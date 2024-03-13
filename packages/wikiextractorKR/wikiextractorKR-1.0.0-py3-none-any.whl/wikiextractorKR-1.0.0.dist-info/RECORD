@@ -1,0 +1,12 @@
+wikiextractor/WikiExtractor.py,sha256=Y3TlMmbRtro87s2F6lOJXUt2VePB8IuSH04eobi3M38,22884
+wikiextractor/__init__.py,sha256=7gAfhh8d_coJce6eyOAPPhDA9xhZefbnVdhFY69rHM0,93221
+wikiextractor/cirrus-extract.py,sha256=6WgTFkobMTJa3hqiwCvDqvAj4nYGxyDAyMt5LZiEFYY,8572
+wikiextractor/clean.py,sha256=UOOLomYIOkEUJL-qb107XgevmC1Yzgdskv3cDtVeIc0,1824
+wikiextractor/extract.py,sha256=ER5Q3fXw7Oz54hy6ZqvCn13Oo7YMp0vA0Tgtm0UC2Ho,69979
+wikiextractor/extractPage.py,sha256=8x24pUuIh2CCWPbUV6T4PwSrsCRpFiSBM5TzIxwD62E,3893
+wikiextractorKR-1.0.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+wikiextractorKR-1.0.0.dist-info/METADATA,sha256=2SoTmRyHgF9pjfJpSmyzQIYRq4TV1XKr-1WlXuH7IeE,7291
+wikiextractorKR-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+wikiextractorKR-1.0.0.dist-info/entry_points.txt,sha256=cpN90-mBjHdH1wd6stjr9XbykCMjmoID5D22n2UWTck,112
+wikiextractorKR-1.0.0.dist-info/top_level.txt,sha256=nmasSeI-UXcmI75e9wK3N-wQsop8zZqVKcYa-ta1hxg,14
+wikiextractorKR-1.0.0.dist-info/RECORD,,
