@@ -1,0 +1,16 @@
+kuzu/__init__.py,sha256=6erWSyZY5tdSu2kiGin0I8aXYoUtMCG7Brv4CN0f-RQ,2155
+kuzu/_kuzu.cp37-win_amd64.pyd,sha256=iTsP3GYZi8uB6CIIFrKaAMCQg3V_Z3H3t5KG0FAEYdc,9143808
+kuzu/connection.py,sha256=9YfXWlWEtZR2JVQQ67nssKB38OArmbh0vYYpegru7No,6047
+kuzu/database.py,sha256=vp6Cn3lr1ekbYvHHduGkt7Z8QOO27PfN_FO2f6zw1MQ,8355
+kuzu/prepared_statement.py,sha256=hrjwdXlOhyAD_-WMOtRUsoXThrUh7utfdXAHkXtKYx0,1213
+kuzu/query_result.py,sha256=Eq-ZsjdGUae3W4UcF18_pmq_jMsBbw9jpS8-0AKUbP8,14146
+kuzu/torch_geometric_feature_store.py,sha256=B_QVWk8GwDzk2srUIBU51Y5r4Af2aZ4bjdorJk0tWLk,7771
+kuzu/torch_geometric_graph_store.py,sha256=0NNTZPduDfU8qIUvO00_XS0URHxwOzJ6ZmVQ9Qei2M8,5024
+kuzu/torch_geometric_result_converter.py,sha256=fM0CTmKjQ2_PBYhOxv4tXBPO3HcdLNidxtaWocLyBjM,13747
+kuzu/types.py,sha256=n7MnkDEF0_Wf2k1gOleQ1rw9DZqf_Xsy-thfI0n6XXw,896
+kuzu-0.3.2.dev15.dist-info/LICENSE,sha256=5VerRIbbpIMY7JL5jVZipZau8iB67w5iM7m71Zmffm4,1093
+kuzu-0.3.2.dev15.dist-info/METADATA,sha256=RLFzMHR-lYOqPmOTLrAbP_5Mj8aabRW_UaL5IjBdHfM,5938
+kuzu-0.3.2.dev15.dist-info/WHEEL,sha256=slqBGdqRnxanDn00BSYHhryEsWH_8CUurgRUvoMtK_Y,101
+kuzu-0.3.2.dev15.dist-info/top_level.txt,sha256=aGR0Ck-463aFSqe4PknpdnhruaSYSD8kfr23ljewx4g,5
+kuzu-0.3.2.dev15.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+kuzu-0.3.2.dev15.dist-info/RECORD,,
