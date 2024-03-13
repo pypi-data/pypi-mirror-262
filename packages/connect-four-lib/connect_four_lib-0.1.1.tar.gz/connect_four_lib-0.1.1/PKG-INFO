@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: connect-four-lib
+Version: 0.1.1
+Summary: A library for connect 4 game
+Author: game-ai-platform-team
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# connect-four-lib
+A library for connect 4 game
+
