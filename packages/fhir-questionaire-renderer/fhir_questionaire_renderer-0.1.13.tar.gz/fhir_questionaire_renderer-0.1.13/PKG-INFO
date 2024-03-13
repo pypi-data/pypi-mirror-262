@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: fhir-questionaire-renderer
+Version: 0.1.13
+Summary: 
+Author: Axel Vanraes
+Author-email: axel.vanraes@tiro.health
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: streamlit (>=1.31.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+
+
+## Setup the dev environment
+1. Install theifrontend dependencies
+> Node.js and yarn are required to install the dependencies. If you don't have them installed, you can download Node.js from [here](https://nodejs.org/en/download/) and yarn from [here](https://classic.yarnpkg.com/en/docs/install/).
+
+Navigate to `fhir_questionnaire_renderer/frontend`.
+
+```bash
+yarn install
+```
+
+2. Install the python dependencies
+
+> Poetry is required to install the dependencies. If you don't have it installed, you can download it from [here](https://python-poetry.org/docs/).
+
+Navigate to the root of the project.
+
+```bash
+poetry install
+```
+
+## Run the custom Streamlit component in dev mode
+
+1. Run the frontend in dev mode
+
+Navigate to `fhir_questionnaire_renderer/frontend`.
+
+```bash
+yarn dev
+```
+
+2. Run the Streamlit app in dev mode
+
+Navigate to `fhir_questionnaire_renderer`.
+
+```bash
+poetry shell
+streamlit run app.py
+```
+
+## Build the custom Streamlit component
+
+1. Build the frontend
+
+Navigate to `fhir_questionnaire_renderer/frontend`.
+
+```bash
+yarn build
+```
+
+2. Set the Streamlit app to production mode
+
+Navigate to `fhir_questionnaire_renderer` and open the `__init__.py` file.
+
+Set `_RELEASE` to `True`.
+
+```python
+_RELEASE = True
+```
+
+3. Follow an online tutorial to build and publish the Python package to PyPI.
+
+> please complete this section
+
