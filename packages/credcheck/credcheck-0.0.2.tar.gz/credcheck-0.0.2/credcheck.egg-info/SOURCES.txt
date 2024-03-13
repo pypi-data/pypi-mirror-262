@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+credcheck/__init__.py
+credcheck/cli.py
+credcheck/cred.py
+credcheck.egg-info/PKG-INFO
+credcheck.egg-info/SOURCES.txt
+credcheck.egg-info/dependency_links.txt
+credcheck.egg-info/requires.txt
+credcheck.egg-info/top_level.txt
