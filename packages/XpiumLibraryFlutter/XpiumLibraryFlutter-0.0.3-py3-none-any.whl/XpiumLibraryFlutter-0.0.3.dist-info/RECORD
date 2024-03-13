@@ -1,0 +1,14 @@
+XpiumLibraryFlutter/XpiumLibraryFlutter.py,sha256=ygiLamsyT9y3UzoL_1AR90eLclesb6KiZG1SUU3Viuc,1293
+XpiumLibraryFlutter/__init__.py,sha256=wxVcUSVq01OxSRXFh8aGO2WRaDbcNWmu2n8Qut5bmgA,373
+XpiumLibraryFlutter/main.py,sha256=uzxQxqtJIvAcAmWr_4Ws0tkJWlTZDDumx8pu7edF4gI,235
+XpiumLibraryFlutter/submodule1/__init__.py,sha256=uHekJmiZT7O0ha61qBbiO9jsD-jp8145W8Du3xc1lpk,110
+XpiumLibraryFlutter/submodule1/module1.py,sha256=juWlTl1dBoRhjIhWlD3lmLQoDrNC4c4eay6BoNMBSPw,216
+XpiumLibraryFlutter/submodule1/module2.py,sha256=l2ZKgYOHeJTaR_dSn2dkZkFuM7IBczVVfiXqHFkASLc,157
+XpiumLibraryFlutter/submodule2/__init__.py,sha256=pZy5BTxmGPvg3i6SJ8IEYi2FOEZ1d8WEhx72C9OMwvQ,114
+XpiumLibraryFlutter/submodule2/module1.py,sha256=gGSi0U5g4Vtd7KQnHc1gIV9AuuNWWFXspL8vK-iBsc0,312
+XpiumLibraryFlutter/submodule2/module2.py,sha256=SirV1cyrbTisTFV61FltMPcM9ABZmAHBOFVTwbCS2Ho,261
+XpiumLibraryFlutter-0.0.3.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+XpiumLibraryFlutter-0.0.3.dist-info/METADATA,sha256=eeT12YDhdK07hQIK1j1I0ej51REP-6WSreUKwLfhX_w,1049
+XpiumLibraryFlutter-0.0.3.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+XpiumLibraryFlutter-0.0.3.dist-info/top_level.txt,sha256=zgIaHsLdNtiMwCkNjKkJSGSa8ib-HL2p81BwGdzWmHE,20
+XpiumLibraryFlutter-0.0.3.dist-info/RECORD,,
