@@ -1,0 +1,11 @@
+bluepyparallel/__init__.py,sha256=phFxbDnES2H9nbYkRX31Pgq9anSvG5WXLJWpRGkFeKI,891
+bluepyparallel/database.py,sha256=r-9mAQvbDbbAQD8GBneOpZT3ZjeaF5ASxoi0gTwHl7A,6131
+bluepyparallel/evaluator.py,sha256=zn8GepjEejTtt7FsswU-Dhqc4KF0wEb3u5Anb7h5Cgg,10246
+bluepyparallel/parallel.py,sha256=_uQRkQ9CgobZbUmsdxky5rc5CmK1poYQXIHwQKpRB1I,15347
+bluepyparallel/utils.py,sha256=9uq8O49xKLFW57LBocVGNCgtJVvuNHCo9z28O1QiIgs,1035
+BluePyParallel-0.2.2.dist-info/AUTHORS.md,sha256=3RgTHr26wtO5iqvP6yWTzBo-Cj6ZmdduDqCDR0sOM2w,136
+BluePyParallel-0.2.2.dist-info/LICENSE.txt,sha256=-lUg1T8_cJC2HxqJ_YsAD2s5PCgl9xQdiDvo_l9NSi0,11354
+BluePyParallel-0.2.2.dist-info/METADATA,sha256=-O1VVIyleXh84aUYj5d2rv05sZZhdyx8iuoQSkI0PSo,8303
+BluePyParallel-0.2.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+BluePyParallel-0.2.2.dist-info/top_level.txt,sha256=Uy3_ZnurCskzkP6u6T89OtM3WVLUT6FisVdmvHi0VX4,15
+BluePyParallel-0.2.2.dist-info/RECORD,,
