@@ -1,0 +1,6 @@
+msgshow.py
+setup.py
+msgshowner.egg-info/PKG-INFO
+msgshowner.egg-info/SOURCES.txt
+msgshowner.egg-info/dependency_links.txt
+msgshowner.egg-info/top_level.txt
