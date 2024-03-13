@@ -1,0 +1,10 @@
+NAME: 'Time-Weighted Average Price'
+MODULE: 'twap'
+CLASS: 'Twap'
+INTERVAL: '1s'
+PARAMETERS:
+  target: 6
+  duration: '20m'
+WATCHLIST: ['ETH/USDT:USDT']
+INCLUDE: ["INTERVAL"] # used when displaying params in CLI, exclude others
+BACKTEST_READY: False

@@ -1,0 +1,2 @@
+[console_scripts]
+cryptobots = cryptobots._cli.cli:cli

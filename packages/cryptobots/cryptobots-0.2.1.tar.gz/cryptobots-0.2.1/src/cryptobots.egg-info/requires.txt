@@ -1,0 +1,10 @@
+autotrader>=1.0.0
+ccxt
+Click
+trogon
+johnnydep
+
+[dev]
+black>=23.9.1
+commitizen>=3.10.0
+pre-commit>=3.4.0
