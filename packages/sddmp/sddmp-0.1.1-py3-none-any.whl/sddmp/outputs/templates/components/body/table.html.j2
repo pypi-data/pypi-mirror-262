@@ -1,0 +1,22 @@
+{% macro table(df) %}
+<div class="table-responsive">
+    <table class="table table-sm table-striped table-hover table-bordered align-middle">
+        <thead class="table-dark">
+            <tr>
+                {% for column in df.columns %}
+                <th scope="col">{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for row in df.itertuples() %}
+            <tr>
+                {% for item in row[1:] %}
+                <td>{{ item }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endmacro %}
