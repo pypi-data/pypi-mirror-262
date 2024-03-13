@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mtlbs
+Version: 0.0.4
+Summary: A modular login system
+Author: Loftea
+Keywords: python,login,GUI,simple,modular,user,fast,beginner
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: ntplib
+Requires-Dist: uuid
+Requires-Dist: importlib
