@@ -1,0 +1,13 @@
+flexclash/__init__.py,sha256=faMgEw28fWOZvhcQMFHlLfRA8owvib2esR7otI9W0Ss,862
+flexclash/data/__init__.py,sha256=iqxLN9njjbKDxTRcphca9DrCX-wCKudNHTxnuqVAx_o,925
+flexclash/data/dataset.py,sha256=bQKuqWHF4uM0Bwg7Ap2_SRNUVjzyz6y1nF4f28c5d9Y,2507
+flexclash/data/poisoning_decorators.py,sha256=i0qL7-20fpDh_Q-d5kV1kvouYdUBLKPFBrXq-Z4m2NA,2319
+flexclash/model/__init__.py,sha256=t2IPhmtXkOGMBJ3oukgSD0WLWzY7qh5NPDAkuI2gAVw,927
+flexclash/model/poisoning_decorators.py,sha256=DKffwkgrFjXaNiIxRZWBwl4fL_a9T_bdCfNsxljhZb0,1618
+flexclash/pool/__init__.py,sha256=ixVNQhubTPwO-U6b_Tpc78ndEHEP1oKyH4tHcYfTAsk,1272
+flexclash/pool/defences.py,sha256=DFowiYyvbHe6uPRDRgr9V6pCwcx9eQjaxtAhnVDDuOI,5975
+flexclash-0.0.1.dist-info/LICENSE.txt,sha256=T1JPg3lo3nq_EZCq836X5KibV0JgzpOKkBdOWRS5T24,34577
+flexclash-0.0.1.dist-info/METADATA,sha256=JC93qbUl9OGPQlRapSrcslJX-4AchBaOFlpkrrj3ITw,4446
+flexclash-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+flexclash-0.0.1.dist-info/top_level.txt,sha256=2pMnIIcaSHKuPrz7OiZRkjPUHuJhYi452Qeccj4NId8,10
+flexclash-0.0.1.dist-info/RECORD,,
