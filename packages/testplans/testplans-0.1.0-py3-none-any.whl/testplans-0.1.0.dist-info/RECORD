@@ -1,0 +1,13 @@
+testplans/__init__.py,sha256=R-t4TnLbcBwgnvYRUi9XwUMKaxed39mOHgUeSzFseHs,105
+testplans/_results.py,sha256=OsG1_zg_zqczgh8QrXN_LaKrHmx4-jd70ZOTUiotfVc,766
+testplans/api.py,sha256=bO7xDcS1NyBDBGYhkwMmRQGRZg0AgE1-uIJKFuv4vlM,2613
+testplans/devices.py,sha256=rwk1chq-d5fd9ww2ZAkbwhHamcyD_Z0QZM14LvmCmz4,5180
+testplans/gui.py,sha256=xLRJuw3ZViVvncj0Az2fwYyyrAKeVeRQJm1Bo2kvPDU,6235
+testplans/main.py,sha256=hGJj9B3SliqrKafQR6PPbdjwUJ11t-Fn8hKWuh0gzSs,10902
+testplans/tc.py,sha256=0tdIcjWY4GOU4Nxd01IYs8xmc8qeIprb-PDFOUmiiGk,10247
+testplans/tm.py,sha256=0xQ2CpWeQxNirDgzsWVikmKpSgrQY_JpMSUCl5Mgs5w,8957
+testplans-0.1.0.dist-info/LICENSE,sha256=BUWiayi7RqcCCQGoo6Mms531bDS9you-qasSm4FOlHE,1082
+testplans-0.1.0.dist-info/METADATA,sha256=Lkwj_3UKcyIFOt3Lf6IsPwH7pWGDKrhxCYF7MABPlaM,5341
+testplans-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+testplans-0.1.0.dist-info/top_level.txt,sha256=E4hFcLGMsdApYPyn8V6pEhXAGchGt2Nv_k8wlrM8VXY,10
+testplans-0.1.0.dist-info/RECORD,,
