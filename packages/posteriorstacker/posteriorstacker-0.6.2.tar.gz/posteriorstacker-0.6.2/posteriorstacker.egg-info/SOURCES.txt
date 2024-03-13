@@ -1,0 +1,16 @@
+COPYING
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+load_ultranest_outputs.py
+posteriorstacker.py
+setup.cfg
+setup.py
+posteriorstacker.egg-info/PKG-INFO
+posteriorstacker.egg-info/SOURCES.txt
+posteriorstacker.egg-info/dependency_links.txt
+posteriorstacker.egg-info/requires.txt
+posteriorstacker.egg-info/top_level.txt
+tutorial/gendata.py
+tutorial/run.py
