@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: python-timetools
+Version: 1.0.3
+Summary: python time tools
+Home-page: https://github.com/xuguox/timetools
+Author: neason
+Author-email: xgx93610@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/xuguox/timetools
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+```
+curr_date = datetime.now()
+start = TimeUtil.get_start_of_date(curr_date)
+end = TimeUtil.get_end_of_date(curr_date)
+print(f"Start of the Date: {start}, End of the Date: {end}")
+```
+```
+Start of the Date: 2024-03-12 00:00:00, End of the Date: 2024-03-12 23:59:59.999999
+```
