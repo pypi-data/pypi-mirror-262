@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: XpiumLibraryFlutter
+Version: 0.0.4
+Summary: Test Library for XpiumLibraryFlutter
+Home-page: https://github.com/tassh571/XpiumLibraryFlutter.git
+Author: Tassana Khrueawan
+Author-email: tassana.khr@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# XpiumLibraryFlutter
+
+Welcome to the XpiumLibraryFlutter, a Robot Framework library for automating the Flutter applications.
+
+## Description
+
+XpiumLibraryFlutter provides a set of keywords that make it easy to write tests for Flutter applications using Robot Framework. This library bridges the gap between testing mobile applications written with Flutter and the powerful testing capabilities of Robot Framework.
+
+## Installation
+
+To install XpiumLibraryFlutter, simply run:
+
+```bash
+pip install XpiumLibraryFlutter

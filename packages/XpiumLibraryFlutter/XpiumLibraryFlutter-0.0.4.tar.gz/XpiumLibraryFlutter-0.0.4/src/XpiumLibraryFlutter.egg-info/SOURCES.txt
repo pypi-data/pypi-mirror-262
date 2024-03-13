@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/XpiumLibraryFlutter.egg-info/PKG-INFO
+src/XpiumLibraryFlutter.egg-info/SOURCES.txt
+src/XpiumLibraryFlutter.egg-info/dependency_links.txt
+src/XpiumLibraryFlutter.egg-info/requires.txt
+src/XpiumLibraryFlutter.egg-info/top_level.txt
