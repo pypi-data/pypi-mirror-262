@@ -1,0 +1,9 @@
+torch>=2.2.0
+ninja
+numpy
+safetensors
+
+[dev]
+pytest
+ruff
+black
