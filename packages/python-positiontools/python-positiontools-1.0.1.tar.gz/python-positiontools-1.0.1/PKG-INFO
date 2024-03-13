@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: python-positiontools
+Version: 1.0.1
+Summary: python position tools
+Home-page: https://github.com/xuguox/positiontools
+Author: neason
+Author-email: xgx93610@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/xuguox/positiontools
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: python-timetools
+
+# positiontools
+tea airdrop
