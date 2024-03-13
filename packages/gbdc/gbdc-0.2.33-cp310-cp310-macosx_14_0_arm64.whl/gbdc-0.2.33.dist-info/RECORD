@@ -1,0 +1,11 @@
+gbdc.cpython-310-darwin.so,sha256=4Obg-XHt6GSPedq1SM1uq_RKuHa_kUn2T3j38tJh35Q,1258512
+gbdc-0.2.33.dist-info/RECORD,,
+gbdc-0.2.33.dist-info/LICENSE,sha256=SBwosrq_RV0l0VgmFWdZybFajzuTq0mw_ICdpZjAzOc,1109
+gbdc-0.2.33.dist-info/WHEEL,sha256=2EVZhLi4jIk3Z3bCc03RR_L3RG1Nt_XPRZ0Vawo2Rps,110
+gbdc-0.2.33.dist-info/top_level.txt,sha256=Q--xc4fHFswsQdlmJ0X8ItO3NqovtcAYVQeng8SL5jw,5
+gbdc-0.2.33.dist-info/METADATA,sha256=OzkL1S5q1G0fmC9fEhqRIug53dkkOB970huRIKTxLDc,128
+gbdc.dylibs/liblz4.1.9.4.dylib,sha256=VRyhFdAqOi1JTyvmjvOEDgBF-KVboR_rFWYgHIZ46bk,159792
+gbdc.dylibs/libarchive.13.dylib,sha256=jxI15u4TcxjD-NrOnDSaNHbBOsCrTRF3NoiU0YTwQMg,687264
+gbdc.dylibs/liblzma.5.dylib,sha256=uUUMbbbvjKl76yovuoUqAjvF4-D28cRADb5lkkdbOLw,184992
+gbdc.dylibs/libzstd.1.5.5.dylib,sha256=GiBk96HTwIiUREqtLtJvHeWGaFoBeJ4zcFXq7Wn52k4,652704
+gbdc.dylibs/libb2.1.dylib,sha256=hBss69puFsHaiQQVjPWBMd-5VyklKQz4X4e_79bj9QQ,85968
