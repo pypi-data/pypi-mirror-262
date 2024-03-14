@@ -1,0 +1,13 @@
+quac
+nchr
+nlit
+chck
+atup
+asto
+ispec
+aspec
+
+[dev]
+urllib3
+requests
+tqdm
