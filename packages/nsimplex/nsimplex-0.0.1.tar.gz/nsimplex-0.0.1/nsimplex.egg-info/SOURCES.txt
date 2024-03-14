@@ -1,0 +1,10 @@
+README.md
+setup.py
+nsimplex.egg-info/PKG-INFO
+nsimplex.egg-info/SOURCES.txt
+nsimplex.egg-info/dependency_links.txt
+nsimplex.egg-info/requires.txt
+nsimplex.egg-info/top_level.txt
+simplex/__init__.py
+simplex/_src/__init__.py
+simplex/_src/simplex.py
