@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: tacotree_lab
+Version: 1.0.0
+Summary: Extension of tacotree toolbox
+Author: Matthias Nadig
+Author-email: nadig_develop@yahoo.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tacotree
+
+# py-tacotree_lab
+
+Extension for tacotree toolbox.
