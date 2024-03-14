@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+BrazilFiscalReport.egg-info/PKG-INFO
+BrazilFiscalReport.egg-info/SOURCES.txt
+BrazilFiscalReport.egg-info/dependency_links.txt
+BrazilFiscalReport.egg-info/requires.txt
+BrazilFiscalReport.egg-info/top_level.txt
+brazilfiscalreport/pdf_docs.py
+brazilfiscalreport/xfpdf.py
+tests/test_brazil_fiscal_report.py
