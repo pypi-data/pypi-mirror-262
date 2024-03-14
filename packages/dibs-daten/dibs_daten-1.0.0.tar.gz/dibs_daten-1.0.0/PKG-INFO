@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: dibs_daten
+Version: 1.0.0
+Summary: Data used for DIBS---Dynamic-ISO-Building-Simulator simulation program for calculating the space heating, occupancy hot water, cooling and electricity demand of German non-residential buildings. Further the DIBS calculates the heating value based energy uses, the primary energy and the greenhouse gas emission based on the defined factors of the German building energy ordinance (Gebäudeenergiegesetz). The underlying resistance-capacity-model is based on the simplified hourly method of ISO 13790:2008.
+Author: Simon Knoll, Michael Hörner
+Author-email: Julian Bischof <j.bischof@iwu.de>, Wail Samjouni <w.samjouni@iwu.de>, André Müller <a.mueller@iwu.de>, Jens Calisti <j.calisti@iwu.de>
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+Project-URL: Repository, https://github.com/IWUGERMANY/DibsData
+
+# DibsData
+
+This module contains data for simulating buildings. The data contained in this module is used by another module called `dibs_computing_core`
+to perform the simulation. Make sure that the `dibs_computing_core` module is installed in your project and configured correctly to
+utilize the full functionality of this module.
+
+## Usage
+
+To use this module in your project, follow these steps:
+
+1. Install the module:
+
+   ```bash
+   pip install dibs_data
+
+2. Import the module
+
+ ```python
+   import dibs_data
+   ```
