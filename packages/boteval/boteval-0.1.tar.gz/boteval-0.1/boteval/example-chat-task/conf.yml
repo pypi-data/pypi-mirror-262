@@ -1,0 +1,83 @@
+
+chat_dir: data
+
+chatbot:
+  display_name: 'Moderator'
+  topics_file: chat_topics.json
+  #bot_name: my-dummy-bot
+  #bot_args:
+  #  key1: val1
+  #  key2: val2
+  #  some_flag: true
+  bot_name: hf-transformers   # use this for huggingface models
+  bot_args:
+    model_name: facebook/blenderbot_small-90M
+
+  transforms:
+    human:
+      - name: my-transform
+        args:
+          arg1: val1
+          arg2: [val2, val3]
+    bot:
+      - name: my-transform
+        args:
+          arg1: val1
+          arg2: [val2, val3]
+      - name: dummy # so we can test multiple
+
+limits:
+  max_threads_per_user: 10
+  max_threads_per_topic: &max_assignments 3
+  max_turns_per_thread: 4
+  reward: &reward '0.01' # dollars
+  desired_rate: &desired_rate '15.00' # dollars        
+
+onboarding:
+  agreement_file: user-agreement.html
+  instructions_file: instructions.html
+  checkboxes:
+    instructions_read: I have read the instructions.
+    iam_adult: I am 18 years or older and I understand that I may have to read and write using toxic language.
+
+ratings:
+  - question: 'How Coherent was the conversation?'
+    choices: &choices
+      - Not at all
+      - Mostly not
+      - So-so
+      - Somewhat
+      - Very
+  - question: 'How likely are you going to continue the conversation with the bot?'
+    choices: *choices
+  - question: 'To what degree did the bot convince you to change your behavior?'
+    choices: *choices
+
+# rename _mturk -> mturk to enable crowd backend
+_mturk:
+  client:
+    profile: default # the [default] profile in ~/.aws/credentials file
+    sandbox: true  # sandbox: false to go live
+  seamless_login: true
+  hit_settings:
+    # https://boto3.amazonaws.com/v1/documentation/api/1.11.9/reference/services/mturk.html#MTurk.Client.create_hit
+    MaxAssignments: *max_assignments
+    AutoApprovalDelayInSeconds: 604800     # 7 days = 604k sec
+    LifetimeInSeconds: 1209600              # 14 days = 1.2M sec
+    AssignmentDurationInSeconds: 3600      # 1 hour = 3.6k sec
+    Reward: *reward
+    DesiredRate: *desired_rate              # The desired hourly pay rate that the bonus will allow the worker to reach.
+    BonusReason: "Hello. You're receiving this bonus to ensure you get paid at a minimum $[RATE]/hour for your work."
+    Title: 'Evaluate a chatbot'
+    Keywords: 'chatbot,chat,research'
+    Description: 'Evaluate a chat bot by talking to it for a while and receive a reward'
+
+
+flask_config:
+  # sqlalchemy settings https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/
+  #SQLALCHEMY_DATABASE_URI: sqlite:///sqlite-dev-01.db
+  DATABASE_FILE_NAME: 'sqlite-dev-01.db'   # this will be placed in task dir
+  SQLALCHEMY_TRACK_MODIFICATIONS: false
+  #SERVER_NAME: localhost  <-- do not use localhost as SERVER_NAME
+  #SERVER_NAME: dev.gowda.ai   # set a reak domain name for mturk integration
+  #PREFERRED_URL_SCHEME: https
