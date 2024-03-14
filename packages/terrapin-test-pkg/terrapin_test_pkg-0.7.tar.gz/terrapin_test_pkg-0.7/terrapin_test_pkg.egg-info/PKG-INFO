@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: terrapin_test_pkg
+Version: 0.7
+Summary: A test package
+Author: gregorymacharia
+Author-email: gmacharia@microsoft.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+
+# pypi-terrapin-test
+Test package to be used in Terrapin's end to end testing.
