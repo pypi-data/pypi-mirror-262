@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+areport/__init__.py
+areport/report.py
+areport/utils.py
+areport.egg-info/PKG-INFO
+areport.egg-info/SOURCES.txt
+areport.egg-info/dependency_links.txt
+areport.egg-info/requires.txt
+areport.egg-info/top_level.txt
+examples/subtract_performance_fees.py
+tests/test_deterministic_data.py
+tests/test_report.py
+tests/test_report_comparison.py
