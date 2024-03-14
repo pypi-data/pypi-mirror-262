@@ -1,0 +1,11 @@
+supadef/__init__.py,sha256=vT70diIw5RNZxGpi9SGo7vM6u9xvaru63AaQqNUDbY8,186
+supadef/cli.py,sha256=8vunhZ7hPBseMqGftUPgXh3ciRP92jn_eEB__2l6TT4,9654
+supadef/config.py,sha256=79b0THGK6CcXYfnek-k6KVa9YKWmajNMTOhG1SxfBk4,282
+supadef/credentials.py,sha256=0qCUsO0HX5TJ6x6AA028lHXBimlaMmwk_Nqj64z9460,123
+supadef/links.py,sha256=3wP66J65UGCH8nL6RRzay2cLmYnEZS4uqDboezNIZpc,1750
+supadef-0.0.41.dist-info/LICENSE,sha256=A23ufEID9CLJBsFnjhPlZaDfRShpYgAVBgKnGc0yBVc,1069
+supadef-0.0.41.dist-info/METADATA,sha256=P2auipWCFfCSAI7EVcDW1PZ2Yom6eqZbpSZTxMwwJ-g,4095
+supadef-0.0.41.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+supadef-0.0.41.dist-info/entry_points.txt,sha256=6O-hVjUzAfYANaXkHg2PVp8zOXfPfs9G0wVaY_ZrvJk,44
+supadef-0.0.41.dist-info/top_level.txt,sha256=zHA6D1qvOsREe1CaOCYPWaXyVjvwWou_mjHi6_foSbs,8
+supadef-0.0.41.dist-info/RECORD,,
