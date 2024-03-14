@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "getstanza"
+version = "0.0.3-beta1"
+description = "Python SDK for adding Stanza Systems fault tolerance to your python 3 service."
+authors = ["Stanza Systems <hello@sre.is>"]
+homepage = "http://www.stanza.systems"
+repository = "https://github.com/StanzaSystems/sdk-python"
+readme = "README.md"
+keywords = ["fault-tolerance", "traffic", "traffic-control", "stanza"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Software Development :: Libraries",
+]
+packages = [
+    { include = "getstanza" },
+    { include = "getstanza_fastapi" },
+    { include = "getstanza_requests" },
+    { include = "getstanza_sqs" },
+    { include = "stanza" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-dateutil = "^2.8.2"
+opentelemetry-api = "^1.20.0"
+opentelemetry-sdk = "^1.20.0"
+opentelemetry-exporter-otlp-proto-grpc = "^1.20.0"
+protoc-gen-openapiv2 = "^0.0.1"
+grpcio = "^1.60.0"
+fastapi = "^0.109.0"
+requests = "^2.31.0"
+boto3 = "^1.34.32"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-cov = "^4.1.0"
+pytest-asyncio = "^0.23.2"
+# We import a version of 'pytest-socket' with an additional fix that is
+# unmerged as of now to prevent this plugin from breaking the VSCode debugger.
+# We should switch back to a tag once this gets merged.
+pytest-socket = { git = "https://github.com/magnasilvar/pytest-socket.git", rev = "403f31751822c79c525c6005fd1e96a366873969" }
+flake8 = "^7.0.0"
+httpx = "^0.27.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
