@@ -1,0 +1,9 @@
+README.md
+license.txt
+setup.py
+trest_identity/__init__.py
+trest_identity/trest_identity_service.py
+trest_identity.egg-info/PKG-INFO
+trest_identity.egg-info/SOURCES.txt
+trest_identity.egg-info/dependency_links.txt
+trest_identity.egg-info/top_level.txt
