@@ -1,0 +1,45 @@
+"/home/sokol/.local/bin/influx_i" "--pref" "e_coli_i" "--pref" "e_coli_iv" "--pref" "ex_i_2box_var" "--pref" "../prl_exp/mtf/e_coli_GX_prl"
+code gen: 2024-02-29 14:24:46
+calcul  : 2024-02-29 14:24:49
+load    : 2024-02-29 14:24:49.88 cpu=0.935
+rinit   : 2024-02-29 14:24:49.88 cpu=0.94
+r_flux  : 2024-02-29 14:24:49.88 cpu=0.94
+Afl qr(): 2024-02-29 14:24:49.93 cpu=0.988
+dfl_dffg: 2024-02-29 14:24:49.94 cpu=0.996
+spAbr   : 2024-02-29 14:24:49.94 cpu=0.998
+weight 1: 2024-02-29 14:24:49.94 cpu=0.999
+weight 2: 2024-02-29 14:24:49.94 cpu=1
+weight 3: 2024-02-29 14:24:49.95 cpu=1.001
+weight 4: 2024-02-29 14:24:49.95 cpu=1.003
+weight 5: 2024-02-29 14:24:49.95 cpu=1.004
+weight 6: 2024-02-29 14:24:49.95 cpu=1.005
+measure : 2024-02-29 14:24:50.00 cpu=1.054
+ineq    : 2024-02-29 14:24:50.02 cpu=1.074
+preopt  : 2024-02-29 14:24:50.10 cpu=1.151
+labargs : 2024-02-29 14:24:50.10 cpu=1.153
+cl expor: 2024-02-29 14:24:50.37 cpu=1.158
+cl sourc: 2024-02-29 14:24:51.80 cpu=1.332
+run    1: 2024-02-29 14:24:51.99 cpu=1.337
+
+Starting point
+zc ineq : 2024-02-29 14:24:51.99 cpu=1.338
+kvh init: 2024-02-29 14:24:52.02 cpu=1.371
+check ja: 2024-02-29 14:24:52.65 cpu=1.394
+optim   : 2024-02-29 14:24:58.54 cpu=1.4
+it=0	res=237.7947
+it=1	res=70.06248	normstep=30.47659	btk=1
+it=2	res=36.43491	normstep=31.35182	btk=1
+it=3	res=21.83319	normstep=0.2793447	btk=1
+it=4	res=21.7384	normstep=0.03332941	btk=1
+it=5	res=21.72383	normstep=0.03867586	btk=1
+it=6	res=21.6348	normstep=0.08885869	btk=1
+it=7	res=21.37745	normstep=0.4890457	btk=0.5
+it=8	res=21.24931	normstep=0.6490092	btk=1
+it=9	res=20.96647	normstep=0.3171006	btk=1
+it=10	res=20.96366	normstep=0.1287473	btk=1
+it=15	res=20.96358	normstep=5.448933e-05	btk=1
+secondzc: 2024-02-29 14:25:07.52 cpu=1.593
+After the first optimization, no zero crossing inequality was activated. So no reoptimization
+postopt : 2024-02-29 14:25:07.54 cpu=1.616
+linstats: 2024-02-29 14:25:08.23 cpu=1.895
+rend    : 2024-02-29 14:25:08.50 cpu=2.023

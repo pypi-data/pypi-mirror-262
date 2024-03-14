@@ -1,0 +1,44 @@
+"/home/sokol/.local/bin/influx_s" "--pref" "e_coli" "--pref" "e_coli_growth" "--pref" "../prl_exp/mtf/e_coli_glc1-6n"
+code gen: 2024-02-29 14:24:09
+calcul  : 2024-02-29 14:24:11
+load    : 2024-02-29 14:24:12.44 cpu=0.956
+rinit   : 2024-02-29 14:24:12.44 cpu=0.958
+r_flux  : 2024-02-29 14:24:12.45 cpu=0.958
+Afl qr(): 2024-02-29 14:24:12.48 cpu=0.993
+dfl_dffg: 2024-02-29 14:24:12.49 cpu=1
+spAbr   : 2024-02-29 14:24:12.49 cpu=1.003
+weight 1: 2024-02-29 14:24:12.49 cpu=1.003
+weight 2: 2024-02-29 14:24:12.49 cpu=1.004
+weight 3: 2024-02-29 14:24:12.49 cpu=1.005
+weight 4: 2024-02-29 14:24:12.49 cpu=1.007
+weight 5: 2024-02-29 14:24:12.50 cpu=1.008
+weight 6: 2024-02-29 14:24:12.50 cpu=1.009
+weight 7: 2024-02-29 14:24:12.50 cpu=1.01
+measure : 2024-02-29 14:24:12.53 cpu=1.046
+ineq    : 2024-02-29 14:24:12.57 cpu=1.082
+preopt  : 2024-02-29 14:24:12.61 cpu=1.119
+labargs : 2024-02-29 14:24:12.61 cpu=1.121
+run    1: 2024-02-29 14:24:12.61 cpu=1.122
+
+Starting point
+res esti: 2024-02-29 14:24:12.61 cpu=1.122
+The following 1 ineqalitie(s) are active at starting point:
+f.x.xul>=0
+kvh init: 2024-02-29 14:24:12.62 cpu=1.132
+check ja: 2024-02-29 14:24:12.64 cpu=1.149
+optim   : 2024-02-29 14:24:12.73 cpu=1.243
+it=0	res=45.2102
+it=1	res=12.83995	normstep=1.515861	btk=1
+it=2	res=12.25994	normstep=1.259661	btk=1
+it=3	res=8.098585	normstep=0.5463658	btk=1
+it=4	res=7.960851	normstep=0.0589933	btk=1
+it=5	res=7.959322	normstep=0.03050743	btk=1
+it=6	res=7.959081	normstep=0.004902886	btk=1
+it=7	res=7.959029	normstep=0.003060732	btk=1
+it=8	res=7.959017	normstep=0.001367668	btk=1
+it=9	res=7.959014	normstep=0.0006590508	btk=1
+it=10	res=7.959014	normstep=0.0003104052	btk=1
+it=15	res=7.959014	normstep=7.292324e-06	btk=1
+postopt : 2024-02-29 14:24:13.45 cpu=1.934
+linstats: 2024-02-29 14:24:13.59 cpu=2.04
+rend    : 2024-02-29 14:24:13.71 cpu=2.097
