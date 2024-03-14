@@ -1,0 +1,5 @@
+bboxrs-0.1.0.dist-info/METADATA,sha256=AvxChEQKbSNwr8u7voANsgMrTAN-RAAkPeHKXm0ha0o,955
+bboxrs-0.1.0.dist-info/WHEEL,sha256=ghwFGx42r3P5MdLaH7S85e4s_372OOmfuw86yvkiSfU,91
+bboxrs/__init__.py,sha256=QYl8uWckGuU7K4ev7hI5IqeLmzrpcAIgCd8VlibtEGY,107
+bboxrs/bboxrs.cp310-win32.pyd,sha256=mjWQ21Nx87_E4ENuxwA1CBA2lqE9tfFWUtDq9DdHSxA,272896
+bboxrs-0.1.0.dist-info/RECORD,,
