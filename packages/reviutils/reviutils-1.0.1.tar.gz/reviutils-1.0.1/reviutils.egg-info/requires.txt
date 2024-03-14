@@ -1,0 +1,9 @@
+numpy
+pandas
+
+[reviutils.audio]
+librosa
+soundfile
+torch
+torchaudio
+pydub
