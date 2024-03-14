@@ -1,0 +1,9 @@
+README.md
+setup.py
+priyademo/__init__.py
+priyademo/main.py
+priyademo.egg-info/PKG-INFO
+priyademo.egg-info/SOURCES.txt
+priyademo.egg-info/dependency_links.txt
+priyademo.egg-info/entry_points.txt
+priyademo.egg-info/top_level.txt
