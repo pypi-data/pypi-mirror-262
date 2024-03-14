@@ -1,0 +1,9 @@
+concurrent_tasking/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+concurrent_tasking/models.py,sha256=9_Dt_1ZuhIBSEKQo98l4BsCBttWlyAB5QWnnQMC9QgE,2939
+concurrent_tasking/task_manager.py,sha256=lY0tOEdcIpRlnop2oVT05uQEexAZXaSiUfJRIJhhwOU,3542
+concurrent_tasking/utils.py,sha256=8XBQe3_Z7c3qk-CVsdgG6RhuS-a3i73rebZeBPJCx7A,494
+ConcurrentTasking-0.2.0.dist-info/LICENSE,sha256=Iqbz1-b23jLoQozUQ2vLfFgnabt7I7o7Hz9YadK7wDY,1067
+ConcurrentTasking-0.2.0.dist-info/METADATA,sha256=zHGZlqazv16MTqFW0k0lJ0kjr09uH9nFuHxk_Qm0WqM,2086
+ConcurrentTasking-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ConcurrentTasking-0.2.0.dist-info/top_level.txt,sha256=ekrrzRIotz807ZYBewLdzu1dXeVrqGojlJq6W5-XYMo,19
+ConcurrentTasking-0.2.0.dist-info/RECORD,,
