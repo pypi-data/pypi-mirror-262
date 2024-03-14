@@ -1,0 +1,8 @@
+setup.py
+InvoiceCrafty/__init__.py
+InvoiceCrafty/invoicepdf.py
+InvoiceCrafty.egg-info/PKG-INFO
+InvoiceCrafty.egg-info/SOURCES.txt
+InvoiceCrafty.egg-info/dependency_links.txt
+InvoiceCrafty.egg-info/requires.txt
+InvoiceCrafty.egg-info/top_level.txt
