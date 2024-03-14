@@ -1,0 +1,9 @@
+datasette_upload_csvs/__init__.py,sha256=fNpG2PnyzCCHafCPzZZO6DRmZgwo8Vwd6TQAw78upTs,8352
+datasette_upload_csvs/templates/upload_csv.html,sha256=arCZbEG7moM-f25LLX884mioDNlZLh0ef2CtBKFFWlA,6081
+datasette_upload_csvs/templates/upload_csv_done.html,sha256=KLKgcz-qf76v_KIP3TW1XEgG1tPl_E-1hj8uBOl9VSU,216
+datasette_upload_csvs-0.9.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+datasette_upload_csvs-0.9.1.dist-info/METADATA,sha256=HUBhFyfSPRYISHThB9V9S7fuhRW5kiywg9MDyYOplvM,2422
+datasette_upload_csvs-0.9.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+datasette_upload_csvs-0.9.1.dist-info/entry_points.txt,sha256=8_Tva71xSE4Y8yxL2_3uQP8OkC2v5U4szBmjFM-hehE,48
+datasette_upload_csvs-0.9.1.dist-info/top_level.txt,sha256=yG6RVkT9SzGEeKvUWoMKgPxX8Xs6_Jog0FzTRk-ZN8c,22
+datasette_upload_csvs-0.9.1.dist-info/RECORD,,
