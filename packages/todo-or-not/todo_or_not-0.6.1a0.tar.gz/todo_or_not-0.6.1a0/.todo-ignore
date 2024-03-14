@@ -1,0 +1,10 @@
+.git/
+.github/
+.idea/
+
+package-lock.json
+package.json
+
+README.md
+localize.json
+pyproject.toml
