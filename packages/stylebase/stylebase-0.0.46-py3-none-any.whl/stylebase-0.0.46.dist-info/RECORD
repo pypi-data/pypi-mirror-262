@@ -1,0 +1,11 @@
+stylebase/__init__.py,sha256=_p27_slBYGvyy6yGWJDXJFy9OqerHIcUCNmf5JXNP0s,18968
+stylebase/__main__.py,sha256=lruanKLDvEoIbQ2f_vAjGaxfHpa0aEm9EYgJHwJqUnA,103
+stylebase/test.py,sha256=NI94RGeVY_o8lCJ72gztclXsmkpNPXjHnSD6n_MEgLM,1108
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__main__.py,sha256=DwT4JiIjApz2pTebGeAXVXHvn765g8dAU5PBcb5sMmo,365
+stylebase-0.0.46.dist-info/LICENSE,sha256=qa7R_AbaR83ZfoUV_42NLm1y03WIzvfz5kcIrGwX-UY,1075
+stylebase-0.0.46.dist-info/METADATA,sha256=5xdpZeR6t1CCpa8DBSKbJq7wZuKk4xHz_EA-ht7bZNs,678
+stylebase-0.0.46.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+stylebase-0.0.46.dist-info/entry_points.txt,sha256=RJL1WCIFmQHQWe5oQtZt_8LrOSy4Xdexf4YDkwMBRaU,55
+stylebase-0.0.46.dist-info/top_level.txt,sha256=rmWx-6PwIs-q0QqQRe0SpQljpZiRiLzcbziMV6bJgW0,16
+stylebase-0.0.46.dist-info/RECORD,,
