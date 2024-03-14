@@ -1,0 +1,13 @@
+autocoder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autocoder/auto_coder.py,sha256=mvW5RVBa963NUUWwPpQ1IYlx2QtEtWaWVWtwmoQMccc,2162
+autocoder/version.py,sha256=8oAxKUG747GUokmxjkrWejyJa5yPNEsoJDlXxoedxTw,21
+autocoder/common/__init__.py,sha256=14jM5prY3bH7vJymK8LY1WRr7FWt19OIP9yt5HTmTS0,4306
+autocoder/dispacher/__init__.py,sha256=znCRaEUt5sSNwBZFvFmQwfCTfuJtsWwlEVU71WgWUkY,9642
+autocoder/pyproject/__init__.py,sha256=ucljrWL67hQdrQWfdTDSch9vTUQ95-obWk0PR1W6lEg,5026
+autocoder/suffixproject/__init__.py,sha256=uHch1ymNs9ZmLICllgLYGHe0okPLQHhSQ3UymmpNJts,3039
+autocoder/tsproject/__init__.py,sha256=bW2u5zQ-KL6qFKwFjaDhx2Y4UHRgUmXhKGhuggQ8g9Q,3857
+auto_coder-0.1.1.dist-info/METADATA,sha256=-8wzC7p_z63thYs06sO2ol6OLSknAqSV_S6Xit_IGt0,6005
+auto_coder-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+auto_coder-0.1.1.dist-info/entry_points.txt,sha256=5EOfmpMUawoFKyAc2rspf5MQQJEIDPPECb8FZQHP5Bo,57
+auto_coder-0.1.1.dist-info/top_level.txt,sha256=Jqc0_uJSw2GwoFQAa9iJxYns-2mWla-9ok_Y3Gcznjk,10
+auto_coder-0.1.1.dist-info/RECORD,,
