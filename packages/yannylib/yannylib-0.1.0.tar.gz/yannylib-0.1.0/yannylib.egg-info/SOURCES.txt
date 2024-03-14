@@ -1,0 +1,5 @@
+setup.py
+yannylib.egg-info/PKG-INFO
+yannylib.egg-info/SOURCES.txt
+yannylib.egg-info/dependency_links.txt
+yannylib.egg-info/top_level.txt
