@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: umi-database-connector
+Version: 1.5.1
+Summary: A python wrapper for our python services
+Author-email: Juan David Cruz Gomez <jdcruz-gomez@umi-innovation.com>, Iaphane Mekki-Felix <imfelix@umi.us>
+Project-URL: Homepage, https://github.com/unitedmotionideas/umi-database-connector
+Project-URL: Issues, https://github.com/unitedmotionideas/umi-database-connector/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
