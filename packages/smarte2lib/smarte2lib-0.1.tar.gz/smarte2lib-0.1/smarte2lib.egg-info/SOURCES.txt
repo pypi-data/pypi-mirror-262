@@ -1,0 +1,7 @@
+README.md
+setup.py
+smarte2lib.egg-info/PKG-INFO
+smarte2lib.egg-info/SOURCES.txt
+smarte2lib.egg-info/dependency_links.txt
+smarte2lib.egg-info/requires.txt
+smarte2lib.egg-info/top_level.txt
