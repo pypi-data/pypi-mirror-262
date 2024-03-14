@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "easestress"
+version = "0.9"
+description = "easestress是一个python语言包（还有R语言版本），旨在缓解大家在科研中的压力。该包集成了经典影视剧的名场面台词和流行的网络吐槽、表情包语句。能够在用户每次调用特定函数时，随机打印出一句轻松有趣的话语，用轻松与欢笑为您的科研之路增添一份色彩！"
+authors = ["杨建强 <1781311651@qq.com>"]
+license = "MIT"
+homepage = "https://yangjianqiang-lianghua.github.io/%E6%88%91%E7%9A%84%E4%B8%9A%E5%8A%A1%EF%BC%8C%E8%A7%A3%E5%8E%8B%E5%8C%85.html"
+repository = "https://github.com/yangjianqiang-lianghua/R-Python-"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+os = "*"
+random = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
