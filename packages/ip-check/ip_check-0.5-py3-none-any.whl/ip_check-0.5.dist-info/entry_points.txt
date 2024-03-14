@@ -1,0 +1,4 @@
+[console_scripts]
+ip-check = ipcheck.main:main
+ip-check-cfg = ipcheck.main:config_edit
+ip-check-cfg-help = ipcheck.main:config_help
