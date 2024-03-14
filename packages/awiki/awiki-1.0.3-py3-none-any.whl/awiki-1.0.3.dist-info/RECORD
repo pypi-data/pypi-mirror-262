@@ -1,0 +1,10 @@
+awiki/__init__.py,sha256=9y_MxVqkYbPTeHZY10x5tIE3MY7Yew8B9QqPe1dz6yA,361
+awiki/client.py,sha256=xBdGUwS09Xh2row1NwJI_Un2MZAIhwy2DNKYUWotRo4,7121
+awiki/constants.py,sha256=avNqREsHY75AA4KNozjR2ftn7L5owg4aBnpggnsIK1o,136
+awiki/models/enums.py,sha256=3eOZT202ESEJMcWIzSdwtNxXlg70b81OZjHRl_MIoOs,4827
+awiki/models/internal.py,sha256=6TzP_KJSpJvwUv5UF9u6DlzHT8xNcGPUWtsE4_YekLk,4677
+awiki/models/results.py,sha256=9a6H3g7cZihxF_77CRZI8wVUa9vsRyiyIs0BUkZG_KM,10341
+awiki-1.0.3.dist-info/LICENSE,sha256=gFEUCQ_MMiEvlZ149XEY0cojmrzsrauV4VDi-5cFF8s,1085
+awiki-1.0.3.dist-info/METADATA,sha256=h3G6OAufNQdicEn7t7szd0enVb8Idvw6WZuPp1UimcI,1585
+awiki-1.0.3.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+awiki-1.0.3.dist-info/RECORD,,
