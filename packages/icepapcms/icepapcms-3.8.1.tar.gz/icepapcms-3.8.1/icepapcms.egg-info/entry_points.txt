@@ -1,0 +1,3 @@
+[gui_scripts]
+icepapcms = icepapcms.__main__:main
+ipapconsole = icepapcms.gui.ipapconsole:main
