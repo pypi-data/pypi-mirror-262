@@ -1,0 +1,9 @@
+{% load wagtailcore_tags %}
+{% extends "./base.html" %}
+{% block classname %}globlocks-listblock{% if classname %} {{ classname }}{% endif %}{% endblock %}
+{% block content %}
+    {% for block in blocks %}
+        {% include_block block with block_id=block.id %}
+    {% endfor %}
+{% endblock %}
+
