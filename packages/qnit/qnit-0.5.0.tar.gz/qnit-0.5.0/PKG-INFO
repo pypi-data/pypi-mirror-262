@@ -1,0 +1,287 @@
+Metadata-Version: 2.1
+Name: qnit
+Version: 0.5.0
+Summary: A Python library for object-oriented parameters, physical quantities and units with a strong support for typing.
+Home-page: https://gitlab.com/c4dht/qnit
+Author: Paul Kernstock
+Author-email: paul.kernstock@posteo.de
+Maintainer: Paul Kernstock
+Maintainer-email: paul.kernstock@posteo.de
+Requires-Python: >=3.9,<3.13
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Classifier: Framework :: tox
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Typing :: Typed
+Requires-Dist: numpy (>=1,<2)
+Requires-Dist: pandas (>=2,<3)
+Requires-Dist: pandas-stubs (>=2,<3)
+Requires-Dist: pint[pandas] (>=0.22,<0.23)
+Requires-Dist: scipy (>=1,<2)
+Project-URL: Changelog, https://gitlab.com/c4dht/qnit/blob/main/CHANGELOG.md
+Project-URL: Issues, https://gitlab.com/c4dht/qnit/issues
+Project-URL: Repository, https://gitlab.com/c4dht/qnit
+Description-Content-Type: text/markdown
+
+# qnit
+
+[kjuː.nɪt] (though some may call it [knɪt])
+
+[![PyPI - Version](https://img.shields.io/pypi/v/qnit)](https://pypi.python.org/pypi/qnit/)
+[![GitLab Issues](https://img.shields.io/gitlab/issues/open/c4dht%2Fqnit)](https://gitlab.com/c4dht/qnit/-/issues)
+[![PyPI license](https://img.shields.io/pypi/l/qnit.svg)](https://pypi.python.org/pypi/qnit/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/qnit.svg)](https://pypi.python.org/pypi/qnit/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+A Python package for object-oriented physical parameters, quantities and units with a strong support for typing.
+
+This library heavily builds upon [Pint](https://github.com/hgrecco/pint) and [Pint-Pandas](https://github.com/hgrecco/pint-pandas).
+
+⚠️ This project is currently under heavy development. Expect API changes.
+
+## Contents
+
+[[_TOC_]]
+
+## Features
+
+* [x] Physical `Quantity`s you can `set` with magnitude and units, convert to other units, get magnitudes or work with the underlying `pint` quantity.
+* [x] `Parameter`s with quantity values ("units-aware") which can be worked with accordingly.
+* [x] `Parameter`s with non-quantity values ("units-naive").
+* [x] Complete and enhanced interface to [pint](https://github.com/hgrecco/pint) and [pint-pandas](https://github.com/hgrecco/pint-pandas)
+* [x] Easily extensible library of physical quantities (s. [Library](#library))
+* [x] Heavy support for typing:
+  * Specify a quantity's units type and get type hints when you're about to do something wrong, e.g. convert an `Energy` 
+  quantity to `kg` units.
+  * Specify a parameter's data type and be hinted when you're about to set an incompatible value.
+
+
+## Getting Started
+
+### Prerequisites
+* Python 3.9 or later
+
+### Install
+
+Install `qnit` from the PyPI in your virtual environment:
+
+```bash
+$ python -m pip install qnit
+```
+
+## Usage
+
+The package provides two main classes: `Quantity` and `Parameter`.
+
+`Quantity` objects represent physical quantities and support units-aware calculations.
+
+Likewise, `Parameter` objects can also handle units and physical quantities
+through their `quantity` property. However, as parameters in a scientific or 
+engineering context may not always be physical quantities,
+they can also represent units-naive values such as booleans or strings.
+
+Both `Quantity` and `Parameter` can handle multi-dimensional array magnitudes and values. 
+
+### Quantity
+
+A `Quantity`'s magnitude and units can be set during or after instantiation
+by using the initializer or `set` method.
+The quantity can be converted to other units or its magnitude
+(as specified units) can be picked out.
+
+It is also possible to work further with the underlying `pint` `Quantity` object
+by using the `pint_quantity` property.
+
+```python
+from qnit import Quantity, quantity_types, units_collections, units_types, ureg
+
+# Create a mass quantity and set its value
+mass: Quantity[units_types.Mass] = Quantity(
+  quantity_type=quantity_types.Mass,
+  description="A mass quantity.",
+)
+mass.set(magnitude=42, units=units_collections.Mass.kg)
+
+# Convert units and get magnitudes using the underlying `pint` quantity.
+mass.pint_quantity.to(units_collections.Mass.g)
+mass.pint_quantity.to('g')
+# <Quantity(42000.0, 'gram')>
+
+mass.pint_quantity.m_as(units_collections.Mass.g)
+mass.pint_quantity.m_as('g')
+# 42000.0
+
+mass.pint_quantity + 4 * ureg.kg
+# <Quantity(46.0, 'kilogram')>
+
+# Get magnitudes as different units
+mass.magnitude(units=units_collections.Mass.tonne)
+# 0.042
+
+# Internal and display units are defined in the `Mass` quantity type.
+quantity_types.Mass.internal_units
+# 'kg'
+quantity_types.Mass.default_display_units
+# 'kg'
+mass.internal_magnitude
+# 42.0
+mass.display_magnitude
+# 42.0
+```
+
+Use mypy or your favorite IDE to warn you about units related errors before runtime
+
+```python hl_lines="0"
+from qnit import Quantity, quantity_types, units_collections, units_types
+
+mass: Quantity[units_types.Mass] = Quantity(
+  quantity_type=quantity_types.Mass,
+  description="A mass quantity.",
+  magnitude=42,
+  units=units_collections.Mass.kg,
+)
+mass.magnitude(units_collections.Energy.kWh)
+# Warning here: Expected type 'Mass', got 'Energy' instead 
+```
+
+### Parameter
+To handle units-aware as well as units-naive `Parameter` objects, 
+`Parameter` provides a `value` property. 
+For units-naive parameters it is either a scalar or array-like units-naive value
+(of type specified at parameter declaration).
+In case of a units-aware parameter it is a `Quantity`
+(with the given units type specified at parameter declaration). 
+
+Units-aware `Parameter` objects also provide properties and methods 
+for getting or setting the underlying `Quantity` object or magnitudes/units.
+
+All `Parameter`s provide a value comment to be set through the initializer
+or the `set_value` or `set_magnitude_units` methods or to be get through the `valueComment` attribute.
+
+```python
+from qnit import Parameter, quantity_types, units_collections, units_types
+
+# Create a units-naive parameter and set its value
+name: Parameter[str, units_types.NoUnits] = Parameter(
+  data_type=str,
+  description="Name of developer",
+)
+name.set_value(value='Peter', value_comment="We might also call it `q-nit`!")
+
+# Create a units-aware parameter and set its value
+temperature : Parameter[float, units_types.Temperature] = Parameter(
+  data_type=float,
+  quantity_type=quantity_types.Temperature,
+  description="Temperature of developer"
+)
+temperature.set_magnitude_units(
+  magnitude=36.6, 
+  units=units_collections.Temperature.deg_C,
+  value_comment="Temperature measured today"
+)
+```
+
+## Library
+In order to ensure a strong support for typing the package contains internal library
+of physical quantities, specifying:
+  * units types (e.g. `units_types.Mass`),
+  * units collections with supported units for each units type
+  * quantity types (e.g. `quantity_types.Mass`) which themselves provide
+    * internal units (to be used for conversion at user interfaces)
+    * default display units (to be used in user frontends)
+    * available units (given as `UnitsCollection` objects)
+
+At the present the library consists of the quantities listed in the table below.
+
+| Physical Domains        | Quantities                                                                                                                                                                                                                                                               |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Dimensionless           | Dimensionless                                                                                                                                                                                                                                                            |
+| Base Quantities         | Length<br/> Mass<br/> Time<br/> Temperature<br/> Current                                                                                                                                                                                                                 |
+| Base Derived Quantities | Volume<br/> Density<br/> Pressure                                                                                                                                                                                                                                        |
+| Time                    | Frequency<br/> DurationShare<br/> ShareInPeriod                                                                                                                                                                                                                          |
+| Geometry                | Angle<br/> Area<br/>                                                                                                                                                                                                                                                     |
+| Mechanics & Kinetics    | Velocity<br/> Acceleration                                                                                                                                                                                                                                               |
+| Thermodynamics          | TemperatureDifference<br/> Energy<br/> Enthalpy<br/> InternalEnergy<br/> MechanicalWork<br/> EnthalpyFlow<br/> Power<br/> HeatFlow<br/> ThermalEfficiency<br/> HeatFlowLossShare<br/> HeatLossShare<br/> SpecificHeatCapacity<br/> CarnotEfficiency<br/> FuelPerformance |
+| Fluid Dynamics          | VolumeFlow<br/> MassFlow<br/> DynamicViscosity<br/> KinematicViscosity                                                                                                                                                                                                   |
+| Heat and Mass Transfer  | HeatCapacityRate<br/> HeatTransferCoefficient<br/> ThermalConductivity<br/> QuadraticHeatTransferCoefficient                                                                                                                                                             |
+| Financial               | Currency<br/> HourlyCosts<br/> EnergyCosts                                                                                                                                                                                                                               |
+| Energy Engineering      | EnergyYield<br/> PowerAreaRatio<br/> GeothermalProdIndex<br/> LinearPressure<br/> QuadraticPressure<br/> TemperatureCorrection                                                                                                                                           |
+
+If needed, the library can be easily extended by subclassing
+`BaseUnitsType`, `UnitsCollection` or `QuantityType`. 
+Especially by subclassing `QuantityType` developers can define
+their own `internal_magnitude` and `default_magnitude`.
+
+```python
+from qnit import quantity_types, units_collections, units_types
+
+sample_mass: quantity_types.QuantityType[units_types.Mass] = (
+  quantity_types.QuantityType(
+    units_type=units_types.Mass,
+    internal_units=units_collections.Mass.g,
+    default_display_units=units_collections.Mass.g,
+    available_units=units_collections.Mass()
+))
+```
+
+
+## Development
+
+To set up a development environment you need a virtual environment and [Poetry](https://python-poetry.org/docs/#installation), for example:
+
+```shell
+POETRY_VIRTUALENVS_IN_PROJECT=1 poetry install
+```
+
+### Testing and Type Checks
+
+Tests for `qnit` are written with `pytest`. You can run the test suite with
+
+```shell
+pytest tests
+```
+
+Both `qnit` itself as well as its tests are to be properly typed. To check this you can run
+
+```shell
+mypy src
+mypy tests
+```
+
+You can also run the test suite in all supported Python environments together with the type checks using [tox](https://tox.wiki/en/4.11.4/installation.html):
+
+```shell
+tox run
+```
+
+For this to work, you should have all supported Python versions installed in your operating system, e.g. by using [pyenv](https://github.com/pyenv/pyenv).
+
+### Formatting
+
+We use [Black](https://black.readthedocs.io/en/stable/) as our code formatter.
+
+```shell
+black --preview .
+```
+
+## Contributing
+
+Before requesting your contribution to be merged, please make sure that
+all tests check out and that your code is properly formatted:
+
+```shell
+black --preview .
+tox run
+```
+
+## License
+`qnit` is licensed under the terms of the [GNU AGPLv3](https://www.gnu.org/licenses/agpl-3.0.html#license-text) License.
