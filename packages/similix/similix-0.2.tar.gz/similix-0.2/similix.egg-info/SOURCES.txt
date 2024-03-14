@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+similix/__init__.py
+similix/article_recommender.py
+similix/embeddings_utils.py
+similix.egg-info/PKG-INFO
+similix.egg-info/SOURCES.txt
+similix.egg-info/dependency_links.txt
+similix.egg-info/requires.txt
+similix.egg-info/top_level.txt
