@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: jupiterpy
+Version: 0.2.0
+Summary: A package to check Jupiter prices
+Home-page: https://github.com/bomsauro/jupiterpy
+Author: Bomsauro
+Author-email: bomsauro@gmail.com
+License: BSD 2-clause
+Description: # Jupiterpy
+        
+        A package to check Jupiterpy prices.
+        
+        To install:
+        
+        ```
+        pip install jupiterpy
+        ```
+        
+        To use: 
+        
+        ```
+        from jupiterpy import prices
+        prices.check("fluxb")
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

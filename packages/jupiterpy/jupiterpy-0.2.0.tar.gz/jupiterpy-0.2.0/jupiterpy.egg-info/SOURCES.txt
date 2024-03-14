@@ -1,0 +1,8 @@
+README.md
+setup.py
+jupiterpy/__init__.py
+jupiterpy.egg-info/PKG-INFO
+jupiterpy.egg-info/SOURCES.txt
+jupiterpy.egg-info/dependency_links.txt
+jupiterpy.egg-info/requires.txt
+jupiterpy.egg-info/top_level.txt
