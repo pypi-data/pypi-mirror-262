@@ -1,0 +1,11 @@
+setup.py
+cv2_jewellery.egg-info/PKG-INFO
+cv2_jewellery.egg-info/SOURCES.txt
+cv2_jewellery.egg-info/dependency_links.txt
+cv2_jewellery.egg-info/requires.txt
+cv2_jewellery.egg-info/top_level.txt
+src/__init__.py
+src/accessories.py
+src/main.py
+src/mode.py
+src/utils.py
