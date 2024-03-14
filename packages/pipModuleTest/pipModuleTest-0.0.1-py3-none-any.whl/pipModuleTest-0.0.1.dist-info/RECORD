@@ -1,0 +1,7 @@
+pipModuleTest/__init__.py,sha256=T8tG4zQiScnlFtT4RUqwAaAwy3_lzFV7Yr0nFHU3btc,110
+pipModuleTest/add.py,sha256=R_jBerFfFTLTlocXrksBoSSnxtWNRbDzsyw2QDFSIXc,33
+pipModuleTest/subtract.py,sha256=4Vk2frAInqsKgECnbES5ltGuqcleQeyhlQqjcEYji9s,33
+pipModuleTest-0.0.1.dist-info/METADATA,sha256=IELhl_PfcE0_JdQivW7HK7LYR8ssMY_gi47NCgFCz3M,557
+pipModuleTest-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pipModuleTest-0.0.1.dist-info/top_level.txt,sha256=LNlURjdUkG1yMEspoT_rkVOMek4w1otJj4sCgGlRpFc,14
+pipModuleTest-0.0.1.dist-info/RECORD,,
