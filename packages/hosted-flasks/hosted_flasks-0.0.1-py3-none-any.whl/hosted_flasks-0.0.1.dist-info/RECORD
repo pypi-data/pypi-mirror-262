@@ -1,0 +1,15 @@
+docs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docs/conf.py,sha256=11BQPtntK7yFPb15DsVOll0mFnoZA11gLQ8dPguu0Io,1149
+hosted_flasks/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+hosted_flasks/__main__.py,sha256=WB7R1QtaMHQWkJzuLCeENqpNqJYDFiBI3H_A0bsckJo,161
+hosted_flasks/frontpage.py,sha256=yt6X0xjXIes-w2FFBmLLhaBaqdOnj67z85-CQ8ksauc,476
+hosted_flasks/log_setup.py,sha256=6oVJqXou3yoVOh4Si8qjxEtT3rhYSZKCUfFWRIDKVW4,403
+hosted_flasks/scanner.py,sha256=q1rpU86lBZdv8yXJWdSOpbsj6D8cRV2pkb9_hriefZg,929
+hosted_flasks/server.py,sha256=oJCgNx4fc9RTZXHfmQ87cfIIi-GTuzaOjS9dt7nFlW0,485
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_example.py,sha256=rIW0v0_DkJf8e9BPvFr17e1zh2nQMkg2PSi7oBmNikE,942
+hosted_flasks-0.0.1.dist-info/LICENSE.txt,sha256=GraFzxI2RAdFk9zet7dqIKi89eyNv2koHN7rcCInYxw,1057
+hosted_flasks-0.0.1.dist-info/METADATA,sha256=a5dd4W2b7KN2cjhh69hpi0_8cC7biZy5udwJBcf9zxA,1673
+hosted_flasks-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hosted_flasks-0.0.1.dist-info/top_level.txt,sha256=UZ4m-xUvvxB54WxhVidpRvSQvusCFvFf6TJZvGFgdZ0,25
+hosted_flasks-0.0.1.dist-info/RECORD,,
