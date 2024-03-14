@@ -1,0 +1,12 @@
+ddlpy/__init__.py,sha256=zwrxj_yhO_VvDGJwa9H9VxrB3aUJ-Rk9l-AzBvAB6JE,732
+ddlpy/cli.py,sha256=90HAMjRpt-pIMXPjaJ1LtmhqPp2s1-WULhzNpW0F3oU,4253
+ddlpy/ddlpy.py,sha256=H9PMomyR-OFn3szvJ8xl8BBgeUpfIBt41p7-516nNns,14706
+ddlpy/endpoints.json,sha256=l63xZysC5v59BYRjqAzTPLQm7sw9BBgOKv4NYGsoYb4,6080
+ddlpy/utils.py,sha256=axWXFCEc1onRDpIxvKIjMjVe1jkGcWbZoYmBbpG-8nU,967
+ddlpy/waterinfo.py,sha256=glVFzqNrnRudGRjnvqVk0qxlAjTBYy6TRh7ARnhAnaA,6164
+rws_ddlpy-0.3.0.dist-info/LICENSE,sha256=YMIFPRl_XeAfXGJIcZJVy3O9uq8MIUFgfytUQAkAiEg,35598
+rws_ddlpy-0.3.0.dist-info/METADATA,sha256=zarQ2RfdFag5IXwaYblw1uKdorn6VzTTSXrIFTK5iis,4720
+rws_ddlpy-0.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+rws_ddlpy-0.3.0.dist-info/entry_points.txt,sha256=ZaajOkDsuyzs2zvdHqYh0_4jJdvXDodbPmTF435rAg4,40
+rws_ddlpy-0.3.0.dist-info/top_level.txt,sha256=RvdfJMjH_0bZ4ghd3_-jECFGC2jAAwu6DWWv3xvaRb0,6
+rws_ddlpy-0.3.0.dist-info/RECORD,,
