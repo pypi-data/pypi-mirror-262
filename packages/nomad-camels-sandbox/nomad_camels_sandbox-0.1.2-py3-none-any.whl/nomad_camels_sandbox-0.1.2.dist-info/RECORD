@@ -1,0 +1,15 @@
+nomad_camels_sandbox/CAMELS_sandbox.py,sha256=IMsQ5rOPVoO7iHOWd3w2NEXialzlV3OcX8cP1JA5HYo,3343
+nomad_camels_sandbox/__init.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nomad_camels_sandbox/server_signals.py,sha256=JoBsa9qqO7mqly-OsQS9eWU4_mxBSSnCMDmXJtw8TMA,7739
+nomad_camels_sandbox/digitaltwins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nomad_camels_sandbox/digitaltwins/diode.py,sha256=ZN41Nx42DkhXIPfS0yYzq40SkmZDrFuJxlC9OTUI1Ho,2956
+nomad_camels_sandbox/digitaltwins/dmm.py,sha256=9_y8KusZSjkMPrLLYTM-UEvM1QJmmXeKsYt2X4F0F8k,1847
+nomad_camels_sandbox/digitaltwins/heater.py,sha256=I3ZvL3pO-rxqNiy8whYRCtto-w8Ah8wxm7gi5pdB1Ac,4083
+nomad_camels_sandbox/digitaltwins/peltierelement.py,sha256=78L8UPlAk_GQPNibR3NzthH0KJwzlij94KCSkctmwBQ,2894
+nomad_camels_sandbox/digitaltwins/ptxxxx.py,sha256=jXu2dPPkIv82BX2A996uFyq9wyDPB2ggBRKlVkk6sac,1128
+nomad_camels_sandbox/digitaltwins/smu.py,sha256=DNgPeFj34-X3Lsc9J3Q2uGbt2uzbredR2JmtxvsLJHc,2387
+nomad_camels_sandbox-0.1.2.dist-info/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+nomad_camels_sandbox-0.1.2.dist-info/METADATA,sha256=QuLBzWA9qL5hvnSliyRN2jFtJIqzdYY38_lgE2E9_kQ,709
+nomad_camels_sandbox-0.1.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+nomad_camels_sandbox-0.1.2.dist-info/top_level.txt,sha256=EWQAkDeJ4ySuKwzyxuE87NInRmfGla2LD7FpcpwfYMc,21
+nomad_camels_sandbox-0.1.2.dist-info/RECORD,,
