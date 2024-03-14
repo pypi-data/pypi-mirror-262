@@ -1,0 +1,2 @@
+[console_scripts]
+needlehaystack.run_test = needlehaystack.run:main
