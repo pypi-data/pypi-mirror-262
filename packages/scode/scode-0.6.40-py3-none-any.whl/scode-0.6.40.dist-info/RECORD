@@ -1,0 +1,12 @@
+scode/Bell.wav,sha256=zXVFI7mEUuT2e9feir8brJe98riwdas5SRA2_HMpG0A,447552
+scode/__init__.py,sha256=qtGc7dof_5L1Xp_ciipolMqE6_Z2p7t8VW_-id21QIY,2148
+scode/dropbox.py,sha256=m1qTNOiVa5tcstlluT2-5shT2nvF95irYsIEsGSniGM,2074
+scode/paramiko.py,sha256=EOpOmuOTJ_BV2EVZ3SfSv3uJudJlT9-ldvc4_h9nRCE,2794
+scode/schedule.py,sha256=CXdBsUdRbCy23uGR2eOzKimkonKGbgA69R9HRinb4pA,750
+scode/selenium.py,sha256=7puQm4UwhsPHc6q8egJ33wt_99YVmdbppcQ3tGsoti0,46741
+scode/telegram.py,sha256=ha0Wd7HSmQPYDvRKH8eH-iPouz6H_RHfWLdRvZMl934,4291
+scode/util.py,sha256=e8IuUrpjygoj_1BcJimG_X6xbNES9Ysb5fSkkL4YPNI,16371
+scode-0.6.40.dist-info/METADATA,sha256=w5Ea7EwHhrCqWSwuTNS4a8gKn9EBr2O3IbS0zZFmS8I,4728
+scode-0.6.40.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+scode-0.6.40.dist-info/top_level.txt,sha256=0fHoCK77WQK1x4xU1jkBqqDmNsOJqpriBBhU4QVOvmU,6
+scode-0.6.40.dist-info/RECORD,,
