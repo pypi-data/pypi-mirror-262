@@ -1,0 +1,11 @@
+skyline2isocor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skyline2isocor/cli.py,sha256=kmFLFlepDRoGFE69dJMQNg3KmIwvKGdT-1IqOMbTTOA,1939
+skyline2isocor/test-data/maud_bug/isocor.tsv,sha256=wmMLSEUwM7zI5n2ZR35gMJdCOqJ9x0qGI0kl5UnyLxo,2068921
+skyline2isocor/test-data/maud_bug/PFPP_13C_POS_SK_results_LLE.csv,sha256=3FdHUDEr9sCOWWVPjv-vpLSFTMFbU-r6FKNxeXHCQSA,2166334
+skyline2isocor/test-data/output_test.tsv,sha256=UCTJyq2wuDs5SPKmghpMPmNxTuKExMlV_LkIrtX7blI,10294
+skyline2isocor/test-data/skyline_output.csv,sha256=rDLYdb6j7hFtklrV0wPTy2KX9mlXswnaXr4GPGOD_s4,17872
+skyline2isocor-0.3.0.dist-info/entry_points.txt,sha256=JjkPriSdVx5N-zmvrnhhV6YBXY2y8eCdQRDD4L7kJ1Q,63
+skyline2isocor-0.3.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+skyline2isocor-0.3.0.dist-info/METADATA,sha256=icV1V8LqgF5S_H1JkeWoK_uUazzfRW8gJOcVJ7cLjQE,604
+skyline2isocor-0.3.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+skyline2isocor-0.3.0.dist-info/RECORD,,
