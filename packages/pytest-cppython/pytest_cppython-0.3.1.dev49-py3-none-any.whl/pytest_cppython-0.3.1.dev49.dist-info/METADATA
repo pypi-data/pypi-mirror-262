@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pytest-cppython
+Version: 0.3.1.dev49
+Summary: A pytest plugin that imports CPPython testing types
+Home-page: https://github.com/Synodic-Software/Pytest-CPPython
+Author-Email: Synodic Software <contact@synodic.software>
+License: MIT
+Project-URL: Homepage, https://github.com/Synodic-Software/Pytest-CPPython
+Project-URL: Repository, https://github.com/Synodic-Software/Pytest-CPPython
+Requires-Python: >=3.12
+Requires-Dist: cppython-core>=0.4.1.dev13
+Requires-Dist: pytest-synodic>=0.0.0
+Requires-Dist: pydantic>=2.6.3
+Requires-Dist: pytest>=8.0.0
+Requires-Dist: pytest-mock>=3.12.0
+Description-Content-Type: text/markdown
+
+# Pytest-CPPython
+A pytest plugin that imports CPPython testing types
