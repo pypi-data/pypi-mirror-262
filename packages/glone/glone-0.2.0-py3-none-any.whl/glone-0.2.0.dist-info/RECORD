@@ -1,0 +1,9 @@
+glone/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+glone/cli/__init__.py,sha256=_-x92AC-YeEB6OH-KEKGPRMScfU_l04zfxceqb1jyB4,2951
+glone/cli/constants.py,sha256=wMRnQmrztQj1GxBYi7H46YgyXmn8yViD-c6XMCNs1uM,368
+glone/cli/models.py,sha256=8Kr72t4owiEnQAMVmu0J9-U-Lf0jepcwzp2XTEwg8iY,358
+glone-0.2.0.dist-info/METADATA,sha256=05K9Lrt2FVwy5G6KE0tDnccxZuFhXhe9S2tvM--Mz1U,3033
+glone-0.2.0.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+glone-0.2.0.dist-info/entry_points.txt,sha256=kskn9_E3cSTAfZRJmJOJUUw3LcZaIVbjg6MBjkNpXHQ,41
+glone-0.2.0.dist-info/licenses/LICENSE,sha256=HP2jsX27vkmd2eBFRESDHf9fPXWZCVVTmzrraWKXGkg,1071
+glone-0.2.0.dist-info/RECORD,,
