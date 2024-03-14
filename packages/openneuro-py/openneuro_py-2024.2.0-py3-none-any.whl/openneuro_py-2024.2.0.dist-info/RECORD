@@ -1,0 +1,12 @@
+openneuro/__init__.py,sha256=J6VRsx8p86Pg2kZmqo9Yp1L-pItthuyr6aYeyxgCcJI,408
+openneuro/_cli.py,sha256=3WuSQZsZPGEm2-qmu6ju44EvOsPvaL-QFPiWqBzp0MM,2705
+openneuro/_config.py,sha256=JFsCtAMtNqzILprgN1PW8KyTa-3H_tw0Mg0rIIQB8nI,2045
+openneuro/_download.py,sha256=NkUMIw_sro9MoVzzpw3KGOqTlXCVgMLDRYFiF_9iRdg,30798
+openneuro/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openneuro/tests/test_config.py,sha256=tWDK99is0eAICEKQupuIztr_gRx0whYRkl0BL_yihN8,762
+openneuro/tests/test_download.py,sha256=0KrNBXuV-DviTixu7WjKx-HFMr5IL0GS3yWFZZD9Kgg,5183
+openneuro_py-2024.2.0.dist-info/METADATA,sha256=oacCWIUUmyoTfIUUW_3gaC-KxsQudu8DRuH2ZP60qTM,43682
+openneuro_py-2024.2.0.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+openneuro_py-2024.2.0.dist-info/entry_points.txt,sha256=WH4JkZPd5TNhGfnMkaWLEZWhK4ne2AvA0-oeif8JnZc,52
+openneuro_py-2024.2.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+openneuro_py-2024.2.0.dist-info/RECORD,,
