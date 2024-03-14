@@ -1,0 +1,5 @@
+llama_index/embeddings/dashscope/__init__.py,sha256=uh3t2cgQx_Ck1EobvU_a3g2WRogdDKu1pawfvtrRjCE,408
+llama_index/embeddings/dashscope/base.py,sha256=Bt2Z6zmZF6XXlgEmxhnAoB1lyLxEdDSbpnZs5kw-Juw,10457
+llama_index_embeddings_dashscope-0.1.3.dist-info/METADATA,sha256=CqqLWQVulELLEF47LUEf9hH3M-xYvC4ZKqGda8ekm74,670
+llama_index_embeddings_dashscope-0.1.3.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+llama_index_embeddings_dashscope-0.1.3.dist-info/RECORD,,
