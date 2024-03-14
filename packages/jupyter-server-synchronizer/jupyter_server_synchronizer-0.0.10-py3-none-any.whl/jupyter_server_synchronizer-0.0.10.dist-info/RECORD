@@ -1,0 +1,13 @@
+jupyter_server_synchronizer/__init__.py,sha256=7SlTym5J4xvvs6TuQAMhdYvAk8z3uIJdSS4IyY4Byo8,139
+jupyter_server_synchronizer/_version.py,sha256=mjyB8r7a--BGiI8pvbV2qDe3IzRdeYmMYATX39h5FXE,545
+jupyter_server_synchronizer/gateway.py,sha256=-spwcXL_qhE3S3IIKGYrkE7zemM3g04jJbZ-ae7egF0,835
+jupyter_server_synchronizer/kernel_db.py,sha256=-YrytpWdUTH_9MI6d4l71T0djK24jOF903KUZOmK8U4,6492
+jupyter_server_synchronizer/kernel_records.py,sha256=RrTUKbEhHuIe55OX-NQClz8W4lwhoyhxnMdZgU6bLBc,6742
+jupyter_server_synchronizer/manager.py,sha256=GZ-bFDB7h7WONImWJ3jBfucP3vTDdmpw-DLOcrfV7cs,10755
+jupyter_server_synchronizer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jupyter_server_synchronizer/traits.py,sha256=M9AAVkBrk4Pa6Fx_Tz3PpaBbYw6cxMq2-DqyGS0d-90,435
+jupyter_server_synchronizer-0.0.10.dist-info/METADATA,sha256=vH6rbkX5x80FiMXeeAk9jqoTGIQ0p38JZ1Y9di7dwbQ,7984
+jupyter_server_synchronizer-0.0.10.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+jupyter_server_synchronizer-0.0.10.dist-info/licenses/COPYING.md,sha256=oSiCujWnw_TMGtD0Mo9p339Di4aN3Ew2pyKKzQWInhg,2833
+jupyter_server_synchronizer-0.0.10.dist-info/licenses/LICENSE,sha256=6XiTJK33r7MrG_6yzLgR5kvm0ZabAoDTVaEP7o9ZaW4,1536
+jupyter_server_synchronizer-0.0.10.dist-info/RECORD,,
