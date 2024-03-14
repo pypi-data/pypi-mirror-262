@@ -1,0 +1,2 @@
+nomad-camels>=1.0.2
+nomad-camels-sandbox>=0.1.0
