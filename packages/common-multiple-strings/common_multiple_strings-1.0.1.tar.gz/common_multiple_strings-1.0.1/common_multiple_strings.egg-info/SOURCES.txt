@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+common_multiple_strings.egg-info/PKG-INFO
+common_multiple_strings.egg-info/SOURCES.txt
+common_multiple_strings.egg-info/dependency_links.txt
+common_multiple_strings.egg-info/top_level.txt
