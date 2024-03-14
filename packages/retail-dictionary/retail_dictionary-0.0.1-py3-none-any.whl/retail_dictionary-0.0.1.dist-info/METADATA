@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: retail-dictionary
+Version: 0.0.1
+Summary: Retail Dictionary where you can find meaning of Retail terms
+Author: Marcel Tino
+Author-email: <marceltino92@gmail.com>
+Keywords: retail,retailterms,retaildictionary
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: spacy
+
+
+# retailterms
+
+A library to get definitions of Retail terms.
+
+Developed by Marcel Tino (c) 2024
+
+## Examples of How To Use the library 
+
+You can use this to alter according to your requirements
+
+```python
+from retail_dictionary import get_meanings
+
+get_meanings("bundled pricing")
+
+```
+
+
