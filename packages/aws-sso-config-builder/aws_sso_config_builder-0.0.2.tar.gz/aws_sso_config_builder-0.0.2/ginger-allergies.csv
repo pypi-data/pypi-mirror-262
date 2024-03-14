@@ -1,0 +1,316 @@
+rating_id,presentation_id,shop_id,priority,level,code,name,category,group,content_category_kind
+b9ec75db-0134-40dd-83b0-7335cd0b05c8,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,46,3,66167268370402,Beef Backstrap (grain fed),(Protein),Food,1
+1ec0d6f6-ff90-4c50-b853-f3333f2aea2f,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,51,3,294912012947630,Beef Broth (grain fed),(Protein),Food,1
+5b2d9a6c-7f08-4942-81b3-2193171a6adb,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,52,3,740554832457,Beef Cheek (grain fed),(Protein),Food,1
+005f3d52-72d7-4221-b31d-d9b226e615bd,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,57,3,1845060338713,Beef Ground Chuck (grain fed),(Protein),Food,1
+12378190-1e19-4c33-b977-0e4d79df9c2f,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,62,3,5131344440896,Beef Pancreas (grass fed),(Protein),Food,1
+925efae4-bb24-4b68-a82a-4c88a0eb182e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,64,3,980477262591,Beef Steak (grain fed),(Protein),Food,1
+65271860-33ec-43e5-96cf-b73107c74a8c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,29,3,66167277393504,Bentonite Clay,(Misc),Food,1
+bbc0c72c-783e-4727-b921-ffdeaaffec6b,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,42,3,4609455740,Bifidobacterium animalis,(Probiotic),Food,1
+57039313-9e2c-4e05-8963-7e6d0d7203ff,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,71,3,66171286397507,Bison,(Protein),Food,1
+2b6ed551-dd22-41b1-8763-408a5c20dcbc,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,72,3,5008236858023,Bison Kidney,(Protein),Food,1
+2028ae69-7281-4a93-9613-08a7d7126306,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,74,3,8868354976303,Bison Spleen,(Protein),Food,1
+caef842a-8398-4d2b-a0af-7018bdc1d3c6,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,18,3,201380,Cherries,(Fruit),Food,1
+613207ba-91b7-4530-9d1b-17ceaeb0709c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,79,3,692470863715348,Chicken Egg Shell (conventionally raised),(Protein),Food,1
+984d2af5-72c6-40c2-bccd-15ebd20c30e2,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,188,3,67184283400509,Cucumber (raw),(Veg),Food,1
+5ea2947f-9db8-4c23-b889-a246cb66c08f,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,96,3,568613152524796,Duck Feathers,(Protein),Food,1
+7fed7b00-8cab-4a21-af93-42852fe433b7,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,102,3,69178295,Emu,(Protein),Food,1
+045780c6-be48-4ac1-8b65-11cc7fdaa058,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,178,3,174232977576,Ginger Root,(Spice),Food,1
+8e3c8dbb-4413-47e4-a847-b156cd66e237,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,104,3,333217669078,Goat Heart,(Protein),Food,1
+fa4f92e7-156a-443c-bb8f-eed1f247293b,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,170,3,71185286387497,Green Lipped Mussel,(Seafood),Food,1
+40a55458-ede8-4ce4-8b85-4af467dc0682,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,171,3,72173287401506,Herring Fish (no guts),(Seafood),Food,1
+5690295b-4b6a-4c1b-ba2d-5b5e718c9469,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,19,3,2012895,Kiwi,(Fruit),Food,1
+e4fc14b2-d4b7-44d0-8e25-8e4c0c292ba2,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,14,3,75189294402510,Krill Oil,(Fat),Food,1
+fd19b9f5-aa86-46a8-bac2-c6d35499a596,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,109,3,502128213788751,Lamb Breast,(Protein),Food,1
+4d772af7-d6d7-4091-8138-16cf64939db9,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,114,3,346741614100911,Lamb Liver,(Protein),Food,1
+62473326-d0de-4c62-b855-f9d4d2097144,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,119,3,22284446430,Lamb Rib,(Protein),Food,1
+700d1a3f-3f3c-4750-9b66-ae9bc8e16e52,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,120,3,179927793403,Lamb Spleen,(Protein),Food,1
+9d36b84d-652f-4331-b098-36be10590475,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,121,3,761282269994,Lamb Testicles,(Protein),Food,1
+c765eeb1-6cff-44ca-a720-50f583b38f72,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,20,3,33632,Mango,(Fruit),Food,1
+fa211124-ff29-4cb9-a490-06d9a77d6623,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,34,3,27827,Milk Thistle,(Misc),Food,1
+61dc354b-b3c1-455e-ad49-cb2da47f83d1,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,125,3,1249149175912,Muskrat Heart,(Protein),Food,1
+2a531356-2012-498e-8f58-d167debe2430,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,126,3,28140153031784,Muskrat Liver,(Protein),Food,1
+5e92674c-678b-49a3-b8b0-c96b362e8636,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,127,3,93049875858234,Muskrat Meat,(Protein),Food,1
+5f1ba2a2-2460-435b-b1f4-0af44f48473d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,173,3,839883555121833 ,Pollock,(Seafood),Food,1
+4647da12-331a-41df-a9e7-ae2e15176e3a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,132,3,80191305412444,Pork Heart,(Protein),Food,1
+cbfd6fcf-ef7c-4850-b6a2-ae1ed0a64b9b,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,134,3,20038283043186,Pork Jowls,(Protein),Food,1
+d30715f3-7fc6-4b8b-8252-fbc67ea7af97,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,135,3,63288388447,Pork Kidney,(Protein),Food,1
+24730ffe-052f-4034-9c1f-33199f71ff3d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,136,3,66018633992420,Pork Leg (ham),(Protein),Food,1
+a4e38d57-da2d-441e-bc22-16f018c6bdcf,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,138,3,697617070314,Pork Lungs,(Protein),Food,1
+fa3b5a5f-65d4-4b16-982f-9cde25055556,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,142,3,80191306421538,Possum,(Protein),Food,1
+d9aaad6b-57b8-4237-98bd-e4e29246d7b2,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,3,3,718840993619939,Pyrodoxine,(Additive),Food,1
+4b23c0e3-cb6a-416d-be10-2c0610cb4636,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,144,3,567288258906,Quail Feathers,(Protein),Food,1
+8af4558e-e73f-42c1-bde2-6a05311981ad,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,146,3,99542225204246,Quail Wing,(Protein),Food,1
+bb2fa5b9-5fc8-495e-980d-077773013f89,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,149,3,85283144092457,Rabbit Brain,(Protein),Food,1
+2e49850a-e702-4dcf-8b2e-1a43a1da65a0,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,151,3,126663142957,Rabbit Fur,(Protein),Food,1
+dec9ea17-5faa-42f9-8b12-c8f16bdc06f6,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,179,3,8219,Rosemary Extract,(Spice),Food,1
+1b3a8d42-c002-427b-a4b5-173c114f43be,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,15,3,83180282384492,Safflower Oil,(Fat),Food,1
+96413f78-2eea-4961-98ed-321bec0785fb,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,181,3,62690976989971,Spearmint,(Spice),Food,1
+6b08294e-71a6-49fa-b007-d2f9adf17c94,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,192,3,82179298330413,Spinach (raw),(Veg),Food,1
+a0b655ea-eb24-4e54-bb95-3e98a15f6dbb,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,193,3,735025651078437,Squash (acorn) (raw),(Veg),Food,1
+6ac73adb-9c8d-4d0f-aafc-f6de51aabc17,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,194,3,498773869162,Squash (butternut) (raw),(Veg),Food,1
+d9c9c91e-b7f2-4032-9d26-f460a9ee3d05,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,195,3,5964063933128,Squash (yellow) (raw),(Veg),Food,1
+9d4a6a15-6a80-49d9-a093-a382b6289407,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,39,3,83200310412520,Sunflower Seeds,(Misc),Food,1
+e009c419-fb29-4110-82d1-2b911be0e24b,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,5,3,456214719846,Thiamine mononitrate,(Additive),Food,1
+c49a6221-cbce-4d59-9974-9a0d4ebe6fc8,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,156,3,16178414665678,Turkey Broth,(Protein),Food,1
+d3695c75-2b19-47ec-a269-a8a3e0bb0c3c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,159,3,370864997309,Turkey Liver,(Protein),Food,1
+32dcb57c-9a66-4ceb-94f9-d0e4b23fe467,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,161,3,484492605984,Turkey Skin,(Protein),Food,1
+faa17a32-c87e-451b-84df-b99e6e2ecbe5,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,182,3,84201315424525,Turmeric,(Spice),Food,1
+5fd97f5a-6012-4581-988b-20be802f8e6a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,164,3,86187297402517,Venison Bones,(Protein),Food,1
+024c8eeb-fb94-4774-80cb-2fb603b41b71,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,165,3,90028108133384,Venison Spleen,(Protein),Food,1
+5dc92101-ac50-457c-9183-f770da3403f3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,7,3,119715944285414,Vitamin D3 supplement,(Additive),Food,1
+f44dfad1-9658-48e9-97e0-9c40fcaa69a6,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,27,2,65173282393503,Almond Butter,(Misc),Food,1
+d2a00527-e264-4c99-9bdb-81efb25c3fa1,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,16,2,65177289397498,Apple,(Fruit),Food,1
+a5803c62-3099-4461-a531-7eb869362885,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,184,2,119406735940,Beans (green) (raw),(Veg),Food,1
+4ba3935c-ad1b-462b-adfa-bdd72ab188dc,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,49,2,544707160021790,Beef Bones (grain fed),(Protein),Food,1
+a26db14e-0c14-4c89-918f-5bf99e3e5794,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,50,2,843302374911,Beef Bones (grass fed),(Protein),Food,1
+00f5168b-b8f3-44e3-9329-d29691176694,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,54,2,670084038504,Beef Ear (grain fed),(Protein),Food,1
+de49177f-6dc1-460a-a99e-b675cf4e259e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,61,2,150332927053139,Beef Pancreas (grain fed),(Protein),Food,1
+7198c3c3-335d-4b66-b8b4-61a791b300fe,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,66,2,844711549723,Beef Tallow (grass fed),(Protein),Food,1
+b93df50f-5679-41df-935d-e3c3ebec1040,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,67,2,1539204940536,Beef Tendons (grain fed),(Protein),Food,1
+72e6d359-5668-4193-bbc8-f70050d3fc38,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,187,2,803979059187,Chard (raw),(Veg),Food,1
+d18ce87f-3785-4083-a6f3-b03f56aed53e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,75,2,40120234345461,Chicken Bone Broth,(Protein),Food,1
+6f55adf1-2f10-4a23-bbea-2d51a83ddda3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,77,2,516140200111923,Chicken Breast (conventionally raised),(Protein),Food,1
+5d1d6145-bf1c-48db-a465-5c451fbfea84,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,78,2,5141297903116,Chicken Cartilage,(Protein),Food,1
+2171d996-102d-45c8-b162-76d50e1050d7,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,80,2,108908982326,Chicken Egg Shell (free range),(Protein),Food,1
+b26ba85a-6d76-40cd-975c-7892a71b0a21,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,84,2,488019166674993,Chicken Feathers,(Protein),Food,1
+4bd4f44a-e773-46f2-abb1-3620c4703f7c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,85,2,260692013126338,Chicken Gizzard (conventionally raised),(Protein),Food,1
+7140dd59-fe84-4b05-a281-868266e35552,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,86,2,99035698679271,Chicken Gizzard (free range),(Protein),Food,1
+5fa9816c-b84a-4cfe-88c2-40c66468273d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,89,2,40719610682709,Chicken Liver (conventionally raised),(Protein),Food,1
+1d7cbd60-5282-4fd7-a74c-1b18188bf3a3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,90,2,6203076896617,Chicken Liver (free range),(Protein),Food,1
+a788521a-4a20-45fa-9ed8-467becc7adb8,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,93,2,54041501382,Chicken Thigh (free range),(Protein),Food,1
+b18fe282-ecda-46c0-83c8-898492345e18,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,166,2,201952,Cod,(Seafood),Food,1
+171634f3-b146-4bba-afa4-22662983f514,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,43,2,82260387716235,Dried Bacillus coagulans Fermentation Prod.,(Probiotic),Food,1
+f70be780-6168-4654-aa16-06af7a2f2806,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,97,2,4030947640391,Duck Hearts,(Protein),Food,1
+b2ccd6c4-4e19-4310-b3a2-e8166c8a2f12,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,98,2,17371383553659,Duck Liver,(Protein),Food,1
+056a08a6-5184-4c7f-9899-36667b25519b,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,100,2,56538276499686,Duck Wing,(Protein),Food,1
+9ebf7946-4907-4446-acad-188dc004dc9d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,11,2,69178295327406,Emu Oil,(Fat),Food,1
+5ed5c35b-8d33-48ed-afef-fcf684a8c030,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,169,2,2384328060585,Eviscerated Whitefish,(Seafood),Food,1
+4cb6e141-6b91-40e7-97b0-e2fcdb061aec,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,31,2,71179296395506,Glucosamine,(Misc),Food,1
+f37aa536-95af-44d1-a5d7-5372c207fc02,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,105,2,5354531117388,Goat Pancreas,(Protein),Food,1
+e1e4e6c2-24f0-437f-9790-7c454b3b79e2,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,183,2,2011086,Honey,(Sweetener),Food,1
+b40cc9bf-7590-4dcf-90f6-b67316780c4a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,10,2,75176278383497,Kefir,(Dairy),Food,1
+2b9e8c20-067f-4810-b6e9-76f44dc0d17d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,32,2,75176284396,Kelp,(Misc),Food,1
+980b298a-5a91-42fc-8991-0d729ea146f2,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,110,2,36860929684488,Lamb Cartilage,(Protein),Food,1
+be9ff74a-9b3a-47cc-837f-8072bd52070d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,111,2,994214230900499,Lamb Chops,(Protein),Food,1
+5dd72c94-6d30-491e-bb93-ac3e5f676a44,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,112,2,26171625096,Lamb Hearts,(Protein),Food,1
+0aaba777-9004-4679-9718-5225f5ddc00e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,113,2,6103468780540,Lamb Leg,(Protein),Food,1
+3d1120f1-27a1-48f2-ba21-a2854212ab2c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,115,2,22898912187021,Lamb Loin,(Protein),Food,1
+6d4ed12e-6d24-465e-9a37-244e45039a74,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,116,2,8923656581222,Lamb Lung,(Protein),Food,1
+235574f4-4468-4bd9-b685-4c7e2ca6307d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,118,2,68207056204670,Lamb Pancreas,(Protein),Food,1
+09635287-d402-4859-896d-f81d5baa76ea,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,190,2,509998339534934,Lettuce (raw),(Veg),Food,1
+7787d6d5-9ab0-4ce1-aba8-d716a4190f6a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,172,2,1901322879242,Minnows,(Seafood),Food,1
+36f9c00c-3c72-4316-8c00-41fd2352ef22,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,35,2,022885948375457,Montmorillonite Clay,(Misc),Food,1
+ed7f1415-acea-4e76-96a0-21cbc54a6e6e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,124,2,77194309416530,Muskrat Bones,(Protein),Food,1
+6aaa0cfa-d872-4f49-a1e8-a65f69ee33ea,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,21,2,201338,Oranges,(Fruit),Food,1
+5af16cdc-aee3-40fa-8e68-62c81a69957e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,22,2,20102322,Papaya,(Fruit),Food,1
+133b4859-2601-4043-ad2b-98476ff6360c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,24,2,2011366,Pineapples,(Fruit),Food,1
+98a7fbce-8386-413f-82e7-6b77f09fee39,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,133,2,359884207450776,Pork Hock,(Protein),Food,1
+9d02821b-5d46-4077-a98c-52f51990b1a7,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,139,2,831488553034002,Pork Shoulder,(Protein),Food,1
+f2c6a254-1b22-4150-8978-7d53e76c6baf,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,143,2,81198295400508,Quail Bones,(Protein),Food,1
+f87c7e04-e73b-4646-b9bf-f4f4052805df,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,145,2,73486243731813,Quail Feet,(Protein),Food,1
+a5e3995a-6a2a-4a4f-97f8-c527c7786286,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,147,2,773470305220,Rabbit,(Protein),Food,1
+12addcf0-3e0b-4857-9ffd-272584eb5862,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,148,2,82179277375480,Rabbit Bones,(Protein),Food,1
+4480096e-2769-4ea0-b7c4-b498d033df28,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,152,2,249350344382524,Rabbit Kidney,(Protein),Food,1
+bab19667-e535-498c-8565-4b4600651122,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,153,2,82179278389500,Racoon,(Protein),Food,1
+25138f52-fbfa-48c5-9254-efe12afb84a8,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,25,2,201153,Raspberries,(Fruit),Food,1
+2892ec35-1659-441b-bd35-9448fc1cd058,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,174,2,82183283315398,Red Snapper,(Seafood),Food,1
+38c988ff-cc9b-40bf-84d3-ddda2f423519,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,4,2,2240677857204,Sodium Phosphate,(Additive),Food,1
+03c62ff8-9758-4b95-8a1b-619bcc600a89,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,162,2,86187284392,Veal,(Protein),Food,1
+2275e5b7-b127-4d92-a859-83cc2a47b7e8,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,163,2,898859853367,Venison,(Protein),Food,1
+375d7e25-da70-4681-b860-6d8a3e319f70,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,8,2,771673763795,Zinc proteinate,(Additive),Food,1
+9ba0be59-5709-45c0-a586-75c99276900c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,28,1,66163278383491,Basil Powder,(Misc),Food,1
+a3550067-a2bf-476a-bc20-03f450c7254a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,47,1,8446068806722,Beef Backstrap (grass fed),(Protein),Food,1
+ea979eb9-3dc9-4717-b2df-85aa264e9116,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,48,1,40120234345461,Beef Bone Broth,(Protein),Food,1
+c5fbf3d6-3b4f-42a9-92a1-8a12d7db9cb9,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,53,1,330964953921,Beef Cheek (grass fed),(Protein),Food,1
+39b47048-f5a5-4a97-8942-b64c594b1f95,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,55,1,611393313336875,Beef Green Tripe (grass fed),(Protein),Food,1
+1d8539f5-1a8a-43de-a07a-354b27ba88a3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,56,1,20675212669879,Beef Ground (grass fed),(Protein),Food,1
+fbb8c2cb-00ad-4c67-a487-12000e025439,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,58,1,38043123525126,Beef Heart (grain fed),(Protein),Food,1
+14c9877b-4fc0-488b-bada-b8ab4324aa5d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,59,1,778520200797,Beef Kidney (grain fed),(Protein),Food,1
+232121a3-ee1f-4ddd-bf80-7702f08dbf1f,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,60,1,977823194036,Beef Kidney (grass fed),(Protein),Food,1
+4855ebbb-e83e-4050-b358-c791ccb5ce0c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,63,1,4928048169183,Beef Spleen (grass fed),(Protein),Food,1
+95a97ee7-0071-4d57-b370-cb4d0cd54c70,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,65,1,837348970089,Beef Steak (grass fed),(Protein),Food,1
+6e4a269a-6d3d-481f-8d5f-f5393b2fb782,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,68,1,9443256051910,Beef Tendons (grass fed),(Protein),Food,1
+b24faf37-2b27-4d14-ba6d-4de773a64f58,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,69,1,759508543539,Beef Tongue (grain fed),(Protein),Food,1
+fb8202f9-aff3-4233-ab2c-801907af5658,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,70,1,3695219222240,Beef Uterus (grain fed),(Protein),Food,1
+36cdec6d-54a2-46e8-9d58-e608315b6da3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,185,1,90723066682,Beets (raw),(Veg),Food,1
+9245aca6-e7e8-4259-8f3f-3046de060856,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,73,1,40233890705,Bison Liver,(Protein),Food,1
+6f74ffa2-321c-4704-87a8-2d44c12f197b,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,9,1,82179298330397,Bovine Colostrum,(Dairy),Food,1
+690cec0f-31e9-44cf-a4da-06ce9b524dc0,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,186,1,81129252113210,Broccoli (raw),(Veg),Food,1
+ac5544b6-8db5-47bc-96f9-aa6a71a7c3e4,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,17,1,67164274371487,Cantaloupe,(Fruit),Food,1
+93f2e420-5d44-42bb-afca-9ad76b63a478,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,30,1,67171276373405,Chia Seeds,(Misc),Food,1
+912edae1-ca42-439e-8101-3bf4acbfea77,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,76,1,67171276375482,Chicken Bones (conventionally raised),(Protein),Food,1
+fc1b57b7-ae83-4d35-b6f3-d21feb9376be,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,81,1,400124290278359,Chicken Egg White (conventionally raised),(Protein),Food,1
+98fc8c89-debe-48f9-93c7-cbc853936af7,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,82,1,3182066487000,Chicken Egg Yolk (conventionally raised),(Protein),Food,1
+ee6ce8cd-77df-4a8a-a23e-e54b2e461d1b,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,83,1,80132728506850,Chicken Egg Yolk (free range),(Protein),Food,1
+d99aceaa-3f36-4919-b980-14838b33ee0c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,87,1,452931180081,Chicken Heart (conventionally raised),(Protein),Food,1
+534fe1dd-a1c6-4d31-9454-76615d9a3017,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,88,1,141319882947,Chicken Heart (free range),(Protein),Food,1
+163c317c-12cf-4f09-befa-ed091c2944f6,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,91,1,47698812969528,Chicken Necks (conventionally raised),(Protein),Food,1
+7a820da0-fa0f-489a-a687-e9dca81942e9,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,92,1,9672893393941,Chicken Necks (free range),(Protein),Food,1
+6582445d-11fa-4f01-a356-abea88468032,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,94,1,26108928261511,Chicken Wing (conventionally raised),(Protein),Food,1
+b45f5c21-c280-4bcf-accb-bec497aff22e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,177,1,201391,Cinnamon,(Spice),Food,1
+15dabf24-5e61-46cd-a8c1-d88cc5f6ade4,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,1,1,5983327889470,Copper proteinate,(Additive),Food,1
+611afcd8-9274-4653-b882-76acc1fa9c9c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,95,1,67178292402507,Cornish Game Hen,(Protein),Food,1
+f606b839-cef5-4a14-a087-1f688622aee6,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,167,1,67181278376,Crab,(Seafood),Food,1
+6afd264c-0a85-4c73-abef-530095e1896a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,44,1,375833194343165,Dried Lactobacillus acidophilus Fermentation Prod.,(Probiotic),Food,1
+854396de-4ae6-4706-ba36-d374ee27c46a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,99,1,583985243405784,Duck Neck,(Protein),Food,1
+9e9c0c05-c530-420a-9150-20fb051c9caa,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,101,1,69177284,Elk,(Protein),Food,1
+8efad897-9d65-43f7-9a94-0b4f19f3d9d3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,168,1,69187292407506,Eviscerated Trout,(Seafood),Food,1
+1ebcc89e-4973-48c0-af20-371283cf9415,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,12,1,70178275395510,Flaxseed Oil,(Fat),Food,1
+e6f1d72f-0119-4a3a-9dd0-354669e68b21,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,103,1,71182279395,Goat,(Protein),Food,1
+be7c3694-d9e0-443e-be3f-f1a2eff858ce,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,106,1,488388296109,Goat Spleen,(Protein),Food,1
+a26f3935-3f5f-4d28-a2e9-b8f72f9207e4,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,107,1,52147887127,Goat Tail,(Protein),Food,1
+742a092e-b3ed-4d7a-ab4c-a986fe9ee15b,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,108,1,67590418542198,Goat Testicles,(Protein),Food,1
+f6121770-a6d4-4cfe-b932-23fc8d038455,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,189,1,236313066073,Greens (dandelion) (raw),(Veg),Food,1
+423d2a3a-0a19-4168-8e42-5bd12f1637f0,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,13,1,72173282394426,Hemp Seed Oil,(Fat),Food,1
+378873c0-f9a7-4061-b427-b2818d68f967,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,2,1,405089132991353,Iron protenaite,(Additive),Food,1
+f12ffc17-521a-46c8-9022-71774c5878be,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,117,1,7866956935786,Lamb Neck,(Protein),Food,1
+e27a6676-4261-44f5-88b7-006bdca0b263,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,122,1,790295982053102,Lamb Trachea,(Protein),Food,1
+42220a60-522f-48e4-9892-e06cc4e6749f,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,123,1,42413962880922,Lamb Tripe,(Protein),Food,1
+93f710bd-21ca-4a2a-aef9-240130ecf347,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,33,1,65173282393503,Milk (almond),(Misc),Food,1
+2273ea31-ad9b-4c25-9b83-4ac46ab0f234,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,128,1,79194310424529,Ostrich,(Protein),Food,1
+81bbf18b-0462-47f6-b3dd-69cb1e58c0d9,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,23,1,201444,Peaches,(Fruit),Food,1
+341c8e4f-eb28-4800-9bc3-03fe24a73162,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,191,1,591352794357350,Peas (green) (raw),(Veg),Food,1
+89d003cf-f856-4ce1-9d53-a373ab4714df,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,45,1,7749143268457,Pediococcus acidilactici Fermentation Prod.,(Probiotic),Food,1
+9563ac2c-77e8-4cdf-b084-a01ff56aeb7f,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,129,1,40120234345461,Pigs Feet,(Protein),Food,1
+a345dfec-e70b-47f0-9238-00544477f21a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,130,1,323925020486,Pigs Tail,(Protein),Food,1
+3c8874ac-0e16-44aa-85b9-29b32e0daeb7,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,131,1,255914527460435,Pork Butt,(Protein),Food,1
+362bfc6b-68b4-4061-b47b-dc079c1db90c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,137,1,380678723184352,Pork Liver,(Protein),Food,1
+75e599d5-2e84-4d36-9634-456990a25788,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,140,1,692222836610,Pork Sirloin,(Protein),Food,1
+db1390fd-343d-4097-bf87-6e9ec6d54d9c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,141,1,363726300063,Pork Snout,(Protein),Food,1
+4135ab2f-25a3-4fb1-b53d-88a8319314d0,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,150,1,435787506114,Rabbit Eyeball,(Protein),Food,1
+e61ce159-c10e-4a33-b1fe-df46a81e8694,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,180,1,83184281313396,Sea Salt,(Spice),Food,1
+e8884840-bd6e-48eb-9fa1-5ea3f2f86251,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,36,1,27075,Seaweed,(Misc),Food,1
+8b68e246-5cb7-46ed-b220-9ecb6419cb39,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,175,1,2019981,Shrimp,(Seafood),Food,1
+cea63c4f-7beb-48a8-8b84-dff972773ffa,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,37,1,83191296408520,Slippery Elm Bark Powder,(Misc),Food,1
+f8df8cd3-bfc4-41ef-bf63-dd7d127124d4,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,38,1,83195300414531,Spirulina,(Misc),Food,1
+a82d3812-ed7d-4745-ba61-401b13e6cddc,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,26,1,201456,Strawberries,(Fruit),Food,1
+9877c598-88b2-4451-8671-ad9d343a6e33,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,176,1,84189297394506,Tilapia,(Seafood),Food,1
+6fe52eb6-b9c8-44e7-853d-e955c2ce2ee6,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,154,1,84201315422523,Turkey Bones,(Protein),Food,1
+df197bd1-81e2-41f0-81c0-35efbaea3c3c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,155,1,1220224048093,Turkey Breast,(Protein),Food,1
+e6fad102-3be1-4716-9684-0b116d6be42b,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,157,1,361007032441,Turkey Gizzard,(Protein),Food,1
+65b1d474-779c-4b05-b503-dd2af1ba5277,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,158,1,117787527211,Turkey Leg,(Protein),Food,1
+52c16399-8653-4c0f-bcb2-24b223a59fe7,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,160,1,6321380969829,Turkey Neck,(Protein),Food,1
+d9fbbcc2-7281-4b94-8739-a3d0f6be3eaf,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,40,1,829448203344,Vegetable Stock,(Misc),Food,1
+c4d7cd60-ec5b-4366-93f0-cb1c0e5e494e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,6,1,621312339508,Vitamin A supplement,(Additive),Food,1
+503f7dd6-180e-4fdc-ac71-4a753dc28aba,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,41,1,87191296412513,White Willow Powder,(Misc),Food,1
+77ee32e3-9ca4-462c-928f-4ed70dd104bd,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,239,0,,Alligator,(Protein),Food,1
+fe14fa57-c5dc-4cbe-8d25-8f5dcedcefad,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,196,0,,Apricot,(Fruit),Food,1
+46dab62e-5bcd-4801-ba04-96c48d41c851,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,271,0,,Bananas,(Fruit),Food,1
+8e76d87e-5c43-4f2e-b125-ae95b7b8b4ab,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,277,0,,Beef Broth (grass fed),(Protein),Food,1
+f2e9702d-6297-42e0-8099-948cce89a697,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,197,0,,Beef Ear (grass fed),(Protein),Food,1
+95729af8-3528-4d76-8c4b-7d625fba8d4b,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,216,0,,Beef Green Tripe (grain fed),(Protein),Food,1
+bbe865df-edf9-4e51-9c8b-811b30fd94e9,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,281,0,,Beef Ground (grain fed),(Protein),Food,1
+1032003a-4fb1-43fb-80ac-2ae9ac8eaed9,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,266,0,,Beef Ground Chuck (grass fed),(Protein),Food,1
+145fc564-7316-41d2-a153-eace911210a4,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,249,0,,Beef Gullet (grain fed),(Protein),Food,1
+261c3f19-eaf7-429f-b5be-d583fa6740e9,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,237,0,,Beef Gullet (grass fed),(Protein),Food,1
+89c10e4e-af5d-4774-92ad-18a5bfe6b389,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,240,0,,Beef Heart (grass fed),(Protein),Food,1
+8b81cd31-e135-41c7-a08e-2da6cad1e2b9,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,217,0,,Beef Liver (grain fed),(Protein),Food,1
+af65e720-05f3-4e01-b3a9-2f1505705fce,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,291,0,,Beef Liver (grass fed),(Protein),Food,1
+1393ef9d-0daa-49ea-9270-7d9b44e81fe5,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,297,0,,Beef Lung (grain fed),(Protein),Food,1
+9a808e1e-9fc2-4d12-8fd0-2e0e344ceeae,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,311,0,,Beef Lung (grass fed),(Protein),Food,1
+35531b79-a13e-47be-a3e5-27220260a2aa,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,274,0,,Beef Marrow (grain fed),(Protein),Food,1
+61bf9d8e-4a60-45fb-a3e6-3314e40ece5c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,215,0,,Beef Marrow (grass fed),(Protein),Food,1
+e1b5b790-20b9-4426-8a03-d7b23ee1eef3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,306,0,,Beef Spleen (grain fed),(Protein),Food,1
+93926a31-afa3-49e1-8cd6-29d43bc96ed6,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,309,0,,Beef Tallow (grain fed),(Protein),Food,1
+4a2708a9-c042-47e3-be3c-16c46b1d4627,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,219,0,,Beef Tongue (grass fed),(Protein),Food,1
+fa2694fc-e805-4877-a10c-08971605f23f,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,250,0,,Beef Trachea (grain fed),(Protein),Food,1
+ca24fb28-fcfc-4249-b089-63e4c908e046,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,270,0,,Beef Trachea (grass fed),(Protein),Food,1
+70057a90-ff7d-4b5c-aa9d-c86406963eef,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,245,0,,Beef Tripe (grain fed),(Protein),Food,1
+c6eec324-95f3-48a1-9ee8-fd3401ed6197,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,238,0,,Beef Tripe (grass fed),(Protein),Food,1
+6cf5afa0-7e6f-4efe-8c77-6fed2a77009a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,241,0,,Beef Uterus (grass fed),(Protein),Food,1
+22ee7989-e5c7-4d09-b44e-eae5fedf02dc,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,264,0,,Bifidobacterium longum,(Probiotic),Food,1
+09bcd700-812d-4499-ace0-6a146392317d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,263,0,,Bison Bones,(Protein),Food,1
+049f84c6-608e-446d-b3e2-d4dd024ea52f,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,276,0,,Bison Green Tripe,(Protein),Food,1
+108f4529-92be-4b5c-bcd4-eff3ef6ff362,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,201,0,,Bison Spinal Cord,(Protein),Food,1
+7edde9b1-8000-48f9-8a9b-58e910ff137a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,251,0,,Black Walnut Hull Powder,(Misc),Food,1
+fe5c43c0-0c20-47bc-9b08-9fffb4218d69,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,315,0,,Blackberries,(Fruit),Food,1
+baec5abb-fbc6-45bc-ab98-d77e742fbd7a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,287,0,,Bok Choy (raw),(Veg),Food,1
+4ec94fd1-65d0-41aa-af4e-b2eb336d6184,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,231,0,,Burdock Root,(Misc),Food,1
+b3757dd3-e2a1-4444-84f4-37ee1f76d45c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,302,0,,Cabbage (raw),(Veg),Food,1
+f6d924a1-b8f4-4cff-8064-e3d7c5716b1d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,305,0,,Carrots (raw),(Veg),Food,1
+44e7c0b1-7a9e-48e4-ba28-e2de57da247a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,203,0,,Catfish,(Seafood),Food,1
+f54f00e7-55e4-4e43-a005-1612942cd944,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,223,0,,Cauliflower (raw),(Veg),Food,1
+ab2db032-6d77-415e-9db7-7e41c237d29a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,227,0,,Chicken Bones (free range),(Protein),Food,1
+74f97c96-7ecb-4eb0-890c-e85e88594f6c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,209,0,,Chicken Breast (free range),(Protein),Food,1
+66db2ac8-e664-4de1-936f-ec83fed6fe5b,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,206,0,,Chicken Drumstick (conventionally raised),(Protein),Food,1
+8210099b-45d9-4d47-a9e9-62782f7a5bb8,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,310,0,,Chicken Drumstick (free range),(Protein),Food,1
+867adb2c-f13a-49a6-a75d-605098bf6222,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,235,0,,Chicken Egg White (free range),(Protein),Food,1
+7b59d0c7-a5d6-49bf-a153-9008bf61b3b4,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,224,0,,Chicken Feet (conventionally raised),(Protein),Food,1
+4156b0e7-c66e-4d79-82a3-29102b694e11,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,299,0,,Chicken Feet (free range),(Protein),Food,1
+23d1a7e8-fb2a-48f2-901a-0cabf4ec57c1,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,204,0,,Chicken Skin (conventionally raised),(Protein),Food,1
+c13e7d33-d4fc-4010-9048-e9d072281177,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,243,0,,Chicken Skin (free range),(Protein),Food,1
+affe005c-2ea0-4212-8cd7-2052581ad9f2,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,269,0,,Chicken Thigh (conventionally raised),(Protein),Food,1
+5c90dd5e-3fb4-4405-ba5b-9abdb7a9648a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,292,0,,Chicken Wing (free range),(Protein),Food,1
+90bfcb9d-dc81-4a2b-812f-0004f6c323d1,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,300,0,,Chicory Root,(Misc),Food,1
+3254bcca-72cb-4823-8dfa-1bfe17ffcfe5,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,268,0,,Chlorella,(Misc),Food,1
+b3863980-bc51-4fc0-ac9b-6b52aebc5128,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,282,0,,Chondroitin,(Misc),Food,1
+42bbf7c4-8e1f-44c2-ba49-acddfaefa474,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,205,0,,Coconut,(Fruit),Food,1
+fc14104b-082a-4a86-b27c-cef8fabb84c3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,273,0,,Crocodile,(Protein),Food,1
+ae0e8a8a-b8a5-4ccc-baa8-d54e12be4c5d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,283,0,,Dandelion Root Powder,(Misc),Food,1
+6953607e-f3e7-45d6-b4e4-4155ef4daef3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,261,0,,D-calcium pantothenate,(Additive),Food,1
+610d84d8-2dc8-444c-8d1a-ee780eb77947,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,199,0,,Dried Lactobacillus casei Fermentation Prod.,(Probiotic),Food,1
+12625572-48aa-4c4c-88ca-1774b49252cb,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,248,0,,Duck Bones,(Protein),Food,1
+7f8d9208-669f-43af-9e62-06e13c1b45e2,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,298,0,,Duck Breast,(Protein),Food,1
+eaf8b084-f125-4c87-ac0b-7e89e401081c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,280,0,,Duck Egg,(Protein),Food,1
+3f0074b2-2236-49b7-a2b5-0d601ba4c521,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,278,0,,Duck Feet,(Protein),Food,1
+8888fc1f-2671-4245-b17b-72a6ccb8381a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,262,0,,Duck Giblets,(Protein),Food,1
+8a12726e-4102-447f-8fb3-e46030267ec4,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,258,0,,Duck Leg,(Protein),Food,1
+90c9022f-eeca-4be7-a763-eb2dde9e5818,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,288,0,,Figs,(Fruit),Food,1
+e269ec09-20d0-4e05-8b32-d2754fc032e6,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,312,0,,Flounder,(Seafood),Food,1
+3df06b6b-1e56-48ae-b1be-cde5da477d48,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,242,0,,Goat Bones,(Protein),Food,1
+5a21c7f6-00f6-4f84-8660-d07ee2888ea3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,208,0,,Goat Lung,(Protein),Food,1
+6997b37e-a0b4-40a8-a65b-970288a87d04,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,200,0,,Goat Tongue,(Protein),Food,1
+5bb2801a-17cc-4397-a546-6e795cd12319,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,289,0,,Goat Trachea,(Protein),Food,1
+595d7981-aa54-44a1-b82a-441ece286a38,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,207,0,,Goose,(Protein),Food,1
+0c883190-d739-4551-aad2-932e5c33693e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,259,0,,Grapefruit,(Fruit),Food,1
+b525ff39-f65a-412f-8c0e-fc7a749cab1f,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,272,0,,Hoki,(Seafood),Food,1
+98c05164-ffac-4101-bae4-6f195622d27c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,256,0,,Honeydew Melon,(Fruit),Food,1
+983f17fd-da98-4389-bfa6-0e9131d4b78e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,212,0,,Kale (raw),(Veg),Food,1
+7393e0b6-8a4e-41d9-a0c4-95f4c988a476,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,225,0,,Lamb Bones,(Protein),Food,1
+08011737-6b78-4b42-87dc-9588634ed821,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,253,0,,Lamb Flank,(Protein),Food,1
+46cdd90b-0e0e-4c21-a17e-a36dd84e8318,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,198,0,,Lamb Kidney,(Protein),Food,1
+60c5b62d-cced-45ab-b758-d117875c962c,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,210,0,,Lamb Shoulder,(Protein),Food,1
+1b2cdcf4-ce51-4256-98c1-49c2dc95a6a8,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,236,0,,Lamb Tongues,(Protein),Food,1
+99007a26-5a6c-48d0-94bf-5f53b2c64467,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,229,0,,L-carnitine,(Additive),Food,1
+69768c53-714b-454c-bfd0-12f6e4cf5e64,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,230,0,,Milk (goat),(Dairy),Food,1
+dfb1eca1-e61b-417e-a015-893a03cb231e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,234,0,,Milk (sheep),(Dairy),Food,1
+b0f240d7-a4a3-44be-883d-7188cab9d203,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,246,0,,Moose,(Protein),Food,1
+fc9e7559-6152-443a-b8a7-3f289bf76941,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,252,0,,Pantothenic acid,(Additive),Food,1
+feefc2aa-5373-420f-ad32-37b7dffa28b6,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,254,0,,Pears,(Fruit),Food,1
+2b0d3d3f-b848-41b0-8b26-593bcc52853a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,226,0,,Pigs Knuckles,(Protein),Food,1
+37dea779-485f-4a5f-adbc-cb8ab5d66610,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,233,0,,Pork Belly,(Protein),Food,1
+41744f57-60cf-420a-a3a0-c33b44597a78,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,295,0,,Pork Bones,(Protein),Food,1
+185e4f7d-7f46-43b1-b696-8792b77b2be7,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,307,0,,Pork Chop,(Protein),Food,1
+78e30aec-ac62-41be-86eb-51ce8ae5d8e4,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,296,0,,Pork Intestines,(Protein),Food,1
+cc991265-bc02-4cef-bc93-c6271069eb43,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,214,0,,Pork Loin,(Protein),Food,1
+c0656aa5-15ca-467d-968b-b3d1f200f70e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,267,0,,Pork Picnic Ham,(Protein),Food,1
+ad16b89c-c18f-465e-8ea8-fd0e8dcd409f,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,228,0,,Pumpkin (raw),(Veg),Food,1
+f1590978-c83f-466e-a636-34c1234d1651,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,286,0,,Pumpkin Seed,(Misc),Food,1
+7f800834-f0ed-4df0-b69e-fd1fc2476247,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,247,0,,Quail Breast,(Protein),Food,1
+7cd7e98c-0ce5-4e2f-a290-110476128469,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,222,0,,Quail Egg,(Protein),Food,1
+43867d1c-149c-43a4-accc-71b8200363f7,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,232,0,,Rabbit Heart,(Protein),Food,1
+a4f44749-f081-4f84-8de1-dc50a8076dda,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,308,0,,Rabbit Liver,(Protein),Food,1
+fc67a976-2f5c-49bf-8c26-becad43815b1,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,244,0,,Rabbit Lungs,(Protein),Food,1
+470c1f99-3b1c-403d-a24a-486f3d25135d,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,290,0,,Rabbit Tongue,(Protein),Food,1
+949d44c3-19f5-4fa3-81a4-27d981c9f19e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,293,0,,Raw Cow Kefir,(Dairy),Food,1
+656790ce-c6c4-4da1-a561-02a985a8ddb1,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,257,0,,Red Quinoa,(Grain),Food,1
+7d8f1e53-c530-4780-a911-60de44363c90,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,221,0,,Rhubarb (raw),(Veg),Food,1
+5f1f3ed3-5d54-48b8-b130-43a7195cdbfe,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,313,0,,Salmon (no bones or skin),(Seafood),Food,1
+83ccd53b-f008-4d13-a650-bbac043555fd,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,218,0,,Sauerkraut (raw),(Veg),Food,1
+4b64fcc5-3d94-40fa-9316-1a206918699e,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,260,0,,Sea Kelp Powder,(Misc),Food,1
+c2ff46cf-2c8e-40c2-87bd-e55b981183f3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,265,0,,Squash (zucchini) (raw),(Veg),Food,1
+01e5090b-c2f6-49ef-bb66-cfb32c1af450,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,213,0,,Squid,(Seafood),Food,1
+e84cdcf1-1a38-4177-8eb9-dc718a22d392,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,255,0,,Tomato,(Fruit),Food,1
+e92634f5-589f-4565-823e-260611b0e3d9,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,284,0,,Tricalcium phosphate,(Additive),Food,1
+17d82c29-0294-4e2c-8ff1-d89f40729d18,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,279,0,,Turkey Feathers,(Protein),Food,1
+8f01ffc0-a20f-41b9-a2ff-591afe5d4921,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,285,0,,Turkey Heart,(Protein),Food,1
+c1e826d4-c97d-43cb-87c0-34bdf6676045,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,314,0,,Turkey Kidney,(Protein),Food,1
+f1cfeca0-375a-4999-9ef5-533e940c0268,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,304,0,,Turkey Wing,(Protein),Food,1
+549fdc43-e197-448f-aee5-17c20fb2c342,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,294,0,,Venison Liver,(Protein),Food,1
+b373d089-9ee2-4c5b-a241-ba24652fdbf9,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,202,0,,Venison Lung,(Protein),Food,1
+3413d463-0c20-4a26-a1c5-6e9c6716cfec,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,220,0,,Vitamin B12 supplement,(Additive),Food,1
+2783313c-f177-4744-b016-aab40e6dc64a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,275,0,,Vitamin E supplement,(Additive),Food,1
+ce389446-9ef0-4086-9c60-ac553629343a,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,303,0,,Watermelons,(Fruit),Food,1
+bacffc66-9714-4f4e-b03f-e7d3b6c5ecf3,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,211,0,,Zeolite,(Misc),Food,1
+b16a8530-5b78-4fc0-970f-d01f7eba4103,7f6e05ca-6280-41dc-af03-acdbd2fde19d,a1a88e09-9fa2-496f-be87-97b7452a7bb1,301,0,,Zinc amino acid,(Additive),Food,1
