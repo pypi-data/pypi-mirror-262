@@ -1,0 +1,11 @@
+argolid-0.0.5.dist-info/RECORD,,
+argolid-0.0.5.dist-info/LICENSE,sha256=Fg4kOwqZrHdNpYuaPay-zI5aNJNXmBfi8ev4u0eytdo,1064
+argolid-0.0.5.dist-info/WHEEL,sha256=eaDTbMedWofVq8IZjew9qeAkoA5Sw2MOU2ppdIRr1Jg,110
+argolid-0.0.5.dist-info/top_level.txt,sha256=pjCWdXMo-MKwmBJQ9NBfN4bsO9S4tHScl5ZMDAnvd88,27
+argolid-0.0.5.dist-info/METADATA,sha256=LQb7ywO_Y1rFr0H9qIAiJr5GOnnFfa5L9ISP_rHaZiY,2760
+argolid/_version.py,sha256=7B5Cc0vASbS-Z9BmMc1k0KErtdww9zqOSJYCz5AqWMg,497
+argolid/__init__.py,sha256=7NzMlEgCyTSqHC-TDDzi2CrVGEeLdpl5nKPLVKz7wuw,122
+argolid/libargolid.cpython-311-darwin.so,sha256=T8v6xliwMu56XFKFMGY7IIBGET0itqPVSJAeDjSKgQ4,25941824
+argolid/pyramid_generator.py,sha256=FrbkGHFSypykCvhCz8Jx4_WjkS9LOEgSce3QCNuE4X8,1269
+argolid/.dylibs/libfilepattern.2.dylib,sha256=2wOeOsgKk_nu8mqLPHgumvoUxGqQUE7weRlOrUTlud0,3427616
+argolid/.dylibs/libjpeg.8.3.2.dylib,sha256=OKyrW50a-Wo_DiVxwaYBMhmo02MYFX5VXCo-0zuwffc,472752
