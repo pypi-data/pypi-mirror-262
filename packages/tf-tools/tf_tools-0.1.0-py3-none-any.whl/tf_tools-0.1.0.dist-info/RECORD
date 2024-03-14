@@ -1,0 +1,10 @@
+tf_tools/__init__.py,sha256=9FbQO8fLCFlqkxWsfVPWZ7D0hBy_7KaZa0nnLBGdTWE,111
+tf_tools/pad.py,sha256=5PpqI7uqt8DHIw8jVFSd1bZRB40SIqMQDNrWgmMW9fk,712
+tf_tools/set.py,sha256=bZ6aioL_bnrVLgN_hNjy9pRYo01GzZtNKvVaMVFMdKM,336
+tf_tools/typing.py,sha256=F310DlD_CGsD2oal5c30dP00FiDl90VureV7tGvckRI,203
+tf_tools/sparse/__init__.py,sha256=ITfahcM0Jmlq1mDhN9DGIIaWygj7qjqyEw_TCvRI-xA,36
+tf_tools/sparse/sparse.py,sha256=b8cfKMoY0Q7WQR6NAHSS9bV-U4oqiPqfIy4R8GTxgC8,934
+tf_tools-0.1.0.dist-info/METADATA,sha256=wFhLnv7hgQ-CcibAjJYTQ9PUNs3Ein6RjTMf_hx0CcA,284
+tf_tools-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tf_tools-0.1.0.dist-info/top_level.txt,sha256=Bipb85iPxwpxIuBs_Xizdojq2gK3zm2I4YgraBTUfZk,9
+tf_tools-0.1.0.dist-info/RECORD,,
