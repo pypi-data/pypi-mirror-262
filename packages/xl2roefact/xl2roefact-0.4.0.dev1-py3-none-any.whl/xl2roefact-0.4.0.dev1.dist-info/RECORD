@@ -1,0 +1,15 @@
+xl2roefact-0.4.0.dev1.dist-info/METADATA,sha256=LEFW-ZoN5-QapDOg4zFR_1i8qgJSqHm-ha77yjFH0Do,53445
+xl2roefact-0.4.0.dev1.dist-info/WHEEL,sha256=N2J68yzZqJh3mI_Wg92rwhw0rtJDFpZj9bwQIMJgaVg,90
+xl2roefact-0.4.0.dev1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+xl2roefact/__init__.py,sha256=SXlghQn5aZGCtVClJz2XcvXlJ344CcRKOYO_lxajPTU,542
+xl2roefact/__main__.py,sha256=crqU9OTQrUosscXY1efPKJyDZxfokuXWdG2sW6p6cZ8,650
+xl2roefact/__version__.py,sha256=kJfB0PcRMGKNNJEzxPXsVw5wJZp4q7TgAz1fne4kwEY,1534
+xl2roefact/app_cli.py,sha256=neChuxgPc4YBs81AFOio91dT9UUP0aUrx5ag6vIayc0,6808
+xl2roefact/chkisld.py,sha256=NF9tFEGaf9Bb50BnrfBquFl9gHpANrLcLWkeMGu7_Ys,752
+xl2roefact/chkxml.py,sha256=Lcw5EdT5JDzF1xfsLbSMdyfKWcTFJ8Cp-rufHAe0gXQ,609
+xl2roefact/config_settings.py,sha256=O-SgMrarcF3XTiVrYsjUzCOmIxXFs3W0HyraXt8mqyg,8955
+xl2roefact/ldxml.py,sha256=LUVrrW6KxtHLFDTV5uHf4Pro_wOZurtbYHfVRH97reg,625
+xl2roefact/libutils.py,sha256=s_hqdT3PrW4KYlKbqHlikHWNTKMulVgJK0KwAHJvYm8,9048
+xl2roefact/rdinv.py,sha256=L6JByoYnogZx_AnsP3R8Si6jaLCM1BQbWg-fYdOGXy0,60673
+xl2roefact/wrxml.py,sha256=f7Y2RqOpqtg1I1Fh0iBiqUzj8oHQk-aT93_v4H8Z67Y,637
+xl2roefact-0.4.0.dev1.dist-info/RECORD,,
