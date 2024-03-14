@@ -1,0 +1,3 @@
+[console_scripts]
+boteval = boteval.app:main
+boteval-quickstart = boteval.quickstart:main

@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: boteval
+Version: 0.1
+Summary: Chat Bot Evaluation
+Home-page: https://github.com/thammegowda/boteval
+Author: Thamme Gowda
+Author-email: tgowdan@gmail.com
+License: Apache
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask ==2.1
+Requires-Dist: ruamel.yaml >=0.17
+Requires-Dist: boto3 >=1.24
+Requires-Dist: cachetools >=5.2
+Requires-Dist: flask-login
+Requires-Dist: flask-sqlalchemy
+Requires-Dist: blinker >=1.5
+Requires-Dist: requests
+Requires-Dist: transformers
+Requires-Dist: openai
+Requires-Dist: spacy
+Requires-Dist: SQLAlchemy ==1.4.46
+Requires-Dist: loguru
+
+# Bot Eval
+
+This project offers a web interface to evaluate chat bots, with optional mturk integration
+
+Docs : https://cutelab.name/boteval/
