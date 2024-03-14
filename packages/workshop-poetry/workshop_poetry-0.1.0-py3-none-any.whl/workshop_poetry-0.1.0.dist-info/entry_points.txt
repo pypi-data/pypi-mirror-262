@@ -1,0 +1,3 @@
+[console_scripts]
+gerar_desculpa_p_faltar_aula=workshop_poetry.main:gerar_desculpa_por_faltar_na_aula_do_gabriel_cli
+
