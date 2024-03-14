@@ -1,0 +1,10 @@
+ward_labels_upload/__init__.py,sha256=Fpq7BamCjm6gjwo6I558W_H4fC0LihY6jlfMWvAdz_M,88
+ward_labels_upload/config.py,sha256=t8KiP1F8LMQC2V653NBLRqgHFYAFuAlgjozYHkN1Qxw,185
+ward_labels_upload/domain.py,sha256=yg3Q-kQvg9xLnLuBJhauh_qzyQDya_JtqWqtIliV7_g,664
+ward_labels_upload/upload.py,sha256=s3fIclrvH7mCQwApyz6T2HuBRWyax93mxLIoycqe6_s,5474
+ward_labels_upload/utils.py,sha256=5X_G-NcyctC2XEE_sKKtCQjRWWKd2fXNktzhx9Grn6I,448
+ward_labels_upload-0.0.10.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ward_labels_upload-0.0.10.dist-info/METADATA,sha256=WVaCMWAV1BVv_qPLSntohRtq5kaJ5SA4CNsJjAMyPfQ,3247
+ward_labels_upload-0.0.10.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ward_labels_upload-0.0.10.dist-info/top_level.txt,sha256=dBRo7yvzddVDjtTaPABeg5i6nrvsbFM3NVzrmL2-PHA,19
+ward_labels_upload-0.0.10.dist-info/RECORD,,
