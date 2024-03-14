@@ -1,0 +1,16 @@
+ig_trading_lib/__init__.py,sha256=WetRdOPvuVFQmnOa920rbQ1hBJfYnidzcSaVA4Qf3m4,278
+ig_trading_lib/authentication/__init__.py,sha256=jubprAzIGLMmfu0g2P9ItqZzPQDJmjy4M_LkIhuTuK4,136
+ig_trading_lib/authentication/cache.py,sha256=jFgzwmf_S1sAWhfkwbanUolX_ODDTWmXYQfJP1DBoKw,4636
+ig_trading_lib/authentication/models.py,sha256=eRe6lD651_85SuHj82LhAazOX9PXMbxo4BfpmTvtZbU,1117
+ig_trading_lib/authentication/service.py,sha256=aqq-dbHIHgdID-pUvTVlakGbYP_j3bwv2H965wWrUlY,4578
+ig_trading_lib/trading/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ig_trading_lib/trading/orders/__init__.py,sha256=zWcxrigqk4HIjvejlKjVMgEZ4_kmVyGZr3XrJNPtBbI,110
+ig_trading_lib/trading/orders/models.py,sha256=K-NJSRQ8GAz1zVY4T60NE9TRb4x8Jp-5YnFQs4AMMGQ,3032
+ig_trading_lib/trading/orders/service.py,sha256=xCnomOJ2BNuQJFv2Bv3HBJcoqUZu5pjwzZFlbKWfi_s,1607
+ig_trading_lib/trading/positions/__init__.py,sha256=NxGwkXlWV1ytv1bSzU-56MxEkd2wOWv0cC8sOPTx2p4,315
+ig_trading_lib/trading/positions/models.py,sha256=nFmxHIq9Ny5-gc49PrLM5PqKK6l5pUHQzVY8VTengWo,11702
+ig_trading_lib/trading/positions/service.py,sha256=JaLZIGMx6ZlAwctpVr5EKNav98CxMSJTMZ_D_zieaYU,5795
+ig_trading_lib-0.1.3.dist-info/LICENSE,sha256=T6-IIcyzDa1SeXbgw8B1FoNh_u0_agPWuOWInpgv9V8,1071
+ig_trading_lib-0.1.3.dist-info/METADATA,sha256=utG2gOFoHIf9VPgY8-kLZ7n-EdWlmXPTWQH7a0hPsbY,2046
+ig_trading_lib-0.1.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ig_trading_lib-0.1.3.dist-info/RECORD,,
