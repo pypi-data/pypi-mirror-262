@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: stap
+Version: 0.0.1a0
+Summary: Python tools for STAP
+Project-URL: Documentation, https://github.com/bact/stap#readme
+Project-URL: Issues, https://github.com/bact/stap/issues
+Project-URL: Source, https://github.com/bact/stap
+Author-email: Arthit Suriyawongkul <suriyawa@tcd.ie>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# stap
+
+<!--
+[![PyPI - Version](https://img.shields.io/pypi/v/stap.svg)](https://pypi.org/project/stap)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/stap.svg)](https://pypi.org/project/stap)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install stap
+```
+
+## License
+
+`stap` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+-->
