@@ -1,0 +1,12 @@
+e3nn
+matplotlib
+networkx
+numpy
+ovito
+pandas
+scikit_learn
+scipy
+tqdm
+NshellFinder
+polyaenum
+nsimplex

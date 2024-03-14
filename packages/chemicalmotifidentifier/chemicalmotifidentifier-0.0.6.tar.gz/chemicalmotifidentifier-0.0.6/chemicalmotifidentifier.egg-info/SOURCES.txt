@@ -1,0 +1,9 @@
+README.md
+setup.py
+chemicalmotifidentifier/__init__.py
+chemicalmotifidentifier.egg-info/PKG-INFO
+chemicalmotifidentifier.egg-info/SOURCES.txt
+chemicalmotifidentifier.egg-info/dependency_links.txt
+chemicalmotifidentifier.egg-info/requires.txt
+chemicalmotifidentifier.egg-info/top_level.txt
+tests/test_motif_id.py
