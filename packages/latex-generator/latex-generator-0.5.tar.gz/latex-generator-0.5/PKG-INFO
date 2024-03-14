@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: latex-generator
+Version: 0.5
+Requires-Dist: Pillow
