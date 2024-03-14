@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pt_br_verbs_lemmatizer
+Version: 0.0.5
+Summary: Program designed to lemmatize the various verbal inflections present in the Brazilian Portuguese language quickly and efficiently.
+Author: Igor Caetano de Souza
+Project-URL: GitHub Repository, https://github.com/IgorCaetano/portuguese_br_verbs_lemmatizer
+Description-Content-Type: text/markdown
+Requires-Dist: msgpack ==1.0.7
+
+# Verb lemmatizer for brazilian portuguese language
+
+This program aims to give the infinitive form of a verb in a very fast and effective way.
+
+## Quantitative information about the dataset
+
+- Total number of verbs: **9,233**
+- Number of regular verbs: **8,941**
+- Number of irregular verbs: **292**
+- Total number of verbal inflections: **3,419,728**
+
+## Usage Examples
+This package was designed to be integrated with other PLN tools, in order to just give the infinitive form of a verb, ie. you need a tool to say if a word is or not a verb. To do that part of the process we highly recommend you to use the spaCy lib. Here we have a example to optimaze the tokenization of a sentence using our lemmatizer instead of spacy's with some time waiting results.
+
+## How it was built
+- First of all we downloaded the Base TeP 2.0 database, which gave us X number of verbs after filtering it. 
+- After that we went to the list of most popular verbs used on portuguese present on https://www.conjugacao.com.br/verbos-populares/ and web scraped the 5000 verbs there.
+- We compare to the list we have from the Base TeP 2.0, adding the ones who doesn't match.
+- Then we start web scraping the inflections of all the verbs we got, also using the [conjugacao website](https://www.conjugacao.com.br).
+- Some additional steps were taken during the scraping process, we add a bunch of inflections endins to be prepared for almost every cenario (except the wrong writening).
+- Some examples of that is the female form of -lo, -o, -no, etc... which are -la, -a, -na, etc...
+- Finally we start to build our dictionary architecture to store all that verbs and that could search into it very quickly. Then we just preenchemos, which is available at the folder "dataset".
+
+_Observation: It is possible to find some wrong inflection verbs inside our dataset, we try out many ways to be highly prepared, but, as we don't have a portuguese grammar teacher on the team, we may have commited some mistakes, but, just to be clear, we have more than just the common inflection verbs. If you notice any wrong word or some trouble during the execution of this package, please contact us!_
+
+## Tests against the giant **[spaCy](https://spacy.io/)** - **[lemmatizer](https://spacy.io/api/lemmatizer)** - **[portuguese trained model](https://spacy.io/models/pt)**:
+
+# Special credits to:
+- **[Base TeP 2.0 database](http://www.nilc.icmc.usp.br/tep2/)**
+- **[conjucagao.com.br website](https://www.conjugacao.com.br/)**
