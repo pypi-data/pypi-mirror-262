@@ -1,0 +1,6 @@
+LICENSE.txt
+setup.py
+opeencv02.egg-info/PKG-INFO
+opeencv02.egg-info/SOURCES.txt
+opeencv02.egg-info/dependency_links.txt
+opeencv02.egg-info/top_level.txt
