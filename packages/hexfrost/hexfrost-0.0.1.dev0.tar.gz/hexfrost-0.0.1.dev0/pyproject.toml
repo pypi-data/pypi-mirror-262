@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "hexfrost"
+version = "0.0.1dev"
+description = ""
+authors = ["Kaziamov <kaziamov@outlook.com>"]
+readme = "README.md"
+packages = [
+    { include = "hexfrost" },
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.8.1,<4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
