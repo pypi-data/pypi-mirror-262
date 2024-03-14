@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: brainai-1.4
+Version: 1.4.0
+Summary: Python version of brainai SDK
+Author-email: yaojianqu <game781120@126.com>
+Project-URL: Homepage, https://github.com/yaojianqu/py-brainai-sdk
+Project-URL: Issues, https://github.com/yaojianqu/py-brainai-sdk/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# python-sdk
+打包方法：
+1. python setup.py bdist_egg (egg 包) 或者 python setup.py sdist (pip包) 
+2. 之后将整个目录打包发给调用方
+    
+安装和使用SDK：
+1. 解压，进入主目录下
+2. python setup.py install --record files.txt  安装
+3. import brainai 在python程序中，调用安装好的brainai包
