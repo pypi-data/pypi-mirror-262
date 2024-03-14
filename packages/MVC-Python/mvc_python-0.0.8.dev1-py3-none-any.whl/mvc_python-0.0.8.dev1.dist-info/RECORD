@@ -1,0 +1,10 @@
+MVC/__init__.py,sha256=A9aS8v4n8pcVBMIkyUrmTpFgy8Pe7vJ8AEdsSXRNDP4,67
+MVC/mvcconnection.py,sha256=4LFnwrypv6Cwu_jUoGkmTVzRbGPE7vNBVd6P6Vau6es,88352
+examples/README.md,sha256=0W1m3DT7GXJFBfpF0CQNemffFDK2-i_ExMoC3hstLE0,114
+examples/SkyhighSSEListUpdate/SkyhighSSEListUpdate.py,sha256=FSTfzwJ3TG0hRFkhLUzKXPCJyGsvDeOkuUE2_PUGTVw,16159
+examples/SkyhighSSEListUpdate/list_1234.csv,sha256=FJ8dV1lTcoDkTzSK6MLLjkQXT2surKB2hZcWyUrr7z4,111
+examples/SkyhighSSEPolicyBackup/SkyhighSSEPolicyBackup.py,sha256=4LfHilF4p3SRFHKzPtTe-N4Y0xb919OA4xzXCChobPo,3956
+mvc_python-0.0.8.dev1.dist-info/METADATA,sha256=-_zPNgMe3BEiBYZArn6fzHZSm3xXvYHvtgDKOpg65Bg,1290
+mvc_python-0.0.8.dev1.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+mvc_python-0.0.8.dev1.dist-info/licenses/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+mvc_python-0.0.8.dev1.dist-info/RECORD,,
