@@ -1,0 +1,17 @@
+tables
+tqdm
+pyarrow
+healpy
+pydantic-settings
+astropy
+pandas
+requests
+uvicorn
+fastapi
+
+[dev]
+asv==0.6.1
+jupyter
+pre-commit
+pytest
+pytest-cov
