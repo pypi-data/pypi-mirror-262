@@ -1,0 +1,15 @@
+aiohttp
+azure-cognitiveservices-speech
+daily-python
+fal
+faster_whisper
+google-cloud-texttospeech
+numpy
+openai
+Pillow
+pyht
+python-dotenv
+torch
+torchaudio
+pyaudio
+typing-extensions
