@@ -1,0 +1,9 @@
+mxwpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mxwpy/linalg.py,sha256=8qHJG24RUgwvkSofSYQy-1tm25R0gi6RymJ-zIFzhTY,1755
+mxwpy/npde.py,sha256=yQ5oI8JkkCPtSiRIB3PPPf_ryBsPm6LOSTegIetWRhY,10944
+mxwpy/spectral.py,sha256=_UlmU7I2EM1MAggwV5LsCGo6znAVH3izyKTKSahigU4,11095
+mxwpy/tools.py,sha256=kaR2E1ha0JBa_rfcyXcCQUqX7j6j_2yxZ9-ynhhXsOM,6244
+mxwpy-0.2.1.dist-info/METADATA,sha256=vhS4xnBkTqbeJClMfX6J-KDvAGPCjjrG4rJxcqpKx_4,2489
+mxwpy-0.2.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mxwpy-0.2.1.dist-info/top_level.txt,sha256=lfVs9A7PzbNaVguaFp-AR5uAH01mQUWOKL2nh_BD_0Q,6
+mxwpy-0.2.1.dist-info/RECORD,,
