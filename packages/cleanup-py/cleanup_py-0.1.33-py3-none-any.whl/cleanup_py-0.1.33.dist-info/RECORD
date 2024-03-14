@@ -1,0 +1,13 @@
+cleanup_py/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cleanup_py/_cleanup.py,sha256=RZ2tq2p2X7Dl6nTXkft00rHhVSa4GK4NCCfNZZETk54,813
+cleanup_py/_find.py,sha256=H7q8ImAjKAv9cCLM4sf-blYpLrIZuQeD-hFRLi8eUVU,849
+cleanup_py/cleanup.py,sha256=TdpKnokZhQJu97wixGljAli4aHIm16om-7J1DSr9R80,1622
+cleanup_py/command.py,sha256=BaRzXUkgVyNxcMIlapoy7JXbWgVXvQitV5E-EQYcgjw,2977
+cleanup_py/tests/__init__.py,sha256=CL1imXR-4ocCxMJRHOxNifSBMvLR5kObpX5MMu6CToY,119
+cleanup_py/tests/cleanup_test.py,sha256=IQjrtE0Vt0_cjB6XDv3v88rjtyV3oHmdW3uBNBX1q3A,670
+cleanup_py-0.1.33.dist-info/LICENSE,sha256=qB_ghzGz0DmU7Thrli8vh6sc-I2zP5y1n4J5wjQCCho,1063
+cleanup_py-0.1.33.dist-info/METADATA,sha256=dmFPFhmQHYQsdfPbCrjYeeSstTfYIwhKzKunvBEVABQ,2035
+cleanup_py-0.1.33.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cleanup_py-0.1.33.dist-info/entry_points.txt,sha256=17djqSfHx5EP0RoGv41rNkJlGV0uks9dpGr9hfd3DeE,52
+cleanup_py-0.1.33.dist-info/top_level.txt,sha256=tgjhlIwZdR9Epk1eqSGW83N58P04xt9RZXHHvZhqxoE,11
+cleanup_py-0.1.33.dist-info/RECORD,,
