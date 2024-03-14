@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: python-licensing
+Version: 0.1.0
+Summary: License your python script and provide licenses via a licensing server.
+Home-page: https://github.com/flemk/python-licensing
+Author: Franz Ludwig Kostelezky
+Author-email: info@kostelezky.com
