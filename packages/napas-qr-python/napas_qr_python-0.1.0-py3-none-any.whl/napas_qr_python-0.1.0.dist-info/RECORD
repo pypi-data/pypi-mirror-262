@@ -1,0 +1,10 @@
+qr_pay/__init__.py,sha256=AHKkS0EmEDQaKgX-SML8WtkcJtzNx6Vo1uVBdZrzypk,154
+qr_pay/crc.py,sha256=50e2j3drhHl1OUOyLq5n7Qss28zk9nyT3XWcwYTUqd8,473
+qr_pay/fields.py,sha256=nOU0RgoxUI2PdV_aybHmgyFq0S6ohBITQdx0W0VxpwM,3201
+qr_pay/qr_pay.py,sha256=L7X6fhS5Hv07VliLoDEV4Fx9thfwHbMMKv90wgA2iv8,4875
+qr_pay/utils.py,sha256=kNIvcgl28VfzqpxoiHV_mvzwAzTmB2U0bLlLA8Jyg_s,910
+napas_qr_python-0.1.0.dist-info/LICENSE,sha256=tcVx8u4RG54b1aGO-u8U9D7biV0uN3OSF71fEHubobc,1066
+napas_qr_python-0.1.0.dist-info/METADATA,sha256=sENyjsHktFBuSIlSrmW57GF9XFNQVgqsMu4J68ldsrI,7257
+napas_qr_python-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+napas_qr_python-0.1.0.dist-info/entry_points.txt,sha256=pYbU9eqdpNAuu3YDbdcLeecNlvNTn0qMkZ9cxdzWB0g,44
+napas_qr_python-0.1.0.dist-info/RECORD,,
