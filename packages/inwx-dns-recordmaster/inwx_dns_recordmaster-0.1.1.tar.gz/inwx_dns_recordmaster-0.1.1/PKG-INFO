@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: inwx-dns-recordmaster
+Version: 0.1.1
+Summary: Manage INWX domains via files, Git, and their API
+Author: Max Mehl
+Author-email: mail@mehl.mx
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: inwx-domrobot (>=3.1.0,<4.0.0)
+Requires-Dist: platformdirs (>=4.2.0,<5.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Description-Content-Type: text/markdown
+
+# INWX DNS Recordmaster
+
+[![Test suites](https://github.com/mxmehl/inwx-dns-recordmaster/actions/workflows/test.yaml/badge.svg)](https://github.com/mxmehl/inwx-dns-recordmaster/actions/workflows/test.yaml)
+
