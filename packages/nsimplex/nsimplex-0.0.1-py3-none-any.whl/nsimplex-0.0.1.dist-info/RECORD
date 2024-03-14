@@ -1,0 +1,7 @@
+simplex/__init__.py,sha256=DRmnYxdkr5td8aM8W56FnoJBYJtED4YY6C5u8o8Smeg,41
+simplex/_src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplex/_src/simplex.py,sha256=ep_X-FmdyaRc4Hxj6q5Q4FQdDxJF51JrZuJoOOeXruY,6122
+nsimplex-0.0.1.dist-info/METADATA,sha256=ImpfQrXz3HnuBrZY121A0B5HtgzWcQoflSBjHicI4fA,1754
+nsimplex-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+nsimplex-0.0.1.dist-info/top_level.txt,sha256=cbMH1bYpN0A3gP-ecibPRHasHoqB-01T_2BUFS8p0CE,8
+nsimplex-0.0.1.dist-info/RECORD,,
