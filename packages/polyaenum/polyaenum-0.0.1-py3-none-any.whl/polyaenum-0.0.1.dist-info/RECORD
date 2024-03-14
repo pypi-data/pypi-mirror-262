@@ -1,0 +1,8 @@
+polya/__init__.py,sha256=RwLNNaRU4cBRbN_y6TCU67rtPrMe0TojXHPQFKOJlqM,35
+polya/_src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+polya/_src/graphs.py,sha256=FEnaTPUhu-L0XiwJO1fS8mgNFMbgf3h686tTKWsLFRE,6574
+polya/_src/polya.py,sha256=XDMwr6bDB4mvaBWBTmC-jWoD7DrImiLhFvt9fD385y4,3047
+polyaenum-0.0.1.dist-info/METADATA,sha256=6vgwIrufuulRqKNJcLBf-xrA4zN2HujVFygKuGxR13k,1595
+polyaenum-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+polyaenum-0.0.1.dist-info/top_level.txt,sha256=y9kJXQJqQutJG0roCzbVnrg-LPJ1TILs5MTaB1_Mfx8,6
+polyaenum-0.0.1.dist-info/RECORD,,
