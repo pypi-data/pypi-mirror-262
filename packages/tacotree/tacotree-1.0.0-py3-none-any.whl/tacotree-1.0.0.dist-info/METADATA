@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: tacotree
+Version: 1.0.0
+Summary: Data processing pipelines based on PyTorch
+Author: Matthias Nadig
+Author-email: nadig_develop@yahoo.com
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tacotree-lab
+Requires-Dist: numpy
+Requires-Dist: ndbounds
+Requires-Dist: torch
+Requires-Dist: torchvision
+
+# py-tacotree
+
+Toolbox for data processing pipelines.
+
+Knowledge of PyTorch is required. See [debug/example_model_sequential.py](debug/example_model_sequential.py) for how to
+create a model in tacotree.
