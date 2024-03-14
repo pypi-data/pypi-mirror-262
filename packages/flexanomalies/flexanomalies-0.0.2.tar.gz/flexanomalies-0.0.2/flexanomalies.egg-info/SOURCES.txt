@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+flexanomalies.egg-info/PKG-INFO
+flexanomalies.egg-info/SOURCES.txt
+flexanomalies.egg-info/dependency_links.txt
+flexanomalies.egg-info/requires.txt
+flexanomalies.egg-info/top_level.txt
