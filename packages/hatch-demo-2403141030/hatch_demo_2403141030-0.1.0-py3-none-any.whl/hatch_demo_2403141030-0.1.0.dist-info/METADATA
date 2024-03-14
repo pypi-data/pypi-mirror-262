@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: hatch-demo-2403141030
+Version: 0.1.0
+Project-URL: Documentation, https://github.com/unknown/hatch-demo-2403141030#readme
+Project-URL: Issues, https://github.com/unknown/hatch-demo-2403141030/issues
+Project-URL: Source, https://github.com/unknown/hatch-demo-2403141030
+Author-email: HARADA <46546646+wI26n8hO@users.noreply.github.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: cowsay
+Description-Content-Type: text/markdown
+
+# Hatch Demo 2403141030
+
+[![PyPI - Version](https://img.shields.io/pypi/v/hatch-demo-2403141030.svg)](https://pypi.org/project/hatch-demo-2403141030)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hatch-demo-2403141030.svg)](https://pypi.org/project/hatch-demo-2403141030)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install hatch-demo-2403141030
+```
+
+## License
+
+`hatch-demo-2403141030` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
