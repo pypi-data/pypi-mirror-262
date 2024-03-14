@@ -1,0 +1,9 @@
+lxml
+loguru
+tqdm
+colorama
+xlrd
+pymysql
+xlsxwriter
+selenium
+natsort
