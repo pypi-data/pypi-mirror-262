@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/sequence_extensions/__init__.py
+src/sequence_extensions/ext_list.py
+src/sequence_extensions.egg-info/PKG-INFO
+src/sequence_extensions.egg-info/SOURCES.txt
+src/sequence_extensions.egg-info/dependency_links.txt
+src/sequence_extensions.egg-info/top_level.txt
+tests/test_list_ext.py
