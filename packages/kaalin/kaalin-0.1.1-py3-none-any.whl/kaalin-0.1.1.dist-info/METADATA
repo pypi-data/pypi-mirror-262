@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: kaalin
+Version: 0.1.1
+Summary: Special opportunities for the Karakalpak language
+Author: Turdıbek Jumabaev
+Author-email: <turdibekjumabaev05@gmail.com>
+Keywords: karakalpak,language,python
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# kaalin

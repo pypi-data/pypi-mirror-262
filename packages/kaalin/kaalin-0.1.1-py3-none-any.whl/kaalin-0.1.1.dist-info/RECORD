@@ -1,0 +1,11 @@
+kaalin/__init__.py,sha256=siiHEnXRLJTL2YobSPiVCoRX_CZjFUaWXH0rF4D7434,79
+kaalin/number/__init__.py,sha256=h_w0keics-0oVbCDlo3FK_INT20nmasYPnbgl-Mb1LE,32
+kaalin/number/number.py,sha256=2kulYifuLaZAAWAInBXLWhaJdIZsITT0Z1QggZpI89g,101
+kaalin/words/__init__.py,sha256=TzHF6w1dU9TXiZ75WvqnChcnGdkv8aNGxu9VVqXOcx0,67
+kaalin/words/cyrillic.py,sha256=zuDDPkVN-PgU6giJgXnemgbUzn-CVPIg2sDDRamOG0k,1543
+kaalin/words/latin.py,sha256=8GTTlIDhSLO-q-zSBcqp-7Z0_XbAb4vt3E0mlZ8Tb6U,1467
+kaalin-0.1.1.dist-info/LICENSE,sha256=30ouXdGCXN27_qV1o98Xi86jCuJlNpqmLzEkqHi7nfw,1075
+kaalin-0.1.1.dist-info/METADATA,sha256=jdIQTfCmIIpxI5KLRo2kBslxRuBlBBtq8jQtZJgk39o,569
+kaalin-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+kaalin-0.1.1.dist-info/top_level.txt,sha256=a04xGMCrNqRYIiA4Zum0QcJ89dIVhU_6u970IaYzQt8,7
+kaalin-0.1.1.dist-info/RECORD,,
