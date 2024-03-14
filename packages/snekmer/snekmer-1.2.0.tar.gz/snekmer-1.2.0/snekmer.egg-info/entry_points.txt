@@ -1,0 +1,2 @@
+[console_scripts]
+snekmer = snekmer.cli:main
