@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: cognitrix
+Version: 0.2.0
+Summary: Package for creating AI Agents using llms
+Home-page: https://github.com/theonlyamos/cognitrix
+License: Apache2
+Keywords: cognitrix,ai,agents,ai agents,ai-agents,llms,autonomous agents
+Author: theonlyamos
+Author-email: theonlyamos@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: aiohttp (>=3.9.3,<4.0.0)
+Requires-Dist: anthropic (>=0.17.0,<0.18.0)
+Requires-Dist: clarifai (>=10.1.0,<11.0.0)
+Requires-Dist: cohere (>=4.50,<5.0)
+Requires-Dist: google-generativeai (>=0.4.0,<0.5.0)
+Requires-Dist: google-search-results (>=2.4.2,<3.0.0)
+Requires-Dist: groq (>=0.4.1,<0.5.0)
+Requires-Dist: openai (>=1.12.0,<2.0.0)
+Requires-Dist: pillow (>=10.2.0,<11.0.0)
+Requires-Dist: pyautogui (>=0.9.54,<0.10.0)
+Requires-Dist: pydantic (>=2.6.2,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: serpapi (>=0.1.5,<0.2.0)
+Requires-Dist: together (>=0.2.11,<0.3.0)
+Requires-Dist: uuid (>=1.30,<2.0)
+Project-URL: Bug Tracker, https://github.com/theonlyamos/cognitrix/issues
+Project-URL: Repository, https://github.com/theonlyamos/cognitrix
+Description-Content-Type: text/markdown
+
+### Cognitrix
+Cognitrix is an open-source autonous AI agents orchestrator built in Python. It allows you to create and manage AI agents easily.
+
+### Features
+- Create and manage AI agents.
+- Conversational interface using chat
+- Modular architecture for easy extensibility
+- Access to various tools like calculators, web - search, etc.
+- Support for multiple platforms
+
+### Architecture
+The core components of Cognitrix are:
+
+- `Agent` - Base class for chatbot agents with - support for tools
+- `LLM` - Integration with large language models like - Cohere, GPT-3 etc.
+- `Tools` - Various utility tools like calculators, search etc.
+- `Memory` - For tracking context and state
+
+The architecture is highly modular and extensible. New tools and capabilities can be easily added.
+
+### Getting Started
+
+### Installation
+```bash
+pip install cognitrix
+```
+or
+```bash
+pip install https://github.com/theonlyamos/cognitrix/archive/main.zip
+```
+
+### Usage
+Run with default settings
+```bash
+cognitrix
+```
+
+List supported platforms
+```bash
+cognitrix --platforms
+```
+
+Run with specific platform
+```bash
+cognitrix --platform <platform_name>
+```
+
+Create a new agent
+```bash
+cognitrix agents --new
+```
+
+List created agents
+```bash
+cognitrix agents
+```
+
+Run with specific agent
+```bash
+cognitrix --agent <agent_name>
+```
+
+Print help message
+```bash
+cognitrix --help
+```
+
+### Contributing
+Cognitrix is open source and contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+
+### License
+This project is licensed under the MIT license. See [LICENSE.md](LICENSE.md) for more details.
+
+### Credits
+Cognitrix was created by [Amos Amissah](https://github.com/theonlyamos).
