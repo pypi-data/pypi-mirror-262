@@ -1,0 +1,15 @@
+websharecli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+websharecli/api.py,sha256=So2ytQNRJ0Z3qTYEjKsMXKFZPb3RObRWikn_LYz8i1U,1424
+websharecli/cli.py,sha256=bgm2ORPui0qM1yzzIIMuBxJOTfVHQNz9q0KUyCrT5ew,3978
+websharecli/commands.py,sha256=AdSDwVAGu1mi6bm3NBO1zL270BAQyWMTrwd1EFk1Igk,3081
+websharecli/config.py,sha256=pnmsStwMPm4pgjzlmR4J4o-PODpYJp1GtQWepp6atNI,846
+websharecli/data.py,sha256=AKE201pI0XW759p4KlskBtSt8cZPYO2tTIYEPi5S974,3123
+websharecli/terminal.py,sha256=c1bgvJOb9KXsOrqfgIcRtDYXdRwYy5qUbGkaShiZcw8,858
+websharecli/util.py,sha256=xCAR6NmRm2X9gHE34JoI3W-6PLBb4s6KK8BtVP04PDU,553
+websharecli/static/config.yaml,sha256=WNkx7z8u2oSS1yvA0mOUsXBTri6HaXDBBHinz1Qt9MY,825
+websharecli-2.2.2.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+websharecli-2.2.2.dist-info/METADATA,sha256=btBuh02A6jAPdI2zGMCfFae7w_yXkOd76-gbTW_5wZA,3461
+websharecli-2.2.2.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+websharecli-2.2.2.dist-info/entry_points.txt,sha256=mFuGysYJ9V2a32Dm6p5sWoxmyWsZFihXksLBdes6zQc,50
+websharecli-2.2.2.dist-info/top_level.txt,sha256=76hBTiPY89fqgImCojtaqpkA_KFJkuhTFdZEbhqNnoQ,12
+websharecli-2.2.2.dist-info/RECORD,,
