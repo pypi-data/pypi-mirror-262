@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: reviutils
+Version: 1.0.2
+Summary: A common library frequently used on python
+Home-page: https://github.com/Viyyy/viutils
+Author: Re.VI
+Author-email: reviy-top@outlook.com
+License: Apache License 2.0
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Provides-Extra: audio
+Requires-Dist: librosa ; extra == 'audio'
+Requires-Dist: soundfile ; extra == 'audio'
+Requires-Dist: torch ; extra == 'audio'
+Requires-Dist: torchaudio ; extra == 'audio'
+Requires-Dist: pydub ; extra == 'audio'
+
