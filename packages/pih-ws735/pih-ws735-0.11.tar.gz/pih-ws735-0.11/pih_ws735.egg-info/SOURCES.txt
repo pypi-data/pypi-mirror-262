@@ -1,0 +1,10 @@
+pih_ws735.egg-info/PKG-INFO
+pih_ws735.egg-info/SOURCES.txt
+pih_ws735.egg-info/dependency_links.txt
+pih_ws735.egg-info/entry_points.txt
+pih_ws735.egg-info/requires.txt
+pih_ws735.egg-info/top_level.txt
+ws735Service/__init__.py
+ws735Service/__main__.py
+ws735Service/const.py
+ws735Service/service.py

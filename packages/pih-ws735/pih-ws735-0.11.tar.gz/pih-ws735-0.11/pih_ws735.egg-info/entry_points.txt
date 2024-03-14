@@ -1,0 +1,2 @@
+[console_scripts]
+pih-ws735 = ws735Service.__main__:start
