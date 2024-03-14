@@ -1,0 +1,9 @@
+README.md
+setup.py
+templify/__init__.py
+templify/main.py
+templify.egg-info/PKG-INFO
+templify.egg-info/SOURCES.txt
+templify.egg-info/dependency_links.txt
+templify.egg-info/requires.txt
+templify.egg-info/top_level.txt
