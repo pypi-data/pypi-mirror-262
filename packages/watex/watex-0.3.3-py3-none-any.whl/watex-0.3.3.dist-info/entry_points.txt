@@ -1,0 +1,3 @@
+[console_scripts]
+version = watex.cli:version
+wx = watex.cli:cli
