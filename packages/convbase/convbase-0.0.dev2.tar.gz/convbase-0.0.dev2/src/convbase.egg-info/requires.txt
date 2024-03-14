@@ -1,0 +1,11 @@
+click
+
+[dev]
+pytest
+ruff
+mypy
+pre-commit
+
+[publish]
+twine
+build
