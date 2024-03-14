@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pycocoevalcap_cn"
+version = "0.0.1"
+authors = [
+  { name="bingwork", email="bingwork@qq.com" },
+]
+description = "pycocoevalcap_cn"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/bingwork/pycocoevalcap_cn"
+Issues = "https://github.com/bingwork/pycocoevalcap_cn/issues"

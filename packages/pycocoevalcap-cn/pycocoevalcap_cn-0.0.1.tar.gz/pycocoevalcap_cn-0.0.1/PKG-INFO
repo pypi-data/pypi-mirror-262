@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pycocoevalcap_cn
+Version: 0.0.1
+Summary: pycocoevalcap_cn
+Project-URL: Homepage, https://github.com/bingwork/pycocoevalcap_cn
+Project-URL: Issues, https://github.com/bingwork/pycocoevalcap_cn/issues
+Author-email: bingwork <bingwork@qq.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+pycocoevalcap_cn
