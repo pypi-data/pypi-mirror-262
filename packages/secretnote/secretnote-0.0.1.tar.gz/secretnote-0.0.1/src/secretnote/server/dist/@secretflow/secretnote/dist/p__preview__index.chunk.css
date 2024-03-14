@@ -1,0 +1,165 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/css-loader@6.7.1_webpack@5.89.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[1].use[1]!../../node_modules/.pnpm/@umijs+bundler-webpack@4.0.86_styled-components@6.1.0_typescript@5.2.2_webpack@5.89.0/node_modules/@umijs/bundler-webpack/compiled/postcss-loader/index.js??ruleSet[1].rules[5].oneOf[1].use[2]!../../node_modules/.pnpm/@umijs+bundler-webpack@4.0.86_styled-components@6.1.0_typescript@5.2.2_webpack@5.89.0/node_modules/@umijs/bundler-webpack/compiled/less-loader/index.js??ruleSet[1].rules[5].oneOf[1].use[3]!./src/modules/layout/index.less ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.secretnote-page {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.secretnote-page .mana-splitpanel {
+  height: calc(100% - 48px);
+}
+.secretnote-page .secretnote-page-preview-content {
+  height: calc(100% - 48px);
+  padding: 24px;
+}
+.secretnote-page .libro-header-right {
+  padding-right: 12px;
+}
+.secretnote-page .libro-view-content {
+  box-sizing: border-box;
+}
+.secretnote-header {
+  border-bottom: 1px solid var(--mana-secretnote-divider-color);
+}
+.secretnote-header .logo {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+  padding-left: 24px;
+  cursor: pointer;
+}
+.secretnote-header .logo .title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.secretnote-sidebar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid var(--mana-secretnote-divider-color);
+  background-color: var(--mana-secretnote-sidebar-background);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.secretnote-sidebar .ant-collapse-item {
+  border-bottom: 1px solid var(--mana-secretnote-divider-color);
+}
+.secretnote-sidebar .ant-collapse-item .ant-collapse-header {
+  align-items: center;
+  color: var(--mana-secretnote-text-color);
+  font-size: 12px;
+  font-weight: 600;
+  user-select: none;
+}
+.secretnote-sidebar .ant-collapse-item .ant-collapse-header .ant-collapse-expand-icon {
+  margin-top: -2px;
+  padding-inline-end: 0;
+}
+.secretnote-sidebar .ant-collapse-item .ant-collapse-header .ant-collapse-arrow {
+  margin-right: 4px;
+}
+.secretnote-sidebar .ant-collapse-item .ant-collapse-content-box {
+  padding-top: 0 !important;
+}
+.secretnote-sidebar .statusbar {
+  position: absolute;
+  bottom: 150px;
+  width: 100%;
+  border-top: 1px solid var(--mana-secretnote-divider-color);
+}
+.secretnote-sidebar .secretnote-sidebar-extra svg {
+  color: var(--mana-secretnote-icon-color);
+}
+.secretnote-sidebar .secretnote-sidebar-extra svg:hover {
+  color: var(--mana-secretnote-icon-hover-color);
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/css-loader@6.7.1_webpack@5.89.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[1].use[1]!../../node_modules/.pnpm/@umijs+bundler-webpack@4.0.86_styled-components@6.1.0_typescript@5.2.2_webpack@5.89.0/node_modules/@umijs/bundler-webpack/compiled/postcss-loader/index.js??ruleSet[1].rules[5].oneOf[1].use[2]!../../node_modules/.pnpm/@umijs+bundler-webpack@4.0.86_styled-components@6.1.0_typescript@5.2.2_webpack@5.89.0/node_modules/@umijs/bundler-webpack/compiled/less-loader/index.js??ruleSet[1].rules[5].oneOf[1].use[3]!./src/modules/file/index.less ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.secretnote-file-tree {
+  padding-left: 12px;
+  background-color: var(--mana-secretnote-sidebar-background);
+  color: var(--mana-secretnote-text-color);
+  font-size: 12px;
+}
+.secretnote-file-tree .ant-tree-treenode::before {
+  top: -3px !important;
+}
+.secretnote-file-tree .ant-tree-treenode:hover::before {
+  background-color: var(--mana-secretnote-li-hover-background) !important;
+}
+.secretnote-file-tree .ant-tree-treenode .ant-tree-switcher {
+  margin-top: 2px;
+}
+.secretnote-file-tree .ant-tree-switcher-noop {
+  width: 0;
+}
+.secretnote-file-tree .secretnote-tree-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 4px;
+  color: var(--mana-secretnote-text-color);
+}
+.secretnote-file-tree .secretnote-tree-title .ant-dropdown-trigger {
+  visibility: hidden;
+}
+.secretnote-file-tree .secretnote-tree-title:hover .ant-dropdown-trigger {
+  visibility: visible;
+}
+.secretnote-file-tree .secretnote-tree-title .ant-space-item {
+  display: flex;
+  align-items: center;
+}
+.secretnote-file-tree .ant-tree-treenode-selected .ant-tree-switcher {
+  color: var(--mana-secretnote-text-color) !important;
+}
+.secretnote-file-tree .ant-tree-treenode-selected::before {
+  background-color: var(--mana-secretnote-li-hover-background) !important;
+}
+.secretnote-file-tree .ant-tree-treenode-selected .ant-tree-node-selected {
+  color: var(--mana-secretnote-text-color) !important;
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/css-loader@6.7.1_webpack@5.89.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[1].use[1]!../../node_modules/.pnpm/@umijs+bundler-webpack@4.0.86_styled-components@6.1.0_typescript@5.2.2_webpack@5.89.0/node_modules/@umijs/bundler-webpack/compiled/postcss-loader/index.js??ruleSet[1].rules[5].oneOf[1].use[2]!../../node_modules/.pnpm/@umijs+bundler-webpack@4.0.86_styled-components@6.1.0_typescript@5.2.2_webpack@5.89.0/node_modules/@umijs/bundler-webpack/compiled/less-loader/index.js??ruleSet[1].rules[5].oneOf[1].use[3]!./src/components/dropdown-menu/index.less ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.secretnote-dropdown-menu {
+  width: 224px;
+}
+.secretnote-dropdown-menu .ant-dropdown-menu {
+  padding: 4px 0;
+  border: 1px solid var(--mana-secretnote-li-hover-background);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 1px 2px 0;
+}
+.secretnote-dropdown-menu .ant-dropdown-menu .ant-dropdown-menu-item {
+  padding: 4px 8px;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+.secretnote-dropdown-menu .ant-dropdown-menu .ant-dropdown-menu-item .ant-dropdown-menu-item-icon {
+  margin-top: -2px;
+  margin-right: 6px;
+}
+.secretnote-dropdown-menu .ant-dropdown-menu .ant-dropdown-menu-item:not(.ant-dropdown-menu-item-danger) .ant-dropdown-menu-title-content {
+  color: var(--mana-secretnote-text-color);
+}
+.secretnote-dropdown-menu .ant-dropdown-menu .ant-dropdown-menu-item:not(.ant-dropdown-menu-item-danger) .ant-dropdown-menu-item-icon {
+  color: var(--mana-secretnote-icon-color);
+}
+.secretnote-dropdown-menu .ant-upload {
+  color: var(--mana-secretnote-text-color);
+  font-size: 12px;
+}
+.ant-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  color: var(--mana-secretnote-icon-color);
+}
+
+
+/*# sourceMappingURL=p__preview__index.chunk.css.map*/
