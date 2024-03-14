@@ -1,0 +1,12 @@
+chatushka/__init__.py,sha256=LMo8LYYzsSFahEqDtARDd1yMAJb2foYE5naTbbHSVlQ,671
+chatushka/__version__.py,sha256=KmS95Pn9DHhxI7473lXtp-mp0p3DJjT_Ji5f-rzWt0c,24
+chatushka/_chatushka.py,sha256=18NClCMLASlWYZK4pMVLTkm67b156lIFYZTyadMTXoo,4341
+chatushka/_constants.py,sha256=-9lQYVmsOZLVlBUNF76ARFWrdClNARyuuVhvBp6IzVQ,51
+chatushka/_errors.py,sha256=lffu-TJuKUXOXYPQT_u5I-Tz2us6R-INKPTEwEnYAQg,290
+chatushka/_logger.py,sha256=JbXymQh564igGYnO5c-kWQV9N3r4rC7Yq7Gt-G7QXEI,63
+chatushka/_matchers.py,sha256=ulvpt9NEaAGXHY1wdwfWJYx49z0anRyyZdz4ixHLzhs,4711
+chatushka/_models.py,sha256=BOHgDqvUjhRmgDQVn-58tyBWPUNQvG03uWz_qtKvn00,2669
+chatushka/_transport.py,sha256=gkm1nIveEL0c1AjPfXmSLqfwT9Fir7O3paU4v4yHP7s,4476
+chatushka-0.11rc4.dist-info/METADATA,sha256=80GmoUKM9gGlGwdHXl15wJ3e-VFZfhnaiNvv5uu8kk0,1121
+chatushka-0.11rc4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+chatushka-0.11rc4.dist-info/RECORD,,
