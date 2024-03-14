@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: gorilla-x
+Version: 0.1.2
+Summary: CLI for Gorilla Execution Engine
+Home-page: https://github.com/gorilla-llm/exec-engine
+Download-URL: https://github.com/gorilla-llm/exec-engine/archive/refs/tags/0.1.tar.gz
+Author: Shishir Patil, Noppapon Chalermchockcharoenkit, Roy Huang, Liheng Lai, Aaron Hao
+Keywords: LLM,gorilla,execution engine
+
