@@ -1,0 +1,10 @@
+example_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_package/main.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_package/print_env.py,sha256=Af5_yLl4sTI0obhIu39Z99Fc4PkA_wwgEkx5ok7i6Ko,170
+example_package/print_text.py,sha256=FkDVTzOC2nFfipiiTH7WDMI_XU4eYN_L8u5f2P0Vh2E,59
+example_package/service_function.py,sha256=IqPU8xECrlYHJSqxewys9zd8DE7ExvtfwpUydFRpbxg,3341
+example_pkg_fajitas30-0.0.7.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_pkg_fajitas30-0.0.7.dist-info/METADATA,sha256=elRkYn7ej62mMTtyCZg9QooXz2taX3fN82t7NS297sw,422
+example_pkg_fajitas30-0.0.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+example_pkg_fajitas30-0.0.7.dist-info/top_level.txt,sha256=BQmbTEGXuNRVRlcu2pp3DR1SHt9FsfBjdBeUA9zZr6Q,16
+example_pkg_fajitas30-0.0.7.dist-info/RECORD,,
