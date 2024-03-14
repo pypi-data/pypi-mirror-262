@@ -1,0 +1,1 @@
+from classfactory.classfactory import ClassFactory

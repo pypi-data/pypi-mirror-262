@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Simple-Class-Factory
+Version: 0.0.1
+Summary: Simple Class Factory
+Author: CeREF Technique
+Author-email: licence.tech@ceref.be
+Keywords: python,class factory
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+Package that eases the building of a factory as a class
