@@ -1,0 +1,19 @@
+build: clean
+    hatch run generate
+
+    just pnpm run build
+    hatch build
+    just pnpm pack --pack-destination dist
+
+
+pnpm +args:
+    cd packages/openverse-api-client && pnpm {{ args }}
+
+
+clean:
+    rm -rf dist
+    # Blank these files so generation still works
+    echo "" > src/openverse_api_client/async_client.py
+    echo "" > src/openverse_api_client/sync_client.py
+    rm -rf packages/openverse-api-client/dist
+    rm -f packages/openverse-api-client/src/types.ts
