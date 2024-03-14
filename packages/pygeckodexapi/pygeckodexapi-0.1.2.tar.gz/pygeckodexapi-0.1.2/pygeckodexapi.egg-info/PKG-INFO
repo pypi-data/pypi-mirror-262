@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pygeckodexapi
+Version: 0.1.2
+Summary: Unofficial SDK for working with the GeckoTerminal API
+Home-page: https://github.com/labfunny/py-gecko-dex-api
+Author: Max
+License: MIT
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests

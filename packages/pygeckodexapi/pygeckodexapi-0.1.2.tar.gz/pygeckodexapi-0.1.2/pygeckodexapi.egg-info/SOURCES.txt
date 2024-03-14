@@ -1,0 +1,10 @@
+setup.py
+pygeckodexapi/__init__.py
+pygeckodexapi/meta.py
+pygeckodexapi/pool.py
+pygeckodexapi/token.py
+pygeckodexapi.egg-info/PKG-INFO
+pygeckodexapi.egg-info/SOURCES.txt
+pygeckodexapi.egg-info/dependency_links.txt
+pygeckodexapi.egg-info/requires.txt
+pygeckodexapi.egg-info/top_level.txt
