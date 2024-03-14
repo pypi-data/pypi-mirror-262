@@ -1,0 +1,8 @@
+setup.py
+lindosol/__init__.py
+lindosol/sunnyday.py
+lindosol.egg-info/PKG-INFO
+lindosol.egg-info/SOURCES.txt
+lindosol.egg-info/dependency_links.txt
+lindosol.egg-info/requires.txt
+lindosol.egg-info/top_level.txt
