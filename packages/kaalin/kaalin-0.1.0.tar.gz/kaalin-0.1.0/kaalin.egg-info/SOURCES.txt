@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+kaalin/__init__.py
+kaalin.egg-info/PKG-INFO
+kaalin.egg-info/SOURCES.txt
+kaalin.egg-info/dependency_links.txt
+kaalin.egg-info/top_level.txt
+tests/test_kaalin_cyrillic.py
+tests/test_kaalin_latin.py
