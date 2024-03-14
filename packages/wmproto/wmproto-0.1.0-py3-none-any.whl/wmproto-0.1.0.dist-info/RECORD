@@ -1,0 +1,12 @@
+wmproto/__init__.py,sha256=Ad6l5fhTh4bcqFddT-jrd1_05afMeg7wxyxPWCNIjYs,165
+wmproto/codec/__init__.py,sha256=JB3JOeHKs4Wu8-BQe85xMlPdLtJgFC5R6lQj-273AZE,37
+wmproto/codec/built_in_json.py,sha256=FEjVNfp3WPWJjZEBSk2k6-qL18eXjCgb04lGBKP50-U,501
+wmproto/protocol.py,sha256=4c50zdfqIgSh9kM4ibAkNYFWunVnuDKyr9a4p03Eat8,8727
+wmproto/sessions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wmproto/sessions/ansq.py,sha256=fq839EYrXGvWnWE1Mb1ui__zycn5ZV5Ik1k5V_AcWFI,2101
+wmproto/shared/__init__.py,sha256=hfQnnk_Q7nVm4cXimVX0ftWb3Ku2br51HlvXxUwPtYI,58
+wmproto/shared/dumpable.py,sha256=zQsYyStGzuc1STiNwfUOJxOeWaWzbivGOcisloKTnOE,365
+wmproto/shared/new_id.py,sha256=_LvpigW0jSo8xWGTT6BwnH7dojdQFMkDYp86KmPtbDc,99
+wmproto-0.1.0.dist-info/METADATA,sha256=y7dNhlAUQ1beFB-BTHY9ZmHxWZO5KEJermZMef10-Ak,380
+wmproto-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+wmproto-0.1.0.dist-info/RECORD,,

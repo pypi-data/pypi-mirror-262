@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: wmproto
+Version: 0.1.0
+Summary: Web Messaging Protocol
+Author: aturkenov
+Author-email: a.k.turken0v@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: ansq (>=0.3.0,<0.4.0)
+Description-Content-Type: text/markdown
+
+# WMProto
+Web Messaging Protocol
+
+
+
