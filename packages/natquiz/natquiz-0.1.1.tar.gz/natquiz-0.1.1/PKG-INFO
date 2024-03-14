@@ -1,0 +1,136 @@
+Metadata-Version: 2.1
+Name: natquiz
+Version: 0.1.1
+Summary: A command line tool to help people prepare for their US naturalization test.
+Author-email: Carlos Paniagua <cpaniaguam@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Carlos Paniagua
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/cpaniaguam/natquiz
+Project-URL: Bug Reports, https://github.com/cpaniaguam/natquiz/issues
+Project-URL: Source, https://github.com/cpaniaguam/natquiz
+Keywords: command line tool,US naturalization
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Education
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# `natquiz` - a US naturalization test quiz
+
+`natquiz` is a tool designed to help you prepare for the US naturalization test. It provides a set of questions that mimic an actual test, allowing you to practice and improve your knowledge of US Civics.
+
+## Features
+
+- Comprehensive question bank: `natquiz` includes the full set of questions covering all sections of the US naturalization test.
+- Randomized quizzes: Each quiz you take is randomly generated, ensuring that you get a unique set of questions every time.
+- Full question bank: The full question bank can be viewed from the command line.
+
+## Installation
+
+To install the package, issue the command `pip install natquiz` (requires Python >= 3.11).
+
+## Usage
+
+Upon installation, use the `natquiz` command.
+
+```shell
+$ natquiz --help
+usage: natquiz [-h] [-n N] [--show-all]
+
+natquiz - a US naturalization quiz
+
+options:
+  -h, --help  show this help message and exit
+  -n N        Number of questions to ask (default: 10)
+  --show-all  Show all questions and exit
+```
+
+To get a regular, 10-question quiz simply issue the `natquiz` command.
+```shell
+$ natquiz
+
+- US Naturalization Quiz -    
+
+Number of questions to ask: 10
+
+Question 1 of 10
+Category: INTEGRATED CIVICS
+What is the capital of the United States?
+(Press enter to show answers)
+```
+
+As shown, press enter to show the answers to the question. The next question is displayed afterwards.
+```shell
+
+- US Naturalization Quiz -    
+
+Number of questions to ask: 10
+
+Question 1 of 10
+Category: INTEGRATED CIVICS
+What is the capital of the United States?
+(Press enter to show answers)
+        Answer 1: Washington, D.C.
+
+Question 2 of 10
+Category: Rights and Responsibilities
+What are two ways that Americans can participate in their democracy?
+(Press enter to show answers)
+```
+
+After the last question you get the option to do another quiz or exit.
+```shell
+Question 10 of 10
+Category: Principles of American Democracy
+How many amendments does the Constitution have?
+(Press enter to show answers)
+        Answer 1: twenty-seven (27)
+
+
+This is the end of the quiz. Would you like to do another quiz? (Yes/No):
+|
+```
+
+Enter `yes` or `y` to do another quiz or `no` or `n` to exit.
+
+```shell
+This is the end of the quiz. Would you like to do another quiz? (Yes/No):
+n
+Good luck on your interview!
+```
+
+If you would like a quiz with fewer than 10 questions, use the `-n` option with the number of questions you would like for the quiz. For example, you would get a two-question quiz with `natquiz -n 2` or `natquiz -n=2`.
+
+To view all the questions issue `natquiz --show-all`.
+
+## Contributing
+
+Contributions are welcome via PRs!
+
+## License
+
+MIT license.

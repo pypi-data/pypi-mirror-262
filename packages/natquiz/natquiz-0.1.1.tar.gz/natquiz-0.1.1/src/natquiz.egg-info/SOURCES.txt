@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+src/natquiz/__init__.py
+src/natquiz/app.py
+src/natquiz/parse_questions.py
+src/natquiz/questions.toml
+src/natquiz.egg-info/PKG-INFO
+src/natquiz.egg-info/SOURCES.txt
+src/natquiz.egg-info/dependency_links.txt
+src/natquiz.egg-info/entry_points.txt
+src/natquiz.egg-info/top_level.txt
