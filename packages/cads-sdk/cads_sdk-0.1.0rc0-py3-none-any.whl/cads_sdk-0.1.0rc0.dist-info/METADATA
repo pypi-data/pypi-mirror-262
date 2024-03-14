@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: cads-sdk
+Version: 0.1.0rc0
+Summary: Function to help Data Scientist work more effectively with DWH
+Home-page: http://git.bigdata.local/data-engineers/sdk/platform
+Author: duyvnc
+Author-email: duyvnc@fpt.com.vn
+License: FPT Inc.
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyspark (>=3.0.2)
+Requires-Dist: findspark
+Requires-Dist: sqlglot
+Requires-Dist: datahub
+Requires-Dist: pycryptodome
+Requires-Dist: pyarrow (>=4.0.0)
+Requires-Dist: ipython
+Requires-Dist: pandas (<=1.5.3)
+Requires-Dist: hmsclient
+Requires-Dist: thrift
+Provides-Extra: all
+Requires-Dist: Pillow ; extra == 'all'
+Requires-Dist: pyspark (>=3.0.2) ; extra == 'all'
+Requires-Dist: petastorm ; extra == 'all'
+Requires-Dist: findspark ; extra == 'all'
+Requires-Dist: sqlglot ; extra == 'all'
+Requires-Dist: pycryptodome ; extra == 'all'
+Requires-Dist: pydub ; extra == 'all'
+Requires-Dist: pyarrow (>=4.0.0) ; extra == 'all'
+Requires-Dist: scipy ; extra == 'all'
+Requires-Dist: ipywidgets ; extra == 'all'
+Requires-Dist: opencv-python ; extra == 'all'
+Requires-Dist: pandas (<=1.5.3) ; extra == 'all'
+Requires-Dist: hmsclient ; extra == 'all'
+Requires-Dist: thrift ; extra == 'all'
+Provides-Extra: cads-sdk
+Requires-Dist: pyspark (>=3.0.2) ; extra == 'cads-sdk'
+Requires-Dist: findspark ; extra == 'cads-sdk'
+Requires-Dist: sqlglot ; extra == 'cads-sdk'
+Requires-Dist: pycryptodome ; extra == 'cads-sdk'
+Requires-Dist: pyarrow (>=4.0.0) ; extra == 'cads-sdk'
+Requires-Dist: pandas (<=1.5.3) ; extra == 'cads-sdk'
+Requires-Dist: hmsclient ; extra == 'cads-sdk'
+Requires-Dist: thrift ; extra == 'cads-sdk'
+Provides-Extra: nosql
+Requires-Dist: Pillow ; extra == 'nosql'
+Requires-Dist: petastorm ; extra == 'nosql'
+Requires-Dist: pydub ; extra == 'nosql'
+Requires-Dist: scipy ; extra == 'nosql'
+Requires-Dist: ipywidgets ; extra == 'nosql'
+Requires-Dist: opencv-python ; extra == 'nosql'
+Provides-Extra: spark-sdk
+Requires-Dist: pyspark (>=3.0.2) ; extra == 'spark-sdk'
+Requires-Dist: findspark ; extra == 'spark-sdk'
+Requires-Dist: sqlglot ; extra == 'spark-sdk'
+Requires-Dist: pycryptodome ; extra == 'spark-sdk'
+Requires-Dist: pyarrow (>=4.0.0) ; extra == 'spark-sdk'
+Requires-Dist: pandas (<=1.5.3) ; extra == 'spark-sdk'
+Requires-Dist: hmsclient ; extra == 'spark-sdk'
+Requires-Dist: thrift ; extra == 'spark-sdk'
+

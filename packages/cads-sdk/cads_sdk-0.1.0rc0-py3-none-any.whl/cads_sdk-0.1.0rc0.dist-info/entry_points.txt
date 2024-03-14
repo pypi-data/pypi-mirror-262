@@ -1,0 +1,6 @@
+[cads_sdk.converter]
+nosql = cads_sdk.nosql:main[nosql]
+spark-sdk = cads_sdk:main
+
+[console_scripts]
+cads-sdk = cads_sdk:main
