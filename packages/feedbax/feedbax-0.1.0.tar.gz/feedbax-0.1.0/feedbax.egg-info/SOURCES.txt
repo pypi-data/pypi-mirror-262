@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+feedbax.egg-info/PKG-INFO
+feedbax.egg-info/SOURCES.txt
+feedbax.egg-info/dependency_links.txt
+feedbax.egg-info/requires.txt
+feedbax.egg-info/top_level.txt
+tests/test_loss_composition.py
+tests/test_skeletons.py
