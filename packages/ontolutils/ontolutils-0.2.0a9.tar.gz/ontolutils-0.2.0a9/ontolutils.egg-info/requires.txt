@@ -1,0 +1,11 @@
+rdflib
+pydantic
+python-dateutil
+requests
+appdirs
+
+[complete]
+pytest>=7.1.2
+
+[test]
+pytest>=7.1.2
