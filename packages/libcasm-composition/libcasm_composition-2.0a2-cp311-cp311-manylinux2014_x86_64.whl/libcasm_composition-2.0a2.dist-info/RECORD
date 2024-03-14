@@ -1,0 +1,16 @@
+libcasm/composition/__init__.py,sha256=gLEyU0sUsFwYZBN6tUTZfQdSVtr3y2fc0k9A344rngk,372
+libcasm/composition/_composition.cpython-311-x86_64-linux-gnu.so,sha256=0QIABV7Z5FKBsK_YUjWqEB6K3XY9oHMDW7EzHVxF9rY,303080
+libcasm/include/casm/composition/CompositionCalculator.hh,sha256=QkDCAabaQQ40uWZHlLBue22IkhANvGfDJF3K5QZNSLI,4742
+libcasm/include/casm/composition/CompositionConverter.hh,sha256=DG0axvqbsXoUV5hvvsTlHlqGfuJ4k4IP24Y-36JXuUY,7029
+libcasm/include/casm/composition/composition_space.hh,sha256=9FI2eGU5CoLJBTp5uMal8KaElIUTd9hole04UFHvGbE,1809
+libcasm/include/casm/composition/io/json/CompositionConverter_json_io.hh,sha256=jf7pZTbUP8gXEvaSQNBLrZo2LUYt3A01OLF8AuF-aEY,757
+libcasm/lib/libcasm_composition.so,sha256=7zx3WQtXmDJOWDiI299TzGtL6oHp4pvq6X086G5cx7g,310416
+libcasm/share/CASMcode_composition/cmake/CASMcode_compositionConfig.cmake,sha256=BA-FdRB8csnV9ayRMGOD8-A-jj7bAYuaUBvYSXbFmYE,965
+libcasm/share/CASMcode_composition/cmake/CASMcode_compositionConfigVersion.cmake,sha256=DqnUQ24TSe519qOa71bm1F11vG7gMUU4yhrwp8epRes,3675
+libcasm/share/CASMcode_composition/cmake/CASMcode_compositionTargets-release.cmake,sha256=phgCZcIRRLZnk82dCg6CmBigDdHMGz0j4BmWiOla7nU,906
+libcasm/share/CASMcode_composition/cmake/CASMcode_compositionTargets.cmake,sha256=PUk2llhDTuOYbx3qtct09nuxEiQ5fUKSrW0dPoPPvJ8,4360
+libcasm_composition-2.0a2.dist-info/LICENSE,sha256=yMHq1d_zAzGY6FAIviUEJQpb8FOnGjsw3OUF_rp5IpY,25710
+libcasm_composition-2.0a2.dist-info/METADATA,sha256=E2vYxb0MCm2RWLhufmjCSYSRTmEiZuMUit-c_-cRPCk,2020
+libcasm_composition-2.0a2.dist-info/WHEEL,sha256=LsUCKWMLranP76l1sIMBIuU2GUOT13Le4eba7GIo5i4,99
+libcasm_composition-2.0a2.dist-info/top_level.txt,sha256=Tr3YuIxg1KAjn2CmMMYPVMunWCHHhizdctIaSCXgRfY,8
+libcasm_composition-2.0a2.dist-info/RECORD,,
