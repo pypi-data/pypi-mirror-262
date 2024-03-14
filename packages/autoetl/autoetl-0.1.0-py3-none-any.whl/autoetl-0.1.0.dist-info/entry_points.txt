@@ -1,0 +1,3 @@
+[console_scripts]
+autoetl=autoetl.cli:app
+
