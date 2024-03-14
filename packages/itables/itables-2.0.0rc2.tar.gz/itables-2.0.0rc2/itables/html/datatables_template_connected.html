@@ -1,0 +1,19 @@
+<table id="table_id"><thead><tr><th>A</th></tr></thead></table>
+<link href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.2/datatables.min.css" rel="stylesheet">
+<script type="module">
+    import 'https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.2/datatables.min.js';
+
+    $(document).ready(function () {
+        document.querySelectorAll("#table_id:not(.dataTable)").forEach(table => {
+            // Define the table data
+            const data = [];
+
+            // Define the dt_args
+            let dt_args = {};
+            dt_args["data"] = data;
+
+            // [pre-dt-code]
+            new DataTable(table, dt_args);
+        });
+    });
+</script>
