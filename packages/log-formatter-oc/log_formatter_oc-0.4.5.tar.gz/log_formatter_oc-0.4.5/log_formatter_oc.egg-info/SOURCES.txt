@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+log_formatter_oc.egg-info/PKG-INFO
+log_formatter_oc.egg-info/SOURCES.txt
+log_formatter_oc.egg-info/dependency_links.txt
+log_formatter_oc.egg-info/requires.txt
+log_formatter_oc.egg-info/top_level.txt
