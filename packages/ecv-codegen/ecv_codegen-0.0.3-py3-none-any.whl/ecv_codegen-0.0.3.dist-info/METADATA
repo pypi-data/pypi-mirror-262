@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ecv-codegen
+Version: 0.0.3
+Summary: ECV code generator prototype
+Home-page: https://github.com/kimreyess/ecvcodegen
+Author: ECV Peeps
+Author-email: reyeskimberly018@gmail.com
+License: UNKNOWN
+Keywords: python,ecv-codegen,ecv-code-generator
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: typing-extensions
+
+ECV code generator prototype
+
