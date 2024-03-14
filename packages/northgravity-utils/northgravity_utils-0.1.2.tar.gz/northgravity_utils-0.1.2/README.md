@@ -1,0 +1,66 @@
+# NORTH GRAVITY PYTHON UTILS #
+
+This document describes the North Gravity Python Utils package which enables users to use the North Gravity platform tools and most common functions within their python scripts / tasks repositories. 
+
+The Python Utils can be used within:
+
+- a single python script that is ran thanks to the Python Runner task within a pipeline in the North Gravity application
+
+- a single Jupyter Notebook that is ran thanks to the Jupyter Runner task within a pipeline in the North Gravity application
+
+- an ensemble of python scripts that are part of a container, for a Task created by the user, used in a pipeline in the North Gravity application
+
+ 
+
+NG_Utils cover most frequently used functions for data/files handling purposes.
+
+The scope of the NG_Utils:
+
+- **DataHandler** - splitting data based on train/test labels, handling dates in datasets  
+
+- **FileHandler** - downloading/uploading model-specific datasets from/to the data lake, handling datasets formats
+
+- **BackTest** - preparing short or extended backtest based on models results
+
+- **StatTest** - preparing report and running statistical tests for stationarity, autocorrelation and volatitity clustering
+
+-**TaskExecUtils** - auxiliary functions used in executing tasks 
+
+
+
+
+## How to install and set the package: 
+### Install
+```text
+pip3 install northgravity_utils==0.1.2
+```
+As the library is available from pip, it can be installed as a specific version within a Python Task from within requirements.txt just by adding:
+```text
+northgravity_utils==0.1.2
+```
+The package relies on the requests library so, in the project, the user must install this library in the requirements.txt file.
+```text
+pip3 install requests==2.27.1
+```
+
+
+### Environment Variables
+The package uses information from the environment variables. They are necessery for functionality of Nortygravity SDK package, used in Northgravity Utils
+Environment variables are automatically provided when running a script within a pipeline (as a Task or within the Python/Jupyter Runners).
+If running locally the script, users must set them in the project to be able to run the project locally.
+
+
+Mandatory environment variables to set:
+
+- NG_API_ENDPOINT → the URL to the North Gravity platform API (by default, the url is set to https://api.northgravity.com)
+
+
+- LOGIN → login received from North Gravity
+
+- PASSWORD → password to log in,
+  
+- or NG_API_KEY → API key to use instead of LOGIN and PASSWORD combination
+    
+Credentials are used to generate the token so that each request is authenticated.
+
+

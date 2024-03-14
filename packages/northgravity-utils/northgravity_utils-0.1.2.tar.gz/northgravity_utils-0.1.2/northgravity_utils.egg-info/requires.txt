@@ -1,0 +1,6 @@
+northgravity
+requests
+urllib3
+scikit-learn
+statsmodels
+fluent-logger
