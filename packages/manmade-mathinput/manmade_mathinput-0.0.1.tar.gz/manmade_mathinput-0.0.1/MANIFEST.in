@@ -1,0 +1,11 @@
+include manmade_mathinput/manmade_mathinput.min.js
+include manmade_mathinput/manmade_mathinput.min.js.map
+include manmade_mathinput/async-*.js
+include manmade_mathinput/async-*.js.map
+include manmade_mathinput/*-shared.js
+include manmade_mathinput/*-shared.js.map
+include manmade_mathinput/metadata.json
+include manmade_mathinput/package-info.json
+include README.md
+include LICENSE
+include package.json

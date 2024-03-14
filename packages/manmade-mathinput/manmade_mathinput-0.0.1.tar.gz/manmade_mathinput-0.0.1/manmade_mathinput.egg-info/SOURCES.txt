@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+manmade_mathinput/MathInput.py
+manmade_mathinput/__init__.py
+manmade_mathinput/_imports_.py
+manmade_mathinput/manmade_mathinput.min.js
+manmade_mathinput/manmade_mathinput.min.js.map
+manmade_mathinput/metadata.json
+manmade_mathinput/package-info.json
+manmade_mathinput.egg-info/PKG-INFO
+manmade_mathinput.egg-info/SOURCES.txt
+manmade_mathinput.egg-info/dependency_links.txt
+manmade_mathinput.egg-info/top_level.txt
+tests/test_usage.py
