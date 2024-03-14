@@ -1,0 +1,2 @@
+include englishidioms/phrases.json
+recursive-include englishidioms/nltk_data *
