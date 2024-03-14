@@ -1,0 +1,11 @@
+lodkit/__init__.py,sha256=2tGQKfQlcebtvprjR-P9cDh5fLainrGcuW4LLHuBb5g,231
+lodkit/connections.py,sha256=42pKI7bOWdclo6v6xv9Yux7ZzLrzM9LjzzNegNGEAXk,3138
+lodkit/graph.py,sha256=X85vyyhNb-X0e-SzOYL99zFSVOchlXUXY-IZqPd3Nuc,3331
+lodkit/importer.py,sha256=rbjjWiWC4EwYO-8GXhXNJMm6dkDPWGziG_WPTGJBWU4,1236
+lodkit/reasoners.py,sha256=IiIkzeAQuc_2fAey_GooGpYg9dX3f-wdZqYbTQbjSr0,3235
+lodkit/types.py,sha256=Dpc1DE-4AudGiF02Gp9Y2BVYXi344cyxZDEgw9Ul8Dc,596
+lodkit/utils.py,sha256=bhz9tojm2VWjOOP5-odlohZtPHBdwAZDAoTjP4umM5w,5624
+lodkit-0.1.13.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+lodkit-0.1.13.dist-info/METADATA,sha256=uqb4LHHLPUAg6hbX5y-h2ixl4z-Xc6M7iwFU8ipEeGc,1286
+lodkit-0.1.13.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+lodkit-0.1.13.dist-info/RECORD,,
