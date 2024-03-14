@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: comicthumb
+Version: 0.0.3
+Summary: Standalone replacement of the comicthumb utility from comix.
+License: GNU General Public License v3 (GPLv3)
+Project-URL: repository, https://codeberg.org/johndovern/comicthumb
+Keywords: comix,comicthumb,thumbnailer
+Description-Content-Type: text/markdown
+Requires-Dist: pillow
+
+# Comicthumb
+
+This is a very basic port of the
+[comicthumb](https://sourceforge.net/p/comix/code/HEAD/tree/trunk/mime/comicthumb)
+utility that came with comix.  Arch users do not get this utility by default
+with the better maintained fork, mcomix. This "just werks on my machine" but if
+it doesn't work on yours submit a pull request please.

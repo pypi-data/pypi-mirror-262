@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comicthumb"
+version = "0.0.3"
+description = "Standalone replacement of the comicthumb utility from comix."
+readme = "README.md"
+license = { text = "GNU General Public License v3 (GPLv3)" }
+keywords = ["comix", "comicthumb", "thumbnailer"]
+dependencies = [
+    "pillow"
+]
+
+[project.optional-dependencies]
+
+[project.scripts]
+comicthumb = "comicthumb.comicthumb:main"
+
+[project.urls]
+repository = "https://codeberg.org/johndovern/comicthumb"
