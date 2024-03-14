@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+streamlit_custom_ydata_profiling/__init__.py
+streamlit_custom_ydata_profiling/example.py
+streamlit_custom_ydata_profiling.egg-info/PKG-INFO
+streamlit_custom_ydata_profiling.egg-info/SOURCES.txt
+streamlit_custom_ydata_profiling.egg-info/dependency_links.txt
+streamlit_custom_ydata_profiling.egg-info/requires.txt
+streamlit_custom_ydata_profiling.egg-info/top_level.txt
+streamlit_custom_ydata_profiling/frontend/build/asset-manifest.json
+streamlit_custom_ydata_profiling/frontend/build/bootstrap.min.css
+streamlit_custom_ydata_profiling/frontend/build/index.html
+streamlit_custom_ydata_profiling/frontend/build/static/js/main.a671263a.js
+streamlit_custom_ydata_profiling/frontend/build/static/js/main.a671263a.js.LICENSE.txt
