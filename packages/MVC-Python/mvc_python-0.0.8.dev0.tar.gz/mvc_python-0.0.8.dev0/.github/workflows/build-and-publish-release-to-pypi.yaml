@@ -1,0 +1,140 @@
+name: Build and Publish releases to PyPI Production
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prerelease:
+    name: build the release version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install build
+          python -m pip install requests
+          python -m pip install hatch
+      - name: List current dir
+        run: |
+         ls -lisah ./
+      - name: git describe tags
+        run: |
+          git describe --tags
+      - name: Get previous version numbers from hatch
+        run: |
+          hatch version
+          OLD_VERSION=`hatch version`
+          echo "OLD_VERSION:$OLD_VERSION"
+      - name: Build package
+        run: hatch build
+      - name: List current directory
+        run: |
+          ls -lisah ./
+      - name: List dist directory
+        run: |
+          ls -lisah ./dist
+      - name: Show file content of _version.py
+        run: |
+          cat _version.py
+      - name: git status
+        run:
+          git status
+      - name: Store the distribution packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+  github-release:
+    name: >-
+      Sign the Python distribution with Sigstore
+      and upload them to the GitHub Release
+    needs:
+      - prerelease
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # IMPORTANT: mandatory for making GitHub Releases
+      id-token: write  # IMPORTANT: mandatory for sigstore
+
+    steps:
+      - name: Download all the dists
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+      - name: List current directory
+        run: |
+          ls -lisah ./
+      - name: List dist directory
+        run: |
+          ls -lisah ./dist
+      - name: Sign the dists with Sigstore
+        uses: sigstore/gh-action-sigstore-python@v2.1.1
+        with:
+          inputs: >-
+            ./dist/*.tar.gz
+            ./dist/*.whl
+      - name: List current directory
+        run: |
+          ls -lisah ./
+      - name: List dist directory
+        run: |
+          ls -lisah ./dist
+      - name: Store the signed distribution packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package-distributions-signed
+          path: dist/
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create
+          '${{ github.ref_name }}'
+          --repo '${{ github.repository }}'
+          --notes ""
+      - name: Upload artifact signatures to GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        # Upload to GitHub Release using the `gh` CLI.
+        # `dist/` contains the built packages, and the
+        # sigstore-produced signatures and certificates.
+        run: >-
+          gh release upload
+          '${{ github.ref_name }}' dist/**
+          --repo '${{ github.repository }}'
+
+  publish-to-prodpypi:
+    name: Publish to PyPI Prod
+    needs:
+      - prerelease
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write  # IMPORTANT: mandatory for trusted publishing
+
+    steps:
+      - name: Download all the dists
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+      - name: Publish distribution to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          verbose: true
+
