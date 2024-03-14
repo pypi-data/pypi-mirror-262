@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+dataperpkit.egg-info/PKG-INFO
+dataperpkit.egg-info/SOURCES.txt
+dataperpkit.egg-info/dependency_links.txt
+dataperpkit.egg-info/entry_points.txt
+dataperpkit.egg-info/requires.txt
+dataperpkit.egg-info/top_level.txt
+src/__init__.py
+src/data_prep_kit.py
