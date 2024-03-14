@@ -1,0 +1,8 @@
+setup.py
+latex_generator_tdv/__init__.py
+latex_generator_tdv/latex_code_generation.py
+latex_generator_tdv.egg-info/PKG-INFO
+latex_generator_tdv.egg-info/SOURCES.txt
+latex_generator_tdv.egg-info/dependency_links.txt
+latex_generator_tdv.egg-info/not-zip-safe
+latex_generator_tdv.egg-info/top_level.txt
