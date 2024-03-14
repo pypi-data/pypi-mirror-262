@@ -1,0 +1,2 @@
+[console_scripts]
+DataPrepKit = src.__init__ :data_prep_kit
