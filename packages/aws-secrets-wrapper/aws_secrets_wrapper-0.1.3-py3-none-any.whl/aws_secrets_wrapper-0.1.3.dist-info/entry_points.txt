@@ -1,0 +1,4 @@
+[console_scripts]
+awsunwrap=aws_secrets_wrapper.cli:unwrap
+awswrap=aws_secrets_wrapper.cli:wrap
+
