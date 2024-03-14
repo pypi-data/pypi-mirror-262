@@ -1,0 +1,7 @@
+README.md
+setup.py
+py_pass_simple.egg-info/PKG-INFO
+py_pass_simple.egg-info/SOURCES.txt
+py_pass_simple.egg-info/dependency_links.txt
+py_pass_simple.egg-info/requires.txt
+py_pass_simple.egg-info/top_level.txt
