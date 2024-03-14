@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mrgeppetto
+Version: 0.0.1
+Summary: The Geppetto Test
+Home-page: https://github.com/gialdetti/mrgeppetto
+Author: Eyal Gal
+Author-email: eyalgl@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+# MrGeppetto
+The Geppetto Test
+
