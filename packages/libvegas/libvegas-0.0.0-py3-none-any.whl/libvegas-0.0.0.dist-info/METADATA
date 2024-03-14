@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: libvegas
+Version: 0.0.0
+Summary: Kinesis client library
+Project-URL: Documentation, https://github.com/unknown/libvegas#readme
+Project-URL: Issues, https://github.com/unknown/libvegas/issues
+Project-URL: Source, https://github.com/unknown/libvegas
+Author-email: Buddhike de Silva <buddhiks@amazon.com>
+License-Expression: MIT
+License-File: LICENCE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
