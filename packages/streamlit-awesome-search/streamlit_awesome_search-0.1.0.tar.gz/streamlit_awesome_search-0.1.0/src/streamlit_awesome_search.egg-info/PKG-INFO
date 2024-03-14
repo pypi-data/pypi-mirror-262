@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: streamlit_awesome_search
+Version: 0.1.0
+Summary: A streamlit search helper tool package
+Author-email: dustin D <ediajin@126.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+> Demo
+
+```python
+import streamlit as st
+import streamlit_awesome_search.awesome_pandas as apd
+
+all_widgets = apd.create_widgets_expander(df)
+
+if all_widgets:
+    with st.spinner('Searching ...'):
+        filter_df = apd.filter_df(df, all_widgets)
+```
