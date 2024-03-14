@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: st_ydata_profiling
+Version: 0.1.4
+Summary: YData Profiling component for Streamlit.
+Home-page: https://github.com/arpy8/st_ydata_profiling
+Author: arpy8
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ydata-profiling>=4.0.0
+Requires-Dist: streamlit>=0.63
+Provides-Extra: devel
+Requires-Dist: wheel; extra == "devel"
+Requires-Dist: pytest==7.4.0; extra == "devel"
+Requires-Dist: playwright==1.39.0; extra == "devel"
+Requires-Dist: requests==2.31.0; extra == "devel"
+Requires-Dist: pytest-playwright-snapshot==1.0; extra == "devel"
+Requires-Dist: pytest-rerunfailures==12.0; extra == "devel"
+
+# st_ydata_profiling
+This is a slightly tweaked version of the `streamlit-pandas-profiling` component but with the latest dependencies. I've created this for my another ongoing project whose dependencies kept on clashing with the [streamlit-pandas-profiling](https://github.com/arpy8/st_ydata_profiling) package by [okld](https://github.com/okld).
+
+
+[![GitHub][github_badge]][github_link] [![PyPI][pypi_badge]][pypi_link] 
+
+## Installation
+
+```sh
+pip install st_ydata_profiling
+```
+
+## Getting started
+
+```python
+import pandas as pd
+from st_ydata_profiling import display_profile_report
+import streamlit as st
+
+from streamlit_pandas_profiling import st_profile_report
+
+df = pd.read_csv("https://storage.googleapis.com/tf-datasets/titanic/train.csv")
+display_profile_report(df)
+```
+
+[github_badge]: https://badgen.net/badge/icon/GitHub?icon=github&color=black&label
+[github_link]: https://github.com/arpy8/st_ydata_profiling
+
+[pypi_badge]: https://badgen.net/pypi/v/st_ydata_profiling?icon=pypi&color=black&label
+[pypi_link]: https://pypi.org/project/st_ydata_profiling
