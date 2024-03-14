@@ -1,0 +1,11 @@
+aivol/__init__.py,sha256=wa0xqt_S2nKJdTx6IEpBQRPtcqcw0V80k0Xrnl1ggHw,86
+aivol/compare.py,sha256=2OBQuQ0DEhRBtD9iNPV1YA5hu0WdG_x0IdlT4KCFGiA,1030
+aivol/config.py,sha256=fDqF7a8etrFCaHu_Kso-pfPmRTml8lvulLh0NwaZeb8,1942
+aivol/experiment.py,sha256=pO90Q-8L4w7XVwcjV74R8hT1td8ICdD3zOfp1EIIchU,2459
+aivol/resolve.py,sha256=50a43CAd8EvWRjmYR-33_sV-njDGyS23Dp3lR3pZvts,2143
+aivol/sidecar.py,sha256=a6y46xd9TQeAKGIvjTZmYwk5GRAhohPU0pO654asopg,6771
+aivol-0.0.1.dist-info/LICENSE,sha256=7Cuc8LmKzqzgbTnLcStKZt3Jplti9pL0-4p2kjUGvFo,1074
+aivol-0.0.1.dist-info/METADATA,sha256=wCbnaT9DhxCmJENW5WffijpfP-C4KLbW-pWEJWs2sJY,476
+aivol-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aivol-0.0.1.dist-info/top_level.txt,sha256=1DonnMoprWaEHa8plamTC7q20zN5K8RoV69aLRB8RwA,6
+aivol-0.0.1.dist-info/RECORD,,
