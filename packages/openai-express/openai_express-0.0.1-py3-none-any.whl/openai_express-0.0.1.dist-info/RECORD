@@ -1,0 +1,11 @@
+openaiexpress/VERSION,sha256=axN4nkPlSFY0Uz3hamXYup00xMl1hYi2ZYBUNfgOsRU,5
+openaiexpress/__init__.py,sha256=Mvw9G8v-K4eTs3lrk9DhpQ33unwScylQaCvLnKj3NSA,38
+openaiexpress/constant_limits.py,sha256=VMQV0AfdlRtmSBUWSJ2tfSuimqZbMwWTjRst7XKNLO8,1745
+openaiexpress/run.py,sha256=B5Q6mrqi_rAH7GJr3bSXJSOZHJAao2tvj90u_E43A2o,5083
+openaiexpress/schema/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openaiexpress/schema/rate.py,sha256=lB3G4zBUkw3v6OaJc2gNVwCuw1s8p3NGdRzCimSCcd4,1404
+openai_express-0.0.1.dist-info/LICENSE,sha256=EfpZFMNjRrrNi_Q0a-KrwLR_oLY9mIUEsMSOxqLmGsU,1078
+openai_express-0.0.1.dist-info/METADATA,sha256=AdsxArJiioC6yO7It7PvWi7_x8XHLwT5Ia8vjLgBCE4,2276
+openai_express-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+openai_express-0.0.1.dist-info/top_level.txt,sha256=G7wjiqE7TxvNSDgsmA1TSe6HSZqreKuCega0OFgJRgs,14
+openai_express-0.0.1.dist-info/RECORD,,
