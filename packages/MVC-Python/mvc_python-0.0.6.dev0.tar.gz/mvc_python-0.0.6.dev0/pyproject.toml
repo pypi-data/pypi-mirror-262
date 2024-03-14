@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling", "versioningit"]
+build-backend = "hatchling.build"
+
+[project]
+name = "MVC-Python"
+description = "A python module for Skyhigh SSE API and administrative access"
+readme = "README.md"
+dynamic = [
+    "version",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent"
+]
+authors = [
+    { name = "Andreas Zengel", email = "andreas.zengel@skyhighsecurity.com" },
+    { name = "Andreas Zengel", email = "andreas.zengel@gmail.com" },
+]
+requires-python = ">=3.8"
+
+dependencies = [
+    'requests>=2.26',
+]
+
+[project.optional-dependencies]
+
+[project.urls]
+"Homepage" = "https://github.com/zengelan/MVC-Python"
+"Bug Tracker" = "https://github.com/zengelan/MVC-Python/issues"
+"Source" = "https://github.com/zengelan/MVC-Python"
+
+[tool.hatch.build.targets.wheel]
+packages = ["MVC", "examples"]
+exclude = ["tests"]
+
+[tool.hatch.build]
+# Replace the path below with the value you gave to the "file" key:
+artifacts = ["_version.py"]
+
+[tool.hatch.version]
+source = "versioningit"
+
+[tool.versioningit.format]
+distance = "{base_version}.post{distance}"
+# Example formatted version: 1.2.3.post42
+dirty = "{base_version}"
+# Example formatted version: 1.2.3
+distance-dirty = "{base_version}.post{distance}"
+# Example formatted version: 1.2.3.post42
+
+[tool.versioningit.write]
+file = "_version.py"
