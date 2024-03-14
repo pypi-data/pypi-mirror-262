@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: gjirafa50
+Version: 0.1.3
+Summary: A Python client for interacting with the Gjirafa50 API
+Home-page: https://github.com/slumbersage/gjirafa50
+Author: Altin and Aiko
+Author-email: altinbb2@gmail.com
+Requires-Dist: requests
+Requires-Dist: fastapi
+Requires-Dist: pydantic
+Requires-Dist: beautifulsoup4
+
