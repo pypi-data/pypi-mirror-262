@@ -1,0 +1,10 @@
+discordrpc/__init__.py,sha256=DC35TCVidvCu5Rmriv6PbQalslsvPJe2EBI3s9h5MLw,274
+discordrpc/button.py,sha256=AUc7Wcr8N_WkQcPDYvIugwOmxuBlN26FZVM-qKC3lwI,927
+discordrpc/exceptions.py,sha256=GCQbJwo9ougMcAmlKZO2pJeqtkyHryGAYBdGsferSf4,1048
+discordrpc/presence.py,sha256=PfW9s7L-_bY_AI2LKDTEYK6JT3bc24njXNY6IL3nQ8g,7039
+discordrpc/utils.py,sha256=-psgaU_s4nchaLIngbUS8eeGae7YzUQUOM1w19Wj3GQ,632
+discord_rpc-5.0.dist-info/LICENSE,sha256=WQk9srdOPCpkckyIU0d1V1K3nvE2H-SJuRrBXWIQ01E,1071
+discord_rpc-5.0.dist-info/METADATA,sha256=OMgcOB-e7wjzVg_efw3SY6U893LWLJfB5k-gCq5lpL8,5132
+discord_rpc-5.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+discord_rpc-5.0.dist-info/top_level.txt,sha256=SfjQz85K9DT-McDPi02jwMLVp5_PnBMojhfvPP1X0_Y,11
+discord_rpc-5.0.dist-info/RECORD,,
