@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: streamlit-listen
+Version: 0.1.0
+Summary: Audio listener component for streamlit
+Home-page: https://github.com/theevann/streamlit-audiorecorder
+Author: Rafal Cegiela
+Author-email: rcegiela@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit>=0.63
+
+### An audio listener component for streamlit
+Streamlit component that allows you to listen continuously to the microphone
+
+### Installation instructions
+```sh
+pip install streamlit-listen
+```
+
+### Usage instructions
+
+```python
+import streamlit as st
+from streamlit_listen import streamlit_listen
+
+chunk = streamlit_listen()
+```
