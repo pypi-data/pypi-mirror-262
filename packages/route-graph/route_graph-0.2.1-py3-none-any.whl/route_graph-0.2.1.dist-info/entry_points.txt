@@ -1,0 +1,3 @@
+[console_scripts]
+route-graph=route_graph.main:app
+
