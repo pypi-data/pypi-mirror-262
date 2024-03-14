@@ -1,0 +1,10 @@
+README.md
+setup.py
+wormholepy/__init__.py
+wormholepy/airdrop.py
+wormholepy/prices.py
+wormholepy.egg-info/PKG-INFO
+wormholepy.egg-info/SOURCES.txt
+wormholepy.egg-info/dependency_links.txt
+wormholepy.egg-info/requires.txt
+wormholepy.egg-info/top_level.txt

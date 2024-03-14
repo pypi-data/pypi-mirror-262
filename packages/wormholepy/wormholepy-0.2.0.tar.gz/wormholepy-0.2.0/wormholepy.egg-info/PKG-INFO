@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: wormholepy
+Version: 0.2.0
+Summary: A package to check Wormhole airdrop
+Home-page: https://github.com/bomsauro/wormholepy
+Author: Bomsauro
+Author-email: bomsauro@gmail.com
+License: BSD 2-clause
+Description: # Wormholepy
+        
+        This is a package to check Wormhole airdrop in several networks.
+        
+        To install:
+        
+        ```
+        pip install wormholepy
+        ```
+        
+        To use:
+        
+        ```
+        from wormholepy import airdrop
+        airdrop.check("0xc1...2d", "aptos")
+        ```
+        
+        Available networks: aptos, solana, sui
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
