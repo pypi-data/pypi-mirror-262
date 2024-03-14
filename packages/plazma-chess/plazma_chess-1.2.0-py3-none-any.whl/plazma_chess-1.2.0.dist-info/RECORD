@@ -1,0 +1,11 @@
+plazma_chess/__init__.py,sha256=jKiN0IHmNyyELccJ1LKOUsHWEDKMDr4AiHsrCIdjh-4,21
+plazma_chess/bot.py,sha256=cyO9rVtckcOBdLvbDTve42KdkrS9TKEkyAw-S1hurwE,5118
+plazma_chess/engine.py,sha256=i2kpWc61LIP8lPWEC3VQdjHCZLCZaJ_9gUq1jclsyPI,17211
+plazma_chess/example.py,sha256=QIqicN4yLw7P1l1PbRqWnE8q590w2_OzLMIhbp4sxN8,12069
+plazma_chess/pygameGui.py,sha256=0Xl-hyjBNqGh4ti4lMFWZ1gMa9PDtwooTI2SWta5P7s,2779
+plazma_chess/utils.py,sha256=7fhq2guCFOoxMziX3n33thwf8n22e1OvgfzlSk57tIY,1139
+plazma_chess-1.2.0.dist-info/LICENCE,sha256=Tc5rh2wTNAHB2R6p3Fxv20iewIUJVnEfm-aIEro_wtA,1091
+plazma_chess-1.2.0.dist-info/METADATA,sha256=VDwm-PCA8j39VlNI5U-iudqM2WY1tZYBr7z7PtPNGRk,4195
+plazma_chess-1.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+plazma_chess-1.2.0.dist-info/top_level.txt,sha256=dIsJVMPpIfxVrqR7VYQyMY6QHI068KwigRcdHFpTcsc,13
+plazma_chess-1.2.0.dist-info/RECORD,,
