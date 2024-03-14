@@ -1,0 +1,26 @@
+Metadata-Version: 2.3
+Name: muffler
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: numpy >=1.16.0
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: bump2version ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-xdist ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-sugar ; extra == 'dev'
+Requires-Dist: streamlit ; extra == 'dev'
+Requires-Dist: watchdog ; extra == 'dev'
+Requires-Dist: seaborn ; extra == 'dev'
+Requires-Dist: plotly ; extra == 'dev'
+Requires-Dist: scipy ; extra == 'dev'
+Provides-Extra: dev
+License-File: LICENSE
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# Muffler
+Denoising Time-Series Data
+
