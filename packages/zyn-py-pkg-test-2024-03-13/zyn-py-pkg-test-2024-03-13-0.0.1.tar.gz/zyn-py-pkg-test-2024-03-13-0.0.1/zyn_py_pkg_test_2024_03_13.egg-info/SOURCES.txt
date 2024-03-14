@@ -1,0 +1,6 @@
+check_os.c
+setup.py
+zyn_py_pkg_test_2024_03_13.egg-info/PKG-INFO
+zyn_py_pkg_test_2024_03_13.egg-info/SOURCES.txt
+zyn_py_pkg_test_2024_03_13.egg-info/dependency_links.txt
+zyn_py_pkg_test_2024_03_13.egg-info/top_level.txt
