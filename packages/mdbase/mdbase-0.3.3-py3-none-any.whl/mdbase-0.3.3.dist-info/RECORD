@@ -1,0 +1,9 @@
+mdbase/__init__.py,sha256=defcnU-V9a4V2KthE06pdLnNlbaPL3CSbfXbXdT9Vfc,1439
+mdbase/data.py,sha256=ifmOGFG9eyvPOIAGJjQSOS9Ujg1Jx4Pn8v27ODxGlS0,3818
+mdbase/io.py,sha256=pDYIbeTFS870PVABAP57vEZ0XIWAlUrhPZPvtTLTCnA,5045
+mdbase/stats.py,sha256=kUeeGxIZTKB6aFyeVJk3KEozubEEEyCv_71bsRyJ-00,52537
+mdbase-0.3.3.dist-info/LICENCE,sha256=mO0Hi9tBF9zHHg2AxElXal6Z2cI05aHmI1e62lnG_jo,1553
+mdbase-0.3.3.dist-info/METADATA,sha256=dDPCwv5TMY3e_4_eq0eH-4eWlwCUdv6v6DCDHofEtYs,1855
+mdbase-0.3.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mdbase-0.3.3.dist-info/top_level.txt,sha256=Fz0ncl4f1N6CPYjTtpizqPJJIAx9xWJlFCTOr9q548I,7
+mdbase-0.3.3.dist-info/RECORD,,
