@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: cohortfinder
+Version: 1.0.0
+Summary: Intelligent data partitioning using quality control metrics
+Home-page: https://github.com/choosehappy/CohortFinder
+Download-URL: https://github.com/choosehappy/CohortFinder
+Author: Andrew Janowczyk
+License: BSD
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Utilities
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib==3.3.4
+Requires-Dist: numpy==1.23.5
+Requires-Dist: opencv_python_headless==4.9.0.80
+Requires-Dist: pandas==2.0.3
+Requires-Dist: scikit_learn==1.2.1
+Requires-Dist: scipy==1.6.1
+Requires-Dist: umap_learn==0.5.2
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+Requires-Dist: requests; extra == "tests"
