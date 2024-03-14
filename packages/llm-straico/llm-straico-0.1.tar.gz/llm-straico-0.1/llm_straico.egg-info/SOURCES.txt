@@ -1,0 +1,7 @@
+llm_straico.py
+pyproject.toml
+llm_straico.egg-info/PKG-INFO
+llm_straico.egg-info/SOURCES.txt
+llm_straico.egg-info/dependency_links.txt
+llm_straico.egg-info/entry_points.txt
+llm_straico.egg-info/top_level.txt
