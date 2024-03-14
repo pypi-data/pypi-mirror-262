@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: NumpyArrayVisualization
+Version: 0.1
+Summary: https://www.bilibili.com/video/BV1WX4y1h775/
+Home-page: https://github.com/JohnsonSii/NumpyArrayVisualization
+Author: JohnsonSii
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow >=5.1.0
+Requires-Dist: numpy ==1.14.4
+Requires-Dist: PyQt5 ==5.15.4
+
+# NumpyArrayVisualization
+
+教学网站：https://www.bilibili.com/video/BV1WX4y1h775/
+
+![20230528233216](https://github.com/JohnsonSii/NumpyArrayVisualization/assets/67853082/c35c9fc3-b354-4992-a6ab-81749fc31679)
