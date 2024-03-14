@@ -1,0 +1,2 @@
+[console_scripts]
+flet-abp-cli = flet_abp_cli.main:cli
