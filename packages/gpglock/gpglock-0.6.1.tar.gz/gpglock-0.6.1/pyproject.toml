@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "gpglock"
+version = "0.6.1"
+description = "A GPG based file lock"
+authors = ["Ming Feng <mingfengdev@outlook.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+gnupg = "^2.3.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+gpginit2 = "gpglock.cli:init"
+gpglock2 = "gpglock.cli:lock"
+gpgunlock2 = "gpglock.cli:unlock"
