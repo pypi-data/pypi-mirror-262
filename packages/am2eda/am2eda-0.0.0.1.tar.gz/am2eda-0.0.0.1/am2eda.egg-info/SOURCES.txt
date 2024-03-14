@@ -1,0 +1,12 @@
+setup.py
+am2eda/__init__.py
+am2eda/backup_code.py
+am2eda/eda_simple.py
+am2eda/plot.py
+am2eda/process.py
+am2eda/txt2pkl.py
+am2eda.egg-info/PKG-INFO
+am2eda.egg-info/SOURCES.txt
+am2eda.egg-info/dependency_links.txt
+am2eda.egg-info/requires.txt
+am2eda.egg-info/top_level.txt
