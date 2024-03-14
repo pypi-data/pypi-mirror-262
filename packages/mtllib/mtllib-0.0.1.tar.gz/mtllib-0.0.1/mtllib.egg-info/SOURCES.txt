@@ -1,0 +1,5 @@
+setup.py
+mtllib.egg-info/PKG-INFO
+mtllib.egg-info/SOURCES.txt
+mtllib.egg-info/dependency_links.txt
+mtllib.egg-info/top_level.txt
