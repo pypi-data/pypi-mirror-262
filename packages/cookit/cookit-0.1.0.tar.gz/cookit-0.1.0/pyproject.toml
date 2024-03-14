@@ -1,0 +1,33 @@
+[project]
+name = "cookit"
+dynamic = []
+description = "A toolkit for self use."
+authors = [
+    { name = "student_2333", email = "lgc2333@126.com" },
+]
+dependencies = [
+    "pydantic>=1.10.0,<3.0.0,!=2.5.0,!=2.5.1",
+    "typing-extensions>=4.10.0",
+]
+requires-python = ">=3.9,<4.0"
+readme = "README.md"
+version = "0.1.0"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+homepage = "https://github.com/lgc2333/cookit"
+
+[tool.pdm.build]
+includes = []
+
+[tool.pdm.version]
+source = "file"
+path = "cookit/__init__.py"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
