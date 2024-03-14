@@ -1,0 +1,11 @@
+README.md
+setup.py
+Gjirafa50/__init__.py
+Gjirafa50/client.py
+Gjirafa50/models.py
+gjirafa50.egg-info/PKG-INFO
+gjirafa50.egg-info/SOURCES.txt
+gjirafa50.egg-info/dependency_links.txt
+gjirafa50.egg-info/requires.txt
+gjirafa50.egg-info/top_level.txt
+tests/__init__.py
