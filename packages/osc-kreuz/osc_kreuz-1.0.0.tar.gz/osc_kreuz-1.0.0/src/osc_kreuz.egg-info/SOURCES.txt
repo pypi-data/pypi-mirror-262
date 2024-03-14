@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/osc_kreuz/conversionsTools.py
+src/osc_kreuz/osc_kreuz.py
+src/osc_kreuz/osccomcenter.py
+src/osc_kreuz/rendererclass.py
+src/osc_kreuz/soundobjectclass.py
+src/osc_kreuz/str_keys_conventions.py
+src/osc_kreuz.egg-info/PKG-INFO
+src/osc_kreuz.egg-info/SOURCES.txt
+src/osc_kreuz.egg-info/dependency_links.txt
+src/osc_kreuz.egg-info/entry_points.txt
+src/osc_kreuz.egg-info/requires.txt
+src/osc_kreuz.egg-info/top_level.txt
