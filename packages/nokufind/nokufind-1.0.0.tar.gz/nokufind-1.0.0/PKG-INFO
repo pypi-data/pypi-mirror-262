@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: nokufind
+Version: 1.0.0
+Summary: A library that allows you to find posts from multiple Boorus and sources.
+Author: Nokutoka Momiji (@NokutokaMomiji)
+License-File: LICENSE
+Requires-Dist: enma==2.3.0
+Requires-Dist: markdownify==0.11.6
+Requires-Dist: pixivpy3==3.7.4
+Requires-Dist: Pybooru==4.2.2
+Requires-Dist: pygelbooru==0.5.0
+Requires-Dist: rule34Py==1.4.11
+Requires-Dist: tqdm==4.66.2
+Requires-Dist: appdirs==1.4.4
+Requires-Dist: selenium==4.18.1
+Requires-Dist: httpx==0.27.0
+Requires-Dist: aiometer==0.5.0
+Requires-Dist: timeloop==1.0.2
+Requires-Dist: Requests==2.31.0
