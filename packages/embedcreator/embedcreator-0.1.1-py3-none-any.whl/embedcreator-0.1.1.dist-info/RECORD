@@ -1,0 +1,12 @@
+creator/__init__.py,sha256=GPrm_C7t1FrNhtcaQ_W2VJ42P5JbKlF65le786CAkUU,81
+creator/exemplo.py,sha256=fG17QoaavFedySNAe5-3RqUXRaJskbv9o1ONCtK19XA,1011
+creator/help.py,sha256=6dd2npdFUmYIb2mC5FNMxd_L-OI6kLLdQeGF3yuaArs,5595
+creator/input.py,sha256=FSh7ATEcGVv_v64RdMjsYpe09fWvwCArNTBvrTc9y44,4582
+creator/paginator.py,sha256=clUX_GChAPyh6CW-PvVvyM7lOkwWOsjW4LAXlNalItk,6511
+creator/embed_creator/__init__.py,sha256=EMf-dAq9DzH47hWOIQs2efeYAel7oNQOwGg-Ca59GBE,9582
+creator/embed_creator/methods.py,sha256=8gLZ_QZG6-M1oeN_hANAU5O7NIUXWo3OY4ncsFPBJ20,9213
+embedcreator-0.1.1.dist-info/LICENSE,sha256=meme-jofgmouJsFzJayIaPtjondbYddA0-8rmJcFPpE,1133
+embedcreator-0.1.1.dist-info/METADATA,sha256=0fjlfsXXHXXDG-OvbOSHbQOym3ntJJgIg7132lC1ylM,499
+embedcreator-0.1.1.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+embedcreator-0.1.1.dist-info/top_level.txt,sha256=KMZpeSBTjQ4ts1-Kcdum2oiuj129aGJ-H6fN-iUCFHc,8
+embedcreator-0.1.1.dist-info/RECORD,,
