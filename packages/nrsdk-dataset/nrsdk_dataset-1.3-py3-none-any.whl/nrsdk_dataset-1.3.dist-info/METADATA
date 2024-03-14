@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: nrsdk-dataset
+Version: 1.3
+Summary: A  module for query data collected by NeuroRecorder
+Home-page: http://gitlab.eegion.cn/lglab/nrsdk_dataset
+Author: Puzhe Li
+Author-email: li_puzhe@qq.com
+License: MIT
+Requires: mne
+
