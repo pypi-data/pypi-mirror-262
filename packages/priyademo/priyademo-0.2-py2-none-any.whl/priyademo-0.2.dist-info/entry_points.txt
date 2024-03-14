@@ -1,0 +1,3 @@
+[console_scripts]
+priyademo1 = priyademo:hello
+
