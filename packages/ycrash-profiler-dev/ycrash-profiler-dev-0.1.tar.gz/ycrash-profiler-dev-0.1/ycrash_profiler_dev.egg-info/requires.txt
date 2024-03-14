@@ -1,0 +1,6 @@
+pyyaml
+guppy3
+requests
+memory_profiler
+psutil
+pexpect
