@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+NumpyArrayVisualization.egg-info/PKG-INFO
+NumpyArrayVisualization.egg-info/SOURCES.txt
+NumpyArrayVisualization.egg-info/dependency_links.txt
+NumpyArrayVisualization.egg-info/requires.txt
+NumpyArrayVisualization.egg-info/top_level.txt
