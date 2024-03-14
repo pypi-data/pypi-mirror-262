@@ -1,0 +1,9 @@
+moviegraphbenchmark/__init__.py,sha256=vSWotV4t28Zp7dFN-3G1K3ceEbVXqALF6hrNsxAS1YM,237
+moviegraphbenchmark/create_graph.py,sha256=f5czdWbvcgVbZzhq5vPbpBN98xlvx0d32DbeyTdnAG4,15158
+moviegraphbenchmark/get_imdb_data.py,sha256=xaWJfwgDijMW-t_GsLK5c2-mBPtXcNYBU35HFjriWFw,1257
+moviegraphbenchmark/loading.py,sha256=nErI2nPVbPaQGhBd2tSey9lWgbPv_XPf8nHYgA-ZTBg,2827
+moviegraphbenchmark/utils.py,sha256=AtMGFaIj5P5wUbYwehZ-4LCPA6uchu7DQe61KHWndSU,2414
+moviegraphbenchmark-1.1.0.dist-info/entry_points.txt,sha256=ukgCLXsY6_a59bIg3RuM9tJ5nW5-8Yg2W8IZaqDNVI0,90
+moviegraphbenchmark-1.1.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+moviegraphbenchmark-1.1.0.dist-info/METADATA,sha256=bV2bFCKls1DCW67sO1zmCq8RMDoohYjWX8foGgbEqAI,5446
+moviegraphbenchmark-1.1.0.dist-info/RECORD,,
