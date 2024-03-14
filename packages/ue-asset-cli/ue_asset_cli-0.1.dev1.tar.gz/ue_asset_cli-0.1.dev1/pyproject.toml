@@ -1,0 +1,52 @@
+[project]
+name = "ue-asset-cli"
+description = "A linux-compatible command-line interface to download Assets from the Epic Game Store Marketplace."
+readme = "README.md"
+requires-python = ">= 3.9"
+license = "MIT"
+authors = [
+    {name = "Jonathan Windgassen", email = "j.windgassen@fz-juelich.de"},
+]
+keywords = ["Unreal Engine", "UE", "UE4", "UE5", "Marketplace", "EGS", "EOS", "Epic Games"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "requests",
+    "tqdm",
+    "keyring",
+]
+dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/jwindgassen/ue-asset-cli"
+Issues = "https://github.com/jwindgassen/ue-asset-cli/issues"
+
+[project.scripts]
+ue-assets = "ue_asset_cli.cli:main"
+
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+raw-options.local_scheme = "no-local-version"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "ue_asset_cli/_version.py"

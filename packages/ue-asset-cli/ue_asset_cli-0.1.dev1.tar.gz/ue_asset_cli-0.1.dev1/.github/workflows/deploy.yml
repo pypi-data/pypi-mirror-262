@@ -1,0 +1,60 @@
+name: GitHub Release and PyPI Publish
+
+on:
+  push:
+    branches: 
+      - main
+      - ci/cd
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.12'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build
+    - name: Build package
+      run: python -m build
+    - name: Create GitHub Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: gh release create "v$(python -c 'import ue_asset_cli as ue; print(ue.__version__)')" --repo '${{ github.repository }}' --generate-notes --latest
+    - name: Upload artifacts to GitHub Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: gh release upload "v$(python -c 'import ue_asset_cli as ue; print(ue.__version__)')" dist/** --repo '${{ github.repository }}'
+
+  publish:
+    runs-on: ubuntu-latest
+    environment: deploy
+    permissions:
+      id-token: write
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.12'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build
+    - name: Build package
+      run: python -m build
+    - name: Publish package
+      uses: pypa/gh-action-pypi-publish@release/v1.8
