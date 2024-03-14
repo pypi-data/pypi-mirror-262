@@ -1,0 +1,11 @@
+pywaterflood-0.3.3.dist-info/METADATA,sha256=PPTtwL7yKIQfbWXSJvt7DwgSJkqVa3wCR5BUaIpO3KY,7595
+pywaterflood-0.3.3.dist-info/WHEEL,sha256=BdfPrRBRCG8iwrHidmac-uiQGgClU_F7SC45j1pmvDY,103
+pywaterflood-0.3.3.dist-info/license_files/LICENSE,sha256=KXJAVAsBz6gA2A-rxA-XSWSYbDU9MhWoRUKxTVzb-k0,1349
+pywaterflood/buckleyleverett.py,sha256=fLbRkq1jSf35QozQ1ha3sIuAHJVkn5Y7SWrN1PSv1C8,3743
+pywaterflood/crm.py,sha256=7kOS05pnQM6sSEt_QiZSltFIWG-fz3rDONxI8lU2sD4,36413
+pywaterflood/multiwellproductivity.py,sha256=gsppQIUtXVPrwjsw042CPDYHJs6f77Sd48vjbl6VbdM,6587
+pywaterflood/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pywaterflood/_core.pyi,sha256=zErWDu9CuqgWWyF2fd01z44yPLsRj3YZ4JZBdu4DMPE,484
+pywaterflood/__init__.py,sha256=DnjqFwTtyBsUsbxNwzawPc2uHV-RdgGX6534cG7zaHo,1011
+pywaterflood/_core.pypy310-pp73-win_amd64.pyd,sha256=HP4M7Oni9I7bxu7zO9ljSa__KbD5HtlcU-W1Hvbod8Q,314368
+pywaterflood-0.3.3.dist-info/RECORD,,
