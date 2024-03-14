@@ -1,0 +1,13 @@
+README.md
+setup.py
+detectinfo.egg-info/PKG-INFO
+detectinfo.egg-info/SOURCES.txt
+detectinfo.egg-info/dependency_links.txt
+detectinfo.egg-info/requires.txt
+detectinfo.egg-info/top_level.txt
+sensitive_info_detector/__init__.py
+sensitive_info_detector/detector.py
+sensitive_info_detector/patterns.py
+sensitive_info_detector/version.py
+tests/__init__.py
+tests/test_detector.py
