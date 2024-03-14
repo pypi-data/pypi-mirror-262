@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: awiki
+Version: 1.0.2
+Summary: A basic asynchronous wrapper for the WikiMedia API
+Author: statikana
+Author-email: contact@statikana.dev
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Description-Content-Type: text/markdown
+
+# awiki
+
+a basic asynchronous wrapper for the wikimedia API.
+
+this currently only supports anonymous actions (ie., getting and searching for pages),
+and does not support editing or creating new pages.
+
+
+## installation
+your favorite flavor of the following:
+```bash
+python3 -m pip install -U awiki
+```
+
+## quick overview
+
+the main class is `awiki.WikiClient`. Each section of the wikimedia API is separated within this class - for example,
+the currently supported sections are `core` - searching and getting previews of pages - and `feed` - getting daily
+featured articles etc.
+
+## examples
+
+Searching for articles called "Python":
+```python
+import asyncio
+
+import awiki
+
+async def main():
+    # create a new instance of the wiki client
+    wiki = awiki.WikiClient()
+
+    # Searches wiki pages for the given search terms, and returns matching pages.
+    pages = await wiki.search_content("Python", limit=25)
+
+    for p in pages:
+        print(f"{p.title}: {p.description} (https://en.wikipedia.org/wiki/{p.key})")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
