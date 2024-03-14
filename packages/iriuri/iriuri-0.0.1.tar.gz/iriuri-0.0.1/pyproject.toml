@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "iriuri"
+version = "0.0.1"
+description = "Fully RFC 3986/3987 URI and IRI parsing and manipulation"
+authors = ["Henry H. Andrews, <handrews@modern-json-schema.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+abnf-to-regexp = "^1.1.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
