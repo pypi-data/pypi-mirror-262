@@ -1,0 +1,1 @@
+from lindosol.sunnyday import Weather
