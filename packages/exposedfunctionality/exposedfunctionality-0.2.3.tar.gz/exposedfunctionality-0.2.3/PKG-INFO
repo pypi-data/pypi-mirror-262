@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: exposedfunctionality
+Version: 0.2.3
+Summary: tool to expose functionalities to multiple tools
+License: MIT
+Author: Julian Kimmig
+Author-email: julian.kimmig@linkdlab.de
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pyyaml (>=6,<7)
+Requires-Dist: typing-extensions (>=4.10.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+
