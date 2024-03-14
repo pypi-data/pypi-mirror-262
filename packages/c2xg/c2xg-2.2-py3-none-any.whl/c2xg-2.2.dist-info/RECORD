@@ -1,0 +1,13 @@
+c2xg/Association.py,sha256=ZGIwp-TcJHf2XDOqz8QU3VlHhcADacHVfskUYZGKXH0,10029
+c2xg/Candidates.py,sha256=sdjP74nF9o1GBy8lbVLpV9RmDe2FJsano22eSWupfaM,9932
+c2xg/Loader.py,sha256=O9HVlPg06O_JJAmZPjup3LJRM4WL0oBIOmA8qGWFvQk,26688
+c2xg/MDL.py,sha256=aSWr2Zw_y-VP8UyWe3sdSJvqye5GQeuYblM7OFTVPqc,9056
+c2xg/Parser.py,sha256=BsKQ5V9ronxoAKEptFJxOk0wKVsZASdWM1_i7Ur6jTE,14987
+c2xg/Word_Classes.py,sha256=R4yFNBBYsW02MoZituTKglHN3YVy1OU_nmQBokfo6Fs,10835
+c2xg/__init__.py,sha256=rxDskxoqjIxQzRpoYpuxFGDl4UgbK-yKqqXst71UPYk,56
+c2xg/c2xg.py,sha256=l-hAS6jdiFWPCGKC7fsDlIw9XH2gwWcIgGTHS5wYstA,111083
+c2xg-2.2.dist-info/LICENSE.txt,sha256=XyC2nw5ci0PBglmLCzS6DQNAuo8Oo5p6mcFlh1Bx0Fo,35797
+c2xg-2.2.dist-info/METADATA,sha256=eiXM1L5vgi5X9Y-NPibxYw-6nAJd06qASuQBuf35m0I,16628
+c2xg-2.2.dist-info/WHEEL,sha256=Xo9-1PvkuimrydujYJAjF7pCkriuXBpUPEjma1nZyJ0,92
+c2xg-2.2.dist-info/top_level.txt,sha256=sK9ZWLKRTTGNsy_w74QzTPzoFWSFdZI5tu2E0jxZNZI,5
+c2xg-2.2.dist-info/RECORD,,
