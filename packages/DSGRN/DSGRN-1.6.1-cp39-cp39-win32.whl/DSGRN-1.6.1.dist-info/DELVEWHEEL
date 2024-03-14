@@ -1,0 +1,2 @@
+Version: 1.5.4
+Arguments: ['C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-2yc4_ynx\\cp39-win32\\build\\venv\\Scripts\\delvewheel', 'repair', '-w', 'C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-2yc4_ynx\\cp39-win32\\repaired_wheel', 'C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-2yc4_ynx\\cp39-win32\\built_wheel\\DSGRN-1.6.1-cp39-cp39-win32.whl']
