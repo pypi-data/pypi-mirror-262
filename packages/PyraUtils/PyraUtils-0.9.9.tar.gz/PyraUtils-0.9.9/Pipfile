@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+httpx = "*"
+requests = "*"
+pypinyin = "*"
+pycryptodome = "*"
+pytz = "*"
+xxhash = "*"
+twine = "*"
+build = "*"
+py7zr = "*"
+wheel = "*"
+numpy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
