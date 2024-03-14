@@ -1,0 +1,10 @@
+argolid-0.0.5.dist-info/RECORD,,
+argolid-0.0.5.dist-info/LICENSE,sha256=Fg4kOwqZrHdNpYuaPay-zI5aNJNXmBfi8ev4u0eytdo,1064
+argolid-0.0.5.dist-info/WHEEL,sha256=O2U6uo1BuIUwqyvIIROAPtr-XIF8g7vpJjg5dZPrhKg,112
+argolid-0.0.5.dist-info/top_level.txt,sha256=pjCWdXMo-MKwmBJQ9NBfN4bsO9S4tHScl5ZMDAnvd88,27
+argolid-0.0.5.dist-info/METADATA,sha256=LQb7ywO_Y1rFr0H9qIAiJr5GOnnFfa5L9ISP_rHaZiY,2760
+argolid/_version.py,sha256=7B5Cc0vASbS-Z9BmMc1k0KErtdww9zqOSJYCz5AqWMg,497
+argolid/__init__.py,sha256=7NzMlEgCyTSqHC-TDDzi2CrVGEeLdpl5nKPLVKz7wuw,122
+argolid/libargolid.cpython-311-darwin.so,sha256=kxbkZf8bkPNlgnLGBsex5KLrz-DKhorQo2F6uQlwmus,34615776
+argolid/pyramid_generator.py,sha256=FrbkGHFSypykCvhCz8Jx4_WjkS9LOEgSce3QCNuE4X8,1269
+argolid/.dylibs/libfilepattern.2.dylib,sha256=saEGF3aqYhVKGl29BSnzj1jjtZWltTnWzrOEW1PU-3A,3296176
