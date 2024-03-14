@@ -1,0 +1,120 @@
+name: Releaser
+
+on:
+  workflow_dispatch:
+    inputs:
+      push:
+        description: Should this push a new release? 
+        required: false
+        default: false
+        type: boolean
+      tag:
+        description: Tag to release
+        required: false
+        type: string
+  workflow_call:
+    inputs:
+      push:
+        description: Should this push a new release? 
+        required: false
+        default: false
+        type: boolean
+      tag:
+        description: Tag to release
+        required: false
+        type: string
+
+jobs:
+  releaser:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Dist Dir
+      id: dist_dir
+      run: mkdir -p dist artifacts
+
+    - name: Get Tag Name
+      id: set_tag
+      env:
+        GIT_TAG: ${{ inputs.tag }}
+      run: |
+        if [ -z "$GIT_TAG" ]; then
+          GIT_TAG=${GITHUB_REF#refs/*/}
+        fi
+        VERSION=$(echo $GIT_TAG | cut -d'v' -f2)
+        NAME="duploctl-${VERSION}"
+        echo "GIT_TAG=${GIT_TAG}" >> $GITHUB_OUTPUT
+        echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+        echo "NAME=${NAME}" >> $GITHUB_OUTPUT
+    
+    - name: Download Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        pattern: ${{ steps.set_tag.outputs.NAME }}-*
+        path: artifacts
+        merge-multiple: false
+
+    - name: Compress Artifacts
+      shell: bash
+      run: |
+        for d in artifacts/*; do
+          name=$(basename $d)
+          dest="dist/${name}.tar.gz"
+          tar -czvf "$dest" -C $d .
+          shasum -a 256 $dest >> dist/checksums.txt
+        done
+        echo "Created Release Artifacts"
+        ls -l dist
+
+    - name: Create Release
+      id: release
+      uses: softprops/action-gh-release@v2
+      if: inputs.push == true
+      with:
+        name: ${{ steps.set_tag.outputs.GIT_TAG }}
+        tag_name: ${{ steps.set_tag.outputs.GIT_TAG }}
+        files: |
+          dist/*
+        body: |
+          duploctl ${{ steps.set_tag.outputs.GIT_TAG }} is out!. 
+
+          PyPi: 
+          [duplocloud-client](https://pypi.org/project/duplocloud-client/${{ steps.set_tag.outputs.VERSION }}/)
+          ```sh
+          pip install duplocloud-client==${{ steps.set_tag.outputs.VERSION }}
+          ```
+
+          Dockerhub:  
+          [duplocloud/duploctl:${{ steps.set_tag.outputs.GIT_TAG }}](https://hub.docker.com/r/duplocloud/duploctl)
+          ```sh
+          docker pull duplocloud/duploctl:${{ steps.set_tag.outputs.GIT_TAG }}
+          ```
+          
+          Build: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        prerelease: false
+
+    - name: Post to a Slack channel
+      id: slack
+      uses: slackapi/slack-github-action@v1.25.0
+      if: inputs.push == true
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      with:
+        channel-id: ${{ vars.SLACK_CHANNEL_ID }}
+        slack-message: |
+          duploctl ${{ steps.set_tag.outputs.GIT_TAG }} is out! 
+          ${{ steps.release.outputs.url }}
+
+    - name: Job Summary
+      env:
+        GIT_TAG: ${{ steps.set_tag.outputs.GIT_TAG }}
+        URL: ${{ steps.release.outputs.url }}
+        VERSION: ${{ steps.set_tag.outputs.VERSION }}
+      run: |
+        cat <<EOF >> $GITHUB_STEP_SUMMARY
+        Tag: $GIT_TAG
+        Release: $URL
+        Docker: duplocloud/duploctl:${GIT_TAG}
+        PyPi: duplocloud-client==${VERSION}
+        EOF
+    
