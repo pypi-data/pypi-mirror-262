@@ -1,0 +1,45 @@
+[tool.pdm]
+distribution = true
+
+[tool.pdm.scripts.test]
+composite = [
+    "pdm install",
+    "flake8 ./pydumpling ./tests",
+    "pytest tests/",
+]
+
+[tool.pdm.build]
+includes = [
+    "pydumpling/*.py",
+]
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest-order>=1.2.0",
+    "flake8>=5.0.4",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "pydumpling"
+version = "0.1.4"
+description = "Python post-mortem debugger"
+authors = [
+    { name = "cocolato", email = "haiizhu@outlook.com" },
+]
+dependencies = [
+    "dill<1.0.0,>=0.3.2",
+]
+requires-python = ">=3.7"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+homepage = "https://github.com/cocolato/pydumpling"
