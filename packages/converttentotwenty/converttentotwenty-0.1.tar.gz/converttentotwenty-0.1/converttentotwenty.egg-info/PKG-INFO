@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: converttentotwenty
+Version: 0.1
+Summary: Ma bibliothèque Python
+Home-page: https://github.com/Joris-ROBIN/Converttentotwenty.git
+Author: Skairipa
+Author-email: jorisrobin34@gmail.com
+License: MEEF
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Converttentotwenty
+
+BibliothÃ¨que permettant la traduction d'un message d'une base 10 Ã  base 20.
+
+Voici le dictionnaire de la base 20 utilisÃ© : "0123456789Â§ÂµÂ£?%&Ã©Ã§Ã |".
+Par exemple, 11 (base10) -> Âµ (base20); 20 (base10) -> | (base20);
+15 (base10) -> & (base20)
+
+Le but est de l'utiliser a des fins pÃ©dagogiques pour des TP de NSI.
+La base choisie est arbitraire et en fait rÃ©fÃ©rence Ã  aucune base existante.
