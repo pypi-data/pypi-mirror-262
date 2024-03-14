@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: phase1api
+Version: 0.0.2
+Summary: Binding for the ESO phase 1 programmatic API
+Project-URL: Homepage, https://www.eso.org/cop1/apidoc/phase1.html
+Author-email: Thomas Bierwirth <thomas.bierwirth@eso.org>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: API,ESO,Observation,Phase1,Preparation,Programmatic
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+# p1api
+
+Python binding for the phase 1 programmatic API to prepare observation proposals. 
+
+Phase 1 programmatic API documentation can be found [here](<https://www.eso.org/cop1/apidoc/phase1.html>).
