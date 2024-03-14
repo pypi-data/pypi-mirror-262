@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: fastapi-nitro
+Version: 0.2.1
+Summary: Cache for FastAPI
+Home-page: https://github.com/lyon916/fastapi-nitro
+License: Apache-2.0
+Keywords: fastapi,cache,caching
+Author: lyon916
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: all
+Provides-Extra: dynamodb
+Provides-Extra: memcache
+Provides-Extra: redis
+Requires-Dist: aiobotocore (>=1.4.1,<3.0.0) ; extra == "dynamodb" or extra == "all"
+Requires-Dist: aiomcache ; extra == "memcache" or extra == "all"
+Requires-Dist: fastapi
+Requires-Dist: importlib-metadata (>=6.6.0,<7.0.0) ; python_version < "3.8"
+Requires-Dist: pendulum
+Requires-Dist: redis (>=4.2.0rc1,<5.0.0) ; extra == "redis" or extra == "all"
+Requires-Dist: typing-extensions (>=4.1.0)
+Requires-Dist: uvicorn
+Project-URL: Documentation, https://github.com/lyon916/fastapi-nitro
+Project-URL: Repository, https://github.com/lyon916/fastapi-nitro.git
+Description-Content-Type: text/markdown
+
+# fastapi-cache
+ 
+
