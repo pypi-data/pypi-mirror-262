@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: radiometerAPI
+Version: 1.0.4
+Summary: API for radiometer
+Home-page: http://www.example.com/
+Author: aburgart02
+Author-email: 
+License: UNKNOWN
+Project-URL: Documentation, https://github.com/aburgart02/radiometer-api
+Project-URL: Source Code, https://github.com/aburgart02/radiometer-api
+Project-URL: Bug Tracker, https://github.com/aburgart02/radiometer-api
+Keywords: radiometer
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# RadiometerAPI
+
+<h2> РЎРѕР·РґР°РЅРёРµ СЌРєР·РµРјРїР»СЏСЂР° RadiometerAPI </h2>
+radiometer_api = RadiometerAPI(server_address: str, token: str, verify_ssl: bool, session: ClientSession | None = None) <br />
+server_address - Р°РґСЂРµСЃ СЃРµСЂРІРµСЂР° <br />
+verify_ssl - РІРєР»СЋС‡РёС‚СЊ/РѕС‚РєР»СЋС‡РёС‚СЊ РїСЂРѕРІРµСЂРєСѓ ssl СЃРµСЂС‚РёС„РёРєР°С‚Р°<br />
+token - Р°РІС‚РѕСЂРёР·Р°С†РёРѕРЅРЅС‹Р№ С‚РѕРєРµРЅ <br />
+session - СЌРєР·РµРјРїСЏСЂ aiohttp.ClientSession(loop=loop) СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С†РёРєР»РѕРј СЃРѕР±С‹С‚РёР№ loop <br />
+
+# РњРµС‚РѕРґС‹ RadiometerAPI
+
+<h2> РЎРёРЅС…СЂРѕРЅРЅС‹Рµ РјРµС‚РѕРґС‹: </h2>
+get_measurement(id: int) - РІРѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РёР·РјРµСЂРµРЅРёРё <br />
+get_measurement_with_data(id: int) - РІРѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РёР·РјРµСЂРµРЅРёРё РІРјРµСЃС‚Рµ СЃ СЃС‹СЂС‹РјРё РґР°РЅРЅС‹РјРё <br />
+get_measurements() - РІРѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РёР·РјРµСЂРµРЅРёСЏС… <br />
+get_measurements_with_data() - РІРѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РёР·РјРµСЂРµРЅРёСЏС… РІРјРµСЃС‚Рµ СЃ СЃС‹СЂС‹РјРё РґР°РЅРЅС‹РјРё <br />
+get_devices() - РІРѕР·РІСЂР°С‰Р°РµС‚ СѓСЃС‚СЂРѕР№СЃС‚РІР° <br />
+get_patients() - РІРѕР·РІСЂР°С‰Р°РµС‚ РїР°С†РёРµРЅС‚РѕРІ <br />
+get_calibrations() - РІРѕР·РІСЂР°С‰Р°РµС‚ РєР°Р»РёР±СЂРѕРІРєРё <br />
+
+<h2> РђСЃРёРЅС…СЂРѕРЅРЅС‹Рµ РјРµС‚РѕРґС‹: </h2>
+get_measurement_async(id: int) - Р°СЃРёРЅС…СЂРѕРЅРЅРѕ РІРѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РёР·РјРµСЂРµРЅРёРё <br />
+get_measurement_with_data_async(id: int) - Р°СЃРёРЅС…СЂРѕРЅРЅРѕ РІРѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РёР·РјРµСЂРµРЅРёРё РІРјРµСЃС‚Рµ СЃ СЃС‹СЂС‹РјРё РґР°РЅРЅС‹РјРё <br />
+get_measurements_async() - Р°СЃРёРЅС…СЂРѕРЅРЅРѕ РІРѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РёР·РјРµСЂРµРЅРёСЏС… <br />
+get_measurements_with_data_async() - Р°СЃРёРЅС…СЂРѕРЅРЅРѕ РІРѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РёР·РјРµСЂРµРЅРёСЏС… РІРјРµСЃС‚Рµ СЃ СЃС‹СЂС‹РјРё РґР°РЅРЅС‹РјРё <br />
+get_devices_async() - Р°СЃРёРЅС…СЂРѕРЅРЅРѕ РІРѕР·РІСЂР°С‰Р°РµС‚ СѓСЃС‚СЂРѕР№СЃС‚РІР° <br />
+get_patients_async() - Р°СЃРёРЅС…СЂРѕРЅРЅРѕ РІРѕР·РІСЂР°С‰Р°РµС‚ РїР°С†РёРµРЅС‚РѕРІ <br />
+get_calibrations_async() - Р°СЃРёРЅС…СЂРѕРЅРЅРѕ РІРѕР·РІСЂР°С‰Р°РµС‚ РєР°Р»РёР±СЂРѕРІРєРё <br />
+
+
