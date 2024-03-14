@@ -1,0 +1,72 @@
+[tool.poetry]
+name = "gptel"
+version = "0.3.0"
+description = "Framework to build Telegram bots"
+authors = ["Cristóbal Carnero Liñán <ccarnerolinan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-telegram-bot = "^20.8"
+openai = "^1.12.0"
+
+[tool.poetry.group.dev.dependencies]
+nox = "^2023.4.22"
+black = "^24.2.0"
+blackdoc = "^0.3.9"
+isort = "^5.13.2"
+ruff = "^0.2.2"
+mypy = "^1.8.0"
+nox-poetry = "^1.0.3"
+coverage = {extras = ["toml"], version = "^7.4.3"}
+pytest = "^8.0.1"
+pytest-cov = "^4.1.0"
+bumpver = "^2023.1129"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+ignore_missing_imports = true
+follow_imports = "skip"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = [
+  "tests",
+]
+
+[tool.coverage.paths]
+source = [
+  "src",
+  "*/site-packages",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["gptel"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.bumpver]
+current_version = "0.3.0"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version {old_version} -> {new_version}"
+tag_message = "{new_version}"
+tag_scope = "default"
+pre_commit_hook = ""
+post_commit_hook = ""
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+    'version = "{version}"',
+]
+"src/gptel/__init__.py" = [
+    '^__version__ = "{version}"$',
+]
