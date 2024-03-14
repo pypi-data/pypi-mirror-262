@@ -1,0 +1,11 @@
+mpsky/__init__.py,sha256=MuqedMbCdVwW3NUPJDt8WyJ5H4j0qyhl8xr973xXa7E,113
+mpsky/_version.py,sha256=pMnmqZnpVmaqR5nqHztNWzbbtb1oy5bPN_v7uhOH8K8,411
+mpsky/core.py,sha256=izWrMMpZvMfJ_s_uE_D3Fpg_WyTFfyek6NXPOOowJqM,17071
+mpsky/log_conf.yaml,sha256=3ChkeL60ui9TFbDg8IMlnqlXuNcAsI3d73GG7v1cjDo,732
+mpsky/service.py,sha256=eYXV03HVT3TPbQvTy2dSPAL4IC7jKbTWmNcUGGZBLSA,2281
+mpsky-0.0.1.dist-info/LICENSE,sha256=NEQ_QGKUh0gWdKl9SF5Tff-IIW1O0hQks7c1_IlkyQM,1498
+mpsky-0.0.1.dist-info/METADATA,sha256=9VyUWOBLQM56zPKMeMwCOAOd2M6U2gbPu8zEKQUeWis,5320
+mpsky-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mpsky-0.0.1.dist-info/entry_points.txt,sha256=_HuYORYRkv5l6I0fe4CdlQtor3NuTna8kRI_7C8_0_w,37
+mpsky-0.0.1.dist-info/top_level.txt,sha256=3J2IV-fSQ3WjUG5won0Sx_-XaalRv2IQpbkP-3XIBrE,6
+mpsky-0.0.1.dist-info/RECORD,,
