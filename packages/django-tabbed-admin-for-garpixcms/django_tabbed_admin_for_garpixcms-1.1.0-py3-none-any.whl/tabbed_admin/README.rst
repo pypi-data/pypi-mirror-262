@@ -1,0 +1,1 @@
+Fork of https://github.com/omji/django-tabbed-admin with Django >= 4 support
