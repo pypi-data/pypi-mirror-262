@@ -1,0 +1,16 @@
+monitor/__init__.py,sha256=WTTTSm9Ov5odFbQ5FAEZoWsaPsq_Ncf4gmBhGzmEaAA,82
+monitor/__main__.py,sha256=AMjnYahyZbxXnQpez4_daydM7BRSmBJyY7upWeffK8U,37
+monitor/app.py,sha256=IJ2qK4gUycteFxJqxNX0pHmUCJgJb887_DtaBMyL3SE,627
+monitor/capture.py,sha256=D-MLM1IeSg8uj7MaXz03meeKyGbMZ_8FEmDC0hr_rXU,2653
+monitor/command.py,sha256=5JzuQxheAaIajT7wDjSvwrM3qBVZLvs_fiplHm_7ivA,3054
+monitor/config.py,sha256=H66CbRzDw2o2KrBzt2to6uXwvpkCew7fK2vYg7EpRbM,6355
+monitor/log.py,sha256=0xaXKl0X6B5D2kakwyshrYAoChiW7UZ6XfULpmeXDGw,3139
+monitor/policy.py,sha256=0floseEqvO48f4Slpy_gttTf88R6T9gOpza3lVaaBy0,2180
+monitor/server.py,sha256=2MXxC42H6bFmwTjx1Cr2QHEhbueSTF45tSyYkSJhZ74,5050
+monitor/video.py,sha256=Ja8OhfBjUd-QtiK93J7EIw57MhcmJLGZnGflyn7iyoU,4245
+work_monitor-0.1.3.dist-info/LICENSE,sha256=bV8ayTfrfyWj-pRiikqONw7q-ExjADDqd7d8bsUFbfU,1061
+work_monitor-0.1.3.dist-info/METADATA,sha256=LoQxDRRs7Zq7zCn_Q2bsRnoyXCtCRoQT39iSZbun69g,903
+work_monitor-0.1.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+work_monitor-0.1.3.dist-info/entry_points.txt,sha256=cSSJU_9vbnWioQ724k5RoHYtxK_pEfIe5dlML1yRnqQ,50
+work_monitor-0.1.3.dist-info/top_level.txt,sha256=tGkQDkVeyKgP5Rr7acpp0df83NBAnI8up0sGwRxuuQ4,8
+work_monitor-0.1.3.dist-info/RECORD,,
