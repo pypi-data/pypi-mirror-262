@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pydedustapi
+Version: 0.1.0
+Summary: A Python library for interacting with the DeDust API
+Home-page: https://github.com/labfunny/py-dedust-api
+Author: Max
+License: MIT
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests
