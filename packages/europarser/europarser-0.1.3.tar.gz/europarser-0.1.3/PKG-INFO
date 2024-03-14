@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: europarser
+Version: 0.1.3
+Project-URL: Documentation, https://github.com/CERES-sorbonne/europarser#readme
+Project-URL: Issues, https://github.com/CERES-sorbonne/europarser/issues
+Project-URL: Source, https://github.com/CERES-sorbonne/europarser
+Author-email: Marceau <pypi@marceau-h.fr>
+License-Expression: AGPL-3.0-or-later
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: aiofiles
+Requires-Dist: beautifulsoup4~=4.12.2
+Requires-Dist: cython
+Requires-Dist: fastapi
+Requires-Dist: faust-cchardet
+Requires-Dist: jinja2
+Requires-Dist: langid~=1.1.6
+Requires-Dist: lxml
+Requires-Dist: matplotlib~=3.7.2
+Requires-Dist: numpy
+Requires-Dist: pandas~=2.0.3
+Requires-Dist: plotly
+Requires-Dist: polars~=0.19.12
+Requires-Dist: py3langid
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: python-dateutil~=2.8.2
+Requires-Dist: python-multipart
+Requires-Dist: tqdm
+Requires-Dist: uvicorn[standard]
+Requires-Dist: xlsxwriter
+Description-Content-Type: text/markdown
+
+# Europarser
+
+[![PyPI - Version](https://img.shields.io/pypi/v/europarser.svg)](https://pypi.org/project/europarser)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/europarser.svg)](https://pypi.org/project/europarser)
+
+Parsing d'articles de presse pour extraire le contenu et le transformer en des formats d'analyse comme TXM ou Iramuteq
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install europarser
+```
+
+
+## Usages
+#### Usage basique
+```python
+from pathlib import Path
+
+from europarser.main import main
+from europarser.models import Params
+
+folder = Path('/path/to/your/articles')
+# As a list, you can choose between "json", "txm", "iramuteq", "csv", "stats", "processed_stats", "plots", "markdown" or any combination of them
+outputs = ["json", "txm", "iramuteq", "csv", "stats", "processed_stats", "plots", "markdown"]
+params = Params(
+    minimal_support_kw=5,
+    minimal_support_authors=2,
+    minimal_support_journals=8,
+    minimal_support_dates=3,
+)
+
+main(folder, outputs, params=params)
+```
+
+### Usage sous forme d'API
+1) Installez le package
+```console
+pip install europarser
+```
+
+2) Lancez le serveur avec la commande suivante
+```console
+europarser-api [--host HOST] [--port PORT]
+```
+
+3) Allez sur [localhost:8000](http://localhost:8000) (par défaut) pour accéder à l'interface de l'API
+
+
+## License
+
+`europarser` est distribué sous les termes de la licence [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.html).
