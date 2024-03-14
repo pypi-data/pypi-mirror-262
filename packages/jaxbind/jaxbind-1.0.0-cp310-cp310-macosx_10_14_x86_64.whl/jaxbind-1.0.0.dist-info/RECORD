@@ -1,0 +1,10 @@
+_jaxbind.cpython-310-darwin.so,sha256=7AYzMMzIKh5KFSc66ij2_IuOj6US-0GHUBX8-f-vrDE,172384
+jaxbind/misc.py,sha256=8yvhu5n5T1topoMpnHFSIGNhdm9uModANenmSvsS_BQ,278
+jaxbind/custom_map.py,sha256=vBXSChFM6IVvKtRoPN5CdNVFi8k9TVPbC_mp_FY0ec0,4284
+jaxbind/__init__.py,sha256=7SmnwLs8LjOsjE2g_vSIlSDw5BXvJsbmJ4pVRXD4qno,110
+jaxbind/jaxbind.py,sha256=BWlUEfAufIwXfUKqTpKo1BNKiZrz_KIGAFwH1e2U8FI,16367
+jaxbind-1.0.0.dist-info/RECORD,,
+jaxbind-1.0.0.dist-info/LICENSE,sha256=PxXTfmH-Zv65ycQ6B6TE1_kHyzCGZ8_J9zWTO27k0nA,1306
+jaxbind-1.0.0.dist-info/WHEEL,sha256=dQasXeZxVA4NJzwupfHSthH1qE3tOXDOp8_Oa-n2Wx8,112
+jaxbind-1.0.0.dist-info/top_level.txt,sha256=W4klZfmjeodUlW1ft6KcStq-js8tSw4m0JWANPuQWNc,17
+jaxbind-1.0.0.dist-info/METADATA,sha256=HoS42wA53YOW0zAj84-StJxz3IRdAZqr6FOJYjGTh-s,10729
