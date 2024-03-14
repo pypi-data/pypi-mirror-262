@@ -1,0 +1,12 @@
+palletjack/cpalletjack.pxd,sha256=NEs9bkMC1OWo3nH6ZaQFAk3WeusuDWdI-Iq0dHghYto,513
+palletjack/parquet_types_palletjack.h,sha256=Vlmqd9CgYXN9zgo3LM4llGkNB8VlUTrCdruN2nVrTgc,86184
+palletjack/windows_fixup.h,sha256=mPxN-RPrEK86i-jlomXpDmefpOdBOc6JCoBxy2aa2Rc,188
+palletjack/palletjack_cython.pyx,sha256=GA4h2DalulrPHwtTKG2gyDKkA65udUmM2KGbT2CR5z4,1087
+palletjack/__init__.py,sha256=mjp-srmaugnZrlHsmK9lRlVX4_qdmrNKsFxhKYqNNFw,119
+palletjack/palletjack_cython.cpython-39-x86_64-linux-gnu.so,sha256=Va1b5ED9Vn-qIrOcgqX3A66c_IKyYu-W3COhpUhmmSo,7613616
+palletjack/palletjack.h,sha256=JExaUHowwPywipdvcJz0Vo2aHnkVwpXEVsaXJKET_gY,556
+palletjack-2.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+palletjack-2.0.0.dist-info/RECORD,,
+palletjack-2.0.0.dist-info/METADATA,sha256=I4kVyY5D0BH0IeJgzzM5lZ9gsbNqKKh20Np9PGHHYUg,3355
+palletjack-2.0.0.dist-info/WHEEL,sha256=gg9-3gSnm8YY3N6EG3Vi0RK32TDT-8Vr2rQhHj0jiC4,149
+palletjack-2.0.0.dist-info/top_level.txt,sha256=YNUveproyFeyOcUwfDVZzW8eHQC69PHFPPTIPRWxUv0,11
