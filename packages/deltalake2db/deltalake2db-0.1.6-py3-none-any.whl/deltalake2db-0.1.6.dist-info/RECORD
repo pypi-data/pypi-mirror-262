@@ -1,0 +1,8 @@
+deltalake2db/__init__.py,sha256=LvCGkobNF4kCtYm2qBr9BQZxeEzlp2ISFk8OzxC1pF0,268
+deltalake2db/duckdb.py,sha256=hVbXEM4Er2Jff51pDWQTACVjIJ9Wo9waxkCLUUeQkH8,11733
+deltalake2db/polars.py,sha256=MLi2x9SgXc9QKBWNd8lOHotc3c4p1byeGCOZKNKJTPY,4910
+deltalake2db/protocol_check.py,sha256=kiAlwNX4PRqTEDdSeHxuilxHzTWai6Km_D7Ka73nO_8,963
+deltalake2db/sql_utils.py,sha256=WRopaRgMMfGo58XxIFeQH_ymGIM0lROaBlny4JwSDbo,2559
+deltalake2db-0.1.6.dist-info/METADATA,sha256=syFheItxkoftoZe1r4KqxNfeW2_GNKfQGhHlwLJoDrQ,2454
+deltalake2db-0.1.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+deltalake2db-0.1.6.dist-info/RECORD,,
