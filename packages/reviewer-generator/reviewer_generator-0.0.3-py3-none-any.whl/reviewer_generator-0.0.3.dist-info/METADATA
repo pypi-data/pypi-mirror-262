@@ -1,0 +1,163 @@
+Metadata-Version: 2.1
+Name: reviewer-generator
+Version: 0.0.3
+Summary: Terminal-based test reviewer generator on formatted notes
+Home-page: https://github.com/shshshshshan/reviewer-generator
+Author: Shan Seneca
+Author-email: shnmyklsnc@gmail.com
+Project-URL: Bug Tracker, https://github.com/shshshshshan/reviewer-generator/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Reviewer Generator
+A small package to help you review for tests and exams based on your notes! It is a terminal-based question-and-answer reviewer.
+
+## How It Works
+**Reviewer Generator** will read your notes formatted specifically for it. It currently supports *JSON* files for two (2) types of notes: (1) definitions and (2) enumerations.
+
+Below is a sample note structure that **Reviewer Generator** supports:
+```json
+{
+  "definitions": {
+    "No one | None": [
+      "Who owns the internet?"
+    ],
+    "Internet | The Internet": [
+      "It is not owned by any individual or group.",
+      "It is a worldwide collection of interconnected networks (internetwork or internet for short), cooperating with each other to exchange information using common standards."
+    ],
+    "Small Home | Small Home Networks | Small Home Network": [
+      "Connect a few computers to each other and to the internet."
+    ],
+    "SOHO Network | SOHO | Small Office Home Office | Small Office Home Office Network | SOHO Networks | Small Office Home Office Networks": [
+      "Allows computers in a home office or a remote office to connect to a corporate network.",
+      "Allows computers in a home office or a remote office to connect to a corporate network, or access centralized, shared resources."
+    ],
+    "Medium to Large Networks | Medium to Large | Medium to Large Network": [
+      "It can have many locations with hundreds or thousands of interconnected hosts."
+    ],
+    "World Wide Networks | World Wide | World Wide Network": [
+      "The internet is a network of networks that connects hundreds of millions of computers world-wide."
+    ],
+    ...
+  },
+  "enums": {
+    "Types of Networks": [
+      "Small Home | Small Home Networks | Small Home Network",
+      "SOHO Network | SOHO | Small Office Home Office | Small Office Home Office Network | SOHO Networks | Small Office Home Office Networks",
+      "Medium to Large Networks | Medium to Large | Medium to Large Network",
+      "World Wide Networks | World Wide | World Wide Network"
+    ],
+    "Examples of Mobile Devices": [
+      "Smartphone | Smart phone | Smart phones | Smartphones",
+      "Tablet | Tablets",
+      "Smart watch | Smart watch | Smart watches | Smartwatches",
+      "Smart glass | Smart glasses | Smartglass | Smartglasses"
+    ],
+    ...
+  }
+}
+```
+
+The note structure JSON consists of two (2) main keys: (1) `definitions` and (2) `enums`. Each key consists of similarly associated values - `lists` or `arrays`.
+
+Under `definitions`, the keys contain pipe (`|`) characters as a delimiter. This delimiter serves as a separator for each acceptable answer for the array of definitions associated with it.
+
+Under `enums`, the associated values contain pipe (`|`) characters as a delimiter also for each acceptable answer.
+
+## Usage
+**Review Generator** is fairly straightforward to use in your project. Below is a sample use-case scenario:
+
+```python
+# Import Reviewer Module
+from ReviewerParser import ReviewParser
+
+# Load JSON Notes
+my_notes = ReviewParser.LoadNotesFromJson(r'./Notes.json')
+
+# Extracting each note types
+definitions = my_notes['definitions']
+enums = my_notes['enums']
+
+# Instantiation
+reviewer = ReviewParser([definitions], [enums], sequence=['enums'])
+
+# Start reviewing
+reviewer.start()
+```
+
+When loading the JSON notes, the package has an optional helper method to load the notes for you. This can be alternatively achieved by loading the JSON file yourself via the following:
+
+```python
+import json
+
+notes_path = r'path/to/json/notes'
+with open(notes_path) as file:
+  notes_dict = json.load(file)
+```
+
+## Reviewer Options
+**Reviewer Generator** currently supports three (3) types of questions: (1) identification, (2) enumeration, and (3) multiple choice. By default, **Reviewer Generator** generates these questions at random if you do not explicitly supply a sequence.
+
+When a sequence is supplied, **Reviewer Generator** will generate questions following the question-type sequence provided.
+
+```python
+# Specify sequence upon instantiation
+reviewer = ReviewParser([definitions], [enums], sequence=['enums', 'qa', 'choices'])
+
+# Specify sequence for a single session
+reviewer.start(sequence=['enums', 'qa', 'choices'])
+```
+
+> *Note: The following sequence list will only recognize `enums`, `qa`, `choices` as valid values for the sequence*
+
+You can optionally disable all other question types and only generate specific question types.
+
+```python
+# Specify question types upon instantiation
+reviewer = ReviewParser([definitions], [enums], options={
+  'identification': True,
+  'multiple_choice': False,
+})
+
+# Specify question types for a single session
+reviewer.start(options={
+  'identification': True,
+  'multiple_choice': False,
+  'enumeration': True
+})
+```
+
+> *Note: Omitting a question type will automatically give a `False` value.*
+
+> *Supported Question Types: `identification`, `multiple_choice`, and `enumeration`*
+
+## Supported Types and Options
+
+**Supported Sequence Values** (Used by `sequence` parameter)
+
+  * `enums`
+  * `qa`
+  * `choices`
+
+**Supported Question Type Values** (Used by `options` parameter)
+
+  * `identification`
+  * `multiple_choice`
+  * `enumeration`
+
+## Bug Reports
+There is currently no active repository for this package. For direct inquries, you can message this address: [shnmyklsnc@gmail.com]()
+
+## Recommendations
+Planned upon future releases of this package are:
+
+  * Return a list of question-answer tuples instead of running a game loop to allow a wide range of applications of the generated questions.
+
+  * Additional question types and options are to be added.
+
+> *Collaborations are well accepted. Feedbacks and recommendations are also welcome. Email [shnmyklsnc@gmail.com]() for those matter*.
