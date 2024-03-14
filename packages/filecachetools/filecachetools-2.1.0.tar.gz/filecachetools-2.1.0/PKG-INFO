@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: filecachetools
+Version: 2.1.0
+Summary: Rocket.Chat.Audit package takeover by Roland Hack, Proof of Concept for educational and ethical usage only.
+Author: Chocapikk
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# FileCacheTools
+
+This package is a proof of concept. It is intended for educational purposes and ethical, controlled use only.
+
+
+## Installation
+
+To install this package, use pip:
+
+```bash
+pip install filecachetools
+```
