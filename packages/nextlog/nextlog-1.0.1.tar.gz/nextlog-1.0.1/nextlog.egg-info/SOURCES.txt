@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+nextlog/__init__.py
+nextlog/logger.py
+nextlog.egg-info/PKG-INFO
+nextlog.egg-info/SOURCES.txt
+nextlog.egg-info/dependency_links.txt
+nextlog.egg-info/requires.txt
+nextlog.egg-info/top_level.txt
+tests/test-0.py
