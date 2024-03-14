@@ -1,0 +1,8 @@
+GraphPCA/__init__.py,sha256=UmdUu-T1ftBtyg4Iyh4Tpx-iRg4zV7pu_mAa10IF30s,23
+GraphPCA/gpca.py,sha256=axmbRM_K_v1uMFN1r84g2ydct2-kpdpfhRMYgoFVS7c,2775
+GraphPCA/utils.py,sha256=-Q7kA4NX3CpeZmJ089rRJ3D_xCkKAd35Vs2_vncFsOo,4726
+st_graphpca-0.0.2.dist-info/LICENSE.txt,sha256=0LF_WmNc2HAlGqSLY0OKR5ODndLV0TMUO9ZzP_3e1is,1055
+st_graphpca-0.0.2.dist-info/METADATA,sha256=-D1e_RlVVEA8IOW0CuaJ5v3EbYZ7bNf3cNUpywAXijY,1381
+st_graphpca-0.0.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+st_graphpca-0.0.2.dist-info/top_level.txt,sha256=NhSQB7HAfTq9s1PXguhOfHuCZFKgZ1rxkHfHFa6NjLk,9
+st_graphpca-0.0.2.dist-info/RECORD,,

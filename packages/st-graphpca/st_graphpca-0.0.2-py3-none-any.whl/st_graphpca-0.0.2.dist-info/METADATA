@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: st-graphpca
+Version: 0.0.2
+Summary: A fast and interpretable dimension reduction algorithm for spatial transcriptomics data.
+Home-page: https://github.com/YANG-ERA/GraphPCA/tree/main
+Author: Jiyuan Yang
+Author-email: 599568651@qq.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: networkx
+Requires-Dist: warnings
+Requires-Dist: scanpy
+Requires-Dist: squidpy
+
+
+# GraphPCA
+
+GraphPCA is a novel graph-constrained, interpretable, and quasi-linear dimension-reduction method tailored for spatial transcriptomic data. It leverages the strengths of graphical regularization and Principal Component Analysis (PCA) to extract low-dimensional embeddings of spatial transcriptomes that integrate location information in linear time complexity. The substantial power boost enabled by GraphPCA fertilizes various downstream tasks of spatial transcriptomics data analyses and provides more precise insights into transcriptomic and cellular landscapes of complex tissues.![](./figures/workflow.png) 
+
+
+# Software dependencies
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+networkx
+warnings
+scanpy
+squidpy
+
+# installation
+Install GraphPCA via PyPI by using:
+
+```         shell
+pip install st-graphpca
+```
+
