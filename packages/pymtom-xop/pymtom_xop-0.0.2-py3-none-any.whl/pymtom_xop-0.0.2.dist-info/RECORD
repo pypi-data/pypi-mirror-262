@@ -1,0 +1,11 @@
+pymtom_xop/__init__.py,sha256=v5VTyh4EYC7gd3SbQpVS4_DaE4LQEj3k3dckYhTx1bo,425
+pymtom_xop/constants.py,sha256=jno0eCNy4Uw16EJWERVwBn8w5uYkxEbwB9mjL8-BSFE,94
+pymtom_xop/mtom_attachment.py,sha256=8RIPNBsfyLFzwHujzl2w3pvomZ7WhBfcz2NHNlANTCI,3605
+pymtom_xop/mtom_transport.py,sha256=pVB_sdJcyTBHun-uAbgCbDZDumoiUgKObfWH90VK2qU,3911
+pymtom_xop/soap_envelope.py,sha256=CyslUeoiod_PZmg1OSXxwO-dmgrG-SstGqySw4A0ukE,4208
+pymtom_xop/xop_package.py,sha256=wTlCgKxg2k8niMJLvFUwIJ53jQK4mamGJq5lhROX2TE,1337
+pymtom_xop-0.0.2.dist-info/LICENSE,sha256=i4KWz6xzSQCQuCrfuzWj1iYnwQlPd1pEarcxUMkL8FA,1084
+pymtom_xop-0.0.2.dist-info/METADATA,sha256=Rn6zWcjefmNAjsjVfzzIvhDqXbEE6s8Q2j6xnieQPgU,5777
+pymtom_xop-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pymtom_xop-0.0.2.dist-info/top_level.txt,sha256=Vd1HiDcZkePOjkeZDg73MseIEhp4zqdaTeGxOa54tek,11
+pymtom_xop-0.0.2.dist-info/RECORD,,
