@@ -1,0 +1,10 @@
+iriuri/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iriuri/re/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iriuri/re/rfc3986.py,sha256=s4rdy4PTRDqcQGbzhOPbz1Dh90rsM-MuWoLaMr68TnU,2084
+iriuri/re/rfc3987.py,sha256=HTpwIDhk9eAGnKjmwa6uLnFtBDuDz4Ms700vJt0fJmc,2756
+iriuri/re/rfc6874.py,sha256=KCjAwimGd-jvewDBs7-bHSgsHxnKgICWAOWtcgI8qIE,871
+iriuri/re/rfc8141.py,sha256=faNg6vVmkJKnPKPchOw2nX7eMEo7KGYy7gdMx6bs7-o,624
+iriuri-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+iriuri-0.0.1.dist-info/METADATA,sha256=ww89MqWTXyZnsBuOB1kzfDh3dcHjmNjLsRanSgZfBk0,3257
+iriuri-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+iriuri-0.0.1.dist-info/RECORD,,
