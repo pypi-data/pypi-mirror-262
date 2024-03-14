@@ -1,0 +1,20 @@
+appdirs
+requests
+pyarrow
+pandas
+pyyaml
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[dev]
+tox
+black
+
+[proxy]
+requests-kerberos-proxy
+
+[testing]
+setuptools
+pytest
+pytest-cov
