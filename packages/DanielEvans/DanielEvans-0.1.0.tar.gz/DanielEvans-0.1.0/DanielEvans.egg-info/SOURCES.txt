@@ -1,0 +1,5 @@
+setup.py
+DanielEvans.egg-info/PKG-INFO
+DanielEvans.egg-info/SOURCES.txt
+DanielEvans.egg-info/dependency_links.txt
+DanielEvans.egg-info/top_level.txt
