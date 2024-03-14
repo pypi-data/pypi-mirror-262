@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/tgadmin/__init__.py
+src/tgadmin/tgadmin.py
+src/tgadmin.egg-info/PKG-INFO
+src/tgadmin.egg-info/SOURCES.txt
+src/tgadmin.egg-info/dependency_links.txt
+src/tgadmin.egg-info/entry_points.txt
+src/tgadmin.egg-info/requires.txt
+src/tgadmin.egg-info/top_level.txt
