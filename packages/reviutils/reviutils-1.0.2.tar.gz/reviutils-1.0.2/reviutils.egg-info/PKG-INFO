@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: reviutils
+Version: 1.0.2
+Summary: A common library frequently used on python
+Home-page: https://github.com/Viyyy/viutils
+Author: Re.VI
+Author-email: reviy-top@outlook.com
+License: Apache License 2.0
+Provides-Extra: audio
+License-File: LICENSE

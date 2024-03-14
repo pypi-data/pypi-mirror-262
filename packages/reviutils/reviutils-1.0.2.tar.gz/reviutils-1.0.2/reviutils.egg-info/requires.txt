@@ -1,0 +1,9 @@
+numpy
+pandas
+
+[audio]
+librosa
+soundfile
+torch
+torchaudio
+pydub
