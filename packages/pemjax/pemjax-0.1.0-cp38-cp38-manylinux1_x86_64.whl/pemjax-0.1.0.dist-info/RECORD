@@ -1,0 +1,10 @@
+pemja_core.cpython-38-x86_64-linux-gnu.so,sha256=eyoPpL71kRPEJytHYfOk1qd_INv0LsQJ24PUYzPr6Do,1689832
+pemja_utils.cpython-38-x86_64-linux-gnu.so,sha256=-8-KSiJCGo_3yzu23_YcuMAlOvP8vUgD0ZxxaPtjL6I,36904
+pemjax-0.1.0.dist-info/RECORD,,
+pemjax-0.1.0.dist-info/WHEEL,sha256=Jfr9RwmHuxiTX9T3W4NBmLD_X2V5Fa0Ct4ofPqz1VR0,108
+pemjax-0.1.0.dist-info/METADATA,sha256=Jye6Gh6-9xqFHEJqA7HdP2kdwVBb0hFEaZejyBCTA7A,4417
+pemjax-0.1.0.dist-info/top_level.txt,sha256=OOlNGh--QZB0yQIp1Kns0_9mkVZOXCITULMc3530trE,29
+pemjax-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pemja/redirect_stream.py,sha256=GD4-RISKn6Ry1wMCqXawPNL-XsXYeuXFf1Kr92axnxM,1381
+pemja/__init__.py,sha256=XLy6UfC3EJKoWs1UYOhwK6mWyiP30rgUKnWdmellg4I,826
+pemja/version.py,sha256=fb08CIaZCRtZ0sn3FtPNx42xvQ5tr82jNzi0kc8MWLE,790
