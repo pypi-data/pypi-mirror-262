@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+botasaurus_server/__init__.py
+botasaurus_server/app.py
+botasaurus_server/header_title.py
+botasaurus_server/run_server.py
+botasaurus_server.egg-info/PKG-INFO
+botasaurus_server.egg-info/SOURCES.txt
+botasaurus_server.egg-info/dependency_links.txt
+botasaurus_server.egg-info/requires.txt
+botasaurus_server.egg-info/top_level.txt
