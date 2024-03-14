@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dataset report for {{raw_folder}}</title>
+  <style>
+      @import url("https://fonts.googleapis.com/css2?family=Literata");
+
+      .error {
+          color: red;
+      }
+
+      * {
+            font-family: "sans-serif";
+        }
+
+        .toc-list, .toc-list ol {
+          list-style-type: none;
+        }
+
+        .toc-list {
+          padding: 0;
+        }
+
+        .toc-list ol {
+          padding-inline-start: 2ch;
+        }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+
+{# Raw folder #}
+
+<h1>Dataset report for PXD018591</h1>
+
+<h2>Contents</h2>
+<ol class="toc-list" role="list">
+    <li>
+        <a href="#global_plots">
+            <span class="title">Global Plots</span>
+        </a>
+        <ol role="list">
+      <!-- subsection items -->
+        </ol>
+    </li>
+    <li>
+        <a href="#peptide_spectra">
+            <span class="title">Peptide Spectra</span>
+        </a>
+    </li>
+</ol>
+
+<h1 id="global_plots">Global Plots</h1>
+
+{% for item in pxds %}
+    <figure>
+        <img src="{{item.name}}_position_hist.png"/>
+        <figcaption style="font-style: italic;">Figure 1: Histogram of the detected amino acid disincorporations<br>
+            across normalized protein length binned in 5 % intervals.</figcaption>
+    </figure>
+    <hr>
+    <figure>
+        <img src="{{item.name}}_heatmap.png"/>
+        <figcaption style="font-style: italic;">Figure 2: Heatmap of the number (log10) of detected amino acid disincorporations at a given codon.</figcaption>
+    </figure>
+    <hr>
+    <figure>
+        <img src="{{item.name}}_detection_rate_plot.png"/>
+        <figcaption style="font-style: italic;">Figure 3: Detected error rate for each codon. Boxplots are calculated individually for each observed<br>
+            misincorporation based on MS1 intensities. Red dots indicate error rate calculated as the ratio of codons<br>
+            with observed misincorporation to correctly translated codons in the dataset.</figcaption>
+    </figure>
+    <hr>
+    <figure>
+        <img src="{{item.name}}_codon_counts.png"/>
+        <figcaption style="font-style: italic;">Figure 4: Number of observed codon counts (blue bars)<br>
+            and observed error rate (black line; based on codon counts) for each codon.</figcaption>
+    </figure>
+    <hr>
+    <figure>
+        <img src="{{item.name}}_peptide_counts.png"/>
+        <figcaption style="font-style: italic;">Figure 5: Distribution of observed error free peptide counts per proteins.</figcaption>
+    </figure>
+    <hr>
+    <figure>
+        <img src="{{item.name}}_hyperscore_distribution.png"/>
+        <figcaption style="font-style: italic;">Figure 6: Distribution of hyperscore for Identified (blue) peptides and decoy (orange) peptides.<br>
+            Dashed line indicates FDR cutoff.</figcaption>
+    </figure>
+{% endfor %}
+
+<hr>
+
+<h1 id="peptide_spectra">Peptide Spectra</h1>
+
+{# DataSet #}
+
+<h2>Scan Number (Peptide Sequence)</h2>
+<ul id="navigation">
+  {% for item in peptides %}
+  <li><a href="#{{item.outputFile}}">{{item.rawfile_name}}.raw/#{{item.scanNo}} ({{item.peptide}})</a></li>
+  {% endfor %}
+</ul>
+
+
+{% for item in peptides %}
+
+<h2 id="{{item.outputFile}}">{{item.rawfile_name}}.raw/#{{item.scanNo}} ({{item.peptide}})</h2>
+<div id="vis_{{item.outputFile}}"></div>
+
+<script>
+  (function(vegaEmbed) {
+    var spec = {{item.jsonSpec}};
+    var embedOpt = {"mode": "vega-lite"};
+
+    function showError(el, error){
+      el.innerHTML = ('<div class="error" style="color:red;">'
+        + '<p>JavaScript Error: ' + error.message + '</p>'
+        + "<p>This usually means there's a typo in your chart specification. "
+        + "See the javascript console for the full traceback.</p>"
+        + '</div>');
+      throw error;
+    }
+    const el = document.getElementById('vis_{{item.outputFile}}');
+    vegaEmbed("#vis_{{item.outputFile}}", spec, embedOpt)
+      .catch(error => showError(el, error));
+  })(vegaEmbed);
+</script>
+
+{% endfor %}
+
+</body>
+</html>
