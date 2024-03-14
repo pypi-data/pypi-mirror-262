@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: tulip
+Version: 1.4.0
+Summary: Temporal Logic Planning (TuLiP) Toolbox
+Home-page: http://tulip-control.org
+Author: Caltech Control and Dynamical Systems
+Author-email: tulip@tulip-control.org
+License: BSD
+Project-URL: Bug Tracker, https://github.com/tulip-control/tulip-control/issues
+Project-URL: Documentation, https://tulip-control.sourceforge.io/doc/
+Project-URL: API Documentation, https://tulip-control.sourceforge.io/api-doc/
+Project-URL: Source Code, https://github.com/tulip-control/tulip-control
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: graphviz>=0.20
+Requires-Dist: networkx>=2.0
+Requires-Dist: numpy>=1.24
+Requires-Dist: omega<0.4.0,>=0.3.1
+Requires-Dist: ply<=3.10,>=3.4
+Requires-Dist: polytope>=0.2.1
+Requires-Dist: scipy
