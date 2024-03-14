@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+TITLE.txt
+lh-agpl3-LICENSE.txt
+setup.py
+./bin/csPlayerBlee.cs
+blee/__init__.py
+blee.csPlayer.egg-info/PKG-INFO
+blee.csPlayer.egg-info/SOURCES.txt
+blee.csPlayer.egg-info/dependency_links.txt
+blee.csPlayer.egg-info/namespace_packages.txt
+blee.csPlayer.egg-info/not-zip-safe
+blee.csPlayer.egg-info/top_level.txt
+blee/csPlayer/__init__.py
+blee/csPlayer/bleep.py
