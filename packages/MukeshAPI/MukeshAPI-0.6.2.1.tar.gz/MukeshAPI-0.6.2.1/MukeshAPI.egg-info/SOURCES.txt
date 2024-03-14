@@ -1,0 +1,14 @@
+README.md
+setup.py
+MukeshAPI/__init__.py
+MukeshAPI/func.py
+MukeshAPI.egg-info/PKG-INFO
+MukeshAPI.egg-info/SOURCES.txt
+MukeshAPI.egg-info/dependency_links.txt
+MukeshAPI.egg-info/requires.txt
+MukeshAPI.egg-info/top_level.txt
+MukeshAPI/AI/__init__.py
+MukeshAPI/AI/blackbox_ai.py
+MukeshAPI/AI/chatgpt_ai.py
+MukeshAPI/AI/datagpt_ai.py
+MukeshAPI/AI/gemini_ai.py
