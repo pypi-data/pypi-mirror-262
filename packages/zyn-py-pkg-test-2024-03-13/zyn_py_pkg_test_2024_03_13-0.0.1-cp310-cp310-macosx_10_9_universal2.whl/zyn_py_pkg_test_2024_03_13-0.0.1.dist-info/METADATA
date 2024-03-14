@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: zyn-py-pkg-test-2024-03-13
+Version: 0.0.1
+Summary: This is a test python module
+Home-page: https://github.com/your/repo
+Author: Your Name
+Author-email: you@example.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+## 用途
+测试第一个发布python包
+
+## 说明
+这是一个什么都不干的空包，发布于https://test.pypi.org/
+
+## 本地打包测试
+>>> python3 setup.py build
+>>> python3 setup.py install
+
+## 安装步骤
+
+
