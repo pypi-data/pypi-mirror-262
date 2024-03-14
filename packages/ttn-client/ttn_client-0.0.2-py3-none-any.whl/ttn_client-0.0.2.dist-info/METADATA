@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ttn_client
+Version: 0.0.2
+Summary: A python client to fetch/receive and parse uplink messages from The Thinks Network
+Project-URL: Homepage, https://github.com/angelnu/thethinksnetwork_python_client
+Project-URL: Issues, https://github.com/angelnu/thethinksnetwork_python_client/issues
+Author-email: Angel Nunez Mencias <pypi@angelnu.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# thethinksnetwork_python_client
+A python client to fetch/receive and parse uplink messages from The Thinks Network
