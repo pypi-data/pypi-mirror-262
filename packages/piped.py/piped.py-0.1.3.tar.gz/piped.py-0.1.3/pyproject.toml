@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "piped.py"
+dynamic = ["version"]
+license = { text = "MIT" }
+authors = [
+  { name="vex12853", email="admin@vex12853.net" },
+]
+description = "API wrapper for Piped written in Python.\n- [documentation]"
+readme = "README.rst"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/vex12853-sub/piped.py"
+Issues = "https://github.com/vex12853-sub/piped.py/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "piped.__version__"}
