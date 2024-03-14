@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: playwright-booster
+Version: 0.0.1
+Summary: A small example package
+Project-URL: Homepage, https://github.com/imaxwen/playwright-booster
+Project-URL: Issues, https://github.com/imaxwen/playwright-booster/issues
+Author-email: Max Wen <maxwen.me@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: playwright>=1.40.0
+Description-Content-Type: text/markdown
+
+# playwright-booster
+playwright booster utils for automation or testing
