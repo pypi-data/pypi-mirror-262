@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: RCutter
+Version: 0.0.4
+Home-page: https://github.com/r3a70/cutter
+Author: surena
+Author-email: ram3a1999.info@gmail.com
+License-File: LICENSE
+Requires-Dist: ffmpeg-python ==0.2.0
+
