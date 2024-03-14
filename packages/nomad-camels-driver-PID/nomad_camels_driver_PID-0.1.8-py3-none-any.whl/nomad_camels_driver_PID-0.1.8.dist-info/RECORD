@@ -1,0 +1,9 @@
+nomad_camels_driver_PID/PID.py,sha256=M8Fmb0-gO_MCn70qw4lhql-KCx_IPYfAJf0m0MjICXM,6709
+nomad_camels_driver_PID/PID_config_sub.py,sha256=x8sJp31kcyCzmqNXXGeI7L8FLbgqFaYhKc35IRy1Q0Y,8666
+nomad_camels_driver_PID/PID_manual_control.py,sha256=TqR4i2mxLFiefu85Dc0S5CNM3x7j4wBo_wl8qlubRiU,9176
+nomad_camels_driver_PID/PID_ophyd.py,sha256=vyJdyTlI8m8wkOnnsuAetDtZD-a4wu6uUf3XdjunC_o,13325
+nomad_camels_driver_PID-0.1.8.dist-info/LICENSE.txt,sha256=gUzxp-edxqPto9GX-n3tNsO3M5F-1doejME16yTzrAk,26525
+nomad_camels_driver_PID-0.1.8.dist-info/METADATA,sha256=4Kc7zklXU_cB6CE268JDdufxkGGm5eocYi6362Dg05k,1115
+nomad_camels_driver_PID-0.1.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+nomad_camels_driver_PID-0.1.8.dist-info/top_level.txt,sha256=UCvft3oWYVm7nuLuG8OWhP14t9oQxZFuvPKFqmYYCSg,24
+nomad_camels_driver_PID-0.1.8.dist-info/RECORD,,
