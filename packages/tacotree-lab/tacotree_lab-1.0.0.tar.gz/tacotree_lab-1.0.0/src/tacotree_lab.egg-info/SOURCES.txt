@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/tacotree_lab/__init__.py
+src/tacotree_lab.egg-info/PKG-INFO
+src/tacotree_lab.egg-info/SOURCES.txt
+src/tacotree_lab.egg-info/dependency_links.txt
+src/tacotree_lab.egg-info/requires.txt
+src/tacotree_lab.egg-info/top_level.txt
