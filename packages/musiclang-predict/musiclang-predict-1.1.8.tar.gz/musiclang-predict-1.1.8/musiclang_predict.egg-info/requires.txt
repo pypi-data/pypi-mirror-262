@@ -1,0 +1,6 @@
+musiclang>=0.25
+torch
+transformers
+tokenizers
+torchtoolkit
+accelerate
