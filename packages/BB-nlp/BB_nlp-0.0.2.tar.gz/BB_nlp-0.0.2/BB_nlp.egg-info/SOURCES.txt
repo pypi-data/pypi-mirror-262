@@ -1,0 +1,8 @@
+setup.py
+BB_nlp/__init__.py
+BB_nlp/main.py
+BB_nlp.egg-info/PKG-INFO
+BB_nlp.egg-info/SOURCES.txt
+BB_nlp.egg-info/dependency_links.txt
+BB_nlp.egg-info/requires.txt
+BB_nlp.egg-info/top_level.txt
