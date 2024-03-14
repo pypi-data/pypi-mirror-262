@@ -1,0 +1,9 @@
+kunefe/__init__.py,sha256=N0K9EzmWGRDuBUwq_zskZcGDqXzfa3QrYPhvjFtw0Mk,255
+kunefe/kunefe.py,sha256=JUK4CbQWPUIvw90UzcpBS0sxwmianRjTFj_lM8RcHQA,11499
+kunefe/templates/generic_job.jinja,sha256=m6jYkDSoCE0y3Dey00ibxCSfVSdUavpJxqFfG2aQgjc,294
+kunefe-0.3.1.dist-info/LICENSE,sha256=OPzV6bHGPCXFylyiCR3GYAK-EP8seLDbcbgO87DYM1o,11359
+kunefe-0.3.1.dist-info/METADATA,sha256=wtuwE99qsr5D07GF8bKdE76FjO99Do4xlyGXzuG6Yaw,21094
+kunefe-0.3.1.dist-info/NOTICE,sha256=3MC524ga1CPsg-N8urKUlLJRQOj8slG-E37DlWjZhi0,81
+kunefe-0.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+kunefe-0.3.1.dist-info/top_level.txt,sha256=NzgwiD3S0AYxxM-B8lqIkYM2uuATsbPJu1YN-tn2Huw,7
+kunefe-0.3.1.dist-info/RECORD,,
