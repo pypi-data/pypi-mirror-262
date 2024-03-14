@@ -1,0 +1,41 @@
+v0.2.7 (July 02, 2023)
+----------------------
+
+This update introduces minor changes and improvements over ``v0.2.6``, including bug fixes and API adjustments.
+
+- |API change| The function ``fetch_data_from_repo`` in :mod:`watex.geology.core` is now deprecated. It has been replaced 
+  by :func:`watex.utils.baseutils.get_remote_data` for enhanced functionality and better integration.
+
+- |Fix| An issue with geographical coordinates being provided as strings in :meth:`watex.geology.DSDrill_build_geology` has been 
+  corrected. All numerical arguments are now automatically converted to numeric types to ensure accurate drillhole construction.
+
+- |Fix| The :func:`watex.utils.funcutils.str2columns` function now consistently converts text values to strings before parsing, 
+  eliminating parsing errors related to unexpected data types.
+
+- |Feature| New utility function :func:`watex.utils.baseutils.save_or_load` introduced for efficient saving and loading of Numpy 
+  arrays. Similarly, :func:`watex.utils.baseutils.array2hdf5` has been added for seamless handling of arrays with HDF5 format.
+
+- |Feature| The :meth:`watex.geology.core.GeoBase.find_properties` method has been implemented to facilitate the discovery of 
+  rock and structural properties or to constrain geological information to match entries in the AGSO database.
+
+- |Feature| Enhanced functionality of :meth:`watex.geology.build_drillholes` allows for manual construction of specific drillholes 
+  through the `kind` parameter.
+
+- |Enhancement| The :func:`watex.utils.read_data` function has been updated to support reading data in text (`txt`) and Numpy 
+  formats (`.npy` and `.npz`), broadening its usability.
+
+- |Enhancement| Nanshan land subsidence data has been added to the dataset collection. The :func:`watex.datasets.nlogs` function 
+  now accepts `ls` (land subsidence) as an argument, enabling the retrieval of subsidence data by specifying the `years` parameter.
+
+- |Enhancement| The :class:`watex.geology.DSDrill` class now features the :meth:`watex.geology.DSDrill.set_drillholes` method, 
+  which supports drillhole construction with valid data provided to the `fit` method. For pre-construction analysis, 
+  :meth:`watex.geology.DSDrill.get_properties` can be utilized to obtain necessary drillhole parameters.
+
+
+  
+
+
+
+
+
+
