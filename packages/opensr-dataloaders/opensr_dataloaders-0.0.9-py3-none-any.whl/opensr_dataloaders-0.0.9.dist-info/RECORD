@@ -1,0 +1,13 @@
+opensr_dataloaders/S2NAIP_v4.py,sha256=Nr8z_sQYJz4-0oaRNBbHeUj_s1y7KzD4axjwSH46gy4,7559
+opensr_dataloaders/__init__.py,sha256=M8BfWj6MQ48gc_kRTkzMXU43QYqAe-K9GW6zraZs3Ls,492
+opensr_dataloaders/coco_dataset.py,sha256=y6FNPgTij0xnmIlqaJ7z10BpqmCRtLEPMrnpIl7xwEQ,9667
+opensr_dataloaders/custom_sen2.py,sha256=BwQJ0FiOZmpn30yF6I671wlySxvY954SKcvtXPqirXg,6400
+opensr_dataloaders/dataset_selector.py,sha256=sjsM2ndxpZwXoKHrf9J7aLQr97YMeOrsyMiUiK-11fg,17289
+opensr_dataloaders/image_augmentations.py,sha256=wsIbJMx00X_RkqPunVzfYBxCc_S_U-n34k6JV1FURZY,6242
+opensr_dataloaders/linear_transforms.py,sha256=SS5XHmc3ZQqQ9GIyX6MMO7ElXqKYtYKEIDiWs4iHRXI,2521
+opensr_dataloaders/sen2_test.py,sha256=j15ovsGXaRrJ2Itb-t8Bx7duqPMFYd5xMaU1AZSmXyk,4966
+opensr_dataloaders-0.0.9.dist-info/LICENSE,sha256=69ydIZqA8HP0_M1LiuqmuTDYOKzltHlbxbidhNOEVj4,23
+opensr_dataloaders-0.0.9.dist-info/METADATA,sha256=t2LFr7GrUuBZ2ltxp8H1PS2voeVW1axY8k55LVEGHdg,805
+opensr_dataloaders-0.0.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+opensr_dataloaders-0.0.9.dist-info/top_level.txt,sha256=vcnNuQsgCDUUM1WEPqqKQdsQB3OT0tLe-FMHwr5Py7g,19
+opensr_dataloaders-0.0.9.dist-info/RECORD,,
