@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: MVC-Python
+Version: 0.0.10
+Summary: A python module for Skyhigh SSE API and administrative access
+Project-URL: Homepage, https://github.com/zengelan/MVC-Python
+Project-URL: Bug Tracker, https://github.com/zengelan/MVC-Python/issues
+Project-URL: Source, https://github.com/zengelan/MVC-Python
+Author-email: Andreas Zengel <andreas.zengel@skyhighsecurity.com>, Andreas Zengel <andreas.zengel@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: requests>=2.26
+Description-Content-Type: text/markdown
+
+# Skyhigh SSE Python module (MVC-Python)
+### A Python class for Skyhigh Security Service Edge APIs
+
+Project on PyPI: https://pypi.org/project/MVC-Python
+
+Project on GitHub: https://github.com/zengelan/MVC-Python
+
+> [!NOTE]
+> **Skyhigh SSE** is the successor of Skyhigh Networks CASB and McAfee Web Gateway Cloud Services. These products are now joined together and marketed by the brand **Skyhigh Security**
+
+If you want to try out Skyhigh SSE register for one of these hands-on workshops: https://www.skyhighsecurity.com/lp/sse-virtual-hands-on-workshops.html
+
+More information about the brand, the company and the solutions are available at: https://www.skyhighsecurity.com/
+
+> [!TIP]
+> Skyhigh SSE converges Secure Web Gateway (SWG), Cloud Access Security Broker (CASB), Private Access (ZTNA), Data Loss Prevention (DLP) and Remote Browser Isolation (RBI) into a single platform, Skyhigh Cloud Platform. Skyhigh SSE provides real-time data and threat protection against advanced and cloud-enabled threats and safeguards data across all vectors (web, cloud, email, and private apps) and users.
+
+Documentation for the Skyhigh Security Service Edge Solution is available at https://success.skyhighsecurity.com/
+
+> [!IMPORTANT]
+> Eventually this project will be renamed to "skyhigh-sse-python" and all references to "McAfee" or "MVC" will be removed
+
+
+## Prepreqs
+You need to set the environment variable named `MVC_OAUTH_CLIENT_ID` to an OAuth ID that is accepted by Trellix IAM.
+You can ask Skyhigh Security Sales Systems Engineer on how to get this ID, or extract it yourself from the login flow to the UI.
+Set it as environment variable e.g. like this:
+
+* `set MVC_OAUTH_CLIENT_ID=1234567890`  (Windows)
+* `export MVC_OAUTH_CLIENT_ID=1234567890`   (Linux/Mac)
+
+## Installation
+### Manual Installation
+1. Download it from the release package here: https://github.com/zengelan/MVC-Python/releases/
+2. Execute `python3 -m pip install skyhigh_sse_python-VERSION.whl` to install the module
+
+### Using PyPI
+The module is available on PyPI here: https://pypi.org/project/MVC-Python
+1. `python3 -m pip install MVC-Python`
