@@ -1,0 +1,9 @@
+LICENSE.txt
+setup.py
+DataHiderlib.egg-info/PKG-INFO
+DataHiderlib.egg-info/SOURCES.txt
+DataHiderlib.egg-info/dependency_links.txt
+DataHiderlib.egg-info/top_level.txt
+code/__init__.py
+code/file_hider.py
+code/text_hider.py

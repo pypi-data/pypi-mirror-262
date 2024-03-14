@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: DataHiderlib
+Version: 0.1
+Summary: A simple python library to hide data: text or files, inside image.
+Author: RikUZa
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE.txt
