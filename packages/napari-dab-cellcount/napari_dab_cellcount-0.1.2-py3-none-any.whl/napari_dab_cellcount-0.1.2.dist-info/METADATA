@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: napari_dab_cellcount
+Version: 0.1.2
+Summary: A napari plugin for counting cells.
+Home-page: https://github.com//ThakurNDLab/napari-dab-cellcount
+Author: Jyotirmay Srivastava :: Heavily Inspired from Cellpose-napari
+Author-email: jyotirmaysrivastava.in@gmail.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: napari
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Requires-Python: >=3.9, <3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: napari
+Requires-Dist: napari-plugin-engine >=0.1.4
+Requires-Dist: PyQt5
+Requires-Dist: PyQt5.sip
+Requires-Dist: numpy
+Requires-Dist: numba
+Requires-Dist: scipy
+Requires-Dist: torch
+Requires-Dist: opencv-python-headless
+Requires-Dist: natsort
+Requires-Dist: tqdm
+Requires-Dist: imagecodecs
+Requires-Dist: tifffile
+Provides-Extra: docs
+Requires-Dist: sphinx >=3.0 ; extra == 'docs'
+Requires-Dist: sphinxcontrib-apidoc ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: sphinx-prompt ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+
+A napari plugin to count cells using a U-Net for cell identification
+Model uses VGG architecture layers as encoders, and requires custom trained model weights
+
+Current Model works well for DAB stained neuronal cells of 30micron mouse brain sections
+
+Install using:
+pip install napari_dab_cellcount
+
+Run using:
+napari napari_dab_cellcount
