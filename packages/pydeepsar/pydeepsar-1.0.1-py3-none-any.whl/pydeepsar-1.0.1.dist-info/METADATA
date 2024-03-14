@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pydeepsar
+Version: 1.0.1
+Summary: This Project aims to ...
+License: GNU General Public License v3
+Author: Islam Mansour
+Author-email: is3mansour@gmail.com
+Requires-Python: >=3.9.1,<4.0.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: tensorflow (>=2.15.0,<3.0.0)
