@@ -1,0 +1,5 @@
+[console_scripts]
+gpginit2=gpglock.cli:init
+gpglock2=gpglock.cli:lock
+gpgunlock2=gpglock.cli:unlock
+
