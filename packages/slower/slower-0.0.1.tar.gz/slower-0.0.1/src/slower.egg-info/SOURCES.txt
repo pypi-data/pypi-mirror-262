@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/slower/__init__.py
+src/slower.egg-info/PKG-INFO
+src/slower.egg-info/SOURCES.txt
+src/slower.egg-info/dependency_links.txt
+src/slower.egg-info/requires.txt
+src/slower.egg-info/top_level.txt
+tests/test_slower.py
