@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: LbCommon
+Version: 0.0.11
+Summary: LHCb Common tools
+Author-email: CERN - LHCb Core Software <lhcb-core-soft@cern.ch>
+Project-URL: Homepage, https://gitlab.cern.ch/lhcb-core/LbCommon
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Provides-Extra: testing
+Requires-Dist: coverage ; extra == 'testing'
+
+LbCommon
+========
+
+LHCb Common python utilities.
+
