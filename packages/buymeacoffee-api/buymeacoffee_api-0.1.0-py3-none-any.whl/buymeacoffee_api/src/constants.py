@@ -1,0 +1,7 @@
+BASE_URL = "https://developers.buymeacoffee.com/api/v1"
+SUBSCRIPTIONS_URL = "{base_url}/subscriptions"
+SUBSCRIPTION_URL = "{base_url}/subscriptions/{id}"
+SUPPORTERS_URL = "{base_url}/supporters"
+SUPPORTER_URL = "{base_url}/supporter/{id}"
+PURCHASES_URL = "{base_url}/extras"
+PURCHASE_URL = "{base_url}/extras/{id}"
