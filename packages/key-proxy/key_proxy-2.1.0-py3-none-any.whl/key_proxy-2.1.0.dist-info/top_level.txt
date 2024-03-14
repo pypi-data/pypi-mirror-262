@@ -1,0 +1,5 @@
+script
+src
+src/key_proxy_gui
+src/starter
+src/typer

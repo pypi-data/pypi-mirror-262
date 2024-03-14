@@ -1,0 +1,4 @@
+
+     [console_scripts]
+     key-proxy=script:hello
+     
