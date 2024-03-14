@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: test0313
+Version: 0.0.0.4
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Requires-Dist: statsmodels
+Requires-Dist: tqdm
+Requires-Dist: umap-learn
+Requires-Dist: plotly
+Requires-Dist: nbformat >=4.2.0
+Requires-Dist: Cython <3
+Requires-Dist: ipykernel
+Requires-Dist: hdbscan
+
