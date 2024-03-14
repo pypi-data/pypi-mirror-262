@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+my-package/__init__.py
+my-package/main.py
+my_package_priya.egg-info/PKG-INFO
+my_package_priya.egg-info/SOURCES.txt
+my_package_priya.egg-info/dependency_links.txt
+my_package_priya.egg-info/top_level.txt
