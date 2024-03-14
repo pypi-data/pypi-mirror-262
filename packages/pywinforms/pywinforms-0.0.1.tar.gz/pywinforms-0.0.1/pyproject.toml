@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "pywinforms"
+version = "0.0.1"
+authors = [
+    { name = "danielnachumdev", email = "danielnachumdev@gmail.com" },
+]
+dependencies = ["danielutils"]
+keywords = ['C#', 'dontnet', 'Windows Froms', 'classes']
+license = { "file" = "LICENSE" }
+description = "A python library to create Windows Forms applications"
+readme = "README.md"
+requires-python = ">=3.11.3"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    # "Operating System :: Unix",
+    # "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/danielnachumdev/pywinforms"
+"Bug Tracker" = "https://github.com/danielnachumdev/pywinforms/issues"

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pywinforms/__init__.py
+pywinforms.egg-info/PKG-INFO
+pywinforms.egg-info/SOURCES.txt
+pywinforms.egg-info/dependency_links.txt
+pywinforms.egg-info/requires.txt
+pywinforms.egg-info/top_level.txt
