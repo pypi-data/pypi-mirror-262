@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/setup.py
+src/pyxle-web/__init__.py
+src/pyxle-web/utils.py
+src/pyxle_web.egg-info/PKG-INFO
+src/pyxle_web.egg-info/SOURCES.txt
+src/pyxle_web.egg-info/dependency_links.txt
+src/pyxle_web.egg-info/top_level.txt
