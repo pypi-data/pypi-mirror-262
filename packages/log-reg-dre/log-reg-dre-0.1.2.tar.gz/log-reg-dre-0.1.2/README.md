@@ -1,0 +1,51 @@
+# log_reg_dre Package
+
+The `log_reg_dre` package is a Python library designed to facilitate the training and evaluation of logistic regression models, particularly in scenarios involving distributional shifts such as covariate shift and conditional shift. It includes functionality for density ratio estimation (DRE), enabling robust model training and evaluation under distributional changes. This package is ideal for researchers and practitioners working on machine learning problems where the training and test data distributions may differ.
+
+## Features
+
+- **Data Generation**: Functions to simulate synthetic datasets that mimic real-world scenarios with distributional shifts.
+- **Density Ratio Estimation**: Tools to estimate the density ratio between two distributions, aiding in addressing covariate shifts.
+- **Estimators**: Sklearn-compatible estimator classes for easy integration with existing machine learning pipelines.
+
+## Installation
+
+You can install the `log_reg_dre` package directly from the source using the following command:
+
+```bash
+pip install git+https://github.com/szhang120/log-reg-DRE.git
+```
+
+## Usage 
+
+Below is a quick start example on how to use the log_reg_dre package to train a logistic regression model with density ratio estimation:
+
+```python
+from log_reg_dre.package.data_generation import generate_x_vals
+from log_reg_dre.package.density_ratio_estimation import train_logistic_ratio_classifier
+from log_reg_dre.package.estimators import StandardEstimator
+
+# Generate synthetic training and test data
+x_train, y_train = generate_x_vals(p_val=0.5, num_samples=100)
+x_test, y_test = generate_x_vals(p_val=0.5, num_samples=40)
+
+# Train the logistic ratio classifier
+classifier = train_logistic_ratio_classifier(x_train, x_test)
+
+# Initialize and train the StandardEstimator
+estimator = StandardEstimator(classifier=classifier)
+estimator.fit(x_train, y_train)
+
+# Evaluate the model
+predictions = estimator.predict(x_test)
+print("Model predictions:", predictions)
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support 
+
+For questions and support, please open an issue in the GitHub repository.
+
