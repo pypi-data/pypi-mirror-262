@@ -1,0 +1,10 @@
+README.md
+setup.py
+retail_dictionary/__init__.py
+retail_dictionary/rd.xlsx
+retail_dictionary/retail_dictionary.py
+retail_dictionary.egg-info/PKG-INFO
+retail_dictionary.egg-info/SOURCES.txt
+retail_dictionary.egg-info/dependency_links.txt
+retail_dictionary.egg-info/requires.txt
+retail_dictionary.egg-info/top_level.txt
