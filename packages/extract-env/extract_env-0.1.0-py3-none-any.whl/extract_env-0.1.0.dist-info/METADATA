@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: extract-env
+Version: 0.1.0
+Summary: Moves the environment variables from a docker compose file into a .env file.
+License: MIT
+Author: Zack Hankin
+Author-email: admin@hankin.io
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: ruamel-yaml (>=0.18.6,<0.19.0)
+Description-Content-Type: text/markdown
+
+# Extract Env
+
+## CLI
+
+```bash
+$ extract-env -h
+Usage: extract-env [OPTIONS]
+
+Options:
+  -e, --env_folder PATH           Folder where the .env file/s to/are located.
+                                  Default: ./
+  --env-file-name PATH            Folder where the .env file/s to/are located.
+                                  Default: .env
+  --use-current-env / --no-use-current-env
+                                  Use the current env files. Default: True
+  -c, --compose-folder DIRECTORY  Folder where the compose file/s are located.
+                                  Default: ./
+  -C, --combine / -N, --no-combine
+                                  Combine like named environment variables
+                                  across services.  Default: True
+  -p, --prefix TEXT               Prefix to add to all environment variable
+                                  names.  Default: ""
+  --postfix TEXT                  postfix to add to all environment variable
+                                  names.  Default: ""
+  -w, --write / -d, --dry-run     Write the environment variables to file.
+                                  Default: True
+  --display / --no-display        Displays the file output in the terminal.
+                                  Default: False
+  -u, --update-compose / -n, --no-update-compose
+                                  Update the docker compose file with the new
+                                  environment variable names.  Default: True
+  -A, --all-files / -S, --selected-file
+                                  Update the docker compose file with the new
+                                  environment variable names.  Default: True
+  -f, --compose_file FILE         Update this/these docker compose file/s with
+                                  the new environment variable names. Used for
+                                  specifying the paths of each file. When
+                                  paths are specified it is assumed that
+                                  --selected-files has been given.  Default:
+                                  None
+  -t, --test                      Test the program using files in the example
+                                  folder.  Default: False
+  -h, --help                      Show this message and exit.
+```
+

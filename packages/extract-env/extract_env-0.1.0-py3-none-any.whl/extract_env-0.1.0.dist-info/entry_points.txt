@@ -1,0 +1,3 @@
+[console_scripts]
+extract-env=extract_env.__main__:main
+
