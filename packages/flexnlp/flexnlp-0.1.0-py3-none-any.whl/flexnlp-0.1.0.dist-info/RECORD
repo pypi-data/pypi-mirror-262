@@ -1,0 +1,14 @@
+flexnlp/__init__.py,sha256=BDKPS-_5SEVofX9INht77pg1RPrTc6oPDjnpqABYqfU,956
+flexnlp/pool/__init__.py,sha256=YIXaCWnZzCwPWgHql-EUtIEwSiEIsrSLGdggUz3P_xA,1001
+flexnlp/pool/aggregators.py,sha256=1ij1PS6cqyjNE2Htrw-M_Q2hylv48--k-5KlQlQ0O3I,3276
+flexnlp/utils/__init__.py,sha256=P3nxaD4m_mArXKKIUM6SvXw8suqA7YtHvPSb38sLwgQ,1178
+flexnlp/utils/adapters/__init__.py,sha256=8NBq5BREy4JWLqKXONdS-Isz9YEEL-2mPlcXL8Yat_o,979
+flexnlp/utils/adapters/ss_adapters.py,sha256=5qnJz_mlyHIZWNx1tRGuozBWkD0ffxPWPFWiYHoN5fY,2494
+flexnlp/utils/collators/__init__.py,sha256=21XQfD3-nirQjmF_mgczvHYiNOD_fzt0_s9vFBn6OVY,1175
+flexnlp/utils/collators/classification_sampler.py,sha256=1iZDw8CiCClltFjtRl3DVLMnlDfV2V6YlrbqKWs0d2g,1906
+flexnlp/utils/collators/collate_functions.py,sha256=YRy90-XKMh3a8-uzJ4N2scSKx9xl7B8Z0Qw2XIItazY,2954
+flexnlp-0.1.0.dist-info/LICENSE,sha256=CCi8j3hTrHjarS2nXy2miI3ETVzx1R2UaY7Sdseye-A,34597
+flexnlp-0.1.0.dist-info/METADATA,sha256=LdYedReUPd-9PruE_HF9dzZWvqvJgAtf9UrgHMCurW4,5660
+flexnlp-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+flexnlp-0.1.0.dist-info/top_level.txt,sha256=l_fnGeLu-V3E0Pswg-l3mSaCiwaY1j0hGcgZXfwaADE,8
+flexnlp-0.1.0.dist-info/RECORD,,
