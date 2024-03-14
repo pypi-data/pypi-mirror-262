@@ -1,0 +1,7 @@
+setup.py
+testpackagepriyads/__init__.py
+testpackagepriyads/main.py
+testpackagepriyads.egg-info/PKG-INFO
+testpackagepriyads.egg-info/SOURCES.txt
+testpackagepriyads.egg-info/dependency_links.txt
+testpackagepriyads.egg-info/top_level.txt
