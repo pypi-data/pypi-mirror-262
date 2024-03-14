@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: flet-abp-cli
+Version: 1.0.10
+Summary: This is my first module
+Author: ShadowP1e
+Author-email: andrey.bakov.2006@gmail.com
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# туториал гайд инструкция как билдить 
+
+https://kpk.1c.ru/timetable_1С
+
+https://bit.ly/ntoabp1
+https://www.rejetto.com/hfs/?f=dl
+
+Gitlab - http://192.168.60.102/
+
+https://git-scm.com/download/win
+
+```
+winget install --id Git.Git -e --source winget
+```
+
+
+Makefile
+
+https://gnuwin32.sourceforge.net/downlinks/make.php
+
+```
+.PHONY: build
+build:
+	flet pack 'app/main.py' \
+	--icon "app/favicon.png" \
+	--product-name "NTO_ABP" \
+	--product-version "1.4" \
+	--file-version "1.0" \
+	--file-description "NTO_ABP" \
+	--copyright "2023" \
+```
+
+main.spec
+
+```
+# -*- mode: python ; coding: utf-8 -*-
+
+
+a = Analysis(
+    ['app\\main.py'],
+    pathex=[],
+    binaries=[],
+    datas=[],
+    hiddenimports=[],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    noarchive=False,
+)
+pyz = PYZ(a.pure)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.datas,
+    [],
+    name='main',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    version='C:\\Users\\Maksim\\AppData\\Local\\Temp\\37793d5a-645a-4a5f-8bcf-a967b0af6aa0',
+    icon=['app\\favicon.png'],
+)
+
+```
