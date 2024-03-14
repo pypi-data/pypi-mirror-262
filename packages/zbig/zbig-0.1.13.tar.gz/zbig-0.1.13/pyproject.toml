@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "zbig"
+version = "0.1.13"
+description = "Big Zhu Python Utility Library"
+authors = ["bigzhu <vermiliondun@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyTelegramBotAPI = "^4.16.1"
+pytz = "^2024.1"
+environs = "^11.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pyTelegramBotAPI = "^4.16.1"
+pytz = "^2024.1"
+pytest = "^8.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
