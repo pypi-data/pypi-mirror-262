@@ -1,0 +1,8 @@
+README.md
+setup.py
+swagMerge.egg-info/PKG-INFO
+swagMerge.egg-info/SOURCES.txt
+swagMerge.egg-info/dependency_links.txt
+swagMerge.egg-info/entry_points.txt
+swagMerge.egg-info/requires.txt
+swagMerge.egg-info/top_level.txt
