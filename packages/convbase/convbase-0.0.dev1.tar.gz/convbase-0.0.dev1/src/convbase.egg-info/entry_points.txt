@@ -1,0 +1,2 @@
+[console_scripts]
+convbase = convbase.convbase:run
