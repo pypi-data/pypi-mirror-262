@@ -1,0 +1,11 @@
+script.py,sha256=ojPHYaMY8ESPRMqA7dHczZQCDjwaLvbLPuUH3_VUDrQ,181
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/key_proxy_gui.py,sha256=Ncsgf21iSa_KTdO1DMmt3T5loroeHVYKRQcvwD4QHOI,3539
+src/starter.py,sha256=bDTDuhwha5mTdKGiRwmkwnQ_kVCisKhhDhCfrSf-KJE,374
+src/typer.py,sha256=RZsjkh1kOfpccnzAHcYP8lZzQJ2LTnvXD8aiIaC6x0s,1083
+key_proxy-1.2.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+key_proxy-1.2.0.dist-info/METADATA,sha256=GBTh-EB9dM_PhKlNawv4EQ2AwYGxOyqVpCLjBswJQKA,291
+key_proxy-1.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+key_proxy-1.2.0.dist-info/entry_points.txt,sha256=WLYU0FNr_W7vgwPFpIcHfD1lcIGqV5xb78Xxuv3t_2Q,57
+key_proxy-1.2.0.dist-info/top_level.txt,sha256=3b9EjO6EZ3Ct_rpCoPENIz9P9zIlp9ycd1pQh75GVCI,11
+key_proxy-1.2.0.dist-info/RECORD,,
