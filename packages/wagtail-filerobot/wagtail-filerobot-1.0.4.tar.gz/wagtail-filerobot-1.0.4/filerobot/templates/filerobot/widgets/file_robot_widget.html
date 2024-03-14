@@ -1,0 +1,13 @@
+<div class="filerobot-wrapper" id="{{ widget.attrs.id }}-filerobot-widget-wrapper">
+    <input
+        type="{{ widget.type }}"
+        name="{{ widget.name }}"
+        {% if widget.value != None %}value="{{ widget.value|stringformat:'s' }}"{% endif %}
+        {% include "django/forms/widgets/attrs.html" %}>
+
+    {% for script in widget.tpl_data %}
+        {{ script|safe }}
+    {% endfor %}
+    
+    <div class="filerobot-widget-container" data-widget="{{ widget.name }}" id="{{ widget.attrs.id }}-filerobot-widget"></div>
+</div>
