@@ -1,0 +1,2 @@
+[console_scripts]
+ue-assets = ue_asset_cli.cli:main
