@@ -1,0 +1,30 @@
+'''
+    ML Engine Backend List
+'''
+COLLAGEN_ML_ENGINE_BACKEND_TORCH = "torch"
+COLLAGEN_ML_DEVICE_TYPE_GPU = "gpu"
+COLLAGEN_ML_DEVICE_TYPE_CPU = "cpu"
+COLLAGEN_ML_DEVICE_TYPE_MPS = "mps"
+
+'''
+    Non-iid data scenario
+'''
+COLLAGEN_NONIID_SCENARIO_NORMAL = "normal"
+
+
+'''
+    Supported federated learning optimizer list
+'''
+COLLAGEN_FEDERATED_OPTIMIZER_FEDAVG = "FedAvg"
+COLLAGEN_FEDERATED_OPTIMIZER_FEDPROX = "FedProx"
+COLLAGEN_FEDERATED_OPTIMIZER_SCAFFOLD = "SCAFFOLD"
+
+'''
+    Simulation Types
+'''
+COLLAGEN_SIMULATION_TYPE_SINGLE_PROCESSOR = "sp"
+
+'''
+    Training platform
+'''
+COLLAGEN_TRAINING_PLATFORM_SIMULATION = "simulation"
