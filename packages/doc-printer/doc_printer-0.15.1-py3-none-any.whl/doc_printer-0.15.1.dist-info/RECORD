@@ -1,0 +1,15 @@
+doc_printer/__init__.py,sha256=7aDvFKtIm6XPZNsCewpOnT43HS3d5f5vBOdZSCXMO_4,1514
+doc_printer/_compat_itertools.py,sha256=a0BHImYRh0jexcQZ24oCrd9nEMIbOcafevmxzbZjSD4,2274
+doc_printer/_compat_singledispatchmethod.py,sha256=XQj7l45qpslQe93p2oXQjVZidnC8oNQqjdYFJukQEFk,656
+doc_printer/_compat_singledispatchmethod.pyi,sha256=U8Tgw_BgCniAhmnYdS9G5DqaRWeyPi0A8NRk4vUWEBo,2011
+doc_printer/abc.py,sha256=7xkp8AOIMfGTeoJg_sKeNHzzIa8ryy1_n_F-nQtrs_s,591
+doc_printer/doc.py,sha256=2aGBuU-Rv1UwXSPM9oJHup82MXJGrSeyxMJxupvl-5M,27387
+doc_printer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+doc_printer/simple.py,sha256=3cvXwUqlpFwACTj05qmaCrLzmlP5bdvw8jf9dqx3Khs,5907
+doc_printer/smart.py,sha256=3yKP5ntzuZnD7-4s7gGXzeOZhiK_LlVowf7X-HuZchU,2268
+doc_printer/table.py,sha256=JUPMvGEv9nFNyqrgFvs63pWSLuerm1jUtSNrt8RxWx8,4286
+doc_printer-0.15.1.dist-info/LICENSE,sha256=Qd1Q6abfHiuSYRq6U18--08_3nl-LTjsY6_pc9JOzDw,1066
+doc_printer-0.15.1.dist-info/METADATA,sha256=x1_VxMLcOv8LLW73D-eEv3-Zlem3gK6EpAfcOQlho2c,3291
+doc_printer-0.15.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+doc_printer-0.15.1.dist-info/top_level.txt,sha256=e30jsFEdIZV3mSDtOdQ0KIGlIWcfoTQBKylqoNgl0kw,12
+doc_printer-0.15.1.dist-info/RECORD,,
