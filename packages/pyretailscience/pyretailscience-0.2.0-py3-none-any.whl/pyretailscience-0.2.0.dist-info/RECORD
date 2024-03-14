@@ -1,0 +1,13 @@
+pyretailscience/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyretailscience/customer.py,sha256=FqTw_bDq6My2p5aW1AgfxMAFcRpNbsh13dXm3mVFNHM,13529
+pyretailscience/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyretailscience/data/cli.py,sha256=bIB2qaQ7h8qd2PY1yd7E56jQkNuY9I0y8IF8fgB_kHg,1165
+pyretailscience/data/contracts.py,sha256=ypSh6QZDjso7amkB21nwRoTlPH6YWQbNcKfzxJAuFf4,17441
+pyretailscience/data/simulation.py,sha256=SzuWCxh-Me1W5yVW4TjU6F_CXzazCZIFdv_bmJ4Wb_0,15906
+pyretailscience/style/graph_utils.py,sha256=3HwG_Glzha7j3C10Iit8_bdopt2xYXpt7_5463aXc4Q,1210
+pyretailscience/style/tailwind.py,sha256=Z-6JD9giGzNMDHXi4GgYpYAAxYI58xRDtQVGuBr_wro,9316
+pyretailscience-0.2.0.dist-info/LICENSE,sha256=SCVQGLQfwOllsRFa9-Z3m8IYu4pnR9Vh2oANUCJiKqI,3860
+pyretailscience-0.2.0.dist-info/METADATA,sha256=qu6YX67wpZ0mPTX4N8dT5FghgYQ6Siv2eDKRGjuyhG4,3620
+pyretailscience-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pyretailscience-0.2.0.dist-info/entry_points.txt,sha256=VJFsbNuCLiNNiOxZ_JYZ_4ZerEQ5rRTpc5jfvkh8Fys,69
+pyretailscience-0.2.0.dist-info/RECORD,,
