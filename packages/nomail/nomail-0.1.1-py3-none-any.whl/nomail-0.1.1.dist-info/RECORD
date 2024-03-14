@@ -1,0 +1,17 @@
+nomail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nomail/action.py,sha256=0A-OsbbAX9UQMspVbyaQSpYymDmb3Lcc1Cwc8MOQic8,687
+nomail/adapter.py,sha256=jBMUooM3NlFqRuDS-bQRMTQ-edl2gjN0CS8f3MbWPb0,771
+nomail/descriptor.py,sha256=5TTYDT_r7yC3rdXsS6yLdFH8q2cmdS4jtP4C3hMlNLU,580
+nomail/email.py,sha256=9QUOpE9YwX0TaD8duQvarTEOI_yJOoU6bXsYmcI6THY,1477
+nomail/email_filter.py,sha256=oFUnQy-jU1Q4JTTsNPHVcUEm8nL25p3bjFHKXvOBV10,604
+nomail/env.py,sha256=owgcdjTUws_i-KxybdMadfhmaYuW_pcgynUPBZwKAqM,305
+nomail/imap.py,sha256=3Ot__j5xgfPSywfv3YuM32TmxRzkQ6IvcuT0Em3IK4E,915
+nomail/io.py,sha256=SAhTnYXBYnG1GJUoeTfRiFdoW0XQ6-Iyp3hdj5Z8kGc,197
+nomail/output.py,sha256=gv3wF7TYSIE_-hCcYJUZCW0FvYG_CxC-WlxwaT5RcHA,701
+nomail/sanitize.py,sha256=XDWK8E43D986fUh3Tq07vqYXGsY2UbRLm7rMXSf4i28,678
+nomail/session.py,sha256=0HOLKFayJqRwsjT6qhbf-i0MoNqbTCH5LglGvus1xqA,471
+nomail/util.py,sha256=YA9vC26LIxT0WJ7tHRjWZsBesDBHOQ4fEZq9a1UjNMo,151
+nomail-0.1.1.dist-info/LICENSE.txt,sha256=JnRt_3uCXuxlhslOYb247AO-fxAAtsX-ZF_wuQWcLWQ,1068
+nomail-0.1.1.dist-info/METADATA,sha256=VW37fBM8V-mMrYSgBPGxJgbYsWnAmVvPVp9Vv1rwwvY,1231
+nomail-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+nomail-0.1.1.dist-info/RECORD,,
