@@ -1,0 +1,7 @@
+
+[dev]
+pytest
+pytest-watch<5.0,>=4.2
+pytest-django<5.0,>=4.8
+django<6,>=2.2
+twine

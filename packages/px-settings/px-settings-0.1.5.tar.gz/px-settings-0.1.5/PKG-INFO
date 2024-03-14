@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: px-settings
+Version: 0.1.5
+Summary: Simple settings utility package.
+Author: Alex Tkachenko
+Author-email: preusx.dev@gmail.com
+License: MIT License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-watch<5.0,>=4.2; extra == "dev"
+Requires-Dist: pytest-django<5.0,>=4.8; extra == "dev"
+Requires-Dist: django<6,>=2.2; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# Settings
+
+Simple settings aggregator class from multiple sources.
+
+With additional django support.
