@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+v0.20240313.0
+-------------
+
+* Fix the mariadb\_recovery action (#815)
