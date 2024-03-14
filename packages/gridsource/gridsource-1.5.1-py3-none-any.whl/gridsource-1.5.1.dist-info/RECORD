@@ -1,0 +1,11 @@
+gridsource/__init__.py,sha256=F1Qooxf05ozP9kAQ5Ywn5arckJqq-rNvIcUHKLA-liQ,1314
+gridsource/autodoc.py,sha256=vWp_vf7zCcjG0VoVAj0H7OsAP8KMykxgxxAQHTSTlHU,28576
+gridsource/cli.py,sha256=wpJ6wMQXbyPnfYl3hGV5_6O-mamTmeE7NeOtJRinewA,5975
+gridsource/custom_systems.txt,sha256=2Txjr4rcyWOz-niK15u4BPf0PPMyc8NI2DAAFyikRt8,230
+gridsource/io.py,sha256=TMojcYcxWqKdKewy_bpliV0TP3dqswuiYFEBvYrsma4,13930
+gridsource/validation.py,sha256=MidIoROKruEvCYl21HUxI-BWGjY3Kgm83PZZOJ1dhEY,34824
+gridsource-1.5.1.dist-info/LICENSE,sha256=YNc5tLb846XekZZQAgP33R7feYsHwnLU4aIzfXZFGE8,1074
+gridsource-1.5.1.dist-info/METADATA,sha256=75QG2JkJRyZQwt0oZMEDR4yLNC9DYmvIn6vDDZmdSWw,838
+gridsource-1.5.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+gridsource-1.5.1.dist-info/entry_points.txt,sha256=WHJKVgWvWE8CiMCxvO0mUAJ5QXiQ6Ev2rFAzeBex_uU,49
+gridsource-1.5.1.dist-info/RECORD,,
