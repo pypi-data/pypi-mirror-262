@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+convertfiletovoice2/__init__.py
+convertfiletovoice2/convertfiletovoice.py
+convertfiletovoice2.egg-info/PKG-INFO
+convertfiletovoice2.egg-info/SOURCES.txt
+convertfiletovoice2.egg-info/dependency_links.txt
+convertfiletovoice2.egg-info/requires.txt
+convertfiletovoice2.egg-info/top_level.txt
