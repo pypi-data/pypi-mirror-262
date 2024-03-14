@@ -1,0 +1,8 @@
+README.md
+setup.py
+instafogging_api/__INIT__.py
+instafogging_api.egg-info/PKG-INFO
+instafogging_api.egg-info/SOURCES.txt
+instafogging_api.egg-info/dependency_links.txt
+instafogging_api.egg-info/requires.txt
+instafogging_api.egg-info/top_level.txt
