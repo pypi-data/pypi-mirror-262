@@ -1,0 +1,11 @@
+dbr/libDynamicPdf.dylib,sha256=sjWRs_-EVrn7Z_DRmUB1PzxtMJp7X4Pp5jXkewumqV4,5324496
+dbr/dbr_python.py,sha256=cfagHPJZais6SR8kUkKolGr3HlFQAs-nh1hrcZ-SSY4,129161
+dbr/__init__.py,sha256=a2gf6pbGuILKbNZTdobskImT6dTRwyDEHnm0Matpbow,71
+dbr/libDynamsoftBarcodeReader.dylib,sha256=nQbjW-GNMW-9ldLETqjzywsM5l4A-UQepuQqjyeNBAs,11675984
+dbr/libDynamsoftLicenseClient.dylib,sha256=cmABNwTxZcHRf11OXlNL2Yvt46samAALP6vwMgvm-jM,2850832
+dbr/dbr.cpython-37m-darwin.so,sha256=LtMkPSoj2ERJgUdJxwlVRz1wd8dp6a04o5mOgyHv4q0,119472
+dbr-9.6.40.dist-info/RECORD,,
+dbr-9.6.40.dist-info/WHEEL,sha256=dlgNGsmxOWMpV1szoPRgCZScocI_wlDaqM-rtZXaaTM,111
+dbr-9.6.40.dist-info/top_level.txt,sha256=RtnRuv17zC0FTWgII9msEV_uFpxjilu6Jag3kKXZZ-Q,4
+dbr-9.6.40.dist-info/LICENSE.txt,sha256=8dq_RHly314Yrezs85ZcfFvTGUaT8Xr4x16a8_-V_PI,73
+dbr-9.6.40.dist-info/METADATA,sha256=aLFxv2WbVTVQMROWzSGf7x4lLOueETrJE2X-covmxXg,5313
