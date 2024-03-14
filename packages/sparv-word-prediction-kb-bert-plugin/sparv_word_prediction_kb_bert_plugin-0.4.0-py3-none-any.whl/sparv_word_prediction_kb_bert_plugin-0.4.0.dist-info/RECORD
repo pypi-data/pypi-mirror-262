@@ -1,0 +1,6 @@
+word_prediction_kb_bert/__init__.py,sha256=4LVCnW79iLnUTTexwzTBLpgWcEdEJIfg1RbS9vFCceQ,3865
+word_prediction_kb_bert/predictor.py,sha256=iBRA71QdRsXKR6zFmmUrnEusdvwxajKmtAGQAmMYyx8,1620
+sparv_word_prediction_kb_bert_plugin-0.4.0.dist-info/METADATA,sha256=YitZbwEHNMmUiiQixDDUL9IHjJbRFJ1GVo2t-wfywvg,2598
+sparv_word_prediction_kb_bert_plugin-0.4.0.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+sparv_word_prediction_kb_bert_plugin-0.4.0.dist-info/entry_points.txt,sha256=uSZXo6j_yFSiTxs-A-5ZwtqLOCAZoz2MQjbOxOL78eU,65
+sparv_word_prediction_kb_bert_plugin-0.4.0.dist-info/RECORD,,
