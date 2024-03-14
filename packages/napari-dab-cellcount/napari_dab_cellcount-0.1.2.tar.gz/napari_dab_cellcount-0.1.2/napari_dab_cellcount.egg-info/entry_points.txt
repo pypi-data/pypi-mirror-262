@@ -1,0 +1,2 @@
+[napari.plugin]
+napari_dab_cellcount = napari_dab_cellcount
