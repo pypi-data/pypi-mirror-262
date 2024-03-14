@@ -1,0 +1,12 @@
+pandas
+requests
+lxml
+simplejson
+bs4==0.0.1
+websocket-client==0.57.0
+pytdx
+protobuf
+grpcio
+pycryptodome
+pydantic
+tqdm
