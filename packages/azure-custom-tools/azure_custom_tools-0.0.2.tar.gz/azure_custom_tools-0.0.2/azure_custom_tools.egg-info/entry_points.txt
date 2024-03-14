@@ -1,0 +1,2 @@
+[package_tools]
+first_tool = azure_custom_tools.tools.utils:list_package_tools

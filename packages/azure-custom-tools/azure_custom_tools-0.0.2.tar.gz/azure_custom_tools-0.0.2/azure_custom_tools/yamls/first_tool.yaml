@@ -1,0 +1,14 @@
+azure_custom_tools.tools.first_tool.show_output:
+  class_name: MyTool
+  function: show_output
+  inputs:
+    connection:
+      type:
+      - CustomConnection
+    input_text:
+      type:
+      - string
+  module: azure_custom_tools.tools.first_tool
+  name: My first Tool
+  description: This is My first tool
+  type: python
