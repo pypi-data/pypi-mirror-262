@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: llm-quantkit
+Version: 0.13
+Summary: cli tool for downloading and quantizing LLMs
+Author-email: xhedit <jevd@protonmail.com>
+License: LGPL-3.0-or-later
+Project-URL: repository, https://github.com/xhedit/quantkit
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: torch >=2.0.0
+Requires-Dist: einops
+Requires-Dist: tqdm
+Requires-Dist: transformers
+Requires-Dist: huggingface-hub
+Requires-Dist: safetensors
+Requires-Dist: auto-gptq
+Requires-Dist: autoawq
+Requires-Dist: exl2conv
+Provides-Extra: dev
+
