@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: math-utilsn
+Version: 0.1.1
+Summary: A simple package for basic math operations
+Home-page: https://github.com/yourusername/math_operations
+Author: Samrat Kumar Dev Sharma
+Author-email: samratkumardev2001@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# math_operations
+
+math_operations is a Python package that provides basic mathematical operations.
+
+## Installation
+
+You can install math_operations using pip:
+
+
+

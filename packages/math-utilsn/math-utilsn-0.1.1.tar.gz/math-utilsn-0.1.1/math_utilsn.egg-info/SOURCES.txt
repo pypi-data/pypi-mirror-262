@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+math_operations/__init__.py
+math_operations/operations.py
+math_utilsn.egg-info/PKG-INFO
+math_utilsn.egg-info/SOURCES.txt
+math_utilsn.egg-info/dependency_links.txt
+math_utilsn.egg-info/entry_points.txt
+math_utilsn.egg-info/top_level.txt

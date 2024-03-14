@@ -1,0 +1,6 @@
+[console_scripts]
+math_operations_add = math_operations.operations:add
+math_operations_divide = math_operations.operations:divide
+math_operations_multiply = math_operations.operations:multiply
+math_operations_subtract = math_operations.operations:subtract
+
