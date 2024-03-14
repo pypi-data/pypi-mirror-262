@@ -1,0 +1,3 @@
+[console_scripts]
+sweep = sweepai.cli:app
+sweepai = sweepai.cli:app
