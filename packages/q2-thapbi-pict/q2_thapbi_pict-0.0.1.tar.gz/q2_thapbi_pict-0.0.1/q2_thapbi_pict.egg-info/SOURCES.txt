@@ -1,0 +1,13 @@
+LICENSE.rst
+README.rst
+setup.py
+q2_thapbi_pict/__init__.py
+q2_thapbi_pict/_prepare_reads_sample_tally.py
+q2_thapbi_pict/citations.bib
+q2_thapbi_pict/plugin_setup.py
+q2_thapbi_pict.egg-info/PKG-INFO
+q2_thapbi_pict.egg-info/SOURCES.txt
+q2_thapbi_pict.egg-info/dependency_links.txt
+q2_thapbi_pict.egg-info/entry_points.txt
+q2_thapbi_pict.egg-info/requires.txt
+q2_thapbi_pict.egg-info/top_level.txt

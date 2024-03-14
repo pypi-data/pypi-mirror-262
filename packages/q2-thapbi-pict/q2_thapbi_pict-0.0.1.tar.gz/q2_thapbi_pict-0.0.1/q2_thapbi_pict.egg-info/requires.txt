@@ -1,0 +1,4 @@
+thapbi_pict<1.1,>=1.0.12
+q2-types>=2023.5
+q2cli>=2023.5
+biom-format>=2.1.12

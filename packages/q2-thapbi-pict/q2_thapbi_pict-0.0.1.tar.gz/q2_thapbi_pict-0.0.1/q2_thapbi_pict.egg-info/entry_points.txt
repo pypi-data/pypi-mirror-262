@@ -1,0 +1,2 @@
+[qiime2.plugins]
+q2-thapbi-pict = q2_thapbi_pict.plugin_setup:plugin
