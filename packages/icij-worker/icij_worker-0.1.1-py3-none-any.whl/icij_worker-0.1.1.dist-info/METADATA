@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: icij-worker
+Version: 0.1.1
+Summary: Create asynchronous tasks from Python functions
+Author: Clément Doumouro
+Author-email: cdoumouro@icij.org
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: icij_common (>=0.1.1,<0.2.0)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
