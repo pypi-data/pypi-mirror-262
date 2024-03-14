@@ -1,0 +1,16 @@
+anyio
+pymysql
+
+[full]
+jinja2
+aiofiles
+python-multipart
+markupsafe
+
+[sec]
+aiofiles
+markupsafe
+
+[template]
+jinja2
+aiofiles
