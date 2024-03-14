@@ -1,0 +1,114 @@
+Metadata-Version: 2.1
+Name: authbox-setup-version
+Version: 1.0.9
+Summary: Read version variable from _version.py and make incremental version
+Home-page: https://github.com/PROJECT-AUTHBOX/authbox_setup_version.git
+Author: Iwan Setiawan
+Author-email: suratiwan03@gmail.com
+Keywords: project,version,incremental,setup,django,python
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: incremental
+Requires-Dist: click
+Requires-Dist: twisted
+
+# Authbox Setup Version
+
+## Overview
+
+Setup file of library has version parameter. This library help you
+to generate version and increment version for next release.
+
+### How to use?
+
+Just type:
+```
+> pip install authbox-setup-version
+```
+
+### Example code:
+```
+> from authbox-setup-version import get_version, increment_version
+
+> get_version('path/to/_version.py')
+> 1.0.31
+
+> increment_version('path/to/_version.py')
+> # from 1.0.31 become 1.0.32
+> increment_version('path/to/_version.py', major=1)
+> # from 1.0.31 become 2.0.31
+> increment_version('path/to/_version.py', minor=1)
+> # from 1.0.31 become 1.1.31
+```
+
+file '_version.py' has been generate using other library, name 'incremental'
+```
+> pip install incremental
+```
+
+generate file '_version.py'
+```
+> python -m incremental.update <package_name> --create
+```
+
+### Management Commands:
+'''
+> # for get current version
+> python manage.py getversion —rel_path <path/to/file/_version.py>
+> python manage.py getversion —rel_path menu/_version.py
+> 1.0.3
+
+> # for increment version
+> python manage.py nextversion —rel_path <path/to/file/_version.py> —package_name <package_name>
+> python manage.py nextversion —rel_path menu/_version.py —package_name menu
+> 1.0.4
+
+'''
+
+### Example setup.py:
+```
+from setuptools import setup, find_packages
+from authbox_setup_version import get_version, increment_version
+
+setup(
+    name='package-name',
+    version=get_version('/path/to/_version.py'),
+    description='short desctiption',
+    
+    author='Iwan Setiawan',        
+    author_email="suratiwan03@gmail.com",
+    packages=find_packages(exclude=['tests', 'tests.*']),
+            
+    classifiers=[
+        'License :: OSI Approved :: BSD License',
+        'Intended Audience :: Developers',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
+    ],            
+)
+```
+
+## Testing:
+
+Activate your virtual environment using 'venv' or 'pyenv' or up your choice.
+And type this code in command prompt:
+```
+> git pull git@github.com:PROJECT-AUTHBOX/authbox-setup-version.git
+> cd authbox-setup-version
+> pytest
+
+> result:
+=========================== test session starts =======================
+platform linux -- Python 3.8.18, pytest-8.0.2, pluggy-1.4.0
+rootdir: /path/to/library/authbox_setup_version
+collected 2 items                                                                                                                                    
+
+tests/test_init.py ..                                            [100%]
+
+============================= 2 passed in 0.37s =======================
+```
+

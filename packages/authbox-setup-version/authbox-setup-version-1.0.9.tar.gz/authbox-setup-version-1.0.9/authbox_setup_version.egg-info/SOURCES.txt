@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+authbox_setup_version/__init__.py
+authbox_setup_version/_version.py
+authbox_setup_version.egg-info/PKG-INFO
+authbox_setup_version.egg-info/SOURCES.txt
+authbox_setup_version.egg-info/dependency_links.txt
+authbox_setup_version.egg-info/requires.txt
+authbox_setup_version.egg-info/top_level.txt
+proj_authbox_setup_version/__init__.py
+proj_authbox_setup_version/asgi.py
+proj_authbox_setup_version/settings.py
+proj_authbox_setup_version/urls.py
+proj_authbox_setup_version/wsgi.py
+tests/test_init.py
