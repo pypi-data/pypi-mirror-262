@@ -1,0 +1,5 @@
+setup.py
+amtlib.egg-info/PKG-INFO
+amtlib.egg-info/SOURCES.txt
+amtlib.egg-info/dependency_links.txt
+amtlib.egg-info/top_level.txt
