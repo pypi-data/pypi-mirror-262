@@ -1,0 +1,1 @@
+from .retail_dictionary import get_meaning
