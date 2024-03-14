@@ -1,0 +1,13 @@
+recompyle/__about__.py,sha256=NB1o-8BxZ2pHoKN1fIvgYSYJQcIlHjdhoTixQCb-HpA,126
+recompyle/__init__.py,sha256=CLr1YfEct6MRB9bgZPxy4VwTjFSpAuxecQ4LVerh5dg,125
+recompyle/decorators/__init__.py,sha256=pjRRqFWhhozxu6TZZP640kHI1ZpAF6WFZMnJb-Ad2W8,135
+recompyle/decorators/decorate_function.py,sha256=2h5a6zy0XVzIhLR1meH_yXWtq6bhB4nvHk8g4VLTAT0,1913
+recompyle/rewrite/__init__.py,sha256=G44sMVNVhstcr09mzj7y0XO8JWO6mXuw23aQCy84GoE,231
+recompyle/rewrite/rewrite_function.py,sha256=cs-CmdzsvfJEsNWSE32z6ilDJ58jcStdNNFpPmx6-Es,11135
+recompyle/transformers/__init__.py,sha256=xGGr1j8ucFWDOj3LiSfYP-O4n5erjYb6mF5U8E3a-K8,150
+recompyle/transformers/base.py,sha256=k4fAleJg7BxsZGk0mE4YEtMv19mZUjt2A2Q5nBwwQtc,748
+recompyle/transformers/function.py,sha256=MTuyACgpOwsO7RKy8ZDKq-xH_yri5HYrq7NBSFM0GJk,6547
+recompyle-0.4.0.dist-info/METADATA,sha256=qAwJ4-9HY2wV1R1qy5FX1vrO1Hc3EWbcIkwpKeQy_fA,9670
+recompyle-0.4.0.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+recompyle-0.4.0.dist-info/licenses/LICENSE.txt,sha256=71gRAI0nqsF7xW2n2V4Ay8Ba7kVHkJT3IMircHlj1Hg,1096
+recompyle-0.4.0.dist-info/RECORD,,
