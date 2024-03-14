@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lightningrobot
+Version: 1.0.4
+Summary: 轻快，好用，基于Python的多平台机器人框架。
+Author: Zhihan
+Author-email: zhihan2727@hotmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: asyncio (>=3.4.3,<4.0.0)
+Requires-Dist: pymysql (>=1.1.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# 闪电机器人
+轻快，好用，基于Python的多平台机器人框架。
