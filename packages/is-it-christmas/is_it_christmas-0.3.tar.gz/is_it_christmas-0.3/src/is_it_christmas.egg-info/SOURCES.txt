@@ -1,0 +1,16 @@
+.gitattributes
+.gitignore
+README.md
+__init__.py
+pyproject.toml
+requirements.txt
+setup.cfg
+.github/workflows/black.yml
+.github/workflows/pylint.yml
+.github/workflows/python-publish.yml
+src/__init__.py
+src/is_it_christmas/checks.py
+src/is_it_christmas.egg-info/PKG-INFO
+src/is_it_christmas.egg-info/SOURCES.txt
+src/is_it_christmas.egg-info/dependency_links.txt
+src/is_it_christmas.egg-info/top_level.txt
