@@ -1,0 +1,206 @@
+************* Module pmk_probes
+pmk_probes\__init__.py:3:0: C0304: Final newline missing (missing-final-newline)
+************* Module pmk_probes.power_supplies
+pmk_probes\power_supplies.py:17:8: C0415: Import outside toplevel (probes._ALL_PMK_PROBES) (import-outside-toplevel)
+pmk_probes\power_supplies.py:75:0: W0223: Method 'metadata' is abstract in class '_PMKPowerSupply' but is not overridden in child class 'PS02' (abstract-method)
+pmk_probes\power_supplies.py:80:0: W0223: Method 'metadata' is abstract in class '_PMKPowerSupply' but is not overridden in child class 'PS03' (abstract-method)
+************* Module pmk_probes.probes
+pmk_probes\probes.py:79:9: W0511: TODO: maybe check the type of power supply here and then confirm the addressed plug number isn't too high, e.g. 3 for a 2-channel power supply (fixme)
+pmk_probes\probes.py:62:16: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+pmk_probes\probes.py:62:32: W1309: Using an f-string that does not have any interpolated variables (f-string-without-interpolation)
+pmk_probes\probes.py:72:8: R1720: Unnecessary "else" after "raise", remove the "else" and de-indent the code inside it (no-else-raise)
+pmk_probes\probes.py:85:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+pmk_probes\probes.py:123:12: R1720: Unnecessary "else" after "raise", remove the "else" and de-indent the code inside it (no-else-raise)
+pmk_probes\probes.py:112:4: R1711: Useless return at end of function or method (useless-return)
+pmk_probes\probes.py:129:4: R0913: Too many arguments (6/5) (too-many-arguments)
+pmk_probes\probes.py:504:0: W0223: Method '_write_float' is abstract in class '_PMKProbe' but is not overridden in child class 'HSDP2010' (abstract-method)
+pmk_probes\probes.py:504:0: W0223: Method 'offset' is abstract in class '_HSDP' but is not overridden in child class 'HSDP2010' (abstract-method)
+pmk_probes\probes.py:514:0: W0223: Method '_write_float' is abstract in class '_PMKProbe' but is not overridden in child class 'HSDP2010L' (abstract-method)
+pmk_probes\probes.py:514:0: W0223: Method 'offset' is abstract in class '_HSDP' but is not overridden in child class 'HSDP2010L' (abstract-method)
+pmk_probes\probes.py:518:0: W0223: Method '_write_float' is abstract in class '_PMKProbe' but is not overridden in child class 'HSDP2025' (abstract-method)
+pmk_probes\probes.py:518:0: W0223: Method 'offset' is abstract in class '_HSDP' but is not overridden in child class 'HSDP2025' (abstract-method)
+pmk_probes\probes.py:528:0: W0223: Method '_write_float' is abstract in class '_PMKProbe' but is not overridden in child class 'HSDP2025L' (abstract-method)
+pmk_probes\probes.py:528:0: W0223: Method 'offset' is abstract in class '_HSDP' but is not overridden in child class 'HSDP2025L' (abstract-method)
+pmk_probes\probes.py:532:0: W0223: Method '_write_float' is abstract in class '_PMKProbe' but is not overridden in child class 'HSDP2050' (abstract-method)
+pmk_probes\probes.py:532:0: W0223: Method 'offset' is abstract in class '_HSDP' but is not overridden in child class 'HSDP2050' (abstract-method)
+pmk_probes\probes.py:542:0: W0223: Method '_write_float' is abstract in class '_PMKProbe' but is not overridden in child class 'HSDP4010' (abstract-method)
+pmk_probes\probes.py:542:0: W0223: Method 'offset' is abstract in class '_HSDP' but is not overridden in child class 'HSDP4010' (abstract-method)
+pmk_probes\probes.py:552:0: W0223: Method '_write_float' is abstract in class '_PMKProbe' but is not overridden in child class 'FireFly' (abstract-method)
+pmk_probes\probes.py:618:12: W0612: Unused variable 'i' (unused-variable)
+pmk_probes\probes.py:644:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module pmk_probes._data_structures
+pmk_probes\_data_structures.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+pmk_probes\_data_structures.py:31:0: C0115: Missing class docstring (missing-class-docstring)
+pmk_probes\_data_structures.py:46:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_data_structures.py:49:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_data_structures.py:60:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_data_structures.py:63:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_data_structures.py:70:0: C0115: Missing class docstring (missing-class-docstring)
+pmk_probes\_data_structures.py:77:0: C0115: Missing class docstring (missing-class-docstring)
+pmk_probes\_data_structures.py:77:0: R0902: Too many instance attributes (11/7) (too-many-instance-attributes)
+pmk_probes\_data_structures.py:101:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_data_structures.py:127:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_data_structures.py:148:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_data_structures.py:184:0: C0115: Missing class docstring (missing-class-docstring)
+pmk_probes\_data_structures.py:6:0: W0611: Unused TypeVar imported from typing (unused-import)
+************* Module pmk_probes._devices
+pmk_probes\_devices.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+pmk_probes\_devices.py:21:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+pmk_probes\_devices.py:1:0: W0611: Unused abstractmethod imported from abc (unused-import)
+pmk_probes\_devices.py:2:0: W0611: Unused namedtuple imported from collections (unused-import)
+pmk_probes\_devices.py:5:0: W0611: Unused PMKProbeProperties imported from _data_structures (unused-import)
+************* Module pmk_probes._errors
+pmk_probes\_errors.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+pmk_probes\_errors.py:1:0: C0115: Missing class docstring (missing-class-docstring)
+pmk_probes\_errors.py:5:0: C0115: Missing class docstring (missing-class-docstring)
+pmk_probes\_errors.py:9:0: C0115: Missing class docstring (missing-class-docstring)
+pmk_probes\_errors.py:13:0: C0115: Missing class docstring (missing-class-docstring)
+pmk_probes\_errors.py:17:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module pmk_probes._hardware_interfaces
+pmk_probes\_hardware_interfaces.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+pmk_probes\_hardware_interfaces.py:13:0: C0115: Missing class docstring (missing-class-docstring)
+pmk_probes\_hardware_interfaces.py:14:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_hardware_interfaces.py:17:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_hardware_interfaces.py:20:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_hardware_interfaces.py:23:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_hardware_interfaces.py:26:4: C0116: Missing function or method docstring (missing-function-docstring)
+pmk_probes\_hardware_interfaces.py:30:0: C0115: Missing class docstring (missing-class-docstring)
+pmk_probes\_hardware_interfaces.py:30:0: W0223: Method 'query' is abstract in class 'HardwareInterface' but is not overridden in child class 'LANInterface' (abstract-method)
+pmk_probes\_hardware_interfaces.py:50:0: C0115: Missing class docstring (missing-class-docstring)
+pmk_probes\_hardware_interfaces.py:50:0: W0223: Method 'query' is abstract in class 'HardwareInterface' but is not overridden in child class 'USBInterface' (abstract-method)
+pmk_probes\_hardware_interfaces.py:57:12: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise ProbeConnectionError(f'Could not open {com_port}. Is the power supply connected?') from exc' (raise-missing-from)
+pmk_probes\_hardware_interfaces.py:92:8: C0103: Variable name "ip" doesn't conform to snake_case naming style (invalid-name)
+pmk_probes\_hardware_interfaces.py:1:0: R0401: Cyclic import (pmk_probes.power_supplies -> pmk_probes.probes) (cyclic-import)
+
+
+Report
+======
+481 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |7      |7          |=          |42.86       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |34     |34         |=          |64.71       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |99     |99         |=          |86.87       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |6      |6          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    serial (pmk_probes._hardware_interfaces)
+
+
+
+1099 lines have been analyzed
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |594    |54.05 |594      |=          |
++----------+-------+------+---------+-----------+
+|docstring |261    |23.75 |261      |=          |
++----------+-------+------+---------+-----------+
+|comment   |45     |4.09  |45       |=          |
++----------+-------+------+---------+-----------+
+|empty     |199    |18.11 |199      |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |0          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |32     |32       |32         |
++-----------+-------+---------+-----------+
+|refactor   |8      |8        |8          |
++-----------+-------+---------+-----------+
+|warning    |26     |26       |26         |
++-----------+-------+---------+-----------+
+|error      |0      |23       |23         |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++-------------------------------+------------+
+|message id                     |occurrences |
++===============================+============+
+|abstract-method                |17          |
++-------------------------------+------------+
+|missing-function-docstring     |13          |
++-------------------------------+------------+
+|missing-class-docstring        |12          |
++-------------------------------+------------+
+|unused-import                  |4           |
++-------------------------------+------------+
+|missing-module-docstring       |4           |
++-------------------------------+------------+
+|no-else-raise                  |2           |
++-------------------------------+------------+
+|useless-return                 |1           |
++-------------------------------+------------+
+|unused-variable                |1           |
++-------------------------------+------------+
+|too-many-instance-attributes   |1           |
++-------------------------------+------------+
+|too-many-arguments             |1           |
++-------------------------------+------------+
+|too-few-public-methods         |1           |
++-------------------------------+------------+
+|raise-missing-from             |1           |
++-------------------------------+------------+
+|no-else-return                 |1           |
++-------------------------------+------------+
+|missing-final-newline          |1           |
++-------------------------------+------------+
+|logging-fstring-interpolation  |1           |
++-------------------------------+------------+
+|invalid-name                   |1           |
++-------------------------------+------------+
+|import-outside-toplevel        |1           |
++-------------------------------+------------+
+|fixme                          |1           |
++-------------------------------+------------+
+|f-string-without-interpolation |1           |
++-------------------------------+------------+
+|cyclic-import                  |1           |
++-------------------------------+------------+
+
+
+
+
+------------------------------------------------------------------
+Your code has been rated at 8.63/10 (previous run: 6.24/10, +2.39)
+
