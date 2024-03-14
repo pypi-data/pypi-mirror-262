@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+src/tocca.egg-info/PKG-INFO
+src/tocca.egg-info/SOURCES.txt
+src/tocca.egg-info/dependency_links.txt
+src/tocca.egg-info/top_level.txt
