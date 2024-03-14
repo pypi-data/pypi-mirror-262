@@ -1,0 +1,2 @@
+[console_scripts]
+run_module = cohortfinder.__main__:main
