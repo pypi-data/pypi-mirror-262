@@ -1,0 +1,42 @@
+[project]
+name = "helptext"
+description = "A documentation-generated argument parser."
+authors = [{name = "Rob Thralls", email = "robert.thralls@pm.me"}]
+maintainers = [{name = "Rob Thralls", email = "robert.thralls@pm.me"}]
+dynamic = ['version']
+license = {file = "LICENSE"}
+readme = "README.md"
+keywords = ["helptext", "help", "text", "docstring", "argument", "parser",
+            "command-line", "interface", "cli", "option", "getopt"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved",
+  "License :: OSI Approved :: BSD License",
+  "License :: OSI Approved :: Zero-Clause BSD (0BSD)",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Operating System :: POSIX",
+  "Operating System :: Unix",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+requires-python = ">=3"
+dependencies = []
+
+[project.urls]
+homepage = "https://gitlab.com/helptext/helptext"
+documentation = "https://gitlab.com/helptext/helptext"
+repository = "https://gitlab.com/helptext/helptext"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/helptext/version.py"
+
