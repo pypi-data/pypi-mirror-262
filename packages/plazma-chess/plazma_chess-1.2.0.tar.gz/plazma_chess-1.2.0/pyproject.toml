@@ -1,0 +1,30 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plazma-chess"
+version = "1.0.0"
+description = "A fully function chess engine written in python"
+readme = "README.md"
+authors = [{ name = "CaptainDeathead", email = "unstableplazma@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["chess", "engine", "game"]
+dependencies = []
+requires-python = ">3"
+
+[project.optional-dependencies]
+dev = []
+
+[project.urls]
+Homepage = "https://github.com/CaptainDeathead/plazma-chess-engine"
+
+[project.scripts]
+no_script = "engine.__main__:main"

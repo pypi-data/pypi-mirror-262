@@ -1,0 +1,10 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+plazma_chess/__init__.py
+plazma_chess/engine.py
+plazma_chess.egg-info/PKG-INFO
+plazma_chess.egg-info/SOURCES.txt
+plazma_chess.egg-info/dependency_links.txt
+plazma_chess.egg-info/top_level.txt
