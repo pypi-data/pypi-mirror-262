@@ -1,0 +1,12 @@
+authbox_setup_version/__init__.py,sha256=JJsU5qIbaikW0Xx49g0gWUxhDGjLXu_FE94N1FRjHbc,2765
+authbox_setup_version/_version.py,sha256=17WcWvXDR5yH1YU0oD81-jbmc90kwSy0eABw1XXHX8s,301
+proj_authbox_setup_version/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proj_authbox_setup_version/asgi.py,sha256=BpnYgI4hdznfaLdccN8nrlZR0l6C853PgqFNYnJx4FQ,414
+proj_authbox_setup_version/settings.py,sha256=AuD3MzrIYjmwYFnu_Sz_KY9LfnrsLvY5YYUkjo6MFDQ,4372
+proj_authbox_setup_version/urls.py,sha256=Eau3hrJfpAPAqLYrJe1ewxwWGCPH9FDBaI_b-CNj-RY,921
+proj_authbox_setup_version/wsgi.py,sha256=A6h3Y5OrFjZgdFgzGKAgOGqm9zq7XNyN4-7i0Zp2nMU,414
+authbox_setup_version-1.0.9.dist-info/LICENSE,sha256=VS72RLpF0_CZQa08XEPACUKN5HseArVR_GIrCIzD-I0,1521
+authbox_setup_version-1.0.9.dist-info/METADATA,sha256=4Qrec_sweIBlcB-Cr3zeZS-ZgDORiGRw796kJB5Y3Ds,3250
+authbox_setup_version-1.0.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+authbox_setup_version-1.0.9.dist-info/top_level.txt,sha256=BpCfCRx0fSYsAr5knSKgPFofoBMsi3US41cDz82wS2g,49
+authbox_setup_version-1.0.9.dist-info/RECORD,,
