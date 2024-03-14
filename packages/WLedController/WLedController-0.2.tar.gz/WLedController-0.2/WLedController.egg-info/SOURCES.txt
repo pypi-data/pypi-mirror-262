@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+WLedController/WLedController.py
+WLedController/exceptions.py
+WLedController.egg-info/PKG-INFO
+WLedController.egg-info/SOURCES.txt
+WLedController.egg-info/dependency_links.txt
+WLedController.egg-info/requires.txt
+WLedController.egg-info/top_level.txt
