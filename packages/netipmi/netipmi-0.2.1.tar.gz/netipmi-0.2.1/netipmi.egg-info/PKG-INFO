@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: netipmi
+Version: 0.2.1
+Summary: IPMI energy measuments tool
+Home-page: https://github.com/VitorRamos/cpufreq
+Author: Vitor Ramos, Alex Furtunato
+Author-email: ramos.vitor89@gmail.com, alex.furtunato@academico.ifrn.edu.br
+License: MIT
+Keywords: ipmi energy sensor tool
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pysocks
+
+ipmi
+====
+
+Python module that gets data from ipmi web service
