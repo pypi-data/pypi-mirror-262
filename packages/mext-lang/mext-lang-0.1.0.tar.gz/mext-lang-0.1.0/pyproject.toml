@@ -1,0 +1,36 @@
+[project]
+name = "mext-lang"
+version = "0.1.0"
+authors = [
+  { name = "Dongning Chen", email = "donny.hikari@gmail.com" },
+]
+description = "Mext is a text template language that is useful for creating prompts for LLM."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "pyyaml>=5.1",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Operating System :: OS Independent",
+]
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+source = "https://github.com/donny-hikari/mext"
+
+[project.scripts]
+render-mext = "mext.scripts.render_mext:render_mext"
+
+[tool.setuptools]
+packages = ["mext"]
+
+[tool.setuptools.package-data]
+mext = ["libs/*", "scripts/*"]
+
+[build-system]
+requires = ["setuptools>=51", "wheel"]
+build-backend = "setuptools.build_meta"
