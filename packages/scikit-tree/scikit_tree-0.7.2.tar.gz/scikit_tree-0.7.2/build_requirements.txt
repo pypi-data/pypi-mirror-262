@@ -1,0 +1,12 @@
+meson
+meson-python
+cython>=3.0.8
+ninja
+numpy
+scikit-learn>=1.4.1
+click
+rich-click
+doit
+pydevtool
+spin
+build
