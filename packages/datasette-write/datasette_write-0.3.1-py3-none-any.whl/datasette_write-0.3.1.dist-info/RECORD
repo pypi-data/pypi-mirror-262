@@ -1,0 +1,7 @@
+datasette_write/__init__.py,sha256=rLD8QENtvprI3ER2aCKGtNmQ7qjAcWbmLd507kySVvU,6715
+datasette_write/templates/datasette_write.html,sha256=-7zwcfznocsei5aIZnRcgEsdCib6-H7Fa1TuxasetDM,4911
+datasette_write-0.3.1.dist-info/METADATA,sha256=rJvJt-Z2oXaT_7fvcjUxI35wl4lPMg3wqpGelgm7iDo,2834
+datasette_write-0.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+datasette_write-0.3.1.dist-info/entry_points.txt,sha256=q6Nsr_AVBF5D0y_ojz62qBHP8NQmxcpTzaD5O8ndsJ0,36
+datasette_write-0.3.1.dist-info/top_level.txt,sha256=TqV9H_tIZKzfVqbxQQWAxuu9NrbmOOdziZgsBYuYods,16
+datasette_write-0.3.1.dist-info/RECORD,,
