@@ -1,0 +1,11 @@
+attribution/__init__.py,sha256=TE-VYTWWpufTIlGMurixQlHKgMJKG2nPOBbr24-Bc1I,499
+attribution/shapley_attribution_ads.py,sha256=JMZrLaxLjWfiylpGAVsGmU7jfQ7oaBNWjG0Lg6xpCQ0,4444
+attribution/shapley_attribution_formula.py,sha256=CR0NLItSbjvJtV0UPzcSTEUsZqewMcv4rgcnLsvJyNA,2586
+example/__init__.py,sha256=fEdvRkF4xBAwlrY30sYDXNHDsxL_GMrLnHzDP2OvmHo,144
+example/ad_attribution.py,sha256=Hk9JoukMW69jtsJ7EEDg7Ou0wi6cOTwog6NMnKP2CaY,489
+example/index_attribution.py,sha256=VH9G38yWUA9XqJaovTehAHn-4aSHCdswvovsXayyaYE,2200
+shapley_attribution_wf-0.0.8.dist-info/LICENSE,sha256=qTAWRe9sQCjmOfE8p98171u0k4NmbT0l6m-rDrRKKoc,1065
+shapley_attribution_wf-0.0.8.dist-info/METADATA,sha256=6Bd73a6jKmwVUmja-jsdLq6-B2IqKpfB8BGIIFVYp_c,924
+shapley_attribution_wf-0.0.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+shapley_attribution_wf-0.0.8.dist-info/top_level.txt,sha256=T7a06YANwPzHbtq1g4otAqwYVQk3q2hUZejzjP7az2E,20
+shapley_attribution_wf-0.0.8.dist-info/RECORD,,
