@@ -1,0 +1,85 @@
+name: Pyinstaller
+
+on:
+  workflow_dispatch:
+    inputs:
+      push:
+        description: Push the image to the registry
+        required: false
+        default: true
+        type: boolean
+      tag:
+        description: The git tag to build on
+        required: true
+        type: string
+  workflow_call:
+    inputs:
+      push:
+        description: Push the image to the registry
+        required: false
+        default: true
+        type: boolean
+      tag:
+        description: The git tag to build on
+        required: true
+        type: string
+
+jobs:
+  installer:
+    name: Pyinstaller
+    runs-on: ${{ matrix.os.runs-on }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+        - name: windows
+          runs-on: windows-latest
+        - name: linux
+          runs-on: ubuntu-latest
+        - name: darwin
+          runs-on: macos-latest
+        arch:
+        - amd64
+    steps:
+
+    - name: Get Tag Name
+      id: set_tag
+      shell: bash
+      env:
+        OS: ${{ matrix.os.name }}
+        ARCH: ${{ matrix.arch }}
+        GIT_TAG: ${{ inputs.tag }}
+      run: |
+        if [ -z "${GIT_TAG}" ]; then
+          GIT_TAG=${GITHUB_REF#refs/*/}
+        fi
+        VERSION="${GIT_TAG#v*}"
+        NAME="duploctl-${VERSION}-${OS}-${ARCH}"
+        echo "GIT_TAG=${GIT_TAG}" >> $GITHUB_OUTPUT
+        echo "NAME=${NAME}" >> $GITHUB_OUTPUT
+
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ steps.set_tag.outputs.GIT_TAG }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+        cache: pip
+    
+    - name: Install Dependencies
+      run: pip install .[build]
+    
+    - name: Pyinstaller
+      id: installer
+      run: pyinstaller installer.spec
+
+    - name: View Files
+      run: ls dist
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: ${{ steps.set_tag.outputs.NAME }}
+        path: dist
