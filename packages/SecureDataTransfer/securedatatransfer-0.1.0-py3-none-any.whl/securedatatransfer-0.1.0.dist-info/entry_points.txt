@@ -1,0 +1,3 @@
+[console_scripts]
+secure-transfer=securedatatransfer.main:main
+
