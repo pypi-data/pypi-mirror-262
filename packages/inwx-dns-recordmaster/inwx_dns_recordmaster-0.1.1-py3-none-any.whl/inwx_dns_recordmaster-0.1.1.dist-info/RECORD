@@ -1,0 +1,12 @@
+recordmaster/__init__.py,sha256=uB9r3UAepWsgkSGM7L5ayV-IKsHWuguhZnzbqS46JL0,1298
+recordmaster/_api.py,sha256=qM8OOIKBIWgNrZpUeBa8W7Q52MCA_QqFX_A4WTyNKXY,1605
+recordmaster/_config.py,sha256=iSR_1u3D2qZ6BFZqk_paSRkvyTm4eWoHKdeDL_Gk-O4,1579
+recordmaster/_data.py,sha256=cmNIHNSQQo2vmnQTLESGL2etjej3uCgZ4B6ZcdIm5Jo,2477
+recordmaster/_get_records.py,sha256=7hgRZ_-wGwoEBK8v_K0tTf3d6QZjaZxE2Hey0j42kFY,5025
+recordmaster/_match_records.py,sha256=tkLPqw42n4l23Rj_Ff8ks6EZXv4qNJtvTAV88-yJy74,3289
+recordmaster/_sync_records.py,sha256=gau6lm0B6CJHoS5B5nT9U9Xp0pjXrQ2FcydEbQ0mcpw,4158
+recordmaster/main.py,sha256=SWZlCkQA0d84pbKunT-0ohbQYAfkC-7iZOftahnoHgU,5729
+inwx_dns_recordmaster-0.1.1.dist-info/METADATA,sha256=qC33xjOnPSM6YL7KJ0pSr9IdYWHM-cobhM2Ogl2s3Jo,764
+inwx_dns_recordmaster-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+inwx_dns_recordmaster-0.1.1.dist-info/entry_points.txt,sha256=cCLIrTcJCTqvjS9ObkZS-BPVl6ucAwlg3SD1-VA1IXM,53
+inwx_dns_recordmaster-0.1.1.dist-info/RECORD,,
