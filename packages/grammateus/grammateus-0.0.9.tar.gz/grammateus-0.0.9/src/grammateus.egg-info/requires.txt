@@ -1,0 +1,12 @@
+requests>=2.31.0
+pydantic>=2.6.3
+jsonlines>=4.0.0
+
+[anthropic]
+anthropic>=0.19.1
+
+[gemini_google]
+google-generativeai>=0.4.0
+
+[openai]
+openai>=1.13.3

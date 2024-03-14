@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: grammateus
+Version: 0.0.9
+Summary: A role similar to a scribe or notary. 
+Author-email: Alexander Fedotov <alex.fedotov@aol.com>
+Project-URL: Homepage, https://github.com/multilogue/grammateus
+Project-URL: Bug Tracker, https://github.com/multilogue/grammateus/issues
+Keywords: grammateus,recording,ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.31.0
+Requires-Dist: pydantic>=2.6.3
+Requires-Dist: jsonlines>=4.0.0
+Provides-Extra: openai
+Requires-Dist: openai>=1.13.3; extra == "openai"
+Provides-Extra: anthropic
+Requires-Dist: anthropic>=0.19.1; extra == "anthropic"
+Provides-Extra: gemini-google
+Requires-Dist: google-generativeai>=0.4.0; extra == "gemini-google"
+
+# Grammateus 
+In ancient Greece the specific role responsible for documenting legal proceedings, similar to a scribe or notary, was called a "grammateus" (γραμματεύς). 
