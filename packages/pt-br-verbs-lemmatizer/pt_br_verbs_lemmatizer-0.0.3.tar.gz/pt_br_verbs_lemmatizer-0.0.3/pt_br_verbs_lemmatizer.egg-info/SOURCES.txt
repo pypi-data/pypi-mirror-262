@@ -1,0 +1,9 @@
+README.md
+setup.py
+pt_br_verbs_lemmatizer/__init__.py
+pt_br_verbs_lemmatizer/main.py
+pt_br_verbs_lemmatizer.egg-info/PKG-INFO
+pt_br_verbs_lemmatizer.egg-info/SOURCES.txt
+pt_br_verbs_lemmatizer.egg-info/dependency_links.txt
+pt_br_verbs_lemmatizer.egg-info/requires.txt
+pt_br_verbs_lemmatizer.egg-info/top_level.txt
