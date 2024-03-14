@@ -1,0 +1,13 @@
+azure_custom_tools.tools.first_tool.show_output:
+  function: show_output
+  inputs:
+    connection:
+      type:
+      - CustomConnection
+    input_text:
+      type:
+      - string
+  module: azure_custom_tools.tools.first_tool
+  name: Hello World Tool
+  description: This is hello world tool
+  type: python

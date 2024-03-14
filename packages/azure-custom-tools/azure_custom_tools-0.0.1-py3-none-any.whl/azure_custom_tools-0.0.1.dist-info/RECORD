@@ -1,0 +1,12 @@
+azure_custom_tools/__init__.py,sha256=SXUyE9hmQeYBcmIxmXrAZAIeYfMHAA7cy2vPwgRceTo,82
+azure_custom_tools/tools/__init__.py,sha256=SXUyE9hmQeYBcmIxmXrAZAIeYfMHAA7cy2vPwgRceTo,82
+azure_custom_tools/tools/first_tool.py,sha256=nPJ7GiYYkBiOLPBSmX3NhSz9DCDnBrwAiV5B7OCdodQ,687
+azure_custom_tools/tools/utils.py,sha256=FKxG-XvEPP8UfUDxrkHrxUloVVvl1vkIceXBObz-50A,553
+azure_custom_tools/yamls/first_tool.yaml,sha256=9JpjOr_KvjiXyNKGJhJ98UvhWizeVTaEOTy-POEauvk,316
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_first_tool.py,sha256=pz0BqF8-FQ7kStaVANnMc1cAwIbTrTkaXoqNmN2BtCc,717
+azure_custom_tools-0.0.1.dist-info/METADATA,sha256=u7pOX_i8Z_OnYeTSGfdn--4R3OLXKH8gau7g-dhkpxI,102
+azure_custom_tools-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+azure_custom_tools-0.0.1.dist-info/entry_points.txt,sha256=SPm-x8l8oz5rHKZ8MiikEiPiajSw-SxWSwmW9pQ4qq0,79
+azure_custom_tools-0.0.1.dist-info/top_level.txt,sha256=Ne3BTXO7wu5g1TvRBNJskDoE0tFKgubMoY-_4AxtWCA,25
+azure_custom_tools-0.0.1.dist-info/RECORD,,
