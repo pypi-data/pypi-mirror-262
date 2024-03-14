@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: BrazilFiscalReport
+Version: 0.2.1
+Home-page: https://github.com/Engenere/BrazilFiscalReport
+Author: Engenere
+License: AGPL-3.0
+Keywords: brazil fiscal report
+License-File: LICENSE
+Requires-Dist: fpdf2
+
+
+    Python library for generating Brazilian auxiliary
+    fiscal documents in PDF from XML documents.
+    
