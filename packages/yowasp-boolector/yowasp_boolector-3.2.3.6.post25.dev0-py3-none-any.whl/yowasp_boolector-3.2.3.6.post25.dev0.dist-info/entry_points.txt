@@ -1,0 +1,2 @@
+[console_scripts]
+yowasp-boolector = yowasp_boolector:_run_boolector_argv
