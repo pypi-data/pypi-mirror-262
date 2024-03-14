@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+creator/__init__.py
+creator/help.py
+creator/input.py
+creator/paginator.py
+creator/embed_creator/__init__.py
+creator/embed_creator/methods.py
+embedcreator.egg-info/PKG-INFO
+embedcreator.egg-info/SOURCES.txt
+embedcreator.egg-info/dependency_links.txt
+embedcreator.egg-info/requires.txt
+embedcreator.egg-info/top_level.txt
