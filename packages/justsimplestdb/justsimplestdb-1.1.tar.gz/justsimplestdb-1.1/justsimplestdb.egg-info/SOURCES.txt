@@ -1,0 +1,10 @@
+README.md
+setup.py
+justsimplestdb/JustSimplestDB.py
+justsimplestdb/__init__.py
+justsimplestdb/owntypes.py
+justsimplestdb.egg-info/PKG-INFO
+justsimplestdb.egg-info/SOURCES.txt
+justsimplestdb.egg-info/dependency_links.txt
+justsimplestdb.egg-info/not-zip-safe
+justsimplestdb.egg-info/top_level.txt
