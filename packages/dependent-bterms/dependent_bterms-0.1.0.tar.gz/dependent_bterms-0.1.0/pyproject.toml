@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dependent-bterms"
+version = "0.1.0"
+description = "An extension to SageMath's module for computations with asymptotic expansions. Provides a special AsymptoticRing that allows to specify a secondary, dependent (monomially bounded) variable."
+authors = ["Benjamin Hackl <devel@benjamin-hackl.at>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/behackl/dependent_bterms"
+packages = [{include = "dependent_bterms"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
