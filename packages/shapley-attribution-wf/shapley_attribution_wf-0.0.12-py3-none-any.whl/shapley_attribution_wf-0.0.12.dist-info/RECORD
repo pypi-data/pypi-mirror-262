@@ -1,0 +1,11 @@
+attribution/__init__.py,sha256=ZA_wwvdWdh5tCeAN3Nd4x9MJoJQYpOzgfvwRTxfPIv0,501
+attribution/shapley_attribution_ads.py,sha256=TUohH11nSuHWYjoAg6tKst7baPenxNT7gfuSEH5LO4w,4510
+attribution/shapley_attribution_formula.py,sha256=EieqeUWWpEeEblo6xrnYnGsSVf2u2sbk43JyyeFXj0U,2597
+shapley_attribution_wf/__init__.py,sha256=ZA_wwvdWdh5tCeAN3Nd4x9MJoJQYpOzgfvwRTxfPIv0,501
+shapley_attribution_wf/shapley_attribution_ads.py,sha256=TUohH11nSuHWYjoAg6tKst7baPenxNT7gfuSEH5LO4w,4510
+shapley_attribution_wf/shapley_attribution_formula.py,sha256=EieqeUWWpEeEblo6xrnYnGsSVf2u2sbk43JyyeFXj0U,2597
+shapley_attribution_wf-0.0.12.dist-info/LICENSE,sha256=qTAWRe9sQCjmOfE8p98171u0k4NmbT0l6m-rDrRKKoc,1065
+shapley_attribution_wf-0.0.12.dist-info/METADATA,sha256=ziUpbspNbdkGSaPOrb1EjU-XKOg1NByIxksSDz-x89Q,936
+shapley_attribution_wf-0.0.12.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+shapley_attribution_wf-0.0.12.dist-info/top_level.txt,sha256=siOePko3ZwS7UilY0FvyU5620A6fwrWT02oy64B878w,23
+shapley_attribution_wf-0.0.12.dist-info/RECORD,,
