@@ -1,0 +1,9 @@
+templify/__init__.py,sha256=AWOdTSUkJPaXExoMWba-p_N_RC9N4CoDpAOejxMilUk,22
+templify/app.py,sha256=pvWN2w5rubASUGvzFoonqmsO4-ILuJI3LFE_2wtansQ,454
+templify/main.py,sha256=Yt0rd1YZlsKzcK8P3-20dB-ba2ZYfj-kS9T8yDeZFfw,83
+templify/services.py,sha256=UbTAhlnZ4aM-2lmi9oqfzW3dDwsik_uRCpgL8fMT69k,82
+templify-0.0.16.dist-info/METADATA,sha256=nE8aPtW9ESX77_YaLu1BVqGqxYMlUJF33LcMTqLlznw,464
+templify-0.0.16.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+templify-0.0.16.dist-info/entry_points.txt,sha256=KeRb7uHRghnaZciEjlkMFAtBTxAhiPc2HG9oYpEfbp8,43
+templify-0.0.16.dist-info/top_level.txt,sha256=kQoMFzCjMdOrYUf9sxmzX7k64LANbrWpJkQXTXu05uU,9
+templify-0.0.16.dist-info/RECORD,,
