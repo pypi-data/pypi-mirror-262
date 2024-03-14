@@ -1,0 +1,2 @@
+[console_scripts]
+convert-teams-wiki = convert_teams_wiki:cli_main
