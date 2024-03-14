@@ -1,0 +1,86 @@
+[build-system]
+requires = [
+    "setuptools>=61",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "feedbax"
+version = "0.1.1"
+description = "Optimal feedback control in JAX."
+# url = ""
+authors = [
+    {name = "Matt L Laporte", email = "matt.l.laporte@gmail.com"}
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+keywords = [
+    'jax',
+    'neural-networks',
+    'optimal-control',
+    'optimal-feedback-control',
+    'pytorch',
+    'biomechanics'
+]
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "diffrax",
+    "equinox",
+    "jax",
+    "jaxtyping",
+    "matplotlib",
+    "numpy",
+    "optax",
+    "seaborn",
+    "tqdm",
+    "tensorboardX",
+]
+
+[project.urls]
+    repository = "https://github.com/mlprt/feedbax"
+
+[project.optional-dependencies]
+analysis = [
+    'pandas',
+]
+tensorboard = [
+    'tensorboardX',
+    'crc32c',
+]
+typing = [
+    'pyright',
+    'typeguard',
+]
+tests = [
+    'coverage',
+    'pytest',
+]
+
+[tool.setuptools]
+py-modules = ["feedbax"]
+
+[tool.pyright]
+include = ["feedbax"]
+exclude = ["**/__pycache__"]
+reportMissingImports = true
+reportMissingTypeStubs = true
+# Temporary:
+# reportAttributeAccessIssue = false
+
+[tool.black]
+target-version = ['py310', 'py311', 'py312']
+include = 'feedbax\/.*\.pyi?$'
+line-length = 88
