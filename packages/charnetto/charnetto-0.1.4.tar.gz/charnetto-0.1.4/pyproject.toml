@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "charnetto"
+version = "0.1.4"
+requires-python = ">=3.6"
+dependencies=[
+	"tqdm>=1.0",
+	"networkx>=2.5",
+	"numpy>=1.19.2",
+	"pandas>=1.0.5",
+]
+authors=[
+	{name = "Coline Métrailler", email = "coline.metrailler@unil.ch"}
+]
+description = "automated character networks for books and movie scripts"
+readme = "README.md"
+license = {text = "MIT License"}
+keywords = ["character networks", "networks", "books", "movies", "network extraction"]
+classifiers = [
+	"Development Status :: 4 - Beta",
+	"Intended Audience :: Developers",
+	"Intended Audience :: Science/Research",
+	"License :: OSI Approved :: MIT License",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3 :: Only",
+	"Programming Language :: Python :: 3.6",
+	"Programming Language :: Python :: 3.7",
+	"Programming Language :: Python :: 3.8",
+	"Programming Language :: Python :: 3.9",
+	"Topic :: Scientific/Engineering :: Artificial Intelligence",
+	"Topic :: Scientific/Engineering :: Information Analysis",
+	"Topic :: Software Development :: Libraries",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+	"Topic :: Text Processing :: Linguistic",
+	"Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/maned_wolf/charnetto"
+Documentation = "https://charnetto.readthedocs.io/en/latest/"
+Repository = "https://gitlab.com/maned_wolf/charnetto"
+Issues = "https://gitlab.com/maned_wolf/charnetto/-/issues"
