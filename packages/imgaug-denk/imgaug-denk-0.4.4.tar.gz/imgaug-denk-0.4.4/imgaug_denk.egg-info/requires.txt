@@ -1,0 +1,14 @@
+six
+numpy>=1.15
+scipy
+Pillow
+matplotlib
+scikit-image>=0.14.2
+opencv-python-headless
+Shapely
+
+[:python_version < "3.5"]
+imageio<=2.6.1
+
+[:python_version >= "3.5"]
+imageio
