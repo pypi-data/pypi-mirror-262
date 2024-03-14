@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+SuiBotProject/TEST.py
+SuiBotProject/__init__.py
+SuiBotProject.egg-info/PKG-INFO
+SuiBotProject.egg-info/SOURCES.txt
+SuiBotProject.egg-info/dependency_links.txt
+SuiBotProject.egg-info/requires.txt
+SuiBotProject.egg-info/top_level.txt
