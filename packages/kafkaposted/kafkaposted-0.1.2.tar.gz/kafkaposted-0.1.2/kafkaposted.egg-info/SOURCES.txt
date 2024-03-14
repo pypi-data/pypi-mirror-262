@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+kafkaposted/__init__.py
+kafkaposted/base.py
+kafkaposted.egg-info/PKG-INFO
+kafkaposted.egg-info/SOURCES.txt
+kafkaposted.egg-info/dependency_links.txt
+kafkaposted.egg-info/not-zip-safe
+kafkaposted.egg-info/requires.txt
+kafkaposted.egg-info/top_level.txt
+kafkaposted/tests/__init__.py
+kafkaposted/tests/test_base.py
