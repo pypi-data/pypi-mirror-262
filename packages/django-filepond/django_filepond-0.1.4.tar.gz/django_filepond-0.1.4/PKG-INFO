@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: django-filepond
+Version: 0.1.4
+Summary: Django support for the fjavascript file upload library filepond
+Keywords: upload,filepond,django
+Author-email: Jochen Wersdörfer <jochen-filepond@wersdoerfer.de>
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Internet
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: Django
+Requires-Dist: django-model-utils
+Requires-Dist: black ; extra == "dev"
+Requires-Dist: flake8 ; extra == "dev"
+Requires-Dist: isort ; extra == "dev"
+Requires-Dist: tox ; extra == "dev"
+Requires-Dist: sphinx-rtd-theme ; extra == "doc"
+Requires-Dist: django-environ ; extra == "test"
+Requires-Dist: factory-boy ; extra == "test"
+Requires-Dist: Pillow ; extra == "test"
+Requires-Dist: pytest >= 6 ; extra == "test"
+Requires-Dist: pytest-cov >= 3 ; extra == "test"
+Requires-Dist: pytest-django ; extra == "test"
+Project-URL: Documentation, https://django-filepond.readthedocs.io/
+Project-URL: Source, https://github.com/ephes/django-filepond
+Provides-Extra: dev
+Provides-Extra: doc
+Provides-Extra: test
