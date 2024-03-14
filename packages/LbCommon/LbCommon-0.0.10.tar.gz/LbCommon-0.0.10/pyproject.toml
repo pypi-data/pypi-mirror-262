@@ -1,0 +1,47 @@
+[build-system]
+requires = [
+    "setuptools>=61.2",
+    "nose>=1.0", "setuptools_scm",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[project]
+name = "LbCommon"
+authors = [{name = "CERN - LHCb Core Software", email = "lhcb-core-soft@cern.ch"}]
+description = "LHCb Common tools"
+readme = "README.rst"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.7"
+dependencies = []
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://gitlab.cern.ch/lhcb-core/LbCommon"
+
+[project.optional-dependencies]
+testing = ["coverage"]
+
+[tool.nosetests]
+verbosity = "2"
+detailed-errors = "1"
+with-doctest = "1"
+with-coverage = "1"
+cover-erase = "1"
+cover-html = "1"
+
+[tool.setuptools]
+zip-safe = true
+script-files = []
+include-package-data = false
+
+[tool.setuptools.packages.find]
+exclude = []
+namespaces = false
