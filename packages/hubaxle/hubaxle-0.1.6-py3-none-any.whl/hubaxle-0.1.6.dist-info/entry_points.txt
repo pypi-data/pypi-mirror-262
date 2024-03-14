@@ -1,0 +1,3 @@
+[console_scripts]
+launch-hubaxle=hubaxle.runner:run
+
