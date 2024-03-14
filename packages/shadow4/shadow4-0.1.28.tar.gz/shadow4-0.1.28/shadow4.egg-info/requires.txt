@@ -1,0 +1,7 @@
+crystalpy>=0.0.20
+numpy
+scipy
+setuptools
+srxraylib
+syned>=1.0.30
+wofryimpl>=1.0.21
