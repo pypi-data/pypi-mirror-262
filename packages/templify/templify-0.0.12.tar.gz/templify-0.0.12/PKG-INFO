@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: templify
+Version: 0.0.12
+Summary: This package provides templates for you to start developing your application
+Home-page: https://github.com/toEpam/templify
+Author: Yunusov Abdulmajid
+Author-email: toepammiddle@email.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: django>=4.2

@@ -1,0 +1,2 @@
+[console_scripts]
+templify start-django = templify:start_django
