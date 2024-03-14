@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: cppython-core
+Version: 0.7.1.dev12
+Summary: Data definitions for CPPython
+Home-page: https://github.com/Synodic-Software/CPPython-Core
+Author-Email: Synodic Software <contact@synodic.software>
+License: MIT
+Project-URL: Homepage, https://github.com/Synodic-Software/CPPython-Core
+Project-URL: Repository, https://github.com/Synodic-Software/CPPython-Core
+Requires-Python: >=3.12
+Requires-Dist: pydantic>=2.6.3
+Requires-Dist: synodic-utilities>=0.1.1.dev3
+Description-Content-Type: text/markdown
+
+# CPPython-Core
+Data definitions for CPPython
