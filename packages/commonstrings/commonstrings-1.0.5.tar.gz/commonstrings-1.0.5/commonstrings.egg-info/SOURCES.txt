@@ -1,0 +1,13 @@
+LICENSE
+README.md
+commonstrings.pyx
+pyproject.toml
+setup.py
+./common_multiple_strings/auxiliary/alphabet.cpp
+./common_multiple_strings/auxiliary/suffix_tree_simple.cpp
+./common_multiple_strings/auxiliary/utf8.cpp
+commonstrings.egg-info/PKG-INFO
+commonstrings.egg-info/SOURCES.txt
+commonstrings.egg-info/dependency_links.txt
+commonstrings.egg-info/requires.txt
+commonstrings.egg-info/top_level.txt
