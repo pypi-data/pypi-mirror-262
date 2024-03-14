@@ -1,0 +1,8 @@
+click>=7.1.2
+locust
+setuptools
+Cython
+bzt
+
+[test]
+pytest

@@ -1,0 +1,2 @@
+[console_scripts]
+stac-api-load-testing = stac_api_load_testing.cli:main
