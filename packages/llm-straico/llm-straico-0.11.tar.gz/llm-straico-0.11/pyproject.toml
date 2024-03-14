@@ -1,0 +1,10 @@
+[project]
+name = "llm-straico"
+version = "0.11"
+dependencies = [
+    "straico",
+    "llm"
+]
+
+[project.entry-points.llm]
+straico = "llm_straico"
