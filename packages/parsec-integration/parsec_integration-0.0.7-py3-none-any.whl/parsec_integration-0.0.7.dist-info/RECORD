@@ -1,0 +1,12 @@
+parsec_integration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parsec_integration/core.py,sha256=GRcyImTMPQPmf6LK0Up625hDqCJrAp_E5_rr69L81b8,16209
+parsec_integration/errors.py,sha256=vdKr8s9FiRUY90mJB7Xl1OM5rrhF4ne_qgWJvZILXzk,846
+parsec_integration/main.py,sha256=UZXHeTK2B7dka-De5dFvTLZ92q4-SGWOqOPl4THXv4E,103999
+parsec_integration/test.py,sha256=-EXKhnnCmEpb-0eRMLNE7tMA9PJwVUZTvsNUEIy83zA,8780
+parsec_integration/dto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parsec_integration/dto/dto.py,sha256=jnLRCOmYS5DLQgKvIr_F6R7uHMeS87Aay1JXiJ7Fk-k,6534
+parsec_integration/dto/validators.py,sha256=CLoy_CeJaZj2KhwYq0-ORZMwYd9E1yUkBrPUgx4Nf58,342
+parsec_integration-0.0.7.dist-info/METADATA,sha256=4F0228PTSPjAXA3nnRm9LcH3xKYyRnpM02kqpK0lR8o,628
+parsec_integration-0.0.7.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+parsec_integration-0.0.7.dist-info/top_level.txt,sha256=5yNqoFyt9iQ88FoLE9v_6QHcNS1G-7GOJl3aydQTtq8,19
+parsec_integration-0.0.7.dist-info/RECORD,,
