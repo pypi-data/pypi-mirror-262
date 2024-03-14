@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: fgutils
+Version: 0.0.4
+Summary: Library to get functional groups from molecular graphs.
+Project-URL: homepage, https://github.com/klausweinbauer/FGUtils
+Project-URL: source, https://github.com/klausweinbauer/FGUtils
+Project-URL: issues, https://github.com/klausweinbauer/FGUtils/issues
+Author-email: Klaus Weinbauer <klaus@bioinf.uni-leipzig.de>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: networkx>=3.2.1
+Requires-Dist: numpy>=1.26.3
+Description-Content-Type: text/markdown
+
+FGUtils is a collection of utility functions for querying functional groups in molecules from their molecular graph representation.
