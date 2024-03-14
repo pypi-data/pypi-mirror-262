@@ -1,0 +1,9 @@
+cwmath/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cwmath/cwexamples.py,sha256=avUZYqYd_rQenr5hmh2jzthjRxW8DNrmLlb8m05jgig,806
+cwmath/cwplane3d.py,sha256=p9YYlWjUQ5bcGITvFcZ2DQnaFgXyNSV_oWnGzTK_55A,6312
+cwmath/cwvector3d.py,sha256=3zfJvcnDDEmPZoRHrJZwnrTkBbfxOS-PqMfZbu4-vyE,3238
+cwmath-0.0.8.dist-info/LICENSE,sha256=2N46ZN9-q_RGQME8BMA3leic2xivcBsH5iy89g6eehk,1064
+cwmath-0.0.8.dist-info/METADATA,sha256=gs_oTXq5MdiBuxOez1nNA1oXFtWtFGWpL3rd_ZY0sLo,4470
+cwmath-0.0.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cwmath-0.0.8.dist-info/top_level.txt,sha256=xwsHuZl1C0wCkiPI5RJmsOSDOK86avE3ZgqOkdv2S1k,7
+cwmath-0.0.8.dist-info/RECORD,,
