@@ -1,0 +1,8 @@
+ngu.pyx
+pyproject.toml
+setup.py
+ngu.egg-info/PKG-INFO
+ngu.egg-info/SOURCES.txt
+ngu.egg-info/dependency_links.txt
+ngu.egg-info/requires.txt
+ngu.egg-info/top_level.txt

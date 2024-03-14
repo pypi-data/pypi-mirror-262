@@ -1,0 +1,21 @@
+[project]
+name = "ngu"
+version = "1.0.7"
+description = ""
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "numpy",
+  "scipy"
+]
+
+[build-system]
+requires = [
+    "setuptools",
+    "cython"
+]
+build-backend = "setuptools.build_meta"
