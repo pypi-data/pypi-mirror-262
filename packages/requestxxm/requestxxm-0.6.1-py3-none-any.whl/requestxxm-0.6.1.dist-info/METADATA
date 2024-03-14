@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: requestxxm
+Version: 0.6.1
+Summary: requestxxm
+Author-email: "xinming.xu" <xu_xinming@live.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# request2
+[![Build Status](https://app.travis-ci.com/raphamoral/request2.svg?branch=master)](https://app.travis-ci.com/raphamoral/request2)
+[![codecov](https://codecov.io/gh/raphamoral/request2/branch/master/graph/badge.svg)](https://codecov.io/gh/raphamoral/request2)
+
