@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pyRRG
+Version: 0.4.1
+Summary: pyRRG module
+Home-page: https://github.com/davidharvey1986/pyRRG
+Download-URL: https://github.com/davidharvey1986/pyRRG/archive/0.4.1.tar.gz
+Author: David Harvey
+Author-email: david.harvey@epfl.ch
+License: MIT
+License-File: LICENSE.txt
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: scipy
