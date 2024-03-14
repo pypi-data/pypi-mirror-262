@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: flask-scheema
+Version: 0.0.1
+Summary: Automatic RESTful API generator with redoc
+Home-page: https://github.com/arched-dev/flask-scheema
+Author: arched.dev (Lewis Morris)
+Author-email: hello@arched.dev
+License: MIT
+License-File: LICENCE.rst
+
