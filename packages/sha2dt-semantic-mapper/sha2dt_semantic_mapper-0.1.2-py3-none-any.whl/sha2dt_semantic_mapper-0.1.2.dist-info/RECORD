@@ -1,0 +1,15 @@
+semantic_main/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+semantic_main/autotwin_mapper.py,sha256=OPC2C64VjsRSc6Tz1SNNU1V6e8jI1XmglGWDXgn908Q,2115
+semantic_main/semantic_logger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+semantic_main/semantic_logger/logger.py,sha256=EpTJtfVHCZQs7Qpk_jQ_tPTyr0Q20qu0awtGBU73RsA,2854
+semantic_main/semantic_mgrs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+semantic_main/semantic_mgrs/dot2sha.py,sha256=DkvwTRWo29kW5aW7bxzhz0YinIWR42_rvMHIj7keblo,1078
+semantic_main/semantic_mgrs/semantic_links_identifier.py,sha256=bj8x8D1JqqJJFjYRV52t93cBW0fGxjw15qGB4Qlnw7k,5837
+semantic_main/semantic_mgrs/sha2upp.py,sha256=pXlmXQ-kozew0rDa8HQtv6VCMCRRJZY1faLQtqWbxFc,4851
+semantic_main/semantic_model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+semantic_main/semantic_model/semantic_link.py,sha256=54pK_CuU6DUY4R2PP-hpyslUH85Vhey-C4t2tpXMN8c,1412
+semantic_main/semantic_model/sha.py,sha256=5j6PC-rRyPdF6wiVk61Imkbm46hawpDCckZ_19WOHVU,2205
+sha2dt_semantic_mapper-0.1.2.dist-info/LICENSE.md,sha256=hlPsMU0Da3xgZy-THGVBnR2MhImUx84p3ap3dI-x9J8,1542
+sha2dt_semantic_mapper-0.1.2.dist-info/METADATA,sha256=66FcuLP7dc8NitUduhRxu0Fe9iqCNb5ut1p3WIRrPaw,923
+sha2dt_semantic_mapper-0.1.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sha2dt_semantic_mapper-0.1.2.dist-info/RECORD,,
