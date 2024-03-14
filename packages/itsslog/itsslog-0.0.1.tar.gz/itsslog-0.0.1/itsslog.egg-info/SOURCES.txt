@@ -1,0 +1,7 @@
+setup.py
+itsslog/__init__.py
+itsslog/main.py
+itsslog.egg-info/PKG-INFO
+itsslog.egg-info/SOURCES.txt
+itsslog.egg-info/dependency_links.txt
+itsslog.egg-info/top_level.txt
