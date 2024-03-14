@@ -1,0 +1,12 @@
+key_mwe/__about__.py,sha256=bCGrJtkL8paJ4NDk9drl1mqggXO2SKXsvgl6Nu8p2VA,131
+key_mwe/__init__.py,sha256=fL2fvdGqWtetLJdtZPoPodnipnXOnhwORg55LxaKXyI,109
+key_mwe/config.py,sha256=27RVn-p3D_XxywEUnouoWTSLlnfP1GqGlelhIMuxvwQ,30
+key_mwe/keyness_estimator.py,sha256=3stzLCxyCuG-duV3RlbN3AoMeCfdmNH_5uvAWmNSVyc,4638
+key_mwe/ngram_dict_tokeniser.py,sha256=hdQ4TdHI0n4tRdH4v6TO-ZRSlL-YPgJnjDeqpbaV2HM,2030
+key_mwe/npmi_estimator.py,sha256=etlHbvY9LddtixVezLylO1hVg1mUaLenu5hDPT41Yy4,5295
+key_mwe/text_preprocessor.py,sha256=5hi6VA1Vaaam1DEIx18ragUk4qsqBy9SfnaD7Eke960,1278
+key_mwe/workflow.py,sha256=hTInfPhhTwrcy69TOQQ6tcEXrWAE8i5oHZySqw6UGRE,2687
+key_mwe-0.0.1.dist-info/METADATA,sha256=sMXJ-QoLU6_5gjK0NoXFv_pmfIvwYMYoRXfkzLP02lQ,11750
+key_mwe-0.0.1.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+key_mwe-0.0.1.dist-info/licenses/LICENSE.txt,sha256=dlPJmSnmQyraXecyl1FY3wsIZe05Js-AB77T1ljlC5A,1101
+key_mwe-0.0.1.dist-info/RECORD,,
