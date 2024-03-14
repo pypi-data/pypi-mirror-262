@@ -1,0 +1,7 @@
+setup.py
+marko_hello/__init__.py
+marko_hello/main.py
+marko_hello.egg-info/PKG-INFO
+marko_hello.egg-info/SOURCES.txt
+marko_hello.egg-info/dependency_links.txt
+marko_hello.egg-info/top_level.txt
