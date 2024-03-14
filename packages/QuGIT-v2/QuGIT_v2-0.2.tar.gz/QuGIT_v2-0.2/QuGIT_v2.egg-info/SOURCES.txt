@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+QuGIT_v2/__init__.py
+QuGIT_v2/qgt.py
+QuGIT_v2.egg-info/PKG-INFO
+QuGIT_v2.egg-info/SOURCES.txt
+QuGIT_v2.egg-info/dependency_links.txt
+QuGIT_v2.egg-info/requires.txt
+QuGIT_v2.egg-info/top_level.txt
