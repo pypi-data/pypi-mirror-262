@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: t_object
+Version: 0.1.0
+Summary: t_object
+Home-page: https://www.thoughtful.ai/
+Author: Thoughtful
+Author-email: support@thoughtful.ai
+Keywords: t_object
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Requires-Dist: pydantic>=2.6.3
+
+======================
+t_object
+======================
+
+t_object
