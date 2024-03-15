@@ -1,0 +1,3 @@
+[console_scripts]
+todoon=todo_or_not:todo_check.typer_main
+
