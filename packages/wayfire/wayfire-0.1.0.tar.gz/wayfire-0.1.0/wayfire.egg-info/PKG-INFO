@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: wayfire
+Version: 0.1.0
+Summary: wayfire compositor library
+Author-email: Thiago <systemofdown@gmail.com>
+Project-URL: Homepage, https://github.com/killown/waypy
+Project-URL: Issues, https://github.com/killown/waypy/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+#### Waypy serves as a python library, offering bindings specifically designed to interact with the wayfire compositor.
+
+# [Use the wiki for more info](https://github.com/killown/waypy/wiki)

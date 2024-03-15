@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+wayfire.py
+wayfire.egg-info/PKG-INFO
+wayfire.egg-info/SOURCES.txt
+wayfire.egg-info/dependency_links.txt
+wayfire.egg-info/top_level.txt
