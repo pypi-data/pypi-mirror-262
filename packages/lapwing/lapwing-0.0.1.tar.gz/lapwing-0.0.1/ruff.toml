@@ -1,0 +1,2 @@
+[per-file-ignores]
+"src/lapwing/project_template/project_name/settings/django.py" = ["E501"]

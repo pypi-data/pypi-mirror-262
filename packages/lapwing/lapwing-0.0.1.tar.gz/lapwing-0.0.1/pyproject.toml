@@ -1,0 +1,88 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lapwing"
+dynamic = ["version"]
+description = "An opinionated start script and project template for Wagtail projects."
+readme = "README.rst"
+requires-python = ">=3.8"
+license = "BSD-3-Clause"
+keywords = []
+authors = [
+  { name = "Stephen Lutes" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "dj-database-url",
+  "python-decouple",
+  "wagtail",
+]
+
+[project.urls]
+Documentation = "https://github.com/stephenlutes/lapwing#readme"
+Issues = "https://github.com/stephenlutes/lapwing/issues"
+Source = "https://github.com/stephenlutes/lapwing"
+
+[project.scripts]
+lapwing = "lapwing.cmd:run"
+
+[tool.hatch.version]
+path = "src/lapwing/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/lapwing tests}"
+
+[tool.coverage.run]
+source_pkgs = ["lapwing", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/lapwing/__about__.py",
+]
+
+[tool.coverage.paths]
+lapwing = ["src/lapwing", "*/lapwing/src/lapwing"]
+tests = ["tests", "*/lapwing/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
