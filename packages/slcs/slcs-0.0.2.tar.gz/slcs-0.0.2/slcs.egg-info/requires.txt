@@ -1,0 +1,14 @@
+nchr
+nlit
+quac
+sigr
+dref
+chck
+asto
+
+[dev]
+numpy
+pandas
+torch
+pytorch_lightning
+torchvision
