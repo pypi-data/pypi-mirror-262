@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: mula
+Version: 0.0.1
+Summary: mula: Tool for moodle vpl operations
+Home-page: https://github.com/senapk/mula
+Author: David Sena Oliveira
+Author-email: sena@ufc.br
+Project-URL: Bug Reports, https://github.com/senapk/mula/issues
+Project-URL: Source, https://github.com/senapk/mula/
+Keywords: programming,learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mechanicalsoup
+Requires-Dist: build
+Requires-Dist: twine
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+# mula - Moodle Update for Lazy Admins
+
+## Install using pip from git
+
+```bash
+pip install git+https://github.com/senapk/mula.git 
+```
+
+## Local install
+
+```bash
+pip install mula
+
+## se aparecerem mensagens que a pasta ~/.local/bin não está no PATH
+echo "export PATH=$PATH:~/.local/bin" >> ~/.bashrc
+```
