@@ -1,0 +1,7 @@
+tensorflow
+jaxtyping
+tf-tools
+
+[test]
+pytest
+hypothesis
