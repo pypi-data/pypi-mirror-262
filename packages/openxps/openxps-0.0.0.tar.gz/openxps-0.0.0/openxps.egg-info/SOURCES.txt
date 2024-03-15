@@ -1,0 +1,17 @@
+CODE_OF_CONDUCT.md
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+openxps/__init__.py
+openxps/_version.py
+openxps/openxps.py
+openxps.egg-info/PKG-INFO
+openxps.egg-info/SOURCES.txt
+openxps.egg-info/dependency_links.txt
+openxps.egg-info/not-zip-safe
+openxps.egg-info/requires.txt
+openxps.egg-info/top_level.txt
+openxps/tests/__init__.py
+openxps/tests/test_openxps.py
