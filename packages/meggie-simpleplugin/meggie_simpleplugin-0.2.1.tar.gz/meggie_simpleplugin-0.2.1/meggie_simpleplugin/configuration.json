@@ -1,0 +1,13 @@
+{
+    "id": "meggie_simpleplugin",
+    "name": "Simple plugin",
+    "description": "Showcase a simple plugin structure",
+    "author": "CIBR",
+    "tabs": [
+        {
+            "id": "preprocessing",
+            "name": "Preprocessing",
+            "output_actions": ["hello"]
+        }
+    ]
+}
