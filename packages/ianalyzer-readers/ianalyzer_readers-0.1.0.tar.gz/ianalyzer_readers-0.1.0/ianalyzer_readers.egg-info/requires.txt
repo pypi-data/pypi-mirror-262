@@ -1,0 +1,8 @@
+beautifulsoup4
+lxml
+openpyxl
+
+[dev]
+pytest
+mkdocs
+mkdocstrings-python
