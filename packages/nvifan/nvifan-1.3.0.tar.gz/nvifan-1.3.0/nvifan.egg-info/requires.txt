@@ -1,0 +1,4 @@
+nvitop
+chardet
+PyYaml
+loguru
