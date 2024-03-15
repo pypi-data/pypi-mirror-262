@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pycopyEcho
+Version: 0.1.0
+Summary: Copy one directory to another
+Author: Echo
+Author-email: 176188484@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+
