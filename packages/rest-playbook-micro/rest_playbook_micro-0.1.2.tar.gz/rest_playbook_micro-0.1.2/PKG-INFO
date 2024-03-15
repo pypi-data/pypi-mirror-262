@@ -1,0 +1,171 @@
+Metadata-Version: 2.1
+Name: rest_playbook_micro
+Version: 0.1.2
+Summary: A REST client playbook module, used to run rest scenarios with substitution and other features
+Author: Samuel Shiels
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11.5
+Requires-Dist: rest-client-micro>=0.3.1
+Requires-Dist: uuid
+Description-Content-Type: text/markdown
+
+# Python REST Playbook
+
+Provides a framework for defining a series (playbook) of rest messages to perform automated testing or access of an endpoint.
+
+# Features
+
+-   Substitution of values in a templated REST message
+    -   Content can be optional or mandatory for provided values
+-   Run messages in a user defined order
+-   Define pause times between messages
+-   Validate status codes for each step
+-   Run code after each step to validate or modify future behaviour
+
+# TODO Features
+- Basic Auth
+  - Dynamic auth per call
+
+# Usage
+
+Since playbook is driven from defined input files the code required to run a playbook is short. All of the development time as a goal should be spent in the input files
+
+```python
+from rest_playbook_micro.rest_playbook import RESTPlaybook as RP
+pb = RP("test.playbook","test.scenario","test.vars")
+results = pb.run_playbook()
+print(results)
+```
+
+All files are flat text and we will discuss their format now. Examples are provided in `./tests`
+
+## Vars file
+
+All variables are defined in the format `<variable_name>=<value>`,
+`<variable_name>` character set is best restricted to `[A-Z*]`and never`=`. `=` symbols in`<value>` do not need to be escaped since the parser will only use the first occurance in each line as a separator.
+
+```text
+PAGE=1
+ID=ORDER001
+SERVICE_ID=SERVICEORDER001
+TIMESTAMP=2023-01-02 12:25:01
+```
+
+## Scenario
+
+Define a scenario for a specific message content. `SCENARIO=` block outlines meta information for the content, whereas `HEADER=`, `PARAMS=` and `BODY=` outline standard HTTP REST data. Close each block with the block name prepended with `=`
+
+Variable substitutions are marked with `%ENV_<VARNAME>%`. You can define content that will not be copied with `%OPTIONAL:` and enforce variables being provided with `%MANDATORY:%`
+
+```text
+----
+SCENARIO=
+NAME=EASY NAME
+DESCRIPTION=Scenario Example
+TYPE=POST
+ENDPOINT=http://localhost:3876/200
+=SCENARIO
+HEADER=
+	Content-Type:application/json
+	Accept:application/json
+=HEADER
+PARAMS=
+	page=%ENV_PAGE%
+=PARAMS
+BODY=
+{
+    "timestamp":"%ENV_TIMESTAMP%"
+    %OPTIONAL:ENV_ID%,"id":"%ENV_ID%"
+    %MANDATORY:ENV_SERVICE_ID%,"service_id":"%ENV_SERVICE_ID%"
+}
+=BODY
+----
+```
+
+## Playbook
+
+A Playbook is a defined series of steps relating to scenario names
+and the step that follows
+
+- `NAME`
+  - Scenario name
+- `WAIT`
+  - Time in seconds to wait in the step
+- `STEP`
+  - Identifies each step in the book
+- `NEXT_STEP`
+  - Which step to move onto, without the playbook will end
+
+```
+----
+NAME=aa
+WAIT=1
+STEP=1
+NEXT_STEP=2
+----
+NAME=ac
+WAIT=1
+STEP=2
+----
+```
+## Assertion
+
+Create an inheritance of the `Assertion` class provided by the module. Implement the `run_assert` function to process for each step provided to it and return `True` or `False` to continue or halt the playbook.
+
+You have access to the current Play class and the variables being used in the 
+
+```python
+from rest_playbook_micro import Assertion
+from rest_playbook_micro import Play as P
+
+
+class TestAssertion(Assertion):
+
+    def __init__(self) -> None:
+        pass
+
+    def run_assert(self, play: P, variables) -> bool:
+
+        match play.STEP:
+            case '1':
+                self.run_01(play, variables)
+            case '2':
+                self.run_02(play, variables)
+            case _:
+                pass
+
+        return True
+
+    def run_01(self, play: P, variables) -> bool:
+        play.result.assert_test = True
+        return True
+
+    def run_02(self, play: P, variables) -> bool:
+        play.result.assert_test = False
+        return True
+```
+
+Then we can instantiate this class and use it in the call to the playbook
+
+```python
+from rest_playbook_micro.rest_playbook import RESTPlaybook as RP
+assertion = TestAssertion()
+pb = RP("test.playbook",
+        "test.scenario",
+        "test.vars",
+        assertion=assertion)
+results = pb.run_playbook()
+print(results[0].assert_test)
+# True
+```
+
+
+# Build
+
+```bash
+python -m build
+python -m twine upload dist/*
+```
