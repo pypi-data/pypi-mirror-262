@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nju_login_simple"
+version = "1.0"
+authors = [
+    { name="SuperKenVery", email="superkenvery@gmail.com" },
+]
+dependencies = [
+    "pycryptodomex == 3.20.0",
+    "requests == 2.31.0",
+    "lxml == 5.1.0",
+    "ddddocr == 1.0.6"
+]
+description = "Login to authserver.nju.edu.cn, using python requests"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/SuperKenVery/nju-login"
+Issues = "https://github.com/SuperKenVery/nju-login/issues"
