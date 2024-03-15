@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: WLedController
+Version: 0.2.1
+Summary: simple implementation of the json-api from WLed https://kno.wled.ge/interfaces/json-api/
+Home-page: https://github.com/tj0vtj0v/WLedController
+Download-URL: https://github.com/tj0vtj0v/WLedController/archive/refs/tags/v_0.2.1.tar.gz
+Author: Tjorven Burdorf
+Author-email: BurdorfTjorven@gmail.com
+License: MIT
+Keywords: WLed,IoT,Connector,API
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Multimedia :: Graphics :: Presentation
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+Requires-Dist: requests
