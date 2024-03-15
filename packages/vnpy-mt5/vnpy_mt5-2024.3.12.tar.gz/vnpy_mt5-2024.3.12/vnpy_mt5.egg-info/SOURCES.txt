@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+vnpy_mt5/__init__.py
+vnpy_mt5/mt5_gateway.py
+vnpy_mt5.egg-info/PKG-INFO
+vnpy_mt5.egg-info/SOURCES.txt
+vnpy_mt5.egg-info/dependency_links.txt
+vnpy_mt5.egg-info/not-zip-safe
+vnpy_mt5.egg-info/top_level.txt
