@@ -1,0 +1,2 @@
+[console_scripts]
+status_600 = status_600:start_clique
