@@ -1,0 +1,17 @@
+pellipop/Video.py,sha256=rJM2FEiEQRAwNdBpg7rQE10qhWn7rkjzfqQ-Uyfb-sQ,7126
+pellipop/__about__.py,sha256=drBET5p7iwMd_Eom5P65fEIhalNI3FpgPqZMDy5jXvM,70
+pellipop/__init__.py,sha256=2G1WvCQko1TnwW5Jv4cfdqwGG8Jf6Ci5ZwQxq5c9V1A,123
+pellipop/cli.py,sha256=scyQpkzeJtSaE70TiSoTM3uwOF2dRHRBn_d1kf8pvlk,3480
+pellipop/file_finder.py,sha256=tHHpFHnohBXPZsGsGWTYhbPF1Z2TcZw9cx8HEB2btwM,3058
+pellipop/gui.py,sha256=26lYbNzl50OisYRDsX_zL7QwlYKGV6qEcutdSzYyIrc,16488
+pellipop/main.py,sha256=wO2jGVe2nyHHAx1pb7OngSC56xGbCSgH6JsVu6kT6WQ,16533
+pellipop/path_fixer.py,sha256=MspLtpcDulm6ICwuPWiXRAt2ftJjszWImALeClUVbqg,1894
+pellipop/whisper_from_url.py,sha256=86wWF_O-uag6U9kNqFBtnQFUVNkLml-9CkzBztlPmMw,3139
+pellipop/speech_to_text/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pellipop/speech_to_text/deprecated_extractText.py,sha256=gSjG1O58WqNwOVP2Y_rvwgbgiuEFEwMVpQc2fFvAeIk,1720
+pellipop/speech_to_text/whisperMode.py,sha256=dnWZ5SRHu0TGXZiBP0J44ocdOe1Ij0u6Wem-VrPsEU4,5476
+pellipop-0.7.1.dist-info/METADATA,sha256=yfFkAeAUcu7OMvo1EsM_en-MjPF8TdBB-ohEcPRYfsg,3106
+pellipop-0.7.1.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+pellipop-0.7.1.dist-info/entry_points.txt,sha256=M7yo-8WYgiV4oCKvuyvuCJksBmZvBLRYw1KlHFGOUq0,113
+pellipop-0.7.1.dist-info/licenses/LICENSE.txt,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+pellipop-0.7.1.dist-info/RECORD,,
