@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+chilicloud/__init__.py
+chilicloud/chilicloud.py
+chilicloud.egg-info/PKG-INFO
+chilicloud.egg-info/SOURCES.txt
+chilicloud.egg-info/dependency_links.txt
+chilicloud.egg-info/requires.txt
+chilicloud.egg-info/top_level.txt
