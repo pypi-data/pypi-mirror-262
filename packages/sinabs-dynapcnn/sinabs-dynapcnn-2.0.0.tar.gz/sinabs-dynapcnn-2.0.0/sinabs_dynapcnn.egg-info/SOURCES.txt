@@ -1,0 +1,8 @@
+AUTHORS
+README.md
+setup.cfg
+setup.py
+sinabs_dynapcnn.egg-info/PKG-INFO
+sinabs_dynapcnn.egg-info/SOURCES.txt
+sinabs_dynapcnn.egg-info/dependency_links.txt
+sinabs_dynapcnn.egg-info/top_level.txt
