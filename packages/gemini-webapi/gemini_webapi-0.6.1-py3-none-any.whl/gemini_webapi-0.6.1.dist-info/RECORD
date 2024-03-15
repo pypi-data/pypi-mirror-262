@@ -1,0 +1,14 @@
+gemini_webapi/__init__.py,sha256=kyIhljNxLgMjYHpEH9jwkVn2RjKQNhmjCRio0v5wi5A,147
+gemini_webapi/client.py,sha256=8V5-Kx5hBwXQ28KDzgtU20xUsqzdGKJpNhMBiVYiKXQ,15660
+gemini_webapi/constants.py,sha256=ezJ0Squ5FPTspAp5IGRe5gg9CYaPHnzx5N95W5gGm5s,865
+gemini_webapi/exceptions.py,sha256=6e-EXHGApi4iC0GDw7RKc3YqVK8UvEkHYaJyGQbReLw,548
+gemini_webapi/utils.py,sha256=6KGo1WMRacgf00RJZTJfY3AGpwMozafzISkgNiPBebY,1118
+gemini_webapi/types/__init__.py,sha256=d2kvXnE004s2E2KDmPPLi5N-BQ59FgDSlrGrO3Wphww,163
+gemini_webapi/types/candidate.py,sha256=Z9bpIK4l8UWbUVMLEoophfhgROo93dxOM9cAwx77CkU,1030
+gemini_webapi/types/image.py,sha256=DPwpOJfqFg4zFz8DQJ49ZmajBcXt4QwuMMaztDtWnBs,5096
+gemini_webapi/types/modeloutput.py,sha256=sGEnaQtSOJE68ve5R5sFgW4POmsyWZAV5zei3Z4BRVk,1090
+gemini_webapi-0.6.1.dist-info/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+gemini_webapi-0.6.1.dist-info/METADATA,sha256=_jAr8_m_2ajc1bGxKFx6PT8ugD9ThK6uAPsLZSPBX-I,13033
+gemini_webapi-0.6.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gemini_webapi-0.6.1.dist-info/top_level.txt,sha256=dtWtug_ZrmnUqCYuu8NmGzTgWglHeNzhHU_hXmqZGWE,14
+gemini_webapi-0.6.1.dist-info/RECORD,,
