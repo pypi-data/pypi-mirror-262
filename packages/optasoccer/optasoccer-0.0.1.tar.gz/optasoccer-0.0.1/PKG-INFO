@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: optasoccer
+Version: 0.0.1
+Summary: opta soccer data reader
+Project-URL: Issues, https://github.com/andrewRowlinson/optasoccer/issues
+Project-URL: Source, https://github.com/andrewRowlinson/optasoccer
+Author-email: Andrew Rowlinson <rowlinsonandy@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: football,opta,soccer
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Requires-Dist: pandas
+Description-Content-Type: text/markdown
+
+**optasoccer is a Python library for reading opta soccer data.**
+
+## Installation
+```bash
+pip install optasoccer
+```
+
+## Quick start
+
+```python
+from optasoccer import read_f24
+events, matches = read_24()
+```
