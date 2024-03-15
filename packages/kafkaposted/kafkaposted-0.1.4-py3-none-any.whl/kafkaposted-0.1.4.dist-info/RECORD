@@ -1,0 +1,9 @@
+kafkaposted/__init__.py,sha256=kArHLNcY-XW2KbBbXwU44WXhaNUu6rv6N89neurmZjQ,82
+kafkaposted/base.py,sha256=8V0lFOljExyB9noChgaPFGSM5Mj9MrluAY7nosgw30c,2804
+kafkaposted/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kafkaposted/tests/test_base.py,sha256=-u0ONEiQtSqqndcwCMxkb3_zq-13cxM-ASykap9j6Xg,2021
+kafkaposted-0.1.4.dist-info/LICENSE,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+kafkaposted-0.1.4.dist-info/METADATA,sha256=uC7G3EhsjuGlcUj9uJ6ibBFj9BTpbJvvCme305iOkng,303
+kafkaposted-0.1.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+kafkaposted-0.1.4.dist-info/top_level.txt,sha256=zGTTTdwZIouS2NQpxVA9ZgdOH7ORkNPvwii1MJnu8VY,12
+kafkaposted-0.1.4.dist-info/RECORD,,
