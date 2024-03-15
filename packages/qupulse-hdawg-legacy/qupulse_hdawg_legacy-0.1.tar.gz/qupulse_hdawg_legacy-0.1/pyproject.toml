@@ -1,0 +1,81 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qupulse-hdawg-legacy"
+dynamic = ["version"]
+description = 'Indexed waveform playback based HDAWG driver for qupulse'
+readme = "README.md"
+requires-python = ">=3.8,<3.9"
+license = "GPL-3.0"
+keywords = []
+authors = [
+  { name = "Simon Humpohl", email = "simon.humpohl@rwth-aachen.de" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "qupulse >= 0.9",
+  "zhinst <= 20.7.2701",
+  "numpy"
+]
+
+[project.urls]
+Documentation = "https://github.com/qupulse/qupulse-hdawg-legacy#readme"
+Issues = "https://github.com/qupulse/qupulse-hdawg-legacy/issues"
+Source = "https://github.com/qupulse/qupulse-hdawg-legacy"
+
+[tool.hatch.version]
+path = "qupulse_hdawg_legacy/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.8"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:qupulse_hdawg_legacy tests}"
+
+[tool.coverage.run]
+source_pkgs = ["qupulse_hdawg_legacy", "tests"]
+branch = true
+parallel = true
+omit = [
+  "qupulse_hdawg_legacy/__about__.py",
+]
+
+[tool.coverage.paths]
+qupulse_hdawg_legacy = ["qupulse_hdawg_legacy", "*/qupulse-hdawg-legacy/qupulse_hdawg_legacy"]
+tests = ["tests", "*/qupulse-hdawg-legacy/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
