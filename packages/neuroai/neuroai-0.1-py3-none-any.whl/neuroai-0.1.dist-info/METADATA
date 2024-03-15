@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: neuroai
+Version: 0.1
+Summary: A package for calcium image processing
+Home-page: 
+Author: HuJiahao
+Author-email: dadadadasukede@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: datetime
+Requires-Dist: tqdm
+Requires-Dist: fastremap
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: torch
+Requires-Dist: tifffile
+Requires-Dist: paramiko
+Requires-Dist: pillow
+Requires-Dist: PyQt5
+Requires-Dist: scikit-image
+Requires-Dist: opencv-python
+Requires-Dist: pyqtgraph (==0.12.4)
+Requires-Dist: ruamel.yaml
+Requires-Dist: tensorflow
+Requires-Dist: keras (==2.3.1)
+Requires-Dist: natsort
+Requires-Dist: numba (==0.53.1)
+Requires-Dist: matplotlib
+Requires-Dist: protobuf
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
