@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: lbank-connector-python
+Version: 1.0.0
+Summary: LBANK connector for the public API, private API, and websockets.
+Home-page: 
+License: MIT
+Keywords: LBANK,Public API,python,connector
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
