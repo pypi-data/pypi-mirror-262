@@ -1,0 +1,10 @@
+langchain~=0.1
+pydantic>=2
+yid_langchain_extensions~=0.4.42
+openai<2,>=1
+langchainhub~=0.1
+PyYAML~=6.0.1
+gitpython~=3.1.42
+langchain-openai
+colorlog
+dependency-injector~=4.41.0
