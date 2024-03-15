@@ -1,0 +1,40 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyprycd"
+version="0.1.9"
+description = "An unofficial Python Client for the PRYCD API for Real Estate Analysis."
+authors = [
+    {name = "Charles S. Givre", email = "charles@geniza.ai"},
+]
+requires-python = ">=3.10"
+keywords = ["Real Estate", "data", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.10",
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+dependencies = [
+    "dateparser",
+    "requests",
+    "pyarrow",
+    "pandas"
+]
+
+[project.urls]
+Repository = "https://github.com/geniza-ai/pyprycd"
+Issues = "https://github.com/geniza-ai/pyprycd/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+exclude = ["tests"]
