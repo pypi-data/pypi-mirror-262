@@ -1,0 +1,10 @@
+openbharatocr/__init__.py,sha256=SC1_vN2SFj01bsfbzu3L9KF0itBIoy2ly1um3F7xA8I,256
+openbharatocr/ocr/__init__.py,sha256=Os0UXxzgaB0XjD-gLjQT63nkbQBM5Xze_3KIxxtn-II,71
+openbharatocr/ocr/aadhaar.py,sha256=IkcP0ERG-v-_s5-8q3SW46Na56ySKW0irIkMhBLf4cs,4081
+openbharatocr/ocr/api.py,sha256=NUx7odNZIubZ0xILPzukAplAZOfNvtRjxi5zdy-0XaY,104
+openbharatocr/ocr/common.py,sha256=NhYJuiRvcBaVaYaLBiqAELC7cForYvT-a2d-756cQyQ,72
+openbharatocr/ocr/pan.py,sha256=xs3hhd-Qplw4JPAUaEXK4iEyvakBcGl7lL1MNZXPYb8,2036
+openbharatocr-0.0.5.dist-info/METADATA,sha256=Uv0Hj0vMKj_-PKCXe1fN90dqrAO8Np3-B98G5j80tNc,1321
+openbharatocr-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+openbharatocr-0.0.5.dist-info/top_level.txt,sha256=whmmV-CuzLgiRhS5fwe9GA4593c7RHDNmaD7PucnQHc,14
+openbharatocr-0.0.5.dist-info/RECORD,,
