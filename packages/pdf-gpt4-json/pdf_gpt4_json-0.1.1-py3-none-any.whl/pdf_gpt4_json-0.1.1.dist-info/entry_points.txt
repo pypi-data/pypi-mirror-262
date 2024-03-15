@@ -1,0 +1,3 @@
+[console_scripts]
+pdf-gpt4-json=pdf_gpt4_json.main:run
+

@@ -1,0 +1,10 @@
+pdf_gpt4_json/__init__.py,sha256=Tz6UMG4yvaVrzDyMuaqufAugbaN2AWftdi2fpU68nLg,463
+pdf_gpt4_json/cli.py,sha256=Zlwhz2PrCKdLNULXIGg7kkLLBeLdh5MX7Pp6e0wkJPU,1615
+pdf_gpt4_json/gpt.py,sha256=-eXh9RKadiCoukJFeZ0SLbtpEZhOahmQgbw3Rb9f4KI,7250
+pdf_gpt4_json/main.py,sha256=rWXPxBFnZChqHJ1-tU9FurMt4z4kg7SM-SKe75Dl2FU,316
+pdf_gpt4_json/util.py,sha256=b_qqnOUX-7WC87VwFaAdYISRKAsQjObGuvO_igStW9E,9638
+pdf_gpt4_json-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pdf_gpt4_json-0.1.1.dist-info/METADATA,sha256=VF8OBjy7f1fXW5V_XIPzuv--r7Uh-abL9GIVCnpnd0s,4075
+pdf_gpt4_json-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pdf_gpt4_json-0.1.1.dist-info/entry_points.txt,sha256=1OTfN3FeEJCPUVcvP74n5wkgkXpoND99HjHNim_XCRE,56
+pdf_gpt4_json-0.1.1.dist-info/RECORD,,
