@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: i-will
+Version: 0.1.1
+Summary: Use commands with "me"
+License: MIT
+Keywords: CLI
+Author: ilotoki0804
+Author-email: ilotoki0804@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Changelog, https://github.com/ilotoki0804/I#relese-note
+Project-URL: Issues, https://github.com/ilotoki0804/I/issues
+Project-URL: Repository, https://github.com/ilotoki0804/I
+Description-Content-Type: text/markdown
+
+# I
+
+Execute commands with respect for English grammar
+
+## How to install
+
+```console
+pip install i-will
+```
+
+## How to use
+
+To use, attach `I`, `I will`, or `please` in front of the command and switch the order of the second and first argument of the command. For example, `pip list` can be used as `I list pip` or `please list pip`.
+
+```console
+I list pip                 # executes: `pip list`
+I will run cargo           # executes: `cargo run`
+please install pip i-will  # executes: `pip install i-will`
+XXX please will run cargo  # This will cause error.
+```
+
