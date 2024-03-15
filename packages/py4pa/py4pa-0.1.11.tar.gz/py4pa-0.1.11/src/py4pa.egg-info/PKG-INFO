@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: py4pa
+Version: 0.1.11
+Summary: Package of various helper modules to support various People Analytics projects
+Author-email: Kevin Metherell <kevindickens@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2022 Kevin Metherell
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://py4pa.readthedocs.io/en/latest/
+Project-URL: Documentation, https://py4pa.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/kammetherell/py4pa/
+Project-URL: Issues, https://github.com/kammetherell/py4pa/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: datetime
+Requires-Dist: networkx
+Requires-Dist: requests
+Requires-Dist: bs4
+Requires-Dist: urllib3
+Requires-Dist: fake-useragent
+Requires-Dist: pysftp
+
+# Python for People Analytics
+
+## Documentation
+https://py4pa.readthedocs.io/en/latest/index.html
+
+
+## Installation
+
+Download and install the package on your machine:
+```
+pip install py4pa
+```
+
+If you need to bypass SSL verification on your machine (if you are behind a proxy for example), you can use the following install command:
+```
+pip install py4pa --trusted-host pypi.org --trusted-host files.pythonhosted.org
+```
+
+Import the package into your Python script:
+```
+import py4pa
+# or
+from py4pa import [arm]
+```
+
