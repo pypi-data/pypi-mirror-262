@@ -1,0 +1,11 @@
+langchain_nexus/__init__.py,sha256=tX6XC1opk3l-U9p9zotjOVJLNWpg3cX7c3t8qJEWfVo,202
+langchain_nexus/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langchain_nexus/models/chat_openai.py,sha256=d0cWnKAs7u0bsdyTPPJGzdZ_mI1EZ0jd1KFeUfAR4w4,30373
+langchain_nexus/models/chat_zhipuai.py,sha256=oTApcEafA68bx32EWoDd1CLjuLLBry2QIKnE5CBy4l0,30169
+langchain_nexus/models/embedding.py,sha256=EP5Z9wUvgZBRyAt59bmk_bWeMZP_koWkKUdMfdFuWEg,33353
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langchain_nexus-0.0.0.dist-info/LICENSE,sha256=T7H608oZw6WC0tf7bngwq_DRkmY_ll8pEcxex_zK6ZU,1094
+langchain_nexus-0.0.0.dist-info/METADATA,sha256=g6MUjGt9QAUl4LPL1_UApMugcGMZPoJjfUGWRhTGDJY,3200
+langchain_nexus-0.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+langchain_nexus-0.0.0.dist-info/top_level.txt,sha256=5eKcds2Rz4Yb4ABFC0pO5RvQ0vWahoB37gsonf4RHhQ,22
+langchain_nexus-0.0.0.dist-info/RECORD,,
