@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: tex2py
+Version: 0.0.5
+Summary: utility converting latex into parse tree in Python
+Home-page: http://github.com/alvinwan/tex2py
+Download-URL: https://github.com/alvinwan/tex2py/archive/0.0.5.zip
+Author: Alvin Wan
+Author-email: hi@alvinwan.com
+License: BSD
+Classifier: Topic :: Utilities
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+License-File: LICENSE
+Requires-Dist: TexSoup ==0.1.4
+Requires-Dist: pptree ==2.0
+Requires-Dist: pytest
+Requires-Dist: pytest-cov ==2.5.1
+Requires-Dist: coverage ==3.7.1
+Requires-Dist: coveralls ==1.1
+
