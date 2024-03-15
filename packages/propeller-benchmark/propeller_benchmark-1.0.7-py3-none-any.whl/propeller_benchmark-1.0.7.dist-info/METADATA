@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: propeller-benchmark
+Version: 1.0.7
+Summary: Tool to compare dexes performances
+Author: Gabriele Ruini
+Author-email: g.ruini@shadowycreators.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: aiohttp
+
+Tool to compare dexes performances
