@@ -1,0 +1,10 @@
+ludfor-lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ludfor-lib/database.py,sha256=zppY8YXe-WdN6RAVyLF2X7mQ3iCyJm51sRNpSFBUhfk,2743
+ludfor-lib/email.py,sha256=XDq15N6L5fVnmzo3ylsx13emlwJmlkjdPBZN9gNvF1c,2022
+ludfor-lib/logger.py,sha256=d7GljYElLEre7T8R1FiGkYsvuVJSLcdA9Zg-zSO3VWc,602
+ludforutils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ludforutils/database.py,sha256=evBjl0l_Jcw3FMf5_p2pwOatUsMkoBv99Ur9IXahxoI,1852
+ludfor_utils-0.1.5.dist-info/METADATA,sha256=AEjo2BHRdxB81OVA5t9mg6ChIQMPEcU4AVHkuxfjx2k,167
+ludfor_utils-0.1.5.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+ludfor_utils-0.1.5.dist-info/top_level.txt,sha256=v4vK9sKU8-6L8-9DbVJH9UVOYzQJVCbEcCPsEbZaBhM,11
+ludfor_utils-0.1.5.dist-info/RECORD,,
