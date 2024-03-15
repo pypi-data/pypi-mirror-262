@@ -1,0 +1,2 @@
+sources = sip_xmlwxXmlNode.cpp sip_xmlwxXmlAttribute.cpp sip_xmlwxXmlDocument.cpp sip_xmlwxXmlDoctype.cpp sip_xmlcmodule.cpp
+headers = sipAPI_xml.h
