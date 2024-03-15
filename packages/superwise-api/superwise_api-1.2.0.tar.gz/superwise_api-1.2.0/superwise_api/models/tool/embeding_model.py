@@ -1,0 +1,3 @@
+from superwise_api.client.models.vertex_ai_model_garden_embedding_model import VertexAIModelGardenEmbeddingModel
+
+EmbeddingModel = VertexAIModelGardenEmbeddingModel
