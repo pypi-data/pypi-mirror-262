@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/compress_em.egg-info/PKG-INFO
+src/compress_em.egg-info/SOURCES.txt
+src/compress_em.egg-info/dependency_links.txt
+src/compress_em.egg-info/requires.txt
+src/compress_em.egg-info/top_level.txt
+src/compressem/__init__.py
+src/compressem/decoder.py
+src/compressem/encoder.py

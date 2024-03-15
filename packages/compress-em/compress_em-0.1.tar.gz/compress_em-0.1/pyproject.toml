@@ -1,0 +1,39 @@
+[project]
+name = "compress_em"
+version = "0.1"
+description = "Particle Picking of Cryo-EM Datasets"
+authors = [{name = "Debangshu Mukherjee", email = "mukherjeed@ornl.gov"}]
+license = {file = "LICENSE"}
+maintainers = [{name = "Debangshu Mukherjee", email = "mukherjeed@ornl.gov"}]
+keywords = [
+    "elecron microscopy", 
+    "cryoEM",
+    "4D-STEM",
+    "big data",
+    "arithmetic coding"
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy >= 1.13.0",
+    "scipy >= 1.0.0",
+    "matplotlib >= 2.2.0",
+    "matplotlib-scalebar >= 0.5.0",
+    "jaxtyping >= 0.2.13",
+]
+
+[project.urls]
+Homepage = "https://code.ornl.gov/intersect-em/compressem"
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

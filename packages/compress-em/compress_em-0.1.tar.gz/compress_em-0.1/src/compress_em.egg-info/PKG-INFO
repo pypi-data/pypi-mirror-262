@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: compress_em
+Version: 0.1
+Summary: Particle Picking of Cryo-EM Datasets
+Author-email: Debangshu Mukherjee <mukherjeed@ornl.gov>
+Maintainer-email: Debangshu Mukherjee <mukherjeed@ornl.gov>
+Project-URL: Homepage, https://code.ornl.gov/intersect-em/compressem
+Keywords: elecron microscopy,cryoEM,4D-STEM,big data,arithmetic coding
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.13.0
+Requires-Dist: scipy>=1.0.0
+Requires-Dist: matplotlib>=2.2.0
+Requires-Dist: matplotlib-scalebar>=0.5.0
+Requires-Dist: jaxtyping>=0.2.13
+
+Compressing large EM datasets using Arithmetic Coding, implemented using JAX
