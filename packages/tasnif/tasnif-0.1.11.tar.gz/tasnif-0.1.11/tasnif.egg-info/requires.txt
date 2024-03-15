@@ -1,0 +1,10 @@
+numpy
+scikit-learn
+matplotlib
+Pillow
+scipy
+tqdm
+torch
+torchvision
+img2vec_pytorch
+rich

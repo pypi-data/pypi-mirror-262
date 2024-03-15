@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+tasnif/__init__.py
+tasnif/calculations.py
+tasnif/logger.py
+tasnif/tasnif.py
+tasnif/utils.py
+tasnif.egg-info/PKG-INFO
+tasnif.egg-info/SOURCES.txt
+tasnif.egg-info/dependency_links.txt
+tasnif.egg-info/requires.txt
+tasnif.egg-info/top_level.txt
