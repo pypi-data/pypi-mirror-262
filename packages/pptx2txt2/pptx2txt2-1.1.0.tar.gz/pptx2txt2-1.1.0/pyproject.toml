@@ -1,0 +1,64 @@
+[project]
+name = "pptx2txt2"
+dynamic = ["version"]
+description = "Extract text from .pptx and .odp files to strings in pure python."
+keywords = ["word", 'pptx', "odp", 'extract', 'text', 'images']
+requires-python = ">=3.8"
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+authors = [
+    { name = "Toby Devlin", email = "toby@tobydevlin.com" },
+]
+maintainers = [
+    { name = "Toby Devlin", email = "toby@tobydevlin.com" },
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Repository = "https://github.com/GitToby/pptx2txt2.git"
+"Bug Tracker" = "https://github.com/GitToby/pptx2txt2/issues"
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.1",
+    "black>=24.2.0",
+    "ruff>=0.3.2",
+    "mypy>=1.9.0",
+    "pytest-cov>=4.1.0",
+    "pre-commit>=3.5.0",
+    "pytest-benchmark>=4.0.0",
+    "build>=1.1.1",
+    "setuptools-scm>=8.0.4",
+]
+
+[build-system]
+requires = [
+    "setuptools>=61",
+    "setuptools-scm>=8.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[tool.pdm]
+distribution = true
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+addopts = "-ra"
+
+[tool.mypy]
+python_version = "3.8"
