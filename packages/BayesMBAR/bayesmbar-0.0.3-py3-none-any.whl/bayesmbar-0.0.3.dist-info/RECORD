@@ -1,0 +1,10 @@
+bayesmbar/__init__.py,sha256=BXLm08g2mBKHzNdXrfvAvm7KLGWhDtUYRcsOM1Xh8s4,56
+bayesmbar/bayesbar.py,sha256=OFgeVitOM2mgcA4ZrGKw2eJHG93yHgJJrZaFyTIYlZ4,6447
+bayesmbar/bayesmbar.py,sha256=Yk6C4xQN0-4q-zLujb_7j3WuQSi6NE26yj-Esks4-Fs,21351
+bayesmbar/test_bayesbar.py,sha256=VVXR_GXxUbshXRO4kZsvGHN2eX7nBmKiVVNH3SIMYc8,1329
+bayesmbar/test_bayesmbar.py,sha256=5fBmcOsQcXnjaNnsqSEhlfv6Kw32Jf-JSUmnKsBT_Vo,2099
+bayesmbar/utils.py,sha256=G-Jbsi5rt0bWghXlGMEPmEefEPOyOMebkgHnZy9u2uw,3396
+bayesmbar-0.0.3.dist-info/METADATA,sha256=o03DehOszTDFeKZgwEvjigutVF0onFtoKkvw-tdrVqk,3309
+bayesmbar-0.0.3.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+bayesmbar-0.0.3.dist-info/licenses/LICENSE,sha256=cseUk_d3BlWfyCxhR_pGwm0BQf7nfrwTNi-lZ1GKENQ,1104
+bayesmbar-0.0.3.dist-info/RECORD,,
