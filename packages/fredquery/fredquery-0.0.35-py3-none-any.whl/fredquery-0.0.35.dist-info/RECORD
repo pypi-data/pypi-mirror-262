@@ -1,0 +1,17 @@
+fredquery/__about__.py,sha256=wJrEm5rgbMLdsRWC0ESW23GRqMsTKJCvUpHEsWqdn1w,127
+fredquery/__init__.py,sha256=_y7dLpFEJrRmsiiHVhYimVWiVmX8wig_7uxWi6mRicA,301
+fredquery/aa2csv.py,sha256=fa6GCyghWxp4G4jPrQm93Ea6c6x36y4qxGhoeQyzZio,236
+fredquery/aa2html.py,sha256=xkRA6DbiZBwPOamTQjFhvt-vx_DkZm-cdsdMmCfczbA,1541
+fredquery/fredcategories.py,sha256=k5yrWydT9SpYlag1SC8stSBT9jHgu3eiNfvINj-PXHU,11995
+fredquery/fredreleases.py,sha256=JY6ic7afIxnnpik9Qno3dnZcBiZi8OQT2rcGywtuUBI,10199
+fredquery/fredseries.py,sha256=NKJoCStUPo-1c7dOvFo8W8z2M4Qv5zz95rMKRNQt_PE,9982
+fredquery/fredsources.py,sha256=ElX-tHBRrJpfp6TxWcoOndiy46yWxeNVCSgDe6g51S0,10880
+fredquery/fredtags.py,sha256=U4t4cB7eni6SmpB6mKxMwdLX1o4T0zv7Tyk0BdO4G-o,8906
+fredquery/plotobs.py,sha256=1brExttXyeZxRrSIdfS3pAxPU28FZhWC34dI3EEOwwg,2322
+fredquery/query.py,sha256=Ei8oB-lGfsLQaOc1OhmB1iDOixMFywxITltcp4isvxE,1811
+fredquery/xmlstr2aa.py,sha256=OeqdVrvOou6cuPoAN-cKYkRZu-Gd21naQlqzBMpp9YI,1722
+fredquery-0.0.35.dist-info/METADATA,sha256=aNYqEnKQGtKegmCQjKqGanhdQFU-W6c1hvuJyERHTZU,7602
+fredquery-0.0.35.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+fredquery-0.0.35.dist-info/entry_points.txt,sha256=FJYsjmaL7VUzikMoJZ8JUd2cc_nT82fLLCOPooKpCs8,223
+fredquery-0.0.35.dist-info/licenses/LICENSE.txt,sha256=xSqyMndjxdgsfRvKDphjwW7_FDVIrjaCo8HjpHwQ29A,1096
+fredquery-0.0.35.dist-info/RECORD,,
