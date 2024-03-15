@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: arktos
+Version: 0.0.2
+Summary: A brief description of Arktos
+Home-page: https://github.com/yourusername/arktos
+Author: W Robert Long
+Author-email: longrob604@gmail.com
+License: UNKNOWN
+Description: # Arktos
+        
+        Arktos (ancient Greek word for Bear) is a utility designed to facilitate the transition from Pandas to Polars, allowing users to leverage Polars' performance benefits with a familiar Pandas-like interface.
+        
+        ## Installation
+        
+        To install Arktos, simply run:
+        
+        ```bash
+        pip install panpol
+        ```
+        
+        ## Quick Start
+        
+        Here's a quick example to get you started with Arktos:
+        
+        ```
+        import panpol as pp
+        ```
+        
+        ## Example Usage
+        
+        Beyond simple file reading, Arktos simplifies more complex data manipulations. Here's an example of grouping data and calculating summary statistics:
+        
+        ```python
+        import arktos as pp
+        
+        # Assuming 'data.csv' has columns 'category' and 'value'
+        df = pp.read_csv('data.csv')
+        
+        # Group by 'category' and calculate the mean of 'value' for each group
+        grouped_df = df.groupby('category').agg({'value': 'mean'})
+        
+        print(grouped_df)
+        ```
+        In this example, Arktos mimics the pandas groupby and aggregation method to calculate the mean of values within each category. It's a powerful feature for those coming from a pandas background looking to utilize the speed of Polars.
+        
+        
+        
+        ## Features
+        - Easy transition from Pandas to Polars
+        - High-performance data manipulation
+        - Familiar syntax for Pandas users
+        
+        ## Contributing
+        We welcome contributions! If you would like to help improve PanPol, please feel free to fork the repository, make your changes, and submit a pull request.
+        
+        ## License
+        PanPol is licensed under the MIT License. See the LICENSE file for more details.
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

@@ -1,0 +1,7 @@
+README.md
+setup.py
+arktos/__init__.py
+arktos.egg-info/PKG-INFO
+arktos.egg-info/SOURCES.txt
+arktos.egg-info/dependency_links.txt
+arktos.egg-info/top_level.txt
