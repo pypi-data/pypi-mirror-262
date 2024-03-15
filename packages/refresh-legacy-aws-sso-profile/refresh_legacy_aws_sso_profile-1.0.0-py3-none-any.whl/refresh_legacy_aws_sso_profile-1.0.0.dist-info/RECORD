@@ -1,0 +1,12 @@
+refresh_legacy_aws_sso_profile-1.0.0.dist-info/METADATA,sha256=9UDyfpRo9vnDakkxwvrK8FEx1X_MNtEUT4sIO0s-ubo,7909
+refresh_legacy_aws_sso_profile-1.0.0.dist-info/WHEEL,sha256=N2J68yzZqJh3mI_Wg92rwhw0rtJDFpZj9bwQIMJgaVg,90
+refresh_legacy_aws_sso_profile-1.0.0.dist-info/entry_points.txt,sha256=pgL3WCI8NVuXvuEEiVqX5zziMRdt6xJyXK-lrFuHn1o,111
+refresh_legacy_aws_sso_profile-1.0.0.dist-info/licenses/LICENSE,sha256=8eTPkL1BbI5dwer7DzINH74mJxR-GUFj8VT-XjqYICs,1093
+refresh_legacy_aws_sso_profile/__init__.py,sha256=Sc2g46F60EAexaHRBgsOs834uBhV9nQKMN30-l6sTso,641
+refresh_legacy_aws_sso_profile/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+refresh_legacy_aws_sso_profile/cli/refresh_legacy_sso/__init__.py,sha256=37r64jb_6hV16ExruPFvb3VZ1PfkXMHq_IXYyymNRhI,22
+refresh_legacy_aws_sso_profile/cli/refresh_legacy_sso/__main__.py,sha256=a4n2KSAR3muXeqLoBKblrm-6RXWp_Fic62kuyfHDYGw,355
+refresh_legacy_aws_sso_profile/cli/refresh_legacy_sso/impl.py,sha256=zQWtN2Y3-F42q0Pc4IolQQydwk6O_7eNSafs_sTkk4w,3057
+refresh_legacy_aws_sso_profile/refresh.py,sha256=i95cc0I2fAzZe1--iAyPdLdp8PkS6TyGgxvAaHtqWFo,3564
+refresh_legacy_aws_sso_profile/version.py,sha256=41Yaq1g_VGiMcyBqQeArOmhazz_zocpmRW3bR8NmkME,386
+refresh_legacy_aws_sso_profile-1.0.0.dist-info/RECORD,,

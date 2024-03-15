@@ -1,0 +1,3 @@
+[console_scripts]
+refresh-legacy-aws-sso-profile = refresh_legacy_aws_sso_profile.cli.refresh_legacy_sso:main
+
