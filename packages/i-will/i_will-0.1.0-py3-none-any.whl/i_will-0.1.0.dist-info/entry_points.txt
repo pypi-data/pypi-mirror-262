@@ -1,0 +1,4 @@
+[console_scripts]
+I=I.__main__:main
+please=I.__main__:main
+
