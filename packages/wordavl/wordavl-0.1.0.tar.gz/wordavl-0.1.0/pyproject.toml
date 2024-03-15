@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "wordavl"
+version = "0.1.0"
+description = "An autocomplete/recommendation system implemented using an AVL datastructure"
+authors = ["João Cabral <jpfcabral@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+loguru = "^0.7.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+pre-commit = "^3.6.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
