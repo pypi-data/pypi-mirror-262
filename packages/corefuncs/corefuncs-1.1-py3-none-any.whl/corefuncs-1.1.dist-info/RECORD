@@ -1,0 +1,11 @@
+corefuncs/__init__.py,sha256=nG_85KN02dyhmz8_RCr5MMYL4myOgfPukReqGtvDBsw,185
+corefuncs/core/__init__.py,sha256=B__8A4F-oGZ8Fb9nZqsNPfLXHMcg05rC-W5Il2V4VkY,307
+corefuncs/core/advanced/__init__.py,sha256=GEq9EXQhgKNOL4KpYboM59arzLuK6rWMYmqa5Ak8hak,181
+corefuncs/core/analysis/__init__.py,sha256=fP5xIpujFWwNGkvO36qT4VQn8qtox29HJ2LHcxSLXJk,185
+corefuncs/core/base/__init__.py,sha256=-TfivnOWr5lMD6rTUgJjHUHUGO-XI8FIx9vh0bP-HaU,508
+corefuncs/core/database/__init__.py,sha256=OhZCWjlwMLbiBjHPu6AyA2oX-QtzsYcohOqk-nqgZGY,234
+corefuncs/core/draw/__init__.py,sha256=S8EwWAOSKWypZUrApFLCpVZ5OhkGLYnkT1JapBvN4O4,178
+corefuncs-1.1.dist-info/METADATA,sha256=Net8BHQqDaLdeuzTlZY52qpQzLdbczK23ndbJq6_-ng,120
+corefuncs-1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+corefuncs-1.1.dist-info/top_level.txt,sha256=2utlewJbTEGqbv-BFqBpcgWeo5Be0CLSczoPow15arU,10
+corefuncs-1.1.dist-info/RECORD,,
