@@ -1,0 +1,10 @@
+whispervid/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+whispervid/docs_creation.py,sha256=ty6_IvD0SmiO67l2zaF8sjCNoblBYUgm1a_BCaGag0M,3642
+whispervid/support_file.py,sha256=2y6QUEQflTEmmSRJIXolSTEyyWcjbre-XG7BCAeBDPU,3319
+whispervid/transcribe_video.py,sha256=et0aNXFTsoav5YGVVr0MOCRoYDzR-9ZTPM1HFJ7hbFQ,857
+whispervid/video_proc.py,sha256=p0qqv4edn9Ef6YroZgtq1xiJoiuLoh0FGrVOg45zW9o,4596
+whispervid/whispervid.py,sha256=BhfciI0K40oUo7RDNz-FP3ZXOrx4CBGEko8uJOF1Tdk,3417
+whispervideos-0.0.1.dist-info/METADATA,sha256=m7Su0m55M6Vd6jyOZcG86Vtp62FBgSex7myGiBhqwkA,128
+whispervideos-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+whispervideos-0.0.1.dist-info/top_level.txt,sha256=quuTTkIZabJdV0ZKJGt6_-qh-mhROSYSymBJLarn9os,11
+whispervideos-0.0.1.dist-info/RECORD,,
