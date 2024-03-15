@@ -1,0 +1,8 @@
+setup.py
+awesome_latex_maker.egg-info/PKG-INFO
+awesome_latex_maker.egg-info/SOURCES.txt
+awesome_latex_maker.egg-info/dependency_links.txt
+awesome_latex_maker.egg-info/requires.txt
+awesome_latex_maker.egg-info/top_level.txt
+latex_maker/__init__.py
+latex_maker/latex_maker.py
