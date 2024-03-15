@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bibliothekarios
+Version: 0.0.1
+Summary: In the Library of Alexandria, librarians were known as βιβλιοθηκάριοι
+Author-email: Alexander Fedotov <alex.fedotov@aol.com>
+Project-URL: Homepage, https://github.com/multilogue/bibliothekarios
+Project-URL: Bug Tracker, https://github.com/multilogue/bibliothekarios/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Bibliothekarios
+In the Library of Alexandria, librarians were known as "βιβλιοθηκάριοι".
