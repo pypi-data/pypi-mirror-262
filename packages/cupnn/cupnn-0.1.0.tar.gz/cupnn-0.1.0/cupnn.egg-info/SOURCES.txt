@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+cupnn.egg-info/PKG-INFO
+cupnn.egg-info/SOURCES.txt
+cupnn.egg-info/dependency_links.txt
+cupnn.egg-info/requires.txt
+cupnn.egg-info/top_level.txt
