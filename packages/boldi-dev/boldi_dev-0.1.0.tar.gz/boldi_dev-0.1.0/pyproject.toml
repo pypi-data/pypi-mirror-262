@@ -1,0 +1,35 @@
+[project]
+name = "boldi-dev"
+version = "0.1.0"
+description = "boldi.dev part of Boldi's Python libraries"
+authors = [
+    { name = "Boldizsár Palotás", email = "boldizsar.palotas@gmail.com" },
+]
+requires-python = ">=3.9"
+readme = "../../README.md"
+license = { file = "../../LICENSE" }
+
+dependencies = [
+    # boldi:
+    "boldi-cli",
+    "boldi-ctx",
+    # public:
+    "ruff",
+    "mypy",
+    "sphinx",
+]
+optional-dependencies = {}
+
+[project.entry-points."boldi.cli.action"]
+dev = "boldi.dev:DevCliAction"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = ["boldi"]
+
+[tool.pdm]
+
+[tool.pdm.dev-dependencies]
