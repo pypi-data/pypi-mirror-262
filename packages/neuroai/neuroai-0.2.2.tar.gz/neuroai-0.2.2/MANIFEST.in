@@ -1,0 +1,8 @@
+include icon/*.png
+include Font/*ttc
+recursive-include Cascade *.pth *.yaml *ipynb *.pyc *.png *.yml *.txt *.md *.xls *.gif *.h5 *.npy *. *.ico *.json *.ui *.qrc 
+recursive-include DeepCAD_RT *.pth *.yaml *ipynb *.pyc *.png *.yml *.txt *.md *.xls *.gif *.h5 *.npy *. *.ico *.json *.ui *.qrc 
+recursive-include GUI *.pth *.yaml *ipynb *.pyc *.png *.yml *.txt *.md *.xls *.gif *.h5 *.npy *. *.ico *.json *.ui *.qrc 
+recursive-include registration *.pth *.yaml *ipynb *.pyc *.png *.yml *.txt *.md *.xls *.gif *.h5 *.npy *. *.ico *.json *.ui *.qrc 
+recursive-include cellpose *.pth *.yaml *ipynb *.pyc *.png *.yml *.txt *.md *.xls *.gif *.h5 *.npy *. *.ico *.json *.ui *.qrc 
+include *.py
