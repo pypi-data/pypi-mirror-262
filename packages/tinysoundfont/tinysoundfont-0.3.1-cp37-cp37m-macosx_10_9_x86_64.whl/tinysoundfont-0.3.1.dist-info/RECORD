@@ -1,0 +1,12 @@
+tinysoundfont-0.3.1.dist-info/RECORD,,
+tinysoundfont-0.3.1.dist-info/WHEEL,sha256=Q_E3PSrS1b9BM-NmdT9tPBmrsPo7uIARNkVbhrMOCq8,113
+tinysoundfont-0.3.1.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tinysoundfont-0.3.1.dist-info/METADATA,sha256=e1fUkrjdtGOJWFGMI_WyYKscqMz9u5ezLCIBWi_DLqw,4162
+tinysoundfont-0.3.1.dist-info/licenses/LICENSE,sha256=9Vg1_UQFPD6zxGI50w8vCtFJ8CooPB6Cmw-tWYz2pN4,1061
+tinysoundfont-0.3.1.dist-info/licenses/NOTICE,sha256=WplOcvNBWBZYIglB7SX-w1Zcsk0cKZ-ccmpKLsfbFYQ,4366
+tinysoundfont/synth.py,sha256=GLq3HQtwbETib2bCCuEW3J0jbOcDzUrBHl5Q_2ccPb0,15945
+tinysoundfont/sequencer.py,sha256=3iR3454TEVxapmfIHU-etHitmjhDbWV8oNUqblJGGxc,6894
+tinysoundfont/__init__.py,sha256=B9yq24bXTSXqUt8-sshGzzyRAzg_vdUviPMAKfGZ_1E,78
+tinysoundfont/_tinysoundfont.cpython-37m-darwin.so,sha256=Ts7tUEV-4WTXlO3z1RHkl1ivTwQlT2PyeTZqf_97OcE,331776
+tinysoundfont/__main__.py,sha256=ZiE0XDsDMnQOtA69BYR-OubVZtwkzasj6oD07wbXFC0,5587
+tinysoundfont/midi/__init__.py,sha256=cm6gcw0s0q-NEcKthHXeQB8ZCltJ01uzGU3RN_cJce0,6413
