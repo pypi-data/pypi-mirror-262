@@ -1,0 +1,10 @@
+splitml/__init__.py,sha256=XQYcj0UFDoC5eJ-HM3rVYjSbaT6o4asT3abX48LPuVE,53
+splitml/constants.py,sha256=FFoB5xoRlbUO8QHW_eY8dAbcjjv3WlNN8nrZjBpt-fM,591
+splitml/groupers.py,sha256=H9_BjqQrEjDS3UqBfdhpqkxLG-0Jzgoq4HrwZX_lrvU,1538
+splitml/splitml.py,sha256=AZHt_GYmsNvqI6Y-Y9cCDZXKaKEzusKC0E-NC9S0FlI,3121
+splitml/stats.py,sha256=ZHN2S9eji6nxfIDN7tEOq-PQTjdVM7ZxxZbazdSASaQ,694
+splitml-0.3.dist-info/LICENSE,sha256=gdZlCmBLqf1EXXRvK3vxYr9tqtLdM6np1o1vbgnnZGA,1051
+splitml-0.3.dist-info/METADATA,sha256=go_OYyy_cCjliUceIl33ixX8x6rJ1fbmKkBgDsJgrxw,667
+splitml-0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+splitml-0.3.dist-info/top_level.txt,sha256=yDEjFfSxayDunH-aakmOd_ThHxvCm04fBXxXktwaqI0,8
+splitml-0.3.dist-info/RECORD,,
