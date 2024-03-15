@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: sockaddr
+Version: 0.1
+Summary: sockaddr helpers for Python using ctypes
+Author-email: tedk <tedk@kpn-cert.nl>
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
