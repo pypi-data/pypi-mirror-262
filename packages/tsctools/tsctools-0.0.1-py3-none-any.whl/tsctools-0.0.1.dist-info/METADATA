@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: tsctools
+Version: 0.0.1
+Summary: Tools needed for GNS Sciences time-series classification platform
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Author-email: Yannik Behr <y.behr@gns.cri.nz>, Christof Mueller <c.mueller@gns.cri.nz>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: h5netcdf
+Requires-Dist: netcdf4>=1.6
+Requires-Dist: pandas
+Requires-Dist: pytest
+Requires-Dist: xarray
+Description-Content-Type: text/markdown
+
+# Time series classification tools
+A collection of tools to integrate with GNS Science's time series classification platform.
