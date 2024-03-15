@@ -1,0 +1,15 @@
+movement/__init__.py,sha256=_XGcOWtURAxGBMbKLyJq9aPCBxIUVeZmIZThxHQt388,384
+movement/filtering.py,sha256=PwWk6uSuOgY242Do1u6ZoQj5fRPW_D0EiJE24BFQ1MU,5653
+movement/logging.py,sha256=oZF16kMe839maAcZIX-Ju0mCCKwwf5xsNZf4rFT-Z_Q,2947
+movement/move_accessor.py,sha256=eDcjWxipzgL9ImGNy-06FlHFe5QYqeHba4IVblkxbXs,5784
+movement/sample_data.py,sha256=1JkfIfRhLElUW0qp0Wqs3r83L_xAnpCqLBiQV1RaPeU,5653
+movement/analysis/kinematics.py,sha256=f-9vhHqdf4F40q8Dor-f2i77y3Z4Rxm2b6gwIAAwPFs,3450
+movement/io/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+movement/io/load_poses.py,sha256=g4vnvSztL5p5qtblue5r7sCPhm2XwWXX6koJNVjwTpk,20325
+movement/io/save_poses.py,sha256=MjpUuosPRSD1In-Z6n4oTfw0Z5ltk7qbV809JBlLi8o,14780
+movement/io/validators.py,sha256=RAlvqYbGXUhorQiFKoaiaCvACn2yAZaSXpJsotlg40A,12941
+movement-0.0.14.dist-info/LICENSE,sha256=_JBgrHArSOKhu5gXD5RtvSlJTZC4J0XMktuBhxB3PQ4,1493
+movement-0.0.14.dist-info/METADATA,sha256=uK9akXa5_HGQU6OFtAyWzdiYKY6DSXPRSI9Er1pw2J0,5287
+movement-0.0.14.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+movement-0.0.14.dist-info/top_level.txt,sha256=Zzs7_PD3FCfgwTW_g4RLWX7pQgVVBWg6qPDJbPC5-Q0,9
+movement-0.0.14.dist-info/RECORD,,
