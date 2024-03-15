@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: sqldantic
+Version: 0.2.0
+Summary: sqlalchemy and pydantic integration.
+Home-page: https://github.com/aachurin/sqldantic
+License: Unlicense
+Author: Andrey Churin
+Author-email: aachurin@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Database
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Typing :: Typed
+Requires-Dist: pydantic (>=2.6.3,<3.0.0)
+Requires-Dist: sqlalchemy (>=2.0.26,<3.0.0)
+Project-URL: Repository, https://github.com/aachurin/sqldantic
+Description-Content-Type: text/markdown
+
+# sqldantic
+SQLalchemy + pyDANTIC
+
+### Example:
+```python
+from __future__ import annotations
+
+import enum
+import ipaddress 
+
+from pydantic import BaseModel
+from sqlalchemy import ForeignKey
+from sqlalchemy.orm import Mapped
+from sqldantic import DeclarativeBase, Field, Relationship
+
+
+class Base(DeclarativeBase):
+    """
+    allowed options are:
+        metadata
+        type_annotation_map
+        json_type
+        model_config
+    
+    see https://docs.sqlalchemy.org/en/20/orm/declarative_styles.html
+    for more information on `metadata` and `type_annotation_map`
+    see https://docs.pydantic.dev/latest/api/config/#pydantic.config.ConfigDict
+    for more information on `model_config`
+    
+    `json_type` is JSON by default, but you can change it to JSONB 
+    """
+
+
+class OS(str, enum.Enum):
+    linux = "linux"
+    windows = "windows"
+    macos = "macos"
+    
+
+class Info(BaseModel):
+    os: OS
+    tags: set[str]
+    
+
+class ClusterBase(Base):
+    name: Mapped[str]
+    hosts: Mapped[list[Host]] = Relationship(back_populates="cluster")
+
+
+class Cluster(ClusterBase, table=True):
+    id: Mapped[int] = Field(primary_key=True)
+
+
+class HostBase(Base):
+    hostname: Mapped[str] = Field(index=True)
+    address: Mapped[ipaddress.IPv4Address]
+    info: Mapped[Info]
+    cluster: Mapped[Cluster] = Relationship(back_populates="hosts")
+    
+    
+class Host(HostBase, table=True):
+    id: Mapped[int] = Field(primary_key=True)
+    cluster_id: Mapped[int] = Field(ForeignKey("cluster.id"))
+
+```
+
+### Description
+Any subclass of `DeclarativeBase` is Pydantic Model.
+
+Any subclass of `DeclarativeBase` with `table=True` is Sqlalchemy Model.
+
+Both `Mapped[...]` and "unmapped" formats are supported, but Sqlalchemy needs `Mapped` for mypy type checking, 
+so `Mapped` is preferred. 
+
+
