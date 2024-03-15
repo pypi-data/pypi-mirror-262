@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: RSAattack
+Version: 0.1
+Summary: A collection of RSA attack codes.
+Home-page: https://github.com/blockcll/RSAattack
+Author: blockcll
+Author-email: wargod2024@hotmail.com
+License: LICENSE.txt
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: libnum
+Requires-Dist: gmpy2
+
+# RSAattack
+A collection of RSA attack codes.
+
+
