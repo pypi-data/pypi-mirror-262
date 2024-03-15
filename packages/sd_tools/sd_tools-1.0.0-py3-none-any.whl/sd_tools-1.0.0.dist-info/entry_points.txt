@@ -1,0 +1,3 @@
+[console_scripts]
+sdxl=sd_tools.sdxl:main
+
