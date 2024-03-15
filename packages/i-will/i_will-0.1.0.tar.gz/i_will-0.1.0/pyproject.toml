@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "i-will"
+version = "0.1.0"
+description = "Use commands with \"me\""
+authors = ["ilotoki0804 <ilotoki0804@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "I", from = "src" },
+]
+keywords = ["CLI"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.poetry.urls]
+Repository = "https://github.com/ilotoki0804/I"
+Issues = "https://github.com/ilotoki0804/I/issues"
+Changelog = "https://github.com/ilotoki0804/I#relese-note"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.scripts]
+I = "I.__main__:main"
+please = "I.__main__:main"
+
+[tool.poetry.group.dev.dependencies]
+black = {extras = ["jupyter"], version = "^24.2.0"}
+poetry = "^1.8.2"
+ipykernel = "^6.29.3"
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
