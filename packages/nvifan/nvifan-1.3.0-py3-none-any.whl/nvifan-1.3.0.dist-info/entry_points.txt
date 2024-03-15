@@ -1,0 +1,4 @@
+[console_scripts]
+nvifan = nvifan.main:main
+nvifan-install = nvifan.tools.installer:install
+nvifan-uninstall = nvifan.tools.installer:uninstall
