@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+myjive.egg-info/PKG-INFO
+myjive.egg-info/SOURCES.txt
+myjive.egg-info/dependency_links.txt
+myjive.egg-info/requires.txt
+myjive.egg-info/top_level.txt
