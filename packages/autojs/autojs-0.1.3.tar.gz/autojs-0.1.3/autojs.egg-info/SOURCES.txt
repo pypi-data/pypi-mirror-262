@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+autojs/__init__.py
+autojs/autox-client.js
+autojs.egg-info/PKG-INFO
+autojs.egg-info/SOURCES.txt
+autojs.egg-info/dependency_links.txt
+autojs.egg-info/requires.txt
+autojs.egg-info/top_level.txt
