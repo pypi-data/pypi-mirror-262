@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/fastask/__init__.py
+src/fastask/ask.py
+src/fastask/dev_mode_router.py
+src/fastask/utils.py
+src/fastask.egg-info/PKG-INFO
+src/fastask.egg-info/SOURCES.txt
+src/fastask.egg-info/dependency_links.txt
+src/fastask.egg-info/entry_points.txt
+src/fastask.egg-info/requires.txt
+src/fastask.egg-info/top_level.txt
