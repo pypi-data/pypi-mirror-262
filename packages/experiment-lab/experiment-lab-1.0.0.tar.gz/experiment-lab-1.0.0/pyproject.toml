@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools >= 61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "experiment-lab"
+description = "A suite of flexible experiments of a variety of different tasks."
+keywords = ["experiment", "suite", "lab"]
+authors = [{ name = "Rishav Bhagat", email = "rishavbhagat.cs@gmail.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+dynamic = ["version"]
+requires-python = ">=3.11"
+dependencies = [
+    "hydra-core",
+    "numpy",
+    "pandas",
+    "torch",
+    "wandb",
+    "tensorboard",
+]
+
+[project.urls]
+Repository = "https://github.com/rishavb123/ExperimentLab"
+
+[project.optional-dependencies]
+all = ["gymnasium", "stable_baselines3", "moviepy", "torchvision", "minigrid"]
+rl = ["gymnasium", "stable_baselines3", "minigrid"]
+rl-vid = ["moviepy"]
+ml = ["torchvision"]
+dev = ["pytest", "black", "build", "twine"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["experiment_lab*"]
+namespaces = false
