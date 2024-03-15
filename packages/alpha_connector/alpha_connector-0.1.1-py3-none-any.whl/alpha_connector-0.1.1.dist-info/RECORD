@@ -1,0 +1,11 @@
+alpha_connector/__init__.py,sha256=0fQz-Op79ttRMg1yI26fyQT48zjXBaSgvKPH59AzTpY,433
+alpha_connector/__main__.py,sha256=_K2uzLotZ3uQaFWEliP4dGzJzypXAJvaZJ9nP7Gs9dA,2064
+alpha_connector/alpha_connector.py,sha256=8_ucGeOBlpSJr7-JZOwarO3FMeoAtMvB2Jfbakbj9Vw,4213
+alpha_connector/alpha_xarray.py,sha256=t_0A3H79qNk9_hh5GV9-UWLPFtSd27YN5y0tcW_x4Pk,1153
+alpha_connector/config.yaml,sha256=m45HLYhnQ6HaembkwmVZPi5yAmfQUJDnnEpfOoduPMY,2449
+alpha_connector/example.py,sha256=m80Z9xlCdvY6EGTL6DFHqZUZiCv-qAF17Eylh6ZJC1o,313
+alpha_connector-0.1.1.dist-info/LICENSE,sha256=0GwukEO44AOaGqxZ4o7yrOmBfwjjEY7j3FeWH6UHD9Q,1080
+alpha_connector-0.1.1.dist-info/METADATA,sha256=CSIwMg5t__Vi1ln-pDUeUS2fQHSzJQ1DLiOBErX8HZE,14386
+alpha_connector-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+alpha_connector-0.1.1.dist-info/entry_points.txt,sha256=kfzrmI50aXMyyVvyaAZHgrWwo_TOa7VXc3mDcjIMaII,64
+alpha_connector-0.1.1.dist-info/RECORD,,
