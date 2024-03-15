@@ -1,0 +1,12 @@
+dj_settings/__init__.py,sha256=6pKJOD5Y12ADakHnRKFZUaDKh9nlkGPNR5G8L2zmFeA,166
+dj_settings/_seven.py,sha256=5z0Lh1yKYFE8rY-HPMqsFl11vcBtpXACW_rBQWYDSfg,408
+dj_settings/_seven.pyi,sha256=5hJRPMcXJqDxPCW9x9ekFVaPDYW7lGY-clL4j56pZ_g,143
+dj_settings/constants.py,sha256=DJguU1y3Ep6eYne6WfZtDRC9z9KX-B2jjL6APLUszkM,304
+dj_settings/exceptions.py,sha256=i6IyqV-KdX_-jlnO6UzBU_0wXLDwS6REl8nIyZ40w9w,39
+dj_settings/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dj_settings/settings.py,sha256=Vz9ExpYee4jFD0E3RGqRqmrR4Vao_Kv4K6XlfVMtH4s,4602
+dj_settings/types.py,sha256=YxKSpdKz5-outs2y2wNYI1uxblXiltYs6cNUJqoEue8,233
+dj_settings/utils.py,sha256=bsLHlMuC7bT5b6lYRjKxVPc_1Mt9BDVNwlxUcej-mUU,3571
+dj_settings-5.0.0.dist-info/METADATA,sha256=F1PI3NjpndB70VMjp-vtrvk4yfgg6i1TSuOoh1ssuJo,3270
+dj_settings-5.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dj_settings-5.0.0.dist-info/RECORD,,
