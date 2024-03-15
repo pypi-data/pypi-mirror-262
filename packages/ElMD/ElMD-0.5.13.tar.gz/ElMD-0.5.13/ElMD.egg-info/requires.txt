@@ -1,0 +1,5 @@
+flit
+numba
+numpy
+scipy
+setuptools
