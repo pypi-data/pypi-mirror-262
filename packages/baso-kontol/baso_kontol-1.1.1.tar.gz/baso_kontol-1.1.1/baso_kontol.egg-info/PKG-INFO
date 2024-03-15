@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: baso_kontol
+Version: 1.1.1
+Summary: resep baso kontol
+Home-page: https://github.com/IrfanDect/baso-kontol
+Author: IrfanDect
+Author-email: bsbdrack@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: rich
+Requires-Dist: requests
+Requires-Dist: prompt-toolkit
+Provides-Extra: excel
+Requires-Dist: openpyxl; extra == "excel"
+
+baso kontol as resep baso....
