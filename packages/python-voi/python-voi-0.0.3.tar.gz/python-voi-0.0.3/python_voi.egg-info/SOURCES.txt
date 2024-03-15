@@ -1,0 +1,8 @@
+README.md
+pyvoi.py
+setup.py
+python_voi.egg-info/PKG-INFO
+python_voi.egg-info/SOURCES.txt
+python_voi.egg-info/dependency_links.txt
+python_voi.egg-info/requires.txt
+python_voi.egg-info/top_level.txt
