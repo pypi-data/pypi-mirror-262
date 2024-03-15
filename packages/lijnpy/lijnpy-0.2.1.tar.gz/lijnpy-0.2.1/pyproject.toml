@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "lijnpy"
+version = "0.2.1"
+description = ""
+authors = ["Ilias Bachiri <ilias.bachiri@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.31.0"
+pydantic = "^2.6.3"
+pydantic-extra-types = "^2.6.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.2"
+coverage = "^7.4.3"
+
+[tool.poetry.group.github-actions]
+# only used in github actions
+optional = true
+[tool.poetry.group.github-actions.dependencies]
+pytest-github-actions-annotate-failures = "^0.1.7"
+
+[tool.coverage.run]
+relative_files = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
