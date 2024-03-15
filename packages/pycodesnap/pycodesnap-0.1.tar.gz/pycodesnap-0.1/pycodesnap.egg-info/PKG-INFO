@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pycodesnap
+Version: 0.1
+Summary: PyCodeSnap for format codes and code to image.
+Home-page: https://github.com/shayanheidari01/pycodesnap
+Author: Shayan Heidari
+Author-email: contact@shayanheidari.info
+Keywords: codesnap,code,image
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
+
+# PyCodeSnap - Image Formatter
+PyCodeSnap for format codes and code to image.
+
+```python
+from pycodesnap import CodeSnap
+
+snap = CodeSnap('python', 'print()')
+snap.create(font_size=24)
+snap.show()
+```
