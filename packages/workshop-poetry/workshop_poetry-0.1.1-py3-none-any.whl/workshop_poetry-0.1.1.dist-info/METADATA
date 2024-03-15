@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: workshop-poetry
+Version: 0.1.1
+Summary: 
+Author: SergioNascimento07
+Author-email: sergioricjr7@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Título
+## Exemplo 
+Este é um texto de exemplo para tentar subir no PyPI

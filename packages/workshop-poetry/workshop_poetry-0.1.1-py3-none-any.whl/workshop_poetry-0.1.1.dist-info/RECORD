@@ -1,0 +1,6 @@
+workshop_poetry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+workshop_poetry/main.py,sha256=tZJkKYO6BaTzhEELE5jhxTErK5YwjZMrexkd1mDn1GM,2139
+workshop_poetry-0.1.1.dist-info/entry_points.txt,sha256=C21rvTGUhTmMoj7yZMTB-0SwxcVyafG1Ik4yNt5PjMI,118
+workshop_poetry-0.1.1.dist-info/METADATA,sha256=MJD0W3zbl06pr-6y9dpxCCOZzH702WPJ-e5Hd6DPvNk,480
+workshop_poetry-0.1.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+workshop_poetry-0.1.1.dist-info/RECORD,,
