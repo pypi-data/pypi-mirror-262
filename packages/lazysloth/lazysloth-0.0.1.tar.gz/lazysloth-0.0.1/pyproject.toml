@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lazysloth"
+version = "0.0.1"
+description = "A Python library for lazy and immutable variables."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Omer Holzinger", email = "omer@omerholz.com" }]
+keywords = ["lazy", "immutable", "variables"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.10"  # Specifies that Python 3.10 or greater is required
+
+[project.urls]
+Homepage = "https://github.com/omerholz/lazysloth"
+Repository = "https://github.com/omerholz/lazysloth"
+

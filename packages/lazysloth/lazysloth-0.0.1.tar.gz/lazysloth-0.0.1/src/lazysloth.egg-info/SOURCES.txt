@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/lazysloth/__init__.py
+src/lazysloth/immutable_types.py
+src/lazysloth/lazy_types.py
+src/lazysloth.egg-info/PKG-INFO
+src/lazysloth.egg-info/SOURCES.txt
+src/lazysloth.egg-info/dependency_links.txt
+src/lazysloth.egg-info/top_level.txt
+tests/test_immutables.py
+tests/test_lazy.py
