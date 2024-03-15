@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: utboxgen-py
+Version: 0.1.0b1
+Summary: A Python library for generating Undertale-styled textbox images
+Author-email: A1Asriel <27139654+A1Asriel@users.noreply.github.com>
+Project-URL: Homepage, https://github.com/A1Asriel/utboxgen-py
+Project-URL: Issues, https://github.com/A1Asriel/utboxgen-py/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow <11.0.0,>=10.2.0
+
+# Undertale Textbox Generator library
+
+This is a package for creating textboxes, mainly in the style of the popular game Undertale, using the [Python](https://www.python.org/) language. Currently, this library is in **beta**.
+
+## Current features
+
+- Textbox images generation with one or multiple lines
+- Automatic text wrapping
+- Character sprites support
+- Combining multiple textboxes into a single image
+- Customizable textbox template
+
+## Planned features
+
+- Automatic textbox splitting
+- Advanced text wrapping (word breaks and more)
+- File export
+- Graphical user interface for standalone use
+
+## License and credits
+
+This project is available under the [MIT License](LICENSE). All assets are used in accordance with their respective licenses.
+
+The 'Determination Mono (RUS)' font is provided by 8-bit Operator, © 2009 - 2014 Grand Chaos Productions. The font is based on a spritesheet by Leafia_Barrett and was modified by theFIZZYnator for use in this project.
+
+'Undertale' is a trademark of Toby Fox. All rights related to Undertale remain the property of Toby Fox.
