@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+algo_fun/__init__.py
+algo_fun/is_anagram.py
+algo_fun_anagram.egg-info/PKG-INFO
+algo_fun_anagram.egg-info/SOURCES.txt
+algo_fun_anagram.egg-info/dependency_links.txt
+algo_fun_anagram.egg-info/top_level.txt
+tests/__init__.py
+tests/test_is_anagram.py
