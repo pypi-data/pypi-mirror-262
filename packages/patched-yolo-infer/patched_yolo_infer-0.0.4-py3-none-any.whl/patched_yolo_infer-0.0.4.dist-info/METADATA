@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: patched-yolo-infer
+Version: 0.0.4
+Summary: YOLO-Patch-Based-Detection
+Home-page: https://github.com/Koldim2001/YOLO-Patch-Based-Inference
+Author: Koldim2001
+Author-email: koldim2001@yandex.ru
+License: MIT
+Keywords: python,yolov8,yolov9,object detection,instance segmentation,patch-based inference,small object detection,yolov8-segimage patchingyolo visualization
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: matplotlib
+Requires-Dist: torch
+Requires-Dist: ultralytics
+
+
+# YOLO-Patch-Based-Detection
+
+
+
+
+
+This library facilitates various visualizations of inference results from YOLOv8 and YOLOv9 models, 
+
+    cropping with overlays, as well as a patch-based inference algorithm enabling detection of small objects in images. 
+
+    It works for both object detection and instance segmentation tasks using YOLO models.
+
+
+
+How to use:
+
+```
+
+import patched_yolo_infer
+
+```
+
+
+
+All examples in __example_crop_inference.ipynb__ and __example_extra_functions.ipynb__
+
