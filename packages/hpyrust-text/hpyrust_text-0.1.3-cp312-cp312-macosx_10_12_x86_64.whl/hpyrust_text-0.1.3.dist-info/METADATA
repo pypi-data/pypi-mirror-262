@@ -1,0 +1,7 @@
+Metadata-Version: 2.3
+Name: hpyrust_text
+Version: 0.1.3
+Summary: New text library/dependency built on rust, for hammadpy.
+Author: Hammad Saeed <hammad@supportvectors.com>
+Author-email: Hammad Saeed <hammad@supportvectors.com>
+License: MIT
