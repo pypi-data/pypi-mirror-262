@@ -1,0 +1,13 @@
+setup.cfg
+setup.py
+whispervideos/__init__.py
+whispervideos/docs_creation.py
+whispervideos/support_file.py
+whispervideos/transcribe_video.py
+whispervideos/video_proc.py
+whispervideos/whispervid.py
+whispervideos.egg-info/PKG-INFO
+whispervideos.egg-info/SOURCES.txt
+whispervideos.egg-info/dependency_links.txt
+whispervideos.egg-info/requires.txt
+whispervideos.egg-info/top_level.txt
