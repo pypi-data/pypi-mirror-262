@@ -1,0 +1,7 @@
+psycopg2
+smtplib
+datetime
+email
+typing
+email
+io
