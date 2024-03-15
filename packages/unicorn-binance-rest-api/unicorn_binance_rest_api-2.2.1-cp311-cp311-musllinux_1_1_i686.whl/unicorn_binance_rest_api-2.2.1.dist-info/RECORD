@@ -1,0 +1,10 @@
+unicorn_binance_rest_api/helpers.cpython-311-i386-linux-musl.so,sha256=fR_cFi-YjILkeo5hD1kHuU84pToIwu4vLKkBdgGnyYI,303004
+unicorn_binance_rest_api/manager.cpython-311-i386-linux-musl.so,sha256=IiDDJRA-n9gc-z0mV2PrY0LIPZBNrRyILRvIBrnMkx8,5663032
+unicorn_binance_rest_api/__init__.cpython-311-i386-linux-musl.so,sha256=ImRTISb-d9FXmscSiu3Mnjk2wiPFgt73dMM6m6O1fWM,92660
+unicorn_binance_rest_api/exceptions.cpython-311-i386-linux-musl.so,sha256=T1qff3acYIKgxlM1-qaAT779oljUORMJv1dBnFTIhDY,613112
+unicorn_binance_rest_api/enums.cpython-311-i386-linux-musl.so,sha256=sviWefsxG4GA89aPO6nrWjGXOhjczyv_9wJBC33S8Tg,96196
+unicorn_binance_rest_api-2.2.1.dist-info/RECORD,,
+unicorn_binance_rest_api-2.2.1.dist-info/WHEEL,sha256=96RtyvHDjZ_Pwdf-yba9grkbFedWeWnoj2z7uR7atnQ,111
+unicorn_binance_rest_api-2.2.1.dist-info/METADATA,sha256=rnzvierrmmYS2TD2d-zmmMepCRMTaEDrk2O0orN8Qh8,26923
+unicorn_binance_rest_api-2.2.1.dist-info/top_level.txt,sha256=_JsXtpPC96W8Mez6pBZXOO_oDJhXmptqFI71vD6d3Xg,25
+unicorn_binance_rest_api-2.2.1.dist-info/LICENSE,sha256=uz0A4rS_HuaQrWl8Ses1o-D9ilTipKvTP-z-pAiMqYk,5449
