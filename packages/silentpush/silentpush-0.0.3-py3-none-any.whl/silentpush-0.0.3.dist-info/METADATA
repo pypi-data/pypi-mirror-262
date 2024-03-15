@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: silentpush
+Version: 0.0.3
+Summary: Python Library to interact with SilentPush Explore API
+Project-URL: Homepage, https://github.com/gmarking/SilentPush-py
+Project-URL: Issues, https://github.com/gmarking/SilentPush-py/issues
+Author-email: Garrett Marking <markingcycles@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: ipaddress
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+# SilentPush Python Library
+
+## Installation
+
+The latest version of SilentPush-py can be installed via pip. 
+
+```bash
+pip install silentpush
+```
