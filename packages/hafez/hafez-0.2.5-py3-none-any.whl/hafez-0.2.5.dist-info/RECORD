@@ -1,0 +1,12 @@
+hafez/__init__.py,sha256=e6agkcalSQq5BQAqSxDOqOjEappydKY9T3N0LHLV9SU,257
+hafez/entry.py,sha256=aU6nOYKbZUFq5HeYrLEFrc7MEZuW_YqKxk9QBMI6Yzg,3687
+hafez/data/hafez.db,sha256=aCntb5yFQMaNnoIwehFTHKUE3s6FYtb3fauiH4l08xc,954368
+hafez/data/audio/do_not_delete_me.txt,sha256=Gh6YTvONnauMYf7pVXjjXiik5C_FSW-e9orhoxC3Nns,23
+hafez/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hafez/utils/db.py,sha256=e0LG7keJwT_uEMkV8mkdQ4cnbopAqhRS3y-VUHwFIyQ,1766
+hafez/utils/formating.py,sha256=-E7L-w-6xSDPSqK4ZLKMOAfVzRoGRjilLclOwJHphUg,1128
+hafez-0.2.5.dist-info/LICENSE,sha256=TSObqi3glpU9S9P6kSv8d488pt0Cc3xDgoUF6yHlx3g,1099
+hafez-0.2.5.dist-info/METADATA,sha256=n5uCS5jY0Tvntye-DPEUdLmGwwpETyKS8dKTZIA50pY,3989
+hafez-0.2.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hafez-0.2.5.dist-info/top_level.txt,sha256=zl_xBZxOuP1dJA41E3Cnxb-LZrnLFhpu7JCz3UW5uDs,6
+hafez-0.2.5.dist-info/RECORD,,
