@@ -1,0 +1,7 @@
+python_comrak-0.9.0.dist-info/METADATA,sha256=vBTdolPX7NaK6GikU0_10qMpdsWng7Vpptsxdt8nruI,2380
+python_comrak-0.9.0.dist-info/WHEEL,sha256=kAFdRPi0EyWt0dTH1ucaCqAbqAPJ_797yuBAMf2K__s,129
+python_comrak-0.9.0.dist-info/license_files/LICENSE.txt,sha256=uF3NPkU9BZglUsUrX8ngvdbSPG-OhEuYSoivMlcLDMA,1078
+python_comrak/__init__.py,sha256=3Xiqxyawp-ZrXOZguJ-ldC3jsshRN5_7xe3YXamGx8k,114
+python_comrak/_lowlevel.pyi,sha256=BZeAPgwoBEjScp9llavDMRurmQfLlY47LhUW2ec_0QE,94
+python_comrak/_lowlevel.cpython-311-x86_64-linux-gnu.so,sha256=rAtQtl5YD65riXOI_EpIPG2-kWXHSjrn5DC5sHcPnF4,44744216
+python_comrak-0.9.0.dist-info/RECORD,,
