@@ -1,0 +1,6 @@
+urllib3
+requests
+typer[all]
+tinydb
+twine
+jsonschema
