@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "latex_kelonmyosa"
+version = "0.1.0"
+description = "Simple latex tool (HW_2)"
+authors = ["KELONMYOSA"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
