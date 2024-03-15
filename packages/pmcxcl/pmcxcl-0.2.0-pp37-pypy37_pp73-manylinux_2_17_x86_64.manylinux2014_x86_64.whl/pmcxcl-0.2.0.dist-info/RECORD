@@ -1,0 +1,8 @@
+_pmcxcl.pypy37-pp73-x86_64-linux-gnu.so,sha256=IO9D69I8P0xMPENJtQSx6oLseZjnf7463TMgXC6NMlQ,2828849
+pmcxcl-0.2.0.dist-info/RECORD,,
+pmcxcl-0.2.0.dist-info/METADATA,sha256=atxvehnFml4A0BMWD-ZLJL-zF4WA1NjqeQ5Es9wpAZ4,8612
+pmcxcl-0.2.0.dist-info/WHEEL,sha256=q9dACjjc9G4BWGDyt1YJXSsK2l1cs4Mf5BbjFTFXjus,162
+pmcxcl-0.2.0.dist-info/top_level.txt,sha256=3-gVHSwlcrGhE7o2MkqTEMT52F8ryBxG6m9vPdb3Pu8,15
+pmcxcl.libs/libOpenCL-f806d0e1.so.1.0.0,sha256=8oAw-SbjjBUhOgUQ0R9xPFjBNwrm-7aAt-h9mdSSY0M,135601
+pmcxcl/__init__.py,sha256=4d0hKJIF0iL3t5s6XvDfzSkSGgrzxWlYMbILTZqmLbk,2083
+pmcxcl/bench.py,sha256=sFe2MprqqAx7HdUB_wgz8wMc6SsQcJrERrUe6fa5BdM,1691
