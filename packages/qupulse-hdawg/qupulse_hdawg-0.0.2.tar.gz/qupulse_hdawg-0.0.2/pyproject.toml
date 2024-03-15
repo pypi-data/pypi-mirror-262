@@ -1,0 +1,85 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qupulse-hdawg"
+dynamic = ["version"]
+description = 'Command table based HDAWG driver for qupulse'
+readme = "README.md"
+requires-python = ">=3.9"
+license = "GPL-3.0"
+keywords = []
+authors = [
+  { name = "Simon Humpohl", email = "simon.humpohl@rwth-aachen.de" },
+  { name = "Max Oberländer", email = "max.oberlaender@rwth-aachen.de" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "qupulse >= 0.9",
+  "numpy",
+  "zhinst >= 21.2.13366"
+]
+
+[project.urls]
+Documentation = "https://github.com/qutech/qupulse-hdawg#readme"
+Issues = "https://github.com/qutech/qupulse-hdawg/issues"
+Source = "https://github.com/qutech/qupulse-hdawg"
+
+[tool.hatch.version]
+path = "qupulse_hdawg/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:qupulse_hdawg tests}"
+
+[tool.coverage.run]
+source_pkgs = ["qupulse_hdawg", "tests"]
+branch = true
+parallel = true
+omit = [
+  "qupulse_hdawg/__about__.py",
+]
+
+[tool.coverage.paths]
+qupulse_hdawg = ["qupulse_hdawg", "*/qupulse-hdawg/qupulse_hdawg"]
+tests = ["tests", "*/qupulse-hdawg/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]

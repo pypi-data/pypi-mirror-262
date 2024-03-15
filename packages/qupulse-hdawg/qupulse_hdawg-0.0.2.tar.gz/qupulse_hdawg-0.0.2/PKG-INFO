@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: qupulse-hdawg
+Version: 0.0.2
+Summary: Command table based HDAWG driver for qupulse
+Project-URL: Documentation, https://github.com/qutech/qupulse-hdawg#readme
+Project-URL: Issues, https://github.com/qutech/qupulse-hdawg/issues
+Project-URL: Source, https://github.com/qutech/qupulse-hdawg
+Author-email: Simon Humpohl <simon.humpohl@rwth-aachen.de>, Max Oberländer <max.oberlaender@rwth-aachen.de>
+License-Expression: GPL-3.0
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: numpy
+Requires-Dist: qupulse>=0.9
+Requires-Dist: zhinst>=21.2.13366
+Description-Content-Type: text/markdown
+
+# qupulse-hdawg
+
+[![PyPI - Version](https://img.shields.io/pypi/v/qupulse-hdawg.svg)](https://pypi.org/project/qupulse-hdawg)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/qupulse-hdawg.svg)](https://pypi.org/project/qupulse-hdawg)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install qupulse-hdawg
+```
+
+## License
+
+`qupulse-hdawg` is distributed under the terms of the [GPLv3](https://spdx.org/licenses/GPL-3.0.html) license.
