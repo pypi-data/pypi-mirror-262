@@ -1,0 +1,8 @@
+README.md
+setup.py
+mylibisyourlib/__init__.py
+mylibisyourlib/module1.py
+mylibisyourlib.egg-info/PKG-INFO
+mylibisyourlib.egg-info/SOURCES.txt
+mylibisyourlib.egg-info/dependency_links.txt
+mylibisyourlib.egg-info/top_level.txt
