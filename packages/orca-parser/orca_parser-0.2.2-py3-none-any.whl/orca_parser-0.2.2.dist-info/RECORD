@@ -1,0 +1,11 @@
+orca_parser/HessianTools.py,sha256=CcIV7D9bp3UJgOwgyD5FiljNI_xUuF3vzTqAIDKIw3Q,3404
+orca_parser/ORCAParse.py,sha256=8Jt0yNTC1hE8Avq0o8e3PNviqidDSZet08218uO-wFQ,21052
+orca_parser/__init__.py,sha256=uMUpzbPxsK_LqWTzPE0YWw8-XBxbN1QA-8lzteL-VAA,2016
+orca_parser/ams_parse.py,sha256=Msfm7vTiiftgux7YunE9QA0gfZO_NVtZjN7ToaQNU8c,1696
+orca_parser/parse_engrad.py,sha256=-XkCudv1I1-lOZfpUQJawn84L_GxRR-IF6r1uXQLdKU,1553
+orca_parser/version.py,sha256=xEqtBrYpsJcJg2G1ebze2d1-Dy_eOtitTcNaka7jPxs,217
+orca_parser-0.2.2.dist-info/LICENSE,sha256=Q2ptU2E48gOsMzhYz_kqVovmJ5d1KzrblLyqD2_-fvY,1235
+orca_parser-0.2.2.dist-info/METADATA,sha256=MivjwyESwTQnVjlSe8AT8rkKZ1iSdfJIcWUsmFhKBRo,1999
+orca_parser-0.2.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+orca_parser-0.2.2.dist-info/top_level.txt,sha256=8n8h8nQznt6NRgMjI0VijQ6cY5Nu7A0UUuc1M-GHe40,12
+orca_parser-0.2.2.dist-info/RECORD,,
