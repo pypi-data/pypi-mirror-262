@@ -1,0 +1,2 @@
+[console_scripts]
+HessFit = HessFit.main:main

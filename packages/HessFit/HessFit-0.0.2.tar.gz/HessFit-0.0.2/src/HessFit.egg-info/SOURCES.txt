@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/HessFit.egg-info/PKG-INFO
+src/HessFit.egg-info/SOURCES.txt
+src/HessFit.egg-info/dependency_links.txt
+src/HessFit.egg-info/entry_points.txt
+src/HessFit.egg-info/requires.txt
+src/HessFit.egg-info/top_level.txt
