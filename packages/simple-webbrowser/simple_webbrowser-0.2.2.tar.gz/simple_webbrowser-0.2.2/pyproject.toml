@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling", "pytube", "colorama"]
+build-backend = "hatchling.build"
+
+[project]
+name = "simple_webbrowser"
+version = "0.2.2"
+authors = [
+  { name="MF366", email="real_mf366@yahoo.com" },
+]
+description = "Need something simple? Need a webbrowser? This is simple_webbrowser."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/MF366-Coding/simple_webbrowser"
+"Bug Tracker" = "https://github.com/MF366-Coding/simple_webbrowser/issues"
