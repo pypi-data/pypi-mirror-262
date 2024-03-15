@@ -1,0 +1,145 @@
+!pip install ultralytics
+
+
+from ultralytics import YOLO
+
+
+model = YOLO("yolov8m.pt")
+
+
+print("Model architecture: \n\n", model, "\n\n")
+print("type(model): \t", type(model), "\n")
+
+
+import numpy as np
+import cv2 
+import matplotlib.pyplot as plt
+import torch
+
+
+test_image_path = r"C:\Users\Shreya\Downloads\000000000192.jpg"
+test_image = cv2.imread(test_image_path)
+print("test_image.shape: \t", test_image.shape, "\n")
+print("Sample test image: \n")
+plt.imshow(test_image)
+
+
+results = model.predict(test_image)
+print("\ntype(results): \t", type(results), "\n\n")
+
+
+print("Object Detection Results: \n", results, "\n")
+print("len(results): \t", len(results), "\n")
+
+
+result = results[0]
+print("result: \n", result, "\n")
+
+
+class_names = result.names
+print("type(class_names): \t", type(class_names), "\n")
+print("The model can detect ", len(class_names), " different object categories \n")
+print("Class ID: \t Object Class Name \n")
+for key in class_names.keys():
+    print(key, "\t\t", class_names[key])
+
+
+original_test_image = result.orig_img
+print("original_test_image.shape: \t", original_test_image.shape, "\n")
+original_test_image_copy = original_test_image
+plt.imshow(original_test_image)
+
+
+computation_time = result.speed
+print("type(computation_time): \t", type(computation_time), "\n\n")
+print("Task \t\t Time Taken \n")
+for key in computation_time.keys():
+    print(key, "\t", computation_time[key])
+
+
+bounding_box_predictions = result.boxes
+print("type(bounding_box_predictions) \t", type(bounding_box_predictions), "\n\n")
+print("bounding_box_predictions: \n", bounding_box_predictions, "\n")
+
+
+
+classes_ids_detected = bounding_box_predictions.cls
+print("type(classes_ids_detected): \t", type(classes_ids_detected), "\n")
+classes_ids_detected_list = classes_ids_detected.tolist()
+print("Number of object categories detected: \t", len(classes_ids_detected_list), "\n")
+print("Class Ids detected: \n", classes_ids_detected_list, "\n")
+print("Class ID \t Object Category\n")
+for class_id in classes_ids_detected_list:
+    class_id = int(class_id)
+    print(class_id, "\t\t", class_names[class_id])
+
+
+confidence = bounding_box_predictions.conf
+print("type(confidence)", type(confidence), "\n")
+confidence_list = confidence.tolist()
+print("confidence_list: \t", confidence_list, "\n")
+print("Class ID \t Object Category \t Confidence \n")
+for index in range(len(classes_ids_detected_list)):
+        class_id = classes_ids_detected_list[index]
+        class_id = int(class_id)
+        print(class_id, "\t\t", class_names[class_id], "\t\t\t", confidence_list[index])
+
+
+torch.set_printoptions(precision=2, sci_mode=None)
+np.set_printoptions(precision=2, suppress=None)
+
+
+bounding_box_xyxy_coordinates = bounding_box_predictions.xyxy
+print("type(bounding_box_xyxy_coordinates): ", type(bounding_box_xyxy_coordinates),"\n")
+bounding_box_xyxy_coordinates_list = bounding_box_xyxy_coordinates.tolist()
+print("Number of bounding boxes detected: \t", len(bounding_box_xyxy_coordinates_list), "\n")
+print("Class ID \t Object Category \t Confidence \t\t\t Bounding Box Coordinates(XYXY) \n")
+for index in range(len(classes_ids_detected_list)):
+        class_id = classes_ids_detected_list[index]
+        class_id = int(class_id)
+        print(class_id, "\t\t", class_names[class_id], "\t\t\t", confidence_list[index], "\t\t", bounding_box_xyxy_coordinates_list[index])
+
+
+import matplotlib.pyplot as plt
+for box_index in range(len(bounding_box_xyxy_coordinates_list)):
+    print("Showing box: ", box_index+1, "\n")
+    x1, y1, x2, y2 = bounding_box_xyxy_coordinates_list[box_index]
+    x1 = int(x1)
+    x2 = int(x2)
+    y1 = int(y1)
+    y2 = int(y2)
+    cv2.rectangle(original_test_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
+    plt.imshow(cv2.cvtColor(original_test_image, cv2.COLOR_BGR2RGB))
+    plt.show()
+    print("\n\n")
+
+
+bounding_box_xywh_coordinates = bounding_box_predictions.xywh
+print("type(bounding_box_xywh_coordinates): ", type(bounding_box_xywh_coordinates),"\n")
+bounding_box_xywh_coordinates_list = bounding_box_xywh_coordinates.tolist()
+print("Number of bounding boxes detected: \t", len(bounding_box_xywh_coordinates_list), "\n")
+print("Class ID \t Object Category \t Confidence \t\t\t Bounding Box Coordinates(XYWH) \n")
+for index in range(len(classes_ids_detected_list)):
+        class_id = classes_ids_detected_list[index]
+        class_id = int(class_id)
+        print(class_id, "\t\t", class_names[class_id], "\t\t\t", confidence_list[index], "\t\t", bounding_box_xywh_coordinates_list[index])
+
+
+import cv2
+font = cv2.FONT_HERSHEY_SIMPLEX
+font_scale = 0.5
+font_color = (0, 0, 255)  
+font_thickness = 1
+for box_index in range(len(bounding_box_xywh_coordinates_list)):
+    print("Showing box: ", box_index+1, "\n")
+    x1, y1, x2, y2 = bounding_box_xyxy_coordinates_list[box_index]
+    x1 = int(x1)
+    x2 = int(x2)
+    y1 = int(y1)
+    y2 = int(y2)
+    cv2.rectangle(original_test_image_copy, (x1, y1), (x2, y2), (0, 255, 0), 2)
+    cv2.putText(original_test_image_copy, str(class_names[int(classes_ids_detected_list[box_index])]), (x1, y1), font, font_scale, font_color, font_thickness)
+    cv2.imshow("Image", original_test_image_copy)
+    cv2.waitKey(0)  
+    cv2.destroyAllWindows()  
+    print("\n\n")

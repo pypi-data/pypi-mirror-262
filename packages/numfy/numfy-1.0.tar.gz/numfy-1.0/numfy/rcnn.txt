@@ -1,0 +1,139 @@
+from PIL import Image
+import cv2
+import matplotlib.pyplot as plt
+
+
+import numpy as np
+import torch
+import torchvision.transforms as T
+import torchvision
+torch.set_printoptions(precision=2, sci_mode=None)
+np.set_printoptions(precision=2, suppress=True)
+
+
+model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
+print("type(model): \t", type(model), "\n")
+print("model: \n", model, "\n")
+
+
+model.eval()
+
+
+COCO_INSTANCE_CATEGORY_NAMES = [
+    '__background__', 'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',
+    'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'N/A', 'stop sign',
+    'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow',
+    'elephant', 'bear', 'zebra', 'giraffe', 'N/A', 'backpack', 'umbrella', 'N/A', 'N/A',
+    'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball',
+    'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket',
+    'bottle', 'N/A', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl',
+    'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza',
+    'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'N/A', 'dining table',
+    'N/A', 'N/A', 'toilet', 'N/A', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone',
+    'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'N/A', 'book',
+    'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'
+]
+
+print("Faster R-CNN network train on ", len(COCO_INSTANCE_CATEGORY_NAMES), " object categories")
+
+
+THRESHOLD = 0.8
+
+
+test_image_path = r"C:\Users\Shreya\Downloads\000000000192.jpg"
+test_image = Image.open(test_image_path)
+print("type(test_image): \t", test_image, "\n")
+
+
+transform = T.Compose([T.ToTensor()])
+test_image_tensor = transform(test_image)
+print("type(test_image_tensor): \t", type(test_image_tensor), "\n")
+print("test_image_tensor.size(): \t", test_image_tensor.size(), "\n")
+print("test_image_tensor: \n", test_image_tensor, "\n")
+
+
+predictions = model([test_image_tensor])
+print("type(predictions): \t", type(predictions), "\n")
+print("len(predictions): \t", len(predictions), "\n")
+print("predictions: \n", predictions, "\n")
+
+
+prediction = predictions[0]
+print("type(prediction): \t", type(prediction), "\n")
+for key in prediction.keys():
+    print(key, "\t", prediction[key])
+
+
+bounding_boxes = prediction['boxes']
+print("bounding_boxes: \n", bounding_boxes, "\n")
+bounding_boxes = bounding_boxes.detach()
+print("bounding_boxes: \n", bounding_boxes, "\n")
+print("Number of bounding boxes (objects) detected: \t", bounding_boxes.size()[0], "\n")
+
+
+class_labels = prediction['labels']
+print("class_labels: \t\t\t\t\t", class_labels, "\n")
+print("Number of bounding boxes (objects) detected: \t", class_labels.size()[0], "\n")
+
+
+prediction_probabilities = prediction['scores']
+print("prediction_probabilities: \t", prediction_probabilities, "\n")
+prediction_probabilities = prediction_probabilities.detach()
+print("prediction_probabilities: \t", prediction_probabilities, "\n")
+print("Class ID \t\t Object Category \t\t Prediction Probability \t\t Bounding Box \n")
+for i in range(class_labels.size()[0]):
+    id = class_labels[i]
+    category = COCO_INSTANCE_CATEGORY_NAMES[id]
+    score = prediction_probabilities[i]
+    b = bounding_boxes[i]
+    print(id.item(), "\t\t", category, "\t\t", score.item(), "\t\t", b)
+
+
+import cv2
+import matplotlib.pyplot as plt
+test_image = cv2.imread(test_image_path)
+test_image = cv2.cvtColor(test_image, cv2.COLOR_BGR2RGB)
+print("Unannotated test image")
+plt.imshow(test_image)
+plt.show()
+font = cv2.FONT_HERSHEY_SIMPLEX
+font_scale = 0.5
+font_color = (0, 0, 255)  
+font_thickness = 1
+for box_index in range(bounding_boxes.size()[0]):
+    print("Showing box: ", box_index+1, "\n")
+    x1, y1, x2, y2 = bounding_boxes[box_index]
+    random_color = list(np.random.choice(range(256), size=3))
+    x1 = int(x1)
+    x2 = int(x2)
+    y1 = int(y1)
+    y2 = int(y2)
+    cv2.rectangle(test_image, (x1, y1), (x2, y2), (int(random_color[0]), int(random_color[1]), int(random_color[2])), 2)
+    cv2.putText(test_image, str(COCO_INSTANCE_CATEGORY_NAMES[int(class_labels[box_index])]), (x1, y1), font, font_scale, font_color, font_thickness)
+    plt.imshow(test_image)
+    plt.show()
+    print("\n\n")
+
+
+import numpy as np
+nms_thresholds = np.linspace(0,1,20)
+nms_thresholds=np.round(nms_thresholds,2)
+nms_thresholds = nms_thresholds.tolist()
+print("nms_threshols: \n", nms_thresholds, "\n")
+
+
+from torchvision.ops import nms
+import matplotlib.patches as patches
+for threshold in nms_thresholds:
+    keep_indices = nms(bounding_boxes, prediction_probabilities, threshold)
+    filtered_boxes = bounding_boxes[keep_indices]
+    image_np = test_image_tensor.squeeze(0).permute(1, 2, 0).numpy()
+    fig, ax = plt.subplots(1)
+    ax.imshow(image_np)
+    for box in filtered_boxes:
+        x, y, w, h = box
+        rect = patches.Rectangle(
+            (x, y), w - x, h - y, linewidth=1, edgecolor='r', facecolor='none')
+        ax.add_patch(rect)
+    plt.title(f"NMS Threshold: {threshold}")
+    plt.show()
