@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+src/Auto_Mouse_Mover.egg-info/PKG-INFO
+src/Auto_Mouse_Mover.egg-info/SOURCES.txt
+src/Auto_Mouse_Mover.egg-info/dependency_links.txt
+src/Auto_Mouse_Mover.egg-info/entry_points.txt
+src/Auto_Mouse_Mover.egg-info/requires.txt
+src/Auto_Mouse_Mover.egg-info/top_level.txt
+src/mousemover/__init__.py
+src/mousemover/__main__.py
+src/mousemover/constants.py
+src/mousemover/main.py
+src/mousemover/routines.py

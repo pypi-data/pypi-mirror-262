@@ -1,0 +1,2 @@
+[console_scripts]
+mousemover = mousemover.main:run
