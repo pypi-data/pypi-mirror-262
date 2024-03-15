@@ -1,0 +1,10 @@
+openxps/__init__.py,sha256=iLLNb7OXYooPVjdanvRXgNq_3FtKpLdw-7TWrLHxa0U,97
+openxps/_version.py,sha256=ShXQBVjyiSOHxoQJS2BvNG395W4KZfqMxZWBAR0MZrE,22
+openxps/openxps.py,sha256=y7BotFFlhhAF7FbN0JUj2-USz4t95e5FuYSW7KwksMk,179
+openxps/tests/__init__.py,sha256=LVVH6YwmDaa2eEmc-HcFz4MTfcPZy7H-A3ZDHxfglDU,112
+openxps/tests/test_openxps.py,sha256=p5DmHckar0HidOZdt7gjAIDmYjppzsJnQT-FFMsU9-Y,272
+openxps-0.0.0.dist-info/LICENSE.md,sha256=dKk3gT_csf7u95wCpTg3pNVJG2qS-MmCGjVFvgsvU0M,1084
+openxps-0.0.0.dist-info/METADATA,sha256=JAKfzbeStEMXehrkqdWS5XfI9SrcMmwNGWr8i8UdVqs,2760
+openxps-0.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+openxps-0.0.0.dist-info/top_level.txt,sha256=zlg3cJEm2Cx-q9G61-rf5GHPUU02V7soAdLQOF6-WUU,8
+openxps-0.0.0.dist-info/RECORD,,
