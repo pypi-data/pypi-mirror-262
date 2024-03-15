@@ -1,0 +1,2 @@
+[console_scripts]
+lapwing = lapwing.cmd:run

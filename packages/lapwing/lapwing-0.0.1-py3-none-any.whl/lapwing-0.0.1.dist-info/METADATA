@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: lapwing
+Version: 0.0.1
+Summary: An opinionated start script and project template for Wagtail projects.
+Project-URL: Documentation, https://github.com/stephenlutes/lapwing#readme
+Project-URL: Issues, https://github.com/stephenlutes/lapwing/issues
+Project-URL: Source, https://github.com/stephenlutes/lapwing
+Author: Stephen Lutes
+License-Expression: BSD-3-Clause
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: dj-database-url
+Requires-Dist: python-decouple
+Requires-Dist: wagtail
+Description-Content-Type: text/x-rst
+
+=======
+Lapwing
+=======
+
+Lapwing is an opinionated setup script and project template for creating Wagtail projects.
+
+Installing
+----------
+
+Lapwing has the following dependencies:
+
+* dj-database-url
+* python-decouple
+* wagtail
+
+Usage
+-----
+
+Lapwing provides an entry script ``lapwing``. Running the script will ask for the values
+for the following information and settings
+
+* Project directory (The directory the project will be created in)
+* Project name (The name of the project)
+* Log file path
+* Database url
+* Static root base
+* Media root base
+
+In addition, when createing the settings.ini file, it will automatically populate the 
+following settings:
+
+* SECRET_KEY
+* ALLOWED_HOSTS
+* DEBUG
