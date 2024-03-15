@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: cppython-git
+Version: 0.1.1.dev3
+Summary: Git Plugin
+Home-page: https://github.com/Synodic-Software/CPPython-Git
+Author-Email: Synodic Software <contact@synodic.software>
+License: MIT
+Project-URL: Homepage, https://github.com/Synodic-Software/CPPython-Git
+Project-URL: Repository, https://github.com/Synodic-Software/CPPython-Git
+Requires-Python: >=3.12
+Requires-Dist: cppython-core>=0.4.1.dev19
+Requires-Dist: pydantic>=2.6.3
+Requires-Dist: dulwich>=0.21.7
+Description-Content-Type: text/markdown
+
+# CPPython-Git
