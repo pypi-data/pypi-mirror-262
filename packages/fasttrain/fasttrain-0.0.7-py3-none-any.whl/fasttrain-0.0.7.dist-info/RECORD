@@ -1,0 +1,17 @@
+fasttrain/__init__.py,sha256=Jxx_TTbwNHfqMI6EQn5vNgoIQjhBvzIm2sBjxKvGOns,439
+fasttrain/metrics.py,sha256=8v92aTHFC214mEffc4K1mzZXgVjVRi5C6CywOzhZ3Js,6655
+fasttrain/reproduce.py,sha256=ElYT-JKHRmvXpC6N1OGrMrnRaekvfk2qWyRkQXRpgA0,616
+fasttrain/callbacks/__init__.py,sha256=lNl0QxYcjWmJNVfIF_mgGPvfpX5Zo3FBj69JdqvRxEU,141
+fasttrain/callbacks/callback.py,sha256=TWQ9MZK_GkdfF5XJ95Qzfoz4jWmafBW8zd4X45BWJ8o,5382
+fasttrain/callbacks/checkpoint.py,sha256=5SHtKVSPzCsOcrF6s5E4cDM047_IJ-D_7ei63_I7mR0,4329
+fasttrain/callbacks/early_stopping.py,sha256=VFfvrKJqkn3zqrYSHJuAlMobkFme6RzRxc0LIHPXBNU,3478
+fasttrain/callbacks/progress_bar.py,sha256=SMfZf2Tih__e38jgcqeIWZyhYv1CrRvjiGuAi7ue2a8,6166
+fasttrain/train/__init__.py,sha256=JMC1HxIW0_ZNKUoeZeS47vIVvDVx_-9iXe_w8Clbl0I,58
+fasttrain/train/device.py,sha256=pJ9Re-_eJeir5wbfSxUQk3TMhaFuXKRs6TLCQp371D4,1231
+fasttrain/train/history.py,sha256=7tIodIuyRBr7Gtvq5ogCrSTgg82_S41McrbpzB95Wew,4640
+fasttrain/train/trainer.py,sha256=qqvaHWcctqUz-rfJGxLZE2asAuaFlKTlXIJStV49fvM,14098
+fasttrain-0.0.7.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+fasttrain-0.0.7.dist-info/METADATA,sha256=TMj_ZF4KbJdO3lA-o0IuHhRjGK5QNYj94vUlgFVR98U,3654
+fasttrain-0.0.7.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+fasttrain-0.0.7.dist-info/top_level.txt,sha256=T7y_SFvHKa_i6QasYePCfpfeuRfWemNxq1TkLtigCiQ,10
+fasttrain-0.0.7.dist-info/RECORD,,
