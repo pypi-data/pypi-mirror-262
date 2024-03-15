@@ -1,0 +1,3 @@
+[console_scripts]
+loutrinette=loutrinette.cli:init
+
