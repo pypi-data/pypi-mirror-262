@@ -1,0 +1,3 @@
+[console_scripts]
+dabox-preflight = dabox.scripts.preflight:run_preflight
+dabox-up = dabox.scripts.up:main
