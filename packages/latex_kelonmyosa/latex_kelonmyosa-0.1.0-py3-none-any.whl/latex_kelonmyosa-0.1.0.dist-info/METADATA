@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: latex_kelonmyosa
+Version: 0.1.0
+Summary: Simple latex tool (HW_2)
+Author: KELONMYOSA
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Simple LaTex Example
