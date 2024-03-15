@@ -1,0 +1,9 @@
+cir_duplicate_detector/__init__.py,sha256=BSX3h5S6pX7rwaBesttXtBWa1i8cKLklXK3TRpoYY-4,4343
+cir_duplicate_detector/pdq_hash.py,sha256=fVos-0n734DGZ5R0nqzLFWgS4DJGJDA8NuFpZXS4T4M,19393
+cir_duplicate_detector/pdq_hash_bk_tree.py,sha256=u-sIU3RL4CnfK46Bm3RXL98NjWs8K6G73O4i0SpX5dM,8421
+cir_duplicate_detector/url.py,sha256=EUQFdnEXsR3IRorzUktI2EoMdKxXIpDjWVwIR9cKXvM,4771
+cir_duplicate_detector/utils.py,sha256=W4k8NSpO3IqzLAMLQvrrFhF17RATO41SgxB5tD3N4-g,4216
+cir_duplicate_detector-0.1.4.dist-info/LICENSE,sha256=QSRm_OLUudySjVmx8NGIuoDe_8Jz5shcAUN_Jbo3seg,1532
+cir_duplicate_detector-0.1.4.dist-info/METADATA,sha256=KjMD-i4T674tAeFxXcAr7d_pxYYruvEDMfjtA871zYM,9110
+cir_duplicate_detector-0.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cir_duplicate_detector-0.1.4.dist-info/RECORD,,
