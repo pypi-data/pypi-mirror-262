@@ -1,0 +1,8 @@
+streamlit_admin/__init__.py,sha256=rALKIGzSJ15vd2kvabmwemMpHJUSFPOxd7MDxpObOj8,43
+streamlit_admin/admin.py,sha256=zae9w39GlMO96zebahJjbNOutMO7VbOOntjj7L1RRqo,11369
+streamlit_admin/model.py,sha256=LMF0l7cGUL9vzbzmZqOeB0ntSxz3mx_M_2DWcWcixFY,913
+streamlit_admin/stauth.py,sha256=dBNwc4ZS3JiYtRi3pcbwXEdyd404k5Fhk8ql1TtWPBg,7380
+streamlit_admin-0.1.0.dist-info/METADATA,sha256=AcskxPgaDlmd2nQxtU-Dwo50rq8oNKKGNVHwXZX8dWU,2604
+streamlit_admin-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+streamlit_admin-0.1.0.dist-info/top_level.txt,sha256=1Zh3dWj70IzCVoYb6L3QjxwJrG42alDO55lXLlPczWw,16
+streamlit_admin-0.1.0.dist-info/RECORD,,
