@@ -1,0 +1,6 @@
+appdirs
+pandas
+PyYAML
+requests
+setuptools
+pre-commit
