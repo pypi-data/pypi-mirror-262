@@ -1,0 +1,13 @@
+cook/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cook/cli.py,sha256=9oAWcecyuT9FSI31rsps0zMSXC_ymt3byppEVDfu6bc,672
+cook/configuration.py,sha256=z-oBlhWudH6RLb8sCenhu8Ux8syb4T1VHHWhg0GGxk0,5574
+cook/cook.py,sha256=YnZbQxRhbo6gzK_rmugiQz3SAGCnjsbVkXMfdTpwrjc,3498
+cook/logger.py,sha256=qiFM1aw3-u_9Wfuq45nyUyeJ_G60N7Xa6J1bON1lue8,369
+cook/receipe.py,sha256=axEmpbA1xd0tS14-XLFhnuQbIyH55rj_LDjXDP6OQTw,1205
+cook/rsync.py,sha256=4JShzmrszpYLHR6OxhQbsFRlAKhsCFnIT4qehmupA-A,936
+cook_builder-0.0.7.dist-info/LICENSE,sha256=0UUuDFQWmwQWxyFKAOOpIJY0PYdk6_CsTLPvUl-wZUU,1072
+cook_builder-0.0.7.dist-info/METADATA,sha256=BcLKrR2EiqmmFuRjXcX8ZOUIupKtRjDutGTwOvzq8Ws,2666
+cook_builder-0.0.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cook_builder-0.0.7.dist-info/entry_points.txt,sha256=fhpuEi5Cdd9RpYJYwE0L43tEEkJCuogl9gSsgi5Tqt8,39
+cook_builder-0.0.7.dist-info/top_level.txt,sha256=ewNQIn2oRSYV98vAsUnw88u2Q8XHKhAz70ed2PEdR2c,5
+cook_builder-0.0.7.dist-info/RECORD,,
