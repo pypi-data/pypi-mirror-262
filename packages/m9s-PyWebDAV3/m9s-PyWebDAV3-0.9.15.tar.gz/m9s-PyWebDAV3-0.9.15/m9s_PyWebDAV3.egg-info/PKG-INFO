@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: m9s-PyWebDAV3
+Version: 0.9.15
+Summary: WebDAV library for Python3
+Author: Andrew Leech, Simon Pamies, Christian Scholz, Vince Spicer,    jasonlarose, Mathias Behrle
+Author-email: info@m9s.biz, andrew@alelec.net
+Maintainer: MBSolutions
+Maintainer-email: info@m9s.biz
+License: LGPL v2
+Project-URL: Bug Tracker, https://support.m9s.biz/
+Project-URL: Source Code, https://gitlab.com/m9s/webdav.git
+Keywords: webdav,Tryton,GNUHealth,server,dav,standalone,library,gpl,http,rfc2518,rfc 2518
+Platform: Unix
+Platform: Windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
+
+PyWebDAV3 - GNU Health
+======================
+
+PyWebDAV is a standards compliant WebDAV server and library written in Python
+This package is a port from Andrew Leech's PyWebDAV3.
+
+It has been ported to support Tryton and uses Python3 only.
+
+Some of the clients known to work:
+
+- Mozilla Thunderbird (Lightning)
+- Cadaver
+- Konqueror
+- Evolution
+
