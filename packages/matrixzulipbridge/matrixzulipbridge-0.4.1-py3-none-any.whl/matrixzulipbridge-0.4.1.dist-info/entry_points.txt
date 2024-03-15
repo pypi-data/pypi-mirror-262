@@ -1,0 +1,3 @@
+[console_scripts]
+matrix-zulip-bridge=matrixzulipbridge.__main__:main
+
