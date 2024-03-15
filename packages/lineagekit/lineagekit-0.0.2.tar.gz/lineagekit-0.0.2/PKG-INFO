@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: lineagekit
+Version: 0.0.2
+Summary: A python library with genealogy methods
+Author: Simon Gravel, Andrii Serdiuk, César Miguel Valdez Córdova
+Author-email: simon.gravel@mcgill.ca
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: tskit>=0.5.6
+Requires-Dist: networkx>=3.2.1
+Requires-Dist: matplotlib>=3.8.3
+Requires-Dist: pytest>=8.0.2
