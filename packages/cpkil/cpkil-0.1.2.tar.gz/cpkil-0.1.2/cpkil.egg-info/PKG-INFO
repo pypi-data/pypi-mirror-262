@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: cpkil
+Version: 0.1.2
+Summary: CPR Package for PKiL
+Author: Jinendra Malekar
+Author-email: <jmalekar@email.sc.edu>
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certifi
+Requires-Dist: charset-normalizer
+Requires-Dist: click
+Requires-Dist: filelock
+Requires-Dist: Flask
+Requires-Dist: Flask-Cors
+Requires-Dist: gensim
+Requires-Dist: huggingface-hub
+Requires-Dist: idna
+Requires-Dist: itsdangerous
+Requires-Dist: Jinja2
+Requires-Dist: joblib
+Requires-Dist: MarkupSafe
+Requires-Dist: nltk
+Requires-Dist: numpy
+Requires-Dist: packaging
+Requires-Dist: Pillow
+Requires-Dist: pyparsing
+Requires-Dist: PyYAML
+Requires-Dist: regex
+Requires-Dist: requests
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: sentence-transformers
+Requires-Dist: sentencepiece
+Requires-Dist: six
+Requires-Dist: smart-open
+Requires-Dist: threadpoolctl
+Requires-Dist: tokenizers
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: tqdm
+Requires-Dist: transformers
+Requires-Dist: typing_extensions
+Requires-Dist: urllib3
+Requires-Dist: Werkzeug
+
+A package that allows for the use of PKiL in CPR
