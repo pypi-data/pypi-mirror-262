@@ -1,0 +1,11 @@
+multiurl/MANIFEST.in,sha256=M0cvnDe40wE8toY_tn-hVeRm1nQ1sVE0zuWurxvt8Aw,28
+multiurl/README.md,sha256=6O4e_ixTeMJGJD1E3vCIgP2YGZNDJBkry34v3pDD1Cc,80
+multiurl/__init__.py,sha256=7dv1Pz-pgfHGiP_HQRe1GmMtRdX1qTr06rLELWKTi60,52
+multiurl/apps.py,sha256=TiCNwkeJ-V8BBtJR_4t0JDG6LEsJKCF6gxkAHqPOFTI,121
+multiurl/multiurl.py,sha256=yc3LttAB78v36qbmifINApCfSAe6BySuZbd_-3l0eP0,3057
+multiurl/setup.py,sha256=_L1w_RnLtZAeYzs-yCqTuIMeZubOMGvW6Hi8FPy9ELY,1102
+multiurl/tests.py,sha256=Xs7-neZ_mONN7YucplsI2cVNuQ_W3ZlqjC92iaWn-kk,4587
+django_multiurl_for_garpix_page-1.6.0.dist-info/METADATA,sha256=hgD-6JpsuSnERBHvLHn2QKwGE5rzmrA3i_eaXFnpgjY,699
+django_multiurl_for_garpix_page-1.6.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+django_multiurl_for_garpix_page-1.6.0.dist-info/top_level.txt,sha256=ugqhd1flA9sh9CyF9tPfsN1ozbODi5k6il8TMpyd-_E,9
+django_multiurl_for_garpix_page-1.6.0.dist-info/RECORD,,
