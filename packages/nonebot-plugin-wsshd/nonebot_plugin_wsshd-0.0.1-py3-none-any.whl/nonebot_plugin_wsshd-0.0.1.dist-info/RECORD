@@ -1,0 +1,9 @@
+nonebot_plugin_wsshd/__init__.py,sha256=-Z1HoUmGXAYeqCZznwEnLqz1-iSe2bb5gU7ebsy1n8I,347
+nonebot_plugin_wsshd/config.py,sha256=2ZlhTynTuux3hFIiB9gvRQ4uywRCmla_aybwLLpyick,428
+nonebot_plugin_wsshd/server/__init__.py,sha256=l-1y1kfKXli-juo9zBcbwHl2--fJEEi0c_JOGVWDP1w,1071
+nonebot_plugin_wsshd/server/client.py,sha256=CgJX6kfeXPtSpi7wF25Dupa7HX0bimgNJeGca-f5w8w,1531
+nonebot_plugin_wsshd/server/shared.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nonebot_plugin_wsshd/server/ws.py,sha256=3vegs4JsAvYwDie6aS7WcPu-tQTkgdhkHZTeA_4Ibv8,654
+nonebot_plugin_wsshd-0.0.1.dist-info/METADATA,sha256=-wWx6MfWESYEucakuAQKxcsiB_M5KnNPbwCHOcXdMYI,788
+nonebot_plugin_wsshd-0.0.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+nonebot_plugin_wsshd-0.0.1.dist-info/RECORD,,
