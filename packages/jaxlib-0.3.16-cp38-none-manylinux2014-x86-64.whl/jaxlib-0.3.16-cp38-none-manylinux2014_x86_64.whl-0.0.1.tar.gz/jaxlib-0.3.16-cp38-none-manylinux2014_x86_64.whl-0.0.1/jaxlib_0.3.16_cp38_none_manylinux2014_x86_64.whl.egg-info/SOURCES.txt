@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/data_file
+jaxlib_0.3.16_cp38_none_manylinux2014_x86_64.whl.egg-info/PKG-INFO
+jaxlib_0.3.16_cp38_none_manylinux2014_x86_64.whl.egg-info/SOURCES.txt
+jaxlib_0.3.16_cp38_none_manylinux2014_x86_64.whl.egg-info/dependency_links.txt
+jaxlib_0.3.16_cp38_none_manylinux2014_x86_64.whl.egg-info/requires.txt
+jaxlib_0.3.16_cp38_none_manylinux2014_x86_64.whl.egg-info/top_level.txt
+tests/__init__.py
+tests/test_simple.py
