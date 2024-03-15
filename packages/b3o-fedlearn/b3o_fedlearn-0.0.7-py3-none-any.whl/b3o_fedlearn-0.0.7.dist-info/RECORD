@@ -1,0 +1,9 @@
+b3o_fedlearn/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+b3o_fedlearn/client_fedlearn.py,sha256=4W7LIJKm4QJptJmVRmHwkQWIEMAWxeGYUIRFpJ7n24M,15351
+b3o_fedlearn/data_processing.py,sha256=Cu10ZiJCmFuWh2IAg3nnmQje62GJQalrGjL2mVqmomY,445
+b3o_fedlearn/fedlearner.py,sha256=A3LL9nB7K2wLKnW2NQB5WnoXQ-b98cC58Xp51J4PZEA,7718
+b3o_fedlearn-0.0.7.dist-info/LICENSE,sha256=oxA41OmPPETgoMOitLhpWyZ4rh4K_xcx4kM78GfHU5A,1056
+b3o_fedlearn-0.0.7.dist-info/METADATA,sha256=JBezF0-BRQd0E-PLDxS4zgHeykpNQIv_mXadDXTO1Tw,1286
+b3o_fedlearn-0.0.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+b3o_fedlearn-0.0.7.dist-info/top_level.txt,sha256=HXr17SBCzK8CDJrLR8BirRJSXEQ97pa42KhgyvdwW5o,13
+b3o_fedlearn-0.0.7.dist-info/RECORD,,
