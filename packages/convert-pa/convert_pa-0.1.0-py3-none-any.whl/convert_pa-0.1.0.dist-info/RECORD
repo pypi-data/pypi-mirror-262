@@ -1,0 +1,6 @@
+convert_pa/__init__.py,sha256=wGwJiNLeJiGkzWd9g54np5wFLH5IDssk6D9cF5jKGJk,302
+convert_pa/convert_nofabet.py,sha256=7AANey0jgQLdQNG0p3gfyi0WdgFasqhKoC-aIm7e1Hg,9732
+convert_pa/convert_sampa.py,sha256=RLIivQ6u3gWqun7uwSYbcBjo7lT2R_4dHxK17KwYTYg,3463
+convert_pa-0.1.0.dist-info/METADATA,sha256=L7JD1qOIvAIGu27zgvaX-848LbaqIMOuOX9qdS7-B20,1348
+convert_pa-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+convert_pa-0.1.0.dist-info/RECORD,,
