@@ -1,0 +1,18 @@
+repos:
+  - repo: https://github.com/hakancelikdev/unimport
+    rev: stable
+    hooks:
+      - id: unimport
+        args:
+          - --include-star-import
+          - --ignore-init
+          - --gitignore
+  - repo: https://github.com/myint/autoflake
+    rev: v1.4
+    hooks:
+      - id: autoflake
+        args:
+          - --in-place
+          - --remove-all-unused-imports
+          - --remove-unused-variable
+          - --ignore-init-module-imports
