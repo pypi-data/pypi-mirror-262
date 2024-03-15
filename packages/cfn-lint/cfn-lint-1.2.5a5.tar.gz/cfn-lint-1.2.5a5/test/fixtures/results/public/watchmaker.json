@@ -1,0 +1,1142 @@
+[
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 43,
+                "LineNumber": 648
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "cw-agent-install",
+                "commands",
+                "01-get-cloudwatch-agent",
+                "command",
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 41,
+                "LineNumber": 648
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 43,
+                "LineNumber": 663
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "cw-agent-install",
+                "commands",
+                "02-extract-cloudwatch-agent",
+                "command",
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 41,
+                "LineNumber": 663
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 43,
+                "LineNumber": 674
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "cw-agent-install",
+                "commands",
+                "10-install-cloudwatch-agent",
+                "command",
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 41,
+                "LineNumber": 674
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 817
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "finalize",
+                "commands",
+                "10-signal-success",
+                "command",
+                "Fn::Join",
+                1,
+                4,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 817
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 834
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "finalize",
+                "commands",
+                "10-signal-success",
+                "command",
+                "Fn::Join",
+                1,
+                5,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 834
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 43,
+                "LineNumber": 870
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "make-app",
+                "commands",
+                "05-get-appscript",
+                "command",
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 41,
+                "LineNumber": 870
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 43,
+                "LineNumber": 888
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "make-app",
+                "commands",
+                "10-make-app",
+                "command",
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 41,
+                "LineNumber": 888
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 933
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "setup",
+                "files",
+                "/etc/cfn/cfn-hup.conf",
+                "content",
+                "Fn::Join",
+                1,
+                7,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 933
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 951
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "setup",
+                "files",
+                "/etc/cfn/cfn-hup.conf",
+                "content",
+                "Fn::Join",
+                1,
+                8,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 951
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 994
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "setup",
+                "files",
+                "/etc/cfn/hooks.d/cfn-auto-reloader.conf",
+                "content",
+                "Fn::Join",
+                1,
+                7,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 994
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1011
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "setup",
+                "files",
+                "/etc/cfn/hooks.d/cfn-auto-reloader.conf",
+                "content",
+                "Fn::Join",
+                1,
+                8,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1011
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 43,
+                "LineNumber": 1039
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "setup",
+                "files",
+                "/etc/cfn/scripts/watchmaker-install.sh",
+                "content",
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 41,
+                "LineNumber": 1039
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1102
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-launch",
+                "commands",
+                "10-watchmaker-launch",
+                "command",
+                "Fn::Join",
+                1,
+                3,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1102
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1120
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-launch",
+                "commands",
+                "10-watchmaker-launch",
+                "command",
+                "Fn::Join",
+                1,
+                4,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1120
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1138
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-launch",
+                "commands",
+                "10-watchmaker-launch",
+                "command",
+                "Fn::Join",
+                1,
+                5,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1138
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1156
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-launch",
+                "commands",
+                "10-watchmaker-launch",
+                "command",
+                "Fn::Join",
+                1,
+                6,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1156
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1174
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-launch",
+                "commands",
+                "10-watchmaker-launch",
+                "command",
+                "Fn::Join",
+                1,
+                7,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1174
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1192
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-launch",
+                "commands",
+                "10-watchmaker-launch",
+                "command",
+                "Fn::Join",
+                1,
+                8,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1192
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1227
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-update",
+                "commands",
+                "10-watchmaker-update",
+                "command",
+                "Fn::Join",
+                1,
+                4,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1227
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1245
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-update",
+                "commands",
+                "10-watchmaker-update",
+                "command",
+                "Fn::Join",
+                1,
+                5,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1245
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1263
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-update",
+                "commands",
+                "10-watchmaker-update",
+                "command",
+                "Fn::Join",
+                1,
+                6,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1263
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1281
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-update",
+                "commands",
+                "10-watchmaker-update",
+                "command",
+                "Fn::Join",
+                1,
+                7,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1281
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1299
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-update",
+                "commands",
+                "10-watchmaker-update",
+                "command",
+                "Fn::Join",
+                1,
+                8,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1299
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 63,
+                "LineNumber": 1317
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Metadata",
+                "AWS::CloudFormation::Init",
+                "watchmaker-update",
+                "commands",
+                "10-watchmaker-update",
+                "command",
+                "Fn::Join",
+                1,
+                9,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 61,
+                "LineNumber": 1317
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Error",
+        "Location": {
+            "End": {
+                "ColumnNumber": 46,
+                "LineNumber": 1374
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Properties",
+                "BlockDeviceMappings",
+                1,
+                "Fn::If",
+                1,
+                "Ebs",
+                "VolumeSize",
+                "Ref"
+            ],
+            "Start": {
+                "ColumnNumber": 41,
+                "LineNumber": 1374
+            }
+        },
+        "Message": "{'Ref': 'AppVolumeSize'} is not of type 'integer' when 'Ref' is resolved",
+        "Rule": {
+            "Description": "Making sure the Ref has a String value (no other functions are supported)",
+            "Id": "E1020",
+            "ShortDescription": "Ref validation of value",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 35,
+                "LineNumber": 1441
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Properties",
+                "Tags",
+                0,
+                "Value",
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 33,
+                "LineNumber": 1441
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 51,
+                "LineNumber": 1597
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Properties",
+                "UserData",
+                "Fn::Base64",
+                "Fn::Join",
+                1,
+                88,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 49,
+                "LineNumber": 1597
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 51,
+                "LineNumber": 1614
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Properties",
+                "UserData",
+                "Fn::Base64",
+                "Fn::Join",
+                1,
+                89,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 49,
+                "LineNumber": 1614
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 51,
+                "LineNumber": 1643
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Properties",
+                "UserData",
+                "Fn::Base64",
+                "Fn::Join",
+                1,
+                98,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 49,
+                "LineNumber": 1643
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 51,
+                "LineNumber": 1660
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstance",
+                "Properties",
+                "UserData",
+                "Fn::Base64",
+                "Fn::Join",
+                1,
+                99,
+                "Fn::If",
+                1,
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 49,
+                "LineNumber": 1660
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 37,
+                "LineNumber": 1687
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstanceLogGroup"
+            ],
+            "Start": {
+                "ColumnNumber": 9,
+                "LineNumber": 1687
+            }
+        },
+        "Message": "The default action when replacing/removing a resource is to delete it. Set explicit values for UpdateReplacePolicy / DeletionPolicy on potentially stateful resource: Resources/WatchmakerInstanceLogGroup",
+        "Rule": {
+            "Description": "The default action when replacing/removing a resource is to delete it. This check requires you to explicitly set policies",
+            "Id": "I3011",
+            "ShortDescription": "Check stateful resources have a set UpdateReplacePolicy/DeletionPolicy",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/public/watchmaker.json",
+        "Level": "Informational",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 1692
+            },
+            "Path": [
+                "Resources",
+                "WatchmakerInstanceLogGroup",
+                "Properties",
+                "LogGroupName",
+                "Fn::Join",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 25,
+                "LineNumber": 1692
+            }
+        },
+        "Message": "Prefer using Fn::Sub over Fn::Join with an empty delimiter",
+        "Rule": {
+            "Description": "Prefer a sub instead of Join when using a join delimiter that is empty",
+            "Id": "I1022",
+            "ShortDescription": "Use Sub instead of Join",
+            "Source": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html"
+        }
+    }
+]
