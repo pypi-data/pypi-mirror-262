@@ -1,0 +1,11 @@
+scematk/__init__.py,sha256=_vJXWhFMz102rwgf7-rFCiiGZ16otOOqHFhT8QWd4wA,360
+scematk/colour/__init__.py,sha256=6X5tnKUk01qWbtKfKaXuBpxUCw5-DnkEpgvCMTjxpY8,279
+scematk/colour/_grey_transform.py,sha256=vizXy1zYzKtFH8KmANAkxPbvjpEaQjGVby1F9oO78Tw,621
+scematk/colour/_od_transform.py,sha256=S-Nbjfto94iQUDTjg2V6FPExhSjCp9288tMtwJo1WxY,1128
+scematk/preprocess/__init__.py,sha256=4DVyllyYgNAx0HVvptcuq7LDVu33QBMcdvOWiA9zcaA,118
+scematk/preprocess/_preprocessor.py,sha256=L2iPgSix6wUmCrlX-tlqkubG8me6g5MATZn6dJ0IblI,472
+scematk/preprocess/_process.py,sha256=R-Gvx0-ABWrWHn-MrVFHpAaqQvxbGlpMnI4ELoFg-DA,318
+scematk-0.0.2rc55.post1.dist-info/LICENSE,sha256=ws_MuBL-SCEBqPBFl9_FqZkaaydIJmxHrJG2parhU4M,1141
+scematk-0.0.2rc55.post1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+scematk-0.0.2rc55.post1.dist-info/METADATA,sha256=ud2CiG7hMzbwhyJ8WKzJ5NJR2fYNJeXwhRaZEaN5Ec4,16898
+scematk-0.0.2rc55.post1.dist-info/RECORD,,
