@@ -1,0 +1,15 @@
+mousetumornet/__init__.py,sha256=Sm1UyoH7GJbOBygPZ1-lFJeB-BY8ZinSW8klCa8v-mk,48
+mousetumornet/cli.py,sha256=SIEDs8k4l0SxEXSgoMYw0LzXUada-SSk-BZbWbC667k,2704
+mousetumornet/configuration.py,sha256=V5YNWsAjygSSY-9Qw4Gckc90401fzJ9hlurKYiEkeRk,540
+mousetumornet/napari.yaml,sha256=XmOMiIloFNWEtbrR6enGT44aVyk7HcsUu0111yQlZOo,604
+mousetumornet/nnunet_predict.py,sha256=s-ChOq62s68KhUaxQV82tKg5fu-z5euSwilpEiR2IPM,2501
+mousetumornet/roi.py,sha256=EGGv5zJS1YWLEpoa1SHN0W41H6gsIbkkZ_OkI-PSFrA,3581
+mousetumornet/roi_widget.py,sha256=jgpw1qJZH3Zm4PLxBZJt6oSXc-fA9AYlzvduHucFvJk,2597
+mousetumornet/napari_nnunet/__init__.py,sha256=KE5P7jYw2n_qXrflvBryQYDqT3Tw7B9n58ZF_0b_vNg,40
+mousetumornet/napari_nnunet/nnunet_widget.py,sha256=01UIzrhBe3r9LQsPKVDzYrkdSMYwRPPPVVVSm0RW1AU,3427
+mousetumornet-0.0.4.dist-info/LICENSE,sha256=p9wmdNf96UDdAq9LEwMsP669a6Lhhrc5ovjn0zL2pQs,1514
+mousetumornet-0.0.4.dist-info/METADATA,sha256=FI-MakF3-0JR3So5-sCg8v5jM6tv-sP3EiC8IOGjocY,7946
+mousetumornet-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mousetumornet-0.0.4.dist-info/entry_points.txt,sha256=Dao79JQ4H0X2-0_l0BPjlUKsyUzCs14ck9VwT9CcShU,245
+mousetumornet-0.0.4.dist-info/top_level.txt,sha256=pPrYZ18nTSmvluySTdd73XYUbx-Gbd-7_T5qfQx31rU,14
+mousetumornet-0.0.4.dist-info/RECORD,,
