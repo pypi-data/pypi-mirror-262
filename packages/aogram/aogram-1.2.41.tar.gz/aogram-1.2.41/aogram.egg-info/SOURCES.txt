@@ -1,0 +1,6 @@
+setup.py
+aogram.egg-info/PKG-INFO
+aogram.egg-info/SOURCES.txt
+aogram.egg-info/dependency_links.txt
+aogram.egg-info/top_level.txt
+pygame/__init__.py
