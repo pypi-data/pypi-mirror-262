@@ -1,0 +1,6 @@
+numpy
+matplotlib
+jupyterlab
+ipympl
+scipy
+tqdm

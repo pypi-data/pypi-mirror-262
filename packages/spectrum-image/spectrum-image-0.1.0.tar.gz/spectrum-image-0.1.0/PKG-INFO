@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: spectrum-image
+Version: 0.1.0
+Summary: Python Package for EELS (Electron Energy Loss Spectroscopy) Analysis
+Author-email: Suk Hyun Sung <sukhsung@umich.edu>
+Project-URL: Homepage, https://github.com/sukhsung/spectrum-image
+Project-URL: Repository, https://github.com/sukhsung/spectrum-image
+Project-URL: Bug Tracker, https://github.com/sukhsung/spectrum-image/issues
+Keywords: Electron Microscopy,EELS,TEM,STEM,Electron Energy Loss Spectroscopy
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: jupyterlab
+Requires-Dist: ipympl
+Requires-Dist: scipy
+Requires-Dist: tqdm
+
+# EELS
+Python Package for EELS (Electron Energy Loss Spectroscopy) data set.
+Built with Jupter lab interactivity in mind, with minimal dependencies
+Check out the notebook example (`example_eels.ipynb`) to get started.
+
+## Installation
+`pip install spectrum-image`
+
+## Dependencies
+`matplotlib`
+`jupyterlab`
+`ipympl`
+`scipy`
+`tqdm`
+`numpy`
+
+## Optional Dependencies for running example notebook
+`hyperspy`
