@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: koistudio-tools
+Version: 0.0.3.post1
+Summary: KoiStudio common tools
+Home-page: https://gitlab.com/koireader/internal/label-studio-tools
+Author: KoiReader Technologies
+Author-email: support@koireader.com
+License: Apache License 2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: appdirs>=1.4.3
+Requires-Dist: lxml>=4.2.5
+
+# Common tools for KoiStudio
