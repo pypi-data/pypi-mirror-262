@@ -1,0 +1,14 @@
+sorcerun/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sorcerun/auth_mongodb_option.py,sha256=stJtahn_ZwlZGtMPmQQlhblyBDAjdbB9olwPBYpMddM,983
+sorcerun/cli.py,sha256=X8uM453qWfM1aAjiS15iGxQYiJu-sU8QMYC-4YhqPtg,18695
+sorcerun/globals.py,sha256=Wo7j5qNca_qFI9Un-6A7Mw_RYZcqA9dNyp5BdIwC2TI,197
+sorcerun/grid_plotter.py,sha256=nSMNrCSCDw-dNr6g-GjRa2RWkLPMNWErAJ1f3AgAVhA,7144
+sorcerun/incense_utils.py,sha256=1dnhKaiaen-ZmIkARSOvv7xrSnIfjWrHmgdAwAYMJZA,10958
+sorcerun/mongodb_utils.py,sha256=iZeTM7LecY7blS6huArFNDxqNhh3ga3oMLmH5HfsdAY,4107
+sorcerun/sacred_utils.py,sha256=QEL6dZ2tBy4is8o8LWDC3D5wYNXtD_oXPqMxp6UI520,2488
+sorcerun-0.3.4.dist-info/LICENSE,sha256=ClceQivbxvqRNPJEH75AuUpKh8cun5GCl9K8eHA3jbw,1081
+sorcerun-0.3.4.dist-info/METADATA,sha256=fq4J3aiWm4YfNFqcRVfSRCE0tP0srSaFWeVKOhBW1IQ,665
+sorcerun-0.3.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sorcerun-0.3.4.dist-info/entry_points.txt,sha256=pxkF1l8yNx4AJjxe3esusnSQ28lI9lIkI-AZaGC8-5U,51
+sorcerun-0.3.4.dist-info/top_level.txt,sha256=yPEOLuu-7Z_beEF8y-7glbullbvwQGJgjHRtmgynuS4,9
+sorcerun-0.3.4.dist-info/RECORD,,
