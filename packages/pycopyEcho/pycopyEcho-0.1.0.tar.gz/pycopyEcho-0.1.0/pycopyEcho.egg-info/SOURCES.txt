@@ -1,0 +1,7 @@
+setup.py
+pycopyEcho/__init__.py
+pycopyEcho/copy.py
+pycopyEcho.egg-info/PKG-INFO
+pycopyEcho.egg-info/SOURCES.txt
+pycopyEcho.egg-info/dependency_links.txt
+pycopyEcho.egg-info/top_level.txt
