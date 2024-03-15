@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "silentpush"
+version = "0.0.3" 
+description = "Python Library to interact with SilentPush Explore API"
+authors = [
+    { name = "Garrett Marking", email = "markingcycles@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests",
+    "ipaddress",
+]
+
+[project.urls]
+Homepage = "https://github.com/gmarking/SilentPush-py"
+Issues = "https://github.com/gmarking/SilentPush-py/issues"
+
+[tool.pytest.ini_options]
+pythonpath = "silentpush"
+
+[tool.hatch.build.targets.wheel]
+packages = ["silentpush"]
