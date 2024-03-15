@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: sprinko
+Version: 0.0.12
+Author: ZackaryW
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: keyring
+Requires-Dist: masscode-driver
+Requires-Dist: keyrings.cryptfile

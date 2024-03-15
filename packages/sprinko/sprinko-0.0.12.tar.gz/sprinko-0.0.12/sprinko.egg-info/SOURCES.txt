@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+sprinko/cli.py
+sprinko/utils.py
+sprinko.egg-info/PKG-INFO
+sprinko.egg-info/SOURCES.txt
+sprinko.egg-info/dependency_links.txt
+sprinko.egg-info/entry_points.txt
+sprinko.egg-info/requires.txt
+sprinko.egg-info/top_level.txt
+sprinko/core/__base__.py
+sprinko/core/__init__.py
+sprinko/core/ctx.py
+sprinko/core/ko.py
+sprinko/core/sprinko.py

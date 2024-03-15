@@ -1,0 +1,2 @@
+[console_scripts]
+sprinko = sprinko.cli:cli
