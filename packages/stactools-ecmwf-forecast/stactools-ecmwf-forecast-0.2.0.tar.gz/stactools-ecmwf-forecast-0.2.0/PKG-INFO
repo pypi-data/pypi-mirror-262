@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: stactools-ecmwf-forecast
+Version: 0.2.0
+Summary: "stactools package to generate STAC items for ECMWF forecast products."
+Home-page: https://github.com/stactools-packages/ecmwf-forecast
+Author: stac-utils
+Author-email: taugspurger@microsoft.com
+Project-URL: Documentation, https://stactools-ecmwf-forecast.readthedocs.io/en/latest/
+Project-URL: Issues, https://github.com/stactools-packages/ecmwf-forecast/issues
+Keywords: stactools,pystac,catalog,STAC,ecmwf
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: stactools>=0.2.6
+Requires-Dist: xarray
+Requires-Dist: cfgrib
+Requires-Dist: fsspec
+
+# ecmwf-forecast
+
+Create STAC metadata for [ECMWF Open Data - Real Time](https://confluence.ecmwf.int/display/UDOC/ECMWF+Open+Data+-+Real+Time).
+
+
+## Planetary Computer collection
+
+
+```console
+stac ecmwf-forecast create-collection template.json \
+    --thumbnail="https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/sentinel-2.png" \
+    --extra-field "msft:short_description=ECMWF Open Data (Real Time) forecasts" \
+    --extra-field "msft:storage_account=ai4edatauewest" \
+    --extra-field "msft:container=ecmwf"
+```
+
+## Planetary Computer item
+
+```console
+stac ecmwf-forecast create-item \
+    "ecmwf/20220201/00z/0p4-beta/enfo/20220201000000-0h-enfo-ef.grib2" \
+    "/ecmwf/20220201/00z/0p4-beta/enfo/20220201000000-0h-enfo-ef.index" \
+    examples/item.json
+```
