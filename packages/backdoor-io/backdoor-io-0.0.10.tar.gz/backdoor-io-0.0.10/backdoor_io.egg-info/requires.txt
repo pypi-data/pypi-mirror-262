@@ -1,0 +1,9 @@
+dacite
+pyautogui
+Pillow
+numpy
+
+[dev]
+pdoc3
+twine
+pytest
