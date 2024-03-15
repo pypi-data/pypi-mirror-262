@@ -1,0 +1,103 @@
+{
+  "thread_id": "92b90506-043c-4c55-b6d5-5466d3c866c8",
+  "content": [
+    {
+      "type": "text",
+      "value": "quas",
+      "annotations": [
+        {
+          "type": "file_path",
+          "text": "accusantium possimus",
+          "file_path": {
+            "file_id": "arcu illum adipisicing nunc accusantium Hic culpa!"
+          },
+          "start_index": 7979,
+          "end_index": 1522
+        },
+        {
+          "type": "file_path",
+          "text": "dolor mattis enim esse mattis Hic esse nobis illum",
+          "file_path": {
+            "file_id": "amet modi"
+          },
+          "start_index": 7854,
+          "end_index": 7398
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "odit elit.",
+      "annotations": [
+        {
+          "type": "file_citation",
+          "text": "accusantium ipsum enim dui esse accusantium illum",
+          "file_citation": {
+            "file_id": "nunc ipsum ipsum Hic vitae amet accusantium enim a",
+            "quote": ""
+          },
+          "start_index": 746,
+          "end_index": 5695
+        },
+        {
+          "type": "file_path",
+          "text": "dui cursus illum",
+          "file_path": {
+            "file_id": ""
+          },
+          "start_index": 1672,
+          "end_index": 1525
+        },
+        {
+          "type": "file_path",
+          "text": "molestias, cursus libero nunc veniam officiis Hic",
+          "file_path": {
+            "file_id": "cursus nobis ipsum ipsum vehicula mattis ut nunc a"
+          },
+          "start_index": 9883,
+          "end_index": 7304
+        },
+        {
+          "type": "file_path",
+          "text": "ut adipisicing illum mattis enim repellendus elit.",
+          "file_path": {
+            "file_id": "reprehenderit amet adipisicing a vehicula placeat"
+          },
+          "start_index": 6926,
+          "end_index": 6018
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "magnam, placeat libero",
+      "annotations": [
+        {
+          "type": "file_path",
+          "text": "placeat nunc vitae ipsum veniam ipsum, mattis sit",
+          "file_path": {
+            "file_id": "architecto magnam, magnam,"
+          },
+          "start_index": 3581,
+          "end_index": 9994
+        }
+      ]
+    },
+    {
+      "type": "image_file",
+      "image_file": {
+        "file_id": "Enim Lorem vehicula tellus. odit vitae officiis a"
+      }
+    }
+  ],
+  "role": "assistant",
+  "file_ids": [
+    "ipsum, nunc vitae molestias,",
+    "quas adipisicing Hic nec mattis reiciendis tellus.",
+    "mattis",
+    "architecto Enim ipsum sit libero repellendus arcu",
+    "vitae consectetur accusantium libero Lorem dui dui"
+  ],
+  "metadata": {},
+  "id": "fa6daa75-404f-4429-b82f-ad140c9ac2c8"
+}

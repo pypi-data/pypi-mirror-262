@@ -1,0 +1,3 @@
+parrot-integrations-core>=0.0.18
+openai
+requests
