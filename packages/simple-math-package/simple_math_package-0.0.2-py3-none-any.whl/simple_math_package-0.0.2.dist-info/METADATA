@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: simple-math-package
+Version: 0.0.2
+Summary: This package is used for simple math operations. It's used as an exercise to understand how to create and distribute a package.
+Home-page: https://github.com/MatheusKomatsu/SimpleMathPackage
+Author: matheus_eiji_faria_komatsu
+Author-email: matheuskomatsu@hotmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# package_name
+
+Description. 
+The package simple_math is used to:
+	- Simple math, like subtraction or multiplication
+	- Intermiate math, like square root
+This package is simply a test to understand how to create and distribute a package.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install simple_math_package
+
+```bash
+pip install simple_math_package
+```
+
+## Usage
+
+```python
+from simple_math_package import basic_operations
+basic_operations.add(number1, number2)
+```
+
+## Author
+Matheus Eiji Faria Komatsu
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
