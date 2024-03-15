@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: sargasso
+Version: 0.3.4
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy >=1.18
+Requires-Dist: pybind11 >=2.6
+
+# sargasso
+Experiments in packaging/distributing C++/Python projects using pybind11 and external libraries
