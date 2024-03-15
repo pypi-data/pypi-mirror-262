@@ -1,0 +1,51 @@
+{
+  "src/lib/components/DashMonacoEditor.react.js": {
+    "description": "ExampleComponent is an example component.\nIt takes a property, `label`, and\ndisplays it.\nIt renders an input with the property `value`\nwhich is editable by the user.",
+    "displayName": "DashMonacoEditor",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "height": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Height of the editor"
+      },
+      "language": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The language of the editor"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "current code"
+      },
+      "theme": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "current theme \"light\",\"vs-dark\""
+      }
+    }
+  }
+}
