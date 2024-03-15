@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: sockaddr
+Version: 0.1.2
+Summary: Prepopulated sockaddr helpers for Python using ctypes
+Keywords: sockaddr,saddr,auditd
+Author-email: tedk <tedk@kpn-cert.nl>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: Log Analysis
+Classifier: Topic :: Security
+Classifier: Topic :: System :: Networking
+Project-URL: Github, https://github.com/Kalkran/sockaddr
+
+
+# sockaddr
+
+Sockaddr helpers for Python.
+
+For example, auditd logs log the socket address in hex form. This should help in decoding them: 
+
+```python3
+s_in = sockaddr.from_hex("02000035898A1005000000000000000030BED20858D83A0010000000")
+print(type(s_in))
+# <class 'sockaddr.addr.sockaddr_in'>
+
+# Using some helper functions for IPv4/6
+print(sockaddr.inet_addr(s_in))
+# '137.138.16.5'
+print(sockaddr.inet_port(s_in))
+# 13568
+```
+
+
+# Or unix sockets
+
+```python3
+s_un = sockaddr.from_hex("01002F7661722F72756E2F646F636B65722E736F636B00")
+print(s_un.sun_path.decode("utf-8"))
+# /var/run/docker.sock
+```
+
+
