@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: hpyrust-text
+Version: 0.1.2
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Rust
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
