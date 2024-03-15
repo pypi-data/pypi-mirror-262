@@ -1,0 +1,8 @@
+s6r_hubspot/__init__.py,sha256=b6hEW8nOWRJ05xQqysgaQrF8dn_LvCI_fWGEbi0fCbA,39
+s6r_hubspot/hubspot.py,sha256=7S-qTlKL9mgCeEBRLVQCjqSSapfduG0LGPqLDYgbRWc,28230
+tests/unit_test.py,sha256=SmXTWNgPH7kDtbKQzMm3sFQL37VomKVe90_FwhhYvcg,6567
+s6r_hubspot-1.0.4.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+s6r_hubspot-1.0.4.dist-info/METADATA,sha256=7qzjphWc0scm3_Tezbww46vg6LAjyiULypypSex59Gc,10917
+s6r_hubspot-1.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+s6r_hubspot-1.0.4.dist-info/top_level.txt,sha256=kwzGvkTAmnisKUCwzN5pNmi6zjVEBuTx0RmCZqOvIDk,18
+s6r_hubspot-1.0.4.dist-info/RECORD,,
