@@ -1,0 +1,11 @@
+google_suite/__init__.py,sha256=NEYQoxha6H15sBUd9IY3O_O6cv04WpUXEgcmWUVdk0A,54
+google_suite/blogger.py,sha256=KsC8ELFazLbCkQau7O1vecWlxZi2QVR1NM8z3rXZ9-4,3455
+google_suite/gmail.py,sha256=51pB0C1wB_9sg_gUHQjQLGQo5OypVkRQmvFnAacA4Ig,20638
+google_suite/models/__init__.py,sha256=eZbfK2vxE3Js4tlgJtd9q2RUw8aLkQTpRje5_F5v2fM,244
+google_suite/models/gmail_models.py,sha256=VizRIcl8CKh8Jf-duV3U8ESmAadHf2nEHy-5gizY4zY,1602
+google_suite/models/gsuite_models.py,sha256=vpnVPjI54QnFhkgwh3qpLfaXDuGRlgw5-abHGO__8UU,94
+google_suite/utils/__init__.py,sha256=_Wc_jfivaMwSWJ2IvHlpvR5dPsYTRyViIkUdtiStKZ8,53
+google_suite/utils/util.py,sha256=aJG5KlYnhbIMX61nK4EUH18ewrjFnjD-bVKmEzPtmE0,2053
+google_suite-0.1.4.dist-info/METADATA,sha256=w1M7yCO5_u0ZinDkJ3mdyeKYveiniYtiCD-4wUQzqAQ,12124
+google_suite-0.1.4.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+google_suite-0.1.4.dist-info/RECORD,,
