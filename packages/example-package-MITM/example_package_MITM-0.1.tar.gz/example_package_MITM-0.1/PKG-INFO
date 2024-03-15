@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: example_package_MITM
+Version: 0.1
+Summary: Test package for pypi in testing MITM interface
+Home-page: https://github.com/idpark0129/example_package_MITM.git
+Download-URL: https://github.com/idpark0129/example_package_MITM/archive/refs/tags/v_01.tar.gz
+Author: Isaac Park
+Author-email: isaacpark0129@gmail.com
+License: MIT
+Keywords: SOME,MEANINGFULL,KEYWORDS
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
