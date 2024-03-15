@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+setup.py
+Yakpdf/__init__.py
+Yakpdf/pdf2image.py
+Yakpdf/pdf2text.py
+Yakpdf.egg-info/PKG-INFO
+Yakpdf.egg-info/SOURCES.txt
+Yakpdf.egg-info/dependency_links.txt
+Yakpdf.egg-info/top_level.txt
