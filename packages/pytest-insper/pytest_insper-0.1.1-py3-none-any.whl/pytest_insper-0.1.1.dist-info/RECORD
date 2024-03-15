@@ -1,0 +1,9 @@
+pytest_insper/__init__.py,sha256=2KSY7ryaDiWyuOVRmhzcX6krk5q0UNx5VgyQAlQ6Zcw,2375
+pytest_insper/fixtures.py,sha256=C1564GjLgPt8TK6FoP3Hq9CDbZKLTwlQGpad_uxggAI,1309
+pytest_insper/util.py,sha256=OgzkC4gVSLNnAI_FU7haLQTHXheM3Lf-1TaTI_CEuGE,1067
+pytest_insper-0.1.1.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+pytest_insper-0.1.1.dist-info/METADATA,sha256=XBDBmGaeRqSfiMmCqzwN-GieUxRcvCNBCX6E3zrVxoI,754
+pytest_insper-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pytest_insper-0.1.1.dist-info/entry_points.txt,sha256=0Xt5ABpLooa3335k2wB_EVYkT-hZbaHx-yDCeV7aqPI,34
+pytest_insper-0.1.1.dist-info/top_level.txt,sha256=xdFHdAKNHVqoZ1PLhR37aonusyKIIb7P82MpN59snF0,14
+pytest_insper-0.1.1.dist-info/RECORD,,
