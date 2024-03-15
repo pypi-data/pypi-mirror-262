@@ -1,0 +1,50 @@
+[project]
+name = "natquiz"
+
+version="0.2.0"
+
+description = "A command line tool to help people prepare for their US naturalization test."
+
+readme = "README.md"
+
+requires-python = ">=3.11"
+
+license = {file = "LICENSE"}
+
+keywords = ["command line tool", "US naturalization"]
+
+authors = [
+  { name = "Carlos Paniagua", email = "cpaniaguam@gmail.com" }
+]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Education",
+  "Intended Audience :: End Users/Desktop",
+  "Topic :: Education",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/cpaniaguam/natquiz"
+"Bug Reports" = "https://github.com/cpaniaguam/natquiz/issues"
+"Source" = "https://github.com/cpaniaguam/natquiz"
+
+[project.scripts]
+natquiz = "natquiz.app:main"
+
+[tool.setuptools]
+# If there are data files included in your packages that need to be
+# installed, specify them here.
+# TODO: ADD ANY DATA FILES WE WANT TO HAVE
+# package-data = {"natquiz" = ["config/*.json"]}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=43.0.0", "setuptools_scm>=8", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
