@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: sklearn-ann
+Version: 0.1.0
+Summary: Various integrations for ANN (Approximate Nearest Neighbours) libraries into scikit-learn.
+License: BSD
+Author: Frankie Robertson
+Author-email: frankie@robertson.name
+Requires-Python: >=3.9,<3.13
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: annlibs
+Provides-Extra: annoy
+Provides-Extra: faiss
+Provides-Extra: nmslib
+Provides-Extra: pynndescent
+Requires-Dist: annoy (>=1.17.0) ; extra == "annoy" or extra == "annlibs"
+Requires-Dist: faiss-cpu (>=1.7.3) ; extra == "faiss" or extra == "annlibs"
+Requires-Dist: nmslib (>=2.1.1) ; extra == "nmslib" or extra == "annlibs"
+Requires-Dist: pandas (>=1.2.0)
+Requires-Dist: pynndescent (>=0.5.1) ; extra == "pynndescent" or extra == "annlibs"
+Requires-Dist: scikit-learn (>=0.24.0)
+Requires-Dist: scipy (>=1.11.1)
