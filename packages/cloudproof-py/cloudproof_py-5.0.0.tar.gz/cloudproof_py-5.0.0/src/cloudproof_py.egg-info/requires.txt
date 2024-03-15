@@ -1,0 +1,5 @@
+cloudproof-anonymization<1.0.0,>=0.1.0
+cover-crypt<15.0.0,>=14.0.0
+findex<7.0.0,>=6.0.0
+cosmian-kms<5.0.0,>=4.13.0
+cloudproof-fpe<1.0.0,>=0.1.0
