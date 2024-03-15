@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: zenguard
+Version: 0.1.0
+Summary: Plug-and-play production grade security for GenAI applications
+License: MIT
+Author: ZenGuard Team
+Author-email: hello@zenguard.ai
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Description-Content-Type: text/markdown
+
+# ZenGuard AI
+
+## ZenGuard AI is specifically designed for AI developers to quickly and easily add production-level protections to their GenAI applications.
+
+## For more documentation visit [docs.zenguard.ai](https://docs.zenguard.ai/)
