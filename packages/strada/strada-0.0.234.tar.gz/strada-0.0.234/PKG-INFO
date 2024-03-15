@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: strada
+Version: 0.0.234
+Summary: Strada SDK
+Home-page: UNKNOWN
+Author: Strada
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Strada Connector SDK
+
+Currently supporting:
+
+- Google Sheets
+- Google Mail
+- OpenAI
+- Slack
+- Hubspot
+- Jira
+- Zendesk
+- Zuora
+- HTTP REST
+
+
