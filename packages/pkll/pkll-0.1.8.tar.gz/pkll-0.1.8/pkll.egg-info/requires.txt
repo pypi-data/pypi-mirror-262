@@ -1,0 +1,10 @@
+msgpack>=1.0.8
+
+[dev]
+pre-commit
+black
+isort
+mypy
+pylint
+pytest
+tox
