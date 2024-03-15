@@ -1,0 +1,289 @@
+start_timer(191): start time = 2227.405667628 
+usecase__get_base_points__P2(42): { 2, <<x^2 + a0*y*z, x + y + a1*z>>, QQ( <a0|t^2 + 1>, <a1|t^2 + a0*t - 1> )[x, y, z] } 
+usecase__get_base_points__P2(45): 
+	{ 2, <<x^2 + a0*y*z, x + y + a1*z>>, QQ( <a0|t^2 + 1>, <a1|t^2 + a0*t - 1>, <a2|t^2 - a0*t - a0*a1> )[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(-a2 + a0, a2 - a1 - a0), { 2, <<x^2 + a0*y, x + y + a1>>, QQ( <a0|t^2 + 1>, <a1|t^2 + a0*t - 1>, <a2|t^2 - a0*t - a0*a1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(a2, -a2 - a1), { 2, <<x^2 + a0*y, x + y + a1>>, QQ( <a0|t^2 + 1>, <a1|t^2 + a0*t - 1>, <a2|t^2 - a0*t - a0*a1> )[x, y] } 
+usecase__get_base_points__P1P1(66): { 7, <<17/5*x^2*v^2 + 17/5*y^2*v^2 + 6/5*x^2*v*w + 6/5*y^2*v*w + x^2*w^2 + y^2*w^2, 6/5*x^2*v^2 + 6/5*y^2*v^2 + 8/5*x^2*v*w + 8/5*y^2*v*w, 7/5*x^2*v^2 + 7/5*y^2*v^2 + 6/5*x^2*v*w + 6/5*y^2*v*w + x^2*w^2 + y^2*w^2, 4*x*y*v^2, (-2)*x^2*v^2 + 2*y^2*v^2, 2/5*x^2*v^2 + (-4)*x*y*v^2 + (-2/5)*y^2*v^2 + 6/5*x^2*v*w + (-6/5)*y^2*v*w, 2*x^2*v^2 + 4/5*x*y*v^2 + (-2)*y^2*v^2 + 12/5*x*y*v*w>>, QQ( <a0|t^2 + 1>, <a1|t^2 + a0*t - 1>, <a2|t^2 - a0*t - a0*a1> )[x, y, v, w] } 
+usecase__get_base_points__P1P1(69): 
+	{ 7, <<17/5*x^2*v^2 + 17/5*y^2*v^2 + 6/5*x^2*v*w + 6/5*y^2*v*w + x^2*w^2 + y^2*w^2, 6/5*x^2*v^2 + 6/5*y^2*v^2 + 8/5*x^2*v*w + 8/5*y^2*v*w, 7/5*x^2*v^2 + 7/5*y^2*v^2 + 6/5*x^2*v*w + 6/5*y^2*v*w + x^2*w^2 + y^2*w^2, 4*x*y*v^2, (-2)*x^2*v^2 + 2*y^2*v^2, 2/5*x^2*v^2 + (-4)*x*y*v^2 + (-2/5)*y^2*v^2 + 6/5*x^2*v*w + (-6/5)*y^2*v*w, 2*x^2*v^2 + 4/5*x*y*v^2 + (-2)*y^2*v^2 + 12/5*x*y*v*w>>, QQ( <a0|t^2 + 1>, <a1|t^2 + a0*t - 1>, <a2|t^2 - a0*t - a0*a1> )[x, y, v, w] }
+	chart=xw, depth=0, mult=1, sol=(-a0, 0), { 7, <<17/5*y^2*v^2 + 6/5*y^2*v + y^2 + 17/5*v^2 + 6/5*v + 1, 6/5*y^2*v^2 + 8/5*y^2*v + 6/5*v^2 + 8/5*v, 7/5*y^2*v^2 + 6/5*y^2*v + y^2 + 7/5*v^2 + 6/5*v + 1, 4*y*v^2, 2*y^2*v^2 + (-2)*v^2, (-2/5)*y^2*v^2 + (-6/5)*y^2*v + (-4)*y*v^2 + 2/5*v^2 + 6/5*v, (-2)*y^2*v^2 + 4/5*y*v^2 + 12/5*y*v + 2*v^2>>, QQ( <a0|t^2 + 1>, <a1|t^2 + a0*t - 1>, <a2|t^2 - a0*t - a0*a1> )[y, v] }
+	chart=xw, depth=0, mult=1, sol=(a0, 0), { 7, <<17/5*y^2*v^2 + 6/5*y^2*v + y^2 + 17/5*v^2 + 6/5*v + 1, 6/5*y^2*v^2 + 8/5*y^2*v + 6/5*v^2 + 8/5*v, 7/5*y^2*v^2 + 6/5*y^2*v + y^2 + 7/5*v^2 + 6/5*v + 1, 4*y*v^2, 2*y^2*v^2 + (-2)*v^2, (-2/5)*y^2*v^2 + (-6/5)*y^2*v + (-4)*y*v^2 + 2/5*v^2 + 6/5*v, (-2)*y^2*v^2 + 4/5*y*v^2 + 12/5*y*v + 2*v^2>>, QQ( <a0|t^2 + 1>, <a1|t^2 + a0*t - 1>, <a2|t^2 - a0*t - a0*a1> )[y, v] } 
+usecase__get_base_points__examples(132): 
+==================================================
+==================================================
+================================================== 
+usecase__get_base_points__examples(133): index for example = 0 
+usecase__get_base_points__examples(134): { 2, <<x^2*z + y^2*z, y^3 + z^3>>, QQ[x, y, z] } 
+usecase__get_base_points__examples(137): 
+	{ 2, <<x^2*z + y^2*z, y^3 + z^3>>, QQ( <a0|t^2 + 1>, <a1|t^2 - a0*t - 1> )[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(a1, -a0*a1), { 2, <<x^2 + y^2, y^3 + 1>>, QQ( <a0|t^2 + 1>, <a1|t^2 - a0*t - 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(-a0, -1), { 2, <<x^2 + y^2, y^3 + 1>>, QQ( <a0|t^2 + 1>, <a1|t^2 - a0*t - 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(a0, -1), { 2, <<x^2 + y^2, y^3 + 1>>, QQ( <a0|t^2 + 1>, <a1|t^2 - a0*t - 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(-a1 + a0, a0*a1 + 1), { 2, <<x^2 + y^2, y^3 + 1>>, QQ( <a0|t^2 + 1>, <a1|t^2 - a0*t - 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(a1 - a0, a0*a1 + 1), { 2, <<x^2 + y^2, y^3 + 1>>, QQ( <a0|t^2 + 1>, <a1|t^2 - a0*t - 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(-a1, -a0*a1), { 2, <<x^2 + y^2, y^3 + 1>>, QQ( <a0|t^2 + 1>, <a1|t^2 - a0*t - 1> )[x, y] }
+	chart=x, depth=0, mult=1, sol=(0, 0), { 2, <<y^2*z + z, y^3 + z^3>>, QQ( <a0|t^2 + 1>, <a1|t^2 - a0*t - 1> )[y, z] }
+	    chart=s, depth=1, mult=1, sol=(0, 0), { 2, <<y^2*z + z, y^2*z^3 + y^2>>, QQ( <a0|t^2 + 1>, <a1|t^2 - a0*t - 1> )[y, z] }
+	        chart=s, depth=2, mult=1, sol=(0, 0), { 2, <<y^2*z + z, y^4*z^3 + y>>, QQ( <a0|t^2 + 1>, <a1|t^2 - a0*t - 1> )[y, z] } 
+usecase__get_base_points__examples(132): 
+==================================================
+==================================================
+================================================== 
+usecase__get_base_points__examples(133): index for example = 1 
+usecase__get_base_points__examples(134): { 2, <<y^5 + x^3*z^2, x^5>>, QQ[x, y, z] } 
+usecase__get_base_points__examples(137): 
+	{ 2, <<y^5 + x^3*z^2, x^5>>, QQ[x, y, z] }
+	chart=z, depth=0, mult=3, sol=(0, 0), { 2, <<y^5 + x^3, x^5>>, QQ[x, y] }
+	    chart=t, depth=1, mult=2, sol=(0, 0), { 2, <<x^3 + y^2, x^5*y^2>>, QQ[x, y] }
+	        chart=s, depth=2, mult=1, sol=(0, 0), { 2, <<y^2 + x, x^5*y^2>>, QQ[x, y] }
+	            chart=t, depth=3, mult=1, sol=(0, 0), { 2, <<x + y, x^5*y^6>>, QQ[x, y] }
+	                chart=t, depth=4, mult=1, sol=(-1, 0), { 2, <<x + 1, x^5*y^10>>, QQ[x, y] }
+	                    chart=t, depth=5, mult=1, sol=(0, 0), { 2, <<x, x^5*y^14 - 5*x^4*y^13 + 10*x^3*y^12 - 10*x^2*y^11 + 5*x*y^10 - y^9>>, QQ[x, y] }
+	                        chart=t, depth=6, mult=1, sol=(0, 0), { 2, <<x, x^5*y^18 - 5*x^4*y^16 + 10*x^3*y^14 - 10*x^2*y^12 + 5*x*y^10 - y^8>>, QQ[x, y] }
+	                            chart=t, depth=7, mult=1, sol=(0, 0), { 2, <<x, x^5*y^22 - 5*x^4*y^19 + 10*x^3*y^16 - 10*x^2*y^13 + 5*x*y^10 - y^7>>, QQ[x, y] }
+	                                chart=t, depth=8, mult=1, sol=(0, 0), { 2, <<x, x^5*y^26 - 5*x^4*y^22 + 10*x^3*y^18 - 10*x^2*y^14 + 5*x*y^10 - y^6>>, QQ[x, y] }
+	                                    chart=t, depth=9, mult=1, sol=(0, 0), { 2, <<x, x^5*y^30 - 5*x^4*y^25 + 10*x^3*y^20 - 10*x^2*y^15 + 5*x*y^10 - y^5>>, QQ[x, y] }
+	                                        chart=t, depth=10, mult=1, sol=(0, 0), { 2, <<x, x^5*y^34 - 5*x^4*y^28 + 10*x^3*y^22 - 10*x^2*y^16 + 5*x*y^10 - y^4>>, QQ[x, y] }
+	                                            chart=t, depth=11, mult=1, sol=(0, 0), { 2, <<x, x^5*y^38 - 5*x^4*y^31 + 10*x^3*y^24 - 10*x^2*y^17 + 5*x*y^10 - y^3>>, QQ[x, y] }
+	                                                chart=t, depth=12, mult=1, sol=(0, 0), { 2, <<x, x^5*y^42 - 5*x^4*y^34 + 10*x^3*y^26 - 10*x^2*y^18 + 5*x*y^10 - y^2>>, QQ[x, y] }
+	                                                    chart=t, depth=13, mult=1, sol=(0, 0), { 2, <<x, x^5*y^46 - 5*x^4*y^37 + 10*x^3*y^28 - 10*x^2*y^19 + 5*x*y^10 - y>>, QQ[x, y] } 
+usecase__get_base_points__examples(132): 
+==================================================
+==================================================
+================================================== 
+usecase__get_base_points__examples(133): index for example = 2 
+usecase__get_base_points__examples(134): { 2, <<x^2, y^2 + x*z>>, QQ[x, y, z] } 
+usecase__get_base_points__examples(137): 
+	{ 2, <<x^2, y^2 + x*z>>, QQ[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(0, 0), { 2, <<x^2, y^2 + x>>, QQ[x, y] }
+	    chart=t, depth=1, mult=1, sol=(0, 0), { 2, <<x^2*y, x + y>>, QQ[x, y] }
+	        chart=t, depth=2, mult=1, sol=(-1, 0), { 2, <<x^2*y^2, x + 1>>, QQ[x, y] }
+	            chart=t, depth=3, mult=1, sol=(0, 0), { 2, <<x^2*y^3 - 2*x*y^2 + y, x>>, QQ[x, y] } 
+usecase__get_base_points__examples(132): 
+==================================================
+==================================================
+================================================== 
+usecase__get_base_points__examples(133): index for example = 3 
+usecase__get_base_points__examples(134): { 2, <<x^2 + y^2, y^2 + x*z>>, QQ[x, y, z] } 
+usecase__get_base_points__examples(137): 
+	{ 2, <<x^2 + y^2, y^2 + x*z>>, QQ( <a0|t^2 + 1> )[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(1, a0), { 2, <<x^2 + y^2, y^2 + x>>, QQ( <a0|t^2 + 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(1, (-a0)), { 2, <<x^2 + y^2, y^2 + x>>, QQ( <a0|t^2 + 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(0, 0), { 2, <<x^2 + y^2, y^2 + x>>, QQ( <a0|t^2 + 1> )[x, y] }
+	    chart=t, depth=1, mult=1, sol=(0, 0), { 2, <<x^2*y + y, x + y>>, QQ( <a0|t^2 + 1> )[x, y] } 
+usecase__get_base_points__examples(132): 
+==================================================
+==================================================
+================================================== 
+usecase__get_base_points__examples(133): index for example = 4 
+usecase__get_base_points__examples(134): { 4, <<x*z, y^2, y*z, z^2>>, QQ[x, y, z] } 
+usecase__get_base_points__examples(137): 
+	{ 4, <<x*z, y^2, y*z, z^2>>, QQ[x, y, z] }
+	chart=x, depth=0, mult=1, sol=(0, 0), { 4, <<z, y^2, y*z, z^2>>, QQ[y, z] }
+	    chart=s, depth=1, mult=1, sol=(0, 0), { 4, <<z, y, y*z, y*z^2>>, QQ[y, z] } 
+usecase__get_base_points__examples(132): 
+==================================================
+==================================================
+================================================== 
+usecase__get_base_points__examples(133): index for example = 5 
+usecase__get_base_points__examples(134): { 2, <<x^5, y^2*z^3>>, QQ[x, y, z] } 
+usecase__get_base_points__examples(137): 
+	{ 2, <<x^5, y^2*z^3>>, QQ[x, y, z] }
+	chart=z, depth=0, mult=2, sol=(0, 0), { 2, <<x^5, y^2>>, QQ[x, y] }
+	    chart=s, depth=1, mult=2, sol=(0, 0), { 2, <<x^3, y^2>>, QQ[x, y] }
+	        chart=s, depth=2, mult=1, sol=(0, 0), { 2, <<x, y^2>>, QQ[x, y] }
+	            chart=t, depth=3, mult=1, sol=(0, 0), { 2, <<x, y>>, QQ[x, y] }
+	chart=y, depth=0, mult=3, sol=(0, 0), { 2, <<x^5, z^3>>, QQ[x, z] }
+	    chart=s, depth=1, mult=2, sol=(0, 0), { 2, <<x^2, z^3>>, QQ[x, z] }
+	        chart=t, depth=2, mult=1, sol=(0, 0), { 2, <<x^2, z>>, QQ[x, z] }
+	            chart=s, depth=3, mult=1, sol=(0, 0), { 2, <<x, z>>, QQ[x, z] } 
+usecase__get_base_points__examples(132): 
+==================================================
+==================================================
+================================================== 
+usecase__get_base_points__examples(133): index for example = 6 
+usecase__get_base_points__examples(134): { 4, <<x^2*y, x*y^2, x*y*z, x^2*z + y^2*z + z^3>>, QQ[x, y, z] } 
+usecase__get_base_points__examples(137): 
+	{ 4, <<x^2*y, x*y^2, x*y*z, x^2*z + y^2*z + z^3>>, QQ( <a0|t^2 + 1> )[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(-a0, 0), { 4, <<x^2*y, x*y^2, x*y, x^2 + y^2 + 1>>, QQ( <a0|t^2 + 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(a0, 0), { 4, <<x^2*y, x*y^2, x*y, x^2 + y^2 + 1>>, QQ( <a0|t^2 + 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(0, (-a0)), { 4, <<x^2*y, x*y^2, x*y, x^2 + y^2 + 1>>, QQ( <a0|t^2 + 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(0, a0), { 4, <<x^2*y, x*y^2, x*y, x^2 + y^2 + 1>>, QQ( <a0|t^2 + 1> )[x, y] }
+	chart=x, depth=0, mult=1, sol=(0, 0), { 4, <<y, y^2, y*z, y^2*z + z^3 + z>>, QQ( <a0|t^2 + 1> )[y, z] }
+	chart=y, depth=0, mult=1, sol=(0, 0), { 4, <<x^2, x, x*z, x^2*z + z^3 + z>>, QQ( <a0|t^2 + 1> )[x, z] } 
+usecase__get_base_points__examples(132): 
+==================================================
+==================================================
+================================================== 
+usecase__get_base_points__examples(133): index for example = 7 
+usecase__get_base_points__examples(134): { 11, <<z^6, y*z^5, y^2*z^4, y^3*z^3, y^4*z^2, y^5*z, y^6, x^2*z^4, x^2*y*z^3, x^2*y^2*z^2, x^3*z^3>>, QQ[x, y, z] } 
+usecase__get_base_points__examples(137): 
+	{ 11, <<z^6, y*z^5, y^2*z^4, y^3*z^3, y^4*z^2, y^5*z, y^6, x^2*z^4, x^2*y*z^3, x^2*y^2*z^2, x^3*z^3>>, QQ[x, y, z] }
+	chart=x, depth=0, mult=3, sol=(0, 0), { 11, <<z^6, y*z^5, y^2*z^4, y^3*z^3, y^4*z^2, y^5*z, y^6, z^4, y*z^3, y^2*z^2, z^3>>, QQ[y, z] }
+	    chart=s, depth=1, mult=3, sol=(0, 0), { 11, <<y^3*z^6, y^3*z^5, y^3*z^4, y^3*z^3, y^3*z^2, y^3*z, y^3, y*z^4, y*z^3, y*z^2, z^3>>, QQ[y, z] } 
+usecase__get_base_points__examples(132): 
+==================================================
+==================================================
+================================================== 
+usecase__get_base_points__examples(133): index for example = 8 
+usecase__get_base_points__examples(134): { 2, <<x^3*y^2 + 2*x^3*y*z + x^2*y^2*z + x^3*z^2 + 2*x*y^2*z^2 - x^2*z^3 + 2*x*y*z^3 + y^2*z^3 + x*z^4, z^5>>, QQ[x, y, z] } 
+usecase__get_base_points__examples(137): 
+	{ 2, <<x^3*y^2 + 2*x^3*y*z + x^2*y^2*z + x^3*z^2 + 2*x*y^2*z^2 - x^2*z^3 + 2*x*y*z^3 + y^2*z^3 + x*z^4, z^5>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[x, y, z] }
+	chart=x, depth=0, mult=2, sol=(0, 0), { 2, <<y^2*z^3 + 2*y^2*z^2 + 2*y*z^3 + z^4 + y^2*z - z^3 + y^2 + 2*y*z + z^2, z^5>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[y, z] }
+	    chart=t, depth=1, mult=2, sol=(-1, 0), { 2, <<y^2*z^3 + 2*y^2*z^2 + y^2*z + 2*y*z^2 + y^2 + z^2 + 2*y - z + 1, z^3>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[y, z] }
+	        chart=t, depth=2, mult=1, sol=(1, 0), { 2, <<y^2*z^3 + 2*y^2*z^2 + y^2*z - 2*y*z^2 + y^2 - 2*y*z - 2*y + z + 1, z>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[y, z] }
+	            chart=s, depth=3, mult=1, sol=(0, 0), { 2, <<y^4*z^3 + 2*y^3*z^3 + 2*y^3*z^2 + y^2*z^3 + 2*y^2*z^2 + y^2*z + y, z>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[y, z] }
+	chart=y, depth=0, mult=3, sol=(0, 0), { 2, <<x^3*z^2 - x^2*z^3 + x*z^4 + 2*x^3*z + 2*x*z^3 + x^3 + x^2*z + 2*x*z^2 + z^3, z^5>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[x, z] }
+	    chart=t, depth=1, mult=1, sol=(a2, 0), { 2, <<x^3*z^2 + 2*x^3*z - x^2*z^2 + x^3 + x*z^2 + x^2 + 2*x*z + 2*x + 1, z^2>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[x, z] }
+	        chart=t, depth=2, mult=1, sol=((-2/23*a1 - 6/23)*a2 - 2/23*a1^2 - 2/23*a1 + 12/23, 0), { 2, <<x^3*z^4 + 2*x^3*z^3 + x^3*z^2 + (3*a2 - 1)*x^2*z^3 + 6*a2*x^2*z^2 + (3*a2 + 1)*x^2*z + ((-3*a1 - 5)*a2 - 3*a1^2 - 3*a1 - 5)*x*z^2 + ((-6*a1 - 6)*a2 - 6*a1^2 - 6*a1 - 10)*x*z + ((-3*a1 - 1)*a2 - 3*a1^2 - 3*a1 - 4)*x + ((2*a1 + 1)*a2 + 2*a1^2 + 2*a1 + 3)*z + 2*a1*a2 + 2*a1^2 + 2*a1 + 2, z>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[x, z] }
+	    chart=t, depth=1, mult=1, sol=(-a2 - a1 - 1, 0), { 2, <<x^3*z^2 + 2*x^3*z - x^2*z^2 + x^3 + x*z^2 + x^2 + 2*x*z + 2*x + 1, z^2>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[x, z] }
+	        chart=t, depth=2, mult=1, sol=((2/23*a1 + 6/23)*a2 + 6/23*a1 + 18/23, 0), { 2, <<x^3*z^4 + 2*x^3*z^3 + x^3*z^2 + (-3*a2 - 3*a1 - 4)*x^2*z^3 + (-6*a2 - 6*a1 - 6)*x^2*z^2 + (-3*a2 - 3*a1 - 2)*x^2*z + ((3*a1 + 5)*a2 + 5*a1)*x*z^2 + ((6*a1 + 6)*a2 + 6*a1 - 4)*x*z + ((3*a1 + 1)*a2 + a1 - 3)*x + ((-2*a1 - 1)*a2 - a1 + 2)*z - 2*a1*a2 + 2, z>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[x, z] }
+	    chart=t, depth=1, mult=1, sol=(a1, 0), { 2, <<x^3*z^2 + 2*x^3*z - x^2*z^2 + x^3 + x*z^2 + x^2 + 2*x*z + 2*x + 1, z^2>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[x, z] }
+	        chart=t, depth=2, mult=1, sol=(2/23*a1^2 - 4/23*a1 + 16/23, 0), { 2, <<x^3*z^4 + 2*x^3*z^3 + x^3*z^2 + (3*a1 - 1)*x^2*z^3 + 6*a1*x^2*z^2 + (3*a1 + 1)*x^2*z + (3*a1^2 - 2*a1 + 1)*x*z^2 + (6*a1^2 + 2)*x*z + (3*a1^2 + 2*a1 + 2)*x + (-2*a1^2 - a1 - 1)*z - 2*a1^2 - 2*a1 - 2, z>>, QQ( <a0|t^2 - t + 1>, <a1|t^3 + t^2 + 2*t + 1>, <a2|t^2 + (a1 + 1)*t + a1^2 + a1 + 2> )[x, z] } 
+usecase__get_base_points__examples(132): 
+==================================================
+==================================================
+================================================== 
+usecase__get_base_points__examples(133): index for example = 9 
+usecase__get_base_points__examples(134): { 2, <<x^3*y^4 + 3*x^2*y^3*z^2 + x*y^4*z^2 + 3*x*y^2*z^4 + y, z^7>>, QQ[x, y, z] } 
+usecase__get_base_points__examples(137): 
+	{ 2, <<x^3*y^4 + 3*x^2*y^3*z^2 + x*y^4*z^2 + 3*x*y^2*z^4 + y, z^7>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, y, z] }
+	chart=x, depth=0, mult=1, sol=(0, 0), { 2, <<y^4*z^2 + 3*y^2*z^4 + 3*y^3*z^2 + y^4 + y, z^7>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[y, z] }
+	    chart=t, depth=1, mult=1, sol=(0, 0), { 2, <<y^4*z^5 + y^4*z^3 + 3*y^3*z^4 + 3*y^2*z^5 + y, z^6>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[y, z] }
+	        chart=t, depth=2, mult=1, sol=(0, 0), { 2, <<y^4*z^8 + y^4*z^6 + 3*y^3*z^6 + 3*y^2*z^6 + y, z^5>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[y, z] }
+	            chart=t, depth=3, mult=1, sol=(0, 0), { 2, <<y^4*z^11 + y^4*z^9 + 3*y^3*z^8 + 3*y^2*z^7 + y, z^4>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[y, z] }
+	                chart=t, depth=4, mult=1, sol=(0, 0), { 2, <<y^4*z^14 + y^4*z^12 + 3*y^3*z^10 + 3*y^2*z^8 + y, z^3>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[y, z] }
+	                    chart=t, depth=5, mult=1, sol=(0, 0), { 2, <<y^4*z^17 + y^4*z^15 + 3*y^3*z^12 + 3*y^2*z^9 + y, z^2>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[y, z] }
+	                        chart=t, depth=6, mult=1, sol=(0, 0), { 2, <<y^4*z^20 + y^4*z^18 + 3*y^3*z^14 + 3*y^2*z^10 + y, z>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[y, z] }
+	chart=y, depth=0, mult=1, sol=(-1, 0), { 2, <<3*x*z^4 + 3*x^2*z^2 + x^3 + x*z^2 + 1, z^7>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	    chart=t, depth=1, mult=1, sol=(0, 0), { 2, <<x^3*z^2 + 3*x^2*z^3 + 3*x*z^4 + (-3)*x^2*z + (-5)*x*z^2 + (-3)*z^3 + 3*x + 2*z, z^6>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	        chart=t, depth=2, mult=1, sol=(-2/3, 0), { 2, <<x^3*z^4 + 3*x^2*z^4 + 3*x*z^4 + (-3)*x^2*z^2 + (-5)*x*z^2 + (-3)*z^2 + 3*x + 2, z^5>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	            chart=t, depth=3, mult=1, sol=(0, 0), { 2, <<x^3*z^6 + x^2*z^5 + (-3)*x^2*z^3 + 1/3*x*z^4 - x*z^2 + (-26/27)*z^3 + 3*x - z, z^4>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	                chart=t, depth=4, mult=1, sol=(1/3, 0), { 2, <<x^3*z^8 + x^2*z^6 + (-3)*x^2*z^4 + 1/3*x*z^4 - x*z^2 + (-26/27)*z^2 + 3*x - 1, z^3>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	                    chart=t, depth=5, mult=1, sol=(0, 0), { 2, <<x^3*z^10 + x^2*z^9 + x^2*z^7 + 1/3*x*z^8 + (-3)*x^2*z^5 + 2/3*x*z^6 + 1/27*z^7 + (-5/3)*x*z^4 + 1/9*z^5 - x*z^2 + (-2/9)*z^3 + 3*x + (-35/27)*z, z^2>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	                        chart=t, depth=6, mult=1, sol=(35/81, 0), { 2, <<x^3*z^12 + x^2*z^10 + x^2*z^8 + 1/3*x*z^8 + (-3)*x^2*z^6 + 2/3*x*z^6 + 1/27*z^6 + (-5/3)*x*z^4 + 1/9*z^4 - x*z^2 + (-2/9)*z^2 + 3*x - 35/27, z>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	chart=y, depth=0, mult=1, sol=(a0, 0), { 2, <<3*x*z^4 + 3*x^2*z^2 + x^3 + x*z^2 + 1, z^7>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	    chart=t, depth=1, mult=1, sol=(0, 0), { 2, <<x^3*z^2 + 3*x^2*z^3 + 3*x*z^4 + 3*a0*x^2*z + (6*a0 + 1)*x*z^2 + 3*a0*z^3 + (3*a0 - 3)*x + (4*a0 - 3)*z, z^6>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	        chart=t, depth=2, mult=1, sol=(1/3*a0 - 4/3, 0), { 2, <<1/3*x^3*z^4 + x^2*z^4 + x*z^4 + a0*x^2*z^2 + (2*a0 + 1/3)*x*z^2 + a0*z^2 + (a0 - 1)*x + 4/3*a0 - 1, 1/3*z^5>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	            chart=t, depth=3, mult=1, sol=(0, 0), { 2, <<1/3*x^3*z^6 + (1/3*a0 - 1/3)*x^2*z^5 + a0*x^2*z^3 + (-1/9*a0)*x*z^4 + (-1/3)*x*z^2 + (-26/81)*z^3 + (a0 - 1)*x + (-1/3)*z, 1/3*z^4>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	                chart=t, depth=4, mult=1, sol=(-1/3*a0, 0), { 2, <<1/3*x^3*z^8 + (1/3*a0 - 1/3)*x^2*z^6 + a0*x^2*z^4 + (-1/9*a0)*x*z^4 + (-1/3)*x*z^2 + (-26/81)*z^2 + (a0 - 1)*x - 1/3, 1/3*z^3>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	                    chart=t, depth=5, mult=1, sol=(0, 0), { 2, <<1/3*x^3*z^10 + (-1/3*a0)*x^2*z^9 + (1/3*a0 - 1/3)*x^2*z^7 + (1/9*a0 - 1/9)*x*z^8 + a0*x^2*z^5 + 2/9*x*z^6 + 1/81*z^7 + (-7/9*a0 + 2/3)*x*z^4 + (-1/27*a0)*z^5 + (-1/3)*x*z^2 + (1/27*a0 - 4/27)*z^3 + (a0 - 1)*x + (1/9*a0 - 26/81)*z, 1/3*z^2>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	                        chart=t, depth=6, mult=1, sol=(-17/81*a0 - 1/9, 0), { 2, <<1/3*x^3*z^12 + (-1/3*a0)*x^2*z^10 + (1/3*a0 - 1/3)*x^2*z^8 + (1/9*a0 - 1/9)*x*z^8 + a0*x^2*z^6 + 2/9*x*z^6 + 1/81*z^6 + (-7/9*a0 + 2/3)*x*z^4 + (-1/27*a0)*z^4 + (-1/3)*x*z^2 + (1/27*a0 - 4/27)*z^2 + (a0 - 1)*x + 1/9*a0 - 26/81, 1/3*z>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	chart=y, depth=0, mult=1, sol=(-a0 + 1, 0), { 2, <<3*x*z^4 + 3*x^2*z^2 + x^3 + x*z^2 + 1, z^7>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	    chart=t, depth=1, mult=1, sol=(0, 0), { 2, <<x^3*z^2 + 3*x^2*z^3 + 3*x*z^4 + (-3*a0 + 3)*x^2*z + (-6*a0 + 7)*x*z^2 + (-3*a0 + 3)*z^3 + (-3*a0)*x + (-4*a0 + 1)*z, z^6>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	        chart=t, depth=2, mult=1, sol=(-1/3*a0 - 1, 0), { 2, <<x^3*z^4 + 3*x^2*z^4 + 3*x*z^4 + (-3*a0 + 3)*x^2*z^2 + (-6*a0 + 7)*x*z^2 + (-3*a0 + 3)*z^2 + (-3*a0)*x - 4*a0 + 1, z^5>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	            chart=t, depth=3, mult=1, sol=(0, 0), { 2, <<x^3*z^6 + (-a0)*x^2*z^5 + (-3*a0 + 3)*x^2*z^3 + (1/3*a0 - 1/3)*x*z^4 - x*z^2 + (-26/27)*z^3 + (-3*a0)*x - z, z^4>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	                chart=t, depth=4, mult=1, sol=(1/3*a0 - 1/3, 0), { 2, <<x^3*z^8 + (-a0)*x^2*z^6 + (-3*a0 + 3)*x^2*z^4 + (1/3*a0 - 1/3)*x*z^4 - x*z^2 + (-26/27)*z^2 + (-3*a0)*x - 1, z^3>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	                    chart=t, depth=5, mult=1, sol=(0, 0), { 2, <<x^3*z^10 + (a0 - 1)*x^2*z^9 + (-a0)*x^2*z^7 + (-1/3*a0)*x*z^8 + (-3*a0 + 3)*x^2*z^5 + 2/3*x*z^6 + 1/27*z^7 + (7/3*a0 - 1/3)*x*z^4 + (1/9*a0 - 1/9)*z^5 - x*z^2 + (-1/9*a0 - 1/3)*z^3 + (-3*a0)*x + (-1/3*a0 - 17/27)*z, z^2>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] }
+	                        chart=t, depth=6, mult=1, sol=(17/81*a0 - 26/81, 0), { 2, <<x^3*z^12 + (a0 - 1)*x^2*z^10 + (-a0)*x^2*z^8 + (-1/3*a0)*x*z^8 + (-3*a0 + 3)*x^2*z^6 + 2/3*x*z^6 + 1/27*z^6 + (7/3*a0 - 1/3)*x*z^4 + (1/9*a0 - 1/9)*z^4 - x*z^2 + (-1/9*a0 - 1/3)*z^2 + (-3*a0)*x - 1/3*a0 - 17/27, z>>, QQ( <a0|t^2 - t + 1>, <a1|t^2 + 4/3*a0 - 1/3>, <a2|t^2 - 2/3>, <a3|t^2 - 4/3*a0 + 1> )[x, z] } 
+usecase__get_base_points__examples(132): 
+==================================================
+==================================================
+================================================== 
+usecase__get_base_points__examples(133): index for example = 10 
+usecase__get_base_points__examples(134): { 7, <<x^2*y^2 + 6/5*x^2*y*z + 17/5*x^2*z^2 + y^2*z^2 + 6/5*y*z^3 + 17/5*z^4, 8/5*x^2*y*z + 6/5*x^2*z^2 + 8/5*y*z^3 + 6/5*z^4, x^2*y^2 + 6/5*x^2*y*z + 7/5*x^2*z^2 + y^2*z^2 + 6/5*y*z^3 + 7/5*z^4, 4*x*z^3, 2*x^2*z^2 - 2*z^4, -6/5*x^2*y*z - 2/5*x^2*z^2 - 4*x*z^3 + 6/5*y*z^3 + 2/5*z^4, -2*x^2*z^2 + 12/5*x*y*z^2 + 4/5*x*z^3 + 2*z^4>>, QQ[x, y, z] } 
+usecase__get_base_points__examples(137): 
+	{ 7, <<x^2*y^2 + 6/5*x^2*y*z + 17/5*x^2*z^2 + y^2*z^2 + 6/5*y*z^3 + 17/5*z^4, 8/5*x^2*y*z + 6/5*x^2*z^2 + 8/5*y*z^3 + 6/5*z^4, x^2*y^2 + 6/5*x^2*y*z + 7/5*x^2*z^2 + y^2*z^2 + 6/5*y*z^3 + 7/5*z^4, 4*x*z^3, 2*x^2*z^2 - 2*z^4, -6/5*x^2*y*z - 2/5*x^2*z^2 - 4*x*z^3 + 6/5*y*z^3 + 2/5*z^4, -2*x^2*z^2 + 12/5*x*y*z^2 + 4/5*x*z^3 + 2*z^4>>, QQ( <a0|t^2 + 1>, <a1|t^2 + 6/5*t + 17/5> )[x, y, z] }
+	chart=x, depth=0, mult=2, sol=(0, 0), { 7, <<y^2*z^2 + 6/5*y*z^3 + 17/5*z^4 + y^2 + 6/5*y*z + 17/5*z^2, 8/5*y*z^3 + 6/5*z^4 + 8/5*y*z + 6/5*z^2, y^2*z^2 + 6/5*y*z^3 + 7/5*z^4 + y^2 + 6/5*y*z + 7/5*z^2, 4*z^3, -2*z^4 + 2*z^2, 6/5*y*z^3 + 2/5*z^4 - 4*z^3 - 6/5*y*z - 2/5*z^2, 2*z^4 + 12/5*y*z^2 + 4/5*z^3 - 2*z^2>>, QQ( <a0|t^2 + 1>, <a1|t^2 + 6/5*t + 17/5> )[y, z] }
+	chart=y, depth=0, mult=2, sol=(0, 0), { 7, <<17/5*x^2*z^2 + 17/5*z^4 + 6/5*x^2*z + 6/5*z^3 + x^2 + z^2, 6/5*x^2*z^2 + 6/5*z^4 + 8/5*x^2*z + 8/5*z^3, 7/5*x^2*z^2 + 7/5*z^4 + 6/5*x^2*z + 6/5*z^3 + x^2 + z^2, 4*x*z^3, 2*x^2*z^2 + (-2)*z^4, (-2/5)*x^2*z^2 + (-4)*x*z^3 + 2/5*z^4 + (-6/5)*x^2*z + 6/5*z^3, (-2)*x^2*z^2 + 4/5*x*z^3 + 2*z^4 + 12/5*x*z^2>>, QQ( <a0|t^2 + 1>, <a1|t^2 + 6/5*t + 17/5> )[x, z] }
+	    chart=t, depth=1, mult=1, sol=(-a0, 0), { 7, <<17/5*x^2*z^2 + 6/5*x^2*z + x^2 + 17/5*z^2 + 6/5*z + 1, 6/5*x^2*z^2 + 8/5*x^2*z + 6/5*z^2 + 8/5*z, 7/5*x^2*z^2 + 6/5*x^2*z + x^2 + 7/5*z^2 + 6/5*z + 1, 4*x*z^2, 2*x^2*z^2 + (-2)*z^2, (-2/5)*x^2*z^2 + (-6/5)*x^2*z + (-4)*x*z^2 + 2/5*z^2 + 6/5*z, (-2)*x^2*z^2 + 4/5*x*z^2 + 12/5*x*z + 2*z^2>>, QQ( <a0|t^2 + 1>, <a1|t^2 + 6/5*t + 17/5> )[x, z] }
+	    chart=t, depth=1, mult=1, sol=(a0, 0), { 7, <<17/5*x^2*z^2 + 6/5*x^2*z + x^2 + 17/5*z^2 + 6/5*z + 1, 6/5*x^2*z^2 + 8/5*x^2*z + 6/5*z^2 + 8/5*z, 7/5*x^2*z^2 + 6/5*x^2*z + x^2 + 7/5*z^2 + 6/5*z + 1, 4*x*z^2, 2*x^2*z^2 + (-2)*z^2, (-2/5)*x^2*z^2 + (-6/5)*x^2*z + (-4)*x*z^2 + 2/5*z^2 + 6/5*z, (-2)*x^2*z^2 + 4/5*x*z^2 + 12/5*x*z + 2*z^2>>, QQ( <a0|t^2 + 1>, <a1|t^2 + 6/5*t + 17/5> )[x, z] } 
+usecase__get_linear_series__P2(155): 
+	chart=z, depth=0, mult=1, sol=(0, 0), None
+	    chart=t, depth=1, mult=1, sol=(0, 0), None
+	        chart=t, depth=2, mult=1, sol=(-1, 0), None
+	            chart=t, depth=3, mult=1, sol=(0, 0), None 
+usecase__get_linear_series__P2(158): 
+	{ 2, <<x^2, y^2 + x*z>>, QQ[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(0, 0), { 2, <<x^2, y^2 + x>>, QQ[x, y] }
+	    chart=t, depth=1, mult=1, sol=(0, 0), { 2, <<x^2*y, x + y>>, QQ[x, y] }
+	        chart=t, depth=2, mult=1, sol=(-1, 0), { 2, <<x^2*y^2, x + 1>>, QQ[x, y] }
+	            chart=t, depth=3, mult=1, sol=(0, 0), { 2, <<x^2*y^3 - 2*x*y^2 + y, x>>, QQ[x, y] } 
+usecase__get_linear_series__P1P1_DP6(178): We consider linear series of curves in P^1xP^1 with the following base point tree: 
+usecase__get_linear_series__P1P1_DP6(179): 
+	chart=xv, depth=0, mult=1, sol=(-a0, a0), None
+	chart=xv, depth=0, mult=1, sol=(a0, -a0), None 
+usecase__get_linear_series__P1P1_DP6(193): The linear series of bi-degree (2,2) corresponding to this base point tree is as follows: 
+usecase__get_linear_series__P1P1_DP6(194): 
+	{ 7, <<x^2*v^2 - y^2*w^2, x^2*v*w + y^2*v*w, x^2*w^2 + y^2*w^2, x*y*v^2 - y^2*v*w, x*y*v*w - y^2*w^2, y^2*v*w + x*y*w^2, y^2*v^2 + y^2*w^2>>, QQ( <a0|t^2 + 1> )[x, y, v, w] }
+	chart=xv, depth=0, mult=1, sol=(a0, (-a0)), { 7, <<-y^2*w^2 + 1, y^2*w + w, y^2*w^2 + w^2, -y^2*w + y, -y^2*w^2 + y*w, y^2*w + y*w^2, y^2*w^2 + y^2>>, QQ( <a0|t^2 + 1> )[y, w] }
+	chart=xv, depth=0, mult=1, sol=(-a0, a0), { 7, <<-y^2*w^2 + 1, y^2*w + w, y^2*w^2 + w^2, -y^2*w + y, -y^2*w^2 + y*w, y^2*w + y*w^2, y^2*w^2 + y^2>>, QQ( <a0|t^2 + 1> )[y, w] } 
+usecase__get_linear_series__P1P1_DP6(206): The linear series of bi-degree (1,1) corresponding to this base point tree is as follows: 
+usecase__get_linear_series__P1P1_DP6(207): 
+	{ 2, <<x*v - y*w, y*v + x*w>>, QQ( <a0|t^2 + 1> )[x, y, v, w] }
+	chart=xv, depth=0, mult=1, sol=(a0, (-a0)), { 2, <<-y*w + 1, y + w>>, QQ( <a0|t^2 + 1> )[y, w] }
+	chart=xv, depth=0, mult=1, sol=(-a0, a0), { 2, <<-y*w + 1, y + w>>, QQ( <a0|t^2 + 1> )[y, w] } 
+usecase__get_implicit__DP6(243): parametrization    = [x^2*v^2 - y^2*w^2, x^2*v*w + y^2*v*w, x^2*w^2 + y^2*w^2, x*y*v^2 - y^2*v*w, x*y*v*w - y^2*w^2, y^2*v*w + x*y*w^2, y^2*v^2 + y^2*w^2] 
+usecase__get_implicit__DP6(244): base points        =
+	{ 7, <<x^2*v^2 - y^2*w^2, x^2*v*w + y^2*v*w, x^2*w^2 + y^2*w^2, x*y*v^2 - y^2*v*w, x*y*v*w - y^2*w^2, y^2*v*w + x*y*w^2, y^2*v^2 + y^2*w^2>>, QQ( <a0|t^2 + 1> )[x, y, v, w] }
+	chart=xv, depth=0, mult=1, sol=(a0, (-a0)), { 7, <<-y^2*w^2 + 1, y^2*w + w, y^2*w^2 + w^2, -y^2*w + y, -y^2*w^2 + y*w, y^2*w + y*w^2, y^2*w^2 + y^2>>, QQ( <a0|t^2 + 1> )[y, w] }
+	chart=xv, depth=0, mult=1, sol=(-a0, a0), { 7, <<-y^2*w^2 + 1, y^2*w + w, y^2*w^2 + w^2, -y^2*w + y, -y^2*w^2 + y*w, y^2*w + y*w^2, y^2*w^2 + y^2>>, QQ( <a0|t^2 + 1> )[y, w] } 
+usecase__get_implicit__DP6(251): implicit equations = [x3*x5 + x5^2 - x2*x6 - x4*x6, x4^2 + x5^2 - x2*x6, x3*x4 + x4*x5 - x1*x6 + x5*x6, x2*x4 - x1*x5 + x2*x6, x1*x4 - x0*x5 + x1*x6 - x5*x6, x3^2 - x5^2 - x0*x6 + x2*x6 + 2*x4*x6, x2*x3 - x0*x5 + x1*x6 - x5*x6, x1*x3 - x0*x4 - x4*x6, x1^2 - x0*x2 - x2*x6, x0*x5^2 + x2*x5^2 - x2^2*x6 - 2*x1*x5*x6 + x5^2*x6 + x2*x6^2, x0*x4*x5 + x1*x5^2 - x1*x2*x6 - x0*x5*x6 + x4*x5*x6 + x1*x6^2 - x5*x6^2] 
+usecase__get_implicit__DP6(261): Hilbert polynomial = 3*t^2 + 3*t + 1 
+usecase__get_implicit__DP6(262): implicit degree    = 6 
+usecase__get_implicit__DP6(268): Inside sphere?:  False 
+usecase__get_implicit__DP6(275): Look for quadric in ideal of signature (1,6)...(may take a while)... 
+usecase__get_implicit__DP6(304): 	 sig = [1, 6, 0] [-1, -1, 0, 0, 0, -1, 1, 0, -1, -1, -1] 
+usecase__get_implicit__DP6(340): quadratic form of signature (1,6) in ideal = -x1^2 + x0*x2 + x2*x3 - x3^2 - x4^2 - x0*x5 - x3*x5 - x5^2 + x0*x6 + x1*x6 + 2*x2*x6 - x4*x6 - x5*x6 
+usecase__get_implicit__DP6(341): matrix M associated to quadratic form      = [(0, 0, 1, 0, 0, -1, 1), (0, -2, 0, 0, 0, 0, 1), (1, 0, 0, 1, 0, 0, 2), (0, 0, 1, -2, 0, -1, 0), (0, 0, 0, 0, -2, 0, -1), (-1, 0, 0, -1, 0, -2, -1), (1, 1, 2, 0, -1, -1, 0)] 
+usecase__get_implicit__DP6(342): M == U.T*J*U                               = [(0.?e-15, 0.?e-15, 1.000000000000000?, 0.?e-15, 0.?e-15, -1.000000000000000?, 1.000000000000000?), (0.?e-15, -2.000000000000000?, 0.?e-16, 0.?e-15, 0.?e-15, 0.?e-15, 1.000000000000000?), (1.000000000000000?, 0.?e-16, 0.?e-16, 1.000000000000000?, 0.?e-16, 0.?e-15, 2.000000000000000?), (0.?e-15, 0.?e-15, 1.000000000000000?, -2.000000000000000?, 0.?e-15, -1.000000000000000?, 0.?e-15), (0.?e-15, 0.?e-15, 0.?e-16, 0.?e-15, -2.000000000000000?, 0.?e-15, -1.000000000000000?), (-1.000000000000000?, 0.?e-15, 0.?e-15, -1.000000000000000?, 0.?e-15, -2.000000000000000?, -1.000000000000000?), (1.000000000000000?, 1.000000000000000?, 2.000000000000000?, 0.?e-15, -1.000000000000000?, -1.000000000000000?, 0.?e-15)] 
+usecase__get_implicit__DP6(343): U                                          = [(0.7856127095242105?, 0.2141152433889037?, 1.016446787525910?, 0.2724937834092648?, -0.2141152433889037?, -0.4154725625029575?, 1.125147723771109?), (0.2632230390001172?, -0.4399761817952255?, -0.747609878600685?, 0.982944504612788?, 0.4399761817952255?, 1.102170293861391?, 0.827980840852233?), (0.4015799313466890?, 0.855748620186072?, 0.0822090383459645?, 0.635213703764238?, -0.855748620186072?, 0.550527743109416?, -0.630910641621480?), (0.3386946987309548?, -0.09587918680796937?, 0.3579503261413215?, -0.7366714982940786?, 0.09587918680796937?, 0.7840040542881279?, -0.05545169737911089?), (0.1475517971830220?, 0.3005502185392302?, -0.5624062102222774?, -0.4019489753741601?, -0.3005502185392302?, -0.0859397574659213?, 0.3562693408267378?), (0.500148865883660?, -0.1429592376416540?, -0.151842135204236?, 0.0181283809303472?, 0.1429592376416540?, -0.180857121882439?, -0.228810305323790?), (0, 1.000000000000000?, 0, 0, 1.000000000000000?, 0, 0)] 
+usecase__get_implicit__DP6(344): J                                          = [(1, 0, 0, 0, 0, 0, 0), (0, -1, 0, 0, 0, 0, 0), (0, 0, -1, 0, 0, 0, 0), (0, 0, 0, -1, 0, 0, 0), (0, 0, 0, 0, -1, 0, 0), (0, 0, 0, 0, 0, -1, 0), (0, 0, 0, 0, 0, 0, -1)] 
+usecase__get_base_points__and__get_linear_series(356): 
+	{ 2, <<x^2 + y^2, y^2 + x*z>>, QQ( <a0|t^2 + 1> )[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(1, a0), { 2, <<x^2 + y^2, y^2 + x>>, QQ( <a0|t^2 + 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(1, (-a0)), { 2, <<x^2 + y^2, y^2 + x>>, QQ( <a0|t^2 + 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(0, 0), { 2, <<x^2 + y^2, y^2 + x>>, QQ( <a0|t^2 + 1> )[x, y] }
+	    chart=t, depth=1, mult=1, sol=(0, 0), { 2, <<x^2*y + y, x + y>>, QQ( <a0|t^2 + 1> )[x, y] } 
+usecase__get_base_points__and__get_linear_series(359): { 2, <<x^2 + y^2, y^2 + x*z>>, QQ( <a0|t^2 + 1> )[x, y, z] } 
+usecase__get_base_points__and__get_linear_series(360): 
+	{ 2, <<x^2 + y^2, y^2 + x*z>>, QQ( <a0|t^2 + 1> )[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(1, a0), { 2, <<x^2 + y^2, y^2 + x>>, QQ( <a0|t^2 + 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(1, (-a0)), { 2, <<x^2 + y^2, y^2 + x>>, QQ( <a0|t^2 + 1> )[x, y] }
+	chart=z, depth=0, mult=1, sol=(0, 0), { 2, <<x^2 + y^2, y^2 + x>>, QQ( <a0|t^2 + 1> )[x, y] }
+	    chart=t, depth=1, mult=1, sol=(0, 0), { 2, <<x^2*y + y, x + y>>, QQ( <a0|t^2 + 1> )[x, y] } 
+usecase__linear_normalization__and__adjoint(382): linear series      = 
+	{ 5, <<x^2, x*y, x*z, y^2, y*z>>, QQ[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(0, 0), { 5, <<x^2, x*y, x, y^2, y>>, QQ[x, y] } 
+usecase__linear_normalization__and__adjoint(383): implicit image     = [x2*x3 - x1*x4, x1*x2 - x0*x4, x1^2 - x0*x3] 
+usecase__linear_normalization__and__adjoint(392): Hilbert polynomial = 3/2*t^2 + 5/2*t + 1 
+usecase__linear_normalization__and__adjoint(393): implicit degree    = 3 
+usecase__linear_normalization__and__adjoint(400): basepoint tree of projection = 
+	{ 4, <<x^2 - x*y, x*z, y^2, y*z>>, QQ[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(0, 0), { 4, <<x^2 - x*y, x, y^2, y>>, QQ[x, y] } 
+usecase__linear_normalization__and__adjoint(405): eqn       = x1^2*x2 - x1*x2*x3 - x0*x3^2 
+usecase__linear_normalization__and__adjoint(406): D(eqn,x0) = -x3^2 
+usecase__linear_normalization__and__adjoint(407): D(eqn,x1) = 2*x1*x2 - x2*x3 
+usecase__linear_normalization__and__adjoint(408): D(eqn,x2) = x1^2 - x1*x3 
+usecase__linear_normalization__and__adjoint(409): D(eqn,x3) = -x1*x2 - 2*x0*x3 
+usecase__linear_normalization__and__adjoint(415): normalization =  { 5, <<x^2, x*y, x*z, y^2, y*z>>, QQ[x, y, z] } 
+usecase__linear_normalization__and__adjoint(416):               =  [x2*x3 - x1*x4, x1*x2 - x0*x4, x1^2 - x0*x3] 
+usecase__linear_normalization__and__adjoint(426): 
+	{ 17, <<x^5, x^4*y, x^4*z, x^3*y^2, x^3*y*z, x^3*z^2, x^2*y^3, x^2*y^2*z, x^2*y*z^2, x^2*z^3, x*y^4, x*y^3*z, x*y^2*z^2, x*y*z^3, y^5 - y^2*z^3, y^4*z - y^2*z^3, y^3*z^2 - y^2*z^3>>, QQ( <a0|t^2 + t + 1> )[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(0, 1), { 17, <<x^5, x^4*y, x^4, x^3*y^2, x^3*y, x^3, x^2*y^3, x^2*y^2, x^2*y, x^2, x*y^4, x*y^3, x*y^2, x*y, y^5 - y^2, y^4 - y^2, y^3 - y^2>>, QQ( <a0|t^2 + t + 1> )[x, y] }
+	chart=z, depth=0, mult=2, sol=(0, 0), { 17, <<x^5, x^4*y, x^4, x^3*y^2, x^3*y, x^3, x^2*y^3, x^2*y^2, x^2*y, x^2, x*y^4, x*y^3, x*y^2, x*y, y^5 - y^2, y^4 - y^2, y^3 - y^2>>, QQ( <a0|t^2 + t + 1> )[x, y] } 
+usecase__neron_severi_lattice(454): ls     =  { 5, <<x^3 + 2*y^2*z - x*z^2 - 2*y*z^2, x^2*y, x*y^2 - 2*y^2*z + 2*y*z^2, x*y*z - 2*y^2*z + 2*y*z^2, y^3 - 2*y^2*z + y*z^2>>, QQ[x, y, z] } 
+usecase__neron_severi_lattice(455): 
+	{ 5, <<x^3 + 2*y^2*z - x*z^2 - 2*y*z^2, x^2*y, x*y^2 - 2*y^2*z + 2*y*z^2, x*y*z - 2*y^2*z + 2*y*z^2, y^3 - 2*y^2*z + y*z^2>>, QQ[x, y, z] }
+	chart=z, depth=0, mult=1, sol=(0, 1), { 5, <<x^3 + 2*y^2 - x - 2*y, x^2*y, x*y^2 - 2*y^2 + 2*y, x*y - 2*y^2 + 2*y, y^3 - 2*y^2 + y>>, QQ[x, y] }
+	    chart=t, depth=1, mult=1, sol=(2, 0), { 5, <<x^3*y^2 - x + 2*y + 2, x^2*y^2 + x^2*y, x*y^2 + 2*x*y + x - 2*y - 2, x*y + x - 2*y - 2, y^2 + y>>, QQ[x, y] }
+	chart=z, depth=0, mult=1, sol=(1, 0), { 5, <<x^3 + 2*y^2 - x - 2*y, x^2*y, x*y^2 - 2*y^2 + 2*y, x*y - 2*y^2 + 2*y, y^3 - 2*y^2 + y>>, QQ[x, y] }
+	chart=z, depth=0, mult=1, sol=(-1, 0), { 5, <<x^3 + 2*y^2 - x - 2*y, x^2*y, x*y^2 - 2*y^2 + 2*y, x*y - 2*y^2 + 2*y, y^3 - 2*y^2 + y>>, QQ[x, y] }
+	chart=z, depth=0, mult=1, sol=(0, 0), { 5, <<x^3 + 2*y^2 - x - 2*y, x^2*y, x*y^2 - 2*y^2 + 2*y, x*y - 2*y^2 + 2*y, y^3 - 2*y^2 + y>>, QQ[x, y] } 
+
+    [x2^2 - 2*x2*x3 + x3^2 - x1*x4, x1^2 - x0*x2 - 2*x1*x2 + 2*x1*x3 - x3^2 + 2*x0*x4 + 2*x3*x4] 
+usecase__neron_severi_lattice(464): ls123  = { 1, <<y>>, QQ[x, y, z] } 
+usecase__neron_severi_lattice(475): ls1    = { 1, <<x - y + z>>, QQ[x, y, z] } 
+usecase__neron_severi_lattice(495): ls45   = { 1, <<x - 2*y + 2*z>>, QQ[x, y, z] } 
+usecase__neron_severi_lattice(507): ls1234 = { 1, <<x*y - 2*y^2 + 2*y*z>>, QQ[x, y, z] } 
+usecase__neron_severi_lattice(508): 		 y * (x - 2*y + 2*z) 
+usecase__neron_severi_lattice(518): ls4    = { 2, <<x, y - z>>, QQ[x, y, z] } 
+usecase__neron_severi_lattice(526): ls1234 = { 2, <<x*y, y^2 - y*z>>, QQ[x, y, z] } 
+usecase__neron_severi_lattice(539): Pinv        = [y0^2 + y1^2 + y2^2 + y3^2 + y4^2, 2*y0*y1, 2*y0*y2, 2*y0*y3, 2*y0*y4, -y0^2 + y1^2 + y2^2 + y3^2 + y4^2] 
+usecase__neron_severi_lattice(540): H           = [x^3 + 2*y^2*z - x*z^2 - 2*y*z^2, x^2*y, x*y^2 - 2*y^2*z + 2*y*z^2, x*y*z - 2*y^2*z + 2*y*z^2, y^3 - 2*y^2*z + y*z^2] 
+usecase__neron_severi_lattice(541): Pinv o H    = [x^6 + x^4*y^2 + x^2*y^4 + y^6 + 4*x^3*y^2*z - 4*x*y^4*z - 4*y^5*z - 2*x^4*z^2 - 4*x^3*y*z^2 + x^2*y^2*z^2 + 18*y^4*z^2 - 28*y^3*z^3 + x^2*z^4 + 4*x*y*z^4 + 13*y^2*z^4, 2*x^5*y + 4*x^2*y^3*z - 2*x^3*y*z^2 - 4*x^2*y^2*z^2, 2*x^4*y^2 - 4*x^3*y^2*z + 4*x*y^4*z + 4*x^3*y*z^2 - 2*x^2*y^2*z^2 - 4*x*y^3*z^2 - 8*y^4*z^2 + 4*x*y^2*z^3 + 16*y^3*z^3 - 4*x*y*z^4 - 8*y^2*z^4, 2*x^4*y*z - 4*x^3*y^2*z + 4*x^3*y*z^2 + 4*x*y^3*z^2 - 8*y^4*z^2 - 2*x^2*y*z^3 + 16*y^3*z^3 - 4*x*y*z^4 - 8*y^2*z^4, 2*x^3*y^3 - 4*x^3*y^2*z + 4*y^5*z + 2*x^3*y*z^2 - 2*x*y^3*z^2 - 12*y^4*z^2 + 4*x*y^2*z^3 + 12*y^3*z^3 - 2*x*y*z^4 - 4*y^2*z^4, -x^6 + x^4*y^2 + x^2*y^4 + y^6 - 4*x^3*y^2*z - 4*x*y^4*z - 4*y^5*z + 2*x^4*z^2 + 4*x^3*y*z^2 + x^2*y^2*z^2 + 10*y^4*z^2 + 8*x*y^2*z^3 - 12*y^3*z^3 - x^2*z^4 - 4*x*y*z^4 + 5*y^2*z^4] 
+usecase__neron_severi_lattice(547): ls_PinvH    = { 6, <<x^6 + x^4*y^2 + x^2*y^4 + y^6 + 4*x^3*y^2*z - 4*x*y^4*z - 4*y^5*z - 2*x^4*z^2 - 4*x^3*y*z^2 + x^2*y^2*z^2 + 18*y^4*z^2 - 28*y^3*z^3 + x^2*z^4 + 4*x*y*z^4 + 13*y^2*z^4, 2*x^5*y + 4*x^2*y^3*z - 2*x^3*y*z^2 - 4*x^2*y^2*z^2, 2*x^4*y^2 - 4*x^3*y^2*z + 4*x*y^4*z + 4*x^3*y*z^2 - 2*x^2*y^2*z^2 - 4*x*y^3*z^2 - 8*y^4*z^2 + 4*x*y^2*z^3 + 16*y^3*z^3 - 4*x*y*z^4 - 8*y^2*z^4, 2*x^4*y*z - 4*x^3*y^2*z + 4*x^3*y*z^2 + 4*x*y^3*z^2 - 8*y^4*z^2 - 2*x^2*y*z^3 + 16*y^3*z^3 - 4*x*y*z^4 - 8*y^2*z^4, 2*x^3*y^3 - 4*x^3*y^2*z + 4*y^5*z + 2*x^3*y*z^2 - 2*x*y^3*z^2 - 12*y^4*z^2 + 4*x*y^2*z^3 + 12*y^3*z^3 - 2*x*y*z^4 - 4*y^2*z^4, -x^6 + x^4*y^2 + x^2*y^4 + y^6 - 4*x^3*y^2*z - 4*x*y^4*z - 4*y^5*z + 2*x^4*z^2 + 4*x^3*y*z^2 + x^2*y^2*z^2 + 10*y^4*z^2 + 8*x*y^2*z^3 - 12*y^3*z^3 - x^2*z^4 - 4*x*y*z^4 + 5*y^2*z^4>>, QQ[x, y, z] } 
+usecase__neron_severi_lattice(548): 		 [x2^2 - 2*x2*x3 + x3^2 - x1*x4, x1^2 - x0*x2 - 2*x1*x2 + 2*x1*x3 - x3^2 + 2*x0*x4 + 2*x3*x4 + x2*x5 - 2*x4*x5, x0^2 - x0*x2 - 2*x1*x2 + 2*x1*x3 - 2*x2*x3 - x3^2 + 2*x0*x4 - x1*x4 + 2*x3*x4 - x4^2 + x2*x5 - 2*x4*x5 - x5^2] 
+stop_timer(204): time passed = 12.263590964999821 
+The End
