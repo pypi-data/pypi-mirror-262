@@ -1,0 +1,14 @@
+column_batch_group,column_name,column_name_new,custom_function,database_name,dataset_name,date_format,function,data_product_id
+3,valueset_code,valueset_code,trim(lower(value_set_code)),,bronze_phvs_translation_valueset_headers,,custom,global_reference
+3,column2,concept_code,,,bronze_phvs_translation_valuesets,,withColumnRenamed,global_reference
+3,column3,concept_name,,,bronze_phvs_translation_valuesets,,withColumnRenamed,global_reference
+3,variable_name,variable_name,trim(lower(code_system_code)),,bronze_phvs_translation_valuesets,,custom,global_reference
+3,valueset_code,valueset_code,"trim(replace(code_system_code,'PH_','PHVS_'))",,bronze_phvs_translation_valuesets,,custom,global_reference
+4,valueset_code,valueset_code,trim(lower(variable_name)),,bronze_phvs_translation_valuesets,,custom,global_reference
+5,valueset_code,valueset_code,"replace(valueset_code, '__lab_','')",,bronze_phvs_translation_valuesets,,custom,global_reference
+5,valueset_code,valueset_code,"replace(valueset_code, '__symptom_','')",,bronze_phvs_translation_valuesets,,custom,global_reference
+5,valueset_code,valueset_code,"replace(valueset_code,'hl7_','')",,bronze_phvs_translation_valuesets,,custom,global_reference
+5,valueset_code,valueset_code,"trim(replace(valueset_code,'_phinvads',''))",,bronze_phvs_translation_valuesets,,custom,global_reference
+5,valueset_type,valueset_type,"trim(case when contains(variable_name, 'phinvads') then 'phinvads'  else 'local' end)",,bronze_phvs_translation_valuesets,,custom,global_reference
+5,valueset_code,valueset_code,"replace(valueset_code,'lk_','')",,bronze_phvs_translation_valuesets,,custom,global_reference
+5,valueset_code,valueset_code,"trim(replace(valueset_code,'_fdd',''))",,bronze_phvs_translation_valuesets,,custom,global_reference
