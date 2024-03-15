@@ -1,0 +1,16 @@
+numfy/__init__.py,sha256=g9FQmR7kWzGgsOAf6ioWl1Tp2N2aGLyKdeiM87hBdn0,1027
+numfy/cgan.txt,sha256=4xY-Sgn0T-qJDx6O0YBc7y9m2n6gqshzeHIsQzfbPS8,5590
+numfy/diffusion.txt,sha256=87Fsie3Hpx2BFbXAK8Z27dAu8qY503jV10YZTzwSGPA,3328
+numfy/face.txt,sha256=9VlU7uC02uvcCDWAEtoOHIxy2FRfja8ZXwU5u-ZDIGM,1483
+numfy/image.txt,sha256=sCdZe1j7vgaSsxEBIjIpviRLHVH0UUoO1UHEm72Rv3g,975
+numfy/mod1.txt,sha256=HW1m9wDUvTBf3puk0uAXc3SjhbdOfbWxryEsRFGE_Gw,11954
+numfy/rcnn.txt,sha256=Y-SVCXeMy6qVLcCErwsjtDcCfzBwmuw3TVlJourbTgo,5097
+numfy/rcnnc.txt,sha256=Hl82rHmEmnSB9VSEsAdpwrIVlpnx6ZT8Cmsjq0cuHyQ,1183
+numfy/stable.txt,sha256=7oPPj2hWJBHXzYvXKREj2u2F1QVH2kr3Fp3WDVZkvOw,1559
+numfy/vae.txt,sha256=WZDevRVlDDycG3X7TTjyHz8L2at03I7zJn-0GAr5R4c,4237
+numfy/yolo.txt,sha256=5mwSOPQ0vvAzWM3iW4R_yRHyaxiRavywGBS-IbXGmOM,5226
+numfy/yoloc.txt,sha256=ZXEb0IM1w7fZUz0rU-mNhrvTm_PSP-QBPYmQTTb8sQM,914
+numfy-1.0.dist-info/METADATA,sha256=KDRf-TkoDC4Rc9VDHsvbZRryE2ZBY7GqYlRX8SnQye0,653
+numfy-1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+numfy-1.0.dist-info/top_level.txt,sha256=EmKNz5rA5N8M69rn39S5AojYoOGy22CN-5CIcf4ebig,6
+numfy-1.0.dist-info/RECORD,,

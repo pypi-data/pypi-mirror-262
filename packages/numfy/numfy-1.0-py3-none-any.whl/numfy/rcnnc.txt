@@ -1,0 +1,53 @@
+import torch
+import torchvision
+from torchvision.models.detection import fasterrcnn_resnet50_fpn
+from torchvision.transforms import functional as F
+from PIL import Image
+
+
+model = fasterrcnn_resnet50_fpn(pretrained=True)
+model.eval()
+
+
+image_path = '/content/drive/MyDrive/DATA/TEST/IMAGES/CD26.jpg'
+image = Image.open(image_path)
+
+
+image_tensor = F.to_tensor(image)
+image_tensor = image_tensor.unsqueeze(0)
+
+
+image_tensor = F.to_tensor(image)
+image_tensor = image_tensor.unsqueeze(0)
+
+
+with torch.no_grad():
+    predictions = model(image_tensor)
+
+
+print(predictions)
+
+
+import torch
+import torchvision
+from torchvision.models.detection import fasterrcnn_resnet50_fpn
+from torchvision.transforms import functional as F
+from PIL import Image, ImageDraw
+
+
+draw = ImageDraw.Draw(image)
+
+
+for score, label, box in zip(predictions[0]['scores'], predictions[0]['labels'], predictions[0]['boxes']):
+    if score > 0.5:
+        box = [round(i, 2) for i in box.tolist()]
+        draw.rectangle(box, outline="red", width=10)
+        draw.text((box[0], box[1]), f"Class: {label.item()}, Score: {score.item():.2f}", fill="red")
+
+
+image.show()
+
+
+import matplotlib.pyplot as plt
+plt.imshow(image)
+

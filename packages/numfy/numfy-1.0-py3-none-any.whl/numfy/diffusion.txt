@@ -1,0 +1,103 @@
+import torch
+import torch.nn as nn
+import torchvision.transforms as transforms
+import torchvision.datasets as datasets
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+torch.manual_seed(42)
+np.random.seed(42)
+torch.set_printoptions(precision=2, sci_mode=None)
+np.set_printoptions(precision=2, suppress=None)
+
+
+transform = transforms.Compose([transforms.ToTensor()])
+print("Transformation to be applied: \n", transform, "\n")
+print("type(transform): \t", type(transform), "\n")
+
+
+batchsize = 1 
+mnist_dataset = datasets.MNIST(root='./data', train=True, transform=transform, download=True)
+data_loader = torch.utils.data.DataLoader(mnist_dataset, batch_size=batchsize, shuffle=True)
+
+
+num_steps = 100
+noise_matrix = np.empty((784,num_steps-1))
+print("noise_matrix.shape: \t", noise_matrix.shape, "\n")
+print("noise_matrix: \t", noise_matrix.shape, "\n")
+print("noise_matrix: \n", noise_matrix, "\n")
+def apply_diffusion(x, num_steps, step_size):
+    for i in range(num_steps):
+        noise = torch.normal(0, i*step_size, size=x.size())
+        print("noise.shape: \t", noise.shape, "\n") # 1,1,28,28
+        noise_resized = noise.resize(784,1)
+        np.append(noise_matrix, noise_resized, axis=1)
+        x = x + noise  
+    return x
+
+
+from sklearn.mixture import GaussianMixture
+from numpy import inf
+noise_matrix = np.nan_to_num(noise_matrix)
+noise_matrix[noise_matrix < 0.00005] = 0
+noise_matrix[noise_matrix > 100.0] = 100
+gm=print(noise_matrix.min())
+print(gm)
+
+
+from sklearn.mixture import GaussianMixture
+from numpy import inf
+noise_matrix = np.nan_to_num(noise_matrix)
+noise_matrix[noise_matrix < 0.00005] = 0
+noise_matrix[noise_matrix > 100.0] = 100
+print(noise_matrix.min())
+gm = GaussianMixture(n_components=2, random_state=0).fit(noise_matrix)
+print(gm)
+
+
+print("means are: \n", gm.means_)
+print("covariances: \n", gm.covariances_)
+print("weights: \n", gm.weights_, "\n")
+
+
+learned_mean = np.mean(gm.means_[0])
+learned_std = np.mean(gm.covariances_[0])
+print("learned mean: \t", learned_mean, "\n")
+print("leared_std: \t", learned_std, "\n")
+
+
+def reverse_diffusion(x, num_steps, step_size):
+    for _ in range(num_steps):
+        noise = torch.normal(learned_mean, learned_std, size=x.size())
+        x = x - noise
+    return x
+
+
+import time
+
+
+from skimage.metrics import structural_similarity as ssim
+start_time = time.time()
+with torch.no_grad():
+    for i, (real_image, _) in enumerate(data_loader):
+        real_image = real_image 
+        print("real_image.shape: ", real_image.shape)
+        forward_diffused_image = apply_diffusion(real_image, num_steps=100, step_size=0.00001)
+        reverse_diffused_image = reverse_diffusion(forward_diffused_image, num_steps=100, step_size=0.000001)
+        if i%5 == 0:
+            print("i = ", i, "\n")
+            fig, axes = plt.subplots(1, 3)
+            axes[0].imshow(real_image[0, 0].numpy(), cmap='gray')
+            axes[0].set_title("Original")
+            axes[1].imshow(forward_diffused_image[0, 0].numpy(), cmap='gray')
+            axes[1].set_title("Noisy")
+            axes[2].imshow(reverse_diffused_image[0, 0].numpy(), cmap='gray')
+            axes[2].set_title("Denoised")
+            plt.show()
+end_time = time.time()
+total_time = end_time - start_time
+total_time = round(total_time,2)
+print("Total Training Time: ", total_time, " seconds")
+
+
