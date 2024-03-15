@@ -1,0 +1,8 @@
+setup.py
+patosyadir/__init__.py
+patosyadir/one.py
+patosyadir/two.py
+patosyadir.egg-info/PKG-INFO
+patosyadir.egg-info/SOURCES.txt
+patosyadir.egg-info/dependency_links.txt
+patosyadir.egg-info/top_level.txt
