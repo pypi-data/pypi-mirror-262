@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: inflow-haisslab
+Version: 1.1.55
+Summary: General python code for analysis pipeline
+Home-page: https://gitlab.pasteur.fr/haisslab/analysis-packages/Inflow
+Author: Timothé Jost-MOUSSEAU
+Author-email: timothe.jost-mousseau@pasteur.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+Requires-Dist: cryptography >=38.0
+Requires-Dist: h5py >=3.7
+Requires-Dist: matplotlib >=3.6
+Requires-Dist: natsort >=8.2
+Requires-Dist: npTDMS >=1.6
+Requires-Dist: numpy >=1.23
+Requires-Dist: opencv-python-headless >=4.6
+Requires-Dist: pandas >=1.4
+Requires-Dist: paramiko >=2.8
+Requires-Dist: scipy >=1.9
+Requires-Dist: seaborn >=0.11
+Requires-Dist: suite2p
+Requires-Dist: concurrent-log-handler >=0.9
+Requires-Dist: timelined-array >=0.0.1
+
