@@ -1,0 +1,4 @@
+vertexai
+requests
+google-cloud-aiplatform
+google-auth
