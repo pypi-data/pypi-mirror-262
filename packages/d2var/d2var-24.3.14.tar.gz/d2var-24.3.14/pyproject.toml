@@ -1,0 +1,29 @@
+
+
+
+[build-system]
+requires = ['setuptools']
+build-backend = 'setuptools.build_meta'
+
+
+[project]
+name = 'd2var'
+version = '24.3.14'
+authors = [
+    {name = 'Example Author', email = 'author@example.com'},
+]
+description = 'A small example package'
+readme = 'README.md'
+requires-python = '>=3.8'
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: Other/Proprietary License',
+    'Operating System :: OS Independent',
+]
+
+
+[project.urls]
+Homepage = 'https://github.com/pypa/sampleproject'
+Issues = 'https://github.com/pypa/sampleproject/issues'
+
+

@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/d2var/__init__.py
+src/d2var/example.py
+src/d2var.egg-info/PKG-INFO
+src/d2var.egg-info/SOURCES.txt
+src/d2var.egg-info/dependency_links.txt
+src/d2var.egg-info/top_level.txt
