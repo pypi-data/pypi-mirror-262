@@ -1,0 +1,12 @@
+python_qualify/__init__.py,sha256=SNaj6umv-2VXtChCdW02yXTaN8M1Bup-OmzD0bZtJ4A,503
+python_qualify/api.py,sha256=CUCWnoSv_UcFGqfzZRk6ftZN3QKW2HjymqkD9MusWEg,1175
+python_qualify/clone.py,sha256=GnGZLXu5PIi15jyaoAy1ydZ3wswP1LI9DTer_kbVRPI,1378
+python_qualify/finder.py,sha256=-3ltdmn7pDfxccF3wKYXNA6AAf70rej9Qaod88daeyM,1751
+python_qualify/loader.py,sha256=aiImbVciuuQcsT2dlRL4Z1aWVa_69Byy8QhMT0Lx5mE,1090
+python_qualify/logging.py,sha256=PYhVv1hxZfu8cvrYffTmJx8DHbUROPTNKFUPM386p_0,1141
+python_qualify/settings.py,sha256=pL0kY0S3o5wa6lqbUpJmDVYLVp6w_IuYBY90S89v98E,224
+python_qualify/version.py,sha256=XDt1_ZbkWCb8wbQgmL3mxnVOtcqw5cUmlzu-cZKBLK0,1080
+python_qualify-0.1.1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+python_qualify-0.1.1.dist-info/METADATA,sha256=WVHYQWwizmURf4wRcDun_EVoO7dpty9VCuh0uli9PwE,4122
+python_qualify-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+python_qualify-0.1.1.dist-info/RECORD,,
