@@ -1,0 +1,173 @@
+{
+    "header":
+    {
+        "generatedOn": 1683707761501,
+        "viewKeys":
+        {
+            "uniqueKey":
+            [
+                "tenant-id"
+            ],
+            "preferenceKey": "grid-Tenant"
+        },
+        "columns":
+        [
+            {
+                "title": "Organization Name",
+                "property": "orgName",
+                "width": 110,
+                "dataType": "string"
+            },
+            {
+                "title": "Sub Domain",
+                "property": "subDomain",
+                "width": 110,
+                "dataType": "string"
+            },
+            {
+                "title": "Name",
+                "property": "name",
+                "width": 110,
+                "dataType": "string"
+            },
+            {
+                "title": "Description",
+                "property": "desc",
+                "width": 110,
+                "dataType": "string"
+            },
+            {
+                "title": "Forecasted Device Count",
+                "property": "wanEdgeForecast",
+                "width": 110,
+                "dataType": "string"
+            },
+            {
+                "title": "vSmarts",
+                "property": "vSmarts",
+                "width": 110,
+                "dataType": "list"
+            },
+            {
+                "title": "Current Device Count",
+                "property": "wanEdgePresent",
+                "width": 110,
+                "dataType": "string"
+            }
+        ],
+        "fields":
+        [
+            {
+                "property": "tenantId",
+                "dataType": "string"
+            },
+            {
+                "property": "orgName",
+                "dataType": "string"
+            },
+            {
+                "property": "subDomain",
+                "dataType": "string"
+            },
+            {
+                "property": "vBondAddress",
+                "dataType": "string"
+            },
+            {
+                "property": "name",
+                "dataType": "string"
+            },
+            {
+                "property": "desc",
+                "dataType": "string"
+            },
+            {
+                "property": "wanEdgeForecast",
+                "dataType": "string"
+            },
+            {
+                "property": "vSmarts",
+                "dataType": "list"
+            },
+            {
+                "property": "wanEdgePresent",
+                "dataType": "string"
+            }
+        ]
+    },
+    "data":
+    [
+        {
+            "flakeId": 31463,
+            "orgName": "vIPtela Inc Regression-Apple Inc",
+            "samlSpInfo": "",
+            "idpMap": "{}",
+            "subDomain": "apple.fruits.com",
+            "vBondAddress": "",
+            "configDBClusterServiceName": "",
+            "vSmarts":
+            [
+                "214bb61f-312a-46ba-b17d-87f7340ca4a2",
+                "491a8ebf-366a-4262-acc8-c3a69086fb39"
+            ],
+            "oldIdpMap": "{}",
+            "createdAt": 1675759046723,
+            "@rid": 2604,
+            "name": "apple",
+            "tenantId": "fe794493-717e-4feb-a7a0-525b007bde57",
+            "wanEdgeForecast": "200",
+            "spMetadata": "",
+            "state": "READY",
+            "wanEdgePresent": 165,
+            "desc": "This is apple"
+        },
+        {
+            "flakeId": 25345,
+            "orgName": "vIPtela Inc Regression-Mango Inc",
+            "samlSpInfo": "",
+            "idpMap": "{}",
+            "subDomain": "mango.fruits.com",
+            "vBondAddress": "1.1.1.1",
+            "configDBClusterServiceName": "",
+            "vSmarts":
+            [
+                "491a8ebf-366a-4262-acc8-c3a69086fb39",
+                "aa2940f2-581f-4f4f-92d7-6c2e4643fefd"
+            ],
+            "oldIdpMap": "{}",
+            "createdAt": 1675759048054,
+            "@rid": 2617,
+            "name": "mango",
+            "tenantId": "c484c488-4329-4256-bfc0-7ce4b8673590",
+            "wanEdgeForecast": "100",
+            "spMetadata": "",
+            "state": "READY",
+            "wanEdgePresent": 5,
+            "desc": "This is mango"
+        },
+        {
+            "flakeId": 17281,
+            "orgName": "vIPtela Inc Regression-Orange Inc",
+            "samlSpInfo": "",
+            "idpMap": "{}",
+            "subDomain": "orange.fruits.com",
+            "vBondAddress": "1.1.1.1",
+            "configDBClusterServiceName": "",
+            "vSmarts":
+            [
+                "aa2940f2-581f-4f4f-92d7-6c2e4643fefd",
+                "214bb61f-312a-46ba-b17d-87f7340ca4a2"
+            ],
+            "oldIdpMap": "{}",
+            "createdAt": 1675759047317,
+            "@rid": 2608,
+            "name": "orange",
+            "tenantId": "56d64e82-3b0b-46e1-9cd3-c51532046649",
+            "wanEdgeForecast": "100",
+            "spMetadata": "",
+            "state": "READY",
+            "wanEdgePresent": 5,
+            "desc": "This is orange"
+        }
+    ]
+}

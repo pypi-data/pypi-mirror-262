@@ -1,0 +1,27 @@
+{
+    "deviceTemplateList":
+    [
+        {
+            "templateId": "2f37c454-fb3d-4978-9154-8fabcf1c085f",
+            "device":
+            [
+                {
+                    "csv-status": "complete",
+                    "csv-deviceId": "d6e188ae-ae40-446d-bd32-1f34156de644",
+                    "csv-deviceIP": "172.16.255.20",
+                    "csv-host-name": "vm10",
+                    "csv-templateId": "2f37c454-fb3d-4978-9154-8fabcf1c085f"
+                },
+                {
+                    "csv-status": "complete",
+                    "csv-deviceId": "314f8c48-a510-4b0b-8e43-71c66e5b3f68",
+                    "csv-deviceIP": "172.16.255.19",
+                    "csv-host-name": "vm9",
+                    "csv-templateId": "2f37c454-fb3d-4978-9154-8fabcf1c085f"
+                }
+            ],
+            "isEdited": false
+        }
+    ]
+}
+

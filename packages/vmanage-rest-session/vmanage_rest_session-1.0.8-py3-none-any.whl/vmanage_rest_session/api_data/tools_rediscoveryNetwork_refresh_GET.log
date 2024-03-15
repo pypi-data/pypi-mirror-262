@@ -1,0 +1,275 @@
+{
+    "header":
+    {
+        "generatedOn": 1681526906044,
+        "viewKeys":
+        {
+            "uniqueKey":
+            [],
+            "preferenceKey": "grid-syncStatus"
+        },
+        "columns":
+        [
+            {
+                "title": "Device Model",
+                "property": "device-model",
+                "display": "multiColumns",
+                "hideable": false,
+                "width": 100,
+                "dataType": "deviceModel"
+            },
+            {
+                "title": "Hostname",
+                "property": "host-name",
+                "hideable": false,
+                "minWidth": 100,
+                "dataType": "string"
+            },
+            {
+                "title": "System IP",
+                "property": "local-system-ip",
+                "hideable": false,
+                "width": 110,
+                "dataType": "ipv4"
+            },
+            {
+                "title": "Reachability",
+                "property": "reachability",
+                "display": "multiColumns",
+                "color":
+                [
+                    {
+                        "key": "reachable",
+                        "value": "616161",
+                        "property": "reachability"
+                    },
+                    {
+                        "key": "unreachable",
+                        "value": "ef5350",
+                        "property": "reachability"
+                    },
+                    {
+                        "key": "auth-failed",
+                        "value": "ffb300",
+                        "property": "reachability"
+                    },
+                    {
+                        "key": "staging",
+                        "value": "ffb300",
+                        "property": "validity"
+                    }
+                ],
+                "width": 150,
+                "minWidth": 150,
+                "dataType": "string"
+            },
+            {
+                "title": "Data Collection Status",
+                "property": "syncState",
+                "colorProperty": "syncState",
+                "color":
+                [
+                    {
+                        "key": "Error while queuing",
+                        "value": "ef5350"
+                    },
+                    {
+                        "key": "In progress",
+                        "value": "ffb300"
+                    },
+                    {
+                        "key": "Error while data collection",
+                        "value": "ef5350"
+                    },
+                    {
+                        "key": "Completed",
+                        "value": "4caf50"
+                    }
+                ],
+                "minWidth": 142,
+                "dataType": "string"
+            },
+            {
+                "title": "Sync Started/Queued",
+                "property": "syncQueued",
+                "displayFormat": "DD MMM YYYY h:mm:ss A z",
+                "inputFormat": "unix-time",
+                "minWidth": 200,
+                "dataType": "date"
+            },
+            {
+                "title": "Sync Completed",
+                "property": "syncCompleted",
+                "displayFormat": "DD MMM YYYY h:mm:ss A z",
+                "inputFormat": "unix-time",
+                "minWidth": 200,
+                "dataType": "date"
+            }
+        ],
+        "fields":
+        [
+            {
+                "property": "device-model",
+                "dataType": "deviceModel",
+                "display": "multiColumns"
+            },
+            {
+                "property": "host-name",
+                "dataType": "string"
+            },
+            {
+                "property": "deviceId",
+                "dataType": "ipv4"
+            },
+            {
+                "property": "local-system-ip",
+                "dataType": "ipv4"
+            },
+            {
+                "property": "uuid",
+                "dataType": "string"
+            },
+            {
+                "property": "reachability",
+                "dataType": "string",
+                "display": "multiColumns"
+            },
+            {
+                "property": "syncState",
+                "dataType": "string"
+            },
+            {
+                "property": "syncQueued",
+                "dataType": "date"
+            },
+            {
+                "property": "syncScheduled",
+                "dataType": "date"
+            },
+            {
+                "property": "syncCompleted",
+                "dataType": "date"
+            }
+        ]
+    },
+    "data":
+    [
+        {
+            "device-model": "vmanage",
+            "syncCompleted": 1681526182919,
+            "local-system-ip": "172.16.255.22",
+            "syncState": "Completed",
+            "host-name": "vm12",
+            "deviceId": "172.16.255.22",
+            "uuid": "2f22f659-d4c6-4acc-bbac-e40ab41e918c",
+            "syncScheduled": 1681526171962,
+            "layoutLevel": 1,
+            "syncQueued": 1681526171962,
+            "reachability": "reachable"
+        },
+        {
+            "device-model": "vsmart",
+            "syncCompleted": 1681526190031,
+            "local-system-ip": "172.16.255.20",
+            "syncState": "Completed",
+            "host-name": "vm10",
+            "deviceId": "172.16.255.20",
+            "uuid": "d6e188ae-ae40-446d-bd32-1f34156de644",
+            "syncScheduled": 1681526181385,
+            "layoutLevel": 2,
+            "syncQueued": 1681526170734,
+            "reachability": "reachable"
+        },
+        {
+            "device-model": "vsmart",
+            "syncCompleted": 1681526189243,
+            "local-system-ip": "172.16.255.19",
+            "syncState": "Completed",
+            "host-name": "vm9",
+            "deviceId": "172.16.255.19",
+            "uuid": "314f8c48-a510-4b0b-8e43-71c66e5b3f68",
+            "syncScheduled": 1681526180629,
+            "layoutLevel": 2,
+            "syncQueued": 1681526168836,
+            "reachability": "reachable"
+        },
+        {
+            "device-model": "vedge-cloud",
+            "syncCompleted": 1681483809968,
+            "local-system-ip": "172.16.255.26",
+            "syncState": "Completed",
+            "host-name": "vm16",
+            "deviceId": "172.16.255.26",
+            "uuid": "856a14a2-75e0-4bdd-bf04-91a3c0506bcc",
+            "syncScheduled": 1681483802697,
+            "layoutLevel": 3,
+            "syncQueued": 1681483802696,
+            "reachability": "reachable"
+        },
+        {
+            "device-model": "vedge-C8300-1N1S-6T",
+            "syncCompleted": 1681526207151,
+            "local-system-ip": "172.16.255.15",
+            "syncState": "Completed",
+            "host-name": "pm5",
+            "deviceId": "172.16.255.15",
+            "uuid": "C8300-1N1S-6T-FDO2421A02A",
+            "syncScheduled": 1681526194401,
+            "layoutLevel": 4,
+            "syncQueued": 1681526175001,
+            "reachability": "reachable"
+        },
+        {
+            "device-model": "vedge-cloud",
+            "syncCompleted": 1681526192610,
+            "local-system-ip": "172.16.255.11",
+            "syncState": "Completed",
+            "host-name": "vm1",
+            "deviceId": "172.16.255.11",
+            "uuid": "89cdefff-51f8-4e54-8df0-ded2e3eefb41",
+            "syncScheduled": 1681526182998,
+            "layoutLevel": 4,
+            "syncQueued": 1681526172407,
+            "reachability": "reachable"
+        },
+        {
+            "device-model": "vedge-cloud",
+            "syncCompleted": 1681526191873,
+            "local-system-ip": "172.16.255.21",
+            "syncState": "Completed",
+            "host-name": "vm11",
+            "deviceId": "172.16.255.21",
+            "uuid": "ca6c8133-418c-4647-95ce-75214388b04a",
+            "syncScheduled": 1681526182505,
+            "layoutLevel": 4,
+            "syncQueued": 1681526171881,
+            "reachability": "reachable"
+        },
+        {
+            "device-model": "vedge-cloud",
+            "syncCompleted": 1681526192090,
+            "local-system-ip": "172.16.255.14",
+            "syncState": "Completed",
+            "host-name": "vm4",
+            "deviceId": "172.16.255.14",
+            "uuid": "e5af1d1f-b667-4e50-941f-18599e29c7b6",
+            "syncScheduled": 1681526182730,
+            "layoutLevel": 4,
+            "syncQueued": 1681526171211,
+            "reachability": "reachable"
+        },
+        {
+            "device-model": "vedge-C8000V",
+            "syncCompleted": 1681526191844,
+            "local-system-ip": "172.16.255.16",
+            "syncState": "Completed",
+            "host-name": "vm6",
+            "deviceId": "172.16.255.16",
+            "uuid": "C8K-44747a1b-23d2-4324-962b-ba6bb59a572b",
+            "syncScheduled": 1681526174822,
+            "layoutLevel": 4,
+            "syncQueued": 1681526170270,
+            "reachability": "reachable"
+        }
+    ]
+}

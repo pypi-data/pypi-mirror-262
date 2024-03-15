@@ -1,0 +1,38 @@
+{
+    "header":
+    {
+        "generatedOn": 1681648951573,
+        "viewKeys":
+        {
+            "uniqueKey":
+            [],
+            "preferenceKey": "grid-OutOfSyncTemplates"
+        },
+        "columns":
+        [
+            {
+                "title": "Template Id",
+                "property": "templateId",
+                "dataType": "string"
+            },
+            {
+                "title": "Count",
+                "property": "count",
+                "dataType": "string"
+            }
+        ],
+        "fields":
+        [
+            {
+                "property": "templateId",
+                "dataType": "string"
+            },
+            {
+                "property": "count",
+                "dataType": "string"
+            }
+        ]
+    },
+    "data":
+    []
+}
