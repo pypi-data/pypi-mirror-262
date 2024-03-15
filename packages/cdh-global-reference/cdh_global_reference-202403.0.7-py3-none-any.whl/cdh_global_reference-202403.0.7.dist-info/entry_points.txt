@@ -1,0 +1,3 @@
+[console_scripts]
+flaskapp=global_reference.app:app
+
