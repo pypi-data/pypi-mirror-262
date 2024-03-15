@@ -1,0 +1,7 @@
+pyproject.toml
+setup.py
+src/neon_connector.egg-info/PKG-INFO
+src/neon_connector.egg-info/SOURCES.txt
+src/neon_connector.egg-info/dependency_links.txt
+src/neon_connector.egg-info/requires.txt
+src/neon_connector.egg-info/top_level.txt
