@@ -1,0 +1,132 @@
+Metadata-Version: 2.1
+Name: genericsuite_ai
+Version: 0.1.0
+Summary: The GenericSuite AI for Python (backend version)
+Home-page: https://github.com/tomkat-cr/genericsuite-be-ai.git
+License: MIT
+Author: Carlos J. Ramirez
+Author-email: tomkat_cr@yahoo.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: clarifai (>=10.1.0,<11.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: duckduckgo-search (>=4.1.1,<5.0.0)
+Requires-Dist: faiss-cpu (>=1.7.4,<2.0.0)
+Requires-Dist: genericsuite (==0.1.0)
+Requires-Dist: google-api-python-client (>=2.111.0,<3.0.0)
+Requires-Dist: jmespath (>=1.0.1,<2.0.0)
+Requires-Dist: jq (>=1.6.0,<2.0.0)
+Requires-Dist: langchain (>=0.1.1,<0.2.0)
+Requires-Dist: langchain-google-genai (>=0.0.5,<0.0.6)
+Requires-Dist: langchain-openai (>=0.0.8,<0.0.9)
+Requires-Dist: langchainhub (>=0.1.14,<0.2.0)
+Requires-Dist: openai (>=1.7.2,<2.0.0)
+Requires-Dist: pillow (>=10.1.0,<11.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: requests-toolbelt (>=1.0.0,<2.0.0)
+Requires-Dist: setuptools (>=65.5.1,<66.0.0)
+Requires-Dist: six (>=1.16.0,<2.0.0)
+Requires-Dist: text-generation (>=0.6.1,<0.7.0)
+Requires-Dist: tiktoken (>=0.5.2,<0.6.0)
+Requires-Dist: transformers (>=4.38.2,<5.0.0)
+Requires-Dist: typing-extensions (>=4.8.0,<5.0.0)
+Project-URL: Repository, https://github.com/tomkat-cr/genericsuite-be-ai.git
+Description-Content-Type: text/markdown
+
+# GenericSuite AI (backend version)
+The GenericSuite AI for Python (backend version).
+
+![GenericSuite AI Logo](https://github.com/tomkat-cr/genericsuite-fe-ai/blob/main/src/lib/images/gs_ai_logo_circle.svg)
+
+GenericSuite AI is a versatile backend solution, designed to provide a comprehensive suite of features, tools and functionalities for AI oriented Python APIs.
+
+It's bassed on [The Generic Suite (backend version)](https://github.com/tomkat-cr/genericsuite-be), so its features are inherited.
+
+The perfect companion for this backend solution is [The GenericSuite AI (frontend version)](https://github.com/tomkat-cr/genericsuite-fe-ai)
+
+
+## Pre-requisites
+
+- Python >= 3.10+ and < 4.0
+
+## Installation
+
+To use GenericSuite AI in your project, install it with the following command(s):
+
+### From Pypi
+
+#### Pip
+```bash
+pip install genericsuite-ai
+```
+
+#### Pipenv
+```bash
+pipenv install genericsuite-ai
+```
+
+#### Poetry
+```bash
+poetry add genericsuite-ai
+```
+
+### From a specific branch in the repository, e.g. "branch_x"
+
+#### Pip
+```bash
+pip install git+https://github.com/tomkat-cr/genericsuite-be-ai@branch_x
+```
+
+#### Pipenv
+```bash
+pipenv install git+https://github.com/tomkat-cr/genericsuite-be-ai@branch_x
+```
+
+#### Poetry
+```bash
+poetry add git+https://github.com/tomkat-cr/genericsuite-be-ai@branch_x
+```
+
+## Contents
+
+This repository includes the following features:
+
+- `ai_chatbot` endpoint to implement NLP conversations based on OpenAI or Langchain APIs.
+- OpenAPI, Google Gemini, Anthropic, Ollama, and Hugging Face models handling.
+- Clarifai models and embeddings handling.
+- Computer vision (OpenAPI GPT4 Vision, Google Gemini Vision, Clarifai Vision).
+- Speech-to-text processing (OpenAPI Whisper, Clarifai Audio Models).
+- Text-to-speech (OpenAI TTS-1, Clarifai Audio Models).
+- Image generator (OpenAI DALL-E 3, Google Gemini Image, Clarifai Image Models).
+- Vector indexers (FAISS, Chroma, Clarifai, Vectara, Weaviate, MongoDBAtlasVectorSearch)
+- Embedders (OpenAI, Hugging Face, Clarifai, Bedrock, Cohere, Ollama)
+- Web search tool.
+- Webpage scrapping and analyzing tool.
+- JSON, PDF, Git and Youtube readers.
+- Language translation tools.
+- Chats stored in the Database.
+- Plan attribute, OpenAi API key and model name in the user profile, to allow free plan users to use Models at their own expenses.
+
+## Configuration
+
+Configure your application by setting up the necessary environment variables. Refer to the example `.env.example` file for the required variables.
+
+## Documentation
+
+For detailed documentation on each feature and module, please refer to the inline comments and docstrings within the codebase.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Credits
+
+This project is developed and maintained by Carlos J. Ramirez. For more information or to contribute to the project, visit [GenericSuite AI on GitHub](https://github.com/tomkat-cr/genericsuite-be-ai).
+
+Happy Coding!
