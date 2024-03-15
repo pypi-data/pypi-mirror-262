@@ -1,0 +1,9 @@
+tidbytes/__init__.py,sha256=-RGvvFyZDfv1EmRBCaqt7fM9Ccf6V7XilO8lFMsiAlQ,165
+tidbytes/codec.py,sha256=46rJ4T6XPm7Qns_myohj-LvZTNZPXAZgCxQ_xU8lCF8,26053
+tidbytes/idiomatic.py,sha256=HHTPQVSP8ROZovMl7c6DAvPWhKUYoNzuLmvjDEAaBV4,30605
+tidbytes/mem_types.py,sha256=J_pECLOWwUddoFjWfkth9VTKSZiEeLpH7XOYkBNTRCE,2890
+tidbytes/natural.py,sha256=4NpDnBEDXJc0p0i3U2HYuCFMmRLvNEkoIdkR0JGOh_A,15671
+tidbytes-0.1.0.dist-info/LICENSE,sha256=4IgRJIEj4dPyvsdOfGL2vUtCv8yjx7N1kxBl5CmOCtg,1070
+tidbytes-0.1.0.dist-info/METADATA,sha256=nlAaRhzjzWP-pNEf8ltyXmgjPY73VKAFIUzek5CzMiM,20497
+tidbytes-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tidbytes-0.1.0.dist-info/RECORD,,
