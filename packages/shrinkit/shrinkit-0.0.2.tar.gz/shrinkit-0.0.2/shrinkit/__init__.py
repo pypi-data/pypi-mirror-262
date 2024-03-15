@@ -1,0 +1,1 @@
+from shrinkit.main import *
