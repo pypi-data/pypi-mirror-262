@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: whispervideos
+Version: 0.0.1
+Author: rpb
+Author-email: balandongiv@gmail.com
+Requires-Dist: pandas
