@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "mycustomls"
+version = "0.1.0"
+description = ""
+authors = ["Heman <heman.1682@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+
+[tool.poetry.scripts]
+mycustomls="mycustomls.main:list_directory"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
