@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+biobb_radiospineomics/__init__.py
+biobb_radiospineomics.egg-info/PKG-INFO
+biobb_radiospineomics.egg-info/SOURCES.txt
+biobb_radiospineomics.egg-info/dependency_links.txt
+biobb_radiospineomics.egg-info/entry_points.txt
+biobb_radiospineomics.egg-info/requires.txt
+biobb_radiospineomics.egg-info/top_level.txt
+biobb_radiospineomics/radiospineomics/__init__.py
+biobb_radiospineomics/radiospineomics/common.py
+biobb_radiospineomics/radiospineomics/radiospineomics.py
+biobb_radiospineomics/radiospineomics/template_container.py
+biobb_radiospineomics/test/__init__.py
