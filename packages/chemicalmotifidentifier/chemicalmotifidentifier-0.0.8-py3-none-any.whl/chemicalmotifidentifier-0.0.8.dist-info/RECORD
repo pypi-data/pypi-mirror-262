@@ -1,0 +1,16 @@
+chemicalmotifidentifier/__init__.py,sha256=nsBM4-gpqBgaz3Gc6upPp5TAgej2fRpIOxl3nBsZy3k,603
+chemicalmotifidentifier/_src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chemicalmotifidentifier/_src/correlations.py,sha256=zQbOGZKhhLvznOhYtm2Ky2XDzOAfYOnmMVmEUXNZ1Iw,20369
+chemicalmotifidentifier/_src/dataset.py,sha256=BUAe5BlVt7_VQ_7xZxxdqzTtzEH0v0YPq2m1aKBvK5A,11207
+chemicalmotifidentifier/_src/dissimilarity.py,sha256=i9UIejGxh9nFO5CxliK1FnrarBQjCSpHEjAC9wk189I,9155
+chemicalmotifidentifier/_src/frameworks_base.py,sha256=pVZqUoeobskXYV3Xhg4Dwcjp5dcfl1SIBJ0kiemCoig,30494
+chemicalmotifidentifier/_src/ml.py,sha256=5dSzXWXj6naEuBYfEhn6f8oaPArD86OeJAierbZB8f8,5041
+chemicalmotifidentifier/_src/models.py,sha256=FFvt8xawkezvlynY--DzFEZ2N6yWZMnogBnX6TwT41Q,4887
+chemicalmotifidentifier/_src/plot.py,sha256=oZPZswIIkpCFNKk9OkxWkvVZRd9RoBLHqdELgfT_yrY,8402
+chemicalmotifidentifier/_src/shell_information.py,sha256=95Ygq1o6qoqapiJr7lfQSrkV90ueMPJAAMiiG9oho8E,18368
+chemicalmotifidentifier/_src/transforms.py,sha256=dVZN_ujUH_R5sYrAGHgPCgV5AfgXTyddGTrnl5ZZ00U,2312
+chemicalmotifidentifier/_src/wc.py,sha256=EBR9tRAp8YiKMvCjJambrdAqRSP5rHVVjSZJKZ_6-Ec,1034
+chemicalmotifidentifier-0.0.8.dist-info/METADATA,sha256=hRm_ZXT05tJGn7ES7CgspoTjNbwCCSZ_Z-5pYLAB3-c,2322
+chemicalmotifidentifier-0.0.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+chemicalmotifidentifier-0.0.8.dist-info/top_level.txt,sha256=YA31W_79AOQ7WsJTUtsl31LAigJgk1AZkffPLHxOTLY,24
+chemicalmotifidentifier-0.0.8.dist-info/RECORD,,
