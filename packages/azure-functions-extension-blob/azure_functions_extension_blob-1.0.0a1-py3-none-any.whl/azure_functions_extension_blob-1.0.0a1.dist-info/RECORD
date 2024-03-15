@@ -1,0 +1,10 @@
+azure/functions/extension/blob/__init__.py,sha256=vYzwJIgMAX5odjm-j3s-9_E3rdkyXtBeBiDz7vpOfxQ,407
+azure/functions/extension/blob/blobClient.py,sha256=DeT37vsQIbc-wnM8U9hivYqnVRaQPxuyY_1VJ6MIINU,1366
+azure/functions/extension/blob/blobClientConverter.py,sha256=DBcPqVgCBGPha1bDmlkwtgBQZa9yv8WB-ZjvW0ka9aI,1607
+azure/functions/extension/blob/containerClient.py,sha256=0BwCg-MHHtAs_H-JQoTEJKoTO1Qqi82VoSsuzT5Ovqg,1336
+azure/functions/extension/blob/storageStreamDownloader.py,sha256=Ii-ypQ6IBqFKmIi7Zxb4LEhQgZuYeakznbK9eazJ2PM,1532
+azure_functions_extension_blob-1.0.0a1.dist-info/LICENSE,sha256=kD31US99AmCf7Qx4CptwT1o-625NhOvkKimEXIGJmjw,1093
+azure_functions_extension_blob-1.0.0a1.dist-info/METADATA,sha256=xNe3kpoH1bL8FLk4mbgZnHXFhEC_RFKteAmGmaKEDt0,522
+azure_functions_extension_blob-1.0.0a1.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+azure_functions_extension_blob-1.0.0a1.dist-info/top_level.txt,sha256=S7DhWV9m80TBzAhOFjxDUiNbKszzoThbnrSz5MpbHSQ,6
+azure_functions_extension_blob-1.0.0a1.dist-info/RECORD,,
