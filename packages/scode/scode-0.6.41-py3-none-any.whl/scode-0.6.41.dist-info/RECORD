@@ -1,0 +1,12 @@
+scode/Bell.wav,sha256=zXVFI7mEUuT2e9feir8brJe98riwdas5SRA2_HMpG0A,447552
+scode/__init__.py,sha256=qaqR5RsGnl7HUgOFuMV_rL8-5dzDB-242egLBdHhb_Q,2148
+scode/dropbox.py,sha256=m1qTNOiVa5tcstlluT2-5shT2nvF95irYsIEsGSniGM,2074
+scode/paramiko.py,sha256=1_3YeHu5vOkrW1gcMiyznzTJviwP2_qCrhh-x2IZQMo,2778
+scode/schedule.py,sha256=CXdBsUdRbCy23uGR2eOzKimkonKGbgA69R9HRinb4pA,750
+scode/selenium.py,sha256=7puQm4UwhsPHc6q8egJ33wt_99YVmdbppcQ3tGsoti0,46741
+scode/telegram.py,sha256=ha0Wd7HSmQPYDvRKH8eH-iPouz6H_RHfWLdRvZMl934,4291
+scode/util.py,sha256=geDKo-vIJqSnr6xzftovmkego2p0-CFfmbv64QKNgyI,16383
+scode-0.6.41.dist-info/METADATA,sha256=36-zpIDY4kT1u7Rmufb7tC5xzOXg1_3ENeAF4yAluNU,4728
+scode-0.6.41.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+scode-0.6.41.dist-info/top_level.txt,sha256=0fHoCK77WQK1x4xU1jkBqqDmNsOJqpriBBhU4QVOvmU,6
+scode-0.6.41.dist-info/RECORD,,
