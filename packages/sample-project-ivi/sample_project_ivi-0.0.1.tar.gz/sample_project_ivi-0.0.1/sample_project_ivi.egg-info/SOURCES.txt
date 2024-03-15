@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+sample_project_ivi/__init__.py
+sample_project_ivi/src.py
+sample_project_ivi/version.txt
+sample_project_ivi.egg-info/PKG-INFO
+sample_project_ivi.egg-info/SOURCES.txt
+sample_project_ivi.egg-info/dependency_links.txt
+sample_project_ivi.egg-info/requires.txt
+sample_project_ivi.egg-info/top_level.txt
+tests/test_src.py
