@@ -1,0 +1,15 @@
+winzig/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+winzig/commands.py,sha256=C8t1pi8EtIFEdxGYaXKabl28-rNnk036kllOyjeUXnU,2782
+winzig/config.py,sha256=JvP7ImUpuADuCi0xG5iaIT0BFYRJpp_SpSFt0aqOZ9E,565
+winzig/crawler.py,sha256=2QDkfqQ13eCj7FITGBDvtFz0taOxEkkpcwOmHl27z8s,4159
+winzig/database.py,sha256=AHSQURh3VnTFuhKucaASkk-TsGNmkuq8bDTARscBZI0,352
+winzig/idf.py,sha256=Mk3uOe8AkXI1SLqNnOgDwaof9I5_vYc0s8tA2V_ZffM,1644
+winzig/main.py,sha256=xW2qbC0OULFFZiSsQAI-uVdA090VvEocRmLCwhJ_aZQ,618
+winzig/models.py,sha256=AdPKOI4_MhX_MxDVqnI8j2sMJoVz2SB1uJ2Sl-SsAVA,771
+winzig/search_engine.py,sha256=9n9jvvufKpue-qufJX8MMYFgIc3xXxe6WK6dO1YJ3jM,2379
+winzig/utils.py,sha256=KEeRG--xEm22Y0ybwtAfEfsTFnnaF752sZVirFCA3Gc,721
+winzig-0.1.4.dist-info/LICENSE,sha256=ObQORiBt0sDbYCi_fmuRSWPEaeMVzDpBa0So2oad5Xk,1051
+winzig-0.1.4.dist-info/METADATA,sha256=I0TvfOg_FCuLfKt6jE7lbeoKAKGJXwJ_ogp5N5fi_gM,5968
+winzig-0.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+winzig-0.1.4.dist-info/entry_points.txt,sha256=3QF6jM7tRyYRtt0IFurNUs9CBGQivmnHKi6ntpgHZU8,42
+winzig-0.1.4.dist-info/RECORD,,
