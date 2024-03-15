@@ -1,0 +1,2 @@
+[console_scripts]
+dita_parser = app:main
