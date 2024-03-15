@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: httpcatlab
+Version: 0.6
+Summary: httpcatlab
+Home-page: https://github.com/lazy-wangxl/httpcatlab
+Download-URL: https://github.com/lazy-wangxl/httpcatlab
+Author: lazy-wangxl
+Author-email: xawangxiaolong@126.com
+License: MIT
+Keywords: httpcatlab
+License-File: LICENSE
+Requires-Dist: httpcat-sdk
