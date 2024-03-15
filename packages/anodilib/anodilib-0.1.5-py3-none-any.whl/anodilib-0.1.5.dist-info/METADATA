@@ -1,0 +1,115 @@
+Metadata-Version: 2.1
+Name: anodilib
+Version: 0.1.5
+Summary: Python library ANODI for Time Series Anomaly Detection
+License: Proprietary
+Author: Daniil Kaminskyi
+Author-email: daniil.kaminskyi@tu-dortmund.de
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: captum (>=0.7.0,<0.8.0)
+Requires-Dist: dill (>=0.3.7,<0.4.0)
+Requires-Dist: fastai (>=2.7.12,<3.0.0)
+Requires-Dist: ipykernel (>=6.25.2,<7.0.0)
+Requires-Dist: matplotlib (>=3.7.1,<4.0.0)
+Requires-Dist: more-itertools (>=10.1.0,<11.0.0)
+Requires-Dist: nbformat (>=5.8.0,<6.0.0)
+Requires-Dist: numpy (>=1.24.3,<2.0.0)
+Requires-Dist: pandas (>=2.0.1,<3.0.0)
+Requires-Dist: plotly (>=5.14.1,<6.0.0)
+Requires-Dist: pyarrow (>=12.0.0,<13.0.0)
+Requires-Dist: scikit-learn (>=1.2.2,<2.0.0)
+Requires-Dist: scipy (>=1.9.3,<2.0.0)
+Requires-Dist: torch (>=2.0.0,<3.0.0)
+Requires-Dist: tsai (>=0.3.7,<0.4.0)
+Description-Content-Type: text/markdown
+
+# ANODI
+
+This is the Python library **ANODI** for Time Series Anomaly Detection. It offers easy access to algorithms and benchmark data.
+
+## Short Description
+
+- the core of the ANODI library is the **algorithm** class (```anodilib.algorithm```) that wrapps an algorithm and the data that the algorithm should be fit on. It has - for example - the following attributes:
+   - ``` self.X_train_df, self.Y_train_df, self.X_test_df, self.Y_test_df```: Dataframes for train and test data and labels
+   - ```train_dls, test_dls```: Dataloaders (fastAI Usage) for train and test data
+   - ```learner```: The Learner object for fastAI
+   - most of the algorithms have additional attributes for _window_length_, _stride_ and _batch_size_
+- the data and some meta arguments are set up as a ```DatasetSpecification``` in the ```data``` module and given as argument to the ```algorithm``` object. 
+   - If not overriden by another test-DatasetSpecification in the ```predict``` function, the given data behind des DatasetSpecification is automatically split into the Dataframes and Dataloaders from above using the parameter ```test_fraction```
+- ANODI offers the following modules: ```algorithm```, ```data```, ```metrics```, ```model```(containing the underlying pytorch models), ```visualization```
+
+## Example Usage
+
+- **Example Usage of IsolationForest Algorithm on the ECG200_TRAIN Dataset**:
+
+```python 
+from anodilib.algorithm.IsolationForest import IsolationForest as IF
+from anodilib.data.DatasetSpecification import ECG200_TRAIN
+
+alg = IF(dataset_specification=ECG200_TRAIN, contamination="auto", test_fraction=0.2)
+alg.fit()
+alg.predict()
+anoms = alg.getAnomalies()
+
+print(anoms)
+```
+
+- **Example Usage of ModifiedLSTM Algorithm on the ECG200_TRAIN Dataset using c_f1_score Metric**:
+
+```python
+from anodilib.algorithm.ModifiedLSTM import ModifiedLSTM
+from anodilib.data.DatasetSpecification import ECG200_TRAIN
+from metrics.cmetrics import c_f1_score
+import numpy as np
+
+alg = ModifiedLSTM(dataset_specification=ECG200_TRAIN, batch_size=28,window_len=4, stride=1)
+
+alg.fit(epoch_num=50, learning_rate="lr_find",learning_rate_iteration=200)
+alg.fit(epoch_num=50, learning_rate="lr_find",learning_rate_iteration=200)
+alg.fit(epoch_num=50, learning_rate="lr_find",learning_rate_iteration=200)
+alg.fit(epoch_num=50, learning_rate="lr_find",learning_rate_iteration=200)
+
+alg.predict()
+
+anoms, _ , _ = alg.getAnomalies()
+print(anoms)
+print(c_f1_score(anoms, np.array(alg.Y_test_df)))
+```
+
+- **Example on how to put your local data into a DatasetSpecification** (here: _WADI_ Dataset)
+
+```python
+from anodilib.data.DatasetSpecification import DatasetSpecification
+
+WADI = DatasetSpecification(
+    dataset_name="WADI.A2_19_Nov_2019_WADI_attackdataLABLE.csv",
+    location=None,
+    delimiter=",",
+    label_column=130, # column containing the label
+    is_data_column=lambda c: c != 130 and c >= 3, # use data of columns
+    columns=None,
+    skip_header=3,
+    skip_footer=3,
+    label_realizations=[1, -1],
+    decimal=".",
+    only_first_n_entries=-1, # if -1, use all entries
+    predefined_dataset=None,
+)
+
+# use for algorithms ...
+
+```
+
+- for more information, have a look at the ```anodilib/tests/``` or on our [Githlib Repository](https://gitlab.fachschaften.org/timonius/anodi/)
+
+## Dev Installation
+
+This package is built using poetry, run the following code to install an editable version of the package for development
+```
+pip install poetry
+poetry install
+```
