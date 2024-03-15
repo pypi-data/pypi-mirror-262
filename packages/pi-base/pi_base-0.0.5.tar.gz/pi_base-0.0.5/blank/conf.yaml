@@ -1,0 +1,23 @@
+Info:
+    Name: 'Blank'
+    Type: blank
+    Version: '%s'
+    Settings:
+        debug: True
+        verbose: True
+    GoogleDrive:
+        secrets: 'auto' # Use value from sites DB, also auto-add to 'Files'
+Conf:
+    Server: false
+Modules:
+    # All modules in {pi_base}/pi_base/lib are available from pi_base package
+    # List here any modules from {app_workspace}/lib that are needed on the target
+    # - app_common_stuff.py
+Files:
+    - { src: 'blank/blank.py', dst: 'app/' }
+    - { src: 'secrets/remote_secrets.yaml', dst: 'app/' }
+    # - { src: 'secrets/sa_admin_client_secrets.json', dst: 'app/' }
+PostInstall:
+    DeleteFiles:
+        # - /home/pi/app/sa_admin_client_secrets.json
+        - /home/pi/app/remote_secrets.yaml
