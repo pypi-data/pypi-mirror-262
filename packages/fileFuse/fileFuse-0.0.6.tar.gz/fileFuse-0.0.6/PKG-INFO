@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: fileFuse
+Version: 0.0.6
+Summary: This project can easily read any file and return the contents of the file. For more information, visit the github page: https://github.com/jayantkhanna1/fileFuse
+Home-page: UNKNOWN
+Author: Jayant Khanna
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3
+License-File: LICENSE
+
+UNKNOWN
+
