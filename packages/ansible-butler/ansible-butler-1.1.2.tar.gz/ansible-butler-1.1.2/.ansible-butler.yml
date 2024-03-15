@@ -1,0 +1,4 @@
+role:
+  dependencies:
+    include_tests: true
+    output_fmt: json
