@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: HessFit
+Version: 0.0.2
+Summary: A package that allows to derive force field.
+Home-page: https://github.com/emanuelefalbo/HessFit
+Author: Emanuele Falbo
+Author-email: falbo.emanuele@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+A package that allows to derive force field.
