@@ -1,0 +1,2 @@
+[console_scripts]
+jentalk-ide = Jentalk.jentalk_ide:main
