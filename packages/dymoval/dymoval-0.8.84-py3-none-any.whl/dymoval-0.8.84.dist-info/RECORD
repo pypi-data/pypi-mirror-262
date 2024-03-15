@@ -1,0 +1,15 @@
+dymoval-0.8.84.dist-info/METADATA,sha256=SYVymhTrGIrobnOWVv9xPVxVMBJ5dI3rdqkcnovo13c,7140
+dymoval-0.8.84.dist-info/WHEEL,sha256=N2J68yzZqJh3mI_Wg92rwhw0rtJDFpZj9bwQIMJgaVg,90
+dymoval-0.8.84.dist-info/licenses/LICENSE,sha256=TlQHXivXXjH6MHnIt3gB1BxatKCKXfbLG01vVsm2suU,1550
+dymoval/__init__.py,sha256=hWyAGILhZzjQ2KOHNCS6Ms04z5MGRquhyt2NJcaNtyw,125
+dymoval/config.py,sha256=BPAwQt9Cf5dhxKQjQMzDdvZR5zBpcrGdtCQLfJphPpM,1332
+dymoval/dataset.py,sha256=LNMLYMa8SWJ3FQQ7GL5Hl1xJOijHpdRng1TetaGjHSM,113157
+dymoval/utils.py,sha256=CReijehIlgsd8oy0NF3CKf9UAm3iu80JIElnIT8pO4A,3202
+dymoval/validation.py,sha256=g2qlO4T_vURO0srQE1_0bni_neDfy0Of-7cfjJi-FR0,32857
+dymoval_tutorial/DCMotor.fmu,sha256=UO2zqAfeitD969GV419n-LK-br_fSHiOzwHmlS1nx8s,65913
+dymoval_tutorial/DCMotor.svg,sha256=DNQ43qN_7O6399uGxx_lOmn9dW5YkU9XCYQyKpOC7a0,1136010
+dymoval_tutorial/DCMotorLogs.h5,sha256=pWStFl3OmLLTb1MC9cnuFBf5PHi6-MjZhyuK5eVEUI8,963816
+dymoval_tutorial/DCMotorModel.py,sha256=6mCMDv61nS2Z3oooiD0K4phH8ZcktZGnsc08NUGnbH8,798
+dymoval_tutorial/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dymoval_tutorial/dymoval_tutorial.ipynb,sha256=iFVlktAiKZtndalx9XpF-G6CmrCouk4DTOJh8qJUM6s,34918
+dymoval-0.8.84.dist-info/RECORD,,
