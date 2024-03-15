@@ -1,0 +1,2 @@
+[scancode_scan]
+source_symbol = source_inpector.symbols_ctags:CtagsSymbolScannerPlugin
