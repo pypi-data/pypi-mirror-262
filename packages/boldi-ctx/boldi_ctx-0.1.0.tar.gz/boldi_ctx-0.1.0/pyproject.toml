@@ -1,0 +1,24 @@
+[project]
+name = "boldi-ctx"
+version = "0.1.0"
+description = "boldi.ctx part of Boldi's Python libraries"
+authors = [
+    { name = "Boldizsár Palotás", email = "boldizsar.palotas@gmail.com" },
+]
+requires-python = ">=3.9"
+readme = "../../README.md"
+license = { file = "../../LICENSE" }
+
+dependencies = ["typing_extensions"]
+optional-dependencies = {}
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = ["boldi"]
+
+[tool.pdm]
+
+[tool.pdm.dev-dependencies]
