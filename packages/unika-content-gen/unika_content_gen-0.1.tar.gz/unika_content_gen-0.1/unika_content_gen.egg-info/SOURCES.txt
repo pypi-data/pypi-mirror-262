@@ -1,0 +1,5 @@
+setup.py
+unika_content_gen.egg-info/PKG-INFO
+unika_content_gen.egg-info/SOURCES.txt
+unika_content_gen.egg-info/dependency_links.txt
+unika_content_gen.egg-info/top_level.txt
