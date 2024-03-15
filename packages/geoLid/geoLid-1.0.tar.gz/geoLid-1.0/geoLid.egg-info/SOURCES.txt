@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+geoLid/__init__.py
+geoLid/geoLid.py
+geoLid.egg-info/PKG-INFO
+geoLid.egg-info/SOURCES.txt
+geoLid.egg-info/dependency_links.txt
+geoLid.egg-info/requires.txt
+geoLid.egg-info/top_level.txt
