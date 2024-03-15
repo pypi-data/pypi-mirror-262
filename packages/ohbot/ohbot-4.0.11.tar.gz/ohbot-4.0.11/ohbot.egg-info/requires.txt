@@ -1,0 +1,7 @@
+pyserial
+lxml
+playsound
+pyobjc
+numpy
+comtypes
+requests
