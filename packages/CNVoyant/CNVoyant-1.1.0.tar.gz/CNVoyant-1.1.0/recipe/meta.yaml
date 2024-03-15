@@ -1,0 +1,62 @@
+{% set name = "CNVoyant" %}
+{% set version = "1.0.34" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 578afd13b8a0fb4da1555f46c024688c0e646f20ed36e6e5ad151d636e780268
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - numpy =1.26
+    - pandas
+    - pickleshare
+    - pip
+    - progressbar
+    - pysam
+    - python =3.10
+    - pyvcf
+    - requests
+    - scikit-learn
+    - setuptools
+    - tqdm
+  run:
+    - matplotlib
+    - seaborn
+    - numpy =1.26
+    - pandas
+    - pickleshare
+    - progressbar
+    - pysam
+    - python =3.10
+    - pyvcf
+    - requests
+    - scikit-learn
+    - setuptools
+    - shap
+    - bcftools
+    - pybedtools
+    - pybigwig
+    - tqdm
+    - htslib
+    - samtools
+    - gzip
+
+about:
+  home: "https://github.com/nch-igm/CNVoyant"
+  license: MIT
+  license_family: MIT
+  license_file: 
+  summary: "Copy Number Variant Pathogenicity Classifier"
+
+
+extra:
+  recipe-maintainers:
+    - Rob-Schuetz
