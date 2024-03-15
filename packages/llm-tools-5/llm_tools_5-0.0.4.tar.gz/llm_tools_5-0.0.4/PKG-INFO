@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: llm_tools_5
+Version: 0.0.4
+Summary: LLM Fine Tuning
+Author-email: sgantayat9@gmail.com
+Requires-Python: >=3.6
