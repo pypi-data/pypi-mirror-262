@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: django-cache-pydantic
+Version: 0.0.1
+Summary: Django application to integrate pydantic models into django cache with an orm interface.
+Author-email: Ali Abharya <abharya.dev@gmail.com>
+Maintainer-email: Ali Abharya <abharya.dev@gmail.com>
+License: MIT
+Project-URL: Changelog, https://github.com/bindruid/django-cache-pydantic/blob/main/CHANGELOG.rst
+Project-URL: Repository, https://github.com/bindruid/django-cache-pydantic
+Keywords: cache,django,pydantic,orm
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: Pydantic >=2.6
+Requires-Dist: Django >=4.2
+
+Django Cache Pydantic
+=========================
+
+This package allows you to create pydantic instances directly inside
+your django project cache and retrieve them
+
+Status
+------
+
+.. image:: https://github.com/bindruid/django-cache-pydantic/workflows/Test/badge.svg?branch=master
+   :target: https://github.com/bindruid/django-cache-pydantic/actions
+
+.. image:: https://img.shields.io/pypi/v/django-cache-pydantic.svg
+   :target: https://pypi.python.org/pypi/django-cache-pydantic
+
+.. image:: https://img.shields.io/pypi/pyversions/django-cache-pydantic.svg
+   :target: https://pypi.org/project/django-cache-pydantic
+
+.. image:: https://img.shields.io/pypi/djversions/django-cache-pydantic.svg
+   :target: https://pypi.org/project/django-cache-pydantic/
+
+Dependencies
+------------
+
+-  Pydantic >= 2.6
+-  Django >= 4.2
+
+
+Install
+-------
+
+.. code:: bash
+
+   pip install django-cache-pydantic
