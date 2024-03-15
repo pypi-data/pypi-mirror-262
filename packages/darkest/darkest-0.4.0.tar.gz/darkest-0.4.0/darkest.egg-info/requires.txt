@@ -1,0 +1,7 @@
+darker>=2.0.0
+darkgraylib>=1.0.0
+
+[test]
+pytest
+pytest-black-ng
+pytest-isort
