@@ -1,0 +1,137 @@
+Metadata-Version: 2.1
+Name: APiHole
+Version: 0.0.2
+Summary: API module for Pi Hole
+Home-page: https://github.com/sdebby/APiHole
+Author: Shmulik Debby
+Author-email: shmulik.debby@gmail.com
+License: MIT
+Keywords: PiHole,pi.hole,API
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# APiHole
+
+This is an easy python API module for comunicating with Pi Hole through API.
+Works with AdminLTE v. 3
+
+* Rev 0.0.2 update by Dan Taeyoung
+
+## Install:
+
+```bash
+pip install APiHole
+```
+
+## Get your Pi Hole API key from here:
+
+```bash
+sudo cat /etc/pihole/setupVars.conf | grep PASSWORD
+```
+
+## Usage
+```python
+from APiHole import PiHole
+
+PiHoleAPI='your pi hole API key'
+PiIP='your pi hole IP'
+
+# Print API version (good for testing communication), (return string)
+print(PiHole.GetVer(PiIP))
+
+# Get PiHole summary , (return dict)
+PiHole.GetSummary(PiIP,PiHoleAPI)
+
+# Get PiHole gravity status , (return dict)
+print(PiHole.GetGravity(PiIP,PiHoleAPI))
+
+# Get PiHole status, (return string)
+PiHole.GetStatus(PiIP)
+
+# Get PiHole 7 top items, split and convert to list (return dict)
+Items=PiHole.GetTopItems(PiIP,PiHoleAPI,7)
+if not len(Items) == 0:
+    ItemsTop=Items['top_queries']
+    resultListTOP = list(ItemsTop.items())
+    rtnTOP=[]
+    ItemsADS=Items['top_ads']
+    resultListADS = list(ItemsTop.items())
+    rtnTOP=[]
+    rtnADS=[]
+    for l in range(len(resultListTOP)):
+        rtnTOP.append(str(resultListTOP[l][0])+' : '+str(resultListTOP[l][1]))
+        rtnADS.append(str(resultListADS[l][0])+' : '+str(resultListADS[l][1]))
+
+    print('top_queries\n'+str(rtnTOP))
+    print('top_ads\n'+str(rtnADS))
+
+# Enable PiHole (return string)
+PiHole.Enable(PiIP,PiHoleAPI)
+
+# Disable PiHole for 2 sec (return string)
+PiHole.Disable(PiIP,PiHoleAPI,2)
+
+# Get top clients (return string)
+PiHole.GetTopClients(PiIP,PiHoleAPI)
+
+# Add google.com to white list (return boolean)
+PiHole.AddWhite(PiIP,PiHoleAPI,'google.com')
+
+# Add google.com to block list (return boolean)
+PiHole.AddBlack(PiIP,PiHoleAPI,'google.com')
+
+# Get recent blocked domain, (return string)
+PiHole.GetRecentBlocked(PiIP,PiHoleAPI)
+
+# Get destinations in %, (return dict)
+PiHole.GetDestination(PiIP,PiHoleAPI)
+
+# Get query types in %, (return dict)
+PiHole.GetQueryTypes(PiIP,PiHoleAPI)
+
+# Get clients names, (return dict)
+PiHole.GetClientNames(PiIP,PiHoleAPI)
+
+# Get data of clients over time, (return dict)
+PiHole.GetOverTimeDataClients(PiIP,PiHoleAPI)
+
+# Get pi hole DNS port, (return string)
+PiHole.GetDnsPort(PiIP,PiHoleAPI)
+
+# Get pi hole chche info, (return dict)
+PiHole.GetCacheInfo(PiIP,PiHoleAPI)
+
+# Get pi hole data of 10 min 
+PiHole.GetOverTimeData10mins(PiIP,PiHoleAPI)
+
+# Remove 'google.com' from block list
+PiHole.RemoveBlock(PiIP,PiHoleAPI,'google.com')
+
+# Add facebook regex to block list (return boolean)
+PiHole.AddRegexBlock(PiIP,PiHoleAPI,'facebook')
+
+# Remove facebook regex from block list (return boolean)
+PiHole.RemoveRegexBlock(PiIP,PiHoleAPI,'facebook')
+```
+### TODOs
+
+
+### Change log
+* rev 0.0.1 - Initial release.
+* rev 0.0.2 (by Dan Taeyoung)
+	* Typo fix.
+	* Add RemoveBlock function.
+	* Add AddRegexBlock function.
+	* Add RemoveRegexBlock function.
+
+## Feedback
+
+If you have any feedback, please reach out to us at shmulik.debby@gmail.com
