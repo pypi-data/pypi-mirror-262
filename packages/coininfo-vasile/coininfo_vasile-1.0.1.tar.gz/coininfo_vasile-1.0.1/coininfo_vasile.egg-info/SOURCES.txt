@@ -1,0 +1,9 @@
+README.md
+setup.py
+coininfo_vasile/__init__.py
+coininfo_vasile/info.py
+coininfo_vasile.egg-info/PKG-INFO
+coininfo_vasile.egg-info/SOURCES.txt
+coininfo_vasile.egg-info/dependency_links.txt
+coininfo_vasile.egg-info/requires.txt
+coininfo_vasile.egg-info/top_level.txt
