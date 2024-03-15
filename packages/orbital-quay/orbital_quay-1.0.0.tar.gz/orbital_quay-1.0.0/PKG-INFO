@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: orbital_quay
+Version: 1.0.0
+Summary: docker logistics
+Keywords: docker
+Description-Content-Type: text/markdown
+Requires-Dist: bracelet
+Requires-Dist: carbonado
+Requires-Dist: click
+
+
+
+
+
+
+******
+
+Bravo!  You have received a Medical Diploma from   
+the Orbital Convergence University International Air and Water Embassy of the Tangerine Planet.  
+
+You are now officially certified to include this module in your practice.
+
+******
+
+
+# this_module
+
+---
+
+## description
+		
+---		
+		
+## install
