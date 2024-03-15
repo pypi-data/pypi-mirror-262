@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+openphonemizer/__init__.py
+openphonemizer.egg-info/PKG-INFO
+openphonemizer.egg-info/SOURCES.txt
+openphonemizer.egg-info/dependency_links.txt
+openphonemizer.egg-info/requires.txt
+openphonemizer.egg-info/top_level.txt
