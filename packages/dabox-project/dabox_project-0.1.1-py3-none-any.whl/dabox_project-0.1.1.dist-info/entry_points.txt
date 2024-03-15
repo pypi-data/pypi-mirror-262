@@ -1,0 +1,4 @@
+[console_scripts]
+dabox-kill = dabox.scripts.dabox_kill:main
+dabox-preflight = dabox.scripts.preflight:run_preflight
+dabox-up = dabox.scripts.dabox_up:main
