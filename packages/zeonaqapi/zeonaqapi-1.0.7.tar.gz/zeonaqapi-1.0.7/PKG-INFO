@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: zeonaqapi
+Version: 1.0.7
+Summary: An API client library for the ZeonAQ API.
+Home-page: https://github.com/darkhorsestech/zeonaqapi
+Author: Craig Carmichael
+Author-email: operations@darkhorsestech.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
