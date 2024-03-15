@@ -1,0 +1,8 @@
+setup.py
+papka_kulikov_v_m/__init__.py
+papka_kulikov_v_m/one.py
+papka_kulikov_v_m/two.py
+papka_kulikov_v_m.egg-info/PKG-INFO
+papka_kulikov_v_m.egg-info/SOURCES.txt
+papka_kulikov_v_m.egg-info/dependency_links.txt
+papka_kulikov_v_m.egg-info/top_level.txt
