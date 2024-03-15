@@ -1,0 +1,14 @@
+bitbox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bitbox/coordination.py,sha256=hoB0HhOh8a3HUHY_j_kgG6bSrNy49i6OrYNaZy_tjX0,77
+bitbox/expressions.py,sha256=ouZitOnQrTtKo2u-YwDGE8CSximZUP94sg5oLJYgGc4,188
+bitbox/kinematics.py,sha256=xlDMsS3YYImXATejqLeDUToWmazqoP7SQDlxjig6Mjs,188
+bitbox/face_backend/__init__.py,sha256=J7boSG3_TVq6IzuTHesP5j9oWIv2ME-_JIDwJKLOVgw,40
+bitbox/face_backend/backend3DI.py,sha256=pZ0SrcDTi3hKUuL-WHqCCVu8noTEMGEUUhoSMJUjfnI,14987
+bitbox/face_backend/functions3DI.py,sha256=xFdivhdajrJV9dlKzaVd3pCDRK64UBQwG18MSQNi61E,8951
+bitbox/face_backend/reader3DI.py,sha256=ae04hxuC04hlpW9ZjM8anofSJA32zEunCIqxtf9CVw4,2659
+bitbox/utilities/__init__.py,sha256=jo3HUz2suoj8UfSP4ahzAZnsWk8GZkA4akTH710NYLc,30
+bitbox/utilities/caching.py,sha256=2EqqN1ItyWhlff9T4DpNIk1Z9j01u0-97mXE1OFKjAU,6716
+bitbox-2024.3.dev2.dist-info/METADATA,sha256=C9zArCkvOX7BlEtYmT_UnPjjY8E2m3K2nN_OpqiGt6M,2810
+bitbox-2024.3.dev2.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+bitbox-2024.3.dev2.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+bitbox-2024.3.dev2.dist-info/RECORD,,
