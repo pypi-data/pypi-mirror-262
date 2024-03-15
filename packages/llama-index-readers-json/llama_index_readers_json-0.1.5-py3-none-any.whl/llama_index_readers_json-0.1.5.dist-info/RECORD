@@ -1,0 +1,5 @@
+llama_index/readers/json/__init__.py,sha256=m5NZ1GYZSKmj2h7IomHQ6OA5bBFc_e567fKgeFwz9SA,79
+llama_index/readers/json/base.py,sha256=0HUS5QJ0dQNtj6FTo75Ys5pL-vPkUYBD34BdRWasaP4,5713
+llama_index_readers_json-0.1.5.dist-info/METADATA,sha256=tQkNQd9Xy7uevEGlZjB3a18DNB5gFe_dXPI2-awm52g,608
+llama_index_readers_json-0.1.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+llama_index_readers_json-0.1.5.dist-info/RECORD,,
