@@ -1,0 +1,12 @@
+numpy
+onnxruntime
+opencv-python
+rich
+pyzmq
+viser
+
+[dev]
+mypy
+pre-commit
+pytest
+ruff
