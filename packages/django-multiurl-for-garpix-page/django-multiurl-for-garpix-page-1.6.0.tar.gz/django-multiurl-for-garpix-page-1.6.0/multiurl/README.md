@@ -1,0 +1,1 @@
+Fork of https://github.com/raiderrobert/django-multiurl with Django >= 4 support

@@ -1,0 +1,15 @@
+MANIFEST.in
+setup.py
+django_multiurl_for_garpix_page.egg-info/PKG-INFO
+django_multiurl_for_garpix_page.egg-info/SOURCES.txt
+django_multiurl_for_garpix_page.egg-info/dependency_links.txt
+django_multiurl_for_garpix_page.egg-info/not-zip-safe
+django_multiurl_for_garpix_page.egg-info/requires.txt
+django_multiurl_for_garpix_page.egg-info/top_level.txt
+multiurl/MANIFEST.in
+multiurl/README.md
+multiurl/__init__.py
+multiurl/apps.py
+multiurl/multiurl.py
+multiurl/setup.py
+multiurl/tests.py
