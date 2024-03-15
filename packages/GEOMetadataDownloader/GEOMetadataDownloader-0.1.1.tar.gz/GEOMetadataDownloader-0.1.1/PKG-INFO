@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: GEOMetadataDownloader
+Version: 0.1.1
+Summary: GEOMetadataDownloader is a Python package designed to effortlessly fetch and organize metadata information from GEO datasets. Seamlessly download and categorize metadata based on types such as RNA, SRA, and more into convenient spreadsheet formats.
+Home-page: https://github.com/sharifrahmanie/GEOMetadataDownloader
+Author: Edris Sharif Rahmani
+Author-email: rahmani.biotech@gmail.com
+License: MIT
+Download-URL: https://github.com/sharifrahmanie/GEOMetadataDownloader/archive/refs/tags/0.1.tar.gz
+Keywords: Gene Expression Omnibus,GEO,Metadata,GSE series,GEO sample information
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+License-File: LICENSE.txt
+
+UNKNOWN
+
