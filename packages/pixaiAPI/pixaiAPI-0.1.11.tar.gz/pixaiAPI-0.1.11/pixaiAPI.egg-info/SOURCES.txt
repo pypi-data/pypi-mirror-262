@@ -1,0 +1,10 @@
+README.md
+setup.py
+pixai/PixaiAPI.py
+pixai/__init__.py
+pixai/payloads.py
+pixaiAPI.egg-info/PKG-INFO
+pixaiAPI.egg-info/SOURCES.txt
+pixaiAPI.egg-info/dependency_links.txt
+pixaiAPI.egg-info/requires.txt
+pixaiAPI.egg-info/top_level.txt
