@@ -1,0 +1,5 @@
+[
+  "test_synth.py::test_0",
+  "test_tinysoundfont.py::test_blocking0",
+  "test_tinysoundfont.py::test_callback0"
+]

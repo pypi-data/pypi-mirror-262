@@ -1,0 +1,5 @@
+{
+  "test_tinysoundfont.py::test_blocking0": true,
+  "test_tinysoundfont.py::test_callback0": true,
+  "test_synth.py::test_0": true
+}

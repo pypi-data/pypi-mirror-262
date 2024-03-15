@@ -1,0 +1,13 @@
+[
+  "test/test_synth.py::test_0",
+  "test/test_tinysoundfont.py::test_blocking",
+  "test/test_tinysoundfont.py::test_blocking0",
+  "test/test_tinysoundfont.py::test_bytes",
+  "test/test_tinysoundfont.py::test_callback",
+  "test/test_tinysoundfont.py::test_callback0",
+  "test/test_tinysoundfont.py::test_help",
+  "test/test_tinysoundfont.py::test_load",
+  "test/test_tinysoundfont.py::test_rerender",
+  "test/test_tinysoundfont.py::test_start",
+  "test/test_tinysoundfont.py::test_wav"
+]

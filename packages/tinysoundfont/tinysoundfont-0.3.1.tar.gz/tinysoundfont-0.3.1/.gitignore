@@ -1,0 +1,8 @@
+build/
+*.egg-info/
+venv/
+test.wav
+dist/
+wheelhouse/
+_skbuild/
+**/__pycache__
