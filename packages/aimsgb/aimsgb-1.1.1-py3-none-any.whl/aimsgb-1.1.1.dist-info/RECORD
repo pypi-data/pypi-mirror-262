@@ -1,0 +1,12 @@
+aimsgb/__init__.py,sha256=zjLEDcQPB6CNT2Y21OWULBe3yVnjXzPc0jGhFAYqZxg,47
+aimsgb/agb.py,sha256=5mL5okFkFcWpxLmKjB-8YzBDKQ-y0UzRAWR_vkYsxGw,7105
+aimsgb/grain.py,sha256=T5kBkCsbYXPKzDowXqcQVGoYONN5TVgd1Fx-ZxmtBk0,14586
+aimsgb/grain_bound.py,sha256=UuPLe9_8MAeGRl05SvcYlCr-KE_QhzsfGJSWqE_ljps,23740
+aimsgb/utils.py,sha256=eyzP0k6XTrsMf5qpnnS6IhjB3B_oPgvqknOIyh7hgag,2256
+tests/test_grain.py,sha256=v81wqmXyZZ2a1DIGxg_RHq6L-kLx7whvSI-8gO3LMeU,928
+tests/time/time.py,sha256=_tT8wfQ8ML0QO1cLsHQjoTDd2ehF10_Itxq309T2zyw,975
+aimsgb-1.1.1.dist-info/METADATA,sha256=99GHajmXoj3_4aRyez4y07Yy4c0WSK_Fn5NSMEA3Fao,4785
+aimsgb-1.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aimsgb-1.1.1.dist-info/entry_points.txt,sha256=iWBLheEB9gVPh77UToChVaCmvLADVs2WmvdeEXqdgmQ,43
+aimsgb-1.1.1.dist-info/top_level.txt,sha256=mRE83BXTWIldf_Zudp0G1rpZMZ6Fm3CWNCUNFD3yhSM,13
+aimsgb-1.1.1.dist-info/RECORD,,
