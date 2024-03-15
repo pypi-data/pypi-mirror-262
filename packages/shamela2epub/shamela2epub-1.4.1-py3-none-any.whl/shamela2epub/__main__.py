@@ -1,0 +1,28 @@
+"""Entry Point."""
+
+import click
+from trogon import tui
+
+from shamela2epub.cli.app import download
+
+try:
+    from shamela2epub.gui.app import gui
+except ImportError:
+    gui = None  # type: ignore[assignment]
+
+
+@tui()  # type: ignore[misc]
+@click.group()
+def click_cli() -> None:
+    pass
+
+
+def main() -> None:
+    click_cli.add_command(download)
+    if gui is not None:
+        click_cli.add_command(gui)
+    click_cli()
+
+
+if __name__ == "__main__":
+    main()
