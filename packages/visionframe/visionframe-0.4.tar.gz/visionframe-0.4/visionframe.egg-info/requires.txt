@@ -1,0 +1,3 @@
+tqdm
+opencv-python
+supervision==0.9.0
