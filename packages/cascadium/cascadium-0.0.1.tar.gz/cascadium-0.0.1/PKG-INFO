@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cascadium
+Version: 0.0.1
+Home-page: https://github.com/frozflame/cascadium
+Author: frozflame
+Author-email: frozflame@outlook.com
+License: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: flask~=3.0.2
+Requires-Dist: joker-filesys~=0.2.1
+Requires-Dist: joker-flasky~=0.6.0
+Requires-Dist: joker~=0.3.3
+Requires-Dist: pymongo~=4.6.2
+Requires-Dist: redis~=5.0.2
+Requires-Dist: requests~=2.31.0
+Requires-Dist: setuptools~=68.2.0
+Requires-Dist: volkanic~=0.5.1
+Requires-Dist: werkzeug~=3.0.1

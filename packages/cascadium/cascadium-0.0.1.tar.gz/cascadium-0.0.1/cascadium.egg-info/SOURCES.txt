@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+cascadium.egg-info/PKG-INFO
+cascadium.egg-info/SOURCES.txt
+cascadium.egg-info/dependency_links.txt
+cascadium.egg-info/not-zip-safe
+cascadium.egg-info/requires.txt
+cascadium.egg-info/top_level.txt
+cascadium/templates/login.html
+cascadium/templates/upload.html
