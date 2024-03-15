@@ -1,0 +1,2 @@
+[opentelemetry_environment_variables]
+api = cityfibre_opentelemetry.environment_variables
