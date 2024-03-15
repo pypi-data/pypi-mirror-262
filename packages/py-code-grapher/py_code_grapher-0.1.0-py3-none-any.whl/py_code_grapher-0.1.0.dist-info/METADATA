@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: py-code-grapher
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Peter <peterHoburg@users.noreply.github.com>
+Requires-Python: >=3.8
+Requires-Dist: pydantic>=2.6.4
+Description-Content-Type: text/markdown
+
+# py-code-grapher
+
+Describe your project here.

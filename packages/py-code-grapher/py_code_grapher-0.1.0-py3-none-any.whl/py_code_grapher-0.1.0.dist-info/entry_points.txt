@@ -1,0 +1,2 @@
+[console_scripts]
+py-code-grapher = py_code_grapher:main
