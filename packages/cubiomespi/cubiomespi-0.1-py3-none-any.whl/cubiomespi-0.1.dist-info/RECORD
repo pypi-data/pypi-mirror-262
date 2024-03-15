@@ -1,0 +1,11 @@
+cpi/__init__.py,sha256=RYnR7A_syvzKpWtDjsqC_huRIvE7yk8RBMngoRZzFUM,22
+cpi/constants.py,sha256=-sxbawF7kGE0L_uhosF03oPzvaLr6atbNKlI6UilRF4,6195
+cpi/cpi.py,sha256=5HEDWuA78Jpd_VCPKt1ke0lu6DmUy5DOzE-aoP4effw,4792
+cpi/generator.py,sha256=W2mhxDeYl0PmSyW9UHg9FWW3PooqNMO5iF-KDAotX-Y,176
+cpi/test.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cpi/util.py,sha256=1B4raNChCR-2k4GzSwQJWJBHDwhDV0JuOYDXnWpWOnA,7519
+cpi/lib/lib.dll,sha256=Ikoa2RAL1JRuAFybwgoNOfFLehFUwRS3kXjtUKkTfNM,943487
+cubiomespi-0.1.dist-info/METADATA,sha256=z2ESPUtPxkYwnepP-MJ2eENK29eA34Yqv2OS8MaGZSI,291
+cubiomespi-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cubiomespi-0.1.dist-info/top_level.txt,sha256=9TRAFyj1-KCSznuPFdi9rBS8IzNiz97gvDjVhQIg-s4,4
+cubiomespi-0.1.dist-info/RECORD,,
