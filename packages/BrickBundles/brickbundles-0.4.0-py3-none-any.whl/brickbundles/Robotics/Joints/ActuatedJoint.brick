@@ -1,0 +1,3 @@
+ActuatedJoint is Joint:
+    actuator is Physics.Interactions.Interaction:
+        charges: mate.charges
