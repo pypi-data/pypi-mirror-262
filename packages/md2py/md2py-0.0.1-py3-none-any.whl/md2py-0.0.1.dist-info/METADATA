@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: md2py
+Version: 0.0.1
+Summary: utility converting markdown into Python abstraction
+Home-page: http://github.com/alvinwan/md2py
+Download-URL: https://github.com/alvinwan/md2py/archive/0.0.1.zip
+Author: Alvin Wan
+Author-email: hi@alvinwan.com
+License: Apache
+Classifier: Topic :: Utilities
+License-File: LICENSE
+Requires-Dist: markdown
+Requires-Dist: beautifulsoup4
+
