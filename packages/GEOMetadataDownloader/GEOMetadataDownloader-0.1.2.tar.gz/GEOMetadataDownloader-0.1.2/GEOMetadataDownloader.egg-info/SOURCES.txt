@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+GEOMetadataDownloader.egg-info/PKG-INFO
+GEOMetadataDownloader.egg-info/SOURCES.txt
+GEOMetadataDownloader.egg-info/dependency_links.txt
+GEOMetadataDownloader.egg-info/requires.txt
+GEOMetadataDownloader.egg-info/top_level.txt
