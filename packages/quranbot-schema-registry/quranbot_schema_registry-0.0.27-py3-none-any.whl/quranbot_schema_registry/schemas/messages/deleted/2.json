@@ -1,0 +1,48 @@
+{
+  "$id": "https://example.com/demo",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Messages.Deleted.v2",
+  "version": 2,
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "event_version": {
+      "enum": [
+        2
+      ]
+    },
+    "event_name": {
+      "type": "string"
+    },
+    "event_time": {
+      "type": "string"
+    },
+    "producer": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "message_id": {
+          "type": "number"
+        },
+        "chat_id": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "message_id",
+        "chat_id"
+      ]
+    }
+  },
+  "required": [
+    "event_id",
+    "event_version",
+    "event_name",
+    "event_time",
+    "producer",
+    "data"
+  ]
+}
