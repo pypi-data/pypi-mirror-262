@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: qupulse-hdawg-legacy
+Version: 0.1
+Summary: Indexed waveform playback based HDAWG driver for qupulse
+Project-URL: Documentation, https://github.com/qupulse/qupulse-hdawg-legacy#readme
+Project-URL: Issues, https://github.com/qupulse/qupulse-hdawg-legacy/issues
+Project-URL: Source, https://github.com/qupulse/qupulse-hdawg-legacy
+Author-email: Simon Humpohl <simon.humpohl@rwth-aachen.de>
+License-Expression: GPL-3.0
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: <3.9,>=3.8
+Requires-Dist: numpy
+Requires-Dist: qupulse>=0.9
+Requires-Dist: zhinst<=20.7.2701
+Description-Content-Type: text/markdown
+
+# qupulse-hdawg-legacy
+
+[![PyPI - Version](https://img.shields.io/pypi/v/qupulse-hdawg-legacy.svg)](https://pypi.org/project/qupulse-hdawg-legacy)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/qupulse-hdawg-legacy.svg)](https://pypi.org/project/qupulse-hdawg-legacy)
+
+-----
+
+**Table of Contents**
+
+- [About](#about)
+- [Installation](#installation)
+- [License](#license)
+
+## About
+
+This is a [qupulse](https://github.com/qutech/qupulse) driver for Zurich Instrument's HDAWG which uses the pre-2022 firmware, i.e. version `20.7.2701`. This was the latest release with `playWaveIndexed`. The latest supported python version is sadly `3.8`. The driver for newer firmware versions is called [qupulse-hdawg](https://github.com/qutech/qupulse-hdawg).
+
+## Installation
+
+```console
+pip install qupulse-hdawg-legacy
+```
+
+## License
+
+`qupulse-hdawg-legacy` is distributed under the terms of the [GPL-3.0](https://spdx.org/licenses/GPL-3.0.html) license.
