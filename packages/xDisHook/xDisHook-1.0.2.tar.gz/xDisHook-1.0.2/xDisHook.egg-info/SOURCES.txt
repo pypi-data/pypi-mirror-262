@@ -1,0 +1,11 @@
+LICENSE
+README.md
+dishook.py
+setup.cfg
+setup.py
+xDisHook.egg-info/PKG-INFO
+xDisHook.egg-info/SOURCES.txt
+xDisHook.egg-info/dependency_links.txt
+xDisHook.egg-info/entry_points.txt
+xDisHook.egg-info/requires.txt
+xDisHook.egg-info/top_level.txt
