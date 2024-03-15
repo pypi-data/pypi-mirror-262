@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: factools
+Version: 0.0.1
+Summary: A tool to load models for fact
+Author: Song JiaXuan
+Author-email: songjx@bupt.edu.cn
+Keywords: python,load,LLM
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Dist: transformers
+Requires-Dist: typing
+Requires-Dist: torch
+
+Help to load models like Vicuna, LLaMa.
