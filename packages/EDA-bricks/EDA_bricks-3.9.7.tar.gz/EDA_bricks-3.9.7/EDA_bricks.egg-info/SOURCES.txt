@@ -1,0 +1,7 @@
+README.md
+setup.py
+EDA_bricks.egg-info/PKG-INFO
+EDA_bricks.egg-info/SOURCES.txt
+EDA_bricks.egg-info/dependency_links.txt
+EDA_bricks.egg-info/requires.txt
+EDA_bricks.egg-info/top_level.txt
