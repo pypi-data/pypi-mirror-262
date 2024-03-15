@@ -1,0 +1,8 @@
+README.md
+setup.py
+coininfo_matas/__init__.py
+coininfo_matas/info.py
+coininfo_matas.egg-info/PKG-INFO
+coininfo_matas.egg-info/SOURCES.txt
+coininfo_matas.egg-info/dependency_links.txt
+coininfo_matas.egg-info/top_level.txt
