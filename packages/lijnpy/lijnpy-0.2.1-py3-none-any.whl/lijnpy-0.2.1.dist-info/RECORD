@@ -1,0 +1,16 @@
+lijnpy/__init__.py,sha256=br1_gMWKI6sv_HEv8ZU5Bi1ztTsTZh3kIm0R13HZC3Y,61
+lijnpy/exceptions.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lijnpy/kods/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lijnpy/kods/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lijnpy/kods/api/v1/__init__.py,sha256=GOeGzQxr7mNA71Phyu_EvJjjqRTJtafBxJDr18qtxX0,257
+lijnpy/kods/api/v1/colors.py,sha256=20uh-FhnzOPCZTE7LqK5tZBIKUey9FvQvSlQHH3N_18,1238
+lijnpy/kods/api/v1/entities.py,sha256=D1USsABH0stutoyk3nru8RcTFEjA_7cbDbdDqycLQME,3332
+lijnpy/kods/api/v1/enums.py,sha256=EMz5TNtqw6-6GH8TkavPJkXfo7jg-aeweG-A5eF5qaw,570
+lijnpy/kods/api/v1/models.py,sha256=znLV2LBb3n3G5QMxGrLgnriP-mobaMthaFyq210GnVc,13318
+lijnpy/kods/api/v1/municipalities.py,sha256=fzAx2V5_ZlELJ62lDmO7aNTMx75qhwhg3D5xwPDv7ic,2741
+lijnpy/kods/api/v1/stops.py,sha256=w1PLhtoTQNiNzMZ2I9kDpBriTbK5UfvZJvTgufkO5a0,7189
+lijnpy/kods/api/v1/transport_regions.py,sha256=Ab1-S7U9Baueo86G7UVXdDGcwXfqf3cGN_ckBLGfs5w,2154
+lijnpy/rest_adapter.py,sha256=7HIspK58Yxn_0MhZCXrTkasv-gsf26PUcx7JbkpRa9U,5875
+lijnpy-0.2.1.dist-info/METADATA,sha256=Yq_jYoEn-16XReNjbA_M68pbY4gclux9PSC8ztMgVUQ,1281
+lijnpy-0.2.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+lijnpy-0.2.1.dist-info/RECORD,,
