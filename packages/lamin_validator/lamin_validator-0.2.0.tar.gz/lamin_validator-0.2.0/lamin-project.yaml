@@ -1,0 +1,5 @@
+project_name: lamin-validator
+description: Validator built on LaminDB
+project_slug: lamin-validator
+repository_name: lamin-validator
+package_name: lamin_validator
