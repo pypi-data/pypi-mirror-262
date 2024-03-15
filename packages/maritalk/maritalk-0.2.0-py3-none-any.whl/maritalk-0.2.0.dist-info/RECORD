@@ -1,0 +1,9 @@
+examples/local/question_answering.py,sha256=AEcDsBmu6CTF7GiQvvx6c0lPoUvfc0DF6UwF6R-waE8,996
+maritalk/__init__.py,sha256=iCDq_SVxfyOCPlNaSAfvN32RqYEEBo20qzkBZ3zD12w,156
+maritalk/resources/api.py,sha256=a5qNxhSmB-aEsDxqPQihfBbRXWTCxyeeYCplHGVNUpU,8917
+maritalk/resources/local.py,sha256=stvKRws5ZBWiEtmE_LPk4oQ1HDiNTVMKiIiGzprTbm4,11720
+maritalk-0.2.0.dist-info/LICENSE,sha256=AFJwRmVCtzwG2kzgodwnFS9-ADlzSh-o1rCdwjZelWU,1088
+maritalk-0.2.0.dist-info/METADATA,sha256=3EpXfdvdJvlBePWi-pwN3Rye-kkLdH4nBm8xidLMQCA,14632
+maritalk-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+maritalk-0.2.0.dist-info/top_level.txt,sha256=AQNex6ODXOUF6Cs4wBqUhY50KpD80dthVj_AJPrLpJ0,18
+maritalk-0.2.0.dist-info/RECORD,,
