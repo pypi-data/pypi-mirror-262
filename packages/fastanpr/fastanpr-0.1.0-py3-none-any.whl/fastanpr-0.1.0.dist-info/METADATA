@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: fastanpr
+Version: 0.1.0
+Summary: A fast automatic number-plate recognition (ANPR) library
+Home-page: https://github.com/arvindrajan92/fastanpr
+Author: arvindrajan92 (Arvind Rajan)
+Author-email: <arvindrajan92@gmail.com>
+License: MIT
+Keywords: python,anpr,fast,licence plate,number plate,detection,recognition,YOLOv8,paddleocr,paddlepaddle
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ultralytics >=8.1.26
+Requires-Dist: paddlepaddle >=2.6.0
+Requires-Dist: paddleocr >=2.7.0.3
+Provides-Extra: dev
+Requires-Dist: pytest >=8.1.1 ; extra == 'dev'
+Requires-Dist: twine >=5.0.0 ; extra == 'dev'
+
+A package that employs lightweight models (such as YOLOv8) and library (such as Paddle OCR) for a fast ANPR
