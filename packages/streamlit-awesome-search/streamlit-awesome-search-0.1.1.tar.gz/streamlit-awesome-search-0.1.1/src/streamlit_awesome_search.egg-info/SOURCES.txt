@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/streamlit_awesome_search/__init__.py
+src/streamlit_awesome_search/awesome_pandas.py
+src/streamlit_awesome_search.egg-info/PKG-INFO
+src/streamlit_awesome_search.egg-info/SOURCES.txt
+src/streamlit_awesome_search.egg-info/dependency_links.txt
+src/streamlit_awesome_search.egg-info/top_level.txt
