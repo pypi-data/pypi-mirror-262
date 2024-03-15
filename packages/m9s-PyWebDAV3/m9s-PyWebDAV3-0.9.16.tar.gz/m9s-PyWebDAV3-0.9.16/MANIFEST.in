@@ -1,0 +1,4 @@
+iinclude setup.py README.rst
+include doc/*
+include test/*
+include pywebdav/lib/*.py pywebdav/server/*.ini
