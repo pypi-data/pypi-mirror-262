@@ -1,0 +1,6 @@
+magic-filter
+aiohttp
+pydantic
+aiofiles
+certifi
+typing-extensions
