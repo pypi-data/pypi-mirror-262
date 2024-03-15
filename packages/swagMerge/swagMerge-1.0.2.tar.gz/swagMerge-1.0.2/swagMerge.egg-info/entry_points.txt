@@ -1,0 +1,3 @@
+[console_scripts]
+swagMerge = src.swag:main
+
