@@ -1,0 +1,11 @@
+aiohttp
+colorama
+aiosqlite
+python-dotenv
+
+[docs]
+py-cord
+sphinx
+furo
+sphinx-autodoc-typehints
+sphinx-copybutton
