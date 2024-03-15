@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "mp-yearmonth"
+version = "0.5.0"
+description = "A year-month datatype for Python."
+keywords = ["year", "month", "date", "calendar"]
+authors = ["Ramon Torres <ramon@macropoetry.com>"]
+readme = "README.rst"
+include = ["LICENSE", "CHANGELOG.rst"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.urls]
+homepage = "https://github.com/raymondjavaxx/mp-yearmonth"
+tracker = "https://github.com/raymondjavaxx/mp-yearmonth/issues"
+repository = "https://github.com/raymondjavaxx/mp-yearmonth"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.3"
+freezegun = "^1.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
