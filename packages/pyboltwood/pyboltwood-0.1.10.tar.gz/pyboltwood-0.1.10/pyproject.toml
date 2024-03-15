@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyboltwood"
+version = "0.1.10"
+authors = [
+  { name="Adam Robichaud", email="arobichaud@diffractionlimited.com" },
+]
+description = "Official Boltwood Cloud Sensor III Serial API Python wrapper"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyserial ~= 3.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/diffraction-limited/pyboltwood"
+Issues = "https://github.com/diffraction-limited/pyboltwood/issues"
+Documentation = "https://diffraction-limited.github.io/pyboltwood"
