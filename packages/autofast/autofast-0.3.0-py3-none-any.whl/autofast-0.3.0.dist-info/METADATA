@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: autofast
+Version: 0.3.0
+Summary: Python dependency injection and configuration library.
+Home-page: https://github.com/Anton-Vasyaev/autofast
+Author: Anton Vasyaev
+Author-email: vasyaevanton@gmail.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: nameof >=0.0.1
+
