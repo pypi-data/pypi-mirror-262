@@ -1,0 +1,8 @@
+mov_cli_anime/__init__.py,sha256=DDJ8sZYn9OM3VG0pGQ1uwvqxbUgpFLBwpeq_WbGgq-s,323
+mov_cli_anime/anitaku/__init__.py,sha256=Fj462oA761mBSgkSUVYX0vvneMxQloAh2EKG9dx9Q9c,22
+mov_cli_anime/anitaku/scraper.py,sha256=2HXzH86L8a9ciC4ftLI_hp7U7Svbr4eYxdRpIWuk5rY,5113
+mov_cli_anime-1.0.6.dist-info/LICENSE,sha256=phLSSuoMKa5VWPIMzgdvITzPXiTlX37dmLnqTaXE-3I,1064
+mov_cli_anime-1.0.6.dist-info/METADATA,sha256=wJ9sHP7qMTdUgmXLpUlo_CkzL2muT4NV1IX8AEDOiNM,2887
+mov_cli_anime-1.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mov_cli_anime-1.0.6.dist-info/top_level.txt,sha256=wSq54Tinm8yUnxncq4GtbHNIKmsmmqbQpTv1fXJEPVE,14
+mov_cli_anime-1.0.6.dist-info/RECORD,,
