@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: ledsc
+Version: 1.0.0
+Summary: Library for communicate with led string controller
+Author-email: Patrik Kratochvil <info@ledsc.eu>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pymodbus ~=3.5.4
+Requires-Dist: pyserial ~=3.5
+
+# LEDSC Python library
+
+Library for communicate with [ledsc](https://ledsc.eu).
+
+## Examples
+
+### Setting colors
+
+```python
+import time
+import logging
+from pymodbus.client import ModbusSerialClient
+from ledsc import LedSC
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+    modbus_client = ModbusSerialClient(port='/dev/ttyUSB1', baudrate=19200)
+    lsc = LedSC(modbus_client=modbus_client, unit=1)
+    lsc.set_transition_time(0.1)
+
+    lsc.set_white(100)
+    time.sleep(2)
+    lsc.set_rgbw(red=100, green=20, blue=40, white=0)
+```
+
+
