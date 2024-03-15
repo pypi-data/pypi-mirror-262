@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/b3o_fedlearn/__init__.py
+src/b3o_fedlearn/client_fedlearn.py
+src/b3o_fedlearn/data_processing.py
+src/b3o_fedlearn/fedlearner.py
+src/b3o_fedlearn.egg-info/PKG-INFO
+src/b3o_fedlearn.egg-info/SOURCES.txt
+src/b3o_fedlearn.egg-info/dependency_links.txt
+src/b3o_fedlearn.egg-info/top_level.txt
