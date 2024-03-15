@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "loutrinette"
+version = "0.0.1"
+description = "Preparation tool for 42school"
+authors = ["xtrm <oss@xtrm.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+xdg-base-dirs = "^6.0.1"
+
+[tool.poetry.scripts]
+loutrinette = "loutrinette.cli:init"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

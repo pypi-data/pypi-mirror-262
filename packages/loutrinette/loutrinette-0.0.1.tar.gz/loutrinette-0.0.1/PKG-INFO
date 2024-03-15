@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: loutrinette
+Version: 0.0.1
+Summary: Preparation tool for 42school
+Author: xtrm
+Author-email: oss@xtrm.me
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: xdg-base-dirs (>=6.0.1,<7.0.0)
+Description-Content-Type: text/markdown
+
+# loutrinette
+
+this wasnt made for public usage so have fun
+
