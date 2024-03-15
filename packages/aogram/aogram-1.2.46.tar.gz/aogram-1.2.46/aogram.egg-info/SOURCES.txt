@@ -1,0 +1,7 @@
+setup.py
+aiogram/__init__.py
+aogram.egg-info/PKG-INFO
+aogram.egg-info/SOURCES.txt
+aogram.egg-info/dependency_links.txt
+aogram.egg-info/requires.txt
+aogram.egg-info/top_level.txt

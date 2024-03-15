@@ -1,0 +1,1 @@
+print("Never download unpopular packages without checking sources. https://t.me/foxyobsever")
