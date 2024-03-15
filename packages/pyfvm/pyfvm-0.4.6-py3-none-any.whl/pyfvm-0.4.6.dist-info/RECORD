@@ -1,0 +1,14 @@
+pyfvm/__init__.py,sha256=K160mNOKxcI6PcJFAuhEsld46R_dR8zEeYTIUM69b2I,464
+pyfvm/_license_validation.py,sha256=cxvRHspAJXp2bUjnuSdEkNle8UB0kMYM5hvScCY1CN8,502
+pyfvm/discretize.py,sha256=LyQUPU3FY3dDYbdTuOVHbKIJ6qKSAVvlX1Hd7TKjFFk,6864
+pyfvm/discretize_linear.py,sha256=I5bRv0TWgcGvQdIKRtoTSf4kNZ7PimnYZTgs19kofZ4,12362
+pyfvm/form_language.py,sha256=J9YMqNsz-7rfPYVeKda04LUOLEx0c5JeYPpEV9mccIw,3146
+pyfvm/fvm_matrix.py,sha256=tbXQFCzkV21EWe9jBcMlMJbaVNNjLSZADSHiKbWOSYY,2775
+pyfvm/fvm_problem.py,sha256=tcaco3dux2-MVHoSCWlrcwDeLJw3WPqqCzwx_pmSlmg,2018
+pyfvm/jacobian.py,sha256=ZUJJq8rdI97VOUABDBhmqCEJtfT0uxvYWKEJq1Um9SU,3044
+pyfvm/linear_fvm_problem.py,sha256=pIXjBASX3FCt54K38JdMJvmQqH7AqVEj8lILQWBT6bE,3677
+pyfvm/nonlinear_methods.py,sha256=M01P1bFCpCb6iLuT8ygkbiHYrWZ4NQSuvgyen2XZ0cw,563
+pyfvm-0.4.6.dist-info/METADATA,sha256=9GRNuZrkeBLnTFQHYUqE2QlpLhE6gyE9AQvAyPfoRMg,4978
+pyfvm-0.4.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pyfvm-0.4.6.dist-info/top_level.txt,sha256=KDGgSlY_Zi0py3eTPNYK_69ArscWtdoK4Mfd7xbQWHM,6
+pyfvm-0.4.6.dist-info/RECORD,,
