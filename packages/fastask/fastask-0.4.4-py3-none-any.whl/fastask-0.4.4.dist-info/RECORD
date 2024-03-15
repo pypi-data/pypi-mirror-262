@@ -1,0 +1,10 @@
+fastask/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastask/ask.py,sha256=lMR8NBtRPAeLuNEeM08ZUr-OvaYkkar7fstm9Fi6pPE,6857
+fastask/dev_mode_router.py,sha256=c0rC_B7u2DT2c291Z4cJBXoQi1Kw-vhY-z6S5nLtihI,6601
+fastask/utils.py,sha256=UUI41ocJMYs8AsCoXaRGUq_bWUtvhZCRuVj2GjhIGiI,2179
+fastask-0.4.4.dist-info/LICENSE,sha256=ekAGmPxYjIKgHSnJaGnywwAK6j9vevqlr8147E8LRbk,1070
+fastask-0.4.4.dist-info/METADATA,sha256=abMe2J0WsxfwF-OX3qFbSNOC5ryWm2sU965vsibr1v4,4944
+fastask-0.4.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fastask-0.4.4.dist-info/entry_points.txt,sha256=a842eNbGUTzw1i4fZKZ3OBQxZt-s_pu5YaSCHociibg,41
+fastask-0.4.4.dist-info/top_level.txt,sha256=jPyXHvWXbxu9jlgnBdHHhDedK12EK0Aj0my9VcMT80Y,8
+fastask-0.4.4.dist-info/RECORD,,
