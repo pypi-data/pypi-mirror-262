@@ -1,0 +1,16 @@
+htag/__init__.py,sha256=W4WfJlZILxf3TgSItQBBTWjAqxzfNzcw4vYtsvcMUpk,419
+htag/__main__.py,sha256=j4cQLWWG4j9jlzyIVBt4U7mYvZxjArgZsNAh1AeytRY,2740
+htag/attrs.py,sha256=YIKCkbnBavVmKJttG09cSa-CLjqFI-mRP5iVU3A169g,3358
+htag/render.py,sha256=QZdNhV6JWUXeqT2-bnDZPVv4OQ8LW6ZNUw0SWf_zz9Y,14712
+htag/runners/__init__.py,sha256=lIGYKIkYJD72bpTXqZ00UNzYS0jP_IlorA49aPghbew,5737
+htag/runners/chromeappmode.py,sha256=L8nPURsvCIzS-gZ5neGi2KVsQxEYxW23smaADUKYE70,5331
+htag/runners/commons/__init__.py,sha256=S6Nvlo1NtkU8MlOyuKe3be354CHTyARbbDJNYu8qWes,2779
+htag/runners/pyscript.py,sha256=glvoBohqsD8Q8Z6IUXR5rmoXy9xw9sWICupVQnX-ECM,2550
+htag/runners/pywebview.py,sha256=Bp5U2B-Ok13ScGUEBCkSB-ZJq2D0oTjvD1OxPv_8oIg,1694
+htag/runners/runner.py,sha256=__I-dgtVAcNtUI_L5hI_2ybcNltLhUCpZNTz_rmt6Vo,15834
+htag/runners/server/__init__.py,sha256=Wdi-baB5Ponkmhpyglo4cvFdyVYgqALJbwghVhmzEmc,23436
+htag/tag.py,sha256=5dl-8AWff7dp4EJSGK2147vZzAwoIIis7HBjH3Xr1Ps,24146
+htag-0.91.1.dist-info/LICENSE,sha256=3UHJs7Jn8o60WsDhLxgSKwwgK5MfQ05L9nEKTOA7uGQ,1065
+htag-0.91.1.dist-info/METADATA,sha256=F9XkYz7U7Hc142p0bUUKmxgthxPsSRffIedollJiAZ8,6622
+htag-0.91.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+htag-0.91.1.dist-info/RECORD,,
