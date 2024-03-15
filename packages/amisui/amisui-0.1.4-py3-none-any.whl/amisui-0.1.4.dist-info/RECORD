@@ -1,0 +1,11 @@
+amisui-0.1.4.dist-info/METADATA,sha256=U0Dx6J9H0aiAEJcdqbhuu-McDUSQRJz25K9QMTD5_rE,1607
+amisui-0.1.4.dist-info/WHEEL,sha256=N2J68yzZqJh3mI_Wg92rwhw0rtJDFpZj9bwQIMJgaVg,90
+amisui-0.1.4.dist-info/licenses/LICENSE,sha256=ySqn8spCrwt3VjGOLp6o1053V5xY5b9eaqHe_BYmv2g,11358
+amisui/__init__.py,sha256=ZshGZrx86mWAHTGS0XhlQuifodJEpIK1Jyy0qdoTScg,249
+amisui/components.py,sha256=6XNW2JxGmaJSAqEqHnLsZ3GxHSQv88O9axxyXR-uH_w,179558
+amisui/config.py,sha256=9RpLyuMKl-lrE41VFcwJFasL_k3wiWWrcF5kq2QFiIU,103
+amisui/constants.py,sha256=kNNVwKHFC5L3diiu72ETgPNvn8xGbplVCosEP-kvC84,1287
+amisui/templates/app.jinja2,sha256=a0syQ_cKnoZ3-iAsc-7F6XNEJ5fknRZN3VrL2TcvjSo,7006
+amisui/templates/page.jinja2,sha256=iLJSjc52zVz2IoZf1oQ6ubKaG9JQRCUDrv49vqrdZ8U,1555
+amisui/types.py,sha256=OJ8HROhr5_KxYho7G7A72lEkcMfZznUCNa2uD1DyZr4,5918
+amisui-0.1.4.dist-info/RECORD,,
