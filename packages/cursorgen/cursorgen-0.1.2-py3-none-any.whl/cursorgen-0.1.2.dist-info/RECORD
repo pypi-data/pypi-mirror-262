@@ -1,0 +1,17 @@
+cursorgen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cursorgen/__main__.py,sha256=SnpvgtrPUsEJ4tonG0ZEXDwwT1MfGCjuHPqUBQpTmdk,1495
+cursorgen/parser/__init__.py,sha256=68Ea2r25CUdInalznGPLgyDO5Iq01rrl7Mitv1It8LY,634
+cursorgen/parser/ani.py,sha256=eWsmKYfqRWP1mqVmRq3KqZeLZefHFeZUe4-o9uRdepo,5370
+cursorgen/parser/base.py,sha256=jyBTt8grcs7ohMhQA5q1zTBrPeyJGHduTzrY6Smd6l0,407
+cursorgen/parser/bmp.py,sha256=AEBFhJBKGEn_Qa01i5D8nD79YKuAfgWISalb6EG4FoM,8657
+cursorgen/parser/cur.py,sha256=5Fbotg5e8t_h1bij8IrfTTj3fqEQvubqWbxlsEPZNew,1910
+cursorgen/parser/xcursor.py,sha256=uyVs2-1e2hHF5Zl_qqEZPf725utgSH2Bfy8TexSYVxg,4278
+cursorgen/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cursorgen/utils/cursor.py,sha256=M47UXI-jW1GEsCzqbP3LbinZkM7h4CIOVb517QY6pc4,1122
+cursorgen/writer/__init__.py,sha256=Oxv9JPnsIqbFbHYjINpT_HFDsw2JaCCjaUcu9hWXRjU,105
+cursorgen/writer/x11.py,sha256=ZXH3pvY0J5DEYzTnr6EVoW5_igdkIx5HTUPkMv-vkg4,2211
+cursorgen-0.1.2.dist-info/METADATA,sha256=xB-h0BW0B1gEG2m-0LguULm9-Fbc0S1RYS9davys6JI,1854
+cursorgen-0.1.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cursorgen-0.1.2.dist-info/entry_points.txt,sha256=dG0iG1p07vafjUrP5i85xUdXQ6J23YF2mz0qCQuMdPk,54
+cursorgen-0.1.2.dist-info/top_level.txt,sha256=c540alHqYOGv7NHvS2RI8mmY3bQlCPnz3Agpo9sLBjo,10
+cursorgen-0.1.2.dist-info/RECORD,,
