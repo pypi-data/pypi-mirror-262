@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: vecstore
+Version: 0.5.0
+Summary: Dynamically expandable Vector Store for embeddings, using the HNSW library
+Home-page: https://github.com/ptarau/vecstore.git
+Author: Paul Tarau
+Author-email: ptarau@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# vecstore
+Dynamically expandable Vector Store for embeddings, using the HNSW library
