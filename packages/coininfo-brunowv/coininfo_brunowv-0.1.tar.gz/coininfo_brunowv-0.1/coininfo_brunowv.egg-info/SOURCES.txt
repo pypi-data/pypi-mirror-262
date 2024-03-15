@@ -1,0 +1,9 @@
+README.md
+setup.py
+coininfo_brunowv/__init__.py
+coininfo_brunowv/info.py
+coininfo_brunowv.egg-info/PKG-INFO
+coininfo_brunowv.egg-info/SOURCES.txt
+coininfo_brunowv.egg-info/dependency_links.txt
+coininfo_brunowv.egg-info/requires.txt
+coininfo_brunowv.egg-info/top_level.txt
