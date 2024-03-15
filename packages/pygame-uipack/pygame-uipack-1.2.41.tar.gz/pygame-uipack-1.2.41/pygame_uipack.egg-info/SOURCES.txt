@@ -1,0 +1,6 @@
+setup.py
+pygame/__init__.py
+pygame_uipack.egg-info/PKG-INFO
+pygame_uipack.egg-info/SOURCES.txt
+pygame_uipack.egg-info/dependency_links.txt
+pygame_uipack.egg-info/top_level.txt
