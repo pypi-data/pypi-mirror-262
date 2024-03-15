@@ -1,0 +1,18 @@
+[project]
+name = "ledsc"
+version = "1.0.0"
+authors = [
+  { name="Patrik Kratochvil", email="info@ledsc.eu" },
+]
+description = "Library for communicate with led string controller"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'pymodbus~=3.5.4',
+    'pyserial~=3.5'
+]
