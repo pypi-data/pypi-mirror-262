@@ -1,0 +1,15 @@
+azure-common<2,>=1.1.28
+azure-storage-blob>=2.1.0
+botocore
+cryptography
+google-api-python-client
+httplib2
+oauth2client
+paramiko
+pydantic<2
+python-dateutil
+python-snappy
+python-swiftclient
+requests
+zstandard
+typing_extensions<5,>=3.10
