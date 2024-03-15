@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+casdbops/__init__.py
+casdbops/cassandra_crud.py
+casdbops.egg-info/PKG-INFO
+casdbops.egg-info/SOURCES.txt
+casdbops.egg-info/dependency_links.txt
+casdbops.egg-info/requires.txt
+casdbops.egg-info/top_level.txt
+tests/__init__.py
+tests/integration/__init__.py
+tests/integration/test_int.py
+tests/unit/__init__.py
+tests/unit/test_unit.py
