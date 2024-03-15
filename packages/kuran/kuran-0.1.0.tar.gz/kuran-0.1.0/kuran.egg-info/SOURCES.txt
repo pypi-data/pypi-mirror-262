@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+kuran/__init__.py
+kuran/kuran.py
+kuran.egg-info/PKG-INFO
+kuran.egg-info/SOURCES.txt
+kuran.egg-info/dependency_links.txt
+kuran.egg-info/requires.txt
+kuran.egg-info/top_level.txt
