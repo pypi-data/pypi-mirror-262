@@ -1,0 +1,2 @@
+[console_scripts]
+mockery = mockery.mockery:main
