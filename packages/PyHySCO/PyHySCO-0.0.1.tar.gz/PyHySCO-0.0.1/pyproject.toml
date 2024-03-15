@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "PyHySCO"
+version = "0.0.1"
+authors = [
+  { name="Abigail Julian", email="abigail.julian@emory.edu" },
+  { name="Lars Ruthotto", email="lars.ruthotto@emory.edu"},
+]
+description = "Pytorch toolbox for Hyperelastic Susceptibility Artifact Correction"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+   "torch>=2.0.0",
+   "numpy",
+   "matplotlib",
+   "nibabel",
+   "scipy"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/EmoryMLIP/PyHySCO/"
+Issues = "https://github.com/EmoryMLIP/PyHySCO/issues"
+
+[project.scripts]
+pyhysco = "scripts.pyhysco:main"
