@@ -1,0 +1,10 @@
+treat2p/__init__.py,sha256=mxvR-29rIzNrGjpCaowcAPFkvlBAYRmeSUuRGvUeQ2o,91
+treat2p/calculations.py,sha256=87FUIBjb0zwdYUVWH1r54H1K7yvc__w8sTngDwUGR50,16912
+treat2p/core.py,sha256=DAJtoKWnYhBy0eWtJRZwT1IWy-vPAzPPXOclBT2HNrA,10807
+treat2p/corrections.py,sha256=ufRrYzsf5371Kb4rQozg_5i_2XAe0_q7V2FJUSpKQkw,1469
+treat2p/normalisation.py,sha256=fxQ1Z55UVh0iJnbglXu_RQ-Td_koS0qLs5PCg3MpJEY,4885
+treat2p/utils.py,sha256=ypWkDx7dSnvTU-f6v2KdKZeWScGLqytPOwVky15ghCc,14005
+treat2p-0.0.1.dist-info/METADATA,sha256=PZeZnt6WCBoMT0FTTQRdKa_8xSX15FHA4oDxb8REiFw,849
+treat2p-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+treat2p-0.0.1.dist-info/top_level.txt,sha256=OwuZZ39zfs2o9PxD3rP0Na7Bh30MZyYnghXx_6Y_uP0,8
+treat2p-0.0.1.dist-info/RECORD,,
