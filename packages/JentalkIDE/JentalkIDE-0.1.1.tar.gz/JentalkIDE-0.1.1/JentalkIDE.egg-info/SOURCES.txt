@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+JentalkIDE.egg-info/PKG-INFO
+JentalkIDE.egg-info/SOURCES.txt
+JentalkIDE.egg-info/dependency_links.txt
+JentalkIDE.egg-info/requires.txt
+JentalkIDE.egg-info/top_level.txt
