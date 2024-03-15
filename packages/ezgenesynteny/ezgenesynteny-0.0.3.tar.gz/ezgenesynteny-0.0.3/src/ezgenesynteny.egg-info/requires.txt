@@ -1,0 +1,11 @@
+requests
+packaging
+biopython>=1.83
+configparser
+matplotlib>=3.8.0
+
+[dev]
+pytest
+black
+setuptools
+twine

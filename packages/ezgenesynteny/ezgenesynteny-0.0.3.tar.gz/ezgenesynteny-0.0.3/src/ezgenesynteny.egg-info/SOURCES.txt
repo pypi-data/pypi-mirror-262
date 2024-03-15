@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.py
+src/ezgenesynteny/__init__.py
+src/ezgenesynteny/config.ini
+src/ezgenesynteny/emailaddress.py
+src/ezgenesynteny/genevis.py
+src/ezgenesynteny/getgenes.py
+src/ezgenesynteny/version_check.py
+src/ezgenesynteny.egg-info/PKG-INFO
+src/ezgenesynteny.egg-info/SOURCES.txt
+src/ezgenesynteny.egg-info/dependency_links.txt
+src/ezgenesynteny.egg-info/entry_points.txt
+src/ezgenesynteny.egg-info/requires.txt
+src/ezgenesynteny.egg-info/top_level.txt
