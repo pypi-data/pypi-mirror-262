@@ -1,0 +1,14 @@
+minimax_client-0.2.0.dist-info/METADATA,sha256=6vtkHCROdz_g5VgXEik-MKSIq-PJ_vLycJ5mAnxLR4g,6883
+minimax_client-0.2.0.dist-info/WHEEL,sha256=N2J68yzZqJh3mI_Wg92rwhw0rtJDFpZj9bwQIMJgaVg,90
+minimax_client-0.2.0.dist-info/licenses/LICENSE.md,sha256=Lr7rKDjurJDC4ObkuQrBkYYjSxK0OC3R8wKckdIr9ms,1076
+minimax_client/__init__.py,sha256=1sP5NWpzwshrQtuT300wqgyQNQ0Bn7iYhO9j_lDdo5E,78
+minimax_client/__version__.py,sha256=WM4XGdxE5C_sAMrh1yTv_727gvihN3_u-AthpuOT6UI,47
+minimax_client/client.py,sha256=CKuyW8ZSEAoUcnz4R2sSMjlTZH1PrgLDxgcqSvIlJhs,4479
+minimax_client/entities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minimax_client/entities/chat_completion.py,sha256=N6WUR2AJw_47fUBOJAsMf5239VjADv0OUJLPVBvS20M,1211
+minimax_client/entities/common.py,sha256=dV_cQ4LTkWTbCkyAs72d_o_5UpLCnRI5iX_ftiJ4-b4,153
+minimax_client/entities/embedding.py,sha256=WFoMeravyKVwrUjw5JNm28o7wnmWPCjFZviuiiwAbQ4,281
+minimax_client/interfaces/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minimax_client/interfaces/chat_completion.py,sha256=0Hm_8Ykm4DPKT0M3dT4tCzTlKyhJZhkrb0SHNHx0eNA,8884
+minimax_client/interfaces/embedding.py,sha256=sMuBILgLz9FCvyNDkuOW33itYKWF3bM7ldQyGokgRW4,3246
+minimax_client-0.2.0.dist-info/RECORD,,
