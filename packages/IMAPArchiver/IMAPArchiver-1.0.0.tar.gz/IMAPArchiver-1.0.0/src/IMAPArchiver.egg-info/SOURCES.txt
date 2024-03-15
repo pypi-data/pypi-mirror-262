@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/IMAPArchiver.egg-info/PKG-INFO
+src/IMAPArchiver.egg-info/SOURCES.txt
+src/IMAPArchiver.egg-info/dependency_links.txt
+src/IMAPArchiver.egg-info/entry_points.txt
+src/IMAPArchiver.egg-info/top_level.txt
+src/imaparchiver/__init__.py
+src/imaparchiver/main.py
