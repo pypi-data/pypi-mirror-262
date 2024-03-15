@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pytorch_ml_utils/__init__.py
+pytorch_ml_utils/get_optimizer.py
+pytorch_ml_utils.egg-info/PKG-INFO
+pytorch_ml_utils.egg-info/SOURCES.txt
+pytorch_ml_utils.egg-info/dependency_links.txt
+pytorch_ml_utils.egg-info/requires.txt
+pytorch_ml_utils.egg-info/top_level.txt
