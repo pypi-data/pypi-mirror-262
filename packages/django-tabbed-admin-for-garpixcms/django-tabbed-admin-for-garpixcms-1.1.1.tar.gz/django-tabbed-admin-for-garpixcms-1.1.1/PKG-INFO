@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: django-tabbed-admin-for-garpixcms
+Version: 1.1.1
+Home-page: https://github.com/garpixcms/django-tabbed-admin
+Author: Garpix LTD
+Author-email: info@garpix.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: Django<5,>=3.1
+
+Fork of https://github.com/omji/django-tabbed-admin with Django >= 4 support
