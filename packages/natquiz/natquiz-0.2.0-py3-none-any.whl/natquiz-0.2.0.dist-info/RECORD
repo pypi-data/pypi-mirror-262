@@ -1,0 +1,10 @@
+natquiz/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+natquiz/app.py,sha256=jUyF4AAEg7tzK9GVUIOm_RuPT6rung6mmAdRDIEwenY,2230
+natquiz/parse_questions.py,sha256=VSP-chUUJ7ZT6QcIKdsQfJJkj9SWsWzJniuMxFfbQkI,710
+natquiz/questions.toml,sha256=u8ofKB8zA7AXBM-r_PU2gvIwRZjT2oF-Qzhmu9bftEw,18980
+natquiz-0.2.0.dist-info/LICENSE,sha256=N3m5QDi8yVXEtjH1Wla7VPmmk2K-7YpR1Dt8-cuW2Ac,1072
+natquiz-0.2.0.dist-info/METADATA,sha256=DzWjPcVL6IWmIldCy5vygNZC-oHIRgczxf5G5yBvur4,4956
+natquiz-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+natquiz-0.2.0.dist-info/entry_points.txt,sha256=wbUdw7QbZ2J3LyVeUOqPgNtsROu5Fhnviol4-M_lb9E,45
+natquiz-0.2.0.dist-info/top_level.txt,sha256=pjeN-KqKbpk9CkTkf7qCKPPd21dresxmjLAKCG7t1rA,8
+natquiz-0.2.0.dist-info/RECORD,,
