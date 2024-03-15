@@ -1,0 +1,76 @@
+[tool.poetry]
+name = "shamela2epub"
+version = "1.4.2"
+description = "A CLI and GUI tool to download a book on https://shamela.ws to an EPUB book."
+authors = ["yshalsager <ysh-alsager@hotmail.com>"]
+license = "GPL-3.0-only"
+repository = "https://github.com/yshalsager/shamela2epub/"
+keywords = ["epub3", "shamela", "book", "epub", "islamic"]
+packages = [
+    { include = "shamela2epub" }
+]
+include = [
+    "README.md",
+    "pyproject.toml"
+]
+readme = "README.md"
+
+[tool.poetry.group.main.dependencies]
+python = ">=3.12,<3.13"
+niquests = "^3.5.3"
+EbookLib = ">=0.17.1,<0.19.0"
+lxml = "^5.1.0"
+click = "^8.1.7"
+parsel = "^1.9.0"
+tomli = "^2.0.1"
+trogon = "^0.5.0"
+tqdm = "^4.65.0"
+
+[tool.poetry.group.gui.dependencies]
+pyqt6 = "^6.6.1"
+pyqtdarktheme-fork = ">=2.3,<3.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.6.2"
+ruff = "^0.3.0"
+mypy = "^1.9.0"
+types-toml = "^0.10.8"
+types-click = "^7.1.8"
+pyinstaller = "^6.5.0"
+
+[tool.poetry.scripts]
+shamela2epub = "shamela2epub.__main__:main"
+shamela2epubgui = "shamela2epub.gui.app:gui"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.mypy]
+files = ["shamela2epub"]
+ignore_missing_imports = true
+disallow_untyped_defs = true
+#disallow_any_unimported = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+show_error_codes = true
+warn_unused_ignores = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+
+[tool.pycln]
+all = true
+
+[tool.ruff]  # https://github.com/charliermarsh/ruff
+fix = true
+line-length = 100
+src = ["shamela2epub"]
+target-version = "py312"
+
+[tool.ruff.lint]
+ignore = ["E501", "S307", "RET504", "S101", "D211", "D213", "ERA001", "G004", "ISC001"]
+ignore-init-module-imports = true
+select = ["A", "B", "BLE", "C4", "C90", "DTZ", "E", "ERA", "F", "G", "I", "INP", "ISC", "N", "NPY", "PGH", "PIE", "PLC", "PLE", "PLR", "PLW", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "S", "SIM", "T10", "T20", "TID", "UP", "W", "YTT"]
+unfixable = ["ERA001", "F401", "F841", "T201", "T203"]
