@@ -1,0 +1,13 @@
+lektor
+
+[dev]
+lektor-fixedlang[style,tests]
+build
+twine
+tox
+
+[style]
+ruff
+
+[tests]
+pytest
