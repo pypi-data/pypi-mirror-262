@@ -1,0 +1,5 @@
+aiotieba[img,speedup]<5,>=4.1.0
+asyncmy<0.3,>=0.2.9
+
+[:python_version < "3.11"]
+tomli<3,>=1.1.0
