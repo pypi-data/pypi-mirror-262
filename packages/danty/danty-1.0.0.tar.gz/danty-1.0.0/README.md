@@ -1,0 +1,1 @@
+# repository unoficinal minerdata cripto
