@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: factools
+Version: 0.1.1
+Summary: Fix bugs
+Author: Song JiaXuan
+Author-email: songjx@bupt.edu.cn
+Keywords: python,load,LLM
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: transformers
+Requires-Dist: typing
+Requires-Dist: torch
+
+Fix bugs in load_vicuna_13b
