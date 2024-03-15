@@ -1,0 +1,2 @@
+[console_scripts]
+nowgg = nowgg:main
