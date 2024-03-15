@@ -1,0 +1,2 @@
+[console_scripts]
+makePDF = src.main:main
