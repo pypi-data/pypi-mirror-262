@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+fastanpr/__init__.py
+fastanpr/best.pt
+fastanpr/numberplate.py
+fastanpr.egg-info/PKG-INFO
+fastanpr.egg-info/SOURCES.txt
+fastanpr.egg-info/dependency_links.txt
+fastanpr.egg-info/requires.txt
+fastanpr.egg-info/top_level.txt
