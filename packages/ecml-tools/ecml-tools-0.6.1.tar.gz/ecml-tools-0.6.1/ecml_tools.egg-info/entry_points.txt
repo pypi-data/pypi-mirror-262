@@ -1,0 +1,2 @@
+[console_scripts]
+anemoi-datasets = ecml_tools.__main__:main
