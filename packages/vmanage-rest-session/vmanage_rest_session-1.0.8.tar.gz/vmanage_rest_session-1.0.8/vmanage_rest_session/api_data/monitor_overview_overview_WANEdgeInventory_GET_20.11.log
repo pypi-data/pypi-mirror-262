@@ -1,0 +1,64 @@
+{
+    "header":
+    {
+        "generatedOn": 1681558999929,
+        "title": "WAN Edge Inventory",
+        "viewKeys":
+        {
+            "uniqueKey":
+            [],
+            "preferenceKey": "grid-vedgeInventory"
+        },
+        "columns":
+        [
+            {
+                "title": "Inventory List",
+                "property": "list",
+                "dataType": "string"
+            },
+            {
+                "title": "Data",
+                "property": "value",
+                "dataType": "number"
+            }
+        ],
+        "fields":
+        [
+            {
+                "property": "list",
+                "dataType": "string"
+            },
+            {
+                "property": "value",
+                "dataType": "number"
+            }
+        ]
+    },
+    "data":
+    [
+        {
+            "name": "Total",
+            "list": "Total",
+            "value": 5,
+            "detailsURL": "/dataservice/device/vedgeinventory/detail"
+        },
+        {
+            "name": "Authorized",
+            "list": "Authorized",
+            "detailsURL": "/dataservice/device/vedgeinventory/detail?status=authorized",
+            "value": 5
+        },
+        {
+            "name": "Deployed",
+            "list": "Deployed",
+            "detailsURL": "/dataservice/device/vedgeinventory/detail?status=deployed",
+            "value": 5
+        },
+        {
+            "name": "Staging",
+            "list": "Staging",
+            "detailsURL": "/dataservice/device/vedgeinventory/detail?status=staging",
+            "value": 0
+        }
+    ]
+}

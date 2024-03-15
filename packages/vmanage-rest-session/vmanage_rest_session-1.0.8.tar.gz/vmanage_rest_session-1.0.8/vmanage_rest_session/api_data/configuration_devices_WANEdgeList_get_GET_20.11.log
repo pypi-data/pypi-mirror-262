@@ -1,0 +1,497 @@
+{
+    "header":
+    {
+        "generatedOn": 1681616778852,
+        "viewKeys":
+        {
+            "uniqueKey":
+            [],
+            "preferenceKey": "grid-vEdgeList"
+        },
+        "columns":
+        [
+            {
+                "title": "Chassis Number",
+                "property": "chasisNumber",
+                "hideable": false,
+                "width": 250,
+                "dataType": "string"
+            },
+            {
+                "title": "Tags",
+                "property": "tags",
+                "display": "toggle",
+                "actionColumn": true,
+                "minWidth": 100,
+                "dataType": "string"
+            },
+            {
+                "title": "Hostname",
+                "property": "host-name",
+                "hideable": true,
+                "width": 200,
+                "dataType": "string"
+            },
+            {
+                "title": "Site ID",
+                "property": "site-id",
+                "width": 70,
+                "dataType": "numberStr"
+            },
+            {
+                "title": "Region ID",
+                "property": "region-id",
+                "width": 120,
+                "dataType": "string"
+            },
+            {
+                "title": "Mode",
+                "property": "configOperationMode",
+                "display": "keyvalue",
+                "keyvalueProperty": "configOperationMode",
+                "keyvalue":
+                [
+                    {
+                        "key": "cli",
+                        "value": "CLI"
+                    },
+                    {
+                        "key": "vmanage",
+                        "value": "vManage"
+                    }
+                ],
+                "width": 80,
+                "dataType": "string"
+            },
+            {
+                "title": "Device Status",
+                "property": "configStatusMessage",
+                "display": "syncDiffChecker",
+                "minWidth": 150,
+                "dataType": "string"
+            },
+            {
+                "title": "Assigned Config Group",
+                "property": "name",
+                "width": 150,
+                "dataType": "string"
+            },
+            {
+                "title": "Assigned Template",
+                "property": "template",
+                "width": 150,
+                "dataType": "string"
+            },
+            {
+                "title": "Device Model",
+                "property": "deviceModel",
+                "display": "keyvalue",
+                "keyvalueProperty": "deviceModel",
+                "hideable": false,
+                "minWidth": 120,
+                "dataType": "string"
+            },
+            {
+                "title": "Draft Mode",
+                "property": "draftMode",
+                "width": 80,
+                "dataType": "string"
+            },
+            {
+                "title": "Serial No./Token",
+                "property": "serialNumber",
+                "width": 150,
+                "dataType": "string"
+            },
+            {
+                "title": "Reachability",
+                "property": "reachability",
+                "hideable": true,
+                "dataType": "string"
+            },
+            {
+                "title": "Certificate State",
+                "property": "vedgeCertificateState",
+                "display": "iconAndToolTip",
+                "iconProperty": "vedgeCertificateState",
+                "toolTipProperty": "vedgeCertificateState",
+                "icon":
+                [
+                    {
+                        "key": "tokengenerated",
+                        "value": "images/certStates/token-generated.png",
+                        "displayKey": "Token Generated"
+                    },
+                    {
+                        "key": "bootstrapconfiggenerated",
+                        "value": "images/certStates/bootstrap-config-generated.png",
+                        "displayKey": "Bootstrap Configuration Generated"
+                    },
+                    {
+                        "key": "csrgenerated",
+                        "value": "images/certStates/csr-generated.png",
+                        "displayKey": "CSR Generated"
+                    },
+                    {
+                        "key": "csrfailed",
+                        "value": "images/certStates/csr-failed.png",
+                        "displayKey": "CSR Failed"
+                    },
+                    {
+                        "key": "certinstallfailed",
+                        "value": "images/certStates/cert-install-failed.png",
+                        "displayKey": "Certificate Installation Failed"
+                    },
+                    {
+                        "key": "certinstalled",
+                        "value": "images/certStates/cert-installed.png",
+                        "displayKey": "Certificate Installed"
+                    }
+                ],
+                "width": 40,
+                "dataType": "string"
+            },
+            {
+                "title": "Enterprise Cert Serial No",
+                "property": "hardwareCertSerialNumber",
+                "width": 100,
+                "dataType": "string"
+            },
+            {
+                "title": "Certificate Expiration Date",
+                "property": "expirationDate",
+                "width": 100,
+                "dataType": "string"
+            },
+            {
+                "title": "Subject SUDI serial #",
+                "property": "subjectSerialNumber",
+                "width": 100,
+                "dataType": "string"
+            },
+            {
+                "title": "Validity",
+                "property": "validity",
+                "display": "toggle",
+                "actionColumn": true,
+                "minWidth": 100,
+                "dataType": "string"
+            },
+            {
+                "title": "Version",
+                "property": "version",
+                "width": 150,
+                "dataType": "string"
+            },
+            {
+                "title": "System IP    ",
+                "property": "local-system-ip",
+                "hideable": true,
+                "minWidth": 120,
+                "dataType": "ipv4"
+            },
+            {
+                "title": "Upload Source",
+                "property": "uploadSource",
+                "display": "toggle",
+                "actionColumn": true,
+                "minWidth": 150,
+                "dataType": "string"
+            }
+        ],
+        "fields":
+        [
+            {
+                "property": "chasisNumber",
+                "dataType": "string"
+            },
+            {
+                "property": "tags",
+                "dataType": "string",
+                "display": "toggle"
+            },
+            {
+                "property": "host-name",
+                "dataType": "string"
+            },
+            {
+                "property": "deviceIP",
+                "dataType": "ipv4"
+            },
+            {
+                "property": "site-id",
+                "dataType": "numberStr"
+            },
+            {
+                "property": "region-id",
+                "dataType": "string"
+            },
+            {
+                "property": "configOperationMode",
+                "dataType": "string",
+                "display": "keyvalue"
+            },
+            {
+                "property": "configStatusMessage",
+                "dataType": "string",
+                "display": "syncDiffChecker"
+            },
+            {
+                "property": "name",
+                "dataType": "string"
+            },
+            {
+                "property": "template",
+                "dataType": "string"
+            },
+            {
+                "property": "deviceModel",
+                "dataType": "string",
+                "display": "keyvalue"
+            },
+            {
+                "property": "draftMode",
+                "dataType": "string"
+            },
+            {
+                "property": "serialNumber",
+                "dataType": "string"
+            },
+            {
+                "property": "reachability",
+                "dataType": "string"
+            },
+            {
+                "property": "vedgeCertificateState",
+                "dataType": "string",
+                "display": "iconAndToolTip"
+            },
+            {
+                "property": "hardwareCertSerialNumber",
+                "dataType": "string"
+            },
+            {
+                "property": "expirationDate",
+                "dataType": "string"
+            },
+            {
+                "property": "subjectSerialNumber",
+                "dataType": "string"
+            },
+            {
+                "property": "validity",
+                "dataType": "string",
+                "display": "toggle"
+            },
+            {
+                "property": "version",
+                "dataType": "string"
+            },
+            {
+                "property": "local-system-ip",
+                "dataType": "ipv4"
+            },
+            {
+                "property": "vbond",
+                "dataType": "ipv4"
+            },
+            {
+                "property": "uploadSource",
+                "dataType": "string",
+                "display": "toggle"
+            }
+        ]
+    },
+    "data":
+    [
+        {
+            "deviceType": "vedge",
+            "serialNumber": "02367755",
+            "ncsDeviceName": "vedge-C8300-1N1S-6T-FDO2421A02A",
+            "configStatusMessage": "In Sync",
+            "templateApplyLog":
+            [
+                "[6-Apr-2023 1:14:17 UTC] Sync-from successful"
+            ],
+            "uuid": "C8300-1N1S-6T-FDO2421A02A",
+            "managementSystemIP": "172.16.255.15",
+            "templateStatus": "Success",
+            "chasisNumber": "C8300-1N1S-6T-FDO2421A02A",
+            "configStatusMessageDetails": "",
+            "configOperationMode": "cli",
+            "deviceModel": "vedge-C8300-1N1S-6T",
+            "deviceState": "READY",
+            "validity": "valid",
+            "platformFamily": "c8000be",
+            "username": "--",
+            "rootCertHash": "ef6f76c95e5e570b001e001e68127b011ef9ff3a",
+            "deviceIP": "172.16.255.15",
+            "personality": "vedge",
+            "uploadSource": "Auto Discovered",
+            "subjectSerialNumber": "FDO2421A02A",
+            "region-id":
+            [],
+            "domain-id": "1",
+            "local-system-ip": "172.16.255.15",
+            "system-ip": "172.16.255.15",
+            "model_sku": "None",
+            "site-id": "500",
+            "host-name": "pm5",
+            "sp-organization-name": "vIPtela Inc Regression",
+            "version": "17.12.01.0.176433",
+            "vbond": "vbond",
+            "vmanage-system-ip": "172.16.255.15",
+            "vmanageConnectionState": "connected",
+            "lastupdated": 1681615948517,
+            "reachability": "reachable",
+            "uptime-date": 1680171960000,
+            "defaultVersion": "17.12.01.0.176433",
+            "organization-name": "vIPtela Inc Regression",
+            "availableVersions":
+            [
+                "17.11.01.0.506"
+            ],
+            "lifeCycleRequired": false,
+            "vedgeCertificateState": "certinstalled",
+            "expirationDate": "NA",
+            "hardwareCertSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        },
+        {
+            "deviceType": "vedge",
+            "serialNumber": "63A53D1BF3B2C785",
+            "ncsDeviceName": "vedge-C8K-44747a1b-23d2-4324-962b-ba6bb59a572b",
+            "configStatusMessage": "In Sync",
+            "templateApplyLog":
+            [
+                "[30-Mar-2023 10:37:48 UTC] Sync-from successful"
+            ],
+            "uuid": "C8K-44747a1b-23d2-4324-962b-ba6bb59a572b",
+            "managementSystemIP": "172.16.255.16",
+            "templateStatus": "Success",
+            "chasisNumber": "C8K-44747a1b-23d2-4324-962b-ba6bb59a572b",
+            "configStatusMessageDetails": "",
+            "configOperationMode": "cli",
+            "deviceModel": "vedge-C8000V",
+            "deviceState": "READY",
+            "validity": "valid",
+            "platformFamily": "c8000v",
+            "username": "--",
+            "rootCertHash": "ef6f76c95e5e570b001e001e68127b011ef9ff3a",
+            "deviceIP": "172.16.255.16",
+            "personality": "vedge",
+            "uploadSource": "Auto Discovered",
+            "region-id":
+            [],
+            "domain-id": "1",
+            "local-system-ip": "172.16.255.16",
+            "system-ip": "172.16.255.16",
+            "model_sku": "None",
+            "site-id": "600",
+            "host-name": "vm6",
+            "sp-organization-name": "vIPtela Inc Regression",
+            "version": "17.11.01.0.166070",
+            "vbond": "vbond",
+            "vmanage-system-ip": "172.16.255.16",
+            "vmanageConnectionState": "connected",
+            "lastupdated": 1681615949596,
+            "reachability": "reachable",
+            "uptime-date": 1680171420000,
+            "defaultVersion": "17.11.01.0.166070",
+            "organization-name": "vIPtela Inc Regression",
+            "availableVersions":
+            [],
+            "lifeCycleRequired": true,
+            "vedgeCertificateState": "certinstalled",
+            "expirationDate": "NA",
+            "hardwareCertSerialNumber": "NA",
+            "subjectSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        },
+        {
+            "deviceType": "vedge",
+            "serialNumber": "F8FBDFDE1C9C439E",
+            "ncsDeviceName": "vedge-ca6c8133-418c-4647-95ce-75214388b04a",
+            "configStatusMessage": "In Sync",
+            "templateApplyLog":
+            [
+                "[30-Mar-2023 10:37:51 UTC] Sync-from successful"
+            ],
+            "uuid": "ca6c8133-418c-4647-95ce-75214388b04a",
+            "managementSystemIP": "172.16.255.21",
+            "templateStatus": "Success",
+            "chasisNumber": "ca6c8133-418c-4647-95ce-75214388b04a",
+            "configStatusMessageDetails": "",
+            "configOperationMode": "cli",
+            "deviceModel": "vedge-cloud",
+            "deviceState": "READY",
+            "validity": "valid",
+            "platformFamily": "vedge-x86",
+            "username": "--",
+            "rootCertHash": "ef6f76c95e5e570b001e001e68127b011ef9ff3a",
+            "deviceIP": "172.16.255.21",
+            "personality": "vedge",
+            "uploadSource": "Auto Discovered",
+            "region-id":
+            [],
+            "domain-id": "1",
+            "local-system-ip": "172.16.255.21",
+            "system-ip": "172.16.255.21",
+            "model_sku": "None",
+            "site-id": "100",
+            "host-name": "vm11",
+            "sp-organization-name": "vIPtela Inc Regression",
+            "version": "20.11.999-2265",
+            "vbond": "vbond",
+            "vmanage-system-ip": "172.16.255.21",
+            "vmanageConnectionState": "connected",
+            "lastupdated": 1681615945154,
+            "reachability": "reachable",
+            "uptime-date": 1680170880000,
+            "defaultVersion": "20.11.999-2265",
+            "organization-name": "vIPtela Inc Regression",
+            "availableVersions":
+            [],
+            "lifeCycleRequired": true,
+            "vedgeCertificateState": "certinstalled",
+            "expirationDate": "NA",
+            "hardwareCertSerialNumber": "NA",
+            "subjectSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        },
+        {
+            "deviceType": "vedge",
+            "serialNumber": "2a4bcc1e04384c6087f6d4b9d691a0e9",
+            "uuid": "e5af1d1f-b667-4e50-941f-18599e29c7b6",
+            "managementSystemIP": "172.16.255.14",
+            "chasisNumber": "e5af1d1f-b667-4e50-941f-18599e29c7b6",
+            "configOperationMode": "cli",
+            "deviceModel": "vedge-cloud",
+            "deviceState": "READY",
+            "validity": "valid",
+            "vedgeCertificateState": "tokengenerated",
+            "personality": "vedge",
+            "lifeCycleRequired": true,
+            "expirationDate": "NA",
+            "hardwareCertSerialNumber": "NA",
+            "subjectSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        }
+    ]
+}

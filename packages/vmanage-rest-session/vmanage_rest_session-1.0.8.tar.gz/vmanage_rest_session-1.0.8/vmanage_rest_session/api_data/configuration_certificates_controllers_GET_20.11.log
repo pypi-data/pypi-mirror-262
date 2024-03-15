@@ -1,0 +1,482 @@
+{
+    "header":
+    {
+        "columns":
+        [
+            {
+                "title": "Operation Status",
+                "property": "state",
+                "colorProperty": "globalState",
+                "color":
+                [
+                    {
+                        "key": "Error",
+                        "value": "ef5350"
+                    }
+                ],
+                "width": 130,
+                "dataType": "string"
+            },
+            {
+                "title": "Controller Type",
+                "property": "deviceType",
+                "display": "keyvalue",
+                "keyvalueProperty": "deviceType",
+                "hideable": false,
+                "keyvalue":
+                [
+                    {
+                        "key": "vsmart",
+                        "value": "vSmart"
+                    },
+                    {
+                        "key": "vbond",
+                        "value": "vBond"
+                    },
+                    {
+                        "key": "vmanage",
+                        "value": "vManage"
+                    },
+                    {
+                        "key": "vedge",
+                        "value": "WAN Edge"
+                    }
+                ],
+                "width": 120,
+                "dataType": "string"
+            },
+            {
+                "title": "Hostname",
+                "property": "host-name",
+                "hideable": false,
+                "width": 150,
+                "dataType": "string"
+            },
+            {
+                "title": "System IP",
+                "property": "system-ip",
+                "hideable": false,
+                "width": 120,
+                "dataType": "ipv4"
+            },
+            {
+                "title": "Site ID",
+                "property": "site-id",
+                "width": 70,
+                "dataType": "numberStr"
+            },
+            {
+                "title": "Certificate Serial",
+                "property": "serialNumber",
+                "width": 150,
+                "dataType": "string"
+            },
+            {
+                "title": "Expiration Date",
+                "property": "expirationDateLong",
+                "displayFormat": "DD MMM YYYY h:mm:ss A z",
+                "inputFormat": "unix-time",
+                "colorProperty": "expirationStatus",
+                "hideable": false,
+                "color":
+                [
+                    {
+                        "key": "warning",
+                        "value": "ffb300"
+                    },
+                    {
+                        "key": "invalid",
+                        "value": "ef5350"
+                    }
+                ],
+                "width": 200,
+                "dataType": "date"
+            },
+            {
+                "title": "uuid",
+                "property": "uuid",
+                "hideable": false,
+                "editable": false,
+                "dataType": "string"
+            },
+            {
+                "title": "vEdge List Status",
+                "property": "state_vedgeList",
+                "minWidth": 80,
+                "dataType": "string"
+            },
+            {
+                "title": "Device IP",
+                "property": "deviceIP",
+                "width": 120,
+                "dataType": "ipv4"
+            }
+        ],
+        "fields":
+        [
+            {
+                "property": "state",
+                "dataType": "string"
+            },
+            {
+                "property": "deviceType",
+                "dataType": "string",
+                "display": "keyvalue"
+            },
+            {
+                "property": "certInstallStatus",
+                "dataType": "string"
+            },
+            {
+                "property": "host-name",
+                "dataType": "string"
+            },
+            {
+                "property": "system-ip",
+                "dataType": "ipv4"
+            },
+            {
+                "property": "site-id",
+                "dataType": "numberStr"
+            },
+            {
+                "property": "username",
+                "dataType": "string"
+            },
+            {
+                "property": "password",
+                "dataType": "string"
+            },
+            {
+                "property": "CSR",
+                "dataType": "string"
+            },
+            {
+                "property": "CSRDetail",
+                "dataType": "string"
+            },
+            {
+                "property": "CertificateDetail",
+                "dataType": "string"
+            },
+            {
+                "property": "serialNumber",
+                "dataType": "string"
+            },
+            {
+                "property": "expirationDate",
+                "dataType": "string"
+            },
+            {
+                "property": "expirationDateLong",
+                "dataType": "date"
+            },
+            {
+                "property": "valid",
+                "dataType": "string"
+            },
+            {
+                "property": "errorDetail",
+                "dataType": "string"
+            },
+            {
+                "property": "requestTokenID",
+                "dataType": "string"
+            },
+            {
+                "property": "uuid",
+                "dataType": "string"
+            },
+            {
+                "property": "state_vedgeList",
+                "dataType": "string"
+            },
+            {
+                "property": "deviceIP",
+                "dataType": "ipv4"
+            },
+            {
+                "property": "errorDetail_vedgelist",
+                "dataType": "string"
+            },
+            {
+                "property": "activity",
+                "dataType": "string"
+            }
+        ],
+        "viewKeys":
+        {
+            "uniqueKey":
+            [],
+            "preferenceKey": "grid-Certificate"
+        }
+    },
+    "data":
+    [
+        {
+            "deviceType": "vbond",
+            "serialNumber": "A901C0F2153FC7C4",
+            "ncsDeviceName": "vbond-856a14a2-75e0-4bdd-bf04-91a3c0506bcc",
+            "configStatusMessage": "In Sync",
+            "templateApplyLog":
+            [
+                "[30-Mar-2023 10:38:16 UTC] Sync-from successful"
+            ],
+            "uuid": "856a14a2-75e0-4bdd-bf04-91a3c0506bcc",
+            "managementSystemIP": "172.16.255.26",
+            "templateStatus": "Success",
+            "chasisNumber": "856a14a2-75e0-4bdd-bf04-91a3c0506bcc",
+            "configStatusMessageDetails": "",
+            "configOperationMode": "cli",
+            "deviceModel": "vedge-cloud",
+            "deviceState": "READY",
+            "validity": "valid",
+            "platformFamily": "vedge-x86",
+            "username": "--",
+            "rootCertHash": "ef6f76c95e5e570b001e001e68127b011ef9ff3a",
+            "state": "Installed",
+            "globalState": "normal",
+            "valid": "valid",
+            "requestTokenID": "59585c1b-8597-41c7-a53a-0835664ae844",
+            "expirationDate": "Mar 27 09:59:02 2033 GMT",
+            "expirationDateLong": 1995530342000,
+            "deviceIP": "172.16.255.26",
+            "activity":
+            [
+                "Installed"
+            ],
+            "certInstallStatus": "Installed",
+            "personality": "vbond",
+            "expirationStatus": "normal",
+            "uploadSource": "Auto Discovered",
+            "timeRemainingForExpiration": 314060831551,
+            "local-system-ip": "172.16.255.26",
+            "system-ip": "172.16.255.26",
+            "model_sku": "None",
+            "site-id": "1600",
+            "host-name": "vm16",
+            "sp-organization-name": "vIPtela Inc Regression",
+            "version": "20.11.999-2265",
+            "vbond": "10.0.12.26",
+            "vmanage-system-ip": "172.16.255.26",
+            "vmanageConnectionState": "connected",
+            "lastupdated": 1681426981555,
+            "reachability": "reachable",
+            "uptime-date": 1680170880000,
+            "defaultVersion": "20.11.999-2265",
+            "organization-name": "vIPtela Inc Regression",
+            "availableVersions":
+            [],
+            "lifeCycleRequired": true,
+            "hardwareCertSerialNumber": "NA",
+            "subjectSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        },
+        {
+            "deviceType": "vmanage",
+            "serialNumber": "2A23CF8270E3B500",
+            "ncsDeviceName": "vmanage-2f22f659-d4c6-4acc-bbac-e40ab41e918c",
+            "configStatusMessage": "In Sync",
+            "templateApplyLog":
+            [
+                "[14-Apr-2023 11:59:58 UTC] Sync-from successful"
+            ],
+            "uuid": "2f22f659-d4c6-4acc-bbac-e40ab41e918c",
+            "managementSystemIP": "172.16.255.22",
+            "templateStatus": "Success",
+            "chasisNumber": "2f22f659-d4c6-4acc-bbac-e40ab41e918c",
+            "configStatusMessageDetails": "",
+            "configOperationMode": "cli",
+            "deviceModel": "vmanage",
+            "deviceState": "READY",
+            "validity": "valid",
+            "platformFamily": "vmanage",
+            "username": "--",
+            "rootCertHash": "ef6f76c95e5e570b001e001e68127b011ef9ff3a",
+            "CSR": "vmanage-2f22f659-d4c6-4acc-bbac-e40ab41e918c-0.viptela.com",
+            "CSRDetail": "-----BEGIN CERTIFICATE REQUEST-----\\nMIIDVjCCAj4CAQAwgdUxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlh\\nMREwDwYDVQQHEwhTYW4gSm9zZTEfMB0GA1UECxMWdklQdGVsYSBJbmMgUmVncmVz\\nc2lvbjEUMBIGA1UEChMLVmlwdGVsYSBMTEMxQzBBBgNVBAMTOnZtYW5hZ2UtMmYy\\nMmY2NTktZDRjNi00YWNjLWJiYWMtZTQwYWI0MWU5MThjLTAudmlwdGVsYS5jb20x\\nIjAgBgkqhkiG9w0BCQEWE3N1cHBvcnRAdmlwdGVsYS5jb20wggEiMA0GCSqGSIb3\\nDQEBAQUAA4IBDwAwggEKAoIBAQDQjzDTEqOAnWC9OLIiyzkb9eX/DAUiV0V+ip0d\\nAzruQ6dinz/WhHu4hxxiuNF58tdoYv+mRn4MvuIGR6r9dL7tefDC/bNHeTNGdr+k\\nayco0n5CS/V+UY9SEXnAPoMtLS9ywD/CXIFKyrahSWTokIjCP1WTgQkECEzIZ+fi\\njyuZSgvi1v7OpTvnn0cXVOLmHZus0YjojTP3YZJ8bOfK5XEcYm8TrmqsYjVJjvJs\\n3dyYN4HSOyYExw3kbw0Nqq+FVGGNg1Jy4AdgaLZ+GQfppwZ0ASUCdYN+01VmTCij\\nJIxH3k+I44qe1mjqppWDcWbpL/K3gkwOoVesfM2FBaDoYF07AgMBAAGgOzA5Bgkq\\nhkiG9w0BCQ4xLDAqMAkGA1UdEwQCMAAwHQYDVR0OBBYEFKeuV4G8Dlt7Rkdv7aZS\\nF87tGg+BMA0GCSqGSIb3DQEBCwUAA4IBAQDE4yeh+ClN//4VBfkA7i+y6Vyt5hW3\\nMSH/tBsDbTQhNExYs66Dl95MekFQaIccBQKwDXtmMQAnTrfF2k+C5ngnoGXTjgNw\\n0e78vVeIPkUP/AA7KTkp0448DhE7ewtoJoP04TOmO5k8Ek8jR5gjBThvD0Q9zJp4\\nPIero1NmOp7UonJfnEWPi3qT2w1FnuW/VGGZgcbld3D03CedWvBULco/YOGJr61b\\nZEaS8hvJFpKItbeyA4I4eRru63sk0PkV1iXwxyFl+ZX6xlEzYkp2yxxNCRBjgYbG\\nhM94MU+X6SdgU4NDPxkpJBrrOy1yfwHmB2umdjxs8doatETNky2x7Vj/\\n-----END CERTIFICATE REQUEST-----",
+            "state": "vBond Updated",
+            "globalState": "normal",
+            "valid": "valid",
+            "expirationDate": "Mar 27 09:59:02 2033 GMT",
+            "expirationDateLong": 1995530342000,
+            "deviceIP": "172.16.255.22",
+            "activity":
+            [
+                "vBond Updated"
+            ],
+            "certInstallStatus": "Installed",
+            "servicePersonality": "all",
+            "personality": "vmanage",
+            "expirationStatus": "normal",
+            "uploadSource": "Auto Discovered",
+            "timeRemainingForExpiration": 314060831551,
+            "domain-id": "0",
+            "local-system-ip": "172.16.255.22",
+            "system-ip": "172.16.255.22",
+            "model_sku": "None",
+            "site-id": "1200",
+            "host-name": "vm12",
+            "sp-organization-name": "vIPtela Inc Regression",
+            "version": "20.11.999-2265",
+            "vbond": "vbond",
+            "vmanage-system-ip": "172.16.255.22",
+            "vmanageConnectionState": "discovered",
+            "lastupdated": 1681481236224,
+            "reachability": "reachable",
+            "uptime-date": 1680170880000,
+            "defaultVersion": "20.11.999-2265",
+            "organization-name": "vIPtela Inc Regression",
+            "availableVersions":
+            [],
+            "lifeCycleRequired": false,
+            "hardwareCertSerialNumber": "NA",
+            "subjectSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        },
+        {
+            "deviceType": "vsmart",
+            "serialNumber": "89EA391D6A0871C5",
+            "ncsDeviceName": "vsmart-d6e188ae-ae40-446d-bd32-1f34156de644",
+            "configStatusMessage": "In Sync",
+            "templateApplyLog":
+            [
+                "[30-Mar-2023 10:37:41 UTC] Sync-from successful"
+            ],
+            "uuid": "d6e188ae-ae40-446d-bd32-1f34156de644",
+            "managementSystemIP": "172.16.255.20",
+            "templateStatus": "Success",
+            "chasisNumber": "d6e188ae-ae40-446d-bd32-1f34156de644",
+            "configStatusMessageDetails": "",
+            "configOperationMode": "cli",
+            "deviceModel": "vsmart",
+            "deviceState": "READY",
+            "validity": "valid",
+            "platformFamily": "vsmart",
+            "username": "--",
+            "rootCertHash": "ef6f76c95e5e570b001e001e68127b011ef9ff3a",
+            "state": "vBond Updated",
+            "globalState": "normal",
+            "valid": "valid",
+            "requestTokenID": "d0457032-93dd-4b38-b213-8554ebcd0586",
+            "expirationDate": "Mar 27 09:59:01 2033 GMT",
+            "expirationDateLong": 1995530341000,
+            "deviceIP": "172.16.255.20",
+            "activity":
+            [
+                "vBond Updated"
+            ],
+            "certInstallStatus": "Installed",
+            "personality": "vsmart",
+            "expirationStatus": "normal",
+            "uploadSource": "Auto Discovered",
+            "timeRemainingForExpiration": 314060830551,
+            "region-id":
+            [],
+            "policy-template-version": "",
+            "domain-id": "1",
+            "policy-template-name": "",
+            "local-system-ip": "172.16.255.20",
+            "system-ip": "172.16.255.20",
+            "model_sku": "None",
+            "site-id": "200",
+            "host-name": "vm10",
+            "sp-organization-name": "vIPtela Inc Regression",
+            "version": "20.11.999-2265",
+            "vbond": "vbond",
+            "vmanage-system-ip": "172.16.255.20",
+            "vmanageConnectionState": "connected",
+            "lastupdated": 1681426981630,
+            "reachability": "reachable",
+            "uptime-date": 1680170880000,
+            "defaultVersion": "20.11.999-2265",
+            "organization-name": "vIPtela Inc Regression",
+            "availableVersions":
+            [],
+            "lifeCycleRequired": false,
+            "hardwareCertSerialNumber": "NA",
+            "subjectSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        },
+        {
+            "deviceType": "vsmart",
+            "serialNumber": "1048804E6FF945E8",
+            "ncsDeviceName": "vsmart-314f8c48-a510-4b0b-8e43-71c66e5b3f68",
+            "configStatusMessage": "In Sync",
+            "templateApplyLog":
+            [
+                "[30-Mar-2023 10:38:02 UTC] Sync-from successful"
+            ],
+            "uuid": "314f8c48-a510-4b0b-8e43-71c66e5b3f68",
+            "managementSystemIP": "172.16.255.19",
+            "templateStatus": "Success",
+            "chasisNumber": "314f8c48-a510-4b0b-8e43-71c66e5b3f68",
+            "configStatusMessageDetails": "",
+            "configOperationMode": "cli",
+            "deviceModel": "vsmart",
+            "deviceState": "READY",
+            "validity": "valid",
+            "platformFamily": "vsmart",
+            "username": "--",
+            "rootCertHash": "ef6f76c95e5e570b001e001e68127b011ef9ff3a",
+            "state": "vBond Updated",
+            "globalState": "normal",
+            "valid": "valid",
+            "requestTokenID": "60e0f0ab-d044-4a2d-8070-756c0f900113",
+            "expirationDate": "Mar 27 09:59:04 2033 GMT",
+            "expirationDateLong": 1995530344000,
+            "deviceIP": "172.16.255.19",
+            "activity":
+            [
+                "vBond Updated"
+            ],
+            "certInstallStatus": "Installed",
+            "personality": "vsmart",
+            "expirationStatus": "normal",
+            "uploadSource": "Auto Discovered",
+            "timeRemainingForExpiration": 314060833551,
+            "region-id":
+            [],
+            "policy-template-version": "",
+            "domain-id": "1",
+            "policy-template-name": "",
+            "local-system-ip": "172.16.255.19",
+            "system-ip": "172.16.255.19",
+            "model_sku": "None",
+            "site-id": "100",
+            "host-name": "vm9",
+            "sp-organization-name": "vIPtela Inc Regression",
+            "version": "20.11.999-2265",
+            "vbond": "vbond",
+            "vmanage-system-ip": "172.16.255.19",
+            "vmanageConnectionState": "connected",
+            "lastupdated": 1681426981701,
+            "reachability": "reachable",
+            "uptime-date": 1680170880000,
+            "defaultVersion": "20.11.999-2265",
+            "organization-name": "vIPtela Inc Regression",
+            "availableVersions":
+            [],
+            "lifeCycleRequired": false,
+            "hardwareCertSerialNumber": "NA",
+            "subjectSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "deviceTemplateList": [
+        {
+            "templateId": "c6116708-08cc-44d5-9f5c-89da7fd9e3d1",
+            "device": [
+                {
+                    "csv-status": "complete",
+                    "csv-deviceId": "C8K-09d87afb-0fc7-42f4-88ad-98da49ad4625",
+                    "csv-deviceIP": "169.254.10.8",
+                    "csv-host-name": "mtedge1",
+                    "//system/host-name": "mtedge1",
+                    "//system/system-ip": "172.16.254.215",
+                    "csv-templateId": "c6116708-08cc-44d5-9f5c-89da7fd9e3d1"
+                }
+            ],
+            "isEdited": false,
+            "isMasterEdited": false
+        }
+    ]
+}

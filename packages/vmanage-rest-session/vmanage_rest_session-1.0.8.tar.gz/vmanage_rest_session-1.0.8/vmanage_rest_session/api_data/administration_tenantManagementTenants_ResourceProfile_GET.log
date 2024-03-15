@@ -1,0 +1,182 @@
+{
+    "header": {
+        "generatedOn": 1692251032024,
+        "viewKeys": {},
+        "columns": {},
+        "fields": {}
+    },
+    "data": [
+        {
+            "natSessionLimit": 15000,
+            "ipv4RouteLimitThreshold": 80,
+            "ipv6RouteLimit": 15000,
+            "ipv6RouteLimitThreshold": 80,
+            "ipv6RouteLimitType": "warning-threshold",
+            "@rid": 3271,
+            "ipv4RouteLimitType": "warning-threshold",
+            "vpn": 3,
+            "tierName": "aaa",
+            "ipv4RouteLimit": 15000,
+            "tlocs": [
+                {
+                    "color": "default",
+                    "encapsulation": "gre"
+                }
+            ],
+            "assignedTenants": [],
+            "assignedTenantCount": 0
+        },
+        {
+            "natSessionLimit": 15000,
+            "ipv4RouteLimitThreshold": 80,
+            "ipv6RouteLimit": 15000,
+            "ipv6RouteLimitThreshold": 80,
+            "ipv6RouteLimitType": "warning-threshold",
+            "@rid": 12495,
+            "ipv4RouteLimitType": "warning-threshold",
+            "vpn": 10,
+            "tierName": "pf_t1",
+            "ipv4RouteLimit": 15000,
+            "tlocs": [
+                {
+                    "color": "lte",
+                    "encapsulation": "ipsec"
+                }
+            ],
+            "assignedTenants": [
+                {
+                    "tenantName": "tenant1",
+                    "tenantId": 574,
+                    "tenantUUId": "c9ebe2eb-a7b1-433f-8ceb-9a034ce2c59b"
+                }
+            ],
+            "assignedTenantCount": 1
+        },
+        {
+            "natSessionLimit": 15000,
+            "ipv4RouteLimitThreshold": 80,
+            "ipv6RouteLimit": 15000,
+            "ipv6RouteLimitThreshold": 80,
+            "ipv6RouteLimitType": "warning-threshold",
+            "@rid": 12496,
+            "ipv4RouteLimitType": "warning-threshold",
+            "vpn": 10,
+            "tierName": "default_tenant_pf",
+            "ipv4RouteLimit": 15000,
+            "tlocs": [
+                {
+                    "color": "lte",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "3g",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "biz-internet",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "blue",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "bronze",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "custom1",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "custom2",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "default",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "gold",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "green",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "metro-ethernet",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "mpls",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "public-internet",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "red",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "silver",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "private1",
+                    "encapsulation": "ipsec"
+                }
+            ],
+            "assignedTenants": [
+                {
+                    "tenantName": "tenant2",
+                    "tenantId": 42607,
+                    "tenantUUId": "f35bc546-61dd-4154-bff2-32875ca2f303"
+                },
+                {
+                    "tenantName": "tenant3",
+                    "tenantId": 36162,
+                    "tenantUUId": "0aff32bd-1892-4b40-a3d5-5666f4903dd0"
+                },
+                {
+                    "tenantName": "tenant4",
+                    "tenantId": 11305,
+                    "tenantUUId": "da059a04-4041-498d-b107-1fa4eec917ad"
+                }
+            ],
+            "assignedTenantCount": 3
+        },
+        {
+            "natSessionLimit": 15000,
+            "ipv4RouteLimitThreshold": 80,
+            "ipv6RouteLimit": 15000,
+            "ipv6RouteLimitThreshold": 80,
+            "ipv6RouteLimitType": "warning-threshold",
+            "@rid": 12497,
+            "ipv4RouteLimitType": "warning-threshold",
+            "vpn": 4,
+            "tierName": "pf_t5",
+            "ipv4RouteLimit": 15000,
+            "tlocs": [
+                {
+                    "color": "lte",
+                    "encapsulation": "ipsec"
+                },
+                {
+                    "color": "gold",
+                    "encapsulation": "ipsec"
+                }
+            ],
+            "assignedTenants": [
+                {
+                    "tenantName": "tenant5",
+                    "tenantId": 52244,
+                    "tenantUUId": "170006e0-30f3-445f-941a-c718f2a8e4dc"
+                }
+            ],
+            "assignedTenantCount": 1
+        }
+    ]
+}

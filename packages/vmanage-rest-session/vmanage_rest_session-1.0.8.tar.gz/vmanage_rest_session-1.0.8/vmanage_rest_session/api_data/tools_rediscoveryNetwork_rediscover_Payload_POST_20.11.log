@@ -1,0 +1,42 @@
+{
+    "action": "rediscover",
+    "devices":
+    [
+        {
+            "deviceId": "2f22f659-d4c6-4acc-bbac-e40ab41e918c",
+            "deviceIP": "172.16.255.22"
+        },
+        {
+            "deviceId": "d6e188ae-ae40-446d-bd32-1f34156de644",
+            "deviceIP": "172.16.255.20"
+        },
+        {
+            "deviceId": "314f8c48-a510-4b0b-8e43-71c66e5b3f68",
+            "deviceIP": "172.16.255.19"
+        },
+        {
+            "deviceId": "856a14a2-75e0-4bdd-bf04-91a3c0506bcc",
+            "deviceIP": "172.16.255.26"
+        },
+        {
+            "deviceId": "C8300-1N1S-6T-FDO2421A02A",
+            "deviceIP": "172.16.255.15"
+        },
+        {
+            "deviceId": "89cdefff-51f8-4e54-8df0-ded2e3eefb41",
+            "deviceIP": "172.16.255.11"
+        },
+        {
+            "deviceId": "ca6c8133-418c-4647-95ce-75214388b04a",
+            "deviceIP": "172.16.255.21"
+        },
+        {
+            "deviceId": "e5af1d1f-b667-4e50-941f-18599e29c7b6",
+            "deviceIP": "172.16.255.14"
+        },
+        {
+            "deviceId": "C8K-44747a1b-23d2-4324-962b-ba6bb59a572b",
+            "deviceIP": "172.16.255.16"
+        }
+    ]
+}

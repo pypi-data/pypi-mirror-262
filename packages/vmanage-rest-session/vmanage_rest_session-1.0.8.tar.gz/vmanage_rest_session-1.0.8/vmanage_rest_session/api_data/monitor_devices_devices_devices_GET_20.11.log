@@ -1,0 +1,570 @@
+{
+    "header":
+    {
+        "columns":
+        [
+            {
+                "title": "Hostname",
+                "property": "host_name",
+                "hideable": false,
+                "dataType": "string"
+            },
+            {
+                "title": "Device Model",
+                "property": "deviceModel",
+                "hideable": false,
+                "dataType": "string"
+            },
+            {
+                "title": "Health",
+                "property": "health",
+                "hideable": false,
+                "dataType": "string"
+            },
+            {
+                "title": "Reachability",
+                "property": "reachability",
+                "hideable": true,
+                "dataType": "string"
+            },
+            {
+                "title": "CPU Load",
+                "property": "cpuLoad",
+                "hideable": true,
+                "dataType": "double"
+            },
+            {
+                "title": "Memory Utilization",
+                "property": "memoryUtilization",
+                "hideable": true,
+                "dataType": "double"
+            },
+            {
+                "title": "Control",
+                "property": "controlConns",
+                "hideable": true,
+                "dataType": "string"
+            },
+            {
+                "title": "vSmart Control",
+                "property": "vsmartControlConns",
+                "hideable": true,
+                "dataType": "string"
+            },
+            {
+                "title": "BFD",
+                "property": "bfds",
+                "hideable": true,
+                "dataType": "string"
+            },
+            {
+                "title": "Site ID",
+                "property": "siteId",
+                "hideable": true,
+                "dataType": "string"
+            },
+            {
+                "title": "Serial Number",
+                "property": "boardSerialNo",
+                "hideable": true,
+                "dataType": "string"
+            },
+            {
+                "title": "System IP",
+                "property": "localSystemIp",
+                "hideable": false,
+                "dataType": "ipv4"
+            },
+            {
+                "title": "Location",
+                "property": "location",
+                "hideable": true,
+                "dataType": "string"
+            },
+            {
+                "title": "Version",
+                "property": "softwareVersion",
+                "hideable": true,
+                "dataType": "string"
+            },
+            {
+                "title": "Up Since",
+                "property": "upSince",
+                "hideable": true,
+                "dataType": "date"
+            },
+            {
+                "title": "Device Groups",
+                "property": "deviceGroups",
+                "hideable": true,
+                "dataType": "array"
+            },
+            {
+                "title": "Chassis Number/ID",
+                "property": "chassisNo",
+                "hideable": false,
+                "dataType": "string"
+            },
+            {
+                "title": "Connected vManage",
+                "property": "connectedVManages",
+                "hideable": true,
+                "dataType": "array"
+            }
+        ],
+        "viewKeys":
+        {
+            "uniqueKey":
+            [],
+            "preferenceKey": "grid-DeviceHealth"
+        },
+        "fields":
+        [
+            {
+                "property": "host_name",
+                "dataType": "string"
+            },
+            {
+                "property": "deviceModel",
+                "dataType": "string"
+            },
+            {
+                "property": "health",
+                "dataType": "string"
+            },
+            {
+                "property": "reachability",
+                "dataType": "string"
+            },
+            {
+                "property": "cpuLoad",
+                "dataType": "double"
+            },
+            {
+                "property": "memoryUtilization",
+                "dataType": "double"
+            },
+            {
+                "property": "controlConns",
+                "dataType": "string"
+            },
+            {
+                "property": "vsmartControlConns",
+                "dataType": "string"
+            },
+            {
+                "property": "bfds",
+                "dataType": "string"
+            },
+            {
+                "property": "siteId",
+                "dataType": "string"
+            },
+            {
+                "property": "boardSerialNo",
+                "dataType": "string"
+            },
+            {
+                "property": "localSystemIp",
+                "dataType": "ipv4"
+            },
+            {
+                "property": "location",
+                "dataType": "string"
+            },
+            {
+                "property": "softwareVersion",
+                "dataType": "string"
+            },
+            {
+                "property": "upSince",
+                "dataType": "date"
+            },
+            {
+                "property": "deviceGroups",
+                "dataType": "array"
+            },
+            {
+                "property": "chassisNo",
+                "dataType": "string"
+            },
+            {
+                "property": "connectedVManages",
+                "dataType": "array"
+            }
+        ]
+    },
+    "total_devices": 9,
+    "devices":
+    [
+        {
+            "name": "vm1",
+            "personality": "vedge",
+            "uuid": "89cdefff-51f8-4e54-8df0-ded2e3eefb41",
+            "reachability": "reachable",
+            "longitude": "-122.777023",
+            "latitude": "37.666684",
+            "health": "green",
+            "qoe": 10,
+            "location": "lat: 37.666684, long: -122.777023",
+            "site_id": "100",
+            "system_ip": "172.16.255.11",
+            "device_type": "vedge",
+            "local_system_ip": "172.16.255.11",
+            "device_model": "vEdge Cloud",
+            "software_version": "20.11.999-2265",
+            "cpu_load": 2.55,
+            "memory_utilization": 38.0,
+            "control_connections": 3,
+            "control_connections_up": 3,
+            "vsmart_control_connections": 2,
+            "expected_vsmart_connections": 2,
+            "has_geo_data": true,
+            "uptime_date": 1680170940000,
+            "device_groups":
+            [
+                "No groups"
+            ],
+            "connected_vmanages":
+            [
+                "172.16.255.22"
+            ],
+            "bfd_sessions_up": 3,
+            "bfd_sessions": 3,
+            "omp_peers": 2,
+            "omp_peers_up": 2,
+            "board_serial_number": "AC61D3868E3E2A82",
+            "chassis_number": "89cdefff-51f8-4e54-8df0-ded2e3eefb41",
+            "vpn_ids": null,
+            "configuration_device": false
+        },
+        {
+            "name": "vm4",
+            "personality": "vedge",
+            "uuid": "e5af1d1f-b667-4e50-941f-18599e29c7b6",
+            "reachability": "reachable",
+            "longitude": "-122.777023",
+            "latitude": "37.666684",
+            "health": "green",
+            "qoe": 10,
+            "location": "lat: 37.666684, long: -122.777023",
+            "site_id": "400",
+            "system_ip": "172.16.255.14",
+            "device_type": "vedge",
+            "local_system_ip": "172.16.255.14",
+            "device_model": "vEdge Cloud",
+            "software_version": "20.11.999-2265",
+            "cpu_load": 2.49,
+            "memory_utilization": 38.1,
+            "control_connections": 3,
+            "control_connections_up": 3,
+            "vsmart_control_connections": 2,
+            "expected_vsmart_connections": 2,
+            "has_geo_data": true,
+            "uptime_date": 1680170880000,
+            "device_groups":
+            [
+                "No groups"
+            ],
+            "connected_vmanages":
+            [
+                "172.16.255.22"
+            ],
+            "bfd_sessions_up": 4,
+            "bfd_sessions": 4,
+            "omp_peers": 2,
+            "omp_peers_up": 2,
+            "board_serial_number": "6F6116F00349BEF5",
+            "chassis_number": "e5af1d1f-b667-4e50-941f-18599e29c7b6",
+            "vpn_ids": null,
+            "configuration_device": false
+        },
+        {
+            "name": "pm5",
+            "personality": "vedge",
+            "uuid": "C8300-1N1S-6T-FDO2421A02A",
+            "reachability": "reachable",
+            "longitude": "-122.777023",
+            "latitude": "37.666684",
+            "health": "green",
+            "qoe": 10,
+            "location": "lat: 37.666684, long: -122.777023",
+            "site_id": "500",
+            "system_ip": "172.16.255.15",
+            "device_type": "vedge",
+            "local_system_ip": "172.16.255.15",
+            "device_model": "C8300-1N1S-6T",
+            "software_version": "17.12.01.0.176433",
+            "cpu_load": 13.34,
+            "memory_utilization": 42.9,
+            "control_connections": 3,
+            "control_connections_up": 3,
+            "vsmart_control_connections": 2,
+            "expected_vsmart_connections": 2,
+            "has_geo_data": true,
+            "uptime_date": 1680171960000,
+            "device_groups":
+            [
+                "No groups"
+            ],
+            "connected_vmanages":
+            [
+                "172.16.255.22"
+            ],
+            "bfd_sessions_up": 4,
+            "bfd_sessions": 4,
+            "omp_peers": 2,
+            "omp_peers_up": 2,
+            "board_serial_number": "02367755",
+            "chassis_number": "C8300-1N1S-6T-FDO2421A02A",
+            "vpn_ids": null,
+            "configuration_device": false
+        },
+        {
+            "name": "vm6",
+            "personality": "vedge",
+            "uuid": "C8K-44747a1b-23d2-4324-962b-ba6bb59a572b",
+            "reachability": "reachable",
+            "longitude": "-122.777023",
+            "latitude": "37.666684",
+            "health": "yellow",
+            "qoe": 9,
+            "location": "lat: 37.666684, long: -122.777023",
+            "site_id": "600",
+            "system_ip": "172.16.255.16",
+            "device_type": "vedge",
+            "local_system_ip": "172.16.255.16",
+            "device_model": "C8000v",
+            "software_version": "17.11.01.0.166070",
+            "cpu_load": 15.9,
+            "memory_utilization": 77.0,
+            "control_connections": 3,
+            "control_connections_up": 3,
+            "vsmart_control_connections": 2,
+            "expected_vsmart_connections": 2,
+            "has_geo_data": true,
+            "uptime_date": 1680171420000,
+            "device_groups":
+            [
+                "No groups"
+            ],
+            "connected_vmanages":
+            [
+                "172.16.255.22"
+            ],
+            "bfd_sessions_up": 4,
+            "bfd_sessions": 4,
+            "omp_peers": 2,
+            "omp_peers_up": 2,
+            "board_serial_number": "63A53D1BF3B2C785",
+            "chassis_number": "C8K-44747a1b-23d2-4324-962b-ba6bb59a572b",
+            "vpn_ids": null,
+            "configuration_device": false
+        },
+        {
+            "name": "vm9",
+            "personality": "vsmart",
+            "uuid": "314f8c48-a510-4b0b-8e43-71c66e5b3f68",
+            "reachability": "reachable",
+            "longitude": "-122.777023",
+            "latitude": "37.666684",
+            "health": "green",
+            "qoe": 10,
+            "location": "lat: 37.666684, long: -122.777023",
+            "site_id": "100",
+            "system_ip": "172.16.255.19",
+            "device_type": "vsmart",
+            "local_system_ip": "172.16.255.19",
+            "device_model": "vSmart",
+            "software_version": "20.11.999-2265",
+            "cpu_load": 0.56,
+            "memory_utilization": 29.0,
+            "control_connections": 9,
+            "control_connections_up": 9,
+            "vsmart_control_connections": 1,
+            "expected_vsmart_connections": 1,
+            "has_geo_data": true,
+            "uptime_date": 1680170880000,
+            "device_groups":
+            [
+                "No groups"
+            ],
+            "connected_vmanages":
+            [
+                "172.16.255.22"
+            ],
+            "bfd_sessions_up": 0,
+            "bfd_sessions": null,
+            "omp_peers": 6,
+            "omp_peers_up": 6,
+            "board_serial_number": "1048804E6FF945E8",
+            "chassis_number": "314f8c48-a510-4b0b-8e43-71c66e5b3f68",
+            "vpn_ids": null,
+            "configuration_device": false
+        },
+        {
+            "name": "vm10",
+            "personality": "vsmart",
+            "uuid": "d6e188ae-ae40-446d-bd32-1f34156de644",
+            "reachability": "reachable",
+            "longitude": "-122.777023",
+            "latitude": "37.666684",
+            "health": "green",
+            "qoe": 10,
+            "location": "lat: 37.666684, long: -122.777023",
+            "site_id": "200",
+            "system_ip": "172.16.255.20",
+            "device_type": "vsmart",
+            "local_system_ip": "172.16.255.20",
+            "device_model": "vSmart",
+            "software_version": "20.11.999-2265",
+            "cpu_load": 0.54,
+            "memory_utilization": 28.0,
+            "control_connections": 9,
+            "control_connections_up": 9,
+            "vsmart_control_connections": 1,
+            "expected_vsmart_connections": 1,
+            "has_geo_data": true,
+            "uptime_date": 1680170880000,
+            "device_groups":
+            [
+                "No groups"
+            ],
+            "connected_vmanages":
+            [
+                "172.16.255.22"
+            ],
+            "bfd_sessions_up": 0,
+            "bfd_sessions": null,
+            "omp_peers": 6,
+            "omp_peers_up": 6,
+            "board_serial_number": "89EA391D6A0871C5",
+            "chassis_number": "d6e188ae-ae40-446d-bd32-1f34156de644",
+            "vpn_ids": null,
+            "configuration_device": false
+        },
+        {
+            "name": "vm11",
+            "personality": "vedge",
+            "uuid": "ca6c8133-418c-4647-95ce-75214388b04a",
+            "reachability": "reachable",
+            "longitude": "-122.777023",
+            "latitude": "37.666684",
+            "health": "green",
+            "qoe": 10,
+            "location": "lat: 37.666684, long: -122.777023",
+            "site_id": "100",
+            "system_ip": "172.16.255.21",
+            "device_type": "vedge",
+            "local_system_ip": "172.16.255.21",
+            "device_model": "vEdge Cloud",
+            "software_version": "20.11.999-2265",
+            "cpu_load": 2.57,
+            "memory_utilization": 38.0,
+            "control_connections": 3,
+            "control_connections_up": 3,
+            "vsmart_control_connections": 2,
+            "expected_vsmart_connections": 2,
+            "has_geo_data": true,
+            "uptime_date": 1680170880000,
+            "device_groups":
+            [
+                "No groups"
+            ],
+            "connected_vmanages":
+            [
+                "172.16.255.22"
+            ],
+            "bfd_sessions_up": 3,
+            "bfd_sessions": 3,
+            "omp_peers": 2,
+            "omp_peers_up": 2,
+            "board_serial_number": "F8FBDFDE1C9C439E",
+            "chassis_number": "ca6c8133-418c-4647-95ce-75214388b04a",
+            "vpn_ids": null,
+            "configuration_device": false
+        },
+        {
+            "name": "vm12",
+            "personality": "vmanage",
+            "uuid": "2f22f659-d4c6-4acc-bbac-e40ab41e918c",
+            "reachability": "reachable",
+            "longitude": "-122.777023",
+            "latitude": "37.666684",
+            "health": "green",
+            "qoe": 10,
+            "location": "lat: 37.666684, long: -122.777023",
+            "site_id": "1200",
+            "system_ip": "172.16.255.22",
+            "device_type": "vmanage",
+            "local_system_ip": "172.16.255.22",
+            "device_model": "vManage",
+            "software_version": "20.11.999-2265",
+            "cpu_load": 6.48,
+            "memory_utilization": 51.0,
+            "control_connections": 8,
+            "control_connections_up": 8,
+            "vsmart_control_connections": 2,
+            "expected_vsmart_connections": 2,
+            "has_geo_data": true,
+            "uptime_date": 1680170880000,
+            "device_groups":
+            [
+                "No groups"
+            ],
+            "connected_vmanages":
+            [
+                "172.16.255.22"
+            ],
+            "bfd_sessions_up": 0,
+            "bfd_sessions": null,
+            "omp_peers": 0,
+            "omp_peers_up": null,
+            "board_serial_number": "2A23CF8270E3B500",
+            "chassis_number": "2f22f659-d4c6-4acc-bbac-e40ab41e918c",
+            "vpn_ids": null,
+            "configuration_device": false
+        },
+        {
+            "name": "vm16",
+            "personality": "vbond",
+            "uuid": "856a14a2-75e0-4bdd-bf04-91a3c0506bcc",
+            "reachability": "reachable",
+            "longitude": "-122.777023",
+            "latitude": "37.666684",
+            "health": "green",
+            "qoe": 10,
+            "location": "lat: 37.666684, long: -122.777023",
+            "site_id": "1600",
+            "system_ip": "172.16.255.26",
+            "device_type": "vbond",
+            "local_system_ip": "172.16.255.26",
+            "device_model": "vEdge Cloud",
+            "software_version": "20.11.999-2265",
+            "cpu_load": 2.18,
+            "memory_utilization": 38.0,
+            "control_connections": null,
+            "control_connections_up": 0,
+            "vsmart_control_connections": 0,
+            "expected_vsmart_connections": 0,
+            "has_geo_data": true,
+            "uptime_date": 1680170880000,
+            "device_groups":
+            [
+                "No groups"
+            ],
+            "connected_vmanages":
+            [
+                "172.16.255.22"
+            ],
+            "bfd_sessions_up": 0,
+            "bfd_sessions": null,
+            "omp_peers": 0,
+            "omp_peers_up": null,
+            "board_serial_number": "A901C0F2153FC7C4",
+            "chassis_number": "856a14a2-75e0-4bdd-bf04-91a3c0506bcc",
+            "vpn_ids": null,
+            "configuration_device": false
+        }
+    ]
+}

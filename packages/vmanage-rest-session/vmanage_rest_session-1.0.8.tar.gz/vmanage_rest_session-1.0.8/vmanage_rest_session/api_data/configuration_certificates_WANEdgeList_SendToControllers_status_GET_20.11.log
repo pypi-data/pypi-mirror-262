@@ -1,0 +1,54 @@
+{
+    "header":
+    {
+        "generatedOn": 1681564848264,
+        "viewKeys":
+        {
+            "uniqueKey":
+            [],
+            "preferenceKey": "grid-ControllersVEdgeStatus"
+        },
+        "columns":
+        [
+            {
+                "title": "Total Controllers",
+                "property": "totalControllers",
+                "dataType": "string"
+            },
+            {
+                "title": "Controllers Out Of Sync",
+                "property": "ControllersOutOfSync",
+                "dataType": "string"
+            },
+            {
+                "title": "view.certificate.controllersVedgeStatus.tenantList",
+                "property": "tenantList",
+                "dataType": "string"
+            }
+        ],
+        "fields":
+        [
+            {
+                "property": "totalControllers",
+                "dataType": "string"
+            },
+            {
+                "property": "ControllersOutOfSync",
+                "dataType": "string"
+            },
+            {
+                "property": "tenantList",
+                "dataType": "string"
+            }
+        ]
+    },
+    "data":
+    [
+        {
+            "totalControllers": 4,
+            "ControllersOutOfSync": 0,
+            "tenantList":
+            []
+        }
+    ]
+}

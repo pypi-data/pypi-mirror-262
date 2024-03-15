@@ -1,0 +1,420 @@
+{
+    "header":
+    {
+        "generatedOn": 1681642652214,
+        "viewKeys":
+        {
+            "uniqueKey":
+            [],
+            "preferenceKey": "grid-MultiTenantControllerView"
+        },
+        "columns":
+        [
+            {
+                "title": "Controller Type",
+                "property": "deviceType",
+                "display": "keyvalue",
+                "keyvalueProperty": "deviceType",
+                "keyvalue":
+                [
+                    {
+                        "key": "vsmart",
+                        "value": "vSmart"
+                    },
+                    {
+                        "key": "vbond",
+                        "value": "vBond"
+                    },
+                    {
+                        "key": "vmanage",
+                        "value": "vManage"
+                    },
+                    {
+                        "key": "vedge",
+                        "value": "WAN Edge"
+                    }
+                ],
+                "width": 140,
+                "dataType": "string"
+            },
+            {
+                "title": "Hostname",
+                "property": "host-name",
+                "width": 200,
+                "dataType": "string"
+            },
+            {
+                "title": "System IP",
+                "property": "local-system-ip",
+                "editable": false,
+                "width": 125,
+                "dataType": "ipv4"
+            },
+            {
+                "title": "Site ID",
+                "property": "site-id",
+                "width": 70,
+                "dataType": "numberStr"
+            },
+            {
+                "title": "Mode",
+                "property": "configOperationMode",
+                "display": "keyvalue",
+                "keyvalueProperty": "configOperationMode",
+                "keyvalue":
+                [
+                    {
+                        "key": "cli",
+                        "value": "CLI"
+                    },
+                    {
+                        "key": "vmanage",
+                        "value": "vManage"
+                    }
+                ],
+                "width": 75,
+                "dataType": "string"
+            },
+            {
+                "title": "Assigned Template",
+                "property": "template",
+                "width": 150,
+                "dataType": "string"
+            },
+            {
+                "title": "Draft Mode",
+                "property": "draftMode",
+                "width": 80,
+                "dataType": "string"
+            },
+            {
+                "title": "Device Status",
+                "property": "configStatusMessage",
+                "display": "syncDiffChecker",
+                "width": 150,
+                "dataType": "string"
+            },
+            {
+                "title": "Certificate Status",
+                "property": "certInstallStatus",
+                "minWidth": 110,
+                "dataType": "string"
+            },
+            {
+                "title": "Policy Name",
+                "property": "policy-template-name",
+                "minWidth": 140,
+                "dataType": "string"
+            },
+            {
+                "title": "Policy Version",
+                "property": "policy-template-version",
+                "minWidth": 150,
+                "dataType": "string"
+            },
+            {
+                "title": "UUID",
+                "property": "uuid",
+                "editable": false,
+                "dataType": "string"
+            }
+        ],
+        "fields":
+        [
+            {
+                "property": "deviceType",
+                "dataType": "string",
+                "display": "keyvalue"
+            },
+            {
+                "property": "host-name",
+                "dataType": "string"
+            },
+            {
+                "property": "system-ip",
+                "dataType": "ipv4"
+            },
+            {
+                "property": "local-system-ip",
+                "dataType": "ipv4"
+            },
+            {
+                "property": "deviceIP",
+                "dataType": "ipv4"
+            },
+            {
+                "property": "site-id",
+                "dataType": "numberStr"
+            },
+            {
+                "property": "configOperationMode",
+                "dataType": "string",
+                "display": "keyvalue"
+            },
+            {
+                "property": "template",
+                "dataType": "string"
+            },
+            {
+                "property": "draftMode",
+                "dataType": "string"
+            },
+            {
+                "property": "configStatusMessage",
+                "dataType": "string",
+                "display": "syncDiffChecker"
+            },
+            {
+                "property": "username",
+                "dataType": "string"
+            },
+            {
+                "property": "password",
+                "dataType": "string"
+            },
+            {
+                "property": "certInstallStatus",
+                "dataType": "string"
+            },
+            {
+                "property": "policy-template-name",
+                "dataType": "string"
+            },
+            {
+                "property": "policy-template-version",
+                "dataType": "string"
+            },
+            {
+                "property": "uuid",
+                "dataType": "string"
+            }
+        ]
+    },
+    "data":
+    [
+        {
+            "deviceType": "vbond",
+            "serialNumber": "303C86B3B82A8EAD",
+            "ncsDeviceName": "vbond-92f9232c-6eb7-4fe6-8248-c312ecce0407",
+            "configStatusMessage": "In Sync",
+            "templateApplyLog":
+            [
+                "[16-Apr-2023 10:53:11 UTC] Sync-from successful"
+            ],
+            "uuid": "92f9232c-6eb7-4fe6-8248-c312ecce0407",
+            "managementSystemIP": "169.254.10.2",
+            "templateStatus": "Success",
+            "chasisNumber": "92f9232c-6eb7-4fe6-8248-c312ecce0407",
+            "configStatusMessageDetails": "",
+            "configOperationMode": "cli",
+            "deviceModel": "vedge-cloud",
+            "deviceState": "READY",
+            "validity": "valid",
+            "platformFamily": "vedge-x86",
+            "username": "--",
+            "rootCertHash": "79a3aabab8e0ed4f239d9004e5694c1b17c94f95",
+            "CSR": "vbond-92f9232c-6eb7-4fe6-8248-c312ecce0407-0.viptela.com",
+            "CSRDetail": "-----BEGIN CERTIFICATE REQUEST-----\nMIIDTTCCAjUCAQAwgcwxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlh\nMREwDwYDVQQHDAhTYW4gSm9zZTEWMBQGA1UECwwNc3QtcmVncmVzc2lvbjEWMBQG\nA1UECgwNQ2lzY28gU3lzdGVtczFBMD8GA1UEAww4dmJvbmQtOTJmOTIzMmMtNmVi\nNy00ZmU2LTgyNDgtYzMxMmVjY2UwNDA3LTAudmlwdGVsYS5jb20xIjAgBgkqhkiG\n9w0BCQEWE3N1cHBvcnRAdmlwdGVsYS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IB\nDwAwggEKAoIBAQDMzX5xVOES7r1yPNnC/TgTSb27u7tLSkkY/2tlTLRC0SlZBCau\n8FB8X75j6063qRWjoRarKbkzil721lYud+a9hCs4f4g7butHfcJ7Eu0Ku7EjXDbP\nrGCc1s+h7UDFmlnJ0SWAqbHRL1qtowQUT0WsHEAq6sCcLCMfgDdB2mTkRL57Z0SS\nVcV430sogfJGO3MHfQpi5DaHD1GN1WcZ3rxrSp9rqM/XbRFQYdI1Qx2ipqMOXy+Q\nrbsZbWzfobt4Bu0oRLPB06Po1wU/6KOG/IRm8jBM8u3o74134VLYAUk0BkPr4441\nhWLwMXE0kxhrc9mhoGQ3Hg5hza4fAWbYLcbfAgMBAAGgOzA5BgkqhkiG9w0BCQ4x\nLDAqMAkGA1UdEwQCMAAwHQYDVR0OBBYEFBgrW/HrpBH6l1372WhhLH8iwD5mMA0G\nCSqGSIb3DQEBCwUAA4IBAQADN6vVksc38n3+/MC0ZDEjSR2NL079x4C+7LWvTGqp\n9MlR/jOirSxq7xZ6ZXOit3jxUDH7p2E9CfYwTjXiNnWc6rJz1/XH0wqbLA7rGZmB\nymkZoFOFROkrANAu2cnB9himoeWfTkiQ3HOHza/dVPGsPLvB/f7t3FOIsvGyI+RX\nxpPQmngu8E8nc5c3LH620clnYYZvHxEkaGaIquXD+x5FGZt8tBAk2xzHYhRopsuf\nqF53BdLvcuG1+dfp6VlJYL8CiJY0bFfJ3enQ02mADC0YSQEk9B2mHIG6gcoXnu+C\nUsWMsd86yoWdmwWv7toQA4KTNyx64ldPb1We4thIaLvW\n-----END CERTIFICATE REQUEST-----",
+            "state": "Installed",
+            "globalState": "normal",
+            "valid": "valid",
+            "requestTokenID": "f0826c7b-0870-4aad-a97e-f6e21f302ee2",
+            "expirationDate": "Apr 11 03:36:15 2033 GMT",
+            "expirationDateLong": 1996803375000,
+            "deviceIP": "169.254.10.2",
+            "activity":
+            [
+                "Installed"
+            ],
+            "state_vedgeList": "Sync",
+            "certInstallStatus": "Installed",
+            "org": "st-regression",
+            "personality": "vbond",
+            "expirationStatus": "normal",
+            "local-system-ip": "1.1.1.13",
+            "system-ip": "169.254.10.2",
+            "model_sku": "None",
+            "site-id": "10013",
+            "host-name": "MT1_vbond",
+            "sp-organization-name": "st-regression",
+            "version": "20.9.2-507",
+            "vbond": "10.0.43.13",
+            "vmanage-system-ip": "169.254.10.2",
+            "vmanageConnectionState": "connected",
+            "lastupdated": 1681642393161,
+            "reachability": "reachable",
+            "uptime-date": 1681442340000,
+            "defaultVersion": "20.9.2-507",
+            "organization-name": "st-regression",
+            "availableVersions":
+            [],
+            "lifeCycleRequired": true,
+            "hardwareCertSerialNumber": "NA",
+            "subjectSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        },
+        {
+            "deviceType": "vmanage",
+            "serialNumber": "4FA992A84E4AEB1F",
+            "ncsDeviceName": "vmanage-47d99416-5cc6-4642-9ee2-695dcbdf43d2",
+            "configStatusMessage": "In Sync",
+            "templateApplyLog":
+            [
+                "[16-Apr-2023 10:19:44 UTC] Sync-from successful"
+            ],
+            "uuid": "47d99416-5cc6-4642-9ee2-695dcbdf43d2",
+            "managementSystemIP": "169.254.10.1",
+            "templateStatus": "Success",
+            "chasisNumber": "47d99416-5cc6-4642-9ee2-695dcbdf43d2",
+            "configStatusMessageDetails": "",
+            "configOperationMode": "cli",
+            "deviceModel": "vmanage",
+            "deviceState": "READY",
+            "validity": "valid",
+            "platformFamily": "vmanage",
+            "username": "--",
+            "rootCertHash": "79a3aabab8e0ed4f239d9004e5694c1b17c94f95",
+            "CSR": "vmanage-47d99416-5cc6-4642-9ee2-695dcbdf43d2-0.viptela.com",
+            "CSRDetail": "-----BEGIN CERTIFICATE REQUEST-----\nMIIDTzCCAjcCAQAwgc4xCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlh\nMREwDwYDVQQHDAhTYW4gSm9zZTEWMBQGA1UECwwNc3QtcmVncmVzc2lvbjEWMBQG\nA1UECgwNQ2lzY28gU3lzdGVtczFDMEEGA1UEAww6dm1hbmFnZS00N2Q5OTQxNi01\nY2M2LTQ2NDItOWVlMi02OTVkY2JkZjQzZDItMC52aXB0ZWxhLmNvbTEiMCAGCSqG\nSIb3DQEJARYTc3VwcG9ydEB2aXB0ZWxhLmNvbTCCASIwDQYJKoZIhvcNAQEBBQAD\nggEPADCCAQoCggEBAN8omNEn4F9MMakZDxQnhS9+iI8wSahbhcYcjVAuqI1PsREk\nCZ3sCPUQ/H0RwYCliCUrrV9WoQs6y+n6vQKuv5OCVgi0VQ50u0rVDbVkKkInXK+l\nUm1WJE2bzxrtWvroqodSjeJU11fEf8dcvgxbU5cxDJ3xfoROZ2FjXC/Km0VjeSCe\nMLc5w73KhAUDeuVUBz0aDOl4v01JDYhQ2cPERpITvMS/RchvR/YpZk1dtPljqpAP\nETN9UGxHQ5emFAkMmFwhSRxG4QW97NGdaTYiQRvig4K14cyIQRJALuoiMh7jH2tc\nxFLYOGLXMSomj4x9mFfiAcw9Bjo7yxNdwzwQ9rUCAwEAAaA7MDkGCSqGSIb3DQEJ\nDjEsMCowCQYDVR0TBAIwADAdBgNVHQ4EFgQU93wOFCEenicn0GKbHaO7eWf59KQw\nDQYJKoZIhvcNAQELBQADggEBACVD7hrsPNO02eb5v3WdHn0/FvlgjiW5MD5sDU33\nFcdnG5uovPgFJxRdGrukDlqQ7rU60qYjtbLcmALSbaomqgd4sAXXyzuh4kSgYiDx\nspE1TbX6JOqQrsJHnFsu85Cg3zShGYGEZbupaqNxfLO/RyRpnWt/LNVaL4XaQup8\nO7Yfr6xF5CJpIfRkJwBmBqfvB9hxapTXaxeVwSnkA5+dDxk+mdQj+9I+IM/OJOXL\nlFnZ9jHiARcC8cN82qqHoKc+VhvwM3dDQ8ltUHVAM3y10BfNWwDnSoc8GeFhV3kn\nk4YKbaD1duuNwlaeTSljxaoPN5WBya8O+9xzCx4XnpIPNy4=\n-----END CERTIFICATE REQUEST-----",
+            "state": "vBond Updated",
+            "globalState": "normal",
+            "valid": "valid",
+            "requestTokenID": "9cf400bd-4243-4e20-98be-2f179e3efdc5",
+            "expirationDate": "Apr 11 03:36:14 2033 GMT",
+            "expirationDateLong": 1996803374000,
+            "deviceIP": "169.254.10.1",
+            "activity":
+            [
+                "vBond Updated",
+                "[16-Apr-2023 10:57:13 UTC] vBond Updated",
+                "[16-Apr-2023 10:57:16 UTC] vBond Updated"
+            ],
+            "certInstallStatus": "Installed",
+            "servicePersonality": "all",
+            "personality": "vmanage",
+            "expirationStatus": "normal",
+            "uploadSource": "Auto Discovered",
+            "timeRemainingForExpiration": 315162096000,
+            "domain-id": "0",
+            "local-system-ip": "1.1.1.10",
+            "system-ip": "169.254.10.1",
+            "model_sku": "None",
+            "site-id": "10010",
+            "host-name": "MT1_vmanage1",
+            "sp-organization-name": "st-regression",
+            "version": "20.9.2-507",
+            "vbond": "vbond",
+            "vmanage-system-ip": "169.254.10.1",
+            "vmanageConnectionState": "connected",
+            "lastupdated": 1681642648154,
+            "reachability": "reachable",
+            "uptime-date": 1681442280000,
+            "defaultVersion": "20.9.2-507",
+            "organization-name": "st-regression",
+            "availableVersions":
+            [],
+            "lifeCycleRequired": false,
+            "hardwareCertSerialNumber": "NA",
+            "subjectSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        },
+        {
+            "deviceType": "vsmart",
+            "serialNumber": "E32469050661DDFB",
+            "uuid": "0d485701-2d9c-4f91-88e2-f9212484c0d8",
+            "managementSystemIP": "169.254.10.4",
+            "chasisNumber": "0d485701-2d9c-4f91-88e2-f9212484c0d8",
+            "configOperationMode": "cli",
+            "deviceModel": "vsmart",
+            "deviceState": "BRING_UP",
+            "validity": "valid",
+            "platformFamily": "vsmart",
+            "username": "admin",
+            "rootCertHash": "79a3aabab8e0ed4f239d9004e5694c1b17c94f95",
+            "CSR": "vsmart-0d485701-2d9c-4f91-88e2-f9212484c0d8-0.viptela.com",
+            "CSRDetail": "-----BEGIN CERTIFICATE REQUEST-----\nMIIDTjCCAjYCAQAwgc0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlh\nMREwDwYDVQQHDAhTYW4gSm9zZTEWMBQGA1UECwwNc3QtcmVncmVzc2lvbjEWMBQG\nA1UECgwNQ2lzY28gU3lzdGVtczFCMEAGA1UEAww5dnNtYXJ0LTBkNDg1NzAxLTJk\nOWMtNGY5MS04OGUyLWY5MjEyNDg0YzBkOC0wLnZpcHRlbGEuY29tMSIwIAYJKoZI\nhvcNAQkBFhNzdXBwb3J0QHZpcHRlbGEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOC\nAQ8AMIIBCgKCAQEA5+pzwlpgahZx9YDKmgGeyLbDLWrp+2wJttQ6DOSCvqakGR/z\npNvrSZWbwFyb2t2fQXjwa28E0gl2gIPHGaqtK0FputpxIGN5+VWfsDhMDhWdTgXH\nxeXDW15RlCaVn0plB5+IETmAu7Ho6CiusR+0OoITrjkG+bwZoYNR7jZIGon9IJTj\ntuEk3aVCmjZaNJf/bPvkkd5nrca1uNzJxEf2kumUsR7+obgFMpF58V4kaPW+C/sj\nh4jJ8Gc5o+QD2Y9fAd8LUGNIblfjKwqvjkREwEEdtJbkbo5kYqWjYk14RAGWPJf4\nVcT9kOaoXNxq18rHzzJWCN8MaYHuEau0Cua/RQIDAQABoDswOQYJKoZIhvcNAQkO\nMSwwKjAJBgNVHRMEAjAAMB0GA1UdDgQWBBTTkA1JK0YwJPQX6QQLJ3hiWWHHwzAN\nBgkqhkiG9w0BAQsFAAOCAQEA5t3kEqq+ZeYZqQB3BIu/jESmIAo7E8a3qNn2VnBn\nP8JCS6dIEWorlTG61JcRor9UNYzs5P+hnzdpEJJDnnL8sKsgR1zN32hpd2xZQFdj\nbWCT/47lhxSIIi5CXWMFpb+nxbylTSiHES6VUhZsY+fb5I3UD54N1mzDD/oJ483/\nnnPFnWNds/wR5w3+HdWBJ8dYlqiMDmfxXTcfoP3X8vJCUcD5VovpPxMCihZm141X\n/GPVXKbCq3M7gTiBzF9N1fev32CsH1YH6+GV4xOeRjhErLbDcqO4xci4dwhvOsGR\neMucPZlbHPUW7VXNKjjJ3KE+KQLcZu3lH8H6ozY0/1MFKA==\n-----END CERTIFICATE REQUEST-----",
+            "state": "vBond Updated",
+            "globalState": "normal",
+            "valid": "N/A",
+            "requestTokenID": "N/A",
+            "expirationDate": "Apr 11 03:36:14 2033 GMT",
+            "expirationDateLong": 1996803374000,
+            "deviceIP": "10.0.43.11",
+            "activity":
+            [
+                "vBond Updated",
+                "[16-Apr-2023 10:57:14 UTC] vBond Updated"
+            ],
+            "state_vedgeList": "Sync",
+            "certInstallStatus": "Installed",
+            "org": "st-regression",
+            "personality": "vsmart",
+            "expirationStatus": "normal",
+            "lifeCycleRequired": false,
+            "resourceUtilizationTenant": "0.0%",
+            "resourceUtilizationDevices": "0.0%",
+            "resourceUtilizationCPU": "NA",
+            "resourceUtilizationMem": "NA",
+            "hardwareCertSerialNumber": "NA",
+            "subjectSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        },
+        {
+            "deviceType": "vsmart",
+            "serialNumber": "026C3C17D128416F",
+            "uuid": "39abf93e-9e29-49c6-96b8-26d8c8666fac",
+            "managementSystemIP": "169.254.10.5",
+            "chasisNumber": "39abf93e-9e29-49c6-96b8-26d8c8666fac",
+            "configOperationMode": "cli",
+            "deviceModel": "vsmart",
+            "deviceState": "BRING_UP",
+            "validity": "valid",
+            "platformFamily": "vsmart",
+            "username": "admin",
+            "rootCertHash": "79a3aabab8e0ed4f239d9004e5694c1b17c94f95",
+            "CSR": "vsmart-39abf93e-9e29-49c6-96b8-26d8c8666fac-0.viptela.com",
+            "CSRDetail": "-----BEGIN CERTIFICATE REQUEST-----\nMIIDTjCCAjYCAQAwgc0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlh\nMREwDwYDVQQHDAhTYW4gSm9zZTEWMBQGA1UECwwNc3QtcmVncmVzc2lvbjEWMBQG\nA1UECgwNQ2lzY28gU3lzdGVtczFCMEAGA1UEAww5dnNtYXJ0LTM5YWJmOTNlLTll\nMjktNDljNi05NmI4LTI2ZDhjODY2NmZhYy0wLnZpcHRlbGEuY29tMSIwIAYJKoZI\nhvcNAQkBFhNzdXBwb3J0QHZpcHRlbGEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOC\nAQ8AMIIBCgKCAQEAslKVu3DL5tVO7RsvX5QXioZbITMmq4gWXDTes0x9La7R7hrC\nFNiIO2TyzCILyM06dWS/5bq8yImEQiD/rPVl9sppMk2aA2E5whnIePlP7PRfUdS0\n9y2f5tTT01JXbPvUrNBVnyF4JT/upTIjmDnZXnJSWZCF1UA2t5dZGTwkuPWJfFPo\nXV9MG8EL1f/hM3UoNIGsYDgGNfkYvp99FZUikVnFhDRactbiLrf/YAK7ZWSHF6Ap\n+QvheFVn8wwE5dVTr6mhU3e8ZRR0P7j2X0xfUmC6VpNoE+Lpz4UYvPmY/la3cHJY\nwRykgG4g1GCq1mZVulOD8as+YG6XlG1zigMZ/wIDAQABoDswOQYJKoZIhvcNAQkO\nMSwwKjAJBgNVHRMEAjAAMB0GA1UdDgQWBBTjQeL/BOAZad56L7uNEXCMnVq/qjAN\nBgkqhkiG9w0BAQsFAAOCAQEAP2YmQPpPo6bVzn3nRE4THOuF35T+zz/lmSkJvLWY\nX88lQ4gKjsZqiwRqq180J5PPgKFer4W8fLAzWGstA8WIB/z6kJjMHbojwsEm+0+2\nNQbzhkCo+c+bcXinid5LzbWk/o7DUzpYzPnFjzfy8IrwKy+6j57nnbhwWwjetH1O\n9c3PVUByOB2lqMjdIm/LwfklpR4gzFGMF5E4yBdOVqWfFlrAIihq5yPZw/nt+W6s\nmm+cl8d9kRHPKvbLep5hwwr0/Dsj79Ck8lC6H/KFyvuPuKCZtYdksFmoT0QP/MZI\nYRf9zpYlf/M4NKKs0eGCHLv2LwlF5+3XMgOkZfaN2KJ+Kw==\n-----END CERTIFICATE REQUEST-----",
+            "state": "vBond Updated",
+            "globalState": "normal",
+            "valid": "N/A",
+            "requestTokenID": "N/A",
+            "expirationDate": "Apr 11 03:36:15 2033 GMT",
+            "expirationDateLong": 1996803375000,
+            "deviceIP": "10.0.43.12",
+            "activity":
+            [
+                "vBond Updated",
+                "[16-Apr-2023 10:57:17 UTC] vBond Updated"
+            ],
+            "state_vedgeList": "Sync",
+            "certInstallStatus": "Installed",
+            "org": "st-regression",
+            "personality": "vsmart",
+            "expirationStatus": "normal",
+            "lifeCycleRequired": false,
+            "resourceUtilizationTenant": "0.0%",
+            "resourceUtilizationDevices": "0.0%",
+            "resourceUtilizationCPU": "NA",
+            "resourceUtilizationMem": "NA",
+            "hardwareCertSerialNumber": "NA",
+            "subjectSerialNumber": "NA",
+            "resourceGroup": "global",
+            "id": "NA",
+            "tags":
+            [],
+            "draftMode": "Disabled"
+        }
+    ]
+}
