@@ -1,0 +1,25 @@
+pandas<=1.5.3,>=1.1.0
+jinja2
+numpy>=1.16.5
+datalad
+colorlog
+lxml
+pympi-ling
+pylangacq
+python-dateutil>=2.8.1
+librosa
+pydub
+soundfile
+nltk
+scikit-learn
+GitPython
+PyYAML
+panoptes-client
+praat-parselmouth
+importlib-resources
+click==7.1.1
+requests==2.25.0
+chardet<4,>=3.0.2
+
+[:python_version >= "3.7.0"]
+pyannote.metrics
