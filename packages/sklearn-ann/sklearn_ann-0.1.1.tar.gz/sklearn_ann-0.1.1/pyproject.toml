@@ -1,0 +1,96 @@
+[project]
+name = "sklearn-ann"
+description = "Various integrations for ANN (Approximate Nearest Neighbours) libraries into scikit-learn."
+authors = [
+    { name = "Frankie Robertson", email = "frankie@robertson.name" },
+    { name = "Philipp Angerer", email = "phil.angerer@gmail.com" }
+]
+readme = "README.rst"
+license = "BSD-3-Clause"
+dynamic = ["version"]
+requires-python = "<3.13,>=3.9"  # enforced by scipy
+dependencies = [
+    "scikit-learn>=0.24.0",
+    "scipy>=1.11.1,<2.0.0",
+]
+
+[project.optional-dependencies]
+tests = [
+    "pytest>=6.2.1",
+    "pytest-cov>=2.10.1",
+]
+docs = [
+    "sphinx>=7",
+    "sphinx-gallery>=0.8.2",
+    "sphinx-book-theme>=1.1.0rc1",
+    "sphinx-issues>=1.2.0",
+    "numpydoc>=1.1.0",
+    "matplotlib>=3.3.3",
+    "scanpydoc",
+]
+annoy = [
+    "annoy>=1.17.0,<2.0.0",
+]
+faiss = [
+    "faiss-cpu>=1.6.5,<2.0.0",
+]
+pynndescent = [
+    "pynndescent>=0.5.1,<1.0.0",
+]
+nmslib = [
+    "nmslib>=2.1.1,<3.0.0 ; python_version < '3.11'",
+]
+annlibs = [
+    "sklearn-ann[annoy,faiss,pynndescent,nmslib]",
+]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+# Flaky tests should be marked as xfail(strict=False),
+# this will notify us when a test considered broken starts succeeding.
+xfail_strict = true
+
+[tool.ruff]
+# TODO: remove `target-version` when switching to PEP 621
+target-version = "py39"
+select = [
+    "F", # Pyflakes
+    "E", # Pycodestyle errors
+    "W", # Pycodestyle warnings
+    "I", # Isort
+    "UP", # Pyupgrade
+    "PT", # Pytest style
+    "PTH", # Pathlib
+    "RUF", # Ruff’s own rules
+]
+ignore = [
+    # Don’t complain about “confusables”
+    "RUF001", "RUF002", "RUF003"
+]
+[tool.ruff.per-file-ignores]
+"examples/*.py" = ["E402"]
+[tool.ruff.isort]
+known-first-party = ["sklearn_ann"]
+
+[tool.hatch.envs.default]
+features = [
+  "tests",
+  "docs",
+  "annlibs",
+]
+
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+build-docs = "sphinx-build -M html docs docs/_build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sklearn_ann"]
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
