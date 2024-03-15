@@ -1,0 +1,11 @@
+casdbops/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+casdbops/cassandra_crud.py,sha256=iscN35sSWuhblqF9abJa9uSOvVkdccpOEiRK_1IrAq8,4244
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/integration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/integration/test_int.py,sha256=61mxQep4durFHyuSIcey5QRr4c76d7HVAIkFXotg8Ns,38
+tests/unit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/unit/test_unit.py,sha256=NwL0-VdPDFIlD7nQRf7yPwhKRWla193XMwOYeipgyI4,33
+casdbops-0.0.3.dist-info/METADATA,sha256=5wQUrT3jGKP4LNrHX-HwrdjA3IelFjgGhqb26JcLxxc,2390
+casdbops-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+casdbops-0.0.3.dist-info/top_level.txt,sha256=54u8fesPMRavdn85adZvG5Og4bQZ7DzqNwW0dh4Vohs,15
+casdbops-0.0.3.dist-info/RECORD,,
