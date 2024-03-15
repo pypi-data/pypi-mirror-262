@@ -1,0 +1,11 @@
+honcho/__init__.py,sha256=PIcB5xtonyA6gXYOKeZySVFYi7FEuKCOx9-0dkhLGv4,496
+honcho/cache.py,sha256=kwcdFne9GF9c-0-i51t0lDp_mBQuIA5joOAenvRF_BM,1115
+honcho/client.py,sha256=dC7zLk-_0BQy78_67AMpFoiM0T20LOrY8_awCU7ykO0,45472
+honcho/ext/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+honcho/ext/langchain.py,sha256=i18TMK1VGFWop4_VDvqCZObTFT-wrSaX5ZmwVVWL2q0,847
+honcho/schemas.py,sha256=ewkJ38ISbQdPzZqJ8Q8A9hilJOiu1OWB_dN5B75CiDM,1785
+honcho/sync_client.py,sha256=iDpw9AMG01Nho-nPkQX5nrjDNQV6CjlpS-tUvr0f30o,44490
+honcho_ai-0.0.5.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+honcho_ai-0.0.5.dist-info/METADATA,sha256=pbrOz-eNWjB12aQpRLEvCFAArH9gwUt6d8U0RD2fgxI,1908
+honcho_ai-0.0.5.dist-info/WHEEL,sha256=7Z8_27uaHI_UZAc4Uox4PpBhQ9Y5_modZXWMxtUi4NU,88
+honcho_ai-0.0.5.dist-info/RECORD,,
