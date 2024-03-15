@@ -1,0 +1,3 @@
+[console_scripts]
+changeemail = ezgenesynteny.emailaddress:main
+ezgenesynteny = ezgenesynteny.getgenes:main
