@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: kafkaposted
+Version: 0.1.4
+Summary: Concrete implementation of posted for Kafka
+License: mit
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# kafkaposted
+Concrete implementation of `posted` for Kafka.
