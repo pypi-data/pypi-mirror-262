@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "rispack"
+version = "1.2.2"
+description = "Pack of shared libraries from Rispar"
+authors = ["Rispar <tecnologia@rispar.com.br>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+SQLAlchemy = "^1.4.36"
+boto3 = "^1.34.52"
+aws-lambda-powertools = "^2.34.2"
+requests-aws-sign = "^0.1.6"
+marshmallow = "^3.21.0"
+marshmallow-dataclass = "^8.6.0"
+requests = "^2.31.0"
+marshmallow-enum = "^1.5.1"
+pg8000 = "^1.30.5"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+isort = "^5.12.0"
+pytest = "^7.3.1"
+pytest-cov = "^4.0.0"
+ipython = "^8.4.0"
+moto = "^4.1.9"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
