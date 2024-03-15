@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/DotIndex/__init__.py
+src/DotIndex.egg-info/PKG-INFO
+src/DotIndex.egg-info/SOURCES.txt
+src/DotIndex.egg-info/dependency_links.txt
+src/DotIndex.egg-info/top_level.txt

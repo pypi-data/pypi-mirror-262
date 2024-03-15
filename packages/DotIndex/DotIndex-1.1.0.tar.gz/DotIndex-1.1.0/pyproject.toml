@@ -1,0 +1,18 @@
+[project]
+name = "DotIndex"
+version = "1.1.0"
+authors = [
+  { name="Hazel", email="trinkey@duck.com" },
+]
+description = "Allows you to use dot notation to index dicts, like how you can in javascript"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/trinkey/dotindex"
+Issues = "https://github.com/trinkey/dotindex/issues"
