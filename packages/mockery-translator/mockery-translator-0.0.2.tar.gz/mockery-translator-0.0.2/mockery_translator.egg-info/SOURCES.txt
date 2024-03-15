@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+mockery/__init__.py
+mockery/mockery.py
+mockery_translator.egg-info/PKG-INFO
+mockery_translator.egg-info/SOURCES.txt
+mockery_translator.egg-info/dependency_links.txt
+mockery_translator.egg-info/entry_points.txt
+mockery_translator.egg-info/top_level.txt
