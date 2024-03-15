@@ -1,0 +1,12 @@
+README.md
+setup.py
+csvskim/__init__.py
+csvskim/__main__.py
+csvskim/cli.py
+csvskim/lib.py
+csvskim.egg-info/PKG-INFO
+csvskim.egg-info/SOURCES.txt
+csvskim.egg-info/dependency_links.txt
+csvskim.egg-info/entry_points.txt
+csvskim.egg-info/requires.txt
+csvskim.egg-info/top_level.txt
