@@ -1,0 +1,7 @@
+setup.py
+touch2.egg-info/PKG-INFO
+touch2.egg-info/SOURCES.txt
+touch2.egg-info/dependency_links.txt
+touch2.egg-info/requires.txt
+touch2.egg-info/top_level.txt
+touchv2/__init__.py
