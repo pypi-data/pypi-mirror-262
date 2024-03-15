@@ -1,0 +1,16 @@
+fvgp/__init__.py,sha256=dOEB0VF2qCfhfq9M_pnmqXBhWlSiVThXdu-7q4-lros,338
+fvgp/_version.py,sha256=6LFPpnw5YUZHDl1-4A3lMp66t4JIrNt6cboyZbo78NQ,497
+fvgp/deep_kernel_network.py,sha256=eLxXRMXGLN_jR3s4sWVVMPUvtRyaejt3OyVq5QqdnaY,1435
+fvgp/fvgp.py,sha256=R5YvDsXgYySvcxBvmQesXD1rtnn6e1k9QcPHq8026TA,22322
+fvgp/gp.py,sha256=2VsITPP6QLfzsHWAgV5olsTxujFDnm3ECDH12DjN2bY,136381
+fvgp/gp2Scale.py,sha256=8KWYxBSQgjn18LtoEQSXsmFUvDCgYOZhP1bU2yBWvFk,14584
+fvgp/gpMCMC.py,sha256=rp1qR1U7oC5qG36zmFedNV55ZHwYI_MaUPjObmi7uDI,13525
+fvgp/mcmc.py,sha256=RexIg_mB9DcKOvU1bYfaWRLrFFRj_Pn4Et8J9ZnXnxw,7043
+fvgp-4.1.2.dist-info/AUTHORS.rst,sha256=x8jdtzE0OxsyWJ51YFPvt6o673CYGzo-jE1eDug9b4Q,148
+fvgp-4.1.2.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fvgp-4.1.2.dist-info/LICENSE,sha256=tMWRXBiUdCmaHYwVqISiAsoJfsJD1ylcQz7zI3eq1Mk,1629
+fvgp-4.1.2.dist-info/METADATA,sha256=zbCjhjI1gCX7BYkcNy1Y8kdY6GfRtQJwxMKjUqXHTXs,3074
+fvgp-4.1.2.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+fvgp-4.1.2.dist-info/entry_points.txt,sha256=FGzxRmLD-YxlaWrYQRmPesy_pqFhQEBUXDuEey_55f8,39
+fvgp-4.1.2.dist-info/top_level.txt,sha256=V_lmgRZnKWNMoTsqAv7ngP2dSF3qh2xYnRKfc6UZIMw,5
+fvgp-4.1.2.dist-info/RECORD,,
