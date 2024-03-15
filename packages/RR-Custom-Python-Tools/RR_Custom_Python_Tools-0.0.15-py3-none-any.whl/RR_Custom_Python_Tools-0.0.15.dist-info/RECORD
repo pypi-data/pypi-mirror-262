@@ -1,0 +1,15 @@
+date_manager/__init__.py,sha256=D0eK4n5vl53MCBs1M3WwJUniLxwdmBAkY9FKNMMNqEo,64
+date_manager/date_manager.py,sha256=-zFW_ElVJkep1c9BDJwbFD3GTniauem3Dn7rpHPLUyI,2245
+date_manager/test_date_manager.py,sha256=ep5U96w_kIue-F8XWak454SRjmBbNw2Z5WnXKdDyZrc,1537
+excel_manager/__init__.py,sha256=PErVOvScSpMdlftZEQxRx5cp0c_vo3q8tPE3C95JgO0,67
+excel_manager/excel_manager.py,sha256=DC_o23EzqXmzhNRtB3s8RXgEmdyGH6oKspNkm2krANc,11565
+excel_manager/test_excel_manager.py,sha256=UVEYd-0YFGfEBSk7V3BQnKHMzgQgW7d_gDQsViuRMAs,2486
+log_manager/__init__.py,sha256=afdxdBev8Q_ADJ-o9hhNYNQkQMxPXaoEdxjvJTjlWXk,61
+log_manager/log_manager.py,sha256=eU1KftlOwxUqX-YmCqI6fWNcsKYPcxzropqxyaWWLjE,2366
+mail_manager/__init__.py,sha256=pq3p8YeZ68r2mAFred_ts9yFLEhkMgWCYcZRofnUs1g,64
+mail_manager/mail_manager.py,sha256=wRj1a_y1T8ysoZLqRfc7BiiDDTM8xkjy91PMx7qgBso,11188
+RR_Custom_Python_Tools-0.0.15.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+RR_Custom_Python_Tools-0.0.15.dist-info/METADATA,sha256=hyKW5Ho7DlXpxV9wjCsjRGLCQop1gXx92dVOuYwa4s0,12757
+RR_Custom_Python_Tools-0.0.15.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+RR_Custom_Python_Tools-0.0.15.dist-info/top_level.txt,sha256=rlvkprT1j337h0ekW4KxEpM1ONAQ3wEr17-6gy9aTEA,52
+RR_Custom_Python_Tools-0.0.15.dist-info/RECORD,,
