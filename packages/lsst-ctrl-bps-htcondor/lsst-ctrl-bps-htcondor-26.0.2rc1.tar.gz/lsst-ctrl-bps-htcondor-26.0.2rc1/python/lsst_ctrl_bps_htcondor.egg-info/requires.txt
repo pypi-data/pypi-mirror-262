@@ -1,0 +1,8 @@
+htcondor>=8.8
+lsst-ctrl-bps<26.100,>=26.0
+lsst-daf-butler<26.100,>=26.0
+lsst-utils<26.100,>=26.0
+
+[test]
+pytest>=3.2
+pytest-openfiles>=0.5.0
