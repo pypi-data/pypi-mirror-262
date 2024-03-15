@@ -1,0 +1,2 @@
+[console_scripts]
+game = pi:main
