@@ -1,0 +1,9 @@
+README.md
+setup.py
+coininfo_Sahel/__init__.py
+coininfo_Sahel/info.py
+coininfo_sahel.egg-info/PKG-INFO
+coininfo_sahel.egg-info/SOURCES.txt
+coininfo_sahel.egg-info/dependency_links.txt
+coininfo_sahel.egg-info/requires.txt
+coininfo_sahel.egg-info/top_level.txt
