@@ -1,0 +1,26 @@
+# Configuration File for Molecular Dynamics Setup
+
+# Simulation Type:
+# Choose between "Protein-Ligand", or "Ligand-Ligand"
+md_type: Protein-Ligand
+
+# Box Type:
+# Specify the type of box for simulation
+# Options: Triclinic, Cubic, Dodecahedron, or Octahedron
+box_type: Triclinic
+
+# Distance:
+# Specify the distance for the simulation
+distance: 10
+
+# Solvent Model:
+# Specify the solvent for the simulation
+solvent: spc216.gro
+
+# RDD:
+# Specify the RDD value for the simulation
+rdd: 0.0
+
+# DDS:
+# Specify the DDS value for the simulation
+dds: 0.8

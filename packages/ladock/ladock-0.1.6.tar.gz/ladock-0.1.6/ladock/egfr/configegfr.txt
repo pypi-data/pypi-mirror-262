@@ -1,0 +1,5 @@
+# Configuration File for EGFR Prediction
+
+# Datatest in CSV format:
+# Specify the path to the input CSV file containing ligand testing  data
+csv_input: /path/to/ligand_data.csv

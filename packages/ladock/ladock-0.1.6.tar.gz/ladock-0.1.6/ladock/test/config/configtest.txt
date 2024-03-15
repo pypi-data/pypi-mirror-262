@@ -1,0 +1,47 @@
+# Configuration File for Testing Deep Learning Models
+
+# Model File Path:
+# Specify the deep learning model file path to be tested
+model: /path/to/model.keras
+
+# Data Test:
+# Specify the dataset for testing
+datatest: /path/to/datatest.csv
+
+# Descriptors:
+# Specify the descriptors to be used for testing
+# Options: 2D Descriptors, 3D Descriptors, Lipinski Descriptors, Morgan Fingerprints, MACCS Fingerprints, Daylight Fingerprints, Avalon Fingerprints, Torsion Fingerprints, PubChem Fingerprints
+descriptors: Morgan Fingerprints
+
+# Molecule Optimization Method:
+# Specify the molecule optimization method
+# Options: 2D, 3D, UFF, MFF, QM
+method: 2D
+
+# Conformer Numbers:
+# Specify the conformer number in molecule optimization
+conformer: 10
+
+# Iteration:
+# Specify the number of iterations in molecule optimization
+iteration: 200
+
+# Transform X:
+# Specify whether to transform X or not (True or False)
+transformX: True
+
+# Scaler X:
+# Specify the scaler for X. Options: MinMaxScaler, StandardScaler, Normalizer, PowerTransformer
+scalerX: StandardScaler
+
+# Logarithmic:
+# Specify whether to use logarithmic scale for Y or not (True or False)
+logarithmic: True
+
+# Transform Y:
+# Specify whether to transform Y or not (True or False)
+transformY: True
+
+# Scaler Y:
+# Specify the scaler for Y. Options: MinMaxScaler, StandardScaler, Normalizer, PowerTransformer
+scalerY: StandardScaler

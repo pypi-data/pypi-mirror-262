@@ -1,0 +1,3 @@
+[console_scripts]
+ladock = ladock.nogui:main
+ladockgui = ladock.gui:main

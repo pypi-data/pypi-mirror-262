@@ -1,0 +1,82 @@
+# Configuration File for Deep Learning with TensorFlow or K-Nearest Neighbors Models
+
+# CSV File:
+# Specify the CSV file containing the data
+csv: /path/to/data.csv
+
+# Columns to Remove:
+# Specify columns to be removed (not included as feature columns)
+columns_to_remove: molecule_chembl_id,standard_value,pref_name,search_term,canonical_smiles
+
+# Transform X:
+# Specify whether to transform X or not (True or False)
+transformX: True
+
+# Scaler X:
+# Specify the scaler for X. Options: MinMaxScaler, StandardScaler, Normalizer, PowerTransformer
+scalerX: StandardScaler
+
+# All Features:
+# Specify whether to use all features or not (True or False)
+all_features: True
+
+# Activity Column:
+# Specify the column containing activity data
+activity: standard_value
+
+# Logarithmic:
+# Specify whether to use logarithmic scale for Y or not (True or False)
+logarithmic: True
+
+# Transform Y:
+# Specify whether to transform Y or not (True or False)
+transformY: True
+
+# Scaler Y:
+# Specify the scaler for Y. Options: MinMaxScaler, StandardScaler, Normalizer, PowerTransformer
+scalerY: StandardScaler
+
+# Plot Label:
+# Specify whether to plot label or not (True or False)
+plot_label: True
+
+# Tool:
+# Specify the tool to use (TensorFlow or K-Nearest Neighbors)
+tool: TensorFlow
+
+# Epochs:
+# Specify the number of epochs (if using TensorFlow)
+epochs: 100
+
+# Batch Size:
+# Specify the batch size (if using TensorFlow)
+batch_size: 32
+
+# Dense Units:
+# Specify the number of units in each dense layer (if using TensorFlow)
+dense_units: 1, 64, 256
+
+# Dense Activations:
+# Specify the activation function for each dense layer (if using TensorFlow). Options: relu, sigmoid, tanh, softmax, linear, leaky_relu, prelu, swish
+dense_activations: linear, linear, relu
+
+# Optimizer:
+# Specify the optimizer (if using TensorFlow). Options: SGD, Adam, RMSProp, Adagrad, Adadelta, Nadam, FTRL
+optimizer: SGD
+
+# Learning Rate:
+# Specify the learning rate (if using TensorFlow)
+learning_rate: 0.001
+
+# Loss Function:
+# Specify the loss function (if using TensorFlow). Options: MSE, MAE, Cross-entropy, Hinge
+loss_function: MAE
+
+# Patience:
+# Specify the patience value (if using TensorFlow)
+patience: 10
+
+# KNN Value:
+# Specify the value of k (if using K-Nearest Neighbors)
+knn_value: 5
+

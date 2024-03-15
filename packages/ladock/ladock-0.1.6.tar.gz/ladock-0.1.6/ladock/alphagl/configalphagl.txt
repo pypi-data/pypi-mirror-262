@@ -1,0 +1,10 @@
+# Configuration File for Alpha Glucosidase Inhibitor Prediction
+
+# Job Directory:
+# Specify the directory where the job will be saved
+job_directory: /path/to/job_directory
+
+# CSV Input Path:
+# Specify the path to the input CSV file containing ligand testing  data
+csv_input: /path/to/ligand_data.csv
+

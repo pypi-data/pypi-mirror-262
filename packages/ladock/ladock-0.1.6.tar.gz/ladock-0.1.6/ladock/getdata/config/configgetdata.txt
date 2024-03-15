@@ -1,0 +1,36 @@
+# Configuration File for Data Preparation
+
+# Getdata Type:
+# Specify the Getdata Type that you will excecute
+# options: step1 for searching target(s), step2 for searching molecule(s), or step3 for calculating descriptors of molecule(s).
+getdata_type: step1
+
+# Query List(step1, step2):
+# Specify the queries for searching targets, example: erbb, hsp90
+query_list: erbb, hsp90 
+
+# CSV Files(step3):
+# Specify the CSV files containing molecules data
+csv_files: /home/ra022310/l00097/project/getdata/erbb/erbb.csv, /home/ra022310/l00097/project/getdata/hsp90/hsp90.csv
+
+# Descriptors List(step3):
+# Specify the descriptors to be calculated
+# Options: 2D Descriptors, 3D Descriptors, Lipinski Descriptors, Morgan Fingerprints, MACCS Fingerprints, Daylight Fingerprints, Avalon Fingerprints, Torsion Fingerprints, PubChem Fingerprints
+descriptors_list: Morgan Fingerprints
+
+# Molecule Column(step3):
+# Specify the column in the CSV file containing molecule data
+molecule_column: canonical_smiles
+
+# Optimization Method(step3):
+# Specify the optimization method
+# Options: 2D, 3D, UFF, MMFF, QM
+optimization_method: MMFF
+
+# Number of Conformers(step3):
+# Specify the number of conformers to generate
+num_conformers: 10
+
+# Maximum Iterations(step3):
+# Specify the maximum iterations for optimization
+max_iterations: 1000
