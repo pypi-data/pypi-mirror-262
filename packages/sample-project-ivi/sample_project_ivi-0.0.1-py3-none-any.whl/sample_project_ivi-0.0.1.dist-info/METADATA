@@ -1,0 +1,537 @@
+Metadata-Version: 2.1
+Name: sample_project_ivi
+Version: 0.0.1
+Summary: A sample project to demonstrate packaging and testing.
+Home-page: https://gitlab.cc-asp.fraunhofer.de/babu/python-template/
+Author: Harisankar Babu
+Author-email: harisankar.babu@ivi.fraunhofer.de
+License: MIT
+Keywords: python
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: tox >=4.5.0 ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+Requires-Dist: sphinx-copybutton ; extra == 'docs'
+Requires-Dist: sphinx-prompt ; extra == 'docs'
+Requires-Dist: recommonmark ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+
+# python-template
+
+[![pipeline status](https://gitlab.cc-asp.fraunhofer.de/babu/python-template/badges/main/pipeline.svg)](https://gitlab.cc-asp.fraunhofer.de/babu/python-template/-/commits/main)
+[![coverage report](https://gitlab.cc-asp.fraunhofer.de/babu/python-template/badges/main/coverage.svg)](https://gitlab.cc-asp.fraunhofer.de/babu/python-template/-/commits/main)
+[![Latest Release](https://gitlab.cc-asp.fraunhofer.de/babu/python-template/-/badges/release.svg)](https://gitlab.cc-asp.fraunhofer.de/babu/python-template/-/releases)
+
+This is a template for a project with the following features:
+
+- Setuptools for Python project
+- Sphinx documentation
+- Pytest unit tests with coverage
+- Pylint code quality checks
+- Type checking with mypy
+- Black code formatting
+- Gitlab CI/CD
+
+## Documentation 📖
+
+Auto generated documentation can be found _[here](http://python-template-babu-5d849e1f859ea5533ef4f19b88fd2c5db39a37f7ed.pages.fraunhofer.de/)_. :point_left:
+
+## Setup Sphinx
+
+Sphinx is a documentation generator that can be used to generate documentation from docstrings in the code.
+
+**All commands are to be run from the project directory.**
+
+<details>
+
+<summary>Setup Sphinx for a New Project</summary>
+
+1. Delete the existing `docs` directory if it exists.
+
+    ```bash
+    rm -rf docs
+    ```
+
+1. Create Sphinx Project
+
+    We will use the `sphinx-quickstart` command to create a new Sphinx project.
+    The files will be created in the `docs` directory.
+
+    ```bash
+    sphinx-quickstart docs
+    ```
+
+1. Edit `conf.py`
+
+    Edit the `docs/conf.py` file to add the following lines to the top of the file:
+
+    ```python
+    import os
+    import sys
+    sys.path.insert(0, os.path.abspath('..'))
+    ```
+
+    Add the following lines to the `extensions` list:
+
+    ```python
+    extensions = [
+        "sphinx.ext.autodoc",  # for autodoc
+        "sphinx.ext.autosummary",  # for autosummary
+        "sphinx.ext.viewcode",  # for source code
+        "sphinx.ext.napoleon",  # for google style docstrings
+        "sphinx_autodoc_typehints",  # for type hints
+        "sphinx_copybutton",  # for copy button
+        "sphinx-prompt",  # for prompt
+        "recommonmark",  # for markdown
+    ]
+    ```
+
+    Change the theme to `sphinx_rtd_theme` or another theme of your choice if you prefer:
+
+    ```python
+    html_theme = "sphinx_rtd_theme"
+    ```
+
+    Add the following lines to the end of the file:
+
+    ```python
+    # generate autosummary even if no references
+    autosummary_generate = True
+    autosummary_imported_members = True
+    ```
+
+1. Generate Documentation
+
+    Run the following command to generate the documentation:
+
+    ```bash
+    sphinx-apidoc -f -e -M -o docs/ sample_project_ivi/
+    ```
+
+    The above command will generate the documentation for the `sample_project_ivi` package. There will be a `modules.rst` file in the output directory. This file will be used to generate the table of contents for the documentation.
+
+1. Edit `index.rst`
+
+    Add modules to the table of contents by adding the following lines to the `docs/index.rst` file:
+
+    ```rst
+    .. toctree::
+    :maxdepth: 2
+    :caption: Contents:
+
+    modules
+    ```
+
+1. Build Documentation
+
+    Run the following command to build the documentation:
+
+    ```bash
+    # for html documentation
+    sphinx-build -b html docs docs/_build
+
+    # for pdf documentation (requires latex to be configured)
+    sphinx-build -M latexpdf docs docs/_build
+    ```
+
+    The documentation will be generated in the `docs/_build` directory.
+
+</details>
+
+## Setuptools
+
+<details>
+
+<summary>Setup Setuptools for a New Project</summary>
+
+- Use **setuptools** to package your code.
+- Setuptools lets you easily download, build, install, upgrade, and uninstall Python packages.
+- Setuptools can be configured using the following files:
+  - `setup.py`
+  - `setup.cfg`
+- Setuptools lets you install your code using pip.
+
+  ```bash
+  pip install git+REPO_URL
+  # or
+  pip install .
+  # or in editable mode
+  pip install -e .
+  ```
+
+- You can also save configurations for your project in the `setup.cfg` file.
+- Sample `setup.py` file:
+
+  ```python
+  from setuptools import setup, find_packages
+
+  setup(
+      name="project_name",
+      version="0.1.0",
+      description="Project description",
+      author="Author name",
+      author_email="Author email",
+      url="Project url",
+      license="License name",
+      # find_packages() finds all the packages in the src directory
+      # package_dir={"": "src"} can be used to specify the source directory
+      packages=find_packages(),
+      # package_data={"": ["data/*.txt"]} can be used to include data files
+      # the following command will include all txt files in the data directory
+      # hence hardcoded paths in the code can be avoided and the code can be made more portable
+      package_data={"src": ["data/*.txt"]},
+      # install_requires can be used to specify the dependencies of the project
+      # will be installed automatically when the project is installed 
+      install_requires=[
+          "package1",
+          "package2",
+      ],
+      # extras_require can be used to specify the dependencies of the project
+      # will not be installed automatically when the project is installed
+      extras_require={
+          "dev": [
+              "package3",
+              "package4",
+          ],
+      },
+      # entry_points can be used to specify the command line scripts
+      entry_points={
+          "console_scripts": [
+              "script_name=package.module:main",
+          ],
+      },
+  )
+  ```
+
+- Check the [Setuptools documentation](https://setuptools.pypa.io/) for more information.
+
+</details>
+
+## Unit testing with Pytest
+
+<details>
+
+<summary>Setup Pytest for a New Project</summary>
+
+- Use **pytest** to write and run tests.
+- Unittesting makes sure that your code works as expected.
+- Pytest can automatically find and run tests in files named `test_*.py` or `*_test.py`.
+- Pytest can be run using the following command:
+
+  ```bash
+  pytest test_file.py
+  # or
+  python -m pytest test_file.py
+  # or to run all tests in a directory 'tests'
+  pytest tests/
+  ```
+
+- Here is a sample test file:
+
+  ```python
+  import pytest
+
+  def test_function():
+      assert 1 == 1
+  ```
+
+- Some sample tests can be found in the [tests](https://gitlab.cc-asp.fraunhofer.de/babu/python-template/-/tree/main/tests).
+
+- Check the [Pytest documentation](https://docs.pytest.org/) for more information.
+
+- Use **coverage** to check the test coverage of your code.
+- Coverage identifies which parts of your code are executed during testing and reports can be generated that show which parts of your code are missed by the tests.
+- Coverage can be run using the following command:
+
+    ```bash
+    coverage run -m pytest file.py
+    coverage report
+    ```
+
+- Check the [Coverage documentation](https://coverage.readthedocs.io/) for more information.
+
+- **tox** can be used to run all the above tools in one command.
+- Tox creates a virtual environment for each Python version you want to test.
+- Tox can be run using the following command:
+
+    ```bash
+    tox
+    ```
+
+- Configuration for tox can be specified in the following files:
+  - `tox.ini`
+  - `pyproject.toml`
+  - `setup.cfg`
+
+- A sample tox configuration file:
+
+  ```ini
+  [tox]
+  envlist = py{38,311} # specify the python versions to test
+
+  [testenv]
+  deps =
+      pytest
+      coverage
+  commands =
+      pytest
+      coverage run -m pytest
+      coverage report
+  ```
+
+- Check the [Tox documentation](https://tox.readthedocs.io/) for more information.
+- Sample tox configuration files can be found in the [tox](https://gitlab.cc-asp.fraunhofer.de/babu/python-template/-/blob/main/tox.ini) directory.
+
+</details>
+
+## Code Quality Checks
+
+<details>
+
+<summary>Setup Code Quality Checks for a New Project</summary>
+
+### Pylint
+
+- Use **linters** to check your code for errors and style.
+- Pylint is one of the tools that can be used to lint your code.
+- [flake8](https://flake8.pycqa.org/) is another popular tool that can be used to lint your code.
+- Code can be linted using the following command:
+
+  ```bash
+  # recommended (pylint and flake8)
+  pylint file.py
+  # or
+  flake8 file.py
+  ```
+
+- Pylint can provide you with a score for your code. This score can be used to track the quality of your code and also be used to enforce a minimum score. In the template repository, the minimum score is set to 9.0. If the score is below 9.0, the CI pipeline will fail. This is done with the following command:
+
+  ```bash
+  pylint --fail-under=9 uam
+  ```
+
+- It can be used to enforce a coding style, find bugs and unused code.
+- Check the [Pylint documentation](https://pylint.pycqa.org/en/stable/index.html) for more information.
+
+- [ruff](https://github.com/charliermarsh/ruff) can also be used to lint your code. ruff is based on rust is much faster than pylint and flake8.
+
+- Example with pylint:
+
+    ```python
+    # Example code test.py
+    def calculate_average(numbers):
+        total = sum(numbers)
+        number_of_items = len(numbers)
+        average = total / len(numbers)
+        print("The average is:", average)
+
+
+    numbers = [1, 2, 3, 4, 5]
+    calculate_average(numbers)
+    ```
+
+    ```bash
+    pylint test.py
+    # Output
+    ************* Module example
+    test.py:10:0: C0304: Final newline missing (missing-final-newline)
+    test.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+    test.py:2:0: C0116: Missing function or method docstring (missing-function-docstring)
+    test.py:2:22: W0621: Redefining name 'numbers' from outer scope (line 9) (redefined-outer-name)
+    test.py:4:4: W0612: Unused variable 'number_of_items' (unused-variable)
+
+    ------------------------------------------------------------------
+    Your code has been rated at 2.86/10 (previous run: 4.29/10, -1.43)
+    ```
+
+    The same suggestions can be seen in VSCode as well once the extensions are installed.
+
+### Mypy
+
+- Use **type hints** to specify the type of variables and arguments.
+- Type hints are optional in Python, but they are recommended.
+- Type hints can be very useful for documentation and debugging.
+- Type hints are specified using the following syntax:
+
+  ```python
+  variable: type
+
+  def function(argument: type) -> type:
+      pass
+
+  class Class:
+      def method(self, argument: type) -> type:
+          pass
+  ```
+
+- Check the [PEP 484](https://www.python.org/dev/peps/pep-0484/) for more information.
+
+- Tools like [mypy](http://mypy-lang.org/) can be used to check your code for type errors.
+
+  ```bash
+  mypy file.py
+  mypy src/
+  ```
+
+- It is a static type checker that can identify type errors in your code.
+
+  ```python
+  def function(argument: int) -> int:
+      return argument + "1"
+  ```
+
+  ```bash
+  mypy file.py
+  error: Unsupported operand types for + ("int" and "str")
+  ```
+
+- Check the [Mypy documentation](http://mypy-lang.org/) for more information.
+
+- Example 1
+
+    ```python
+    # Example code test_1.py
+    def add_numbers(a: int, b: int) -> int:
+        return a + b
+
+    result = add_numbers(5, "10")  # Type mismatch: 'str' cannot be added to 'int'
+    print(result)
+    ```
+
+    ```bash
+    mypy test_1.py
+    # Output
+    test.py:5: error: Argument 2 to "add_numbers" has incompatible type "str"; expected "int"  [arg-type]
+    Found 1 error in 1 file (checked 1 source file)
+    ```
+
+- Example 2
+
+    ```python
+    # Example code test_2.py
+    import numpy as np
+
+    def calculate_mean(data: np.ndarray) -> float:
+        return np.mean(data)
+
+    numbers = [1, 2, 3, 4, 5]  # Incorrect type: List[int] instead of np.ndarray
+    mean = calculate_mean(numbers)
+    print(mean)
+    ```
+
+    ```bash
+    mypy test_2.py
+    # Output
+    test.py:8: error: Argument 1 to "calculate_mean" has incompatible type "List[int]"; expected "ndarray[Any, Any]"  [arg-type]
+    Found 1 error in 1 file (checked 1 source file)
+    ```
+
+- **You need to provide type hints for your code to be checked by mypy. Else it will not be able to check the type of the variables.**
+- Mypy will also check for type errors in third-party libraries.
+
+### Black
+
+- Use **black** to format your code.
+- Black lets you format your code in a consistent way.
+- Black can be run using the following command:
+
+  ```bash
+  black --check --diff file.py # will show the changes that will be made without making them
+  # or
+  black file.py # will format the file in place
+  ```
+
+- It can be integrated with your editor to format your code on save.
+
+- Check the [Black documentation](https://black.readthedocs.io/) for more information.
+
+- Example:
+
+    ```python
+    # before
+    def my_function():
+    x=1
+    y = 2
+    z=3
+    if x>y:
+    print("x is greater than y")
+    else:
+    print("y is greater than or equal to x")
+    ```
+
+    <div align="center">
+    <font size="5">↓</font>
+    </div>
+
+    ```python
+    # after
+    def my_function():
+        x = 1
+        y = 2
+        z = 3
+        if x > y:
+            print("x is greater than y")
+        else:
+            print("y is greater than or equal to x")
+    ```
+
+- Use **isort** to sort your imports.
+- Isort does sort import in the following order:
+  - standard library imports
+  - related third party imports
+  - local application/library specific imports
+- Isort can be run using the following command:
+
+    ```bash
+    isort --check-only --diff file.py # will show the changes that will be made without making them
+    # or
+    isort file.py # will format the file in place
+    ```
+
+- It can also be integrated with your editor to sort your imports on save.
+- Here is an example of how isort sorts imports:
+
+    ```python
+    # before
+    import os
+    import sys
+    import django
+    import requests
+    import uam
+    ```
+
+    <div align="center">
+    <font size="5">↓</font>
+    </div>
+
+    ```python
+    # after
+    import os
+    import sys
+
+    import django
+    import requests
+
+    import uam
+    ```
+
+  - Check the [Isort documentation](https://pycqa.github.io/isort/) for more information.
+
+</details>
