@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: en_core_web_sm_qbf
+Version: 3.6.0
+Summary: English pipeline optimized for CPU. Contains tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.
+Home-page: https://explosion.ai
+Author: Explosion
+Author-email: contact@explosion.ai
+License: MIT
+License-File: LICENSE
+License-File: LICENSES_SOURCES
+Requires-Dist: spacy<3.7.0,>=3.6.0
