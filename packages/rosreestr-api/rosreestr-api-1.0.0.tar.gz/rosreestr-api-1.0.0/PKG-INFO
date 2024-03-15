@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: rosreestr-api
+Version: 1.0.0
+Summary: Toolset to work with rosreestr.gov.ru/api and pkk.rosreestr.ru/api
+Home-page: https://github.com/GregEremeev/rosreestr-api
+Author: Greg Eremeev
+Author-email: gregory.eremeev@gmail.com
+License: BSD-3-Clause
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+License-File: LICENCE.txt
+Requires-Dist: requests==2.31.0
+Requires-Dist: fake-useragent==1.5.0
+Provides-Extra: dev
+Requires-Dist: ipdb>=0.13.2; extra == "dev"
+Requires-Dist: pytest>=5.4.1; extra == "dev"
+Requires-Dist: httpretty>=1.0.2; extra == "dev"
