@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: awesome-latex-maker
+Version: 0.0.2
+Summary: Awesome LaTeX Maker
+Author: Georgii Angeni
+Requires-Python: >=3.11, <4
+Description-Content-Type: text/plain
+Requires-Dist: pdflatex
+
+Awesome LaTeX Maker
