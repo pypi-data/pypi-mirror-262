@@ -1,0 +1,14 @@
+numpy
+scipy
+astropy
+specutils
+
+[pyqt6]
+PyQt6
+PyQt6-Charts
+
+[pyside6]
+PySide6
+
+[redrock]
+redrock
