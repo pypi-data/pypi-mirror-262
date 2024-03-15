@@ -1,0 +1,14 @@
+gufo/http/__init__.py,sha256=OgVlA9El305NsrxZTNA95c1QYLpwlW40jqT7t0m3HYg,933
+gufo/http/py.typed,sha256=IX4GVS0w1ozL5zVROQ9eXNmPtDRpjXLbhTclnT1DW_M,169
+gufo/http/httpd.py,sha256=gmfvV5YH-jLXgFyR_qG_FUzrvkt68Q5AvC9GitXSRvk,12881
+gufo/http/sync_client.py,sha256=gBLCCNVlKQJaGQfwWsPxBMRZzN1SSS483suzRGU096Y,6813
+gufo/http/_fast.pyi,sha256=eXekQjrACzH90M9wRa4TDqB5Xu8urRX_TKk3PPXeJmI,2694
+gufo/http/async_client.py,sha256=4igEBfo-7tqpAmizklfyF_F7r8r-unTwjF4Tv6qdkMc,6953
+gufo/http/_fast.cpython-310-x86_64-linux-gnu.so,sha256=nA4nQcAJgM7iaZa8NEh_c7qcpL5U25qk071RcUv3ack,7500944
+gufo/http/util.py,sha256=jtIRC2i5SH_dAVGh6tg_SGLYIfTB1XK2VvKirXjJ6cE,971
+gufo/http/types.py,sha256=AnDozP582TBJryk-ab1Osoydr3v85DTfnm1B_O2-wqo,919
+gufo_http-0.2.0.dist-info/RECORD,,
+gufo_http-0.2.0.dist-info/METADATA,sha256=FTY94nq9bADBBaASJhbh32cL2Om1A3jDEFlYe_7OZXk,5921
+gufo_http-0.2.0.dist-info/WHEEL,sha256=CzQQWV-lNyM92gr3iaBk8dvO35YDHRxgzkZ-dxumUIM,152
+gufo_http-0.2.0.dist-info/top_level.txt,sha256=oqzUsd7ME9VEkgr0OzpovwDbtISCL6PGomKIZ095-sI,5
+gufo_http-0.2.0.dist-info/LICENSE.md,sha256=Gmsx35Dd6HK2RxcUsoZJf1H6bkhwXutqAiIArG4UfKY,1515
