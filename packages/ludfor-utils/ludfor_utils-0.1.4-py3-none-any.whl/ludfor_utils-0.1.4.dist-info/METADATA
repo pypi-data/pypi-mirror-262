@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ludfor-utils
+Version: 0.1.4
+Summary: Funções para utilização em Scripts
+Author: Ludfor Desenvolvimento
+Requires-Dist: psycopg2
+Requires-Dist: smtplib
+Requires-Dist: datetime
+Requires-Dist: email
+Requires-Dist: typing
+Requires-Dist: io
+
