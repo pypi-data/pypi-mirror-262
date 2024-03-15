@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: conflator
+Version: 0.1.2
+Summary: Load small app configurations from environment variables, command line arguments and config files,                 according to a pydantic model.
+Home-page: https://github.com/ecmwf/conflator
+Author: ECMWF
+Author-email: James.Hawkes@ecmwf.int
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
