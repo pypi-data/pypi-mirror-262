@@ -1,0 +1,16 @@
+near_synonym/__init__.py,sha256=ZWLCS7siwzMQIS4Du3ZJWz6URbWdUstGcoYWB481dUc,237
+near_synonym/neg_antonym.py,sha256=K9J3bNpJdfEaCq1tVY09-2tD7S6o9w-XrZZRqmBuU6A,9284
+near_synonym/roformer.py,sha256=zIAy0w9WUmV8TPY8FV32BHrme9eDu9vbPA_xfqWuWOU,4574
+near_synonym/search.py,sha256=nAaRF0aaVqcSw4JEUS8hMl5y96fjE_sLDzjWt1_UfMk,2612
+near_synonym/tools.py,sha256=SC0gc6Nh1CP7z8vseBAB9DgnvuCrgK5lConaXgLzhGY,21035
+near_synonym/version.py,sha256=JW3QgWuttT6T9FnWuoGrypr1YzPHILH7ZM5uV2Guz18,131
+near_synonym/near_synonym_model/__init__.py,sha256=0l9Pd0xrvo080MuDVfnlwGM-2krTQyQrib4ysdkgo64,106
+tet/__init__.py,sha256=-c1-f_Rth_K5L6ViDKT4AJG610gZTxaqWXsO_9nnsJA,106
+tet/tet_ann_alg_of_hnsw.py,sha256=5hUnXYgGvH7OGXNdrqllQwgUkQyUKRPxRYZyxDKvZXs,49203
+tet/tet_calcul_similarity.py,sha256=2flAunI_gkwTzcRH00mrqnm18hEBxHagFIpSmmWwROo,1561
+tet/tet_near_synonym.py,sha256=HYCiDymRGiDyUXmxKad1Q90wqw1B__jO38cav6bhprQ,2157
+near_synonym-0.0.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+near_synonym-0.0.1.dist-info/METADATA,sha256=VJLhjPD8duTT3huXikgfuO4JaAl74MsJwk9vYSw1uBg,5153
+near_synonym-0.0.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+near_synonym-0.0.1.dist-info/top_level.txt,sha256=w5zuK6DwvjATPKLbE25LiIHU41V6X2S_zhqNnUXpYIM,17
+near_synonym-0.0.1.dist-info/RECORD,,
