@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "contacts24"
+version = "24.03.14"
+description = ""
+authors = ["Vitaliy Kononenko <konvio@users.noreply.github.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+colorama = "^0.4.6"
+prompt-toolkit = "^3.0.43"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+ruff = "^0.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "contacts24.cli:start"
