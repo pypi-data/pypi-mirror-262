@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: RPiLEDController
+Version: 0.1.6
+Summary: A library to control the onboard LEDs on a Raspberry Pi
+Home-page: UNKNOWN
+Author: Paul März
+License: UNKNOWN
+Keywords: RASPBERRY,PI,LED
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# RPiLEDController
+This Python can be used to easily control the onboard-leds of a Raspberry Pi
+Currently the following RPis are supported:
+- any Raspberry Pi 4
+- any Raspberry Pi 5
+
+## Installation
+To install the package, simply run the following command:
+```bash
+pip install RPiLEDController
+```
+
+## Usage
+To use the package, simply import it and create an instance of the `RPiLEDController` class:
+```python
+from RPiLEDController import RPiLEDController
+
+led_controller = RPiLEDController()
+```
+At the end of your code, add the following line to release the leds:
+```python
+led_controller.release()
+```
+### ALWAYS USE SUDO TO RUN THE CODE
+You will get this error if you don't use sudo: `PermissionError: [Errno 13] Permission denied: '/sys/class/leds/led1/trigger'`
+
+## Methods
+The following methods are available:
+
+### act_off
+    Turns the green activity led off
+### act_on
+    Turns the green activity led on
+### act_release
+    Resets the trigger of the green activity led to "mmc0"
+### act_reserve
+    Sets the trigger of the green activity led to "none"
+### pwr_off
+    Turns the red power led off
+### pwr_on
+    Turns the red power led on
+### pwr_release
+    Resets the trigger of the red power led to "default-on"
+### pwr_reserve
+    Sets the trigger of the red power led to "none"
+### reserve
+    Sets the trigger of the red power led to "none" and the trigger of the green activity led to "none"
+### release
+    Resets the trigger of the red power led to "default-on" and the trigger of the green activity led to "mmc0"
+
+## Example
+```python
+from RPiLEDController import RPiLEDController
+
+led_controller = RPiLEDController()
+
+led_controller.act_off()
+led_controller.pwr_on()
+
+led_controller.release()
+```
+This code will turn the green activity led off and the red power led on. At the end of the code, the triggers of both leds will be reset to their default values.
+
+
