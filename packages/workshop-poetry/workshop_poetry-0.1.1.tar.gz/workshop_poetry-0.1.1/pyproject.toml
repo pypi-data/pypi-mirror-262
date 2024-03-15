@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "workshop-poetry"
+version = "0.1.1"
+description = ""
+authors = ["SergioNascimento07 <sergioricjr7@gmail.com>"]
+readme = "README.md"
+packages = [{include = "workshop_poetry"}]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.12.2"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs-material = "^9.5.13"
+mkdocstrings = "^0.24.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+gerar_desculpa_p_faltar_aula = "workshop_poetry.main:gerar_desculpa_por_faltar_na_aula_do_gabriel_cli"
