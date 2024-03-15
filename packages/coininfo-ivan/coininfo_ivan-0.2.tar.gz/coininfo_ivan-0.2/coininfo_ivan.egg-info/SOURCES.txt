@@ -1,0 +1,9 @@
+README.md
+setup.py
+coininfo_ivan/__init__.py
+coininfo_ivan/info.py
+coininfo_ivan.egg-info/PKG-INFO
+coininfo_ivan.egg-info/SOURCES.txt
+coininfo_ivan.egg-info/dependency_links.txt
+coininfo_ivan.egg-info/requires.txt
+coininfo_ivan.egg-info/top_level.txt
