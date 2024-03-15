@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>sServer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/bootstrap-5.3.1.min.css?mimetype=text/css">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+
+        #files-dropzone {
+            background-color: #e6e6e6;
+            border-radius: 15px;
+            padding: 20px;
+            margin-left: 5%;
+            width: 90%;
+            height: 19vh;
+            overflow-y: auto;
+        }
+
+        #uploads {
+            display: inline-block;
+        }
+
+        div::-webkit-scrollbar {
+            width: 0;
+        }
+
+
+        .uploaded_file {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        .list {
+            border: 0.5px solid;
+            border-color: #e6e6e6;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .progress_bar {
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid;
+            border-color: #666666;
+            background-color: #666666;
+            height: 10px;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0;
+            background-color: #33ccff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- 文件列表 -->
+        <div class="list" style="height: 50vh; overflow-y: auto;">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>Created At</th>
+                        <th>Size</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="files">
+                    {% for file in files %}
+                    <tr>
+                        <td><a href="{{ url_for('app.download', fid=file.id) }}" target="_blank">{{ file.original_name
+                                }}</a></td>
+                        <td>{{ file.created_at|datetime_format }}</td>
+                        <td>{{ file.size|format_size }}</td>
+                        <td>
+                            <a href="{{ url_for('app.delete', mode='file', id=file.id) }}">
+                                <bottom class="btn btn-danger">删除</bottom>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="list" style="height: 20vh; overflow-y: auto;">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Message</th>
+                        <th>Created At</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="msg-list">
+                    {% for msg in msgs %}
+                    <tr>
+                        <td class="msg">
+                            <pre>{{ msg.content }}</pre>
+                        </td>
+                        <td>{{ msg.created_at|datetime_format }}</td>
+                        <td>
+                            <bottom class="copy-btn btn btn-success">复制</bottom>
+                            <a href="/delete/msg/{{ msg.id }}">
+                                <bottom class="btn btn-danger">删除</bottom>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-group">
+            <form action="{{ url_for('app.msg') }}" method="post">
+                <label for="msg-input">Message:</label>
+                <textarea class="form-control" id="msg-input" name="content" rows="1"></textarea>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+
+        </div>
+
+
+    </div>
+    <div class="dropzone">
+        <div id="files-dropzone">
+            <p id="tips">点击或拖拽上传</p>
+            <input type="file" name="file" id="file" multiple hidden action="{{ url_for('app.upload') }}">
+            <div id="uploads"></div>
+        </div>
+    </div>
+
+    <script>
+
+        function uuidv4() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        let dropArea = document.getElementById('files-dropzone');
+        let fileElem = document.getElementById('file');
+        const action = fileElem.getAttribute("action");
+
+        // 阻止 dragover 和 drop 事件的默认行为以启用拖拽上传
+        ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+
+        // 点击 div 选择文件
+        dropArea.addEventListener('click', () => {
+            let tempInput = document.createElement('input');
+            tempInput.setAttribute('type', 'file');
+            tempInput.setAttribute('multiple', true);
+            tempInput.style.display = 'none';
+
+            tempInput.addEventListener('change', function (event) {
+                handle(event.target.files);
+                document.body.removeChild(tempInput);
+            });
+            document.body.appendChild(tempInput);
+            tempInput.click();
+        }, false);
+
+        // 处理拖拽相关事件
+        dropArea.addEventListener('drop', handleDrop, false);
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        function handleDrop(e) {
+            let dt = e.dataTransfer;
+            let files = dt.files;
+            handle(files);
+        }
+
+        function handleFiles(event) {
+            handle(event.target.files);
+        }
+
+        function handle(files) {
+            var tips = document.getElementById("tips");
+            if (tips != undefined) {
+                tips.remove();
+            }
+            Array.from(files).forEach(uploadFile);
+        }
+
+        async function uploadFile(file) {
+            const chunkSize = 50 * 1024 * 1024;
+            const chunksCount = Math.ceil(file.size / chunkSize);
+            const _id = uuidv4();
+
+            let progressElement = createProgressElement(_id, file.name);
+
+            for (let i = 0; i < chunksCount; i++) {
+                let start = i * chunkSize;
+                let end = Math.min(file.size, (i + 1) * chunkSize);
+
+                let blob = file.slice(start, end);  // 文件切块
+
+                let formData = new FormData();
+                formData.append('file', blob, _id + "-" + i); // 添加文件数据
+
+                const uploadResponse = await fetch(action, {
+                    method: 'POST', body: formData
+                });
+                if (uploadResponse.ok) {
+                    progressElement.style.width = ((i + 1) * 100 / chunksCount) + "%";
+                } else {
+                    progressElement.style.backgroundColor = "#ff9999";
+                    progressElement.parentNode.style.borderColor = "#ff0000";
+                    return;
+                }
+            }
+
+            const uploadResponse = await fetch(action, {
+                method: 'PATCH',
+                body: JSON.stringify({ filename: file.name, _id: _id, chunks: chunksCount }),
+                headers: { 'Content-Type': 'application/json' },
+            });
+            const finishResult = await uploadResponse.text();
+            if (uploadResponse.ok) {
+                progressElement.style.backgroundColor = "#00ff00";
+                var tbody = document.getElementById("files");
+                tbody.insertAdjacentHTML('afterbegin', finishResult);
+            } else {
+                progressElement.style.backgroundColor = "#ff9999";
+                progressElement.parentNode.style.borderColor = "#ff0000";
+                return;
+            }
+        }
+
+        function createProgressElement(_id, filename) {
+            let uploadElem = document.createElement('div');
+            uploadElem.className = "uploaded_file"
+
+            uploadElem.innerHTML = `
+                <div class="progress_bar"><div id="${_id}" class="progress"></div></div>
+                <span>${filename}</span>
+            `;
+
+            document.getElementById('uploads').appendChild(uploadElem);
+            return document.getElementById(_id);
+        }
+
+
+        document.querySelectorAll('.copy-btn').forEach(function (btn) {
+            btn.addEventListener('click', function (ev) {
+                var content = this.parentNode.parentNode.querySelector('.msg').textContent.trim();
+                navigator.clipboard.writeText(content).then(function () {
+                    console.log('复制成功');
+                }, function (err) {
+                    console.log('复制失败', err);
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
