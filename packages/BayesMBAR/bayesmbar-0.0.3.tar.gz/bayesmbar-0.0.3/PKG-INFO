@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: BayesMBAR
+Version: 0.0.3
+Summary: Bayesian Multistate Bennett Acceptance Ratio Methods
+Project-URL: Homepage, https://bayesmbar.readthedocs.io
+Project-URL: Bug Tracker, https://github.com/DingGroup/BayesMBAR/issues
+Author-email: Xinqiang Ding <Xinqiang.Ding@tufts.edu>
+License: MIT License
+        
+        Copyright (c) 2023 The Ding Research Group at the Tufts University
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: blackjax>=1.1.1
+Requires-Dist: jax>=0.4.24
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: optax>=0.1.9
+Requires-Dist: pytest>=8.1.1
+Requires-Dist: scipy>=1.12.0
+Requires-Dist: tqdm>=4.66.2
+Description-Content-Type: text/markdown
+
+# Bayesian Multistate Bennett Acceptance Ratio Method
+
+This repository contains the code for the Bayesian Multistate Bennett Acceptance Ratio Method as described in the [paper](https://doi.org/10.1021/acs.jctc.3c01212). BayesMBAR is a Bayesion generalization of the Multistate Bennett Acceptance Ratio (MBAR) method for computing free energy differences between multiple states. 
+
+Besides its theoretical interest, BayesMBAR has two practical advantages over MBAR. First, it provides a more accurate uncertainty estimate, especially when the number of samples is small or the phase space overlap between states is poor. Second, it allows for the incorporation of prior information to improve the accuracy of the free energy estimates. For example, when the free energy surface over a collective variable is known to be smooth, BayesMBAR can use this information to improve the accuracy of the free energy estimates.  The [paper](https://doi.org/10.1021/acs.jctc.3c01212) has more details on the method and its applications.
+
+We are committed to making the code as user-friendly as possible. We are actively working on improving the documentation and adding more examples. If you have any questions or suggestions, please feel free to open an issue or [contact us](mailto:Xinqiang.Ding@tufts.edu) directly.
