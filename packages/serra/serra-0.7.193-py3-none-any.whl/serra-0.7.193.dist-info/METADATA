@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: serra
+Version: 0.7.193
+Summary: Simplified Data Pipelines
+Home-page: http://github.com
+Author: Serra Technologies
+Author-email: founders@serra.io
+License-File: LICENSE.md
+Requires-Dist: click
+Requires-Dist: pyspark
+Requires-Dist: pyyaml
+Requires-Dist: pandas
+Requires-Dist: boto3
+Requires-Dist: databricks-sdk
+Requires-Dist: wheel
+Requires-Dist: loguru
+Requires-Dist: snowflake-connector-python
+Requires-Dist: google-cloud-bigquery
+Requires-Dist: geopy
+Requires-Dist: db-dtypes
+
+Placeholder
