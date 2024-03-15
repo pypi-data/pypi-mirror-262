@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: img-to-pdf
+Version: 1.0.2
+Summary: Simple CLI tool to convert images in a directory to a PDF
+Home-page: https://github.com/Cbannon35/makePDF
+Author: Christopher Bannon
+Author-email: cbannon@berkeley.edu
+License: MIT
+Keywords: PDF,image,convert
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: img2pdf ==0.5.1
+Requires-Dist: Pillow ==10.2.0
+Requires-Dist: pillow-heif ==0.15.0
+Requires-Dist: PyPDF2 ==3.0.1
+Requires-Dist: setuptools ==58.0.4
+Requires-Dist: tqdm ==4.62.3
+
+# makePDF or img-to-pdf
+
+[![PyPI version](https://badge.fury.io/py/img-to-pdf.svg)](https://badge.fury.io/py/img-to-pdf)
+
+
+This is a simple script to convert all images or pdfs in a directory to a single pdf file.
+
+- [PyPI](https://pypi.org/project/img-to-pdf/)
+- [GitHub](https://github.com/Cbannon35/makePDF/)
+
+## Usage
+
+```bash
+makePDF [operation] [flags]
+```
+
+## Operations
+
+- `img`: Convert all images in a directory to a single PDF.
+- `pdf`: Convert all PDFs in a directory to a single PDF.
+- `help`: Display help information.
+
+## Flags
+
+- `-name`: The name of the output file.
+- `-in` or `--input`: The input directory.
+- `-out` or `--output`: The output directory.
+
+## Example
+
+Merge images from the directory `input_images` into a single PDF named `output.pdf` in the directory `example/output_pdf`:
+
+```bash
+makePDF img -in input_images -out example/output_pdf -name output.pdf
+```
+
+Merge all pdf in the current directory into a single PDF in the current directory:
+
+```bash
+makePDF.py pdf
+```
+
+## Installation
+
+```bash
+pip install img-to-pdf
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Motivation
+
+I created this script in an afternoon because I was not having a fun time converting images to PDFs for class. [Automator](https://apple.stackexchange.com/questions/12709/how-can-i-convert-jpg-into-pdf-easily) has a good solution for Mac users, but I was more comfortable in the terminal.
+
+## Room for Improvement
+
+- Add support for other file types.
+- Further Optimization
+
