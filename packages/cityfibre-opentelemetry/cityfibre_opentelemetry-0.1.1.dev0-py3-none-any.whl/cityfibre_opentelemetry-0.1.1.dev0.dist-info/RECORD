@@ -1,0 +1,8 @@
+opentelemetry/__init__.py,sha256=iO8ff1-b79dVk24qlkGvVWeNCI8fP5Ky16yQ8JEdB_o,2234
+opentelemetry/environment_variables.py,sha256=wxEueSBpKLfdNFDrs-bJBiCDtMbTjga74cJMldTzRoI,2058
+opentelemetry/version.py,sha256=CXBIDZMCsj1WFd6wVPoHtSL5NYiFpLQS_Ol6ZtYMZFI,611
+cityfibre_opentelemetry-0.1.1.dev0.dist-info/METADATA,sha256=gmT14ahtYINGxpzQQCWqCm8Tfrz6GaM6Pc7kSnmmNC4,971
+cityfibre_opentelemetry-0.1.1.dev0.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+cityfibre_opentelemetry-0.1.1.dev0.dist-info/entry_points.txt,sha256=J6GySEMjeGBe7MGnS4ug4X6u7kuPcSzk3S20tQigStM,80
+cityfibre_opentelemetry-0.1.1.dev0.dist-info/licenses/LICENSE,sha256=6nzowAlQ1RvrFhG6tHrMWrX5zYy1tSZVS16Vyl5FI8I,11338
+cityfibre_opentelemetry-0.1.1.dev0.dist-info/RECORD,,
