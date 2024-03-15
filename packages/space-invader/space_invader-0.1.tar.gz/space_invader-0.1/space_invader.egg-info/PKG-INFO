@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: space_invader
+Version: 0.1
+License-File: LICENSE
+Requires-Dist: pygame==2.5.2

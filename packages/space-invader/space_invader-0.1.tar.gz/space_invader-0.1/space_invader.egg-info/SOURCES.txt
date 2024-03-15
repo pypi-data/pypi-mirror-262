@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+space_invader.egg-info/PKG-INFO
+space_invader.egg-info/SOURCES.txt
+space_invader.egg-info/dependency_links.txt
+space_invader.egg-info/requires.txt
+space_invader.egg-info/top_level.txt
+tests/test_methods.py
