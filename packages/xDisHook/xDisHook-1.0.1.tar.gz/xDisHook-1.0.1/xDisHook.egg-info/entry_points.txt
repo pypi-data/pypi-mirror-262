@@ -1,0 +1,2 @@
+[console_scripts]
+xdishook = xDisHook.main:main_function
