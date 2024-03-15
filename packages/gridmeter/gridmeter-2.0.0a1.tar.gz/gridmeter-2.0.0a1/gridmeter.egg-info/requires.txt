@@ -1,0 +1,12 @@
+attrs
+numpy>=1.24.4
+scipy>=1.10.1
+pandas>=1.1.0
+numba
+scikit-learn>=1.3.0
+fdasrsf<=2.5.2,>=2.4.1
+scikit-fda
+pydantic>=2.0.0
+eval_type_backport
+
+[off-dataflow]

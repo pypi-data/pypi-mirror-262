@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gridmeter
+Version: 2.0.0a1
+Summary: Tools for stratified sampling for comparison groups
+Home-page: http://github.com/recurve-methods/comparison_groups
+Author: Recurve Analytics, Inc
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: off-dataflow
+License-File: LICENSE
+
+
+# GRIDmeter™
+
+Please see the tutorial Jupyter notebook in [scripts/Tutorial.ipynb](https://github.com/recurve-methods/comparison_groups/blob/master/gridmeter/scripts/Tutorial.ipynb).
+
+
