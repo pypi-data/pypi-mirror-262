@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: saleyo
+Version: 0.1.0
+Summary: A Package to do mixin in Python
+Author-Email: H2Sxxa <h2sxxa0w0@gmail.com>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# saleyo
