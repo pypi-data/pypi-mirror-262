@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "mssi"
+version = "0.1.4"
+description = "Multiscale gene-gene correlation for spatial transcriptomics data"
+authors = ["Doron Haviv"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pygsp = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
