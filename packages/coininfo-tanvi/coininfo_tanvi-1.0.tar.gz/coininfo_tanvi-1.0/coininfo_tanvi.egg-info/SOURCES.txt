@@ -1,0 +1,9 @@
+README.md
+setup.py
+coininfo_tanvi/__init__.py
+coininfo_tanvi/info.py
+coininfo_tanvi.egg-info/PKG-INFO
+coininfo_tanvi.egg-info/SOURCES.txt
+coininfo_tanvi.egg-info/dependency_links.txt
+coininfo_tanvi.egg-info/requires.txt
+coininfo_tanvi.egg-info/top_level.txt
