@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: EDA-bricks
+Version: 3.9.7
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Geethanjali
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: IPython
+Requires-Dist: arch
+Requires-Dist: bokeh
+Requires-Dist: cx-Oracle
+Requires-Dist: dtaidistance
+Requires-Dist: factor-analyzer
+Requires-Dist: ipython
+Requires-Dist: jinja2
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pandasql
+Requires-Dist: plotly
+Requires-Dist: psycopg2
+Requires-Dist: pymssql
+Requires-Dist: pyodbc
+Requires-Dist: pytz
+Requires-Dist: requests
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: spectrum
+Requires-Dist: sqlalchemy
+Requires-Dist: statsmodels
+
+UNKNOWN
+
