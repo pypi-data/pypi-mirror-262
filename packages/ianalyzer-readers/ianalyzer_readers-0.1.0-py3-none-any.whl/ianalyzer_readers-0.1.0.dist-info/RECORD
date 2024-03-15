@@ -1,0 +1,14 @@
+ianalyzer_readers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ianalyzer_readers/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ianalyzer_readers/extract.py,sha256=tZ1SWJG029GxE5571RNfIlTwaTgb5OmPxlw0JDndMw0,21969
+ianalyzer_readers/readers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ianalyzer_readers/readers/core.py,sha256=RfQNAkfRmpY1w-NQBrK7xY0LyD00vS8z5rVnpWmFVLg,6677
+ianalyzer_readers/readers/csv.py,sha256=G8C9c09Z-XAPGNXCN_aHJhkrEjHsfhqJS4f1K0o7iiI,4710
+ianalyzer_readers/readers/html.py,sha256=jL6AsO1BgwhzaKSDk06IeJsWu3DlQfQlDWRVw9SGHv4,2972
+ianalyzer_readers/readers/xlsx.py,sha256=HPbURDsZ2pqpFxTkMpmZt4Y22qHRRy46a7SA0jnJDOs,4574
+ianalyzer_readers/readers/xml.py,sha256=_gFDfCtylIeVgoankXXfemftgl0ec8CaXpFXBEeo3h0,10917
+ianalyzer_readers-0.1.0.dist-info/LICENSE,sha256=KPdxdFLesJmiNqOaRxZ6WrmcRQYLdgxqF-YfPwZk9LU,1205
+ianalyzer_readers-0.1.0.dist-info/METADATA,sha256=WHNWkdpIWwAsP9iMhmH_FUPwv13kVZOzH9-AZ5a_g2Q,3991
+ianalyzer_readers-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ianalyzer_readers-0.1.0.dist-info/top_level.txt,sha256=D7HP-k0WRqRLSRBSKfufuCeker5tsrPvxcit-Clt1ko,18
+ianalyzer_readers-0.1.0.dist-info/RECORD,,
