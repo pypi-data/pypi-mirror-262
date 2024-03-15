@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+MEA_analyzer_jesseantonissen/__init__.py
+MEA_analyzer_jesseantonissen/library_functions.py
+MEA_analyzer_jesseantonissen.egg-info/PKG-INFO
+MEA_analyzer_jesseantonissen.egg-info/SOURCES.txt
+MEA_analyzer_jesseantonissen.egg-info/dependency_links.txt
+MEA_analyzer_jesseantonissen.egg-info/top_level.txt

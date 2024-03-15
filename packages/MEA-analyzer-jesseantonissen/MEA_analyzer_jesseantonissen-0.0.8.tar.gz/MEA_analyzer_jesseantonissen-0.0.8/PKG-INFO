@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: MEA_analyzer_jesseantonissen
+Version: 0.0.8
+Summary: Library for analyzing MEA files.
+Home-page: https://github.com/jesseantonissen/MEA_Analyzer.git
+Author: Jesse Antonissen
+Author-email: j.b.antonissen@hva.nl
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MEA_Analyzer
+This repository contains library functions to analyze MEA files.
