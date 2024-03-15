@@ -1,0 +1,10 @@
+hr_dataset/__init__.py,sha256=F3WQfNSkQPU4gn3jshnoeNkZK01NDx77B4oxPNZ3jqs,63
+hr_dataset/config/config_parser.py,sha256=gfP_5lJG0fWP0Xcyhwua5AeSlejed_a1o8kdv70JWlo,2455
+hr_dataset/config/validate_inputs.py,sha256=xh2Rq5y_-tQ5iPKEi-scscK1tKh-OhoQr5gHTPmImYs,201
+hr_dataset/differenceregel/differenceregel.py,sha256=HLX5YbSOmhqr29YJhZy7TpDyTRRb8-LGruYt4f9Q6ts,8772
+hr_dataset/functions/file_handler.py,sha256=piON8Ie_T9WysSL4EzVbqs8tDEwHEn9q_IG0an3dv3A,951
+hr_dataset/module.py,sha256=kB-JjVyPEdzkPFuYt_Yes3G-NypGdGr3Hcx-JMCkSwI,2399
+hr_dataset/resultatoversigt/resultatoversigt.py,sha256=lWI08OFuP5GfvyrnFny-GOTqF4z-k_1lTeCV_QJZApM,2239
+hr_dataset-0.1.2.dist-info/METADATA,sha256=EeeykT2cgAVBtMAKidEKA4Z2N5UvDLGJ_OZKghPy_Pw,418
+hr_dataset-0.1.2.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+hr_dataset-0.1.2.dist-info/RECORD,,
