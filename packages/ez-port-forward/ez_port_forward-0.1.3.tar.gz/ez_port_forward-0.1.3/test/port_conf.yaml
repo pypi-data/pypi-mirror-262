@@ -1,0 +1,44 @@
+vmbr0:
+    bridge: eno1
+    subnet: 10.0.0.0/24
+    forwards: 
+        201: # minecraft create
+            ssh:
+            tcpudp: 25565,25567
+
+        207: # minecraft vanulla-mod
+            ssh:
+            tcpudp: 25566,25576
+            tcp:
+                20780: 8080
+
+        208: 
+            udp: 7777,15000,15777
+
+        102: # fileserver
+            udp: 137,138
+            tcp: 139,445
+        
+        103: # teamspeak
+            udp: 9987
+            tcp: 10011,10022,10443,30033
+
+        204: #7d2d
+            udp: 26900,26901,26902,26903
+            tcp: 26900
+
+        202: # arma gungame
+            ssh:
+            udp: 2302,2303,2304,2305,2306,2307
+
+        205: # arma prophunt
+            ssh:
+            udp: 2402,2403,2404,2405,2406
+            
+        209: # palworld
+            ssh:
+            udp: 27015,8211,25577
+
+        211: # enshrouded
+            ssh:
+            udp: 15636,15637

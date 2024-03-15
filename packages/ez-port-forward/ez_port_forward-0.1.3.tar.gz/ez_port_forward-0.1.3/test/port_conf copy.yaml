@@ -1,0 +1,54 @@
+vmbr0:   
+    bridge: eno1
+    subnet: 10.0.0.0/24
+    forwards:
+        #### Tools LCX
+        102: # Fileserver
+            udp: 137,138
+            tcp: 139,445
+        
+        103: # team speak 3
+            udp: 9987
+            tcp: 10011,10022,10443,30033
+
+        111: # PiHole
+            tcpudp: 53
+            tcp:
+                11180: 80
+
+        112: # Wireguard
+            udp: 51820
+
+        #### Gaming LCX
+        201: # Minecraft create
+            ssh:
+            tcpudp: 25565,25567
+
+        204: #7d2d
+            udp: 26900,26901,26902,26903
+            tcp: 26900
+
+        202: # arma gungame
+            ssh:
+            udp: 2302,2303,2304,2305,2306,2307
+
+        205: # arma prophunt
+            ssh:
+            udp: 2402,2403,2404,2405,2406
+
+        207: # Minecraft vanilla-mod
+            ssh:
+            tcpudp: 25566,25576
+            tcp:
+                20780: 8080
+
+        208: # Satisfactory
+            udp: 7777,15000,15777
+            
+        209: # Palworld
+            ssh:
+            udp: 27015,8211,25577
+
+        211: # Enshrouded
+            ssh:
+            udp: 15636,15637

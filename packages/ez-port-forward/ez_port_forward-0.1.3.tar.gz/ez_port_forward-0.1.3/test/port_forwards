@@ -1,0 +1,26 @@
+iface vmbr0 inet static
+#--- Container 101
+	post-up iptables -t nat -A PREROUTING -i eno1 -p tcp --dport 10101 -j DNAT --to 10.0.0.101:True
+	post-up iptables -t nat -A PREROUTING -i eno1 -p tcp --dport 123 -j DNAT --to 10.0.0.101:123
+	post-up iptables -t nat -A PREROUTING -i eno1 -p tcp --dport 345 -j DNAT --to 10.0.0.101:345
+	post-up iptables -t nat -A PREROUTING -i eno1 -p tcp --dport 567 -j DNAT --to 10.0.0.101:567
+	post-up iptables -t nat -A PREROUTING -i eno1 -p udp --dport 888 -j DNAT --to 10.0.0.101:888
+	post-up iptables -t nat -A PREROUTING -i eno1 -p udp --dport 999 -j DNAT --to 10.0.0.101:999
+	post-up iptables -t nat -A PREROUTING -i eno1 -p tcp --dport 111 -j DNAT --to 10.0.0.101:111
+	post-up iptables -t nat -A PREROUTING -i eno1 -p udp --dport 111 -j DNAT --to 10.0.0.101:111
+	post-up iptables -t nat -A PREROUTING -i eno1 -p tcp --dport 222 -j DNAT --to 10.0.0.101:222
+	post-up iptables -t nat -A PREROUTING -i eno1 -p udp --dport 222 -j DNAT --to 10.0.0.101:222
+#---
+#--- Container 102
+	post-up iptables -t nat -A PREROUTING -i eno1 -p tcp --dport 123 -j DNAT --to 10.0.0.102:321
+# 	post-up iptables -t nat -A PREROUTING -i eno1 -p tcp --dport 345 -j DNAT --to 10.0.0.102:345
+	post-up iptables -t nat -A PREROUTING -i eno1 -p tcp --dport 567 -j DNAT --to 10.0.0.102:765
+#---
+#--- Container 201
+	post-up iptables -t nat -A PREROUTING -i eno1 -p tcp --dport 20122 -j DNAT --to 10.0.0.201:22
+#---
+#--- Container 202
+	post-up iptables -t nat -A PREROUTING -i eno1 -p tcp --dport 22 -j DNAT --to 10.0.0.202:20222
+#---
+#--- Container 333
+#---
