@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: wallpaper-downloader
+Version: 0.0.1
+Summary: wallpaper-downloader is a simple Python module to easily download wallpaper images from websites that we supported.
+Home-page: https://github.com/omamkaz/wallpaper-downloader
+License: GPL-3.0
+Keywords: wallpaper,image,internet,downloader,fetch,web,scrape,bs4,script,automation
+Author: Osama Mohammed Al-zabidi
+Author-email: omamkaz@gmail.com
+Requires-Python: >=3.7,<3.13
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: beautifulsoup4 (==4.11.1)
+Requires-Dist: lxml (==4.9.2)
+Requires-Dist: requests (==2.31.0)
+Project-URL: Repository, https://github.com/omamkaz/wallpaper-downloader
+Description-Content-Type: text/markdown
+
+# Wallpaper Downloader
+wallpaper-downloader is a simple Python module to easily download wallpaper images from websites that we supported.
+
+
+# Installation
+```bash
+pip install wallpaper-downloader
+```
+
+# Usage
+```python
+from walldown import WallpaperFlare
+from walldown import download_url
+
+
+wf = WallpaperFlare("Space")
+for img in wf.search(2):
+    print("name: ", img.name)
+    print("size: ", img.size)
+    print("width: ", img.width)
+    print("height: ", img.height)
+    print("url: ", img.url)
+    print("preview: ", img.preview)
+    print("keywords: ", list(img.keywords))
+    print("description: ", img.description)
+    print("px_resolution: ", img.px_resolution)
+    print("=" * 30)
+
+    # To download image uncomment this line
+    # download_url(img.url)
+```
+# Changelog
+
+
