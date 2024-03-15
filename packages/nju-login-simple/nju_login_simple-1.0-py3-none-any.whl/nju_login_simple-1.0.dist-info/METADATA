@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: nju_login_simple
+Version: 1.0
+Summary: Login to authserver.nju.edu.cn, using python requests
+Project-URL: Homepage, https://github.com/SuperKenVery/nju-login
+Project-URL: Issues, https://github.com/SuperKenVery/nju-login/issues
+Author-email: SuperKenVery <superkenvery@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: ddddocr==1.0.6
+Requires-Dist: lxml==5.1.0
+Requires-Dist: pycryptodomex==3.20.0
+Requires-Dist: requests==2.31.0
+Description-Content-Type: text/markdown
+
+# 南京大学统一认证登陆
+
+从账号密码拿到 `CASTGC` cookie
+
+```python
+import nju_login_simple
+
+response=nju_login.login('221223322','password')
+castgc=response.cookies['CASTGC']
+```
