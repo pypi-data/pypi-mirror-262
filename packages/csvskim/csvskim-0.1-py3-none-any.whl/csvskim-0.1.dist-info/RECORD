@@ -1,0 +1,9 @@
+csvskim/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+csvskim/__main__.py,sha256=8hDtWlaFZK24KhfNq_ZKgtXqYHsDQDetukOCMlsbW0Q,59
+csvskim/cli.py,sha256=ktjYhJNCBX6z6W4AhN21uhwmHhp9WdldtWuoXq0eox0,1772
+csvskim/lib.py,sha256=H3Eh9iFedQp3EcJxyjT-FbSszgSLNd6fWjQ6udihfNw,698
+csvskim-0.1.dist-info/METADATA,sha256=YND53jgPPD8EgVme5uCmCWAZKhJK5tHdRwt_vqVV9F8,777
+csvskim-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+csvskim-0.1.dist-info/entry_points.txt,sha256=yGgos65iQG7RmubF4k9hDTuJE5sKwk7mtL3OxkfjHv0,63
+csvskim-0.1.dist-info/top_level.txt,sha256=EZrZhvoNUilQYqb9CdmNMjOeAKttx_q-HlsFtcuM_tk,8
+csvskim-0.1.dist-info/RECORD,,
