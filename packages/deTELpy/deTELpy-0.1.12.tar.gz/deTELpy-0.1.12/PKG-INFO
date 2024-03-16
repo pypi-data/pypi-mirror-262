@@ -1,0 +1,527 @@
+Metadata-Version: 2.1
+Name: deTELpy
+Version: 0.1.12
+Summary: Python package of the deTEL translation error detection pipeline from mass-spectrometry data
+Home-page: https://git.mpi-cbg.de/atplab/detelpy
+Author: Cedric Landerer
+Author-email: landerer@mpi-cbg.de
+License: BSD
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas~=1.5.3
+Requires-Dist: numpy~=1.26.3
+Requires-Dist: dataclasses~=0.6
+Requires-Dist: pathlib~=1.0.1
+Requires-Dist: biopython~=1.83
+Requires-Dist: numba~=0.58.1
+Requires-Dist: scipy~=1.11.4
+Requires-Dist: tqdm~=4.66.1
+Requires-Dist: seaborn~=0.13.1
+Requires-Dist: matplotlib~=3.8.2
+Requires-Dist: gooey~=1.0.8
+Requires-Dist: python-dateutil~=2.8.2
+Requires-Dist: Jinja2~=3.1.3
+Requires-Dist: ms_deisotope~=0.0.53
+Requires-Dist: brain-isotopic-distribution~=1.5.16
+Requires-Dist: pebble~=5.0.6
+Requires-Dist: spectrum_utils[iplot]==0.3.5
+Requires-Dist: pythonnet==3.0.3
+
+<h1 align="center">
+    <img src="https://git.mpi-cbg.de/tothpetroczylab/detelpy/-/raw/main/branding/logo/logo_deTEL_v1.0.png" width="300">
+</h1><br>
+
+# detelpy Python package
+
+## Table of content
+1. [detecting Translation Error Landscape: deTEL](#detecting-translation-error-landscape-detel-)
+   1. [Supported Operating Systems](#supported-operating-systems)
+   2. [detelpy is available on PyPI](#detelpy-is-available-on-pypi)
+   3. [detelpy is also installable from source](#detelpy-is-also-installable-from-source)
+   4. [Install external requirements (required for rTEL and eTEL only)](#install-external-requirements-required-for-rTEL-and-eTEL-only)
+      1. [Install Mono (required for Thermo .raw file reading on Linux and MacOS)](#install-mono-required-for-reading-thermo-raw-files-on-linux-and-MacOS)
+      2. [Install FragPipe (required for rTEL only)](#install-fragpipe-required-for-rTEL-only)
+   5. [Quick start](#quick-start)
+2. [rTEL](#rtel)
+    1. [Installation instructions](#installation-instructions)
+       1. [Software Requirements rTEL](#software-requirements-rtel)
+          1. [Internally tested software versions](#internally-tested-software-versions)
+       2. [Supported OS](#supported-os)
+    2. [How to use?](#how-to-use)
+       1. [How to provide the FragPipe installation path?](#how-to-provide-the-fragpipe-installation-path)
+          1. [How to configure the system PATH in Linux?](#how-to-configure-the-system-PATH-in-Linux)
+          2. [How to set the PATH and environment variables in Windows](#how-to-set-the-path-and-environment-variables-in-windows)
+          3. [How to use the program option?](#how-to-use-the-program-option)
+       2. [Positional arguments](#positional-arguments)
+       3. [Optional arguments](#optional-arguments)
+       4. [Example commands](#example-commands)
+          1. [Mode 1: Run the rTEL workflow](#mode-1-run-the-rtel-workflow)
+          2. [Mode 2: Generate a configuration file template](#mode-2-generate-a-configuration-file-template)
+3. [empirical Translation Error Landscape: eTEL](#empirical-translation-error-landscape-etel-)
+   1. [Software Requirements eTEL](#software-requirements-etel)
+   2. [Command line options](#command-line-options)
+4. [multinomial Translation Error Landscape: mTEL](#multinomial-translation-error-landscape-mtel)
+   1. [Software Requirements mTEL](#software-requirements-mtel)
+   2. [Command line options mTEL](#command-line-options-mtel)
+   3. [Examples mTEL](#examples-mtel)
+      1. [Normal run](#normal-run)
+      2. [Bootstrapping datasets](#bootstrapping-datasets)
+5. [How to run deTEL on a cluster?](#how-to-run-detel-on-a-cluster)
+6. [How to containerisation rTEL?](#how-to-containerisation-rtel)
+
+# detecting Translation Error Landscape: deTEL 
+deTEL is a simple pipeline that allows for the exploration of translation errors in mass-spectrometry data.
+deTEL consists of two components:
+* rTEL reveals FDR controlled mass-shifts between expected and observed peptides, potentially translation errors.
+* eTEL detects translation errors in mass-spectrometry data and explores the empirical translation error landscape.
+* mTEL is a model fitted to the translation errors detected by eTEL and describes the multinomial translation error landscape and extends the empirical translation error landscape.
+deTELpy packages these components into an easy to use Python package.
+
+## Supported Operating Systems
+
+| 	                  | Linux 	 | Windows 	 | MacOS 	 |
+|--------------------|---------|-----------|---------|
+| rTEL 	             | [x]   	 | [ ]     	 | [ ]   	 |
+| eTel 	             | [x]   	 | [x]     	 | [x]   	 |
+| eTel with report 	 | [x]   	 | [ ]     	 | [x]   	 |
+| mTel 	             | [x]   	 | [x]     	 | [x]   	 |
+
+Tested on:
+- macOS Ventura 13.4.1
+- AlmaLinux 9.3
+- Windows 10
+
+## detelpy is available on PyPI
+
+detelpy officially supports Python 3.9+ including 3.10 and 3.11. The latest Python version 3.12 is not supported yet due to
+compilation issues on Linux for the wxPython dependency. It might still work on other operating systems.
+
+```shell
+$ python --version
+Python 3.11.4
+
+$ python -m pip install deTELpy
+```
+
+## detelpy is also installable from source
+
+```shell
+$ git clone git@git.mpi-cbg.de:atplab/detelpy.git
+```
+
+Once you have a copy of the source, you can embed it in your own Python package, or install it into your site-packages easily.
+
+```shell
+$ cd detelpy
+$ python3 -m venv detelpy-env
+$ source detelpy-env/bin/activate
+(detelpy-env) $ python -m pip install .
+```
+
+Please note that if you encounter any problems installing **wxpython** for any reason, then please install the Python package **wxpython** individually using a pre-compiled wheel.
+
+Pre-compiled wheels for the various operating systems can be found [here](https://extras.wxpython.org/wxPython4/extras/linux/gtk3/):
+
+Here are example commands for Ubuntu 22.04 and the various Python versions...
+```shell
+ # for Python 3.9 run:
+$ pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.1-cp39-cp39-linux_x86_64.whl
+
+ # for Python 3.10 run:
+$ pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.1-cp310-cp310-linux_x86_64.whl
+
+ # for Python 3.11 run:
+$ pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.1-cp311-cp311-linux_x86_64.whl
+```
+
+Once you installed the **wxpython** package successfully, you should run the pip install command again:
+```shell
+(detelpy-env) $ python -m pip install .
+```
+
+## Install external requirements (required for rTEL and eTEL only)
+
+The only requirement for running mTEL is Python. eTEL requires Python and Mono (.Net).
+
+To run our rTEL wrapper around FragPipe and MSFragger you need a fully functional installation of FragPipe in addition to Mono, including
+MSFragger, Philosopher and IonQuant. MSFragger, Philosopher and IonQuant could be either downloaded and installed via the 
+[FragPipe GUI](https://fragpipe.nesvilab.org/docs/tutorial_fragpipe.html#configure-fragpipe)
+or installed manually. The manual installation requires the download of the tools and the extraction
+within the tools subdirectory of the FragPipe installation folder.
+
+MSFragger can be downloaded [here](http://msfragger-upgrader.nesvilab.org/upgrader/).
+
+Philosopher can be downloaded from the GitHub repo [here](https://github.com/Nesvilab/philosopher/releases).
+
+Please fetch IonQuant [here](https://msfragger.arsci.com/ionquant/) and copy and paste it into the tools subdirectory.
+
+```shell e.g Philosopher
+$ cd fragpipe/tools
+
+$ wget https://github.com/Nesvilab/philosopher/releases/download/v5.1.0/philosopher_v5.1.0_linux_amd64.zip
+
+$ unzip philosopher_v5.1.0_linux_amd64.zip
+```
+
+Your FragPipe tools subdirectory should then look similar to...
+```shell
+[schereme@ddcode-srv2 testing]$ ls -lth binaries/fragpipe_20_0/tools/
+total 202M
+-rwxr-xr-x. 1 username root 1.5K May 31  2023 batmass-consumer.jar
+-rwxr-xr-x. 1 username root  39M May 31  2023 batmass-io-1.30.0.jar
+-rwxr-xr-x. 1 username root 2.2M May 31  2023 commons-math3-3.6.1.jar
+-rwxr-x---. 1 username root  16M Feb 23 10:36 IonQuant-1.10.12.jar
+drwxr-xr-x. 3 username root 4.0K May 31  2023 MSFragger-4.0
+-rwxr-xr-x. 1 username root  31K May 31  2023 msfragger_pep_split.py
+drwx------. 2 username root   80 Nov  8 16:40 philosopher_v5.1.0_linux_amd64
+drwxr-xr-x. 2 username root   58 May 31  2023 PTMProphet
+...
+```
+
+### Install Mono (required for reading Thermo .raw files on Linux and MacOS)
+
+Mono is required to read and process Thermo Fisher RAW files according to the [documentation](https://mobiusklein.github.io/ms_deisotope/docs/_build/html/data_source/formats.html#thermo-fisher-raw).
+Installation instruction for mono could be found [here](https://www.mono-project.com/download/stable/#download-lin) for the various operating systems.
+
+On macOS for example you can use brew:
+```shell
+$ brew install mono
+```
+
+On CentOS for example you can use dnf once the Mono repository is enabled:
+```shell
+$ sudo dnf install mono-complete
+# OR if you need to disable GPG checks
+$ sudo dnf --nogpgcheck install mono-complete
+```
+
+### Install FragPipe (required for rTEL only)
+
+Read chapter [Software Requirements rTEL](#software-requirements-rtel).
+
+## Quick start
+
+### Provided test data
+
+We provide an example test data set and example output files for our users, which can be use for testing or simply to look at. This also gives you the opportunity
+to run any of the 3 modules without the need to start with rTEL, which is the computationally very heavy module.
+
+Provided input files and folders:
+- **example_data/fasta/K12_MG1655_aa_decoys_contam.fasta:** Search database containing peptide sequences and decoys/reverse sequences
+- **example_data/fasta/K12_MG1655_cds.fasta:** Fasta file of coding sequences located, matching the amino acid sequences used for the open search 
+- **example_data/PXD011051:** RAW file folder downloaded from PRIDE containing 3 Thermo Fisher RAW files
+- **example_data/PXD011051/rtel_output_fragpipe_v21_1/psm.tsv:** output file created by the rTEL/open search (by philosopher)
+- **example_data/tRNA_count:** tRNA count folder, containing count files for E.coli and Yeast
+
+Provided output files and folders:
+- **example_data/PXD011051/etel_output/PXD011051_substitution_errors.csv:** Substitution errors, CSV formatted
+- **example_data/PXD011051/etel_output/PXD011051_peptide_counts.csv:** Peptide counts, CSV formatted
+- **example_data/PXD011051/etel_output/PXD011051_codon_counts.csv:** Codon counts, CSV formatted
+- **example_data/PXD011051/etel_output/report/PXD011051.html:** Visual representation of the analysis results, HTML formatted
+
+Please download the compressed archive and the md5 file from [here](https://doi.org/10.17617/3.N58KMF), unzip it and then continue running detelpy from the terminal.
+
+```bash
+# Recommended checksum to confirm the download was successful:
+md5sum -c 20240311_detelpy_example_data.zip.md5
+# Must return *20240311_detelpy_example_data.zip: OK*
+# If not - try downloading the file again as it may be a corrupted copy.
+
+unzip 20240311_detelpy_example_data.zip
+
+# To run rTEL/eTEL/mTEL with GUI
+python -m deTEL
+
+# To run rTEL from command line (CLI: command line interface)
+export PATH="$PATH:<absolute-path-to-fragpipe-install-dir>/bin"
+python -m deTEL rTEL example_data/fasta/K12_MG1655_aa_decoys_contam.fasta example_data/PXD011051 -p rtel_output
+
+# To run eTEL from command line without the report generation step
+python -m deTEL eTEL -f example_data/fasta/K12_MG1655_cds.fasta -psm example_data/PXD011051/rtel_output_fragpipe_v21_1/psm.tsv -s example_data/PXD011051/rtel_output_fragpipe_v21_1 -o example_data/PXD011051/etel_output -decoy rev_ -p PXD011051 -tol 0.005
+
+# To run eTEL from command line including the report generation
+python -m deTEL eTEL --generate-report -f example_data/fasta/K12_MG1655_cds.fasta -psm example_data/PXD011051/rtel_output_fragpipe_v21_1/psm.tsv -s example_data/PXD011051/rtel_output_fragpipe_v21_1 -o example_data/PXD011051/etel_output -p PXD011051
+
+# To run mTEL from command line
+python -m deTEL mTEL -f example_data/PXD011051/etel_output -r example_data/tRNA_count/ecoli_tRNA_count.csv -o example_data/PXD011051/mtel_output -s 250 -p 100 -c 4.2e-17 -t 10 -b 100 -nb -1 -a n
+```
+
+# rTEL
+rTEL reveals FDR controlled mass-shifts between expected and observed peptides, potentially translation errors.
+
+## Installation instructions
+
+### Software Requirements rTEL
+
+Please make sure you have the following software stack installed before running rTEL.
+
+* Python version 3.9+
+* Java JDK/JRE 9+ or Java OpenJDK
+* [FragPipe](https://fragpipe.nesvilab.org/) version 21.0+, preferable version 21.1
+  * [MSFragger](http://msfragger-upgrader.nesvilab.org/upgrader/) version 4.0+
+  * [Philosopher](https://github.com/Nesvilab/philosopher/releases) version 5.1.0+
+  * IonQuant version 1.10.12+
+
+#### A few note about FragPipe
+
+For rTEL to work, you require a functional installation of FragPipe. rTEL is just a Python wrapper around FragPipe.
+So if any combination of the FragPipe tools, like for instance MSFragger version 4.4.0 and IonQuant version 1.7.16, do not
+support each other, then rTEL won't function as well.
+
+**Please note** that since FragPipe version 18.0, a Java version of 9+ is required. For more information on FragPipe installation requirements,
+please have a look at the individual FragPipe release notes [here](https://github.com/Nesvilab/FragPipe/releases).
+
+The FragPipe installation directory has the following structure:
+```bash
+binaries % ls -l fragpipe 
+drwxr-xr-x@ bin
+drwxr-xr-x@ cache
+drwxr-xr-x@ lib
+drwxr-xr-x@ tools
+drwxr-xr-x@ workflows
+```
+This applies for the following FragPipe versions: 17.0+, including the latest version 21.1.
+Please do not change this structure. Any changes will result in rTEL not functioning properly.
+
+If you are using the FragPipe GUI for installing external tools like MSFragger, Philosopher or IonQuant automatically,
+then it will install these tools by default into the sub folder called 'tools'.
+If you make any of these installations manually then **please make sure** that you install any of the above mentioned tools
+into the same 'tools' folder, otherwise rTEL won't be able to resolve all these external binaries.
+
+This is how the FragPipe tools folder should look like:
+```bash
+binaries % ls -l fragpipe/tools
+drwxr-xr-x@ diann 
+drwxr-xr-x@ diann_so
+drwxr-xr-x@ fasta
+drwxr-xr-x@ MSFragger-4.0
+drwxr-xr-x@ philosopher_v5.1.0_linux_amd64
+drwxr-xr-x@ speclib
+...
+```
+
+### Supported OS
+FragPipe only supports Linux and Windows and does **NOT** support Mac OS X operating systems.
+
+## How to use?
+
+### How to provide the FragPipe installation path?
+
+#### How to configure the system PATH in Linux?
+By default rTEL will check your systems PATH for the FragPipe binary installation directory.
+
+For changing your system PATH temporarily in your terminal, use the following export command:
+```bash
+export PATH="$PATH:<fragpipe-install-dir>/bin"
+```
+
+For updating your system PATH permanently add the export command above in your bashrc file.
+
+#### How to set the PATH and environment variables in Windows?
+Documentation on how to change your system PATH in Windows can be found [here](https://www.computerhope.com/issues/ch000549.htm). 
+
+#### How to use the program option?
+If you have multiple different version of FragPipe installed on your local machine or cluster, or if the binary has 
+not been added to the systems path, then we provide an option, which will tell rTEL where to look for the installation folder.
+
+Use the following command to tell rTEL, which FragPipe installation path to use:
+```bash
+python -m deTEL rTEL example_data/fasta/K12_MG1655_aa_decoys_contam.fasta example_data/PXD011051 --fragpipe_bin_dir /usr/local/fragpipe/bin
+```
+
+### Positional arguments
+* FILE: Search database as codon fasta file
+* DIR: Mass spec RAW file location
+
+### Optional arguments
+* -h: Print out help
+* -c: The number of threads used for processing by MSFragger and Crystal-C (default=1)
+* -p: Name of the output folder created within the given RAW file directory
+* -cd: Folder, which contains the configuration files for MSFragger, Crystal-C and PTM-Shepherd (open_search_params, crystal-c.params and shepherd.config)
+* -fp: Folder containing the FragPipe binary
+* -gc: Turns on configuration template generation mode
+* -iq: Turns on MS1 precursor intensity-based quantification
+* -v: Turns on verbosity
+
+### Example commands
+rTEL comes in 2 different modes, one for 1) Running open search and generating the psm file needed for the eTEL step
+and a second one for 2) creating a configuration folder, containing configuration files for the various tools like MSFragger,
+Crystal-C and PTM-Shepherd.
+
+#### Mode 1: Run the rTEL workflow
+The following command will run open search and generate the psm file needed for eTEL
+```bash
+python -m deTEL rTEL example_data/fasta/K12_MG1655_aa_decoys_contam.fasta example_data/PXD011051
+```
+
+#### Mode 2: Generate a configuration file template
+rTEL is shipped with configuration files for MSFragger, Crystal-C and PTM-Shepherd. By default the program will use these
+built in configuration files and all default values. If you would like change any of these configration files and values
+then you would have to create your own configuration folder first of all. We provide a command line tool for you to
+generate your own configuration folder.
+
+The following command will generate a configuration folder at the location provided. It accepts a relative or absolute
+path to the new configuration directory.
+```bash
+python -m deTEL rTEL --generate-config --config_dir test_dir
+```
+Running the above command will create a folder called 'test_dir' in the current working directory with the following 3
+configuration files as an output.
+
+```bash
+test_dir % ls -ls
+-rw-r--r--  crystal-c.params
+-rw-r--r--  open_search.params
+-rw-r--r--  shepherd.config
+```
+
+You may now make any changes to the configurable values, but please keep the format and the structure of the configuration
+files as it is.
+
+You can then use these customized configuration files for running the rTEL workflow using the --config_dir program option like this:
+```bash
+python -m deTEL rTEL example_data/fasta/K12_MG1655_aa_decoys_contam.fasta example_data/PXD011051 --config_dir test_dir/
+```
+
+# empirical Translation Error Landscape: eTEL 
+![empirical Translation Error Landscape (eTEL)](https://git.mpi-cbg.de/tothpetroczylab/detelpy/-/raw/hotfix_post_release_0_1_11/img/eTEL.png)
+eTEL detects the empirical translation error landscape by first performing an open search using MSFragger [(see: Perform open search)](#perform-open-search-with-fragger_open_search).
+The second step is to extract translation errors using custom pythons scripts packaged [(see: detect_substitutions)](#detect_substitutions).
+The output of eTEL can directly be used to fit the mTEL model [(see: multinomial Translation Error Landscape: mTEL)](#multinomial-translation-error-landscape-mtel).
+
+## Software Requirements eTEL
+
+Please make sure you have the following software stack installed before running eTEL.
+
+* Python version 3.8+
+
+## Command line options
+* -f: Fasta file of coding sequences located, matching the amino acid sequences used for the open search.
+* -psm: path to psm.tsv file created by the open search (by philosopher).
+* -s: Folder to which output files are writen.
+* -o: Output folder
+* -p: Prefix used for output files
+* -decoy: identification prefix of decoy sequences (default: rev_)
+* -tol: m/z tolerance, used to filter DP–BP couples that resemble substitutions and exclude pairs that resemble known PTM (default: 0.005)
+* -gr: Option to generate a full dataset report, including plots for visualising the results
+* -r: Option for specifying the mass spec RAW file location (optional). Please note that, by default eTEL expects the RAW files to be present in the parent folder of the given open search output folder (-s option).
+
+## Example
+The below command will detect substitutions in the specified ```psm.tsv``` created by the open search. 
+Since we may have one experiment and want to collect all files in a common folder, we specify a prefix (```Experiment1```) to identify the output belonging to each individual experiment.
+
+```bash
+python -m deTEL eTEL -f project/fasta/s228c_orf_cds.fasta -psm project/open_search_experiment1/psm.tsv -o project/results -p Experiment1
+```
+
+If you would like to generate a full dataset report, including plots for visualising the results, then please use the **--generate-report** option
+provided:
+
+```bash
+python -m deTEL eTEL --generate-report -f project/fasta/s228c_orf_cds.fasta -psm project/open_search_experiment1/psm.tsv -o project/results -p Experiment1
+```
+
+# multinomial Translation Error Landscape: mTEL
+![<multinomial Translation Error Landscape (mTEL)](https://git.mpi-cbg.de/tothpetroczylab/detelpy/-/raw/hotfix_post_release_0_1_11/img/mTEL.png)
+mTEL uses observed translation errors to estimate a multinomial translation error landscape.
+mTEL is based on the competition of tRNAs and estimates affinity parameters between codon/anticodon pairs.
+
+## Software Requirements mTEL
+
+Please make sure you have the following software stack installed before running mTEL.
+
+* Python version 3.8+
+
+## Command line options mTEL
+* -f: Folder with codon_count and error files.
+* -r: tRNA count file.
+* -o: Output folder.
+* -s: Number of samples of the chain.
+* -p: Number of posterior samples.
+* -c: Cell volume assumed (in cubic micrometers), Default: 4.2e-17 (approximate size of a yeast cell).
+* -t: Number to thin out chain by.
+* -b: Number of burn-in steps.
+* -nb: Number of sub-samplings performed.
+* -os: suffix added to output files (default: date).
+* -a: aggregate all datasets by summation (y,n) Default: No (n).
+
+## Examples mTEL
+
+### Normal run
+We assume that the folder ```ecoli``` contains all needed pairs of ```*_codon_counts.csv``` and ```*_substitution_errors.csv``` files.
+A cell volume of 0.6e-18 is assumed for E. coli. We will collect 1000 samples after disgarding 1000 burn-in samples. 
+In total, this run will perform (1000 + 1000) * 10 = 20000 steps. The last 200 samples will be used to estimate the posterior distributions of the indivisual parameters.
+```bash
+$ python -m deTEL mTEL -f ecoli -r example_data/tRNA_count/ecoli_tRNA_count.csv -c 0.6e-18 -o output/ecoli/ -s 1000 -p 200 -t 10 -b 1000
+```
+
+### Bootstrapping datasets
+We can bootstrap datasets as they can show a high variability. This allows us to explore parameter sensitivity and robustness.
+This run perfomes 20 resamplings with replacement of the datasets found in the folder ```yeast```, keeping the number of datasets constant.
+For each resampling, the model will collect 250 samples after 10 burn-in steps and perform a total of (250 + 10) * 20 = 5200. The last 100 samples of each run will be used to estimate the posterior mean.
+```bash
+$ python -m deTEL mTEL -f yeast -r example_data/tRNA_count/yeast_tRNA_count.csv -c 4.2e-17 -o output/yeast/ -s 250 -p 100 -t 20 -b 10 -nb 20
+```
+
+# How to run deTEL on a cluster?
+
+Here we give an example of a bash script for running eTEL on a Slurm cluster. This could be used as a template for
+your own cluster setup.
+
+```bash
+#!/bin/bash
+#SBATCH -J eTEL
+#SBATCH -o .out/etel.out
+#SBATCH -e .err/etel.err
+#SBATCH --partition=batch
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --time=02:00:00
+
+module load python/3.10.7
+
+FASTA='test_data/fasta/bacteria/K12_MG1655_cds.fasta'
+PSM_FILE='test_data/PXD031425_psm.tsv'
+OUTPUT_FOLDER="test_data/PXD031425_results"
+PREFIX=($(echo $PSM_FILE | cut -d '/' -f 3 | cut -d '_' -f 1))
+
+mkdir -p OUTPUT_FOLDER
+
+python3.10 -m deTEL eTEL -f ${FASTA} -psm ${PSM_FILE} -o ${OUTPUT_FOLDER} -p ${PREFIX}
+```
+
+# How to containerisation rTEL?
+
+## Building your Docker images
+
+Download FragPipe, MSFragger, Philosopher and IonQuant into a sub-directory called binaries for instance and adjust
+line 66 of the Dockerfile, which copies the binaries into the container.
+
+```shell
+ln 64: COPY binaries/fragpipe_v21 /fragpipe
+```
+
+```shell
+$ docker build . -f Dockerfile -t atplab/detelpy
+```
+
+## Run your image as a container
+
+```shell
+$ docker run atplab/detelpy
+
+e.g.
+$ docker run -v ./test_data/fasta/s228c_orf_aa_decoys.fasta:/app/inputs/s228c_orf_aa_decoys.fasta -v ./test_data/PXD018591/:/app/inputs/PXD018591/ atplab/detelpy /app/inputs/s228c_orf_aa_decoys.fasta /app/inputs/PXD018591 -p output3 
+```
+
+## Create an interactive bash shell in the container
+
+```shell
+$ docker run -it --entrypoint sh atplab/detelpy
+```
