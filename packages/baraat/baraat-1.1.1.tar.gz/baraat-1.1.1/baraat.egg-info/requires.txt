@@ -1,0 +1,9 @@
+transformers
+tokenizers
+datasets
+torch==2.2.0
+fasttext
+huggingface_hub
+bitsandbytes
+accelerate
+peft
