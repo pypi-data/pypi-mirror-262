@@ -1,0 +1,46 @@
+[project]
+name = "tglite"
+version = "0.0.1"
+description = "Temporal GNN Lightweight Framework"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Yufeng Wang", email = "yufengwang05@gmail.com"}
+]
+maintainers = [
+  {name = "Wanyu Zhao", email = "wanyu2@illinois.edu"},
+  {name = "Hengjia Yu", email = "hengjia2@illinois.edu"}
+]
+keywords = [
+  "machine learning",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+]
+requires-python = ">=3.7"
+dependencies = [
+  "numpy==1.21.6",
+  "torch>=1.12.1",
+  "torch-scatter>=2.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["sphinx"]
+test = ["pytest", "pytest-cov"]
+
+[project.urls]
+homepage = "https://github.com/ADAPT-uiuc/tglite"
+repository = "https://github.com/ADAPT-uiuc/tglite"
+
+[tool.setuptools.packages.find]
+where = ["python"]
+include = ["tglite*"]
+namespaces = false
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "torch>=1.12.1"]
+build-backend = "setuptools.build_meta"
