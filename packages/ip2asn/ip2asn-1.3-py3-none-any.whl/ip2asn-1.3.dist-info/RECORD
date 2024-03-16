@@ -1,0 +1,9 @@
+ip2asn/__init__.py,sha256=dI98dNJy0G_gPW0157ctGlPnvGDr9UAcoctUTQixcak,5157
+ip2asn/main.py,sha256=pOsM5IOss4rHNo8rs218cQKgJvY2OFqBBxGJVQ9I7eQ,6309
+ip2asn/test.py,sha256=Ez8dZOFoxrkzsS0rDrIRIKN7gCNHIn1TbsMG2MSo4LQ,88
+ip2asn/tests/test_ip2asn.py,sha256=iICOPP_nHGM-jZwqNEq1DEB4pHOfru-SQPyDakpdbGU,8645
+ip2asn-1.3.dist-info/METADATA,sha256=97MS6oYmY6RC-1HZtQ2IaQVzzSVKSFCKNV1vc7zsA4Y,2395
+ip2asn-1.3.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+ip2asn-1.3.dist-info/entry_points.txt,sha256=_CO09_7yZAaV8DWYIXsK0SPUxBdciKIUPNTxM0BaTOM,44
+ip2asn-1.3.dist-info/licenses/LICENSE,sha256=C-1joJ1djpW_F5j71Ng1GEtevUHPsA2YBxL-vaAguto,1122
+ip2asn-1.3.dist-info/RECORD,,
