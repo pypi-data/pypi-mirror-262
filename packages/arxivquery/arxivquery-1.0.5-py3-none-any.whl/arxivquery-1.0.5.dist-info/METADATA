@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: arxivquery
+Version: 1.0.5
+Summary: A simple wrapper for extracting Arxiv search results to a workable dataframe
+Home-page: https://github.com/uaineteine/ArxivAPI
+Author: Daniel Stamer-Squair
+Author-email: uaine.teine@hotmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: scikit-learn
+Requires-Dist: gensim
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: bs4
+Requires-Dist: tqdm
+Requires-Dist: regex
+Requires-Dist: wheel
+Requires-Dist: twine
+
