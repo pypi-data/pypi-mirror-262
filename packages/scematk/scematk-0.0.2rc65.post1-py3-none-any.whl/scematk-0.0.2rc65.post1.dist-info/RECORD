@@ -1,0 +1,10 @@
+scematk/__init__.py,sha256=b9KmFTlsjR-fL_VPXsM3Ws8oT7nTHObrVioE4PluOI0,360
+scematk/plot/__init__.py,sha256=OanNrppr7S7e6WWIzBBIl3QXneo3wT7hAgcpKB3vfRc,67
+scematk/plot/_show_thumb.py,sha256=uWN-zvJNpGHn_JuoEmn6Ni5y8u7L48Wb_aUTtJxaFsY,1234
+scematk/process/__init__.py,sha256=2qJSb6hbzzFZXWG1ULQBrgu9KtaY8TrbTnDUuPzhFrw,109
+scematk/process/_process.py,sha256=YhJ_CpGZv0zcGgMz3rtU_BHn1HAR5iqHdWTPaC6HKUg,316
+scematk/process/_processor.py,sha256=0PqlGPRDLFVKR1rxkHjQdpo_9coRs8qMLZ_j9coy4QY,473
+scematk-0.0.2rc65.post1.dist-info/LICENSE,sha256=ws_MuBL-SCEBqPBFl9_FqZkaaydIJmxHrJG2parhU4M,1141
+scematk-0.0.2rc65.post1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+scematk-0.0.2rc65.post1.dist-info/METADATA,sha256=8wacv6zLZDhVB4tWUsPTUOqFHBqYYgG0vhKSdJQNQx8,16981
+scematk-0.0.2rc65.post1.dist-info/RECORD,,
