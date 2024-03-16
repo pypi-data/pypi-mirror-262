@@ -1,0 +1,7 @@
+setup.py
+XxPipPackage/__init__.py
+XxPipPackage/utils.py
+XxPipPackage.egg-info/PKG-INFO
+XxPipPackage.egg-info/SOURCES.txt
+XxPipPackage.egg-info/dependency_links.txt
+XxPipPackage.egg-info/top_level.txt

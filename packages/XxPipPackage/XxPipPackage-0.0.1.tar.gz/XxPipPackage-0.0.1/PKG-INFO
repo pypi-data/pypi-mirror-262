@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: XxPipPackage
+Version: 0.0.1
+Summary: A demo for Python pip package
+Home-page: https://github.com/demoprj/XxPipPackage
+Author: tokoyi
+Author-email: tokoyi@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+
+A demo for Python pip package ...
+
