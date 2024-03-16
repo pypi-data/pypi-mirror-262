@@ -1,0 +1,1440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>987</width>
+    <height>794</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:transparent;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame_7">
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>730</y>
+         <width>961</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgba(2,2,2,150);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>1</x>
+         <y>1</y>
+         <width>961</width>
+         <height>761</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:50px;
+opacity:0.5;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="pixmap">
+        <pixmap>../icon/background-43-6.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>961</width>
+         <height>731</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>166660</width>
+         <height>166660</height>
+        </size>
+       </property>
+       <property name="toolTipDuration">
+        <number>-1</number>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTabWidget::pane { /* The tab widget frame */
+    border-top: 2px solid #C2C7CB;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(128, 218, 205, 255), stop:1 rgba(44, 175, 255, 158))
+}
+
+
+
+QTabWidget::tab-bar {
+
+    width:342px
+}
+
+QTabBar::tab {
+
+min-width:70px;
+
+min-height:25px;
+
+color: white;
+
+font:13px &quot;Microsoft YaHei&quot;;
+
+border: 2px solid;
+
+border-color:rgb(0, 0, 120);
+
+border-radius:3px;
+}
+
+QTabBar::tab:selected{
+
+min-width:70px;
+
+min-height:25px;
+color: white;
+
+font:13px &quot;Microsoft YaHei&quot;;
+
+border: 2px solid;
+
+border-bottom: 0px solid;
+
+border-color: #4796f0;
+}
+
+</string>
+       </property>
+       <property name="tabPosition">
+        <enum>QTabWidget::North</enum>
+       </property>
+       <property name="tabShape">
+        <enum>QTabWidget::Rounded</enum>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <property name="elideMode">
+        <enum>Qt::ElideNone</enum>
+       </property>
+       <property name="usesScrollButtons">
+        <bool>true</bool>
+       </property>
+       <property name="documentMode">
+        <bool>false</bool>
+       </property>
+       <property name="tabsClosable">
+        <bool>false</bool>
+       </property>
+       <property name="movable">
+        <bool>false</bool>
+       </property>
+       <property name="tabBarAutoHide">
+        <bool>false</bool>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Data Enhancement</string>
+        </attribute>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>100</y>
+           <width>691</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>100</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">color:rgb(0, 0, 0);
+font: 18pt ;
+font: 18pt &quot;华文新魏&quot;;
+font: 75 18pt &quot;Adobe Gothic Std B&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string> Raw Data</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="styleSheet">
+             <string notr="true">color:rgb(0, 0, 0);
+;
+font: 75 18pt &quot;Adobe Gothic Std B&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Enhancement</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>170</y>
+           <width>691</width>
+           <height>301</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>100</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame">
+            <property name="styleSheet">
+             <string notr="true">background-color:rgb(255, 255, 255);
+border:1px outset black;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_2">
+            <property name="styleSheet">
+             <string notr="true">background-color:rgb(255, 255, 255);
+border:1px outset black;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>490</y>
+           <width>691</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>100</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QScrollBar" name="horizontalScrollBar_2">
+            <property name="styleSheet">
+             <string notr="true">QScrollBar:horizontal {
+    border: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+    height: 15px;
+    margin: 0px 20px 0 20px;
+}
+QScrollBar::handle:horizontal {
+    background:rgba(79, 253, 255, 150);
+    min-width: 20px;
+    margin-left:3px;
+    margin-right:3px;
+    border:0.5px solid;
+    border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+}
+QScrollBar::add-line:horizontal {
+    border: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));;
+    background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+	
+    width: 20px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+    border: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+    width: 20px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+    border: 2px solid grey;
+    width: 3px;
+    height: 3px;
+    background: white;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}</string>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QScrollBar" name="horizontalScrollBar">
+            <property name="styleSheet">
+             <string notr="true">QScrollBar:horizontal {
+    border: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+    height: 15px;
+    margin: 0px 20px 0 20px;
+}
+QScrollBar::handle:horizontal {
+    background:rgba(79, 253, 255, 150);
+    min-width: 20px;
+    margin-left:3px;
+    margin-right:3px;
+    border:0.5px solid;
+    border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+}
+QScrollBar::add-line:horizontal {
+    border: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));;
+    background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+	
+    width: 20px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+    border: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+    width: 20px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+    border: 2px solid grey;
+    width: 3px;
+    height: 3px;
+    background: white;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}</string>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QFrame" name="frame_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>171</width>
+           <height>701</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(220, 220, 220, 120);
+border-right:2px solid;
+border-right-color:qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));
+
+
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLineEdit" name="lineEdit_4">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>290</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_7">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>260</y>
+            <width>81</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border:none;
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>nimg_init</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_3">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>220</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>180</y>
+            <width>131</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border:none;
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>smooth_sigma_time</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_2">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>370</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-:transparent</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>330</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border:none;
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>maxregshift</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>450</y>
+            <width>113</width>
+            <height>20</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>410</y>
+            <width>111</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border:none;
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>smooth_sigma</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_8">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>120</y>
+            <width>111</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 12pt &quot;Adobe Gothic Std B&quot;;
+border:None;
+background:transparent;</string>
+          </property>
+          <property name="text">
+           <string>Parameters</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_run_enhance">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>530</y>
+            <width>111</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Run Enhancement</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>580</y>
+           <width>151</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>load Image(tiff stack)</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="geometry">
+          <rect>
+           <x>670</x>
+           <y>580</y>
+           <width>131</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Save Enhacement tif</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>460</y>
+           <width>691</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <property name="spacing">
+           <number>100</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_16">
+            <property name="styleSheet">
+             <string notr="true">font: 9pt &quot;微软雅黑&quot;;</string>
+            </property>
+            <property name="text">
+             <string>1/6500</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_17">
+            <property name="styleSheet">
+             <string notr="true">font: 9pt &quot;微软雅黑&quot;;</string>
+            </property>
+            <property name="text">
+             <string>1/6500</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <zorder>layoutWidget</zorder>
+        <zorder>frame_3</zorder>
+        <zorder>layoutWidget</zorder>
+        <zorder>layoutWidget</zorder>
+        <zorder>layoutWidget</zorder>
+        <zorder>pushButton_5</zorder>
+        <zorder>pushButton_6</zorder>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Data Process</string>
+        </attribute>
+        <widget class="QFrame" name="frame_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>171</width>
+           <height>721</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(220, 220, 220, 120);
+border-right:2px solid qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_9">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>140</y>
+            <width>111</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+font: 75 12pt &quot;Adobe Gothic Std B&quot;;
+border:none;</string>
+          </property>
+          <property name="text">
+           <string>Parameters</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_10">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>200</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border:none;
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>flow_threshold</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_5">
+          <property name="geometry">
+           <rect>
+            <x>28</x>
+            <y>238</y>
+            <width>119</width>
+            <height>20</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_11">
+          <property name="geometry">
+           <rect>
+            <x>37</x>
+            <y>270</y>
+            <width>108</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border:none;
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>cellprob_threshold</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_6">
+          <property name="geometry">
+           <rect>
+            <x>28</x>
+            <y>304</y>
+            <width>119</width>
+            <height>20</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>27</x>
+            <y>350</y>
+            <width>121</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border:none;
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Segmentation model</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox">
+          <property name="geometry">
+           <rect>
+            <x>28</x>
+            <y>384</y>
+            <width>121</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>cyto</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>cyto2</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_14">
+          <property name="geometry">
+           <rect>
+            <x>37</x>
+            <y>430</y>
+            <width>99</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+border:none;
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Reduction model</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_2">
+          <property name="geometry">
+           <rect>
+            <x>28</x>
+            <y>464</y>
+            <width>121</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>3.51Hz_30ms</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_5">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>0</y>
+           <width>311</width>
+           <height>311</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+border:1px solid black;
+border-left:none;
+margin-left:1px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_6">
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>0</y>
+           <width>311</width>
+           <height>311</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+border:1px solid black</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_8">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>390</y>
+           <width>311</width>
+           <height>311</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+border:1px solid black;
+border-left:none;
+margin-left:1px</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_9">
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>390</y>
+           <width>311</width>
+           <height>311</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+border:1px solid black</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_11">
+         <property name="geometry">
+          <rect>
+           <x>500</x>
+           <y>440</y>
+           <width>131</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Save Seg tif</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_12">
+         <property name="geometry">
+          <rect>
+           <x>500</x>
+           <y>490</y>
+           <width>131</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Save Raw sig</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_13">
+         <property name="geometry">
+          <rect>
+           <x>500</x>
+           <y>540</y>
+           <width>131</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Save Reducted sig</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_14">
+         <property name="geometry">
+          <rect>
+           <x>500</x>
+           <y>590</y>
+           <width>131</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Save Binarization</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_15">
+         <property name="geometry">
+          <rect>
+           <x>500</x>
+           <y>640</y>
+           <width>131</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Save all as *.npy</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_10">
+         <property name="geometry">
+          <rect>
+           <x>479</x>
+           <y>-1</y>
+           <width>171</width>
+           <height>311</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(220, 220, 220, 120);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_12">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>20</y>
+            <width>54</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 12pt &quot;Adobe Gothic Std B&quot;;
+background:transparent</string>
+          </property>
+          <property name="text">
+           <string>Run</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_16">
+          <property name="geometry">
+           <rect>
+            <x>21</x>
+            <y>250</y>
+            <width>131</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Run all</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="geometry">
+           <rect>
+            <x>21</x>
+            <y>151</y>
+            <width>131</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Spike Reduction</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="geometry">
+           <rect>
+            <x>21</x>
+            <y>51</y>
+            <width>131</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Run Segmentation</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_9">
+          <property name="geometry">
+           <rect>
+            <x>21</x>
+            <y>201</y>
+            <width>131</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Run Binarization</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_10">
+          <property name="geometry">
+           <rect>
+            <x>21</x>
+            <y>101</y>
+            <width>131</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:rgba(220, 220, 220, 200);
+
+
+font: 9pt &quot;微软雅黑&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Signal Extration</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_11">
+         <property name="geometry">
+          <rect>
+           <x>480</x>
+           <y>390</y>
+           <width>171</width>
+           <height>311</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(220, 220, 220, 120);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_15">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>20</y>
+            <width>54</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 12pt &quot;Adobe Gothic Std B&quot;;
+background:transparent</string>
+          </property>
+          <property name="text">
+           <string>Save</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QScrollBar" name="horizontalScrollBar_3">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>340</y>
+           <width>311</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QScrollBar:horizontal {
+    border: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+    height: 15px;
+    margin: 0px 20px 0 20px;
+}
+QScrollBar::handle:horizontal {
+    background:rgba(79, 253, 255, 150);
+    min-width: 20px;
+    margin-left:3px;
+    margin-right:3px;
+    border:0.5px solid;
+    border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+}
+QScrollBar::add-line:horizontal {
+    border: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));;
+    background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+	
+    width: 20px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+    border: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(8, 123, 202, 255), stop:1 rgba(255, 255, 255, 255));
+    width: 20px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+    border: 2px solid grey;
+    width: 3px;
+    height: 3px;
+    background: white;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_18">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>310</y>
+           <width>81</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>1/6500</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <zorder>frame_4</zorder>
+        <zorder>frame_11</zorder>
+        <zorder>frame_10</zorder>
+        <zorder>frame_5</zorder>
+        <zorder>frame_6</zorder>
+        <zorder>frame_8</zorder>
+        <zorder>frame_9</zorder>
+        <zorder>pushButton_11</zorder>
+        <zorder>pushButton_12</zorder>
+        <zorder>pushButton_13</zorder>
+        <zorder>pushButton_14</zorder>
+        <zorder>pushButton_15</zorder>
+        <zorder>horizontalScrollBar_3</zorder>
+        <zorder>label_18</zorder>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="window_button">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>-10</y>
+         <width>151</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="pushButton_hide">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:transparent;
+}
+
+QPushButton:hover {
+
+background-color:rgba(127, 127, 127, 150);
+
+}
+
+QPushButton:pressed{
+
+border-width:1px;
+border-height:1px;
+
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../icon/24gl-minus.png</normaloff>../icon/24gl-minus.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_close">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:transparent;
+}
+
+QPushButton:hover {
+
+background-color:rgba(255, 0, 0, 180);
+
+}
+
+QPushButton:pressed{
+
+border-width:1px;
+border-height:1px;
+
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../icon/24gl-cross.png</normaloff>../icon/24gl-cross.png</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <zorder>label</zorder>
+      <zorder>label_19</zorder>
+      <zorder>tabWidget</zorder>
+      <zorder>window_button</zorder>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../icon/icon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_hide</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>920</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>665</x>
+     <y>501</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_close</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1022</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1159</x>
+     <y>524</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
