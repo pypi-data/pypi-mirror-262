@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+axaremote/__init__.py
+axaremote/__main__.py
+axaremote/axaconnection.py
+axaremote/axaremote.py
+axaremote/py.typed
+axaremote.egg-info/PKG-INFO
+axaremote.egg-info/SOURCES.txt
+axaremote.egg-info/dependency_links.txt
+axaremote.egg-info/requires.txt
+axaremote.egg-info/top_level.txt
+tests/test_AXARemote.py
+tests/test_AXARemoteTelnet.py
