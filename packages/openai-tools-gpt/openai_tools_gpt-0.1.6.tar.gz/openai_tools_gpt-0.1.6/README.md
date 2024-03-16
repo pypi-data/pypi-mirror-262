@@ -1,0 +1,123 @@
+# **OpenAI Python API Library Wrapper**
+
+This wrapper provides the ability to stream sync and async responses when using or not function calling,
+it also provides default responses, memory manipulation and some debugging capabilities.
+
+## **Installation**
+
+```bash
+# install form PyPI
+pip install openai-tools-gpt
+```
+
+## **Usage**
+
+Prior to interact with the Class, remember to setup your **`OpenAI Api Key`** in your environment.
+
+Jupyter Notebook
+
+```python
+os.environ["OPENAI_API_KEY"] = "Your_api_key",
+```
+
+Or in your terminal
+
+```bash
+export OPENAI_API_KEY="Your_api_key"
+```
+
+The model is set to **`"gpt-3.5-turbo"`** by default, full docstring can be inspect within the Class instantiation.
+
+### `Simple use case`
+
+```python
+from openai_tools_gpt import ToolsGPT
+
+gpt: ToolsGPT = ToolsGPT()
+
+input: str = "Hey, what's up"
+
+# Regular response
+gpt.invoke(input)
+
+# Synchronous streaming response
+for token in gpt.stream(input):
+    print(token, end="", flush=True)
+
+# Asynchronous streaming response
+async for token in gpt.astream(input):
+    print(token, end="", flush=True)
+```
+
+### `Tools enabled`
+
+```python
+from typing import Callable
+from openai_tools_gpt import ToolsGPT
+
+tools_schema: dict = [
+    {
+                "type": "function",
+                "function": {
+                    "name": "get_dollar",
+                    "description": "describe what is the function goal",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {},
+                    },
+                },
+            }
+]
+
+def get_dollar() -> str:
+    return "4000 COP"
+
+tools: dict[str, Callable] = {"get_dollar": get_dollar}
+
+gpt = ToolsGPT(tools_schema=tools_schema,
+               tools=tools,
+               tool_choice="auto")
+
+input: str = "How's the dollar doing ?"
+
+# Regular response
+gpt.invoke(input)
+
+# Synchronous streaming response
+for token in gpt.stream(input):
+    print(token, end="", flush=True)
+
+# Asynchronous streaming response
+async for token in gpt.astream(input):
+    print(token, end="", flush=True)
+
+```
+
+### `Memory`
+
+The model has the memory set to **`False`** by default, so it won't remember any interaction,
+only the initial message (system or user) it set.
+
+```python
+from openai_tools_gpt import ToolsGPT
+
+gpt: ToolsGPT = ToolsGPT(with_memory=True,
+                         memory=[{"role": "system",
+                                  "content": "You are my friendly assistant"}])
+```
+
+### `Debugging`
+
+You can also see which tool or tools the model is using for generating the response,
+if using or not, for every single response.
+
+```python
+from openai_tools_gpt import ToolsGPT
+
+gpt: ToolsGPT = ToolsGPT(debug=True)
+```
+
+## **Useful links**
+
+- [OpenAI Docs](https://platform.openai.com/docs/overview)
+- [JSON Schema](https://json-schema.org/understanding-json-schema/reference/type)
