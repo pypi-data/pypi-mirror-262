@@ -1,0 +1,10 @@
+sdmc_adhoc_processing/__init__.py,sha256=BTiqb2v8k-qJZ8UMfRtaZsDQdqsipKwA_9Sj2kFYAqA,245
+sdmc_adhoc_processing/constants.py,sha256=lDn3BvHMttAZKHDUSGyy593YSGYiar6ii_maYTbDXa4,2576
+sdmc_adhoc_processing/generate_dict.py,sha256=Uqi4W1cr0oW-Tfvcn6D70G7n4Y9Tw7DadcDCRqTMXzU,5738
+sdmc_adhoc_processing/process.py,sha256=TPhg80mPqgGI3WwG4Eiq4lWTgb-4ElJR-jvHkCCOLw8,7008
+sdmc_adhoc_processing-0.1.43.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sdmc_adhoc_processing-0.1.43.dist-info/METADATA,sha256=ACxNT6Za_XWyKY8Mvf3jdguX2VcD1DBWioOWw58_dUc,620
+sdmc_adhoc_processing-0.1.43.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sdmc_adhoc_processing-0.1.43.dist-info/entry_points.txt,sha256=2GIq16xiY5C42GRrT0xWxjdH6Pxte9vIuvOmy4c6bVs,118
+sdmc_adhoc_processing-0.1.43.dist-info/top_level.txt,sha256=9l_IeMDzJ5UsLodcqcwFyH6yvq5_AyB4Zzahz4Tlv3A,22
+sdmc_adhoc_processing-0.1.43.dist-info/RECORD,,
