@@ -1,0 +1,12 @@
+pyproject.toml
+setup.py
+airflow_package/__init__.py
+airflow_package/my_file.py
+airflow_package/my_otherfile.py
+airflow_package.egg-info/PKG-INFO
+airflow_package.egg-info/SOURCES.txt
+airflow_package.egg-info/dependency_links.txt
+airflow_package.egg-info/requires.txt
+airflow_package.egg-info/top_level.txt
+airflow_package/my_folder/__init__.py
+airflow_package/my_folder/my_nested_file.py
