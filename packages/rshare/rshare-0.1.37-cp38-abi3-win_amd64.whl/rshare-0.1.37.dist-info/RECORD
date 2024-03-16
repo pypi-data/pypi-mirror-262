@@ -1,0 +1,10 @@
+rshare-0.1.37.dist-info/METADATA,sha256=VOc5KK8pdgT80kMDqUroFL3qnwlZveiS7joM8-gIt7k,4654
+rshare-0.1.37.dist-info/WHEEL,sha256=xHx4MTFVGTioQqKTlQqO1-qdDr58L6Fx5_KoufP7tVc,94
+rshare/fetch.py,sha256=F4bQFe9bxI01JRjUomTXRv0h3CV618_QrCK_m9i0esU,1170
+rshare/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rshare/rshare.pyi,sha256=WF5ypbAcrQ1h3T6eCPexaCOW7VYEWZIoFiy9-0AOBSw,779
+rshare/tests/main.py,sha256=Vn4Rr9-5eZLCUklRNOcR9x5kPjcUrVd8d9MXc-R6Dts,3718
+rshare/utils/_rshare_version.py,sha256=NBJSfu7xCqAXyfWHQaCfSeXD17FeGOtmpqdPtrGto2g,470
+rshare/__init__.py,sha256=HPryRn1IHeKoy57Chg-JKLtSdsxKdXnK2LIqcIRx2t0,395
+rshare/rshare.pyd,sha256=fpBv5WqadE1AreNSAjIa_ZAU8rxH7wSpnx7ImTDpYAg,4186624
+rshare-0.1.37.dist-info/RECORD,,
