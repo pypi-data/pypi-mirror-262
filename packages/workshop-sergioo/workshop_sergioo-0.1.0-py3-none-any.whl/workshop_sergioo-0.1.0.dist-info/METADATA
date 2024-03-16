@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: workshop-sergioo
+Version: 0.1.0
+Summary: 
+Author: RafaelRodrigues
+Author-email: rafael.rodrigues85@hotmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+Lista de Palavras e Seus Sinônimos
+
+Este código Python consiste em um dicionário que mapeia palavras para uma lista de sinônimos correspondentes. Além disso, há uma função para buscar sinônimos de uma palavra específica dentro deste dicionário.
+Utilização
+Dicionário de Palavras e Sinônimos
+
+O dicionário PALAVRAS_E_SINONIMOS contém uma variedade de palavras em português, juntamente com uma lista de sinônimos associados a cada palavra.
+Função buscar_sinonimo(palavra_buscada)
+
+A função buscar_sinonimo recebe como entrada uma palavra e retorna uma lista de sinônimos correspondentes a essa palavra, se ela estiver presente no dicionário. Caso contrário, a função retorna uma mensagem indicando que a palavra está fora do escopo da pesquisa.
+Exemplo de Uso
+
+python
+
+# Busca sinônimos da palavra "casa"
+sinonimos_casa = buscar_sinonimo("casa")
+print("Sinônimos de 'casa':", sinonimos_casa)
+
+# Busca sinônimos da palavra "computador"
+sinonimos_computador = buscar_sinonimo("computador")
+print("Sinônimos de 'computador':", sinonimos_computador)
+
+# Busca sinônimos de uma palavra não presente no dicionário
+sinonimos_palavra_desconhecida = buscar_sinonimo("aventura")
+print("Sinônimos de 'aventura':", sinonimos_palavra_desconhecida)
+
+Contribuições
+
+Este código pode ser aprimorado de várias maneiras, como:
+
+    Adicionar mais palavras e sinônimos ao dicionário.
+    Implementar uma função para buscar sinônimos de forma mais eficiente ou incluir outras funcionalidades relacionadas ao processamento de linguagem natural.
+
+Sinta-se à vontade para contribuir com melhorias e expansões neste código!
+
+
