@@ -1,0 +1,8 @@
+
+[:platform_system == "Windows"]
+windows-curses
+
+[dev]
+commitizen
+pre-commit
+pexpect
