@@ -1,0 +1,9 @@
+aiokadiapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiokadiapi/aio/__init__.py,sha256=xehtTFJ1Gl4fHSwIdPmt4_-z3iJMKfrVIiwtSipZewM,71
+aiokadiapi/aio/get_info.py,sha256=IWHg0sEV6o0_BbMqgrYHnCoNzXwvlMKiDDsR0dz5UgU,1075
+aiokadiapi/mp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiokadiapi/mp/runner.py,sha256=IspRbOtaby9QLS8Z1GO9_bFMdeP2yXTQOs8kaKtFltg,271
+aiokadiapi/mp/static.py,sha256=442-uIqDUnx9_LaJMO9ImpqeoYEIoBewcYRMvzy7OBs,2320
+aiokadiapi-0.1.0.dist-info/METADATA,sha256=3N4TMrHLNugIq_mXAygevoGe87rjeSYzNrzVqcyBxik,321
+aiokadiapi-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+aiokadiapi-0.1.0.dist-info/RECORD,,
