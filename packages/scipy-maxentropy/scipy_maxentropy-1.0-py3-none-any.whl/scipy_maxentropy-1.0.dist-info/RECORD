@@ -1,0 +1,8 @@
+scipy_maxentropy/__init__.py,sha256=6moheo80g0BLop-MKQHn_ww_Bvus_iRCrAUeyVk6y80,179
+scipy_maxentropy/info.py,sha256=D3ojLs-owpF63zkk_bSZV3qo0EsFELVjNBvTsKjHqtQ,2206
+scipy_maxentropy/maxentropy.py,sha256=LKBPAD4IG6zD6GAG_JAxj72JvRYdeCNlbIw8rDXbcfE,66508
+scipy_maxentropy/maxentutils.py,sha256=nSAiHU0eGRCuswWJXb8nRGFUOK-uiDZBjJEKZX46bsU,16930
+scipy_maxentropy-1.0.dist-info/LICENSE.md,sha256=4TYADkEh6u8spVg9fxYMINjcjiSyHM6KvyrNZEAkH7s,1502
+scipy_maxentropy-1.0.dist-info/METADATA,sha256=5BjBNxl8oCcdk0Wd1lclJgcR5aTmKp1GH0k5AoMe7M4,4788
+scipy_maxentropy-1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+scipy_maxentropy-1.0.dist-info/RECORD,,
