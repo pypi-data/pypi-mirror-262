@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: gibby
+Version: 1.0.0
+Requires-Python: >=3.9
+License-File: LICENSE.txt
+Requires-Dist: typer~=0.9.0
+Provides-Extra: all
+Requires-Dist: typer[all]~=0.9.0; extra == "all"
+Provides-Extra: dev
+Requires-Dist: ruff<1,>=0.3.1; extra == "dev"
+Requires-Dist: mypy<2,>=1.9.0; extra == "dev"
