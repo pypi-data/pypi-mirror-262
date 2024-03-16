@@ -1,0 +1,4 @@
+[console_scripts]
+hello=biblio_tec.main:JonaMath.Hello_World
+sum=biblio_tec.main:JonaMath.sum
+
