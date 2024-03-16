@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: paravastu
+Version: 1.2.1
+Author: Paravastu Lab
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: biopandas
+Requires-Dist: dtale
+Requires-Dist: plotnine
+Requires-Dist: glob
+Requires-Dist: matplotlib
+Requires-Dist: matplotlib.pyplot
+Requires-Dist: itertools
+
