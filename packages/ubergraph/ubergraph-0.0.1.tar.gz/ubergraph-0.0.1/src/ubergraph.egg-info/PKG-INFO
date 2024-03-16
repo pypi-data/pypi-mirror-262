@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: ubergraph
+Version: 0.0.1
+Summary: A wrapper around pygraphviz to implement an ubergraph
+Project-URL: Homepage, https://github.com/tbrumbaugh5396/ubergraph
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Ubergraph
+
+This is a package used to wrap [pygraphviz](https://pypi.org/project/pygraphviz/) to create ubergraphs.
+
+Ubergraphs are based upon [the paper](https://arxiv.org/pdf/1704.05547.pdf).
+
+# Importing ubergraph
+
+from ubergraph import ubergraph
+
+# Functions
+
+## Create an ubergraph
+
+You can create an ubergraph which is simply a directed graph in pygraphviz.
+
+u = ubergraph.ubergraph()
+
+## Add a node to the ubergraph
+
+You can add nodes to your ubergraph.
+
+u = ubergraph.add_node(u, "node")
+
+## Add an edge to the ubergraph
+
+You can add edges to your ubergraph.
+The lists may be empty.
+Any undefined nodes or edges will be added to the ubergraph.
+
+u = ubergraph.add_edge(u, "edge", list_of_from_nodes, list_of_to_nodes, list_of_from_edges, list_of_to_edges)
+
+## Get the nodes in the ubergraph
+
+You can get the nodes in your ubergraph.
+
+nodes = ubergraph.get_nodes(u)
+
+## Get the edges in the ubergraph
+
+You can get the edges in your ubergraph.
+
+edges = ubergraph.get_edges(u)
+
+## Get the nodes and edges from a node or edge
+
+u = get_from(u, node_or_edge)
+
+## Get the nodes and edges to a node or edge
+
+u = get_to(u, node_or_edge)
+
+## Get the edges that a node or edge is in
+
+u = get_in_edges(u, node_or_edge)
+
+## Get the edges that is in a node or edge
+
+u = get_out_edges(u, node_or_edge)

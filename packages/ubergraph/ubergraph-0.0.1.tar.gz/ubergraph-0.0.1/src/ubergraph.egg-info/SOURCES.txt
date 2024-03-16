@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/ubergraph/__init__.py
+src/ubergraph/ubergraph.py
+src/ubergraph/ubergraph_test.py
+src/ubergraph.egg-info/PKG-INFO
+src/ubergraph.egg-info/SOURCES.txt
+src/ubergraph.egg-info/dependency_links.txt
+src/ubergraph.egg-info/top_level.txt
