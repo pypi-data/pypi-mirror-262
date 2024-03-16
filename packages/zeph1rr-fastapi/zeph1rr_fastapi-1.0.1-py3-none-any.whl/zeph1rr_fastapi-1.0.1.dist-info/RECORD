@@ -1,0 +1,8 @@
+zeph1rr_fastapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zeph1rr_fastapi/__main__.py,sha256=lQhU1gYCFUioF-LBvLdyh1E0j-iYJQyimKGn4kRVRSg,1101
+zeph1rr_fastapi/logging.py,sha256=KKQf_jnyldTqCpm_gYvRtuRBwGZmw222XqGtd6ZpkOs,2717
+zeph1rr_fastapi/utils.py,sha256=AJOt6JEr8NY4H5BMk7mWdjBwoRRWut6F-6eHWjsbQsc,1507
+zeph1rr_fastapi-1.0.1.dist-info/LICENSE.md,sha256=puUodlqLzxSPA9IOibACi6xhwzTxvpoel2Z7qEq-9OY,1064
+zeph1rr_fastapi-1.0.1.dist-info/METADATA,sha256=PiluxhQEMM-9N2GRLT5Ou6x1sCPW5Ouk-Ccy7qAesYA,638
+zeph1rr_fastapi-1.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+zeph1rr_fastapi-1.0.1.dist-info/RECORD,,
