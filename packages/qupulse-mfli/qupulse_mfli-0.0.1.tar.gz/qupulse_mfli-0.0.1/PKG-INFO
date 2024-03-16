@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: qupulse-mfli
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/qutech/qupulse-mfli#readme
+Project-URL: Issues, https://github.com/qutech/qupulse-mfli/issues
+Project-URL: Source, https://github.com/qutech/qupulse-mfli
+Author: Quantum Technology Group RWTH Aachen University, Paul Surrey <paul.surrey@rwth-aachen.de>
+License-Expression: GPL-3.0
+License-File: LICENSE
+Keywords: control,physics,pulse,quantum,qubit
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: qupulse
+Requires-Dist: xarray
+Requires-Dist: zhinst
+Requires-Dist: zhinst-core
+Requires-Dist: zhinst-utils
+Description-Content-Type: text/markdown
+
+# MFLI Driver for qupulse
+
+This is an early version of a Zurich Instruments MFLI driver for qupulse.
+
+## Installation
+
+```console
+git clone https://github.com/qutech/qupulse-mfli
+pip install -e ./qupulse-mfli
+```
+
+for a development install or
+
+```console
+pip install qupulse-mfli
+```
+
+for the published version.
+
+## License
+
+`qupulse-mfli` is distributed under the terms of the [GPLv3](https://spdx.org/licenses/GPL-3.0.html) license.
+
+## Build & Publish
+
+This project uses `hatch`. After you installed hatch `python -m pip install hatch`.You can push the version, build and publish (if you have the credentials) it via
+```console
+python -m hatch version M.N.L
+python -m hatch build
+python -m hatch publish
+```
