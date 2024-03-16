@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: terrajinja-cli
+Version: 0.0.3
+Summary: Terrajinja extension for automation using cdktf
+Home-page: https://gitlab/terrajinja
+Author: Terrajinja Team
+Author-email: int-terrajinja@schubergphilis.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cdktf >=0.20.3
+Requires-Dist: terrajinja-deploy >=0.0.1
+Requires-Dist: terrajinja-templates >=0.0.1
+Requires-Dist: PyYAML >=6
+Requires-Dist: deepmerge >=1.1.1
+Requires-Dist: Jinja2 >=3.1.3
+
+# terrajinja-cli
+
+TODO: add proper documentation
+
+History
+-------
+
+0.0.1 (14-03-2024)
+---------------------
+
+* First code creation
