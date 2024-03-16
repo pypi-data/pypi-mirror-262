@@ -1,0 +1,3 @@
+[console_scripts]
+bible_verse=my_package.main:print_bible_verse
+
