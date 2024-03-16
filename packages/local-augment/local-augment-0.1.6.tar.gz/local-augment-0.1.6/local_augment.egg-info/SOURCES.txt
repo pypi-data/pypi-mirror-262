@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+localAugment/__init__.py
+local_augment.egg-info/PKG-INFO
+local_augment.egg-info/SOURCES.txt
+local_augment.egg-info/dependency_links.txt
+local_augment.egg-info/top_level.txt
