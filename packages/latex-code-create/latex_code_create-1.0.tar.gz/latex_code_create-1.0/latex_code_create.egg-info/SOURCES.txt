@@ -1,0 +1,7 @@
+setup.py
+latex_code_create/LaTeX.py
+latex_code_create/__init__.py
+latex_code_create.egg-info/PKG-INFO
+latex_code_create.egg-info/SOURCES.txt
+latex_code_create.egg-info/dependency_links.txt
+latex_code_create.egg-info/top_level.txt

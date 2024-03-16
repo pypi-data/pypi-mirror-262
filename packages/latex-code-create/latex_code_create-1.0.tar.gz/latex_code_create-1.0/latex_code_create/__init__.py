@@ -1,0 +1,1 @@
+from .LaTeX import table_generation, picture_generation
