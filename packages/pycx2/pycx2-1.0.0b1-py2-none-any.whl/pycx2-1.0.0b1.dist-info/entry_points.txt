@@ -1,0 +1,3 @@
+[console_scripts]
+pycx2 = pycx2.cli:compile
+
