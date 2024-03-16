@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: TprParser
+Version: 0.1
+Summary: A reader of gromacs tpr file
+Home-page: UNKNOWN
+Author: Yujie Liu
+Author-email: liuyujie714@hnu.edu.cn
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
