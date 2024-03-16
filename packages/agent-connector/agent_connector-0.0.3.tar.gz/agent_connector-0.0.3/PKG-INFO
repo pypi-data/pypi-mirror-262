@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: agent_connector
+Version: 0.0.3
+Summary: This is my tools package
+Home-page: https://github.com/cxbxmxcx/Agent-Connector
+Author: Micheal Lanham
+Author-email: cxbxmxcx@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://github.com/cxbxmxcx/Agent-Connector
+Project-URL: Source, https://github.com/cxbxmxcx/Agent-Connector
+Project-URL: Tracker, https://github.com/cxbxmxcx/Agent-Connector/issues
+Description: # Agent-Connector
+        
+        [![PyPI version](https://badge.fury.io/py/agent-connector.svg)](https://pypi.org/project/agent-connector/)
+        ![Build Status](https://travis-ci.com/cxbxmxcx/Agent-Connector.svg?branch=main)
+        ![License](https://img.shields.io/github/license/cxbxmxcx/Agent-Connector)
+        ![Python Version](https://img.shields.io/pypi/pyversions/Agent-Connector)
+        ![Issues](https://img.shields.io/github/issues/cxbxmxcx/Agent-Connector)
+        ![Pull Requests](https://img.shields.io/github/issues-pr/cxbxmxcx/Agent-Connector)
+        ![Code Size](https://img.shields.io/github/languages/code-size/cxbxmxcx/Agent-Connector)
+        
+        
+        ![Downloads](https://pepy.tech/badge/Agent-Connector)
+        
+        
+        
+        The Agent Connector is a cutting-edge Prompt Flow plugin that establishes a direct connection to GPT Nexus, a sophisticated agent development and testing platform. This innovation is highlighted in the book *GPT Agents In Action* by Manning Publications, showcasing its importance in the realm of AI-driven solutions.
+        
+        ## Background
+        
+        In the rapidly evolving field of artificial intelligence, the development and testing of AI agents remain paramount. Agent Connector serves as a bridge to GPT Nexus, enabling developers to seamlessly integrate and interact with AI agents within their applications. This tool is designed to enhance the efficiency of AI agent deployment, offering a streamlined workflow for developers seeking to leverage the capabilities of GPT Nexus.
+        
+        ## Installation
+        
+        Installing Agent Connector is a straightforward process that can be accomplished with a simple pip command. Ensure you have Python installed on your system, and then run the following command in your terminal:
+        
+        pip install agent-connector
+        
+        This command will fetch and install the latest version of Agent Connector from PyPI, along with its dependencies.
+        
+        ## Setup
+        
+        After installation, integrating Agent Connector into your Prompt Flow involves a few simple steps:
+        
+        1. Add Agent Connector as a tool to your Prompt Flow. This step typically involves updating your Prompt Flow configuration to include Agent Connector as an available plugin.
+        
+        2. Create a custom connection by setting the base_url parameter to the URL of your GPT Nexus instance. This is crucial for ensuring that Agent Connector can communicate with GPT Nexus.
+        
+        3. Configure the connection parameters including agent_name, agent_profile, agent_actions, and user_input. These parameters are essential for defining how Agent Connector interacts with AI agents through GPT Nexus.
+        
+        ## Usage
+        
+        With Agent Connector set up, you can start leveraging the power of GPT Nexus within your applications. Here's a quick overview of how to use it:
+        
+        1. Initialize the Agent Connector with your custom configuration, specifying the connection details and agent parameters.
+        
+        2. Invoke Agent Connector within your Prompt Flow, passing in user_input and any other relevant parameters defined during setup.
+        
+        3. Receive and process the response from GPT Nexus, utilizing the output from your AI agents in your application's workflow.
+        
+        Agent Connector simplifies the process of connecting to and utilizing GPT Nexus, making it an indispensable tool for developers working with AI agents.
+        
+        For more detailed examples and advanced configurations, please refer to the documentation or explore the examples directory in this repository.
+        
+        ---
+        
+        We welcome contributions and feedback on Agent Connector! If you encounter any issues or have suggestions for improvements, please file an issue on this GitHub repository.
+        
+        Happy coding!
+        
+Platform: UNKNOWN
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
