@@ -1,0 +1,15 @@
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+brainsurfy/__init__.py
+brainsurfy/surfplot.py
+brainsurfy/utils.py
+brainsurfy.egg-info/PKG-INFO
+brainsurfy.egg-info/SOURCES.txt
+brainsurfy.egg-info/dependency_links.txt
+brainsurfy.egg-info/not-zip-safe
+brainsurfy.egg-info/requires.txt
+brainsurfy.egg-info/top_level.txt
+docs/images/output_v0.1.0.png
