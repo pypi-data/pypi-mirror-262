@@ -1,0 +1,12 @@
+nbvalx/__init__.py,sha256=STDEKZmXxif7dmjg3LlMGPmkuAWdKioPsMi4k2Ny4mY,308
+nbvalx/jupyter_magics.py,sha256=cq5Hmsae2RS9k8RKHcIZCTo5n8oZ_k69fVD3Cu25Pao,7102
+nbvalx/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nbvalx/pytest_hooks_notebooks.py,sha256=t1EuNRWHMQ7RjlybbFSKvXoSo8uIwzNmFVO-F6g7BSY,33454
+nbvalx/pytest_hooks_unit_tests.py,sha256=VO6BbowFk__4dbnAGrIAEYyItog9cSHpk8wrEnXP2Rg,745
+nbvalx/tempfile.py,sha256=4f5q-5zonU3GdQsEa-1gV_L6yx-QtB9HtIodikjOdVU,3297
+nbvalx-0.3.2.dist-info/AUTHORS,sha256=i9pUBA1qxMlNBp9kKYBuRepXjpw-I3I7wFFEWhUQ6l8,51
+nbvalx-0.3.2.dist-info/LICENSE,sha256=4nFi-E-jOhn0NY_6y47KG1SRPyQc_AzioGKD8efAi84,1519
+nbvalx-0.3.2.dist-info/METADATA,sha256=gyjb79nnQp_JSS9apZqHO6NoxpuP_sRWsH22kre2p2E,11853
+nbvalx-0.3.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+nbvalx-0.3.2.dist-info/top_level.txt,sha256=vDmkGchS0Zwqlmkmeal6pkBEgmrQcUrn_Wa57IsAM8I,7
+nbvalx-0.3.2.dist-info/RECORD,,
