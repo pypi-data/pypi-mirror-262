@@ -1,0 +1,2 @@
+[console_scripts]
+aas-compliance-check = aas_compliance_tool:main

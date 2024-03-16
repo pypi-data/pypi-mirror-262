@@ -1,0 +1,16 @@
+aas_compliance_tool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aas_compliance_tool/cli.py,sha256=i2wZGieQKdl3lHEuobTewc5bUKsPH0e7OULrXFNWZOo,10791
+aas_compliance_tool/compliance_check_aasx.py,sha256=uJ99jCuGDoMkIGVUQO-1olLoc3g76OmGC3c8RPUuw0U,15161
+aas_compliance_tool/compliance_check_json.py,sha256=DpQst30q3W2lPmZqN8Ztwr5_AuP4ZNGZbl-OPw3Bbwg,9814
+aas_compliance_tool/compliance_check_xml.py,sha256=zbK_acSJaK_P6zzGqRRPPR3iVNxq0csCRZ26rDdAnZg,9627
+aas_compliance_tool/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aas_compliance_tool/state_manager.py,sha256=GxXjZ-zHXZ2aP5xOEbMU5dnYM5ckCT0iOeGdAIrJzJs,8942
+aas_compliance_tool/schemas/aasJSONSchema.json,sha256=9zNO3StCGORE_x7MWxb1MpItB49A8RnAbxpgFakkogY,42319
+aas_compliance_tool/schemas/aasXMLSchema.xsd,sha256=cxjpZAHD_2DQO-QjjCjdJs9oDHKeZkR8WJFOw5Q19oc,57635
+aas_compliance_tool-1.0.0.dist-info/LICENSE,sha256=zWP3n3byDT3_ZHl-aNvfCz7Pf-tmIzADdTXn7ktF_2E,1084
+aas_compliance_tool-1.0.0.dist-info/METADATA,sha256=WhySxYaLPIhKjS4TT6eRjzpwMJMXxqmC4Iht5kZZFq0,1754
+aas_compliance_tool-1.0.0.dist-info/NOTICE,sha256=iByBoG17H5y3DjI8usytI381gvCa21SzaN-yKQQoByo,687
+aas_compliance_tool-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aas_compliance_tool-1.0.0.dist-info/entry_points.txt,sha256=DMPtA1v7jObTmirjhNqHSWYqjNlN58OGTvcodbYvRsk,66
+aas_compliance_tool-1.0.0.dist-info/top_level.txt,sha256=-ZbCAk6tjZ90pRNK4J1WOi1Ac_Us99APcyvQ7bp8YQQ,20
+aas_compliance_tool-1.0.0.dist-info/RECORD,,

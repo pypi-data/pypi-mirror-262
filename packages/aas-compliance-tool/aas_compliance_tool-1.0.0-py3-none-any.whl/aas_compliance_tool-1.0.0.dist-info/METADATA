@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: aas-compliance-tool
+Version: 1.0.0
+Summary: AAS compliance checker based on the Eclipse BaSyx Python SDK
+Home-page: https://github.com/rwth-iat/aas-compliance-tool
+Author: The AAS Compliance Tool authors
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: pyecma376-2 >=0.2.4
+Requires-Dist: basyx-python-sdk >=1.0.0
+
+# AAS Compliance Tool
+An AAS compliance checker based on the Eclipse BaSyx Python SDK for testing xml and json files.
+Following functionalities are supported:
+
+* create an xml or json file compliant to the official schema containing example Asset Administration Shell elements
+* create an aasx file with xml or json files compliant to the official schema containing example Asset Administration 
+Shell elements
+* check if a given xml or json file is compliant to the official schema
+* check if a given xml, json or aasx file is readable even if it is not compliant to the offical schema
+* check if the data in a given xml, json or aasx file is the same as the example data
+* check if two given xml, json or aasx files contain the same Asset Administration Shell elements in any order 
+
+Invoking should work with either `python -m aas_compliance_tool.cli` or (when installed correctly and PATH is set 
+correctly) with `aas-compliance-check` on the command line.
+
+For further usage information consider the `aas_compliance_tool`-package or invoke with 
+`python -m aas_compliance_tool.cli --help` respectively `aas-compliance-check --help`.
