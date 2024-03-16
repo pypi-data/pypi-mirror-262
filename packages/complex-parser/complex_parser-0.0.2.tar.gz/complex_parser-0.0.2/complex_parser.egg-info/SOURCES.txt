@@ -1,0 +1,8 @@
+setup.py
+complex_parser/__init__.py
+complex_parser/main.py
+complex_parser.egg-info/PKG-INFO
+complex_parser.egg-info/SOURCES.txt
+complex_parser.egg-info/dependency_links.txt
+complex_parser.egg-info/requires.txt
+complex_parser.egg-info/top_level.txt

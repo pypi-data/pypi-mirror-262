@@ -1,0 +1,6 @@
+fuzzywuzzy>=0.18.0
+nltk>=3.6.2
+psutil
+
+[dev]
+twine
