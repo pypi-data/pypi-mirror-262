@@ -1,0 +1,15 @@
+HISTORY.md
+LICENSE
+MANIFEST.in
+Pipfile
+README.md
+VERSION
+requirements.txt
+setup.py
+src/terrajinja/templates/gitlab-runner/description.txt
+src/terrajinja/templates/gitlab-runner/parameters/gitlab_runner.yaml
+src/terrajinja/templates/gitlab-runner/templates/generic_gitlab_runner_v0.0.1.yaml
+src/terrajinja_templates.egg-info/PKG-INFO
+src/terrajinja_templates.egg-info/SOURCES.txt
+src/terrajinja_templates.egg-info/dependency_links.txt
+src/terrajinja_templates.egg-info/top_level.txt
