@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/__init__.py
+data/analysis/__init__.py
+data/analysis/similarity/__init__.py
+data/analysis/similarity/tool/__init__.py
+data/analysis/similarity/tool/jms/__init__.py
+data/analysis/similarity/tool/jms/data_similarity_tool.py
+data_analysis_similarity_tool_jms.egg-info/PKG-INFO
+data_analysis_similarity_tool_jms.egg-info/SOURCES.txt
+data_analysis_similarity_tool_jms.egg-info/dependency_links.txt
+data_analysis_similarity_tool_jms.egg-info/requires.txt
+data_analysis_similarity_tool_jms.egg-info/top_level.txt
