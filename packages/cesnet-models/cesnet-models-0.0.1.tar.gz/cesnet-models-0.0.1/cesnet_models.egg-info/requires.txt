@@ -1,0 +1,15 @@
+numpy
+scikit-learn
+torch>=1.10
+
+[dev]
+black
+build
+jupyterlab
+mkdocs-autorefs
+mkdocs-material-extensions
+mkdocs-material
+mkdocs
+mkdocstrings-python
+mkdocstrings
+twine
