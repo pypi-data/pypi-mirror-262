@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: PyForgeTESTS
+Version: 1.0.0
+Summary: Pygame Developer Kit
+Home-page: https://github.com/TheDotBat/HueEngine
+Author: Izaiyah Stokes
+Author-email: setoichi.dev@gmail.com
+License: Apache-2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: pygame
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Description-Content-Type: text/markdown
+License-File: license.md
+License-File: NOTICE.md
+Requires-Dist: psutil
+Requires-Dist: pygame-ce
+Requires-Dist: pyautogui
+Requires-Dist: pygame-gui
+Requires-Dist: screeninfo
+Requires-Dist: pygetwindow
+
+# PyForge
+
+[![Discord](https://img.shields.io/discord/1147936778834169896.svg??kill_cache=1label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/TA3WnjGMC8)
+
+
+PyForge offers a powerful and versatile game programming library designed to simplify the development of high-performance graphical applications such as games and GUI tooling using Python + Pygame-CE.
