@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: fast_kinematics
+Version: 0.0.1
+Summary: A fast kinematics library for robotics
+Author: Xinsong Lin
+Author-email: x8lin@ucsd.edu
+Requires: pytorch
+Requires-Python: >=3.8
+
