@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: autogen-init
+Version: 2.0.2
+Summary: A Python package that updates __init__.py files across a package for direct imports.
+Home-page: https://github.com/dsdanielpark/auto-init
+Author: Daniel Park
+Author-email: parkminwoo1991@gmail.com
+Keywords: Python,Python package init,package init,autoinit,package initialization,__init__.py automation
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Autogen Init: Streamline Your Package Setup
+
+Autogen-Init is a Python tool designed to make `__init__.py` file updates seamless across your package, ensuring imports are clean and easy to access. It scans your package's directories to automatically update `__init__.py` files with all necessary class and function imports. Plus, it simplifies adding version and author details to your top-level `__init__.py`, boosting package metadata.
+
+## Features
+
+- **Auto Updates**: Instantly refreshes `__init__.py` files with internal imports.
+- **Metadata Enhancements**: Adds version and author info effortlessly.
+- **Flexible Overwrites**: Choose to update or append `__init__.py` files as needed.
+
+## 📦 Installation
+
+Get Autogen-Init with pip for a smooth integration:
+
+```
+pip install autogen-init
+```
+
+## Usage
+
+Activate Autogen-Init with the `run` command, setting your package's root as the start path. Opt to overwrite `__init__.py` files and add version and author data.
+
+```python
+from autogen_init import run
+
+# Quick start
+run(
+    start_path='C:/path/to/my_package',
+    overwrite=True,
+    version="1.0.0",
+    author="Minwoo(Daniel) Park <parkminwoo1991@gmail.com>"
+)
+```
+
+### Arguments
+
+- `start_path (str)`: Your package's root directory.
+- `overwrite (bool)`: Flag to overwrite `__init__.py` files, default is `True`.
+- `version (str)`: Package version for the top-level `__init__.py`.
+- `author (str)`: Package author(s) for the top-level `__init__.py`.
+
+## Contributing
+
+Your contributions are welcome! For bug reports, feature suggestions, or submissions, don't hesitate to get in touch or open a pull request.
+
+## ©️ License
+
+Autogen-Init is MIT licensed — see the LICENSE file for details.
