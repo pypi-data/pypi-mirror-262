@@ -1,0 +1,3 @@
+[console_scripts]
+omp=opinionated_media_processor.omp:main
+
