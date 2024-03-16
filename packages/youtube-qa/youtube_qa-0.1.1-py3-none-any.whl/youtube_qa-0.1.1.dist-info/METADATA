@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: youtube-qa
+Version: 0.1.1
+Summary: Question answering over YouTube videos with embeddings and LLMs.
+Author: Jake Cyr
+Author-email: cyrjake@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: llama-index (>=0.10.20,<0.11.0)
+Requires-Dist: sentence-transformers (>=2.5.1,<3.0.0)
+Requires-Dist: youtube-search (>=2.1.2,<3.0.0)
+Requires-Dist: youtube-transcript-api (>=0.6.2,<0.7.0)
+Description-Content-Type: text/markdown
+
+# YouTube Question Answer
+
+Simple experiment for question answering on YouTube videos using embeddings and
+the top n YouTube search result transcripts.
+
