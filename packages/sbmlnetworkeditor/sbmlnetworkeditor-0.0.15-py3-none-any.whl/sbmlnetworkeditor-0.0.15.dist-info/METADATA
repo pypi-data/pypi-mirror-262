@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: sbmlnetworkeditor
+Version: 0.0.15
+Summary: A python api to work with libsbmlnetworkeditor library
+Home-page: https://github.com/adelhpour/SBMLNetworkEditor
+Author: Adel Heydarabadipour
+Author-email: adelhp@uw.edu
+Project-URL: Bug Tracker, https://github.com/adelhpour/SBMLNetworkEditor/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: libsbmlnetworkeditor ==0.0.13
+Requires-Dist: networkinfotranslator ==0.0.18
+Requires-Dist: ipython >=8.15.0
+
+# SBMLNetworkEditor
+
+A python api to work with libsbmlnetworkeditor library
+
+
