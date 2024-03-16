@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "python-pro-latex-remaster"
+version = "0.1.0"
+description = "LaTeX helper functions for Python"
+authors = ["DanilMargaryan <daniilmargaran31028@gmail.com>"]
+packages = [
+    { include = "homework2" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
