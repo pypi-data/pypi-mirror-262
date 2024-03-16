@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "nonebot_plugin_wsshd"
+version = "0.0.2"
+description = ""
+authors = ["lovemilk <zhuhansan666@outlook.com>"]
+license = "BSD License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+uvicorn = "^0.28.0"
+typing-extensions = "^4.10.0"
+nonebot-plugin-localstore = "^0.6.0"
+rsa = "^4.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

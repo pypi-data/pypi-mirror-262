@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: nonebot_plugin_wsshd
+Version: 0.0.2
+Summary: 
+License: BSD License
+Author: lovemilk
+Author-email: zhuhansan666@outlook.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: nonebot-plugin-localstore (>=0.6.0,<0.7.0)
+Requires-Dist: rsa (>=4.9,<5.0)
+Requires-Dist: typing-extensions (>=4.10.0,<5.0.0)
+Requires-Dist: uvicorn (>=0.28.0,<0.29.0)
+Description-Content-Type: text/markdown
+
+# nonebot-plugin-wsshd
+
+> 还在开发中 (**切勿**使用) ~ 先抢包名
+
+> It is still developing... **DO NOT** use it.
+
