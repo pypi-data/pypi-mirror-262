@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+potato.py.egg-info/PKG-INFO
+potato.py.egg-info/SOURCES.txt
+potato.py.egg-info/dependency_links.txt
+potato.py.egg-info/top_level.txt
+python/potato.py
