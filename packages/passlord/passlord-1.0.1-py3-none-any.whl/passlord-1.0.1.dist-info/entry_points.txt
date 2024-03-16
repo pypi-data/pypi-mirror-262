@@ -1,0 +1,2 @@
+[console_scripts]
+passlord = passlord.passlord:run_main_function

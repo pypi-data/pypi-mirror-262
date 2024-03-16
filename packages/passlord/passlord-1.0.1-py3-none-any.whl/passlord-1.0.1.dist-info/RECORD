@@ -1,0 +1,10 @@
+passlord/__init__.py,sha256=fRBEdVL0N0kedJnRwpkclZBhDJH2kYAJt7K7AmYKSJY,92
+passlord/passlord.py,sha256=OwTgB7QxJxRlZgguhpgi7D72k13lFq7RUIeVS-mZoNY,16346
+passlord/patterns/__init__.py,sha256=9_8wL9Scv8_Cs8HJyJHGvx1vwXErsuvlsAqNZLcJQR0,8
+passlord/patterns/rules.txt,sha256=KieN9Rma9GAEkqinkNjOk7CF76X7YroYETawQhXaon8,596097
+passlord-1.0.1.dist-info/LICENCE,sha256=1GRN2yz_MI6_TRVimYCKZRu2THvZpd4nroh6cJJ85rY,1056
+passlord-1.0.1.dist-info/METADATA,sha256=DsdRmdasYRqqzFREVHw3DdmDFYLTWp9hqt4e9--Szik,3911
+passlord-1.0.1.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+passlord-1.0.1.dist-info/entry_points.txt,sha256=_6pytvgwcSJAdVvjA7FiX-1hzwEUoCOfSVh4pZqNrtw,65
+passlord-1.0.1.dist-info/top_level.txt,sha256=poFlfLGdjfw21WvAtjg8jbS7zys7zJqknmJ9KBnNec0,9
+passlord-1.0.1.dist-info/RECORD,,
