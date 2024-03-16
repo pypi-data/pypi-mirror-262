@@ -1,0 +1,17 @@
+LICENSE
+pyproject.toml
+setup.cfg
+src/example_package/__init__.py
+src/example_package/main.py
+src/example_package/print_env.py
+src/example_package/print_text.py
+src/example_package/service_function.py
+src/fajitas_tools/__init__.py
+src/fajitas_tools/compute_log.py
+src/fajitas_tools/gmail.py
+src/fajitas_tools/google_sheet.py
+src/fajitas_tools/main.py
+src/fajitas_tools.egg-info/PKG-INFO
+src/fajitas_tools.egg-info/SOURCES.txt
+src/fajitas_tools.egg-info/dependency_links.txt
+src/fajitas_tools.egg-info/top_level.txt
