@@ -1,0 +1,7 @@
+setup.py
+spinning_meme_maker.egg-info/PKG-INFO
+spinning_meme_maker.egg-info/SOURCES.txt
+spinning_meme_maker.egg-info/dependency_links.txt
+spinning_meme_maker.egg-info/entry_points.txt
+spinning_meme_maker.egg-info/requires.txt
+spinning_meme_maker.egg-info/top_level.txt
