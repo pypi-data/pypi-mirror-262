@@ -1,0 +1,11 @@
+pnu_vuxml-1.1.0.data/data/man/man1/vuxml.1.gz,sha256=xHZEZyocgT6Bh3XMcZJfkO3OaoIjxbDiaWPFBL_fE9c,2241
+pnu_vuxml-1.1.0.data/data/man/man3/vuxml.3.gz,sha256=hH4_lPx3WlAQCOnc2VwGL5co3XrOc7wnIFL-lmVF71k,1806
+vuxml/__init__.py,sha256=OIUvQK6yxVB8AiXXHt83ZFQSsZMxRVNxkf2BJMND5v0,60
+vuxml/library.py,sha256=zZPGYd-ZTCkomn3ty1eWSmT6PEYv_8fpzz8aGBvFVvE,19990
+vuxml/main.py,sha256=ClU_93mX0Daxf6df-LU9vb5t8RxcGxDHGruACohkbr0,13726
+pnu_vuxml-1.1.0.dist-info/License,sha256=_8OOv2grfA7GzILc5V0VEMRkVk3nSBmUZQsylbCPksQ,1461
+pnu_vuxml-1.1.0.dist-info/METADATA,sha256=WD0Wdq3n50ZaBje9eMpN3__Cc5J8LZ6DIhc6FciQkEc,2218
+pnu_vuxml-1.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pnu_vuxml-1.1.0.dist-info/entry_points.txt,sha256=f6TkISES7KyJqN9QVRUQ8kdOJyKNW_MBEhZ7z37ADfY,37
+pnu_vuxml-1.1.0.dist-info/top_level.txt,sha256=RKbHldXIGZi_UyjgUJmZ1Xu2SJshQtyr7M0UQfeHpYo,6
+pnu_vuxml-1.1.0.dist-info/RECORD,,
