@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/BIRs/__init__.py
+src/BIRs/libs.py
+src/basic_influence_roles.egg-info/PKG-INFO
+src/basic_influence_roles.egg-info/SOURCES.txt
+src/basic_influence_roles.egg-info/dependency_links.txt
+src/basic_influence_roles.egg-info/requires.txt
+src/basic_influence_roles.egg-info/top_level.txt
+test/test_birs.py
