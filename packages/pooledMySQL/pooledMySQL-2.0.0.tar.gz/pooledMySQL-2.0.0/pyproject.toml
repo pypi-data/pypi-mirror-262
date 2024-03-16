@@ -1,0 +1,45 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pooledMySQL"
+version = "2.0.0"
+description = "A simple way to have MySQL connection pool which auto-scales infinitely as required. This would help remove problems caused by multithreading, also removed user hassle of manually creating and deleting connections manually."
+
+readme = "README.md"
+authors = [{ name = "Bhindi", email = "bhaskarpanja93@gmail.com" }]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["mysql", "pool", "threadedmysql", "multithreaded", "thread", "database", "sql"]
+requires-python = ">=3.6"
+dependencies = ["mysql_connector_python >= 8.3.0", "customisedLogs>=1.2.4"]
+
+[project.urls]
+Homepage = "https://github.com/BhaskarPanja93/OpenSource"
+
+[project.scripts]
+pooledMySQL = "pooledMySQL.MySQLPoolManager.__main__:main"
+
+[tool.bumpver]
+current_version = "2.0.0"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version {old_version} -> {new_version}"
+tag_message = "{new_version}"
+tag_scope = "default"
+pre_commit_hook = ""
+post_commit_hook = ""
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+]
+

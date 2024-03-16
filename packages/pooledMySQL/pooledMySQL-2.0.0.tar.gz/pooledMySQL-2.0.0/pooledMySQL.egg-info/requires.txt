@@ -1,0 +1,2 @@
+mysql_connector_python>=8.3.0
+customisedLogs>=1.2.4
