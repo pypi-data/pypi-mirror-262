@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: nvidia-ammo
+Version: 0.9.0
+Summary: Ammo: a unified algorithmic model optimization and deployment toolkit.
+Author-email: "Nvidia, Inc." <ammo-support@exchange.nvidia.com>
+License: NVIDIA Proprietary Software
+Project-URL: Homepage, https://nvidia.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Science/Research
+Requires-Python: <3.12,>=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: ninja
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: onnx >=1.14.0
+Requires-Dist: onnxruntime ~=1.16.1
+Requires-Dist: onnx-graphsurgeon
+Requires-Dist: pydantic >=2.0
+Requires-Dist: rich
+Requires-Dist: scipy
+Requires-Dist: torch >=1.11
+Requires-Dist: tqdm
+Requires-Dist: transformers
+Provides-Extra: deploy
+Requires-Dist: mpi4py ; extra == 'deploy'
+Provides-Extra: onnx
+Requires-Dist: jax ; extra == 'onnx'
+
+AMMO
+#########
+
+*AlgorithMic Model Optimization.*
+
+--------
+
+AMMO is a library for conveniently optimizing and deploying efficient neural networks that can
+fit a wide range of Nvidia hardware. It is intended for ML engineers to efficiently design, train,
+and deploy their models on Nvidia from within their desired ML training framework, e.g., PyTorch.
