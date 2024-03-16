@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: opinionated-media-processor
+Version: 0.1.4
+Summary: Manipulate, Encode and Package - the simple way
+Author: Fabre Lambeau
+Author-email: fabre.lambeau@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: boto3 (>=1.34.63,<2.0.0)
+Requires-Dist: ffmpeg-python (>=0.2.0,<0.3.0)
+Requires-Dist: graphviz (>=0.20.1,<0.21.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+
