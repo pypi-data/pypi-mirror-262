@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+arxivapi/arxiv_paper.py
+arxivapi/print_status.py
+arxivapi/query.py
+arxivquery.egg-info/PKG-INFO
+arxivquery.egg-info/SOURCES.txt
+arxivquery.egg-info/dependency_links.txt
+arxivquery.egg-info/requires.txt
+arxivquery.egg-info/top_level.txt
