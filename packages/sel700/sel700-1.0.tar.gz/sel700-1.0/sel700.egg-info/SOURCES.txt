@@ -1,0 +1,5 @@
+setup.py
+sel700.egg-info/PKG-INFO
+sel700.egg-info/SOURCES.txt
+sel700.egg-info/dependency_links.txt
+sel700.egg-info/top_level.txt
