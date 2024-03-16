@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: spinning-meme-maker
+Version: 1.0.4
+Summary: A package for creating spinning meme GIFs
+Author: Overtimepog
+Author-email: truen2005@gmail.com
+Description-Content-Type: text/markdown
+
+# Spinning Meme Maker
+
+Spinning Meme Maker is a Python package that allows you to create spinning meme GIFs using 3D models and images. It provides a convenient way to generate engaging and humorous visual content.
+
+## Installation
+
+You can install Spinning Meme Maker using pip:
+
+pip install spinning_meme_maker
+
+## Usage
+
+To create a spinning meme GIF, you can use the spinning_meme_maker command followed by the required arguments:
+
+spin(model_path image_path frames filename top_text bottom_text speed bg_color)
+
+- model_path: The path to the 3D model file (supported formats: .obj, .egg).
+- image_path: The path to the image file or URL of the image to be used as the texture.
+- frames: The number of frames to generate for the GIF.
+- filename: The desired filename for the generated GIF (without the .gif extension).
+- top_text: The text to be displayed at the top of the GIF (optional).
+- bottom_text: The text to be displayed at the bottom of the GIF (optional).
+- speed: The speed factor for the GIF animation (default: 1.0).
+- bg_color: The background color of the GIF in hexadecimal format (e.g., #FFFFFF for white).
+
+Example usage:
+spin(chair.obj meme_image.jpg 36 my_meme "Top Text" "Bottom Text" 1.5 #00FF00)
+
+This command will generate a spinning meme GIF named my_meme.gif using the chair.obj model and meme_image.jpg image, with 36 frames, "Top Text" displayed at the top, "Bottom Text" displayed at the bottom, a speed factor of 1.5, and a green background color.
+
+## Dependencies
+
+Spinning Meme Maker requires the following dependencies:
+- Panda3D
+- Pillow
+- requests
+
+These dependencies will be automatically installed when you install the package using pip.
+
+## Contributing
+
+Contributions to Spinning Meme Maker are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
+
+## License
+
+Spinning Meme Maker is open-source software licensed under the [MIT License](https://opensource.org/licenses/MIT).
