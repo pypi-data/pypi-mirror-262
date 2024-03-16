@@ -1,0 +1,206 @@
+title: Image/ImageClassification/MultiTask
+type: object
+properties:
+  accuracy:
+    type: number
+    format: float
+    description: >
+      Accuracy is the proportion of correct predictions among the total number of cases
+      processed averaged over all task.
+  f1:
+    type: number
+    format: float
+    description: >
+      OPTIONAL. The F1 score is the harmonic mean of the precision and recall averaged over all task.
+      Macro-averaged for the overall evaluation.
+  precision:
+    type: number
+    format: float
+    description: >
+      Precision is the fraction of correctly labeled positive examples out of all of the examples
+      that were labeled as positive averaged over all task.
+  recall:
+    type: number
+    format: float
+    description: >
+      Recall is the fraction of the positive examples that were correctly labeled by the model
+      as positive averaged over all task.
+  auRoc:
+    type: number
+    format: float
+    description: >
+      OPTIONAL. The Area Under Receiver Operating Characteristic curve metric. Macro-averaged for
+      the overall evaluation averaged over all task.
+  auPrc:
+    type: number
+    format: float
+    description: >
+      OPTIONAL. The Area Under Precision-Recall Curve metric. Macro-averaged for the overall
+      evaluation averaged over all task.
+  taskMetrics:
+    type: array
+    items:
+      type: object
+      properties:
+        taskName:
+          type: string
+          description: >
+            Task name.
+        accuracy:
+          type: number
+          format: float
+          description: >
+            Accuracy is the proportion of correct predictions among the total number of cases processed.
+        f1:
+          type: number
+          format: float
+          description: >
+            OPTIONAL. The F1 score is the harmonic mean of the precision and recall.
+            Macro-averaged for the overall evaluation.
+        precision:
+          type: number
+          format: float
+          description: >
+            Precision is the fraction of correctly labeled positive examples out of all of the examples
+            that were labeled as positive.
+        recall:
+          type: number
+          format: float
+          description: >
+            Recall is the fraction of the positive examples that were correctly labeled by the model as positive.
+        auRoc:
+          type: number
+          format: float
+          description: >
+            OPTIONAL. The Area Under Receiver Operating Characteristic curve metric. Macro-averaged for
+            the overall evaluation.
+        auPrc:
+          type: number
+          format: float
+          description: >
+            OPTIONAL. The Area Under Precision-Recall Curve metric. Macro-averaged for the overall evaluation.
+        categoryMetrics:
+          type: array
+          description: >
+            The match metrics for every category.
+          items:
+            type: object
+            properties:
+              categoryName:
+                type: string
+                description: >
+                  Category name.
+              metrics:
+                type: object
+                description: >
+                  The match metrics for each label confidence threshold.
+                properties:
+                    auRoc:
+                      type: number
+                      format: float
+                      description: >
+                        The Area Under Receiver Operating Characteristic curve metric for every category.
+                    auPrc:
+                      type: number
+                      format: float
+                      description: >
+                        The Area Under Precision-Recall Curve metric for every category.
+                    confidenceMetrics:
+                      type: array
+                      description: >
+                        Metrics for each confidenceThreshold.
+                      items:
+                        type: object
+                        properties:
+                          confidenceThreshold:
+                            type: number
+                            format: float
+                            description: >
+                              Metrics are computed with an assumption that the Model never returns predictions with
+                              score lower than this value.
+                          recall:
+                            type: number
+                            format: float
+                            description: >
+                              Recall (True Positive Rate) for the given confidence threshold.
+                          precision:
+                            type: number
+                            format: float
+                            description: >
+                              Precision for the given confidence threshold.
+                          falsePositiveRate:
+                            type: number
+                            format: float
+                            description: >
+                              False Positive Rate for the given confidence threshold.
+                          f1Score:
+                            type: number
+                            format: float
+                            description: >
+                              The harmonic mean of recall and precision.
+                          truePositiveCount:
+                            type: integer
+                            format: int64
+                            description: >
+                              The number of Model created labels that match a ground truth label.
+                          falsePositiveCount:
+                            type: integer
+                            format: int64
+                            description: >
+                              The number of Model created labels that do not match a
+                              ground truth label.
+                          falseNegativeCount:
+                            type: integer
+                            format: int64
+                            description: >
+                              The number of ground truth labels that are not matched by a Model created label.
+                          trueNegativeCount:
+                            type: integer
+                            format: int64
+                            description: >
+                              The number of labels that were not created by the Model,
+                              but if they would, they would not match a ground truth label.
+        confusionMatrix:
+          type: object
+          description: >
+            OPTIONAL. Confusion matrix of the evaluation.
+          properties:
+            annotationSpecs:
+              type: array
+              description: >
+                AnnotationSpecs used in the confusion matrix.
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: >
+                      OPTIONAL. ID of the AnnotationSpec.
+                  displayName:
+                    type: string
+                    description: >
+                      Display name of the AnnotationSpec.
+            rows:
+              type: array
+              description: >
+                Rows in the confusion matrix. The number of rows is equal to the size of `annotationSpecs`.
+                `row[i][j]` is the number of DataItems that have ground truth of the `annotationSpecs[i]`
+                and are predicted as `annotationSpecs[j]` by the Model being evaluated.
+              items:
+                type: object
+                properties:
+                  row:
+                    type: array
+                    items:
+                      type: integer
+                      format: int64
+  _timestamp:
+    type: string
+    format: date-time
+    description: >
+      The time formatted according to ISO.
+required:
+  - accuracy
+  - precision
+  - recall
+  - _timestamp

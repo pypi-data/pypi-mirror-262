@@ -1,0 +1,95 @@
+title: Image/ChangeDetection/ObjectDetection
+type: object
+properties:
+  evaluatedBoundingBoxCount:
+    type: integer
+    format: int32
+    description: >
+      The total number of bounding boxes (i.e. summed over all images) the ground
+      truth used to create this evaluation.
+  boundingBoxMetrics:
+    type: array
+    description: >
+      The bounding boxes match metrics for every category.
+    items:
+      type: object
+      properties:
+        categoryName:
+          type: string
+          description: >
+            Category name.
+        metrics:
+          type: array
+          description: >
+            The bounding boxes match metrics for each intersection-over-union threshold and
+            each label confidence threshold pair.
+          items:
+            type: object
+            properties:
+              iouThreshold:
+                type: number
+                format: float
+                description: >
+                  The intersection-over-union threshold value used to compute this metrics entry.
+              meanAveragePrecision:
+                type: number
+                format: float
+                description: >
+                  The mean average precision, most often close to `auPrc`.
+              confidenceMetrics:
+                type: array
+                description: >
+                  Metrics for each label-match confidence_threshold from. Precision-recall curve is derived from them.
+                items:
+                  type: object
+                  properties:
+                    confidenceThreshold:
+                      type: number
+                      format: float
+                      description: >
+                        The confidence threshold value used to compute the metrics.
+                    recall:
+                      type: number
+                      format: float
+                      description: >
+                        Recall under the given confidence threshold.
+                    precision:
+                      type: number
+                      format: float
+                      description: >
+                        Precision under the given confidence threshold.
+                    f1Score:
+                      type: number
+                      format: float
+                      description: >
+                        The harmonic mean of recall and precision.
+                    truePositiveCount:
+                      type: integer
+                      format: int64
+                      description: >
+                        The number of Model created labels that match a ground truth label.
+                    falsePositiveCount:
+                      type: integer
+                      format: int64
+                      description: >
+                        The number of Model created labels that do not match a ground truth label.
+                    falseNegativeCount:
+                        type: integer
+                        format: int64
+                        description: >
+                          The number of ground truth labels that are not matched by a Model created label.
+  boundingBoxMeanAveragePrecision:
+    type: number
+    format: float
+    description: >
+      The single metric for bounding boxes evaluation:
+      the `meanAveragePrecision` averaged over all `boundingBoxMetrics`.
+  _timestamp:
+    type: string
+    format: date-time
+    description: >
+      The time formatted according to ISO.
+required:
+  - evaluatedBoundingBoxCount
+  - boundingBoxMeanAveragePrecision
+  - _timestamp
