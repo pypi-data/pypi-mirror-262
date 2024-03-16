@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "ryser"
+version = "0.1.0"
+description = "Latin squares and related designs."
+authors = ["Matthew Henderson <matthew.james.henderson@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
