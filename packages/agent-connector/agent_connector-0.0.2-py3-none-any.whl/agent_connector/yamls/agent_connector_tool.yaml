@@ -1,0 +1,22 @@
+agent_connector.tools.agent_connector_tool.call_agent:
+  function: call_agent
+  inputs:
+    connection:
+      type:
+      - CustomConnection
+    agent_name:
+      type:
+      - string
+    agent_profile:
+      type:
+      - string
+    agent_actions:
+      type:
+      - list
+    user_input:
+      type:
+      - string    
+  module: agent_connector.tools.agent_connector_tool
+  name: Agent Connector Tool
+  description: Use this tool to connect to an agent running within GPT Nexus
+  type: python

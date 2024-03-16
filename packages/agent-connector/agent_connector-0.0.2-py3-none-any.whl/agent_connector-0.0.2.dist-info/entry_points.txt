@@ -1,0 +1,3 @@
+[package_tools]
+agent_connector_tool = agent_connector.tools.utils:list_package_tools
+
