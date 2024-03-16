@@ -1,0 +1,11 @@
+xs.getInfXS: False
+xs.getB1XS: True
+xs.variableGroups: [gc-meta, kinetics, xs]
+branching:
+  floatVariables: [Fhi, Blo]
+depletion:
+  materials: [fuel*]
+  metadataKeys: [NAMES, BU]
+  materialVariables:
+    [ADENS, MDENS, VOLUME]
+serpentVersion: 2.1.29

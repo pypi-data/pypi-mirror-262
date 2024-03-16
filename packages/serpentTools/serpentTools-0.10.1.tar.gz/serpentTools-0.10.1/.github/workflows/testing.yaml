@@ -1,0 +1,68 @@
+name: CI
+on:
+  # Enable running actions from GH Actions tab
+  workflow_dispatch:
+
+  pull_request:
+    branches:
+      - develop
+      - main
+  push:
+    branches:
+      - develop
+      - main
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11"]
+
+    name: 'Python ${{ matrix.python-version }}'
+
+    steps:
+      - 
+        uses: actions/checkout@v3
+
+      - 
+        name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      -
+        name: install
+        shell: bash
+        run: pip install ".[extras,test,ci]"
+
+      -
+        name: unit tests
+        shell: bash
+        run: pytest --cov=serpentTools --cov-report= -v
+
+      -
+        name: notebooks
+        shell: bash
+        # Workaround to prepend repository to python path
+        # to resolve an issue importing serpenttools after
+        # installing. Should be removed with a src-layout
+        # https://github.com/CORE-GATECH-GROUP/serpent-tools/issues/499
+        run: |
+          cd examples
+          jupyter execute *ipynb
+
+      -
+        name: artifacts
+        uses: actions/upload-artifact@v3
+        if: failure()  # only if the previous step failed
+        with:
+            name: test-images-${{ matrix.python-version }}
+            path: |
+                tests/plots/result_images/*png
+
+      -
+        name: after
+        shell: bash
+        run: |
+          coverage report

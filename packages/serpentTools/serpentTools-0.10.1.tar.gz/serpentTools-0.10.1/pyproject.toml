@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "serpentTools"
+# Let setuptools-scm pick up version data
+dynamic = ["version"]
+maintainers = [
+    {name="Dan Kotlyar"},
+    {name="Drew Johnson"},
+]
+description = "A suite of parsers designed to make interacting with Serpent output files simple, scriptable, and flawless"
+readme = "README.rst"
+requires-python = ">=3.8,<3.12"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+license = {file = "LICENSE"}
+dependencies = [
+    "numpy>=1.16.0",
+    "matplotlib>=2.2.3,!=3.3.4",
+    "pyyaml>=5.1.1",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/CORE-GATECH-GROUP/serpent-tools"
+"Bug Tracker" = "https://github.com/CORE-GATECH-GROUP/serpent-tools/issues"
+
+[project.optional-dependencies]
+extras = ["pandas>1", "scipy"]
+test = ["pytest>=6", "pytest-cov", "coverage"]
+ci = ["jupyter"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+serpentTools = ["variables.yaml"]
+"serpentTools.data" = ["*.m", "*.coe"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# This is okay to be empty, but we need a section here
+# in order to trigger it's usage when setting version data
+[tool.setuptools_scm]
+
+[tool.pytest.ini_options]
+markers = [
+    "plot: tests involving plotting capabilities",
+]
+addopts = "-rs"

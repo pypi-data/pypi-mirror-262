@@ -1,0 +1,5 @@
+* text eol=auto
+* text eol=lf
+*.py diff=py
+*.png binary
+*.m linguist-vendored
