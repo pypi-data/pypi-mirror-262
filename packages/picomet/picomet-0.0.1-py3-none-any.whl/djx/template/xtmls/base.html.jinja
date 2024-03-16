@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>{% if Tailwind %}
+    <Tailwind #="base" />{% endif %}
+    <script s-asset:src="djx/xtml.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"
+      integrity="sha512-AB2vAMVrtmmI+2BwSMqB+y1qGPNJovUOCp4w27S9pvX8yXPQNbBO4kuM952+LlOpng9VeWPb86b5N32bkvXRvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <Debug>
+      <script s-asset:src="djx/hmr.js"></script>
+    </Debug>
+  </head>
+
+  <body>
+    <main>
+      <div s-group="page">
+        <Outlet />
+      </div>
+    </main>
+  </body>
+</html>
