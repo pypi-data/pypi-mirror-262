@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/CTFdHelper/__init__.py
+src/CTFdHelper/__main__.py
+src/CTFdHelper.egg-info/PKG-INFO
+src/CTFdHelper.egg-info/SOURCES.txt
+src/CTFdHelper.egg-info/dependency_links.txt
+src/CTFdHelper.egg-info/top_level.txt

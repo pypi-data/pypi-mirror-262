@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: CTFdHelper
+Version: 0.0.2
+Summary: A small wrapper for CTFd
+Author-email: Ben Allison <ben@jianmin.dev>
+Project-URL: Homepage, https://github.com/bja2142/CTFdHelper
+Project-URL: Issues, https://github.com/bja2142/CTFdHelper/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# CTFdHelper
+
+This is a small project to assist in interacting with CTFd over the command line.
+
+It supports initial configuration and a limited set of features to interact over API
+
+
+## Testing
+
