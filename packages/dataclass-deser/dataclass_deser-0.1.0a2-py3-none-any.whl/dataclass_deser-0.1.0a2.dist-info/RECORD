@@ -1,0 +1,7 @@
+dataclass_deser/__init__.py,sha256=y-IIbiYgcw1LdqvRoN_jmdlorBjciB1egUdkr94i7Rk,61
+dataclass_deser/deser.py,sha256=ZafZZ13J7DZ5TqN1p0jbJmqua8hZIxcd08MwKpdne7M,9368
+dataclass_deser-0.1.0a2.dist-info/LICENSE.txt,sha256=Wc8Wxr6xpnFf1h5K4AxMPGZuUy2s7XggexMNBnUtIrI,1074
+dataclass_deser-0.1.0a2.dist-info/METADATA,sha256=owsvJBLG7mBK8Vcje1QrvP2GYXeschRbmEf37Ro02wA,2213
+dataclass_deser-0.1.0a2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dataclass_deser-0.1.0a2.dist-info/top_level.txt,sha256=R5qQ3U8gfDAmbWCHpMq_uwDbEhpB5OUfwx-g9ouwTVM,16
+dataclass_deser-0.1.0a2.dist-info/RECORD,,
