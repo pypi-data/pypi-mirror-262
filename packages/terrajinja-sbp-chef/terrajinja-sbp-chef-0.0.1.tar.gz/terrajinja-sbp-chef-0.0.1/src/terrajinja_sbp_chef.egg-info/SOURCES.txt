@@ -1,0 +1,14 @@
+HISTORY.md
+LICENSE
+MANIFEST.in
+Pipfile
+README.md
+VERSION
+requirements.txt
+setup.py
+src/terrajinja/sbp/chef/data_bag_item.py
+src/terrajinja_sbp_chef.egg-info/PKG-INFO
+src/terrajinja_sbp_chef.egg-info/SOURCES.txt
+src/terrajinja_sbp_chef.egg-info/dependency_links.txt
+src/terrajinja_sbp_chef.egg-info/requires.txt
+src/terrajinja_sbp_chef.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+# this is only usable for terrajinja
+terrajinja-imports-chef>=0.4.6
