@@ -1,0 +1,9 @@
+pip
+setuptools
+langchain
+sqlalchemy
+pymysql
+langchain
+langchain_openai
+openai
+Cython
