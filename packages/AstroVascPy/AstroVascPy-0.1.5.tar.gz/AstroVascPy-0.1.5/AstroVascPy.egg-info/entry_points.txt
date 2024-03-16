@@ -1,0 +1,2 @@
+[console_scripts]
+astrovascpy = astrovascpy.cli:main
