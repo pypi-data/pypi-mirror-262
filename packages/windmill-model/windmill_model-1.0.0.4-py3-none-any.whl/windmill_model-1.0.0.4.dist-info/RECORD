@@ -1,0 +1,9 @@
+windmillmodelv1/__init__.py,sha256=Okf9DPgoozuHwKEOnUmxSSQ2Fx5qS-qjOCkP43bIqd0,213
+windmillmodelv1/client/__init__.py,sha256=Okf9DPgoozuHwKEOnUmxSSQ2Fx5qS-qjOCkP43bIqd0,213
+windmillmodelv1/client/model_api_model.py,sha256=9UUdTqSw88X6AuX_busHyOnd_m-YCN61HY5eGoGSYXE,1131
+windmillmodelv1/client/model_api_modelstore.py,sha256=LZkE5vnCsRqpuumw4pdSX-P9ydcJq_Rpjy7OjNfVnoQ,944
+windmillmodelv1/client/model_client.py,sha256=b2oH3rPHTVoJ_jypV4NlHHa5Gwj4vbrjxl15rj0_xYE,14676
+windmill_model-1.0.0.4.dist-info/METADATA,sha256=zIhrdC3gQCCB1tM5F2DZzodqy4bJwoaD3EI4zKK1Gdk,652
+windmill_model-1.0.0.4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+windmill_model-1.0.0.4.dist-info/top_level.txt,sha256=uBCpozfSUysc-8wOnPIlsBUgN-AUUGroeoehPba-WYU,16
+windmill_model-1.0.0.4.dist-info/RECORD,,
