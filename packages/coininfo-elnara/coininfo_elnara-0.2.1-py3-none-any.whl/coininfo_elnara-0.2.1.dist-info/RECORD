@@ -1,0 +1,8 @@
+coininfo_elnara/__init__.py,sha256=WBcDXlmFYRzCNBw0juFiHXYvTn0vNOXIRZ5GfZ9BvVc,36
+coininfo_elnara/info.py,sha256=Rf1Mt5H7VjKEhk60d9omzDwekqtHsReD5ugXExfWR7Q,3289
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_project.py,sha256=Rid7_OPO7MfaQsTts-9x6gWI_wII3VkVWWmfa0jQKYg,3304
+coininfo_elnara-0.2.1.dist-info/METADATA,sha256=0eh5mOKoOy0zH4rfMkNEwcWl_TYMjuIsaNbANhhnqg4,754
+coininfo_elnara-0.2.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+coininfo_elnara-0.2.1.dist-info/top_level.txt,sha256=qtdVolD3Zequum1zXYqdX7qij_DGT-RFhqMAcB5xCFY,22
+coininfo_elnara-0.2.1.dist-info/RECORD,,
