@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "rag-eval"
+version = "0.1.0"
+description = ""
+authors = ["Joaquin Dominguez <joaquin.dominguez@proton.me>"]
+license = "Apache-2.0"
+readme = "README.md"
+packages = [{include = "rag-eval", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+qdrant-client = "^1.8.0"
+python-dotenv = "^1.0.1"
+pydantic = "^2.6.4"
+pyright = "^1.1.354"
+black = "^24.3.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+requests-mock = "^1.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
