@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: hollarek
+Version: 0.9.1
+Summary: Collection of general python utilities for future projects
+Home-page: https://github.com/Somerandomguy10111/hollarek
+Author: Daniel Hollarek
+Author-email: daniel.hollarek@googlemail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+License-File: LICENSE.txt
+Requires-Dist: PyYAML
+Requires-Dist: apscheduler
+Requires-Dist: beautifulsoup4
+Requires-Dist: boto3
+Requires-Dist: cryptography
+Requires-Dist: devtools
+Requires-Dist: dill
+Requires-Dist: func-timeout
+Requires-Dist: json-repair
+Requires-Dist: mss
+Requires-Dist: orjson
+Requires-Dist: pathvalidate
+Requires-Dist: psutil
+Requires-Dist: pympler
+Requires-Dist: pynput
+Requires-Dist: pypdf
+Requires-Dist: python-docx
+Requires-Dist: requests
+Requires-Dist: screeninfo
+Requires-Dist: selenium
+Requires-Dist: textract
+Requires-Dist: trafilatura
+
+UNKNOWN
+
