@@ -1,0 +1,16 @@
+terrajinja/imports/chef/__init__.py,sha256=3q0pkLIio5DA-9BeXkcixVi3miweHSvVX2n4PmsrWdw,416
+terrajinja/imports/chef/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+terrajinja/imports/chef/_jsii/__init__.py,sha256=9zVK0YbUN0c6XWGqf-Yp9Ru5PqQm5XShJ_7BLzarJf0,373
+terrajinja/imports/chef/_jsii/chef@0.0.0.jsii.tgz,sha256=CDLqv_Vp7Ng6iLvSAgIW1Zci4ZJs7epttpgpn_Bq8xY,38587
+terrajinja/imports/chef/client/__init__.py,sha256=AzTLTwtapubwhHKw-gB2Vg1QuxX4ATTuUxg93Y1rJ_c,22915
+terrajinja/imports/chef/data_bag/__init__.py,sha256=4my-d91FpEyn5Haftn2ygBUSc7Bt-iEWp7hMJ5S7s40,19859
+terrajinja/imports/chef/data_bag_item/__init__.py,sha256=RUiOBs4ytjYGz4NnEtflvLbRpahcPMC-3AHyWmo56q8,22271
+terrajinja/imports/chef/environment/__init__.py,sha256=hpBXDvfXAZmaJtQzrNtNi4U4BmuNqM0nZVgcr5P4Ztg,30915
+terrajinja/imports/chef/node/__init__.py,sha256=LKkXwDDr2pTJjVDYbMCQTeEVlAjK2sydrp63iLeIA98,40232
+terrajinja/imports/chef/provider/__init__.py,sha256=JBdGn3N50YJliNBNzrvzQofLHoNOMQxnOH-61H0eL-8,20957
+terrajinja/imports/chef/role/__init__.py,sha256=pBbOhoSDwu8ewu4tx9ujEfGYja_78CC3PmW7PDkc3GQ,29836
+terrajinja_imports_chef-0.4.6.dist-info/LICENSE,sha256=Muqz0wlb0ZP8umtA2_fWfq4946_Xu-XQwprFq4tLSkg,1061
+terrajinja_imports_chef-0.4.6.dist-info/METADATA,sha256=6-V7JJP1lgVjnaOrUB2LqPY83ac0V17N6-ABgwlDu7M,824
+terrajinja_imports_chef-0.4.6.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+terrajinja_imports_chef-0.4.6.dist-info/top_level.txt,sha256=apZ6Jo9O_SBI9yAAu0zz0pJpjZwf6vDrkc2ykRGC72s,11
+terrajinja_imports_chef-0.4.6.dist-info/RECORD,,
