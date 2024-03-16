@@ -1,0 +1,10 @@
+opencv_python
+PyEmail
+yacs
+tqdm
+argparse
+imageio
+fitz
+psutil
+xlrd
+aiomultiprocess
