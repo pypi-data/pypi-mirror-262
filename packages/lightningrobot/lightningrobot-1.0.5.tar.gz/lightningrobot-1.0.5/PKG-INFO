@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: lightningrobot
+Version: 1.0.5
+Summary: 轻快，好用，基于Python的多平台机器人框架。
+Home-page: https://lightningrobot.github.io/
+License: MIT
+Keywords: robot,lightningrobot
+Author: Zhihan
+Author-email: zhihan2727@hotmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pymysql (>=1.0.0,<2.0.0)
+Project-URL: Documentation, https://lightningrobot.github.io/
+Project-URL: Repository, https://github.com/LightningRobot/main/
+Description-Content-Type: text/markdown
+
+# 闪电机器人
+轻快，好用，基于Python的多平台机器人框架。

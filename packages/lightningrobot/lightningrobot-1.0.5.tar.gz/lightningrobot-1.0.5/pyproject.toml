@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "lightningrobot"
+version = "1.0.5"
+description = "轻快，好用，基于Python的多平台机器人框架。"
+authors = ["Zhihan <zhihan2727@hotmail.com>"]
+readme = "README.md"
+homepage = "https://lightningrobot.github.io/"
+documentation = "https://lightningrobot.github.io/"
+license = "MIT"
+repository = "https://github.com/LightningRobot/main/"
+keywords = ["robot", "lightningrobot"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pymysql = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
