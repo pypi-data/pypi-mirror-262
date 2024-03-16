@@ -1,0 +1,13 @@
+torch>=1.10.2
+configargparse
+tensorboard>=2.9
+flask==2.0.3
+flake8==4.0.1
+waitress
+pyonmttok<2,>=1.32
+pytest-flake8==1.1.1
+pytest==7.0.1
+pyyaml
+timeout_decorator
+sentencepiece==0.1.97
+sacrebleu==2.3.1

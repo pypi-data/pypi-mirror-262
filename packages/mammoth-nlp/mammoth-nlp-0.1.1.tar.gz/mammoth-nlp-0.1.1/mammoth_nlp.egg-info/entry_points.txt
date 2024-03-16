@@ -1,0 +1,3 @@
+[console_scripts]
+mammoth_train = mammoth.bin.train:main
+mammoth_translate = mammoth.bin.translate:main
