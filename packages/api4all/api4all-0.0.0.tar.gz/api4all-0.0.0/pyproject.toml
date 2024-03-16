@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api4all"
+version = "0.0.0"
+requires-python = ">=3.8"
+authors = [
+  {name = "Hieu Nguyen", email = "hieung.tech@gmail.com"}
+]
+maintainers = [
+  {name = "Hieu Nguyen", email = "hieung.tech@gmail.com"}
+]
+description = "Easy-to-use LLM API from a state-of-the-art provider and comparison."
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["llm", "llmapi", "llminference", "llmprovider", "llmprice", "llmlearderboard"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/hieuminh65/api4all"
+Documentation = "https://github.com/hieuminh65/api4all"
+Repository = "https://github.com/hieuminh65/api4all"
+Changelog = "https://github.com/hieuminh65/api4all/blob/main/CHANGELOG.md"
