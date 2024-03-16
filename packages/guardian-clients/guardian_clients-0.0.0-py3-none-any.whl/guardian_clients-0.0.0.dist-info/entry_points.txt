@@ -1,0 +1,3 @@
+[console_scripts]
+guardian-scanner=guardian_clients:guardian
+
