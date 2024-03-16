@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comicthumb"
+version = "0.0.5"
+description = "Python3 reimplementation of comix's comicthumb for generating comic thumbnails"
+readme = "README.md"
+license = { text = "GNU General Public License v2 (GPLv2)" }
+keywords = ["comix", "comicthumb", "thumbnailer"]
+dependencies = [
+    "pillow"
+]
+
+[project.optional-dependencies]
+
+[project.scripts]
+comicthumb = "comicthumb.comicthumb:main"
+
+[project.urls]
+repository = "https://codeberg.org/johndovern/comicthumb"

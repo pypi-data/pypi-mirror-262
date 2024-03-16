@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: comicthumb
+Version: 0.0.5
+Summary: Python3 reimplementation of comix's comicthumb for generating comic thumbnails
+License: GNU General Public License v2 (GPLv2)
+Project-URL: repository, https://codeberg.org/johndovern/comicthumb
+Keywords: comix,comicthumb,thumbnailer
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pillow
+
+# Comicthumb
+
+This is a very basic port of the
+[comicthumb](https://sourceforge.net/p/comix/code/HEAD/tree/trunk/mime/comicthumb)
+utility that came with comix.  Arch users do not get this utility by default
+with the better maintained fork, mcomix. This "just werks on my machine" but if
+it doesn't work on yours submit a pull request please.

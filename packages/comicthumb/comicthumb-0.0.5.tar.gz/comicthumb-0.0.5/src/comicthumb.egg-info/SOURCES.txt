@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/comicthumb/__init__.py
+src/comicthumb/comicthumb.py
+src/comicthumb.egg-info/PKG-INFO
+src/comicthumb.egg-info/SOURCES.txt
+src/comicthumb.egg-info/dependency_links.txt
+src/comicthumb.egg-info/entry_points.txt
+src/comicthumb.egg-info/requires.txt
+src/comicthumb.egg-info/top_level.txt
