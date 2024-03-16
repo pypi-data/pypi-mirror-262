@@ -1,0 +1,5 @@
+appdirs
+jsonpickle
+pygame
+requests
+results
