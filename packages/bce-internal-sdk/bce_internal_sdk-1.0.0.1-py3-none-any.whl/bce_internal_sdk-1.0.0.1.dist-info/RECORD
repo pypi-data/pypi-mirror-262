@@ -1,0 +1,9 @@
+bceinternalsdk/__init__.py,sha256=8sFyX-QcznYAf__G6oPw1KXnKwNEP6iWX_bJE1sdZNY,212
+bceinternalsdk/client/__init__.py,sha256=UOxkYstEJWQur5jC5ESJsWezmsXajZ-QeUoH_hS7AMU,212
+bceinternalsdk/client/bce_internal_client.py,sha256=vtQ-Vuu_hlIu2KVdUT12SCLgSSGW8ZqZCaIJKR9nAlI,3800
+bceinternalsdk/client/paging.py,sha256=7PWb1gOEeM0W3VXjA6qfQkgjSK9WMo8p4pJGd-Isox0,1720
+bceinternalsdk/client/validator.py,sha256=1b8f11sZbQpaKwP8QurYhbuNHcl1iM6k1qouicYMwYU,4301
+bce_internal_sdk-1.0.0.1.dist-info/METADATA,sha256=bQXVlBwROR4pon70DGxG-xO9-CLxOZPCQkDh1WB1wFM,580
+bce_internal_sdk-1.0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+bce_internal_sdk-1.0.0.1.dist-info/top_level.txt,sha256=a_JDE_p8ZpaQHv1SZCe6XIDzG2Y05wiEvPaB2SUtbRE,15
+bce_internal_sdk-1.0.0.1.dist-info/RECORD,,
