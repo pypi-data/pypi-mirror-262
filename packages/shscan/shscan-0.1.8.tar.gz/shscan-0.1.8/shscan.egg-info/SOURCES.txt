@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+shscan/__init__.py
+shscan/main.py
+shscan.egg-info/PKG-INFO
+shscan.egg-info/SOURCES.txt
+shscan.egg-info/dependency_links.txt
+shscan.egg-info/entry_points.txt
+shscan.egg-info/requires.txt
+shscan.egg-info/top_level.txt
