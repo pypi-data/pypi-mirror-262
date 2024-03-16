@@ -1,0 +1,30 @@
+[project]
+name = "IGLabel"
+version = "0.0.5"
+description = "This package will give you an easy way to label your sequences according to common standards in immunology."
+authors = [
+    { name = "Nils Hofmann", email = "nilhof01@gmail.com" },
+]
+dependencies = []
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=7.1.2",
+]
+
+[tool.pdm.scripts]
+test = "python -m pytest -s C:/Users/nilsh/my_projects/IGLabel/tests"

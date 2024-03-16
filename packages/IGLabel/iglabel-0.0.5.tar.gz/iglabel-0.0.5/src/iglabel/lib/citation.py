@@ -1,0 +1,1 @@
+cite = "Lefranc MP, Pommié C, Ruiz M, Giudicelli V, Foulquier E, Truong L, Thouvenin-Contet V, Lefranc G. IMGT unique numbering for immunoglobulin and T cell receptor variable domains and Ig superfamily V-like domains. Dev Comp Immunol. 2003 Jan;27(1):55-77. doi: 10.1016/s0145-305x(02)00039-3. PMID: 12477501."
