@@ -1,0 +1,9 @@
+coininfo/__init__.py,sha256=bzruQZQB7L1q-eLcNNGWmpOw3F8Dl2MDgvupLmFzc1M,54
+coininfo/humain.py,sha256=ONWXaIddw8XAZZWM_oYsyo16XSagFiQDkSqnM9fgsK0,524
+coininfo/human.py,sha256=8_OvHBssCPLPdlUmr2_xx39qqVI4fAWo7SVqhAuGf88,526
+coininfo/info.py,sha256=8j1zSatrX4DFQTJlVXdnlAjpHxk1CTUQhlhytBQehk8,965
+coininfo/test_info.py,sha256=gRFpiaQlEisPNG35luNDT1SyW1dEscNWhwLixd65Ee8,2603
+coininfo_einherer-0.1.3.dist-info/METADATA,sha256=QtwaYdt3CloGbiotJU3I0d7kJVgRzwO_SEisKpHbG1g,744
+coininfo_einherer-0.1.3.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+coininfo_einherer-0.1.3.dist-info/top_level.txt,sha256=RgEOOKSU0Y86BGpStUdYqUAdY6C4A8lXfCayQaBaRto,9
+coininfo_einherer-0.1.3.dist-info/RECORD,,
