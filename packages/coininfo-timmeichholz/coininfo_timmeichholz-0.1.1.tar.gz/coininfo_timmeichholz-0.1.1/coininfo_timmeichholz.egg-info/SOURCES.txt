@@ -1,0 +1,9 @@
+README.md
+setup.py
+coininfo/__init__.py
+coininfo/info.py
+coininfo_timmeichholz.egg-info/PKG-INFO
+coininfo_timmeichholz.egg-info/SOURCES.txt
+coininfo_timmeichholz.egg-info/dependency_links.txt
+coininfo_timmeichholz.egg-info/requires.txt
+coininfo_timmeichholz.egg-info/top_level.txt
