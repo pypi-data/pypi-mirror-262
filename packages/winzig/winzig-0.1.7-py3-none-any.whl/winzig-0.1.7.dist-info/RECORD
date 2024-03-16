@@ -1,0 +1,17 @@
+winzig/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+winzig/commands.py,sha256=urWgf4hQL_wxCM56O_D0aIkS7lawazWGkV1f0SicdMg,3573
+winzig/config.py,sha256=JvP7ImUpuADuCi0xG5iaIT0BFYRJpp_SpSFt0aqOZ9E,565
+winzig/crawler.py,sha256=AuadUIsxL0ISjm3YQt8kAaz98MBBBJRiBLPEfyu2wz8,4298
+winzig/database.py,sha256=AHSQURh3VnTFuhKucaASkk-TsGNmkuq8bDTARscBZI0,352
+winzig/idf.py,sha256=aPEw197yl-On-5ci_0dkoiBWkfQSA8JEGqEUQzH-FJI,1675
+winzig/main.py,sha256=8KIrlWKmsUW5ld0TxHl26P0j3wkdPwsHnEskQLd1taI,656
+winzig/models.py,sha256=AdPKOI4_MhX_MxDVqnI8j2sMJoVz2SB1uJ2Sl-SsAVA,771
+winzig/search_engine.py,sha256=djswDJR9Rm5RbMJVJg4HzOZEg82dk1pWk2hUJBAY2Iw,2418
+winzig/tui.py,sha256=_6tSpeGJSPUg_WA1pPJ5yKX6Rs1J9rpR6Ejq9ay_jvk,1545
+winzig/tui.tcss,sha256=KVBkRuEvdfNyWokM6N2RO1EvD918C0kewYGsDKSAnyw,121
+winzig/utils.py,sha256=KEeRG--xEm22Y0ybwtAfEfsTFnnaF752sZVirFCA3Gc,721
+winzig-0.1.7.dist-info/LICENSE,sha256=ObQORiBt0sDbYCi_fmuRSWPEaeMVzDpBa0So2oad5Xk,1051
+winzig-0.1.7.dist-info/METADATA,sha256=klcJGI5sVPu3-5FbivoDMLV7CphnH9o4W6wNQN7ZSYA,6339
+winzig-0.1.7.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+winzig-0.1.7.dist-info/entry_points.txt,sha256=3QF6jM7tRyYRtt0IFurNUs9CBGQivmnHKi6ntpgHZU8,42
+winzig-0.1.7.dist-info/RECORD,,
