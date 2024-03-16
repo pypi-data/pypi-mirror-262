@@ -1,0 +1,5 @@
+[console_scripts]
+PyForge -T = PyForge.scripts.test:main
+PyForge -Test = PyForge.scripts.test:main
+PyForge -t = PyForge.scripts.test:main
+PyForge -test = PyForge.scripts.test:main
