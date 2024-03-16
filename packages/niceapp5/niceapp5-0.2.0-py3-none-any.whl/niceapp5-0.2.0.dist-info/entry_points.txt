@@ -1,0 +1,2 @@
+[console_scripts]
+niceapp5 = niceapp5:start
