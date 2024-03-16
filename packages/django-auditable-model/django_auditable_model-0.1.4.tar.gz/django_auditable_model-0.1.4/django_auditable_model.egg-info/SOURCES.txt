@@ -1,0 +1,13 @@
+setup.py
+django_auditable_model/__init__.py
+django_auditable_model/admin.py
+django_auditable_model/apps.py
+django_auditable_model/models.py
+django_auditable_model/serializers.py
+django_auditable_model/tests.py
+django_auditable_model/views.py
+django_auditable_model.egg-info/PKG-INFO
+django_auditable_model.egg-info/SOURCES.txt
+django_auditable_model.egg-info/dependency_links.txt
+django_auditable_model.egg-info/top_level.txt
+django_auditable_model/migrations/__init__.py

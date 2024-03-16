@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: django_auditable_model
+Version: 0.1.4
+Summary: A Django app providing reusable abstract models.
+Author: Shubham Sharma
+Author-email: sharma.shubham6522@gmail.com
+License: MIT
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+# About
+This library creates Abstract models which will be used to reduce work across all the models of your application. You can
+just import the library and inherit it in other models to make usage of its functionality.
+
+## Usage
+
+```
+from django_auditable_models.models import AbstractAuditableModel
+
+class MyModel(models.Model,AbstractAuditableModel):
+    name = models.CharField(max_length = 150,null=True,blank=True)
+    
+test = MyModel()
+test.name = 'TestName'
+test.save()
+
+print(test.created_on)
+
+```
+
+### Use the Mixin in Your Serializers
+
+When defining serializers for your models, inherit from both `AuditableModelMixin` and `serializers.ModelSerializer` (or any other base serializer class you're using). The `AuditableModelMixin` ensures that the `created_by` field is automatically populated from the request context.
+
+```python
+from myapp.models import MyModel
+from rest_framework import serializers
+from django_auditable_models.serializers import AuditableModelMixin
+
+class MyModelSerializer(AuditableModelMixin, serializers.ModelSerializer):
+    class Meta:
+        model = MyModel
+        fields = ['id', 'name', 'created_by']
+        read_only_fields = ('created_by',)
+```
+
+### Ensure the Request Context is Passed to the Serializer
+
+In your views, ensure that the serializer's context includes the request object. This is automatically handled if you're using DRF's generic views or viewsets.
+
+```python
+from myapp.models import MyModel
+from myapp.serializers import MyModelSerializer
+from rest_framework import generics
+
+class MyModelListCreateAPIView(generics.ListCreateAPIView):
+    queryset = MyModel.objects.all()
+    serializer_class = MyModelSerializer
+```
+
+If you're not using DRF's view classes that automatically pass the context, make sure to include the request context manually when initializing the serializer.
+
+```python
+serializer = MyModelSerializer(data=request.data, context={'request': request})
+```
+
+### Advantages
+
+- **Separation of Concerns**: This approach keeps the logic for assigning the `created_by` field within the API layer, maintaining a clear separation from the model layer.
+- **Flexibility and Reusability**: By using a mixin, you can easily apply this functionality to any serializer without duplicating code.
+- **Explicit Context Usage**: It leverages the serializer context, which is explicitly designed for passing additional information like the request object, ensuring that the implementation aligns with DRF's design patterns.
+
+This serializer-level solution is particularly suited for Django projects that use DRF for building APIs, providing a clean, reusable way to automatically handle `created_by` fields across different models and serializers.
