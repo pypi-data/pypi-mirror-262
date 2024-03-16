@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: matlab-search-path-resolver
+Version: 0.1.0
+Summary: Navigate the MATLAB search path in Python.
+Home-page: https://github.com/watermarkhu/matlab-path
+License: MIT
+Keywords: MATLAB,path,textmate
+Author: Mark Hu
+Author-email: watermarkhu@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: textmate-grammar-python (>=0.3.0,<0.4.0)
+Project-URL: Documentation, https://
+Project-URL: Repository, https://github.com/watermarkhu/matlab-path
+Description-Content-Type: text/markdown
+
+# MATLAB path
+
+```matlab
+from pathlib import Path
+from matlab_path import SearchPath
+
+path = Path("./test/workspace")
+
+search_path = SearchPath([])
+search_path.addpath(path, recursive=True)
+```
+
