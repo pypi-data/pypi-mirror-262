@@ -1,0 +1,52 @@
+## Py Configurator Logger
+**Py Configurator Logger** is a Python package designed to simplify logging configuration and usage within your projects. It provides a flexible logger setup with customizable output formats and log levels.
+
+### Installation
+You can install Py Configurator Logger via pip:
+
+``` pip install py-configurator-logger ```
+
+
+### Usage
+#### Basic Usage
+```
+from py_configurator_logger import ConfiguratorLogger
+
+# Initialize logger
+configurator_logger = ConfiguratorLogger(logger_name='my_logger')
+logger = configurator_logger.get_logger()
+
+# Log messages
+logger.debug('Debug message')
+logger.info('Info message')
+logger.warning('Warning message')
+logger.error('Error message')
+logger.critical('Critical message')
+
+# Log custom level
+logger.trace('Trace message')
+
+# You can also provide extra parameters to the logger, such as:
+logger.info('User logged in', extra={'user_id': 123, 'username': 'example_user'})
+
+This allows for additional contextual information to be included in the log messages.
+```
+
+### Configuration
+**Py Configurator Logger**  utilizes configurations from environment variables loaded from .env files within the directory. You can customize the logging behavior by setting the following environment variables:
+
+- **logs_level**: Adjusts the log level. The default level is set to **INFO**.
+- **logs_output_format**: Specifies the log output format, which can be either plain_text or json. The default format is **plain_text**.
+- **log_text_format:** Sets the log format for plain text output. The default format is `%(asctime)s %(levelname)s %(name)s:%(lineno)d %(message)s`.
+- **log_json_format:** Sets the log format for JSON output. The default format is `{"timestamp": "%(asctime)s", "level": "%(levelname)s", "filename": "%(name)s", "lineno": "%(lineno)d", "message": "%(message)s"}`.
+
+
+### Sample .env file
+
+```
+logs_level=trace
+logs_output_format=json
+```
+
+You can also add **log_text_format** and **log_json_format** 
+for further customization of the logging output formats for plain text and JSON output.
