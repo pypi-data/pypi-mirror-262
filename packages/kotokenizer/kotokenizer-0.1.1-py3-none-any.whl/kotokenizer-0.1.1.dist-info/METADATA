@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: kotokenizer
+Version: 0.1.1
+Summary: Korean tokenizer, sentence classification, and spacing model.
+Home-page: https://github.com/dsdanielpark/ko-tokenizer
+Author: daniel park
+Author-email: parkminwoo1991@gmail.com
+Keywords: Python,Tokenizer,Korean,Korean Tokenizer,NLP,Natural Language Process,LLM,Large Language Model
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: Korean
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Korean Tokenizer
+Wait for release
