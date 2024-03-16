@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "vizing"
+version = "0.1.1"
+description = "List-colouring in Python."
+authors = ["Matthew Henderson <matthew.james.henderson@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-constraint = "^1.4.0"
+networkx = "^3.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
