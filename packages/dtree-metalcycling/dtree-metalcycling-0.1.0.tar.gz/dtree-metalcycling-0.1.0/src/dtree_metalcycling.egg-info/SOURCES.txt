@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+docs/dtree.png
+examples/example_1.py
+src/__init__.py
+src/dtree.py
+src/dtree_metalcycling.egg-info/PKG-INFO
+src/dtree_metalcycling.egg-info/SOURCES.txt
+src/dtree_metalcycling.egg-info/dependency_links.txt
+src/dtree_metalcycling.egg-info/requires.txt
+src/dtree_metalcycling.egg-info/top_level.txt
