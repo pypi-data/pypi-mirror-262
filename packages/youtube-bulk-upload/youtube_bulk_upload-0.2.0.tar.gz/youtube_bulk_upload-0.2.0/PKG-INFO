@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: youtube-bulk-upload
+Version: 0.2.0
+Summary: Upload all videos in a folder to youtube, e.g. to help re-populate an unfairly terminated channel
+Home-page: https://github.com/beveradb/youtube-bulk-upload
+License: MIT
+Author: Andrew Beveridge
+Author-email: andrew@beveridge.uk
+Requires-Python: >=3.9,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth
+Requires-Dist: google-auth-httplib2
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: requests (>=2)
+Requires-Dist: thefuzz (>=0.22)
+Project-URL: Documentation, https://github.com/beveradb/youtube-bulk-upload/blob/main/README.md
+Project-URL: Repository, https://github.com/beveradb/youtube-bulk-upload
+Description-Content-Type: text/markdown
+
+# youtube-bulk-upload
+Upload videos to youtube in bulk, e.g. to help re-populate an unfairly terminated channel
+
