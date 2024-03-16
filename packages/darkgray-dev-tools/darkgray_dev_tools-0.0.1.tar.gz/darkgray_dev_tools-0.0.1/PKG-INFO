@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: darkgray_dev_tools
+Version: 0.0.1
+Summary: Tools for development, testing and releasing of Darker, Graylint and Darkgraylib.
+Author-email: Antti Kaihola <13725+akaihola@users.noreply.github.com>
+Requires-Dist: click
+Requires-Dist: ruamel.yaml>=0.15.78
+Requires-Dist: setuptools>=61
+Project-URL: Home, https://github.com/akaihola/darkgray-dev-tools
