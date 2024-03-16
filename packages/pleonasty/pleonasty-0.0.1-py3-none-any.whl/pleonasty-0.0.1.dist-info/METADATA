@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pleonasty
+Version: 0.0.1
+Summary: A very simple abstraction for LLMs to get single responses to a given input.
+Author-email: "Ryan L. Boyd" <ryan@ryanboyd.io>
+Project-URL: Homepage, https://github.com/ryanboyd/pleonasty
+Project-URL: Issues, https://github.com/ryanboyd/pleonasty/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy >=1.25.2
+Requires-Dist: tqdm >=4.66.1
+Requires-Dist: accelerate >=0.27.2
+Requires-Dist: SentencePiece >=0.1.99
+Requires-Dist: protobuf >=4.25.3
+Requires-Dist: bitsandbytes >=0.42.0
+
+# pleonasty
+
+A very, very, very, very simple library to abstract interactions with an LLM for single-response purposes.
