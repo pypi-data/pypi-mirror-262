@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: terrajinja-sbp-backend
+Version: 0.0.1
+Summary: Terrajinja extension for automation using cdktf
+Home-page: https://gitlab/terrajinja
+Author: Terrajinja Team
+Author-email: int-terrajinja@schubergphilis.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# terrajinja-sbp-backend
+
+sbp extension for the backend provider
+
+TODO: add proper documentation
+
+History
+-------
+
+0.0.1 (14-03-2024)
+---------------------
+
+* First code creation
