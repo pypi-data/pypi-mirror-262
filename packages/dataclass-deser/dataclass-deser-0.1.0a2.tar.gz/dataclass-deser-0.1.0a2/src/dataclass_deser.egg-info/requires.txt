@@ -1,0 +1,13 @@
+typing_extensions>=4.5
+
+[dev]
+test
+mypy
+black
+isort
+
+[mypy]
+mypy>=1
+
+[test]
+pytest
