@@ -1,0 +1,8 @@
+README.md
+setup.py
+tawashipkg/__init__.py
+tawashipkg.egg-info/PKG-INFO
+tawashipkg.egg-info/SOURCES.txt
+tawashipkg.egg-info/dependency_links.txt
+tawashipkg.egg-info/requires.txt
+tawashipkg.egg-info/top_level.txt
