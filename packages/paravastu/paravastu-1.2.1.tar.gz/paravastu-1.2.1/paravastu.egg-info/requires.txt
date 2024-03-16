@@ -1,0 +1,9 @@
+numpy
+pandas
+biopandas
+dtale
+plotnine
+glob
+matplotlib
+matplotlib.pyplot
+itertools
