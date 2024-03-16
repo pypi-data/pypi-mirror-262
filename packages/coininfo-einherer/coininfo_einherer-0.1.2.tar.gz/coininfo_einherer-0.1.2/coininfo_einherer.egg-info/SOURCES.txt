@@ -1,0 +1,11 @@
+README.md
+setup.py
+coininfo/__init__.py
+coininfo/humain.py
+coininfo/info.py
+coininfo/test_info.py
+coininfo_einherer.egg-info/PKG-INFO
+coininfo_einherer.egg-info/SOURCES.txt
+coininfo_einherer.egg-info/dependency_links.txt
+coininfo_einherer.egg-info/requires.txt
+coininfo_einherer.egg-info/top_level.txt
