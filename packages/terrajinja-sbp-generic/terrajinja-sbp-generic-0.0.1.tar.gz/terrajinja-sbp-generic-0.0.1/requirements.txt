@@ -1,0 +1,2 @@
+# this is only usable for terrajinja
+terrajinja-cli>=0.0.4
