@@ -1,0 +1,10 @@
+fkpackage/__init__.py,sha256=0NNeRLzEiSqGm9NKIcdaiRUU7_Sd-r6vNC8OivaFt5o,161
+fkpackage/addition.py,sha256=zPQuQd-7APR_yrczpkfXq47BcwIAhA2u8Paxgv0ZCNo,31
+fkpackage/subtraction.py,sha256=ypG4_UqNF6FHuEJD_4OmLgO-6B_oG4CEGkP0J1w135s,36
+fkpackage/extras/__init__.py,sha256=A6mc2x5Jkv8jV7IYIn8-wzrw1WyRDB5vwK6fGRczo1w,167
+fkpackage/extras/division.py,sha256=w6XBNaGNAhGuepYe8MmCxs9Z8jX_-3pHSz18zlHh0Ig,34
+fkpackage/extras/multiplication.py,sha256=HdfNg7m8Ot4ICpXxWEw7WW1z7POZalc-GV7V2h434gU,36
+fkpackage-0.0.1.dist-info/METADATA,sha256=m__XFEqKCULm96di3cuFUCo9S2TQ8aovEWZJMWckYFU,527
+fkpackage-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+fkpackage-0.0.1.dist-info/top_level.txt,sha256=n3qdHz6iq9QVL9mAHF-8ZtVNsOWoj4jqoGu5zQF2rWQ,10
+fkpackage-0.0.1.dist-info/RECORD,,
