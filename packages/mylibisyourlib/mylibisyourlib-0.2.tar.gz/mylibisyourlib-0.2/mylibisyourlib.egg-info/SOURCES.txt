@@ -1,0 +1,12 @@
+README.md
+setup.py
+mylibisyourlib/__init__.py
+mylibisyourlib/create_script.py
+mylibisyourlib/fetch_content_not_found.py
+mylibisyourlib/module1.py
+mylibisyourlib/update_content_not_found.py
+mylibisyourlib.egg-info/PKG-INFO
+mylibisyourlib.egg-info/SOURCES.txt
+mylibisyourlib.egg-info/dependency_links.txt
+mylibisyourlib.egg-info/requires.txt
+mylibisyourlib.egg-info/top_level.txt
