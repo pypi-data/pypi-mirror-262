@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pycx3/__init__.py
+pycx3/__main__.py
+pycx3/cli.py
+pycx3/compile.py
+pycx3.egg-info/PKG-INFO
+pycx3.egg-info/SOURCES.txt
+pycx3.egg-info/dependency_links.txt
+pycx3.egg-info/entry_points.txt
+pycx3.egg-info/requires.txt
+pycx3.egg-info/top_level.txt
