@@ -1,0 +1,7 @@
+python>=3.8
+matplotlib>=3.5.2
+numba>=0.56.4
+numpy>=1.23.5
+pytest>=7.1.2
+scikit-sparse>=0.4.7
+scipy>=1.8.1
