@@ -1,0 +1,15 @@
+## hpr2507 :: Racket, Nix, Fractalide and the sounds of a Hong Kong New Town
+
+ Listen to me walk through five shopping malls and one bicycle tunnel, as I rant about how flow-based programming microservices and functional package management will save the future of programming and software reuse, and usher in a new era of software quality and productivity!
+If it sounds like I'm a bit down about working alone on racket2nix, you're interpreting me wrong! I didn't expect any feedback at all from the small to non-existent racket/nix intersection, but it turns out the intersection is larger than I thought, and I'm grateful for any words of encouragement, and feedback in any form on what the community needs.
+Links:
+
+racket2nix
+racket
+nix
+fractalide
+
+Nix is the mother of Guix:
+
+hpr2198 :: How awesome is Guix and why will it take over the world
+

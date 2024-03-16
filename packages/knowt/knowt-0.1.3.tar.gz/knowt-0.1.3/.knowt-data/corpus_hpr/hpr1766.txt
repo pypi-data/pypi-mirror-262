@@ -1,0 +1,20 @@
+## hpr1766 :: Sox of Silence
+
+ 
+Many of you may be aware of the "truncate silence" filter in audacity. As I already use SOX to speed up my podcasts, I wanted to see if it could also remove silence as well. While the man page is detailed, it is difficult to follow. https://sox.sourceforge.net/
+
+
+Fortunately Jason Navarrete posted an excellent article on digitalcardboard.com called The SoX of Silence which went through the process step by step https://digitalcardboard.com/blog/2009/08/25/the-sox-of-silence/
+
+The Script
+
+    # -S, --show-progress
+    # -V verbose
+    # tempo Change the audio playback speed but not its pitch. 
+    # remix Select and mix input audio channels into output audio channels. 
+    # remix - performs a mix-down of all input channels to mono.
+    # silence Removes silence from the beginning, middle, or end of the audio.
+    # https://digitalcardboard.com/blog/2009/08/25/the-sox-of-silence/
+    # 
+    sox -S -v2 "${FILENAME}" "${FILENAME}-faster-${SPEED}.ogg" -V9 tempo ${SPEED} remix - silence 1 0.1 1% -1 0.1 1%
+

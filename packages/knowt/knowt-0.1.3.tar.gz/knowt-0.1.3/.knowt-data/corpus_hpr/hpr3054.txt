@@ -1,0 +1,295 @@
+## hpr3054 :: Coronavirus Thoughts
+
+ This is an attempt on my part to pull together what we know about the Coronavirus, and what measures we can take. It emphasizes the importance of social distancing, and evaluates our prospects for conquering the disease. https://www.palain.com/?page_id=731
+
+https://www.palain.com/?page_id=356
+https://www.palain.com/?page_id=358
+https://www.palain.com/?page_id=360
+https://www.palain.com/?page_id=402
+https://www.palain.com/?page_id=402
+https://hackerpublicradio.org/eps.php?id=2685
+https://hackerpublicradio.org/eps.php?id=2695
+https://hackerpublicradio.org/eps.php?id=2705
+https://hackerpublicradio.org/eps.php?id=2870
+https://hackerpublicradio.org/eps.php?id=2880
+https://www.theguardian.com/world/2020/apr/05/when-will-a-coronavirus-vaccine-be-ready
+https://s2.washingtonpost.com/camp-rw/?e=endpbG5pa0B6d2lsbmlrLmNvbQ%3D%3D&s=5e8b05f4fe1ff6038cf6a56a&linknum=0&linktot=79
+https://www.jci.org/articles/view/138003
+https://www.scientificamerican.com/podcast/science-talk/
+https://fivethirtyeight.com/videos/why-we-shouldnt-hope-covid-19-is-seasonal-like-the-flu/
+https://fivethirtyeight.com/features/why-we-still-need-to-test-widely-for-coronavirus/
+https://www.palain.com/?page_id=731
+
+
+Show notes added by Ken as they are released under a Creative Commons Attribution-ShareAlike 4.0 International License. 
+
+   Well, since I am sitting at home maintaining a “social distance” I thought I would put down some thoughts about this pandemic and how we will be affected. But a disclaimer to be completely clear: I am not a doctor or a research scientist. I am retired, but I was once a college professor teaching 
+   
+   Statistics
+   
+   and 
+   
+   Research Methods
+   
+   . I think this helps me in some way to interpret the information I receive, but when I want authoritative information I look to real doctors, the CDC, and qualified researchers. If you want to know more about what I mean by qualified researchers, you might want to check out my series on interpreting studies:
+
+
+
+
+      Scientific and Medical Reports
+      
+
+
+
+      Problems With Studies
+      
+
+
+
+      Evidence-Based Medicine
+      
+
+
+
+      The Hierarchy of Evidence
+      
+
+
+
+      Evaluating a Study
+      
+
+
+
+   And if you prefer audio to reading, you can download the audio versions at Hacker Public Radio:
+
+
+
+
+      Scientific and Medical Reports
+      
+
+
+
+      Problems With Studies
+      
+
+
+
+      Evidence-Based Medicine
+      
+
+
+
+      The Hierarchy of Evidence
+      
+
+
+
+      Evaluating  a Study
+      
+
+
+
+   So, with the preliminaries out of the way, what do we know? We know that this is a virus of a type called coronavirus, which makes it part of the family of viruses that include the common cold, SARS, and MERS. What distinguishes this new virus, technically called SARS-CoV2 (though I usually just call it covid-19, like most reports do) is that it is highly infectious and highly virulent. Highly infectious means it is easily passed from one person to another. Highly virulent means that it can cause death easily. It has been compared in this respect to the 1918 Flu pandemic, which we estimate infected 500 million people worldwide (about 1/3 of the population at that time) and killed at least 20 million to 50 million people, and perhaps more. Note that assigning a cause of death is not a precise science, and medical record keeping in many parts of the world was sketchy at best.
+
+
+   What Can Help?
+
+
+   The ultimate answer to this would be a vaccine. Thankfully, the anti-vaxxers have crawled back under whatever rocks they live under for the time being, but a vaccine is not the perfect answer right now. The good news is that coronavirus appears to be one that does not mutate a lot, which means a vaccine is likely to be more effective than the flu vaccine. Influenza virus changes every year and that makes it a bit of guesswork to figure out. 
+   
+   Scientists are working on a vaccine right now in a crash program
+   
+   , and again there is some good news on that front. First, Chinese scientists were able to DNA sequence the virus pretty quickly. They found that this virus shares 80-90% of its DNA with SARS, which is why it is named SARS-CoV2. Unfortunately, we don’t have a SARS vaccine because that outbreak died off before work was completed, but the work that was done is something we can build on. But in general, most researchers have said that it will take as much as 18 months even with a crash program. 
+
+
+   Usually these take much longer. First you do animal studies, both for safety and for efficacy. For example, one of the early candidates for a SARS vaccine was causing harm to the animals who received it, though they think that problem has now been solved. If the animal trials are promising, you can move on to human trials Stage 1 is to test with a small number of healthy volunteers, looking specifically to test safety. You don’t want to administer a vaccine that kill everyone, or even any significant number of people.   If the candidate passes that test, Stage 2 is to administer the vaccine to a few hundred people in an area where the disease is rampant. If it looks like it is working, and no safety issues have arisen, a final trial can involve several thousand people. If it passes that, it can be approved for medical use and move into production. And that adds even more delays, since producing vaccine in large quantities takes a long time. According to Ronald Klain, Obama Administration’s Ebola Czar:
+
+
+
+      Developing and testing the vaccine — hard as it is — isn’t the hardest part. Manufacturing hundreds of millions of doses — and getting people to take the vaccine — will be harder and take longer.
+   
+
+
+   https://s2.washingtonpost.com/camp-rw/?e=endpbG5pa0B6d2lsbmlrLmNvbQ%3D%3D&s=5e8b05f4fe1ff6038cf6a56a&linknum=0&linktot=79
+   
+
+
+
+   Now, this process can be accelerated to some degree, but not by as much as you might think. Doing the research to find a candidate that might work will take time, and there is no short cut. That is why researchers say a crash program might deliver something in 18 months, as opposed to the decade or more many vaccines require. Sometimes when these studies are done, you get quick results that can lead to dropping some steps. For example, if you have a test group and a control group, and the test group recovers quickly while the control group is dying, any ethical researcher will stop the trial and give the remedy to everyone who needs it. But you are dealing with probabilities in this, and most people are not comfortable with that. They want yes or no answers, and sadly life does not give that all the time. If you are responsible for that decision, if anything goes wrong you will get all of the blame. I’m glad I don’t have to make that decision, though also apprehensive that the people who do make that decision may not be sane adults.
+
+
+   OK, if you we wait for the vaccine, what about medicines to cure the infection? Again, there is work being done here. Several different approaches are being studied. One which we know can work is called 
+   
+   Convalescent Plasma
+   
+   (aka Convalescent Blood). This takes plasma from people who have recovered from the disease, and gives it intravenously to someone seriously ill. It is an old approach, predating vaccines, but it does work. The transfusion of the plasma contains antibodies made by the person who recovered, and those antibodies can help someone with the disease. But the obvious problem is that it does not scale very well when new cases keep increasing. Other approaches are using drugs developed for different illnesses, in the hope that they are sufficiently similar to covid-19 so that the medication would be effective. This is good since those medications have already passed all of the safety tests, but we just don’t know enough right now. Some reports suggest HIV drugs can help, other reports say they don’t. And so this may bear fruit, but it may be a while yet. The medicine promoted by Donald Trump, hydroxychloroquine, has not been found effective in any good research, and should not be counted on as a valid cure.
+
+
+   And that brings us back to the things we know are effective at this point, which is preventing people from passing on the virus by 
+   
+   social distancing
+   
+   , i.e. quarantine, and massive testing. If people stay home and do not interact with other people, they cannot pass the disease along and the outbreak will eventually die off. This will work if done properly. To see this, I will use an example I pulled from Steve Mirsky of the 
+   
+   Scientific American Podcast
+   
+   , which requires less than a minute of spreadsheet work. This uses the reproduction factor R0, which is the average number of people who get infected by each person with the virus.
+
+
+
+
+
+
+               Round
+            
+
+               R0=1.3
+            
+
+               R0=2.5
+            
+
+
+
+               1
+            
+
+               1.3
+            
+
+               2.5
+            
+
+
+
+               2
+            
+
+               1.7
+            
+
+               6.3
+            
+
+
+
+               3
+            
+
+               2.2
+            
+
+               15.6
+            
+
+
+
+               4
+            
+
+               2.9
+            
+
+               39.1
+            
+
+
+
+               5
+            
+
+               3.7
+            
+
+               97.7
+            
+
+
+
+               6
+            
+
+               4.8
+            
+
+               244.1
+            
+
+
+
+               7
+            
+
+               6.3
+            
+
+               610.4
+            
+
+
+
+               8
+            
+
+               8.2
+            
+
+               1525.9
+            
+
+
+
+               9
+            
+
+               10.6
+            
+
+               3814.7
+            
+
+
+
+               10
+            
+
+               13.8
+            
+
+               9536.7
+            
+
+
+
+
+      How the reproduction factor affects the spread
+   
+
+
+   As we can see, with a factor of R0=1.3, which means each person infects on average 1.3 others, after ten rounds of infection it has only spread to 14 other people. But with R0=2.5, which doesn’t seem that much different, ten rounds means 9,536 people have the disease. Now, there are two primary factors affecting R0. One is the inherent infectiousness of the virus, which is high and out of our control. The other factor is how many people each person interacts with, and that is what we are trying to reduce through social distancing.
+
+
+   Testing is still important, even at this stage, because it does several good things. First, it helps with the allocation of resources if we know exactly where the worst spots are. Second, it saves time and equipment in hospitals if we know exactly who is sick. Third, this gets us data we need to plan for future outbreaks. This pandemic is not the last one we will face, and this one won’t be over soon either. We need to know everything we can about how it spreads. And finally, we need a robust testing regime in place before we can “safely” start to resume our lives. 
+
+
+
+      There’s also the fact that, eventually, we’re going to want to go back outside again. As the current protocols start to relax, 
+      
+      a second wave of infections may arise,
+      
+       especially if we don’t have a good grasp on where and how many cases we have in the U.S., said Dr. Eli Perencevich, a professor of medicine and epidemiology at the University of Iowa.
+   
+
+      “We can’t stay in social distancing forever,” Perencevich said. “So we need to ramp up testing quickly.”
+   
+
+
+   https://fivethirtyeight.com/features/why-we-still-need-to-test-widely-for-coronavirus/
+   
+
+
+
+   So, the bottom line is that a vaccine is most likely 18 months away, medicines may be months away, and right now the best thing we can do as individuals is isolate.
+

@@ -1,0 +1,10 @@
+## hpr0116 :: Linux Boot Process Part 6 - Init
+
+ Linux Boot Process pt. 6 - Init 
+
+Init is the mother of all processes.  See my Notes for a brief reference.  Also check out these resources:
+
+Wikipedia page on init
+init man page
+inittab man page
+Upstart

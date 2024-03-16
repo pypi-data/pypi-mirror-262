@@ -1,0 +1,18 @@
+## hpr2384 :: Slackware in Scotland
+
+ Beni aka @Navigium visited Andrew aka @mcnalu in Scotland as part of a cycling tour and they decided to record a follow up to their previous HPR show on Slackware to mark the release of Slackware 14.2, or rather the first anniversary of its release.
+Some points and links mentioned are:
+
+Arch is for fruitflies, Slackware for elephants?
+Destroying a hard drive hammer or drill?
+Grub vs Lilo?
+Changes in Slackware - no changes an end user would notice! Pulseaudio now included as needed for bluetooth support. In Andrew's experience of 14.1 and before, only one package needed Pulseaudio, namely the game VVVVVV and even then it just wanted to see it installed, didn't need it for sound to work!
+You can get gnome for slackware with dropline GNOME.
+Digression: Trains in Switzerland vs Scotland
+Beni and Andrew generally build our packages using the slackbuilds.org. There can be dependency issues but it's rare. Worst case is Pandoc with its Haskell deps but sbopkg queue files are a great help there. Beni recommends sbotools as an alternative that deals with this and feels like portsnap on FreeBSD.
+Digression: Recommend this HPR show on open-sourcing of Colossal Cave Adventure by ClaudioM.
+Managing WiFi networks: wicd vs NetworkManager vs rc.inet1 (slackware network config script).
+When camping and cycling, power is precious. Beni explains how to pack a bicycle for air travel.
+Expect Slackware in Switzerland!
+
+The hosts wish to clarify that no Italian Arch linux users nor fruitflies were harmed during the recording of this show.

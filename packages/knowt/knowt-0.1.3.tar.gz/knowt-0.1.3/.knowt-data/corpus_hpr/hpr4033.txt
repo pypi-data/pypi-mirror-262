@@ -1,0 +1,46 @@
+## hpr4033 :: Using playerctl to control media players
+
+ About MPRIS
+
+The Media Player Remote Interfacing Specification is a standard D-Bus
+interface which aims to provide a common programmatic API for
+controlling media players.
+
+
+It provides a mechanism for discovery, querying and basic playback
+control of compliant media players, as well as a tracklist interface
+which is used to add context to the active media item.
+
+man playerctl
+
+DESCRIPTION
+The playerctl utility controls MPRIS-enabled media players. In
+addition to offering play, pause and stop control, playerctl also offers
+previous and next track support, the ability to seek backwards and
+forwards in a track, and volume control. playerctl also supports
+displaying metadata (e.g., artist, title, album) for the current track,
+and showing the status of the player.
+Players that can be controlled using playerctl include audacious(1),
+cmus(1), mopidy(1), mpd(1), quodlibet(1), rhythmbox(1), vlc(1) and
+xmms2(1). However, any player that implements the MPRIS interface
+specification can be controlled using playerctl including web
+browsers.
+
+Command Summary
+
+"playerctl status" Get the current status of the player.
+"playerctl play" Command the player to play.
+"playerctl pause" Command the player to pause.
+"playerctl play-pause" Command the player to toggle between play and
+pause.
+"playerctl stop" Command the player to stop.
+"playerctl next" Command the player to skip to the next track.
+"playerctl previous" Command the player to skip to the previous
+track.
+
+Links
+
+https://support.mozilla.org/en-US/kb/control-audio-or-video-playback-your-keyboard
+https://specifications.freedesktop.org/mpris-spec/2.2/
+https://www.addictivetips.com/ubuntu-linux-tips/fix-media-keys-not-working-on-linux/
+

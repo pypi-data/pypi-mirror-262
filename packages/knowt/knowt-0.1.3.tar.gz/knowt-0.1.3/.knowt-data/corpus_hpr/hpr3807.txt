@@ -1,0 +1,157 @@
+## hpr3807 :: PeePaw builds a computer
+
+ 
+intro
+
+who is peepaw?
+Me!
+why a retro computer?
+help a kid understand computers
+why z80?
+cheap, available, cheap
+
+the plan
+
+build from scratch
+build something like a tec1
+https://en.wikipedia.org/wiki/TEC-1
+a great guide is the 1981 book build your own z80 computer
+Build
+Your Own Z80 Computer Steve Ciarcia/
+get started with nop tester
+http://www.z80.info/z80test0.htm
+want an expandable system
+keep the cost down
+work up to a system like the jupiter ace (which is like a zx-81
+sinclair computer)
+https://en.wikipedia.org/wiki/Jupiter_Ace
+
+getting started, the nop test
+
+use an arduino mega board and some forth to spin up the most basic
+z80 system
+https://gitlab.com/8bitforce/retroshield-hw/-/tree/master/hardware
+give the z80 5 volts, a clock and the right data and it will happily
+start up and run through its address space doing nothing
+
+the nop tester, in software
+
+make a forth logic probe
+https://en.wikipedia.org/wiki/Logic_probe
+use a gate method of frequency counting
+https://ww1.microchip.com/downloads/en/Appnotes/doc8365.pdf
+create a few forth words to make a "logic probe" and test that
+probe
+https://pajacobs-ghub.github.io/flashforth/ff5-tutorial-guide.html#_counting_button_presses
+need an arduino mega running flashforth
+https://store.arduino.cc/products/arduino-mega-2560-rev3
+https://flashforth.com/atmega.html
+datasheet
+https://store.arduino.cc/products/arduino-mega-2560-rev3
+https://ww1.microchip.com/downloads/en/devicedoc/atmel-2549-8-bit-avr-microcontroller-atmega640-1280-1281-2560-2561_datasheet.pdf
+some jumper wires
+z80
+solderless bread board
+
+the code walk through, start from the bottom up note: ( -- ) are
+stack effect comments, back slashes are plain comments
+
+constants
+variable
+@ ! mset mclr mtst
+set up external interrupt, int4, arduino board pin4
+
+
+\ the source code
+\ declare some constants and variable as labels
+variable Compare
+variable Count
+
+$100 constant PINH      \ these labels come from the atmega2560 datasheet
+$101 constant DDRH
+$102 constant PORTH
+$a0 constant TCCR4A
+$a1 constant TCCR4B
+$a8 constant OCR4A
+$2c constant PINE
+$2d constant DDRE
+$2e constant PORTE
+$6a constant EICRB
+$3d constant EIMSK
+
+: ext4.irq ( -- ) Count @ 1+ Count ! ;i  \ the frequency counter
+
+: logicprobe-init ( -- )
+    1249 Compare ! \ 100 hz
+    %0000.1000 DDRH mset \ h3 output
+    %0100.0000 TCCR4A c!  \ toggle d6, ph3 on compare match
+    0000.1011 %TCCR4B c!  \ set ctc mode, clk/64
+    Compare @ OCR4A !  \ set compare value
+    %0 DDRE c! \ e input
+    0001.0000 PORTE mset \ pullup on e4
+    %0000.0010 %EICRB mset \ falling edge
+    ['] ext4.irq #6 int!
+;
+
+\ helper words
+
+: start-clock ( -- )  %0100.0000 TCCR4A c! %0000.1011 TCCR4B c! ;    \ the bit manipulation does what the word says
+: stop-clock ( -- )   %0000.0000 TCCR4A c!  %0000.0000 TCCR4B c! ;
+: set-frequency ( n -- )  OCR4A ! ;    \ set compare value
+: pin-high ( -- )  %0000.1000 PORTH mset ;
+: pin-low ( -- )    %0000.1000 PORTH mclr ;
+: open-gate ( -- )   0 Count ! %0001.0000 EIMSK mset ;
+: close-gate ( -- )   %0001.0000 EIMSK mclr ;
+
+: process-data ( -- )
+  Count @ 1- Count !       \ clean up value in Count
+  Count @ dup 0 > if       \ is Count greater than 0, if so its pulsing
+     cr ." freq=" 10 * .
+  else                     \ otherwise its not so is it high or low?
+      drop
+      %0000.1000 PINH mtst
+      if
+         ." high"
+       else
+          ." low"
+      then then
+ ;
+
+ : wait ( -- ) 100 ms ;
+
+ : sample-pin ( -- ) open-gate wait close-gate process-data ;  \ the 'logic probe'
+
+test
+Arduino
+
+
+clock, using 16 bit timer4, its output is on pin6, running at
+100hz
+need to be able to start and stop the clock, and set the output pin
+high or low
+sample-pin is the word that does the work
+ouput from the serial terminal exercising the logic probe ( comments
+add after the fact):
+
+E FlashForth 5 ATmega2560 13.06.2022
+
+ok<#,ram>
+logicprobe-init ok<#,ram>    (start up the logic probe)
+sample-pin                   (sample the pin)
+freq=100 ok<#,ram>           ( its oscilating at 100hz)
+stop-clock ok<#,ram>
+sample-pin low ok<#,ram>     ( after stopping the clock the pin is low)
+pin-high ok<#,ram>
+sample-pin
+high ok<#,ram>               ( now its high)
+125 set-frequency ok<#,ram>
+start-clock ok<#,ram>
+sample-pin
+freq=1000 ok<#,ram>          ( after changing the frequency its 1000hz)
+next time
+
+repurpose the 16bit clock and use it to drive the z80, we'll hook up
+the data port of the z80 to the arduino mega and use the logic probe to
+see if the z80 is working
+
+

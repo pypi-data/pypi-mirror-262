@@ -1,0 +1,55 @@
+## hpr2010 :: Parsing JSON with Python
+
+ JSON is a popular way of storing data in a key/value type arrangement so that the data can be parsed easily later. For instance, here is a very simple JSON snippet:
+{
+"name":"tux",
+"health":"23",
+"level":"4"
+}
+If you are like me, three questions probably spring to your mind:
+
+That looks an awful lot like a Python dictionary.
+Yes, it looks exactly like a Python dictionary. They are shockingly similar. If you are comfortable with Python lists and dictionaries, you will feel right at home with JSON.
+I don't feel comfortable with dictionaries, can't I just use a delimited text file?
+You can, but you will have to write parsers for it yourself. If your data gets very complex, the parsing can get pretty ugly.
+That is not to say that you should not use a simple delimited text file if that is all that your programme needs. For example, I would not want to open a config file as a user and find that I have to format all my options as valid JSON.
+Just know that JSON is out there and available, and that the JSON Python module has some little features that make your life easier when dealing with sets of data.
+Why not use XML instead?
+You can. Mostly one should use the most appropriate format for one's project. I'm a big fan of XML, but sometimes JSON makes more sense.
+
+I am not going to make this post about teaching the JSON format. If you need clarification on how to structure data into JSON, go through a tutorial on it somewhere; there are several good ones online. Honestly, it's not that complex; you can think of JSON as nested dictionaries.
+Starting from scratch, let's say that you write a programme that by nature gathers data as it runs. When the user quits, you want to save the data to a file so that when the user resumes the app later, they can load the file back in and pick up where they left off.
+Storing Data as JSON
+At its most basic, the JSON data structure is basically the same as a Python dictionary, and in fact the nice thing about JSON is that it can be directly imported into a Python dictionary. Usually, however, you are resorting to JSON because you have somewhat complex data, so in the sample code we will use a dictionary-within-a-dictionary:
+#!/usr/bin/env python
+
+game = {'tux': {'health': 23, 'level': 4}, 'beastie': {'health': 13, 'level': 6}}
+# you can always add more to your dictionary
+
+game['konqi'] = {'health': 18, 'level': 7}
+That code creates a ditionary called game which stores the player name and a corresponding dictionary of attributes about how the player is doing in the progress of the game. As you can see after the comment, adding new players is simple.
+Now let's see how to save that data to a save file.
+## continued...
+import json
+
+with open('dosiero.json', 'w') as outfile:
+    json.dump(game, outfile)
+That would be your save command. Simple as that, all the structured content of your game dictionary is committed to a file on your hard drive.
+Reading Data from a JSON File
+If you are saving data to JSON, you probably will evenually want to read the data back into Python. For this, Python features the function json.load
+import json
+
+dosiero = open('dosiero.json')
+game = json.load(dosiero)
+
+print game['tux']     # prints {'health': 23, 'level': 4}
+print game['tux']['health']    # prints 23
+print game['tux']['level']     # prints 4
+
+# when finished, close the file
+
+json_data.close()
+As you can see, JSON integrates surprisingly well with Python, so it's a great format when your data fits in with its model.
+Have fun!
+[EOF]
+Made with Free Software.

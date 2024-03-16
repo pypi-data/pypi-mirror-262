@@ -1,0 +1,42 @@
+## hpr1561 :: How I got into Accessible Computing
+
+ 
+Accessibility tools for the visually impaired
+
+
+A short explanation of how I personally got involved with accessible computing,
+a definition of the term 'accessible' as it is applied to anything in relation
+to persons with physical or cognitive impairment, and very short list of the most
+commonly used adaptive tools to improve accessibility to Windows and Linux.
+
+Windows
+
+The NVDA screen-reader: https://nvaccess.org
+
+
+Linux
+
+The Orca screen-reader: https://help.gnome.org/users/orca/stable/
+
+The brltty refreshable Braille display driver: https://mielke.cc/brltty/
+  brltty has to be the most impressive example of well-documented Open Source.
+
+Debian Accessibility: https://www.debian.org/devel/debian-accessibility/
+  Debian has a fully accessible installer.  I have installed Debian 7.4 from the net install CD ISO image.  The installer is text-based and presents no problem for even the totally blind.
+  See the Debian Accessibility page linked to above.
+
+Ubuntu Accessibility: https://help.ubuntu.com/community/Accessibility 
+  The Ubuntu 'Ubiquity' graphical installer is totally accessible.  Installing from a live CD or DVD image is simple.  See the page linked above. 
+
+Vinux (an Ubuntu variant which is accessible out-of-the-box): https://vinuxproject.org/ 
+  This is an Ubuntu variant which comes up talking from the first.  Not only is the installer accessible, but considerable attention has been paid to including only applications which are accessible on the CD and DVD images. Applications which are either inaccessible or which simply have little or no relevance to the visually impaired are excluded.
+
+Talking Arch: https://talkingarch.tk/
+  Chris Brannan created an accessible ISO image of Arch Linux. 
+  This uses the speakup console-mode screen-reader to provide a way of installing Arch Linux for the visually impaired. Console-mode only, but providing a great starting-point.  I have tried various desktops on top of this installation, including mate, LXDE and others.
+  Talking Arch is now maintained by a couple of names which will be familiar to the Linux VI community; Kyle and Kelly.  Erm...embarassingly I can't find their last names right now.
+
+
+
+Mike Ray.  June 2014
+

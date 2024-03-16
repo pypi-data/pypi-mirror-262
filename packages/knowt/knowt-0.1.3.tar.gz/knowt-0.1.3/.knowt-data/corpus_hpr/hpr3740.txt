@@ -1,0 +1,7 @@
+## hpr3740 :: Batch File Variables; Nested Batch Files
+
+ This final episode of the DOS series continues the look at batch files by first looking at how you can use variables in writing your batch files. Then we look at how batch files can be nested, that is, how one batch file can call another batch file, thus chaining batch files together.
+Links:
+
+https://www.ahuka.com/dos-lessons-for-self-study-purposes/dos-lesson-17-batch-file-variables-nested-batch-files/
+

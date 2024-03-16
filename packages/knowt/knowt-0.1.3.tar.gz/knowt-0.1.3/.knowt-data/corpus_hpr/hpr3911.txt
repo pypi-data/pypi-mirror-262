@@ -1,0 +1,224 @@
+## hpr3911 :: An overview of the 'ack' command
+
+ 
+Introduction
+I have occasionally been using a tool called ack for a
+few years now. It’s billed as “an alternative to grep for
+programmers”.
+There are several features I find particularly useful:
+
+It can restrict text searches to files of a particular
+type
+It uses Perl regular expressions which may be the most powerful
+and feature rich types of RE’s available at present
+You can limit the search area within a file if desired
+
+It is a very comprehensive and useful tool, though maybe quite
+complex to use. Personally I use it in special cases where I need its
+power, and otherwise use the usual grep.
+In this episode I will give you the flavour of its capabilities and
+otherwise leave you to research more if it sounds interesting.
+Installing ack
+The tool can be found in repositories. I use Debian, and
+ack is in the Debian repo and can be installed with:
+sudo apt install ack
+Installing it this way the version I have (and am describing here) is
+3.6.0. There is a new version, 3.7.0 available from the website.
+The documentation on the website suggests installing it as a Perl
+module using CPAN, which is something I will do soon I
+think.
+Perl regular expressions
+These are very sophisticated.
+A project to convert the Perl regular expression capabilities into a
+portable library form was undertaken by Philip Hazel of Cambridge
+University in 1997, and was called Perl Compatible Regular
+Expressions or PCRE.
+Philip Hazel was the originator of the exim mail
+transfer agent (MTA, or mail server), and wanted to use PCRE within
+it.
+Since then PCRE (and later PCRE2) is the way regular expressions are
+implemented in a lot of other software, which shows how widespread use
+of the Perl RE has become.
+The ack documentation refers to the Perl manual for
+details of this type of regular expression, and to a tutorial, if you
+wish to gain a deeper understanding.
+It should be noted that GNU grep can use Perl compatible
+regular expressions when matching lines in files, but this feature is
+marked as experimental.
+File types
+The ack command has rules for recognising file types. It
+does this by looking at the name extensions ('.html' or
+'.py' for example), and in some cases by examining their
+contents. The complete list of types can be found by running:
+ack --help-types
+… or, for a more detailed but less readable list:
+ack --dump
+Some examples are:
+
+cc for C files
+haskell for Haskell files
+lua for Lua files
+python for Python files
+shell for Bash, and other shell command files
+
+These names can be used with the options -t TYPE and
+--type=TYPE and also by simply preceding them with two
+dashes (--TYPE). There are also ways of requesting files
+not of a given type: -T TYPE, --type=noTYPE
+and --noTYPE.
+To check files in the current directory of type shell an
+ack command like the following might be used and the
+following type of output produced:
+$ ack --shell declare
+Bash_snippet__using_coproc_with_SQLite/examples/coproc_test.sh
+11:declare -a com=('date +%F' 'whoami' 'id' 'echo "$BASH_VERSION"'
+Note that ack reports the file path and numbered lines
+within it that match.
+You can add your own file types to ack. There is a
+configuration file called .ackrc in which new types can be
+declared. See below for more information.
+The file type feature is one that makes me use ack again
+and again.
+The .ackrc file
+This file contains “command-line options that are prepended to
+the command line before processing”.
+It’s a useful way to add new types (or even modify existing
+ones).
+It can be located in a number of places. Mine is
+~/.ackrc with other configuration files in my home
+directory.
+It’s possible to generate a new .ackrc with the option
+--create-ackrc. This saves all the default settings in the
+file which makes it simple to adjust anything you need to change.
+As an example of a change, I have Markdown files with the extension
+.mkd. However, by default ack only recognises
+.md, and .markdown. To add .mkd
+to the list I can add one of the following to the
+.ackrc:
+# Either add `.mkd` to the list
+--type-add=markdown:ext:mkd
+# or replace the list with a new one
+--type-set=markdown:ext:md,mkd,markdown
+Note that lines beginning with # are comments. Note also
+that --type-add and --type-set have to be
+followed by an = sign, not a space in this file.
+If you examine the settings with ack --dump you will see
+the default command and the one you have added. If you use
+ack --help-types you will see the new extension added to
+the default list.
+markdown     .md .markdown; .mkd
+If I use this to search files in the directory where I keep my HPR
+episodes I see:
+$ ack --markdown 'inner ear'
+Hacking_my_inner_ear/hpr2109_full_shownotes.mkd
+24:became fascinated by the structure of the human [inner ear][2], and studied it
+28:The human inner ear performs two major functions:
+.
+.
+.
+Quick review of selected
+ack options
+Usage
+The ack command is designed to be similar in as many
+respects as possible to grep. The command is used in
+general as follows:
+ack [OPTION]... PATTERN [FILES OR DIRECTORIES]
+The [OPTION] part denotes any options (some discussed
+below) and PATTERN is the PCRE search pattern. There are
+some cases where this must be omitted - such as when files of a
+particular type are being listed. See example 1 below for such a
+case.
+In some cases a particular file is being searched, or all files in
+certain directories, and that is what
+[FILES OR DIRECTORIES] denotes.
+The full documentation for ack can be seen with the
+usual man ack command, and also using
+ack --man. There is also an option --help
+which gives a summary of all of the available options.
+Options
+There are many options specific to ack and some in
+common with grep, and we’ll look at just a few here:
+
+-i - like grep this makes the matched
+pattern case insensitive.
+-f - Only print the files that would be searched,
+without actually doing any searching. See example 1 below.
+-g - Same as -f, but only select files whose names
+match PATTERN. This interacts with file type searches like
+--html, so beware.
+-l - reports the file names which contain matches
+for a given pattern
+-L - reports the file names which do not
+contain matches for a given pattern
+-c - reports file names and the number of matches;
+used on its own it reports all files, those that match and
+those that do not. If used with -l then you only see the
+names of file that have matches, as well as a count of matches. See
+example 2 below.
+-w - forces the search pattern to match only whole
+words. See example 3 below. (Note: there is an equivalent in GNU grep,
+which I had not checked when I recorded the audio).
+
+Examples
+1. Find all Markdown
+files in a directory
+Using the -f option:
+$ ack --markdown -f Nitecore_Tube_torch/
+Nitecore_Tube_torch/README.mkd
+Nitecore_Tube_torch/container.mkd
+Nitecore_Tube_torch/index.mkd
+Nitecore_Tube_torch/shownotes.mkd
+Using the -g option:
+$ ack -g '\.mkd$' Nitecore_Tube_torch/
+Nitecore_Tube_torch/README.mkd
+Nitecore_Tube_torch/container.mkd
+Nitecore_Tube_torch/index.mkd
+Nitecore_Tube_torch/shownotes.mkd
+2. Names
+of files that contain a match, with a match count
+Using the -l and -c options:
+$ ack --markdown -lci '\bear\b'
+Hacking_my_inner_ear/hpr2109_full_shownotes.mkd:11
+Hacking_my_inner_ear/shownotes.mkd:3
+An_overview_of_the_ack_command/shownotes.mkd:6
+The sequence '\b' in Perl regular expressions is a
+boundary such as a word boundary. So the pattern is looking for the word
+'ear' as opposed to the characters 'ear' (as
+in 'pearl' for example).
+Note how the single-letter options -l, -c
+and -i can be concatenated.
+3. Searching for words in
+a simpler way
+In example 2 the \b boundaries ensured the pattern
+matched words rather than letter sequences. This can be simplified by
+using the -w option:
+$ ack --markdown -lci -w 'ear'
+Hacking_my_inner_ear/hpr2109_full_shownotes.mkd:11
+Hacking_my_inner_ear/shownotes.mkd:3
+An_overview_of_the_ack_command/shownotes.mkd:6
+Links
+
+The ack website:
+
+ack!
+
+
+
+Perl regular expressions:
+
+RE reference
+manual
+RE
+tutorial
+
+
+
+PCRE: Perl Compatible Regular Expressions:
+
+Wikipedia
+article on PCRE
+Wikipedia
+article on Philip Hazel
+
+
+

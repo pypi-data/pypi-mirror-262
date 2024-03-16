@@ -1,0 +1,5 @@
+## hpr0004 :: Firefox Profiles
+
+ 
+Peter explains how to move firefox profiles from machine to machine even between OSX, Windows and Linux. The biggest issue is actually locating the profile and this is covered in the following article.
+https://kb.mozillazine.org/Profile_folder_-_Firefox

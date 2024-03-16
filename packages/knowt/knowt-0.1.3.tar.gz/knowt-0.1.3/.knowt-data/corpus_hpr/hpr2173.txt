@@ -1,0 +1,33 @@
+## hpr2173 :: Driving a Blinkt! as an IoT device
+
+ Driving a Blinkt! as an IoT device
+Introduction
+I managed to buy a Raspberry Pi Zero when they first came out in December 2015. This was not easy since they were very scarce. I also bought a first-generation case from Pimoroni and some 40-pin headers. With the Zero this header is not pre-installed and it’s necessary to solder it onto the Pi yourself.
+I have had various project ideas for this Pi Zero, but had not decided on one until recently. Within the last month or two Pimoroni produced a device called the Blinkt! which has eight APA102 RGB LEDs and attaches to the GPIO header. This costs £5, just a little more than the Zero itself.
+My plan was to combine the two and turn them into a status indicator for various things going on that needed my attention.
+Long notes
+I have written out a moderately long set of notes for this episode and these are available here https://hackerpublicradio.org/eps/hpr2173/full_shownotes.html.
+Links
+
+Raspberry Pi Zero
+Pimoroni Ltd
+The Blinkt! add-on from Pimoroni
+Pimoroni’s documentation “Getting Started with Blinkt!”
+The GitHub repository for Blinkt!
+The RIBBA picture frame from IKEA
+Inkscape vector graphics editor
+MQTT (Message Queuing Telemetry Transport):
+
+Wikipedia article on MQTT
+Wikipedia article on the Publish-subscribe pattern
+
+BlinkStick MQTT page
+Mailbox Alert add-on for Thunderbird
+Jezra’s Orb project
+Resources:
+
+My Inkscape template “blinkt_legends.svg”
+My first primitive listener script “blinkt_client.py”
+My cron script for checking comments “cronjob_comments”
+
+

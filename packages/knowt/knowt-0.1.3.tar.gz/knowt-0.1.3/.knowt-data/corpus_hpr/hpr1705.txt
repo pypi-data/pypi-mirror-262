@@ -1,0 +1,9 @@
+## hpr1705 :: 47 - LibreOffice Calc - Page Styles and Page Settings
+
+ 
+Page Styles in LibreOffice Calc set the properties for entire sheets of your workbook file. In any given Template you can have different sheets with different Page Styles if you wish, but for any given sheet you can only have one Page Style. And dont be confused by the difference between a sheet in the file and a page when printed. One single sheet may take many physical pages to print, but it is all one sheet and it is all governed by a single Page Style.
+
+
+https://www.ahuka.com/?page_id=961
+
+

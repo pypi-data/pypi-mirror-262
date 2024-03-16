@@ -1,0 +1,552 @@
+<html>
+<head>
+<title>Chapter 7: Strings</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap06.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap08.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 7</h2>
+
+
+
+<h1>Strings</h1>
+
+<a name=1></a>
+<h3>7.1 A compound data type</h3>
+<p>
+So far we have seen three types: <tt><font size=-1>int</font></tt>, <tt><font size=-1>float</font></tt>, and <tt><font size=-1>string</font></tt>.  Strings are qualitatively different from the
+other two because they are made up of smaller pieces <s>&nbsp; &nbsp;</s> characters.
+<p>
+Types that comprise smaller pieces are called <b>compound data
+types</b>.  Depending on what we are doing, we may want to treat a
+compound data type as a single thing, or we may want to access its
+parts.  This ambiguity is useful.
+<p>
+The bracket operator selects a single character from a string.
+
+<p><tt><font size=-1>&gt;&gt;&gt; fruit = <font color=red>"banana"</font>
+<br>&gt;&gt;&gt; letter = fruit[1]
+<br>&gt;&gt;&gt; <font color=black>print</font> letter
+<br></font></tt></p>
+
+<p>
+The expression <tt><font size=-1>fruit[1]</font></tt> selects character number 1 from <tt><font size=-1>fruit</font></tt>.  The variable <tt><font size=-1>letter</font></tt> refers to the result.  When we
+display <tt><font size=-1>letter</font></tt>, we get a surprise:
+
+<p><tt><font size=-1>a
+<br></font></tt></p>
+
+<p>
+The first letter of <tt><font size=-1><font color=red>"banana"</font></font></tt> is not <tt><font size=-1>a</font></tt>.  Unless you are a
+computer scientist.  In that case you should think of the expression in
+brackets as an offset from the beginning of the string, and the offset
+of the first letter is zero.  So <tt><font size=-1>b</font></tt> is the 0th letter
+("zero-eth") of <tt><font size=-1><font color=red>"banana"</font></font></tt>, <tt><font size=-1>a</font></tt> is the 1th letter
+("one-eth"), and <tt><font size=-1>n</font></tt> is the 2th ("two-eth") letter.
+<p>
+To get the first letter of a string, you just put 0, or
+any expression with the value 0, in the brackets:
+
+<p><tt><font size=-1>&gt;&gt;&gt; letter = fruit[0]
+<br>&gt;&gt;&gt; <font color=black>print</font> letter
+<br>b
+<br></font></tt></p>
+
+<p>
+The expression in brackets is called an <b>index</b>.  An index
+specifies a member of an ordered set, in this case the set of
+characters in the string.  The index <i>indicates</i> which one you
+want, hence the name.  It can be any integer expression.
+
+<a name=2></a>
+<h3>7.2 Length</h3>
+<p>
+The <tt><font size=-1>len</font></tt> function returns the number of characters in a string:
+
+<p><tt><font size=-1>&gt;&gt;&gt; fruit = <font color=red>"banana"</font>
+<br>&gt;&gt;&gt; len(fruit)
+<br>6
+<br></font></tt></p>
+
+<p>
+To get the last letter of a string, you might be tempted to try something
+like this:
+
+<p><tt><font size=-1>length = len(fruit)
+<br>last = fruit[length]&nbsp; &nbsp; &nbsp; &nbsp;<font color=#009000># ERROR!
+</font><br></font></tt></p>
+
+<p>
+That won't work. It causes the runtime error <tt><font size=-1>IndexError: string
+<br>index out of range</font></tt>.  The reason is that there is no 6th letter in
+<tt><font size=-1><font color=red>"banana"</font></font></tt>.  Since we started counting at zero, the six letters
+are numbered 0 to 5.  To get the last character, we have to subtract
+1 from <tt><font size=-1>length</font></tt>:
+
+<p><tt><font size=-1>length = len(fruit)
+<br>last = fruit[length-1]
+<br></font></tt></p>
+
+<p>
+Alternatively, we can use negative indices, which count backward from the end
+of the string.  The expression <tt><font size=-1>fruit[-1]</font></tt> yields the last letter,
+<tt><font size=-1>fruit[-2]</font></tt> yields the second to last, and so on.
+
+<a name=3></a>
+<h3>7.3 Traversal and the <tt><font size=-1><font color=black>for</font></font></tt> loop</h3>
+<p>
+A lot of computations involve processing a string one character at a
+time.  Often they start at the beginning, select each character in
+turn, do something to it, and continue until the end.  This pattern of
+processing is called a <b>traversal</b>.  One way to encode a traversal
+is with a <tt><font size=-1><font color=black>while</font></font></tt> statement:
+
+<p><tt><font size=-1>index = 0
+<br><font color=black>while</font> index &lt; len(fruit):
+<br>&nbsp; letter = fruit[index]
+<br>&nbsp; <font color=black>print</font> letter
+<br>&nbsp; index = index + 1
+<br></font></tt></p>
+
+<p>
+This loop traverses the string and displays each letter on a line by
+itself.  The loop condition is <tt><font size=-1>index &lt; len(fruit)</font></tt>, so
+when <tt><font size=-1>index</font></tt> is equal to the length of the string, the
+condition is false, and the body of the loop is not executed.  The
+last character accessed is the one with the index <tt><font size=-1>len(fruit)-1</font></tt>,
+which is the last character in the string.
+
+<blockquote><i>As an exercise, write a function that takes a string as an argument
+and outputs the letters backward, one per line.</i>
+</blockquote>
+<p>
+Using an index to
+traverse a set of values is so common that
+Python provides an alternative, simpler syntax <s>&nbsp; &nbsp;</s> the <tt><font size=-1><font color=black>for</font></font></tt> loop:
+
+<p><tt><font size=-1><font color=black>for</font> char <font color=black>in</font> fruit:
+<br>&nbsp; <font color=black>print</font> char
+<br></font></tt></p>
+
+<p>
+Each time through the loop, the next character in the string is assigned
+to the variable <tt><font size=-1>char</font></tt>.  The loop continues until no characters are
+left.
+<p>
+The following example shows how to use concatenation and a <tt><font size=-1><font color=black>for</font></font></tt> loop to generate an abecedarian series.  "Abecedarian" refers
+to a series or list in which the elements appear in alphabetical
+order.  For example, in Robert McCloskey's book <i>Make Way for
+Ducklings</i>, the names of the ducklings are Jack, Kack, Lack, Mack,
+Nack, Ouack, Pack, and Quack.  This loop outputs these names in order:
+
+<p><tt><font size=-1>prefixes = <font color=red>"JKLMNOPQ"</font>
+<br>suffix = <font color=red>"ack"</font>
+<br>
+<br><font color=black>for</font> letter <font color=black>in</font> prefixes:
+<br>&nbsp; <font color=black>print</font> letter + suffix
+<br></font></tt></p>
+
+<p>
+The output of this program is:
+
+<p><tt><font size=-1>Jack
+<br>Kack
+<br>Lack
+<br>Mack
+<br>Nack
+<br>Oack
+<br>Pack
+<br>Qack
+<br></font></tt></p>
+
+<p>
+Of course, that's not quite right because "Ouack" and
+"Quack" are misspelled.
+
+<blockquote><i>As an exercise, modify the program to fix this error.</i>
+</blockquote>
+
+<a name=4></a>
+<h3>7.4 String slices</h3>
+<p>
+A segment of a string is called a 
+<b>slice</b>.  Selecting a slice is similar to
+selecting a character:
+
+<p><tt><font size=-1>&gt;&gt;&gt; s = <font color=red>"Peter, Paul, and Mary"</font>
+<br>&gt;&gt;&gt; <font color=black>print</font> s[0:5]
+<br>Peter
+<br>&gt;&gt;&gt; <font color=black>print</font> s[7:11]
+<br>Paul
+<br>&gt;&gt;&gt; <font color=black>print</font> s[17:21]
+<br>Mary
+<br></font></tt></p>
+
+<p>
+The operator <tt><font size=-1>[n:m]</font></tt> returns the part of the string from the 
+"n-eth" character to the "m-eth" character, including the first but
+excluding the last.  This behavior is counterintuitive; it makes
+more sense if you imagine the indices pointing <i>between</i> the
+characters, as in the following diagram:
+
+<p align="center"><img src="illustrations/banana.png"></p>
+<p>
+If you omit the first index (before the colon), the slice starts at the
+beginning of the string.  If you omit the second index, the slice goes to the
+end of the string.  Thus:
+
+<p><tt><font size=-1>&gt;&gt;&gt; fruit = <font color=red>"banana"</font>
+<br>&gt;&gt;&gt; fruit[:3]
+<br><font color=red>'ban'</font>
+<br>&gt;&gt;&gt; fruit[3:]
+<br><font color=red>'ana'</font>
+<br></font></tt></p>
+
+<p>
+What do you think <tt><font size=-1>s[:]</font></tt> means?
+
+<a name=5></a>
+<h3>7.5 String comparison</h3>
+<p>
+The comparison operators work on
+strings.  To see if two strings are equal:
+
+<p><tt><font size=-1><font color=black>if</font> word == <font color=red>"banana"</font>:
+<br>&nbsp; <font color=black>print</font>&nbsp; <font color=red>"Yes, we have no bananas!"</font>
+<br></font></tt></p>
+
+<p>
+Other comparison operations are useful for putting words in alphabetical
+order:
+
+<p><tt><font size=-1><font color=black>if</font> word &lt; <font color=red>"banana"</font>:
+<br>&nbsp; <font color=black>print</font> <font color=red>"Your word,"</font> + word + <font color=red>", comes before banana."</font>
+<br><font color=black>elif</font> word &gt; <font color=red>"banana"</font>:
+<br>&nbsp; <font color=black>print</font> <font color=red>"Your word,"</font> + word + <font color=red>", comes after banana."</font>
+<br><font color=black>else</font>:
+<br>&nbsp; <font color=black>print</font> <font color=red>"Yes, we have no bananas!"</font>
+<br></font></tt></p>
+
+<p>
+You should be aware, though, that Python does not handle upper-
+and lowercase letters the same way that people do.  All the uppercase
+letters come before all the lowercase letters.  As a result:
+
+<p><tt><font size=-1>Your word, Zebra, comes before banana.
+<br></font></tt></p>
+
+<p>
+A common way to address this problem is to convert strings to a standard
+format, such as all lowercase, before performing the comparison.  A more
+difficult problem is making the program realize that zebras are not fruit.
+
+<a name=6></a>
+<h3>7.6 Strings are immutable</h3>
+<p>
+It is tempting to use the <tt><font size=-1>[]</font></tt> operator on the left side of an
+assignment, with the intention of changing a character in a string.
+For example:
+
+<p><tt><font size=-1>greeting = <font color=red>"Hello, world!"</font>
+<br>greeting[0] = <font color=red>'J'</font>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font color=#009000># ERROR!
+</font><br><font color=black>print</font> greeting
+<br></font></tt></p>
+
+<p>
+Instead of producing the output <tt><font size=-1>Jello, world!</font></tt>, this code
+produces the runtime error <tt><font size=-1>TypeError: object doesn't support item
+<br>assignment</font></tt>.
+<p>
+Strings are <b>immutable</b>, which means you can't change an
+existing string.  The best you can do is create a new string
+that is a variation on the original:
+
+<p><tt><font size=-1>greeting = <font color=red>"Hello, world!"</font>
+<br>newGreeting = <font color=red>'J'</font> + greeting[1:]
+<br><font color=black>print</font> newGreeting
+<br></font></tt></p>
+
+<p>
+The solution here is to concatenate a new first letter onto
+a slice of <tt><font size=-1>greeting</font></tt>.  This operation has no effect on
+the original string.
+
+<a name=7></a>
+<h3>7.7 A <tt><font size=-1>find</font></tt> function</h3>
+<p>
+What does the following function do?
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>find</font>(str, ch):
+<br>&nbsp; index = 0
+<br>&nbsp; <font color=black>while</font> index &lt; len(str):
+<br>&nbsp; &nbsp; <font color=black>if</font> str[index] == ch:
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> index
+<br>&nbsp; &nbsp; index = index + 1
+<br>&nbsp; <font color=black>return</font> -1
+<br></font></tt></p>
+
+<p>
+In a sense, <tt><font size=-1>find</font></tt> is the opposite of the <tt><font size=-1>[]</font></tt> operator.
+Instead of taking an index and extracting the corresponding character,
+it takes a character and finds the index where that character
+appears.  If the character is not found, the function returns <tt><font size=-1>-1</font></tt>.
+<p>
+This is the first example we have seen of a <tt><font size=-1><font color=black>return</font></font></tt> statement
+inside a loop.
+If <tt><font size=-1>str[index] == ch</font></tt>, the function returns
+immediately, breaking out of the loop prematurely.
+<p>
+If the character doesn't appear in the string, then the program
+exits the loop normally and 
+returns <tt><font size=-1>-1</font></tt>.
+<p>
+This pattern of computation is sometimes called a "eureka" traversal
+because as soon as we find what we are looking for, we can cry
+"Eureka!" and stop looking.
+
+<blockquote><i>As an exercise, modify the <tt><font size=-1>find</font></tt> function so that it has a
+third parameter, the index in the string where it should start
+looking.</i>
+</blockquote>
+
+<a name=8></a>
+<h3>7.8 Looping and counting</h3>
+<p>
+The following program counts the number of times the letter <tt><font size=-1>a</font></tt>
+appears in a string:
+
+<p><tt><font size=-1>fruit = <font color=red>"banana"</font>
+<br>count = 0
+<br><font color=black>for</font> char <font color=black>in</font> fruit:
+<br>&nbsp; <font color=black>if</font> char == <font color=red>'a'</font>:
+<br>&nbsp; &nbsp; count = count + 1
+<br><font color=black>print</font> count
+<br></font></tt></p>
+
+<p>
+This program demonstrates another pattern of computation called a <b>counter</b>.  The variable <tt><font size=-1>count</font></tt> is initialized to 0 and then
+incremented each time an <tt><font size=-1>a</font></tt> is found.  (To <b>increment</b> is to
+increase by one; it is the opposite of <b>decrement</b>, and unrelated
+to "excrement," which is a noun.)  When the loop exits, <tt><font size=-1>count</font></tt>
+contains the result <s>&nbsp; &nbsp;</s> the total number of <tt><font size=-1>a</font></tt>'s.
+
+<blockquote><i>As an exercise, encapsulate this code in a function named <tt><font size=-1>countLetters</font></tt>, and generalize it so that it accepts the string and the
+letter as arguments.</i>
+</blockquote>
+
+<blockquote><i>As a second exercise, rewrite this function so that instead of
+traversing the string, it uses the three-parameter version of <tt><font size=-1>find</font></tt> from the previous.</i>
+</blockquote>
+
+<a name=9></a>
+<h3>7.9 The <tt><font size=-1>string</font></tt> module</h3>
+<p>
+The <tt><font size=-1>string</font></tt> module contains useful functions that
+manipulate strings.  As usual, we have to import the module before
+we can use it:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>import</font> string
+<br></font></tt></p>
+
+<p>
+The <tt><font size=-1>string</font></tt> module includes a function named <tt><font size=-1>find</font></tt> that does
+the same thing as the function we wrote.  To call it we have to
+specify the name of the module and the name of the function using dot
+notation.
+
+<p><tt><font size=-1>&gt;&gt;&gt; fruit = <font color=red>"banana"</font>
+<br>&gt;&gt;&gt; index = string.find(fruit, <font color=red>"a"</font>)
+<br>&gt;&gt;&gt; <font color=black>print</font> index
+<br>1
+<br></font></tt></p>
+
+<p>
+This example demonstrates one of the benefits of modules <s>&nbsp; &nbsp;</s> they help
+avoid collisions between the names of built-in functions and
+user-defined functions.  By using dot notation we can specify which
+version of <tt><font size=-1>find</font></tt> we want.
+<p>
+Actually, <tt><font size=-1>string.find</font></tt> is more general than our version.  First,
+it can find substrings, not just characters:
+
+<p><tt><font size=-1>&gt;&gt;&gt; string.find(<font color=red>"banana"</font>, <font color=red>"na"</font>)
+<br>2
+<br></font></tt></p>
+
+<p>
+Also, it takes an additional argument that specifies the index it
+should start at:
+
+<p><tt><font size=-1>&gt;&gt;&gt; string.find(<font color=red>"banana"</font>, <font color=red>"na"</font>, 3)
+<br>4
+<br></font></tt></p>
+
+<p>
+Or it can take two additional arguments that specify a range
+of indices:
+
+<p><tt><font size=-1>&gt;&gt;&gt; string.find(<font color=red>"bob"</font>, <font color=red>"b"</font>, 1, 2)
+<br>-1
+<br></font></tt></p>
+
+<p>
+In this example, the search fails because the letter <i>b</i> does not
+appear in the index range from <tt><font size=-1>1</font></tt> to <tt><font size=-1>2</font></tt> (not including <tt><font size=-1>2</font></tt>).
+
+<a name=10></a>
+<h3>7.10 Character classification</h3>
+<p>
+It is often helpful to examine a character and test whether it is
+upper- or lowercase, or whether it is a character or a digit.  The
+<tt><font size=-1>string</font></tt> module provides several constants that are
+useful for these purposes.
+<p>
+The string <tt><font size=-1>string.lowercase</font></tt> contains all of the letters that the
+system considers to be lowercase.  Similarly, <tt><font size=-1>string.uppercase</font></tt>
+contains all of the uppercase letters.  Try the following and see what
+you get:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> string.lowercase
+<br>&gt;&gt;&gt; <font color=black>print</font> string.uppercase
+<br>&gt;&gt;&gt; <font color=black>print</font> string.digits
+<br></font></tt></p>
+
+<p>
+We can use these constants and <tt><font size=-1>find</font></tt> to classify characters. For
+example, if <tt><font size=-1>find(lowercase, ch)</font></tt> returns a value other than <tt><font size=-1>-1</font></tt>, then <tt><font size=-1>ch</font></tt> must be lowercase:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>isLower</font>(ch):
+<br>&nbsp; <font color=black>return</font> string.find(string.lowercase, ch) != -1
+<br></font></tt></p>
+
+<p>
+Alternatively, we can take advantage of the <tt><font size=-1><font color=black>in</font></font></tt> operator, which
+determines whether a character appears in a string:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>isLower</font>(ch):
+<br>&nbsp; <font color=black>return</font> ch <font color=black>in</font> string.lowercase
+<br></font></tt></p>
+
+<p>
+As yet another alternative, we can use the comparison operator:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>isLower</font>(ch):
+<br>&nbsp; <font color=black>return</font> <font color=red>'a'</font> &lt;= ch &lt;= <font color=red>'z'</font>
+<br></font></tt></p>
+
+<p>
+If <tt><font size=-1>ch</font></tt> is between <i>a</i> and <i>z</i>, it must be a lowercase
+letter.
+
+<blockquote><i>As an exercise, discuss which version of <tt><font size=-1>isLower</font></tt> you think
+will be fastest.  Can you think of other reasons besides speed to
+prefer one or the other?</i>
+</blockquote>
+<p>
+Another constant defined in the <tt><font size=-1>string</font></tt> module may
+surprise you when you print it:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> string.whitespace
+<br></font></tt></p>
+
+<p>
+<b>Whitespace</b> characters move the cursor without printing
+anything.  They create the white space between visible
+characters (at least on white paper).  The constant
+<tt><font size=-1>string.whitespace</font></tt> contains all the
+whitespace characters, including
+space, tab (<tt><font size=-1>\t</font></tt>), and newline
+(<tt><font size=-1>\n</font></tt>).
+<p>
+There are other useful functions in the <tt><font size=-1>string</font></tt> module, but this
+book isn't intended to be a reference manual.  On the other hand, the
+<i>Python Library Reference</i> is.  Along with a wealth of other
+documentation, it's available from the Python website, <a href="http://www.python.org">www.python.org</a>.
+
+<a name=11></a>
+<h3>7.11 Glossary</h3>
+
+<dl>
+<dt>compound data type</dt>
+<dd>A data type in which the values are made
+up of components, or elements, that are themselves values.</dd>
+<dt>traverse</dt>
+<dd>To iterate through the elements of a set,
+performing a similar operation on each.</dd>
+<dt>index</dt>
+<dd>A variable or value used to select a member of an
+ordered set, such as a character from a string.</dd>
+<dt>slice</dt>
+<dd>A part of a string specified by a range of indices.</dd>
+<dt>mutable</dt>
+<dd>A compound data types whose elements can be assigned
+new values.</dd>
+<dt>counter</dt>
+<dd>A variable used to count something, usually initialized
+to zero and then incremented.</dd>
+<dt>increment</dt>
+<dd>To increase the value of a variable by one.</dd>
+<dt>decrement</dt>
+<dd>To decrease the value of a variable by one.</dd>
+<dt>whitespace</dt>
+<dd>Any of the characters that move the cursor without
+printing visible characters.  The constant
+<tt><font size=-1>string.whitespace</font></tt>
+contains all the whitespace characters.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap06.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap08.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

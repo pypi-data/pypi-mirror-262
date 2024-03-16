@@ -1,0 +1,268 @@
+## hpr3812 :: PeePaw's computer does nothing
+
+ peepaws computer does nothing
+
+who's peepaw, whats the goal
+
+to build and understand the inner workings of an 8 bit computer and
+maybe one day pass it on to a grand kid
+
+this episode -nop test
+
+do a nop test, that is get the z80 up and running executing the nop
+instruction
+using the facilities of an arduino mega board running flash forth to
+do that, talk about pictures
+why? flash forth is interactive, without being such a big
+application itself. Happily runs on an atmega328
+why the mega, oodles and oodles of io, so emulating hardware should
+be a snap
+use the microcontroller board to provide 5 volts, clock signal and
+data to get the z80 up and running
+use the logic probe to see if there is activity on the address
+bus
+
+wiring up
+
+hot glued solderless breadboard on to an arduino mega protoshield,
+white wire is the logicprobe input
+power and ground first
+clock, blue
+control lines int, nmi, wait busrq and reset
+orange wires data bus
+address lines go around the chip clockwise from the clock signal
+(blue wire) we'll be probing A0, next to the ground line
+
+
+1.logicprobe.jpg
+
+2.power.jpg
+
+3.clock.jpg
+
+4.control.signals.jpg
+
+5.data.jpg
+
+6.ready.to.probe.jpg
+
+z80-pinout.jpg
+
+2560-pinout.jpg
+ Click the thumbnail
+to see the full-sized image
+
+fixing some words, refactoring some words, defining new words
+
+fixed the data processing word to us the input on pin e4 (digital 2)
+not the output on pin h6 (digital 9)
+changed freq= some value to simply pulse, not interested in the
+specific frequency
+split clock and logic probe init words
+added some words to control the reset line reset and run
+added a word step that allows for single clock pulses
+
+the test, mega board plugged into laptop, seral terminal running
+
+spool up the logic probe
+spool up the microcontroller board setting up a port to provide data
+on the z80 data bus (rudimentary rom)
+add 5 volts
+initialize and start the clock
+probe the clock line
+probe a0 line
+
+a little more to see what else we can discern
+
+single step to reset
+probe m1
+single step to reset
+add halt instruction
+probe halt line
+
+this is output captured from the tests run on the show. lines that
+begin with a back slash are comments used as narration
+ok<#,ram> is the forth interpreter reporting it has
+successfully processed the proceeding word(s), including comments pulse,
+high and low are output from the logicprobe, all other words are defined
+in the source text and the end of the notes
+
+E FlashForth 5 ATmega2560 13.06.2022
+
+\ initialize the logic probe  ok<#,ram>
+logicprobe.init  ok<#,ram>
+\ initialize the clock  ok<#,ram>
+clock.init  ok<#,ram>
+\ initialize arduinomega ports that interact with z80  ok<#,ram>
+z80.ports.init  ok<#,ram>
+\ add power on the board  ok<#,ram>
+\ probe the clock pin to see if there is activity  ok<#,ram>
+sample
+pulse ok<#,ram>
+\ success!  ok<#,ram>
+\ probe adrress line A0, pin 30 on the z80  ok<#,ram>
+sample
+pulse ok<#,ram>
+\ pulse means there is activity on the bus  ok<#,ram>
+\ stop the clock and probe A0 again, should see either a static high or low
+signal ok<#,ram>
+stop.clock sample
+low ok<#,ram>
+\ now move logic probe to pin 27, the M1 signal  ok<#,ram>
+\ put the z80 in reset and give three clock steps  ok<#,ram>
+reset  ok<#,ram>
+step  ok<#,ram>
+step  ok<#,ram>
+step  ok<#,ram>
+\ the z80 should be reset, now put in run  ok<#,ram>
+run  ok<#,ram>
+\ now single step the clock to see the M1  ok<#,ram>
+\ signal go from high to low as the z80 begins   ok<#,ram>
+\ fetching data fro the data bus at address 0  ok<#,ram>
+step sample
+high ok<#,ram>
+step sample
+high ok<#,ram>
+step sample
+low ok<#,ram>
+step sample
+low ok<#,ram>
+step sample
+high ok<#,ram>
+\ success! the M1 signal is working as expected  ok<#,ram>
+\ now reset the z80 and see what happens when  ok<#,ram>
+\ we give a different instruction this time hex 76  ok<#,ram>
+\ the halt instruction. We should see the halt signal go from   ok<#,ram>
+\ high to low  ok<#,ram>
+reset step step step  ok<#,ram>
+\ put hat instruction on data lines  ok<#,ram>
+$76 DATA c!  ok<#,ram>
+\ now run mode  ok<#,ram>
+run  ok<#,ram>
+\ step clock and sample pin 18 the halt line  ok<#,ram>
+step sample
+high ok<#,ram>
+step sample
+high ok<#,ram>
+step sample
+high ok<#,ram>
+step sample
+high ok<#,ram>
+step sample
+high ok<#,ram>
+step sample
+low ok<#,ram>
+step sample
+low ok<#,ram>
+\ 4 clock cycles and halt line goes low and stays low, success!  ok<#,ram>
+\ thanks for listening  ok<#,ram>
+
+Forth source code
+
+-logicprobe
+marker -logicprobe
+
+variable Compare
+variable Count
+
+$100 constant PINH
+$101 constant DDRH
+$102 constant PORTH
+
+$a0 constant TCCR4A
+$a1 constant TCCR4B
+$a8 constant OCR4A
+
+$2c constant PINE
+$2d constant DDRE
+$2e constant PORTE
+
+$6a constant EICRB
+$3d constant EIMSK
+
+: ext4.irq ( -- ) Count @ 1+ Count ! ;i
+
+: logicprobe.init ( -- )
+  %0 DDRE c! \ e input
+  %0000.0010 EICRB mset \ falling edge
+  ['] ext4.irq #6 int! \ attach interrupt
+;
+
+: clock.init ( -- )
+  1249 Compare ! \ 100 hz
+  %0000.1000 DDRH mset \ h3 output
+  %0100.0000 TCCR4A c!  \ toggle d6, ph3 on compare match
+  %0000.1011 TCCR4B c!  \ set ctc mode, clk/64
+  Compare @ OCR4A !    \ set compare value
+;
+
+\ helper words
+: start.clock ( -- )  %0100.0000 TCCR4A c! %0000.1011 TCCR4B c! ;
+: stop.clock ( -- )   %0000.0000 TCCR4A c!  %0000.0000 TCCR4B c! ;
+: set.frequency ( n -- )  OCR4A ! ;    \ set compare value
+: pin.high ( -- )  %0000.1000 PORTH mset ;
+: pin.low ( -- )    %0000.1000 PORTH mclr ;
+: open.gate ( -- )   0 Count ! %0001.0000 EIMSK mset ;
+: close.gate ( -- )   %0001.0000 EIMSK mclr ;
+
+: process.data ( -- )
+  Count @ 1-
+  Count !
+  Count @ 0 > if
+    \ cr ." freq=" 10 * .
+    cr ." pulse"
+  else
+    %0001.0000 PINE mtst if
+      cr ." high"
+    else
+      cr ." low"
+    then then
+;
+
+: wait 100 ms ;
+
+: sample ( -- ) open.gate wait close.gate process.data ;
+
+\ nop tester
+-nop
+marker -nop
+
+$20 constant PINA
+$21 constant DDR.DATA
+$22 constant DATA
+
+$23 constant PINB
+$24 constant DDRB
+$25 constant PORTB
+
+$2f constant PINF
+$30 constant DDRF
+$31 constant PORTF
+
+%0000.0001 constant WAIT
+%0000.0010 constant BUSRQ
+%0000.0100 constant RESET
+%0001.0000 constant INT
+%0010.0000 constant NMI
+
+: z80.ports.init ( -- )
+  \ data port output
+  $ff DDR.DATA c!
+  \ control signals, output
+  NMI INT or DDRB mset
+  WAIT BUSRQ RESET or or DDRF mset
+  \ nop instruction on data port
+  $ff DATA mclr
+  \ control lines high
+  NMI INT or PORTB mset
+  WAIT BUSRQ RESET or or PORTF mset
+;
+
+: reset ( -- ) RESET PORTF mclr ;
+: run ( -- ) RESET PORTF mset ;
+: step ( -- ) pin.high 1 ms pin.low ;
+
+\ logicprobe.init
+\ clock.init
+\ z80.ports.init
+\ sample

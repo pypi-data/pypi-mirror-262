@@ -1,0 +1,7 @@
+## hpr1082 :: LiTS 016: top pt 4: Alternate Windows
+
+ This final installment on the top command will discuss the alternate displays for top. When starting top with the defaults one is presented with a full screen view of top containing the summary window at the top and the task area in the bottom. The task area usually takes up three quarters of the top window. This display is not the only informative view that top has. By pressing the “A” key the “Alternate Display” view is presented where the task area becomes four separate task areas of equal size called “field groups”. The summary area remains where it is. Each of the four field groups displays the task information in a different manner.
+
+
+For complete shownotes, and video see https://www.linuxintheshell.com/2012/09/25/episode-016-top-pt-4-alternate-windows/
+

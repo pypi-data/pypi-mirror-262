@@ -1,0 +1,25 @@
+## hpr1850 :: 18 - ssh Introduction
+
+ 
+In 1995 there was a password-sniffing attack on the network of the University of Helsinki in Finland, and this lead a researcher there, Tatu Ylönen, to create the first SSH implementation. SSH is an acronym for Secure Shell, and expresses the idea that you can securely log in and get a shell on a remote server. This was initially released as free software, but in later versions he took it proprietary. But the developers at OpenBSD decided that a free software implementation was needed, and they created OpenSSH, which is the basis for most implementations today. 
+For more go to https://www.zwilnik.com/?page_id=722
+
+Links
+
+https://en.wikipedia.org/wiki/Secure_Shell
+
+https://www.windowsnetworking.com/articles-tutorials/windows-server-2008/install-SSH-Server-Windows-Server-2008.html
+
+https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+
+https://www.openssh.com/manual.html
+
+https://www.tiltedwindmillpress.com/
+
+https://vimeo.com/54505525
+
+https://hak5.org/category/episodes/season_11
+
+https://www.zwilnik.com/?page_id=722
+
+

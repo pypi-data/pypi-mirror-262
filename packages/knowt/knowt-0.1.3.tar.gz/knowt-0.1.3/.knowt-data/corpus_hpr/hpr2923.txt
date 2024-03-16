@@ -1,0 +1,79 @@
+## hpr2923 :: Describing how I listen to podcasts PART 5
+
+ Below are examples of messages shown on the screen during operation
+System Up (Unfortunately I didn’t get a picture of this message)
+
+Shows the unit waiting to get a wi-fi connection and get given an IP address.
+
+Unit goes to the HPR site and gets the number of days to free slot in the show queue. At the time when I took the picture the queue had a healthy 22 shows!
+Links to three previous shows I did that mention the Blinkstick
+
+Solving a problem I had with my Blinkstick
+https://hackerpublicradio.org/eps.php?id=2089
+Tracking the HPR queue using python and a Blinkstick
+https://hackerpublicradio.org/eps.php?id=2340
+Follow on to HPR2340 (Tracking the HPR queue in Python)
+https://hackerpublicradio.org/eps.php?id=2344
+
+
+Link to Moc, Music On Console
+https://moc.daper.net/
+
+ 
+Menu 0 Podcasts screens
+0 [PODCASTS]
+0 1 <|| PLAY/PAUSE (Toggles moc between play and Pause)
+0 2 <<  INFORMATION(Displays information about the current track)
+0 3 <<  (Move to previous track in playlist)
+0 4 <<  (Move to next track in playlist)
+0 5 LIGHT (Toggle back-light on LCD screen)
+PUSH IN TOP TOGGLE BUTTON (Seek forward or back in current track)
+ 
+Menu 1 Audiobooks screens
+1 [AUDIOBOOKS]
+1 1 <|| PLAY/PAUSE (Toggles moc between play and Pause)
+1 2 <<  INFORMATION(Displays information about the current track)
+1 3 <<  (Move to previous track in playlist)
+1 4 <<  (Move to next track in playlist)
+1 5 LIGHT (Toggle back-light on LCD screen)
+PUSH IN TOP TOGGLE BUTTON (Seek forward or back in current track)
+ 
+Menu 2 System screens
+2 [SYSTEM]
+2 1 Sys Information (System information)
+2 2 WiFi (Displays WiFi inofrmation such SSID & signal strength)
+2 3 HPR (Displays the number days to the next free slots on FPR que)
+2 4 Not shown, (Not in use)
+2 5 LIGHT (Toggle back-light on LCD screen)
+PUSH IN TOP TOGGLE BUTTON (Shut-down the Raspberry Pi)
+Infra-red Sensor
+
+Example of my Samsung TV remote control
+Lirc Article from Wikipedia
+https://en.wikipedia.org/wiki/LIRC
+
+
+Infra-red sensor turned on
+
+Infra-red sensor turned off
+
+Kodi article on Wikipedia, (Formerly XBMC)
+https://en.wikipedia.org/wiki/Kodi_(software)
+
+
+
+Example of a message being sent to the unit telling me that a backup is complete. The bright pink LED on the Blinkstick lets me know at a glance that a message has been sent to the display.
+
+EEE PC article on Wikipedia
+https://en.wikipedia.org/wiki/Asus_Eee_PC
+Switch Bounce article on Wikipedia
+https://en.wikipedia.org/wiki/Switch#Contact_bounce
+
+
+
+
+A flavour of what information is shown when the information button 2 is pushed. The picture showing the title scrolling from right to left was blurred so I didn’t include this.
+
+The menu displayed during seek, this in initiated by pushing and releasing the toggle button while either in the Podcasts main menu 0 or Audio book main menu 1.
+
+The shut-down menu this in initiated by pushing and releasing the toggle button while in the System main menu 2.

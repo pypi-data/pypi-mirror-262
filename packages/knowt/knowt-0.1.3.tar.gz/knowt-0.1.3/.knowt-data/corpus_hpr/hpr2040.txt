@@ -1,0 +1,7 @@
+## hpr2040 :: Why I Use Linux
+
+ My first objective in making this show is to actually record a show, which is something I've never done.
+My second objective was to say something interesting about why I use Linux, how I found it and why I think I keep using it.
+I found Linux by word of mouth. It was a bit of a hassle to use back then and I wouldn't have stuck with it if the system didn't meet my needs better than everything else that was available to me. Cost was very important at first, but as time has gone by, it's been the tools and the usability of the system that have made me stay with it.
+Despite their differences, Apple and Microsoft both try hard to be big, to have lots of users (buyers). They try to be everything to everyone. I think that happens with some Linux distributions too, but Linux is not one thing in the way that Windows is one thing. This means that at least some distributions can be less focused on keeping up with the latest, flashiest things. Linux just works for what I need it to do. I miss it when I'm not using it.
+Most of the work I do besides household bookkeeping is programming for the web. The tools I use most often are: Vim, git, grep, Filezilla, the LAMP stack, Meteor, Firefox, Chromium. Many of these tools are afterthoughts in other systems, whereas they seem like native inhabitants in a Linux distribution.

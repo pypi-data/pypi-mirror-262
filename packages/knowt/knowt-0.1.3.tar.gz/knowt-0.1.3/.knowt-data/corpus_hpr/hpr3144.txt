@@ -1,0 +1,3 @@
+## hpr3144 :: Pentesting: Insecure Object Reference
+
+ Insecure object reference is a very common bug in online applications which most of the time leads to significant data breaches. In this episode I talk about one such vulnerability I discovered recently in a covid-related application.

@@ -1,0 +1,24 @@
+## hpr3243 :: Pictor - free and open radio astronomy
+
+ In this show I talk with Apostolos and Vasilis who I met at FOSDEM 2020 about the Pictor radio telescope which they created and now maintain. Using free and open source software and hardware they have made a radio telescope that anyone can operate via a simple web page and which can return results to you within a minute or two. In fact you'll hear me get excited during the show when I realise this and submit an observation request, the results of which came back immediately and which you can see below.
+To date Pictor has performed 3,500 observations from over 700 users from all around the world. Additionally, the PICTOR web platform is now equipped with a 3.2m antenna, which is about 4 times more sensitive than the previous 1.5m antenna, so users can observe the radio sky for free with an even more sensitive instrument.
+On top of that, after 204 hours of integration time and over 3 TB of data, they have produced a Northern Sky Hydrogen (HI) Survey produced with the PICTOR Radio Telescope. This effort actually marks the very first radio-image obtained in Greece, shown here:
+Pictor all sky images of hydrogen in our galaxy
+
+Here are the results of the observation I performed during the show. The body of the email pictor sent back to me confirms the observation I requested:
+Your observation has been carried out by PICTOR successfully!
+Observation name: mcnalu first try
+Observation datetime: 2020-12-08 12:40:09 (UTC+2)
+Center frequency: 1420000000.0 Hz
+Bandwidth: 2400000 Hz
+Sample rate: 2400000 samples/sec
+Number of channels: 2048
+Number of bins: 100
+Observation duration: 10 sec
+Observation ID: 82937104
+Your observation's averaged spectrum, dynamic spectrum (waterfall) and Power vs Time plot are attached in this email as an image.
+
+And this is the plot attached to that email:
+Graphs showing raw and corrected radio spectra for mcnalu's observation request
+
+Please do have a go at using Pictor and let us know how you got on by recording an HPR show.

@@ -1,0 +1,75 @@
+## hpr1760 :: pdftk: the PDF Toolkit
+
+ Hacking Apart and Re-Assembling PDFs
+Extract pages 3–5 from file foobar.pdf:
+
+pdftk foobar.pdf cat 3-5 output excerpt.pdf
+
+Same thing but also grab the cover page:
+
+pdftk foobar.pdf cat 1 3-5 output excerpt.pdf
+
+Combine multiple PDFs:
+
+pdftk file1.pdf file2.pdf file3.pdf cat output combined.pdf
+
+Reassemble a 50-page document with all of the pages in reverse order (I once actually did this for my wife and she was very grateful—she had scanned an article at the library and it ended up with all of the pages in the wrong order from last to first. This command solved her problem in about one second.):
+
+pdftk wrongorder.pdf cat 50-1 output rightorder.pdf
+
+Check the pdftk man page for all kinds of other manipulations you can do, including "bursting" a PDF into its component pages, rotating pages in any direction, applying password protection, etc. 
+Embedding “Bookmarks” as a Table of Contents
+You can also use pdftk to embed a table of contents in a flat PDF file. This is incredibly useful, as it can make large, unwieldy files very easy to navigate. All you have to do is add some bookmark data in a fairly straightforward format as shown below.  As a starting point you should that dump the current metadata content of the file with this command:
+
+pdftk foobar.pdf dump_data_utf8
+
+Save the contents of this data dump in a text file and then add bookmark information just below the NumberOfPages value. Here is an excerpt from the huge anthology of public-domain scores I assembled for my music history class:
+
+InfoBegin
+InfoKey: ModDate
+InfoValue: D:20150106100000-06'00'
+InfoBegin
+InfoKey: CreationDate
+InfoValue: D:20150106100000-06'00'
+InfoBegin
+InfoKey: Creator
+InfoValue: pdftk 2.02 - www.pdftk.com
+InfoBegin
+InfoKey: Producer
+InfoValue: itext-paulo-155 (itextpdf.sf.net-lowagie.com)
+PdfID0: ece858bf9affbcad3b575cf3891a187f
+PdfID1: 23f89459e103dd43c6e7bc92028245c0
+NumberOfPages: 765
+BookmarkBegin
+BookmarkTitle: Beethoven: Symphony no. 5 in C minor Op. 67
+BookmarkLevel: 1
+BookmarkPageNumber: 205
+BookmarkBegin
+BookmarkTitle: Beethoven 5: I. Allegro con brio
+BookmarkLevel: 2
+BookmarkPageNumber: 205
+BookmarkBegin
+BookmarkTitle: Beethoven 5: II. Andante con moto
+BookmarkLevel: 2
+BookmarkPageNumber: 235
+BookmarkBegin
+BookmarkTitle: Beethoven 5: III. Allegro
+BookmarkLevel: 2
+BookmarkPageNumber: 256
+BookmarkBegin
+BookmarkTitle: Beethoven 5: IV. Allegro
+BookmarkLevel: 2
+BookmarkPageNumber: 275
+
+And here is the command to update the PDF with the table of contents embedded. This tells it to take the input file  foobar.pdf and update its metadata using the file foobar.info (with utf8 encoding) and output the results as foobar_with_toc.pdf.
+
+pdftk foobar.pdf update_info_utf8 foobar.info output foobar_with_toc.pdf
+
+Links
+
+pdftk man page: https://www.pdflabs.com/docs/pdftk-man-page/
+PDF Labs: https://www.pdflabs.com/docs/
+
+Update
+I made a screencast as a follow-up, showing the process of embedding bookmarks to make a table of contents:
+https://m.youtube.com/watch?v=5dv_02v0zzc

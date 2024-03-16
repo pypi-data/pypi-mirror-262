@@ -1,0 +1,16 @@
+## hpr0866 :: Publican, the user-friendly Perl frontend to Docbook XML
+
+ Klaatu introduces you to Publican, the user-friendly Perl frontend to Docbook XML from the Fedora Linux Project.  Also, how to set up vim with XML tag completion.
+Links
+
+Also see Docbook The Definitive Guide
+
+
+nXML-mode for GNU Emacs.
+
+
+Feel free to glance over the dot-emacs file that Klaatu uses, mostly stolen from Unix guru Bill Von Hagen (who in turn stole it from lots of other people; read comments for credits)
+
+
+XML Completion for Vim
+

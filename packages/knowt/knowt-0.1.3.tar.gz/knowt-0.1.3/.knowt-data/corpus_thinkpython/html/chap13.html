@@ -1,0 +1,411 @@
+<html>
+<head>
+<title>Chapter 13: Classes and functions</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap12.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap14.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 13</h2>
+
+
+
+<h1>Classes and functions</h1>
+
+<a name=1></a>
+<h3>13.1 Time</h3>
+<p>
+As another example of a user-defined type, we'll define a class called
+<tt><font size=-1>Time</font></tt> that records the time of day.  The class definition looks
+like this:
+
+<p><tt><font size=-1><font color=black>class</font> Time:
+<br>&nbsp; <font color=black>pass</font>
+<br></font></tt></p>
+
+<p>
+We can create a new <tt><font size=-1>Time</font></tt> object and assign
+attributes for hours, minutes, and seconds:
+
+<p><tt><font size=-1>time = Time()
+<br>time.hours = 11
+<br>time.minutes = 59
+<br>time.seconds = 30
+<br></font></tt></p>
+
+<p>
+The state diagram for the <tt><font size=-1>Time</font></tt> object looks like this:
+
+<p align="center"><img src="illustrations/time.png"></p>
+
+<blockquote><i>As an exercise, write a function <tt><font size=-1>printTime</font></tt> that takes a 
+<tt><font size=-1>Time</font></tt> object
+as an argument and prints it in the form <tt><font size=-1>hours:minutes:seconds</font></tt>.</i>
+</blockquote>
+
+<blockquote><i>As a second exercise, write a boolean function <tt><font size=-1>after</font></tt> that
+takes two <tt><font size=-1>Time</font></tt> objects, <tt><font size=-1>t1</font></tt> and <tt><font size=-1>t2</font></tt>, as arguments, and
+returns <tt><font size=-1>True</font></tt> if <tt><font size=-1>t1</font></tt> follows <tt><font size=-1>t2</font></tt> chronologically and
+<tt><font size=-1>False</font></tt> otherwise.</i>
+</blockquote>
+
+<a name=2></a>
+<h3>13.2 Pure functions</h3>
+<p>
+In the next few sections, we'll write two versions of a function
+called <tt><font size=-1>addTime</font></tt>, which calculates the sum of two <tt><font size=-1>Time</font></tt>s.
+They will demonstrate two kinds of functions: pure functions and
+modifiers.
+<p>
+The following is a rough version of <tt><font size=-1>addTime</font></tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>addTime</font>(t1, t2):
+<br>&nbsp; sum = Time()
+<br>&nbsp; sum.hours = t1.hours + t2.hours
+<br>&nbsp; sum.minutes = t1.minutes + t2.minutes
+<br>&nbsp; sum.seconds = t1.seconds + t2.seconds
+<br>&nbsp; <font color=black>return</font> sum
+<br></font></tt></p>
+
+<p>
+The function creates a new <tt><font size=-1>Time</font></tt> object, initializes its
+attributes, and returns a reference to the new object.  This is called
+a <b>pure function</b> because it does not modify any of the objects
+passed to it as arguments and it has no side effects, such as
+displaying a value or getting user input.
+<p>
+Here is an example of how to use this function.  We'll create two <tt><font size=-1>Time</font></tt> objects: <tt><font size=-1>currentTime</font></tt>, which contains the current time; and
+<tt><font size=-1>breadTime</font></tt>, which contains the amount of time it takes for a
+breadmaker to make bread.  Then we'll use <tt><font size=-1>addTime</font></tt> to figure out
+when the bread will be done.  If you haven't finished writing <tt><font size=-1>printTime</font></tt> yet, take a look ahead to <a href="chap14.html#2">Section 14.2</a> before
+you try this:
+
+<p><tt><font size=-1>&gt;&gt;&gt; currentTime = Time()
+<br>&gt;&gt;&gt; currentTime.hours = 9
+<br>&gt;&gt;&gt; currentTime.minutes = 14
+<br>&gt;&gt;&gt; currentTime.seconds =&nbsp; 30
+<br>
+<br>&gt;&gt;&gt; breadTime = Time()
+<br>&gt;&gt;&gt; breadTime.hours =&nbsp; 3
+<br>&gt;&gt;&gt; breadTime.minutes =&nbsp; 35
+<br>&gt;&gt;&gt; breadTime.seconds =&nbsp; 0
+<br>
+<br>&gt;&gt;&gt; doneTime = addTime(currentTime, breadTime)
+<br>&gt;&gt;&gt; printTime(doneTime)
+<br></font></tt></p>
+
+<p>
+The output of this program is <tt><font size=-1>12:49:30</font></tt>, which is correct. On the
+other hand, there are cases where the result is not correct.  Can you
+think of one?
+<p>
+The problem is that this function does not deal with cases where the
+number of seconds or minutes adds up to more than sixty.  When that
+happens, we have to "carry" the extra seconds into the minutes column
+or the extra minutes into the hours column.
+<p>
+Here's a second corrected version of the function:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>addTime</font>(t1, t2):
+<br>&nbsp; sum = Time()
+<br>&nbsp; sum.hours = t1.hours + t2.hours
+<br>&nbsp; sum.minutes = t1.minutes + t2.minutes
+<br>&nbsp; sum.seconds = t1.seconds + t2.seconds
+<br>
+<br>&nbsp; <font color=black>if</font> sum.seconds &gt;= 60:
+<br>&nbsp; &nbsp; sum.seconds = sum.seconds - 60
+<br>&nbsp; &nbsp; sum.minutes = sum.minutes + 1
+<br>
+<br>&nbsp; <font color=black>if</font> sum.minutes &gt;= 60:
+<br>&nbsp; &nbsp; sum.minutes = sum.minutes - 60
+<br>&nbsp; &nbsp; sum.hours = sum.hours + 1
+<br>
+<br>&nbsp; <font color=black>return</font> sum
+<br></font></tt></p>
+
+<p>
+Although this function is correct, it is starting to get big.  Later
+we will suggest an alternative approach that yields shorter code.
+
+<a name=3></a>
+<h3>13.3 Modifiers</h3>
+<p>
+There are times when it is useful for a function to modify one or more
+of the objects it gets as arguments.  Usually, the caller keeps a
+reference to the objects it passes, so any changes the function makes
+are visible to the caller.  Functions that work this way are called
+<b>modifiers</b>.
+<p>
+<tt><font size=-1>increment</font></tt>, which adds a given number of seconds to a <tt><font size=-1>Time</font></tt>
+object, would be written most naturally as a
+modifier.  A rough draft of the function
+looks like this:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>increment</font>(time, seconds):
+<br>&nbsp; time.seconds = time.seconds + seconds
+<br>
+<br>&nbsp; <font color=black>if</font> time.seconds &gt;= 60:
+<br>&nbsp; &nbsp; time.seconds = time.seconds - 60
+<br>&nbsp; &nbsp; time.minutes = time.minutes + 1
+<br>
+<br>&nbsp; <font color=black>if</font> time.minutes &gt;= 60:
+<br>&nbsp; &nbsp; time.minutes = time.minutes - 60
+<br>&nbsp; &nbsp; time.hours = time.hours + 1
+<br></font></tt></p>
+
+<p>
+The first line performs the basic operation; the remainder deals
+with the special cases we saw before.
+<p>
+Is this function correct?  What happens if the parameter <tt><font size=-1>seconds</font></tt> is
+much greater than sixty?  In that case, it is not enough to carry
+once; we have to keep doing it until <tt><font size=-1>seconds</font></tt> is less than sixty.
+One solution is to
+replace the <tt><font size=-1><font color=black>if</font></font></tt> statements with <tt><font size=-1><font color=black>while</font></font></tt>
+statements:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>increment</font>(time, seconds):
+<br>&nbsp; time.seconds = time.seconds + seconds
+<br>
+<br>&nbsp; <font color=black>while</font> time.seconds &gt;= 60:
+<br>&nbsp; &nbsp; time.seconds = time.seconds - 60
+<br>&nbsp; &nbsp; time.minutes = time.minutes + 1
+<br>
+<br>&nbsp; <font color=black>while</font> time.minutes &gt;= 60:
+<br>&nbsp; &nbsp; time.minutes = time.minutes - 60
+<br>&nbsp; &nbsp; time.hours = time.hours + 1
+<br></font></tt></p>
+
+<p>
+This function is now correct, but it is not the most efficient
+solution.
+
+<blockquote><i>As an exercise, rewrite this function so that it doesn't contain 
+any loops.</i>
+</blockquote>
+
+<blockquote><i>As a second exercise, rewrite <tt><font size=-1>increment</font></tt> as a pure function, and
+write function calls to both versions.</i>
+</blockquote>
+
+<a name=4></a>
+<h3>13.4 Which is better?</h3>
+<p>
+Anything that can be done with modifiers can also be done with pure
+functions.  In fact, some programming languages only allow pure
+functions.  There is some evidence that programs that use pure
+functions are faster to develop and less error-prone than programs
+that use modifiers.  Nevertheless, modifiers are convenient at times,
+and in some cases, functional programs are less efficient.
+<p>
+In general, we recommend that you write pure functions whenever it is
+reasonable to do so and resort to modifiers only if there is a
+compelling advantage.  This approach might be called a <b>functional
+programming style</b>.
+
+<a name=5></a>
+<h3>13.5 Prototype development versus planning</h3>
+<p>
+In this chapter, we demonstrated an approach to program
+development that we call <b>prototype development</b>. In each
+case, we wrote a rough draft (or prototype) that performed the basic
+calculation and then tested it on a few cases, correcting flaws as we
+found them.
+<p>
+Although this approach can be effective, it can lead to code that is
+unnecessarily complicated <s>&nbsp; &nbsp;</s> since it deals with many special
+cases <s>&nbsp; &nbsp;</s> and unreliable <s>&nbsp; &nbsp;</s> since it is hard to know if you have found
+all the errors.
+<p>
+An alternative is <b>planned development</b>, in which high-level insight
+into the problem can make the programming much easier.  In this case,
+the insight is that a <tt><font size=-1>Time</font></tt> object is really a three-digit number
+in base 60!  The <tt><font size=-1>second</font></tt> component is the "ones column," the
+<tt><font size=-1>minute</font></tt> component is the "sixties column," and the <tt><font size=-1>hour</font></tt>
+component is the "thirty-six hundreds column."
+<p>
+When we wrote <tt><font size=-1>addTime</font></tt> and <tt><font size=-1>increment</font></tt>, we were effectively
+doing addition in base 60, which is why we had to carry from one
+column to the next.
+<p>
+This observation suggests another approach to the whole problem <s>&nbsp; &nbsp;</s> we
+can convert a <tt><font size=-1>Time</font></tt> object into a single number and take
+advantage of the fact that the computer knows how to do arithmetic
+with numbers.  The following function converts a <tt><font size=-1>Time</font></tt>
+object into an integer:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>convertToSeconds</font>(t):
+<br>&nbsp; minutes = t.hours * 60 + t.minutes
+<br>&nbsp; seconds = minutes * 60 + t.seconds
+<br>&nbsp; <font color=black>return</font> seconds
+<br></font></tt></p>
+
+<p>
+Now, all we need is a way to convert from an integer to a <tt><font size=-1>Time</font></tt>
+object:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>makeTime</font>(seconds):
+<br>&nbsp; time = Time()
+<br>&nbsp; time.hours = seconds // 3600
+<br>&nbsp; time.minutes = (seconds%3600) // 60
+<br>&nbsp; time.seconds = seconds%60
+<br>&nbsp; <font color=black>return</font> time
+<br></font></tt></p>
+
+<p>
+You might have to think a bit to convince yourself that this function
+is correct.  Assuming you are convinced, you can use it and
+<tt><font size=-1>convertToSeconds</font></tt>
+to rewrite <tt><font size=-1>addTime</font></tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>addTime</font>(t1, t2):
+<br>&nbsp; seconds = convertToSeconds(t1) + convertToSeconds(t2)
+<br>&nbsp; <font color=black>return</font> makeTime(seconds)
+<br></font></tt></p>
+
+<p>
+This version is much shorter than the original, and it is much easier to
+demonstrate that it is correct.
+
+<blockquote><i>As an exercise, rewrite <tt><font size=-1>increment</font></tt> the same way.</i>
+</blockquote>
+
+<a name=6></a>
+<h3>13.6 Generalization</h3>
+<p>
+In some ways, converting from base 60 to base 10 and back is harder
+than just dealing with times.  Base conversion is more abstract; our
+intuition for dealing with times is better.
+<p>
+But if we have the insight to treat times as base 60 numbers and make
+the investment of writing the conversion functions (<tt><font size=-1>convertToSeconds</font></tt> and <tt><font size=-1>makeTime</font></tt>), we get a program that is
+shorter, easier to read and debug, and more reliable.
+<p>
+It is also easier to add features later.  For example, imagine
+subtracting two <tt><font size=-1>Time</font></tt>s to find the duration between them.  The
+na&iuml;ve approach would be to implement subtraction with borrowing.
+Using the conversion functions would be easier and more likely to be
+correct.
+<p>
+Ironically, sometimes making a problem harder (or more general) makes it
+easier (because there are fewer special cases and fewer opportunities
+for error).
+
+<a name=7></a>
+<h3>13.7 Algorithms</h3>
+<p>
+When you write a general solution for a class of problems, as opposed
+to a specific solution to a single problem, you have written an <b>algorithm</b>.  We mentioned this word before but did not define it
+carefully.  It is not easy to define, so we will try a couple of
+approaches.
+<p>
+First, consider something that is not an algorithm.  When you learned
+to multiply single-digit numbers, you probably memorized the
+multiplication table.  In effect, you memorized 100 specific solutions.
+That kind of knowledge is not algorithmic.
+<p>
+But if you were "lazy," you probably cheated by learning a few
+tricks.  For example, to find the product of <tt>n</tt> and 9, you can
+write <tt>n-1</tt> as the first digit and <tt>10-n</tt> as the second
+digit.  This trick is a general solution for multiplying any
+single-digit number by 9.  That's an algorithm!
+<p>
+Similarly, the techniques you learned for addition with carrying,
+subtraction with borrowing, and long division are all algorithms.  One
+of the characteristics of algorithms is that they do not require any
+intelligence to carry out.  They are mechanical processes in which
+each step follows from the last according to a simple set of rules.
+<p>
+In our opinion, it is embarrassing that humans spend so much time in
+school learning to execute algorithms that, quite literally, require
+no intelligence.
+<p>
+On the other hand, the process of designing algorithms is interesting,
+intellectually challenging, and a central part of what we call
+programming.
+<p>
+Some of the things that people do naturally, without difficulty or
+conscious thought, are the hardest to express algorithmically.
+Understanding natural language is a good example.  We all do it, but
+so far no one has been able to explain <i>how</i> we do it, at least
+not in the form of an algorithm.
+
+<a name=8></a>
+<h3>13.8 Glossary</h3>
+
+<dl>
+<dt>pure function</dt>
+<dd>A function that does not modify any of the objects it
+receives as arguments.  Most pure functions are fruitful.</dd>
+<dt>modifier</dt>
+<dd>A function that changes one or more of the objects it
+receives as arguments.  Most modifiers are fruitless.</dd>
+<dt>functional programming style</dt>
+<dd>A style of program design in which the
+majority of functions are pure.</dd>
+<dt>prototype development</dt>
+<dd>A way of developing programs starting with a
+prototype and gradually testing and improving it.</dd>
+<dt>planned development</dt>
+<dd>A way of developing programs that involves
+high-level insight into the problem and more planning than incremental
+development or prototype development.</dd>
+<dt>algorithm</dt>
+<dd>A set of instructions for solving a class of problems by a
+mechanical, unintelligent process.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap12.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap14.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

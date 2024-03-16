@@ -1,0 +1,23 @@
+## hpr1318 :: How I found Linux
+
+ 
+1st PC 95 wfw win3.11 installed with jumbo tracker colorado
+no ownership in HS and prior to '95
+recognition of internet '94 ncsa mosaic
+hunger for web page builds
+Sparc1 - SunOS pizza boxes / DEC Alpha / VAX/VMS
+stoked curiosity UNIX
+Unix Renaissance FAMU --> https://www.famu.edu
+Linux Unleashed - Slackware 2.0 kernel 1.2.13
+filesystem inspection, file ownership, permissions, basic scripts
+Networking - Token Ring / Ethernet / IBM 4381
+Trumpet winsock / NetBEUI / dial-up networking modems cash service
+https://en.wikipedia.org/wiki/Winsock
+slackware PPP chatscripts / robotics 14.4K modem
+winnt 4.0 network YP/NIS - 25 machines /etc/passwd
+redhat 4.2 , slackware desktop of choice,  
+debian potato, use debian for business deployment
+mostly web services, openvpn, asterisk (centos)
+mythtv arch - knoppmyth --> LinHES
+many thanks to ken fallon, dann washko, klaatu
+

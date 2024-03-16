@@ -1,0 +1,8 @@
+## hpr2441 :: Server Basics 103
+
+ Klaatu walks you through installing, configuring, and running fail2ban, and discusses the basics about firewalls.
+
+firewalld
+
+fail2ban
+

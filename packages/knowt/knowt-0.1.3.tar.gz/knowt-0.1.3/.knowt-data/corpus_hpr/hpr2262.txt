@@ -1,0 +1,13 @@
+## hpr2262 :: Abstracting Nurse Jesus
+
+ NOTE: the audio recording appears to have periodic jitter. As I recorded at 44.1 Khz this time, I wonder if my S2 just handles recording at a lower quality better, and if so I'll prefer lower quality over jitter in the recording.
+In this episode I explain why and how I abstracted random number and choice generation into self-sustainable methods for objects.
+
+A superclass was needed so that all the classes of object in the game engine would have access to these random generation methods.
+I preferred to use methods in this case so objects would be self-sufficient and wouldn't depend on extra modules imported at the top of my code.
+The syntactic sugar achieved by using customized methods instead of i.e. random.randint(0, 99) makes the code easier to write and understand at a glance.
+Nurse Jesus is a pun on the acronym RNG for Random Number Generator
+Let me know if you get the reference at 2:00 ;-)
+
+I recorded this episode in parts using a program called Urecord on my pocket computer (mobile phone).
+I program using Pygame, post on a GNU Social account, and maintain a personal website at NoxBanners.NET. I study programming techniques at Refactoring.com, style at Python.org, and sometimes patterns at Portland Pattern Repository

@@ -1,0 +1,22 @@
+## hpr2011 :: Introduction to sed - part 4
+
+ Introduction to sed - part 4
+In the last episode we looked at some of the more frequently used sed commands, having spent previous episodes looking at the s command, and we also covered the concept of line addressing.
+In this episode we will look at how sed really works in all the gory details, examine some of the remaining sed commands and begin to build useful sed programs.
+To read the rest of the notes for this episode follow this link: https://hackerpublicradio.org/eps/hpr2011/full_shownotes.html
+Links
+
+Introduction to sed - part 1: https://hackerpublicradio.org/eps.php?id=1976
+Introduction to sed - part 2: https://hackerpublicradio.org/eps.php?id=1986
+Introduction to sed - part 3: https://hackerpublicradio.org/eps.php?id=1997
+Some further Bash tips: https://hackerpublicradio.org/eps.php?id=1903
+GNU sed manual: https://www.gnu.org/software/sed/manual/sed.html
+Wikipedia entry for sed: https://en.wikipedia.org/wiki/Sed
+"Sed - An Introduction and Tutorial" by Bruce Barnett: https://www.grymoire.com/Unix/Sed.html
+Wikibooks sed wiki: https://en.wikibooks.org/wiki/Sed
+Example files:
+
+Demonstration Bash script: https://hackerpublicradio.org/eps/hpr2011/demo3.sh
+Demonstration of 'M' modifier: https://hackerpublicradio.org/eps/hpr2011/demo4.sed
+
+Wikipedia entry for "Pig Latin": https://en.wikipedia.org/wiki/Pig_Latin

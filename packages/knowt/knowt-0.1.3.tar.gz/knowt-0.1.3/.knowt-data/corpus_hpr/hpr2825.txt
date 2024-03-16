@@ -1,0 +1,22 @@
+## hpr2825 :: More text to speech trials
+
+ 
+A supplementary show to Jeroens episode HPR2792 :: Playing around with text to speech synthesis on Linux.
+
+
+I found two addional options. The first is mimic
+
+
+# dnf info mimic
+Summary      : Mycroft's TTS engine
+URL          : https://mimic.mycroft.ai/
+License      : BSD
+Description  : Mimic is a fast, lightweight Text-to-speech engine developed by Mycroft A.I.
+             : and VocalID, based on Carnegie Mellon University’s FLITE software. Mimic takes
+             : in text and reads it out loud to create a high quality voice. Mimic's
+             : low-latency, small resource footprint, and good quality voices set it apart
+             : from other open source text-to-speech projects.
+
+
+And the second is gTTS which is a interface to the google TTS api.
+

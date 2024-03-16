@@ -1,0 +1,18 @@
+## hpr1481 :: Encryption and Gmail
+
+ 
+Last time we looked at how you can use GPG and Enigmail to digitally sign or encrypt messages in Thunderbird. But today many people use web-based mail, and one of the most popular is Googles Gmail. Others include Outlook.com and Yahoo, but using any of them is pretty similar. So since I have a Gmail account handy, I will use that to demonstrate encryption in web mail accounts.
+
+
+The important thing you must keep in mind is that this relies on you using your GPG keys to either sign or encrypt the message before it leaves your computer, what Steve Gibson calls Pre-Interent Encryption, or PIE. The flaw in what Lavabit did (discussed in previous lesson) was to use keys that the mail provider controlled, and these keys could be (and were) demanded by the the government.. If you use your own GPG keys that you control, no provider (Google, in this case) is even capable of giving anything to the government other than a blob of random nonsense.
+
+
+To do this, I will use an extension for Googles Chrome Browser called Mailvelope. This is also available for Firefox, but in my case I use Chrome to access my Gmail account., so using a Chrome extension makes sense for me. The first thing to do is go to the Chrome store, search for Mailvelope, and install it.
+
+
+For the remainder of the show notes please see https://www.zwilnik.com/?page_id=546
+
+Links
+
+https://www.mailvelope.com/
+

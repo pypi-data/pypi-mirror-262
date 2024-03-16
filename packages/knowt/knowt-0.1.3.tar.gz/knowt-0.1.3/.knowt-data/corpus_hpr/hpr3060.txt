@@ -1,0 +1,39 @@
+## hpr3060 :: Running a local imap server
+
+ Setting up a local imap server
+To install a local imap daemon that will only listen to localhost connections, made via ssh tunneling. This is for use as a local backup of your imap files, or for keeping a remote backup somewhere.
+This is not a mail delivery solution but rather a way to keep a backup of your email using to a MailDir directory that you can access using your email client. As each message is stored in its own file, you can also use normal tools like find|sed|awk|grep to find messages.
+This setup can be installed locally or remotely on, for example, a raspberry pi. In that case you can enable a portforwarding rule in ~/.ssh/config to include something like LocalForward 127.0.0.1:2143 127.0.0.1:143
+Install using aptitude install courier-imap courier-authdaemon
+You can check the status using systemctl status courier-imap.service courier-authdaemon.service
+Edit the file /etc/courier/imapd and modify the following settings:
+Address to listen on, can be set to a single IP address.
+    < ADDRESS=0
+    > ADDRESS=127.0.0.1
+
+Maximum number of IMAP servers started
+    < MAXDAEMONS=40
+    > MAXDAEMONS=80
+
+Maximum number of connections to accept from the same IP address
+    < MAXPERIP=20
+    > MAXPERIP=40
+
+The following setting is optional, and causes messages from the given folder to be automatically deleted after the given number of days.
+    < IMAP_EMPTYTRASH=Trash:7
+    > #IMAP_EMPTYTRASH=Trash:7
+
+Change the directory name of the maildir directory.
+    < MAILDIRPATH=Maildir
+    > MAILDIRPATH=/home/pi/MailDir
+
+Then restart the service using systemctl restart courier-imap.service courier-authdaemon.service.
+When I did this I got a strange error about but installing the package gamin fixed it. Which is a Library providing the FAM File Alteration Monitor API.
+  Filesystem notification initialization error -- contact your mail
+  administrator (check for configuration errors with the FAM/Gamin library)
+
+Links
+
+https://www.courier-mta.org/imap/documentation.html
+https://www.faqforge.com/linux/fix-for-courier-imap-error-check-for-configuration-errors-with-the-famgamin-library/
+

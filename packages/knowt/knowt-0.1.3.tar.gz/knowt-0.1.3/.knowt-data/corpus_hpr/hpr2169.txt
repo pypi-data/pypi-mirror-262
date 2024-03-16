@@ -1,0 +1,22 @@
+## hpr2169 :: How I connect to the awesome #oggcastplanet on mobile
+
+ On HPR #2162 I mentioned that I'm connecting to freenode IRC using Riot and Matrix. Here I explain a bit of background to why, what Matrix is, and why you should use it too.
+Quick-quick version
+Just go to https://riot.im/app/#/room/#freenode_#oggcastplanet:matrix.org, click Join and you're on the channel! If you register a user there (or maybe on another instance, like @lambadalambda's https://matrix.heldscal.la/), you can then log in with the same username and password in the Android app and see all your joined channels there.
+Correction to audio: Riot is on F-Droid. For some reason I couldn't find it at the time, even though it's clearly there, so I'm currently using the version from the Google Play Store. I hear that battery use may be an issue if you're independent from the evil GOOG.
+Alternatives
+Other ways of connecting to IRC over flaky or intermittent connections without losing context:
+
+ZNC
+In particular, check out this pretty elaborate ZNC-on-ZNC setup to solve the issue with having multiple devices that all want an independent scrollback buffer. I was just about considering setting up something like this when I discovered the Matrix bridge instead.
+One colleague of mine uses Quassel and loves it.
+Another colleague uses irssi ConnectBot or something similar and can't understand why anybody would want anything else.
+
+Criticism
+
+Matrix is a big fat NIH, why not just use XMPP? (short pump.io discussion)
+
+Fodder for further HPR episodes
+
+Man there are a lot of Slack alternatives out there. (pump.io post)
+

@@ -1,0 +1,47 @@
+## hpr2383 :: What's In My Ham Shack
+
+ What's In My Ham Shack
+In this episode I am starting what I hope will become a series where Amateur Radio operators talk about what equipment they have and use in their Ham Shacks.
+Ham Shack Definition
+A good definition of exactly what a Ham Shack is can be found on Wikipedia.
+https://en.wikipedia.org/wiki/Radio_shack
+Categories of Ham Radio gear
+I tend to divide gear into the following categories.
+
+Portable - hand-held devices designed for carrying.
+Mobile - equipment that is designed to be used in a vehicle.
+Base - gear used in a fixed station environment.
+Miscellaneous - other stuff.
+
+My Ham Shack
+You can google any of these model numbers to see what the hardware looks like and learn more about it.
+Portable Gear
+
+Allinco DJ-190 Handy-Talkie
+Yeasu VX-6R tri-band Handy-Talkie
+
+Mobile Gear
+
+Yeasu FT-8800 dual-band radio
+New Motorolla Mount (NMO) antenna mount
+Comet B-10nmo mobile antenna
+Comet SBB-5nmo mobile antenna
+
+Base Station Gear
+
+ICOM IC-746 HF+6m+2m radio
+Grasshopper II vertical HF antenna
+Unknown brand vertical 2-meter/70-cm base station antenna
+MFJ-4225MV Switching Power Supply
+MFJ-949E Manual Antenna Tuner
+LDG Electronics AT-200Pro II Automatic Antenna Tuner
+Computer running Xubuntu 16.04
+West Mountain RIGblaster Advantage digital interface
+
+Miscellaneous Gear
+
+MFJ-269C Antenna Analyzer
+Stereo head-phones and microphone
+Push-to-Talk pedal
+RTL-SDR Dongle
+Collection of various connectors and adaptors

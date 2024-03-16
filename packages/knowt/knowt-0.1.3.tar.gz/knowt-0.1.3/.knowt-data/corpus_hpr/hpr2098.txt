@@ -1,0 +1,5 @@
+## hpr2098 :: Minimal Music Site?
+
+ Project available https://sourceforge.net/p/minimal-music-site
+
+A very small responsive website for uploading content. Originally designed primarily for musicians needing an easy interface to share content. Upload files in the admin pages. Automatically saves files in directories and lists content on main pages by date. I'm sure there are many improvements that could be made.

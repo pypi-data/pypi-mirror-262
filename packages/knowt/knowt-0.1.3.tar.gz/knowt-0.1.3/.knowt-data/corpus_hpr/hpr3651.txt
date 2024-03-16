@@ -1,0 +1,306 @@
+## hpr3651 :: HPR Community News for July 2022
+
+ 
+New hosts
+
+Welcome to our new hosts: 
+binrc, 
+    Celeste.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+3630
+Fri
+2022-07-01
+Planning an RV Trip
+Ahuka
+
+
+3631
+Mon
+2022-07-04
+HPR Community News for June 2022
+HPR Volunteers
+
+
+3632
+Tue
+2022-07-05
+Intro to web scraping with Python
+Klaatu
+
+
+3633
+Wed
+2022-07-06
+The collective history of RAID controller brands
+JWP
+
+
+3634
+Thu
+2022-07-07
+Everything You Always Wanted to Know About PEX Part 05 - PEX and the Single Installer
+Trey
+
+
+3635
+Fri
+2022-07-08
+A short podcast on a nice tool called system-monitoring-center
+Jeroen Baten
+
+
+3636
+Mon
+2022-07-11
+The Importance of Data Reduction
+Lurking Prion
+
+
+3637
+Tue
+2022-07-12
+HPR feed to Sqlite
+norrist
+
+
+3638
+Wed
+2022-07-13
+Ken drops a bear on his android phone
+Ken Fallon
+
+
+3639
+Thu
+2022-07-14
+Linux Inlaws S01E60: The Job Interview
+monochromec
+
+
+3640
+Fri
+2022-07-15
+Expert DIR use
+Ahuka
+
+
+3641
+Mon
+2022-07-18
+Turntable audio capture Part 2
+Archer72
+
+
+3642
+Tue
+2022-07-19
+Interview with a Hacker: Vitaliy
+operat0r
+
+
+3643
+Wed
+2022-07-20
+My computing history and the software I use
+binrc
+
+
+3644
+Thu
+2022-07-21
+Pinball Machine Repair Tips
+Celeste
+
+
+3645
+Fri
+2022-07-22
+How to set up a small Linux Wireguard VPN
+Jeroen Baten
+
+
+3646
+Mon
+2022-07-25
+arm, slackware, forth oh my!
+Brian in Ohio
+
+
+3647
+Tue
+2022-07-26
+Weekend projects
+Rho`n
+
+
+3648
+Wed
+2022-07-27
+A response to tomorrows show
+Ken Fallon
+
+
+3649
+Thu
+2022-07-28
+Linux Inlaws S01E61: 20 years in review
+monochromec
+
+
+3650
+Fri
+2022-07-29
+Major Destinations
+Ahuka
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 18 comments in total.
+Past shows
+There are 2 comments on
+2 previous shows:
+
+hpr3226
+(2020-12-14) "Using taskwarrior to structurize your work"
+by Jeroen Baten.
+
+
+
+Comment 3:
+dnt on 2022-07-09:
+"the urgency"
+hpr3627
+(2022-06-28) "Only Key Duo"
+by operat0r.
+
+
+
+Comment 1:
+operat0r on 2022-07-06:
+"Installer Changed ..."
+
+This month's shows
+There are 16 comments on 9 of this month's shows:
+hpr3630
+(2022-07-01) "Planning an RV Trip"
+by Ahuka.
+
+Comment 1:
+brian-in-ohio on 2022-07-05:
+"enjoyed the show"Comment 2:
+Kevin O'Brien on 2022-07-06:
+"Photos"
+hpr3632
+(2022-07-05) "Intro to web scraping with Python"
+by Klaatu.
+
+Comment 1:
+Some Guy On The Internet on 2022-07-08:
+"Thank you"
+hpr3634
+(2022-07-07) "Everything You Always Wanted to Know About PEX Part 05 - PEX and the Single Installer"
+by Trey.
+
+Comment 1:
+dnt on 2022-07-09:
+"a hacker's plumbing system"
+hpr3637
+(2022-07-12) "HPR feed to Sqlite"
+by norrist.
+
+Comment 1:
+Ken Fallon on 2022-07-20:
+"Daily Database Dump in SQL Format"
+hpr3642
+(2022-07-19) "Interview with a Hacker: Vitaliy"
+by operat0r.
+
+Comment 1:
+Kevin O'Brien on 2022-07-20:
+"Great show"
+hpr3643
+(2022-07-20) "My computing history and the software I use"
+by binrc.
+
+Comment 1:
+Archer72 on 2022-07-08:
+"First show"Comment 2:
+norrist on 2022-07-20:
+"Plan9"Comment 3:
+Dave Morriss on 2022-07-20:
+"An excellent first show"Comment 4:
+brian-in-ohio on 2022-07-24:
+"future show"
+hpr3644
+(2022-07-21) "Pinball Machine Repair Tips"
+by Celeste.
+
+Comment 1:
+Archer72 on 2022-07-16:
+"Pinball machines and English"Comment 2:
+Trey on 2022-07-21:
+"Welcome!"Comment 3:
+brian-in-ohio on 2022-07-24:
+"soundscape"
+hpr3648
+(2022-07-27) "A response to tomorrows show"
+by Ken Fallon.
+
+Comment 1:
+LongTimeLurker on 2022-07-27:
+"Known Unknowns"Comment 2:
+E-/-y on 2022-07-28:
+"Only the Interviews"
+hpr3649
+(2022-07-28) "Linux Inlaws S01E61: 20 years in review"
+by monochromec.
+
+Comment 1:
+Ken Fallon on 2022-06-24:
+"response show"
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2022-July/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+Olly Clark
+The UK Tech community has been saddened to hear of the death of Oliver (Olly) Clark, a well known presence at OggCamp, Barcamp and Raspberry Pi meetings. He apparently died in November 2021 as a consequence of COVID-19. His family did not know who to contact in the wider community, so this news only became apparent recently.
+
+Twitter: @ollyclarkdotorg (https://twitter.com/ollyclarkdotorg)
+Mastodon: https://mastodon.sdf.org/@ollyclarkdotorg
+Flickr: https://www.flickr.com/people/ollyclarkdotorg/
+Web site: http://www.ollyclark.org/ (currently unavailable, but archived on the Wayback Machine at https://web.archive.org/web/20210801015127/https://www.ollyclark.org/)
+
+Older HPR shows on archive.org, phase 2
+Now that all shows from number 1 to the latest have been uploaded to the Internet Archive there are other tasks to perform. We are reprocessing and re-uploading shows in the range 871 to 2429 as explained in the Community News show notes released in May 2022. We are keeping a running total here to show progress:
+
+Re-uploads done so far: 576
+Shows remaining to be done: 983
+Shows uploaded by last Community News recording: 431
+Shows added since last recording: 145
+

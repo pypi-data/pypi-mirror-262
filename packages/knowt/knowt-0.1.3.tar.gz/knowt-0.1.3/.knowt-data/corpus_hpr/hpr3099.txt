@@ -1,0 +1,13 @@
+## hpr3099 :: Linux Inlaws S01E08 The review of the review
+
+ S01E08: The review of the review
+More shenanigans from our two heroes. In this short episode our two heroes rant about Linus and other old people, Transmeta and other history, discuss Martin's EdgeOS woes and discover that MIPS is indeed a CPU architecture supported by standard Debian. The show concludes with a short review of Claudio's review and poxes about the Arch wiki and Californication. You have been warned!
+Links:
+
+Linus Torvald's 80 column rant: https://lkml.iu.edu/hypermail/linux/kernel/2005.3/08168.html
+Linux's device tree explained: https://elinux.org/Device_Tree_Reference
+Debian packages for EdgeOS: https://help.ui.com/hc/en-us/articles/205202560-EdgeRouter-Add-Debian-Packages-to-EdgeOS
+Arch Wiki: https://wiki.archlinux.org
+Californication: https://www.sho.com/californication
+The Italian music extract is courtesy of Christian Petermann from his piece Folk Festival (CC-BY-SA)
+

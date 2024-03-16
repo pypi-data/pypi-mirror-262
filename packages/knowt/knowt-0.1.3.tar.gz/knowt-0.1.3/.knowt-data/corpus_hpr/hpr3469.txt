@@ -1,0 +1,19 @@
+## hpr3469 :: Linux Inlaws S01E43: The Great Battle or not
+
+ In this episode Martin and one of the Grumpies (as in Grumpy Old Coders)
+battle it out: SQL or NoSQL - which technology is better? If you ever wondered
+why the Structured Query Language was invented in the first place and why the
+hipster abandoned ship for the latest (?) rage of the likes of the NoSQL
+variety, this is for you. Plus: A whole family of never-heard-of sound effects
+make their debut on this bumper of an episode.
+Links:
+
+SQL: https://www.iso.org/standard/63555.html
+NoSQL: https://en.wikipedia.org/wiki/NoSQL
+NoSQL Geek: https://www.nosqlgeek.org
+ACID compliance: https://en.wikipedia.org/wiki/ACID
+redis: https://github.com/redis/redis
+CAP theorem: https://en.wikipedia.org/wiki/CAP_theorem
+TorroDB: https://github.com/gordol/torrodb-server
+Grumpy Old Coders episode on the Dark Side: https://soundcloud.com/user-498377588/grumpy-old-coders-ep-11-the-dark-side
+

@@ -1,0 +1,95 @@
+## hpr2517 :: DIY CCTV Security System
+
+ CCTV Security System
+
+$80 Reolink IP PoE Security Camera 4MP Super HD 2560x1440 with SD Card & Audio Outdoor Indoor Bullet IR Night Vision Motion Detection RLC-410S
+65$ RLC-410 ( No SD CARD )
+$150 Linksys Business LGS116P 16-Port Desktop Gigabit Ethernet PoE+ Unmanaged Network Switch I Metal Enclosure $150
+Ispy to start
+https://forums.zoneminder.com/viewtopic.php?f=36&t=26906 115 lines of bash
+When event ends on ZM yolo is run on a random 10 images for that event (Person Dog Cat Car)
+if an object is detected we look to see if two Android phones via MAC on network
+if they are on the network it means somebody is home so events are throttled to 1/1hr max
+if nobody is home then original image/object detected from event is sent to email
+zones
+zones preclusion
+Video https://rmccurdy.com/scripts/videos/rmccurdy_com/ZoneMinder_Yolo_Yolov2_Darknet_Script_Plugin.mp4
+
+Issues:
+
+rain, spiderwebs, shadows, Car lights (preclusion zones)
+full motion capture is -6hrs 16gig
+smearing ( lower FPS on cam and make sure ZM has higher framerate then the cam make sure not to use Source Type:ffmpeg and use remote or try both)
+journalctl -f -t DARKNET.service (shows nothing...@#%ing systemd)
+night time
+
+More Notes:
+Start with one zone at a time and raise/test sensitive KISS...don't setup like 4 zones and expect to trouble shoot anything. I used my Android to do a lot of tweaking. I also want to sort out "night" mode config so after night mode kicks in a different config is automatically applied.
+Use low quality for motion detection and drop frame rate of cam to lower than max of ZM for little to no smearing and I also set "Alarm Frame Count to 2" and "overload ignore frame count to 4" but I think it's more about Alarm Frame Count..I can't be sure..
+Explanation of overload ignore frame count
+Report this post Quote
+Post by bb99 » Thu May 10, 2012 5:22 pm
+For sudden changes to the environment, no better tool then Overload Frame Ignore Count. Your fps determines these settings but at 10 fps with Overload Frame Ignore Count set to 4, it only ignores .4 seconds. In other words if a drastic change to the lighting (such as a car with headlights on in darkness) passes within the monitors view it will ignore the number of frames you specify before processing for motion detection.
+Alarm Frame Count
+This option allows you to specify how many consecutive alarm frames must occur before an alarm event is generated. The usual, and default, value is 1 which implies that any alarm frame will cause or participate in an event. You can enter any value up to 16 here to eliminate bogus events caused perhaps by screen flickers or other transients. Values over 3 or 4 are unlikely to be useful however. Please note that if you have statistics recording enabled then currently statistics are not recorded for the first ‘Alarm Frame Count’-1 frames of an event. So if you set this value to 5 then the first 4 frames will be missing statistics whereas the more usual value of 1 will ensure that all alarm frames have statistics recorded.
+https://forums.zoneminder.com/viewtopic.php?f=36&t=26222
+Windows software to get basic idea ( install face plugin )
+https://www.ispyconnect.com/plugins.aspx
+Videos
+
+https://www.reddit.com/r/DIY/comments/713eka/heres_how_to_build_your_own_smart_security_camera/
+https://www.hackster.io/hackerhouse/raspberry-pi-motion-tracking-gun-turret-77fb0b
+https://www.youtube.com/watch?v=QfNvhPx5Px8
+https://www.youtube.com/watch?v=4eIBisqx9_g&t=11m10s
+
+eazy getting started
+
+https://pjreddie.com/darknet/yolo/#small
+
+getting started with GPU
+you need 4gig+ GPU and new nvidia or old GCC4.9 /GCC4_NEEDED_FOR_DARKNET$ ls cpp-4.9_4.9.2-10_amd64.deb gcc-4.9_4.9.2-10_amd64.deb libasan1_4.9.2-10_amd64.deb libcloog-isl-dev_0.18.2-1+b2_amd64.deb libisl10_0.12.2-2_amd64.deb g++-4.9_4.9.2-10_amd64.deb gcc-4.9-base_4.9.2-10_amd64.deb libcloog-isl4_0.18.2-1+b2_amd64.deb libgcc-4.9-dev_4.9.2-10_amd64.deb libstdc++-4.9-dev_4.9.2-10_amd64.deb https://github.com/dasGringuen/debian9-install
+GPU memory talk
+https://groups.google.com/forum/#!msg/darknet/ZRAEvMmKzFc/iVZgibJiJQAJ
+trying to GPU prep ..
+apt-get remove --purge nvidia-cuda-toolkit libcudnn*
+dpkg -i libcudnn7_7.0.5.15-1+cuda9.1_amd64.deb
+dpkg -i libcudnn7-dev_7.0.5.15-1+cuda9.1_amd64.deb
+dpkg -i cuda-repo-ubuntu1704-9-1-local_9.1.85-1_amd64
+
+sudo dpkg -i cuda-repo-ubuntu1704-9-1-local_9.1.85-1_amd64.deb
+sudo apt-key add /var/cuda-repo-9-1-local/7fa2af80.pub
+sudo apt-get update
+sudo apt-get install cuda
+
+apt install libopencv-dev
+more code/ references
+
+https://machinethink.net/blog/object-detection-with-yolo/
+https://ozone.network/apidocs/starter__example_8cpp_source.html
+
+yolov2 training
+
+https://www.yuthon.com/2016/12/03/Train-YOLOv2-on-my-own-dataset/
+
+dump reolink using GPU nvidia
+ffmpeg -c:v h264_vdpau -rtsp_transport tcp -i "rtsp://admin:@25.0.0.238/h264Preview_01_main" -f segment -segment_time 60 -segment_format mp4  -reset_timestamps 1 -strftime 1 -c copy -map 0 dauphine-%Y%m%d-%H%M%S.mp4
+
+ffmpeg -hwaccel vdpau -i rtsp://admin:@25.0.0.238/h264Preview_01_main -an -f rawvideo -y /dev/null
+complicated zoneminder plugins and bits of code :(
+
+https://gist.github.com/pliablepixels/34b484cca1c23ae9493c5d2e57f0bde8
+https://forums.zoneminder.com/viewtopic.php?f=36&t=26222
+https://through-the-interface.typepad.com/through_the_interface/2012/09/creating-a-face-recognising-security-cam-with-a-raspberry-pi-part-1.html
+
+cheap cams 720p max
+
+https://www.zmododirect.com/
+
+Save as video
+By default ZoneMinder saves events as a sequence of images. It is however possible to save an event as a video file. Caution is advised when converting events to video as it is very strenuous on the ZoneMinder machine, however once you have converted an event it can be viewed/downloaded any time without additional stress on the server.
+First, make sure you have OPT_FFMPEG under Options -> Images set to yes (checked).
+If necessary, set the proper full path for the ffmpeg executable in PATH_FFMPEG (ex.: /usr/bin/ffmpeg)
+Open up the default view for an event and Click the video link located in the top left corner
+Choose a video export file type and click generate.
+Download the video to your machine. If video files have already been generated you will see them listed at the bottom of the page.
+When an event gets a video file encoded for it you can choose to automatically include that event with any future exports. For a more detailed explanation on how to select and export events investigate How to export download and view events

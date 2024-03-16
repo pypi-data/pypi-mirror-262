@@ -1,0 +1,118 @@
+## hpr1370 :: Blogging With Octopress
+
+ Blogging with Octopress
+Static html site generators automate many of the tedious steps that are necessary
+to create website.  Octopress is a static html generator that automates many of the tedious tasks of static html site generators, and comes with a number of reasonable presets, configured right out of the box.
+Static HTML Site Generators I looked at:
+
+Jekyll: https://jekyllrb.com/
+Jekyll-bootsrap: https://jekyllbootstrap.com/
+Pelican: https://docs.getpelican.com/en/3.3.0/
+Templer: https://www.steve.org.uk/Software/templer/ (HPR1203)
+Octopress: https://octopress.org
+
+
+     I settled on octopress for the following reasons:
+
+
+SASS
+
+      Sass adds additional functionality to css such as variables, mixins, 
+      scopes, and was a tool that I had previously worked with.
+Twitter Bootstrap
+
+      Twitter bootstrap is a set of templates that produce nice looking 
+      pages that are standards compliant, and adaptive so that they look 
+      good at any screen resolution. 
+HTML5 Video Plugin
+
+      I ended up creating my own, but Octopress has a HTML5 video plugin.  
+      Unfortunately this only supported H264 video, so I created my own to 
+      serve H264, Webm, and Ogv.
+Deployment scripts
+
+      Octopress comes with rsync, and github pages support out of the box, 
+      so you can deploy your site with very little effort.
+
+Requirements:
+
+Ruby 1.9.3 or above
+Git
+HTML knowledge
+Text Editor & Terminal
+
+Install Requirements:
+In Ubuntu 12.04 I did the following:
+
+sudo apt-get install emacs git zlib1g-dev openssl libopenssl-ruby1.9.1 \
+libssl-dev libruby1.9.1 libreadline-dev
+
+Install ruby through rbenv
+rbenv (https://rbenv.org)
+
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+# set environment in ~/.bash_profile.  Change this to ~/.zshrc if using zshell
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile # You can change to .zshrc or .bashrc
+
+Install ruby-build to make installing ruby easy
+
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+Install ruby
+
+rbenv install 1.9.3-p194
+rbenv rehash
+
+Octopress
+https://octopress.org
+Install Octopress
+
+git clone git://github.com/imathis/octopress.git octopress
+cd octopress
+rbenv local 1.9.3-p194  
+
+Install Ruby Requirements
+
+gem install bundler
+rbenv rehash
+bundle install  
+
+What is rake?
+Rake is like make but for ruby. 
+Use rake scripts to setup and preview blog
+
+rake -T # list all available rake tasks
+rake install # install themes and default config
+rake preview # generate and view site
+
+Open localhost:4000 in your webbrowser
+Setup Deployment
+
+rake set_root_dir['blog-test']
+rake setup_github_pages 
+rake generate
+# Change the following url to point to your repository
+git remote add origin https://github.com/HarryGuerilla/blog-test.git
+git config branch.master.remote origin
+git add .
+git commit -m "initial commit"
+git push origin master
+rake deploy # this is where the magic happens
+
+Configure Blog
+
+emacs _config.yml
+# Edit title, author, subtitle
+
+Create First Post & Basic workflow:
+
+rake new_post
+emacs post
+git add .
+git commit -m "added new post"
+
+Publish Blog
+
+rake deploy

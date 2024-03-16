@@ -1,0 +1,31 @@
+## hpr1727 :: Basic Mutt
+
+ Using a text email client such as Mutt is quite a learning experience.  Here is some information to help you get started.
+
+The programs that Frank used to set up Mutt:
+
+Getting and Sorting Mail:  
+Fetchmail https://sourceforge.net/projects/fetchmail/
+Procmail and Formail https://www.procmail.org/
+
+Reading and Composing Mail:  Mutt https://www.mutt.org/
+
+Sending Mail:  msmtp https://msmtp.sourceforge.net/
+
+These are the references that Frank found most helpful:
+
+Configuring Mutt:
+Quickstart Guide to Mutt: https://docs.huihoo.com/gentoo/resources/document-listing/guide-to-mutt.html
+
+Calmar on Mutt:  https://www.calmar.ws/mutt/
+Feeding the Cloud:  Handling multiple identities/accounts in mutt:  https://feeding.cloud.geek.nz/posts/handling-multiple-identitiesaccounts-in/
+
+Procmail (the UMBC link is a great introduction to procmail and procmail's regex):
+Mail Filtering with Procmail:  https://userpages.umbc.edu/~ian/procmail.html#example
+https://www.linux-mag.com/id/826/
+
+Some Text Browsers (for help in parsing HTML emails)
+Lynx https://lynx.isc.org/
+Links https://www.jikos.cz/~mikulas/links/
+elinks https://elinks.or.cz/
+w3m https://w3m.sourceforge.net/

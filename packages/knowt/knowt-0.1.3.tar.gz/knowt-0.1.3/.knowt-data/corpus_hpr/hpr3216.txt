@@ -1,0 +1,14 @@
+## hpr3216 :: Buying a second home in France
+
+ funda.nl
+
+Do geo query on overpass-turbo.eu
+Find query to query villages here: https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example
+The box on the right is the viewport that you will get data from.
+Used python to convert xml file to Postgres sql table
+Run query for all < my_max_inhabitants
+Run script to query and save to csv
+Import csv into LibreOffice spreadsheet.
+Use global search & replace to make cells with google maps url clickable.
+Nice podcast of French women about buying a house in France
+https://joinusinfrance.com/episode/buying-a-house-in-france-episode-239/

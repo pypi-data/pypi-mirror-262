@@ -1,0 +1,85 @@
+## hpr3937 :: Adventures in Pi-Hole
+
+ Adventures in Pi-Hole
+Hi all! Today I'm gonna be talking about my adventures in setting up
+Pi-hole. This will be without screenshots, but instead in all text,
+sorry! Also this is all written as kind of an "Aftermath" story. This is
+being written after the fact, so this might be missing some details, but
+most of it is there.
+Intro: What is Pi-hole
+Pi-hole is a DNS/DHCP server that
+allows for easy network-wide ad-blocking, along with all the nice
+customizations that come with being a DNS server, such as custom
+domains.
+First Step: Get it running
+The first step was getting Pi-hole running. I did this using Docker
+Compose on a "NAS" which is honestly a full on server at this point. A
+quick copy/paste from Pi-hole's
+README and I was up and running! I set a singular system to use this
+as a DNS server, and after that, I figured I was set and ready to
+go.
+Second Step: DHCP town
+Of course, I wasn't satisfied just finishing there. I want automatic
+DNS setting for any device that connects to my network. Of course, I
+could just set the DNS upstream in my OpenWRT router to use the IP address of
+my server, but that isn't good enough for me. This means I'd be missing
+out on automatic per-client information, since when setting a DNS server
+for OpenWRT, it only sets itself to forward any DNS requests up to the
+DNS server, which means from Pi-hole's perspective, all the requests are
+coming from the router and nowhere else. The solution is to set up
+Pi-Hole as a DHCP server. Keep in mind this isn't a tutorial, so let's
+go through what I did first. The first step was to turn on the DHCP
+server in Pi-Hole. This was super easy, just a checkbox and click save.
+Cool! Then I disabled the DHCP server in OpenWRT, and that was all set.
+A few restarting of network devices later, like my phone, and they
+automatically connected to the Pi-Hole server, and worked like a charm.
+Next up, I set up Tailscale. I use Headscale, but the setup is
+essentially the same as if you were using Tailscale's UI. Set in the
+config to override local DNS, set the nameserver to the Tailscale IP
+address of the server, and turn on magic DNS, et voila! Now to restart
+the Tailscale nodes, and make sure that on the server, you set it to not
+accept the DNS from Tailscale. If you don't do that, it'll get in an
+endless loop of trying to use itself as the DNS server, and it's just no
+good. Okay! It's all set, and I check the dashboard, and it's already
+blocking DNS requests. Perfect!
+Third Step: Whoopsies!
+This was fine and great, but when I went to reboot my server, which I
+do weekly, something bad happened. The interface for the server didn't
+come up. This is a problem, since it's the DHCP server for my network,
+so without that working, the network was dead in the water. It can't
+give out IP addresses. What's going on? I go ahead and access my server
+directly. No matter how hard I try, it can't connect to the interface.
+What's the big deal? Well this is pretty simple, and a question popped
+in my head that go me there. "How does this server even get its IP
+address?" You see when I set up pi-hole, it just kept using the IP
+address that the router gave it, which it was more than happy to use,
+but the moment the router didn't have a DHCP server, the NAS didn't have
+a way to get an IP address anymore. So what do you do then? The answer
+is pretty simple. Give the server a static IP. Make sure in the DHCP
+server of pi-hole, you set a reservation in it for the server, then in
+NetworkManager, which I use, set it to have a static IP, and set its DNS
+to point to localhost. Perfect! This works like a charm!
+Fourth Step: Adlists
+Okay, phew! Crisis averted. Just some missing networking knowledge.
+So what's next up on the list? Hmmm... Let's see... The default adlist
+is kinda small, let's go see if we can find some new adlists. Apparently
+this is more difficult than you'd think. A quick search on DDG only came
+up with an equivalent search in GitHub. Not useful! I have no idea the
+trustworthiness and stability of these adlists. Let's see. Another
+search leads to a Reddit article that then links to a different list.
+Bingo! An Adlist list. Exactly what I
+needed. I went ahead and looked into these lists, and added a few of
+them. Perfect!
+Fifth Step: Maintenance
+docker compose pull && docker compose up -d
+Of course, this isn't it. I actually use an a/b update scheme, but you
+get the gist. Updates are taken care of, and just make sure you try and
+keep the server up as long as possible, and keep downtime to a
+minimum.
+Sixth Step: Moving off the
+NAS.
+After a while of running this, the necessity of having the NAS on the
+whole time was starting to get frustrating. The answer there was to move
+it off the NAS. I did this by installing it on a Raspberry Pi 3B,
+running Arch Linux ARM. The setup was identical to before once I had
+gotten ALARM running.

@@ -1,0 +1,22 @@
+## hpr1254 :: X2go Remote Linux server/client
+
+ 
+
+With x2go you can access your desktop using another computer -- that means both LAN and internet connections. The transmission is done using the ssh protocol, so it is encrypted. By using the free nx libraries from NoMachine, a very acceptable performance in both speed and responsiveness is achieved. Even an ISDN connection runs smoothly.
+
+
+This makes it is possible to connect your laptop to any computer with the environment, applications, and performance of the remote desktop. It is also possible to have a bunch of computers connected to a single server (terminal-server, thin-client).
+
+
+Clients are available for Linux (Qt4), Windows, and Mac. The latter two can be downloaded directly as binary from the x2go homepage.
+
+
+https://wiki.archlinux.org/index.php/X2go
+
+https://wiki.x2go.org/doku.php/start
+
+https://wiki.x2go.org/doku.php/wiki:repositories:start
+
+https://launchpad.net/~x2go/+archive/stable
+
+

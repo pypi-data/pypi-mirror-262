@@ -1,0 +1,214 @@
+## hpr3829 :: The Edinburgh cohort of HPR hosts stops Mumbling!
+
+ 
+Introduction
+Hosts:
+
+MrX
+Dave
+Morriss
+
+We recorded this on Saturday March 11th 2023. This time we
+met in person, first at a pub called The Steading close to the
+entrance to the Midlothian
+Snowsports Centre where we had something to eat and drink -
+though they only serve breakfast items before 12 noon. Then we adjourned
+to Dave’s Citroen car (Studio C) in the car park and recorded a
+chat.
+The last of these chats was over Mumble in September 2022, so it was
+great to be away from home and to meet in person again after a long time
+of COVID avoidance.
+Topics discussed
+
+Google Docs - Dave and MrX use this to build shared notes to help
+organise these sessions
+
+There are issues with cut and paste when using Firefox – it doesn’t
+work!
+
+It can be fixed by selecting about:config in a new
+tab.
+Change the attribute dom.event.clipboardevents.enabled
+to true.
+
+
+
+
+Is email still relevant in 2023?
+
+Google Wave
+- Google’s possible email replacement seemed not to have lasted very
+long
+Alternative access to Gmail using the IMAP protocol
+Folders versus labels. Tom Scott’s video “I
+tried using AI. It scared me.”
+Dave’s experiences with email:
+
+Digital
+Equipment Corporation’s Vax VMS used DECmail, which needed DECNet networking.
+The UK Academic network (JANET) initially used its
+own Coloured
+Book protocols, including Grey Book mail. This ran over an X.25
+network.
+Gradual transition to TCP/IP and SMTP mail (over JANET Internet
+Protocol Service, “JIPS”).
+In early Unix days (Ultrix) there was MH
+(Message Handler)
+Later, this was replaced by nmh.
+A GUI interface was available called xmh
+A very flexible open-source front end called exmh was
+crafted using Tcl/Tk
+Using procmail
+allowed an enormous number of capabilities, like sophisticated
+filtering, spam detection and automatic replies.
+Now using Thunderbird,
+and has been for maybe 15 years.
+
+MrX used Eudora in the past, but mostly uses Outlook now.
+Both agree that many useful features of email, available in the
+past, have gone. Both of us still find email relevant however!
+
+
+
+Calendars:
+
+MrX misses the calendar on the Psion Organiser
+Dave used to use an X-Windows tool called ical on
+Ultrix (no relation to the later iCalendar standard). Moved
+to Thunderbird and its calendar called Lightning.
+Both have used the Google Calendar, Dave uses a Thunderbird add-on
+to share family calendars
+
+
+
+Lifetime of storage media:
+
+SD cards can last a fairly long time, but getting the right type is
+important. Using older-style cards in new projects might turn out to be
+a false economy.
+Hard disks can last a long time if the right sort is used. One thing
+that shortens their life is getting them hot.
+MrX has used Western Digital Passport hard drives for some time, and
+they have been very reliable – none have failed.
+There are different drives from Western Digital which have different
+performances and they are colour coded. See the Western
+Digital website for details.
+
+
+
+Complexity and single points of failure:
+
+Chip shortages and lack of resilience:
+
+Modern components that do a single job used to consist of multiple
+discrete components that could be replaced individually. Now, if a
+component fails it has to be replaced in its entirety, and because of
+the shortage of chips it uses it may be unavailable.
+Older devices and components may still use older less specialised
+parts and so can be repaired.
+Unnecessary reliance on GPS in devices, cloud services in Smart
+Home equipment, etc.
+For example, managing enormous warehouses requires a lot of services
+that may not be too resilient, and could fail catastrophically.
+
+Coronal Mass
+Ejection (CME):
+
+Such an event could destroy many satellites (such as those providing
+GPS). It could also cause a massive overload of the power grid.
+Transformers used in the grid can be damaged or destroyed and replacing
+them in a timely fashion can be difficult.
+Carrington
+event in September 1859 telegraph machines reportedly shocked
+operators and caused small fires.
+March
+1989 CME caused a power outage in Quebec, Canada.
+Recent YouTube video from Anton Petrov: Wow! Sun Just
+Produced a Carrington Like Event, But We Got Super Lucky
+
+
+
+
+Keeping systems up to date:
+
+MrX has had problems getting various RPis updated and running.
+Dave has had similar problems making the jump from Raspbian to
+Raspberry Pi OS.
+In some cases the operating system on the Pis have needed to be
+completely reinstalled, and the work in installing and reconfiguring
+software has proved to be too much!
+MrX’s PiFace
+Control and Display board is giving problems, as is the simpler PiFace
+Digital. It looks as if the company has gone out of business
+unfortunately.
+Dave has a Pico RGB
+Base from Pimoroni, a 14-key board with RGB LEDs which could be used
+as a way of controlling things.
+Dave’s Magic
+Mirror system (a Pi 3A+ attached to a monitor) failed because
+the Pi needed to be upgraded and then the Node.js code
+didn’t seem to be maintained any more! Needs work!!
+MrX’s desktop PC is small and quiet, but since it’s in a cold room,
+tends not to get used too much in the winter! Dave’s PC is in an
+extension (addition) to the house and tends to get used quite a lot, but
+in cold winter weather, less so.
+
+
+
+YouTube list:
+
+We were going to mention a few YouTube channels we’d watched lately,
+but felt we’d already talked long enough!
+Rather than just adding the list to the notes, as we discussed, we
+will leave this section to the next time we make a recording such as
+this.
+
+
+
+Completing HPR shows:
+
+MrX has a show he has recorded but is held up preparing notes to go
+with it.
+Dave tends to write draft notes first, then build the recording
+around them, but this approach isn’t necessarily faster!
+
+
+Links
+
+Google:
+
+Google
+Wave
+Accessing
+Gmail with IMAP
+
+
+
+Early mail tools:
+
+MH
+Message Handling System
+MH
+& xmh: Email for Users & Programmers, Jerry Peek,
+1996
+nmh - Message Handling
+System
+procmail mail
+filter
+
+
+
+Solar storms / Coronal Mass Ejections:
+
+Wikipedia article on Coronal Mass
+Ejections (CME).
+Wikipedia article on the Carrington
+event in September 1859.
+Wikipedia article on the March
+1989 CME.
+List of solar storms
+Transformer
+shortage in the USA
+
+
+

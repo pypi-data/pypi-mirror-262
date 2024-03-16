@@ -1,0 +1,87 @@
+## hpr1629 :: Banana Pi - First Impressions
+
+ The Banana Pi - First Impressions
+They say duplication is the sincerest form of flattery, substitute the word of your choice for 'duplication'.
+The Banana Pi is made in China and bears an uncanny resemblance to the Raspberry Pi.
+Not just the name, the board is fractionally larger, some of the features on the board are similarly placed:
+
+26-pin GPIO
+3.5mm analogue audio jack
+RCA composite video jack
+SD card slot
+
+There are things the RPI does not have:
+
+Power button
+uBoot button
+Microphone
+USB-otg port (otg = on-the-go, a bi-directional USB port)
+SATA connector
+
+The processor is a dual-core running slightly faster than the Raspberry Pi, although to be fair, of course, the RPI can be over-clocked.
+The Banana Pi has twice the RAM and a dual-core processor.
+The SoC is the ARM Allwinner A20.
+Getting my Hands on a Banana Pi
+My first Banana dropped through the letterbox a couple of days ago.
+Thanks to some kind soul on the Raspberry Pi Facebook group who described the connectors on the edges of the board I narrowly avoided plugging the power supply into the USB-otg port. The power micro-USB is on the underside of the board between the SATA power and data connectors which are on the upper side of the board.
+Can't really say much about it because I can't actually see the build quality, but it feels nice. The PCB is fractionally thinner than the RPI.
+Problems
+I had an initial struggle to find a download link for any images.
+The downloads page of lemaker.org has a two row table on it which appears to be upside-down and it has links to Google-drive, two different public DropBox links, a MS One-Drive link, and something I didn't initially find, an FTP link.
+Both of the DB links are duff because they have suspended the account because of excessive traffic.
+This is the FTP download link:
+https://filez.zoobab.com/bananapi/mirror/
+Available Images
+When I found the FTP page I grabbed images for:
+
+Arch Linux
+Bananian-latest
+Lubuntu
+Raspbian
+
+I downloaded and extracted all of these images to my Debian desktop machine and tried to write and boot them in succession.
+The first I tried was Arch, on the assumption that would not have a desktop installed.
+After writing the card I looked at it on my Debian machine with parted and it appeared to have two partitions. As with the Raspberry Pi there is a small FAT16 partition and a bigger ext4 partition.
+The FAT partition contained the same files as the Raspberry Pi:
+
+config.txt
+cmdline.txt
+kernel.img
+
+And some others I can't remember.
+In addition it contained:
+
+uEnv.txt
+uImage
+
+It appears uEnv.txt is equivalent to the Raspberry Pi cmdline.txt file, and uImage is, of course, the kernel.
+So oddly it has the files for the RPI and it's own in the FAT partition.
+Then I tried Bananian, and this appears to be Debian Wheazy for ARM.
+Similar story with the FAT partition.
+It is a very minimal installation which has little more than the Linux Standard Base (LSB) packages. I like this because I like to have control.
+Sound and Stuff
+I found a review from April this year that said the sound driver snd-bcm2835 was not available. At the name snd-bcm2835 my heart sank because I expected the BPI to have the same stuttering text-to-speech problems as the RPI.
+Not expecting much I did, as root:
+apt-get install alsa-base alsa-utils
+Looking through /lib/modules/... blah blah I found a driver called:
+snd-aaci.ko
+I did:
+modprobe snd-aaci
+And then:
+speaker-test
+And I got pink noise!
+Next I did:
+apt-get install espeakup
+update-rc.d espeakup defaults
+modprobe speakup_soft
+And speakup burst into life with no stuttering!
+Immediate Conclusions
+The online community and code-base for the Banana Pi is not yet very mature, and because the origin of the beast is China, a lot of what's out there is in Chinese.
+But it is growing. And after all, it took the RPI a while to take off and go ballistic.
+At the moment I would say the Banana Pi is not for the faint-hearted or the total newbie, although, a lot of newbie questions are generic and don't have machine-specific answers.
+Links
+LeMaker page:
+https://www.lemaker.org/
+Australian community page with forums:
+https://www.bananapi.com/
+The worst thing about the Banana Pi is, when writing emails about it, and these show-notes, typing the word 'banana' and knowing when to stop!

@@ -1,0 +1,8 @@
+## hpr2523 :: Run Linux on a Windows Box
+
+ A short show about running Debian on windows.
+Yes it really works.
+What you have do first
+https://askubuntu.com/questions/966184/new-installation-of-windows-10-and-ubuntu-from-windows-store-error/966214
+and here
+https://www.bing.com/search?q=how+to+run+windows+powershell+as+adminstrator&form=EDGTCT&qs=PF&cvid=75a5d473a2d140ea841cb0457e42026f&refig=ba953cbaebae48c8b5d1c46080dafd1a&cc=DE&setlang=en-US

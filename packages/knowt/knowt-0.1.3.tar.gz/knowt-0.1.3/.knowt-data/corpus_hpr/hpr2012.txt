@@ -1,0 +1,98 @@
+## hpr2012 :: Parsing XML in Python with Untangle
+
+ XML is a popular way of storing data in a hierarchical arrangement so that the data can be parsed later. For instance, here is a simple XML snippet:
+<?xml version="1.0"?>
+<book>
+   <chapter id="prologue">
+      <title>
+     The Beginning
+ </title>
+   </chapter>
+</book>
+The nice thing about XML is that it is explicit and strictly structured. The trade-off is that it's pretty verbose, and getting to where you want to go often requires fairly complex navigation.
+If you do a quick search online for XML parsing in Python, your two most common results are lxml and beautifulsoup. These both work, but using them feels less like opening a dictionary (as with JSON) to look up a definition and more like wandering through a library to gather up all the dictionaries you can possibly find.
+In JSON, the thought process might be something like:
+"Go to the first chapter's title and print the contents."
+With traditional XML tools, it's more like:
+"Open the book element and gather all instances of titles that fall within those chapters. Then, look into the resulting object and print the contents of the first occurrence."
+There are at least two libaries that you can install and use to bring some sanity to complex XML structures, one of which is untangle.
+Untangle
+With untangle, each element in an XML document gets converted into a class, which you can then probe for information. Makes no sense? well, follow along and it will become clear:
+First, ingest the XML document. Assuming it's called sample.xml and is located in the current directory:
+>>> import untangled
+>>> data = untangle.parse('sample.xml')
+Now our simple XML sample is sitting in RAM, as a Python class. The first element is <book> and all it contains is more elements, so its results are not terribly exciting:
+>>> data.book
+Element(name = book, attributes = {}, cdata = )
+As you can see, it does identify itself as "book" (under the name listing) but otherwise, not much to look at. That's OK, we can keep drilling down:
+>>> data.book.chapter
+Element(name = chapter, attributes = {'id': 'prologue'}, cdata = )
+Now things get more interesting. The next element identifies itself as "chapter", and reveals that it has an attribute "id" which has a value of "prologue". To continue down this path:
+>>> data.book.chapter.title
+Element(name = title, attributes = {}, cdata = The Beginning )
+And now we have a pretty complete picture of our little XML document. We have a breadcrumb trail of where we are in the form of the class we are invoking (data.book.chapter.title) and we have the contents of our current position.
+Sniping
+That's very linear; if you know your XML schema (and you usually do, since XML is quite strict) then you can grab values without all the walking. For instance, we know that our chapters have 'id' attributes, so we can ask for exactly that:
+>>> data.book.chapter['id']
+'prologue'
+You can also get the contents of elements by looking at the cdata component of the class. Depending on the formatting of your document, untangle may be a little too literal with how it stores contents of elements, so you may want to use .strip() to prettify it:
+>>> data.book.chapter.title.cdata.strip()
+'The Beginning'
+Dealing with More Than One Element
+My example so far is nice and tidy, with only one chapter in the book. Generally you'll be dealing with more data than that. Let's add another chapter to our sample file, and some content to each:
+<?xml version="1.0"?>
+<book>
+   <chapter id="prologue">
+      <title>
+     The Beginning
+  </title>
+      <para>
+     This is the first paragraph.
+      </para>
+    </chapter>
+
+    <chapter id="end">
+      <title>
+     The Ending
+  </title>
+      <para>
+     Last para of last chapter.
+      </para>
+    </chapter>
+</book>
+Accessing each chapter is done with index designations, just like with a dict:
+>>> data.book.chapter[0]
+Element(name = chapter, attributes = {'id': 'prologue'}, cdata = )
+>>> data.book.chapter[1]
+Element(name = chapter, attributes = {'id': 'end'}, cdata = )
+If there is more than one instance of a tag, you must use a designator or else untangle won't know what to return. For example, if we want to access either the title or para elements within a chapter:
+>>> data.book.chapter.title
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'title'
+Oops. But if we tell it which one to look at:
+>>> data.book.chapter[0].title.cdata.strip()
+'The Beginning'
+>>> data.book.chapter[1].title.cdata.strip()
+'The Ending'
+Or you can look at the paragraph instead of the title. The lineage is the same, only instead of looking at the title child, you look at the para child:
+>>> data.book.chapter[0].para.cdata.strip()
+'This is the first paragraph.'
+>>> data.book.chapter[1].para.cdata.strip()
+'Last para of last chapter.'
+You can also iterate over items:
+>>> COUNT = [0,1]
+>>> for TICK in COUNT:
+...     print(data.book.chapter[TICK])
+Element <chapter> with attributes {'id': 'prologue'} and children
+[Element(name = title, attributes = {}, cdata = The Beginning ),
+Element(name = para, attributes = {}, cdata = This is the first paragraph.)]
+
+Element <chapter> with attributes {'id': 'end'} and children
+[Element(name = title, attributes = {}, cdata = The Ending ),
+Element(name = para, attributes = {}, cdata = Last para of last chapter.)]
+And so on.
+Easy and Fast
+I'll admit the data structure of the classes does look odd, and you could probably argue it's not the cleanest and most elegant of all output; it's unnerving to see empty cdata fields or to constantly run into the need to strip() whitespace. However, the ease and speed and intuitiveness of parsing XML with untangle is usually well worth any trade-offs.
+[EOF]
+Made on Free Software.

@@ -1,0 +1,24 @@
+## hpr3512 :: Auld Acquaintance
+
+ Toshiba Satellite L455-S5000
+https://www.ifixit.com/Device/Toshiba_Satellite_L455-S5975
+The script!
+#!/bin/bash
+
+# target dir is ~/Photos/YYYY-MM-DD_Hm
+targetDir="/home/$USER/Photos/$(date +"%F_%H%M")"
+
+# create the dir
+mkdir $targetDir
+
+# cd to dir
+cd $targetDir
+
+# kill all gphoto stuff
+pkill -f gphoto2
+
+# get the files
+gphoto2 --get-all-files
+
+# delete all files on camera recursively
+gphoto2 -DR

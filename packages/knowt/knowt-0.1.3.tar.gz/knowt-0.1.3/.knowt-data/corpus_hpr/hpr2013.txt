@@ -1,0 +1,135 @@
+## hpr2013 :: Parsing XML in Python with Xmltodict
+
+ 
+If Untangle is too simple for your XML parsing needs, check out xmltodict. Like untangle, xmltodict is simpler than the usual suspects (lxml, beautiful soup), but it's got some advanced features as well.
+
+If you're reading this article, I assume you've read at least the introduction to my article about Untangle, and you should probably also read, at some point, my article on using JSON just so you know your options.
+Quick re-cap about XML:
+XML is a way of storing data in a hierarchical arrangement so that the data can be parsed later. It's explicit and strictly structured, so one of its benefits is that it paints a fairly verbose definition of data. Here's an example of some simple XML:
+<?xml version="1.0"?>
+<book>
+   <chapter id="prologue">
+      <title>
+     The Beginning
+  </title>
+      <para>
+     This is the first paragraph.
+      </para>
+    </chapter>
+
+    <chapter id="end">
+      <title>
+     The Ending
+  </title>
+      <para>
+     Last para of last chapter.
+      </para>
+    </chapter>
+</book>
+And here's some info about the xmltodict library that makes parsing that a lot easier than the built-in Python tools:
+Install
+Install xmltodict manually, or from your repository, or using pip:
+$ pip install xmltodict
+or if you need to install it locally:
+$ pip install --user xmltodict
+Xmltodict
+With xmltodict, each element in an XML document gets converted into a dictionary (specifically an OrderedDictionary), which you then treat basically the same as you would JSON (or any Python OrderedDict).
+First, ingest the XML document. Assuming it's called sample.xml and is located in the current directory:
+>>> import xmltodict
+>>> with open('sample.xml') as f:
+...     data = xmltodict.parse(f.read())
+If you're a visual thinker, you might want or need to see the data. You can look at it just by dumping data:
+>>> data
+OrderedDict([('book', OrderedDict([('chapter',
+[OrderedDict([('@id', 'prologue'),
+('title', 'The Beginning'),
+...and so on...
+Not terribly pretty to look at. Slightly less ugly is your data set piped through json.dumps:
+>>> import json
+>>> json.dumps(data)
+'{"book": {"chapter": [{"@id": "prologue",
+"title": "The Beginning", "para": "This is the first paragraph."},
+{"@id": "end", "title": "The Ending",
+"para": "This is the last paragraph of the last chapter."}]
+}}'
+You can try other feats of pretty printing, if they help:
+>>> pp = pprint.PrettyPrinter(indent=4)
+>>> pp.pprint(data)
+{ 'book': { 'chapter': [{'@id': 'prologue',
+                         'title': 'The Beginning',
+             'para': 'This is the ...
+                         ...and so on...                 
+More often than not, though, you're going to be "walking" the XML tree, looking for specific points of interest. This is fairly easy to do, as long as you remember that syntactically you're dealing with a Python dict, while structurally, inheritance matters.
+Elements (Tags)
+Exploring the data element-by-element is very easy. Calling your data set by its root element (in our current example, that would be data['book']) would return the entire data set under the book tag. We'll skip that and drill down to the chapter level:
+>>> data['book']['chapter']
+[OrderedDict([('@id', 'prologue'), ('title', 'The Beginning'),
+('para', 'This is the first paragraph.')]),
+OrderedDict([('@id', 'end'), ('title', 'The Ending'),
+('para', 'Last paragraph of last chapter.')])]
+Admittedly, it's still a lot of data to look at, but you can see the structure.
+Since we have two chapters, we can enumerate which chapter to select, if we want. To see the zeroeth chapter:
+>>> data['book']['chapter'][0]
+OrderedDict([('@id', 'prologue'),
+('title', 'The Beginning'),
+('para', 'This is the first paragraph.')])
+Or the first chapter:
+>>> data['book']['chapter'][1]
+OrderedDict([('@id', 'end'), ('title', 'The Ending'),
+('para', 'Last paragraph of last chapter.')])
+And of course, you can continue narrowing your focus:
+>>> data["book"]["chapter"][0]['para']
+'This is the first paragraph.'
+It's sort of like Xpath for toddlers. Having had to work with Xpath, I'm happy to have this option.
+Attributes
+You may have already noticed that in the dict containing our data, there is some special notation happening. For instance, there is no @id element in our XML, and yet that appears in the dict.
+Xmltodict uses the @ symbol to signify an attribute of an element. So to look at the attribute of an element:
+>>> data['book']['chapter'][0]['@id']
+'prologue'
+If you need to see each attribute of each chapter tag, just iterate over the dict. A simple example:
+>>> for c in range(0,2):
+...     data['book']['chapter'][c]['@id']
+...
+'prologue'
+'end'
+Contents
+In addition to special notation for attributes, xmltodict uses the # prefix to denote contents of complex elements. To show this example, I'll make a minor modification to sample.xml:
+<?xml version="1.0"?>
+<book>
+   <chapter id="prologue">
+      <title>
+     The Beginning
+  </title>
+      <para class="linux">
+     This is the first paragraph.
+      </para>
+    </chapter>
+
+    <chapter id="end">
+      <title>
+     The Ending
+  </title>
+      <para class="linux">
+     Last para of last chapter.
+      </para>
+    </chapter>
+</book>
+Notice that the <para> elements now have a linux attribute, and also contain text content (unlike <chapter> elements, which have attributes but only contain other elements).
+Look at this data structure:
+>>> import xmltodict
+>>> with open('sample.xml') as g:
+...     data = xmltodict.parse(g.read())
+>>> data['book']['chapter'][0]
+OrderedDict([('@id', 'prologue'),
+('title', 'The Beginning'),
+('para', OrderedDict([('@class', 'linux'),
+('#text', 'This is the first paragraph.')]))])
+There is a new entry in the dictionary: #text. It contains the text content of the <para> tag and is accessible in the same way that an attribute is:
+>>> data['book']['chapter'][0]['para']['#text']
+'This is the first paragraph.'
+Advanced
+The xmltodict module supports XML namespaces and can also dump your data back into XML. For more documentation on this, have a look at the module on github.com/martinblech/xmltodict.
+What to Use?
+Between untangle, xmltodict, and JSON, you have pretty good set of options for data parsing. There really are diferent uses for each one, so there's not necessarily a "right" or "wrong" answer. Try them out, see what you prefer, and use what is best. If you don't know what's best, use what you're most comfortable with; you can always improve it later.
+[EOF]
+Made on Free Software.

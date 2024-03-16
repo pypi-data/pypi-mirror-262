@@ -1,0 +1,48 @@
+## hpr1587 :: Beginner's guide to the night sky 3 - A wee dot on a dark sky
+
+ 
+A ramble about stars, by a geeky chap who resides on planet Earth. This episode
+is entitled a wee dot on a dark sky.
+
+
+I comment briefly on why it's remarkable
+that the night sky is dark. I then go on to talk about the colour of stars,
+which we can just perceive with the naked eye. To learn more you need to use
+a prism, or, as professional astronomers prefer, a diffraction grating to
+obtain a spectrum of a star. I talk a little too much about the mathematics
+of diffraction gratings but eventually get back to talking about
+spectrum of the Sun which in overall shape is very close to what physicists
+call a black body spectrum (https://en.wikipedia.org/wiki/Black_body)- the spectrum any object will have at a given
+temperature. Astronomers and physicists prefer to measure temperature
+in units of kelvin (https://en.wikipedia.org/wiki/Kelvin),
+and to convert to it you only need to add 273 to the
+celsius temperature. Conversion from Fahrenheit is left as an exercise
+to the listener.
+
+
+The Sun shows spectral lines, specifically dark lines on the broad spectrum
+called absorptions lines. This is caused by atoms in a cooler layer of gas
+(called the chromosphere) that's just above the bright surface of the Sun
+(called the photosphere). In fact, Helium is named as such because it was
+first discovered by its absorption lines in the solar spectrum (Helios
+is Greek for Sun). Many other elements can be found in the spectrum of
+the Sun and other stars, but most of the mass of all stars is made up
+of hydrogen and helium.
+
+
+The temperature of a star is correlated with colour, with blue stars being
+hotter than red stars. This was originally measured by astronomers by
+something called colour or B-V (B minus V) index.
+
+
+The luminosity of a star is the rate
+at which it emits energy as light, and can be measured in the same units
+as light bulbs, i.e. watts (W). But to estimate the luminosity we need
+to know the distance to a star which, for nearby stars, can be 
+found by the parallax method. By plotting colour index (a proxy
+for temperature) against luminosity we can form a key piece of empirical
+evidence - the Hertzsprung Russell diagram: https://en.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell_diagram
+
+
+It turns out that our nearest star - the Sun - is quite unremarkable. It is neither very hot or cool, nor
+very bright or dim - it's a fairly typical star.

@@ -1,0 +1,242 @@
+## hpr1138 :: Programming languages 2 - Python
+
+ Programming languages 2 - Getting started with Python
+
+1 Characteristics
+2 Installation
+3 Syntax and semantics
+4 Interpreter
+5 Standard library
+6 Documentation and tutorials
+
+
+Python is a very interesting language in the sense that it covers a
+very wide range of use cases. 
+
+It can be useful for simple scripting tasks, that is automating
+   repetitive tasks that you usually do by hand.
+
+It can also be useful for text file processing, like parsing log
+   files or specific formats like XML.
+
+You can use use it as a glue language, that is a mix of system
+   calls to command-line programs, like in scripting, but also by
+   calling foreing language libraries which provide Python bindings.
+
+You can use Python as a first language in a Computer Science
+   curriculum, since it is simple to learn and supports different
+   programming paradigms (Object Oriented, Procedural, Functional).
+
+You can it also as an extension language, since a Python
+   interpreter can be embedded in C/C++ programs.
+
+Python being a very rich language with a very rich standard
+   library, you can use it to build very complex applications. There
+   are many ways of using it to build complex Graphical User
+   Interfaces, since many graphical libraries provide Python bindings
+   (https://www.diotavelli.net/PyQtWiki/PyQt4, GTK, etc.). Python also
+   provides a default library for GUIs, which is called Tkinter and is
+   based on Tcl/Tk.
+
+You can also use Python for web development, either by using the
+   standard library utilities or by using one of the very popular web
+   frameworks like Zope, Plone or Django.
+
+Finally, Python is also extensively used in scientific computing,
+   since projects like SciPy, Numpy or Matplotlib provide a set of
+   tools which allow Python to be as powerful as languages like Matlab
+   or IDL with the advantage of being a full fledged language with a
+   very rich standard library.
+
+
+2 Installation
+
+There are 2 current versions of Python: version 2 and
+version 3. Version 3 is not fully compatible with version 2, so if you
+are starting with Python, I think is is wise to go with version 3, but
+be aware that most existing applications and Open Source projects use
+version 2.
+
+
+If you are using a GNU based system, chances are that Python is
+already installed in you system. Otherwise, it will be available in
+your distribution repositories. As far as I know, Python is also
+available on the Mac via the terminal. On widows, you will have to
+download a Python distribution from https://python.org/download. On
+this page you will also find links for downloading Python for Linux,
+MacOS, etc.
+
+
+If you go to this site, you will notice that they mention alternative
+implementations of Python. The implementation I will be talking about
+here is the one done in C.
+
+
+To install Python, you also can download the source code and compile
+it yourself.
+
+3 Syntax and semantics
+
+Have a look at this link
+
+
+Python is intended to be a highly readable language. It is designed to
+have an uncluttered visual layout, frequently using English keywords
+where other languages use punctuation. Python requires less
+boilerplate than traditional manifestly typed structured languages
+such as C or Pascal, and has a smaller number of syntactic exceptions
+and special cases than either of these.
+
+
+The simplicity of Python is demonstrated by its version of the classic
+"Hello world" program:
+
+
+print("Hello world")
+
+
+Indentation
+
+
+Python uses whitespace indentation, rather than curly braces or
+keywords, to delimit blocks; a feature also termed the off-side
+rule. An increase in indentation comes after certain statements; a
+decrease in indentation signifies the end of the current block.
+
+
+Statements and control flow
+
+
+Python's statements include (among others):
+
+
+    The if statement, which conditionally executes a block of code,
+    along with else and elif (a contraction of else-if).
+
+
+    The for statement, which iterates over an iterable object,
+    capturing each element to a local variable for use by the attached
+    block.
+
+
+    The while statement, which executes a block of code as long as its
+    condition is true.
+
+
+    The class statement, which executes a block of code and attaches
+    its local namespace to a class, for use in object-oriented
+    programming.
+
+
+    The def statement, which defines a function or method.
+
+
+    The import statement, which is used to import modules whose
+    functions or variables can be used in the current program.
+
+
+Each statement has its own semantics: for example, the def statement
+does not execute its block immediately, unlike most other statements.
+
+
+Expressions
+
+
+Python expressions are similar to languages such as C and Java.
+
+
+    In Python, == compares by value, in contrast to Java, where it
+    compares by reference. (Value comparisons in Java use the equals()
+    method.) Python's is operator may be used to compare object
+    identities (comparison by reference). Comparisons may be chained,
+    for example a <= b <= c.
+
+
+    Python uses the words and, or, not for its boolean operators
+    rather than the symbolic &&, ||, ! used in Java and C.
+
+
+    Conditional expressions in Python are written as x if c else y
+    (different in order of operands from the ?: operator common to
+    many other languages).
+
+
+Methods
+
+
+Methods on objects are functions attached to the object's class; the
+syntax instance.method(argument) is, for normal methods and functions,
+syntactic sugar for Class.method(instance, argument). Python methods
+have an explicit self parameter to access instance data, in contrast
+to the implicit self in some other object-oriented programming
+languages (for example, Java, C++ or Ruby).
+
+
+Typing
+
+
+Python uses duck typing and has typed objects but untyped variable
+names. Type constraints are not checked at compile time; rather,
+operations on an object may fail, signifying that the given object is
+not of a suitable type. Despite being dynamically typed, Python is
+strongly typed, forbidding operations that are not well-defined (for
+example, adding a number to a string) rather than silently attempting
+to make sense of them.
+
+
+Python allows programmers to define their own types using classes,
+which are most often used for object-oriented programming. New
+instances of classes are constructed by calling the class (for
+example, SpamClass() or EggsClass()), and the classes themselves are
+instances of the metaclass type (itself an instance of itself),
+allowing metaprogramming and reflection.
+
+4 Interpreter
+The section 3 of the python tutorial (An informal introduction to Python) gives a very good overview of the use of the interactive interpreter.
+
+
+Of course, if you are going to write long programs, you will want to
+save them to files which can then be passed to the interpreter for execution.
+
+5 Standard library
+Python has a very rich standard library, that is a set of modules
+which are part of the standard Python installation and which provide
+many interesting functions which in many other languages are only
+provided by 3rd party libraries :
+
+
+Operating System Interface
+
+Command Line Arguments
+
+Error Output Redirection and Program Termination
+
+String Pattern Matching
+
+Mathematics
+
+Internet Access
+
+Dates and Times
+
+Data Compression
+
+Performance Measurement
+
+Output Formatting
+
+Working with Binary Data Record Layouts
+
+Multi-threading
+
+Logging
+
+Decimal Floating Point Arithmetic
+
+
+6 Documentation and tutorials
+The main reference is the Python documentation page at
+https://docs.python.org/ . There you will find a very useful tutorial
+(this is the place to start), the standard library reference, and many
+other interesting information.
+

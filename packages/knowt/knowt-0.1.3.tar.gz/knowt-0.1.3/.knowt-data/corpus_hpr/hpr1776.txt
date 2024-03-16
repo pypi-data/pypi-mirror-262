@@ -1,0 +1,21 @@
+## hpr1776 :: Vim Hints 004
+
+ Joining commands together
+In this episode I want to look at more movement commands and how to use them in conjunction with commands that change things in the file. I also want to add some more elements to the configuration file we have been building over the last few episodes.
+I have covered a lot of ground in this episode, introducing a number of new subjects. This is partly because I felt the series needed to get to the point where you could start to make full use of Vim if you are following along, and partly because the episodes up to this point have been moving a little too slowly! I hope the change in pace and length hasn't put you off.
+Full Notes
+Since the notes explaining this subject are particularly long, they have been placed here: https://hackerpublicradio.org/eps/hpr1776_full_shownotes.html and an ePub version is also available here: https://hackerpublicradio.org/eps/hpr1776_full_shownotes.epub.
+Links
+
+Vim Help:
+
+Using Help: https://vimdoc.sourceforge.net/htmldoc/helphelp.html
+Motion: https://vimdoc.sourceforge.net/htmldoc/motion.html
+Searching: https://vimdoc.sourceforge.net/htmldoc/pattern.html
+Insertion: https://vimdoc.sourceforge.net/htmldoc/insert.html
+Changing: https://vimdoc.sourceforge.net/htmldoc/change.html
+Options: https://vimdoc.sourceforge.net/htmldoc/options.html
+
+Graphical Cheat Sheet: https://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html
+Vim Hints Episode 3 https://hackerpublicradio.org/eps.php?id=1734
+

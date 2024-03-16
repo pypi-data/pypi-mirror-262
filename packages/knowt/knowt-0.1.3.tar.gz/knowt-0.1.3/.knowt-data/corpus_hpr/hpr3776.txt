@@ -1,0 +1,105 @@
+## hpr3776 :: A linux distro review
+
+ Xerolinux
+https://xerolinux.xyz
+I installed XeroLinux on an older I mac I had, mostly due to 2
+factors,
+
+I had the hardware and
+A review I saw touted the MAC like interface from a modified KDE
+Plasma base.
+
+As a Plasma user, how could I resist.
+I had previously installed Fedora 36 on the MAC and was receiving
+random hardware issues at boot time, I wanted to see if the issue
+persisted on and Arch base, and since I had never used Arch, this was a
+perfect test case.
+The install:
+
+Power on the MAC and (if you have a MAC keyboard) press and hold the
+Option key. This presented me with 2 options, boot into fedora, or to
+the EFI partition on my USB with XeroLinux installer.
+Select the EFI USB device
+I was then presented with 4 menu options, XeroLinux installer, REFI
+boot options, MAC OS and reboot
+I chose to boot into the Installer
+In the GUI installer I was first given the options to install
+several fixes for virtual environments including Qemu and VMWare as well
+as an install option
+Next I was greeting (literally with a welcome screen proclaiming
+“Welcome Fellow Linux Nerds” )
+
+I am at home...lol
+After selecting language, time zone and Keyboard layouts, The disk
+partitioning options are presented (and in much less confusing verbage
+than Fedora) and you are given choice of what swap partition type to
+use, No Swap, Swap no hibernate swap with hibernate and swap to file
+also a choice of file system, xfs, btrfs of ext4. I chose xfs the
+default, and since this is just a toy, not a high availability/high
+capacity server, there is no need for BTRFS, and if I am happy with the
+state of the system, I may well use it as a media server or Plex server
+and in that case I’ll need the larger file capacity of XFS Also
+available are the file system encryption check box and a manual
+partition options
+Under the user account setup, it detected and offered to set the
+machine name as MAcPro51, which is fine, it’ll help me id the device on
+my network, VS a unique name I would then have to come up with but would
+inevitably also contain “MAC” The page also included check boxes to
+validate password strength (forcing strong passwords, an auto-login
+option and an option to “reuse user password as root password. Obviously
+for SUDO purposes, this would not be recommended, but in my situation, I
+did chose it and the strong passwords validation
+The next screen verifies all the selections and when next is clicked,
+A pop-up wants you to confirm again that you want to make the changes
+selected.
+(insert jeopardy music while the install happens)
+During the install, there is a button to observe what is actually
+going on in the background, partitioning, file copies, compiles,
+etc
+First boot and login
+Well poop,I see a message in the boot screens referring to a hardware
+issue in CPU0 bank 8, there might be a hardware issue, it IS and older
+Intel MAC after all…
+Step one is, as always, update the system
+Picture 1
+ Click the thumbnail to see
+the full-sized image
+Yes, that is a silhouette of the MST3K guys, I’m using a 720 P TV as
+my monitor and watch movies when I’m in my home office. 121 packages are
+ready fro update including Kernel 5.19.12
+(more jeopardy Music)
+next stop: install proprietary driver , open source drivers and
+non-preinstalled apps All this went very smoothly, as though the distro
+maintainers had put lots of work and thought into it. To say I’m
+impressed is an understatement so far.
+Also there’s a handy dandy “Post install system config button, let’s
+see what that does…
+Picture 2
+ Click the thumbnail to see
+the full-sized image
+Man, all kinds of goodies to play with!!
+With such goodies as Yakuake, Avanti browser and KDE connect
+preinstaled, the only thing I really needed was a decent office suite,
+Libre office, of course…
+The XeroLinux “Hello” app is quite a setup, offering all the tools
+you need to get up and running. With an app browser very similar to
+Discover, used by Fedora, finding LibreOffice was easy, tick a check
+box, a few dependencies needed confirmation, click install and poof,
+done.
+I was able to seamlessly browse the internet and watched a full
+length Jackie Chan movie on Netflix with no issues or buffering,
+Libre-office Calc opened in about 5 seconds, only marginally slower than
+my regular I7 desktop PC running Fedora 35.
+The hardware
+2010 MACPRO5.1 with dual Intel Xeon 12 core processors running at
+2.5Ghz and 32 GB ram and an ATI Radeon HD 5770 I bought the MAC at a
+local college surplus auction with no hard drive, and installed a 500GB
+“spinning rust” hard drive I happened to have laying around.
+As older hardware, it’s still fairly quiet and crash free, so far.
+With a modest up time of 5 days.
+Picture 3
+ Click the thumbnail to see
+the full-sized image
+Picture 4
+ Click the thumbnail to see
+the full-sized image

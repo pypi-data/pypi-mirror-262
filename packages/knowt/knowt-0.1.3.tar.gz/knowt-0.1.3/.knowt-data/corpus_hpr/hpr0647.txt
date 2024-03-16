@@ -1,0 +1,32 @@
+## hpr0647 :: How I Got Into Linux
+
+ Linux-specific content starts at the 15min mark.  Until then is all the
+computer geekery that led up to my first linux exposure.  Feel free
+to skip forward if you don't want to hear about old systems like the
+Commodores, TI, 5.25" floppies, FidoNet BBS, etc.
+URLs referenced in this episode
+
+FidoNet
+https://www.fidonet.org/
+Apple data stored on audio cassette tape at 1200 baud:
+https://www.pagetable.com/?p=31
+Xubuntu (w/xcfe lighter desktop environment):
+https://www.xubuntu.org/
+fluxbox lightweight window manager:
+https://www.fluxbox.org
+Puppy linux:
+https://www.puppylinux.com/
+Tiny Core - brutally small, not for beginners::
+https://www.tinycorelinux.com/
+antiX, a light distro:
+https://antix.mepis.org/
+Linux on Eee or under virtualbox:
+https://muedemaus.blogspot.com/search/label/linux
+
+Clarifications and corrections:
+The Apple ][e setup I describe was almost exactly $2000.
+I still own the TI 99/4A and BASIC manual;  I cranked it
+up a few years ago.  The thing that sticks out is how terrible
+the keyboard is -- it's almost unusable but seemed fine at the
+time..
+

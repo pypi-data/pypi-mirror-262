@@ -1,0 +1,17 @@
+## hpr3967 :: Unsolicited thoughts on running open source software projects
+
+ Some thoughts on the different ways you can run an open source
+software project, comparing projects like password-store, which are
+based on a mailing list and use a minimal forge platform, and others
+that are based on a fancy forge like Github.
+I think the fancy forge gives the open source software project a vibe
+that we're more used to, in our capitalist society. It's a more
+centralized structure that feels more like a service that's being
+offered to the public, mostly in one direction. Meanwhile software
+projects that don't have a platform for creating road maps, issues, pull
+requests etc actually foster a stronger and more open community
+structure, rather counter-intuitively, because the software is free and
+everyone is able to contribute and modify the software for their own
+use, and they in fact do. The idea of a canonical version of the
+software is only a convenience, not a defining feature of it.
+Let me know your thoughts on this.

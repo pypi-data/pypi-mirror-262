@@ -1,0 +1,23 @@
+## hpr2904 :: DIY URL shortening
+
+ 
+Make a directory to house your shortened URLs.
+
+
+$ ssh example.com mkdir public_html/u
+
+
+On demand, create a subdirectory for the shortened URL you want to create.
+
+
+$ ssh example.com mkdir public_html/u/hpr
+
+
+Create an HTTP redirect in an index.html file.
+
+
+$ ssh example.com echo ""<html><title>Shortened URL</title><head><meta http-equiv='refresh' content='0; URL=http://hackerpublicradio.org/correspondents/0078.html' /></head></html>"" > www/u/hpr/index.html
+
+
+Your shortened URL is example.com/u/hpr
+

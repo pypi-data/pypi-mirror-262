@@ -1,0 +1,16 @@
+## hpr0679 :: A Little Bit of Python: Episode 14 2010-06-06
+
+ 
+A Little Bit of Python is an occasional podcast on all things Python. The four protagonists on the show are all core Python developers and members of the Python Software Foundation. They are: Michael Foord (author of IronPython in Action and maintainer of unittest), Andrew Kuchling (creator of PyCrypto and one of the python.org webmasters), Steve Holden (PSF chairman), Jesse Noller (maintainer of multiprocessing).
+
+
+Episode 14.Bit-of-Python-2010-06-06
+
+
+Interview with Christian Tismer
+
+
+Christian Tismer is a long standing member of the Python community and, amongst other things, he is the original
+creator of Stackless and has worked on both psyco and PyPy. In this interview we discuss all of these projects,
+both their history and what the future holds for them.
+

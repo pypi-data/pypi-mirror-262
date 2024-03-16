@@ -1,0 +1,124 @@
+## hpr3734 :: Inetd: the internet super-server
+
+ Inetd, the internet
+super-server
+Inetd is slowly becoming one of my favorite daemons. It makes writing
+programs that talk over the network super easy. Inetd handles all of the
+hard socket stuff and allows admins to write simple UNIX-ey programs.
+Inetd is useful because it allows us to write services that only run
+when they are requested in order to reduce total system load.
+How inetd works
+Inetd can be conceptualized as a sort of "wrapper daemon". Inetd is
+always running despite the fact that many of it's sub-services are
+not always running.
+Inetd listens on a specific port. When it gets a request, it handles
+all of the hard socket parts. This request is then passed to one of our
+inetd services
+We will use a simple server that echoes the request back to the user
+as an example. We will call this inetd service
+echod
+Inetd passes requests to echod as text.
+echod will read from stdin and write to stdout. Everything
+written to stdout is passed to the client. echod will then
+exit.
+echo server example
+I use OpenBSD on my webserver. Sadly, systemd sockets have replaced
+inetd on many linux systems. systemd sockets are entirely painful to
+use. I can't verify that these examples will work on non-OpenBSD systems
+but the openbsd-inetd package is available on a wide
+variety of debianoiads.
+Let's write out out echod service and the configuration
+files required to get it working.
+Edit /etc/inetd.conf
+# port  socket type protocol    wait/nowait user    server program      server arguments(optional)
+9999    stream      tcp         nowait      daemon  /opt/echod/echod.sh
+And our echod service file, located at
+/opt/echod/echod.sh:
+#!/bin/sh
+while read l; do
+        echo $l;
+done;
+
+exit 0;
+Be sure to chmod +x echod.sh and
+rcctl enable inetd && rcctl start inetd or it won't
+run.
+Testing
+Sometimes you can use curl to test a service but I will use netcat
+instead because it doesn't assume http.
+$ echo "foobar" | nc -N localhost 9999
+foobar
+$
+You can also use telnet to test the service:
+$ telnet localhost 9999
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+foo
+foo
+foobar
+foobar
+echo back
+echo back
+^]
+telnet> Connection closed.
+$
+Finger server example
+Many months ago, I wrote a finger server to learn more about how
+inetd works (and to write a finger daemon that doesn't allow for
+enumerating non-regular users). You can download the source
+code for my finger server from my gitlab.
+This finger server only allows information from users who have a home
+directory in /home/ to be displayed. It also has hard-coded
+filenames it looks for. Example output looks something like:
+$ finger binrc@localhost
+[localhost/127.0.0.1]
+binrc@openbsd.my.domain
+
+https://0x19.org
+
+Working on an HPR episode
+
+binrc.nospam@nospam.protonmail.com
+
+No .pgpkey
+
+$
+Gopher server example
+Currently, I am working on a gopher server that runs through inetd to
+learn more about how gopher works (and to write a gopher server that
+doesn't allow for path traversal). I have yet to add autoindex support
+but I thought it would be good to include anyway because it really
+demonstrates how simple it can be to write an inetd service. You can download the source code
+for my gopher server from my gitlab.
+This gopher server reads input from standard in and prints the
+requested file to standard out. Writing an inetd service can be as easy
+as writing an application specific version of cat(1).
+Giving the service SSL
+You can pair inetd with relayd to make any inetd service use ssl. In
+this example, I am symlinking my existing httpd certs obtained with acme.sh
+# ln -s /etc/ssl/example.com.fullchain.pem /etc/ssl/example.com\:9998.crt
+# ln -s /etc/ssl/private/example.com.key /etc/ssl/private/example.com\:9998.key
+A sample relayd configuration looks like:
+log connection
+
+tcp protocol "echod" {
+        tls keypair "example.com:9998"
+}
+
+relay "echod" {
+        listen on example.com port 9998 tls
+        protocol "echod"
+        forward to 127.0.0.1 port 9999
+}
+After enabling and starting relayd, it will now be listening on port
+9998. When it receives traffic on 9998, it
+will perform all of the fancy cryptography stuff and pass the request to
+localhost:9999. Since relayd is listening on
+9999 and passing requests on 9999 to the echo
+server, we are now running an echo server with ssl.
+Conclusion
+Do I run inetd in production? No, not really. I have in the past but
+I haven't needed it seeing as finger, echo, and gopher are dead
+protocols. Even if inetd is largely useless in the modern era, it's
+still fun to play with.

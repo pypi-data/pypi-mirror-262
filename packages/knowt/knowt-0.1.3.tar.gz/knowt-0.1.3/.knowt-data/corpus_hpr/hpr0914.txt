@@ -1,0 +1,130 @@
+## hpr0914 :: Sunday Morning Linux Review: Episode 014
+
+ Sunday Morning Linux Review: Episode 014
+January 15th, 2012
+
+https://smlr.us
+
+
+Intro:
+
+
+Mat Enders, Tony Bemus, and Mary Tomich
+
+
+Kernel News: Mat
+
+
+Release Candidates
+None
+
+
+Main Line
+3.2 no change
+
+
+Stable Releases
+Greg KH announced the release of the 2.6.32.54 Kernel Thu, 12 Jan 2012 20:13:20 UTC
+There were 18 files changed, 167 files inserted, and 66 files deleted
+
+
+Greg KH announced the release of the 3.0.17 Kernel Thu, 12 Jan 2012 20:21:36 UTC
+There were 52 files changed, 364 files inserted, and 179 files deleted
+
+
+Greg KH announced the release of the 3.1.9 Kernel Thu, 12 Jan 2012 20:22:18 UTC
+There were 53 files changed, 367 files inserted, and 179 files deleted
+
+
+Greg KH announced the release of the 3.2.1 Kernel Thu, 12 Jan 2012 20:25:05 UTC
+There were 63 files changed, 465 files inserted, and 200 files deleted
+
+
+Kernel Quote
+
+
+"Here’s the different active kernel versions that I am maintaining at the moment:
+3.2.y – this will be maintained until 3.3 comes out
+3.1.y – there will be only one, maybe two, more releases of this tree
+3.0.y – this is the new "longterm" kernel release, it will be
+maintained for 2 years at the minimum by me.
+2.6.32.y – this is the previous "longterm" kernel release. It is
+approaching it’s end-of-life, and I think I only have
+another month or so doing releases of this. After I am
+finished with it, it might be picked up by someone else, but
+I’m not going to promise anything.
+All other longterm kernels are being maintained in various forms
+(usually quite sporadically, if at all), by other people, and I can not
+speak for their lifetime at all, that is up to those individuals."
+– Greg Kroah-Hartman
+There was also a bit of a dust up between Tim Gardner of Canonical and Greg Kroah-Hartman over maintenance of the 2.6.32 kernel once greg gives it up. It appears to have been started by a misunderstanding and a conclusion jump by Tim.
+
+
+Distro News: Tony
+
+
+Distrowatch.com
+
+
+1-13 – PC-BSD 9.0 – desktop-oriented distribution based on the latest stable FreeBSD
+1-12 – FreeBSD 9.0 – a major new version of the BSD operating featuring a brand-new system installer
+1-12 – Webconverger 11.0 – a web browser-only specialist distribution for Internet kiosks
+1-11 – Astaro Security Gateway 8.3 – specialist distribution for firewall and gateways
+1-10 - Asturix 4 – Ubuntu-based desktop distribution with a custom desktop environment and many usability improvements
+1-10 – Fuduntu 2012.1 – a new quarterly update of the distribution that was forked from Fedora last year
+1-8 – Porteus 1.1 – Slackware-based live CD with a choice of Trinity (a KDE 3 fork), KDE 4 and LXDE desktops
+Mat did you know about the KDE 3 fork, Trinity?
+
+
+Distro of the Week: Tony
+
+
+Fuduntu – 1433
+openSUSE – 1440
+Fedora – 1495
+Ubuntu – 1873
+Mint – 4248
+Tech News:
+
+
+Microsoft Now Collects Extortion On Approximatley 70% Of All US Sales Of Androids
+
+
+LG is the latest victim to pay Microsoft’s extortion demands. They are the eleventh victim in this extortion scheme. A list of the other victims includes Samsung, HTC, and Acer. This leaves Motorola Mobility as the only major manufacturer to not sign an extortion agreement with Microsoft. I would wager that Microsoft has not even approached Motorola as Google now owns Motorola and those pockets are deep enough to scare off the Microsoft patent trolls. Microsoft now claims that they are collecting "royalties" on over 70% of all Android smart phones sold in the US. The terms of this latest agreement are unknown as Microsoft makes part of the agreement that the parties can not make public the patents covered by Microsoft’s claims. In other words a typical extortion agreement.
+
+
+The MPAA Instigates A Dustup with Ars Technica
+On 1/10 the MPAA (Motion Picture Associtation of America) said on it’s blog, "… Ars Technica, a tech blog with a long history of challenging efforts to curb content theft,". This entire claim by the MPAA appears to be Ars Technica opposing things in the past like the broadcast flag which would have allowed remote control of peoples home entertainment recording devices, along with their stand against DRM that prevents owners from ripping legal backup copies of their DVDs. Ars also has publicly opposed the horrendous SOPA legislation currently in front of Congress. It is obvious that the MPAA’s position is the wacky correlation of fighting for consumers’ rights is the equivalent of having no enforcement at all.
+
+
+Not that any representative of the MPAA would ever engage in outlandish statements to further their cause. Like this quote from Jack Valenti when he appeared before congress in 1982, "I say to you that the VCR is to the American film producer and the American public as the Boston strangler is to the woman home alone."
+
+
+United States Migrates Spy Drone Control Panels From Windows To Linux
+Last September the ground control systems for the Reaper drones, which reside at the Creech Air Force Base in Nevada, became infected with a virus. When it happed the Air Force dismissed this intrusion as a nuisance that posed no real threat, it was however taken very seriously.
+
+
+Still the discovery of this virus on the Air Force’s systems was a huge embarrassment. This is what they had to say at the time:
+
+
+"The malware in question is a credential stealer, not a key logger, found routinely on computer networks and is considered more of a nuisance than an operational threat. It is not designed to transmit data or video, nor is it designed to corrupt data, files or programs on the infected computer. Our tools and processes detect this type of malware as soon as it appears on the system, preventing further reach.", they also went on to say, "The ground system is separate from the flight control system Air Force pilots use to fly the aircraft remotely; the ability of the pilots to safely fly these aircraft remained secure throughout the incident,"
+Screen shots of drone control computers posted by security researcher Mikko Hypponen show that some of the systems have been migrated from Microsoft Windows to Linux. In a statement Mikko Hypponen said,
+
+
+"If I would need to select between Windows XP and a Linux based system while building a military system, I wouldn’t doubt a second which one I would take."
+Open Source Surgery, a Robot called Raven takes Flight
+
+
+The Raven 2 is a surgical robot with 7 degrees of freedom, compact electronics and two wing-like arms which end in tiny gripper claws designed to perform surgery on simulated patients. The robot’s software is compatible with Robot Operating System, an open source robotics coding platform.
+January 20, 2012 is Penguin Awareness Day
+ep0898 :: Hacker Public Radio New Year’s Eve Part 8/8 (The After Show)
+fiftyonefifty mentions us as one of the new podcasts that he likes!! Thanks!
+
+
+Raspberry Pi Linux micro machine enters mass production
+The Commodore 64 is 30
+Outtro Music:
+
+
+Across my way by Matthew Morris
+

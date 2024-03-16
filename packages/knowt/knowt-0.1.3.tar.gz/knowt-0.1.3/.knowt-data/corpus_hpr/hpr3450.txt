@@ -1,0 +1,8 @@
+## hpr3450 :: Internal Commands
+
+ This tutorial looks at DOS Internal Commands, which in some sense are analogous to shell commands in Linux. That means that the command interpreter already has these loaded and ready to go when you boot.
+Links:
+
+https://webopedia.internet.com/TERM/c/command.html
+https://www.ahuka.com/dos-lessons-for-self-study-purposes/dos-lesson-3-internal-commands/
+

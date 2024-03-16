@@ -1,0 +1,58 @@
+## hpr1489 :: Setting up a Raspberry Pi and RaspBMC
+
+ 
+In this episode CPrompt and his friend Matt go through their entire process of putting together a Raspberry Pi, 
+installing the OS and setting up RaspBMC.
+
+Links:
+
+Pi Case : 
+ 
+https://www.amazon.com/Pibow-Ninja-Case-Raspberry-Pi/dp/B00DUUBSVM/ref=sr_1_111?ie=UTF8&qid=1396811125&sr=8-111&keywords=raspberry+pi
+
+https://szyishun.en.alibaba.com/product/914059508-218350250/RASPBERRY_PI_TRANSPARENT_ACRYLIC_CASE_ENCLOSURE_COMPUTER_BOX.html
+
+
+
+Heat Sinks : 
+ 
+https://www.amazon.com/Kootek-Aluminum-Heatsink-set-Raspberry/dp/B00C8NNZ36/ref=sr_1_23?ie=UTF8&qid=1396810802&sr=8-23&keywords=raspberry+pi
+
+
+
+Raspbmc : 
+ 
+https://www.raspbmc.com/
+
+
+
+RaspBMC Nightly Builds: 
+ 
+https://forum.xbmc.org/showthread.php?tid=176043&pid=1667837#pid1667837
+
+
+
+MPEG2 and VC1 License : 
+ 
+https://www.raspberrypi.com/mpeg-2-license-key/
+
+
+
+LibDVDCSS: 
+ 
+https://forum.xbmc.org/showthread.php?tid=176043
+
+
+
+iPazzport Keyboard : 
+ 
+https://www.amazon.com/Wireless-iPazzPort-Handheld-Keyboard-Touchpad/dp/B0093ITXOE/ref=sr_1_2?ie=UTF8&qid=1396810908&sr=8-2&keywords=ipazz+keyboard
+
+
+
+Bluetooth Keyboard : 
+ 
+https://convictradio.com/2013/05/setting-up-bluetooth-on-the-raspberry-pi-running-raspbmc/
+
+
+

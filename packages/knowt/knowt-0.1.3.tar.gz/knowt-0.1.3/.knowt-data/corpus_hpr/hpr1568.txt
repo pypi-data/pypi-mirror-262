@@ -1,0 +1,19 @@
+## hpr1568 :: Blather Speech Recognition for Linux
+
+ Blather Speech Recognition for Linux: Jon has a conversation with his computer
+In this episode I have a blather conversation with my computer. This is a sort of appendix to an episode I released earlier (hpr 1284 https://hackerpublicradio.org/eps.php?id=1284) which was a conversation with Jezra, the lead developer of the blather speech recognition program for Linux. The current episode will make much more sense if you listen to the previous one first.
+For the most part I use blather as an accessibility tool, to manipulate my desktop and generally to save myself hundreds of keystrokes a day. This is important because of my repetitive strain injuries. Blather allows me to do many “productivity” tasks using only my voice. I also like to have fun with it, though, and this “conversation” is an example of the sort of goofy stuff I like to do. When the computer hears me say certain predefined phrases, it runs commands. For example when I say “what’s for dinner,” it shuffles the contents of a plaintext file that has about 20 options for dinner, chooses the top option and pipes it through my default text-to-speech program, which is either espeak or festival, depending on what I set as the environment variable in my blather startup script. When it hears me ask for certain other information, such as “what day is it?” and “what’s today’s date?”, it runs the appropriate system command and pipes the output through the text-to-speech program. For information about blather, the various back-end things that make it work, examples of my blather scripts and configuration files, visit the links below.
+
+Links
+
+Blather source code: https://gitorious.org/blather
+Jezra’s site: https://www.jezra.net/
+Sphinx page: https://cmusphinx.sourceforge.net/
+Sphinx knowledge base tool: https://www.speech.cs.cmu.edu/tools/lmtool-new.html
+Blather Video Demo Playlist on YouTube https://www.youtube.com/playlist?list=PLvB_ffZs45ufhOnw1epfjncXYRa5pfGw8
+My blog intro to Blather: https://jonathankulp.org/blog.html#blather
+Snapshot of my blather commands file: https://paste.jonkulp.net/sicegamupi.tex
+Blather dependencies for Debian https://paste.jonkulp.net/lolilabuje
+My Blather startup script: https://paste.jonkulp.net/xatanejawa
+Blog post on pocketsphinx gstreamer config: how to fix “vader not found” problem https://jonathankulp.org/blog.html#blather_vader
+“What time is it?” script https://paste.jonkulp.net/humogedole.vbs

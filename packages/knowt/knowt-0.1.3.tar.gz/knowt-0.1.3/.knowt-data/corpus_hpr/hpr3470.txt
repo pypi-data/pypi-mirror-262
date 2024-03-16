@@ -1,0 +1,7 @@
+## hpr3470 :: External Commands and Emergency Boot Disk
+
+ In our continuing exploration of DOS we come to the topics of External Commands and Emergency Boot Disks. We cover them together because External Commands may not be available on your Emergency Boot Disk unless you take steps to include them, unlike Internal Commands, which are always part of a Boot Disk.
+Links:
+
+https://www.ahuka.com/dos-lessons-for-self-study-purposes/dos-lesson-4-external-commands-emergency-boot-disk/
+

@@ -1,0 +1,29 @@
+## hpr1291 :: Parsing an ISO8601 formatted duration field with Perl
+
+ 
+Ken recently asked Dave for help with a Perl regular expression for
+parsing ISO8601 time durations. As a consequence a Perl script was
+written, which is available at
+https://gitlab.com/davmo/hprmisc/blob/master/parse_8601_duration.
+
+
+In this show Ken and Dave discuss this script at some (considerable)
+length. Keen listeners might want to view the script as they listen.
+Detailed show notes describing how to put together a Perl regular
+expression are also available at https://hackerpublicradio.org/eps/hpr1291/.
+
+
+Unfortunately some of the line numbers in the script referred to in the
+show are now incorrect since Dave could not stop himself updating it.
+
+
+For detailed show notes on how Dave created the script see:
+
+
+https://hackerpublicradio.org/eps/hpr1291/
+For a html version of the script see:https://hackerpublicradio.org/eps/hpr1291/parse_8601_duration.html
+
+Computer Books v Math: https://abstrusegoose.com/strips/i_never_would_have_passed_kindergarten.png
+XKCD ISO8601: https://sslimgs.xkcd.com/comics/iso_8601.png
+Sams Teach Yourself Perl in 24 Hours (3rd Edition): https://www.amazon.com/dp/0672327937
+

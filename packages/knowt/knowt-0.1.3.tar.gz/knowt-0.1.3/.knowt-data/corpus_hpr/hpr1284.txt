@@ -1,0 +1,19 @@
+## hpr1284 :: Blather Speech Recognition for Linux: Interview with Jezra
+
+ 
+
+A conversation with Jezra, sometime HPR host and the lead developer of the Blather speech recognition program for Linux. 
+Links: 
+
+Blather source code: https://gitorious.org/blather 
+Jezra's site: https://www.jezra.net/ 
+Sphinx page: https://cmusphinx.sourceforge.net/ 
+Sphinx knowledge base tool: https://www.speech.cs.cmu.edu/tools/lmtool-new.html 
+Video demo "Intro to Blather: Speech Recognition for Linux" https://youtu.be/gr1FZ2F7KYA 
+My blog intro to Blather: https://jonathankulp.org/archives/698
+
+Snapshot of my blather commands file: https://paste.jonkulp.net/index.php/view/8296098
+My blather startup script: https://paste.jonkulp.net/index.php/view/14335421
+Debian install script: https://paste.jonkulp.net/zosawagazu.bash
+
+Editor's Note 2019-05-22: some links in these notes were broken but have been updated with the kind help of Jon himself.

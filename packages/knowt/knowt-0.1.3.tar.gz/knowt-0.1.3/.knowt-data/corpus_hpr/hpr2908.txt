@@ -1,0 +1,132 @@
+## hpr2908 :: Modeling opinions in space game
+
+ We continue with people, this time focusing on opinions. This episode has somewhat more code than previous one, so following along with the shownotes might be a good idea. I’m trying to minimize amount of code I read out aloud.
+Intro
+One person’s opinion of another is expressed as OpinionScore that ranges from -100 to 100.
+Computing the score is based on intelligence player has available to them. Internally we have ReportResult that tracks score, reasons for the score and confidence level about the results. It’s defined as:
+data ReportResult =
+    FeelingLevel OpinionScore
+    | ReasonsLevel OpinionScore [OpinionReason]
+    | DetailedLevel OpinionScore [OpinionReason]
+    deriving (Show, Read, Eq)
+We’re going to be adding up these results quite a bit, so we define SemiGroup and Monoid instances for it. When two results are combined, scores are added together, lists of reasons are concatenated and the lowest confidence level is used. This is written as:
+instance Semigroup ReportResult where
+    (FeelingLevel s1) <> (FeelingLevel s2) = FeelingLevel (s1 <> s2)
+    (FeelingLevel s1) <> (ReasonsLevel s2 _) = FeelingLevel (s1 <> s2)
+    (FeelingLevel s1) <> (DetailedLevel s2 _) = FeelingLevel (s1 <> s2)
+    (ReasonsLevel s1 _) <> (FeelingLevel s2) = FeelingLevel (s1 <> s2)
+    (ReasonsLevel s1 r1) <> (ReasonsLevel s2 r2) = ReasonsLevel (s1 <> s2) (r1 <> r2)
+    (ReasonsLevel s1 r1) <> (DetailedLevel s2 r2) = ReasonsLevel (s1 <> s2) (r1 <> r2)
+    (DetailedLevel s1 _) <> (FeelingLevel s2) = FeelingLevel (s1 <> s2)
+    (DetailedLevel s1 r1) <> (ReasonsLevel s2 r2) = ReasonsLevel (s1 <> s2) (r1 <> r2)
+    (DetailedLevel s1 r1) <> (DetailedLevel s2 r2) = DetailedLevel (s1 <> s2) (r1 <> r2)
+
+
+instance Monoid ReportResult where
+    mempty = DetailedLevel mempty mempty
+Opinion based on traits
+Current system compares two lists of traits. For example, two brave characters like each other slightly better than if one of them would be coward. Comparison is done by traitPairOpinion function, which definition I’m omitting as it’s rather long and not too interesting. It’s signature is: traitPairOpinion :: TraitType -> TraitType -> Maybe (OpinionScore, OpinionReason). So, given two traits, tells how that pair affects to opinion and reasoning for it.
+In order to have nicer format for out data, we introduce a helper function:
+traitPairScore :: TraitType -> TraitType -> (OpinionScore, [OpinionReason])
+traitPairScore a b =
+    case traitPairOpinion a b of
+            Nothing ->
+                mempty
+
+            Just (s, r) ->
+                (s, [r])
+This is because (OpinionScore, OpinionReason) isn’t monoid, but (OpinionScore, [OpinionReason]) is, which means we can combine them with <>.
+Actual score calculation based on traits, we do it like this:
+traitScore :: [TraitType] -> [PersonIntel] -> [TraitType] -> [PersonIntel] -> ReportResult
+traitScore originatorTraits originatorIntel targetTraits targetIntel =
+    if (Traits `elem` originatorIntel) && (Traits `elem` targetIntel)
+        then DetailedLevel score reasons
+        else FeelingLevel score
+    where
+        (score, reasons) = mconcat $ traitPairScore <$> originatorTraits <*> targetTraits
+The interesting part is mconcat $ traitPairScore <$> originatorTraits <*> targetTraits. Function traitPairScore expects two TraitType values as parameters, but we’re calling it with two lists of such values. First step is to use <$> and list of values, which produces a list of partially applied functions. Second step is to use <*> to call each and every of those functions with values from second list. Result is a list of results that were obtained by calling traitPairScore with every combination of elements from two lists. Final step is to take this list of ReportResult values and combine them to single result with mconcat.
+Finally, based on available intel, ReportResult of correct level is created.
+Opinion based on relations
+Score based on relations is similar, but a bit convoluted (or rather, a lot more).
+Intel here has two dimensions. One of them is relationship visibility (is it public, family relation or secret relation), another is level of detail: BaseOpinionIntel, ReasonsForOpinions and DetailedOpinions.
+relationScore is the entry point for calculation:
+relationScore :: [PersonIntel] -> [Relation] -> ReportResult
+relationScore intel relations =
+    mconcat $ (relReport oIntel score) <$> visibilities
+    where
+        score = mconcat $ (relationTypeScore . relationType) <$> relations
+        visibilities = mkUniq $ relationVisibility <$> relations
+        oIntel = mkUniq $ mapMaybe (\case
+                                        Opinions x ->
+                                            Just x
+
+                                        _ ->
+                                            Nothing)
+                                   intel
+Code has to take into account of what level of intel we have about opinions and on what detail: oIntel. On the other hand, visibilities is unique relation visibilities that exists in relations in this particular case and score is computed based on relations.
+Function relReport creates final report. It takes into account on what level of intel we have, by doing: matching = safeHead $ reverse $ sort $ filter (\x -> opinionIntelVisibility x == visibility) intel. This finds highest level intel we have about this particular relationship visibility. Based on the highest level of available intel ReportResult is created with correct confidence level. Ie. if there’s no specific intel, we get FeelingLevel report. If there’s intel about why particular person has certain opinion, we get ReasonsLevel report. Whole definition of function is below:
+relReport :: [OpinionIntel]
+    -> (OpinionScore, [OpinionReason])
+    -> RelationVisibility
+    -> ReportResult
+relReport intel (score, reasons) visibility =
+    case matching of
+        Nothing ->
+            FeelingLevel score
+
+        Just (BaseOpinionIntel _) ->
+            FeelingLevel score
+
+        Just (ReasonsForOpinions _) ->
+            ReasonsLevel score reasons
+
+        Just (DetailedOpinions _) ->
+            DetailedLevel score reasons
+    where
+        matching = safeHead $ reverse $ sort $ filter (\x -> opinionIntelVisibility x == visibility) intel
+Opinion report
+To pull all this together, we combine results of these two functions. Based on given information, it’ll compute traitsRep and relationsRep. These two are combined with <> as explained earlier in episode:
+
+scores are summed up
+reason lists are concatenated
+confidence level is lowest of two
+
+opinionReport :: [TraitType]
+    -> [PersonIntel]
+    -> [TraitType]
+    -> [PersonIntel]
+    -> [Relation]
+    -> OpinionReport
+opinionReport originatorTraits originatorIntel targetTraits targetIntel targetRelations =
+    reportResultToOpinionResult $ traitsRep <> relationsRep
+    where
+        traitsRep = traitScore originatorTraits originatorIntel targetTraits targetIntel
+        relationsRep = relationScore originatorIntel targetRelations
+Finally ReportResult is transformed to OpinionReport, which can be sent to client.
+OpinionReport has three levels:
+
+BaseOpinionReport only tells if feeling is positive, neutral or negative
+OpinionReasonReport has feeling and in addition to reasoning
+DetailedOpinionReport has exact (more or less) score and reasoning
+
+data OpinionReport =
+    BaseOpinionReport OpinionFeeling
+    | OpinionReasonReport OpinionFeeling [OpinionReason]
+    | DetailedOpinionReport OpinionScore [OpinionReason]
+    deriving (Show, Read, Eq)
+Actual transformation is shown here:
+reportResultToOpinionResult :: ReportResult -> OpinionReport
+reportResultToOpinionResult (FeelingLevel score) =
+    BaseOpinionReport $ scoreFeeling score
+
+reportResultToOpinionResult (ReasonsLevel score reasons) =
+    OpinionReasonReport (scoreFeeling score) reasons
+
+reportResultToOpinionResult (DetailedLevel score reasons) =
+    DetailedOpinionReport (clamp (-100) 100 score) reasons
+Note about incorrectness
+Reports are based on intel and this might lead into incorrect results. In case of player’s own avatar, they have full intel (ie. they know all relations, all traits and so on.) Therefore opinion about some other person is based wholly on what we know about them.
+But in case of gauging somebody else’s opinion about us or person A’s opinion of person B, when A or B isn’t us, there’s chance of misjudging things. We might not know everything about them, or we might know more about A than B knows about them. In short, opinion shown for player, is just best effort guess.
+In closing
+Questions, comments and feedback is welcome. Even better is if you record your own HPR episode. Best way to reach me nowadays is by email or in fediverse, where I’m Tuula@mastodon.social.
+ad astra!

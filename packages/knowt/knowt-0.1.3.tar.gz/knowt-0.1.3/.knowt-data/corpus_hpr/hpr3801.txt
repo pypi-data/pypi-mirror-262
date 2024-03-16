@@ -1,0 +1,55 @@
+## hpr3801 :: Enter the gopher
+
+ If you would like to talk about gopher on Mastodon, I'm
+@screwtape@mastodon.sdf.org (and I have a weekly aNONradio
+show about gopher)
+
+floodgap link
+https://gopher.floodgap.com
+Web proxy to menu with ascii art
+https://gopher.floodgap.com/gopher/gw.lite?=gopher.club+70+312f75736572732f78696c65642f
+Get on a tilde:
+https://sdf.org
+https://tildeverse.org
+
+    $ ssh username@tty.sdf.org # Following sdf.org 's instructions
+    $ # Some good gophers to browse
+    $ lynx gopher://gopher.club
+    $ lynx gopher://tildeverse.org
+    $ lynx gopher://floodgap.com
+
+You might have to
+apt install lynx
+or
+pkg_add lynx
+or etc.
+sdf.org:
+$ mkgopher
+https://phlogosphere.org or
+tilde.institute tilde (for example):
+$ man burrow # how to use burrow
+https://wiki.tilde.institute/w/gopher
+Gopher standard!
+https://rfc-editor.org/info/rfc1436
+Mastodon: @albatross@sdf.org
+elpher-mode
+https://elpa.nongnu.org/nongnu/doc/elpher.html
+https://mastodon.sdf.org/@screwtape/109334057925655327
+phetch
+https://github.com/xvxx/phetch
+overbite
+https://gopher.floodgap.com/overbite/
+proxy to floodgap
+https://gopher.floodgap.com/gopher/
+Cool gophers:
+
+gopher://tilde.institute/1/~screwtape/
+gopher://gopher.club/1/users/nm03
+gopher://linkerror.com
+gopher://gopher.black
+gopher://i-logout.cz/1/bongusta
+
+(Very) Advanced! Self-hosting tls gopher:
+gophernicus (+ reference to stunnel4)
+https://github.com/gophernicus/gophernicus
+

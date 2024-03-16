@@ -1,0 +1,3 @@
+## hpr0793 :: Server/Client relationship, DHCP server
+
+ Remember back in the 400s of HPR when Klaatu was doing a Networking Basics miniseries?  Well, its back, with an introduction to the concept of the Server / Client relationship, how to set up a server as an internet gateway and a DHCP server.

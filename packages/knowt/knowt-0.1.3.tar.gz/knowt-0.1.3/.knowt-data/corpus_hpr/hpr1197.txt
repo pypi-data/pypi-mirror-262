@@ -1,0 +1,15 @@
+## hpr1197 :: What I do with bash scripts
+
+ In this episode I talk about the way I use shell scripting on a
+day-to-day basis. I am not employed in a technical field, so the
+fact that I use shell scripts at all surprises most people. I am
+just a music history professor with an enthusiasm for Linux and
+free software. Although I have dabbled a bit with Python, I don't
+feel nearly as comfortable with Python as I do with bash, so all
+of the scripts I mention in this episode are written for bash.  
+Here are links to blog posts about some of the scripts mentioned
+in the show.  
+markdown2latex:  https://jonathankulp.org/archives/570 
+Cowsay stuff: https://jonathankulp.org/archives/346 
+"stick" scp script: https://jonathankulp.org/archives/441 
+MyIP: https://jonathankulp.org/archives/620 

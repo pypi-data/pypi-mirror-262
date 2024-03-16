@@ -1,0 +1,135 @@
+## hpr3723 :: HPR News
+
+ HPR News.
+Threat Analysis;
+your attack surface.
+Wireless
+key fobs compromised in European nations (France, Spain, and
+Latvia). On October 10, 2022, European authorities arrested 31
+suspects across three nations. The suspects are believed to be related
+to a cybercrime ring that allegedly advertised an “automotive diagnostic
+solution” online and sent out fraudulent packages to their victims. The
+fraudulent packages contained malware and once installed onto the
+victims vehicle, the attackers were able to unlock the vehicle, start
+the ignition, then steal the vehicle without the physical key fob.
+European authorities confiscated over €1 million in criminal assets
+(malicious software, tools, and an online domain).
+Microsoft
+Office 365 has a broken encryption algorithm. Microsoft Office 365
+uses an encryption algorithm called “Office 365 Message Encryption” to
+send and receive encrypted email messages. The messages are encrypted in
+an Electronic Codebook (ECB). The U.S. National Institute of Standards
+and Technology (NIST) reported, "ECB mode encrypts plaintext blocks
+independently, without randomization; therefore, the inspection of any
+two ciphertext blocks reveals whether or not the corresponding plaintext
+blocks are equal". Emails can be harvested today then decrypted later
+for future attacks.
+User Space.
+Netflix
+crackdown on freeloaders. Netflix is testing in Argentina, the
+Dominican Republic, El Salvador, Guatemala, and Honduras Chile, Costa
+Rica and Peru different
+efforts to crackdown on freeloaders. The term “freeloaders” covers
+the multiple users sharing a single Netflix account from different
+locations. Netflix plans to charge an additional $3.00 - $4.00 per
+subaccount.
+Samsung
+implements private blockchain to link user devices. While claiming
+the private blockchain, “has nothing to do with cryptomining”, the Knox
+Matrix security system links all your devices together in a private
+blockchain instead using a server based group verification system. The
+system, Knox Matrix, is suppose to allow devices to “manage themselves”
+by auto updating, caching updates for other devices then distributing
+the updates to other devices on the private blockchain.
+Toys for Techs.
+
+Juno
+Tablet:
+
+whois
+lookup
+DNS
+Twister Report
+
+
+Juno Tablet is a Beta product; overall it works with a few bugs. This
+is a non-refundable product, you will only get store credit.
+
+Price: $429.00 USD.
+Screen Size: 10.1”
+
+Screen Type: Full HD IPS screen 1920×1200 Capacitive touch,
+Capacitive (10-Point) MIPI-DSI.
+Refresh Rate: 60 Hz.
+
+CPU: Intel
+Jasper Lake Intel Celeron N5100 (4 Cores / 4 Threads) – 1.10GHz
+(Turbo 2.80 GHz)
+
+Graphics: Intel UHD Graphics, Frequency: Base 350 MHz - Max 800
+MHz.
+
+Ram (SOLDERED): 8GB 2133 MHz LPDDR4.
+Storage: 256GB, 512GB, 1TB SSD.
+Chassis: Plastic.
+Wireless Card: Intel
+Wireless AC 9460/9560 Jefferson Peak 2.4 and 5GHz + Bluetooth
+4.2.
+Ports:
+
+1x USB3.0
+1x Type-C 3.1 (Supports charging + video out)
+1x Mini HDMI
+1x Micro SD
+3.5MM Headphone Jack
+
+Built-in Microphone
+Linux Kernel 5.18+
+OS:
+
+Manjaro
+Phosh
+Manjaro Plasma
+Mobile
+Mobian
+Phosh
+Windows 11 (Not included – can provide ISO)
+
+JingPad A1, It’s the
+World’s FIRST Consumer-level ARM-based Linux Tablet.
+
+JingPad A1 maybe discontinued: https://www.youtube.com/watch?v=cmBG1Sjgsgk
+
+Pine64’s
+Ox64.
+RISC-V SBC Info:
+Ram:
+
+Embedded 64MB PSRAM
+
+Network:
+
+2.4GHz 1T1R WiFi 802.11 b/g/n
+Bluetooth 5.2
+Zigbee
+10/100Mbps Ethernet (optional, on expansion board)
+
+Storage:
+
+on-board 16Mb (2MB) or 128Mb (16MB) XSPI NOR flash memory.
+microSD - supports SDHC and SDXC
+
+Expansion Ports:
+
+USB 2.0 OTG port
+26 GPIO Pins, including SPI, I2C and UART functionality. Possible
+I2S and GMII expansion.
+Dual lane MiPi CSI port, located at USB-C port, for camera
+module.
+
+Audio:
+
+mic (optional, on camera module)
+speaker (optional, on camera module)
+
+

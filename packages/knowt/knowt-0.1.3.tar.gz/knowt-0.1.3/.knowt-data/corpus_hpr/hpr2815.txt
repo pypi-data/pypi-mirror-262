@@ -1,0 +1,85 @@
+## hpr2815 :: Copy pasta
+
+ 
+You can copy and paste on Linux the same way you do on any other OS: Ctrl+C to copy and Ctrl+V to paste (or use the Edit menu, or a right-click menu).
+
+
+However, Linux doesn't limit you to just that.
+The primary GUI environment of Linux (at the time of this recording) is X, and the Inter-Client Communication Conventions Manual defines three X Selection states: Primary, Secondary, and Clipboard.
+The Secondary is rarely (if ever?) used, so I don't cover it here.
+
+Primary
+
+The primary X Selection is anything literally selected at any given moment.
+If you highlight a word in Firefox with your mouse, for instance, then it becomes the Primary Selection, and it is owned by Firefox.
+If you press the Middle Mouse Button in any application, then that application asks the owner (Firefox, in this example) for the data contained in the Primary Selection.
+Firefox sends the data to that application so that it can paste it for you.
+
+
+A Primary selection remains the Primary Selection until it is overwritten by a new Primary Selection.
+In other words, text needn't be highlighted to be retained in the Primary Selection slot.
+
+Clipboard
+
+The Clipboard Selection is data that has explicitly been sent to the clipboard by a copy action.
+This is usually a right-click > Copy or a selection of Edit > Copy.
+When another application is told to paste from the clipboard, it pastes data from the Clipboard Selection.
+
+Both
+
+You can (and often do) have both a Primary Selection and a Clipboard selection.
+If you press Ctrl+V, you get the contents of the Clipboard Selection.
+If you press the middle mouse button, then you get the contents of the Primary Selection.
+
+xsel
+
+The xsel command allows you to retrieve the contents of an X Selection.
+
+
+$ xsel --primary
+dungeons
+$ xsel --clipboard
+dragons
+
+Clipboard managers
+
+Clipboard managers such as Klipper, CopyQ, Parcellite, and so on, provide a history for your clipboard.
+They track the latest 10 (or so) items you have copied or selected.
+They can be a little confusing, because they do tend to blur the line between the Primary Selection and the Clipboard Selection, but now that you know the technical difference, it shouldn't confuse you to see them both listed by a clipboard manager designed to conflate them.
+
+GPM
+
+GPM is a daemon allowing you to use your mouse without a GUI.
+Among its features, it permits you to select text in a text console (TTY) and then paste it with the middle mouse button.
+
+GNU Screen and Tmux
+
+Screen and tmux are "window managers for text consoles".
+I don't tend to use tmux as often as I should, having learnt GNU Screen long ago, so I'm not familiar with the process of copying and pasting with tmux.
+For Screen, you can copy text in this way:
+
+
+
+Press Ctrl+A to get out of insert mode.
+
+
+Press left-square_bracket to enter copy-mode
+
+
+Move your text to the position you want to start selecting and press Enter or Return
+
+
+Arrow to the position at which you want to end your selection and press Enter or Return again
+
+
+
+To paste your selection:
+
+
+
+Press Ctrl+A to get out of insert mode.
+
+
+Press right-square_bracket to paste
+
+

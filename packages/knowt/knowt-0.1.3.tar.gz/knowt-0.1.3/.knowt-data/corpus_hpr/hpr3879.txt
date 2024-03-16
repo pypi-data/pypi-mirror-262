@@ -1,0 +1,213 @@
+## hpr3879 :: HPR at Hillend
+
+ 
+Introduction
+Hosts:
+
+MrX
+Dave
+Morriss
+
+We recorded this on Saturday May 20th 2023. We met in
+person again, and as before first visited the pub called The
+Steading where we had lunch. Then we adjourned to Dave’s Citroen
+car (Studio C) in the car park, and recorded a chat.
+The region where we met is close to a village called
+Hillend, which led to the show title.
+Topics discussed
+
+ChatGPT:
+
+MrX did two shows in May using ChatGPT. He has used it more than
+Dave has.
+MrX has an iPhone and can use ChatGPT from it. He uses it as a
+source of information when out and about. For instance, to find out
+about the history of Musselburgh
+Harbour.
+MrX has also used ChatGPT to write experimental Python scripts.
+There is a TED
+talk by Greg Brockman, the inventor of ChatGPT.
+Discussion of the Call
+Annie app
+ELIZA the program
+that was written in the 1960s and simulated conversation well enough to
+convince people.
+
+
+
+Audacity/Tenacity audio editors:
+
+Web sites: Audacity
+and Tenacity.
+Audacity
+Wikipedia page
+MrX and Dave have both used Audacity for several years.
+Audacity was forked after it was taken over by Muse Group, and Tenacity was developed.
+However, it doesn’t seem that there have been any releases on Tenacity
+to date.
+The most recent versions of Audacity have contained changes - in
+particular the way the audio project is stored has changed. Instead of a
+directory filled with various files there is now a single project file
+with the extension .aup3 which is a SQLite database. This
+was changed in March 2021 for Version 3.0.
+
+Previously Audacity stored the project as a file called
+<project>.aup and a directory called
+<project>_data/ containing sub-directories and
+files.
+
+MrX reports changes in the way multiple tracks are handled. Dave
+finds that the horizontal scrollbar has disappeared (which seems to be a
+bug).
+
+
+
+Dr John Campbell:
+
+YouTube
+channel
+During the COVID-19 epidemic the channel contained a lot of
+information about the SARS-CoV-2 virus, vaccines, disease, treatments,
+etc, which seemed to be helpful and well researched.
+At one point there was a lot of talk about Ivermectin as a drug that
+could help with the disease, but although this received no support from
+scientific research, it seemed to be receiving more and more exposure on
+the channel.
+From then on the quality of the content on the channel seemed to
+deteriorate, and it no longer seems trustworthy.
+Other sources have been critical, including Debunk
+the Funk with Dr Wilson
+
+
+
+The Doctor Who Exhibition:
+
+Dave met with Andrew Conway and Andrew’s friend, and all went to the
+exhibition held at the National Museum of Scotland.
+The exhibition contained a lot of Doctor Who memorabilia, including
+some original props.
+MrX and the group that went to the exhibition have all watched
+Doctor Who over the years. All have lost interest at some point but then
+resumed, particularly after the show was restarted in 2005 with
+Christopher Eccleston and Billie Piper.
+Discussion about the BBC
+Radiophonic Workshop where the Doctor Who sound effects were made as
+well as the signature tune. Also the Mellotron, a keyboard
+that played tape loops.
+
+
+
+Mechanical musical instruments:
+
+The Swedish band Wintergatan
+use mechanical instruments in their music and Martin Molin, a
+band member is responsible for some of them. He did a series on YouTube
+about mechanical instruments: Music
+Machine Mondays at the Museum
+Speelklok in Utrecht which is great to watch if you are
+interested.
+Dave also mentioned musical instrument museums in Berlin
+and Brussels.
+MrX mentioned a museum in Dalbeattie, a town
+in Dumfries and
+Galloway in the Scottish Borders. In the museum there had been a
+chance to play a barrel organ.
+
+
+
+YouTube channels:
+
+Dave:
+
+(Mentioned earlier) Debunk
+the Funk with Dr Wilson - the host, Dan Wilson, has a Ph.D. in
+molecular biology that covers bad science while making good science
+accessible. The channel focuses mainly on pseudoscience surrounding the
+anti-vaccine movement and COVID misinformation.
+Little
+Chinese Everywhere - Yan is a Human Geographer who studied in
+Switzerland. The first season was “The Longest Way Back Home
+(Switzerland to China)” where she travelled over land to China. She
+is now producing videos for season 2 about China itself. She plans to
+visit every province in mainland China and make videos.
+
+Dave mentioned the episode about Yanjin City in
+Yunnan. It is mentioned in Wikipedia as the “World’s
+Narrowest City”, either side of the narrow Heng River valley, a
+tributary of the Yangtze.
+
+
+MrX:
+
+Ron Mattino - a
+channel dedicated to electronics, programming and engineering.
+
+Mentioned episode about the pins on a smartphone battery: Why do MOBILE
+BATTERIES have THREE terminals? A simple Explanation.
+
+
+
+
+Links
+
+Artificial Intelligence:
+
+ChatGPT
+TED
+talk by Greg Brockman
+Call Annie
+application
+ELIZA early
+chatbot
+
+
+
+Audio editing:
+
+Audacity web
+site
+Audacity
+Wikipedia page
+Tenacity web site
+
+
+
+Science misinformation:
+
+Dr John
+Campbell’s YouTube channel
+
+
+
+Doctor Who:
+
+BBC
+Radiophonic Workshop
+
+
+
+Mechanical musical instruments:
+
+Music
+Machine Mondays
+Museum
+Speelklok
+Berlin
+music museum
+Brussels
+music museum
+Dalbeattie
+museum
+
+
+
+YouTube:
+
+Debunk
+the Funk with Dr Wilson
+Little
+Chinese Everywhere
+Ron Mattino
+
+
+

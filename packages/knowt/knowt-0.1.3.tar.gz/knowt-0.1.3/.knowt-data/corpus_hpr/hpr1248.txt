@@ -1,0 +1,35 @@
+## hpr1248 :: Frank Bell Achieves Enlightenment Adventures with E17 Pt One
+
+ 
+There was great rejoicing in the Linux community when the Enlightenment Desktop, v. 0.17 (AKA E17), was released recently.  It was the first major upgrade in well over a decade to a desktop environment that many remembered fondly for its commitment to a visually pleasing computing experience.  
+
+
+Frank Bell describes how he started using Enlightenment and what he has encountered so far.  In this, the first of two parts, he addresses installing Enlightenment, Enlightenment's "first-run" dialog, the structure of the desktop, the menu, and the management applications and windows on the desktop.  
+
+
+Part Two will focus on the nitty-gritty of configuring the appearance and behavior of Enlightenment.
+
+
+Links:
+
+
+E17 Screenshot:  https://pineviewfarm.net/misc/e17_2.jpg
+
+Enlightenment website:  https://www.enlightenment.org/
+
+Enlightenment wiki:  https://trac.enlightenment.org/e/wiki
+
+Themes and eye candy:  https://e17-stuff.org/
+
+Enlightenment article at the Arch wiki:  https://wiki.archlinux.org/index.php/Enlightenment
+
+Bodhi Linux Guide to Enlightenment (Enlightenment is Bodhi's default desktop): https://www.bodhilinux.com/e17guide/e17guideEN/index.html
+
+Frank's Enlightenment handout for his LUG:  https://www.pineviewfarm.net/misc/TWUUG_E17.pdf
+
+Enlightenment Slackbuild:  https://slackbuilds.org/repository/14.0/desktop/enlightenment
+
+SlackE17 binary: https://sourceforge.net/projects/slacke17
+
+Kernel Panic Oggcast Interview with Rasterman (Carsten Haitzler), Enlightenment maintainer:  https://kernelpanicoggcast.net/Oggcasts/KernelPanic_71.ogg
+

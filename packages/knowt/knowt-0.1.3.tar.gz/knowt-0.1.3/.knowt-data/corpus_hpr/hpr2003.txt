@@ -1,0 +1,14 @@
+## hpr2003 :: Using the Incron file watching daemon
+
+ Using the Incron file watching daemon
+
+Check out the man page for incron and also this write-up by Nixcraft.
+
+basic usage:
+incrontab -e
+In your editor of choice, follow this syntax:
+<path-to-watch> <event mask> command
+Links
+
+https://linux.die.net/man/5/incrontab
+https://www.cyberciti.biz/faq/linux-inotify-examples-to-replicate-directories/

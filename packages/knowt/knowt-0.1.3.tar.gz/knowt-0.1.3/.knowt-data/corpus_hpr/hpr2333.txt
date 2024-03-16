@@ -1,0 +1,38 @@
+## hpr2333 :: VirtualenvWrapper for Fish Shell
+
+ In this episode, talk about how I created my own virtualenvwrapper-like interface using Fish Shell.
+Fish Shell is "a smart and user-friendly command line shell for macOS, Linux, and the rest of the family. It excels in tab completion and ease of use, but virtualenvwrapper does not support it.
+Virtualenvwrapper, like the name suggests, is a wrapper around python's virtualenv functionality, which allows you to use different versions of python packages in separate environments. To learn more, listen to BJB's show called A bit of background on virtualenvwrapper.
+Functions and aliases in my fish config file:
+# Set virtual directory root
+export set WORKON_HOME=$HOME/Envs
+
+# List virtual environments
+alias lsenvs="ls -m $WORKON_HOME | sed 's/\///g'"
+
+# Create python2 virtual environment
+function -d "Like virtualenvwrapper for python2" mkvirtualenv2
+    virtualenv -p python2 $WORKON_HOME/$argv;
+    and source $WORKON_HOME/$argv/bin/activate.fish;
+    and echo "Virtual environment created."
+end
+
+# Create python3 virtual environment
+function -d "Like virtualenvwrapper" mkvirtualenv
+    virtualenv -p python3 $WORKON_HOME/$argv;
+    and source $WORKON_HOME/$argv/bin/activate.fish;
+    and echo "Virtual environment created."
+end
+
+# Source a virtual environment
+function workon
+    source $WORKON_HOME/$argv/bin/activate.fish; and echo "Switch to virtual environment."
+end
+
+# Delete a virtual environment
+function -d "Like virtualenvwrapper" rmvirtualenv
+    if test -n "$VIRTUAL_ENV"
+        deactivate
+    end
+    rm -rf $WORKON_HOME/$argv; and echo "Virtual environment deleted."
+end

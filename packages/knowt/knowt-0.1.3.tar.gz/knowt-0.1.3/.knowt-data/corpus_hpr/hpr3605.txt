@@ -1,0 +1,52 @@
+## hpr3605 :: Aspire-ing to use 13 year hardware
+
+ Aspire-ing to use 13 year hardware
+Dual boot
+image = /boot/vmlinuz
+  root = /dev/sda3
+  label = Slackware15.0
+  read-only
+image = /boot/vmlinuz
+  root = /dev/sda2
+  label = Slackware14.2
+  read-only
+First change
+# LILO configuration file
+# Append any additional kernel parameters:
+append="acpi=ht"
+Dropped CPU usage to 50%
+Second change
+grep . -r /sys/firmware/acpi/interrupts/
+
+/sys/firmware/acpi/interrupts/gpe1D:322734808     STS enabled      unmasked
+
+echo "mask" > /sys/firmware/acpi/interrupts/gpeXX
+Interrupts
+Interrupts
+ 
+My case was
+echo "mask" > /sys/firmware/acpi/interrupts/gpe1D
+Dropped usage to 0-5%
+Then added the mask to crontab -e under root
+Add 'acpi_mask_gpe=0x1D' or whatever interrupt corresponds to the overactive one, and remember to run the lilo command afterward to make the kernel option active.
+Htop options for CPU usage
+ Click the thumbnail to see the full-sized image 
+Htop display
+ 
+Upgrades
+Fan from AliExpress
+https://www.aliexpress.com/item/32861732299.html
+Replacement fan
+ Click the thumbnail to see the full-sized image 
+2GB DDR2 667MHz SODIMM PC2-5300
+https://www.amazon.com/gp/product/B00C53A37K
+2Gb ram upgrade
+ Click the thumbnail to see the full-sized image 
+Resources
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/kernel_administration_guide/listing_of_kernel_parameters_and_values
+acpi=ht
+https://www.kernel.org/doc/ols/2005/ols2005v1-pages-59-76.pdf
+Use ACPI boot table parsing, but do not enable ACPI interpreter This disables any ACPI functionality that is not required for Hyper Threading.
+ACPI (Advanced Configuration and Power Interface) is an open industry specification establishing industry-standard interfaces for OS-directed configuration and power management on laptops, desktops, and servers.
+HPR3511 Podman like Vagrant
+https://archive.org/details/hpr3511

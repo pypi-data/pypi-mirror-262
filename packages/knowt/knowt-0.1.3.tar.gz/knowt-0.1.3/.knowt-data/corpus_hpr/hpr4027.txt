@@ -1,0 +1,88 @@
+## hpr4027 :: Today I learnt (2023-12-18)
+
+ 
+TIL 1
+and 2 - a cure for Sickle Cell Anemia / fetal hemoglobin
+Note: many of the words used here have
+alternative UK (and Commonwealth) spellings versus USA spellings. I am
+using the USA versions throughout, though I personally prefer the UK
+versions with their diphthongs and ligatures
+like fœtal, but I blame my education for the
+bias!
+TLDR 1: A potential cure was approved in the UK in November 2023
+for the blood disorder called Sickle Cell Anemia.
+TLDR 2: The oxygen-carrying pigment in fetuses is different from
+that in adults, and changes after birth.
+
+I am interested in all types of science, but particularly in Biology
+of all sorts (I have a BSc degree in Zoology).
+I was listening to a podcast where the subject of a potential
+treatment for Sickle Cell Anemia was discussed:
+
+Sickle Cell Disease is an inherited blood disorder resulting in
+anemia which has many complications and can be fatal. It is caused by an
+abnormality in haemoglobin. It's a rather complex subject which we will
+not go into here, though the Wikipedia
+page has a lot of useful information.
+A new treatment has been developed using genetic manipulation (CRISPR),
+which increases the amount of fetal hemoglobin (Hemoglobin F) produced
+by the stem cells in the bone marrow.
+Red blood cells with Hemoglobin F do not form the sickle shape.
+
+A "foetus" (UK) or "fetus" (US) is the unborn offspring that
+develops from an animal embryo.
+Hemoglobin is the oxygen-carrying protein in red blood cells. In the
+fetus it is different from that in the adult, and is called
+Hemoglobin F. Normally the fetal form is replaced by the adult
+form after birth in the first 2-4 months.
+Quote from Wikipedia: Hemoglobin F has a different composition
+than adult forms of hemoglobin, allowing it to bind (or attach to)
+oxygen more strongly; this in turn enables the developing fetus to
+retrieve oxygen from the mother's bloodstream, which occurs through the
+placenta found in the mother's uterus.
+The change from fetal to adult haemoglobin has been known about for
+many years (75+?) but I had never heard of it until recently.
+
+Links
+
+About the words "foetal", "fœtal" and "fetal":
+
+Wikipedia:
+Diphthong
+Wikipedia:
+Ligature (writing)
+
+Wikipedia:
+Sickle Cell Disease
+Wikipedia:
+CRISPR gene editing
+Wikipedia:
+Fetus
+Wikipedia:
+Hemoglobin
+Wikipedia:
+Fetal hemoglobin
+Wikipedia:
+Malaria
+
+TIL 3 - Perl's birthday
+
+The Perl scripting language was "born" in 1987 on December
+18th.
+See the Github
+commit for the first released version
+I'm a long-time devotee of Perl, and my birthday is the same day! I
+didn't know this until today ☺
+I'm more than twice as old though...
+I find it quite interesting to look at the original ideas behind
+Perl, which you can see on Github.
+
+Links
+
+Perl website
+First
+Github commit
+Wikipedia:
+Perl
+
+

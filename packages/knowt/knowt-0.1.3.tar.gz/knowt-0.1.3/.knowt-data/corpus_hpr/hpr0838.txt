@@ -1,0 +1,10 @@
+## hpr0838 :: Martin Peres @ XDC
+
+ Martin Peres works on the nouveau driver for X.org.
+
+Nouveau project site - https://nouveau.freedesktop.org
+Nouveau mailing list - https://lists.freedesktop.org/mailman/listinfo/nouveau
+Nouveau irc          - irc.freenode.net #nouveau
+
+The program that reads information from your Nvidia card that Martin talks about is called nvacounter.
+It can be found at: https://github.com/pathscale/envytools/tree/

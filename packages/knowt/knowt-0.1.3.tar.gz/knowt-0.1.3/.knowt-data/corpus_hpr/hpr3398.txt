@@ -1,0 +1,37 @@
+## hpr3398 :: Anacron
+
+ Setup
+
+$ mkdir -p ~/.local/etc/cron.daily ~/.var/spool/anacron
+
+Create a file called anacrontab:
+
+$ touch /.local/etc/anacrontab
+
+Set it up to trigger scripts in your cron.daily folder:
+
+
+SHELL=/bin/sh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+1  0  cron.daily   run-parts $HOME/.local/etc/cron.daily/
+
+
+Validate your anacrontab:
+
+
+$ anacron -T -t ~/.local/etc/anacrontab -S ~/.var/spool/anacron
+
+Start anacron in a file that gets triggered at login, such as ~/.profile:
+
+
+anacron -t $HOME/.local/etc/anacrontab -S $HOME/.var/spool/anacron
+
+Using
+Now that everything is set up, just put scripts you want to run regularly in cron.daily, and make them executable.
+
+You can set up a weekly directory, too. Just set the time interval in your anacrontab to:
+
+
+SHELL=/bin/sh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+7  0  cron.weekly   run-parts $HOME/.local/etc/cron.weekly/

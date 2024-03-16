@@ -1,0 +1,144 @@
+## hpr3657 :: Small time sysadmin
+
+ 
+Creating Backups.
+
+
+This script was trimmed to serve as an example.
+The three options shown (email, jop, dots) demonstrates, how to list items with case statements:
+
+Single item/directory (jop).
+Multiple items in single directory (dots).
+Multiple items in multiple directories (email).
+
+The text files created after the archive serves as an item list
+with current permissions.
+tar --directory= /path/to/directory/ --create --file INSERT_ARCHIVE_NAME.tar /path/to/file;
+
+#!/bin/bash
+#License: GPL v3
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+#Name: getoverhere.sh
+#Purpose:
+#Version: beta 0.07
+#Author: SGOTI (Some Guy On The Internet)
+#Date: Sat 29 Jan 2022 02:19:29 AM EST
+
+#variables:
+VAR_TBALL=
+VAR_TARGET=
+VAR_JUMP=
+VAR_VALUE=
+
+#start:
+cat << "EOT01"
+Options:
+    email |"${HOME}/.thunderbird/"
+    jop |"${HOME}/Documents/joplin"
+    dots |"${HOME}/.bashrc .vimrc .bash_aliases"
+EOT01
+
+echo -e "What do you want to backup? : \c."
+read VAR_VALUE
+
+case ${VAR_VALUE} in
+    "email" )
+VAR_TBALL="INSERT_EMAIL_NAME$(date +%m-%d-%Y).tar.gz"
+VAR_TARGET="msgFilterRules.dat"
+VAR_JUMP="${HOME}/.thunderbird/*.default-release/ImapMail/imap.mail.yahoo.com/"
+    echo -e "Grabbing INSERT_EMAIL_NAME...\n"
+tar -C ${VAR_JUMP} --create --file ${VAR_TBALL} --gzip ${VAR_TARGET}
+    sleep 1
+
+VAR_TBALL="INSERT_EMAIL_NAME$(date +%m-%d-%Y).tar.gz"
+VAR_TARGET="msgFilterRules.dat"
+VAR_JUMP="${HOME}/.thunderbird/*.default-release/ImapMail/imap.gmail.com/"
+    echo -e "Grabbing INSERT_EMAIL_NAME...\n"
+tar -C ${VAR_JUMP} --create --file ${VAR_TBALL} --gzip ${VAR_TARGET}
+    sleep 1
+
+VAR_TBALL="EMAIL_ARCHIVES$(date +%m-%d-%Y).tar.gz"
+VAR_TARGET="Mail/"
+VAR_JUMP="${HOME}/.thunderbird/*.default-release/"
+    echo -e "Grabbing email EMAIL_ARCHIVES...\n"
+tar -C ${VAR_JUMP} --create --file ${VAR_TBALL} --gzip ${VAR_TARGET}
+    echo -e "Creating List for ${VAR_TBALL}...\n"
+ls -lhAR --group-directories-first ${VAR_JUMP}${VAR_TARGET} > EMAIL_ARCHIVES$(date +%m-%d-%Y).txt
+    sleep 1
+
+VAR_TBALL="THUNDERBIRD_CALENDER$(date +%m-%d-%Y).tar.gz"
+VAR_TARGET="calenders/"
+VAR_JUMP="${HOME}/Documents/"
+    echo -e "Grabbing email THUNDERBIRD_CALENDER...\n"
+tar -C ${VAR_JUMP} --create --file ${VAR_TBALL} --gzip ${VAR_TARGET}
+    echo -e "Creating List for ${VAR_TBALL}...\n"
+ls -lhAR --group-directories-first ${VAR_JUMP}${VAR_TARGET} > THUNDERBIRD_CALENDER$(date +%m-%d-%Y).txt
+    sleep 1
+
+VAR_TBALL="THUNDERBIRD_ADDRESS_BOOK$(date +%m-%d-%Y).tar.gz"
+VAR_TARGET="address-book/"
+VAR_JUMP="${HOME}/Documents/"
+    echo -e "Grabbing ${VAR_TARGET}...\n"
+tar -C ${VAR_JUMP} --create --file ${VAR_TBALL} --gzip ${VAR_TARGET}
+    echo -e "Creating List for ${VAR_TBALL}...\n"
+ls -lhAR --group-directories-first ${VAR_JUMP}${VAR_TARGET} > THUNDERBIRD_ADDRESS_BOOK$(date +%m-%d-%Y).txt
+    sleep 1
+
+VAR_TBALL="THUNDERBIRD_ALL$(date +%m-%d-%Y).tar.gz"
+VAR_TARGET=".thunderbird/"
+VAR_JUMP="${HOME}/"
+    echo -e "Grabbing ${VAR_TARGET}...\n"
+tar -C ${VAR_JUMP} --create --file ${VAR_TBALL} --gzip ${VAR_TARGET}
+    echo -e "Creating List for ${VAR_TBALL}...\n"
+ls -lhAR --group-directories-first ${VAR_JUMP}${VAR_TARGET} > THUNDERBIRD_ALL$(date +%m-%d-%Y).txt ;;
+
+    "jop" )
+VAR_TBALL="JOPLIN$(date +%m-%d-%Y).tar.gz"
+VAR_TARGET="joplin/"
+VAR_JUMP="${HOME}/Documents/"
+    echo "Grabbing ${VAR_TARGET}"
+tar -C ${VAR_JUMP} --create --file ${VAR_TBALL} --gzip ${VAR_TARGET}
+    sleep 1
+    echo -e "Creating List for ${VAR_TBALL}...\n"
+ls -lhAR --group-directories-first ${VAR_JUMP}${VAR_TARGET} > JOPLIN$(date +%m-%d-%Y).txt ;;
+
+    "dots" )
+VAR_TBALL="dots$(date +%m-%d-%Y).tar.gz"
+VAR_TARGET=".bashrc .vimrc .bash_aliases"
+VAR_JUMP="${HOME}/"
+    echo "Grabbing ${VAR_TARGET}"
+tar -v -C ${VAR_JUMP} --create --file ${VAR_TBALL} --gzip ${VAR_TARGET} ;;
+
+    * )
+    echo "Good Heavens..." ;;
+esac
+exit;
+
+
+
+Restoring from backups.
+
+
+tar --extract --directory= /path/to/directory/ --file /path/to/file;
+A cp -v -t /path/to/directory *08-05-2022.tar.gz; command is used to
+send the latest tarballs to the fresh install, from the backup drive.
+Now that you’ve seen the script above, I’ll just give a tar --extract example to keep things short and sweet.
+
+VAR_TBALL="EMAIL_ARCHIVES*.tar.gz"
+VAR_JUMP="${HOME}/.thunderbird/*.default-release/"
+    echo -e "Restoring EMAIL_ARCHIVES...\n"
+tar --extract --directory= ${VAR_JUMP} --file ${VAR_TBALL}
+    echo -e "EMAIL_ARCHIVES restored.\n"
+

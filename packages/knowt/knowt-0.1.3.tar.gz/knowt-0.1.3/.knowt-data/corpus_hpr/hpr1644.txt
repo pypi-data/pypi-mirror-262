@@ -1,0 +1,19 @@
+## hpr1644 :: Opensource.com: Benetech, OpenStack and Kumusha
+
+ In this episode
+Open source product development most effective when social
+Benetech started out in the 90s without even understanding the meaning of the term open source. They just "needed an easy way to interface with different voice synthesizers" to develop readers for people who are blind and "shared the code to be helpful."
+
+Sound familiar? Opensource.com started covering stories like in 2010 and they recur more often than you might think. Stories of people sharing the code to help others—but sharing code to get help developing better code. When code is open, a community has the opportunity to form around it.
+Read this interview about what Benetech CEO Jim Fruchterman learned by adopting open source philosophy and furthering technology-for-good. 
+Read more: 
+https://opensource.com/business/14/7/interview-jim-fruchterman-benetech
+OpenStack product management: wisdom or folly?
+Two recent, excellent, blog posts have touched on a topic I've been wrestling with since May's OpenStack Summit: What is the role of the Product Management function, if any, in the OpenStack development process?
+ The first article, "Calling all 'User Landians' to lead OpenStack above the cloud," by Evan Scheessele, talks about the "real user" of OpenStack—those people that need to deliver a solution that brings some sort of value to their organization. The other article, "Who's In Charge Here Anyway?…," by Rob Hirschfeld, speaks to the dynamics of how decisions—which OpenStack features are in in or out—get made in the OpenStack ecosystem.
+Read more: https://opensource.com/business/14/7/openstack-product-management-wisdom-or-folly
+Giving Sub-Saharan African communities an online presence
+People in Sub-Saharan Africa face hurdles to get online. Despite some progress, the region lags behind in Internet connectivity due to the high costs of service and poor infrastructure, according to a recent World Economic Forum report.
+
+This digital divide means some African communities are underrepresented on the web. Without a well-developed online presence, misinformation about them can spread relatively unchallenged.
+Read more: https://opensource.com/life/14/7/giving-sub-saharan-african-communities-online-presence

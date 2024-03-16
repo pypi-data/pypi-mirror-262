@@ -1,0 +1,267 @@
+## hpr3956 :: HPR Community News for September 2023
+
+ 
+New hosts
+
+Welcome to our new hosts: 
+Noodlez, 
+    hobs.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+3935
+Fri
+2023-09-01
+Server build retrospective
+Daniel Persson
+
+
+3936
+Mon
+2023-09-04
+HPR Community News for August 2023
+HPR Volunteers
+
+
+3937
+Tue
+2023-09-05
+Adventures in Pi-Hole
+Noodlez
+
+
+3938
+Wed
+2023-09-06
+An open directory of web audio stream
+dnt
+
+
+3939
+Thu
+2023-09-07
+How I got into tech and hacking
+Trixter
+
+
+3940
+Fri
+2023-09-08
+Equipment Maintenance
+Ahuka
+
+
+3941
+Mon
+2023-09-11
+Interview with Yosef Kerzner
+operat0r
+
+
+3942
+Tue
+2023-09-12
+RE: How to make friends.
+Some Guy On The Internet
+
+
+3943
+Wed
+2023-09-13
+Why my Dell does it better on Linux.
+knightwise
+
+
+3944
+Thu
+2023-09-14
+Race for the Galaxy
+Tuula
+
+
+3945
+Fri
+2023-09-15
+My chrome plugins
+Daniel Persson
+
+
+3946
+Mon
+2023-09-18
+Planning for a planner, part 02.
+Some Guy On The Internet
+
+
+3947
+Tue
+2023-09-19
+Archiving Floppy Disks
+Steve Saner
+
+
+3948
+Wed
+2023-09-20
+Cleaning up my mancave and talking about Creativity
+knightwise
+
+
+3949
+Thu
+2023-09-21
+How I use virtualisation to tame my Social Media addiction.
+knightwise
+
+
+3950
+Fri
+2023-09-22
+Sid Meiers' Alpha Centauri
+Ahuka
+
+
+3951
+Mon
+2023-09-25
+Cell Phone Screen Protectors
+operat0r
+
+
+3952
+Tue
+2023-09-26
+Making the Case for Markdown
+Keith Murray
+
+
+3953
+Wed
+2023-09-27
+Large language models and AI don't have any common sense
+hobs
+
+
+3954
+Thu
+2023-09-28
+Sedating HPR at the Steading
+Dave Morriss
+
+
+3955
+Fri
+2023-09-29
+airgradient measurement station
+Daniel Persson
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 8 comments in total.
+Past shows
+There is 1 comment on
+1 previous show:
+
+hpr3934
+(2023-08-31) "Crusader Kings II"
+by Tuula.
+
+
+
+Comment 1:
+Kevin O'Brien on 2023-09-04:
+"Loved the show"
+
+This month's shows
+There are 7 comments on 6 of this month's shows:
+hpr3937
+(2023-09-05) "Adventures in Pi-Hole"
+by Noodlez.
+
+Comment 1:
+Windigo on 2023-09-16:
+"Clever static IP solution"
+hpr3938
+(2023-09-06) "An open directory of web audio stream"
+by dnt.
+
+Comment 1:
+dnt on 2023-09-07:
+"Update"
+hpr3940
+(2023-09-08) "Equipment Maintenance"
+by Ahuka.
+
+Comment 1:
+Reto on 2023-09-19:
+"Tires"Comment 2:
+Kevin O'Brien on 2023-09-20:
+"Telling it like it is"
+hpr3941
+(2023-09-11) "Interview with Yosef Kerzner"
+by operat0r.
+
+Comment 1:
+Reto on 2023-09-19:
+"honesty"
+hpr3946
+(2023-09-18) "Planning for a planner, part 02."
+by Some Guy On The Internet.
+
+Comment 1:
+Reto on 2023-09-19:
+"Previously"
+hpr3948
+(2023-09-20) "Cleaning up my mancave and talking about Creativity"
+by knightwise.
+
+Comment 1:
+Kevin O'Brien on 2023-09-24:
+"TUCOWS"
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://lists.hackerpublicradio.com/pipermail/hpr/2023-September/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+FOSDEM 2024
+
+FOSDEM 2024 will take place on Saturday 3rd and Sunday 4th of
+February 2024 in Brussels, Belgium. It will be at the usual location,
+the ULB (Université libre de Bruxelles).
+Neither Ken nor Dave will be attending this time.
+If anyone wishes to apply for a stand on HPR's behalf, and if
+people want to help out doing the key speaker interviews, please get in
+touch.
+
+Site migration
+
+During September effort has gone into fixing broken links in the
+static site templates and the database itself.
+There are still more links to correct however.
+Each show page now contains a link to the version of the show
+uploaded to the Internet Archive. If there are HPR links in older shows
+that have not been updated yet, this copy can be used instead.
+

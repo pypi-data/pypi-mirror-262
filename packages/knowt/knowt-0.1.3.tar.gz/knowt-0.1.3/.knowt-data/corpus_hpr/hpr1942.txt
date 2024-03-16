@@ -1,0 +1,29 @@
+## hpr1942 :: Kobo Touch N-905 E-Reader
+
+ Klaatu reviews the Kobo Touch N-905 e-reader.
+Too Long; Didn't Listen: it's a positive review and the device mostly works well with Linux. There are some exceptions, such as the need to hack around the registration process; luckily, that's easy:
+https://gedakc.users.sourceforge.net/display-doc.php?name=kobo-desktop-ereader-setup
+That being "the ugly", here are the Good and the Bad:
+Good:
+
+works with Linux, after one initial hack
+uses file manager or calibre
+great format support (EPUB, EPUB3, PDF, MOBI, JPEG, GIF, PNG, BMP, TIFF, TXT, HTML, RTF, CBZ, CBR)
+e-ink 
+great battery life (lasts a month on one charge, with every evening and weekend filled with reading)
+a little more interactive and configurable than expected
+one device, one app, one purpose
+small, lightweight, convenient
+cheap ($60 USD)
+expansion up to 32gb
+
+Negative
+
+requires registration (or a rego hack)
+rearranges your books by meta data; no override to respect your dirs
+touch screen
+slow (though not annoyingly slow)
+long time to index books
+hard to keep track of books you are currently reading
+sleep/off screen should be more configurable
+

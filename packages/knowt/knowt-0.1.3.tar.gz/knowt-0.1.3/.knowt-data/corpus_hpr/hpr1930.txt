@@ -1,0 +1,134 @@
+## hpr1930 :: A systemd primer
+
+ 1 What is systemd?
+A dependency system for unix services.
+And, a set of basic unix services to make a unix system usable.
+And, a growing list of not quite so basic services
+
+NTP, networkd, timers (crond/atd)
+
+From a programmers perspective, it's the mainloop phenomenon.
+2 Alternatives
+Solaris: Service Management Facility
+Mac OSX: launchd
+Ubuntu: upstart (until recently)
+3 Replaces
+SYSV
+LSB (actually implements LSB deps)
+4 Terminology
+units
+
+[auto]mount
+swap
+path (inotify triggers)
+socket
+timer (crond/atd)
+service
+slice (cgroup)
+pseudo
+device
+snapshot
+scope
+
+
+
+targets
+
+replace run levels
+default target at boot
+can isolate to just one target
+
+5 Advantages - Design
+Proper, explicit dependencies between system compontents
+Starts components in parallel
+A proper separation of concerns, lots of situations covered.
+
+configuration files are regular, simple to understand generally small
+OTOH, there are LOTS of options
+
+Configuration is not runnable shell.
+[Unit]
+Description=CUPS Scheduler
+Documentation=man:cupsd(8)
+
+[Service]
+ExecStart=/usr/sbin/cupsd -l
+Type=simple
+
+[Install]
+Also=cups.socket cups.path
+WantedBy=printer.target
+
+Separate system and user daemons.
+6 Advantages - Sysadmins
+Modify configuration without modifying upstream configuration
+Service watching (startup, watchdog, failure modes)
+systemd-delta
+[EXTENDED]   /lib/systemd/system/rc-local.service → /lib/systemd/system/rc-local.service.d/debian.conf
+[EXTENDED]   /lib/systemd/system/systemd-timesyncd.service → /lib/systemd/system/systemd-timesyncd.service.d/disable-with-time-daemon.conf
+[EQUIVALENT] /etc/systemd/system/default.target → /lib/systemd/system/default.target
+
+3 overridden configuration files found.
+
+7 Advantages - Programming
+Removal of some error and security prone code
+
+socket activation (e.g. privileged ports)
+user/group changing
+
+8 Advantages - Provisioning
+standardized cgroup controls
+containers
+debootstrap ; systemd-spawn-boot
+* systemd takes care of all pseudo file systems for you
+9 Advantages - Users
+quick to boot
+can reduce load later on (services start & stop as required)
+10 Examples
+Color legend:
+
+black = Requires
+dark blue = Requisite
+dark grey = Wants
+red = Conflicts
+green = After
+
+systemd-analyze blame
+systemd-analyze plot
+systemd-analyze plot gdm.service
+11 Disadvantages
+Journald
+
+It’s really nice in theory, but in practice I’ve found it to be slow and buggy
+
+It’s a little new, so LTS distros necessarily have older versions
+
+el7 has something like 200 patches
+
+network-online.target is a bit flakey
+DBUS
+
+Unix is a graveyard of IPC, I don't feel DBUS is much better
+KDBUS means it will probably be around for ever.
+
+12 Quandries
+Deeply hooked into linux specific details, not portable
+
+kernel api, cgroups, udev etc.
+
+Some cool features relient on file system e.g. btrfs for snapshot
+13 Future
+I haven’t had a chance to play with networkd yet, but it sounds like it’s going to be very good.
+14 Questions
+Migrating
+
+It depends…
+systemd only supports start/stop/reload
+work with the daemon: oneshot/simple/forking/inetd
+integrate with systemd: notify, watchdog
+
+Userspace
+
+Every login, a separate systemd -> user is spawned
+Can override with .config/systemd files
+

@@ -1,0 +1,22 @@
+## hpr3765 :: Fixing clock events in GBA pokemon cartridges
+
+ Pokemon games for the GBA (Game Boy Advance) have an internal RTC
+chip with a coin battery to keep track of the time when the console is
+powered off.
+What happens when the internal battery runs dry? How to fix it?
+Is this enough to completely restore calendar-based events?
+
+Tools:
+
+https://github.com/megaboyexe/GBA_RTCRead
+https://gbatemp.net/threads/how-to-reset-the-rtc-in-gba-pokemon-games-after-replacing-the-battery.558620/
+Swapping battery instructions https://www.youtube.com/watch?v=1piXd3ffwug
+
+Additional resources:
+
+https://www.youtube.com/watch?v=jzauCmOvF_U
+(few mistakes about here)
+https://www.youtube.com/watch?v=TrIAyAKg2S0
+(followup videos with corrections)
+
+

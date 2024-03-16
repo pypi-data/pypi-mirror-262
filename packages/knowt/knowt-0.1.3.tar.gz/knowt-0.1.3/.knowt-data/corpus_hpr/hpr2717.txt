@@ -1,0 +1,50 @@
+## hpr2717 :: Mobile Device Security
+
+ Introduction
+Hello and welcome to Hacker Public Radio, I’m Edward Miro and for this episode I decided to address mobile device security. As with most of the research and articles I’ve written in the past, these are geared toward standard users in a business setting and are meant to be a jumping off point for further research and to be a foundation for cyber security 101 level training classes. If you like what I do, and want to have me come speak to your team, feel free to email me.
+As an information security researcher, I have noticed a trend in what potential clients lately have been interested in: cell phones. Almost everyone I have consulted for in the area of private investigations make this area their main priority. This makes sense as users have started to transition to using mobile devices more and more. Not only do cell phones represent the main conduit to the internet for a huge chunk of people, but many use them for work also. Many companies have smartly presented policies against this, but there are still many organizations that allow bring-your-own-device style implementations. In the following podcast I will try to define the threats, defense and considerations in very broad strokes.
+Cell phones differ from a standard hacking target in a few ways. For the most part, many of the same vectors are still valid. Remote code execution however is more rare, but not out of the question. I’m going to attempt to present these different vectors in an ascending list of what is most likely to be used as an attack, in my humble (and possibly ignorant) opinion.
+1. Passive Surveillance
+This vector is one many in the hacking world will already be familiar with and it is a major concern for mobile devices as well. Attackers can monitor an access point where the mobile device is connected and collect packets in all the usual ways. Open public WiFi is a treasure trove and tons of data that’s being sent in the clear can be collected, analyzed and leveraged by attackers.
+Defense here is a bit more complicated for the general user, but shouldn’t be too intrusive for most:
+
+Use a VPN on your mobile devices.
+Switch to a DNS provider that provides secure DNSSEC.
+Implement proper encryption on access points.
+
+2. Spyware
+Many commercial spyware applications are readily available on both of the main app stores. The challenges for attackers lie in either gaining physical access to the unlocked device to install the spyware, or tricking the user into installing it themselves. Most often the target’s spouse or close contact does this. Some of these apps can be disguised to look like innocuous applications as a feature, but with devices that are rooted/jailbroken, they can be completely hidden from the user. I found a few surveys that state the average smart phone user has about 30 apps installed. I don’t think it’s unreasonable to suspect the average person wouldn’t notice a second calculator or calendar app. These apps feature the full gamut of what you’d expect from a spyware app.
+Defense against spyware is pretty simple:
+
+Don’t allow unsupervised access to your device.
+Use a strong passcode or biometric lock.
+Remove unused applications and be aware of new apps that may pop up.
+Don’t root or jailbreak your device.
+
+3. Social Engineering
+The tried and true vector that has always worked and will continue to work is social engineering. It doesn’t matter what kind of device a target is using if you can get them to click a malicious link, open a malicious attachment, or disclose their password to the attackers. With a user’s password you can conduct a vast amount of surveillance through their Google or Apple account. Not to mention leverage their password into all their other accounts as most users still use the same password for everything. We can also callback to the previous section on spyware by mentioning that many users are already familiar with enabling the installation of 3rd party applications and can be tricked into installing a cleverly disguised spyware application.
+Basic OPSEC recommendations are applicable here:
+
+Don’t click strange or unsolicited links or attachments on your devices.
+Never disclose your password to anyone through a text message or voice call.
+Don’t install 3rd party applications. I’ll extend this to say not to install any shady or questionable apps, even ones hosted by the app stores. There have been instances of vetted apps being malicious.
+
+4. IMSI catchers/Femtocells
+I refer to these as DIY Stingrays. Stingrays are devices used by law enforcement to track and surveil cell phone traffic. These devices emulate a cell tower or boost cell phone signals when used in a legitimate way. Mobile phones are designed to prefer using stations that are the closest and strongest. Any technically proficient attacker can DIY one of these devices for not a lot of money. When an attacker deploys one of these devices, the target’s phone usually has no idea that the device isn’t an official cell tower and happily connects and passes traffic through it. The rogue stations can then be configured to pass the traffic on to an authentic tower and the user will have no idea. These rogue towers can not only collect identifying information about the mobile device that can be used to track or mark a target, they can also monitor voice calls, data, and SMS, as well as perform man-in-the-middle attacks. Often they can disable the native encryption of the target’s phone as well.
+Defense against this vector is a bit more complicated:
+
+As before, use a VPN.
+Use Signal or other encrypted communication apps.
+Avoid disclosing sensitive information during voice calls.
+There is software that has been developed to detect and notify the user when a rogue station has been detected, but this is not going to be super helpful for standard users. There are also maps online of known cell towers and it is possible to use software to identify your connected tower.
+
+5. Exploits
+Speaking very generally, this attack vector is for the most part less of a concern (depending on your particular threat level), but we all know that the chance of this happening in the wild is probably remote for most people. The technical implementations of exploits such as Rowhammer, Stagefright, and Blueborne are well outside the scope of this particular talk, but we would be incorrect to not mention them and what can be done to protect against them. And we should also pay special attention to more and more exploits being developed to attack mobile devices as attackers have started putting a lot of attention in this area. Even though many of these vulnerabilities are being patched, we all know many users are still using old versions of Android and iOS, and many devices are simply outside the support period offered by the manufacturers and will never be updated past a certain point. Couple that with the general idea that mobile devices (or any device running a non Windows based OS) are “safer” because less exploits exist for them is currently a very poor assumption. This will probably get worse as the cost of keeping up with new devices now being over $1000 and many users won’t be able to get devices that are constantly being patched.
+What we can do:
+
+Keep your mobile devices updated with most current OS updates and carrier settings. Also keep applications updated. I don’t know how many times I’ve noticed friends or family with devices that are ready to be updated, but the notifications go ignored.
+If it’s possible, replace devices when they are outside the support period.
+Be paranoid, if it applies to you. What this means is when you use any computer or device, always remember that zero day exploits can exist for years before being disclosed. You could follow ALL the best OPSEC practices, and you could still be vulnerable to exploits that haven’t been disclosed and/or patched. This might not matter if you’re just a general user, but if you work for the government or do intelligence work, act as if.
+
+Well, thank you for taking the time to listen to my basic introduction to cell phone cyber defense. I know most of the information I provided is only the tip of the iceberg and if current trends hold up, this will only get worse in the future. If you want to add to or correct any mistakes I may have made, like I stated in the introduction, feel free to email me and let’s have a conversation. I don’t claim to know all there is to know and love feedback and any opportunities to learn more or collaborate with others in the field.
+Thanks again, and have a great 2019!

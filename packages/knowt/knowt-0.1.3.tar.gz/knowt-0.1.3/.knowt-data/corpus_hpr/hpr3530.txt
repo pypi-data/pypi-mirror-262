@@ -1,0 +1,9 @@
+## hpr3530 :: Filenames and ASCII
+
+ In a purely text-based operating system you need to pay special attention to naming files. You won't have any helpful icons or thumbnails to help you locate things. So we dig into the file naming conventions in DOS, including forbidden characters. And since the possible characters all come from the ASCII character set, we do a small look at that as well.
+Links:
+
+https://webopedia.internet.com/TERM/A/ASCII.html
+https://www.techweb.com/encyclopedia/defineterm?term=ASCIIchart
+https://www.ahuka.com/dos-lessons-for-self-study-purposes/dos-lesson-7-dos-filenames-ascii/
+

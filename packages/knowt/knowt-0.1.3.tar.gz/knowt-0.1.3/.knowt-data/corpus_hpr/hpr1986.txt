@@ -1,0 +1,24 @@
+## hpr1986 :: Introduction to sed - part 2
+
+ Introduction to sed - part 2
+In the last episode we looked at sed at the simplest level. We looked at three command-line options and the 's' command. We introduced the idea of basic regular expressions.
+In this episode we will cover all of these topics in more detail.
+We are looking at GNU sed in this series. This version contains many extensions to POSIX sed. These extensions provide many more features, but sed scripts written this way are not portable.
+To read the rest of the notes for this episode follow this link: https://hackerpublicradio.org/eps/hpr1986/full_shownotes.html
+Note: Since recording the audio I have added a sixth example to the full notes to cover the topic of word boundaries, which I had omitted at the time.
+Links
+
+Introduction to sed - part 1: https://hackerpublicradio.org/eps.php?id=1976
+GNU sed manual:
+
+HTML Manual: https://www.gnu.org/software/sed/manual/sed.html
+Section on Invocation: https://www.gnu.org/software/sed/manual/sed.html#Invoking-sed
+Section on Escapes in Regular expressions: https://www.gnu.org/software/sed/manual/sed.html#Escapes
+
+"Sed - An Introduction and Tutorial" by Bruce Barnett: https://www.grymoire.com/Unix/Sed.html
+Wikipedia entry for sed: https://en.wikipedia.org/wiki/Sed
+Example files for processing:
+
+https://hackerpublicradio.org/eps/hpr1986/full_shownotes.html (extracted from https://hackerpublicradio.org/about.php)
+https://hackerpublicradio.org/eps/hpr1986/sed_demo2.txt (downloaded from https://hackerpublicradio.org/stats.php)
+

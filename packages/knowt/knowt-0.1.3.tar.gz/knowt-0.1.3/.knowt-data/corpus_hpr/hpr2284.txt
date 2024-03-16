@@ -1,0 +1,5 @@
+## hpr2284 :: Resurrecting a dead ethernet switch
+
+ In this episode I simply let you participate with me replacing an electrolytic capacitor in the power supply of an Ethernet switch.
+The broken capacitor shows a bulge in its housing and was therefore easily identifiable. The supply voltage in the fault condition could be observed with an oscilloscope to completely collapse when load is turned on. Both facts are illustrated in the image below.
+Replacing the capacitor fixed the switch and brought it back in service.

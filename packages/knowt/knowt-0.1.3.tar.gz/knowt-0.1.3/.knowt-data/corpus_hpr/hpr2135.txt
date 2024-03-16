@@ -1,0 +1,13 @@
+## hpr2135 :: Audio speedup script
+
+ Audio speedup script
+Back in 2015 Ken Fallon did a show (episode 1766) on how to use sox to truncate silence and speed up audio.
+Inspired by this I wrote a Bash script to aid my use of the technique, which I thought I’d share with you.
+I have written out detailed notes for this episode describing the script and examining how it works and these are available here https://hackerpublicradio.org/eps/hpr2135/full_shownotes.html.
+Links
+
+HPR show 1766 “The Sox of Silence”: https://hackerpublicradio.org/eps.php?id=1766
+Original article on doing clever things with sox: https://digitalcardboard.com/blog/2009/08/25/the-sox-of-silence/
+The speedup script for download: https://hackerpublicradio.org/eps/hpr2135/speedup
+The repository containing the speedup script on GitLab: https://gitlab.com/davmo/hprmisc
+

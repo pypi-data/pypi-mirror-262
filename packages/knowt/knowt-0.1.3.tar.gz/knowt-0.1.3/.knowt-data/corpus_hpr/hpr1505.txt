@@ -1,0 +1,11 @@
+## hpr1505 :: 28 - LibreOffice Calc - Fills, an Introduction
+
+ 
+One of the key techniques in using a spreadsheet is to master the art of fills, which lets you fill a column or a row with data without having to type in every cell individually. And this technique requires that there be a predictable pattern to the contents of each cell as you fill them. But you can do a lot with this technique, and we will want to use this when we do our first model, which will be a simple savings model.
+
+
+But first we need to build the tools in our tool kit, and fills are a big one. To begin with, you can fill either rows or columns, though columns are more frequently filled using this technique. Still, it is good to know you can do either. The simplest fill begins with a cell that has some kind of contents. For example, lets say that cell B1 contains the word "Rain". If you click on the cell, you will see it highlighted with a thick black border
+
+
+For the remainder of the show notes please see https://www.ahuka.com/?page_id=734
+

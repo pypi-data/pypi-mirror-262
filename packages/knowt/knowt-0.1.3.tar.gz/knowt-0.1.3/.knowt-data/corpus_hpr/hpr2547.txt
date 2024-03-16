@@ -1,0 +1,5 @@
+## hpr2547 :: MSYS2
+
+ In the beginning there was Cygwin, by Cygnus Solutions (later acquired by Red Hat), then came msys, a lightweight derivative with no package manager, no fancy integration tools, just the bare minimum necessary to support a gcc compiler and the GNU autotools.
+msys2 is cygwin minus the package manager plus an adaptation of the pacman package manager from Arch, and a big archive of packages of all kinds. It offers a friendlier command-line experience than Cygwin does.
+I failed to mention here that msys was explicitly made to support the MinGW (Minimalist GNU for Windows) flavor of GCC, which is intended for building native Windows applications. GCC for Windows has two types of output, cygwin or mingw, where cygwin is for source code that expects POSIX-y facilities and mingw is for code that should compile (possibly with some minor adjustments for C dialect) equally well under GCC and Microsoft Visual C, and should produce about the same output.

@@ -1,0 +1,35 @@
+## hpr1948 :: Check Your Spelling in Vim
+
+ 
+Frank Bell describes how to check your spelling in the Vim editor and to create
+your own wordlist.
+
+
+Frank's ~/.vimrc file:
+
+
+set ruler laststatus=2 number title hlsearch
+syntax on
+set textwidth=80
+set spell spelllang=en_us
+set spellfile=$HOME/.Vim/spell/en.utf-8.add
+
+Illustrations:
+
+Text file in Vim with spellcheck enabled:
+
+
+
+
+
+Vim "choose the right word" list:
+
+
+
+
+Links:
+
+Excellent introductory tutorial:  https://thejakeharding.com/tutorial/2012/06/13/using-spell-check-in-vim.html
+Vim's own documentation: https://Vimdoc.sourceforge.net/htmldoc/spell.html
+Linux Voice Vim tutorial (PDF):  https://www.linuxvoice.com/issues/001/vim.pdf
+Linux Voice Vim video:  https://www.linuxvoice.com/learn-to-love-vim/

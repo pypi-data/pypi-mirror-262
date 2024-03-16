@@ -1,0 +1,12 @@
+## hpr1557 :: Encrypting E-mail on Android; Importing Keys
+
+ We have looked at e-mail encryption on both Thunderbird and G-Mail, and that is good, but in 2014 a lot of people use mobile phones and tablets for their e-mail. So it makes sense to look at how we can do this. The solution I am going explore here involves two components, the K-9 Android mail client, and APG, the Android Privacy Guard. I am going to stick to what I know, so if you are looking for help with iPhone or iPad, the best I can do is suggest that you try a Google search. On Android, while many people use Gmail, K-9 is a very popular client for people looking for a more traditional POP3 or IMAP client to handle their e-mail needs. So this should be a good solution for many people. As regards APG, I am not aware that anyone has done an audit of this program. It seems to be the most widely recommended, and is probably OK, but I am making no larger claims for it. - For more go to https://www.zwilnik.com/?page_id=602
+Links:
+
+https://play.google.com/store/apps/details?id=com.fsck.k9
+https://play.google.com/store/apps/details?id=org.thialfihar.android.apg
+https://play.google.com/store/apps/details?id=com.sand.airdroid
+https://www.zwilnik.com/?page_id=2
+https://www.schneier.com/contact.html
+https://www.gnupg.org/gph/en/manual/x334.html
+https://www.zwilnik.com/?page_id=602

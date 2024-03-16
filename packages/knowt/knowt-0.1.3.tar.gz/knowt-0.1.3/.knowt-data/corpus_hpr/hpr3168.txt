@@ -1,0 +1,85 @@
+## hpr3168 :: FreeBSD Jails and iocage
+
+ FreeBSD Jails with iocage
+Introduction
+FreeBSD jails allow users to run multiple, isolated instances of FreeBSD on a single server. Iocage simplifies the management of FreeBSD Jails.
+https://en.wikipedia.org/wiki/OS-level_virtualization
+The jails will be configured to bind to an IP address on the jail host's internal network. The host OS will pass traffic from the external network to the jail.
+The jails will be managed with Iocage. Iocage uses ZFS properties to store configuration data for each jail, so a ZFS file system is required.
+Network setup
+These steps will:
+
+Set up the internal network.
+Enable the pf packet filter
+Configure pf pass internet traffic to and from the jail.
+
+PF is full featured firewall, and can do more than just pass traffic to an internal network. Refer to the PF documentation for additional configuration options.
+Run the following to configure the internal network and enable pf.
+sysrc cloned_interfaces+="lo1"
+sysrc ifconfig_lo1="inet 192.0.2.1/24"
+sysrc pf_enable="YES"
+
+Put the following in /etc/pf.conf
+# Variables
+# ext_if should be set to the hosts external NIC
+ext_if = "vtnet0"
+jail_if = "lo1"
+jail_net = $jail_if:network
+
+# NAT allows the jails to access the external network
+nat on $ext_if from $jail_net to any -> ($ext_if)
+
+# Redirect traffic on port 80 to the web server jail
+# Add similar rules for additional jails
+rdr pass on $ext_if inet proto tcp to port 80 -> 192.0.2.10
+
+Reboot to activate the network changes
+ZFS
+The best way to use ZFS on a VPS is to attach block storage as a new disk.
+If block storage is not available, you can optionally use a file as the ZFS device.
+Enable and start ZFS.
+sysrc zfs_enable="YES"
+service zfs start
+
+ZFS using Block storage
+List the available disks. If you are using a VPS, the block store will probably be the second disk.
+geom disk list
+
+Create a ZFS pool named jailstore.
+zpool create jailstore  /dev/vtbd1
+
+ZFS using a file
+Create the ZFS file.
+dd if=/dev/zero of=/zfsfile bs=1M count=4096
+
+Create a ZFS pool named jailstore.
+zpool create jailstore /zfsfile
+
+Install iocage
+pkg install py36-iocage
+
+Using iocage
+iocage activate jailstore
+iocage fetch
+
+iocage create -n www ip4_addr="lo1|192.0.2.10/24" -r 11.1-RELEASE
+iocage start www
+iocage console www
+
+Once you have a shell inside the jail, install and start Apache.
+pkg install apache24
+sysrc apache24_enable="yes"
+service apache24 start
+
+Port 80 on the jail will now be accessible on the hosts IP address.
+Multiple jails.
+Additional jails can be installed using the example above.
+
+Install the new jail with the iocage create command , but use a different IP address
+Expose the new jail to the network by adding additional rules to pf.conf.
+
+Book recommendation
+
+FreeBSD Mastery: Jails, Michael W Lucas
+Michael W Lucas is great Technical book author.
+

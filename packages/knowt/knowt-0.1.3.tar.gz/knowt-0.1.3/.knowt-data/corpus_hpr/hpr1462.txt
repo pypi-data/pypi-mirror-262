@@ -1,0 +1,17 @@
+## hpr1462 :: Encryption and Email with Thunderbird
+
+ 
+Now it is time to take a look at practical uses of encryption, and the number one use is for e-mail. Encrypted communication via e-mail is very desirable if you want to keep a secret. In the U.S. the current legal precedents say that any e-mail left on a server is not protected since you would have no expectation of privacy. This precedent was set many years ago when POP3 was the standard for all e-mail and people did not usually leave e-mail on a server. These days, many people use web-based e-mail or use a newer standard called IMAP which by default stores everything on the server. Perhaps you are one of these people, and thought that you had a right to expect privacy, but in the U.S. you dont, and I would expect that in many other countries the situation is no better.
+
+
+There have been attempts to provide encrypted e-mail service from a service provider, but the problem here is that the provider usually has to have to the key in order to encrypt the e-mail, and if they have the key they can be compelled to give it up. Recently in the U.S. there was a case involving Ladar Levison who ran such a service called Lavabit. Lavabit encrypted mail in transit using TLS encryption, and he had the keys. When his service was used by Edward Snowden, the government came to get the keys. Now, Levison would have given them the key for Snowdens e-mail if he had been served a warrant, as he always made clear to his customers that he would obey proper legal demands. But in this case the government demanded that he turn over all of the keys for all his customers, and this was too far for Levison. He shut down his service rather than cooperate, and is a bit of a hero for that. But it illustrates that you are at the mercy of the service provider. If the government made this demand to Lavabit, you are safe in presuming they had made the same demand to other providers, and that they all cooperated with the government and said nothing to their customers. So it would be mistake to rely on 3rd party mail service providers to give you privacy. You need to control it yourself. But of course, after the last few lessons you know how to do that, and have your secure keys created. You just need to put them to use.
+
+
+For the remainder of the show notes please see https://www.zwilnik.com/?page_id=547
+
+Links
+
+Thunderbird: https://www.mozilla.org/en-US/thunderbird/
+
+Enigmail: https://www.enigmail.net/home/index.php
+

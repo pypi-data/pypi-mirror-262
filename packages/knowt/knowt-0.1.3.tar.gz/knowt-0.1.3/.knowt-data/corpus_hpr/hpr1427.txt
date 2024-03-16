@@ -1,0 +1,30 @@
+## hpr1427 :: Decoding HPR1216 the easy way and a bit more
+
+ 
+This Episode is kind of a direct response to HPR1343 by Laindir, where he explains his awesome way to decode the morse code in HPR1216. For the fun of it, I start right out by digressing into a memory of mine. It is about how I tried to decode morse code telemetry from the AO-21 amateur radio satellite some 20 years ago by using a CBM-8032 computer. 
+
+
+After that I reveal the easy way to decode HPR1216 by using the CW mode of the program FLDIGI. Along the way, I mention the use of "monitors" in pulse audio, which are selectable in pavucontrol as input sources for audio applications. This is an easy way to loop back sound output from other applications. This method also combines nicely with WEBSDR, web accessible software defined receivers, all over the world. These may be used if you want to throw some real world signals at FLDIGI to play with the different modes. For listening to amateur radio communication I recommend to start out with one of these modes: CW (morse telegraphy), PSK > BPSK31 (very common, narrow band tele type mode) and RTTY > RTTY-45 ("original" radio tele type). For the typing modes you might want to check also "View>Waterfall>Docked scope" or activate "View>View/Hide Channels".
+
+
+Finally I add a tip about using OSS-wrappers like aoss, from alsa-oss, and padsp from the pulseaudio-utils package, to run old OSS applications. I use this primarily for siggen, a suit of command line / curses applications for generating audio signals like sine wave, rectangle and so on.   
+
+
+NOTE: There is one stumbling block with pavucontrol, which I forgot to mention in the recording. Applications will only show up as playback sources or recording sinks when they actively use the interface. That is, the alsa player source will only be visible while playing, in the same way as an audacity sink can only be seen while the recording is going on. 
+
+Links:
+
+hpr1343 :: Too Clever For Your Own Good https://hackerpublicradio.org/eps.php?id=1343
+
+hpr1216 :: Digital Data Transfer https://hackerpublicradio.org/eps.php?id=1216
+
+Some sparse info on the AO-21 satellite https://www.sat-net.com/winorbit/help/satao21.html
+
+Wiki page covering the CBM8032 https://en.wikipedia.org/wiki/Commodore_PET
+
+
+Fldigi home page https://www.w1hkj.com/Fldigi.html
+
+WEBSDR main page https://websdr.org
+
+

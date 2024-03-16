@@ -1,0 +1,13 @@
+## hpr1645 :: 42 - LibreOffice Calc - Data Manipulation 2: Standard and Advanced Filters
+
+ 
+You can set a Standard Filter from within the AutoFilter drop-down, or you can go there through the Data menu by selecting Data>Filter>Standard Filter.  Now lets look at the question we ended the last tutorial with: How many females over the age 40 had a case in 1978. We saw we could get this by manually putting checkmarks in every age that was greater than 40 using AutoFilter, but how do we do this using Standard Filter? - For more go to https://www.ahuka.com/?page_id=897
+
+
+https://help.libreoffice.org/Common/List_of_Regular_Expressions
+
+https://www.ahuka.com/?attachment_id=909
+
+https://www.ahuka.com/?page_id=897
+
+

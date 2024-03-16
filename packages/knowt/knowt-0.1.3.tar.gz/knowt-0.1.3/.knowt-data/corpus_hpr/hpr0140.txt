@@ -1,0 +1,19 @@
+## hpr0140 :: LPI Certification Part 6 Device Configuration
+
+ Objective:
+
+Candidates should be able to install and configure internal and external communication
+devices such as modems, ISDN adapters, and DSL switches. This objective includes
+verification of compatibility requirements (especially important if that modem is a
+winmodem), necessary hardware settings for internal devices (IRQs, DMAs, I/O ports), and
+loading and configuring suitable device drivers. It also includes communication device and
+interface configuration requirements, such as the correct serial port for 115.2 Kbps, and the
+correct modem settings for outbound PPP connection(s).
+
+Key files, terms, and utilities include:
+
+/proc/dma          Direct memory accessing channels in use
+/proc/interrupts   Interrupts in use
+/proc/ioports      I/O ports in use
+setserial(8)       Configure serial port access for an internal modem
+

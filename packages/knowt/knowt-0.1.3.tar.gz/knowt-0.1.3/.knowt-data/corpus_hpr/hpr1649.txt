@@ -1,0 +1,57 @@
+## hpr1649 :: Raspberry Pi Accessibility Breakthrough
+
+ 
+Since April last year the text-to-speech using eSpeak in the Raspberry Pi
+console has stuttered very badly and regularly crashes the kernel.
+
+
+Here's how I fixed it.
+
+
+Cloning my github repo:
+
+
+git clone https://github.com/cromarty/ttsprojects.git
+
+
+Installation:
+
+
+cd ttsprojects/raspberry-pi/libilctts/build
+sudo ./build.sh
+cd ../../piespeakup
+sudo ./build.sh
+
+
+Bingo!  Speech should work.
+
+
+This has only just been released and there is still work to do on the
+documentation.
+
+
+Note: I am not connected to the Raspberry Pi Foundation in any way
+and anything I say or do is not endorsed by them.
+
+
+My email address is connected with a Freelists email list I set up and
+an accompanying web site:
+
+
+https://www.raspberryvi.org/
+
+
+The 'VI' is for 'Visually Impaired' and I DID check with the
+Foundation about the similarity of the web address before I created it.
+
+
+To join our email list send an email to:
+
+
+raspberry-vi-request@freelists.org
+
+
+With 'subscribe' in the subject.
+
+
+Mike

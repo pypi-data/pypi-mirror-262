@@ -1,0 +1,6 @@
+## hpr2461 :: Gitolite
+
+ Gitolite provides an admin a centralised interface, in the form of a configuration file, to make managing users, user permissions, repos, and user and repo groups easy. It abstracts Git users from UNIX users by defining a user by public keys, and manages permissions down to the branch-level. And better yet, it is itself managed over Git.
+
+ 
+Proper documentation is available on Gitolite.com

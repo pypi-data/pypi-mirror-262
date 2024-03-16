@@ -1,0 +1,49 @@
+## hpr1939 :: Collating Pages with pdftk
+
+ I'm moving into my new office at work, and among many things I had to move are file boxes full of old class notes from graduate school. The academic hoarder in me doesn't want to recycle them—I might need these things again! I'm scanning.
+I've inherited an excellent scanner/copier with a feeder that lets you scan stacks of pages with one click. This works great for single-sided documents, but most of my handwritten notes are double-sided. I scan one side, then turn the stack over and scan the other side, and I end up with two PDFs for a single stack of pages—one with the front pages and the other with back pages in reverse order. The difficulty is to collate the pages of those two files so that the front and back sides appear in a single PDF in the correct order. Sounds like a job for a shell script!
+The script takes two CLI arguments. The first argument is the PDF containing front pages, and the second is the PDF of the back pages.
+The first job is take the backsides and reverse the page order, because they were scanned in last-page-to-first. This is very easy with pdftk:
+pdftk back.pdf cat end-1 output backfix.pdf
+Now that the pages are all in the correct order it's time to collate them. We're going to use the burst function of the PDF toolkit to explode each of the two PDFs into separate pages. After that, we recombine the separate pages in the correct order. The trick is finding a way to do this efficiently. In concept, it's not hard to collate pages in whatever order you want after they've been burst. You simply keep giving pdftk CLI arguments for all of the files you want to combine and then output them as a single file. However, if you have 40 or 50 pages, it's extremely tedious to provide that many CLI args one at a time. This must be automated!
+The way I figured out how to do this was to ensure that the burst command would output files that would appear in the correct order automatically when using the ls command inside the working directory. The burst command automatically numbers the output files, but you can specify certain filename formatting parameters if you want to. I chose a format that would begin the filename with the numerical page count in at least three digits with leading zeros (001, 002, etc), followed by an underscore and either the word "front" for the front pages or "reverse" for the back pages.
+So here are the burst commands:
+
+pdftk front.pdf burst output %03d_front.pdf
+pdftk backfix.pdf burst output %03d_reverse.pdf
+
+At this point a bunch of new files appear, looking something like this: 
+
+001_front.pdf
+001_reverse.pdf
+002_front.pdf
+002_reverse.pdf
+003_front.pdf
+003_reverse.pdf
+...
+
+Notice how the front and back pages all appear in the correct order? Now, instead of typing in the filename for every page, we can use the output of the ls command, filtering out any files not beginning with numbers.
+pdftk $(ls |grep ^[0-9]) cat output collated.pdf
+And it's done. The entire script loks like this:
+
+#!/bin/bash
+
+# Requires: pdftk
+
+front=$(readlink -f "$1")
+back=$(readlink -f "$2")
+basedir=$(dirname $front) 
+stem=$(basename $back .pdf)
+backfix="$stem"-fixed.pdf
+new=$(basename $front .pdf | sed -e 's/[Ff]ront/Combined/')
+
+cd $basedir
+pdftk $back cat end-1 output $backfix &> /dev/null
+pdftk $front burst output %03d_front.pdf &> /dev/null
+pdftk $backfix burst output %03d_reverse.pdf &> /dev/null
+pdftk $(ls |grep ^[0-9]) cat output "$new".pdf
+
+Links
+
+pdftk man page: https://www.pdflabs.com/docs/pdftk-man-page/
+My earlier HPR episode about pdftk: hpr1760

@@ -1,0 +1,52 @@
+## hpr0546 :: Shot of Hack - Changing the time offset of a series of photos
+
+ The problem: You have a series of photos where the time is offset from the correct time but is still correct in relation to each other.
+Here are a few of the times that I have needed to do this: - Changing the battery on my camera switched to a default date. - I wanted to synchronize the time on my camera to a GPS track so the photos matched the timestamped coordinates. - At a family event where images from different cameras were added together.
+You can do edit the timestamp using a GUI and many photo manipulation applications like the GIMP support metadata editing. For example on KDE:
+gwenview -> plugins -> images -> metadata -> edit EXIF 
+The problem is that this gets tiresome after a few images, and anyway the times are correct in relation to each other - I just need to add or subtract a time correction to them en masse.
+The answer: exiv2 - Image metadata manipulation tool. It is a program to read and write Exif, IPTC and XMP image metadata and image comments.
+user@pc:~$ exiv2 *.jpg
+File name       : test.jpg
+File size       : 323818 Bytes
+MIME type       : image/jpeg
+Image size      : 1280 x 960
+Camera make     : FUJIFILM
+Camera model    : MX-1200
+Image timestamp : 2008:12:07 15:12:59
+Image number    :
+Exposure time   : 1/64 s
+Aperture        : F4.5
+Exposure bias   : 0 EV
+Flash           : Fired
+Flash bias      :
+Focal length    : 5.8 mm
+Subject distance:
+ISO speed       : 160
+Exposure mode   : Auto
+Metering mode   : Multi-segment
+Macro mode      :
+Image quality   :
+Exif Resolution : 1280 x 960
+White balance   :
+Thumbnail       : image/jpeg, 5950 Bytes
+Copyright       :
+Exif comment    :
+The trick is to pick a image where you can that figure out what the time was and work out the time offset. In my case I needed to adjust the date forward by six months and four days while changing the time back by seven hours. I used the command exiv2 -O 6 -D 4 -a -7 *.jpg
+-a time
+    Time adjustment in the format [-]HH[:MM[:SS]].
+    This option is only used with the 'adjust' action. Examples:
+        1 adds one hour,
+        1:01 adds one hour and one minute,
+        -0:00:30 subtracts 30 seconds.
+-Y yrs
+    Time adjustment by a positive or negative number of years, for the 'adjust' action.
+-O mon
+    Time adjustment by a positive or negative number of months, for the 'adjust' action.
+-D day
+    Time adjustment by a positive or negative number of days, for the 'adjust' action.
+When we run this we can see that the timestamp has now changed.
+user@pc:~$ exiv2 *.jpg | grep timestamp
+Image timestamp : 2009:06:11 08:12:59
+That's it. Remember this is the end of the conversation - to give feedback you can either record a show for the HPR network and email it to admin@hackerpublicradio.org or write it on a post-it note and attach it to the windscreen of Dave Yates's car as he's recording his next show.
+

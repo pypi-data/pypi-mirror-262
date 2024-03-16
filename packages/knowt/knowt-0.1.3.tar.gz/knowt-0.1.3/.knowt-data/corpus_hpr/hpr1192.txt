@@ -1,0 +1,13 @@
+## hpr1192 :: LiTS 024: time and /usr/bin/time
+
+ The time program is a handy tool to not only gauge how much time in seconds it takes a program to run, but will also display how much user CPU time and system CPU time was used to execute the process. To understand these values you must grasp how the kernel handles the time reporting for the process. For example, the output of:
+time ls
+is
+real 0m0.007s
+user 0m0.000s
+sys 0m0.003s
+
+
+
+For the complete show including video and a complete write up go to https://www.linuxintheshell.com/2013/02/26/episode-024-time-and-usrbintime/
+

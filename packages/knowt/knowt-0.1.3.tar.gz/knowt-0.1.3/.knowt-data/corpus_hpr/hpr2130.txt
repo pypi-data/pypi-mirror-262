@@ -1,0 +1,8 @@
+## hpr2130 :: Git push to two repositories at once
+
+ 
+Set up your git remotes (‘origin’ and ‘foo’)
+Create a new remote (‘all’) entry to encompass the existing targets
+Adjust ssh config as needed
+git push all HEAD
+

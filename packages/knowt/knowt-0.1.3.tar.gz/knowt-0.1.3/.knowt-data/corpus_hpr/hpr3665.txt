@@ -1,0 +1,196 @@
+## hpr3665 :: UNIX Is Sublime
+
+ UNIX is sublime
+Or, "how to use a computer without hating yourself for it in the morning"
+Or, "Unix is basically a simple operating system . . ."
+Or, "My weariness and disdain for computers grow with each additional unit of knowledge"
+Or, "Worse is better"
+Origins
+UNIX is not Multics
+Multics = Multiplexed Information and Computer Service
+UNIX = Uniplexed Information and Computing Service
+The name 'UNIX' is a pun on the name 'Multics'. Multics was entirely too large and complicated to be useful so the boys at Bell Labs cooked up something smaller, less complicated, and easier to use.
+
+Ancient emulation interlude
+How to run Multics in 2022.
+This wiki helped me emulate UNIXv5.
+And this one helped me emulate UNIXv7.
+These guys host ancient systems accessible via guest accounts over ssh.
+
+"Cool, but useless."
+
+
+I know almost nothing about Multics and I'm not sure if it's even worth learning. This is about UNIX, not Multics. Maybe I'll come back to it.
+Philosophy, implementations, ducks
+When I think of "UNIX", I do not think of the trademark. Instead, I think of the Unix philosophy. and the general design principles, interface, and behavior of a UNIX system.
+A better way of thinking about "UNIX" is as something "POSIX-like" rather than "AT&T's commercial UNIX". Example: although Linux and GNU are overly complicated, they pass the duck test for being a UNIX. Pedigree or not, you know a nix when you see one.
+Also, when I say "UNIX", I mean "Free UNIX". I have no interest in proprietary implementations that only exist for the purpose of restricting users and disempowering/discouraging sysadmins from becoming self-reliant.
+So what is the philosophy?
+
+Do one thing and do it well
+Design programs that work together using text as the common interface
+KISS: Keep it simple, stupid
+Test early, test often
+
+And additionally:
+
+everything is a file or a process
+
+Design
+10,000 Ft View
+UNIX is a multiuser time sharing networked operating system, running as an always online service. A UNIX system is a single mainframe computer running an operating system designed for multiple users to access concurrently over the network, equally (depending on implementation) sharing resources amongst the active users.
+In a traditional network setup, there is one mainframe UNIX machine with multiple dumb terminals connected to it over the network. None of the users touch the mainframe physically. Instead, they interact with it exclusively through their own dumb terms. These dumb terminals have minimal or no computing power of their own because all of the actual computation takes place on the mainframe. Built in networking is a given.
+As for the actual software running on the mainframe, it's quite simple to visualize. A Unix system is a flexible but organized stack of concepts, each depending on the concept below, all working together for the sole purpose of enabling the end user to play video games and watch videos online.
+       / user applications \
+      /       shells        \
+     /        daemons        \
+    /       file systems      \
+   /        kmods/drivers      \
+  /           syscalls          \
+ /             kernel            \
+/             hardware            \
+
+In order to fully explain why UNIX is sublime, I will start from the bottom and work my way upward. Before I discuss the shell, I will explain the multiuser aspects of the system. Then, after a long arduous journey of verbosity, explain how to actually use the thing.
+Kernel
+The kernel is something the user rarely interacts with. It abstracts all the hard parts away from the user. No more poking random memory addresses to load a program from tape.
+Multitasking
+In order to support multiple users, resource sharing was implemented. When a user's process requests CPU time, it's put into a rotational queue along with the other requests for CPU time. Round robin style concurrency is one of the easiest to implement but most modern systems use a weighted model that prioritizes processes owned by specific users. Memory and disk space are typically assigned hard limits to prevent system crashes. "Ask your sysadmin if you need more resources."
+Virtual Memory
+Abstracting memory management from users is almost necessary in a multitasking system. The kernel must be the arbiter of all. The most interesting thing about virtual memory is that it doesn't actually need to be a RAM stick, but can be a swap partition on a disk or even a remote cloud provider if you've actually lost your mind. This type of flexibility improves system stability. Instead of a kernel panic when memory runs out, the kernel can de-prioritize nonessential or idle processes by sending them to swap space.
+Paged Memory (logical memory)
+No more fragmented memories! The kernel maintains a page table that maps logical locations to physical locations. Instead one continuous chunk of memory, the kernel divides memory into small sections called "pages". When allocating memory, the kernel might not give a process continuous pages. The advantage of a paged memory scheme further enables multiuser computing. Example: When you have a large program like a web browser open, the pages that contains the unfocused tabs can be swapped out to disk without stalling the entire browser.
+Programming Interface pt. 0 (syscalls, kmods, drivers)
+When a process requests a resource, it sends a syscall to the kernel. The kernel then responds to the system call. This allows for privilege separation. Does your web browser need direct access to all memory? What about all files? Do we even want to write assembly every time we want to access a file? Syscalls are dual purpose: abstraction and security.
+Kernel modules are dynamic "extensions" that give the kernel new features (typically hardware support). The ability to dynamically load/unload modules as hardware changes increases uptime because it means a new kernel doesn't need to be compiled, installed, and booted into every time we plug in a different peripheral.
+Filesystem
+Hierarchical structure
+A UNIX filesystem is hierarchical. Each directory contains files or other directories, each with a specific purpose. This type of organization makes it very easy to navigate and manage a system. Each child directory inherits ownership and permissions unless otherwise specified (see Access Control).
+In order to visualize this, I imagine a tree-like structure descending from the root directory, /. The tree(1) program shows this type of hierarchy.
+Virtual Filesystems (logical filesystem)
+The idea behind virtual filesystems is, again, abstraction. Using the concept of a virtual file system, multiple disks can be presented to the user and programmer as a single unified filesystem. This means mounted local disks, NFS shares, and even the contents of a CDROM are presented as if the files contained therein are "just on the big hard drive".
+Additionally, using bind mounts, a directory can be mounted onto another directory as if it were just another filesystem.
+The final interesting thing about virtual filesystems is the concept of a ramdisk: mounting a section of memory so that it can be used as if it was an ordinary directory. <--Shoot foot here.
+Everything is a file
+Well, almost everything is presented as if it were a file. This greatly simplifies programming.
+Prime example: /dev/urandom is a random entropy generator presented as a file, making it very simple for a programmer to implement seeded RNG in a program.
+Another example: The kernel translates mouse input into a data stream that can be opened as a file. The programmer only needs to read from /dev/mouse0 instead of writing hundreds of mouse drivers for a clicky GUI.
+Exercise 1: Try running this command then wiggling your mouse:
+# Linux
+$ sudo cat /dev/input/mouse0
+
+# FreeBSD
+$ sudo cat /dev/sysmouse
+
+Yet another example: the TTY is just a file. You can even print it to a text file using setterm(1) on Linux.
+Exercise 2:
+[user@fedora ~]$ sudo setterm --dump 3
+[user@fedora ~]$ cat screen.dump
+
+Fedora Linux 36 (Workstation Edition)
+Kernel 5.18.5-200.fc36.x86_64 on an x86_64 (tty3)
+
+fedora login: root
+Password:
+Last login: Sat Jul 30 14:34:20 on tty3
+[root@fedora ~]# /opt/pfetch/pfetch
+        ,'''''.   root@fedora
+       |   ,.  |  os     Fedora Linux 36 (Workstation Edition)
+       |  |  '_'  host   XXXXXXXXXX ThinkPad T490
+  ,....|  |..     kernel 5.18.5-200.fc36.x86_64
+.'  ,_;|   ..'    uptime 20d 22h 40m
+|  |   |  |       pkgs   3910
+|  ',_,'  |       memory 6522M / 15521M
+ '.     ,'
+   '''''
+
+[root@fedora ~]#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[user@fedora ~]$
+
+Links
+Yet another way of "mounting" a file or directory to another file or directory is linking. There are two types of links: hard links and symbolic links.
+On UNIX, files are indexed by inodes (index nodes). Using links, we can make "shortcuts" to files.
+Hard linking adds a "new index" to a file. They share an inode. If the original file is removed, the file persists in storage because the secondary file created by a hard link still exists. Think "different name, same file"
+Symlinks are like pointers. A symlink points to the original file instead of the inode. If you remove the original file, the symlink breaks because it points to a file that points to an inode rather than simply pointing to an inode.
+Using links, we can make files more convenient to access as if we are "copying" files without actually copying files.
+Filename extensions
+On a UNIX system, file extensions are arbitrary. UNIX determines file type by reading the file headers. The file tells you exactly what type of file it is (just read it). The entire system does not break when a file extension doesn't match the expected contents of the file.
+Extensions only matter when you wilfully associate with the microsoft users leaving issues on your software repos. "Not my OS, not my issue, it's open source so fork it if you don't like it"
+Multiuser (timesharing)
+See also: Multitasking.
+Exercise 3: attempt to use Windows like a multiuser operating system and get back to me when you have realized that any and all claims made by microsoft about how their "multi user enterprise system" is in any way capable of competing with a genuine multi-user UNIX system are false advertising.
+Users, Groups
+A multiuser system needs a way to manage users and categorize them for access control purposes. Every user has a single user account and belongs to 0 or more groups. Sorting users into groups at the time of account creation makes is significantly easier than granting/revoking permissions user-by-user. Additionally, using something like rctl(8) on FreeBSD allows a systems administrator to allocate resources to specific users, groups, or login classes (like groups).
+Daemons (services)
+On a UNIX system, every process is owned by a user. In the case of a service, the process is owned by a daemon account. Daemon accounts have limited permissions and make it possible to run persistent services as a non-root user.
+Access Control
+Since UNIX was designed to be a multiuser system, access control is required. We know about users, we know about groups, but what about permissions?
+There are three types of operations that can be done to a file: read, write, and execute. Who can the admin grant these permissions to? The Owner, the Group, and the Other (all). This type of access control is called discretionary access control because the owner of the file can modify files at their own discretion.
+Actually using the thing
+Programming interface Pt. 1 (data streams)
+All UNIX utilities worth using use 3 data streams:
+
+stdin
+
+read from it the same way you read from a file
+
+stdout
+
+print to it the same way you print to a terminal (file)
+
+stderr
+
+print to it the same way print to a file, read from it the same way you read from a file
+
+env vars if you're a CGI programmer
+
+Shell
+The shell is how a user actually interacts with a UNIX system. It's a familiar interface that allows a human user to interact with a computer using real human language.
+Explicitly telling the computer to do is infinitely less agonizing than dealing with a computer that tries to do what it thinks you want it to do by interpreting input from a poorly designed, overly engineered interface.
+The shell, in addition to being an interactive interface, is also scriptable. Although math is a struggle, shell scripting is a fairly simple way of automating tasks. Taping together interoperable commands you already know makes everything easier. My favorite aspect about writing POSIX shell scripts is knowing that shell is a strongly, statically typed language where the only datatype is string.
+Problem that are difficult or messy to solve in shell usually mean it's time to write another small C program for your specific needs. Adding the new program into the shell pipeline is trivial.
+Pipes
+Pipes, the concept that makes UNIX so scriptable. A shell utility that follows the UNIX philosophy will have a non-captive interface, write uncluttered data to stdout, read from stdin, and error to stderr. The | pipe character instructs programs to send their stdout to the next stdin in the pipeline instead of printing to the terminal.
+All standard command line utilities are interoperable and can be easily attached like building blocks. "Meta programming" has never been easier.
+Pipes make it so that every UNIX program is essentially a filter. Sure, you could just use awk, but I prefer shell.
+Bonus:
+
+plaintext configuration files
+All logs are pretty much just a .csv
+OS vendor doesn't force you to upgrade to a newer version of spyware
+modular design means explorer.exe crashes don't take down your entire IT infrastructure
+Portable design means write once, run everywhere with minimal effort
+
+Summary:
+UNIX is a non-simple modular operating system designed for 1970s big iron mainframes but we love it too much to let it go. Compared to minimal hobbyist operating systems, UNIX is BIG. Compared to commercial operating systems, free UNIX is small. Maybe slightly more than minimum viable but the papercuts are mild enough to forgive.
+See Also:
+The UNIX-HATERS Handbook

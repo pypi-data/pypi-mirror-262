@@ -1,0 +1,37 @@
+## hpr1813 :: Apt Spelunking: surf, lightyears, and fbterm
+
+ 
+"Apt spelunking" is a silly term I made up for the act of searching through the Debian package repositories with vague terms, and trying out random applications therein.
+
+
+Today, we will be covering three packages: surf, lightyears, fbterm
+
+surf
+
+Surf is a lightweight, graphical browser. It uses the webkit rendering engine, and is a GTK-based application (not that you can tell). It is extremely spartan. Part of the suckless project, surf takes the Unix philosophy to it's extreme.
+
+
+Essentially, you only get a single browser window. No tabs, bookmarks, or other interface to speak of. Any navigation is accomplished through links on the page, or some very rudimentary keyboard shortcuts. Ctrl+H goes forward in history, and Ctrl+L goes backwards. If you want to visit a URL, you can either send it as a command-line argument, or use Ctrl+G to bring up a drun-like text input. It is perfect for lightweight system configurations, surf does the bear minimum to qualify as a web browser.
+
+
+If you're looking for zen simplicity, or want an easy way to embed a web app in its own window without a lot of overhead, surf is an excellent option.
+
+lightyears
+
+20,000 light years into space bills itself as a "single player real-time strategy game with steampunk sci-fi". In it, you are given a square of alien landscape, dotted with steam vents, and a small settlement at the center. This settlement runs on the steam so abundant on this alien world, and it's your job to keep the steam flowing.
+
+
+The game consists of building steam nodes, which capture steam from the vents, and connecting them back to your settlement. Of course, you can't simply build a straight pipe back to your settlement; the length of the pipe is taken into account, and the longer the pipe, the harder it is to get steam to travel through it. You can get around this by daisy chaining nodes together in a web, and providing multiple routes back to your settlement. Running a steam-powered base on this alien planet isn't without its share of dangers, however! There are aliens, inclement weather, and seismic instability that can all damage your network of steam pipes and nodes. If your steam pressure falls below a certain threshold, you lose. 
+
+
+This game has an eerie similarity to network engineering, and I've always enjoyed it a lot. It can get very frustrating, though, and the difficulty levels are steep steps. If you're interested in strategy games, I'd highly recommend giving this one a try.
+
+fbterm
+
+Another in the lightweight category, fbterm is a terminal emulator that's designed to be run with a framebuffer. A framebuffer is a low-level method for displaying text and/or graphics on a monitor, and is often used to run GUI applications without the overhead of an X server.
+
+
+You can use fbterm to get an antialiased terminal, with freetype font support. That means you can use bitmap and vector fonts, just like most full-featured terminal emulators, without the extra weight of running an X session and window manager.
+
+
+If you like window managers, you could also use fbterm as a replacement for one of your consoles, using a program called "rungetty". Here's the instructions: https://superuser.com/a/810655/21018 I don't mind having fbterm as a backup terminal, in case I need to debug an X session or my window manager has locked up. Having an option that is more graphically pleasing than a bare getty TTY can be a lifesaver.

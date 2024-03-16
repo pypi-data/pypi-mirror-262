@@ -1,0 +1,8 @@
+## hpr2553 :: Get ahead with git HEAD
+
+ This episode is light on actual commands, and mostly a narrative analysis of what git HEAD is and why it matters to you.
+Some commands you can try:
+$ cat ~/path/to/git/repo/.git/HEAD
+and
+$ ls ~/path/to/git/repo/.git/refs
+$ cat ~/path/to/git/repo/.git/refs/master

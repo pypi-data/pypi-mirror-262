@@ -1,0 +1,152 @@
+## hpr1454 :: HPR Coverage at FOSDEM 2014 Part 5
+
+ HPR Coverage at FOSDEM 2014
+
+The following are a series of interviews recorded at FOSDEM 2014.
+
+
+FOSDEM is a free event that offers open source communities a place to meet, share ideas and collaborate.
+
+
+For more information see the website https://fosdem.org/2014/, where you can watch a recording of the many talks https://video.fosdem.org/2014/
+
+Day 2 Part 3
+Free as in BEER
+00:00:28 Perl Community
+
+I chat with Wendy G.A. van Dijk who, while not selling cute camels, is promoting the Perl Community.
+
+perl nlpw::2014 Dutch Perl Workshop 25 April Utrecht
+
+Powerful, stable, mature, portable. Perl 5 is a highly capable, feature-rich programming language with over 26 years of development. Perl 5 runs on over 100 platforms from portables to mainframes and is suitable for both rapid prototyping and large scale development projects.
+
+A big camel
+Links
+
+https://www.perl.org/
+Perl-conferences YAPC::Europe
+https://act.yapc.eu/ye2014/user/4756
+
+00:07:42 RedHat
+
+Fredric Hornain talks to us about G6 Containers, AS7, Qpid and much more.
+
+Links
+
+https://www.redhat.com/
+
+00:12:19 OpenOffice
+
+Oliver-Rainer Wittmann from IBM takes some time to chat with us about OpenOffice.
+
+Swag at the OpenOffice booth
+
+Apache OpenOffice is the leading open-source office software suite for word processing, spreadsheets, presentations, graphics, databases and more. It is available in many languages and works on all common computers. It stores all your data in an international open standard format and can also read and write files from other common office software packages. It can be downloaded and used completely free of charge for any purpose.
+
+Links
+
+https://www.openoffice.org/
+
+00:24:07 Elasticsearch
+
+Honza Kral takes some time out to chat with us about the Elasticsearch ELK Stack. 
+
+Honza Kral from Elasticsearch
+
+By combining the massively popular Elasticsearch, Logstash and Kibana we have created an end-to-end stack that delivers actionable insights in real-time from almost any type of structured and unstructured data source. Built and supported by the engineers behind each of these open source products, the Elasticsearch ELK stack makes searching and analyzing data easier than ever before.
+
+Links
+
+https://www.elasticsearch.org/
+https://www.elasticsearch.org/overview/logstash
+https://www.elasticsearch.org/overview/kibana
+
+00:33:25 LibreOffice
+
+We have a great conversation with Cor Nouws, who proves that you can earn a living supporting Free Software.
+
+The hard working Libreoffice booth team
+
+LibreOffice is the most widely used free open source office software. It is a community-driven project of The Document Foundation. LibreOffice is developed by professionals and by users, just like you, who believe in the principles of free software and in sharing their work with the world in a non-restrictive way. At the core of these principles is the promise of better-quality, highly-reliable and secure software that gives you greater flexibility at zero cost and no end-user lock-in. LibreOffice works natively with the Open Document Format, but also brings you support for by far the most file types for office-documents. It comes with support for over 80 languages and with a whole amount of other unique features to work with your texts, spreadsheets, presentations, drawings and data.
+
+Links
+
+https://www.libreoffice.org/
+https://www.documentfoundation.org/
+
+00:47:34 guifi.net
+
+Rogier Baig talks to us about the roll out of peer to peer networks.
+
+
+guifi.net is a telecommunications network, is open, free and neutral because is built through a peer to peer agreement where everyone can join the network by providing his connection, and therefore, extending the network and gaining connectivity to all. guifi.net is owned by all who join. Is a collaborative project horizontally managed composed by individuals, organizations, enterprises, education institutions and universities and government offices. Is open so everyone can participate in same terms and conditions within the scope of the Wireless Commons.
+
+Links
+
+https://guifi.net/
+
+00:58:01 Bareos
+
+Jörg Steffens explains that bareos is not "bare os" but rather Bareos - Backup Archiving REcovery Open Sourced. 
+
+
+Bareos is a 100% open source fork of the backup project from bacula.org. The fork is in development since late 2010, it has a lot of new features. The source has been published on github, licensed AGPLv3.
+
+Links
+
+https://www.bareos.org/en/
+
+01:05:30 XMPP realtime lounge
+
+Lights, Sensors, Switches, Dimmers and of course the obligatory RaspberryPi and a bread board. So what is this you ask ? Well Ralph Meijer, Edwin Mons and Joachim Lindborg explain the "Internet of things" and how they want to use the XMPP protocol to "chat" with your devices. The plan is simple: set-up each device so it can talk to XMPP, then you can use Jabber or any other XMPP client to talk to them.
+
+The lads from the XMPP realtime lounge
+
+The Extensible Messaging and Presence Protocol (XMPP) is an open technology for real-time communication, which powers a wide range of applications including instant messaging, presence, multi-party chat, voice and video calls, collaboration, lightweight middleware, content syndication, and generalized routing of XML data. The technology pages provide more information about the various XMPP “building blocks”. Several books about Jabber/XMPP technologies are available, as well.
+
+Links
+
+https://xmpp.org/
+https://iea.sust.se/
+https://fosdem.org/2014/schedule/event/deviot07/
+https://wiki.xmpp.org/web/Tech_pages/IoT_systems
+
+01:24:09 Jitsi
+
+We have a chat with Emil Ivov, the project lead of Jitsi.
+
+
+Jitsi (formerly SIP Communicator) is an audio/video and chat communicator that supports protocols such as SIP, XMPP/Jabber, AIM/ICQ, Windows Live, Yahoo! and many other useful features. Jitsi is Open Source / Free Software, and is available under the terms of the LGPL.
+
+Links
+
+https://jitsi.org/
+https://video.fosdem.org/2014/H2215_Ferrer/Saturday/Jitsi_Videobridge_and_WebRTC.webm
+
+01:31:09 FOSDEM
+
+To wrap up the show I managed to track down Jan-Frederik Martens from the FOSDEM team.
+
+
+
+Links
+
+https://fosdem.org
+
+01:36:36 Music - Entire Song
+
+Track name                               : Free Software Song
+Performer                                : Fenster
+Recorded date                            : 2002
+Copyright                                : Copyright (C) 2002, 
+Fenster LLC. Verbatim copying of this entire recording is permitted in any medium, 
+provided this notice is preserved. 
+Performers: 
+Paul Robinson (vocals), 
+Roman Kravec (guitar), 
+Ed D'Angelo (bass), 
+Dave Newman (drums), 
+Brian Yarbrough (trumpet), 
+Tony Moore (trumpet). 
+Free software info at www.gnu.org speeches at audio-video.gnu.org/audio
+

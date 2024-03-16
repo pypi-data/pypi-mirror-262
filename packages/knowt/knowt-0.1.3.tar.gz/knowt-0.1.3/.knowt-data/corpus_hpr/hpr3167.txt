@@ -1,0 +1,60 @@
+## hpr3167 :: A ramble with the Pentland Squires (part 1)
+
+ Introduction
+Once again the two HPR hosts based in Edinburgh got together over Mumble to have a chat during the COVID-19 pandemic.
+
+MrX
+Dave Morriss
+
+We recorded this conversation in the evening of Sunday 23rd August 2020.
+The audio was quite long when we’d finished, so we decided to cut it into two similar-length pieces and the remainder is released as a second episode.
+Show title
+Although a explaining a joke can often destroy it, it’s probably worth saying that the title of this show was derived from the name of a variety of potato, Pentland Squire, and the fact that the two participants were separated by the Pentland Hills in Edinburgh! "Where was the joke?" you ask…
+Notes
+Some of the topics we discussed:
+
+Our positions relative to the Pentland Hills: MrX is to the East and Dave is to the West of the area, which is to the south of Edinburgh, about 6 or 7 miles out.
+
+Pentland Hills Regional Park
+
+
+
+The state of COVID-19 and the lockdown in Scotland
+
+Scotland Coronavirus Tracker
+Coronavirus (COVID-19) in the UK - no longer offering a simple CSV download as it originally did, but now has a detailed API.
+
+
+
+Processing HPR shownotes:
+
+Experiences:
+
+HTML, preferred but needs to be high quality
+Markdown, if well formatted this is the easiest to deal with
+Plain text, gets converted to Markdown by volunteers
+
+ReText, an editor for Markdown and reStructuredText markup languages
+
+
+
+Glasgow Podcrawl
+
+A virtual meeting this year over Jitsi
+Some people joined from very far away such as Klaatu in New Zealand
+
+
+
+Scripts written in recent times:
+
+MrX: finding the duration of a video with ffprobe.
+Dave: choosing a meal from a list in a database to cook for the family
+
+
+
+Vegetarianism
+
+MrX’s experiences
+Dave often makes a Nut Roast for Christmas dinner
+
+

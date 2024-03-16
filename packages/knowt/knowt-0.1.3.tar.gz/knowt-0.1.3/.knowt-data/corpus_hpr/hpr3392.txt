@@ -1,0 +1,161 @@
+## hpr3392 :: Structured error reporting
+
+ Initial state
+When I originally wanted a unified error reporting on the server-side, I made one huge type that enumerated all the possible error cases that could be reported:
+-- | Error codes for all errors returned by API
+data ErrorCode
+    -- common error codes
+    = ResourceNotFound
+    | InsufficientRights
+    | FailedToParseDataInDatabase
+    -- errors specific to news
+    | SpecialEventHasAlreadyBeenResolved
+    | UnsupportedArticleType
+    | SpecialNewsExtractionFailed
+    | TriedToMakeChoiceForRegularArticle
+    -- errors specific to simulation state
+    | SimulationStatusNotFound
+    | DeltaTIsTooBig
+    | TurnProcessingAndStateChangeDisallowed
+    | SimulationNotOpenForCommands
+    | SimulationNotOpenForBrowsing
+    -- errors specific to people
+    | StatIsTooLow Text
+    | CouldNotConfirmDateOfBirth
+    | DateOfBirthIsInFuture
+    | FirstNameIsEmpty
+    | FamilyNameIsEmpty
+    | CognomenIsEmpty
+    | RegnalNumberIsLessThanZero
+    -- errors specific to new person creation
+    | AgeBracketStartIsGreaterThanEnd
+    | PersonCreationFailed
+    deriving (Show, Read, Eq)
+
+Then I had some helper functions to turn any value of that type into a nice error message:
+errorCodeToStatusCode :: ErrorCode -> Int
+statusCodeToText :: Int -> ByteString
+errorCodeToText :: ErrorCode -> Text
+raiseIfErrors :: [ErrorCode] -> HandlerFor App ()
+
+errorCodeToStatusCode was responsible for turning ErrorCode into http status code. For example StatIsTooLow "intrigue" would be 400. statusCodeToText would take this code and turn it into short error message given in http response. 400 would be Bad Request. errorCodeToText would give a bit more verbose explanation of what happened, StatIsTooLow "intrigue" would be mapped to "Stat intrigue is too low". Finally raiseIfErrors would take a list of ErrorCode and use these helper functions to turn them into a http response with correct status code, error message and json body detailing all errors that had happened:
+[
+    { code:
+        { tag: "StatIsTooLow"
+        , contents: "intrique"
+        }
+    , error: "Stat intrigue is too low"
+    }
+]
+
+There’s two tags: code, which contains machine readable details about the error and error, which contains error message that can be shown to user.
+While this worked fine, there was some problems with it. ErrorCode type was growing larger and larger and the module it was defined in was referred all over the codebase. Every time I added a new error message, all the modules that used error reporting had to be compiled and it was getting slow.
+Solution
+Breaking up the ErrorCode to smaller types and moving them to different modules would means less modules were going to built when I added a new error code. The problem was that raiseIfErrors :: [ErrorCode] -> HandlerFor App () wanted a list of ErrorCode and elements in a list have to be of same type.
+I started by splitting ErrorCode to smaller types. Each of the smaller error types have automatically derived toJSON and fromJSON functions for serializing them to and from JSON:
+data PersonCreationError =
+    StatIsTooLow Text
+    | CouldNotConfirmDateOfBirth
+    | DateOfBirthIsInFuture
+    | FirstNameIsEmpty
+    | FamilyNameIsEmpty
+    | CognomenIsEmpty
+    | RegnalNumberIsLessThanZero
+    deriving (Show, Read, Eq)
+
+$(deriveJSON defaultOptions ''PersonCreationError)
+
+That $(deriveJSON defaultOptions ''PersonCreationError) is template haskell call. Basically it invokes a deriveJSON function with PersonCreationError as parameter and compiles and splices the resulting code here. This is fast and easy way of generating ToJSON and FromJSON instances and avoiding having to write them by hand. It is very similar to how Lisp macros work.
+Then I defined a type class, that has functions for getting a http status code and a error message that can be shown to user. statusCodeToText I could use as is, without any modifications:
+class ErrorCodeClass a where
+    httpStatusCode :: a -> Int
+    description :: a -> Text
+
+I have to have instance of ErrorCodeClass defined for each and every smaller error type. Here’s an excerpt of PersonCreationError showing how it would look like:
+instance ErrorCodeClass PersonCreationError where
+    httpStatusCode = \case
+        StatIsTooLow _ -> 400
+        CouldNotConfirmDateOfBirth -> 500
+...
+
+    description = \case
+        StatIsTooLow s ->
+            "Stat " ++ s ++ " is too low"
+...
+
+A little note: description = \case relies on lambda case extension. It is just a slightly different way of writing:
+    description d =
+        case d of
+
+This allows me to turn values of these smaller error types into error messages that could be sent to the user.
+The second part of the solution is to figure out a way to put values of these smaller error types into same list. If a list is of type [PersonCreationError], it can’t contain values of CommonError and vice versa. Creating a wrapper like:
+data ECode a = ECode a
+
+doesn’t work, because then I would have elements of type ECode PersonCreationError and ECode CommonError, which are of different type. What I need, is a way to wrap all these different types into a wrapper that loses the type of wrapped value. Another problem is that I need to place constraints on what kind of values can be wrapped. I need them to have instances for ErrorCodeClass (for getting error information) and ToJSON (for serializing them into JSON). There’s several ways of doing this, but I chose to use generalized algebraic data types (GADTs for short):
+{-# LANGUAGE GADTs #-}
+
+data ECode where
+    ECode :: (ErrorCodeClass a, ToJSON a) => a -> ECode
+
+Now type ECode has one value constructor, also named to ECode, which takes one parameter a. a can be anything, as long as there’s ErrorCodeClass and ToJSON instances defined for it. Calling this constructor will return ECode. If you compare this with the previous definition of ECode, you’ll notice two major differences:
+
+a is constrained to have specific type class instances
+resulting type is ECode, not ECode a
+
+The second part means that I can wrap different types into ECode and place them into a same list without problems. Type of that list is simply [ECode].
+But having a list of error codes wrapped in ECode isn’t going to do much to us. We need to be able to turn them into http status code, text and list of error messages. Luckily we have a type class just for that:
+instance ErrorCodeClass ECode where
+    httpStatusCode (ECode a) =
+        httpStatusCode a
+
+    description (ECode a) =
+        description a
+
+httpStatusCode of ECode is httpStatusCode of the value ECode wraps. Similarly description of ECode is description of the wrapped value.
+For turning ECode into JSON, I opted for hand written instance:
+instance ToJSON ECode where
+    toJSON (ECode a) =
+        object [ "HttpCode" .= httpStatusCode a
+               , "FaultCode" .= toJSON a
+               , "ErrorDescription" .= description a
+               ]
+
+This gives me complete control over how I want to report errors to the client.
+Final piece of the puzzle is raiseIfErrors function:
+raiseIfErrors :: [ECode] -> HandlerFor App ()
+raiseIfErrors errors = do
+    when (not $ null errors) $ do
+        let code = fromMaybe 500 $ errors ^? ix 0 . to httpStatusCode
+        let msg = statusCodeToText code
+        sendStatusJSON (Status code msg) $ toJSON errors
+
+If there are any elements in the passed in list, grab the http status code and text from the first element of the list. I was considering writing some sort of logic to deduce which error code to return in case there are more than one type in the list, but decided against it. There doesn’t seem to be any easy way to decide between HTTP 400 Bad Request and HTTP 500 Internal Server Error. So I just return the first one. Body of the response contains list of errors codes:
+[
+    { HttpCode: 400
+    , FaultCode: {
+        Tag: "StatIsTooLow"
+        , Contents: "intrique"
+        }
+    , ErrorDescription: "Stat intrigue is too low"
+    }
+]
+
+Since manually wrapping things in ECode gets tedious after a while, I defined function for each type of error that does that for me:
+statIsTooLow :: Text -> ECode
+statIsTooLow s = ECode $ StatIsTooLow s
+
+Now, instead of writing ECode $ StatIsTooLow "intrigue", I can write statIsTooLow "intrigue". And if I ever decide to change internals of errors again, I can change how these functions are defined and hopefully don’t have to change each and every place where they’re being used.
+Different solution
+Another way to tackle this problem is to use records instead of algebraic data types:
+data ECode = ECode
+    { httpCode :: Int
+    , description :: Text
+    }
+
+statIsTooLow :: Text -> ECode
+statIsTooLow s =
+    ECode
+    { httpCode = 400
+    , description = "Stat " ++ s ++ " is too low"
+    }
+

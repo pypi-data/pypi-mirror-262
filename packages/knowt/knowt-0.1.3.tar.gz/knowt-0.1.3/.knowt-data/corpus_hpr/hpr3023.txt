@@ -1,0 +1,46 @@
+## hpr3023 :: Critique My Script, Episode 1 - Qots-Crew-Gen
+
+ This is my second HPR episode and the first in what could be a series about shell scripts I have written. This episode goes through a short script which randomly generates first and last names for a ten man aircrew to use with the Avalon Hill game B-17 Queen of the Skies.
+You can see the basic script in action here:
+https://www.sodface.com/misc/qots-crew-gen
+and a more complicated version here, though based on the same underlying methodolgy:
+https://www.sodface.com/misc/qots-crew-gen2
+Here’s the script:
+#!/bin/sh
+
+first_names='./firstnames.txt'
+last_names='./surnames.txt'
+crew_positions='./positions.txt'
+crew_ranks='./ranks.txt'
+
+len_first_names=$(wc -l < ${first_names})
+len_last_names=$(wc -l < ${last_names})
+
+num_pairs=$(printf "10 ${len_first_names} ${len_last_names}" | \
+    awk 'BEGIN { srand() }
+    { for (i=1; i<=$1; i++) {
+        for(f = 2; f <= NF; f++) {
+        num=int(rand() * $f + 1); printf num"," } printf "\n"
+    }
+    }')
+
+i=1
+
+for crew_member in ${num_pairs}
+do
+  line_num=$(printf "${crew_member}" | cut -d',' -f1)
+  first_name=$(sed -n ${line_num}p ${first_names})
+
+  line_num=$(printf "${crew_member}" | cut -d',' -f2)
+  last_name=$(sed -n ${line_num}p ${last_names})
+
+  crew_position=$(sed -n ${i}p ${crew_positions})
+  crew_rank=$(sed -n ${i}p ${crew_ranks})
+
+  #
+  # Use the variables above to generate HTML.
+  # Omitted here to simplify this example.
+  #
+
+  i=$((( ${i} +1 )))
+done

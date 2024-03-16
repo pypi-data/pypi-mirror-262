@@ -1,0 +1,3 @@
+## hpr0856 :: GNU Emacs 2
+
+ Second episode of three in Klaatu's GNU Emacs mini series.  This time, you and Klaatu will tackle the .emacs file and learn how to bring text highlighting, modern-style copy/paste keybindings, and even a little taste of buffers and frame-type things.

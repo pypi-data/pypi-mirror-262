@@ -1,0 +1,34 @@
+## hpr1571 :: Yahoo Mail Forwarder
+
+ 
+Build, configure and deploy a self maintaining Yahoo mail forwarding virtual client.
+
+Needed
+
+
+VirtualBox
+Fedora 20 LXDE/32Bit iso file.
+Virtual Hosting Server (currently using VirtualBox, phpVirtualBox with a Centos6 host).
+Yahoo Account
+IMAP capable email account for delivery.
+
+
+Since it will be virtual, isolated, single purpose machine,  Security is minimal.
+
+
+Step by step instuctions at https://james.toebesacademy.com/YahooMailForwarder.html
+
+Build VM
+Configure Applications and AutoStart
+Configure Mail Forwarding
+Configure Automatic Maintenance
+Test
+Deploy to Virtual Server.
+
+Known Issues:
+
+Occasionally bulk forwards spam folder....
+
+
+Let me know your thoughts and if you want to hear more about my home server configuration.
+

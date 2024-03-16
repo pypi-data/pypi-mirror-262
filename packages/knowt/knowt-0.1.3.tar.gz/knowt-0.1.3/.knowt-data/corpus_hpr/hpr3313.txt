@@ -1,0 +1,18 @@
+## hpr3313 :: Zoom Update
+
+ 
+Script and instruction at https://james.toebesacademy.com/ZoomUpdate.html
+GitHub Repo: https://github.com/ToeJet/Scripts/tree/main/ZOOMUPDATE
+
+Zoom does not provide a standard Fedora repo for updating. To get around that, this script will check the zoom fedora download link. If an update is found, it will download the new version, stop the current version from running, then install the updated package. All versions are downloaded to the same folder as the script. Filename is changed to match datestamp.
+I leave my linux machine always running. I schedule this to run just after midnight. If no update, nothing happens. If zoom is not running when I unlock, I launch zoom as normal.
+
+Bash Script.
+Uses wget
+Cron for scheduling
+Download, cron, forget...
+Periodically review log to see update history
+
+james@toebesacademy.com
+https://james.toebesacademy.com
+Let me know what you think.

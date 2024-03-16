@@ -1,0 +1,18 @@
+## hpr2386 :: The Decline and Fall of Tcl
+
+  Tcl is an interesting language that does many things "wrong", especially if you're coming from a LISP perspective, and especially-especially if you're coming from a Scheme perspective. Examples are all over the C2 wiki, but probably DynamicStringsVsFunctional is the epicenter.
+It also forms an important part of modern Scheme history, as the Tcl War led to the creation of Guile.
+What happened after that? Where Tcl and Tk went wrong, by David N Welton
+TL;DL: Tcl was successful because it found its niche as a lightweight yet capable language able to both integrate and be integrated with C code, but it fell behind on Tk look-and-feel compared to GNOME and KDE and also on other mainstream development phenomena, it ossified because it was afraid to upset its installed base, it got stuck between not-slim-enough and not-featureful-enough, the syntax is too weird, and it spiraled into losing touch with the rest of the free software world, which ultimately also affected business use.
+Further notes
+
+Guile (again) faces several of these same challenges.
+Haskell tries to avoid success at all costs, in order to not lose the freedom to improve the language.
+Python and Perl both have Tk integrations and Python's IDLE is even implemented in it. Lua had ltk, but it's no longer maintained. There is even a Tcl/Tk package for R.
+Ousterhout pronounces it OH-stir-howt, which may or may not be how I pronounced it. I think the guttural sound may be reserved for the Dutch "G" and have nothing to do with "H".
+
+Potential episodes
+
+Fossil
+Tcl
+

@@ -1,0 +1,3 @@
+## hpr0441 :: Migrating Your GPG Key and Starting GPG-Agent
+
+ Klaatu continues his discussion of GnuPG related matters (see episode 0222 for Alpine+GPG and some random Bad Apple Linux OggCast ep 2x04 on GPG in general).  In this exciting episode, he talks about the proper way to migrate your GnuPG keys, how to manage gpg-agent in your Slackware+KDE desktop, and advises everyone who will be attending Ohio Linux Fest this year to attend the GnuPG Key Signing Party.

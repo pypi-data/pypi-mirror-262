@@ -1,0 +1,53 @@
+## hpr0931 :: The ratpoison window manager
+
+ Links
+The tutorial talked about in the episode
+
+    Dion Moult
+    Ratpoison: an efficient and minimalist WM.
+ https://thinkmoult.com/2009/05/13/ratpoison-an-efficient-and-minimalist-wm/
+
+My ratpoisonrc file
+
+escape F13 
+
+exec ./.fehbg &
+exec /usr/bin/conky &
+
+bind Next exec amixer -q set Master 10- unmute
+bind Prior exec amixer -q set Master 10+ unmute
+unbind k
+unbind c 
+bind j focusdown
+bind h focusleft
+bind k focusup
+bind l focusright
+bind J exchangedown
+bind H exchangeleft
+bind K exchangeup
+bind L exchangeright
+bind C-k delete
+exec /usr/bin/rpws init 4 -k
+set winname class
+set border 0
+set padding 0 15 0 0 
+set barpadding 0 0 
+
+warp on
+startup_message off 
+
+bind space exec aterm
+
+bind a exec aterm -e alsamixer
+bind f exec firefox
+bind o exec libreoffice
+bind t exec import MyScreenshot.png
+bind c exec codeblocks
+bind v exec aterm -pixmap false -e vim 
+bind g exec ~/.my-scripts/scripts/gimp.sh
+
+#Displays a calender
+
+# make sure to have ccal installed on your box so you can use this calender
+bind d exec ratpoison -d :0.0 -c "echo `date +'%r - %A %n  %D - %B'`  `cal | tail +2 | sed -e 's/^Su/\n\n Su/' -e 's/.*/ & /' -e \"s/\ $(date +%e)\ /\<$(date +%e)\>/\"`"
+

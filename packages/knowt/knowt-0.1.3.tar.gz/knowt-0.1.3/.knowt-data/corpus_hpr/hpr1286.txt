@@ -1,0 +1,20 @@
+## hpr1286 :: iCalendar Hacking
+
+ Editor’s Note 2020-01-02
+The notes for this episode have been reformatted, particularly the long-form notes. This was done to make them more readable. Also, the original Git repository has been changed from Gitorious to GitLab.
+In 2019 an iCalendar file was placed on the HPR server at https://hackerpublicradio.org/HPR_Community_News_schedule.ics which you can use in your own calendar application. The file contains the recording times of 12 months of Community News shows and is updated monthly.
+The Problem
+Back in 2012 Ken Fallon tried to use Google Calendar to set up an event for the recording of the monthly Community News shows on HPR. He wanted to set these on the Saturday before the first Monday of the month. Surprisingly he didn’t find a way to do this and ended up deleting the attempt.
+I looked at the calendaring application I use: Thunderbird with the Lightning calendar plugin, to see if I could manage it. I also couldn’t find a way.
+This episode documents my journey to find a way to make the calendar entries we need.
+Long notes
+Detailed notes are available for this episode, and these can be viewed here.
+Links
+
+Detailed show notes: https://hackerpublicradio.org/eps/hpr1286/full_shownotes.html
+My make_meeting script for download - https://gitlab.com/davmo/hprmisc/blob/master/make_meeting
+Wikipedia iCalendar entry - https://en.wikipedia.org/wiki/ICalendar
+iCalendar RFC - https://www.ietf.org/rfc/rfc5545.txt
+pcal PostScript calendar generator - https://pcal.sourceforge.net/
+Remind - https://www.roaringpenguin.com/products/remind, https://www.linuxjournal.com/article/3529
+

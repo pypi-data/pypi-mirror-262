@@ -1,0 +1,7 @@
+## hpr1485 :: 26 - LibreOffice Calc Cells
+
+ LibreOffice Calc: Cells
+All spreadsheets have the same basic structure, a table of rows and columns. Columns are headed up A, B, C, and so on. After Z, the next column is AA, then AB, AC, AD, and so on. The maximum number of columns is 1024. Rows are numbered 1,2,3 and so on, and the maximum number of rows is 1024*1024, or 1,048,576. At this time I am not aware of any plans to increase these numbers, though that could change if competitive pressures make it necessary.
+Where a row and column intersect, there is a cell, which is given the address of the column followed by the row, e.g. A1, but never 1A. This is very useful since you can use the contents of a cell in a calculation by simply using the cell address. For example, to add the value of cell B4 to the value in cell C3 and store it, you would write “=B4+C3″ in the cell where you want to store the sum. Learning to use cell addresses is extremely important, so get in the habit of doing this at every opportunity.
+
+For the rest of this article see https://www.ahuka.com/?page_id=706

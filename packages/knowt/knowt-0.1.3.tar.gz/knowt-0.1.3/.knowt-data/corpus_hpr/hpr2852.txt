@@ -1,0 +1,98 @@
+## hpr2852 :: Gnu Awk - Part 16
+
+ Introduction
+This is the sixteenth and final episode of the 'Learning Awk' series which is being produced by b-yeezi (BY) and Dave Morriss (DM).
+We are using this as an opportunity to have a round-table discussion about the series, about Awk, and where we recommend the listeners should go from here. Including this one we have produced 16 episodes covering the features most likely to be used in pipelines on the command line or in simple shell and awk scripts.
+ Note that although the HPR site will list this episode as having a single host, in fact it has two! Plans are afoot to enhance the HPR database so we can eventually indicate this properly. 
+Topics Discussed
+
+The series
+
+Started in 2016 (first show released 2016-07-13)
+Finishing in 2019
+16 episodes in total
+
+
+
+Why are we finishing the series?
+
+We have probably reached the limit of what is useful on the command line or in shell scripts or even in manageable-sized Awk scripts
+Awk shows its limitations as we go on and doesn’t compare well with more modern text processing languages
+
+
+
+Our personal experiences with Awk
+
+BY:
+
+Started with sed and awk when first moving to Linux in 2011
+(ongoing) Exploring and cleaning client data
+(ongoing) Personal scripts when adding python or other tool would be overkill
+
+DM:
+
+Working with VAX/VMS in the 1980’s. No very good text processing features built-in, so Gnu Awk (and sed) was a great way to handle the data we were using to generate accounts for new students each year. Could easily spot bad records, do some data validation (for example impossible dates of birth).
+Later in the late 1980’s and early 1990’s more Unix systems came on the scene running HP-UX, Ultrix, SunOS, Solaris, OSF/1, True64 Unix, and awk was very much used there.
+Later still we moved to Linux; initially Fedora but later RHEL, and of course awk figured in the list of tools there as well.
+
+
+
+
+What have we left out? Why?
+
+User-defined functions are pretty clunky and hard to use
+Multi-dimensional arrays: other languages do this better
+Internationalization: assumes you’re writing big awk programs
+The gawk debugger: quite clever but probably overkill for this series
+Extensions written in C and C++: some come with gawk and look quite good, but this subject is out of scope
+
+
+
+What to use as an alternative to Awk?
+
+DM moved from gawk to Perl (version 4) in the 1980’s and later to Perl version 5. This might have engendered an awky, Bashy mindset that’s hard to shake off. Not the recommended place to start these days.
+BY moved from gawk to Python and R for large projects. For interactive Bashy exploration, moved to XSV, q, and csv-kit for most use cases.
+These tools have built-in convenience features, like accounting for headers, data types, and file encodings
+
+
+
+What’s next?
+
+It is planned to turn the notes for this series into a combined document which will be available on the HPR site and on archive.org. There is no timescale for this at the moment
+
+
+Links
+
+GNU Awk User’s Guide
+
+Internationalization with gawk
+
+
+
+A proof that Unix utility sed is Turing complete
+Mutagen - discussed as an alternative way to access audio metadata (tags) from Python
+XSV
+csvkit
+Run SQL on CSV files with q
+
+
+Links to all of the shows in this series on HPR:
+
+Gnu Awk - Part 1 - episode 2114
+Gnu Awk - Part 2 - episode 2129
+Gnu Awk - Part 3 - episode 2143
+Gnu Awk - Part 4 - episode 2163
+Gnu Awk - Part 5 - episode 2184
+Gnu Awk - Part 6 - episode 2238
+Gnu Awk - Part 7 - episode 2330
+Gnu Awk - Part 8 - episode 2438
+Gnu Awk - Part 9 - episode 2476
+Gnu Awk - Part 10 - episode 2526
+Gnu Awk - Part 11 - episode 2554
+Gnu Awk - Part 12 - episode 2610
+Gnu Awk - Part 13 - episode 2804
+Gnu Awk - Part 14 - episode 2816
+Gnu Awk - Part 15 - episode 2824
+Gnu Awk - Part 16 - episode 2852
+
+

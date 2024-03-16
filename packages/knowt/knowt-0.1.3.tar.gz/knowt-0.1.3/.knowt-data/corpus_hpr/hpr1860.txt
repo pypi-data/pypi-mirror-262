@@ -1,0 +1,21 @@
+## hpr1860 :: FiftyOneFifty interviews Chris Waid of Save WiFi
+
+ 
+The Save WiFi program has been instituted to combat the greatest threat the open source movement has faced from government over regulation.  If you have listened to LinuxLUGCast.com, The Linux Link Tech Show, Linux for the Rest od US,or HPR recently, you may already be aware that recent decisions by the FCC have already forced router manufactures to lock down their equipment against the installation of non factory firmware.  My guest, Chris Waid, CEO of Think Penguin and a leader in the Save WiFi project, joins me to explain how Linux on the desktop may also become subject to FCC regulation.  As manufacturers incorporate more Software Defined Radio into PC's, the FCC may feel it has no choice but to lock down (or lock out), not only open source software, but any software that is not pre vetted and pre certified, even on proprietery OS's.
+
+
+Right now, there is a narrow window where the FCC has invited comment from the public, and Hacker Public Radio invites all our listeners to add their voices against this ill advised course of action.
+
+
+The Save WiFi program: https://libreplanet.org/wiki/Save_WiFi/Individual_Comments
+
+FCC comentary link: https://www.federalregister.gov/articles/2015/09/01/2015-21634/extension-of-time-for-comments-on-equipment-authorization
+
+
+
+There is one small saving grace.  Kevin Wisher found an Ars Technica article where an unnamed FFC spokesman seems to be saying locking open source firmware out of routers was not the intended consequence (even though Open-WRT was mentioned by name in the updated rules).  I think the FCC might prefer manuafacturers avoid incorporating radio hardware that is so easily manipulated:
+https://arstechnica.com/information-technology/2015/09/fcc-accused-of-locking-down-wi-fi-routers-but-the-truth-is-a-bit-murkier/
+
+
+I want to give special thanks to Chris Waid for going above and beyond for recording our conversation because I was having ISP problems.  I want to appologize in advance for any audio problems, I was way low and had to fix it in post.
+

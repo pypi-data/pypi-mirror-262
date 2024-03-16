@@ -1,0 +1,13 @@
+## hpr2313 :: NilFS2
+
+ 
+Klaatu talks about NilFS2, including how to monitor checkpoints, create snapshots, and browse snapshots.
+
+
+NILFS or NILFS2 (New Implementation of a Log-structured File System) is a log-structured file system implementation for the Linux kernel. It is being developed by Nippon Telegraph and Telephone Corporation (NTT) CyberSpace Laboratories and a community from all over the world. NILFS was released under the terms of the GNU General Public License (GPL).
+
+https://en.wikipedia.org/wiki/NILFS
+
+
+https://nilfs.sourceforge.net/en/
+

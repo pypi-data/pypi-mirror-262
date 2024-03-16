@@ -1,0 +1,15 @@
+## hpr1840 :: Running external commands in Kate
+
+ 
+Kate is an excellent text editor. The "Text Filter"  - enables easy text filtering, which by pressing Alt + Backslash pops up a screen that allows you to enter commands.
+
+
+
+Settings > Configure Kate > Plugins > Text Filter
+
+
+Kate (short for KDE Advanced Text Editor) is a text editor developed by KDE. It has been a part of KDE Software Compilation since version 2.2, which was first released in 2001. Geared towards software developers, it features syntax highlighting, code folding, customizable layouts, regular expression support, and extensibility.
+
+
+Source: https://en.wikipedia.org/wiki/Kate_(text_editor)
+

@@ -1,0 +1,18 @@
+## hpr2105 :: 24 - SSL Certificates - Problems
+
+ 
+I had the opportunity to present a talk on SSL Certificates at our local LUG, the Washtenaw Linux Users Group, which uses some material from a previous HPR episode, but may be of interest to our listeners nonetheless. Because this was a lengthy presentation I have divided it into sections. This is the second section which will explore some of the problems that we have with SSL Certificates, and how we might address those problems. The first section contains our description of how SSL Certificates work.
+For more go to https://www.zwilnik.com/?page_id=686
+Links:
+
+https://www.washlug.org/
+https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/included/
+https://en.wikipedia.org/wiki/DigiNotar
+https://www.zdnet.com/article/microsoft-warns-of-fake-google-and-yahoo-domains/
+https://nakedsecurity.sophos.com/2013/12/09/serious-security-google-finds-fake-but-trusted-ssl-certificates-for-its-domains-made-in-france/
+https://www.eff.org/deeplinks/2011/09/post-mortem-iranian-diginotar-attack
+https://addons.mozilla.org/en-US/firefox/addon/certificate-patrol/
+https://www.eff.org/deeplinks/2011/09/post-mortem-iranian-diginotar-attack
+https://en.wikipedia.org/wiki/Transport_Layer_Security
+https://www.zwilnik.com/?page_id=686
+

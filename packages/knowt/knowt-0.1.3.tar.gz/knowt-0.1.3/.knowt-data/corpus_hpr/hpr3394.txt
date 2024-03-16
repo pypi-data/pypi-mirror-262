@@ -1,0 +1,60 @@
+## hpr3394 :: Be an XML star with xmlstarlet
+
+ See the layout of an XML document
+
+$ xmlstarlet elements planets.xml
+xml
+xml/sol
+xml/sol/planet
+xml/sol/planet/name
+xml/sol/planet/albedo
+xml/sol/planet
+xml/sol/planet/name
+xml/sol/planet/albedo
+xml/sol/planet
+xml/sol/planet/name
+xml/sol/planet/albedo
+
+
+See content of the planet node
+
+$ xmlstarlet select -t --value-of '/xml/sol/planet' planets.xml
+
+        Mercury
+        0.11
+
+        Venus
+        0.7
+
+        Terra
+        0.39
+
+Get the third instance of the planet node
+
+$ xmlstarlet select -t --value-of '/xml/sol/planet[3]' planets.xml
+Terra
+0.39
+
+Get only the planets with an albedo greater than 0.25
+
+$ xmlstarlet select -t --value-of '/xml/sol/planet[albedo > 0.25]' planets.xml
+
+Venus
+0.7
+
+Terra
+0.39
+
+Get only the planets closer to Sol than the third planet
+
+$ xmlstarlet select -t --value-of '/xml/sol/planet[position() < 3]' planets.xml
+
+Mercury
+0.11
+
+Venus
+0.7
+
+Learn more XPath functions at Mozilla Developer Network.
+Download xmlstarlet from xmlstar.sourceforge.net (https://sourceforge.net/projects/xmlstar/).
+

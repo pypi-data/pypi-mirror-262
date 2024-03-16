@@ -1,0 +1,22 @@
+## hpr1807 :: Arch Linux Development Environment: Ep1
+
+ 
+Checking the network
+
+Partitioning
+
+Making the filesystems
+
+Mounting the filesystems
+
+Installing the base packages
+
+Generate the fstab
+
+Chroot and Configuration
+
+Boot Loading
+
+
+
+Complete show notes: https://hackerpublicradio.org/eps/hpr1807.html

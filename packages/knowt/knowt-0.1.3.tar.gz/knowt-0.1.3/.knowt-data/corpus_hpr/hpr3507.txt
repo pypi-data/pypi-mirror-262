@@ -1,0 +1,92 @@
+## hpr3507 :: USB Turntable fix and sound journey
+
+ Partial list of albums
+
+Journey - Frontiers
+Journey - Evolution
+Journey - Greatest Hits
+Journey - Departure
+Chicago - 2 albums - unknown titles
+John Denver - Rocky Mountain Christmas
+Inside Star Trek (1976)
+
+SIDE I Inside Star Trek Star Trek Theme William Shatner Meets Captain Kirk The Origin of Spock Sarek's Son Spock The Questor Affair
+SIDE II The Enterprise Runs Aground McCoy's Rx for Life The Star Trek Philosophy Asimov's World of Science Fiction A Letter From a Network Censor The Star Trek Dream Ballad I/Ballad II)*
+
+
+Inside Star Trek album: Cover
+ Click the
+thumbnail to see the full-sized image -  -  
+Inside Star Trek album: Contents
+ Click the thumbnail to see the full-sized image -  - 
+I found a turntable at the thrift store, and the spindle ran, but the platter did not. The belt had slipped off, and here is the fix.
+
+https://www.youtube.com/watch?app=desktop&v=rXkOoaIVsvE
+
+How to remove platter
+ Click the thumbnail to see the full-sized image -  - 
+Belt placement
+ Click the thumbnail to see the full-sized image -  - 
+Routing Audio from a USB Turntable to HDMI using a Raspberry Pi
+
+https://www.rickmakes.com/routing-audVmmsio-from-a-usb-turntable-to-hdmi-using-a-raspberry-pi
+
+Send input to output
+alsaloop -t 500000 -C hw:CARD=CODEC,DEV=0 -P default:CARD=b1
+alsaloop man page
+
+https://linux.die.net/man/1/alsaloop
+-t  | --tlatency= Requested latency in usec (1/1000000sec).
+
+Parameter b1 is found by
+pi@retropie:~ $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: b1 [bcm2835 HDMI 1], device 0: bcm2835 HDMI 1 [bcm2835 HDMI 1]
+Raspberry Pi as a USB audio capture device
+
+https://scruss.com/blog/2012/11/20/raspberry-pi-as-a-usb-audio-capture-device
+arecord -D 'pulse' -V stereo -c 2 -f dat -d 900 out.wav
+arecord -D 'hw:CARD=CODEC,DEV=0' -V stereo -c 2 -f dat -d 900 out.wav
+
+Used hw:CARD=CODEC,DEV=0 derived from 'arecord -L'
+hw:CARD=CODEC,DEV=0
+USB Audio CODEC, USB Audio
+Direct hardware device without any conversions
+arecord man page
+
+https://linux.die.net/man/1/arecord
+
+   -D, --device=NAME
+    Select PCM by name
+    -V, --vumeter=TYPE
+    Specifies the VU-meter type, either stereo or mono. The stereo VU-meter is available only for 2-channel stereo samples with interleaved format.
+    -c, --channels=#
+    The number of channels. The default is one channel. Valid values are 1 through 32.
+    -f --format=FORMAT
+    Sample format
+    Recognized sample formats are: S8 U8 S16_LE S16_BE U16_LE U16_BE S24_LE S24_BE U24_LE U24_BE S32_LE S32_BE U32_LE U32_BE FLOAT_LE FLOAT_BE FLOAT64_LE FLOAT64_BE IEC958_SUBFRAME_LE IEC958_SUBFRAME_BE MU_LAW A_LAW IMA_ADPCM MPEG GSM SPECIAL S24_3LE S24_3BE U24_3LE U24_3BE S20_3LE S20_3BE U20_3LE U20_3BE S18_3LE S18_3BE U18_3LE
+    Some of these may not be available on selected hardware
+    The available format shortcuts are:
+
+    -f cd (16 bit little endian, 44100, stereo) [-f S16_LE -c2 -r44100]
+    -f cdr (16 bit big endian, 44100, stereo) [-f S16_BE -c2 -f44100]
+    -f dat (16 bit little endian, 48000, stereo) [-f S16_LE -c2 -r48000]
+Recording to FLAC
+
+https://unix.stackexchange.com/questions/583892/how-can-one-record-mic-audio-straight-to-a-flac-file
+
+How can one record mic audio straight to a FLAC file?
+ffmpeg -f alsa -ar 48000 -ac 1 -i hw:0 testfile.flac
+Took out the "-ac 1", which downmixed the input to mono
+Change hw:0 to hw:2 based on
+pi@retropie:~/vinyl $ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 2: USB20 [AV TO USB2.0], device 0: USB Audio [USB Audio]
+Subdevices: 1/1
+Subdevice #0: subdevice #0
+
+ffmpeg -f alsa -ar 48000 -i hw:2 testfile_stereo.flac
+FFmpeg Audio Channel Manipulation
+
+https://trac.ffmpeg.org/wiki/AudioChannelManipulation
+

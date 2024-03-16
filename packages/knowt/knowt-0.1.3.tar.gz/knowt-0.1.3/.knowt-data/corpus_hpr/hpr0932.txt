@@ -1,0 +1,32 @@
+## hpr0932 :: Programming languages 1 - Introduction
+
+ 
+This is the first episode on a series about computer programming languages. In this episode, I will start by discussing why you may want to learn a programming language, then I will give an introduction about what programming languages are, which are the different types of programming languages, their history, and I will also give some pointers to resources which can be useful to get you started with programming.
+
+
+Eric Raymond's "How to become a hacker" essay, available at https://catb.org/~esr/faqs/hacker-howto.html
+
+1 Wikipedia sources: 
+
+https://secure.wikimedia.org/wikipedia/en/wiki/Categorical_list_of_programming_languages
+https://secure.wikimedia.org/wikipedia/en/wiki/History_of_programming_languages
+
+2 Resources for learning to program 
+2.1 Easy 
+2.1.1 List of resources on Wikipedia 
+
+https://secure.wikimedia.org/wikipedia/en/wiki/List_of_educational_programming_languages
+
+2.1.2 The Python tutorial 
+
+https://docs.python.org/tutorial/
+
+2.2 Intermediate 
+2.2.1 Structure and interpretation of computer programs 
+
+https://mitpress.mit.edu/sicp/
+
+
+Book free online
+Videos of the lectures: https://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/
+

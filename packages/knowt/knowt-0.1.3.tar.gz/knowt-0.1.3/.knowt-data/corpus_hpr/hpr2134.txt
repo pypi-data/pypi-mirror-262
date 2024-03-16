@@ -1,0 +1,66 @@
+## hpr2134 :: Shutdown Sequence Systemd
+
+ Set up a service to trigger FIRST (this would be the shutdown service):
+
+
+# cat /lib/systemd/system/fakehalt.service
+
+[Unit]
+Description=Fake-Halt Service
+After=fakevm.service
+Requires=fakevm.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/fakehalt.sh #this will fail until fakevm succeeds
+ExecReload=/usr/local/bin/fakehalt.sh
+
+
+And then set up the one that you want to run and complete BEFORE shutdown is permitted:
+
+
+# cat /lib/systemd/system/fakevm.service
+[Unit]
+Description=Fake Service
+Before=fakehalt.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/fake.sh
+
+
+Create a script to represent the VM shutdown (or any process that you cannot anticipate the duration of)
+
+# cat /usr/local/bin/fake.sh
+#!/bin/sh
+
+test="1"
+sleep 21
+if [ X"$test" = "X1" ]; then
+    echo "vm has shut down" > /tmp/fake.test
+    exit 0
+else 
+    exit 1
+fi
+
+
+And a script to pass for a shutdown signal:
+
+
+# cat /usr/local/bin/fakehalt.sh
+#!/bin/sh
+
+sleep 3
+cat /tmp/vmfake.test > /tmp/haltfake.test
+
+
+Start the service you want to happen AFTER the first one:
+
+
+# systemctl start fakehalt
+
+
+What "should" happen is that fakehalt will fail to find a file called /tmp/fake.test to cat from, and so everything should go horribly wrong.
+
+What actually happens is that systemd places fakehalt service on hold until it gets an exit 0 signal from the fake service. So if you wait 21 seconds and cat /tmp/fakehalt.test, you see that the cat from a file that did not exist when fakehalt was started - actually succeeded.
+

@@ -1,0 +1,88 @@
+## hpr1372 :: Rootstrikers.org and federal election commission data processing
+
+ 
+In the show I introduce rootstrikers and describe my current project to process the FEC data.
+
+
+Different Rootstriker Projects that I worked on :
+
+
+The Anti Corruption Pledge : https://bitbucket.org/h4ck3rm1k3/the-anti-corruption-pledge
+
+
+Congress Legislators
+https://github.com/unitedstates/congress-legislators
+
+
+Rootstrikers Wikipedia Interface
+
+
+https://github.com/h4ck3rm1k3/rootstrikers-wikipedia
+
+Example Wiki Here : https://rootstrikers.wikia.com/wiki/Rootstrikers_Wiki
+
+Converter to Wiki format from maplight data: https://github.com/h4ck3rm1k3/rootstriker-fec-maplight-wiki
+
+Bot to upload to example wiki: https://github.com/h4ck3rm1k3/rootstriker-fec-bot
+
+
+
+Federal Election Commission aggregation
+
+
+Fech, the ruby interface :
+https://github.com/NYTimes/Fech
+
+
+The documentation of the fields, with a generated python class interface
+    https://github.com/h4ck3rm1k3/FEC-Field-Documentation
+
+
+Starting point of the data repository in yaml format (v1)
+    https://github.com/h4ck3rm1k3/federal-election-commission-aggregation
+
+
+The years are split into git submodules
+
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2000
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2001
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2002
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2003
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2004
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2005
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2006
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2007
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2008
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2009
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2010
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2011
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2012
+
+https://github.com/h4ck3rm1k3/federal-election-commission-aggregation-2013
+
+
+
+Experimental C++ Reader(not finished)
+
+
+https://bitbucket.org/h4ck3rm1k3/yaml-cpp
+
+
+
+twitter : https://twitter.com/h4ck3rm1k3
+
+
+G+ : https://plus.google.com/u/0/106785192512941136314/posts

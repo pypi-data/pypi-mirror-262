@@ -1,0 +1,51 @@
+## hpr0894 :: 2011-2012 Hacker Public Radio New Year's Eve Part 4/8 (Mrs Corenominal brings the naughty)
+
+ 
+May not be safe for work
+This is episode four of a eight part Hacker Public Radio New Year's Eve event and you can expect more of them all week long.
+
+Thanks to:
+
+PipeManMusic of the Open Source Musician's Podcast for the Murmur server, and audio streaming
+Tracy Holtz for stream mirror
+Dann Washko of The Linux Link Tech Show for stream mirror
+cobra2 for stream mirror
+John Neusteter for stream mirror
+KevinW for creating the Mumble How-To, and for manning the testing room during most of the show.
+Ken Fallon for being Ken Fallon
+The Hacker Public Radio Community for coming together and pulling this off, and for making it so much fun for everone. 
+
+
+I was so wrapped up in the actual show, that it didn't occur to me to take notes and write down the names of all the people who helped us out. The few I listed above are all that I can remember 24 hours later. If you helped out in any way, and would like to be mentioned in the show notes of the remaining parts of this show (there will be a few of them) please email hpr (at) hackerpublicradio (dot) org with your name and I'll be glad to thank you publicly and properly.
+-pokey
+
+
+This segment started with a discussion on accessibility. We are looking for a way to convert the audio to text so that deaf/hard of hearing people can enjoy our content. That lead to a discussion on Text to speech and that if you are uncomfortable or unable to record a show for HPR, then there are loads of people who will narrate a scrip for you.
+
+
+The discussion turned to the question of how to pick topics for HPR and while the advice is to pick a topic that you're excited about you can always look at the Requested topics section of HPR at https://hackerpublicradio.org/contribute.php#requested_topics. If there is something that you would like to hear then mail the mailing list at hpr@hackerpublicradio.org (which you can join at https://hackerpublicradio.org/maillist ) or just email admin@hackerpublicradio.org and we'll add it to the Requested topic page.
+
+
+For the record when we say topic we are not talking about the topic choclate bar.
+https://en.wikipedia.org/wiki/Topic_(chocolate_bar)
+
+
+
+
+
+After discovering that HPR has a explicit tag in iTunes (https://www.apple.com/itunes/podcasts/specs.html#explicit) the conversation took a turn to how the topic of Adult content and that there are two sides to the story.
+https://hackerpublicradio.org/eps.php?id=0069 There's Pr0n on them there internets!
+https://hackerpublicradio.org/eps.php?id=0586 Miscellaneous Radio Theater 4096- The Internet is For Porn
+
+
+This lead to the question of whither government censorship will force developments in how the Internet is used. This brought up mesh networks (we had a discussion in https://hackerpublicradio.org/eps.php?id=0069 with Juergen Schinker open wireless network) and how the Chaos Computer Club had a presentation on the Hackerspace Global Grid. From their FAQ "We want to build a distributed network of ground stations to receive satellite communications. The first step is establishing a means of accurate synchronization for the distributed network. Next up are building various receiver modules (ADS-B, amateur satellites, etc) and data processing of received signals. A communication/control channel (read: sending data) is a future possibility but there are no fixed plans on how this could be implemented yet."
+https://shackspace.de/wiki/doku.php?id=project:hgg Hackerspace Global Grid. Sounds a bit like an open version of the Iridium satellite constellation
+https://en.wikipedia.org/wiki/Iridium_satellite_constellation Iridium satellite constellation
+
+
+After a discussion on Google+, the topic came on whither you needed to encode all 3 audio formats for HPR. The answer is no, not if you don't want to. If you do then you can download the script that Code Cruncher made from https://hackerpublicradio.org/incoming/processing/prep_audio.sh. That said it's enough to upload the show in almost any format and we'll convert it.
+
+
+To round off the segment was a discussion of the https://theflatearthsociety.org/ who argue that "The Flat Earth model is a belief that the Earth's shape is a plane or disk." (source wikipedia https://en.wikipedia.org/wiki/Flat_Earth_Theory. 
+.... Which inevitably lead to the https://en.wikipedia.org/wiki/Turtles_all_the_way_down and of course that had to lead to https://www.terrypratchett.co.uk/ Terry Pratchett. At that point the Mumble server gave up and decided to go cry in a corner.
+

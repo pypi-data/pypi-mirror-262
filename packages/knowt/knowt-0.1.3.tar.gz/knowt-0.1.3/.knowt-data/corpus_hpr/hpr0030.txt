@@ -1,0 +1,9 @@
+## hpr0030 :: Network Backups
+
+ Network Backups – how hard can it be? Dosman, gives an overview of some free software, backup solutions. He, then describes his home network, backup project. There's an autochanger involved, so he's got some hackin' to do. 
+ SCSI Generic Driver (SG)  
+ MTX tape library tools  
+ Amanda  
+ Bacula  
+
+Shownotes by: diggsit

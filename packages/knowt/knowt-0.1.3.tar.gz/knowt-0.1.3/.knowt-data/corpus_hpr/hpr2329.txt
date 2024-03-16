@@ -1,0 +1,15 @@
+## hpr2329 :: Building a Digital Clock Kit
+
+ Building a Digital Clock Kit
+Introduction
+In April 2017 my son and I decided to each build a digital clock. I had been interested in the idea since seeing Big Clive build one on YouTube, and I think my son had been similarly motivated.
+He found one, which I have linked to below. It's smaller than the one shown by Big Clive, comes from ShenZhen China, and costs $5.35 (about £4.18) postage free. It takes a long time to arrive, so patience is needed!
+There are many digital clock kits on eBay, and lots of YouTube videos showing how to build them. I think it's a great project for someone wanting some soldering practice which is a little more demanding than a beginner project.
+One type to avoid, I think, is the surface mount type. The one I have uses a through-hole PCB, but I have seen some that provide SMD (surface-mounted device) components. That type of soldering is beyond me at the moment (though my son has been teaching himself to do it).
+Long notes
+I have provided detailed notes detailing the unpacking and building of this device, with photographs. These are available here.
+Links
+
+Youtube bigclivedotcom: eBay clock kit. Full build and setting guide.
+eBay item: 4-Digit LED DIY Digital Electronic Micro Controller Kit Clock Time Thermometer
+Full details of the build with photographs

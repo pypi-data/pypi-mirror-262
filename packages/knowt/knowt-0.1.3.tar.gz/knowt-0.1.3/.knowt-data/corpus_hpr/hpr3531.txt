@@ -1,0 +1,3 @@
+## hpr3531 :: Barrier: Software KVM
+
+ This episode is a quick software recommendation/introduction to Barrier. Barrier is a software KVM, forked from Synergy. It sends your keystrokes and mouse input over the network, so that you can share your input devices between computers.

@@ -1,0 +1,40 @@
+## hpr2102 :: AngularJS's ng-repeat, and the browser that shall not be named
+
+ Introduction
+At my work, we are in the process of revamping our internal call logging system. Moving from .NET and Microsoft’s ASPX pages for both the client side and back end processing, to an HTML5 based Single Page Application (SPA) using AngularJS for the client side interface with a .NET WebAPI service for the back end processing. The main page for both versions contains a list of the current days calls laid out in a table with 9 columns. Users are able to switch to a specific day’s calls by selecting a date via a calendar widget, or by moving one day at a time via previous and next day buttons. By the end of a typical day, the page will contain between 40 and 50 calls.
+During recent testing of the SPA client on the proprietary browser we all love to hate, or at least have a love/hate relationship with if you have to support it, I noticed that rendering of a whole days worth of calls would take seconds, freezing the UI completely. This made changing dates painful. As we reload the data any time you re-enter that page (a manual way to poll for new data until we implement either timer based polling or a push service through websockets), the page was almost unusable. The page rendered fine in both Mozilla and webkit based javascript JIT engines, but Microsoft’s engine would choke on it.
+After a bit of searching on “AngularJS slow rendering” and “AngularJS optimize”, I found many references about using Angular’s ng-repeat directive when rendering long lists of data (see references below for the main pages I read). I tried a couple of the methods mentioned to optimize the ng-repeat directive. I used the “track by” feature of ng-repeat to use the call’s id as the internal id of the row, so ng-repeat didn’t have to generate a hashed id for each row. I implemented Angular’s one-time binding feature to reduce the number of watches being created (reducing the test day’s number of watches from 1120 to 596), but even these two combined optimizations didn’t have enough effect to render the page in an acceptable amount of time. The next optimization I played with was using ng-repeat with the limitTo filter. This limits the number of items rendered in the list that ng-repeat is looping through. This is particularly useful combined with paging of the data. I set the limitTo option to different values to see how it affected the rendering time. I found that rendering 5 rows was fast and consistent for every day’s worth of data I viewed. From my reading, I knew if I updated the limitTo amount while keeping the array of items the same, ng-repeat would only render any un-rendered items, and not redo the whole limited list.
+The Code
+<tr ng-repeat="c in results | limitTo:displayRenderSize">
+Inside your directive, set an angular.$watch on the list of items to be rendered by ng-repeat. In this example the list is stored in the variable results.
+return {
+        scope: {
+            results: "=",
+    },
+        link: function (scope, element, attrs) {
+            scope.renderSizeIncrement = 5;
+            scope.displayRenderSize = scope.renderSizeIncrement;
+
+            scope.$watch('results', function () {
+                if (scope.results) {
+                    scope.displayRenderSize = scope.renderSizeIncrement;
+                    scope.updateDisplayRenderSize();
+                }
+            });
+            scope.updateDisplayRenderSize = function () {
+                if (scope.displayRenderSize < scope.results.length) {
+                    scope.displayRenderSize += scope.renderSizeIncrement;
+                    $timeout(scope.updateDisplayRenderSize, 0);
+                }
+            }
+        }
+    }
+}
+Any time the results are updated. The displayRenderSize variable is reset to render the default number of items, and the updateDisplayRenderSize function is called. This function calls itself repeatedly via angular’s $timeout service ($timeout is a wrapper for javascript’s setTimeout function). It increments the displayRenderSize variable which is being watched by the limitTo filter of the main ng-repeat. Each time the displayRenderSize variable is incremented, the ng-repeat renders the next set of items. This is repeated until all the items in the list are rendered.
+The magic happens because ng-repeat blocks any other javascript, which does not effect angular’s digest path, until it is finished rendering. By calling the updateDisplayRenderSize with a timeout, the function doesn’t get called again until after the next set of items is rendered. Making the $timeout delay 0, sets the function to be called as soon as possible after the ng-repeat digest cycle stops blocking. In this instance, the sum of the rendering time for parts of the list is shorter than the sum of the rendering time for all of the list at one time.
+Conclusion
+There are a couple small glitches with this solution. Scrolling can be a bit jerky as the chunk sized renders cause a series of micro UI freezes, instead of one big long one. Also, if you don’t have a fixed or 100% percent wide table layout, and you don’t have fixed column sizes, the table layout will dance a little on the screen until the columns have been filled with their largest amounts of data. This is the result of the table layout being re-calculated as more data fills it. That being said, overall, this solution works great. It moved the pause from seconds to under half a second or less—making the page go from unbearable to usable on Microsoft’s latest browser offerings.
+References
+[1] AngularJS Performance Tuning for Long Lists; Small Improvements; Tech blog; blog; viewed: 2016-08-09
+[2] Optimizing ng-repeat in AngularJS; Fundoo Solutions; blog; viewed: 2016-08-09
+[3] AngularJS: My solution to the ng-repeat performance problem; thierry nicola; blog; published: July 24, 2013; viewed: 2016-0809

@@ -1,0 +1,302 @@
+## hpr2826 :: HPR Community News for May 2019
+
+ 
+New hosts
+
+Welcome to our new hosts: 
+Joel D, 
+    Zen_Floater2.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+2803
+Wed
+2019-05-01
+Update on my Raspi 3 B OpenMedia Vault and Next Cloud instances
+JWP
+
+
+2804
+Thu
+2019-05-02
+Awk Part 13: Fix-Width Field Processing
+b-yeezi
+
+
+2805
+Fri
+2019-05-03
+My 50th Show
+Tony Hughes AKA TonyH1212
+
+
+2806
+Mon
+2019-05-06
+HPR Community News for April 2019
+HPR Volunteers
+
+
+2807
+Tue
+2019-05-07
+Are bash local variables local?
+clacke
+
+
+2808
+Wed
+2019-05-08
+Haskell function types
+Tuula
+
+
+2809
+Thu
+2019-05-09
+The Blue Oak Model License and Its One Big Gotcha
+Joel D
+
+
+2810
+Fri
+2019-05-10
+Wi-Fi on Android
+Ken Fallon
+
+
+2811
+Mon
+2019-05-13
+Interview with Alan Pope
+Yannick
+
+
+2812
+Tue
+2019-05-14
+Is 5G mobile data a danger to your health?
+clacke
+
+
+2813
+Wed
+2019-05-15
+Should we dump the linux Desktop.
+knightwise
+
+
+2814
+Thu
+2019-05-16
+Spectre and Meltdown and OpenBSD and our future
+Zen_Floater2
+
+
+2815
+Fri
+2019-05-17
+Copy pasta
+klaatu
+
+
+2816
+Mon
+2019-05-20
+Gnu Awk - Part 14
+Dave Morriss
+
+
+2817
+Tue
+2019-05-21
+Are you successful? Click to find out more!
+clacke
+
+
+2818
+Wed
+2019-05-22
+Writing Web Game in Haskell - Science, part 1
+Tuula
+
+
+2819
+Thu
+2019-05-23
+Reply to Knightwise - podcasts
+Ahuka
+
+
+2820
+Fri
+2019-05-24
+29 - CERT Home Security Tips
+Ahuka
+
+
+2821
+Mon
+2019-05-27
+Interviewing some exhibitors at the 2019 vcfe.org event
+Jeroen Baten
+
+
+2822
+Tue
+2019-05-28
+What's in the Box! Part 1
+NYbill
+
+
+2823
+Wed
+2019-05-29
+Gentoo and why I use it
+aldenp
+
+
+2824
+Thu
+2019-05-30
+Gnu Awk - Part 15
+Dave Morriss
+
+
+2825
+Fri
+2019-05-31
+More text to speech trials
+Ken Fallon
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 16 comments in total.
+Past shows
+There are 6 comments on
+4 previous shows:
+
+hpr2504
+(2018-03-08) "Intro to Git with pen and paper"
+by klaatu.
+
+
+
+Comment 1:
+Ken Fallon on 2019-05-23:
+"This needs to be a video"
+hpr2793
+(2019-04-17) "bash coproc: the future (2009) is here"
+by clacke.
+
+
+
+Comment 2:
+clacke on 2019-05-04:
+"Re: backquotes vs dollar-paren"
+
+Comment 3:
+clacke on 2019-05-09:
+"Re: awk coprocesses"
+
+Comment 4:
+Dave Morriss on 2019-05-09:
+"Regarding awk coprocesses"
+hpr2794
+(2019-04-18) "Interview with Martin Wimpress"
+by Yannick.
+
+
+
+Comment 1:
+Klaatu on 2019-05-26:
+"Great interview"
+hpr2798
+(2019-04-24) "Should Podcasters be Pirates ?"
+by knightwise.
+
+
+
+Comment 4:
+Klaatu on 2019-05-07:
+"This is one of those episodes..."
+
+This month's shows
+There are 10 comments on 4 of this month's shows:
+hpr2806
+(2019-05-06) "HPR Community News for April 2019"
+by HPR Volunteers.
+
+Comment 1:
+clacke on 2019-05-09:
+"Yggdrasil and Hollywood"Comment 2:
+clacke on 2019-05-09:
+"HKOSCON2019"
+hpr2809
+(2019-05-09) "The Blue Oak Model License and Its One Big Gotcha"
+by Joel D.
+
+Comment 1:
+norrist on 2019-05-09:
+"The show _was_ fun"Comment 2:
+Joel D on 2019-05-16:
+"re: norrist"
+hpr2813
+(2019-05-15) "Should we dump the linux Desktop."
+by knightwise.
+
+Comment 1:
+Yannick on 2019-05-15:
+"Should we dump Windows?
+"Comment 2:
+Hipstre on 2019-05-15:
+"Do We Need Linux?"Comment 3:
+DV on 2019-05-16:
+"Response to knightwise"Comment 4:
+DeepGeek on 2019-05-17:
+"Desktop is Dead"Comment 5:
+Snapdeus on 2019-05-17:
+"Linux desktop"
+hpr2814
+(2019-05-16) "Spectre and Meltdown and OpenBSD and our future"
+by Zen_Floater2.
+
+Comment 1:
+ClaudioM on 2019-05-17:
+"Hello, Fellow Puffy Disciple!"
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2019-May/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+Links
+
+https://ohshitgit.com/
+https://www.nporadio1.nl/podcasts/hallo-hier-hilversum
+
+Tags and Summaries
+Over the period tags and/or summaries have been added to 10 shows which were without them.
+If you would like to contribute to the tag/summary project visit the summary page at https://hackerpublicradio.org/report_missing_tags.php and follow the instructions there.

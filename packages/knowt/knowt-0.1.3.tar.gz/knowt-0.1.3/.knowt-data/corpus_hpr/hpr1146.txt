@@ -1,0 +1,25 @@
+## hpr1146 :: Wireshark-1
+
+ Wireshark Tutorials
+The introduction to wireshark is to introduce protocols, and lead people to the existing material and ask for more detailed desires.
+
+Protocols 101  Wikipedia thinks it is long but not as
+long as college courses but it covers the basic level stuff
+but the article should open the rabbit hole a bit.
+https://en.wikipedia.org/wiki/Communications_protocol
+
+A great Compendium of Protocols is here and very
+useful in under standing what wireshark shows you
+https://www.protocols.com/
+
+To download for Windows or MAC use
+https://www.wireshark.org/download.html
+For Linux use a trusted Repository
+
+Documents and training videos
+https://www.wireshark.org/docs/
+
+The Wireshark Users Guide
+https://www.wireshark.org/docs/wsug_html_chunked/
+
+Contact NewAgeTechnoHippie at gmail for question or comments

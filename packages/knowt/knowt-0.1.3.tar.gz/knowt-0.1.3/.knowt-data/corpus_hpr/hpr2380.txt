@@ -1,0 +1,13 @@
+## hpr2380 :: Raspbian X86 on P4 Tower
+
+ Raspbian x86 on an old P4 tower
+Well I’m back again, as I said in the show I did about Raspbian x86 on the Lenovo x61s, I was interested to see how the OS would perform on what I now class as very old hardware in the form of a Pentium 4 tower.
+We have a spare tower at the Makerspace which gets used to test low resource operating systems to see if they live up to their name, so on Saturday (yesterday as I write this, but a few weeks ago by the time this show goes out) I put the x86 Raspbian image on to this tower to see how it would perform.
+Tower specifications are: Pentium 4 2.8Gig CPU, 2Gig DDR Ram and a 40Gig HDD, which in its day was a very useful bit of kit, but technology has moved on and most people wouldn’t consider it any use as a working PC today.
+First problem I encountered was the DVD drive was duff and I didn’t have the image on a flash drive. Luckily I did have my trusty USB DVD in the bag, so I hooked that up, booted into the boot menu and set the disc off loading the OS. I won't go into this again as I ran through the install process last time, HPR 2362, but the install went well and I was left with a new install of Pixel on the tower.
+I went through the new install process and was left with an up to date and password secure PC, I then rebooted to check what the resource use was at first boot, which I was amazed was a consistent 66mb of RAM, and about 1% CPU use.
+
+Using the Chromium web browser pushes up RAM usage over a 100 but it was smooth and easily coped with navigating to resource hungry sites such as YouTube and the BBC. So first test passed.
+I next opened a Word document in LibreOffice, this took about 10seconds to load but once open was perfectly usable with no lag, so should provide a good office capable PC.
+So you can use the Web, Write documents, it has an email client or you can use web mail. And it’s not painfully slow, this PC would now make a very usable homework/first computer for any child, or a computer for an older member of the family that just needs to keep in touch with family and friends without breaking the bank. In fact you could probably pick up a working tower off the likes of Freecycle/Freegle for £0 and you may even get a small 17”/19” TFT monitor from the same place.
+Yes it’s not as energy efficient as the latest kit but as I said last time the cost of a new PC/laptop can buy a lot of additional electricity in the time you may run it before it finally expires.

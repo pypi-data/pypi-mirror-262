@@ -1,0 +1,9 @@
+## hpr1880 :: Arduino Bluetooth HOWTO
+
+ 
+Klaatu talks about the HC-05 and -06 series of bluetooth modules and how to use them with an Arduino, including some basic code on the Arduino to get it to respond to signals over bluetooth, and some basic PyQt code on how to send signals to the bluetooth device. PLUS, he talks about configuring the bluetooth so that it is connected to the serial port of your system (so that Python can use it).
+
+
+A super basic bluetooth controller app can be found here:
+https://gitlab.com/makerbox/rovcon 
+(it's Klaatu's code, and it's not quite finished, so if you have improvements or questions, feel free to comment or merge or email)

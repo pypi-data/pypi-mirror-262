@@ -1,0 +1,39 @@
+## hpr3254 :: The Markdown editor Retext
+
+ What is ReText?
+The ReText website on GitHub says that ReText is a simple but powerful editor for Markdown and reStructuredText markup languages.
+Doing a search on the HPR site returned the following two references to ReText.
+The excellent Markdown and Pandoc HPR 1832 episode by b-yeezi makes reference to ReText
+Dave Morriss mentioned using ReText as a possible tool when sending in shownotes as markdown is preferable to plain text. Refer to HPR 3167
+Retext Version Info
+As of the 1st of January 2021 I am running ReText version 7.0.1 the latest version was 7.1.0 this was last updated on the 4th of April 2020.
+Why I am covering this
+I’m covering this because in HPR show 3167 Dave Morriss said that Markdown was a preferred way to submit shownotes. Prior to this I had supplied my shownotes in plain text.
+What is Markdown?
+I guess I first must cover what markdown is I found the following definitions:-
+Description of Markdown from Wikipedia
+Markdown is a lightweight markup language for creating formatted text using a plain-text editor. John Gruber and Aaron Swartz created Markdown in 2004 as a markup language that is appealing to the human users in its source form.[9] Markdown is widely used in blogging, instant messaging, online forums, collaboration software, documentation pages, and even readme files Link https://en.wikipedia.org/wiki/Markdown
+Description of Markdown from John Gruber's website, one of the co founders of Markdown.
+Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
+Example text used in the show and how it looks
+# This is a level 1 heading
+
+## This is a level 2 heading
+
+### This is a level 3 heading
+
+This is a level 1 heading
+This is a level 2 heading
+This is a level 3 heading
+List of useful links
+Finally here are useful links that are available from within the ReText program. They can be found within the Help / About ReText menu:-
+Link to ReText website
+Link to Markdown syntax
+Link to reStructuredText syntax
+Final thoughts
+
+Using ReText to pull these shownotes together disciplined me to hopefully put more meaningful titles within my shownotes.
+It helped my to create meaningful descriptive links which will hopefully help accessibility for the visually impaired.
+I edited the text on this occasion in live preview mode I found this made it very easy to see how the final version would look.
+I think I ended up with more polished shownotes that hopefully needs fewer and hopefully no input from our band of HPR volunteers working behind the scenes.
+

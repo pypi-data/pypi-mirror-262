@@ -1,0 +1,48 @@
+## hpr2771 :: Embedding hidden text in Djvu files
+
+ 
+To embed text into a Djvu file, you must create a djvused script detailing the page and bitmap location of one of: character, word, line, paragraph, or region.
+
+
+For good measure, you should first list the contents of your Djvu bundle:
+
+$ djvused -e 'select; ls' test.djvu
+   1 P   177062  p0001.djvu
+   2 P   199144  p0002.djvu
+   3 P    12323  p0003.djvu
+   4 P    57059  p0004.djvu
+   5 P    96725  p0005.djvu
+   6 P    53868  p0006.djvu
+
+
+Then define the location of text in a file called, for instance, content.dsed. Assume that my page is 1000 px by 1000 px:
+
+select; remove-ant; remove-txt
+
+select "p0004.djvu" # page 4
+set-txt
+(page 0 0 1000 1000
+ (word 100 600 450 800 "Hello" )
+ (word 100 600 450 800 "world" ))
+
+.
+
+select "p0005.djvu"
+set-txt
+(page 0 0 1000 1000
+ (line 100 400 900 600 "Hacker Puppy Radio"))
+
+
+Apply this script to your Djvu file with dvjused:
+
+djvused -f ./content.dsed -s test.djvu
+
+Converting from PDF to Djvu
+
+You can convert PDF files to Djvu with the djvudigital command. Due to license incompatibility, it does require you to compile a Ghostscript plugin, but it's an easy build. Get the gsdjvu code, and then follow its README instructions.
+
+
+Once you've built the Ghostscript driver, you can convert PDF to Djvu:
+
+djvudigital --words foo.pdf foo.djvu
+

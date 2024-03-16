@@ -1,0 +1,109 @@
+## hpr2322 :: A bit of background on virtualenvwrapper
+
+ A bit of background on virtualenvwrapper
+Or, Linux processes, the process environment and the shell.
+speaker intro
+Hi, I'm bjb. I've been using Linux for wow, 20 years now.
+motivation
+knox gave a nice podcast on virtualenvwrapper - it was timely for me, I was just trying to use it the other day and not finding all the bits and pieces. So thank you for collecting that info in one place.
+knox asked why virtualenvwrapper behaves as it does ...
+introduction
+virtualenvwrapper is a combination of bash functions and programs.
+To understand how it works you need to know a little bit about bash and Linux.
+I know there have been some very good earlier and current! HPR shows on bash. But bash is a huge topic. The man page for it was 3500 lines about 10 years ago ...now it is 4300 plus lines. It has a LOT of functionality, and when you're just trying to get something done, it's overwhelming to look at. So in this HPR episode, I will just answer one or two of knox's questions. It gives me an excuse to make an episode.
+Also I'm not going to go too deep into the description. In order to keep the podcast short and to-the-point, I'm just going to cover what is needed. There is lots more depth - there are several shells you could use and I'm only going to talk about bash; at startup bash can read more than just the files I mention in this podcast ... I'm just not going to cover all the possibilities. That's what the over 4300 line man page is for : -). If you have questions, ask them in the comments, or make your own podcast and ask them! Maybe you'll get some answers - either from me or from another HPR community member.
+environment for processes
+A program that has no inputs is not flexible or powerful. As a simple example, a program that displays the results of a hard-coded search is certainly useful if you want to know about that hard-coded search term. But a program that can search for a term that you specify at run time is so much more useful. You do not have to recompile the program to change the search term.
+Programs can receive inputs in several ways.
+On Linux and other unix-like OSs, a program can be run with arguments, read and write to file descriptors (and that includes standard in, standard out and standard error), they can receive signals - and they have another input: the "environment". That is a bunch of key-value pairs that are made available to the program when it starts. Some examples of environment variables are PATH, HOME, EDITOR and PAGER. The name of the environment variable, 'PAGER', is the key, and the thing on the other side of the equals sign, like 'less', is the value - the pair make up a key-value entry in the environment.
+People who program in C or C++ and maybe other languages know that the program starts with a main function, and that function has some parameters. The first one is a count of arguments and the second one is an array of strings, each string being one of the arguments passed to the program when it is launched. There is a little-known optional third parameter: an array of strings that represents the "environment".
+The way the program gets these strings is that it inherits them from its parent process. The parent process of programs that are run from the command line is ... the command line itself, bash. Or csh, or whatever your shell is. When the program starts, it gets a copy of the exported parts of the environment of its parent.
+environment in bash
+Bash gives you the ability to set these environment variables and mark them as "available for handing to subprocesses", and that is what is happening when you give that "export" command.
+You can view all the currently defined variables that have been marked for export by using the "env" command with no arguments. E N V - echo november victor. Or, env, short for environment.
+Since these variables are passed down the generations from parent to child, it is usually sufficient to define it once at the top level.
+The command line itself is a program called bash. It reads some files at startup.
+As an example of the "generations", you can call bash from within bash. And you can call bash again from within that bash. Then the first bash is the parent of the second one, and the second one is the parent of the third. The third bash is the child of the second.
+You can see the environment changing: Set a variable fred=one in the first shell and export it:
+export fred=one
+then run bash. In that bash you can echo $fred, and see that fred is one. Now you can change fred to two:
+export fred=two
+and run the third bash. In the third bash, you can see that fred is two:
+echo $fred
+now exit bash with the exit command.
+If you echo $fred, you will see fred is still two, since we set it to two just before we ran the third bash. But if you exit again, you will be back to the first bash, and you will see that fred is now one. This is the environment that bash had, just before you launched the second bash. The second and third environments are gone - those processes terminated when the exit command was given on their prompts; and when they did, their environments were cleaned up and removed.
+In the show notes, I have another exercise to help with understanding this environment thing.
+Here's another exercise to illustrate this principle. Type bash and
+enter, and you will be in a subshell. If you show a process listing
+in a hierarchical format, with children indented from their parents,
+you will see that the bash you are currently in is a child of
+another bash. The command to see the list of running processes in
+hierarchical format is:
+    ps -efH
+There are several bash processes. In order to pick out the bash
+instance that I'm running, I look for the ps process, because it has
+a uniqe string in the arguments: -efH. In the less session, search
+for 'efH' by typing "/efH". The screen will jump to where the
+ps -efH process is, and highlight the "efH" string that you searched
+for. The line you searched for will be at the top of the display
+... to see the few lines above, type "kkkk" (one k for each line to
+move up). To exit from less, type q.
+Go ahead and export another made-up variable - perhaps your street name:
+   export CHESTNUT=rizwan
+Make sure it is there with the env command:
+   env | grep CHESTNUT
+and then run another subshell, and search for it again:
+   bash
+   env | grep CHESTNUT
+Exit the various shells with the "exit" command or by typing ^D. If
+you exit the subshell, and the shell in which you created the
+CHESTNUT environment variable, you can run the env command and
+search for that environment variable - it will not be there. The
+program in which the environment variable was created has terminated,
+and its environment has been discarded.
+bash startup files
+When bash is a login shell, it reads ~/.bash_profile. When it is not a login shell, but some subshell of the login shell, it reads ~/.bashrc.
+So for things that you only need to set once, you can put them in ~/.bash_profile. For things that you have to run for each new subshell, you put them in .bashrc.
+(Note that most distributions will set up the user accounts so they will run ~/.bashrc from .bash_profile for interactive shells)
+the PATH
+This is important, because of two things. The first is the PATH. The PATH is one of the environment variables that is used by the system to look for executables. So if you want to run a program, it should be in one of the directories on the PATH, or you will have to specify the full path to the program when running it.
+When you first get your account on a system, there is a default version of the .bashrc and .bash_profile files. In .bash_profile there should be a definition of the PATH. It contains the system directories like /usr/bin and /bin - you don't want to remove those from your path or your shell will become next to useless - you will have to use full paths for all commands. So the way that people add directories to the PATH is to assign the existing value of PATH to itself, plus the desired new directories. For example:
+
+PATH=$PATH:/home/bjb/bin
+
+But if you put this in .bashrc, then every subshell will have another copy of the directory /home/bjb/bin tacked onto the end of the PATH. So the right place to put this definition is in ~/.bash_profile, where it will be executed once and then inherited by all the subshells.
+shell functions and aliases
+However not everything you need in the shell is inherited from the parent program. It turns out that another facility that bash supplies and that virtualenv uses is the ability to define and execute bash functions. Bash also has aliases.
+A bash function is a series of bash commands that have been given a name, and that you can run by typing that name. It can also receive arguments that can influence how the function will behave. HPR episode 1757 by Dave Morriss called "Useful Bash Functions" talks about bash functions.
+You can see the list of currently defined bash functions by using the bash command: declare -F
+An alias is a simpler version of a function - it is (usually) just a shorter string to represent a longer or more complicated command, to make command line use easier (assuming you can remember all the aliases in the first place).
+You can see the list of currently defined aliases by using the bash command: alias
+virtualenvwrapper makes use of bash functions. This has consequences.
+the bash builtin command 'source'
+One is that you need to define those functions in every subshell. That's why you need to put "source /usr/local/bin/virtualenvwrapper.sh" in your bashrc.
+Well it seems that on a Debian system virtualenvwrapper puts the workon shell function into your shell via a more convoluted route. I will describe it in the show notes. But in the end, the virtualenvwrapper file that defines the virtualenvwrapper adds the function workon to your shell by sourcing the file /etc/bash_completion.d/virtualenvwrapper whenever .bashrc is sourced. (Note that "." is shorthand for the bash "source" built-in command.) The "workon" function is defined in /etc/bash_completion.d/virtualenvwrapper (the definition is about in the middle of the file.)
+- ~/.bashrc sources /etc/bash_completion or /usr/share/bash-completion/bash_completion
+  (whichever one it finds first);
+- which sources /usr/share/bash-completion/bash_completion;
+- which sources all the files in /etc/bash_completion.d
+- one of which is virtualenvwrapper.sh
+- which defines the bash function workon.
+Look at that, on a Debian system "apt-cache show virtualenvwrapper" does indeed list bash-completion as a dependency. The virtualenvwrapper upstream does not assume you will be using command completion, and in the comments at the top of the /etc/bash_completion.d/virtualenvwrapper file tell you to put "source .../virtualenvwrapper.sh" into your ~/.bashrc file.
+A description of bash-completion could be a topic of another podcast (I'm not actually volunteering to do this one, heh, just suggesting it as a topic).
+life cycle of environment
+Another consequence is this: When you run a program, it will inherit a copy of the environment of its parent. When it is done, it will exit and that environment will disappear. So, you cannot run a program or subshell to try to affect your environment. It will affect the subshell or program environment, and as soon as the command is done, that updated environment will disappear.
+The "source" built-in bash command is meant to allow you to run a bunch of commands in a file as if they had been typed on the command line. So you can put commands that affect the environment, and the environment will still have the changes when the sourcing is done.
+back to virtualenvwrapper: conclusion
+So, virtualenvwrapper is mainly changes to the environment. It consists of a few files that are stored in ~/.virtualenvs, with names like postactivate and premkvirtualenv. They are basically hooks to add functionality before and after the commands you would issue for virtualenv, so you can customize virtualenv.
+To understand virtualenvwrapper, let's have a quick look at virtualenv first. The things you do with virtualenv are to create a virtualenv, destroy one, and activate one.
+So the things you can do with virtualenvwrapper are to run some script or scriptlet before or after you create a virtualenv, destroy a virtualenv, or activate a virtualenv.
+The main thing to customize is the "where to find the activate file" and the "what to do after activating 'postactivate'".
+It does this by setting environment variables (like PATH and PYTHONHOME) appropriately and by defining bash functions to do things like change directory to where the project is.
+You just have to edit .virtualenvs/postactivate to contain the location of your project files. You also define WORKON_HOME to be the directory that contains all your virtualenvs (for me that is /usr/local/pythonenv, but for most people it will be some directory in their home directory.
+Summary
+virtualenv manipulates the environment in order to allow you to have different python setups for your different projects - handy if you have one project that depends on different versions of python packages than another project and you want to run both.
+But virtualenv leaves a few rough edges, like leaving it up to you to find the virtualenv in order to source the activate script. That is where virtualenvwrapper comes in.
+We have talked about the environment, and how virtualenvwrapper manipulates the environment to make it easier to work with the virtualenvs that you have created.
+The environment refers to the set of environment variables that are defined and passed to child processes. We also discussed the process hierarchy and that a new environment is created for a new process, and it is destroyed when that process exits. We covered sourcing a file of shell commands, so that if those commands affect the environment, then when the sourcing is done, the environment left is the one that was changed and the changes persist past the source command. We talked about the .bash_profile and the .bashrc files.
+HPR exhortation
+You've been listening to Hacker Public Radio. Anyone can make a show -if I can do it, so can you.

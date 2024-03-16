@@ -1,0 +1,95 @@
+## hpr3743 :: HPR News
+
+ HPR NEWS
+News for the community,
+by the community.
+
+TAGS: Ransomware, Malware, Phishing, Security
+Breach
+Microsoft
+Confirms Server Misconfiguration Led to 65,000+ Companies' Data
+Leak
+
+Microsoft “misconfigured” an Azure
+Blob Storage server causing a security breach. Attackers were able
+to access unauthorized customer data; business transactions and other
+interactions between Microsoft and its customers. SOCRadar, a cyber security company, is
+calling the security breach “BlueBleed”. SOCRadar discovered the breach
+on September 24, 2022 Microsoft is downplaying the security breach but
+security researcher Kevin Beaumont isn't buying it. Mr. Beaumont suggest
+Microsoft dropped the ball on informing its customers, and federal
+regulators, of the security breach in a timely manner.
+
+HiddenAds
+malware affects 1M+ Android users
+
+McAfee’s Mobile Research Team identified multiple apps containing
+malware on the Google Play Store. After install, the malicious android
+apps automatically run services without the user knowing or interacting
+with the app. That’s right, they auto run after install. These malicious
+apps then disguise themselves by changing their icon to the “Google
+Play” icon and renaming to themselves to “Google Play” or “Settings”.
+The malicious apps quickly create permanent malicious services. McAfee’s
+Mobile Research Team demonstrates the resilience of the malware by using
+kill
+-9 on the service processes. More malicious processes generate
+immediately as if nothing happened.
+
+Fully
+undetectable PowerShell backdoor disguised as part of a Windows
+update
+
+Director of security research at SafeBreach, Tomer Bar stated, "The
+covert self-developed tool and the associated C2 commands seem to be the
+work of a sophisticated, unknown threat actor who has targeted
+approximately 100 victims."
+Based on the metadata found within a malicious document, this seems
+to be a LinkedIn-based spear-phishing attack, which ultimately leads to
+the execution of a PowerShell script via a piece of embedded macro
+code.
+"The Macro drops 'updater.vbs' creates a scheduled task pretending
+to be part of a Windows update, which will execute the updater.vbs
+script from a fake update folder under
+'%appdata%\local\Microsoft\Windows,'"said Tomar.
+Currently 32 security vendors and 18 anti-malware engines have
+flagged the decoy document and the PowerShell scripts as malicious.
+The findings come as Microsoft has taken
+steps to block Excel 4.0 (XLM or XL4) and Visual Basic for
+Applications (VBA) macros by default across Office apps, prompting
+threat actors to pivot to alternative
+delivery methods.
+
+Millions of
+patients compromised in hospital data leak.
+
+Nearly 3 million Illinois & Wisconsin patients are caught in a
+hospital data breach. Advocate Aurora Health, which operates 27
+hospitals, said in a statement, “the breach may have exposed information
+including a patients' medical provider, type of appointments, medical
+procedures, dates and locations of scheduled appointments, and IP
+addresses”. The system blamed the breach on its use of pixels, computer
+code that collects information on how a user interacts with a website,
+including products developed by Google and Facebook's parent company
+Meta that make the collected data accessible to those companies.
+The health care industry's use of pixels has come under wide
+criticism from privacy advocates who warn that the technology's use
+violates federal patient privacy law. A report
+published in June by The Markup found many of the country's top-ranked
+hospitals used the Meta Pixel, collecting and sending sensitive patient
+information to the social media company.
+
+
+User space.
+
+Texas
+sues Google for biometric data collecting
+
+Texas has filed a lawsuit against Google claiming the tech behemoth
+took users’ biometric data without permission. Texas Attorney General Ken Paxton,
+claims Google is illegally data harvesting Texans using features and
+devices such as: Google Photos, Google Assistant, and Nest Hub Max. Google
+spokesman José Castañeda
+is willing to take the argument to court, “AG Paxton is once again
+mischaracterizing our products in another breathless lawsuit,”.
+
+

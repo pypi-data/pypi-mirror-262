@@ -1,0 +1,39 @@
+## hpr2271 :: Raspberry Pi Zero W
+
+ 
+In this episode I talk about the new Raspberry Pi Zero W single board computer released on 28th February 2017 to coincide with the 5th Birthday of the Raspberry Pi Foundation.
+
+
+This tiny 65x30mm single board PC has the following specs
+
+
+1GHz, single-core CPU 
+
+512MB RAM 
+
+Mini HDMI and USB On-The-Go ports 
+
+Micro USB power
+
+HAT-compatible 40-pin header 
+
+Composite video and reset headers 
+
+CSI camera connector 
+
+802.11 b/g/n wireless LAN 
+
+Bluetooth 4.1 
+
+Bluetooth Low Energy (BLE) 
+
+
+
+Here are a couple of links to the foundation and a fuller review
+
+
+https://www.raspberrypi.org/
+
+
+https://www.engadget.com/2017/02/28/raspberry-pi-zero-w-is-a-10-computer-with-wifi-and-bluetooth/
+

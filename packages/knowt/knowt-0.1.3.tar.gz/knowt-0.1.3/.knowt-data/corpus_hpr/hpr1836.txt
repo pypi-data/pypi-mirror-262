@@ -1,0 +1,11 @@
+## hpr1836 :: The Statusnet Shuffle
+
+ 
+Theru and NYbill talk about moving a Statusnet instance to a new server.  Also, upgrading an existing Statusnet instance to GNU-social.
+
+
+Theru's blog post: https://blog.theru.org/how-i-move-my-status-net-server-and-upgrade-it-to-gnu-social/
+
+Windigo's blog post on running SN/GS with nginx:
+https://fragdev.com/blog/gnusocial-on-nginx-with-php-fpm
+

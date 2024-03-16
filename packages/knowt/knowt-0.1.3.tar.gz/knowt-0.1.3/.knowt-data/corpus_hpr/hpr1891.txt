@@ -1,0 +1,340 @@
+## hpr1891 :: HPR Community News for October 2015
+
+ 
+New hosts
+
+Welcome to our new hosts: 
+clacke, 
+    Moral Volcano, 
+    JustMe, 
+    thelovebug.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+1869
+Thu
+2015-10-01
+Irssi Connectbot
+NYbill
+
+
+1870
+Fri
+2015-10-02
+19 - Home SSH Server
+Ahuka
+
+
+1871
+Mon
+2015-10-05
+HPR Community News for September 2015
+HPR Volunteers
+
+
+1872
+Tue
+2015-10-06
+Sim City BuildIt September 2015
+swift110
+
+
+1873
+Wed
+2015-10-07
+TiT Radio 21 - I Thought I Had Better Links
+FiftyOneFifty
+
+
+1874
+Thu
+2015-10-08
+Interview with Droops
+Ken Fallon
+
+
+1875
+Fri
+2015-10-09
+63 - LibreOffice Impress - Formatting Text
+Ahuka
+
+
+1876
+Mon
+2015-10-12
+MicrobeLog, or: On Shaving Yaks and Doing Things
+clacke
+
+
+1877
+Tue
+2015-10-13
+Recording HPR on the fly on your Android phone
+clacke
+
+
+1878
+Wed
+2015-10-14
+What's In My Bag
+b-yeezi
+
+
+1879
+Thu
+2015-10-15
+Hacking a Belt to Make it Fit
+Jon Kulp
+
+
+1880
+Fri
+2015-10-16
+Arduino Bluetooth HOWTO
+klaatu
+
+
+1881
+Mon
+2015-10-19
+My road to Linux
+clacke
+
+
+1882
+Tue
+2015-10-20
+How I Compute Away From My Computer
+Thaj Sara
+
+
+1883
+Wed
+2015-10-21
+Don't Get Locked In
+Knightwise
+
+
+1884
+Thu
+2015-10-22
+Some more Bash tips
+Dave Morriss
+
+
+1885
+Fri
+2015-10-23
+64 - LibreOffice Impress - Multimedia
+Ahuka
+
+
+1886
+Mon
+2015-10-26
+Moral Volcano's Linux Tips & Tricks podcast for Hacker Public Radio
+Moral Volcano
+
+
+1887
+Tue
+2015-10-27
+Coffee Making Basics
+JustMe
+
+
+1888
+Wed
+2015-10-28
+Diceware Passphrase
+John Duarte
+
+
+1889
+Thu
+2015-10-29
+experiencing the meegopad T-02  part one
+A Shadowy Figure
+
+
+1890
+Fri
+2015-10-30
+A short walk with my son
+thelovebug
+
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This discussion takes
+place on the Mail List which is open to all
+HPR listeners and contributors. The discussions are open and available on the
+Gmane
+archive.
+
+The main threads this month were:
+
+From: Dave Morriss <perloid@...>
+Date: 2015-09-28 11:15:19 +0100
+Subject: HPR Community News - next Saturday on 2015-10-03T18:00:00Z
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/965
+Messages: 6
+From: Dave Morriss <perloid@...>
+Date: 2015-10-26 08:56:11 UTC
+Subject: HPR Community News - next Saturday on 2015-10-31T18:00:00Z
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/973
+Messages: 4
+
+Total messages this month: 10
+Comments this month
+These are comments which have been made during the past month, either to shows
+released during the month or to past shows.
+There are 32 comments:
+
+hpr1728
+(2015-03-18) "Requested Topic: Favourite Browser Extensions"
+by Fin.
+ Comment 3:
+Fin on 2015-10-30:
+"Ad-Block Edge Successor"
+
+hpr1828
+(2015-08-05) "Multimeter Mod's Part 1"
+by NYbill.
+ Comment 3:
+Neandergeek on 2015-10-17:
+"Great imprompto series"
+
+hpr1848
+(2015-09-02) "Introduction to w3m, a Command Line Web Browser"
+by Frank Bell.
+ Comment 1:
+tom_len on 2015-10-01:
+"automatize login from command line" Comment 2:
+Frank on 2015-10-27:"[no title]"
+
+hpr1859
+(2015-09-17) "A Mouse in a Maze on the Raspberry PI"
+by Gabriel Evenfire.
+ Comment 2:
+Eric on 2015-10-07:
+"A better maze" Comment 3:
+Gabriel Evenfire on 2015-10-13:
+"Maze generation"
+
+hpr1862
+(2015-09-22) "The Awesomely Epic Guide To KDE Part 1"
+by Geddes.
+ Comment 2:
+Geddes on 2015-10-16:"[no title]"
+
+hpr1863
+(2015-09-23) "The Awesomely Epic Guide To KDE Part 2"
+by Geddes.
+ Comment 2:
+Geddes on 2015-10-16:
+"Thanks for the feedback"
+
+hpr1864
+(2015-09-24) "Turning an old printer into a network printer"
+by Dave Morriss.
+ Comment 3:
+turtle on 2015-10-05:"[no title]" Comment 4:
+Dave Morriss on 2015-10-06:
+"DEC-LN03" Comment 5:
+Bob Evans on 2015-10-07:
+"connecting to legacy printers" Comment 6:
+Dave Morriss on 2015-10-07:
+"Re: connecting to legacy printers"
+
+hpr1866
+(2015-09-28) "An awkward talk with two young computer users"
+by Quvmoh.
+ Comment 2:
+combiner on 2015-10-05:"[no title]"
+
+hpr1867
+(2015-09-29) "The Lafayette Public Library Maker Space"
+by Jon Kulp.
+ Comment 1:
+amunizp on 2015-10-07:
+"3D print"
+
+hpr1870
+(2015-10-02) "19 - Home SSH Server"
+by Ahuka.
+ Comment 1:
+kdmurray on 2015-10-06:
+"SSH Passwords"
+
+hpr1874
+(2015-10-08) "Interview with Droops"
+by Ken Fallon.
+ Comment 1:
+droops on 2015-09-27:
+"Thanks" Comment 2:
+J. on 2015-10-08:"[no title]" Comment 3:
+Dave Morriss on 2015-10-13:
+"I loved this interview"
+
+hpr1880
+(2015-10-16) "Arduino Bluetooth HOWTO"
+by klaatu.
+ Comment 1:
+Mike Ray on 2015-10-16:
+"Great show"
+
+hpr1881
+(2015-10-19) "My road to Linux"
+by clacke.
+ Comment 1:
+Fin on 2015-10-19:
+"Music fail" Comment 2:
+Dave Morriss on 2015-10-23:
+"Great episode" Comment 3:
+clacke on 2015-10-26:
+"Thanks"
+
+hpr1884
+(2015-10-22) "Some more Bash tips"
+by Dave Morriss.
+ Comment 1:
+Frank on 2015-10-27:"[no title]" Comment 2:
+Dave Morriss on 2015-10-27:
+"Thanks Frank, glad you enjoyed it" Comment 3:
+Frank on 2015-10-28:"[no title]" Comment 4:
+Dave Morriss on 2015-10-29:
+"Regular expressions"
+
+hpr1889
+(2015-10-29) "experiencing the meegopad T-02  part one"
+by A Shadowy Figure.
+ Comment 1:
+GNULinuxRTM on 2015-10-29:
+"Execellent Episode." Comment 2:
+Jon Kulp  on 2015-10-30:
+"Tremendous! " Comment 3:
+Fin on 2015-10-30:
+"Fantastic!" Comment 4:
+A Shadowy Figure on 2015-10-31:
+"Like your work as well GNULinuxRTM"
+
+hpr1890
+(2015-10-30) "A short walk with my son"
+by thelovebug.
+ Comment 1:
+Jon Kulp  on 2015-10-30:
+"Up with the $2 lapel mic! " Comment 2:
+Mike Ray on 2015-10-31:
+"Audio Quality"
+
+

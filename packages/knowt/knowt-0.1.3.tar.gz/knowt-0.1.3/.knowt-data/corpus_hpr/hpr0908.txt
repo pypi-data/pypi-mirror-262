@@ -1,0 +1,15 @@
+## hpr0908 :: TV Downloader TED
+
+ Hello everyone its riddlebox, sorry its been so long since I have done a podcast.
+Today I am going to tell you about my kinda sorta home dvr that I have at the moment.
+No, this isn't another show talking about mythtv....even though the mythtv project is a good one...
+Our myth box at home died a while back and we lost three tuner cards which I hadn't realized how expensive the setup was getting to be needing all of the tuner cards and a back end server that could handle everything.
+So I looked at a debian server I have been using as my zoneminder server which just records two cameras when there is motion.
+I found a Java app called TED - or torrent episode downloader from www.Ted.nu.
+As the name states it uses torrents to download the shows. With this application which you download and launch from the jar file..
+I had to use a --no-tray switch to get it to run.
+Once you open the jar file you are greeted with the app and a list of the popular shows.
+You can tell it to start torrenting those shows and you can tell Ted the frequency of how often to look for new shows.
+You can even tell it to get past shows.
+So I got Ted all configured the way I wanted, then I setup a guest SAMBA share on my downloads folder so my blue ray player can see the share, and now I just go to my blue ray player and see what shows are available to watch.
+Some shows may show up a couple days after they air but overall it works great.

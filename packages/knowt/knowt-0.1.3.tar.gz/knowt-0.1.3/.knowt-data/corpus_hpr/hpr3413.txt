@@ -1,0 +1,56 @@
+## hpr3413 :: Bash snippet - using coproc with SQLite
+
+ Introduction
+I am in the process of rewriting some scripts I use to manage Magnatune albums. I’m a lifetime Magnatune member and have access to the whole music collection. I wrote a script for downloading albums and placing them in my ~/Music directory which I talked about in 2013 (show 1204). The original scripts are still available on GitLab and I know of one other person who made use of them!
+Since 2013 I have written a few other support scripts, for example one to manage a queue of albums I want to buy and download, and one which summarises the state of this queue.
+It’s this 'show_queue' script I am currently updating (called show_queue_orig, and available in the resources to this show). The original version of this script took Magnatune album URLs from a file (acting as a queue of stuff I wanted to buy), parsed out a piece of the URL and used it to grep a pre-prepared summary in another file. This file of summaries had been made from a master XML file provided by Magnatune (see update_albums on GitLab).
+Magnatune has moved away from this master XML file to a SQLite database in recent years, so I want to perform a database lookup for each URL to list its details.
+The first version of the new script wasn’t difficult to write: just extract the search data as before and run a query on the database using this data. I have included this script which I call show_queue_db_1 amongst the resources for this episode, so you can see what I’m talking about – and what I want to improve on. It felt bad to be performing multiple calls on the sqlite3 command in a loop, so I looked around for an alternative way.
+In April 2019 clacke did a show (number 2793) about the Bash coproc command.
+This command creates a subshell running a command or group of commands which is connected to the calling (parent) process through two file descriptors (FDs). It’s possible for the calling shell to write to the input descriptor and read from the output one and thereby communicate with whatever is running in the subshell.
+I was vaguely aware of coproc at the time of clacke’s show but hadn’t looked into it. I found the show fascinating but didn’t have a use for the feature at the time.
+To solve my need to show my Magnatune queue of future purchases, it looked as if a sqlite3 instance running in a subshell could be given queries one after the other and return the answers I needed. My journey to a Bash script using coproc then followed.
+Long notes
+Follow this link to read the detailed notes associated with this episode.
+Links
+
+Bash Reference Manual:
+
+3.2.6 Coprocesses
+3.6.8 Duplicating File Descriptors
+
+
+
+Stack Exchange:
+
+How do you use the command coproc in various shells?
+
+
+
+Wikipedia:
+
+Wikipedia page on expect
+
+
+
+Other links:
+
+hpr1204 :: My Magnatune Downloader
+GitLab repository: original magnatune-downloader
+hpr2793 :: bash coproc: the future (2009) is here
+
+
+
+Resources:
+
+Example files:
+
+coproc_test.sh
+coproc_test.awk
+show_queue_orig
+show_queue_db_1
+show_queue_db_2
+show_queue.pl.zip
+
+
+

@@ -1,0 +1,18 @@
+## hpr1035 :: OGG Camp 11 Panel Discussion
+
+ Welcome to the Full Circle Podcast on Hacker Public Radio. This is the fourth of our highlights of last Summers unconference, OGG Camp-11, held at Farnham Maltings in the South of England.
+Introducing Andy Piper on MQTT: MQ Telemetry Transport
+MQTT is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. It was designed as an extremely lightweight publish/subscribe messaging transport. It is useful for connections with remote locations where a small code footprint is required and/or network bandwidth is at a premium. For example, it has been used in sensors communicating to a broker via satellite link, over occasional dial-up connections with healthcare providers, and in a range of home automation and small device scenarios. It is also ideal for mobile applications because of its small size, low power usage, minimised data packets, and efficient distribution of information to one or many receivers
+Andy Piper on Lanyrd: social bridgebuilder, photographer, techie, speaker, podcaster, WebSphere Messaging Community Lead @ IBM, Committee @ Digital Surrey.
+The presentation Messaging for the Internet of Awesome Things (slideshare.net)
+Andy’s blog for MQTT, The Lost Outpost is also on-line.
+OGG Camp is a joint venture organised by those lovely podcasters the Linux Outlaws and the Ubuntu UK Podcast.
+We've more highlights of OGG Camp coming up on the Full Circle Podcast very soon, including Andy Piper and Laura Cjaikowski.
+The Full Circle Podcast is the companion to Full Circle Magazine, the Independent Magazine for the Ubuntu Community. Find us at www.fullcirclemagazine.org/podcast.
+Feedback; you can post comments and feedback on the podcast page at www.fullcirclemagazine.org/podcast, send us a comment to podcast (at) fullcirclemagazine.org
+Your Hosts:
+
+Robin Catling (blog at https://catlingmindswipe.blogspot.com/, @robincatling on Twitter)
+
+Additional audio by Victoria Pritchard
+Runtime: 31mins 35seconds

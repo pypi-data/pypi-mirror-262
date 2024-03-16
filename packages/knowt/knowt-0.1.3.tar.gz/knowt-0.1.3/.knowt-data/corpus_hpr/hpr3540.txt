@@ -1,0 +1,15 @@
+## hpr3540 :: HSV Components Layer Modes
+
+ Layer Modes, sometimes called Blending Modes, allow you to combine layers in a variety of ways. We continue with the HSV Components Modes, which brings us to yet another color model, in this case the Hue, Saturation, and Value model. We've already looked at RGB, which is the model used for most broadcast and online uses, and the CMYK model which is used for printing. These are the Layer Modes available on the latest (at the time I write this) version of GIMP, 2.10.24.
+Links:
+
+https://docs.gimp.org/2.10/en/gimp-concepts-layer-modes.html
+https://www.linuxtopia.org/online_books/graphics_tools/gimp_advanced_guide/gimp_guide_node55_004.html
+https://www.youtube.com/watch?v=17Iivi0tmug&t=1734s
+https://en.wikipedia.org/wiki/RGB_color_model
+https://en.wikipedia.org/wiki/Subtractive_color
+https://en.wikipedia.org/wiki/Color_model
+https://en.wikipedia.org/wiki/HSL_and_HSV
+https://snappygoat.com/
+https://www.ahuka.com/gimp/hsv-components-layer-modes/
+

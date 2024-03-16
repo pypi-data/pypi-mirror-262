@@ -1,0 +1,194 @@
+## hpr1387 :: Christmas Light Synchronization
+
+ Hello hacker public radio
+I have wanted to contribute to HPR for several months now. I find it annoying and pointless to create a script to read off. But after several attempts of trying to recording my self blathering on with stuttering, cursing, air gaps, and humming I had to script my episode. In this episode I would like to talk about building a Christmas light synchronization system.
+I had first seen someone's home brew system years ago synchronized to music by the trans-Siberian orchestra. I was immediately mesmerized and went to work on figuring out how it was done.
+I have had a fair amount of experience with fabrication and electricity over the years. However I really only know how to maintain systems that have already been engineered and fully vetted by others. My exploration led me to first find all of the unreliable sources and then on to the sites that leave out the magic step into getting their system to work. Truly reliable sources were scarce.
+Frustrated with what I was finding, I gave up and my time was consumed with remodelling our home and moving to a different state into our new house.
+Last year I wanted to start another attempt at making a system but time was short and planning something like this during the holidays is extremely dumb.
+After the last holiday season and while putting away the holiday lights all I could think about is getting these lights synchronized for the next season. So I went back to the disinformation highway continuing my research.
+Although I was looking strictly for technical information personal information leaked through.
+The common theme amongst other people is to start planning for the next season in July. Starting to plan in January is a bad idea and all you will have is anguish when it comes time to deploy your show.
+Soon July came along and I argued with myself if I was really going to commit myself to doing this. From what I have read I can be reassured that there is no backing out once you start. Most people talk about what they are going to add to their system next year.
+So lets talk about the first step.
+Some sites will say "GET AS MANY LIGHTS AS YOU CAN AS SOON AS POSSIBLE"
+This theme seems like a logical step, but I don't know what I'm doing!
+I already have lots of lights, its not like I'm going to put up one hundred thousand lights this year. No my plans are to put up the same old lights I already have and incorporate them into the system and then grow from there.
+So if I already have some lights I need a new step one.
+Unfortunately most of the so called step by step lists don't agree on anything. So I chose what was most important just to get lights to work, even if I was never able to build my own synchronization system. The most important thing in any holiday lighting set-up is electricity. So that is the first thing I concentrated on. The front of my house has two outlets on two different circuits. One conveniently placed on the front porch, at the lowest spot on the porch with a plastic cover that is hinged to open upwards preventing direct line of sight when trying to plug an extension cord in. The second is behind a razor sharp ornamental grass bush. The two circuits are on 15 amp breakers and each outlet is installed with a ground fault circuit interrupter (GFCI). You make have seen these in your bathroom, they have a rest button and a test button. These circuits are not dedicated to these two outlets. They are connected to all of the rooms on the front side of the house. For me this simply will not do. Because when or if a breaker trips part of the house will go dark. Instead of fussing with these difficult circuits I decided to install two new circuits that would be exclusively dedicated for any out door lighting. My garage has a relatively empty breaker box so whatever I decide to do I'll have plenty of room to do it.
+With my mind on future needs I made a check list of what I wanted
+
+# One. Two separate circuits
+# Two. 20 amps on each line
+# Three. The circuits need to terminate in two separate two gang boxes somewhere out in the yard where all the lights would connect to them.
+ And thats just what I did. From the breaker box I ran 12 gauge 3 wire (12/3) over head and down the wall into two separate junction boxes. A GFCI outlet is the first device connected from the home run between the breaker box and this junction box. So anything installed after this point will have GFCI protection. The second thing installed is a light switch that can create an open circuit to the power leaving the garage. I had thought about installing a digital timer instead of the light switches but the light switches are a cheap place holder until I make up my mind. the GFCI outlets and light switches are rated at 20 amps not 15. After the light switches, the circuits run out of the garage and are trenched about 30 inches below ground in PVC conduit. They reappear in a spot in the yard, terminated at the 2 gang outlets. This took quite sometime to do. All of my expenses are going into copper so the budget doesn't call for any machinery to help along the. So at this point regardless if I continue on with my adventures I should always have enough power just to run lights.
+As the month went on I stumbled across Instructables.com and found a few people actually showing their secret sauce. I probably spent a whole month reading and then rereading what they were doing. There were only about six people that truly knew how to make a synchronization system and they all had one thing in common, Arduino. Without even really knowing what an Aduino is, I knew this was going to be the key to getting a system of my very own! Without hesitation I linked over to adafruit and bought an Arduino Uno. Everyone else had one, so why shouldnt I?
+The Uno would only cost me $30 and I would be on my way to completing my goal. If you've never seen or heard of an Arduino they are credit card sized micro controllers that are made in Italy and are open sourced. The Arduino has one little hang up. Everything is programmed in C language. I know nothing of C or any real programming language. The only programing I have any experience with is HTML 1.0. These geriatric skills would not help me with the Arduino. Arduino helps you learn basic skills. You can read practice pages at Arduino.cc or you can use the Arduino examples built into their IDE software. The first tutorial I explored was the Blink command. The blink command you assign a name to the pin you want to use and then create a loop of turning the pin on and off, or HIGH and LOW. For me this was fun and now I am the lord of the blinks. I've been told that music is math. So I chose to experiment with this idea as my first arduino sketch. Arduino calls your program a sketch. So I found some sheet music with around eight notes. I printed the sheet music and then translated all of the notes into integers. Then I mapped the numbers to coordinate with the pins on ardunio. Uploaded the sketch and nothing happened.
+You cant see the electricity moving around on the Arduino, I need to do something to ensure the program is working. I run over to Radio Shack to try to remedy this hang up as soon as possible. Radio Shack carries Arduino parts, so I bought a prototyping board, resistors and LED's.
+LED's are great for flash lights and such. But when it comes to prototyping and experimenting LEDs are great indicators that circuits are working correctly. So I soldered up 8 leds, resistors and wires to the prototyping shield and placed the shield onto the Arduino.
+I plugged power into the Arduino in and the lights started blinking. I gave my self a mental high five and congratulated my brain on a job well done. This test was successful, it was time to move on to the next step. I had already been over on amazon browsing relays and found a company on there called SainSmart that has prebuilt relay modules. I picked out a module that had 8 relays on it. This module was about $9 and I didn't think that I would be able to build something as nice as this for the same price. What I did next is sloppy and dangerous. Don't do this, I did it because I was following other peoples' instructions. People think its OK to run 120v into shoe boxes or clear rubber made totes. I did mine in an $8 home depot tool box. I wired everything up correctly and tested the system. I was able to get 8 strings of light to blink but I wasn't very happy with what I had. My idea for making the sequence, looked nice when it was only 8 leds blinking in a two by two inch square. Translate that to strings with 100 bulbs and it doesn't look sequenced. In-fact it looks like a sloppy attempt at being random. Maybe even call it laggy. it was bad.
+I left out everything I had to do to get the system working because I don't want anyone to do this. Seriously don't run push high voltage into cheap plastic products. It's dumb and dangerous, I did it for you, so you don't have to.
+However this first experiment passed all of my tests and filled in all the gaps in my mind. I know exactly what to do now and I'll cover my new box in detail. I suppose I skipped over what a relay is. You can think of a relay as an electromechanical light switch. They use direct current to drive a magnet to mechanically move an internal switch to create an open or closed circuit. These are the the devices that make it physically possible to synchronize a light show. While running my first prototype system a blue genie escaped from the board so I only have seven of eight relays working. It didn't bother me too much that one of them was broken because my plans are to build a larger system. I went back to Amazon again and this time purchased another eight relay module and then two sixteen relay modules. When talking about syncro systems a relay is called a channel, so with all my new hardware I now have enough to do 47 channels. The ardunio UNO only has 17 usable pins. So I needed to build multiple system or get a new controller. So I got a new controller. My new controller is still an Arduino, but instead of being the UNO it is now the MEGA. The MEGA is advertised to have 54 input/output ports. This more than enough to drive the relays I have. The issues of a proper enclosure is not trivial. This system contains high voltage and direct current electronics. I chose a Cantex twelve by twelve by six inch PVC junction box. The lid has six screws and a gasket to make the enclosure water tight.
+The box was fairly expensive at thirty dollars but made everything feel better. In my collection of spare parts and junk I found a fist full of stand-offs and screws that actually had the same thread spacing. I drilled holes in the box and screwed in the stand-offs once I had the relays and Arduino parts mounted the way I liked I removed the hardware only leaving the screws and stand-offs.
+Around all of the mounting hardware I used a combination of hot glue, silicone caulk and PVC cement to insulate the metal screws and to make their connections water tight. With the lid open and looking into the box the entire back side of the box fits the MEGA and two 16 relay modules. On the six inch side walls I was able to mount the eight relay modules. Before I mounted the relays for the last time I wired them up for high voltage. The relays have three set screws. The center screw is the common hot wire. For example from relay one I have a short 14 gauge wire running out of this screw and into a four port wire nut. Ideal makes a Push-In Wire connector that has 4 ports. The ports are bussed together and make for a cleaner install when compared to a standard twist wire nut. One push in connector can connect two relays and then jumper on to the next wire nut with two more relays, so on and so on. So there are 4 total relay modules and I connected all the common hots among all of them this way. When it came to the 16 relay modules I used tall standoffs so I could hide all this wire under them. So these connections are a little bit longer. The set screws in these modules can only handle up to 14 gauge wire. So thats what I used throughout. Before placing the modules you need to look at the other two set screws and make a decision. to the right of the common hot is the open side and to the left of the common hot is the closed side. At this point you have to think about your Christmas lights. Do you want them to be off all the time and have the relays turn them on to create your sequence. Your default state will be to have a dark yard. I chose to have them on at all times and I was going to create sequences where I would be turning them off. So even if nothing is happening the default state will be that my yard will be bright with lights. I also chose this way because if something breaks along the way I don't have to run out and re plug everything just to have lights on. But be careful as this will become confusing as we go along, its inverted from tradition thinking. With the relays wired with common hots, I installed them into the box and screwed them in. After that I tied the modules hots together. But made it more complicated than it needed to be. For some dumb reason I decided to load balance my box. Two relays per circuit. Back to my power, I ran two lines A and B. In side my box I made it so there was an A and B side too. Honestly everything can be tied together and it won't stress the system out the slightest. All it does is makes things more complicated. The next thing I did was connect all of the DC cables in the system. I created connectors from bits and parts laying around. Old IDE cables are nice for this. I wanted a completely modular system in case anything failed. So nothing is hard-wired soldered. I started out on the MEGA with Pin 22 and wired one pin to one relay pin. over and over again 47 times.
+Then I created a power distribution board that distributes 12 volts to all of the relays and Arduino. I fitted everything up and ensured that everything fit and I had good connections. Then pulled the MEGA back out. Even though I have the relays in a box and all the hardware is connected the Mega has never been powered on. Its still dumb and doesn't know what it's supposed to be doing. Earlier I was talking about using sheet music to make a sequence and how that's a bad idea. I needed a new way to make blinky blinky. I found some popular windows software called Vixen Lights. Vixen is extremely granular lighting synchronization software. To the best of my knowledge it only works under Windows, although I have been trying to get it to work in WINE. Someday I'll get this to work. When you get Vixen up and running the screen looks like a spreadsheet, full of cells. Each cell represents time on a channel, double click the cell to turn it on or off. Some estimate that it could take several hours to synchronize three minutes of music. I'm not really concerned about making a sequence at this time. I move on because its more important to get a completed box in my mind. So let me help you spend some more money. When using Vixen the Ardunio needs to be connected to your computer via a USB cable. You'll configure Vixen to send serial to the com port that Ardunio is connected to. I have spare computers. But installing windows xp on a box and getting it configured is extremely annoying in its self. Then figuring out how to put a desktop in the yard adds to pointlessness. Some people might jump on the wifi bandwagon. There are to many devices on my network and I really don't want a power system to be available to the Internet. Plus why would you want your lights to be remotely operated like this. If you're not home why do you care if your lights are on or off. I'm doing this for me. The challenge is to eliminate the USB cable and keep it off the Internet.
+I found out about wireless radios called xbee's. They are expensive, but do exactly what I want. They create a wireless serial connection at 9600 baud. When you're out shopping for your own there are two different types of xbee's. S1 and S2. I believe the S2's are also called zigbees and you can make them more secure than the S1. I ordered the wrong ones, I ordered the S1's. The S1's are extremely easy to set up. But to set them up you need more hardware. I ordered a majority of my hardware from Adafruit. So along with two xbees, I also got two xbee adapter kits and one FTDI cable. After building the adapter kits and plugging in the xbees I wired one of them into the Ardunio. For the Arduino side all you need is four wires. Ground, five volt power, transmit, and receive. The Uno has one TX/RX connection while the Mega has four. This doesn't matter since all Ardunio needs to do is listen. On your computer all you need to do is plug in the xbee using the FTDI. It is recognized as serial I believe in both Windows and Linux no drivers were needed to make it work. The only computer configuration needed is changing in Vixen, you need to tell Vixen what port it needs to use to send serial commands. But before you test this, you need to give your Arduino instructions. Here is the sketch I created for my system:
+int C1 = 2;
+int C2 = 3;
+int C3 = 4;
+int C4 = 5;
+int C5 = 6;
+int C6 = 7;
+int C7 = 8;
+int C8 = 9;
+int C9 = 10;
+int C10 = 11;
+int C11 = 12;
+int C12 = 13;
+int C13 = 22;
+int C14 = 23;
+int C15 = 24;
+int C16 = 25;
+int C17 = 26;
+int C18 = 27;
+int C19 = 28;
+int C20 = 29;
+int C21 = 30;
+int C22 = 31;
+int C23 = 32;
+int C24 = 33;
+int C25 = 34;
+int C26 = 35;
+int C27 = 36;
+int C28 = 37;
+int C29 = 38;
+int C30 = 39;
+int C31 = 40;
+int C32 = 41;
+int C33 = 42;
+int C34 = 43;
+int C35 = 44;
+int C36 = 45;
+int C37 = 46;
+int C38 = 47;
+int C39 = 48;
+int C40 = 49;
+int C41 = 50;
+int C42 = 51;
+int C43 = 52;
+int C44 = 53;
+int C45 = 54;
+int C46 = 55;
+int C47 = 56;
+int i = 0;
+int incomingByte[47];
+void setup()
+{
+Serial.begin(9600);
+pinMode(C1, OUTPUT);
+pinMode(C2, OUTPUT);
+pinMode(C3, OUTPUT);
+pinMode(C4, OUTPUT);
+pinMode(C5, OUTPUT);
+pinMode(C6, OUTPUT);
+pinMode(C7, OUTPUT);
+pinMode(C8, OUTPUT);
+pinMode(C9, OUTPUT);
+pinMode(C10, OUTPUT);
+pinMode(C11, OUTPUT);
+pinMode(C12, OUTPUT);
+pinMode(C13, OUTPUT);
+pinMode(C14, OUTPUT);
+pinMode(C15, OUTPUT);
+pinMode(C16, OUTPUT);
+pinMode(C17, OUTPUT);
+pinMode(C18, OUTPUT);
+pinMode(C19, OUTPUT);
+pinMode(C20, OUTPUT);
+pinMode(C21, OUTPUT);
+pinMode(C22, OUTPUT);
+pinMode(C23, OUTPUT);
+pinMode(C24, OUTPUT);
+pinMode(C25, OUTPUT);
+pinMode(C26, OUTPUT);
+pinMode(C27, OUTPUT);
+pinMode(C28, OUTPUT);
+pinMode(C29, OUTPUT);
+pinMode(C30, OUTPUT);
+pinMode(C31, OUTPUT);
+pinMode(C32, OUTPUT);
+pinMode(C33, OUTPUT);
+pinMode(C34, OUTPUT);
+pinMode(C35, OUTPUT);
+pinMode(C36, OUTPUT);
+pinMode(C37, OUTPUT);
+pinMode(C38, OUTPUT);
+pinMode(C39, OUTPUT);
+pinMode(C40, OUTPUT);
+pinMode(C41, OUTPUT);
+pinMode(C42, OUTPUT);
+pinMode(C43, OUTPUT);
+pinMode(C44, OUTPUT);
+pinMode(C45, OUTPUT);
+pinMode(C46, OUTPUT);
+pinMode(C47, OUTPUT);
+}
+void loop()
+{
+if (Serial.available() >= 47) {
+for (int i=0; i<=47; i++)
+{
+incomingByte[i] = Serial.read();
+}
+digitalWrite(C1, incomingByte[0]);
+digitalWrite(C2, incomingByte[1]);
+digitalWrite(C3, incomingByte[2]);
+digitalWrite(C4, incomingByte[3]);
+digitalWrite(C5, incomingByte[4]);
+digitalWrite(C6, incomingByte[5]);
+digitalWrite(C7, incomingByte[6]);
+digitalWrite(C8, incomingByte[7]);
+digitalWrite(C9, incomingByte[8]);
+digitalWrite(C10, incomingByte[9]);
+digitalWrite(C11, incomingByte[10]);
+digitalWrite(C12, incomingByte[11]);
+digitalWrite(C13, incomingByte[12]);
+digitalWrite(C14, incomingByte[13]);
+digitalWrite(C15, incomingByte[14]);
+digitalWrite(C16, incomingByte[15]);
+digitalWrite(C17, incomingByte[16]);
+digitalWrite(C18, incomingByte[17]);
+digitalWrite(C19, incomingByte[18]);
+digitalWrite(C20, incomingByte[19]);
+digitalWrite(C21, incomingByte[20]);
+digitalWrite(C22, incomingByte[21]);
+digitalWrite(C23, incomingByte[22]);
+digitalWrite(C24, incomingByte[23]);
+digitalWrite(C25, incomingByte[24]);
+digitalWrite(C26, incomingByte[25]);
+digitalWrite(C27, incomingByte[26]);
+digitalWrite(C28, incomingByte[27]);
+digitalWrite(C29, incomingByte[28]);
+digitalWrite(C30, incomingByte[29]);
+digitalWrite(C31, incomingByte[30]);
+digitalWrite(C32, incomingByte[31]);
+digitalWrite(C33, incomingByte[32]);
+digitalWrite(C34, incomingByte[33]);
+digitalWrite(C35, incomingByte[34]);
+digitalWrite(C36, incomingByte[35]);
+digitalWrite(C37, incomingByte[36]);
+digitalWrite(C38, incomingByte[37]);
+digitalWrite(C39, incomingByte[38]);
+digitalWrite(C40, incomingByte[39]);
+digitalWrite(C41, incomingByte[40]);
+digitalWrite(C42, incomingByte[41]);
+digitalWrite(C43, incomingByte[42]);
+digitalWrite(C44, incomingByte[43]);
+digitalWrite(C45, incomingByte[44]);
+digitalWrite(C46, incomingByte[45]);
+digitalWrite(C47, incomingByte[46]);
+}
+}
+All the sketch really says is, listen to serial, take that info and do this. Upload the sketch using the USB cable plugged into your computer. I don't believe you can upload the sketch or make any changes to the sketch using xbee. Once I had this all setup, I built a 47 led array connected to the pins I want to use, plus the xbee. With a 9 volt battery and the Arduino, I tested this setup. My I created a one at a time sequence on my desktop and hit play. Immediately the lights started flashing. I walked away from the desktop antenna and I was able to venture about 100 feet from the antenna and maintain the signal. Everything is looking great.
+I didn't change a thing with the Arduio and placed it in the box and connected it to the relays. I connected up the DC system and then tested the relays one at a time. This part was fairly amusing, 47 relays clicking is funny for some reason. I also used this time to play with my multimeter, I tested every aspect of the system before moving on. Making sure the set screws worked as claimed and everything was connected correctly. This will be the last time you have easy access to all the hardware so it needs to be verified. The next step is wiring the relays to do work. So lets do some money math real quick. I have 47 channels. Outdoor outlet boxes are only two gang. If you break the tabs off your outlets you can put 4 channels in one outdoor PVC box. Lets say that since you didn't destroy one of your relays you would have 48. 48 divided by 4 is twelve. You need 12 outdoor PVC boxes. At roughly $7 per box at a minimum that cost $84. Then add onto that receptacle covers They generally cost about $14 each. 12 times 14 equals 168 dollars. 84 + 168 = 252 dollars! This doesn't cover the cost of wire, outlets, and PVC fittings. 250 dollars just for molded plastic seems wasteful.
+Its best practice to go with that method. I simply can not spend the money for that. Instead I went to the dollar store and bought enough green extension cords to complete my task. The extension cords are about 6 foot long. I cut about one third of the cable off of the male side. Since these extension cords are not solid core copper I stripped off a bit of the ends and twisted them before tinning the tips with solder. The relays have set screws and stranded wire doesn't make as nice of a connection as solid wire so by tinning the tips you're giving the screws something to bite onto. In conjunction with the extension cords I used electric glands to pass the wires through the wall of the junction box. I bought 6 of them and randomly divided all 47 extension cords through only 5 of them. The 6th one will be used for main power later on. As I installed the extension cords I labelled and color coordinated the female parts. And also hit it with the multimeter to double check my work. Once all the extension cords have been connected and verified, it's time to install the main power. In my junk pile I had about eight feet of 14/3 outdoor romex. I color coordinated both of these to indicate which one is A and B. There's nowhere to tie in the ground in this system, so I clipped that end off and then moved on to the white wires. I tied all of the neutrals together and then tested that with a multimeter, testing across the two furthest points ensuring a sure path. I used the same push-in connectors and several hot glue sticks to create a solid brick of push in connectors. Finally I tied the hot black wires into their sides and the system is complete. I ran a live test of the system a few weeks ago. I pulled out a few strings of lights and played around experimenting with the Vixen environment. I have a few ideas on how I would like to change the system but I haven't incorporated these ideas yet. What I would like to do is bring a raspberry pi in to remove my desktop. I found a program on SourceForge called Lumos. The creator claims that his program can play Vixen sequences via the command line in Linux. I would like to give this a try, or just get Vixen to work under Linux. I don't want to dedicate my main computer to perform this yearly task. I hope I have explained this clear enough. I don't participate in all the social media sites, but I do wear tinfoil hats. If you would like to reach me I hangout in the Podnutz Chat on freenode, my user name is Underruner. Thank you for listening.

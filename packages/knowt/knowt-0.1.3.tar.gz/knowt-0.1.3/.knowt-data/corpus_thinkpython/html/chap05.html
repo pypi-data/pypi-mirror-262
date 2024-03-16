@@ -1,0 +1,708 @@
+<html>
+<head>
+<title>Chapter 5: Fruitful functions</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap04.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap06.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 5</h2>
+
+
+
+<h1>Fruitful functions</h1>
+
+<a name=1></a>
+<h3>5.1 Return values</h3>
+<p>
+Some of the built-in functions we have used, such as the math
+functions, have produced results.  Calling the function generates a
+new value, which we usually assign to a variable or use as part of an
+expression.
+
+<p><tt><font size=-1>e = math.exp(1.0)
+<br>height = radius * math.sin(angle)
+<br></font></tt></p>
+
+<p>
+But so far, none of the functions we have written has returned a
+value.
+<p>
+In this chapter, we are going to write functions that return values,
+which we will call <b>fruitful functions</b>, for want of a better
+name.  The first example is <tt><font size=-1>area</font></tt>, which returns the area of a
+circle with the given radius:
+
+<p><tt><font size=-1><font color=black>import</font> math
+<br>
+<br><font color=black>def</font> <font color=orange>area</font>(radius):
+<br>&nbsp; temp = math.pi * radius**2
+<br>&nbsp; <font color=black>return</font> temp
+<br></font></tt></p>
+
+<p>
+We have seen the <tt><font size=-1><font color=black>return</font></font></tt> statement before, but in a fruitful
+function the <tt><font size=-1><font color=black>return</font></font></tt> statement includes
+a <b>return value</b>.  This statement means: "Return immediately from
+this function and use the following expression as a return value."
+The expression provided can be arbitrarily complicated, so we could
+have written this function more concisely:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>area</font>(radius):
+<br>&nbsp; <font color=black>return</font> math.pi * radius**2
+<br></font></tt></p>
+
+<p>
+On the other hand, <b>temporary variables</b> like <tt><font size=-1>temp</font></tt> often make
+debugging easier.
+<p>
+Sometimes it is useful to have multiple return statements, one in each
+branch of a conditional:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>absoluteValue</font>(x):
+<br>&nbsp; <font color=black>if</font> x &lt; 0:
+<br>&nbsp; &nbsp; <font color=black>return</font> -x
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; <font color=black>return</font> x
+<br></font></tt></p>
+
+<p>
+Since these <tt><font size=-1><font color=black>return</font></font></tt> statements are in an alternative conditional,
+only one will be executed.  As soon as one is executed, the function
+terminates without executing any subsequent statements.
+<p>
+Code that appears after a <tt><font size=-1><font color=black>return</font></font></tt> statement, or any other place
+the flow of execution can never reach, is called <b>dead code</b>.
+<p>
+In a fruitful function, it is a good idea to ensure
+that every possible path through the program hits a
+<tt><font size=-1><font color=black>return</font></font></tt> statement.  For example:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>absoluteValue</font>(x):
+<br>&nbsp; <font color=black>if</font> x &lt; 0:
+<br>&nbsp; &nbsp; <font color=black>return</font> -x
+<br>&nbsp; <font color=black>elif</font> x &gt; 0:
+<br>&nbsp; &nbsp; <font color=black>return</font> x
+<br></font></tt></p>
+
+<p>
+This program is not correct because if <tt><font size=-1>x</font></tt> happens to be 0,
+neither condition is true, and the function ends without hitting a
+<tt><font size=-1><font color=black>return</font></font></tt> statement.
+In this case, the return value is a special value called
+<tt><font size=-1>None</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> absoluteValue(0)
+<br>None
+<br></font></tt></p>
+
+
+<blockquote><blockquote><i>As an exercise, write a <tt><font size=-1>compare</font></tt> function
+that returns <tt><font size=-1>1</font></tt> if <tt><font size=-1>x &gt; y</font></tt>,
+<tt><font size=-1>0</font></tt> if <tt><font size=-1>x == y</font></tt>, and <tt><font size=-1>-1</font></tt> if <tt><font size=-1>x &lt; y</font></tt>.</i>
+</blockquote>
+</blockquote>
+
+<a name=2></a>
+<h3>5.2 Program development</h3>
+<p>
+At this point, you should be able to look at complete functions
+and tell what they do.  Also, if you have been doing the exercises,
+you have written some small functions.  As you write
+larger functions, you might start to have more difficulty,
+especially with runtime and semantic errors.
+<p>
+To deal with increasingly complex programs,
+we are going to suggest a technique called
+<b>incremental development</b>.  The goal of incremental development
+is to avoid long debugging sessions by adding and testing only
+a small amount of code at a time.
+<p>
+As an example, suppose you want to find the distance between two
+points, given by the coordinates <tt>(x<sub>1</sub>, y<sub>1</sub>)</tt> and <tt>(x<sub>2</sub>, y<sub>2</sub>)</tt>.
+By the Pythagorean theorem, the distance is:
+
+<p>
+<table align=center><tr><td><tt>
+<b>distance</b> = <table style="display: inline; vertical-align: middle;"><tr><td rowspan=2 valign=bottom><font size=5>&radic;</font></td><td><hr noshade color=black></td></tr><tr><td>(x<sub>2</sub> - x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub> - y<sub>1</sub>)<sup>2</sup></tr></table> 
+</tt></td></tr></table>
+
+
+<p>
+The first step is to consider what a <tt><font size=-1>distance</font></tt> function should
+look like in Python. In other words, what are the inputs (parameters)
+and what is the output (return value)?
+<p>
+In this case, the two points are the inputs, which we can represent
+using four parameters.  The return value is the distance, which is
+a floating-point value.
+<p>
+Already we can write an outline of the function:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>distance</font>(x1, y1, x2, y2):
+<br>&nbsp; <font color=black>return</font> 0.0
+<br></font></tt></p>
+
+<p>
+Obviously, this version of the function doesn't compute distances; it
+always returns zero.  But it is syntactically correct, and it will
+run, which means that we can test it before we make it more
+complicated.
+<p>
+To test the new function, we call it with sample values:
+
+<p><tt><font size=-1>&gt;&gt;&gt; distance(1, 2, 4, 6)
+<br>0.0
+<br></font></tt></p>
+
+<p>
+We chose these values so that the horizontal distance equals 3 and the
+vertical distance equals 4; that way, the result is 5
+(the hypotenuse of a 3-4-5 triangle). When testing a function, it is
+useful to know the right answer.
+<p>
+At this point we have confirmed that the function is syntactically
+correct, and we can start adding lines of code.  After each
+incremental change, we test the function again.  If an error occurs at
+any point, we know where it must be <s>&nbsp; &nbsp;</s> in the last line
+we added.
+<p>
+A logical first step in the computation is to find the differences
+<tt>x<sub>2</sub> - x<sub>1</sub></tt> and <tt>y<sub>2</sub> - y<sub>1</sub></tt>.  We will store those values in
+temporary variables named <tt><font size=-1>dx</font></tt> and <tt><font size=-1>dy</font></tt> and print them.
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>distance</font>(x1, y1, x2, y2):
+<br>&nbsp; dx = x2 - x1
+<br>&nbsp; dy = y2 - y1
+<br>&nbsp; <font color=black>print</font> <font color=red>"dx is"</font>, dx
+<br>&nbsp; <font color=black>print</font> <font color=red>"dy is"</font>, dy
+<br>&nbsp; <font color=black>return</font> 0.0
+<br></font></tt></p>
+
+<p>
+If the function is working, the outputs should be 3 and 4.  If so,
+we know that the function is getting the right arguments and performing
+the first computation correctly.  If not, there are only a few lines
+to check.
+<p>
+Next we compute the sum of squares of <tt><font size=-1>dx</font></tt> and <tt><font size=-1>dy</font></tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>distance</font>(x1, y1, x2, y2):
+<br>&nbsp; dx = x2 - x1
+<br>&nbsp; dy = y2 - y1
+<br>&nbsp; dsquared = dx**2 + dy**2
+<br>&nbsp; <font color=black>print</font> <font color=red>"dsquared is: "</font>, dsquared
+<br>&nbsp; <font color=black>return</font> 0.0
+<br></font></tt></p>
+
+<p>
+Notice that we removed the <tt><font size=-1><font color=black>print</font></font></tt> statements we wrote in the previous
+step.  Code like that is called <b>scaffolding</b> because it is
+helpful for building the program but is not part of the final product.
+<p>
+Again, we would run the program at this stage and check the output
+(which should be 25).
+<p>
+Finally, if we have imported the math module, we can use the
+<tt><font size=-1>sqrt</font></tt> function to compute and return the result:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>distance</font>(x1, y1, x2, y2):
+<br>&nbsp; dx = x2 - x1
+<br>&nbsp; dy = y2 - y1
+<br>&nbsp; dsquared = dx**2 + dy**2
+<br>&nbsp; result = math.sqrt(dsquared)
+<br>&nbsp; <font color=black>return</font> result
+<br></font></tt></p>
+
+<p>
+If that works correctly, you are done.  Otherwise, you might
+want to print the value of <tt><font size=-1>result</font></tt> before the return
+statement.
+<p>
+When you start out, you should add only a line or two of code
+at a time.
+As you gain more experience, you might find yourself
+writing and debugging bigger chunks.  Either way,
+the incremental development process can save you a lot of debugging
+time.
+<p>
+The key aspects of the process are:
+
+<ol>
+<li>Start with a working program and make small incremental changes. 
+At any point, if there is an error, you will know exactly where it is.</li>
+<li>Use temporary variables to hold intermediate values so you can
+output and check them.</li>
+<li>Once the program is working, you might want to remove some of
+the scaffolding or consolidate multiple statements into compound
+expressions, but only if it does not make the program difficult to
+read.</li>
+</ol>
+
+<blockquote><i>As an exercise, use incremental development to write a function
+called <tt><font size=-1>hypotenuse</font></tt> that returns the length of the hypotenuse of a
+right triangle given the lengths of the two legs as arguments.
+Record each stage of the incremental development process as you go.</i>
+</blockquote>
+
+<a name=3></a>
+<h3>5.3 Composition</h3>
+<p>
+As you should expect by now, you can call one function from
+within another.  This ability is called <b>composition</b>.
+<p>
+As an example, we'll write a function that takes two points,
+the center of the circle and a point on the perimeter, and computes
+the area of the circle.
+<p>
+Assume that the center point is stored in the variables <tt><font size=-1>xc</font></tt> and
+<tt><font size=-1>yc</font></tt>, and the perimeter point is in <tt><font size=-1>xp</font></tt> and <tt><font size=-1>yp</font></tt>. The
+first step is to find the radius of the circle, which is the distance
+between the two points.  Fortunately, there is a function, <tt><font size=-1>distance</font></tt>, that does that:
+
+<p><tt><font size=-1>radius = distance(xc, yc, xp, yp)
+<br></font></tt></p>
+
+<p>
+The second step is to find the area of a circle with that radius and return
+it:
+
+<p><tt><font size=-1>result = area(radius)
+<br><font color=black>return</font> result
+<br></font></tt></p>
+
+<p>
+Wrapping that up in a function, we get:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>area2</font>(xc, yc, xp, yp):
+<br>&nbsp; radius = distance(xc, yc, xp, yp)
+<br>&nbsp; result = area(radius)
+<br>&nbsp; <font color=black>return</font> result
+<br></font></tt></p>
+
+<p>
+We called this function <tt><font size=-1>area2</font></tt> to distinguish it from the <tt><font size=-1>area</font></tt> function defined earlier.  There can only be one function with a
+given name within a given module.
+<p>
+The temporary variables <tt><font size=-1>radius</font></tt> and <tt><font size=-1>result</font></tt> are useful for
+development and debugging, but once the program is working, we can
+make it more concise by composing the function calls:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>area2</font>(xc, yc, xp, yp):
+<br>&nbsp; <font color=black>return</font> area(distance(xc, yc, xp, yp))
+<br></font></tt></p>
+
+
+<blockquote><i>As an exercise, write a function <tt><font size=-1>slope(x1, y1, x2, y2)</font></tt>
+that returns the slope of the line through the points <tt>(x1, y1)</tt> and
+<tt>(x2, y2)</tt>.  Then use this function in a function called
+<tt><font size=-1>intercept(x1, y1, x2, y2)</font></tt> that returns the y-intercept of the
+line through the points <tt><font size=-1>(x1, y1)</font></tt> and <tt><font size=-1>(x2, y2)</font></tt>.</i>
+</blockquote>
+
+<a name=4></a>
+<h3>5.4 Boolean functions</h3>
+<p>
+Functions can return boolean values, which is often convenient for hiding
+complicated tests inside functions.  For example:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>isDivisible</font>(x, y):
+<br>&nbsp; <font color=black>if</font> x % y == 0:
+<br>&nbsp; &nbsp; <font color=black>return</font> True
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; <font color=black>return</font> False
+<br></font></tt></p>
+
+<p>
+The name of this function is <tt><font size=-1>isDivisible</font></tt>.  It is common to give
+boolean functions names that sound like yes/no questions.  <tt><font size=-1>isDivisible</font></tt> returns either <tt><font size=-1>True</font></tt> or <tt><font size=-1>False</font></tt> to indicate whether the
+<tt><font size=-1>x</font></tt> is or is not divisible by <tt><font size=-1>y</font></tt>.
+<p>
+We can make the function more concise by taking advantage of the fact
+that the condition of the <tt><font size=-1><font color=black>if</font></font></tt> statement is itself a boolean
+expression.  We can return it directly, avoiding the <tt><font size=-1><font color=black>if</font></font></tt>
+statement altogether:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>isDivisible</font>(x, y):
+<br>&nbsp; <font color=black>return</font> x % y == 0
+<br></font></tt></p>
+
+<p>
+This session shows the new function in action:
+
+<p><tt><font size=-1>&gt;&gt;&gt;&nbsp; &nbsp;isDivisible(6, 4)
+<br>False
+<br>&gt;&gt;&gt;&nbsp; &nbsp;isDivisible(6, 3)
+<br>True
+<br></font></tt></p>
+
+<p>
+Boolean functions are often used in conditional statements:
+
+<p><tt><font size=-1><font color=black>if</font> isDivisible(x, y):
+<br>&nbsp; <font color=black>print</font> <font color=red>"x is divisible by y"</font>
+<br><font color=black>else</font>:
+<br>&nbsp; <font color=black>print</font> <font color=red>"x is not divisible by y"</font>
+<br></font></tt></p>
+
+<p>
+It might be tempting to write something like:
+
+<p><tt><font size=-1><font color=black>if</font> isDivisible(x, y) == True:
+<br></font></tt></p>
+
+<p>
+But the extra comparison is unnecessary.
+
+<blockquote><i>As an exercise, write a function <tt><font size=-1>isBetween(x, y, z)</font></tt> that
+returns <tt><font size=-1>True</font></tt> if <tt>y le x le z</tt> or <tt><font size=-1>False</font></tt> otherwise.</i>
+</blockquote>
+
+<a name=5></a>
+<h3>5.5 More recursion</h3>
+<p>
+So far, you have only learned a small subset of Python, but you might
+be interested to know that this subset is a <i>complete</i>
+programming language, which means that anything that can be
+computed can be expressed in this language.  Any program ever written
+could be rewritten using only the language features you have learned
+so far (actually, you would need a few commands to control devices
+like the keyboard, mouse, disks, etc., but that's all).
+<p>
+Proving that claim is a nontrivial exercise first accomplished by Alan
+Turing, one of the first computer scientists (some would argue that he
+was a mathematician, but a lot of early computer scientists started as
+mathematicians).  Accordingly, it is known as the Turing Thesis.  If
+you take a course on the Theory of Computation, you will have a chance
+to see the proof.
+<p>
+To give you an idea of what you can do with the tools you have learned
+so far, we'll evaluate a few recursively defined mathematical
+functions.  A recursive definition is similar to a circular
+definition, in the sense that the definition contains a reference to
+the thing being defined.  A truly circular definition is not very
+useful:
+
+<dl>
+<dt>frabjuous</dt>
+<dd>An adjective used to describe something that is frabjuous.</dd>
+</dl>
+<p>
+If you saw that definition in the dictionary, you might be annoyed. On
+the other hand, if you looked up the definition of the mathematical
+function factorial, you might get something like this:
+
+<p>
+<table align=center><tr><td><tt>
+0! = 1 <br>n! = n (n-1)!
+</tt></td></tr></table>
+
+
+<p>
+This definition says that the factorial of 0 is 1, and the factorial
+of any other value, <tt>n</tt>, is <tt>n</tt> multiplied by the factorial of <tt>n-1</tt>.
+<p>
+So <tt>3!</tt> is 3 times <tt>2!</tt>, which is 2 times <tt>1!</tt>, which is 1 times
+<tt>0!</tt>. Putting it all together, <tt>3!</tt> equals 3 times 2 times 1 times 1,
+which is 6.
+<p>
+If you can write a recursive definition of something, you can usually
+write a Python program to evaluate it. The first step is to decide
+what the parameters are for this function.  With little effort, you
+should conclude that <tt><font size=-1>factorial</font></tt> has a single parameter:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>factorial</font>(n):
+<br></font></tt></p>
+
+<p>
+If the argument happens to be 0, all we have to do is return 1:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>factorial</font>(n):
+<br>&nbsp; <font color=black>if</font> n == 0:
+<br>&nbsp; &nbsp; <font color=black>return</font> 1
+<br></font></tt></p>
+
+<p>
+Otherwise, and this is the interesting part, we have to make a
+recursive call to find the factorial of <tt>n-1</tt> and then multiply it by
+<tt>n</tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>factorial</font>(n):
+<br>&nbsp; <font color=black>if</font> n == 0:
+<br>&nbsp; &nbsp; <font color=black>return</font> 1
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; recurse = factorial(n-1)
+<br>&nbsp; &nbsp; result = n * recurse
+<br>&nbsp; &nbsp; <font color=black>return</font> result
+<br></font></tt></p>
+
+<p>
+The flow of execution for this program is similar to the flow of <tt><font size=-1>countdown</font></tt> in <a href="chap04.html#9">Section 4.9</a>.  If we call <tt><font size=-1>factorial</font></tt> with the
+value 3:
+<p>
+Since 3 is not 0, we take the second branch and calculate the factorial
+of <tt><font size=-1>n-1</font></tt>...
+
+<blockquote>Since 2 is not 0, we take the second branch and calculate the factorial of
+<tt><font size=-1>n-1</font></tt>...
+<p>
+  <blockquote>  Since 1 is not 0, we take the second branch and calculate the factorial
+  of <tt><font size=-1>n-1</font></tt>...
+<p>
+    <blockquote>    Since 0 <i>is</i> 0, we take the first branch and return 1
+    without making any more recursive calls.
+    </blockquote>
+<p>
+  The return value (1) is multiplied by <tt>n</tt>, which is 1, and the
+  result is returned.
+  </blockquote>
+<p>
+The return value (1) is multiplied by <tt>n</tt>, which is 2, and the
+result is returned.
+</blockquote>
+<p>
+The return value (2) is multiplied by <tt>n</tt>, which is 3, and the result, 6,
+becomes the return value of the function call that started the whole
+process.
+<p>
+Here is what the stack diagram looks like for this sequence of function
+calls:
+
+<p align="center"><img src="illustrations/stack3.png"></p>
+<p>
+The return values are shown being passed back up the stack.
+In each frame, the return value is
+the value of <tt><font size=-1>result</font></tt>, which is the product of <tt><font size=-1>n</font></tt>
+and <tt><font size=-1>recurse</font></tt>.
+<p>
+Notice that in the last frame, the local
+variables <tt><font size=-1>recurse</font></tt> and <tt><font size=-1>result</font></tt> do not exist, because
+the branch that creates them did not execute.
+
+<a name=6></a>
+<h3>5.6 Leap of faith</h3>
+<p>
+Following the flow of execution is one way to read programs, but
+it can quickly become labyrinthine.  An
+alternative is what we call the "leap of faith." When you come to a
+function call, instead of following the flow of execution, you <i>assume</i> that the function works correctly and returns the appropriate
+value.
+<p>
+In fact, you are already practicing this leap of faith when you use
+built-in functions.  When you call <tt><font size=-1>math.cos</font></tt> or <tt><font size=-1>math.exp</font></tt>,
+you don't examine the implementations of those functions.  You just
+assume that they work because the people who wrote the built-in
+functions were good programmers.
+<p>
+The same is true when you call one of your own functions.  For example,
+in <a href="chap05.html#4">Section 5.4</a>, we wrote a function called <tt><font size=-1>isDivisible</font></tt>
+that determines whether one number is divisible by another.  Once we
+have convinced ourselves that this function is correct <s>&nbsp; &nbsp;</s> by testing
+and examining the code <s>&nbsp; &nbsp;</s> we can use the function without looking
+at the code again.
+<p>
+The same is true of recursive programs.  When you get to the recursive
+call, instead of following the flow of execution, you should assume
+that the recursive call works (yields the correct result) and then ask
+yourself, "Assuming that I can find the factorial of <tt>n-1</tt>, can I
+compute the factorial of <tt>n</tt>?"  In this case, it is clear that you
+can, by multiplying by <tt>n</tt>.
+<p>
+Of course, it's a bit strange to assume that the function works
+correctly when you haven't finished writing it, but that's why
+it's called a leap of faith!
+
+<a name=7></a>
+<h3>5.7 One more example</h3>
+<p>
+In the previous example, we used temporary variables to spell out
+the steps and to make the code easier to debug, but we could have
+saved a few lines:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>factorial</font>(n):
+<br>&nbsp; <font color=black>if</font> n == 0:
+<br>&nbsp; &nbsp; <font color=black>return</font> 1
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; <font color=black>return</font> n * factorial(n-1)
+<br></font></tt></p>
+
+<p>
+From now on, we will tend to use the more concise form, but we
+recommend that you use the more explicit version while you are developing
+code.  When you have it working, you can tighten it up if you are
+feeling inspired.
+<p>
+After <tt><font size=-1>factorial</font></tt>, the most common example of a recursively defined
+mathematical function is <tt><font size=-1>fibonacci</font></tt>, which has the following definition:
+
+<p>
+<table align=center><tr><td><tt>
+<b>fibonacci</b>(0) = 1 <br><b>fibonacci</b>(1) = 1 <br><b>fibonacci</b>(n) = <b>fibonacci</b>(n-1) + <b>fibonacci</b>(n-2);
+</tt></td></tr></table>
+
+
+<p>
+Translated into Python, it looks like this:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>fibonacci</font> (n):
+<br>&nbsp; <font color=black>if</font> n == 0 <font color=black>or</font> n == 1:
+<br>&nbsp; &nbsp; <font color=black>return</font> 1
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; <font color=black>return</font> fibonacci(n-1) + fibonacci(n-2)
+<br></font></tt></p>
+
+<p>
+If you try to follow the flow of execution here, even for fairly
+small values of <tt>n</tt>, your head explodes.  But according to the
+leap of faith, if you assume that the two recursive calls
+work correctly, then it is clear that you get
+the right result by adding them together.
+
+<a name=8></a>
+<h3>5.8 Checking types</h3>
+<p>
+What happens if we call <tt><font size=-1>factorial</font></tt> and give it 1.5 as an argument?
+
+<p><tt><font size=-1>&gt;&gt;&gt; factorial (1.5)
+<br>RuntimeError: Maximum recursion depth exceeded
+<br></font></tt></p>
+
+<p>
+It looks like an infinite recursion.  But how can that be?  There is a
+base case <s>&nbsp; &nbsp;</s> when <tt><font size=-1>n == 0</font></tt>.  The problem is that the values
+of <tt><font size=-1>n</font></tt> <i>miss</i> the base case.
+<p>
+In the first recursive call, the value of <tt><font size=-1>n</font></tt> is 0.5.
+In the next, it is -0.5.  From there, it gets smaller and
+smaller, but it will never be 0.
+<p>
+We have two choices.  We can try to generalize the <tt><font size=-1>factorial</font></tt>
+function to work with floating-point numbers, or we can make
+<tt><font size=-1>factorial</font></tt> check the type of its argument.  The first option
+is called the gamma function and it's a little beyond the
+scope of this book.  So we'll go for the
+second.
+<p>
+We can use the built-in function <tt><font size=-1>isinstance</font></tt> to verify the type of the
+argument.  While we're
+at it, we also make sure the argument is positive:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>factorial</font> (n):
+<br>&nbsp; <font color=black>if not</font> isinstance(n, int):
+<br>&nbsp; &nbsp; <font color=black>print</font> <font color=red>"Factorial is only defined for integers."</font>
+<br>&nbsp; &nbsp; <font color=black>return</font> -1
+<br>&nbsp; <font color=black>elif</font> n &lt; 0:
+<br>&nbsp; &nbsp; <font color=black>print</font> <font color=red>"Factorial is only defined for positive integers."</font>
+<br>&nbsp; &nbsp; <font color=black>return</font> -1
+<br>&nbsp; <font color=black>elif</font> n == 0:
+<br>&nbsp; &nbsp; <font color=black>return</font> 1
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; <font color=black>return</font> n * factorial(n-1)
+<br></font></tt></p>
+
+<p>
+Now we have three base cases.  The first catches
+nonintegers.  The second catches negative integers.  In both cases,
+the program prints an error message and returns a special value, -1, to
+indicate that something went wrong:
+
+<p><tt><font size=-1>&gt;&gt;&gt; factorial (<font color=red>"fred"</font>)
+<br>Factorial <font color=black>is</font> only defined <font color=black>for</font> integers.
+<br>-1
+<br>&gt;&gt;&gt; factorial (-2)
+<br>Factorial <font color=black>is</font> only defined <font color=black>for</font> positive integers.
+<br>-1
+<br></font></tt></p>
+
+<p>
+If we get past both checks, then we know that <tt>n</tt> is a positive
+integer, and we can prove that the recursion terminates.
+<p>
+This program demonstrates a pattern sometimes called a <b>guardian</b>.
+The first two conditionals act as guardians, protecting the
+code that follows from values that might cause an error.  The guardians
+make it possible to prove the correctness of the code.
+
+<a name=9></a>
+<h3>5.9 Glossary</h3>
+
+<dl>
+<dt>fruitful function</dt>
+<dd>A function that yields a return value.</dd>
+<dt>return value</dt>
+<dd>The value provided as the result of a function call.</dd>
+<dt>temporary variable</dt>
+<dd>A variable used to store an intermediate value in
+a complex calculation.</dd>
+<dt>dead code</dt>
+<dd>Part of a program that can never be executed, often because
+it appears after a <tt><font size=-1><font color=black>return</font></font></tt> statement.</dd>
+<dt><tt><font size=-1>None</font></tt></dt>
+<dd>A special Python value returned by functions that
+have no return statement, or a return statement without an argument.</dd>
+<dt>incremental development</dt>
+<dd>A program development plan intended to
+avoid debugging by adding and testing only
+a small amount of code at a time.</dd>
+<dt>scaffolding</dt>
+<dd>Code that is used during program development but is
+not part of the final version.</dd>
+<dt>guardian</dt>
+<dd>A condition that checks for and handles circumstances that
+might cause an error.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap04.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap06.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

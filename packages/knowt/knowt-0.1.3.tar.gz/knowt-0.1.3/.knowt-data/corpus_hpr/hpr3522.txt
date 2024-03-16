@@ -1,0 +1,59 @@
+## hpr3522 :: Set up your Robot Building Lab and build a $0 Robot Platform
+
+ be the assimilator not the assimilated
+Setting up your robot building lab and building your first platform/ crash buggy.
+Getting started
+
+stuff to buy:
+
+order Arduino Uno or kit (recommended)
+Kit is highly recommended because you can work through projects for the various sensors and relays and gain experience using sensors. This makes it easier to integrate sensors into your robot, enabling it to more effectively interact with it's environment. Kit should come with a case, booklet, and have links to the code involved.
+order extra Arduinos (for when you blow up the first one)
+small machine screws of various lengths with nuts and washers
+18650 4 cell battery compartment
+2 18650 1 cell compartments*
+18650 chargers (wavgat) - these plug into a usb device
+solder/flux/solder sucker (tree sap)
+perfboard
+extra dupont wires (male to male)
+extra resistors
+optional
+
+ultrasonic sensors (or hack out of something)
+mp3 module
+
+L298N h-bridge modules
+
+get tools and acc:
+
+solder station
+computer with internet (raspberry pi works too) - should have listened...
+adruino.cc download and install arduino IDE
+various screwdrivers, pliers, straight airplane snips, drill with assorted bits. hacksaw, ruler, soldering station, multimeter,
+parts drawers for organizing small parts,
+several rubbermaid bins or cardboard boxes for cct boards, ABS pieces, etc.
+
+Collect and disassemble post apocalyptic scraps:
+
+safety note: Be careful when disassembling; use pliers rather than your fingers as much as possible. Printers and other products can sometimes be tricky to take apart. There may not be any visible screws to remove. The case cover may just snap into place and sometimes it feels like you are going to break the part before it unsnaps. Be aware that the ABS can snap if you force it past its breaking point, it is strong but when it breaks it can have sharp edges. Be especially careful when taking apart laptop batteries. Try not to short any circuits, and watch out because the metal strips that connect the 18650 cells are very sharp. Use pliers and metal cutters and remember not to create any circuits with your metal tools!
+
+
+Ingredients
+
+Printers are a great source of mechanical and chassis parts, including motors. The best are the ones with scanners built-in, which means an extra stepper motor.
+
+motors A mid sized printer will usually have two electric motors of the same size along with a few other smaller motors and stepper motors. Have two identical printers and you will have the 4 identical motors needed. It is OK to have 2 smaller and 2 larger motors and put one pair in front and one pair in back.
+steel rods, wheels with rubber tires, gears, specialty steel plates, reed switches, rotary encoders, ir switches
+ABS parts including a power supply cover that can hold Arduino.
+Glass panel can be repurposed as solar panel with cheap Chinese solar cells.
+
+UPS - for relays and opto isolators
+TVs - wire, speakers, optoisolators, lots of transistors and other components in older tvs.
+laptops, power tools, cell phones - lithium ion batteries
+books: libgen.is
+
+https://designingelectronics.com/
+
+
+Example of useful parts
+ Click the thumbnail to see the full-sized image

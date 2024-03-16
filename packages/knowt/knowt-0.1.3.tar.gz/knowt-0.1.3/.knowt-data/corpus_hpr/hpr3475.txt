@@ -1,0 +1,21 @@
+## hpr3475 :: How I Watch Everything Using Open Source Software
+
+ I've been using this setup or one similar for several years now and it has worked out very well.
+Hardware:
+
+Clearstream TV antenna
+Coax cable
+Hauppage WinTV-dual HD USB Dual Tuner
+Raspberry Pi 4 4GB
+1 TB SSD connected via USB 3
+HDMI cable
+
+Software:
+
+Libreelec OS
+Kodi
+TVheadend server
+TVheadend client
+Debrid addon media streamer
+
+Any questions or comments you can reach me at minnix at minnix dot dev

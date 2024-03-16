@@ -1,0 +1,85 @@
+## hpr2807 :: Are bash local variables local?
+
+ https://en.wikipedia.org/wiki/Scope_%28computer_science%29
+In hpr2739, Dave talked briefly about local variables. But what are they?
+In most modern languages, especially in compiled languages, "local" means that the value of a variable cannot be directly known, by looking up the name, outside the bounds of that function, but that’s not how it works in bash.
+Languages like C and Python have lexical scope. Lexical scope means local variables are local in the text. The names are local.
+If I’m writing code that is textually located outside the function, I cannot even describe how to access the variables within the function, because myvariable in my function is not the same variable, not the same place, as myvariable in your function.
+Languages like Bash and Elisp have dynamic scope. That means local variables are local in time. The names are global.
+What happens when you declare a variable local in bash is that the existing value of that variable is stowed away, to be brought back when your function exits.
+#!/usr/bin/env bash
+function sayscope() {
+    echo The scope is $whatsmyscope
+}
+
+function globalscope() {
+    whatsmyscope=global
+}
+
+function dynamicscope() {
+    whatsmyscope=dynamic
+}
+
+function localscope() {
+    local whatsmyscope=local
+    sayscope
+    dynamicscope
+    sayscope
+}
+
+globalscope
+sayscope
+localscope
+sayscope
+The scope is global
+The scope is local
+The scope is dynamic
+The scope is global
+Perl has both, and it calls them local (dynamic scope, like bash) and my (lexical scope):
+#!/usr/bin/env perl
+use v5.10;
+
+sub sayscope {
+    say "Dynamic scope is $whatsmyscope";
+}
+
+sub globalscope {
+    $whatsmyscope="global";
+}
+
+sub dynamicscope {
+    $whatsmyscope="dynamic";
+}
+
+sub lexicalscope {
+    my $whatsmyscope="lexical";
+    say "Lexical scope is $whatsmyscope";
+    sayscope;
+}
+
+sub localscope {
+    local $whatsmyscope="local";
+    sayscope;
+    dynamicscope;
+    sayscope;
+    lexicalscope;
+}
+
+globalscope;
+sayscope;
+localscope;
+sayscope;
+Dynamic scope is global
+Dynamic scope is local
+Dynamic scope is dynamic
+Lexical scope is lexical
+Dynamic scope is dynamic
+Dynamic scope is global
+You almost never want to use local in Perl, it’s mostly there for historical reasons — lexical scope is a Perl 5 feature. https://perl.plover.com/local.html covers well the remaining few and narrow exceptions where local might be useful.
+As dynamic scope has some valid use, it’s available in some otherwise lexically scoped languages. For example, Common LISP has the special form, and several Schemes and Racket have parameter objects:
+
+https://www.lispworks.com/documentation/HyperSpec/Body/d_specia.htm
+https://srfi.schemers.org/srfi-39/srfi-39.html
+https://docs.racket-lang.org/reference/parameters.html
+
+To dig fully into the history and flora of dynamic and lexical scope merits another episode.

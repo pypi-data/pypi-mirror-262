@@ -1,0 +1,26 @@
+## hpr2407 :: The Lost Episode Part 2
+
+ A follow up to “The Lost Episode”. Flashing the blank Atmega328p chip to get bring a nonworking Transistor Tester Kit to life.
+There are a lot of these kits out there. Different shapes, colors, and capabilities. In my case the kit was called a: 2578AY-AT. The firmware for this particular kit is: mega328_color_kit.
+
+Pics for the Episode:
+https://media.gunmonkeynet.net/u/nybill/collection/the-lost-episode-part-2/
+PDF of Open Source project:
+https://www.avrtester.tode.cz/upload/ttester_en.pdf
+My AVR Programmer:
+https://www.amazon.com/Qunqi-Programmer-Adapter-ATMEGA8-ATMEGA128/dp/B014J2BMAG/ref=sr_1_3?ie=UTF8&qid=1508004600&sr=8-3&keywords=usbasp
+Avrdudess:
+https://blog.zakkemble.co.uk/avrdudess-a-gui-for-avrdude/
+Steps after plugging in the USB programmer:
+
+    lsusb (get bus and device ID numbers.)
+    sudo chmod +777 /dev/bus/usb/*bus_ID/*device_ID
+
+    avrdude -c ‘your programmer’ -p ‘your chip’
+
+In my case:
+
+    avrdude -c usbasp -p m328p
+Avrdude should communicate with the programmer and verify the chip is ready to receive instructions.
+From here Avrdudess helped as I was able to use the ‘verify’ options after a write to see there was an error. Avrdudess also let me correct the error by changing the E-lock value to 0x04. Then the flash would write.
+Remember to write the hex file first and the eep file second as hex would over write a eep file if it was written first.

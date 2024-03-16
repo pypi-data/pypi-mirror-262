@@ -1,0 +1,7 @@
+## hpr3684 :: Wake on Lan
+
+ WakeOnLAN (WOL)
+From wiki.wireshark.org
+
+WakeOnLAN is the protocol name given to the so-called Magic Packet technology, developed by AMD and Hewlett Packard for remotely waking up a remote host that may have been automatically powered-down because of its power management features. Although power management allows companies and individuals to cut power usage costs, it presents a problem for IT departments especially in being able to quickly and efficiently remotely manage PC's, especially during off-hours operation when those PC's are most likely to be in a suspended or standby state, assuming power management features are enabled.
+

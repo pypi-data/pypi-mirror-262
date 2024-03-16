@@ -1,0 +1,35 @@
+## hpr1443 :: Fahrenheit 0-100
+
+ 
+The Fahrenheit scale DOES make sense!  Just don't add water.
+
+
+Comparing temperature points:
+  ºC      ºF     ºK       ºR
+-273    -460      0        0  Absolute zero
+ -40     -40    233      420  C = F
+ -18       0    255      460  Coldest of the year?
+   0      32    273      492  Water freezes
+  10      50    283      510  Spring or Fall day?
+  23      73.4  296      533  Better room temp
+  25      77    298      537  Room temp
+  37      98.6  310      558  Human body temp
+  38     100    311      580  Hottest of the year?
+  85     185    358      645  This one sticks with me
+ 100     212    373      672  Water Boils
+ 125     257    398      717  Maximum silicon chip
+ 371     700    644     1160  Soldering iron tip
+
+
+The scales and the people:
+
+
+https://en.wikipedia.org/wiki/Fahrenheit
+
+https://en.wikipedia.org/wiki/Daniel_Gabriel_Fahrenheit
+
+https://en.wikipedia.org/wiki/Celcius
+
+https://en.wikipedia.org/wiki/Anders_Celsius
+
+

@@ -1,0 +1,35 @@
+## hpr2024 :: Remapping Keys with xmodmap
+
+ In this episode I talk about how I tried to implement an idea that my son had when we were talking one day. I was complaining about file names with spaces in them, and he asked what if the computer automatically changed the spacebar so that it made underscores whenever somebody was trying to save a file? I thought this was a great idea. I even thought of a way implement it, though not quite as magically as he had envisioned. My solution involves the use of the command-line tools xev and xmodmap, and one blather voice prompt to launch the xmodmap command that will remap the spacebar to make underscores instead. Maybe somebody a whole lot smarter than me can figure out how to make this happen automatically whenever a save dialog box is open.
+First you need to find the keycode for your spacebar. Run the xev command and then press the spacebar to see which key code it is. Here's the output on my laptop:
+KeyPress event, serial 48, synthetic NO, window 0x4e00001,
+    root 0xc0, subw 0x0, time 116149126, (-739,-226), root:(448,358),
+    state 0x0, keycode 65 (keysym 0x20, space), same_screen YES,
+    XLookupString gives 1 bytes: (20) " "
+    XmbLookupString gives 1 bytes: (20) " "
+    XFilterEvent returns: False
+
+As you can see, my spacebar has the keycode of "65." Now we use xmodmap to reassign keycode 65 to make underscores:
+xmodmap -e "keycode 65 = underscore"
+Now to test it out. While xev is running, press spacebar. Notice that now when the spacebar is pressed it makes an underscore:
+KeyPress event, serial 57, synthetic NO, window 0x2600001,
+    root 0xc0, subw 0x0, time 116190619, (-520,-247), root:(667,337),
+    state 0x0, keycode 65 (keysym 0x5f, underscore), same_screen YES,
+    XLookupString gives 1 bytes: (5f) "_"
+    XmbLookupString gives 1 bytes: (5f) "_"
+    XFilterEvent returns: False
+
+And to change it back:
+xmodmap -e "keycode 65 = space"
+Now whenever I want to change the spacebar to make underscores or switch it back, I speak one of the following commands, which are in my blather configuration file.
+
+MAKE UNDERSCORES: xmodmap -e "keycode 65 = underscore"
+MAKE SPACES: xmodmap -e "keycode 65 = space"
+
+Links
+
+xmodmap man page: xmodmap is a utility for modifying keymaps and pointer button mappings in X
+xev man page: use xev print contents of X events
+
+Video Demonstration
+https://www.youtube.com/embed/hKEax8IqxAU

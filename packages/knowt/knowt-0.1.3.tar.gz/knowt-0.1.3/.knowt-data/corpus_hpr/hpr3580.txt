@@ -1,0 +1,22 @@
+## hpr3580 :: RAW images
+
+ Most of the time we work with JPEG images because that is the most common format for digital images. They have the virtue of decent quality combined with smaller file size, and so won't fill up your storage quite as fast. But if you want the highest quality you have to work with unprocessed images, called RAW images. These are simply the actual data recorded by the camera sensors, and they give you some advantages, such as better correction of white balance. But GIMP does not open RAW images directly. But there are some work-arounds which we discuss in this tutorial.
+Links:
+
+https://en.wikipedia.org/wiki/Raw_image_format
+https://en.wikipedia.org/wiki/Darktable
+https://en.wikipedia.org/wiki/Dcraw
+https://linux.die.net/man/1/dcraw
+https://krita.org/en/
+https://www.rawtherapee.com/
+https://en.wikipedia.org/wiki/DigiKam
+https://en.wikipedia.org/wiki/ImageMagick
+https://en.wikipedia.org/wiki/Shotwell_(software)
+https://en.wikipedia.org/wiki/Raw_image_format
+https://howtogimp.com/raw-photos-in-gimp/
+https://www.signatureedits.com/free-raw-photos/
+https://www.signatureedits.com/raw-files-license/
+https://www.darktable.org/install/
+https://www.rawtherapee.com/downloads/
+https://www.ahuka.com/gimp/raw-images/
+

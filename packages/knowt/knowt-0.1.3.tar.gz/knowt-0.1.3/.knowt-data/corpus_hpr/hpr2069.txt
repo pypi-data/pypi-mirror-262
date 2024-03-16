@@ -1,0 +1,14 @@
+## hpr2069 :: Counting Stuff in LibreOffice Calc
+
+ When I took over as Director of the School of Music in January, one of the first things I did was to try to get a better handle on the number of faculty I had at various ranks, how many had terminal degrees, how many already had tenure, how many were on tenure track, how many held endowed professorships, and so forth. Somewhere in the process, I discovered a handy trick for generating reports for this kind of thing. It's the COUNTIF function of LibreOffice calc. In this episode I will go through some examples of ways that I've used COUNTIF to generate reports.
+Examples
+Count occurrences of the string from A6 of current sheet on other sheet Personnel in column K
+=COUNTIF($Personnel.$K$1:$K$135,Reports.A6)
+Count occurrences of explicit string on other sheet "Personnel" in column K
+=COUNTIF($Personnel.$K$1:$K$135,"=Instructor")
+Count greater than or equal to 50
+=COUNTIF($I$2:$I$105,">=50")
+Using SUMPRODUCT, count between range greater than or equal to 40 but less than 50
+=SUMPRODUCT($I$2:$I$105>=40,$I$2:$I$105<50)
+Look for the string from sheet "Reports," cell A21, in the sheet "Personnel" column U, excluding any rows that have the value "Adjunct" in column K.
+=COUNTIFS($Personnel.$U$1:$U$135,Reports.A21,$Personnel.$K$1:$K$135,"<>Adjunct")

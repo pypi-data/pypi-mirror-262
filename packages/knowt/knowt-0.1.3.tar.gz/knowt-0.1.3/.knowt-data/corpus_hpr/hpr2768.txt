@@ -1,0 +1,86 @@
+## hpr2768 :: Writing Web Game in Haskell - Planetary statuses
+
+ Intro
+In episode hpr2748 Writing Web Game in Haskell - Special events, I talked about how to add special events in the game. One drawback with the system presented there was that the kragii worms might attack planet that already had kragii worms present. This time we’ll look into how to prevent this. As a nice bonus, we also come up with system that can be used to record when a planet has particularly good harvest season.
+Data types and Database
+We need a way to represent different kinds of statuses that a planet might have. These will include things like on going kragii attack or a particularly good harvest season. And since these are will be stored in database, we are also going to use derivePersistField to generate code needed for that.
+data PlanetaryStatus =
+    GoodHarvest
+    | PoorHarvest
+    | GoodMechanicals
+    | PoorMechanicals
+    | GoodChemicals
+    | PoorChemicals
+    | KragiiAttack
+
+derivePersistField "PlanetaryStatus"
+We could have recorded statuses as strings, but declaring a separate data type means that compiler can catch typos for us. It also makes code easier to read as PlanetaryStatus is much more informative than String or Text.
+For database, we use following definition shown below in models file. It creates database table planet_status and respective Haskell data type PlanetStatus. There will be one row in database for each status that a planet has. I could have stored all statuses in a list and store that in database, effectively having one row for any planet. Now there’s one row for any planet + status combination. Choice wasn’t really based on any deep analysis, but merely a gut feeling that this feels like a good idea.
+PlanetStatus json
+    planetId PlanetId
+    status PlanetaryStatus
+    expiration Int Maybe
+    deriving Show Read Eq
+expiration column doesn’t have NOT NULL constraint like all other columns in the table. This is reflected in PlanetStatus record where data type of planetStatusExpiration is Maybe Int instead of Int. So some statuses will have expiration time, while others might not. I originally chose to represent time as Int instead of own data type, but I have been recently wondering if that was really a good decision.
+Kragii attack, redux
+Code that does actual database query looks pretty scary on a first glance and it’s rather long. First part of the code is there to query database and join several tables into the query. Second part of the code deals with counting and grouping data and eventually returning [Entity Planet] data that contains all planets that match the criteria.
+-- | Load planets that are kragii attack candidates
+kragiiTargetPlanets :: (MonadIO m, BackendCompatible SqlBackend backend
+                           , PersistQueryRead backend, PersistUniqueRead backend) =>
+                           Int -> Int -> Key Faction -> ReaderT backend m [Entity Planet]
+kragiiTargetPlanets pop farms fId = do
+    planets <- E.select $
+        E.from $ (planet `E.LeftOuterJoin` population `E.LeftOuterJoin` building `E.LeftOuterJoin` status) -> do
+            E.on (status E.?. PlanetStatusPlanetId E.==. E.just (planet E.^. PlanetId)
+                  E.&&. status E.?. PlanetStatusStatus E.==. E.val (Just KragiiAttack))
+            E.on (building E.?. BuildingPlanetId E.==. E.just (planet E.^. PlanetId))
+            E.on (population E.?. PlanetPopulationPlanetId E.==. E.just (planet E.^. PlanetId))
+            E.where_ (planet E.^. PlanetOwnerId E.==. E.val (Just fId)
+                      E.&&. building E.?. BuildingType E.==. E.val (Just Farm)
+                      E.&&. E.isNothing (status E.?. PlanetStatusStatus))
+            E.orderBy [ E.asc (planet E.^. PlanetId) ]
+            return (planet, population, building)
+    let grouped = groupBy ((a, _, _) (b, _, _) -> entityKey a == entityKey b) planets
+    let counted = catMaybes $ fmap farmAndPopCount grouped
+    let filtered = filter ((_, p, f) ->
+                                p >= pop
+                                || f >= farms) counted
+    let mapped = fmap ((ent, _, _) -> ent) filtered
+    return mapped
+In any case, when we’re querying for possible kragii attack candidates, the query selects all planets that are owned by a given faction and have population of at least 10 (left outer join to planet_population table), have at least 5 farming complex (left outer join to building table) and don’t have on going kragii attack (left outer join to planet_status table). This is encapsulated in kragiiTargetPlanets 10 5 function in the kragiiAttack function shown below.
+Rest of the code deals with selecting a random planet from candidates, inserting a new planet_status row to record that kragii are attacking the planet and creating special event so player is informed about the situation and can react accordingly.
+kragiiAttack date faction = do
+    planets <- kragiiTargetPlanets 10 5 $ entityKey faction
+    if length planets == 0
+        then return Nothing
+        else do
+            n <- liftIO $ randomRIO (0, length planets - 1)
+            let planet = maybeGet n planets
+            let statusRec = PlanetStatus <$> fmap entityKey planet
+                                         <*> Just KragiiAttack
+                                         <*> Just Nothing
+            _ <- mapM insert statusRec
+            starSystem <- mapM (getEntity . planetStarSystemId . entityVal) planet
+            let event = join $ kragiiWormsEvent <$> planet <*> join starSystem <*> Just date
+            mapM insert event
+Second piece to the puzzle is status removal. In can happen manually or automatically when the prerecorded date has passed. Former method is useful for special events and latter for kind of seasonal things (good harvest for example).
+For example, in case of removing kragii attack status, code below serves as an example. The interesting part is deleteWhere that does actual database activity and removes all KragiiAttack statuses from given planet.
+removeNews event odds = MaybeT $ do
+    res <- liftIO $ roll odds
+    case res of
+        Success -> do
+            _ <- lift $ deleteWhere [ PlanetStatusPlanetId ==. kragiiWormsPlanetId event
+                                    , PlanetStatusStatus ==. KragiiAttack
+                                    ]
+            _ <- tell [ WormsRemoved ]
+            return $ Just RemoveOriginalEvent
+        Failure -> do
+            _ <- tell [ WormsStillPresent ]
+    return $ Just KeepOriginalEvent
+Removal of expired statuses is done based on the date, by using <=. operator to compare expiration column to given date.
+_ <- deleteWhere [ PlanetStatusExpiration <=. Just date]
+Other uses and further plans
+Like mentioned before, planet statuses can be used for variety of things. One such application is recording particularly good (or poor) harvest season. When such thing occurs, new planet_status record is inserted into database with expiration to set some suitable point in future. System will then automatically remove the status after that date is reached.
+In the meantime, every time food production is calculated, we have to check for possible statuses that might affect it and take them into account (as form of small bonus or malus).
+While this system is for planet statuses only, similar systems can be build for other uses (like statuses that affect a single ship or whole star system).
+Easiest way to catch me nowadays is either via email or on fediverse where I’m Tuula@mastodon.social

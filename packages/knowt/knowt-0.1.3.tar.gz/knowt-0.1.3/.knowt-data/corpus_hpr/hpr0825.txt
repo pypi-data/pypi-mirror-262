@@ -1,0 +1,16 @@
+## hpr0825 :: Jamey Sharp Interview at X.Org Developer Conference (XDC) 2011
+
+ 
+Jamey Sharp was placed on Ritalin, briefly, in fifth grade. His interests and activities have been varied ever since. Today his day job involves a computer test for attention deficit disorder, but his biggest projects have been the Portland State Aerospace Society, a student rocketry club at Portland State University; XCB, a new low-level binding to the X protocol, in the process of replacing Xlib; and Serialist, because his other projects didn’t leave him enough time to read his favorite webcomics without tool support.
+Jamey’s interests span computer science fields including cryptography, combinatorial search, compilers, and computational complexity; systems-level programming, such as file format and network protocol implementations, Linux kernel development, and boot-loader hacking; computer architecture and its impact on software design; and functional programming, preferably in Haskell.
+This interview focuses on Jamey's work on X.org, specifically the XCB project. The X protocol C-language Binding (XCB) is a replacement for Xlib featuring a small footprint, latency hiding, direct access to the protocol, improved threading support, and extensibility.
+
+XCB project site - https://xcb.freedesktop.org/
+XCB mailing list - https://lists.freedesktop.org/mailman/listinfo/xcb
+XCB irc          - irc.freenode.net #xcb
+https://opensourcebridge.org/users/432
+https://www.ohloh.net/accounts/jamey
+https://www.tovatest.com/
+https://psas.pdx.edu/
+https://xcb.freedesktop.org/
+https://serialist.net/

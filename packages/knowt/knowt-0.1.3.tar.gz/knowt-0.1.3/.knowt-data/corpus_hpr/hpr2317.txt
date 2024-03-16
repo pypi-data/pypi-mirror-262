@@ -1,0 +1,14 @@
+## hpr2317 :: Bash snippet - extglob and scp
+
+ Bash snippet - extglob and scp
+The Problem
+Following on from my last show on filename expansion, concentrating on extended patterns and the extglob option, I was asked a question by Jon Kulp in the comment section.
+Jon was using ls *(*.mp3|*.ogg) to find all OGG and MP3 files in a directory which also held other files. However, when he wanted to copy this subset of files elsewhere he had problems using this expression in an scp command.
+Having done some investigations to help solve this I thought I'd put what I found into an HPR episode and share it, and this is the show.
+Along the way clacke commented too and this led me to more investigations!
+Long notes
+As often happens, my idea of a brief episode turned into something much longer, so I converted the notes into long notes which you can find here. In them I have marked some sections which you might want to skip over -- unless you are as much of a geek as I am! I have not covered these sections in detail in the audio.
+Links
+
+HPR Show 2293: More supplementary Bash tips
+StackExchange question: Exclude characters for SCP-filepattern

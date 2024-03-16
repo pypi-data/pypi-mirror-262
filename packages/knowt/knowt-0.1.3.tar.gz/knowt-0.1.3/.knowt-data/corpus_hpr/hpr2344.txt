@@ -1,0 +1,131 @@
+## hpr2344 :: Follow on to HPR2340 (Tracking the HPR queue in Python)
+
+ This is a follow up to my previous show HPR2340, the improvement being I use the available STATS file from the hpr website rather than scraping the content from the HPR calendar page
+
+Link to my original show HPR2340
+https://hackerpublicradio.org/eps.php?id=2340
+Link to the excellent episode HPR1986 from Dave Morriss which references the stats file
+https://hackerpublicradio.org/eps/hpr1986/full_shownotes.html#example-2
+Link to useful HPR Stats page
+https://hackerpublicradio.org/stats.php
+
+Snapshot contents (2017-06-23) of 'stats.txt' file which was actually called 'hpr_stats.txt' my mistake
+Started:    11 years, 8 months, 19 days ago (2005-10-10)
+Renamed HPR:    9 years, 5 months, 27 days ago (2007-12-31)
+Total Shows:    2911
+Total TWAT: 300
+Total HPR:  2611
+HPR Hosts:  286
+Days to next free slot: 17
+Hosts in Queue: 9
+Shows in Queue: 14
+Comments waiting approval:  0
+Files on the FTP Server:    1
+Number of Emergency Shows:  7
+Days until show without media:  0
+1498246151,369343750,299186950,2911,300,2611,286,17,9,14,0,1,7,0
+
+Link to Meld the great visual diff and merge tool
+https://meldmerge.org/
+
+#!/usr/bin/env python3
+
+### This is a scratchpad file I've created to try out snippets of code in python
+
+# The script below is for use with Python 3
+# This script should work out of the box on most systems running a version of Python 3 
+# If you happen to have a blinkstick lying about then your can uncomment the blinkstick module
+# and uncomment the references at the bottom of the program that call the blinkstick functions
+# Regrds, Mr X
+
+
+# Imported modules
+from time import sleep          # used to pause program
+#from blinkstick import blinkstick  # used to control blinkstick nano attached to usb port of raspberry pi
+import urllib.request           # used to capture hpr webpage content to get the number of HPR shows in the que
+import re               # regular expressions, used to find sting in HPR webpage (get_hpr_que)
+
+
+# These functions control a blink stick nano attached to my raspberry pi USB port #################
+# They can be ignored or deleted if you don't have one
+
+
+def bstick_off():
+# Search for all attached blinksticks and turn them all off
+    for bstick in blinkstick.find_all():
+        bstick.turn_off()   # Turn front blinkstick LED off
+        bstick.set_color(channel=0, index=1, name="black")  # Turn rear blinkstick led off
+        print("Blinkstick: " + bstick.get_serial() + " turned off")
+
+
+def bstick_on(colour):
+# Turn blinkstick on and set led colour to string value stored in var colour
+# valid colours are, black, silver, gray, white, maroon, red, purple, fuchsia, green, lime, olive, yellow, navy, blue, teal, aqua
+    for bstick in blinkstick.find_all():
+        bstick.set_max_rgb_value(30)        # Sets max blinkstick RGB value to 15, makes LED dimm
+        bstick.set_color(name=colour)       # Turn blinkstick on, var colour determines colour
+        print ("Blinkstick: " + bstick.get_serial() + " | Colour: " + bstick.get_color(color_format="hex") + " [" + colour + "]")
+#hex
+
+def bstick_on_random():
+# Turn blinkstick on colour random
+    for bstick in blinkstick.find_all():
+        bstick.set_random_color()
+        print ("Blinkstick: " + bstick.get_serial() + " | Colour: " + bstick.get_color(color_format="hex"))
+
+
+def bstick_blink_red():
+# Flash blinkstick colour red
+    for bstick in blinkstick.find_all():
+        bstick.blink(name="red")
+        print ("Blinkstick: " + bstick.get_serial() + " | Colour: " + bstick.get_color(color_format="hex"))
+
+################################################################################
+
+
+def get_hpr_que_improved():
+# Goto hacker public stats page and extract the number of days to next free slot
+# turns on blinkstick LED with colour dependent on the number of days to next free slot in HPR queue
+
+    url = 'https://hackerpublicradio.org/stats.php'  # HPR url for stats page
+    try:
+        text = urllib.request.urlopen(url).read()   # Try to read hpr stats text
+    except:
+        print("ERROR: Problem acessing url " + url)     # if error accessing url then return -1
+        hpr_shows = -1
+        return hpr_shows
+    #print(text)    # DEBUG
+    text_page = str(text)   # convert text from list to string
+    line_begin = text_page.find('Days to next free slot:') # find position of string in page
+    line_end = line_begin + 27 # Store line end position (start position + 27)
+    line = text_page[line_begin:line_end]  # Capture string line
+    #print(line) # DEBUG Print line string
+    digit = re.findall(r'\d+',line)         # Find digits in line
+    #print(digit[0])    # DEBUG print the 1st digit
+    try:
+        hpr_shows = int(digit[0])   # convert digit list to integer days
+    except:                         # If show numbers not found then return -1
+        print("ERROR: Problem getting number of HPR shows in que.")
+        hpr_shows = -1
+        return hpr_shows
+
+    if hpr_shows > 9:       # If hpr show que > 9 turn on green LED
+        print("Turn on green blinkstick LED")
+        #bstick_on("green")
+    elif hpr_shows > 5:     # Else if hpr show que > 5 turn on blue LED
+        print("Turn on blue blinkstick LED")
+        #bstick_on("blue")
+    elif hpr_shows > -1:    # Else if hpr show que > -1 turn on ref LED
+        print("Turn on red blinkstick LED")     
+        #bstick_on("red")
+    else:
+        print("Flash red blinkstick LED")
+        #bstick_blink_red() # Else blink LED to show error
+    print("The are " + str(hpr_shows) + " days to tne next free slot in the HPR que...")
+    sleep(4)
+    print("Turn off all blinkstick LED's")
+    #bstick_off()           # Turn blinkstick off
+
+
+# Main program
+get_hpr_que_improved()

@@ -1,0 +1,18 @@
+## hpr4016 :: Today I learnt
+
+ Introduction:
+In this episode I continue the series "Today I learnt.." which was
+started by Dave
+Morriss in HPR 4002
+Show notes:
+I mention that I first tried to remove the password from my pdf using
+the excellent pdf manipulation program Okular recommended to me by Dave
+Morriss.
+After some googling I found the following solution
+to my password protected PDF.
+The command line program I used to remove the password from my pdf
+was qpdf.
+This is the
+Man page documentation for qpdf
+This is the command I used to remove the password in my pdf
+Qpdf —decrypt protected.pdf unprotected.pdf

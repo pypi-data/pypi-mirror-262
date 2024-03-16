@@ -1,0 +1,49 @@
+## hpr3284 :: Introduction to gdb
+
+ 
+Frustrated by gdb tutorials that are either too complicated or too simple? I think this might be an actually-useful tutorial to help you see how and why gdb can be useful.  Anyway, it's the path I followed to finding a use for the mysterious gdb, so maybe it will work for you.
+
+
+To follow along with this episode, here's some simple yet buggy code. This compiles but crashes when run.
+
+
+#include <iostream>
+#include <stdlib.h>  // rand
+#include <stdio.h>  // printf
+
+using namespace std;
+
+int main () {
+
+srand (time(NULL));
+int penguin = rand() % 8;
+cout << "This is a message from your friendly coder\n" << endl;
+int kiwi = 3;
+
+printf("penguin is set to is %s\n", penguin);
+printf("kiwi is set to is %s\n", kiwi);
+
+ return 0;
+} // main
+
+
+
+To compile it and see it crash, do this:
+
+
+$ g++ example.cpp
+$ ./a.out
+
+
+To compile it with debug symbols so you can step through it in gdb, do this:
+
+
+$ g++ -g -o debugtest example.cpp
+$ gdb debugtest
+
+
+You can now follow along with this tutorial.
+
+
+For extra credit, try compiling this with clang++ instead!
+

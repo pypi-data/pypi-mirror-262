@@ -1,0 +1,222 @@
+## hpr1241 :: HPR Community News for April 2013
+
+ New hosts
+
+Welcome to our new hosts: 
+Russ Wenner, 
+Jezra, and
+Helvetin.
+
+Show Review
+
+
+id
+title
+host
+
+
+
+1219
+The Care and Feeding of the Flintlock Muzzleloading Rifle
+Russ Wenner
+
+1220
+Cinnarch 64 bit, Installation Review
+FiftyOneFifty
+
+1221
+TGTM Newscast 93 for 2013-04-02 DeepGeek and Dann Washko 
+Tgtm News Team
+
+1222
+LiTS 027: mathematical commands
+Dann
+
+1223
+How I got into linux
+Jezra
+
+1224
+Podio Book Report on Jake Bible's "Dead Mech"
+FiftyOneFifty
+
+1225
+ Modern Survivalism Part 2
+Tracy Holz_Holzster
+
+1226
+TGTM Newscast for 2013-04-09 DeepGeek & Pokey
+Tgtm News Team
+
+1227
+Not-A-Con interview
+mordancy
+
+1228
+Utilizing Maximum Space on a Cloned BTRFS Partition
+FiftyOneFifty
+
+1229
+Chromebook Acer C7 Review
+Helvetin
+
+1230
+Google How Could You
+Neodragon
+
+1231
+TGTM Newscast for 2013-04-16 Bobobex
+Tgtm News Team
+
+1232
+LiTS 028: extended attributes
+Dann
+
+1233
+Playing Ingress
+Epicanis
+
+1234
+fightcodegame.com
+Mike Hingley
+
+1235
+Talk Cyberpunk To Me
+sigflup
+
+
+
+
+I would like to suggest the following amendments to the scheduling
+rules detailed below in ALL CAPS bellow:
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+https://hackerpublicradio.org/calendar.php#normal_priority
+We now release shows based on when the hosts last had a show aired.
+This brings new hosts and returning hosts to the top of the queue to
+encourage their efforts, and it also spreads out shows submitted in
+batches and gives a wider variety of hosts. Once a host is determined,
+the first show uploaded by that host is released. If you wish your
+shows to be released in a particular order then make sure you make that
+obvious in the title and by emailing admin@hackerpublicradio.org.
+You can swap the order of the shows but it involves additional effort
+and is frowned upon :).
+WHERE POSSIBLE WE WILL NOT RELEASE SHOWS FROM THE SAME HOST IN ANY ONE
+WEEK.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+https://hackerpublicradio.org/calendar.php#synicated_shows
+Syndicated Shows
+We will continue to promote new podcasts and other creative commons
+material but due to a lack of slots, we are only releasing material
+created exclusively for HPR. If there is a piece of creative commons
+content that you would like to promote, then feel free to record a
+regular show where you introduce the content and explain why it is
+important and providing links to where we can get more information.
+THESE SHOWS CAN BE RELEASED EITHER UNDER YOUR OWN NAME OR UNDER
+THE GENERIC HOST CALLED "VARIOUS CREATIVE COMMONS WORKS" (HOSTID 158)  
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+The amendment "WHERE POSSIBLE WE WILL NOT RELEASE SHOWS FROM THE SAME
+HOST IN ANY ONE WEEK." had been included prior to the changes in
+January, but I would like to put it back.
+
+The amendment "THESE SHOWS WILL CAN BE RELEASED EITHER UNDER YOUR
+OWN NAME OR UNDER THE GENERIC HOST CALLED "VARIOUS CREATIVE COMMONS
+WORKS" was discussed in the mail list under the title of "Various
+Creative Commons Works" but the discussions got derailed. 
+
+Please keep discussion to these two points only. 
+
+As always Silence, or no comment is assumed to be approval.
+
+Ken.
+
+Also the addition of the following text to the Scheduling Rules: 
+Please be aware that we cannot predict when your show will be out, but 
+sooner of later it will be released. Sometimes a new host will jump to 
+the top of the queue, while other hosts seem to be waiting a long time. 
+This is because all the shows at HPR are scheduled according to the 
+Scheduling Guidelines, which apply to everyone without exception.
+
+
+On the List
+
+Transfertags complete
+https://gitorious.org/hpr-scheduling-system/hpr-scheduling-system/blobs/master/transcoding/transfer_tags
+Shownote cleanup continues
+Direction idea for HPR website - XSLT
+Catalog of HPR Swag from 123stickers.com
+https://drive.google.com/folderview?id=0B0VQmm3RmAmeMENUWUl6SmhSdjg&usp=sharing
+
+How do the postings work? 
+Android App
+HPR topic requests
+https://hackerpublicradio.org/contribute.php#requested_topics
+Andriod Application
+https://corenominal.org/demo/hpr
+Reports of issues with the FTP server
+Aaron Swartz In Memoriam
+Removing the dev mail list
+Show upload form/ATOM feed/Opus questions...
+https://blinky.dogphilosophy.net/atomtest.xml
+Multiple host uploads
+Adding a list of "promised shows"
+Various Creative Commons Works/ Is there a backlog or not
+To hide the actual number of shows, Not the hacker ethic
+Should there be regular backup and a end of the line
+
+Think about how we should rotate the HPR lead role
+
+Todo List
+New
+
+Show Flow Rate/Average wait times
+Android App
+Crediting multiple hosts
+
+Processing
+
+Securing the website
+Upload Form
+Fixing broken links
+Fixing broken HTML/Converting to HTML5/CSS3
+thelinuxlink.pl
+
+Done
+
+DB support for summary and tags
+Move FTP Server internally, add new links to readme and sample show notes
+
+https://hackerpublicradio.org/contribute.php
+
+https://hackerpublicradio.org/sample_shownotes.html
+
+https://hackerpublicradio.org/README.txt
+
+
+
+Search options
+Introduction of show Tags
+Automatic tagging of media files
+
+To Do
+
+Automate the presentation
+Introduction to HPR video
+Add ATOM Feed
+Opus Support
+Events Page
+Twitter/Identi.CA Feed
+Upload to Archive.org
+Automating media upload, identification and transcoding
+
+Events
+
+sigflup: Notacon April 18-21, 2013, Hilton Garden Inn in Downtown Cleveland https://www.notacon.org/event-information-2/
+OCPLive May 27 Memorial Day Weekend Philadelphia https://ocplive.com/
+
+We would like more backup shows
+
+There are 32 shows in the queue from 13 hosts. Consider contributing a show. https://hackerpublicradio.org/calendar.php
+

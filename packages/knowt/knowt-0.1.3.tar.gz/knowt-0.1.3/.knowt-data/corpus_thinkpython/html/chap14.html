@@ -1,0 +1,698 @@
+<html>
+<head>
+<title>Chapter 14: Classes and methods</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap13.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap15.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 14</h2>
+
+
+
+<h1>Classes and methods</h1>
+
+<a name=1></a>
+<h3>14.1 Object-oriented features</h3>
+<p>
+Python is an <b>object-oriented programming language</b>, which means
+that it provides features that support <b>object-oriented
+programming</b>.
+<p>
+It is not easy to define object-oriented programming, but we have
+already seen some of its characteristics:
+
+<ul>
+<li>Programs are made up of object definitions and function
+definitions, and most of the computation is expressed in terms
+of operations on objects.</li>
+<li>Each object definition corresponds to some object or concept
+in the real world, and the functions that operate on that object
+correspond to the ways real-world objects interact.</li>
+</ul>
+<p>
+For example, the <tt><font size=-1>Time</font></tt> class defined in <a href="chap13.html">Chapter 13</a>
+corresponds to the way people record the time of day, and the
+functions we defined correspond to the kinds of things people do with
+times.  Similarly, the <tt><font size=-1>Point</font></tt> and <tt><font size=-1>Rectangle</font></tt> classes
+correspond to the mathematical concepts of a point and a rectangle.
+<p>
+So far, we have not taken advantage of the features Python provides to
+support object-oriented programming.  Strictly speaking, these features are
+not necessary.  For the most part, they provide an alternative syntax
+for things we have already done, but in many cases, the
+alternative is more concise and more accurately conveys the structure of
+the program.
+<p>
+For example, in the <tt><font size=-1>Time</font></tt> program, there is no obvious
+connection between the class definition and the function definitions
+that follow.  With some examination, it is apparent that every function
+takes at least one <tt><font size=-1>Time</font></tt> object as an argument.
+<p>
+This observation is the motivation for <b>methods</b>.  We have already
+seen some methods, such as <tt><font size=-1>keys</font></tt> and <tt><font size=-1>values</font></tt>, which were
+invoked on dictionaries.  Each method is associated with a class and is
+intended to be invoked on instances of that class.
+<p>
+Methods are just like functions, with
+two differences:
+
+<ul>
+<li>Methods are defined inside a class definition in order
+to make the relationship between the class and the method explicit.</li>
+<li>The syntax for invoking a method is different from the
+syntax for calling a function.</li>
+</ul>
+<p>
+In the next few sections, we will take the functions from the previous
+two chapters and transform them into methods.  This transformation is
+purely mechanical; you can do it simply by following a sequence of
+steps.  If you are comfortable converting from one form to another,
+you will be able to choose the best form for whatever you are doing.
+
+<a name=2></a>
+<h3>14.2 <tt><font size=-1>printTime</font></tt></h3>
+<p>
+In <a href="chap13.html">Chapter 13</a>, we defined a class named
+<tt><font size=-1>Time</font></tt> and you wrote a function named <tt><font size=-1>printTime</font></tt>, which
+should have looked something like this:
+
+<p><tt><font size=-1><font color=black>class</font> Time:
+<br>&nbsp; <font color=black>pass
+<br>
+<br>def</font> printTime(time):
+<br>&nbsp; <font color=black>print</font> str(time.hours) + <font color=red>":"</font> + \
+<br>&nbsp; &nbsp; &nbsp; &nbsp; str(time.minutes) + <font color=red>":"</font> + \
+<br>&nbsp; &nbsp; &nbsp; &nbsp; str(time.seconds)
+<br></font></tt></p>
+
+<p>
+To call this function, we passed a <tt><font size=-1>Time</font></tt> object as an argument:
+
+<p><tt><font size=-1>&gt;&gt;&gt; currentTime = Time()
+<br>&gt;&gt;&gt; currentTime.hours = 9
+<br>&gt;&gt;&gt; currentTime.minutes = 14
+<br>&gt;&gt;&gt; currentTime.seconds = 30
+<br>&gt;&gt;&gt; printTime(currentTime)
+<br></font></tt></p>
+
+<p>
+To make <tt><font size=-1>printTime</font></tt> a method, all we have to do is
+move the function definition inside the class definition.  Notice
+the change in indentation.
+
+<p><tt><font size=-1><font color=black>class</font> Time:
+<br>&nbsp; <font color=black>def</font> <font color=orange>printTime</font>(time):
+<br>&nbsp; &nbsp; <font color=black>print</font> str(time.hours) + <font color=red>":"</font> +&nbsp; \
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; str(time.minutes) + <font color=red>":"</font> +&nbsp; \
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; str(time.seconds)
+<br></font></tt></p>
+
+<p>
+Now we can invoke <tt><font size=-1>printTime</font></tt> using dot notation.
+
+<p><tt><font size=-1>&gt;&gt;&gt; currentTime.printTime()
+<br></font></tt></p>
+
+<p>
+As usual, the object on which the method is invoked appears
+before the dot and the
+name of the method appears after the dot.
+<p>
+The object on which the method is invoked is assigned to the
+first parameter, so in this case <tt><font size=-1>currentTime</font></tt> is assigned
+to the parameter <tt><font size=-1>time</font></tt>.
+<p>
+By convention, the first parameter of a method is
+called <tt><font size=-1>self</font></tt>.  The reason for this is a little
+convoluted, but it is based on a useful metaphor.
+<p>
+The syntax for a function call, <tt><font size=-1>printTime(currentTime)</font></tt>,
+suggests that the function is the active agent.  It says
+something like, "Hey <tt><font size=-1>printTime</font></tt>!  Here's an object for
+you to print."
+<p>
+In object-oriented programming, the objects are the active
+agents.  An invocation like <tt><font size=-1>currentTime.printTime()</font></tt>
+says "Hey <tt><font size=-1>currentTime</font></tt>!  Please print yourself!"
+<p>
+This change in perspective might be more polite, but
+it is not obvious that it is useful.  In the examples we
+have seen so far, it may not be.  But sometimes shifting
+responsibility from the functions onto the objects
+makes it possible to write more versatile functions,
+and makes it easier to maintain and reuse code.
+
+<a name=3></a>
+<h3>14.3 Another example</h3>
+<p>
+Let's convert <tt><font size=-1>increment</font></tt> (from <a href="chap13.html#3">Section 13.3</a>) to a
+method.  To save space, we will leave out previously defined methods,
+but you should keep them in your version:
+
+<p><tt><font size=-1><font color=black>class</font> Time:
+<br>&nbsp; <font color=#009000>#previous method definitions here...
+</font><br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>increment</font>(self, seconds):
+<br>&nbsp; &nbsp; self.seconds = seconds + self.seconds
+<br>
+<br>&nbsp; &nbsp; <font color=black>while</font> self.seconds &gt;= 60:
+<br>&nbsp; &nbsp; &nbsp; self.seconds = self.seconds - 60
+<br>&nbsp; &nbsp; &nbsp; self.minutes = self.minutes + 1
+<br>
+<br>&nbsp; &nbsp; <font color=black>while</font> self.minutes &gt;= 60:
+<br>&nbsp; &nbsp; &nbsp; self.minutes = self.minutes - 60
+<br>&nbsp; &nbsp; &nbsp; self.hours = self.hours + 1
+<br></font></tt></p>
+
+<p>
+The transformation is purely mechanical <s>&nbsp; &nbsp;</s> we move the method
+definition into the class definition and change the name of the first
+parameter.
+<p>
+Now we can invoke <tt><font size=-1>increment</font></tt> as a method.
+
+<p><tt><font size=-1>currentTime.increment(500)
+<br></font></tt></p>
+
+<p>
+Again, the object on which the method is invoked gets assigned
+to the first parameter, <tt><font size=-1>self</font></tt>.  The second parameter,
+<tt><font size=-1>seconds</font></tt> gets the value <tt><font size=-1>500</font></tt>.
+
+<blockquote><i>As an exercise, convert <tt><font size=-1>convertToSeconds</font></tt> 
+(from <a href="chap13.html#5">Section 13.5</a>) to a method in the
+<tt><font size=-1>Time</font></tt> class.</i>
+</blockquote>
+
+<a name=4></a>
+<h3>14.4 A more complicated example</h3>
+<p>
+The <tt><font size=-1>after</font></tt> function is slightly more complicated because it
+operates on two <tt><font size=-1>Time</font></tt> objects, not just one.  We can only convert
+one of the parameters to <tt><font size=-1>self</font></tt>; the other stays the same:
+
+<p><tt><font size=-1><font color=black>class</font> Time:
+<br>&nbsp; <font color=#009000>#previous method definitions here...
+</font><br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>after</font>(self, time2):
+<br>&nbsp; &nbsp; <font color=black>if</font> self.hour &gt; time2.hour:
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> 1
+<br>&nbsp; &nbsp; <font color=black>if</font> self.hour &lt; time2.hour:
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> 0
+<br>
+<br>&nbsp; &nbsp; <font color=black>if</font> self.minute &gt; time2.minute:
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> 1
+<br>&nbsp; &nbsp; <font color=black>if</font> self.minute &lt; time2.minute:
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> 0
+<br>
+<br>&nbsp; &nbsp; <font color=black>if</font> self.second &gt; time2.second:
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> 1
+<br>&nbsp; &nbsp; <font color=black>return</font> 0
+<br></font></tt></p>
+
+<p>
+We invoke this method on one object and pass the other as an argument:
+
+<p><tt><font size=-1><font color=black>if</font> doneTime.after(currentTime):
+<br>&nbsp; <font color=black>print</font> <font color=red>"The bread is not done yet."</font>
+<br></font></tt></p>
+
+<p>
+You can almost read the invocation like English: "If the done-time is
+after the current-time, then..."
+
+<a name=5></a>
+<h3>14.5 Optional arguments</h3>
+<p>
+We have seen built-in functions that take a variable number of
+arguments.  For example, <tt><font size=-1>string.find</font></tt> can take two, three, or
+four arguments.
+<p>
+It is possible to write user-defined functions with optional argument
+lists.  For example, we can upgrade our own version of <tt><font size=-1>find</font></tt> to do
+the same thing as <tt><font size=-1>string.find</font></tt>.
+<p>
+This is the original version from <a href="chap07.html#7">Section 7.7</a>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>find</font>(str, ch):
+<br>&nbsp; index = 0
+<br>&nbsp; <font color=black>while</font> index &lt; len(str):
+<br>&nbsp; &nbsp; <font color=black>if</font> str[index] == ch:
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> index
+<br>&nbsp; &nbsp; index = index + 1
+<br>&nbsp; <font color=black>return</font> -1
+<br></font></tt></p>
+
+<p>
+This is the new and improved version:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>find</font>(str, ch, start=0):
+<br>&nbsp; index = start
+<br>&nbsp; <font color=black>while</font> index &lt; len(str):
+<br>&nbsp; &nbsp; <font color=black>if</font> str[index] == ch:
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> index
+<br>&nbsp; &nbsp; index = index + 1
+<br>&nbsp; <font color=black>return</font> -1
+<br></font></tt></p>
+
+<p>
+The third parameter, <tt><font size=-1>start</font></tt>, is optional because a default value,
+<tt><font size=-1>0</font></tt>, is provided.  If we invoke <tt><font size=-1>find</font></tt> with only two
+arguments, it uses the default value and starts from the beginning of
+the string:
+
+<p><tt><font size=-1>&gt;&gt;&gt; find(<font color=red>"apple"</font>, <font color=red>"p"</font>)
+<br>1
+<br></font></tt></p>
+
+<p>
+If we provide a third argument, it <b>overrides</b> the default:
+
+<p><tt><font size=-1>&gt;&gt;&gt; find(<font color=red>"apple"</font>, <font color=red>"p"</font>, 2)
+<br>2
+<br>&gt;&gt;&gt; find(<font color=red>"apple"</font>, <font color=red>"p"</font>, 3)
+<br>-1
+<br></font></tt></p>
+
+
+<blockquote><i>As an exercise, add a fourth parameter, <tt><font size=-1>end</font></tt>, that specifies where
+to stop looking.
+<p>
+Warning: This exercise is a bit tricky.  The default value of
+<tt><font size=-1>end</font></tt> should be <tt><font size=-1>len(str)</font></tt>, but that doesn't work.  The
+default values are evaluated when the function is defined, not when it
+is called.  When <tt><font size=-1>find</font></tt> is defined, <tt><font size=-1>str</font></tt> doesn't exist yet,
+so you can't find its length.</i>
+</blockquote>
+
+<a name=6></a>
+<h3>14.6 The initialization method</h3>
+<p>
+The <b>initialization method</b> is
+a special method that is invoked when an object is created.  The name
+of this method is <tt><font size=-1>__init__</font></tt> (two underscore characters,
+followed by <tt><font size=-1>init</font></tt>, and then two more underscores).  An
+initialization method for the <tt><font size=-1>Time</font></tt> class looks like this:
+
+<p><tt><font size=-1><font color=black>class</font> Time:
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self, hours=0, minutes=0, seconds=0):
+<br>&nbsp; &nbsp; self.hours = hours
+<br>&nbsp; &nbsp; self.minutes = minutes
+<br>&nbsp; &nbsp; self.seconds = seconds
+<br></font></tt></p>
+
+<p>
+There is no conflict between the attribute <tt><font size=-1>self.hours</font></tt>
+and the parameter <tt><font size=-1>hours</font></tt>.  Dot notation specifies which
+variable we are referring to.
+<p>
+When we invoke the <tt><font size=-1>Time</font></tt> constructor, the arguments we provide
+are passed along to <tt><font size=-1>init</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; currentTime = Time(9, 14, 30)
+<br>&gt;&gt;&gt; currentTime.printTime()
+<br>9:14:30
+<br></font></tt></p>
+
+<p>
+Because the arguments are optional, we can omit them:
+
+<p><tt><font size=-1>&gt;&gt;&gt; currentTime = Time()
+<br>&gt;&gt;&gt; currentTime.printTime()
+<br>0:0:0
+<br></font></tt></p>
+
+<p>
+Or provide only the first:
+
+<p><tt><font size=-1>&gt;&gt;&gt; currentTime = Time (9)
+<br>&gt;&gt;&gt; currentTime.printTime()
+<br>9:0:0
+<br></font></tt></p>
+
+<p>
+Or the first two:
+
+<p><tt><font size=-1>&gt;&gt;&gt; currentTime = Time (9, 14)
+<br>&gt;&gt;&gt; currentTime.printTime()
+<br>9:14:0
+<br></font></tt></p>
+
+<p>
+Finally, we can make assignments to a subset of the
+parameters by naming them explicitly:
+
+<p><tt><font size=-1>&gt;&gt;&gt; currentTime = Time(seconds = 30, hours = 9)
+<br>&gt;&gt;&gt; currentTime.printTime()
+<br>9:0:30
+<br></font></tt></p>
+
+
+<a name=7></a>
+<h3>14.7 Points revisited</h3>
+<p>
+Let's rewrite the <tt><font size=-1>Point</font></tt> class from
+<a href="chap12.html#1">Section 12.1</a> in a more object-oriented style:
+
+<p><tt><font size=-1><font color=black>class</font> Point:
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self, x=0, y=0):
+<br>&nbsp; &nbsp; self.x = x
+<br>&nbsp; &nbsp; self.y = y
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>__str__</font>(self):
+<br>&nbsp; &nbsp; <font color=black>return</font> <font color=red>'('</font> + str(self.x) + <font color=red>', '</font> + str(self.y) + <font color=red>')'</font>
+<br></font></tt></p>
+
+<p>
+The initialization method
+takes <tt>x</tt> and <tt>y</tt> values as optional parameters;
+the default for either parameter is 0.
+<p>
+The next method, <tt><font size=-1>__str__</font></tt>, returns a string representation
+of a <tt><font size=-1>Point</font></tt> object.
+If a class provides a method named <tt><font size=-1>__str__</font></tt>, it
+overrides the default behavior of the Python built-in <tt><font size=-1>str</font></tt> function.
+
+<p><tt><font size=-1>&gt;&gt;&gt; p = Point(3, 4)
+<br>&gt;&gt;&gt; str(p)
+<br><font color=red>'(3, 4)'</font>
+<br></font></tt></p>
+
+<p>
+Printing a <tt><font size=-1>Point</font></tt> object implicitly invokes <tt><font size=-1>__str__</font></tt> on
+the object, so defining <tt><font size=-1>__str__</font></tt> also changes the behavior of
+<tt><font size=-1><font color=black>print</font></font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; p = Point(3, 4)
+<br>&gt;&gt;&gt; <font color=black>print</font> p
+<br>(3, 4)
+<br></font></tt></p>
+
+<p>
+When we write a new class, we almost always start by writing <tt><font size=-1>__init__</font></tt>, which makes it easier to instantiate objects, and <tt><font size=-1>__str__</font></tt>, which is almost always useful for debugging.
+
+<a name=8></a>
+<h3>14.8 Operator overloading</h3>
+<p>
+Some languages make it possible to change the definition of the
+built-in operators when they are applied to user-defined types.  This
+feature is called <b>operator overloading</b>.  It is especially useful when
+defining new mathematical types.
+<p>
+For example, to override the addition operator <tt><font size=-1>+</font></tt>, we
+provide a method named <tt><font size=-1>__add__</font></tt>:
+
+<p><tt><font size=-1><font color=black>class</font> Point:
+<br>&nbsp; <font color=#009000># previously defined methods here...
+</font><br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>__add__</font>(self, other):
+<br>&nbsp; &nbsp; <font color=black>return</font> Point(self.x + other.x, self.y + other.y)
+<br></font></tt></p>
+
+<p>
+As usual, the first parameter is the object on which the method is
+invoked.  The second parameter is conveniently named <tt><font size=-1>other</font></tt>
+to distinguish it from <tt><font size=-1>self</font></tt>.  To add two <tt><font size=-1>Point</font></tt>s, we create
+and return a new <tt><font size=-1>Point</font></tt> that contains  the sum of the
+<tt>x</tt> coordinates and the sum of the <tt>y</tt> coordinates.
+<p>
+Now, when we apply the <tt><font size=-1>+</font></tt> operator to <tt><font size=-1>Point</font></tt> objects, Python
+invokes <tt><font size=-1>__add__</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt;&nbsp; &nbsp;p1 = Point(3, 4)
+<br>&gt;&gt;&gt;&nbsp; &nbsp;p2 = Point(5, 7)
+<br>&gt;&gt;&gt;&nbsp; &nbsp;p3 = p1 + p2
+<br>&gt;&gt;&gt;&nbsp; &nbsp;<font color=black>print</font> p3
+<br>(8, 11)
+<br></font></tt></p>
+
+<p>
+The expression <tt><font size=-1>p1 + p2</font></tt> is equivalent to
+<tt><font size=-1>p1.__add__(p2)</font></tt>, but obviously more elegant.
+
+<blockquote><i>As an exercise, add a method <tt><font size=-1>__sub__(self, other)</font></tt> that
+overloads the subtraction operator, and try it out.</i>
+</blockquote>
+<p>
+There are several ways to override the behavior of the
+multiplication operator: by defining a method named
+<tt><font size=-1>__mul__</font></tt>, or <tt><font size=-1>__rmul__</font></tt>, or both.
+<p>
+If the left operand of <tt><font size=-1>*</font></tt> is a <tt><font size=-1>Point</font></tt>, Python invokes
+<tt><font size=-1>__mul__</font></tt>, which assumes that the other operand is also
+a <tt><font size=-1>Point</font></tt>.  It computes the <b>dot product</b> of the two
+points, defined according to the rules of linear algebra:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>__mul__</font>(self, other):
+<br>&nbsp; <font color=black>return</font> self.x * other.x + self.y * other.y
+<br></font></tt></p>
+
+<p>
+If the left operand of <tt><font size=-1>*</font></tt> is a primitive type and the right
+operand is a <tt><font size=-1>Point</font></tt>, Python invokes <tt><font size=-1>__rmul__</font></tt>, which
+performs <b>scalar multiplication</b>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>__rmul__</font>(self, other):
+<br>&nbsp; <font color=black>return</font> Point(other * self.x,&nbsp; other * self.y)
+<br></font></tt></p>
+
+<p>
+The result is a new <tt><font size=-1>Point</font></tt> whose coordinates are a multiple
+of the original coordinates.  If <tt><font size=-1>other</font></tt> is a type that cannot
+be multiplied by a floating-point number, then
+<tt><font size=-1>__rmul__</font></tt> will yield an error.
+<p>
+This example demonstrates both kinds of multiplication:
+
+<p><tt><font size=-1>&gt;&gt;&gt; p1 = Point(3, 4)
+<br>&gt;&gt;&gt; p2 = Point(5, 7)
+<br>&gt;&gt;&gt; <font color=black>print</font> p1 * p2
+<br>43
+<br>&gt;&gt;&gt; <font color=black>print</font> 2 * p2
+<br>(10, 14)
+<br></font></tt></p>
+
+<p>
+What happens if we try to evaluate <tt><font size=-1>p2 * 2</font></tt>?  Since
+the first operand is a <tt><font size=-1>Point</font></tt>, Python invokes
+<tt><font size=-1>__mul__</font></tt> with <tt><font size=-1>2</font></tt> as the second argument.
+Inside <tt><font size=-1>__mul__</font></tt>, the program tries to access the <tt><font size=-1>x</font></tt>
+coordinate of <tt><font size=-1>other</font></tt>, which fails because
+an integer has no attributes:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> p2 * 2
+<br>AttributeError: <font color=red>'int'</font> object has no attribute <font color=red>'x'</font>
+<br></font></tt></p>
+
+<p>
+Unfortunately, the error message is a bit opaque.  This example
+demonstrates some of the difficulties of object-oriented programming.
+Sometimes it is hard enough just to figure out what code is running.
+<p>
+For a more complete example of operator overloading, see
+<a href="app02.html">Appendix B</a>.
+
+<a name=9></a>
+<h3>14.9 Polymorphism</h3>
+<p>
+Most of the methods we have written only work for a specific
+type.  When you create a new object, you write methods that operate
+on that type.
+<p>
+But there are certain operations that you will want to apply to many
+types, such as the arithmetic operations in the previous sections.
+If many types support the same set of operations, you
+can write functions that work on any of those types.
+<p>
+For example, the <tt><font size=-1>multadd</font></tt> operation (which is common in
+linear algebra) takes three arguments; it multiplies the first
+two and then adds the third.  We can write it in Python like
+this:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>multadd</font> (x, y, z):
+<br>&nbsp; <font color=black>return</font> x * y + z
+<br></font></tt></p>
+
+<p>
+This method will work for any values of <tt><font size=-1>x</font></tt> and <tt><font size=-1>y</font></tt>
+that can be multiplied and for any value of <tt><font size=-1>z</font></tt> that can be
+added to the product.
+<p>
+We can invoke it with numeric values:
+
+<p><tt><font size=-1>&gt;&gt;&gt; multadd (3, 2, 1)
+<br>7
+<br></font></tt></p>
+
+<p>
+Or with <tt><font size=-1>Point</font></tt>s:
+
+<p><tt><font size=-1>&gt;&gt;&gt; p1 = Point(3, 4)
+<br>&gt;&gt;&gt; p2 = Point(5, 7)
+<br>&gt;&gt;&gt; <font color=black>print</font> multadd (2, p1, p2)
+<br>(11, 15)
+<br>&gt;&gt;&gt; <font color=black>print</font> multadd (p1, p2, 1)
+<br>44
+<br></font></tt></p>
+
+<p>
+In the first case, the <tt><font size=-1>Point</font></tt> is multiplied by a scalar
+and then added to another <tt><font size=-1>Point</font></tt>.
+In the second case, the dot product yields a numeric
+value, so the third argument also has to be a numeric value.
+<p>
+A function like this that can take arguments with different
+types is called <b>polymorphic</b>.
+<p>
+As another example, consider the method <tt><font size=-1>frontAndBack</font></tt>,
+which prints a list twice, forward and backward:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>frontAndBack</font>(front):
+<br>&nbsp; <font color=black>import</font> copy
+<br>&nbsp; back = copy.copy(front)
+<br>&nbsp; back.reverse()
+<br>&nbsp; <font color=black>print</font> str(front) + str(back)
+<br></font></tt></p>
+
+<p>
+Because the <tt><font size=-1>reverse</font></tt> method is a modifier, we make a copy
+of the list before reversing it.  That way, this method doesn't
+modify the list it gets as an argument.
+<p>
+Here's an example that applies <tt><font size=-1>frontAndBack</font></tt> to a list:
+
+<p><tt><font size=-1>&gt;&gt;&gt;&nbsp; &nbsp;myList = [1, 2, 3, 4]
+<br>&gt;&gt;&gt;&nbsp; &nbsp;frontAndBack(myList)
+<br>[1, 2, 3, 4][4, 3, 2, 1]
+<br></font></tt></p>
+
+<p>
+Of course, we intended to apply this function to lists, so
+it is not surprising that it works.
+What would be surprising is if we could apply it to a <tt><font size=-1>Point</font></tt>.
+<p>
+To determine whether a function can be applied to a new type,
+we apply the fundamental rule of polymorphism:
+
+<blockquote><b>If all of the operations inside the function can be applied
+to the type, the function can be applied to the type.</b>
+</blockquote>
+<p>
+The operations in the method include <tt><font size=-1>copy</font></tt>, <tt><font size=-1>reverse</font></tt>, and
+<tt><font size=-1><font color=black>print</font></font></tt>.
+<p>
+<tt><font size=-1>copy</font></tt> works on any object, and we have already written
+a <tt><font size=-1>__str__</font></tt> method for <tt><font size=-1>Point</font></tt>s, so all we need
+is a <tt><font size=-1>reverse</font></tt> method in the <tt><font size=-1>Point</font></tt> class:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>reverse</font>(self):
+<br>&nbsp; self.x , self.y = self.y, self.x
+<br></font></tt></p>
+
+<p>
+Then we can pass <tt><font size=-1>Point</font></tt>s to <tt><font size=-1>frontAndBack</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt;&nbsp; &nbsp;p = Point(3, 4)
+<br>&gt;&gt;&gt;&nbsp; &nbsp;frontAndBack(p)
+<br>(3, 4)(4, 3)
+<br></font></tt></p>
+
+<p>
+The best kind of polymorphism is the unintentional kind, where
+you discover that a function you have already written can be
+applied to a type for which you never planned.
+
+<a name=10></a>
+<h3>14.10 Glossary</h3>
+
+<dl>
+<dt>object-oriented language</dt>
+<dd>A language that provides
+features, such as user-defined classes and inheritance, that facilitate
+object-oriented programming.</dd>
+<dt>object-oriented programming</dt>
+<dd>A style of programming in which
+data and the operations that manipulate it are organized into classes
+and methods.</dd>
+<dt>method</dt>
+<dd>A function that is defined inside a class definition and
+is invoked on instances of that class.</dd>
+<dt>override</dt>
+<dd>To replace a default.  Examples include replacing a default
+value with a particular argument and replacing a default method
+by providing a new method with the same name.</dd>
+<dt>initialization method</dt>
+<dd>A special method that is invoked automatically
+when a new object is created and that initializes the object's attributes.</dd>
+<dt>operator overloading</dt>
+<dd>Extending built-in operators
+(<tt><font size=-1>+</font></tt>, <tt><font size=-1>-</font></tt>, <tt><font size=-1>*</font></tt>, <tt><font size=-1>&gt;</font></tt>, <tt><font size=-1>&lt;</font></tt>, etc.) so that they work
+with user-defined types.</dd>
+<dt>dot product</dt>
+<dd>An operation defined in linear algebra that
+multiplies two <tt><font size=-1>Point</font></tt>s and yields a numeric value.</dd>
+<dt>scalar multiplication</dt>
+<dd>An operation defined in linear algebra that
+multiplies each of the coordinates of a <tt><font size=-1>Point</font></tt> by a numeric
+value.</dd>
+<dt>polymorphic</dt>
+<dd>A function that can operate on more than one
+type.  If all the operations in a function can be
+applied to a type, then the function can be applied to a type.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap13.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap15.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

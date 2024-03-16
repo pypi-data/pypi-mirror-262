@@ -1,0 +1,13 @@
+## hpr1673 :: How I use ZFS on Linux
+
+ 
+On the show today, I will tell you about how I use the ZFS file system on my home server. I also go into some details about how I came to use the ZFS, especially under Linux. I also tell you about a certain pitfall I ran into with the hard drives I chose for ZFS. And finally, I will refer you back to HPR episode 1600 by JWP for more information about ZFS, as he goes into great detail about it and its history.
+
+Links
+
+https://hackerpublicradio.org/eps.php?id=1600
+
+https://zfsonlinux.org/
+
+https://www.backblaze.com/blog/hard-drive-reliability-update-september-2014/
+

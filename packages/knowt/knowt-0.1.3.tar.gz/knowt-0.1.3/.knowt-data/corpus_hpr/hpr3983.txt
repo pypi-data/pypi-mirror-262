@@ -1,0 +1,62 @@
+## hpr3983 :: ChatGPT Output is not compatible with CC-BY-SA
+
+ When uploading to HPR you are
+You are
+agreeing to license your show CC-BY-SA.
+
+All our shows are now released under a Creative Commons
+Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license, which
+means that while you continue to retain the copyright to your show, you
+are allowing us (and everyone else) to use it provided we give you
+attribution and that we release it under the same license. Click the
+link for more information.
+
+The
+Creative
+Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+license itself says that sharing (the S in CC-BY-SA), allows you to
+"copy and redistribute the material in any medium or format for any
+purpose, even commercially".
+On the face of it the
+OpenAI
+ChatGPT Terms of use seem similar, with Section 3 saying "you can
+use Content for any purpose, including commercial purposes".
+Unfortunately they then go on to say "Subject to your compliance with
+these Terms":
+      3. Content
+
+      (a) Your Content. You may provide input to the Services (“Input”), and
+      receive output generated and returned by the Services based on the Input
+      (“Output”). Input and Output are collectively “Content.” As between the
+      parties and to the extent permitted by applicable law, you own all
+      Input. Subject to your compliance with these Terms, OpenAI hereby
+      assigns to you all its right, title and interest in and to Output. This
+      means you can use Content for any purpose, including commercial purposes
+      such as sale or publication, if you comply with these Terms. OpenAI may
+      use Content to provide and maintain the Services, comply with applicable
+      law, and enforce our policies. You are responsible for Content,
+      including for ensuring that it does not violate any applicable law or
+      these Terms.
+The same document lists some restrictions...
+      2. Usage Requirements
+
+      (c) Restrictions. You may not (i) use the Services in a way that
+      infringes, misappropriates or violates any person’s rights; (ii) reverse
+      assemble, reverse compile, decompile, translate or otherwise attempt to
+      discover the source code or underlying components of models, algorithms,
+      and systems of the Services (except to the extent such restrictions are
+      contrary to applicable law); (iii) use output from the Services to
+      develop models that compete with OpenAI;
+... while the
+Usage policies
+list more.
+So in my opinion, and I am not a lawyer (IANAL) the
+OpenAI
+ChatGPT Terms of use is not compatible with the
+Creative
+Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+license.
+You can of course refer to ChatGPT as you would any other non
+Creative Commons site.
+If you disagree or would like to weigh in please discuss this on the
+mail list.

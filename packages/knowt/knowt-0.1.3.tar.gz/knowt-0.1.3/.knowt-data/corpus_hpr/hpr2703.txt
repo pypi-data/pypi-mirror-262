@@ -1,0 +1,111 @@
+## hpr2703 :: Fog of war in Yesod based game
+
+ Duality of the universe: there's true state of the universe used in simulation and there's state the the players perceive. These most likely will always be in conflict. One possible solution is to separate these completely. Perform simulation in one system and record what players see in other.
+For every type of entity in the game, there's two sets of data: real and reported. Reports are tied to time and faction. Examples are given for planets. Thus, we have Planet, PlanetReport and CollatedPlanetReport. First is the real entity, second is report of that entity tied in time and faction. Third one is aggregated information a faction has of given entity. In database two first ones are:
+
+Planet json
+    name Text
+    position Int
+    starSystemId StarSystemId
+    ownerId FactionId Maybe
+    gravity Double
+    SystemPosition starSystemId position
+    deriving Show
+
+PlanetReport json
+    planetId PlanetId
+    ownerId  FactionId Maybe
+    starSystemId StarSystemId
+    name Text Maybe
+    position Int Maybe
+    gravity Double Maybe
+    factionId FactionId
+    date Int
+    deriving Show
+
+Third one is defined as a datatype:
+
+data CollatedPlanetReport = CollatedPlanetReport
+    { cprPlanetId :: Key Planet
+    , cprSystemId :: Key StarSystem
+    , cprOwnerId  :: Maybe (Key Faction)
+    , cprName     :: Maybe Text
+    , cprPosition :: Maybe Int
+    , cprGravity  :: Maybe Double
+    , cprDate     :: Int
+    } deriving Show
+
+Data from database need to be transformed before working on it. Usually it's 1:1 mapping, but sometimes it makes sense to enrich it (turning IDs into names for example). For this we use ReportTransform type class:
+
+-- | Class to transform a report stored in db to respective collated report
+class ReportTransform a b where
+    fromReport :: a -> b
+
+instance ReportTransform PlanetReport CollatedPlanetReport where
+    fromReport report =
+	CollatedPlanetReport (planetReportPlanetId report)
+			     (planetReportStarSystemId report)
+			     (planetReportOwnerId report)
+			     (planetReportName report)
+			     (planetReportPosition report)
+			     (planetReportGravity report)
+			     (planetReportDate report)
+
+To easily combine bunch of collated reports together, we define instances
+    of semigroup and monoid for collated report data.
+    Semigroup defines an associative binary operation (<>) and monoid defines a zero or empty item (mempty). My explanation about Monoid and Semigroup were a bit rambling, so maybe have a look at https://wiki.haskell.org/Monoid which explains it in detail.
+
+instance Semigroup CollatedPlanetReport where
+    (<>) a b = CollatedPlanetReport (cprPlanetId a)
+				    (cprSystemId a)
+				    (cprOwnerId a <|> cprOwnerId b)
+				    (cprName a <|> cprName b)
+				    (cprPosition a <|> cprPosition b)
+				    (cprGravity a <|> cprGravity b)
+				    (max (cprDate a) (cprDate b))
+
+instance Monoid CollatedPlanetReport where
+    mempty = CollatedPlanetReport (toSqlKey 0) (toSqlKey 0) Nothing Nothing Nothing Nothing 0
+
+In some cases there might be a list of collated reports that are about different entities of same type (several reports for every planet in solar system). For those cases, we need a way to tell what reports belong together:
+
+-- | Class to indicate if two reports are about same entity
+class Grouped a where
+    sameGroup :: a -> a -> Bool
+
+instance Grouped PlanetReport where
+    sameGroup a b =
+	planetReportPlanetId a == planetReportPlanetId b
+
+After this, processing a list of reports for same entity is short amount of very general code:
+
+-- | Combine list of reports and form a single collated report
+--   Resulting report will have facts from the possibly partially empty reports
+--   If a fact is not present for a given field, Nothing is left there
+collateReport :: (Monoid a, ReportTransform b a) => [b] -> a
+collateReport reports = mconcat (map fromReport reports)
+
+For reports of multiple entities is bit more complex, as they need to be sorted first, but the code is similarly general:
+
+-- | Combine list of reports and form a list of collated reports
+--   Each reported entity is given their own report
+collateReports :: (Grouped b, Monoid a, ReportTransform b a) => [b] -> [a]
+collateReports [] = []
+collateReports s@(x:_) = collateReport itemsOfKind : collateReports restOfItems
+    where split = span (sameGroup x) s
+	  itemsOfKind = fst split
+	  restOfItems = snd split
+
+Final step is to either render reports as HTML or send them as JSON back to client. For JSON case we need one more type class instance (ToJSON) that can be automatically generated. After that handler function can be defined. After authenticating the user and checking that they are member of a faction, reports of specific planet (defined by its primary key) are retrieved from database, collated, turned into JSON and sent back to client:
+
+$(deriveJSON defaultOptions {fieldLabelModifier = drop 3} ''CollatedPlanetReport)
+
+getApiPlanetR :: Key Planet -> Handler Value
+getApiPlanetR planetId = do
+    (_, _, fId) <- apiRequireFaction
+    loadedPlanetReports <- runDB $ selectList [ PlanetReportPlanetId ==. planetId
+					      , PlanetReportFactionId ==. fId ] [ Asc PlanetReportDate ]
+    let planetReport = collateReport $ map entityVal loadedPlanetReports :: CollatedPlanetReport
+    return $ toJSON planetReport
+
+For those interested seeing some code, source is available at https://github.com/Tuula/deep-sky/ (https://github.com/Tuula/deep-sky/tree/baa0807dd36b61fd02174b17c10013862af4ec18 is situation before lots of Elm related changes that I mentioned in passing in the previous episode)

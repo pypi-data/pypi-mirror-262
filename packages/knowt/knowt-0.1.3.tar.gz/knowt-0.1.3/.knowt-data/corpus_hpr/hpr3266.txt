@@ -1,0 +1,96 @@
+## hpr3266 :: Upgrading Debian on my raspberry pi
+
+ Pi13 upgrade from Jessie 8 to Stretch 9 - performed 15/12/20
+History
+Upgraded my raspberry pi 13, which I think had a minimal install Raspbian, Debian i.e. has no desktop installed. The Pi had a PiFaceIO board installed, refer to my previous HPR episode Hpr2901
+Backup process, in case something went wrong
+I first moved all the unnecessary files to free up as much space as possible
+Shrunk the Pi partition on the installed 128GB SD card down to 25106MB (24.52GB), (25708544K), 26,325,549,056 bytes using partition magic
+I calculated that this would be 51,417,088 blocks of 512 bytes
+I used dd to make an image file and grabbed some unallocated space after partition by using count=55417088, refer to the command below
+sudo dd if=/dev/sdb of=/home/stuart/pi-13-img-backup.img bs=512 count=55417088
+I used the following command to image files to a spare 64GB SD card
+sudo dd if=/home/stuart/pi-13-img-backup.img of=/dev/sdb bs=512 status=progress
+I then expanded the partition to fill the full 64GB of the card
+Booted from the 64GB card to make sure that I had a backup in case anything went wrong
+Removed the 64GB card which I can go back to if things don't work out
+Booted from 128GB card and expanded the partition using Gparted to fill 128GB SD card
+I used the 128GB SD card to perform the upgrade, remember I have 64GB card to fall back on if things go wrong
+Upgrade process
+Source of information below
+Step 1: Check available disk space
+In order to update to Raspbian Stretch, there must be enough space on the SD card. Therefore you should check the available and used disk space usage first:
+$ df -h
+Step 2: Check package status
+You must also check that all packages are in a state that is suitable for upgrade. The following command displays all packages that have the status semi-installed or configuration failed, and those with error status:
+$ sudo dpkg --audit
+$ sudo dpkg --get-selections | grep hold
+Step 3: Update system
+Before upgrading, the Raspbian should be completely updated:
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get dist-upgrade
+Step 4: Modify Release
+For upgrading to the new Raspbian version, the package lists must be adapted to the "Stretch" release. To do this, only the word "jessie" has to be replaced by "stretch". In order not to overlook any position, we simply let the replacement be done by the following command:
+$ sudo sed -i /deb/s/jessie/stretch/g /etc/apt/sources.list
+$ sudo sed -i /deb/s/jessie/stretch/g /etc/apt/sources.list.d/*.list
+Step 5: Updating package lists
+The new package lists must then be updated and imported:
+$ sudo apt-get update
+Step 6: Update to "Stretch"
+Now we are ready to start the upgrade:
+$ sudo apt-get upgrade
+$ sudo apt-get dist-upgrade
+Step 7: Clean up installation
+Old, unnecessary packages are removed after the system update with the following commands:
+$ sudo apt-get autoremove
+$ sudo apt-get autoclean
+What was reported during upgrade
+repo for get_iplayer no longer available so had to comment them out. On my Pi these were located at the following location.
+/etc/apt/sources.list.d/packages.hedgrows.org.uk.list
+change to lsb_release command
+The lsb_release command no longer worked so after the upgrade I could not use it to check what version of Debian I was running.
+Link to alternative methods to check installed Debian version.
+I chose the following method
+cat /etc/os-release
+.bashrc - kept my original file
+Something about /etc/login.defs & /etc/login.defs.dpkg-new
+lots of changes in new version of ssh
+Something was mentioned about apt hashes sha1 weak "yes" & apt hashes ripe-md/160 weak "yes"
+Something about ~/.ssh/authorized_keys & ~/.ssh/authorized_keys2
+Something about key length and accepted key types
+What went wrong after the upgrade
+mocp wouldn't run
+I had to modify my config file in .moc folder I added the following line near the top of the file
+ALSAStutterDefeat = no
+In my .moc folder I had to also modify the my_keymap file at line 82. I think the next_search option is not available in the new version of moc 2.6-alpha3 installed with Debian Stretch. I commented out the following
+#next_search =          ^g ^n
+pifacedigitalio test.py reported an error
+multiple errors reported last line of error was:-
+pifacedigitalio.core.NoPiFaceDigitalDetectedError: No PiFace Digital board detected (hardware_addr=0, bus=0, chip_select=0)
+I changed the first line of my python script
+from
+#!/usr/bin/env python
+to
+#!/usr/bin/env python3
+This removed the original error. I stupidly thought this had solved the problem so I went about converting my script to run with Python 3 only to find at the end once I had correct everything that I ended up with the same original error.
+How I solved the pifacedigitalio test.py reported error
+The problem was solved by looking at this post
+According to the post it had something to do with the SPI serial speed changing from 500Khz to 125Mhz
+Problem was solved by modifying a file spi.py
+I found the location of the file by using the following command
+find / -iname spi.py
+The files were located at
+/usr/lib/python2.7/dist-packages/pifacecommon/spi.py
+/usr/lib/python3/dist-packages/pifacecommon/spi.py
+I created a copy of the original file and called it spi.py.bak
+I only modified the file in python2.7 as my program test.py runs in python2.7
+I added a comma to the end of line 68 and added the following line to line 69
+speed_hz=ctypes.c_uint32(15000)
+SSH from pifacecad stopped working
+My Raspberry pi "Pi10" downstairs would not SSH into my Pi13 server upstairs This made it impossible for me to remotely start and stop podcasts and audiobooks playing on my Pi13 upstairs.
+This happened because the downstairs Pi10 had DSA and RSA keys and it was using DSA keys to ssh into Pi13. I found this by looking at /var/logs/auth.log on Pi13 The log reported
+userauth_pubkey: key type ssh-dss not in PubkeyAcceptedKeyTypes
+SSH from EEEPC stopped working
+Was not able to SSH into Pi13 from EEEpc
+My EEEPC netbook only had DSA keys and that is what it was using to try and SSH into Pi13 I generated new RSA keys and added them to Pi13, this solved the problem and allowed me to ssh into Pi13 from the EEEpc

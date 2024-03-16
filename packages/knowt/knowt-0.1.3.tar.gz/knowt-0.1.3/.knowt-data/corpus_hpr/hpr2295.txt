@@ -1,0 +1,19 @@
+## hpr2295 :: MX Linux
+
+ MX Linux OS
+Hi To all in HPR land, this is Tony Hughes in the UK back with you. I noticed that the queue has a couple of gaps in the next week or so here goes again.
+Apart from my last show I've recently done shows on current Linux distro's that are suitable for older hardware but with a modern look and feel and fully featured with the latest software available.
+As you have probably gathered by now if you have listened to my other shows I am a big fan of older Lenovo Laptops. My main Lenovo is an X230i i3 with a 2.5G cpu and 8Gig of Ram and a 120Gig SSD, it did have Mint 17.3 running on it and after running Mint 18 / 18.1 for several months on my desktop PC I decided to upgrade to 18.1 on the X230i.
+I completed the install and on first boot after install the boot time had risen from about 40s to over 2 minutes, I suspected a problem with the install so did it again with the same result. I couldn't find any issues reported on the net so resorted to installing Linux Lite which is based on Ubuntu 16.04 as is Mint 18. The problem persisted after this install despite getting near 40s boots on the Lenovo X61s with an SSD and the same Distro.
+I did another web search but could not find any other reports of this issue with the X230i so put a post on the Facebook community Distro hoppers. The response I got back from one member was to try MX16.
+MX Linux is a joint venture from the antiX and former MEPIS communities and is based on the latest Debian Stable "Jessie" with the XFCE desk top environment.
+I duly downloaded it and installed it in a Virtual PC using virtual box to see what it looked and felt like. The install is fairly user friendly although if you've never had experience of Linux and installed other Distributions a new user may be a bit unsure when asked about the MBR and where to put it, other than that a fairly straightforward install.
+On install there is a fairly good selection of the software you would need including a full install of LibreOffice, FireFox, Thunderbird, GIMP and synaptic package manager for adding further software from the repositories. MX have also included the ability to simply install codecs and additional drivers and a software installation system for popular Apps from the MX Welcome that comes up at boot or if disabled can be started form the menu. Also I installed it on a virtual 8Gig HDD and GParted reports use of 4.64Gig after install and updates, by default it only installs a 1G swap despite 2Gig allocated Ram in the VM.
+I liked the look of MX and decided to give it a go on the X230i, install went smoothly and lo and behold boot was back to around 40s on first boot after install. So I've updated the install, installed my packages I use that are not there by default such as Audacity, Scratch and a couple of other things I use. I've also put it on the X61s I use and again working faultlessly, so I'm happy again. Since I installed MX I found out from a member of my Makerspace/LUG that he had experienced the same problem with Ubuntu 16.04 based distro's and crippled SSD Boot times.
+I like MX so much when it come to time to reinstall my Desk Top PC, which is about the only PC I use that is not constantly changing OS, I think I will be putting MX on it. This is a big deal for me as I've been a loyal Mint user for over 5 years but MX is working so well on the Laptops at the moment it would be good to have the same OS on the Desktop PC as well.
+Will MX stop my Distro Hopping, NO, I like trying out new things that's why I have several Laptops kicking around so I have spare hardware to try out new Linux stuff, but it is good to have something stable around when you need it, hence sticking with Mint for so long on the Desktop.
+
+https://mxlinux.org/
+https://antix.mepis.org/index.php?title=Main_Page
+https://www.mepis.org/
+

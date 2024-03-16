@@ -1,0 +1,33 @@
+## hpr2113 :: sqlite and bash
+
+ Crontab
+0 3 * * 0 /bin/du -m /data/ > /home/USER/du_files/"du_$(/bin/date +\%Y\%m\%d)"
+Script
+cd ~/du_files
+TODAYS_FILE="du_$(/usr/bin/date +%Y%m%d)"
+YESTERDAYS_FILE="du_$(/usr/bin/date --date="7 days ago" +%Y%m%d)"
+/usr/bin/echo "create table old (oldsize integer, path varchar);" > delta.sql
+/usr/bin/echo "create table new (newsize integer, path varchar);" >> delta.sql
+/usr/bin/echo '.separator "\t" ' >> delta.sql
+/usr/bin/echo ".import $TODAYS_FILE new" >> delta.sql
+/usr/bin/echo ".import $YESTERDAYS_FILE old" >> delta.sql
+/usr/bin/echo ".mode csv" >> delta.sql
+/usr/bin/echo ".headers on" >> delta.sql
+/usr/bin/echo ".out deltas.csv" >> delta.sql
+/usr/bin/echo "select *,newsize-oldsize as delta_in_megabytes from old natural join new where oldsize<newsize order by delta_in_megabytes desc;" >> delta.sql
+
+/usr/bin/sqlite3 < delta.sql
+
+echo $YESTERDAYS_FILE|/usr/bin/mailx -a deltas.csv -s deltas.csv me@mywork.com
+Resulting SQL
+create table old (oldsize integer, path varchar);
+create table new (newsize integer, path varchar);
+.separator "\t"
+.import du_20160821 new
+.import du_20160814 old
+.mode csv
+.headers on
+.out deltas.csv
+select *,newsize-oldsize as delta_in_megabytes
+from old    natural join new    where oldsize<newsize
+order by delta_in_megabytes desc;

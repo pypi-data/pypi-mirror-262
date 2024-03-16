@@ -1,0 +1,30 @@
+## hpr2526 :: Gnu Awk - Part 10
+
+ Gnu Awk - Part 10
+Introduction
+This is the tenth episode of the "Learning Awk" series which is being produced by b-yeezi and myself.
+In this episode I want to talk more about the use of arrays in GNU Awk and then I want to examine some real-world examples of the use of awk.
+Long notes
+The notes for rest of this episode are available here.
+Links
+
+GNU Awk User's Guide
+Previous shows in this series on HPR:
+
+"Gnu Awk - Part 1" - episode 2114
+"Gnu Awk - Part 2" - episode 2129
+"Gnu Awk - Part 3" - episode 2143
+"Gnu Awk - Part 4" - episode 2163
+"Gnu Awk - Part 5" - episode 2184
+"Gnu Awk - Part 6" - episode 2238
+"Gnu Awk - Part 7" - episode 2330
+"Gnu Awk - Part 8" - episode 2438
+"Gnu Awk - Part 9" - episode 2476
+
+Resources:
+
+ePub version of these notes
+PDF version of these notes
+awk10_ex1.awk
+awk10_ex2.awk
+

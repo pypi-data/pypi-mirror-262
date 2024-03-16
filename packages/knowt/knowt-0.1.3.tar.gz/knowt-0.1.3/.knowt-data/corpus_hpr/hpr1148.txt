@@ -1,0 +1,17 @@
+## hpr1148 :: Development Discussion
+
+ 
+I am trying to write a script which will implement the scheduling rules for
+HPR. I spoke to Ken Fallon about this, and where it would fit in the overall
+design of the HPR system, when we met up at OggCamp 2012 in August, but we
+didn't manage to resolve very much. So, recently Ken and I began a discussion
+over Mumble to try and make progress. A few minutes in we decided to record
+our discussion for posterity, and this is the result.
+
+
+The notes which I had sent Ken before our Mumble session are available in PDF
+format.
+
+
+https://hackerpublicradio.org/eps/hpr1148_Design_Notes_20121108.html
+https://hackerpublicradio.org/eps/hpr1148_Design_Notes_20121108.pdf

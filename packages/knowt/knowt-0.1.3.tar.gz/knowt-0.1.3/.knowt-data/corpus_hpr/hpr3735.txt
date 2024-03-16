@@ -1,0 +1,89 @@
+## hpr3735 :: i3 Tiling Window Manager
+
+ What is i3?
+
+Lightweight tiling window manager
+Configured with 2 files
+
+~/.config/i3/config
+/etc/i3status.conf
+
+
+Multi-monitor
+support
+Monitor properties
+    xrandr -q | grep HDMI
+
+HDMI-A-0 disconnected primary (normal left inverted right x axis y
+axis)
+
+    xrandr --prop | grep HDMI
+
+HDMI-A-0 disconnected primary (normal left inverted right x axis
+y axis)
+supported: Unknown, VGA, DVI-D, HDMI, DP, Wireless,
+Native
+
+    ## dualmonitor.sh
+
+    #!/bin/bash
+    echo '1 for on 2 for off'
+    read monitor
+    if [ $monitor == 1 ]; then
+    xrandr --output HDMI-A-0 --auto --left-of eDP
+    elif [ $monitor == 2 ]; then
+    xrandr --output HDMI-A-0 --off
+    fi
+Top keybindings
+Mod + O --> Open Firefox
+Mod + Enter --> Open Terminal
+Mod + M --> Open the Mutt email client
+Mod + Shift + M --> Open the Sylpheed email client
+
+Mod1 + D --> Open Dmenu
+Mod1 + T --> Open Tenacity
+Mod keys
+mod1    Alt_L (0x40),  Meta_L (0xcd)
+
+mod4    Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
+Area selection
+screenshots
+  bindsym --release Shift+Print exec import Pictures/Screenshots/screenshot_"$(date "+%a %b %F_%H-%M-%S")".png
+Screenshot entire
+screen
+  bindsym --release Print exec import -window root Pictures/Screenshots/screenshot_"$(date "+%a %b %F_%H-%M-%S")".png
+Compositor
+picom
+Set wallpaper
+  exec --no-startup-id feh --bg-fill "~/Pictures/Wallpaper/Star\ Trek/STAR-TREK-Starships-star-trek-2952089-1024-768.jpg"
+i3 with KDE
+systemctl --user mask plasma-kwin_x11.service
+
+plasma-i3.service
+
+    [Install]
+    WantedBy=plasma-workspace.target
+
+    [Unit]
+    Description=Plasma Custom Window Manager
+    Before=plasma-workspace.target
+
+    [Service]
+    ExecStart=/usr/bin/i3
+    Slice=session.slice
+    Restart=on-failure
+systemctl --user daemon-reload
+systemctl --user enable plasma-i3.service
+Files
+~/.config/i3/config
+/etc/i3status.conf
+dualmonitor.sh
+i3_with_kde_plasma_config.conf
+Links
+Wikipedia article on i3
+Wikipedia article on
+Xinerama
+Archwiki entry on i3
+i3 User Guide
+KDE/Plasma with i3wm
+

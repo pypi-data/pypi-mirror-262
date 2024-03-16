@@ -1,0 +1,15 @@
+## hpr2379 :: sending a text message from the command line
+
+ Notes? We don't need no stinking notes!
+
+Edited 2017-09-08 by Ken 
+I beg to differ :).
+
+
+This show was recorded on Audacity using a Logitech headset.
+
+
+In episode hpr1892 :: my chicken coop jezra went to great lengths to protect his chickens. His system based on a BeagleBone Black ensures the door opens and closes only during the day. 
+
+
+In this show jezra explains how he gets the system to send him an email, and a text message using mailx and his phones providers free SMS to Email gateway.

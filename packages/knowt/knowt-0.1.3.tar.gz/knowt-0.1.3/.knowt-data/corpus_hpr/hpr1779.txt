@@ -1,0 +1,133 @@
+## hpr1779 :: Cowsay and Figlet
+
+ Basic commands
+Make default cow speak:
+
+cowsay "Hacker Public Radio"
+
+Result:
+
+ _____________________
+< Hacker Public Radio >
+ ---------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+Modes
+
+-b Borg mode; 
+-d dead;
+-g greedy mode; 
+-p causes a state of paranoia to come over the cow; 
+-s makes the cow appear thoroughly stoned; 
+-t yields a tired cow; 
+-w is somewhat the  opposite  of -t,  and  initiates wired mode; 
+-y brings on the cow's youthful appearance.
+
+Use "tired" cow mode:
+
+cowsay -t "Ken is tired of begging for shows"
+
+Result:
+
+ ___________________________________
+< Ken is tired of begging for shows >
+ -----------------------------------
+        \   ^__^
+         \  (--)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+Specify different images with -f
+Threaten someone with a dragon:
+
+cowsay -f dragon 'record and upload a show OR ELSE!'
+
+Result:
+
+ ___________________________________
+< record and upload a show OR ELSE! >
+ -----------------------------------
+      \                    / \  //\
+       \    |\___/|      /   \//  \\
+            /0  0  \__  /    //  | \ \    
+           /     /  \/_/    //   |  \  \  
+           @_^_@'/   \/_   //    |   \   \ 
+           //_^_/     \/_ //     |    \    \
+        ( //) |        \///      |     \     \
+      ( / /) _|_ /   )  //       |      \     _\
+    ( // /) '/,_ _ _/  ( ; -.    |    _ _\.-~        .-~~~^-.
+  (( / / )) ,-{        _      `-.|.-~-.           .~         `.
+ (( // / ))  '/\      /                 ~-. _ .-~      .-~^-.  \
+ (( /// ))      `.   {            }                   /      \  \
+  (( / ))     .----~-.\        \-'                 .~         \  `. \^-.
+             ///.----..>        \             _ -~             `.  ^-`  ^-_
+               ///-._ _ _ _ _ _ _}^ - - - - ~                     ~-- ,.-~
+                                                                  /.-~
+
+On Linux, praise Ahuka with a Random Cow:
+
+echo 'Ahuka Rocks!' | cowsay -f $(locate *.cow | shuf -n1)
+
+One Result:
+
+ ______________
+< Ahuka Rocks! >
+ --------------
+        \    ,-^-.
+         \   !oYo!
+          \ /./=\.\______
+               ##        )\/\
+                ||-----w||
+                ||      ||
+
+               Cowth Vader
+
+
+Figlet
+Make ASCII banner text with figlet. This one uses the default font and wraps the lines at 45 characters:
+
+
+figlet -w 45 "Hacker Public Radio"
+
+Result:
+
+ _   _            _             
+| | | | __ _  ___| | _____ _ __ 
+| |_| |/ _` |/ __| |/ / _ \ '__|
+|  _  | (_| | (__|   <  __/ |   
+|_| |_|\__,_|\___|_|\_\___|_|   
+                                
+ ____        _     _ _      
+|  _ \ _   _| |__ | (_) ___ 
+| |_) | | | | '_ \| | |/ __|
+|  __/| |_| | |_) | | | (__ 
+|_|    \__,_|_.__/|_|_|\___|
+                            
+ ____           _ _       
+|  _ \ __ _  __| (_) ___  
+| |_) / _` |/ _` | |/ _ \ 
+|  _ < (_| | (_| | | (_) |
+|_| \_\__,_|\__,_|_|\___/ 
+                          
+
+Use an alternate font with -f option:
+
+figlet -f digital "Community News"
+
+
++-+-+-+-+-+-+-+-+-+ +-+-+-+-+
+|C|o|m|m|u|n|i|t|y| |N|e|w|s|
++-+-+-+-+-+-+-+-+-+ +-+-+-+-+
+
+Links
+
+My random cowsay "is it Friday yet" page: https://jonkulp.net/iify.html
+Cowsay for Android: https://play.google.com/store/apps/details?id=ch.fixme.cowsay&hl=en
+cowsay(1) - Linux man pagehttps://linux.die.net/man/1/cowsay
+figlet(6) - Linux man page: https://linux.die.net/man/6/figlet
+

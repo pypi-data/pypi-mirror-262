@@ -1,0 +1,91 @@
+## hpr2707 :: Steganalysis 101
+
+ 1. Introduction
+Hello and welcome to Hacker Public Radio, I’m Edward Miro and I’ve been a fan of HPR for a while now and really love its collaborative and random nature. It’s always been important for me to support the hacking community. I always take any opportunity to give back to this community who have given me so much throughout the years. I’ve also always subscribed to the idea that the best way to learn something is by teaching and I hope to do a good job for all you listeners. This talk is on mystical art of steganalysis which is the process of identifying the presence of and decrypting (hopefully) steganography.
+2. What is steganography?
+I’m into hacking, but I’m not a professional hacker. Usually I call myself a hobbyist. I like CTFs, crypto challenges, lots of stuff from Vulnhub or OverTheWire, things like that. I’ll provide some links in the end if anyone is interested, but for those who aren’t familiar a CTF, or Capture The Flag, it’s a kind of game that helps you get better at hacking. These days there are tons of VMs that are setup to be intentionally vulnerable to different techniques or attacks. You load the VM and pretend it’s a server you want to attack and follow your standard hacking protocols. Some are setup to be boot to root challenges where you ‘win’ when you get root and some are setup with flags that you can find hidden in the target worth points. There are in person and online CTFs and they’ve gotten pretty popular with the National Cyber League being a major competition. Some are easy, some are really hard and most have really good write-ups that can teach you so much about INFOSEC, penetration testing and actually let you practice the techniques in a relatively easy and legal way.
+Where steganography comes in to this discussion is that it’s an element you sometimes see used in the kinds of challenges I mentioned previously and also in alternate reality games, online recruitment challenges by national agencies/big tech companies and militarys. They are even used in real world espionage and intelligence work or super spooky secret challenges like Cicada 3301.
+Simply put steganography (and I’m pasting this straight out of Wikipedia): “is the practice of concealing a file, message, image, or video within another file, message, image, or video”. Steganography is used to hide secrets in plain sight. It’s a way to send a message, without anyone detecting that a message is even being sent.
+I’ll give you more examples in the next section, but imagine a letter that has a secret written in invisible ink. Only the sender and receiver should know about the invisible ink and any eavesdroppers should be none the wiser. This simple example has been used by countless prisoners whose mail is routinely read and examined. Terrorists and spies the world over also use steganography and are known to embed messages in an image and post it online. With how many image hosting sites there are, with millions of people posting to them billions of images day in and day out, you can see why steganography can be such a challenge to combat. Before I move on to some more specific examples I want to stress again that I’m not an expert on cryptography or steganography. While researching for this podcast it’s overwhelmingly clear that you could spend your whole career focused on only steganography. This talk is just a primer on the subject and only the tip of the iceberg.
+3. Examples (also from Wikipedia, the great repository of all knowledge)
+
+Analog:
+
+Head shaving
+Invisible ink
+Knots tied into ropes
+Messages hidden under stamps on envelopes
+Mixed typeface
+Using a grille cipher
+Sending messages via newspaper classifieds
+
+Digital:
+
+Noise in images or sound files
+Text commented out in source html or other code
+Using different color text
+Fractionalized comments
+Audio signals/spectro
+Hidden control characters and non printing Unicode
+
+
+The possibilities are almost endless for how this technique can be applied.
+4. Why should we care?
+When we are doing a CTF or crypto challenge and are presented with an image or media file we are pretty well assured there’s something in there, though not every image you find while doing a challenge or CTF will utilize steganography so don’t overanalyze. I’ve known people who are really into alternate reality games spending 100s of hours doing spectrographic analysis and for our purpose(and the scope of this podcast), there should be some clue that steganography is being used. The challenge then becomes how we direct our work flow as to not waste any time and be the most efficient in cracking that particular part the puzzle. There are MANY stego tools out there, some of them homebrewed, and unless the designer of the challenge puts in a clue, you might spend hours trying different algorithms or tools. And even if you do, there’s no guarantee you’ll get anything at all. A lot of the tools that will be mentioned in the next section rely on fingerprinting how known algorithms process data. This is not only a big problem for hackers like us with our CTFs and games, but even more so for governments who are charged with keeping us safe. So if you’re looking at possible steganography, you need to build a good workflow and I noticed a post on Reddit a few weeks ago with a user asking about image forensics. There was a comment posted that was so good I forwarded it to my hacking friends and it inspired me to do this podcast. I’m using the comment as a potential framework for my own personal work with images and steganography. It helped me to develop my own protocol and I wanted to share it with you all and if anyone wants to expand on it or improve it please do so. Thank you /u/Alexeyan!
+5. Proposed work flow
+This is coming straight out of the post on Reddit. I thought about rewriting it, but it didn’t seem necessary and I will be giving the author full credit. I add a couple more tools on at the bottom and a few closing thoughts:
+
+First: Look at the image. Maybe it tells you something important.
+Use binwalk to check for other file type signatures in the image file.
+Use Exiftool to check for any interesting exif-metadata.
+Use stegsolve and switch through the layers and look for abnormalities.
+Maybe the Flag is painted in the LSB image, or some QR-Code.
+Maybe there are random pixels that look strange in a certain layer, that’s a hint for Bit-Stego.
+Use zsteg to automatically test the most common bitstegos and sort by %ascii-in-results. (This one auto-solves about 50% of all image stego challenges)
+If the file is a png, you can check if the IDAT chunks are all correct and correctly ordered.
+Check with the strings tool for parts of the flag. If you found for example “CTF{W” in a chunk, check what is on that position in other IDAT chunks.
+The harder ones can be a lot more tricky though.. JPG coefficiency manipulation, Frequency analysis, …
+But usually those are frowned upon, because they require a lot of guessing (if no hiding tool is provided)
+
+Some other go to tools not mentioned above:
+
+Stegdetect
+DIIT(Digital Invisible Ink Toolkit )
+StegSecret
+ILook Investigator (for law enforcement)
+
+Detecting steganography is hard work. There are computer scientists who do only this. While we aren’t at that level for the information being presented here, it will require a lot of digging and trying different tools. Hopefully following these steps will help identify the more common techniques in an easier way than trial and error.
+One last thing I want to mention is that part of how I see detecting steganography in CTFs or cyptochallenges is having a certain mindset and always looking at things in various layers. I try to look at everything within the challenge as if there could be something right in front of my eyes. I mentally flip through different layers and see the codes within the codes. And remember if you’re playing an alternate reality game, a CTF or a crypto challenge, generally speaking, the designers want you to play through the game. They will leave clues if you need them. They want the players to get to the end. Don’t overthink things.
+Well that’s all I’ve got for today. I hope you enjoyed this podcast and got something useful out of it. Like I said in the introduction, I’m Edward Miro. Have fun, and good luck!
+6. Sources
+
+Steganography basics:
+
+https://en.wikipedia.org/wiki/Steganography
+https://www.wired.com/story/steganography-hacker-lexicon/
+https://null-byte.wonderhowto.com/how-to/steganography-hide-secret-data-inside-image-audio-file-seconds-0180936/
+
+CTFs
+
+https://www.nationalcyberleague.org/
+https://www.vulnhub.com/
+https://ctf365.com/
+
+Tools
+
+https://github.com/ReFirmLabs/binwalk
+https://www.sno.phy.queensu.ca/~phil/exiftool/
+https://github.com/zardus/ctf-tools/tree/master/stegsolve
+https://github.com/zed-0xff/zsteg
+https://en.wikipedia.org/wiki/Strings_(Unix)
+https://github.com/abeluck/stegdetect
+https://diit.sourceforge.net/
+https://stegsecret.sourceforge.net/
+https://www.ilook-forensics.org/
+
+Detection
+
+https://web.cs.ucdavis.edu/~davidson/Publications/IAAI103.pdf
+https://www.sans.org/reading-room/whitepapers/stenganography/steganalysis-detecting-hidden-information-computer-forensic-analysis-1014
+
+

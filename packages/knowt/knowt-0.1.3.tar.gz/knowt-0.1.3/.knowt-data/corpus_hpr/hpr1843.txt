@@ -1,0 +1,10 @@
+## hpr1843 :: Some Bash tips
+
+ Today I want to talk about three Bash commands:
+
+pushd
+popd
+dirs
+
+These let you change directory on a Linux system (and others which support Bash) but keep a record of where you have been in a stack structure. The stack can be viewed and manipulated with these commands as well.
+I have written out a moderately long set of notes about these commands and these are available here https://hackerpublicradio.org/eps/hpr1843_full_shownotes.html.

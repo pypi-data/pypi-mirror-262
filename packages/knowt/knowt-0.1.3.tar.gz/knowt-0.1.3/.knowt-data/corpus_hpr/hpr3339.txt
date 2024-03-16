@@ -1,0 +1,29 @@
+## hpr3339 :: Linux Inlaws S01E30: Politicians and artificial intelligence part 2
+
+ After successfully navigating through the shallow (or not-so-shallow) depths of the first episode on deep learning fundamentals, our two heroes tackle a more concrete topic in this episode: How to use the damn stuff! No expenses will be spared to bring to the listeners the finer details of tensors, TensorFlow and other frameworks which serve as the basis for modern artificial intelligence / machine learning applications running on back-propagation networks (see the first episode on the foundations). Lifting the curtain even more, all will be revealed about a little corner shop called "Google" (well, almost all :-).
+
+Links:
+
+Torch: https://torch.ch
+
+PyTorch: https://pytorch.org
+
+TensorFlow: https://www.tensorflow.org
+
+Lua: https://www.lua.org
+
+BigTable: https://en.wikipedia.org/wiki/Bigtable
+
+BigFS: https://en.wikipedia.org/wiki/Google_File_System
+
+Google's inner workings: https://www.panmacmillan.com/authors/david-a-vise/the-google-story/9781509889211
+
+TPUs: https://en.wikipedia.org/wiki/Tensor_Processing_Unit
+
+More DL frameworks: https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software
+
+TIOBE index: https://www.tiobe.com/tiobe-index
+
+Stackoverflow survey: https://insights.stackoverflow.com/survey/2020
+
+

@@ -1,0 +1,29 @@
+## hpr3307 :: Git worktree
+
+ Create a new worktree
+
+$ git branch | tee
+* dev
+trunk
+$ git worktree add -b hotfix ~/demo/penguin.tree trunk
+Preparing ../penguin.tree (identifier penguin.tree)
+HEAD is now at 62a2daf commit
+
+
+List existing worktrees
+
+$ git worktree list
+/home/tux/demo/penguin.git       15fca84 [dev]
+/home/tux/demo/penguin.tree     09e585d [trunk]
+
+
+Move a worktree
+
+$ git worktree move penguin.tree ~/Temp
+
+
+Remove a worktree
+
+$ git worktree remove penguin.tree
+
+

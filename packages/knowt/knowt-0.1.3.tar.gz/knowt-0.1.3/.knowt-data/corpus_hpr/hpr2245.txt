@@ -1,0 +1,24 @@
+## hpr2245 :: Managing tags on HPR episodes - 1
+
+ Managing tags on HPR episodes - 1
+Introduction
+We have been collecting and storing tags for new HPR shows for a while now with the intention of eventually offering a search interface. In addition, a number of contributors, including myself have been adding tags (and summaries), to shows that do not have them, since August 2015. There is still a way to go, but we’re making progress. At the time of writing (2017-01-31) 56.29% (1248) of all HPR shows (2217) have tags.
+In recent times the way in which we should use these tags has been discussed. In show 2035 on 2016-05-20 droops suggested:
+
+The website, which is a lot of work, needs to have related shows listed on each individual show’s page. This will take a tag system and someone to tag all of the almost uncountable previous episodes.
+
+This episode begins a discussion about some of the ways that tags can be stored, managed and accessed efficiently in the HPR database.
+I started planning a show about this subject in the summer of 2016, and the amount of information I have accumulated has grown since then. There is now quite a lot, so I am going to split what was originally going to be one show into three.
+The subject becomes quite technical in the later shows, discussing database design techniques, and all three of the shows contain examples of database queries and scripts. If you are not interested in this subject than feel free to skip past. However, you might find this first episode more palatable, and any thoughts you might have on the subject would be appreciated.
+Long notes
+I have written out a set of longer notes for this episode and these are available here.
+Links
+
+HPR show 2035: “Building Community”
+Wikipedia page on Comma Separated Values
+RFC 4180 “Common Format and MIME Type for Comma-Separated Values (CSV) Files”
+HPR web page listing shows missing summaries and tags
+Resources:
+
+Perl script to clean the tags field in the database: clean_csv_tags
+

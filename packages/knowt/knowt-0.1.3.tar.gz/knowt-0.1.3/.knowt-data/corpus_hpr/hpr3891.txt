@@ -1,0 +1,254 @@
+## hpr3891 :: HPR Community News for June 2023
+
+ 
+New hosts
+
+There were no new hosts this month.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+3869
+Thu
+2023-06-01
+5 minute war game
+Klaatu
+
+
+3870
+Fri
+2023-06-02
+Texas
+Ahuka
+
+
+3871
+Mon
+2023-06-05
+HPR Community News for May 2023
+HPR Volunteers
+
+
+3872
+Tue
+2023-06-06
+Sgoti update with replies.
+Some Guy On The Internet
+
+
+3873
+Wed
+2023-06-07
+Nextcloud instance updating
+ToeJet
+
+
+3874
+Thu
+2023-06-08
+2022-2023 New Years Show Episode 9
+HPR Volunteers
+
+
+3875
+Fri
+2023-06-09
+Parlons Linux Season 1 Episode 7, le sticky bit
+Ken Fallon
+
+
+3876
+Mon
+2023-06-12
+Recording An Episode For Hacker Public Radio
+Ryuno-Ki
+
+
+3877
+Tue
+2023-06-13
+KeePass X.C. audit review.
+Some Guy On The Internet
+
+
+3878
+Wed
+2023-06-14
+Linux commands to gather information about your system
+JWP
+
+
+3879
+Thu
+2023-06-15
+HPR at Hillend
+Dave Morriss
+
+
+3880
+Fri
+2023-06-16
+Installing a Google Nest Thermostat
+Ahuka
+
+
+3881
+Mon
+2023-06-19
+Xplane_VatSim_2022
+operat0r
+
+
+3882
+Tue
+2023-06-20
+Alternatives to the cd command
+Klaatu
+
+
+3883
+Wed
+2023-06-21
+Emergency Show: How to demonstrate the power of condensing steam
+Mike Ray
+
+
+3884
+Thu
+2023-06-22
+2022-2023 New Years Show Episode 10
+HPR Volunteers
+
+
+3885
+Fri
+2023-06-23
+L'apéro des Papas Manchots podcast, Rencontre avec le vétérinaire du Libre
+Ken Fallon
+
+
+3886
+Mon
+2023-06-26
+light saber zzz ohh no!
+operat0r
+
+
+3887
+Tue
+2023-06-27
+10 must-know commands for a new cloud admin
+Klaatu
+
+
+3888
+Wed
+2023-06-28
+KeePassXC recent CVE
+Some Guy On The Internet
+
+
+3889
+Thu
+2023-06-29
+comm - compare two sorted files line by line
+Ken Fallon
+
+
+3890
+Fri
+2023-06-30
+Lessons Learned
+Ahuka
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 6 comments in total.
+This month's shows
+There are 6 comments on 6 of this month's shows:
+hpr3871
+(2023-06-05) "HPR Community News for May 2023"
+by HPR Volunteers.
+
+Comment 1:
+Mechatroniac on 2023-06-10:
+"hpr3816"
+hpr3872
+(2023-06-06) "Sgoti update with replies."
+by Some Guy On The Internet.
+
+Comment 1:
+Kevin O'Brien on 2023-06-08:
+"I'm glad you are enjoying my shows"
+hpr3878
+(2023-06-14) "Linux commands to gather information about your system"
+by JWP.
+
+Comment 1:
+foky on 2023-06-15:
+"one command to get them all"
+hpr3879
+(2023-06-15) "HPR at Hillend"
+by Dave Morriss.
+
+Comment 1:
+Kevin O'Brien on 2023-06-22:
+"Dr. Campbell"
+hpr3880
+(2023-06-16) "Installing a Google Nest Thermostat"
+by Ahuka.
+
+Comment 1:
+Kevin O'Brien on 2023-06-22:
+"Addendum"
+hpr3884
+(2023-06-22) "2022-2023 New Years Show Episode 10"
+by HPR Volunteers.
+
+Comment 1:
+Kevin O'Brien on 2023-06-24:
+"PIN Story"
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2023-June/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+Relocation of the HPR site
+A lot of work has gone into relocating HPR to a new server as well as
+migrating to a static site. There is still work to do.
+
+The main database has been moved from
+anhonesthost.com
+The static site generator written by Rho`n is being
+used to generate the entire new website (with a few exceptions).
+The remaining dynamic features (e.g. show submission and comment
+entry) are provided by a PHP interface
+There are outstanding issues with email on the server so at the
+moment show submission needs manual intervention from the Janitors.
+The hpr mailing list is not working at present
+The way in which new shows are processed has had to be changed and
+shows containing pictures are not yet being rendered properly
+
+

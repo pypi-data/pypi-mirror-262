@@ -1,0 +1,9 @@
+## hpr0082 :: Root kits
+
+ Wikipedia, defines Rootkit as “.. a program designed to take fundamental control of a computer system, without authorization..”.  Rootkit means “pwned”.  In this episode, Finux, gives a detailed account of how rootkits work.  He also reveals ways to expose and - better yet - avoid them. 
+original audio from  https://www.linuxbasement.com/  
+finux discusses rootkits
+
+
+
+Shownotes by: diggsit

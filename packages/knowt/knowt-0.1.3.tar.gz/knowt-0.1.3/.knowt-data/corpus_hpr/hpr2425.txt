@@ -1,0 +1,79 @@
+## hpr2425 :: Intro to XSL
+
+ 
+Sure, you can use pandoc to process your Docbook XML, but why not learn a little XSL this weekend?
+
+Requirements
+
+You must have xsltproc installed. It's available from your software repository.
+
+
+Here is some sample XML for you:
+
+
+<xml version="1.0">
+  <para>
+    My name is <author>Foo</author>.
+  </para>
+
+  <para>
+    You're listening to <emphasis role="bold">Hacker Public
+    Radio</emphasis>.
+  </para>
+</xml>
+
+
+And here's the complete XSL as demonstrated:
+
+
+<xsl:stylesheet xmlns:xsl="https://www.w3.org/1999/XSL/Transform" version="1.0">
+
+  <xsl:template match="para">
+    <p><span><xsl:apply-templates/></span></p>
+  </xsl:template>
+
+  <xsl:template match="emphasis">
+    <em><xsl:apply-templates/></em>
+  </xsl:template>
+
+  <xsl:template match="emphasis[@role='bold']">
+    <strong><xsl:apply-templates/></strong>
+  </xsl:template>
+
+  <xsl:template match="author" name="host">
+    <xsl:choose>
+
+      <xsl:when test="$host = 'Klaatu'">
+        <xsl:text>Klaatu</xsl:text>
+      </xsl:when>
+
+      <xsl:when test="$host = 'Gort'">
+        <xsl:text>Gort</xsl:text>
+      </xsl:when>
+    </xsl:choose>
+  </xsl:template>
+</xsl:stylesheet>
+
+Links
+
+
+
+Norm Walsh
+
+
+
+
+dpawson
+
+
+
+
+O'Reilly
+
+
+
+
+DM Schema
+
+
+

@@ -1,0 +1,5 @@
+## hpr1022 :: LiTS 010: df - Exploring Disk Filesystem Usage
+
+ The df command is used to report file system usage. The df command will show you the amount of storage available, used, and free per partition for each fileystem currently mounted on the system. Values are shown in blocks. 
+
+https://www.linuxintheshell.com

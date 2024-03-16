@@ -1,0 +1,64 @@
+## hpr1449 :: Timelapse Video
+
+ 
+A quick introduction to timelapse video and some of the tools used in linux to help create them. 
+
+
+cd to dir that holds the images
+
+
+Create a directory called resize and run
+
+
+ "mogrify -path resize -resize 1920x1080! *.JPG" 
+
+
+If you need to Deflicker your images place the script in your resize directory 
+and run
+
+
+ "./timelapse-deflicker.pl -v"
+
+
+This will create a dir called deflickered
+
+
+If you use mencoder to create your video you need to use ls and make a text 
+file with the files listed in sequential order
+
+
+ "ls -1tr | grep -v files.txt > files.txt"
+
+
+then
+
+
+ "mencoder -nosound -noskip -oac copy -ovc copy -o outputfile.avi -mf fps=25 'mf://@files.txt'
+
+
+if you use ffmpeg something like this should get you out of trouble, though 
+your files need to be named in sequential order starting with img(number 1 2 etc).jpg 
+
+
+ "ffmpeg -f image2 -i img%d.jpg -vcodec libx264 outputfile.mp4"
+
+
+Youtube links
+
+
+ Milkyway 
+
+
+https://youtu.be/VeGM7iEBUT0
+
+
+ Construction
+
+
+https://youtu.be/-9iCGD6Ielw
+
+
+Deflicker script
+
+
+https://tinyurl.com/p7ffof7

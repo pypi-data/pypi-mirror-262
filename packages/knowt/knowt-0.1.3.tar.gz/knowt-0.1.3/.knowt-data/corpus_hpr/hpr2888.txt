@@ -1,0 +1,89 @@
+## hpr2888 :: Pattern matching in Haskell
+
+ Pattern matching is one of those features of Haskell that immediately got me interested as it reduces amount of branching inside of functions I write. Basic idea is that if value constructors are for making data, pattern matching is for taking it apart.
+First example is a function that takes a Bool and returns a respective String:
+boolToString :: Bool -> String
+boolToString n =
+    if n
+        then "True"
+        else "False"
+Nothing too fancy, just an if expression inside a function. We can move that if out of there though and define exactly same functionality, but with patterns:
+boolToString :: Bool -> String
+boolToString True =
+    "True"
+
+boolToString False =
+    "False"
+There’s one definition for boolToString, but two different patterns used.
+Second example is bit more complex, this time we have Maybe Int that is being turned into String. Maybe has two value constructors Nothing and Just a. We have two cases for Just, specific one for when it’s Just 1 and more general one Just n that takes care of rest of the cases.
+isBig :: Maybe Int -> String
+isBig Nothing =
+    "Not at all"
+
+isBig (Just 1) =
+    "Just perfect"
+
+isBig (Just n) =
+    if n < 10
+        then "Just slightly"
+        else "Definitely is"
+Some example usage:
+> isBig Nothing
+"Not at all"
+> isBig $ Just 0
+"Just perfect"
+> isBig $ Just 50
+"Definitely is"
+Pattern matching isn’t limited to algebraic datatypes that we have been working with so far. We can do same things with records. Below is an function used to calculate total fee when cost and customer are known. Each customer can have their own discount percentage, but in addition we’re giving 10% discount to VIP customers:
+data Customer = Customer
+    { customerName :: String
+    , customerDiscountPct :: Double
+    , vipCustomer :: Bool
+    }
+
+totalFee :: Double -> Customer -> Double
+totalFee bill cust@(Customer { vipCustomer = True }) =
+    bill * 0.9 * customerDiscountPct cust
+
+totalFee bill cust =
+    bill * customerDiscountPct cust
+There’s two cases of totalFee function. First one is for when passed in Customer has vipCustomer field True. Second one takes care of general case. In the first case we’re using @ to bind Customer as a whole to cust name.
+Lists can be matched too. The basic idea is exactly the same:
+
+(x:xs) matches a list with at least one item, x is first item, xs is rest of the items (might be an empty list)
+(x:y:_) matches two first items in a list of at least two items, x is first, y is second, _ is rest
+[] matches empty list
+(x:[]) matches list of exactly one item
+
+Underscore _ matches to everything without binding value to a name. This is useful when you don’t care about exact value, so you don’t want to give it a name. One could give it a name, but compiler will issue a warning if there are unused values in the code.
+Next example is recursively counting amount if items in a list using pattern matching:
+count :: [a] -> Int
+count [] =
+    0
+
+count (x:xs) =
+    1 + count xs
+Fibonacci series is series of number which starts with 0, 1 and then rest of the numbers are sum of two previous ones: 0, 1, 1, 2, 3, 5, 8…
+To calculate number in series, we can write following code (this is extremely slow way of calculating them by the way):
+fibonacci :: Int -> Int
+fibonacci 0 =
+    0
+
+fibonacci 1 =
+    1
+
+fibonacci n =
+    fibonacci (n - 1) + fibonacci (n - 2)
+Last trick in our sleeve for now is case expression. This allows us to do pattern matching inside of a function. Otherwise it works in the same way. Our fibonacci function could be defined as:
+fibonacci :: Int -> Int
+fibonacci n =
+    case n of
+        0 ->
+            0
+
+        1 ->
+            1
+
+        n ->
+            fibonacci (n - 1) + fibonacci (n - 2)
+Questions, comments and feedback are welcome. Best way to catch me nowadays is either email or in fediverse where I’m Tuula@mastodon.social

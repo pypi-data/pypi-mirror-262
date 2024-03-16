@@ -1,0 +1,12 @@
+## hpr3532 :: Self-hosting in small scale E0: Disclaimer and general idea
+
+ By the end of the series I would like to end up with an example repository on Github/Gitlab with scenarios and example configuration file which makes them easy to replicate and modify to your need. I am interested in your opinion what type of service would you fancy to self-host yourself. So don't hesitate to contact me on twitter, matrix.org or in email.
+Twitter: @takov751
+matrix: takov751:matrix.org
+email: takov751+hpr@protonmail.com
+Few interesting communities/project:
+
+Community around making a curated list of their own docker images and maintain them:
+https://linuxserver.io
+Open source project for home automation: https://www.home-assistant.io/
+

@@ -1,0 +1,3 @@
+## hpr1262 :: LiTS 031: who
+
+ Episode 31 of Linux in the Shell discuses the use of the who command. The who command does more than just identify who is logged into a system. Who is coupled with init and will produce statistical information about the system since the last boot. Make sure you visit the entry on https://www.linuxintheshell.com/2013/06/04/episode-031-who/ to get the full write up of the who command and for further information in the bibliography on topics discussed.

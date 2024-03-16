@@ -1,0 +1,15 @@
+## hpr0992 :: LiTS 007: Chmod and Unix Permissions.
+
+ 
+This is LITS 007
+
+
+Pay attention everyone, this is serious stuff. This is CHMOD a powerful and dangerous operator that has 
+infiltrated to the heart of every unix and linux system. We have been receiving reports that it has also behind many strange incidents leading to computer compromise and in some cases complete lock down.
+
+
+Our American colleague, Special Agent Washko, will show us how to, in his own words "turn this bad boy around" so we can get it working for us.
+
+
+As ever the extremely detailed shownotes can be found on his site https://www.linuxintheshell.com/2012/05/22/episode-007-chmod-and-unix-permissions/.
+

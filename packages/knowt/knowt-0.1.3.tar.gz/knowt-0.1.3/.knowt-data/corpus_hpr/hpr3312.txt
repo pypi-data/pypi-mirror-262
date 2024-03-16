@@ -1,0 +1,109 @@
+## hpr3312 :: COVID Doldrums
+
+ Introduction
+Hosts:
+
+MrX
+Dave Morriss
+
+We had some issues with getting Mumble to work, for reasons we couldn’t quite fathom. Both ends needed to be restarted several times until all worked properly.
+We recorded this on Sunday March 7th 2021. The last time we set up a chat like this was back in August 2020, surprisingly!
+Note on the title: the term the doldrums refers to a belt around the equator where sailing ships used to be becalmed due to the lack of wind. It also means a state of inactivity or stagnation, or a dull, listless, depressed mood; low spirits. 
+Topics discussed
+
+Pandemic (1):
+
+Planning for pandemics
+Years ago parents used to let children catch chickenpox when it was known somebody had it (pox party).
+Did COVID-catching parties really happen? Wikipedia page on alleged COVID parties.
+
+
+
+Christmas/New Year:
+
+Dave:
+
+Cooked a fancy vegetarian meal twice! On Boxing Day and New Years Day. Second time was a joint effort. Getting everything coordinated is easier when there are several contributors!
+
+MrX:
+
+Had long break because like many I hadn’t taken many holidays
+Spent first part of holiday upgrading devices around the house
+I had a nice relaxing break and spent Christmas with my mother, she lives on her own.
+Visit to the dentist was interesting, wondering how they were going to cope with aerosol spray from the drill. The answer was they didn’t. Rough edge smoothed, they told me they will contact me when things settle down and said I was right to get it checked. If any pain or further break then will be moved into a different category where they do use drill with full PPE.
+
+
+
+
+Pandemic (2):
+
+Dave:
+
+Vaccination received on 2020-02-02 (Oxford/AstraZeneca)
+Probably getting second in late April or early May; not heard yet
+Still avoiding going out for the moment
+The deleterious effects of the lock down; trying to walk on a regular basis to counteract these and get exercise
+Meeting up with the rest of the family several times per week for dinner, etc.
+
+MrX:
+
+Horizon things we now know about COVID
+Don’t know how long the vaccine protects against virus spreading but likely to protect against serious illness for a good long time.
+12 weeks between jabs: 2nd jab does not provoke a stronger response; it’s that the 1st jab produces good responses and poor responses but by waiting 12 weeks for the 2nd jab it only provokes the good responses.
+Think the UK has among the worst death rate in Europe
+Like Dave continuing to avoid the virus as before.
+Seems to be getting more difficult coping with lock down
+Haven’t been into work since last November, working from home
+Home working, clutter, stress, not taking enough breaks
+Glad I didn’t need to drive during all the bad weather
+Think I heard on a podcast recently that Linux use had dropped by 50%, could this be linked to people working from home. I would say this is true for myself
+Except for me all immediate family have been vaccinated
+Way to stay positive tip from something Mrs X read
+
+Three things at the end of each day that were a highlight or something that we are grateful for.
+This may say something about my personality but for me the highlights often relate to food.
+
+Can’t go outside our own region.
+
+
+
+
+Weather in & around Edinburgh:
+
+Some snow in the past few months. More than Edinburgh tends to have.
+Methods of clearing snow on driveways. Snow shovels - mainly plastic unfortunately.
+Thoughts about making a home-made shovel out of metal for durability.
+
+
+
+To Do lists and Taskwarrior:
+
+Jeroen Baten did a show about Taskwarrior in December 2020.
+Dave has been trying to use taskwarrior regularly. There’s a feeling of achievement when a task is done!
+MrX has tried various solutions including paper. Taskwarrior doesn’t fit with many modes of working.
+
+
+
+Laptops and Chromebooks:
+
+MrX has money to spend on either of these, and is debating what to buy
+Dave has an Entroware laptop but mainly uses a desktop system
+
+
+
+Technology:
+
+Hand warmers:
+
+MrX has a new electric hand warmer
+Dave only has experience of the reusable gel ones that release heat as they crystallise
+Talk of other technologies: single use warmers, fuelled Zippo warmers
+
+Raspberry Pi Pico:
+
+Dave has one of these. It’s a microcontroller that costs £3.60. Not in use yet though.
+The keypad isn’t 16×16 but 4×4 – 16 keys, not 256! It’s from Pimoroni, the RGB Keypad Base.
+
+The R Programming Language
+
+

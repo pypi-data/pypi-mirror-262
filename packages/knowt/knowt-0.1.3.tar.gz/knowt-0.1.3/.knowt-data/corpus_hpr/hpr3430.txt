@@ -1,0 +1,16 @@
+## hpr3430 :: Booting
+
+ The boot process is a very particular system for taking a dead hunk of metal and silicon and turning it into an active computer. It is kind of remarkable, and in the DOS environment you really needed to know how it worked.
+Links:
+
+https://webopedia.com/TERM/B/BIOS.html
+https://webopedia.com/TERM/R/ROM.html
+https://webopedia.com/TERM/C/CMOS.html
+https://webopedia.com/TERM/p/power_on_self_test.html
+https://webopedia.com/TERM/M/MBR.html
+https://webopedia.com/TERM/k/kernel.html
+https://webopedia.com/TERM/s/shell.html
+https://webopedia.com/TERM/i/internal_command.html
+https://webopedia.com/TERM/b/batch_file.html
+https://www.ahuka.com/dos-lessons-for-self-study-purposes/dos-lesson-2-booting/
+

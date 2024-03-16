@@ -1,0 +1,22 @@
+## hpr1529 :: TrueCrypt, Heartbleed, and Lessons Learned
+
+ 
+Two recent events have shed light on some fundamental issues in getting security in Open Source projects. One of them is a serious bug referred to as "Heartbleed", and the other is the first part of a security audit of the TrueCrypt encryption program. By looking at both of these together and doing a Lessons Learned we can draw some conclusions about what is needed to have security in Open Source projects.
+
+
+Links:
+
+
+https://www.digitaltrends.com/computing/how-did-the-heartbleed-openssl-bug-happen/#!FLdxR
+ 
+https://tools.ietf.org/html/rfc6520
+
+https://www.novainfosec.com/2014/04/16/no-major-findings-in-truecrypt-audit/
+
+https://arstechnica.com/information-technology/2014/04/tech-giants-chastened-by-heartbleed-finally-agree-to-fund-openssl/
+
+https://podcasts.infoworld.com/d/open-source-software/heartbleed-postmortem-openssls-license-discouraged-scrutiny-241781?source=rss_security
+
+https://www.zwilnik.com/?page_id=588
+
+

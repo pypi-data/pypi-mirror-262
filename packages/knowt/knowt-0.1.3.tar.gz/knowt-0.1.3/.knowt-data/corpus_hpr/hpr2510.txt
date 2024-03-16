@@ -1,0 +1,12 @@
+## hpr2510 :: 26 - Diffie-Hellman-Merkle Key Exchange
+
+ Diffie-Hellman Key Exchange is based on work initially done by Ralph Merkle, and remains one of the key developments in secure communication over the Internet. In this episode I try to explain just how this works, with an example of a calculated key exchange.
+For more go to https://www.zwilnik.com/?page_id=955
+Links
+
+https://ee.stanford.edu/~hellman/publications/24.pdf
+https://en.wikipedia.org/wiki/Modular_arithmetic
+https://en.wikipedia.org/wiki/Discrete_logarithm
+https://en.wikipedia.org/wiki/Man-in-the-middle_attack
+https://www.zwilnik.com/?page_id=955
+

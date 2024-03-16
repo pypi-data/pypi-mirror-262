@@ -1,0 +1,98 @@
+## hpr3182 :: Yo-ho-ho, and a bottle of Cholecalciferol
+
+ Introduction
+Two HPR hosts from Scotland get together over Mumble one more time to chat about all manner of stuff.
+
+Andrew Conway
+Dave Morriss
+
+We recorded on Saturday 19th September 2020, which was International Talk Like A Pirate Day, we but managed to avoid any utterances of ARRRR!, and the use of marlinspikes, fids or belaying pins. Also, no timbers were shivered and no mainbraces spliced (not while recording anyway).
+Notes
+Some of the topics we discussed:
+
+COVID-19:
+
+The increase in COVID-19 cases in Scotland, particularly Glasgow
+
+Movement in Glasgow is more restricted than in Edinburgh at time of recording
+
+The KCL COVID tracker, described further in an article with more details
+
+Andrew is using this
+
+Is Glasgow the most infected city in the UK?
+This week in Virology podcast discussing easing of lock down and return of children to school, both likely to increase infections.
+Vitamin D (D3 in particular1) seems to have a beneficial effect in COVID-19 cases. Having an optimal level of the vitamin seems to help ameliorate the COVID-19 effects, whereas being deficient can apparently result in more severe effects. See the study in the Journal of Steroid Biochemistry and Molecular Biology
+Long-term immunity and t-cells: see the Nature paper mentioned in the episode
+The virus is called SARS-CoV-22 (as opposed to SARS-CoV-1, the previous SARS coronavirus). The disease is called COVID-193.
+Speculations heard:
+
+Whether having had the BCG immunisation against tuberculosis helps protect from COVID-19.
+Whether exposure to other (milder) corona viruses can provide immunity to SARS-CoV-2.
+
+The puzzling case of Sweden and COVID-19
+Have there been randomised controlled trials of the effectiveness of the masks in common use?4
+
+
+
+What we’re doing in lockdown:
+
+Dave: cooking for the family 2 nights a week; shopping “by proxy”; not going to the gym yet
+Andrew: exercising at home; tried the gym a couple of times but was put off by overcrowding; working on the BBC Micro (check HPR show hpr2731 :: My 8 bit Christmas)
+
+
+
+BBC Micro:
+
+A 32KiB 8-bit computer based around the 6502 CPU, made by Acorn Computers Ltd.
+Game: Twin Kingdom Valley originally played by Andrew in 1982/3. He has been:
+
+Disassembling the game (which is in machine code).
+
+Disassembly is non-trivial when data is interleaved with the code.
+
+Rewriting the non-graphic code in C
+
+The BBC had a paged ROM area known as the Sideways ROM (see the System Memory Map)
+Andrew had the ROM game Dr. Who and the Mines of Terror!.
+The 65C02 processor is still being made!
+Ben Eater on YouTube is explaining the workings of the 6502, amongst other things.
+
+Andrew has bought a 6502 kit from Ben Eater
+
+The 6502 could be seen as an early RISC (Reduced Instruction Set) machine (though not intentionally). Acorn created the Acorn RISC Machine (ARM) for the Archimedes and eventually spun off ARM Ltd.
+
+
+
+Internet bandwidth in Scotland
+
+Dave’s street has just had optical fibre installed. He has an ADSL link at present which is slow and not always reliable
+Andrew has cable, which is very reliable. Reliability is more important than very high speeds, as is low latency
+
+
+
+HPR queue state:
+
+OK for the next couple of weeks (at time of recording)
+A new show then arrived at that point!
+HPR always needs shows!
+
+
+
+Programming languages:
+
+Dave hasn’t been too keen on using assembler since the late 1980’s
+Andrew has been a Java programmer but likes the slimness of C
+Dave tinkered with FORTH on the BBC Micro at one time, and wrote some stuff in PostScript as a programming language
+FORTH was used to control telescopes at one time
+
+
+
+
+
+Vitamin D3 is also known as cholecalciferol.↩︎
+SARS-CoV-2: SARS stands for Severe Acute Respiratory Syndrome, CoV means Corona Virus and the 2 refers to the second SARS corona virus in recent times.↩︎
+COVID-19: simply means coronavirus disease 19, referring to its arrival in 2019.↩︎
+Some clarification of the types of mask being used most commonly might be needed. Andrew was thinking of the fabric masks when speaking about this. Some research after the recording discovered a mask-related trial as follows: Human coronavirus data from four clinical trials of masks and respirators.↩︎
+
+

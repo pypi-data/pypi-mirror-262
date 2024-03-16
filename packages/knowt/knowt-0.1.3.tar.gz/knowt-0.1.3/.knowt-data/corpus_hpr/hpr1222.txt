@@ -1,0 +1,18 @@
+## hpr1222 :: LiTS 027: mathematical commands
+
+ 
+Episode 27 of Linux in the Shell continues on with looking at some mathematical commands. Four programs are discussed:
+
+
+factor - which will give you the prime factors of a number
+
+primes - which will list all the prime numbers between a start and option stopping number
+
+seq - sequence will list all the numbers given a stopping point or a starting and stopping point. You can also specify an increment or decrement value.
+
+arithmetic - Arithmetic is a game from the bsd games package that will quiz you on arithmetic problems.
+
+
+
+For full notes go to https://www.linuxintheshell.com/2013/04/09/episode-27-factor-primes-seq-and-arithmetic/
+

@@ -1,0 +1,47 @@
+## hpr0507 :: Cron with Ken Fallon
+
+ 
+LINKS
+==============================================
+https://help.ubuntu.com/community/CronHowto
+https://unixhelp.ed.ac.uk.CGI/man-cgi?crontab+5
+https://unixgeeks.org/security/newbie/unix/cron-1.html
+https://en.wikipedia.org/wiki/Cron
+https://ratholeradio.org/
+
+SCRIPT
+==============================================
+username@computer:~$ vi /home/username/bin/hello.bash
+
+username@computer:~$ cat /home/username/bin/hello.bash
+#!/bin/bash
+echo "hello world"
+
+username@computer:~$ /home/username/bin/hello.bash
+bash: /home/username/bin/hello.bash: Permission denied
+
+username@computer:~$ chmod +x /home/username/bin/hello.bash
+
+username@computer:~$ /home/username/bin/hello.bash
+hello world
+
+username@computer:~$ export |grep EDITOR
+declare -x EDITOR="vim"
+
+username@computer:~$ crontab -l
+no crontab for username
+
+username@computer:~$ crontab -e
+no crontab for username - using an empty one
+No modification made
+
+username@computer:~$ crontab -e
+no crontab for username - using an empty one
+crontab: installing new crontab
+
+username@computer:~$ crontab -l
+# m h  dom mon dow   command
+* * * * * /home/username/bin/hello.bash > /home/username/hello.output 2>&1
+
+username@computer:~$ cat /home/username/hello.output
+hello world

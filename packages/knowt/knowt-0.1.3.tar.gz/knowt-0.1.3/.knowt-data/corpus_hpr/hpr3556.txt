@@ -1,0 +1,12 @@
+## hpr3556 :: TTS for HPR
+
+ Used the opentts Project with default settings. The voices you will hear in order:
+
+coqui_en_ljspeech
+larynx_northern_english_male
+larynx_southern_english_female
+larynx_scottish_english_male
+larynx_glados
+
+I found the gladOS voice funny, hence I included that one, but these are the best sounding to my knowledge so far.
+I have seen that with there will be a new mimic release version 3 soon, which has a really great voice. And example with the voice of Alan Pope mycroft_demo. And synesthesiam who's working on these projects said that there will be hopefully a model, which can be trained with actual voice, which would fine tune the voice to sounds more like someone else.

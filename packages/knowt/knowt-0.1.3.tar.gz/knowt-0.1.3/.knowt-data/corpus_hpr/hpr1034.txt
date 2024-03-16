@@ -1,0 +1,31 @@
+## hpr1034 :: PXE Boot
+
+ 
+In todays show, Ken tells of his struggle to get silent PC to work with his spare 17" monitor. His attempts to get a "VIA EPIA M9000 Mini ITX Motherboard" failed miserably and so he has turned to a HP Compaq t5000 thin client. As can be seen in this post here and discussed here.
+
+
+
+
+
+The OS installs fine from USB but you run into grub issues on reboot that require you to boot from USB disk to rectify and that runs into problems as the boot order get's confusing. To get around this I decided to install Debian via PXE boot or more commonly "Pixie" boot. A full description can be found on the debian wiki. Basically it involves setting up a DHCP server, a TFTP server and downloading a boot image.
+
+
+Once you have everything configured is a standard Debian net install. The only gotya is entering the MAC address of your Client and making sure you know what is happening on your network with regard to DHCP. I set the internal sd drive as the boot partition, created a 500Mb swap on my 4G external disk and put the root as the rest. I set both the boot and the root partition to ext2 as I didn't want the added strain of journaling on the sd media.
+
+
+I ran into the Grub 2 ERROR 17 issue which meant that I had to do some reading on Grub2 and we're back to the bad old days of lilo where you need run commands or your config changes are ignored. Anyway another Pixie boot, this time into recovery mode long enough to type update-grub. A quick reboot and we're into a standard Debian base install.
+
+
+I took the steps to installing Debian multimedia by adding the magic deb https://www.debian-multimedia.org squeeze main non-free to my /etc/apt/sources.list and then doing
+
+aptitude install debian-multimedia-keyring
+
+to get the keyring in order. After that it was a aptitude update and a aptitude safe-upgrade and that was it. I was free to install anything I wanted.
+
+Links
+
+https://forums3.armagetronad.net/viewtopic.php?f=49&t=21990
+https://www.linuxquestions.org/questions/linux-general-1/linux-riddle-how-do-you-install-linux-on-a-hp-compaq-t5000-internet-terminal-564929/
+https://wiki.debian.org/PXEBootInstall
+https://help.ubuntu.com/community/Grub2
+

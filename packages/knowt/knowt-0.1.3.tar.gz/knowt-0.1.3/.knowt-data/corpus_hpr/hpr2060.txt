@@ -1,0 +1,30 @@
+## hpr2060 :: Introduction to sed - part 5
+
+ Introduction to sed - part 5
+This episode is the last one in the "Introduction to sed" series.
+In the last episode we looked at the full story of how sed works with the hold and pattern buffers. We looked at some of the commands that we had not yet seen and how they can be used to do more advanced processing using sed's buffers.
+In this episode we will look at a selection of the remaining commands, which might be described as quite obscure (even very obscure). We will also look at some of the example sed scripts found in the GNU sed manual.
+To read the rest of the notes for this episode follow this link: https://hackerpublicradio.org/eps/hpr2060/full_shownotes.html
+Links
+
+Introduction to sed - part 1: https://hackerpublicradio.org/eps.php?id=1976
+Introduction to sed - part 2: https://hackerpublicradio.org/eps.php?id=1986
+Introduction to sed - part 3: https://hackerpublicradio.org/eps.php?id=1997
+Introduction to sed - part 4: https://hackerpublicradio.org/eps.php?id=2011
+GNU sed manual:
+
+Index: https://www.gnu.org/software/sed/manual/sed.html
+Commands for sed gurus: https://www.gnu.org/software/sed/manual/sed.html#Programming-Commands
+Commands Specific to GNU sed: https://www.gnu.org/software/sed/manual/sed.html#Extended-Commands
+
+Wikipedia entry for sed: https://en.wikipedia.org/wiki/Sed
+"Sed - An Introduction and Tutorial" by Bruce Barnett: https://www.grymoire.com/Unix/Sed.html
+Wikibooks sed wiki: https://en.wikibooks.org/wiki/Sed
+Example files:
+
+Using the c command: https://hackerpublicradio.org/eps/hpr2060/demo5.sed
+Centring lines: https://hackerpublicradio.org/eps/hpr2060/centre.sed
+Reverse lines of files: https://hackerpublicradio.org/eps/hpr2060/tac.sed
+Reverse characters of lines (original and debug): https://hackerpublicradio.org/eps/hpr2060/reverse_characters.sed https://hackerpublicradio.org/eps/hpr2060/reverse_characters_debug.sed
+
+

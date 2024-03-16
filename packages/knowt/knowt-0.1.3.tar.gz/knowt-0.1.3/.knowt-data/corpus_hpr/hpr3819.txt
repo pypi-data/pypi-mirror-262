@@ -1,0 +1,49 @@
+## hpr3819 :: Remapping Mouse Buttons with XBindKeys on Linux
+
+ Remapping Mouse Buttons with XBindKeys on Linux
+After a really long time of not bothering to figure out how to do this, I finally did some research and found out how to remap the extra buttons on my Kensington Expert mouse and my Logitech marble trackball mouse in a Linux environment. The tools it needed were xvkbd, xdotool, and xbindkeys. I already had the first two installed, but had never used xbindkeys before. I also used xev to identify the button numbers and key numbers.
+The Kensington Expert Mouse is one that I've had for about 15 years, and it was fairly expensive when I bought it, something like $75 or $80. It has four large buttons with a large trackball in the middle and a scroll wheel going around the track ball. I bought it at a time when I was doing a lot of graphic work that required clicking and dragging and double-clicking and stuff like that. If you're using it in a Mac or Windows environment, there is a special configuration tool that you can use to set it up just how you want. I had always configured it so that the upper left and upper right buttons were used for double-clicking and click dragging. This helped reduce a lot of strain on my hands. I have never gotten this to work on Linux, though, until today.
+If you want to do this yourself, the first thing to do is make sure you have these packages installed: xvkbd, xdotool, and xbindkeys.
+
+Then create a configuration file in your home directory:
+
+
+~/.xbindkeysrc
+
+
+In order to map the upper left button to "double click," and the upper right button to "click and drag," I added these lines to the configuration file:
+
+
+# Double-click assigned to button 2 (upper left)
+
+"xdotool sleep 0.2 click 1 ; xdotool click 1"
+      b:2
+
+# Click and Drag assigned to button 8 (upper right)
+
+"xdotool sleep 0.2 mousedown 1"
+      b:8
+
+
+To test the settings, simply kill the xbindkeys process and restart it by typing xbindkeys:
+
+
+user@hostname:~$ pkill -f xbindkeys
+user@hostname:~$ xbindkeys
+
+On my desktop computer I have a Logitech marble trackball mouse, and it has two small keys that are assigned to back and forward by default. This can be handy for navigating file managers and web pages, but I wanted them to be assigned to "page up" and "page down" (to make up for the lack of a scroll wheel on the mouse). Here is the configuration file for that machine:
+
+"xvkbd  -text "\[Page_Down]""
+       b:8
+
+"xvkbd  -text "\[Page_Up]""
+       b:9
+
+I suppose I could have used xdotool for this configuration file as well, but for reasons I can't remember now, I tried xvkbd first and it worked, so I did not experiment further. I  used xdotool for the Kensington because xvkbd did not have a way to perform virtual mouse clicks.
+Links
+
+xev
+XBindKeys
+xvkbd
+xdotool
+

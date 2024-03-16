@@ -1,0 +1,167 @@
+## hpr3052 :: Locating computers on a network
+
+ Locating computers on a network
+Sometimes you may wish to locate a device on your network. It might be to find rogue devices, or to locate a new device be that a printer, an Internet of Things light bulb, or whatever. In my case I was trying to track down a RaspberryPi. Raspbian now lists the IP Addresses assigned to it when it first starts, but that requires a monitor to be connected.
+Locating using your router.
+This is by far the easiest way to find a new device but it is also the most manual. If you have access to the (WiFi) Router/DHCP server on your network then this should be a matter of logging in and getting the address from the menu area probably called Network or LAN or something like that. So first list all the computers that are on the network. Then turn on your pi, and see if a new one has joined. If you're lucky it may even be labeled Raspberry Pi Foundation.
+In my case I want to locate these devices automatically using a script. So below we will explore some ways that you can approach the problem of locating devices on your network. All of them rely on trying to find the mapping between an Ethernet MAC Address, and a IP Address. It will help to understand a little about how Ethernet works. This is a nice short overview, How does Ethernet work? (animated) by Janos Pasztor
+ARP
+I don't know the network device you will be using so I'd like to share a few ways of doing this using the ARP protocol. This provides a mapping between a device's permanent MAC address and their, often temporarily, assigned IP address.
+When your computer 192.168.1.1 wants to talk to another device it will need to know the Ethernet MAC address of the other device. Let's assume it wants to connect to the local printer 192.168.1.2 that is on the same network, and it knows its IP Address. If your computer has already heard the printer communicate on the network, it will have already added the printer's IP address and MAC Address to its so called ARP table. Over time older entries will be removed from this table either because they are too old, or there were too many entries.
+Linux has a command called arp which will show you a list of the IP addresses mapped to the MAC/HWaddress address.
+# arp -n
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.1.254            ether   ff:ee:dd:cc:bb:aa   C                     eno1
+192.168.1.2              ether   00:11:22:33:44:55   C                     eno1
+192.168.1.1              ether   00:aa:bb:cc:dd:ee   C                     eno1
+
+From a Internet Protocol (IP) point of view all your devices in your house are probably in the same Subnet(work). But what if you need to communicate outside your network? For example to ping a well known server 8.8.8.8 to check if you have an Internet Connection. The IP settings also include a Default gateway to send all traffic not intended for the local network.
+Finding the Default gateway
+Your computer will have many IP Addresses configured but it's a good bet that the network you and your new pi are on is the same one as the default gateway is on. You can find the default gateway using the following command:
+$ route -n | grep -E 'Destination|^0.0.0.0'
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.1.254   0.0.0.0         UG    100    0        0 eno1
+
+It uses route to show the route table showing IP Addresses and not network names. The first column is Destination and so a 0.0.0.0 there means route everything else to and the to we get from the second column Gateway, which is our gateway.
+You can also get the same information using the following command:
+$ ip route show | grep default
+default via 192.168.1.254 dev eno1 proto dhcp metric 100
+
+And now to just show the IP Address.
+$ route -n | awk '/^0.0.0.0/ {print $2}'
+192.168.1.254
+
+From an Ethernet point of view it needs to find the MAC address associated with your router/default gateway's IP address 192.168.1.254, so that it can send Ethernet Frames to it. In our case the address is in the ARP table, but if it wasn't then your computer would broadcast to everyone on the network using a special address ff:ff:ff:ff:ff:ff. When the router/default gateway replies that entry will be added to the ARP table.
+
+739  5.328679069  00:aa:bb:cc:dd:ee  ff:ff:ff:ff:ff:ff  ARP  42  Who has 192.168.1.254? Tell 192.168.1.1
+746  5.328911559  ff:ee:dd:cc:bb:aa  00:aa:bb:cc:dd:ee  ARP  60  192.168.1.254 is at ff:ee:dd:cc:bb:aa
+
+Have a play with WireShark to see what is actually going on on your network. There is a good step by step walk through on Wireshark/Arp on wikiversity.
+All RaspberryPi computers have an Ethernet MAC address starting with b8:27:eb or dc:a6:32. So if your computer and the new pi are on the same network you can look for new MAC addresses starting with b8:27:eb or dc:a6:32.
+Foiled by the Switch
+All is not plain sailing as most modern LAN's use switches to split up the broadcast domain.
+
+Switches act as buffers, receiving and analyzing the frames from each connected network segment. Frames destined for nodes connected to the originating segment are not forwarded by the switch. Frames destined for a specific node on a different segment are sent only to that segment. Only broadcast frames are forwarded to all other segments. This reduces unnecessary traffic and collisions.
+
+What this means is that although all your computers may be on one big IP network, the devices may be connected to different switches. For example a WiFi Router downstairs, a Cabled Switch in the back room, and a network extender in the attic. All are filtering out unnecessary traffic. While that is a good thing, it does mean that it may not ever see the traffic from the new Pi.
+If we try and contact each and every IP Address on the network, that forces ARP "Who has?" traffic, and the answers that come back will be added to the arp table. There are a few ways to force this discovery.
+Discovery by ping
+One way to generate ARP traffic is to use the ping utility.
+
+Ping measures the round-trip time for messages sent from the originating host to a destination computer that are echoed back to the source. The name comes from active sonar terminology that sends a pulse of sound and listens for the echo to detect objects under water.
+
+To ping an IP Address, just type ping 192.168.1.1. That will send out a continuous ping which you can stop by pressing and holding the ctrl key and then pressing the letter c.
+$ ping 192.168.1.1
+PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.
+64 bytes from 192.168.1.1: icmp_seq=1 ttl=63 time=0.547 ms
+64 bytes from 192.168.1.1: icmp_seq=2 ttl=63 time=0.493 ms
+64 bytes from 192.168.1.1: icmp_seq=3 ttl=63 time=0.422 ms
+64 bytes from 192.168.1.1: icmp_seq=4 ttl=63 time=0.466 ms
+^C
+--- 192.168.1.1 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3105ms
+rtt min/avg/max/mdev = 0.422/0.482/0.547/0.045 m
+
+We don't actually care about the output, as the point here is to generate some traffic to see who is awake. So we can redirect output and errors to /dev/null. So a good command to do this would be:
+ping -n -c 1 -W 1 192.168.1.1 >/dev/null 2>&1 &
+The options used are to limit the traffic and wait time as much as possible:
+-n Numeric output only.  No attempt will be made to lookup symbolic names for host addresses.
+-c count. Stop after sending count ECHO_REQUEST packets. With deadline option, ping waits for count ECHO_REPLY packets, until the timeout expires.
+-W timeout. Time to wait for a response, in seconds. The option affects only timeout in absence of any responses, otherwise ping waits for two RTTs.
+
+In this solution we will try and ping every host on the network. It would be a bit tedious to do each one by one, so we will make a script to do this for us. It's a very safe bet that your home network will have a private IP range of 192.168.???.0 to 192.168.???.255. This is not a safe assumption in an Office Environment but we can deal with that later.
+So we will try and find the base part of the subnet 192.168.1.1 which will be 192.168.1 and then we will ping each address in turn.
+base=$( ip route show | awk -F '\\.|/| ' '/default/ {print $3"."$4"."$5}' )
+for node in {1..254}
+do
+( ping -n -c 1 -W 1 ${base}.${node} & )
+done
+
+I'm assigning the base variable the first three parts of the IP Address and then I am cycling through all possible addresses sending out a ping (a sort of hello message) to each. By wrapping the whole thing in () we can fork each to run at the same time.
+This will force some traffic between my computer and every computer on the network, which will fill up the arp table on my pc.
+# arp -n
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.1.2              ether   00:11:22:33:44:55   C                     eno1
+192.168.1.1              ether   00:aa:bb:cc:dd:ee   C                     eno1
+192.168.1.10             ether   11:11:11:11:11:11   C                     eno1
+192.168.1.25             ether   22:22:22:22:22:22   C                     eno1
+192.168.1.3              ether   33:22:22:22:22:22   C                     eno1
+192.168.1.5              ether   b8:27:eb:11:11:11   C                     eno1
+
+And now we find all the computers that are on, and responding to pings on the network. We can see that there is one that starts with b8:27:eb|dc:a6:32, and it has an IP Address of 192.168.1.5.
+# arp -n | grep -Ei 'b8:27:eb|dc:a6:32' | awk '{print $1}'
+192.168.1.5
+
+Putting it all together
+base=$( ip route show | awk -F '\\.|/| ' '/default/ {print $3"."$4"."$5}' )
+for node in {1..254}
+do
+  (ping -n -c 1 -W 1 ${base}.${node} >/dev/null 2>&1 &)
+done
+arp -n | grep -Ei 'b8:27:eb|dc:a6:32' | awk '{print $1}'
+
+Discovery by nmap
+You should have permission in writing from your network administrator before you proceed with these steps.
+Here I am going to use some of the commands above together with the tools nmap and ipcalc to locate and scan the network. This has the advantage of dealing with more exotic subnet masks.
+Find the default interface
+# route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.1.254   0.0.0.0         UG    100    0        0 eno1
+....
+
+# route -n | grep -E '^0.0.0.0' | awk '{print $8}'
+eno1
+
+Find the ip and subnetmask for the default interface
+# ifconfig eno1 | grep 'inet '
+inet 192.168.1.1  netmask 255.255.255.0  broadcast 192.168.1.255
+
+# ifconfig eno1 | grep 'inet ' | awk '{print $2"/"$4}'
+192.168.1.1/255.255.255.0
+
+Get the network from ipcalc
+# ipcalc 192.168.1.1/255.255.255.0
+Address:        192.168.1.1
+Network:        192.168.1.0/24
+Netmask:        255.255.255.0 = 24
+Broadcast:      192.168.1.255
+
+Address space:  Private Use
+Address class:  Class C
+HostMin:        192.168.1.1
+HostMax:        192.168.1.254
+Hosts/Net:      254
+
+# ipcalc 192.168.1.4/255.255.255.0 | grep 'Network' | awk '{print $NF}'
+192.168.1.0/24
+
+Now call nmap to give the ip address and MAC address
+# nmap -sn 192.168.1.0/24
+Starting Nmap 7.40 ( https://nmap.org ) at 2017-07-05 20:57 CEST
+Nmap scan report for 192.168.1.2
+Host is up (0.0012s latency).
+MAC Address: 00:11:22:33:44:55 (Acme industries)
+Nmap scan report for 192.168.1.5
+MAC Address: b8:27:eb:11:11:11 (Raspberry Pi Foundation)
+Nmap scan report for local.lan (192.168.1.254)
+Host is up.
+Nmap done: 256 IP addresses (2 hosts up) scanned in 3.51 seconds
+
+
+-sn (No port scan) This option tells Nmap not to do a port scan after host discovery, and only print out the available hosts that responded to the host discovery probes. This is often known as a “ping scan”, but you can also request that traceroute and NSE host scripts be run. In previous releases of Nmap, -sn was known as -sP.
+
+Discovery by arp-scan
+By far the easiest way to do this is using the dedicated tool called arp-scan, (Man Page)
+# arp-scan --interface eno1 --localnet --numeric --ignoredups
+Interface: eno1, type: EN10MB, MAC: 20:47:47:ca:24:a6, IPv4: 192.168.10.14
+Starting arp-scan 1.9.7 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.1.2     00:11:22:33:44:55       Acme industries
+192.168.1.5     dc:a6:32:22:22:22       Raspberry Pi Trading Ltd
+192.168.1.233   b8:27:eb:11:11:11       Raspberry Pi Foundation
+192.168.1.254   e4:95:6e:00:00:00       IEEE Registration Authority
+
+12 packets received by filter, 0 packets dropped by kernel
+Ending arp-scan 1.9.7: 256 hosts scanned in 1.939 seconds (132.03 hosts/sec). 12 responded
+
+Whichever option you chose I hope this helps you become more familiar with your network and the way it works.

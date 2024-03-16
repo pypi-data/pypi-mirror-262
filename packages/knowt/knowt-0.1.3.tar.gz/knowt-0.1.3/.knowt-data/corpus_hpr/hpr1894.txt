@@ -1,0 +1,39 @@
+## hpr1894 :: Interview with Davide Zilli and Dr Marianne Sinka of the HumBug Project
+
+ 
+Back in 2012 I put up a blog post on my site related to the need for an Open Source Mosquito Locator. Mosquitoes are the greatest killer of humans per year.
+
+
+
+Recently Alexandre Azzalini left a comment pointing me to the HumBug project which is dedicated to Mosquito Detection and Habitat Mapping for Improved Malaria Modelling. I got in touch, and so today I talk to Davide Zilli, and Dr. Marianne Sinka who were winners of the Google Impact Challenge UK 2014.
+
+
+Royal Botanic Gardens Kew: Crowdsourcing data to help prevent mosquito-borne diseases
+
+Mosquitoes are responsible for the spread of some of the most deadly and costly diseases, with more than half the world's population living in areas where they are routinely exposed to disease carrying mosquitoes. One of the most deadly diseases that they transmit is malaria, that kills over 600,000 people every year. The Royal Botanic Gardens Kew will equip villagers in rural Indonesia with wearable acoustic sensors to detect the sound of mosquitoes. Each species has its own wing beat allowing the research team to record the occurrence of different species, as well as daily readings of critical environmental conditions. Combined with detailed vegetation maps, this will be able to track disease-bearing mosquitoes. Over the next three years, Kew Gardens will work with Oxford University to turn this project into a reality, creating a downloadable smartphone app and a range of wearable acoustic detectors. This novel technology will be trialled in 150 rural households in Indonesia with the aim of preventing and managing outbreaks of mosquito-borne disease. This prototype technology has the potential ultimately to be rolled out in every region of the world where mosquito-borne diseases pose a threat to life.
+https://impactchallenge.withgoogle.com/uk2014
+
+
+Their approach is to use a Goertzel algorithm running on either a dedicated device or on a smart phone to identify species. This data will then be used for Habitat Mapping and Vector modeling to try and target only species that are a danger to Humans.
+
+
+
+Reach them on Twitter @humbugmozz
+
+Links
+
+https://kenfallon.com/open-source-mosquito-locator/
+https://www.telegraph.co.uk/news/worldnews/11644785/Which-animal-kills-the-most-humans.html
+https://humbug.robots.ox.ac.uk/
+https://davide.zillis.net/
+https://seeg.zoo.ox.ac.uk/members/dr-marianne-sinka
+https://impactchallenge.withgoogle.com/uk2014
+https://twitter.com/humbugmozz
+https://en.wikipedia.org/wiki/Goertzel_algorithm
+https://soundtrap.io/
+https://shop.ee.co.uk/mobile-phones/pay-as-you-go/alcatel-pixi-3-(4.5)/details
+https://www.gsmarena.com/alcatel_pixi_3_(4)-6933.php
+https://humbug.robots.ox.ac.uk/research/sensing/
+https://humbug.robots.ox.ac.uk/research/mapping/
+https://humbug.robots.ox.ac.uk/research/modelling/
+

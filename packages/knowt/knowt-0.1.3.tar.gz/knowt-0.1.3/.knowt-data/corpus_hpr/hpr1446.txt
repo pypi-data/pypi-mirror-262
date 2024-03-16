@@ -1,0 +1,24 @@
+## hpr1446 :: Interview with Fernando H. F. Botelho from the F123 group
+
+ 
+In today's show Ken talks to Fernando H. F. Botelho from the F123 group.
+
+
+The F123 Group, which includes Botelho & Paula Consultoria Empresarial Ltda., F123 Consulting, and F123 Software, designs and manages projects in the areas of poverty reduction, technology, and disability. The group provides NGOs, educational institutions, foundations, government agencies, individuals, and international organizations with project management and technical development services, as well as professional low-cost software and training for blind and visually impaired persons.
+
+
+During the discussion we discuss the different approaches to helping accessibility on Linux. You can email them on info@f123.org, or by following them on twitter: https://Twitter.com/F123org
+
+Links
+
+F123: https://f123.org/en/
+Sonar Linux: https://sonar-project.org/
+Vinux: https://vinuxproject.org/
+eSpeak text to speechhttps://espeak.sourceforge.net/
+The Festival Speech Synthesis System: https://www.cstr.ed.ac.uk/projects/festival/
+MARY Text-to-Speech System: https://mary.dfki.de/
+Speech Dispatcher: https://devel.freebsoft.org/speechd
+SpeechHub - TTS server for the vision impaired community: https://www.speechhub.org/
+Adding support for a new language to MARY TTS: https://github.com/marytts/marytts/wiki/New-Language-Support
+RedStart: Voice recording tool for TTS: https://mary.opendfki.de/wiki/RedStart
+OpenJDK: https://openjdk.java.net/legal/gplv2+ce.html

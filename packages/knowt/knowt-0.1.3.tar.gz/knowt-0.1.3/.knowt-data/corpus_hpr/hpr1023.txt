@@ -1,0 +1,132 @@
+## hpr1023 :: About Rivendell with Rivendell
+
+ AukonDK
+About Rivendell with Rivendell
+
+In this episode I talk about the Rivendell Radio Automation software whilst using the same software to play music and sound.
+This show was recorded "as live" and unscripted. I need a bit more practise as I'd like to use a similar setup to do my own podcast show. Did a bit of normalising and amplifing as the levels weren't that great (another thing to practise)
+
+
+Links and CC attribution follow.
+
+
+[00:00]
+SFX
+CinematicBoomNorm.wav by Herbert Boland
+CC-BY
+https://www.freesound.org/people/HerbertBoland/sounds/33637/
+
+
+[00:36]
+Promo
+Rivendell Audio Spot -- "$15,000"
+https://www.rivendellaudio.org/rivendell/download.shtml
+
+
+[00:47]
+Bed Music
+Emptiness by Alexander Blu
+CC-BY-SA
+https://www.jamendo.com/en/track/946
+
+
+[01:00]
+Link
+Rivendell Radio Automation
+https://www.rivendellaudio.org/
+
+
+[03:29]
+Music
+There's Something Wrong by Brad Sucks
+CC-BY-SA
+https://www.jamendo.com/en/track/210911
+
+
+[07:30]
+Link
+Installing Rivendell - From the Rivendell Wiki, lists some live cds
+https://rivendell.tryphon.org/wiki/Installing_Rivendell
+
+
+[10:20]
+Link
+My Blog post on installing Rivendell in Ubuntu 12.04
+https://www.bluedrava.com/rivendell-on-ubuntu-12.04
+
+
+[15:10]
+Link
+alsa_in and alsa_out - Very useful if you have a USB headset
+https://manpages.ubuntu.com/manpages/natty/man1/alsa_in.1.html
+
+
+[17:22]
+Music
+Delirante planete by Löhstana David
+CC-BY
+https://www.jamendo.com/en/track/873822
+
+
+[22:06]
+Promo
+Rivendell Audio Spot -- "Rock Steady"
+https://www.rivendellaudio.org/rivendell/download.shtml
+
+
+[21:14]
+Bed Music
+May by Alexander Blu
+CC-BY-SA
+https://www.jamendo.com/en/track/950
+
+
+[21:42]
+Link
+Screenshot of RDAirplay from Rivendell site
+https://www.rivendellaudio.org/images/rdairplay2.png
+
+
+Gallery of screenshots here
+https://www.rivendellaudio.org/rivendell/gallery.shtml
+
+
+[25:23]
+grenade.wav by ljudman
+CC-Sampling+
+https://www.freesound.org/people/ljudman/sounds/33245/
+
+
+[25:53]
+Storm by RHumphries
+CC-BY
+https://www.freesound.org/people/RHumphries/sounds/2523/
+
+
+[27:27]
+Promo
+Rivendell Audio Spot -- "Never Pay"
+https://www.rivendellaudio.org/rivendell/download.shtml
+
+
+[34:28]
+Fly Away by Tanya T6
+CC-BY-SA
+https://www.jamendo.com/en/track/894415
+
+
+[42:34]
+Note
+Odd thing happened, I thought the bed music had bypassed the recording when in fact it had just bypassed the mixer so it played full volume. Again, more practice needed.
+
+
+Stuff I forgot to mention:
+Talking about multiple tracks in Carts, you can set each track to only play under certain conditions, such as time or day of the week.
+RDPanel is an appilcation which is a large version of the sound panel in RDAirplay, great to have on a second monitor.
+Logs are playlists which can be saved and loaded an can be generated just by playing music in Airplay or building them manually in RDLogedit or automatically with RDLogManager.
+Rivendell can manage more than one radio station if needed and share the same DB.
+
+
+https://aukondk.com
+https://bluedrava.com
+

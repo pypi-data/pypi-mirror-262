@@ -1,0 +1,19 @@
+## hpr3781 :: The Joule Thief
+
+ The Joule Thief is a delightfully simple circuit that can light an
+LED that requires 2V or more from a battery that is depleted to 1V or
+less. There are three components in addition to the battery and LED: an
+NPN transistor, a resistor and a double wound inductor. The key thing
+about the inductor is that the same core shares two windings but in
+opposite directions.
+The explanation of how it works is simple enough, as long as you
+already understand how inductors and transistors work. In other words,
+it isn't simple at all! In short, the double wound inductor and
+transistor conspire to generate a transient high voltage spike and so
+turn LED on and off so rapidly that the human eye cannot perceive
+it.
+The idea of such a circuit is approaching its centenary but the name
+itself is only around 20 years old. I recommend you check out Big Clive's web site as it was
+he who came up with the name "Joule Thief". I also recommend this video in
+which he constructs a circuit using some ninja-level soldering
+skills.

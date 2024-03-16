@@ -1,0 +1,96 @@
+## hpr2963 :: A walk through my PifaceCAD Python code – Part 3
+
+ Code
+The script being discussed in this show is available for download with the previous show: cad-menu.py
+Functions
+
+def button0(event):
+Play / Pause Button
+Print message to lcd and toggle between play and pause for podcasts, then runs init_display to display available options
+def button1(event):
+Track Information button
+Print message to lcd then display current moc track information such as moc state, current time, time left, current playlist number of total playlist number & podcast title.
+
+Example output from command mocp --info
+State: PAUSE
+File: /home/pi/files/mp3/hpr1597.mp3
+Title: Steve Smethurst - HPR1597: Extravehicular Activity (Hacker Public Radio)
+Artist: Steve Smethurst
+SongTitle: HPR1597: Extravehicular Activity
+Album: Hacker Public Radio
+TotalTime: 14:11
+TimeLeft: 02:47
+TotalSec: 851
+CurrentTime: 11:24
+CurrentSec: 684
+Bitrate: 64kbps
+AvgBitrate: 64kbps
+Rate: 44kHz
+def button2(event):
+Previous Track Button
+Button is only active if button is pushed twice within 0.3 seconds. This was added to stop moving to a new track by accidental pushing of button. If menu = 0 or 1 and value of variable TimeDiff is less than 0.3 then Print message to lcd and move to previous track in playlist. If menu = 2 and button pressed twice within 0.3 then display number of HPR shows in the queue
+def button3(event):
+Next track Button
+Button is only active if button is pushed twice within 0.3 seconds. This was added to stop moving to a new track by accidental pushing of button. If menu = 0 or 1 and value of variable TimeDiff is less than 0.3 then Print message to lcd and move to next track in playlist Button currently has no function if menu = 2
+def button4(event):
+Toggle backlight Button
+If 1st time button is pushed then turn off blinkstick and display main menu else Toggle lcd backlight between on and off
+def moc_seek():
+Used to seek backward or forward in track being played in mocp SeekPosition is a global variable used to store the current seek position, its value changes up and down when using button6 and button7
+def button5(event):
+Jogg switch
+This button is selected by momentarily pushing in the left/right toggle button. Button located on the top of unit
+
+If menu equals 0 or 1, [PODCASTS or AUDIOBOOKS] menu then
+
+if not in seek menu then display seek menu
+if in seek menu then jump forward or back in track by the amount currently displayed on the seek menu, uses function moc_seek()
+
+If menu equals 2, [SYSTEM] menu then
+
+Get date and time information, Clear screen, turn on LCD backlight print the shutdown message with date and time info to lcd & then issue the shutdown command
+
+
+
+
+
+def button6(event):
+Left Jogg switch decrement through menus also used during seek
+This button is selected by momentarily pushing the toggle switch to the left. Button located on the top of unit
+Button only active if more than 0.3 seconds has passed since it was last pushed, this was added to get around switch bounce causing multiple jumps in menu, think left and right jogg switch is a bit noisy.
+
+If in seek menu
+
+SeekPosition decrements by one until SeekMin is reached, and then returns to 0
+each time the display is updated with the decremented value stored in dictionary SeekDisplay
+
+If not in seek menu
+
+Menu decrements down by one until MenuMin is reached then rolls over to MenuMax
+
+
+def button7(event):
+Same as button6 above but instead increments value, i.e. menu or seek value is incremented by 1
+def print_ir_code(event):
+Used during debugging to get remote control working, came from piface examples page, prints IR code print(event.ir_code)
+def ir_play(event):
+If the play button is pushed on the remote control twice within 0.5 seconds and if IR is active then toggle backlight and toggle between play and pause
+def ir_info(event):
+If the info button (pause) is pushed on the remote control twice within 0.5 seconds and if IR is active then toggle backlight and display on the LCD information about the current track
+def ir_rewind(event):
+If the rewind button is pushed on the remote control and if IR is active then toggle backlight and go to previous track on playlist
+def ir_forward(event):
+If the forward button is pushed on the remote control and if IR is active then toggle backlight and go to next track on playlist
+def ir_stop(event):
+If the stop button is pushed on the remote control and if IR is active then toggle backlight
+def ir_blue(event):
+Activate and deactivate IR buttons on the remote control, turns blinkstick on red when IR active. When blue button is pushed twice within 0.5 seconds on remote control, toggle backlight and display momentary message on LCD display giving IR status i.e. are the remote control buttons active or deactive.
+
+All remote buttons bar this one are affected. This feature was added to remotely disable all the buttons while using the TV remote control media buttons these would sometimes falsely trigger things
+
+The double push of the blue button within 0.5 seconds was added as sometimes a single push of it was required on my TV and this would falsely activate it
+
+Feature added to check if var FirstPass is set to true, i.e. backlight button4 has not pushed since boot
+
+button4 normally toggles backlight but turns off hpr queue LED first time it’s pushed after boot.
+

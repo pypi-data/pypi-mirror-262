@@ -1,0 +1,19 @@
+## hpr3295 :: Renewing a Let's Encrypt cert for Home Network use
+
+ 
+Back in hpr3289 :: NextCloud the hard way, I showed you how to install a Let's Encrypt SSL cert for use on your home network. One of the problems was the fact that the automatic renew tools won't work.
+
+
+Today I got a reminder email from Let's Encrypt and I used the exact same command to renew it as I did to create it in the first place. The tool is smart enough to know this is a renewal process. 
+
+
+One thing I forgot to do last time was to remove the TXT record from DNS after I was done. So I had to delete the record and wait a while for the Time To Live (TTL) to expire.
+
+
+I set about doing a check list so the next time the process can be even faster.
+
+
+Run the command certbot certonly --manual --preferred-challenges dns
+Deploy a DNS TXT record under the name _acme-challenge.nextcloud.example.com
+Finish the challenge.
+When successful, remove the DNS TXT record as it's not needed for another two months.

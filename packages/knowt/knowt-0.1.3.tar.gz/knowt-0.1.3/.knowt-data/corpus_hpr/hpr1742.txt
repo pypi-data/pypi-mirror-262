@@ -1,0 +1,79 @@
+## hpr1742 :: How to Get Yourself On an Open Source Podcast - Presentation for Kansas Linux Fest, 22 March 2015
+
+ 
+Howdy folks, this is 5150 for Hacker Public Radio.  What you are about to hear is a presentation titled "How to Get Yourself on an Open Source Podcast" that I delivered at Kansas Linux Fest on 22 March 2015.  Since it was not recorded (I was told the SD card was full), and there has been interest expressed by my fellow podcasters, I thought it might be worth re-recording.  I am afraid Mike Dupont is not satisfied with any of the video from KLF 2015, this may be the only talk from that event you get to hear. However, show notes are extensive, https://lanyrd.com/2015/klf15/schedule/   All I can tell you is, three out of the four audience members seemed to enjoy my presentation.  I shall deliver the rest of this podcast as if you gentile listeners were my live audience.
+
+
+A. Howdy folks, my name is Don Grier. I'm an IT consultant and farmer from South Central Kansas. I am also a podcaster.  You might recognize my voice from such podcasts as Hacker Public Radio, the Kernel Panic Oggcast, or Linux LUG Cast, where I use the handle, FiftyOneFifty.
+
+
+I. When fellow Hacker Public Radio host Mike Dupont told me KLF would be a reality, I struggled to find a topic that I knew well enough to give a talk about.  It was almost in jest that I said I could talk about "How to Get Yourself on an Open Source Podcast".  Actually, since that was as far as my proposal went, I was shocked and honored to find myself on the same roster with so many other speakers with impressive credentials and technical topics.
+
+
+II. This afternoon, I hope not only to chronicle my personal history with Linux and open source related podcasts, but to show you why I believe podcasting can be as an important part of giving back to the community as contributing code, or documentation, or cash.  Linux podcasts bind the community by providing education, both as basic as Linux Reality or as specific as GNU World Order.  Podcasts announce new innovations, and tell us of Free and Open Source software adoption and opposition in corporations and governments.  Podcasts herald community events like this one, and provide a little humor at the end of a long day.
+
+
+B. Some of you may wonder why I'm using old school technology to organize my notes at a high tech conference. At this point, 5150 holds up several stapled sheets of paper in large print.  The plain and simple truth is that I can't read my phone or tablet with my glasses on; and I'm already using bifocals.  It just seems every time I get new glasses, the lower lenses work for about two weeks, then I have to take then off to see the phone. But this last time I figured I'd outsmart my the system and just order a single focus lenses.  I was still congratulating myself on my thriftiness when I put my new glasses on, sat down at the computer, and realized I couldn't read the keyboard.
+
+
+C. Before I talk about my history as a podcaster, I think I should tell you my history with Linux.
+
+
+I. My first experience with Linux was with a boxed set of Mandrake 7.2 around 2002.  I always maintain at least a second running system in the house, in case the primary machine coughs up a hairball. I'd always been a geek alternative OS's, and I wanted a tertiary machine on my network that wouldn't be affected by the propagation of Windows viruses. 
+
+
+a. There wasn't much flash to Linux apps in those days, I recall I was not impressed by whichever browser shipped with Mandrake.  I don't recall what I knew about installing additional applications from repositories, but in any case I was still on dialup.  
+
+
+b. The Pentium I that I installed Mandrake on had both a modem and an Ethernet card. The installer asked which one I used to reach the Internet, and only set up one of the two devices.  This annoyed me as I'd planned to use the Linux box as a gateway to see if it would save a few CPU cycles on the P4 I used as a gaming machine back then.  I really wouldn't have know where to go on the Internet for help, and I expect help would not be as forth coming 13 years ago.
+
+
+II. My next experience with Linux came around 2007.  The school I consulted for had several Windows 98 machines not compatible with the software they wanted to run. Even though the machines were P4's, we determined the cost of XP plus memory upgrades could better be applied to new machines.  As a result, I was able to bring several of the machines home.  Over time, I boosted their memory with used sticks from eBay, and even the odd faster processor.  As a noob, I installed Feisty Fawn on a system out in the machine shed, and spent a lot of that winter hacking on that box when I should have been overhauling tractors.  Just as I was delving into NDIS wrappers, Gusty brought support for my Gigabyte wireless card, which combined with a double fork isolating power box, gave me reasonable certainty that the box out in the shed was safe from lightning storms.  About six months later, I rescued up a refugee from a major meteorological event and set it up in my house running Mint. For the first time I didn't have to leave the house to get my Linux on.
+
+
+D. Just before I set up that first Linux box, we finally got broadband out to the farm, and I'd discovered podcasts.  I figured there must be Linux podcasts to go along the general tech and computing podcasts I followed, as well as a fondly remembered weekly SciFi revue show that started out as a Sunday afternoon show on a Wichita radio station, was canceled twice, and re-emerged as a semi weekly podcast, only to disappear forever a couple months after I started listening again, but not before I download all the episodes I missed.
+
+
+I. In my initial search for Linux related content, all I came up with were four drunk off their ass Scots discussing the minutia of Ruby on Rails.  While I liked the format, I lacked the commitment to become a Ruby programmer so I could understand the show.
+
+
+II. A few days later I came across "The Techie Geek".  Russ Wenner mixed tutorials with reviews of new applications and upcoming events.  Better yet, he introduced me to a world of other Linux podcasts.  Through "The Techie Geek", I learned of the irreverent banter of the "Linux Outlaws", the subdued studiousness of what was then called "The Bad Apples", the contained chaos of  the "Linux Cranks", the classroom like atmosphere of the "Linux Basement" during Chad's Drupal tutorial period, tech hints and movie reviews delivered at the speed of 75 miles per hour by Dave Yates of "Lotta Linux Links", the auditory dissonance of "The Linux Link Tech Show", and the constant daily variety of "Hacker Public Radio".
+
+
+E. In 2010, I made my first contribution to Hacker Public Radio.  The great thing about HPR is that there is no vetting process, we only ask your audio be intelligible (not polished, not even good, we just have to be able to understand you) and that the topic be of interest to geeks.  If you consider yourself a geek, any topic that interests you is welcome. There is no maximum or minimum runtime, just get the show uploaded on-time.  While topics tend concern open source, this is not a requirement.  I believe my second HPR concerned how to migrate Windows wireless connection profiles between systems.  I'd spent a few hours figuring it out one day for a customer and I thought I should consolidate what I learned in one place.  HPR provides a podcasting platform at no cost to the podcaster.  It serves as both a venue for broadcasters without the resources to host their own site or without the time to commit to a regular schedule.  It can also serve as an incubator for hosts trying to find their own audience. It's never been easier to become a podcaster with HPR.  I would start with an e-mail introduction (as a courtesy) to admin@HackerPublicRadio.org.  Next, record you audio. When you have a file ready to upload, select an open slot in the calendar page and follow the instructions, be prepared to paste in your shownotes.  
+
+
+F. I also credit HPR for getting me my first invite to participate in my first podcast with multiple hosts.  Once a month, Hacker Public Radio records a Community News podcast, recorded on the first Saturday afternoon after the end of the previous month (exact times and server details are published in the newsletter).  All HPR hosts, and indeed listeners are invited to participate, it is just asked that you have listened to most the the past month's shows so you can participate in the discussion.  
+
+
+I. Like most multi-host audio podcast's, HPR uses Mumble to record shows, including the annual New Year's Eve show, which has dozens of participants.  There is a Mumble tutorial on LinuxLUGCast.com to help you get started.
+
+
+II. I started to take part in Hacker Public Radio's Community News a few months after recording my first podcast.  I did it because I wanted to take a greater part in HPR, not because I considered it an audition, but it is a good way to show other people that you can politely and intelligently participate in a group discussion. (Actually, I have a tendency to wander off into tangents and unintentionally dominate the topic, something I struggle with to this day).
+
+
+III. Another way to join in a round table discussion on HPR is to participate in the HPR Book Club.  Once a month, we take an audio book that is freely available  on the Internet and share our opinions.  Recording schedules and the next book to be reviewed are available in the HPR newsletter.
+
+
+G. I believe sharing one or more Community News with Patrick Dailey (aka pokey) influenced him to invite me into the cast of Dev Random.  The semi weekly Dev Random recorded of the Saturdays Kernel Panic didn't.  While we sometimes accidentally talked about tech and open source, we always saved the most disturbing things we'd seen on the Internet in the previous two weeks for discussion on the show, things that could not be discussed on other podcasts.  Despite rumors to the contrary, dev random is not dead, only resting, and shall one day rise again to shock and disgust new generations of listeners.
+
+
+H. Sometimes you just have to be in the right place at the right time.  I won't insult the Kernel Panic Oggcast by calling it a sister show to Dev Random, it just recorded on opposite Saturdays and had some of the same cast members in common.  Anyway, I'd been participating in the forum for a while, suggesting topics from FOSS stories I'd come across in social media during the week.  I was idling in #oggcastplanet on Freenode when Peter Cross asked for people from the channel to participate in the show on a day only a couple of the regular cast showed up.  Dev Random used the same Mumble server, so I used my existing credentials to take Peter up on his offer, and for better or worse I've been a KPO cast member ever since. 
+
+
+I. While we are on the topic, having a presence on Freenode IRC chat is a great way to get your name or handle known in the podcasting world.  Many podcasts have their own channel set up that listeners participate in during live streaming podcasts.  Saying something helpful, (or more likely smart alecky) might get you mentioned on the show and make you familiar to the shows audience.  I've seen several individuals move from regular forum or chat participants to the hosts of their own show or contributors to HPR.  From my own experience, after spending several weeks as silent participants in Podbrewers, listening to the stream and commenting in the chat, RedDwarf and myself were invited to bring our own beers and join the cast.  
+
+
+I. While many podcasts still have their own IRC channels, other than providing a conduit between the hosts, they are most active during live broadcasts.  Between shows, many of the podcasters I listen to gravitate to hanging around in Freenode's #oggcastplanet , since podcasters typically have a chat client open during work and leisure hours. In fact, at KPO we use #oggcastplanet as our primary communications channel during live streaming. 
+
+
+II. I still recall the day monsterb and Peter64 asked me about the origin of my handle, given it's similarity to their colleague, threethirty.  I'd heard both on podcasts I followed, and I felt like I was talking to rock stars.
+
+
+III.  Now that I am a podcaster in my own right, with a presence in #oggcastplanet, I try to make a point to say hello when I see an unfamiliar handle in the channel.  I expect the spambots consider me the nicest guy in IRC. 
+
+
+IV. As it happens, IRC was also responsible for my involvement in the Linux LUG Cast. LLC was conceived after the re-imaginging and final demise of Steve McLaughlin's project, "Linux Basix".  Kevin Wisher, chattr, and honkeymaggo wanted to do a show along the same lines while incorporating the spirit of the unrecorded online LUG that always preceded it on the mumble server.  I was brought along by the simple expediency of never having closed the #LinuxBasix channel in my chat client.  We have been going for a little more than a year and have attracted a following, but frankly we have not found the listener participation we were looking for.  This was meant to be a true online Linux Users Group for people couldn't travel to a LUG.  So far, it's usually been the same four of five guys talking about what Linux projects succeed, what failed, and what we we're going to try next.  I've learned a lot in the past year, and I expect the listeners have as well, but we are always hoping to get more live participation.  Rural areas like the midwest are our target audience.  The details of the Mumble connection are posted at LinuxLUGCast.com, we always monitor the Freenode.org IRC channel #linuxlugcast while recording, and the Feedback link is posted on the website.
+
+
+Thank you for your time and attention this afternoon, especially considering the caliber of talks running in the other two channels.  I can be contacted at FiftyOneFifty@LinuxBasement.com .  Are there any questions?

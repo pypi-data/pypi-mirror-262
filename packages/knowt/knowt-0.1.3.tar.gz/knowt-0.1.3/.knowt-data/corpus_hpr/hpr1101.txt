@@ -1,0 +1,85 @@
+## hpr1101 :: Recovery of an (en)crypted home directory in a buntu based system
+
+ Recovery of an (en)crypted home directory in a 'buntu based system 
+by 5150
+
+
+This is going to be the archetypal “How I Did It” episode because if fulfills the criterion of dealing with an issue most listeners will most likely never have to resolve, but might be invaluable to those few who some day encounter the same problem, how to recover an encrypted home folder on an Ubuntu system.
+I enabled home folder encryption on installation of a Linux Mint 8 system some years back and it never gave me trouble until the day that it did.  Suddenly, my login would be accepted, but then I would come right back to GDM.  Finally I dropped into a text console to try to recover the contents of my home folder, and instead found two files, Access-Your-Private-Data.desktop and README.txt .  README.txt explained that I had arrived in my current predicament because my user login and password for some reason were no longer decrypting my home folder (Ubuntu home folder encryption is tied to your login, no additional password is required).  Honestly, until I lost access to my files, I 'd forgotten that I'd opted for encryption.  I found two
+articles that described similar methods of recovery.  I'd tried that following their instructions and failed, probably because I was mixing and matching what seemed to be the easiest steps to implement from the two articles.  When I took another look at the material weeks later, I discovered I missed a link in the comments that led me to an improved method added at Ubuntu 11.04 that saves several steps:
+https://blog.dustinkirkland.com/2011/04/introducing-ecryptfs-recover-private.html
+
+Boot to an Ubuntu distribution CD (11.04 or later)
+Create a mount point and mount the hard drive.  Of course, if you configured you drive(s) with multiple data partitions (root, /home,
+etc) you would have to mount each separately to recover all the contents of your drive, but you only have to worry about decrypting your home directory.  If you use LVM, and your home directory spans several physical drives or logical partitions, I suspect things could get interesting.
+
+$sudo mkdir /media/myhd
+
+/media is owned by root, so modifying it requires elevation
+
+You need to confirm how your hardrive is registered with the OS.  I just ran Disk Utility and confirmed that my hard drive was parked
+at /dev/sda, that meant that my single data partition would be at /dev/sda1
+$sudo mount /dev/sda1 /media/myhd
+Do a list on /media/myhd to confirm the drive is mounted
+
+$ls /media/myhd
+
+The new recovery command eliminates the need to re-create your old user
+
+$sudo ecryptfs-recover-private           (yes, ecrypt not encrypt)
+You will have to wait a few minutes while the OS searches your hard drive for encrypted folders
+
+When a folder is found, you will see 
+INFO:
+Found [/media/myhd/home/.ecryptfs/username/.Private].
+Try to recover this directory? [Y/n]
+
+Respond “Y”
+
+You will be prompted for you old password
+You should see a message saying your data was mounted read only at 
+/tmp/ecryptfs.{SomeStringOfCharacters}
+
+I missed the mount point at first, I was look for my files in /media/myhd/home/myusername
+
+
+
+If you try to list the files in /tmp/ecryptfs.{SomeStringOfCharacters}, you will get a “Permission Denied” error.  This because your old user owns these files, not your distribution CD login
+
+[You will probably want to copy “/tmp/ecryptfs.{SomeStringOfCharacters}” into your terminal buffer as you will need to reference it in commands.  You can select if with your mouse in the “Success” message and copy it with <Ctrl><Alt>c, paste it later with <Ctrl><Alt>v
+I tried to take ownership of /tmp/ecryptfs.{SomeStringOfCharacters}, I should have thought that would have worked.
+
+From my command prompt, I can see my user name is “ubuntu”
+$ sudo chown -R ubuntu /tmp/ecryptfs.{SomeStringOfCharacters}
+
+-R takes ownership of subdirectories recursively
+It's a good time to get a cup of coffee
+
+
+
+Next, we need to copy the files in our home directory to another location, I used an external USB drive (it was automounted under /media when I plugged it in).  If you had space on the original hard drive, I suppose you could create a new user and copy the files to the new home folder.  I decided to take the opportunity to upgrade my distro.  Some of the recovered files will wind up on my server and some on my newer laptop.
+
+One could run Ubuntu's default file manager as root by issuing “sudo nautilus &” from the command line (the “&” sends the
+process to the background so you can get your terminal prompt back)
+
+Before copying, be sure to enable “View Hidden Files” so the configuration files and directories in you home directory will be recovered as well.  As I said, there are select configuration files and scripts in /etc I will want to grab as well.
+
+I had trouble with Nautilus stopping on a file it couldn't copy, so I used cp from the terminal so the process wouldn't stop every
+time it needed additional input.
+
+$ cp -Rv  /tmp/ecryptfs.{SomeStringOfCharacters} /media/USBDrive/Recovered
+
+Of course the destination will depend on what you've named your USB drive and what folder (if any) you created to hold your recovered files
+-Rv copies subdirectories recursively and verbosely, otherwise the drive activity light may be your only indication of progress.  The cp command automatically copies hidden files as well.
+Because of the file ownership difficulties, I could only copy the decrypted home folder in its entirety, 
+
+
+
+ I still had trouble with access do to to ownership once I detached the external drive and remounted it on my Fedora laptop, but I
+took care of that with:
+
+$ su -c 'chown -R mylogin/media/USBDrive/Recovered'
+
+
+
+

@@ -1,0 +1,12 @@
+## hpr3729 :: Contributing to SuperTuxKart
+
+ 
+Main website of the game https://supertuxkart.net
+Stk core engine (C++) https://github.com/supertuxkart/stk-code
+Tools for 2d and 3d production https://supertuxkart.net/Installing_Tools
+Media repo with all source files https://supertuxkart.net/Media_Repo
+Style guidelines to maintain visual consistency https://supertuxkart.net/Texture_Guidelines
+Addons website to publish your creation https://online.supertuxkart.net/
+
+This time I tried a "car rambling podcast", where I record while I
+drive and stop the recording only when reaching the destination

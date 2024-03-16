@@ -1,0 +1,65 @@
+## hpr1451 :: Jeremy Allison ~ the SAMBA project
+
+ HPR Coverage at FOSDEM 2014
+The following are a series of interviews recorded at FOSDEM 2014.
+FOSDEM is a free event that offers open source communities a place to meet, share ideas and collaborate.
+For more information see the website https://fosdem.org/2014/, where you can watch a recording of the many talks https://video.fosdem.org/2014/
+Jeremy Allison ~ the SAMBA projectFor some reason my Zoom H2 failed to record this interview. Based on past experience I'm more inclined to blame the operator than the device so the audio is taken from the backup recording device, a Sansa Clip. As we say at HPR, any recording is better than no recording so any strange audio artefacts are a result of that.
+
+https://en.wikipedia.org/wiki/Zoom_H2
+https://en.wikipedia.org/wiki/SanDisk_Sansa#Sansa_Clip
+
+From wikipedia:Jeremy Allison is a computer programmer known for his contributions to the free software community, notably to Samba, a re-implementation of SMB/CIFS networking protocol, released under the GNU General Public License.
+
+https://en.wikipedia.org/wiki/Jeremy_Allison
+https://www.samba.org/~jra/
+https://en.wikipedia.org/wiki/PDP-11
+https://en.wikipedia.org/wiki/Acorn_Atom
+https://en.wikibooks.org/wiki/6502_Assembly
+Linus Torvalds interviewed by Jeremy Allison: https://www.youtube.com/watch?v=05pgVwzAZ6k
+https://en.wikipedia.org/wiki/Sinclair_QL
+https://en.wikipedia.org/wiki/Graphical_Environment_Manager
+https://en.wikipedia.org/wiki/Motorola_68020
+https://www.sun3arc.org/text/general.phtml
+https://en.wikipedia.org/wiki/Amiga
+https://en.wikipedia.org/wiki/Sun_Microsystems
+https://en.wikipedia.org/wiki/GNU_Compiler_Collection
+https://en.wikipedia.org/wiki/Open_Windows
+https://en.wikipedia.org/wiki/Capital_punishment_in_the_United_States
+https://en.wikipedia.org/wiki/Vantive
+https://www.samba.org/
+https://en.wikipedia.org/wiki/Samba_(software)
+https://www.cs.rit.edu/~hpb/Man/_Man_SunOS_4.1.3_html/html4/pcfs.4s.html
+https://en.wikipedia.org/wiki/Andrew_Tridgell
+https://en.wikipedia.org/wiki/Windows_nt
+https://en.wikipedia.org/wiki/Gpl
+https://www.iss.net/security_center/advice/Services/SunRPC/default.htm
+https://en.wikipedia.org/wiki/Cygnus_Solutions
+https://en.wikipedia.org/wiki/Cygwin
+IBM to Acquire Whistle Communications: https://www-03.ibm.com/press/us/en/pressrelease/2155.wss
+https://en.wikipedia.org/wiki/Cobalt_Networks
+https://en.wikipedia.org/wiki/Cobalt_Qube
+https://www.sgi.com/
+https://en.wikipedia.org/wiki/Silicon_Graphics
+https://en.wikipedia.org/wiki/Va_linux
+
+Hewlett-Packard official website: https://www.hp.com
+Hewlett-Packard on Wikipedia: https://en.wikipedia.org/wiki/Hewlett-Packard
+Novell official website: https://www.novell.com
+Novell on Wikipedia: https://en.wikipedia.org/wiki/Novell
+SUSE Desktop: https://www.suse.com/products/desktop/
+Microsoft & Novell Interoperability Collaboration: https://www.microsoft.com/en-us/legal/IntellectualProperty/IPLicensing/CustomerCovenant/MSNovellCollab.aspx
+The Google Hiring Process: https://www.google.co.uk/about/jobs/lifeatgoogle/hiringprocess/
+European Commision vs Microsoft: chronology of the case: https://fsfe.org/activities/ms-vs-eu/timeline.en.html
+GPL on Wikipedia: https://en.wikipedia.org/wiki/GNU_General_Public_License
+CIFS, Microsoft and the Samba Team: https://www.samba.org/samba/ms_license.html
+https://golang.org/
+https://en.wikipedia.org/wiki/Go_(programming_language)
+https://code.google.com/p/go/
+https://lists.samba.org/archive/samba-technical/2014-January/097186.html
+Bug 2662 - revamped directory handling code is not 64bit clean: https://bugzilla.samba.org/show_bug.cgi?id=2662
+GPLv3: https://gplv3.fsf.org/
+Jeremy Allison on why Samba switched to GPLv3: https://www.fsf.org/blogs/licensing/jeremy-allison-on-why-samba-switched-to-gplv3
+Star Fleet Scotty uses a mouse https://www.youtube.com/watch?v=hShY6xZWVGE
+
+ Jeremy working the booth.

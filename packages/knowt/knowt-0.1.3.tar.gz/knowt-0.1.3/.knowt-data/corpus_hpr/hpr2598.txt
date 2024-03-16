@@ -1,0 +1,41 @@
+## hpr2598 :: Calculating planetary orbits in Haskell
+
+ Function signatures (it might or might not be helpful to have these at hand while listening):
+
+Helpers:
+
+    radToDeg :: Floating a => a -> a
+    degToRad :: Floating a => a -> a
+    clamp :: Float -> Float
+
+Time:
+
+    day :: Int -> Int -> Int -> Float -> Day Float
+
+Orbital parameters:
+
+    longitudeOfAscendingNode :: Orbit body center => body -> center -> Day d -> LongAscNode body center
+    inclinationToEcliptic :: Orbit body center => body -> center -> Day d -> InclToEcl body center
+    argumentOfPeriapsis :: Orbit body center => body -> center -> Day d -> ArgPeri body center
+    semiMajorAxis :: Orbit body center => body -> center -> Day d -> SemiMajor body center
+    eccentricity :: Orbit body center => body -> center -> Day d -> Ecc body center
+    meanAnomaly :: Orbit body center => body -> center -> Day d -> MeanAno body center
+
+Calculating location on orbital plane:
+
+    eccAnomaly :: MeanAno a b -> Ecc a b -> EccAnomaly a b
+    trueAnomaly :: EccAnomaly a b -> Ecc a b -> TrueAnomaly a b
+    dist :: EccAnomaly a b -> Ecc a b -> SemiMajor a b -> Distance a b
+
+Translating between coordinate systems:
+
+    toEclCoord :: TrueAnomaly a b -> Distance a b -> LongAscNode a b -> ArgPeri a b -> InclToEcl a b -> EclCoord a b
+    toEqCoordinates :: EclCoord body Earth -> Day Float -> EqCoord body
+Some helpful links:
+
+Guide by Paul Schlyter - https://www.stjarnhimlen.se/comp/ppcomp.html
+Sample calculations by Paul Schlyter - https://www.stjarnhimlen.se/comp/tutorial.html
+Tuula's blog post - https://engineersjourney.wordpress.com/2018/06/29/planetary-orbits-and-haskell/
+Definition of orbital elements in Wikipedia - https://en.wikipedia.org/wiki/Orbital_elements
+Units of angle in Wikipedia - https://en.wikipedia.org/wiki/Degree_(angle) and https://en.wikipedia.org/wiki/Radian
+

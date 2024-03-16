@@ -1,0 +1,31 @@
+## hpr1955 :: Install Open Street Map on a Garmin 60CX
+
+ 
+First go to this site:  https://garmin.openstreetmap.nl/
+
+Then select your map type
+
+Select and download the predefined area or tiles you want. You can download it directly or have the web page build it for you by entering your email address and pushing the button BUILD MY MAP.
+
+a) If you choose the email option then you get an email that the map is being built and another (later on) that the map is ready.
+
+Unzip the file
+
+Rename the downloaded map to gmapsupp.img 
+
+Save your old map (that's on your device) entitled  to a different name and then backup
+
+Put the map you unzipped and renamed in its place and make sure it is renamed to 'gmapsupp.img' (omit the single quotes I have used in these show notes)
+
+Use your device and thank OSM
+
+
+
+Reasons why I like OSM for use on my Garmin 60CX and Garmin E-trex Vista
+
+
+OSM maps have more data for my area than the Garmin supplied map World Wide maps are available. See where Peter64, Ken Fallon or even 5150 lives. It's cheaper than buying a commercial map Trails, points and other improvements I put on OSM can be on my map I like the OSM concept and community.
+
+
+These older GPS's can be purchased for bargain prices. Apparently the suction cup receiver - Garmin Windshield devices can also use OSM maps with other free software.
+

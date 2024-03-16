@@ -1,0 +1,30 @@
+## hpr0675 :: Python Response to Bad Apples Podcast 5x18
+
+ 
+In episode 5X18 of the Bad Apples podcast, Klaatu challenged me to create my own podcast 
+explaining my Python version of his bash script. His bash script created a list of
+files that matched a file name pattern, then read the first line from each of those files
+and wrote that to an output file. My Python program does exactly the same thing, but in Python.
+Here is the body of that program with the comments stripped out:
+
+#!/usr/bin/python
+import glob
+outfile = open("toc.output", "w")
+for filename in glob.glob("*.txt"):
+    outfile.write(open(filename).readline())
+
+
+The above text can be used to follow along with the audio of the podcast. Here is the English explanation 
+version of the above program:
+
+Tell the system the rest of the text in the file should interpreted by Python
+Import the glob module, which is one of the library modules that comes with Python
+Create a new file object called "toc.output" that we can write to
+Iterate over the list of files that match the pattern "*.txt" created by the glob function, and assign each matching file in turn to the filename variable
+Open each filename, read the first line from the file and write it to our previously opened output file.
+
+
+It's not shown above, but each matching filename that we open is closed at the end of the looping construct. 
+In addtion, the output file is also closed at the end of the programs execution.
+
+Hopefully you enjoyed the podcast!

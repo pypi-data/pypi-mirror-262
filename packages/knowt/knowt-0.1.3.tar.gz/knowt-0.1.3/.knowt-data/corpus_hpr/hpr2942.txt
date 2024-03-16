@@ -1,0 +1,21 @@
+## hpr2942 :: Why I love lisps
+
+ Syntax example
+(define (fib-rec n)
+  (if (< n 2)
+      n
+      (+ (fib-rec (- n 1))
+         (fib-rec (- n 2)))))
+
+Structured Editing
+Parinfer: https://shaunlebron.github.io/parinfer/
+Paredit: https://www.emacswiki.org/emacs/ParEdit
+Clojure libraries
+core.match (adds pattern matching): https://github.com/clojure/core.match
+core.logic (prolog-like stuff): https://github.com/clojure/core.logic
+overtone: https://github.com/overtone/overtone
+Other stuff
+Clojure macro explanation: https://learnxinyminutes.com/docs/clojure-macros/
+Books
+The little schemer: https://mitpress.mit.edu/books/little-schemer-fourth-edition
+Clojure for the brave and true: https://www.braveclojure.com/

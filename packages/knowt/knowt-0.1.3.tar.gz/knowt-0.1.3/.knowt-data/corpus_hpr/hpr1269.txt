@@ -1,0 +1,44 @@
+## hpr1269 :: Frank Bell Achieves Enlightenment Adventures with E17 Pt Two
+
+ 
+Frank concludes his two-part series on the E17 (Enlightenment 0.17.x) Desktop Environment with a look at some nuts-and-bolts configuration items.
+
+
+He covers several configuration settings that illustrate how Enlightenment's various  configuration dialogs work, including the
+
+
+Shelf (Panel) and Gadgets (Widgets) in the Shelf.
+
+Settings Panel, and, within the Settings Panel,
+
+Key and Mouse Bindings.
+
+Favorite Applications.
+
+Startup Applications.
+
+Themes and Wallpapers.
+
+The Titlebar Menu, including "Window" settings, such as Maximize, Half-Maximize, Vertical Maximize; and "Remember" settings, such as Position and "Sticky" state.
+
+
+
+Links:
+
+
+ICCCM (Inter-Client Communications Conventions Manual):
+
+
+https://en.wikipedia.org/wiki/Inter-Client_Communication_Conventions_Manual
+
+
+
+NetWM (Extended Window Manager Hits):
+
+
+https://en.wikipedia.org/wiki/Extended_Window_Manager_Hints
+
+
+
+For a list of links to E17 resources and to listen to the first episode, see Part One:
+https://hackerpublicradio.org/eps.php?id=1248

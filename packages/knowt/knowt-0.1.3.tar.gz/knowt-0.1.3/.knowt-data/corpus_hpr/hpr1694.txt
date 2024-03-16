@@ -1,0 +1,25 @@
+## hpr1694 :: My APOD downloader
+
+ My APOD Downloader
+Astronomy Picture of the Day
+You have probably heard of the Astronomy Picture of the Day (APOD) site. It has existed since 1995, is provided by NASA and Michigan Technological University (MTU) and is created and managed by Robert Nemiroff and Jerry Bonnell. The FAQ on the site says "The APOD archive contains the largest collection of annotated astronomical images on the internet".
+The Downloader
+Being a KDE user I quite like a moderate amount of bling, and I particularly like to have a picture on my desktop. I like to rotate my wallpaper pictures every so often, so I want to have a collection of images. To this end I download the APOD on my server every day and make the images available through an NFS-mounted volume.
+In 2012 I wrote a Perl script to perform the download, using a fairly primitive HTML parsing method. This script has been improved over the intervening years and now uses the Perl module HTML::TreeBuilder which I believe is much better at parsing HTML.
+The version of the script I use myself also includes the Perl module Image::Magick which interfaces to the awesome ImageMagick image manipulation software suite. I use this to annotate the downloaded image with the title parsed from the HTML so I know what it is.
+The script I am presenting here is called collect_apod_simple and does not use ImageMagick. I chose to omit it because the installation of this suite and the related Perl module can be difficult. Also, I do not feel that the annotation always works as well as it could, and I have not yet found the time to correct this shortcoming.
+A version of the more advanced script (called collect_apod) is available in the same place as collect_apod_simple should you wish to give it a try. Both scripts are available on GitLab under the link https://gitlab.com/davmo/hprmisc.
+The Code
+The script itself is described in the full show notes, available here: https://hackerpublicradio.org/eps/hpr1694_full_shownotes.html
+Links
+
+Wikipedia entry https://en.wikipedia.org/wiki/Astronomy_Picture_of_the_Day
+Astronomy Picture of the Day https://apod.nasa.gov/apod/astropix.html
+NASA https://en.wikipedia.org/wiki/NASA
+Michigan Technological University (MTU) https://en.wikipedia.org/wiki/Michigan_Technological_University
+Robert Nemiroff https://www.mtu.edu/physics/department/faculty/nemiroff/
+Jerry Bonnell https://antwrp.gsfc.nasa.gov/htmltest/jbonnell/www/bonnell.html
+HTML::TreeBuilder Perl module https://search.cpan.org/~cjm/HTML-Tree-5.03/lib/HTML/TreeBuilder.pm
+ImageMagick image manipulation software suite https://www.imagemagick.org/
+GitLab link https://gitlab.com/davmo/hprmisc.
+

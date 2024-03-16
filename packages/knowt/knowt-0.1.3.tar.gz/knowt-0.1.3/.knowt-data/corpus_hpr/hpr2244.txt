@@ -1,0 +1,38 @@
+## hpr2244 :: building lineageOS
+
+ i am too ignorant to build for the device that i want.
+i mention a dev from xda.
+i am running debian sid... also mention arch and the importance of shownotes.
+following lineage wiki, i merge the extra commands from a 14.1 device page.
+install adb fastboot repo with package manager and you can ignore creating ~/bin, chmod command, and PATH update as these tools were installed by your package manager.
+install list given on the wiki of packages...some will not exist... search to find out their names.
+cd into the location for your project.
+$ mkdir -p ./android/system
+$ cd android/system
+$ repo init -u https://github.com/LineageOS/android.git -b cm-14.1
+$ repo sync
+$ repo sync
+$ repo sync
+successful new 50G on my drive.
+$ nano android/system/.repo/local_manifests/roomservice.xml
+add the needed lines from the muppets and ignore extracting proprietary blobs.
+$ repo sync
+$ source build/envsetup.sh
+$ breakfast spyder
+$ export USE_CCACHE=1
+$ prebuilts/misc/linux-x86/ccache/ccache -M 50G
+$ export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
+$ export WITH_SU=true
+$ croot
+$ brunch spyder
+ran 99% and errored... xmllint command not found.
+search for and install libxml2-utils.
+rerun build and get an out of memory error... go to bed... try tomorrow... shutdown machine.
+sift through old information as things have changed regarding file names and such.
+$ nano ~/.jack-server/config.properties
+change jack.server.max-service=4 to 2
+start from envsetup.sh again.
+$ cd $OUT
+boot phone to recovery and install
+$ adb sideload ./lineage-14.1-20170202-UNOFFICIAL-spyder.zip
+i remove some apps and install fdroid.

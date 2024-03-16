@@ -1,0 +1,403 @@
+<html>
+<head>
+<title>Chapter 18: Stacks</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap17.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap19.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 18</h2>
+
+
+
+<h1>Stacks</h1>
+
+<a name=1></a>
+<h3>18.1 Abstract data types</h3>
+<p>
+The data types you have seen so far are all concrete, in the
+sense that we have completely specified how they are implemented.
+For example, the <tt><font size=-1>Card</font></tt> class represents a card using two
+integers.  As we discussed at the time, that is not the only way
+to represent a card; there are many alternative implementations.
+<p>
+An <b>abstract data type</b>, or ADT, specifies a set of operations (or
+methods) and the semantics of the operations (what they do), but it
+does not specify the implementation of the operations.  That's
+what makes it abstract.
+<p>
+Why is that useful?
+
+<ul>
+<li>It simplifies the task of specifying an algorithm if you
+can denote the operations you need without having to think at the
+same time about how the operations are performed.</li>
+<li>Since there are usually many ways to implement an ADT,
+it might be useful to write an algorithm that can be used with
+any of the possible implementations.</li>
+<li>Well-known ADTs, such as the Stack ADT in this chapter,
+are often implemented in standard libraries so they can be written
+once and used by many programmers.</li>
+<li>The operations on ADTs provide a common high-level language
+for specifying and talking about algorithms.</li>
+</ul>
+<p>
+When we talk about ADTs, we often distinguish the code that uses
+the ADT, called the <b>client</b> code, from the code that implements
+the ADT, called the <b>provider</b> code.
+
+<a name=2></a>
+<h3>18.2 The Stack ADT</h3>
+<p>
+In this chapter, we will look at one common ADT, the <b>stack</b>.  A
+stack is a collection, meaning that it is a data structure that
+contains multiple elements.  Other collections we have seen include
+dictionaries and lists.
+<p>
+An ADT is defined by the operations that can be performed on it, which
+is called an <b>interface</b>.  The interface for a stack consists of
+these operations:
+
+<dl>
+<dt><tt><font size=-1>__init__</font></tt></dt>
+<dd>Initialize a new empty stack.</dd>
+<dt><tt><font size=-1>push</font></tt></dt>
+<dd>Add a new item to the stack.</dd>
+<dt><tt><font size=-1>pop</font></tt></dt>
+<dd>Remove and return an item from the stack.  The item
+that is returned is always the last one that was added.</dd>
+<dt><tt><font size=-1>isEmpty</font></tt></dt>
+<dd>Check whether the stack is empty.</dd>
+</dl>
+<p>
+A stack is sometimes called a "last in, first out" or LIFO
+data structure, because the last item added is the first to
+be removed.
+
+<a name=3></a>
+<h3>18.3 Implementing stacks with Python lists</h3>
+<p>
+The list
+operations that Python provides are similar to the operations that
+define a stack.  The interface isn't exactly what it is supposed
+to be, but we can write code to translate from the Stack ADT
+to the built-in operations.
+<p>
+This code is called an <b>implementation</b> of the Stack ADT.
+In general, an implementation is a set of methods that satisfy
+the syntactic and semantic requirements of an interface.
+<p>
+Here is an implementation of the Stack ADT that uses a Python list:
+
+<p><tt><font size=-1><font color=black>class</font> Stack :
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self) :
+<br>&nbsp; &nbsp; self.items = []
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>push</font>(self, item) :
+<br>&nbsp; &nbsp; self.items.append(item)
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>pop</font>(self) :
+<br>&nbsp; &nbsp; <font color=black>return</font> self.items.pop()
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>isEmpty</font>(self) :
+<br>&nbsp; &nbsp; <font color=black>return</font> (self.items == [])
+<br></font></tt></p>
+
+<p>
+A <tt><font size=-1>Stack</font></tt> object contains an attribute named <tt><font size=-1>items</font></tt>
+that is a list of items in the stack.  The initialization method
+sets <tt><font size=-1>items</font></tt> to the empty list.
+<p>
+To push a new item onto the stack, <tt><font size=-1>push</font></tt> appends it onto <tt><font size=-1>items</font></tt>.  To pop an item off the stack, <tt><font size=-1>pop</font></tt> uses the
+homonymous <a href="javascript:fn('same-named')">* Note</a> list method to remove and return the
+last item on the list.
+<p>
+Finally, to check if the stack is empty, <tt><font size=-1>isEmpty</font></tt> compares
+<tt><font size=-1>items</font></tt> to the empty list.
+<p>
+An implementation like this, in which the methods consist of simple
+invocations of existing methods, is called a <b>veneer</b>.  In real
+life, veneer is a thin coating of good quality wood used in
+furniture-making to hide lower quality wood underneath.  Computer
+scientists use this metaphor to describe a small piece of code that
+hides the details of an implementation and provides a simpler, or more
+standard, interface.
+
+<a name=4></a>
+<h3>18.4 Pushing and popping</h3>
+<p>
+A stack is a <b>generic data structure</b>, which means that we can
+add any type of item to it.  The following example pushes
+two integers and a string onto the stack:
+
+<p><tt><font size=-1>&gt;&gt;&gt; s = Stack()
+<br>&gt;&gt;&gt; s.push(54)
+<br>&gt;&gt;&gt; s.push(45)
+<br>&gt;&gt;&gt; s.push(<font color=red>"+"</font>)
+<br></font></tt></p>
+
+<p>
+We can use <tt><font size=-1>isEmpty</font></tt> and <tt><font size=-1>pop</font></tt> to remove and print
+all of the items on the stack:
+
+<p><tt><font size=-1><font color=black>while not</font> s.isEmpty() :
+<br>&nbsp; <font color=black>print</font> s.pop(),
+<br></font></tt></p>
+
+<p>
+The output is <tt><font size=-1>+ 45 54</font></tt>.  In other words, we just used a stack
+to print the items backward!  Granted, it's not the
+standard format for printing a list, but by using a stack, it was
+remarkably easy to do.
+<p>
+You should compare this bit of code to the implementation of <tt><font size=-1>printBackward</font></tt> in <a href="chap17.html#4">Section 17.4</a>.  There is a natural
+parallel between the recursive version of <tt><font size=-1>printBackward</font></tt> and the
+stack algorithm here.  The difference is that <tt><font size=-1>printBackward</font></tt> uses
+the runtime stack to keep track of the nodes while it traverses the
+list, and then prints them on the way back from the recursion.  The
+stack algorithm does the same thing, except that it uses a <tt><font size=-1>Stack</font></tt>
+object instead of the runtime stack.
+
+<a name=5></a>
+<h3>18.5 Using a stack to evaluate postfix</h3>
+<p>
+In most programming languages, mathematical expressions are
+written with the operator between the two operands, as in
+<tt><font size=-1>1+2</font></tt>.  This format is called <b>infix</b>.  An alternative
+used by some calculators is called <b>postfix</b>.  In
+postfix, the operator follows the operands, as in <tt><font size=-1>1 2 +</font></tt>.
+<p>
+The reason postfix is sometimes useful is that there is a
+natural way to evaluate a postfix expression using a stack:
+
+<ul>
+<li>Starting at the beginning of the expression, get one
+term (operator or operand) at a time.</li>
+  <ul>
+  <li>If the term is an operand, push it on the stack.</li>
+  <li>If the term is an operator, pop two operands off
+  the stack, perform the operation on them, and push the
+  result back on the stack.</li>
+  </ul>
+
+<li>When you get to the end of the expression, there should
+be exactly one operand left on the stack.  That operand is the
+result.</li>
+</ul>
+
+<blockquote><i>As an exercise, apply this algorithm to the expression
+<tt><font size=-1>1 2 + 3 *</font></tt>.</i>
+</blockquote>
+<p>
+This example demonstrates one of the advantages of postfix <s>&nbsp; &nbsp;</s> there is
+no need to use parentheses to control the order of operations.  To get
+the same result in infix, we would have to write <tt><font size=-1>(1 + 2) * 3</font></tt>.
+
+<blockquote><i>As an exercise, write a postfix expression that is equivalent to
+<tt><font size=-1>1 + 2 * 3</font></tt>.</i>
+</blockquote>
+
+<a name=6></a>
+<h3>18.6 Parsing</h3>
+<p>
+To implement the previous algorithm, we need
+to be able to traverse a string and break it into operands and
+operators.  This process is an example of <b>parsing</b>, and the
+results <s>&nbsp; &nbsp;</s> the individual chunks of the string <s>&nbsp; &nbsp;</s> are called <b>tokens</b>.  You might remember these words from Chapter 1.
+<p>
+Python provides a <tt><font size=-1>split</font></tt> method in both the <tt><font size=-1>string</font></tt> and <tt><font size=-1>re</font></tt> (regular expression) modules. The function <tt><font size=-1>string.split</font></tt>
+splits a string into a list using a single character as a <b>delimiter</b>.
+For example:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>import</font> string
+<br>&gt;&gt;&gt; string.split(<font color=red>"Now is the time"</font>,<font color=red>" "</font>)
+<br>[<font color=red>'Now'</font>, <font color=red>'is'</font>, <font color=red>'the'</font>, <font color=red>'time'</font>]
+<br></font></tt></p>
+
+<p>
+In this case, the delimiter is the space character, so the string
+is split at each space.
+<p>
+The function <tt><font size=-1>re.split</font></tt> is more powerful, allowing us to
+provide a regular expression instead of a delimiter.
+A regular expression is a way of specifying a set of strings.
+For example, <tt><font size=-1>[A-z]</font></tt> is the set of all letters and
+<tt><font size=-1>[0-9]</font></tt> is the set of all digits.  The <tt><font size=-1>^</font></tt> operator
+negates a set, so <tt><font size=-1>[^0-9]</font></tt> is the set of every character that
+is not a digit, which is exactly the set we want to use to
+split up postfix expressions:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>import</font> re
+<br>&gt;&gt;&gt; re.split(<font color=red>"([^0-9])"</font>, <font color=red>"123+456*/"</font>)
+<br>[<font color=red>'123'</font>, <font color=red>'+'</font>, <font color=red>'456'</font>, <font color=red>'*'</font>, <font color=red>''</font>, <font color=red>'/'</font>, <font color=red>''</font>]
+<br></font></tt></p>
+
+<p>
+Notice that the order of the
+arguments is different from <tt><font size=-1>string.split</font></tt>; the delimiter comes
+before the string.
+<p>
+The resulting list includes the operands <tt><font size=-1>123</font></tt> and <tt><font size=-1>456</font></tt> and
+the operators <tt><font size=-1>*</font></tt> and <tt><font size=-1>/</font></tt>.  It also includes two empty
+strings that are inserted as "phantom operands," whenever an
+operator appears without a number before or after it.
+
+<a name=7></a>
+<h3>18.7 Evaluating postfix</h3>
+<p>
+To evaluate a postfix expression, we will use the parser from
+the previous section and the algorithm from the section before that.
+To keep things simple, we'll start with an evaluator that
+only implements the operators <tt><font size=-1>+</font></tt> and <tt><font size=-1>*</font></tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>evalPostfix</font>(expr):
+<br>&nbsp; <font color=black>import</font> re
+<br>&nbsp; tokenList = re.split(<font color=red>"([^0-9])"</font>, expr)
+<br>&nbsp; stack = Stack()
+<br>&nbsp; <font color=black>for</font> token <font color=black>in</font> tokenList:
+<br>&nbsp; &nbsp; <font color=black>if</font>&nbsp; token == <font color=red>''</font> <font color=black>or</font> token == <font color=red>' '</font>:
+<br>&nbsp; &nbsp; &nbsp; <font color=black>continue
+<br>&nbsp; &nbsp; if</font>&nbsp; token == <font color=red>'+'</font>:
+<br>&nbsp; &nbsp; &nbsp; sum = stack.pop() + stack.pop()
+<br>&nbsp; &nbsp; &nbsp; stack.push(sum)
+<br>&nbsp; &nbsp; <font color=black>elif</font> token == <font color=red>'*'</font>:
+<br>&nbsp; &nbsp; &nbsp; product = stack.pop() * stack.pop()
+<br>&nbsp; &nbsp; &nbsp; stack.push(product)
+<br>&nbsp; &nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; &nbsp; stack.push(int(token))
+<br>&nbsp; <font color=black>return</font> stack.pop()
+<br></font></tt></p>
+
+<p>
+The first condition takes care of spaces and empty strings.  The next
+two conditions handle operators. We assume, for now, that anything
+else must be an operand.  Of course, it would be better to check for
+erroneous input and report an error message, but we'll get to that
+later.
+<p>
+Let's test it by evaluating the postfix form of <tt><font size=-1>(56+47)*2</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> evalPostfix (<font color=red>"56 47 + 2 *"</font>)
+<br>206
+<br></font></tt></p>
+
+<p>
+That's close enough.
+
+<a name=8></a>
+<h3>18.8 Clients and providers</h3>
+<p>
+One of the fundamental goals of an ADT is to separate the
+interests of the provider, who writes the code that implements
+the ADT, and the client, who uses the ADT.
+The provider only has to worry
+about whether the implementation is correct <s>&nbsp; &nbsp;</s> in accord
+with the specification of the ADT <s>&nbsp; &nbsp;</s> and not how it will be used.
+<p>
+Conversely, the client <i>assumes</i> that the implementation of the
+ADT is correct and doesn't worry about the details.  When you
+are using one of Python's built-in types, you have the luxury
+of thinking exclusively as a client.
+<p>
+Of course, when you implement an ADT, you also have
+to write client code to test it.  In that case, you play both
+roles, which can be confusing.  You should make some effort
+to keep track of which role you are playing at any moment.
+
+<a name=9></a>
+<h3>18.9 Glossary</h3>
+
+<dl>
+<dt>abstract data type (ADT)</dt>
+<dd>A data type (usually a collection
+of objects) that is defined by a set of operations but that can
+be implemented in a variety of ways.</dd>
+<dt>interface</dt>
+<dd>The set of operations that define an ADT.</dd>
+<dt>implementation</dt>
+<dd>Code that satisfies the syntactic and semantic
+requirements of an interface.</dd>
+<dt>client</dt>
+<dd>A program (or the person who wrote it) that uses an ADT.</dd>
+<dt>provider</dt>
+<dd>The code (or the person
+who wrote it) that implements an ADT.</dd>
+<dt>veneer</dt>
+<dd>A class definition that implements an ADT with
+method definitions that are invocations of other methods, sometimes
+with simple transformations.  The veneer does no significant work,
+but it improves or standardizes the interface seen by the client.</dd>
+<dt>generic data structure</dt>
+<dd>A kind of data structure that can
+contain data of any type.</dd>
+<dt>infix</dt>
+<dd>A way of writing mathematical expressions with the
+operators between the operands.</dd>
+<dt>postfix</dt>
+<dd>A way of writing mathematical expressions with the
+operators after the operands.</dd>
+<dt>parse</dt>
+<dd>To read a string of characters or tokens and analyze
+its grammatical structure.</dd>
+<dt>token</dt>
+<dd>A set of characters that are treated as a unit for
+purposes of parsing, such as the words in a natural language.</dd>
+<dt>delimiter</dt>
+<dd>A character that is used to separate tokens,
+such as punctuation in a natural language.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap17.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap19.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

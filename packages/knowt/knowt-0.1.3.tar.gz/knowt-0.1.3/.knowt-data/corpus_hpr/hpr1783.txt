@@ -1,0 +1,85 @@
+## hpr1783 :: Windows To Linux - Better Late Than Never.
+
+ 
+This is a story of my last days as a Windows Users at home and my eventual switch to Linux.  My name is Kevin and my online name is GNULinuxRTM.  The name GNULinuxRTM was recently created for a project I am working on.  But maybe Ill talk about that another time.
+
+
+Although I listened to every single episode of Linux Reality, many episodes of Linux Outlaws, Linux Link Tech Show, The Bad Apples aka GNU World Order, and other Podcast shows, I just recently listened to my first episode to Hacker Public Radio.  What caught my attention was the plea for content to keep Hacker Public Radio going.  So I have been HPR binging and I have to say that the fact that this kind of Podcast format exists, is amazing.
+
+
+Yes, I had heard the words Hacker Public Radio before, but I just thought it meant that this was some kind of show for extreme Hacker types, which I didnt think described me.
+
+
+Another confession, my day job is mostly in a Windows environment.  And although I kept myself up to date on the progress of Linux, I had very few opportunities to use Linux at work.  I had enough challenge keeping up to technology I had to know to do my job.  Although I heard and understood the significance of making a commitment to use Linux, I never did make the switch.  Sure I dabbled with Linux as a Server platform and maybe to get some use out of some old hardware.  But not on my most powerful and most used home machine.  The computer I use every day for my own personal projects was, until last Summer, a Windows PC.
+
+
+You see I hate wasting effort and time, something we all have a limited amount of.  I remember after a particularly frustrating bout with Linux I turned to a Co-Worker and said "Windows, because Lifes too short".
+
+
+Also, I am one of those weirdos who loves the little red Trackpoint on IBM Thinkpads.  Last Spring I traded in my old Thinkpad plus some cash for an off-lease Lenovo Thinkpad W510 Notebook.   I got it cheaper because they didnt have the original power supply, instead it came with a 3rd party power supply.  Eventually it got to me that it took more than twice as long to charge the notebook, so i spent the money to replace it with a higher wattage power supply.  "In a for penny, in for a pound", why not upgrade to 8Gb of RAM too.
+
+
+Shortly after the 90 day warranty I started having weird lockup issues.  The hard drive light would go solid and the machine would just freeze.  Ive seen this before.  Suck it up and back to local computer store to replace the Hard Drive.  But "In for a penny, in for a pound", why not get one of those slick new SSD drives.  Got home, do a drive copy and I am back in business Or so I think.  After a while I realize I am still suffering from intermittent Lockups.  Time for a fresh install.
+
+
+Install Windows 7, Windows Update, Reboot, Windows Update Reboot, Windows Update Reboot almost done. Blue-Screen-of-Death.  Reboot, Blue Screen of Death.  Start over, Re-install Windows 7, trickle install Updates, Save System State, Reboot, Repeat, Blue Screen, Ahhhhh!!@!!!  System Restore, its that update, Blue Screen, not its that update, Blue Screen, Blue Screen, Blue Screen  Ahhhhh!!##$
+
+
+Is it my new RAM, switch that out.  No difference.  Power Supply?  Nope.  Go back to Non-SSD drive?  Still No Change.  Different Windows Install Disc?  No, No and No.  
+
+
+Now Im really "In for a Pound" with this machine and I cant use it.  Deflated, I put the computer down in the corner of the room and try to forget about it.  The sleek black Thinkpad just sits there mocking me every time I walk by,  but I am determined to ignore it.  Weeks go by, now a month.  Ive gone back to my desktop, but its no use, I miss having a notebook.  Im an easy-chair Notebook guy now.  I dont want to regress down the evolutionary scale and hunch over my desktop anymore.  Im at home, I should be reclining!
+
+
+Like a bad hangover, time has numbed the memory of the pain.  I pick the Thinkpad, its time to drink again! Im back baby and Ive got that "You cant beat me" Techy Battle cry pumping through my veins.  "LINUX! Ill try Linux!"  At least that is the way I prefer to remember it.  But really, I was thinking that Ive spent sooo much money on the piece of Crap, Ill use it even i have to switch to Linux.
+
+
+Lets see  Ive got to approach this logically.  Uhhh, choose a Distro, Desktop, hmmmm.  Video on Richard Stallman spanking Ubuntu on Amazon Deal, hmmm.  Ok, Linux Mint 17 is based on the LTS release of Ubuntu, 5 years Support, Cool!  Top of the Distrowatch charts.  Looks like a good start.
+
+
+I install Linux Mint 17 and it is up and running in no time.  Run the Update Manager and hold my breath.  Wow!  It updated 100%, no Crash Screen of Doom!
+
+
+Now what?  What do i do now?  Google "First things to do after install Linux Mint 17", wow Direct hit,  Yeehaw!  Oh cool, Steam Games, Yummy.  PlayOnLinux, Bonus!  What a blast.  But the fun of discovery was better than any game I played.
+
+
+Alas, my machine was running great but still had a locked up issue, just not as often.  But it was a victory nonetheless.  Besides, I had a mostly working machine and I would just ignore the problem.  An infrequent lockup didnt seem to bother Linux Mint, it just boot back up fine.
+
+
+After about a month on Linux Mint a little message popped up, I cant remember exactly what it said.  But it was like machine was talking to me.  "Hey Buddy, this battery in your notebook, uhh it kinda sucks.  And you might want it replace because well I need steady power to you know, breath.  And it sure would be a lot easier if I could  Huh Huh Huh  AHHHHH count on some steady air flow".
+
+
+Yeah, you know I was elated, but even more so amazed!  I had installed no diagnostic software, I had spent no additional time troubleshooting, I had just installed Linux and started using it.  And my computer just told me what was wrong with it.
+
+
+New battery arrived and now the machine is solid as rock.  Did I go back to Windows 7, Hell No!  I had kicked the habit once a for all and I was not missing Windows at all.
+
+
+I distinctly remember a standout moment when I was working on my brother-in-law's wedding video.   Circumstances were that the key family members could not be at the Wedding and the they were anxiously waiting for the Wedding Video.  I didnt want to delay finishing the project and was reluctant to do anything else with the computer during the Render process.  Rendering the Video took quite a bit of time and was very CPU intensive.  But I had broken the Wedding into several segments and there was lots of Rendering and getting feedback.  
+
+
+Kdenlive lets you assign how many processors would be used during Rendering, and I had set that to four.  There were processors to spare, maybe I can do something else while I am waiting for the Render.
+
+
+Ill read a few emails.  Hey, I dont notice any performance difference. 
+Maybe Ill surf a bit.  Still fine.  Youtube Video, smooth, now in HD, wow! no problem or no slow down.  Multi-tasking as it should be!
+
+
+Next day at work, I cant help but talk about it with my Co-Workers.  "Why not get a Mac?" they say. it wasnt a question, it was a strong suggestion.  Most of them had written off Linux years ago.  I start talking about how great my system is working for me and how I have been able to get so much done with 100% open source applications.
+"So what", they say.  "You can install most of those applications on the Mac and Windows as well".  
+
+
+Its no use, I guess I am not much of an evangelist.  Or maybe I just work with cynical people.  But it does cause me to question.  Why am I so excited about Open Source Software now?  At this point in history.  Really most of the fundamental building blocks of Open Source Software have already happened.  It seems to me we are now in a fine tuning stage.
+
+
+I think it is that maturity that appeals to me.  No longer do you have to say, you can install Linux, BUT.  And word "But" lands with a thud.  There is very little creative work that you cannot do on Linux and Open Source software, right now.
+
+
+I dont regret a single moment I have invested in switching to and learning Linux.
+
+
+My story continues, but well save that for another time.   I hope to tell you more about my project and the hurdles Ive gone through in a future HPR episode.
+
+
+Bye for now,
+GNULinuxRTM signing off.

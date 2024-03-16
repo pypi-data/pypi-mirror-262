@@ -1,0 +1,25 @@
+## hpr1905 :: 66 - LibreOffice Impress - Built-In Charts
+
+ 
+In the last tutorial we looked at OLE objects, and saw that Charts could be brought into Impress from Calc via OLE. But you can create the Charts directly in Impress. Bear in mind that due to the modular nature of LibreOffice you will be using the same tools to do this as Calc uses: LibreOffice developers never reinvent the wheel if they can avoid it.
+
+
+There is a lot to know about Charts if you are going to use them effectively, and we covered all of this in our Calc tutorials.
+For more go to https://www.ahuka.com/?page_id=1291
+
+Links
+
+https://www.ahuka.com/?page_id=772
+
+https://www.ahuka.com/?page_id=780
+
+https://www.ahuka.com/?page_id=809
+
+https://hackerpublicradio.org/eps.php?id=1545
+
+https://hackerpublicradio.org/eps.php?id=1555
+
+https://hackerpublicradio.org/eps.php?id=1565
+
+https://www.ahuka.com/?page_id=9
+

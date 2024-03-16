@@ -1,0 +1,5 @@
+## hpr1532 :: Project Idea - White-Hat Spam Bot
+
+ If you run a blog or a podcast, promoting your material can take as much time (or more) than content creation itself. Just like a small business marketing and promoting your efforts take time, effort and energy that can take you away from what you'd rather be doing: making great stuff.
+This podcast discusses the germ of an idea, and its fledgling implementation, for creating an open-source tool for managing the distribution of posts to social media and doing it in as non-spammy a way as possible.
+The premise is simple: take information from a number of disparate sources, and promote it to a number of disparate destinations. The challenge is doing it without violating the social norms of the destination networks, and without crossing the line between promotion and spaminess.

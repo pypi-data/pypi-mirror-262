@@ -1,0 +1,74 @@
+## hpr3775 :: Emergency Show posted in 2014. How to make a punch-card computer
+
+ 
+How to make a punch-card computer
+In this show we are going to make a punch-card computer out of stuff from your kitchen.
+Most of the materials are things you would otherwise have thrown away.
+What you will need
+
+An empty breakfast cereal box.
+Some bamboo barbecue skewers, eight for an eight bit computer, nine for a nine bit etc.  These things come in cheap packs of many skewers.  Or you could clean up used skewers.
+Scissors or a sharp craft knife.
+Some glue.  Preferably washable PVA glue if you care about your clothes or have a small child 'helping'.
+Some pieces of card which you can write on, the number corresponds to the 'bit-ness' of the computer.  If you used eight skewers, you need eight bits of card.  These need to be slightly narrower than the cereal box.  They could be made from other cereal boxes sliced up.  A height of about four inches, ten centimetres is good.
+An enquiring mind and temporarily suspended credulity.
+
+What to do
+Step 1:
+Prepare the case of the computer.
+Cut off the box flaps at the top where the cereal was poured out.
+The computer will eventually be used standing up in the usual position with the open end at the top.
+Step 2:
+Making a chute at the bottom.
+You need to make a sort of chute at the bottom so that stuff that falls down into the box will slide out the front.
+Do this by cutting a horizontal line across the width of the box about four or five inches, about eight centimetres from the bottom edge of the box.
+Now cut down the front edges of the box from the horizontal slit to the bottom.
+This will make a flap that you can fold down by putting your hand inside and pushing it out.
+Hinge it down and make a fold in this flap about half an inch (one centimetre) from the front edge of the flap.
+Coat the inside of the flap, above the fold, with glue.  Now push the flap back up and press the folded (gluey) portion of the flap against the inside of the back of the box.  You could use some sticky tape to hold it down while it dries.
+When the glue has dried you will be able to see how this now forms a chute at the bottom of the box.
+Step 3:
+Now draw a horizontal line across the front side of the box about an inch, or 2.5 centimetres from the open end.
+Now is the trickiest part because you will need to do some arithmetic.  Pity you don't have a computer, right?
+You need to measure out a number of points across this line which correspond to the bit-ness of your computer.  So if you are making an eight bit computer, you need eight marks spaced equally across this line, that's nine gaps across.
+When you have done this you are going to pierce holes in the box with either one of the BBQ skewers or something sharper.  You need for the skewers to pass right through the box and out the back side, in the same position as accurately as possible.  This might be easier if you draw and measure out the same points on the back panel and push holes through from both sides.
+Either way what you are aiming for is to make the path through the box as accurately level and equi-distant as possible.  The skewers should pass through the box and remain parallel.
+Step 4:
+We are now going to make the punched cards.
+Create the same number of cards as the bit-ness of your computer.  So an eight bit computer will require eight cards.
+The cards will be almost as wide as the inside of the box, and tall enough to write stuff on but not high enough to show their bottom edges through the chute hole at the bottom of the computer.  And not so tall that when they fall to the bottom they get wedged between the chute and the back wall of the computer.
+Laying each card flat on the table, draw a horizontal line across the card about
+the same distance from its top edge as you drew the line into which you punched holes in the body of the computer.
+You will need to measure out the same number of holes across this as the holes across your computer.  Again accuracy is important if the computer is to work smoothly.
+Make each hole in the punched cards large enough that the skewers you used pass through the hole with no resistance.  A hand-held single hole punch is good for this.
+The holes need to line up when the stack of cards is held flat in a pack.
+Step 5:
+Programming your punched cards.
+Take each card in turn and change all but one of the holes into a slot from the holes to the top of the card.
+For example, for card one, in an eight bit computer, leave hole zero (left-most for little-endian) as it is and for holes 1 to 7 cut from each side of the hole to the top edge, removing the little bit of card.
+So when a card is done it will look a bit like a comb with one hole somewhere along the row, corresponding to which bit the card represents.
+For the next card cut all the holes except the one to the right of the last one.
+When you have done this and placed the cards in a stack, you will see that what you have is a stack of cards, each of which has 1 intact hole and bit-ness minus 1 slots.
+Step 6:
+Loading the program into your computer.
+Holding the cards together in a stack, feed them into the top of the computer, with the punches at the top closest to the open top end of the box.
+Holding the cards in place so that their holes line up with the holes in the box, push skewers through from the front of the box, through the corresponding holes and slots in the stack of cards.
+Now when you stand the computer up, what you have is a box containing a stack of punched cards, each of which is only held in place by one skewer.
+And if you cut the cards to be very close to the width of the box, the cards will sit straight without drooping down at one end.
+Step 7:
+Getting some data out of your computer.
+Before you loaded the cards into the computer, you wrote some data on them, right?
+If you have an eight bit computer and you have eight kids, you will never forget their birthday again.  Write the name and birthday of each child on a card and write their name above the skewer hole on the box, using the hole which corresponds to their card, the one with the intact (not a slot) in it.
+When you pull that skewer out, the corresponding card is no longer held in the box, and it drops down and slides out of the chute.  Pity it's not quite as much fun as getting nice crisp bank notes out of a cash-machine.
+Finally, take a magic-marker and write 'Windows Vista' on the front of the box.  And it might be a good idea to snip off the sharp ends of the bamboo skewers before you put your eye out or damage a small child.
+Troubleshooting
+Problem: When I pull out a skewer, no card drops out.
+Possible causes:  There is too much friction between the cards or between the outer edges of the card and the sides of the box.  When you load the cards, try to spread them apart a bit.  And make the cards a few millimetres narrower than the box.  Or the holes and slots in the cards are too small and there is too much friction between the edges of a slot and a skewer.
+Conclusion
+This is a totally pointless activity and you need to get out more.
+I remember seeing this somewhere when I was a very small child.  Either in a book or on TV.  I think it may have been my slightly older brother who made it.  I have the vaguest recollection of a cereal box with some of my mum's knitting needles sticking out.
+If you used eight bamboo skewers, you are now the proud owner of an eight bit computer with eight bits of random access memory.
+A slight drawback is that each time you ask for output (pull out a skewer) the data bit you asked for is no longer inside the computer's memory.  So you will have to 'reboot' every five minutes (sound familiar?).
+And because of the way it works, eight bits does not mean 256 different cards.
+But it's fun and a young kid will delight in pulling out a skewer to make a card drop out.  There is glue involved as well.
+Mike

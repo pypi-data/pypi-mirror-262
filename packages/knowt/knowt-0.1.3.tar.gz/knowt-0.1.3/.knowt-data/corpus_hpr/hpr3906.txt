@@ -1,0 +1,189 @@
+## hpr3906 :: The Oh No! News.
+
+ The Oh No! news.
+Oh No! News is Good
+News.
+
+TAGS: Oh No News, InfoSec, browser security,
+session tokens, session id
+
+
+InfoSec; the language
+of security.
+
+Source: Session ID.
+
+Source: JSON Web
+Token.
+
+Terms
+of Use: Copyleft, free content
+
+
+Source: Session
+vs Token Based Authentication.
+
+Terms
+of Use: CC-BY-SA (with CC-BY-NC-SA elements).
+
+
+Source: Steal Application
+Access Token. Adversaries can steal application access tokens as a
+means of acquiring credentials to access remote systems and resources.
+Application access tokens are used to make authorized API requests on
+behalf of a user or service and are commonly used as a way to access
+resources in cloud and container-based applications and
+software-as-a-service (SaaS).
+
+Terms of
+Use: Similar to CC-BY-SA
+
+
+Source: Analysis:
+CircleCI attackers stole session cookie to bypass MFA.
+
+Terms of
+Use: Section 8. CONTENT AND CONTENT LICENSES. NOT
+certain
+
+
+Source: How to Prevent
+Session Hijacking?
+
+Terms of
+Use: Copyright, restrictive
+
+
+
+
+
+Additional Information.
+
+What is a "Data
+Breach"? A data breach is a security violation, in which sensitive,
+protected or confidential data is copied, transmitted, viewed, stolen,
+altered or used by an individual unauthorized to do so.
+What is "Malware"?
+Malware (a portmanteau for
+malicious software) is any software intentionally designed to cause
+disruption to a computer, server, client, or computer network, leak
+private information, gain unauthorized access to information or systems,
+deprive access to information, or which unknowingly interferes with the
+user's computer security and privacy.
+What is a "Payload"?
+In the context of a computer virus or worm, the payload is the portion
+of the malware which performs malicious action; deleting data, sending
+spam or encrypting data. In addition to the payload, such malware also
+typically has overhead code aimed at simply spreading itself, or
+avoiding detection.
+What is "Phishing"?
+Phishing is a form of social engineering
+where attackers deceive people into revealing sensitive information or
+installing malware such as ransomware. Phishing
+attacks have become increasingly sophisticated and often transparently
+mirror the site being targeted, allowing the attacker to observe
+everything while the victim is navigating the site, and transverse any
+additional security boundaries with the victim.
+Social
+engineering (security) In the context of information security,
+social engineering is the psychological
+manipulation of people into performing actions or divulging
+confidential information. A type of confidence trick for the purpose of
+information gathering, fraud, or system access, it differs from a
+traditional "con" in that it is often one of many steps in a more
+complex fraud scheme.
+
+What is "Information
+Security" (InfoSec)? Information security, sometimes shortened to
+InfoSec, is the practice of protecting information by mitigating information risks. It
+is part of information risk
+management.
+
+Information Security Attributes: Confidentiality, Integrity and Availability (C.I.A.).
+Information Systems are composed in three main portions, hardware,
+software and communications with the purpose to help identify and apply
+information security industry standards, as mechanisms of protection and
+prevention, at three levels or layers: physical, personal and
+organizational. Essentially, procedures or policies are implemented to
+tell administrators, users and operators how to use products to ensure
+information security within the organizations.
+
+What is "Risk
+management"? Risk management is the identification, evaluation, and
+prioritization of risks followed by coordinated and economical
+application of resources to minimize, monitor, and control the
+probability or impact of unfortunate events or to maximize the
+realization of opportunities.
+What is a "Vulnerability"
+(computing)? Vulnerabilities are flaws in a computer system that
+weaken the overall security of the device/system. Vulnerabilities can be
+weaknesses in either the hardware itself, or the software that runs on
+the hardware.
+What is an "Attack
+Surface"? The attack surface of a software environment is the sum of
+the different points (for "attack vectors") where an unauthorized user
+(the "attacker") can try to enter data to or extract data from an
+environment. Keeping the attack surface as small as possible is a basic
+security measure.
+What is an "Attack
+Vector"? In computer security, an attack vector is a specific path,
+method, or scenario that can be exploited to break into an IT system,
+thus compromising its security. The term was derived from the
+corresponding notion of vector in biology. An attack vector may be
+exploited manually, automatically, or through a combination of manual
+and automatic activity.
+What is
+"Standardization"? Standardization is the process of implementing
+and developing technical standards based on the consensus of different
+parties that include firms, users, interest groups, standards
+organizations and governments. Standardization can help maximize
+compatibility, interoperability, safety, repeatability, or quality. It
+can also facilitate a normalization of formerly custom processes.
+
+List of computer
+standards.
+List of technical standard
+organizations.
+
+What is a "Replay
+attack"? A replay attack is a form of network attack in which valid
+data transmission is maliciously or fraudulently repeated or delayed.
+Another way of describing such an attack is: "an attack on a security
+protocol using a replay of messages from a different context into the
+intended (or original and expected) context, thereby fooling the honest
+participant(s) into thinking they have successfully completed the
+protocol run."
+What is a
+"Man-in-the-middle attack"? In cryptography and computer security, a
+man-in-the-middle, ..., attack is a cyberattack where the attacker
+secretly relays and possibly alters the communications between two
+parties who believe that they are directly communicating with each
+other, as the attacker has inserted themselves between the two
+parties.
+What is "Transport Layer
+Security" (TLS)? Transport Layer Security (TLS) is a cryptographic
+protocol designed to provide communications security over a computer
+network. The protocol is widely used in applications such as email,
+instant messaging, and voice over IP, but its use in securing HTTPS
+remains the most publicly visible.
+What is a "Handshake"
+(computing)?. In computing, a handshake is a signal between two
+devices or programs, used to, e.g., authenticate, coordinate. An example
+is the handshaking between a hypervisor and an application in a guest
+virtual machine.
+What is Security
+theater? The practice of taking security measures that are
+considered to provide the feeling of improved security while doing
+little or nothing to achieve it.
+
+
+
+
+
+License: Creative
+Commons Attribution-ShareAlike 4.0 International
+This
+work is licensed under a
+Creative
+Commons Attribution-ShareAlike 4.0 International License.
+

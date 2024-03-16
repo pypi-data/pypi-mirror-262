@@ -1,0 +1,54 @@
+## hpr2415 :: bullet journal to org mode
+
+ 1 Brief introduction
+1.1 Myself
+Hi, I'm Brian in Ohio
+1.2 Inspiration for show
+I heard Shane Shennan on episode 2299 doing a what's in my bag episode where he briefly mentions using a bullet journal. Then I think I heard Ken Fallon wondering about bullet journals on community news for the month with that episode. So I thought a show was in order explaining how I went from using a bullet journal to using emacs org mode.
+1.3 Parameters
+I'm not an expert on any of the following topics: bullet journal, Getting things done (GTD), orgmode or emacs. I'm someone who has tried these tools, climbed the learning curve and have some observations to make through that process.
+2 What's a bullet journal
+2.1 Created by ryder carrol
+The analog system for the digital age
+2.2 Where I found out about it
+https://www.relay.fm/penaddict/70
+2.3 What it is
+Method of laying out a notebook and using it to organize and process ideas and tasks. I won't try to explain exactly how it is set up. The video tutorial https://bulletjournal.com/ is excellent. You can use any notebook and divide it up into index pages, future log, monthly log and daily log there's a visual indexing/ tagging system to help organize stuff. Its extremely customizable.
+2.4 How I used it
+I bullet journaled for 2 and a half years, initially set it up stock but later put the index at the back. I used it as a daily planner, idea storing device and short term and long term goal setting tool.
+2.5 Strengths
+Customizable but within framework, gives a method to get organized that you can tailor to your needs. Its pretty easy to find needed info, if you're diciplined about using. It its battery free
+2.6 Shortcomings
+Need to be disciplined. Can be tedious to enter items in month, daily and index sections. It takes time to set up. I think Shane's use case he mentioned in podcast as sort of a project/idea book sounds pretty cool and might be a really good use case for this system. Hard to edit, this may be a strength for some people, but for me as a daily planner it was a little daunting to use. Adding stuff to something requires either leaving space ahead of time or indexing to a new page. The monthly log was always a mystery to me on how to use it. If you lose it you've lost it, no easy way to back it up
+3 What is org mode
+3.1 Created by Carsten Dominik
+
+org-mode wiki
+
+3.2 what it is
+Is an editing and organizing mode for notes, planning, and authoring in the free software text editor Emacs.
+3.3 How I found out about it
+3.3.1 emacs
+3.3.1.1 Wanted a commandline C development environment for microcontroller project development
+3.3.1.2 IDE
+Worked with vim/ a bash shell as a sort of minimal IDE. I specifically was using it on a laptop that didn't have X installed on it. Just for fun, not my bread and butter.
+3.3.1.3 Wanted to try something new
+Knew about emacs, had tried it didn't like it
+3.3.1.4 Thanks to klaatu for emacs hpr emacs episodes
+
+hpr 852
+hpr 856
+hpr 861
+
+3.3.1.5 Thanks to youtube found out about org mode
+Rainer Konig - getting yourself organized with org-mode
+https://www.youtube.com/channel/UCfbGTpcJyEOMwKP-eYz3_fg
+3.3.2 Switched in october 2016
+3.4 How I use it
+At its heart an org-mode is an outliner. I use org-mode to set up daily todo tasks, organize projects, jot down notes. Org-mode has a subsystem call agenda view that can generate daily planner views from your org-mode files. I initially tried to mimic the bullet journal in org-mode, but found that it was better to approach org mode relying on its strengths, which are different, as you can imagine, from a Bullet journal.
+3.5 Strengths
+I like it because its editable, searchable and customizable. Projects can be broken down into as fine a detail as you want and that detail level can expand or contract as necessary. The power of org-mode comes out when you use it to capturing ideas, tasks and information. Capturing these events is done via capture templates that you can create. This new data is then saved to the appropriate org file then shows up in your agenda view. Its extremely easy to back up, it's text based and therefore future proof. There are many good tutorials and resources online
+3.6 Shortcomings
+Need to know a little about emacs and that can feel overwhelming to try. This new tool will require you to use your brain. Emacs keybindings
+4 What's next
+Trying to find a good way to use orgmode portably. mobile-org app for android doesn't work for me. This has led to trying a couple of different solutions which I will record other hpr episodes about. Thanks for listening. If you have ideas on Bullet Journals or Org-mode I'd love to hear an episode about it. I'll put links into the show notes, this is Brian in Ohio signing off.

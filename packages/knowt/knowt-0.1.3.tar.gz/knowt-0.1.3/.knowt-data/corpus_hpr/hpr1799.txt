@@ -1,0 +1,95 @@
+## hpr1799 :: Posting From the Command Line on Open Social Networks
+
+ Posting From the Command Line on Open Social Networks
+You can post to your open social media timelines from the command line using API access. Why would you want to do this?
+
+Script automated postings.
+Bots
+Post from terminal environments.
+Post from wherever else you are without having to go to the social media site or to the client that you use to access it.
+Trigger postings via voice command (what I do).
+
+On GNU Social
+Here is the basic format for the command to post a message to a Statusnet / GNU Social timeline:
+curl -s --basic --user <username:password> --data status="Hello World" --output /dev/null https://instance.domain.com/api/statuses/update.xml
+And here is the script I use to post a message to my timeline, launched by a blather voice command:
+
+#!/bin/bash
+
+# SN account info
+user=johndoe
+pass='password123'
+
+# a place to store the text message 
+text=/tmp/message.txt
+
+# Virtual keystrokes to copy selected text to the clipboard
+xdotool key Control+c
+
+# pipe text out of clipboard into the text file
+xclip -o > $text
+
+# rest for half a sec
+sleep .5
+
+curl -s --basic \
+--user $user:$pass \
+--data status="$(cat "$text")" \
+--output /dev/null \
+https://instance.domain.com/api/statuses/update.xml 
+
+rm $text
+
+exit 0
+
+On Pump.io
+On pump.io you have to install the pump.io software on your computer. You don't have to be running a server, you just have to have the binaries so that you can run the commands. I will not go into how this is done on this podcast, but there's a link to the pump.io website below and there should be installation instructions available there. Once you have the software installed, you also have to allow command-line access to your account and get the token for authentication, maybe authorize the user too:
+
+pump-register-app -s instance.domain.com -P 443 -t CLI
+
+
+pump-authorize -s instance.domain.com -P 443 -u username
+
+Finally you can post to your timeline from the command line:
+pump-post-note -s instance.domain.com -P 443 -p -u username -n "Hello World."
+My script to post a message to the pump.io timeline, launched by a blather voice command:
+
+#!/bin/bash
+
+# a place to put the text. 
+text=/tmp/message.txt
+
+# --------------------------------
+# Since markdown is possible, I run 
+# the text through markdown to get
+# a bit of formatting and save it
+# as a separate file 
+# --------------------------------
+pump=/tmp/pump.txt
+
+# Virtual keystrokes to copy selected text to the clipboard
+xdotool key Control+c
+
+# pipe text out of clipboard into the text file
+xclip -o > $text
+
+# run Markdown
+markdown $text > $pump
+
+# Post message
+pump-post-note -s instance.domain.com -P 443 -p -u username -n "$(cat $pump)"
+
+sleep 1
+
+rm $text
+rm $pump
+
+exit 0
+
+Links
+
+GNU social: https://gnu.io/
+https://identi.ca/ (a pump.io network)
+pump.io Clients: https://github.com/e14n/pump.io/wiki/Clients
+My Screencast demonstrating the use of blather voice command to post to a timeline https://youtu.be/IJyzF_-6S2o
+

@@ -1,0 +1,435 @@
+## hpr1569 :: Many-to-many data relationship howto
+
+ How to implement a many-to-many join in a relational database
+The purpose of this HPR show is to demonstrate the best, and really the only way to define a many-to-many relationship between two entities in a database.
+What triggered it?
+There has been some discussion between Ken and Dave on the community news podcasts, presumably relating to some work which is being done on the HPR web site. I sent Ken an email explaining how to implement a many-to-many relationship and got a predictable response; do a show :)
+So here it is.
+What do I mean by database entity?
+In analysing the structure of the data which is to be stored by a database, one of the most important things to do is to identify what entities are to be stored and manipulated.
+What constitutes an entity is often quite simple; some examples might be 'customer', 'billing address', 'shipping address', 'invoice', 'invoice item' etc.
+In fact it's also true to say that more often than not entities and tables have a one-to-one relationship. If the analysis of your data reveals that there is a 'customer' entity, then there will probably be a 'customer' table.
+One area where this might not be quite true is where the mechanism used to implement the whole software system demands a greater level of granularity. There are some e-commerce systems which are written with object-oriented technology and which demand that the data model matches the objects in the system. Typically this results in a data model that might look like it is over-normalised.
+But for the sake of this example, we will assume that one entity occupies one table.
+In fact if you find your analysis has any two tables that appear to have a one-to-one relationship, there is probably something wrong with your analysis because these two tables could be merged into one.
+Entity Relationships
+In a database system comprised of a number of tables, one table per entity, there will be complex relationships between the entities. This is the reason we talk about 'relational' databases. Or perhaps it is because all the columns in a table are supposed to be related to the unique identifier in that table, not sure, and neither was Mr. Codd.
+Types of relationship
+One-to-many or many-to-one, depending on which end of the telescope you are looking through. For example a customer might make one, or many purchases from your company e-commerce system. In which case there will be a one-to-many relationship between the 'customer' table and the 'invoice' table in the sales ledger.
+Note that if the customer has only ever made one purchase there will only be one row in the invoice table, but it COULD contain more. The more end is really one-or-more.
+Because one visit to the web site might result in the customer dropping more than one item into his shopping cart, there will also be an 'invoice lines' or 'invoice items' table.
+How these relationships are represented on diagrams
+Classically an entity relationship diagram consists of a series of rectangles, one for each table with the name of the entity written in the box. The entity rectangles are joined together by lines. These lines have what are usually called 'crows feet' at the 'many' end. A crows foot looks just like what it says, where the line joins the many end of the join, the line splits into three prongs before it hits the side of the many entity rectangle. Depending on what mechanism has been used to create this diagram, the crows foot can also look more like a fork than a crows foot, but there are still three prongs.
+In this text I will use a line consisting of dashes to join entities, and a backwards left or right arrow to represent the many end of a relationship.
+So, using the example above, the one-to-many relationship between customer and invoice looks like this:
+
+customer-----<invoice
+
+Here the less-than sign is used at the many end and should be thought of as a crows foot with the middle toe missing.
+How to join two tables in a many-to-many relationship
+You will not come across this relationship very often. It is far less common than a simple one-to-many or many-to-one.
+One example where this might be useful, and the example I use in this text, is a music database where two of the entities are:
+Artist
+Genre
+
+Clearly there will be multiple artists, and multiple genres. And it is not inconceivable that an artist might appear in more than one genre. And a given genre will clearly contain more than one artist.
+So this gives rise to a many-to-many relationship, which in pure analysis terms could be diagrammed like this:
+artist>-----<genre
+
+But this is NOT the way to define it in actual physical database tables.
+Observing the rules of normalisation, an artist should be identified by one property, the artist name, and a genre should be identified by one single property, the genre name.
+More often, and in our example below, each entity is given a unique identifier which is in addition to it's actual name.
+This is how changing a simple name in one table can result in the change being seen globally over the entire database system. For example in a customer table, the row:
+id  name
+--  ----
+1   Mickey Mouse
+
+Will cause 'Mickey Mouse' to be shown as the customer name wherever the identifier '1' is used to retrieve records or to join tables in a complex SQL query.
+Change 'Mickey Mouse' to 'Donald Duck' in this table, and 'Donald Duck' will appear everywhere 'Mickey Mouse' was seen before.
+Foreign Keys
+When two tables are to be joined to make a query, columns, or multiple columns are given indexes. A column which contains the key from another table is called a 'foreign key'.
+Going back to our customer and invoice example from above, the invoice table will contain the customer identifier from the customer table. And because a single customer can make more than one visit to our web site to buy stuff, the column containing the customer identifier in the invoice table is not given a unique index.
+If the customer with the identifier '12345' has made five different shopping excursions to our site, there will be five rows in the 'invoice' table containing the customer identifier '12345'.
+Armed with this information, how will we represent this:
+artist>-----<genre
+
+Clearly the artist table should contain a foreign key from the genre table, and the genre table should contain a foreign key from the artist table.
+The rules of normalisation say that all the attributes in a table (columns) should relate to the primary key of the table. Clearly putting a genre foreign key into the artist table, or an artist foreign key into the genre table busts this rule wide open. Don't do it
+The solution
+To solve this problem we introduce another table between the artist table and the genre table, which I always suffix with '_xref', short for cross-reference.
+Now our entity relationship diagram will look like this:
+artist-----<artist_genre_xref>-----genre
+
+What does the artistgenrexref table contain? Simple, it contains the bare minimum to define a unique row which joins an artist and a genre.
+If the artist identifier is called artistid and the genre identifier is called genreid, then the xref table contains two columns:
+artist_id
+genre_id
+
+What kind of index do we need on this table to make a unique relationship between an artist and a genre? We need a unique compound index which uses both columns.
+This will ensure that one and only one row can appear in the table joining one artist to one genre. But because an artist can belong to more than one genre, both columns in the index mean this is possible.
+A worked example
+In the example code and data below, I have used SQLite3.
+SQLite is the world's most used Relational Database System (RDBMS).
+How can this claim be made?
+Well if you have a smart-phone in your pocket, it probably uses SQLite. If you have a satellite TV receiver, a Tivo or some other kind of home media device, it probably contains SQLite.
+And if you are really strange and have a fridge which will tell you what's inside, it probably uses SQLite. And there will be one row which says 'half an onion wrapped in foil which has been in here for six months'.
+Several times I have been brought Blackberry hand-sets and asked to retrieve important documents or texts from it when the user interface mechanism has failed. Something that often happens with that flavour of soft fruit.
+SQLite is easy to install on your Linux machine. In fact it is used by so many other packages that it may well be on there already. But you may have to install the interactive SQLite3 program.
+On Arch Linux:
+$ sudo pacman -S sqlite3
+On Debian or Ubuntu:
+$ sudo apt-get install sqlite3
+Below I have inserted the contents of all the files which I created to demo this many-to-many relationship strategy.
+Each file is topped and tailed by the string '--snip--'. In the SQLite3 interactive program, a double dash ('--') starts a line comment. Each file also contains the name of the file and a description of what it does.
+An exception is the .csv files I have used to load data into my little test database. These have the '--snip--' tops and tails in this text but they do not exist in the actual data, for obvious reasons. If you are snipping out the csv data to try this at home, don't include anything but the data lines in the csv data.
+To start an interactive SQLite 3 prompt and create your test database, do this at a Linux or Windows command prompt. Here the prompt is represented by a dollar sign:
+$ sqlite3 music.db
+
+You will get this prompt:
+sqlite>
+
+Because the first thing I alwys want to know about apiece of software I haven't used before is how to get out, to get out of the interactive SQLite3 session, type this, of course 'sqlite>' is the prompt:
+sqlite>.quit
+
+To run a file of commands you have defined in an external file, do this:
+sqlite>.read filename
+
+Where 'filename' is a file containing dot prefixed commands and/or SQL.
+The files from my working example:
+The following file contains commands to create tables and indexes in the database named on the command-line when you called sqlite3.
+--snip--
+--
+-- file name: ddl.sql
+--
+-- ddl = 'data definition language'
+--
+-- This SQL creates three tables, the artists table tbl_artist,
+-- the genre table tbl_genre, and the cross-reference
+-- ttable tbl_artist_genre_xref
+--
+-- The xref table is what provides the many-to-many relationship
+-- between artist and genre by virtue of it's
+-- compund index; idx_artist_genre_xref,
+-- which has two columns included in it
+--
+-- I use the tbl_ prefix for tables and the idx_ prefix for indexes.
+-- These might seem redundant but they are useful for preventing
+-- collisions between database component names and reserved words.
+--
+
+-- Create the artist table
+create table tbl_artist (
+    artist_id integer not null primary key,
+    artist_name text not null
+);
+
+-- Create the genre table
+create table tbl_genre (
+    genre_id integer not null primary key,
+    genre_name text not null
+);
+
+-- Create the artist_genre_xref table
+--
+-- I use number for both columns instead of integer because SQLite
+-- does something funky with auto-incrementing integer
+-- columns which have a 'not null' constraint, I think
+create table tbl_artist_genre_xref (
+    artist_id number not null,
+    genre_id number not null
+);
+
+create unique index idx_artist_genre_xref on tbl_artist_genre_xref (
+    artist_id,
+    genre_id
+);
+
+--snip--
+
+There follow three files which contain comma-separated values (.csv) records for loading into each table.
+The first is artist data:
+--snip--
+1,"Horslips"
+2,"Runrig"
+3,"The Pogues"
+4,"Led Zeppelin"
+5,"Disturbed"
+6,"Martin Carthy"
+7,"Steeleye Span"
+8,"Schubert"
+9,"Mozart"
+--snip--
+
+The first three artists fall into both the folk and rock genres. Led Zeppelin and Disturbed will be in rock only.
+Martin Carthy and Steeleye Span are folk only.
+Schubert and Mozart need no further explanation.
+The next is data to load into the genre table:
+--snip--
+1,"Folk"
+2,"Rock"
+3,"Classical"
+4,"Scottish"
+5,"Irish"
+--snip--
+
+The last data file is the data which will be loaded into the artistgenrexref table. It contains only numerical data:
+--snip--
+1,1
+2,1
+3,1
+1,2
+2,2
+3,2
+4,2
+5,2
+6,1
+7,1
+8,3
+9,3
+1,5
+3,5
+2,4
+--snip--
+
+What is this data doing? Well there are some artists there which will appear in both the 'folk and the 'rock' genres. Horslips are a seventies Irish folk-rock band. I still play their 'The Book of Invasions' album at least once a week. This is either because it is a seminal album or because I am a dinosaur who refuses to be dragged kicking and screaming into the 21st century. Runrig are a band from the Western Isles of Scotland who cross over the folk/rock boundary also. Check links at the end of this text.
+The next file loads the data from these .csv files into the three database tables.
+--snip--
+--
+-- file name: load.sql
+--
+-- Load some data into the tables from three CSV files
+--
+.separator ","
+.import artist.csv tbl_artist
+.import genre.csv tbl_genre
+.import xref.csv tbl_artist_genre_xref
+--snip--
+
+There now follow some SQL queries which retrieve data-sets which should be obvious from the file names:
+--snip--
+--
+-- file name: select-folk-only.sql
+--
+-- This is where the SQL gets a bit hairy, using a sub-query to exclude
+-- everything except the category we want from the record-set.
+--
+-- This is the kind of situation where a view
+-- might be useful to hide some of the SQL complexity from
+-- the user.
+--
+select a.artist_id, a.artist_name, x.genre_id
+from tbl_artist as a, tbl_artist_genre_xref as x
+where a.artist_id = x.artist_id
+and x.genre_id = 1
+and a.artist_id not in (
+    select a.artist_id
+    from tbl_artist as a, tbl_artist_genre_xref as x
+    where a.artist_id = x.artist_id
+    and x.genre_id != 1
+);
+
+--snip--
+
+
+
+--snip--
+--
+-- file name: select-folk.sql
+--
+-- Straight-forward query to select artists that appear in the folk
+-- category.
+--
+-- This will return artists that appear in the folk category, which
+-- includes artists that appear either exclusively in folk or in BOTH
+-- folk and any other category also.
+--
+-- A little hard to get your head around.  Remember the artists returned
+-- by this set are in both folk and any other category.
+--
+select a.artist_id, a.artist_name, x.genre_id
+from tbl_artist as a, tbl_artist_genre_xref as x
+where a.artist_id = x.artist_id
+and x.genre_id = 1;
+
+--snip--
+
+
+
+--snip--
+--
+-- file name: select-rock-only.sql
+--
+-- This is where the SQL gets a bit hairy.  It uses a sub-query to
+-- exclude everything except the category we want from the record-set.
+--
+-- This is the type of query where a view might be useful to hide some
+-- of the SQL complexity from the user
+--
+select a.artist_id, a.artist_name, x.genre_id
+from tbl_artist as a, tbl_artist_genre_xref as x
+where a.artist_id = x.artist_id
+and x.genre_id =2
+and a.artist_id not in (
+    select a.artist_id
+    from tbl_artist as a, tbl_artist_genre_xref as x
+    where a.artist_id = x.artist_id
+    and x.genre_id != 2
+);
+--snip--
+
+
+
+--snip--
+--
+-- file name: select-rock.sql
+--
+-- select all artists which appear in the rock category
+--
+select a.artist_id, a.artist_name
+from tbl_artist as a, tbl_artist_genre_xref as x
+where a.artist_id = x.artist_id
+and x.genre_id = 2;
+--snip--
+
+
+--snip--
+--
+-- file name: select-scottish.sql
+--
+-- Straight-forward query to select artists that appear in the scottish
+-- category.
+--
+-- This will return artists that appear in the scottish category, which
+-- includes artists that appear either exclusively in scottish or in
+-- BOTH scottish and any other category also.
+--
+select a.artist_id, a.artist_name, x.genre_id
+from tbl_artist as a, tbl_artist_genre_xref as x
+where a.artist_id = x.artist_id
+and x.genre_id = 4;
+--snip--
+
+
+
+--snip--
+--
+-- file name: select-irish.sql
+--
+-- Straight-forward query to select artists that appear in the irish
+-- category.
+--
+-- This will return artists that appear in the irish category, which
+-- includes artists that appear either exclusively in irish or in BOTH
+-- irish and any other category also.
+--
+select a.artist_id, a.artist_name, x.genre_id
+from tbl_artist as a, tbl_artist_genre_xref as x
+where a.artist_id = x.artist_id
+and x.genre_id = 5;
+--snip--
+
+The next files, all prefixed 'dump' will dump the record-sets returned by the above SQL queries into corresponding .csv files:
+--snip--
+--
+-- file name: dump-folk-only.sql
+--
+-- Dump all artists that appear ONLY in the folk category
+-- into folk-only.csv
+--
+.mode csv
+.output folk-only.csv
+.read select-folk-only.sql
+--snip--
+
+
+
+--snip--
+--
+-- file name: dump-folk.sql
+--
+-- Dump all artists that appear in the folk category
+-- into folk.csv
+--
+.mode csv
+.output folk.csv
+.read select-folk.sql
+--snip--
+
+
+
+--snip--
+--
+-- file name: dump-rock-only.sql
+--
+-- Dump all artists that appear ONLY in the rock category
+-- into rock-only.csv
+--
+.mode csv
+.output rock-only.csv
+.read select-rock-only.sql
+--snip--
+
+
+
+--snip--
+--
+-- file name: dump-rock.sql
+--
+-- Dump all artists that appear in the rock category
+-- into rock.csv
+--
+.mode csv
+.output rock.csv
+.read select-rock.sql
+--snip--
+
+
+
+--snip--
+--
+-- file name: dump-scottish.sql
+--
+-- Dump all artists that appear in the scottish category
+-- into scottish.csv
+--
+.mode csv
+.output scottish.csv
+.read select-scottish.sql
+--snip--
+
+
+
+--snip--
+-- Dump all artists that appear in the irish category
+-- into irish.csv
+--
+.mode csv
+.output irish.csv
+.read select-irish.sql
+--snip--
+
+In a real-world example, the hard-coded numeric genre identifiers in the above queries would be replaced by placeholders like '?' which would be replaced by actual values at run-time.
+Conclusion
+In conclusion, in my experience programming all manner of systems using Oracle, MySQL and SQLite databases, this method is the only one which doesn't take diabolical liberties with the rules of database normalisation.
+It may result in SQL queries which will make you scratch your head, but that is far more acceptable than doing stuff like trying to shoe-horn a many-to-many relationship into your database structure by other means.
+One of the most crucial aspects of using a high-end RDBMS like Oracle, MySQL or SQLServer, is the need to get as much data selection done by the server as possible.
+This is because the server is a big fat box in a cupboard connected to your machine by a network infrastructure. It might be next door or on the other side of the world.
+It makes far more sense for the server to return to you those records, and ONLY those records you want, over the network.
+Any other strategy for implementing a many-to-many relationship is likely to result in you pulling stuff back to your machine which you are ultimately going to drop in some kind of loop. Slow and wasteful of bandwidth.
+In the example I have used, the cross-reference table was populated manually. In most real-world implementations the cross-reference table will be populated in response to records being added to the two outer tables, or in response to user-intervention using a client application. Often triggers are used to create the cross-reference rows.
+If you were authoring a music database application in which such a relationship exists between artist and genre, the user interface would probably provide a means for the user to decide which genres to plop artists into.
+I have used SQLite to demo this strategy. While SQLite is a great tool, it is a 'lite' tool that is designed for single-user applications, in particular embedded systems.
+If you are thinking of starting an airline and want to implement a world-wide seat booking application which will serve many concurrent users, needing complex transactional operations, don't use SQLite or your customer complaints are likely to exceed bookings.
+My example data definitions also contain no constraints for preventing orphaned rows. These are rows in a table containing a foreign key where no record exists in the table identified by the foreign key. Because in my example I load the 'parent' tables before I load the table which contains foreign keys to both of those tables, there is no risk of creating orphaned rows.
+Most RDBMS systems include a mechanism for what is called 'cascaded deletes', that is, when deleting a row from a parent table, any row in a table containing a foreign key for that row, a 'child' row, will also be deleted, preventing 'orphaned' records.
+Applying this to the above example, deleting 'Runrig' from the artists table would also delete all rows from the artistgenrexref table with the identifier for 'Runrig'.
+Links
+
+Database normalisation according to Mr Codd: https://en.wikipedia.org/wiki/Database_normalization
+SQLite: https://www.sqlite.org/
+Horslips are/were an Irish folk-rock band The first two tracks from 'The Book of Invasions; a Celtic Symphony' live:https://www.youtube.com/watch?v=rqk3U0nFEI8
+Runrig are a Scottish folk-rock band who have been around for years. Loch Lomond live:https://www.youtube.com/watch?v=CHu0h9XaNcg
+
+If any queries result from this show about any of the terms I might have very casually scattered about relating to database theory, assuming I know the answers, I can do more shows about those.
+Maybe one about SQLite in particular.
+Mike

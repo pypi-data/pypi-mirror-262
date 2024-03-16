@@ -1,0 +1,28 @@
+## hpr0562 :: Introduction to bash scripting
+
+ 
+https://en.wikipedia.org/wiki/Bourne_shell
+https://en.wikipedia.org/wiki/Command-line_interface
+
+A list of "Hello World" programs in many different computer languages: 
+https://www.roesler-ac.de/wolfram/hello.htm 
+
+For Windows:
+Editor: https://notepad-plus-plus.org/
+Bash (and more): https://x.cygwin.com/ 
+(run setup, and selecting the 'xinit' package from the 'X11' category.)
+
+$ echo '#!/bin/bash' > hello.bash
+$ echo "echo hello world" >> hello.bash
+
+$ cat hello.bash 
+#!/bin/bash
+echo hello world
+
+$ chmod +x hello.bash
+
+$ ./hello.bash
+hello world
+
+feedback-(a)-kenfallon.com
+More information https://www.kenfallon.com

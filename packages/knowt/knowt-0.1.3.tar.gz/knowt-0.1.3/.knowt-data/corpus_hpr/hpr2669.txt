@@ -1,0 +1,40 @@
+## hpr2669 :: Additional ancillary Bash tips - 12
+
+ Additional ancillary Bash tips - 12
+Making decisions in Bash
+This is the twelfth episode in the Bash Tips sub-series. It is the fourth of a group of shows about making decisions in Bash.
+In the last three episodes we saw the types of test Bash provides, and we looked briefly at some of the commands that use these tests. We looked at conditional expressions and all of the operators Bash provides to do this. We concentrated particularly on string comparisons which use glob and extended glob patterns.
+Now we want to look at the other form of string comparison, using regular expressions.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+“GNU BASH Reference Manual”
+
+“Bash Conditional Constructs”
+“Bash Conditional Expressions”
+“Bourne Shell Builtins”
+“Bash Pattern Matching”
+
+“POSIX Shell Command Language” - documentation of all of the POSIX features mentioned in this series.
+“Extended Regular Expressions”
+“A Brief Introduction to Regular Expressions”
+HPR series: Bash Scripting
+Previous episodes under the heading Bash Tips:
+
+HPR episode 1648 “Bash parameter manipulation”
+HPR episode 1843 “Some Bash tips”
+HPR episode 1884 “Some more Bash tips”
+HPR episode 1903 “Some further Bash tips”
+HPR episode 1951 “Some additional Bash tips”
+HPR episode 2045 “Some other Bash tips”
+HPR episode 2278 “Some supplementary Bash tips”
+HPR episode 2293 “More supplementary Bash tips”
+HPR episode 2639 “Some ancillary Bash tips - 9”
+HPR episode 2649 “More ancillary Bash tips - 10”
+HPR episode 2659 “Further ancillary Bash tips - 11”
+
+Resources:
+
+Examples: bash12_ex1.sh, bash12_ex2.sh, bash12_ex3.sh, bash12_ex4.sh, bash12_ex5.sh
+

@@ -1,0 +1,47 @@
+## hpr2278 :: Some supplementary Bash tips
+
+ Some supplementary Bash tips
+Pathname expansion; part 1 of 2
+Expansion
+As we saw in the last episode 2045 (and others in this sub-series) there are eight types of expansion applied to the command line in the following order:
+
+Brace expansion (we looked at this subject in episode 1884)
+Tilde expansion (seen in episode 1903)
+Parameter and variable expansion (this was covered in episode 1648)
+Command substitution (seen in episode 1903)
+Arithmetic expansion (seen in episode 1951)
+Process substitution (seen in episode 2045)
+Word splitting (seen in episode 2045)
+Pathname expansion (this episode and the next)
+
+This is the last topic in the (sub-) series about expansion in Bash. However, when writing the notes for this episode it became apparent that there was too much to fit into a single HPR episode. Consequently I have made it into two.
+In this episode we will look at simple pathname expansion and some of the ways in which its behaviour can be controlled. In the next episode we’ll finish by looking at extended pattern matching. Both are included in the “Manual Page Extracts” section at the end of the long notes.
+Long Show Notes
+I have written out a moderately long set of notes about this subject and these are available here.
+Links
+
+
+Previous shows in this series
+
+HPR episode 1648 “Bash parameter manipulation” (2014-11-26)
+HPR episode 1843 “Some Bash tips” (2015-08-26)
+HPR episode 1884 “Some more Bash tips” (2015-10-22)
+HPR episode 1903 “Some further Bash tips” (2015-11-18)
+HPR episode 1951 “Some additional Bash tips” (2016-01-25)
+HPR episode 2045 “Some other Bash tips” (2016-06-03)
+
+
+
+
+Other HPR series referenced:
+
+“Learning sed” series on HPR
+“Learning Awk” series on HPR
+
+
+
+
+Wikipedia article on glob patterns
+Advanced Bash Scripting Guide: “Globbing”
+Article on Greg’s Wiki entitled “Globs”
+

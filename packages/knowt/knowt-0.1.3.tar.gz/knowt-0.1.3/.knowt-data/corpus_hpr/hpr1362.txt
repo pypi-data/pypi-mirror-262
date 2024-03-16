@@ -1,0 +1,24 @@
+## hpr1362 :: Fixing a bad RSS feed
+
+ 
+There have been problems with the podcast feed for "mintCast",
+apparently as a result of a bug in Wordpress. The feed contains
+multiple "enclosure" tags containing the same audio over and over
+again. While the mintCast hosts are looking for a fix I would like to
+find a local work-around.
+
+
+I have also encountered a problem with the "Pod Delusion Extra" feed
+which contains multiple enclosures in some episodes. Unlike the
+"mintCast" example I don't want to lose these enclosures but want to
+find a way of repackaging them into individual episodes.
+
+
+These problems affect some podcatchers, the modified Bashpodder I use
+being amongst them. To counteract this problem I have written two
+short Perl scripts to copy and clean each feed before submitting it to
+my podcatcher.
+
+
+Detailed notes: 
+https://www.hackerpublicradio.org/eps/hpr1362/Dealing_with_bad_RSS_feeds.html

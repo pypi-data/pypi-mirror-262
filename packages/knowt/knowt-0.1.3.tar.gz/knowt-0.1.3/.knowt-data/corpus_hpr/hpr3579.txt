@@ -1,0 +1,64 @@
+## hpr3579 :: PINN is not NOOBS
+
+ Multiboot with PINN
+https://github.com/procount/pinn/blob/master/README_PINN.md
+
+What is PINN (PINN Is Not NOOBS)?
+An easy enhanced Operating System installer for the Raspberry Pi
+The latest version of PINN can be downloaded from sourceforge.
+This README relates to v3.8
+(PINN-lite does not include any operating systems at all.
+It is more akin to NOOBS-lite rather than NOOBS. For that reason, the filename that you download is called pinn-lite.zip. More recently, pinn.zip has also been made available for download which includes versions of Raspbian and LibreELEC.)
+
+Sourceforge
+https://sourceforge.net/projects/pinn/
+Github
+https://github.com/procount/pinn
+
+Release page
+
+https://github.com/procount/pinn/releases/tag/p3.8.1
+
+
+Web UI for PINN
+https://pinn.mjh.nz/
+
+Instructions
+
+
+Unzip pinn-lite.zip
+
+
+Replace recovery.cmdline file in PINN directory with downloaded file
+
+
+Copy the contents of the PINN directory to your FAT32 formatted media
+
+
+Boot your Raspberry Pi
+
+
+Select all systems and install
+
+
+Enjoy!
+
+Installation instructions
+ Click the thumbnail to see the full-sized image
+https://www.youtube.com/watch?v=tc2dSMiUfmI&t=171s
+Raspberry Pi OS 64-bit release news
+https://www.raspberrypi.com/news/raspberry-pi-os-64-bit/
+
+Downloads
+
+https://www.raspberrypi.com/software/operating-systems/
+
+
+OS installation selection
+
+Installing RetroPie
+
+Installing Kodi/OSMC
+
+Boot selection menu
+

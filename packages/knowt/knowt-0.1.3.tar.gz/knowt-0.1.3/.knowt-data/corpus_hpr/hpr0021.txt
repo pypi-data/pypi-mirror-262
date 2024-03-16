@@ -1,0 +1,22 @@
+## hpr0021 :: The Festival Speech Synthesis System
+
+ Dave Yates, and his co-host Lynn, demonstrate the voice synthesis package, Festival. Dave, discusses how he employs Festival, along with other packages to extend its capabilities. Lynn, clears-up a few of the finer points, for Dave. 
+
+Howto use alsa output;
+HMM-based Speech Synthesis System (HTS) - Release Archive or where to get CMU_US_SLT_ARTIC_HTS voice for festival ver 1.4.3;
+Online voice demos;
+Yet another online voice demo site;
+Linux Gazette article on festival;
+Hackosis festival article;
+Festival ver 1.4.3 manual;
+Article with info on how to change default voice;
+Perlbox Voice is an voice enabled application to bring your desktop under your command;
+Mini linux tts howto; an older document with some still useful information;
+How to Make Your Instant Messenger Talk in Ubuntu Linux;
+Another good festival article;
+Gentoo forum:Festival tips: more understandable and books to audiobooks;
+Festtival MBROLA info; and
+MBROLA binary and voices
+
+
+Shownotes by diggsit

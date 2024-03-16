@@ -1,0 +1,266 @@
+## hpr2227 :: FOSDEM 2017 H Building and the Hallway track
+
+ Table of Contents
+
+Godot Engine
+Software Freedom Conservancy
+BBC Open Source
+WolfSSL
+GrimoireLab
+MySQL
+Kallithea
+World Privacy and Identity Association (WPIA)
+XMPP
+Pulp
+SHA2017
+ManageIQ
+
+
+
+https://godotengine.org/
+
+Godot is an advanced, feature-packed, multi-platform 2D and 3D open source game engine. Godot provides a huge set of common tools, so you can just focus on making your game without reinventing the wheel. Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. Your game is yours, down to the last line of engine code.
+
+Listen to the interview with Rémi Verschelde
+
+
+
+
+
+Links
+
+Source: https://github.com/godotengine/
+Wikipedia: https://en.wikipedia.org/wiki/Godot_(game_engine)
+IRC: https://webchat.freenode.net/?channels=#godotengine
+Google+: https://plus.google.com/u/0/communities/111020480776556451458
+RSS: https://godotengine.org/rss.xml
+Twitter: https://twitter.com/godotengine
+Facebook: https://www.facebook.com/groups/godotengine/
+YouTube: https://www.youtube.com/channel/UCKIDvfZD1ZhY4_hhbotf7wA
+Reddit: https://www.reddit.com/r/godot
+Steam: https://steamcommunity.com/app/404790
+
+
+
+https://sfconservancy.org/
+
+Software Freedom Conservancy, Inc. is a 501(c)(3) not-for-profit organization incorporated in New York. Software Freedom Conservancy helps promote, improve, develop, and defend Free, Libre, and Open Source Software (FLOSS) projects. Conservancy provides a non-profit home and infrastructure for FLOSS projects.
+
+Listen to the interview with Bradley M. Kuhn
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Software_Freedom_Conservancy
+IRC: https://webchat.freenode.net/?channels=conservancy
+Google+: https://plus.google.com/u/0/104268783278405704634
+Linkedin: https://www.linkedin.com/company-beta/3091519/
+Mailinglist: https://lists.sfconservancy.org/pipermail/announce/
+RSS: https://sfconservancy.org/feeds/omnibus/
+Twitter: https://twitter.com/conservancy
+FediVerse: https://identi.ca/conservancy
+Facebook: https://www.facebook.com/SoftwareFreedomConservancy/
+YouTube: https://www.youtube.com/channel/UCUEeuNvX2UyTTyTYXR9dm_A
+About: https://sfconservancy.org/about/
+
+
+
+https://www.bbc.co.uk/opensource/
+
+The BBC has been using and contributing to open source projects for as long as we've had a website. This site brings together all the open source projects across the BBC with links to all our documentation and source code and information on how to get involved. Open source code used on public facing services, internal services and educational resources.
+
+Listen to the interview with David Buckhurst
+
+
+
+
+
+
+
+Links
+
+Source: https://github.com/bbc
+Wikipedia: https://en.wikipedia.org/wiki/BBC
+Twitter: https://twitter.com/BBCOpenSource
+
+
+
+https://www.wolfssl.com/wolfSSL/Home.html
+
+Embedded SSL/TLS Library for Applications, Devices, IoT, and the Cloud. Providing secure communication for IoT, smart grid, connected home, automobiles, routers, applications, games, IP, mobile phones, the cloud, and more.
+
+Listen to the interview with Chris Conlon
+
+
+
+
+
+Links
+
+Source: https://github.com/wolfssl/wolfssl
+Wikipedia: https://en.wikipedia.org/wiki/WolfSSL
+Google+: https://plus.google.com/u/0/+Wolfssl
+Linkedin: https://www.linkedin.com/company/wolfssl
+RSS: https://www.wolfssl.com/wolfSSL/Blog/rss.xml
+Twitter: https://twitter.com/wolfSSL
+Facebook: https://www.facebook.com/wolfssl
+YouTube: https://www.youtube.com/user/wolfssl
+About: https://wolfssl.com/wolfSSL/About.html
+SlideShare: https://www.slideshare.net/yassl
+Flickr: https://www.flickr.com/photos/54654493@N05/
+
+
+
+https://grimoirelab.github.io/
+
+free, libre, open source tools for software development analytics.
+
+Listen to the interview with Daniel Izquierdo Cortázar
+
+
+
+
+
+Links
+
+Source: https://github.com/bitergia
+IRC: https://webchat.freenode.net/?channels=metrics-grimoire
+Twitter: https://twitter.com/hashtag/GrimoireLab
+Facebook: https://www.facebook.com/hashtag/grimoirelab
+
+
+
+https://www.mysql.com/
+
+MySQL is the world's most popular open source database. With its proven performance, reliability and ease-of-use, MySQL has become the leading database choice for web-based applications, used by high profile web properties including Facebook, Twitter, YouTube, Yahoo! and many more. Oracle drives MySQL innovation, delivering new capabilities to power next generation web, cloud, mobile and embedded applications.
+
+Listen to the interview with Mark Leith
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/MySQL
+Google+: https://plus.google.com/+mysql
+Twitter: https://twitter.com/#!/mysql
+Facebook: https://www.facebook.com/mysql
+YouTube: https://www.youtube.com/mysqlchannel
+
+
+
+https://kallithea-scm.org/
+
+Kallithea, a member project of Software Freedom Conservancy, is a GPLv3'd, Free Software source code management system that supports two leading version control systems, Mercurial and Git, and has a web interface that is easy to use for users and admins. You can install Kallithea on your own server and host repositories for the version control system of your choice.
+
+Listen to the interview with Andrew Shadura
+
+
+
+
+
+Links
+
+Source: https://bitbucket.org/conservancy/kallithea/wiki/Home
+Wikipedia: https://en.wikipedia.org/wiki/Kallithea_(software)
+IRC: https://webchat.freenode.net/?channels=kallithea
+Mailinglist: https://lists.sfconservancy.org/mailman/listinfo/kallithea-general
+Twitter: https://twitter.com/KallitheaSCM
+
+
+
+https://wpia.club/en/
+
+The World Privacy and Identity Association (WPIA) is anxious to transfer the human rights to protect one's privacy and identity into the cyber space. WPIA is going to foster political education, seek exchange with politicians, develop software, and operate a free certificate authority. Everything will be done to patronise and substain your digital rights. We make it happen for empowering the digital YOU!
+
+Listen to the interview with Reinhard Mutz
+
+
+
+
+
+Links
+
+Google+: https://plus.google.com/113724401049079094223
+Twitter: https://twitter.com/WPIAssociation
+Facebook: https://www.facebook.com/WPIA-World-Privacy-and-Identity-Association-332073417178164/
+
+
+
+https://xmpp.org/
+
+XMPP is the open standard for messaging and presence. XMPP powers emerging technologies like IoT, WebRTC, and social. No one owns XMPP. It's free and open for everyone since 1999. It's a living standard. Engineers actively extend and improve it. Millions use XMPP software daily to connect to people and services.
+
+Listen to the interview with Sam Whited
+
+
+
+
+
+Links
+
+Source: https://xmpp.org/software
+Wikipedia: https://en.wikipedia.org/wiki/XMPP
+IRC: https://xmpp.org/community/chat
+Mailinglist: https://xmpp.org/community/mailing-lists
+
+
+
+https://pulpproject.org/
+
+Pulp is a platform for managing repositories of software packages and making it available to a large numbers of consumers. Pulp can locally mirror all or part of a repository, host your own software packages in repositories, and manage many types of content from multiple sources in one place.
+
+Listen to the interview with Brian Bouterse
+
+
+
+
+
+Links
+
+Source: https://github.com/pulp/
+Mailinglist: https://www.redhat.com/mailman/listinfo/pulp
+
+
+
+https://sha2017.org/
+
+SHA2017 is a non profit outdoor Hacker camp/conference taking place in The Netherlands from the 4th to 8th of August 2017. It is the successor of a string of similar events happening every four years. These are GHP, HEU, HIP, HAL, WTH, HAR and OHM. Similar events are EMF Camp 2016 in the UK, CCC Camp and congress in Germany. The location is the Scoutinglandgoed in Zeewolde, 55km east of Amsterdam.
+
+Listen to the interview with Robin Edgar
+
+
+
+
+
+Links
+
+IRC: https://webchat.freenode.net/?channels=#sha2017
+Mailinglist: https://lists.sha2017.org/cgi-bin/mailman/listinfo
+RSS: https://sha2017.org/rss.xml
+
+
+
+https://manageiq.org/
+
+ManageIQ is an open source management platform for Hybrid IT. It can manage small and large environments, and supports multiple technologies such as virtual machines, public clouds and containers. With ManageIQ you will be able to: Continuously discover the latest state of your environment. Implement self service for your end users. Enforce compliance across the environment. Optimize the performance and utilization of you environment.
+
+Listen to the interview with Carol Chene
+
+
+
+
+
+Links
+
+Source: https://github.com/ManageIQ/
+Google+: https://plus.google.com/+ManageiqOrg
+Linkedin: https://www.linkedin.com/company/manageiq
+Twitter: https://twitter.com/ManageIQ
+Facebook: https://www.facebook.com/manageiq/
+YouTube: https://www.youtube.com/user/ManageIQVideo
+

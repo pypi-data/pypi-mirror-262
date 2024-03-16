@@ -1,0 +1,15 @@
+## hpr3427 :: Ranger for the Win!
+
+ Programs referenced in this episode
+
+ranger
+caca-utils
+poppler-utils
+atool
+highlight
+trash-cli
+xlsx2csv
+docs2txt
+catdoc (for doc2txt and xls2csv)
+ods2tsv
+

@@ -1,0 +1,447 @@
+## hpr3289 :: NextCloud the hard way
+
+ NextCloud
+I want to install NextCloud for my family, but only for my family. This means making things hard for myself by installing it behind my firewall with a private nat ipaddress. That presented problems with getting a valid Let's encrypt cert.
+It all now works, and thanks to timttmy I was able to get the WireGuard VPN installed and working.
+Pi 4
+Get a Pi, and a SSD, enable it. You should review Raspberry Pi 4 USB Boot Config Guide for SSD / Flash Drives, for issues with SSD drives and the Raspberry Pi.
+You can install Raspbian as normal. I already covered this in hpr2356 :: Safely enabling ssh in the default Raspbian Image, and Safely enabling ssh in the default Raspberry Pi OS (previously called Raspbian) Image.
+And then follow the instructions in How to Boot Raspberry Pi 4 From a USB SSD or Flash Drive.
+Next Cloud
+Install Apache, MariaDB, and PHP
+
+How to install Nextcloud 20 on Ubuntu Server 20.04
+NextCloud - Installation and server configuration - Installation on Linux
+Download NextCloud
+
+# diff /etc/apache2/apache2.conf /etc/apache2/apache2.conf.orig
+171,172c171,172
+<       Options FollowSymLinks
+<       AllowOverride All
+---
+>       Options Indexes FollowSymLinks
+>       AllowOverride None
+Install PHPMyAdmin
+
+How to Install PHPMyAdmin on the Raspberry Pi
+
+Required Changes to nextcloud config.
+root@nextcloud:~# diff /root/nextcloud-config.php.orig /var/www/html/nextcloud/config/config.php 
+>     1 => 'nextcloud',
+>     2 => '192.168.123.123',
+>     3 => 'nextcloud.example.com',
+>   'memcache.local' => '\OC\Memcache\APCu',
+# diff /etc/apache2/sites-available/000-default.conf.orig /etc/apache2/sites-enabled/000-default.conf
+28a29,32
+>         RewriteEngine On
+>         RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [R=301,L]
+>       Redirect 301 /.well-known/carddav /var/www/html/nextcloud/remote.php/dav
+>       Redirect 301 /.well-known/caldav /var/www/html/nextcloud/remote.php/dav
+Required Changes to php.ini config.
+root@nextcloud:~# diff /etc/php/7.3/apache2/php.ini.orig /etc/php/7.3/apache2/php.ini
+401c401
+< memory_limit = 128M
+---
+> memory_limit = 2000M
+689c689
+< post_max_size = 8M
+---
+> post_max_size = 2048M
+841c841
+< upload_max_filesize = 2M
+---
+> upload_max_filesize = 2048M
+Upgrade
+You can upgrade using the procedure described by klaatu in hpr3232 :: Nextcloud, or as admin via the UI https://nextcloud.example.com/nextcloud/index.php/settings/user, Administration, Overview.
+You will see a lot of Warnings on Admin Page, but don't panic. The server is not accessible on the Internet after all.
+The errors have links to how you can fix them and some are very easy to do.
+I got an error "Error occurred while checking server setup". I used this tip to move root owned files out of next cloud dir.
+For me it was mostly about enabling caching via APCU, and enabling You are accessing this site via HTTP.
+The first is fixed in the nextcloud/config/config.php page, the next is fixed by installing a valid SSL cert from Let's Encrypt.
+SSL Let's Encrypt
+Based on the following article I installed it manually.
+Obtain Let's Encrypt SSL Certificate Using Manual DNS Verification
+Install certbot
+# apt install certbot
+Then run the script manually specifying that the challenge should be over dns.
+# certbot certonly --manual --preferred-challenges dns 
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator manual, Installer None
+Enter email address (used for urgent renewal and security notices) (Enter 'c' to
+cancel): letsencrypt@example.com
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Please read the Terms of Service at
+https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
+agree in order to register with the ACME server at
+https://acme-v02.api.letsencrypt.org/directory
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(A)gree/(C)ancel: A
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Would you be willing to share your email address with the Electronic Frontier
+Foundation, a founding partner of the Let's Encrypt project and the non-profit
+organization that develops Certbot? We'd like to send you email about our work
+encrypting the web, EFF news, campaigns, and ways to support digital freedom.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: n
+Please enter in your domain name(s) (comma and/or space separated)  (Enter 'c'
+to cancel): nextcloud.example.com
+Obtaining a new certificate
+Performing the following challenges:
+dns-01 challenge for nextcloud.example.com
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NOTE: The IP of this machine will be publicly logged as having requested this
+certificate. If you're running certbot in manual mode on a machine that is not
+your server, please ensure you're okay with that.
+
+Are you OK with your IP being logged?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: y
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Please deploy a DNS TXT record under the name
+_acme-challenge.nextcloud.example.com with the following value:
+
+0c5dbJpS5t0VKzglhdfFhZ6CGmZlLHNaNnAQe2VeJyKi
+
+Before continuing, verify the record is deployed.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Press Enter to Continue
+It was at this point I went to my hosting companys page and created a subdomain called nextcloud. Then I added a TXT record called _acme-challenge with the text 0c5dbJpS5t0VKzglhdfFhZ6CGmZlLHNaNnAQe2VeJyKi.
+In order to verify that we use the command:
+# apt-get install -y dnsutils
+
+$ dig -t TXT _acme-challenge.nextcloud.example.com
+
+; <<>> DiG 9.11.5-P4-5.1+deb10u2-Debian <<>> -t TXT _acme-challenge.nextcloud.example.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 39298
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;_acme-challenge.nextcloud.example.com. IN TXT
+
+;; ANSWER SECTION:
+_acme-challenge.nextcloud.example.com. 3600 IN TXT "0c5dbJpS5t0VKzglhdfFhZ6CGmZlLHNaNnAQe2VeJyKi"
+
+;; Query time: 7 msec
+;; SERVER: 178.21.112.12#53(178.21.112.12)
+;; WHEN: Thu Dec 10 16:27:53 CET 2020
+;; MSG SIZE  rcvd: 121
+
+Now that the answer section is correct we can continue with the certbot script.
+Waiting for verification...
+Cleaning up challenges
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/nextcloud.example.com/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/nextcloud.example.com/privkey.pem
+   Your cert will expire on 2021-03-10. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+Renew
+Unfortunately the renew is not automatic. "You don't have to renew Certificate with"renew" option. You have to run the same command you ran for Certificate creation."
+So I just set up a 3 monthly recurring reminder in NextCloud to do this.
+Delete
+If you need to delete the cert you can do it as follows.
+root@nextcloud:~# certbot certificates
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Found the following certs:
+  Certificate Name: nextcloud.example.com
+    Domains: nextcloud.example.com
+    Expiry Date: 2021-03-10 14:28:07+00:00 (VALID: 89 days)
+    Certificate Path: /etc/letsencrypt/live/nextcloud.example.com/fullchain.pem
+    Private Key Path: /etc/letsencrypt/live/nextcloud.example.com/privkey.pem
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+root@nextcloud:~# certbot delete
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+Which certificate(s) would you like to delete?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: nextcloud.example.com
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate numbers separated by commas and/or spaces, or leave input
+blank to select all options shown (Enter 'c' to cancel): 1
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Deleted all files relating to certificate nextcloud.example.com.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Apache setup
+Setting up Apache is not well explained anywhere I could find.
+The good news is that moz://a SSL Configuration Generator page takes the misery out of making tea. I mean, it will help you with your configuration. If you do like misery you can of course read the Talk:Security/Server Side TLS page.
+The most helpful articles were:
+
+Secure Apache with Let's Encrypt on Debian 10
+Adding a trusted self-signed SSL certificate to Apache on Debian/Ubuntu
+How To Create a Self-Signed SSL Certificate for Apache in Debian 10
+
+I made the following changes:
+root@nextcloud:/etc/apache2/sites-available# diff 000-default.conf.orig 000-default.conf
+28a29,30
+>         RewriteEngine On
+>         RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [R=301,L]
+
+root@nextcloud:/etc/apache2/sites-available# diff default-ssl.conf.orig default-ssl.conf
+32,33c32,33
+<               SSLCertificateFile      /etc/ssl/certs/ssl-cert-snakeoil.pem
+<               SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+---
+>               SSLCertificateFile      /etc/letsencrypt/live/nextcloud.example.com/fullchain.pem
+>               SSLCertificateKeyFile   /etc/letsencrypt/live/nextcloud.example.com/privkey.pem
+129a130,131
+>               # enable HTTP/2, if available
+>               Protocols h2 http/1.1
+130a133,134
+>               # HTTP Strict Transport Security (mod_headers is required) (63072000 seconds)
+>               Header always set Strict-Transport-Security "max-age=63072000"
+Testing
+To test the cert you can connect to the localhost on the server.
+root@nextcloud:/etc/apache2/sites-available# openssl s_client -crlf -debug -connect localhost:443 -status -servername nextcloud.example.com
+CONNECTED(00000003)
+write to 0x643cf8 [0x652568] (321 bytes => 321 (0x141))
+[snip...]
+read from 0x643cf8 [0x6492b3] (5 bytes => 5 (0x5))
+0000 - 48 54 54 50 2f                                    HTTP/
+3069898768:error:1408F10B:SSL routines:ssl3_get_record:wrong version number:../ssl/record/ssl3_record.c:332:
+---
+no peer certificate available
+---
+No client certificate CA names sent
+---
+SSL handshake has read 5 bytes and written 321 bytes
+Verification: OK
+---
+New, (NONE), Cipher is (NONE)
+Secure Renegotiation IS NOT supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+[snip...]
+I had been using systemctl restart apache2.service to restart apache, but the recommended way is to use apache2ctl.
+root@nextcloud:/etc/apache2/sites-available# apache2ctl 
+Usage: /usr/sbin/apache2ctl start|stop|restart|graceful|graceful-stop|configtest|status|fullstatus|help
+       /usr/sbin/apache2ctl <apache2 args>
+       /usr/sbin/apache2ctl -h            (for help on <apache2 args>)
+
+root@nextcloud:/etc/apache2/sites-available# apache2ctl restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+
+root@nextcloud:/etc/apache2/sites-available# apache2 -t
+[Thu Dec 10 18:18:49.187628 2020] [core:warn] [pid 4108] AH00111: Config variable ${APACHE_RUN_DIR} is not defined
+apache2: Syntax error on line 80 of /etc/apache2/apache2.conf: DefaultRuntimeDir must be a valid directory, absolute or relative to ServerRoot
+For some reason that fixed it.
+# openssl s_client -crlf -debug -connect localhost:443 -status -servername nextcloud.example.com
+CONNECTED(00000003)
+write to 0xe4918 [0xf3188] (324 bytes => 324 (0x144))
+[snip...]
+OCSP response: 
+======================================
+OCSP Response Data:
+    OCSP Response Status: successful (0x0)
+    Response Type: Basic OCSP Response
+    Version: 1 (0x0)
+    Responder Id: C = US, O = Let's Encrypt, CN = R3
+    Produced At: Dec 22 16:04:00 2020 GMT
+[snip...]
+---
+Certificate chain
+ 0 s:CN = nextcloud.example.com
+   i:C = US, O = Let's Encrypt, CN = R3
+ 1 s:C = US, O = Let's Encrypt, CN = R3
+   i:O = Digital Signature Trust Co., CN = DST Root CA X3
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+[snip...]
+DNS Rebind Protection
+Now that everything is up and running we just need to create a new A record pointing to our internal IP Address. Unfortunately while nextcloud.example.com resolves to 192.168.123.123 externally, it fails to return an answer internally.
+A little investigation lead to the fact that my firewall, was seeing this as a DNS Rebinding attack. It correctly blocks these DNS entires. I was able to add an exception under Network > DHCP > Rebind protection > Discard upstream RFC1918 responses.
+On your router you should check under DHCP/DNS entries for RFC1918 or DNS Rebinding.
+You can verify your install as follows:
+# apt-get install -y dnsutils
+
+$ dig nextcloud.example.com
+
+; <<>> DiG 9.16.8-Debian <<>> nextcloud.example.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 29350
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;nextcloud.example.com.          IN      A
+
+;; ANSWER SECTION:
+nextcloud.example.com.   3600    IN      A       192.168.123.123
+
+;; Query time: 40 msec
+;; SERVER: 192.168.0.71#53(192.168.0.71)
+;; WHEN: Thu Dec 10 16:53:39 GMT 2020
+;; MSG SIZE  rcvd: 65
+Completing
+Back in the admin console you should keep upgrading, and fixing errors until it says Your version is up to date. and All checks passed.
+At this point you are ready to open the server up to your users while they are outside the home, in work or school.
+Firewall setup
+timttmy has already done an episode on WireGuard where he goes into the details of how to install it manually.
+I cheated and used the PIVPN which now supports wireguard.
+This is a good walkthrough with screenshots in the article Setting up a WireGuard VPN on the Raspberry Pi.
+Once that's done you should have the following commands available.
+# pivpn
+::: Control all PiVPN specific functions!
+:::
+::: Usage: pivpn <command> [option]
+:::
+::: Commands:
+:::  -a,  add              Create a client conf profile
+:::  -c,  clients          List any connected clients to the server
+:::  -d,  debug            Start a debugging session if having trouble
+:::  -l,  list             List all clients
+:::  -qr, qrcode           Show the qrcode of a client for use with the mobile app
+:::  -r,  remove           Remove a client
+:::  -h,  help             Show this help dialog
+:::  -u,  uninstall        Uninstall pivpn from your system!
+:::  -up, update           Updates PiVPN Scripts
+:::  -bk, backup           Backup VPN configs and user profiles
+
+During the install process you will select a port to use. This port needs to be allowed in from the Internet to your internal server. Where this will be done is different for every router, but have a look around for port forwarding or permit access to do this.
+Setting up Client on LineageOS
+It is at this point that you will need to have accounts created in NextCloud.
+
+https://nextcloud.example.com/nextcloud/
+
+You can do this under your profile > users in an admin account.
+I created an account for each of the family members, a generic one for the house, and a readonly one for the MagicMirror.
+The house account houses (pun intended) the shared calendar, files, and contacts. All the family accounts have read and write access to these, except for the MagicMirror one which only needs to read the calendar and contacts.
+Fdroid
+Now you can install the software you will need on your phones.
+
+NextCloud Synchronization client
+DAVx DAVx⁵ CalDAV/CardDAV Synchronization and Client
+OpenTasks Keep track of your list of goals
+WireGuard Next generation secure VPN network tunnel
+
+You will need to setup the NextCloud client using the url https://nextcloud.example.com/nextcloud/, username and password.
+Then you set up DAVx using another url https://nextcloud.example.com/nextcloud/remote.php/dav, but the same , username and password.
+By the way if you want to access files you can do so via davs://nextcloud.example.com/nextcloud/remote.php/dav/files/house/
+I set up the NextCloud client to automatically upload photos, and videos to the server.
+To set up WireGuard you need to create a connection for each device connecting
+root@nextcloud:~# pivpn add
+Enter a Name for the Client: Mobile_Worker
+::: Client Keys generated
+::: Client config generated
+::: Updated server config
+::: WireGuard reloaded
+======================================================================
+::: Done! Mobile_Worker.conf successfully created!
+::: Mobile_Worker.conf was copied to /home/ken/configs for easy transfer.
+::: Please use this profile only on one device and create additional
+::: profiles for other devices. You can also use pivpn -qr
+::: to generate a QR Code you can scan with the mobile app.
+======================================================================
+Then open display the qrcode as follows:
+root@nextcloud:~# pivpn qrcode
+::  Client list  ::
+1) Mobile_Worker
+Please enter the Index/Name of the Client to show: 
+Pressing 1 in my case will display the QRCode.
+Open the WireGuard app on the phone and press + to add an account, and select scan from qr code.
+Point it to QRCode and that's it.
+If you want to remove a client, you can just use pivpn remove
+root@nextcloud:~# pivpn remove
+::  Client list  ::
+1) Mobile_Worker
+Please enter the Index/Name of the Client to be removed from the list above: 6
+Do you really want to delete Mobile_Worker? [Y/n] y
+::: Updated server config
+::: Client config for Mobile_Worker removed
+::: Client Keys for Mobile_Worker removed
+::: Successfully deleted Mobile_Worker
+::: WireGuard reloaded
+MagicMirror
+The final step is to have the MagicMirror in the living room display the shared calendar.
+To display your calendar there, you need to have an ics iCalendar file.
+You can get that by login into NextCloud as the MagicMirror user via the web, going to the calendar you desire to export. Click the ... menu and select "Copy Private Link".
+You can then add the ?export at the end of the url to get an ical export.
+Dave gave me a tip on how to have MagicMirror serve this file, by using its own local webserver. You point it to a local directory eg: https://localhost:8080/modules/.calendars/. Don't forget to create it.
+mkdir -p ~/MagicMirror/modules/.calendars/
+I wrote a script that would first get a new version of the ical file, and if it is downloaded correctly would immediately overwrite the previous one.
+[magicmirror@magicmirror ~]$ cat /home/pi/bin/cal.bash
+#!/bin/bash
+wget --quiet --output-document /home/pi/MagicMirror/modules/.calendars/home_calendar.ics.tmp --auth-no-challenge --http-user=magicmirror --http-password="PASSWORD" "https://nextcloud.example.com/nextcloud/remote.php/dav/calendars/magicmirror/personal_shared_by_House/?export" > /dev/null 2>&1
+if [ -s /home/pi/MagicMirror/modules/.calendars/home_calendar.ics.tmp ]
+then
+  mv /home/pi/MagicMirror/modules/.calendars/home_calendar.ics.tmp /home/pi/MagicMirror/modules/.calendars/home_calendar.ics
+fi
+[snip...]
+I then scheduled this to run every 15 minutes.
+[magicmirror@magicmirror ~]$ crontab -l
+*/15 * * * * /home/pi/bin/cal.bash >/dev/null 2>&1
+The final step was to update my Calendar entry in the ~/MagicMirror/config/config.js config file.
+        // Calendar
+        {
+            module: "calendar",
+            header: "Calendar",
+            position: "top_center",
+            config: {
+                colored: true,
+                maxTitleLength: 30,
+                fade: false,
+                calendars: [
+                    {
+                        name: "Family Calendar",
+                        url: "https://localhost:8080/modules/.calendars/home_calendar.ics",
+                        symbol: "calendar-check",
+                        color: "#825BFF" // violet-ish
+                    },
+                    {
+                        name: "Birthday Calendar",
+                        url: "https://localhost:8080/modules/.calendars/birthday_calendar.ics",
+                        symbol: "calendar-check",
+                        color: "#FFCC00" // violet-ish
+                    },
+                    {
+                        // Calendar uses repeated 'RDATE' entries, which this iCal parser
+                        // doesn't seem to recognise. Only the next event is visible, and
+                        // the calendar has to be refreshed *after* the event has passed.
+                        name: "HPR Community News recordings",
+                        url: "https://hackerpublicradio.org/HPR_Community_News_schedule.ics",
+                        symbol: "calendar-check",
+                        color: "#C465A7" // purple
+                    },
+                    {
+                        // https://inzamelkalender.gad.nl/ical-info
+                        name: "GAD Calendar",
+                        url: "https://inzamelkalender.gad.nl/ical/0381200000107654",
+                        symbol: "calendar-check",
+                        color: "#00CC00" // Green
+                    },
+                ]
+            }
+        },
+The contacts birthday wasn't available to the MagicMirror user immediately after I created it, so I was able to force an update as follows:
+root@nextcloud:/var/www/html/nextcloud# sudo -u www-data php occ dav:sync-birthday-calendar
+Start birthday calendar sync for all users ...
+    7 [============================]
+Conclusion
+With that we have a family sharing solution just like other normal house holds. Yet with the security of knowing that the data doesn't leave the house, and is not being used without your approval.
+You can tell it's a hit, because now people are scheduling tech support tasks via the app.
+Ah well.

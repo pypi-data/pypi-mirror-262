@@ -1,0 +1,70 @@
+## hpr3384 :: Page Numbers in EPUB eBook Files
+
+ This episode is a response to hpr3367 by Andrew Conway and Dave Morriss. One of the topics they brought up was the thorny issue of page numbers in e-books. Most of the time you don't need to worry about page numbers in ebooks, if you're reading fiction for example. The whole point of an ebook is that the texts can reflow to fit the page no matter what size the screen is or what font-size you've chosen. This is a major accessibility feature of all e-book formats. One reason you might want to specify actual page numbers, though, is if you're dealing with a technical or academic book, and you need to be able to refer to specific passages in the book by page number, as you are expected to do in academic research. Or, as Andrew and Dave were discussing, you might need to create an index in your ebook that would send your readers back to specific pages like in a paper book.
+I've thought about this before but never really gotten into the weeds and figured out how to make it happen. In fact, when I was creating the new digital editions of the Counterpoint textbooks like I discussed in hpr1512, I actually took the trouble to put page number anchors through the entire thing, so that at a future date I would be able to enable real page numbers. This was a key part of the source file's infrastructure, which helped me quickly find the passages I was working on in my huge HTML file. Those anchors are not quite in the correct format for EPUB, but they are consistent and I will easily be able to write a script to fix them. I haven't done that yet, but now that I figured out how to do it on some smaller examples, this is on my to-do list.
+Anyway while I was listening to Dave and Andrew talk about this, I thought I remembered reading somewhere that in the newest ePub specification, EPUB 3, there was support for publisher's page numbers to deal with precisely this issue. Their discussion prompted me to see if I could make it work. I'm happy to report success, although with some qualifications, which I will get into.
+Converting to EPUB 3
+The first thing to do is to upgrade your ebook from EPUB2 to EPUB3. There are a couple of ways to do this. The way I did it was to use the ebook editor in a recent version of Calibre. When you open up the EPUB for editing, go to the Tools menu and choose Upgrade book internals. This will create the new navigation file nav.xhtml to replace the old toc.ncx file. You'll need to edit this new file later to enable the page numbers.
+Insert page anchors
+Next you need to put your page anchors in there. This could be very tedious if you haven't done any preparatory work, such as putting visible page numbers in plain sight in square brackets [21] the way I did for a couple of ebooks. It wasn't very elegant, but at least it was easy to find where the page breaks were. I have a Blather voice command that triggers a python script to create these things. Here's an example of page number anchor, which goes in the main text of the book wherever you want to insert a page number. This will not be visible to the reader inline. This is for page 57:
+
+<span epub:type="pagebreak" id="page57" title="57"></span>
+
+Page List in Navigation File
+Finally you need to put a page list in the new navigation file. This is simply an ordered list with hyperlinks to every page anchor that you put in your ebook. This will not be visible to the reader, but it's critical to making everything work. Here's a minimal example from my first attempt. This only covers Pages 122 to 126. This is the kind of page numbering you might need if you created an ebook from a five-page article from an academic journal that appeared in the middle of the volume.
+
+<nav epub:type="page-list" hidden="hidden">
+    <ol>
+        <li><a href="filename.html#page122">122</a></li>
+        <li><a href="filename.html#page123">123</a></li>
+        <li><a href="filename.html#page124">124</a></li>
+        <li><a href="filename.html#page125">125</a></li>
+        <li><a href="filename.html#page126">126</a></li>
+    </ol>
+</nav>
+
+I'm not sure it matters where you put this navigation block in the nav.xhmtl file, but I put mine between the table of contents and the landmarks blocks.
+Scripting the creation of page list
+It could be very tedious to create a page list like this, so of course I wrote a script to automate a lot of the heavy lifting. I'm sure Dave can write one that's more elegant than this, but this is what I came up with in about 5 minutes and it did the job, with the exception of putting the right URL for each link. I did a little bit of post-production to search and replace the URLs generated in the script with what I needed for the specific eBook. I think if you added a third command-line argument with a URL, you can solve this problem. The difficulty with larger books will be when you have more than one internal HTML file in the book, you will have to go through very carefully and make sure that the link goes to the correct file. I saved the script as pagelist.sh and put it in my $PATH.
+Command to run to generate a page list from pages 42 to 61:
+
+pagelist.sh 42 61
+
+And here's the script:
+
+#!/bin/bash
+
+# grab beginning and ending pages from 1st and 2nd
+# CLI arguments, and specify a tmp file to put stuff
+start="$1"
+end="$2"
+navfile=/tmp/navfile.txt
+
+# put the top matter for the nav block
+echo '<nav epub:type="page-list" hidden="hidden">' > $navfile
+echo "    <ol>" >> $navfile
+
+# iterate through the page numbers making list item for each one.
+# should replace filename with your ebook's actual filename
+for i in $(seq $start $end); do
+	echo "        <li><a href=\"filename.html#page$i\">$i</a></li>" >> $navfile
+done
+
+# close out the list and nav block
+echo "    </ol>" >> $navfile
+echo "</nav>" >> $navfile
+
+exit 0
+
+
+Then you just need to copy and paste what was generated from the script into your editor and make sure all of the URLs are correct, then stick that navigation block into the nav.xhtml file.
+
+Conclusions
+So, once you have the page anchors and the page list in place in your EPUB3 ebook, everything should work. The problem is that so far the only ebook reader I have found that renders the page numbers correctly on the screen is the iBooks app on iOS. I tried it on my Kobo dedicated eReader, on the Marvin ePub reader on iOS and on Overdrive on Android, and none of them displayed my shiny page numbers. iBooks was the only one, but it did so perfectly after choosing "show publisher page numbers" on the table of contents menu. It was pretty magical. A quick internet search confirms that there is very little e-book reader or app support for displaying these page numbers.
+However, the embedded page numbers will still be useful if what you want to do is create an index that directs readers back to specific pages. On the one hand, indexes are not as critical as they used to be because you can search through the text of e-books very easily. What you can't do easily is browse an eBook the way you can browse a paper book index to see what topics might catch your eye. This might be something only academics do. It's not uncommon for an academic to pick up a book and flip right to the bibliography and the index!
+Links
+
+Examples of different page number code formatting from the Accessible Publishing Knowledge Base
+EPUB 3 Specification for navigation document, including page numbers
+Calibre eBook management software
+

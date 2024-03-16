@@ -1,0 +1,10 @@
+## hpr0039 :: Debian Live CD
+
+ Information on Debian Live CD's and a small framework to build them. 
+
+Debian Live: 
+ https://debian-live.alioth.debian.org/  
+ https://wiki.debian.org/DebianLive/  
+ https://live.debian.net/cdimage/  
+ DFS Live CD  
+ Video of live-helper  

@@ -1,0 +1,462 @@
+## hpr2021 :: HPR Community News for April 2016
+
+ 
+New hosts
+
+Welcome to our new hosts: 
+Joe, 
+    brian.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+2000
+Fri
+2016-04-01
+How to Point a Satellite Dish
+Ken Fallon
+
+
+2001
+Mon
+2016-04-04
+HPR Community News for March 2016
+HPR Volunteers
+
+
+2002
+Tue
+2016-04-05
+Just got a Raspberry Pi Zero
+swift110
+
+
+2003
+Wed
+2016-04-06
+Using the Incron file watching daemon
+b-yeezi
+
+
+2004
+Thu
+2016-04-07
+A First Look at the Owon B35T
+NYbill
+
+
+2005
+Fri
+2016-04-08
+How I prepare and record my HPR Kdenlive voiceover shows.
+Geddes
+
+
+2006
+Mon
+2016-04-11
+Basic Audio Production - Compression
+Nacho Jordi
+
+
+2007
+Tue
+2016-04-12
+My new laptop
+Dave Morriss
+
+
+2008
+Wed
+2016-04-13
+HPR needs shows to survive.
+Ken Fallon
+
+
+2009
+Thu
+2016-04-14
+Understanding the GNU/Screen Hardstatus line
+Curtis Adkins (CPrompt^)
+
+
+2010
+Fri
+2016-04-15
+Parsing JSON with Python
+klaatu
+
+
+2011
+Mon
+2016-04-18
+Introduction to sed - part 4
+Dave Morriss
+
+
+2012
+Tue
+2016-04-19
+Parsing XML in Python with Untangle
+klaatu
+
+
+2013
+Wed
+2016-04-20
+Parsing XML in Python with Xmltodict
+klaatu
+
+
+2014
+Thu
+2016-04-21
+A first look at the Owon B35T Part 2
+NYbill
+
+
+2015
+Fri
+2016-04-22
+Linux in the Church
+Joe
+
+
+2016
+Mon
+2016-04-25
+Echoprint
+laindir
+
+
+2017
+Tue
+2016-04-26
+Here are my thoughts on a 3D printer Kit.
+cheeto4493
+
+
+2018
+Wed
+2016-04-27
+How to make Komboucha Tea
+b-yeezi
+
+
+2019
+Thu
+2016-04-28
+a pi project and an owncloud project
+Matt McGraw (g33kdad)
+
+
+2020
+Fri
+2016-04-29
+Automotive Billing
+brian
+
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This discussion takes
+place on the Mail List which is open to all
+HPR listeners and contributors. The discussions are open and available on the
+Gmane
+archive.
+
+The main threads this month were:
+
+From: NYbill <nybill@...>
+Date: 2016-04-04 17:08:54 -0400
+Subject: Fwd: Re: Defaults...
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1159
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2016-04-05 20:20:08 +0200
+Subject: Call for shows
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1160
+Messages: 5
+From: Mike Ray <mike@...>
+Date: 2016-04-06 13:45:38 +0100
+Subject: HTML notes accessibility pointer
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1161
+Messages: 7
+From: Curtis Adkins <curtadkins@...>
+Date: 2016-04-09 21:26:57 -0400
+Subject: Upload show issue
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1168
+Messages: 2
+From: Ken Fallon <ken@...>
+Date: 2016-04-12 08:12:09 +0200
+Subject: Fwd: CFP for Full Stack Fest 2016 has opened!
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1170
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2016-04-19 13:21:58 +0200
+Subject: 11th Annual People's Podcast Awards
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1175
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2016-04-21 15:46:34 +0200
+Subject: Fwd: for your podcast: interview about FOSS situation in	Russia
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1176
+Messages: 1
+From: Frank Bell <frankwbell@...>
+Date: 2016-04-21 13:37:59 -0400
+Subject: Proposed New Series
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1177
+Messages: 8
+From: Carl D Hamann <carl.hamann@...>
+Date: 2016-04-22 10:42:04 -0500
+Subject: Re: Proposed New Series
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1184
+Messages: 2
+From: Dave Morriss <perloid@...>
+Date: 2016-04-25 15:27:13 +0100
+Subject: HPR Community News - next Saturday on 2016-04-30T18:00:00Z
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1187
+Messages: 5
+From: Fifty OneFifty <fiftyonefifty@...>
+Date: 2016-04-25 21:56:10 -0500
+Subject: Re: Hpr Digest, Vol 91, Issue 11
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1189
+Messages: 3
+From: Carl D Hamann <carl.hamann@...>
+Date: 2016-04-25 23:01:41 -0500
+Subject: Re: HPR Community News - next Saturday on 2016-04-30T18:00:00Z
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1191
+Messages: 1
+From: Dave Morriss <perloid@...>
+Date: 2016-04-30 18:21:57 +0100
+Subject: Re: HPR Community News - next Saturday on 2016-04-30T18:00:00Z
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1196
+Messages: 1
+
+Total messages this month: 38
+Comments this month
+These are comments which have been made during the past month, either to shows
+released during the month or to past shows.
+There are 46 comments:
+
+hpr1987
+(2016-03-15) "Pomodoro Timer - The Evolution of a Script (pt 1)"
+by Nacho Jordi.
+ Comment 2:
+David L. Willson on 2016-04-17:
+"changed my life"
+
+hpr1990
+(2016-03-18) "Pomodoro Timer - The Evolution of a Script part deux"
+by Nacho Jordi.
+ Comment 1:
+David L. Willson on 2016-04-17:
+"found it!"
+
+hpr1993
+(2016-03-23) "Can your window manager do this?"
+by Nacho Jordi.
+ Comment 1:
+sigflup on 2016-04-04:
+"ratpoison"
+
+hpr1996
+(2016-03-28) "Xdotool magic"
+by Nacho Jordi.
+ Comment 1:
+Urugami on 2016-04-18:
+"File Naming"
+
+hpr1998
+(2016-03-30) "Homebrewing"
+by m1rr0r5h4d35.
+ Comment 2:
+Ken Fallon on 2016-04-07:
+"Would love to hear the full recoring"
+
+hpr1999
+(2016-03-31) "How I record a full band under Linux"
+by noplacelikeslashhome.
+ Comment 1:
+Jon Kulp on 2016-04-01:
+"More on Ardour!" Comment 2:
+Ken Fallon on 2016-04-06:
+"More detail"
+
+hpr2000
+(2016-04-01) "How to Point a Satellite Dish"
+by Ken Fallon.
+ Comment 1:
+Mike Ray on 2016-04-04:
+"I tried very hard..." Comment 2:
+droops on 2016-04-04:
+"Very Good" Comment 3:
+Frank on 2016-04-05:"[no title]" Comment 4:
+Ken Fallon on 2016-04-06:
+"Beep"
+
+hpr2001
+(2016-04-04) "HPR Community News for March 2016"
+by HPR Volunteers.
+ Comment 1:
+Jon Kulp on 2016-04-04:
+"Not a Timing Belt"
+
+hpr2002
+(2016-04-05) "Just got a Raspberry Pi Zero"
+by swift110.
+ Comment 1:
+Ken Fallon on 2016-04-06:
+"I'm so jealous"
+
+hpr2003
+(2016-04-06) "Using the Incron file watching daemon"
+by b-yeezi.
+ Comment 1:
+Ken Fallon on 2016-04-06:
+"Installing this now"
+
+hpr2004
+(2016-04-07) "A First Look at the Owon B35T"
+by NYbill.
+ Comment 1:
+Ken Fallon on 2016-04-07:
+"daisy chain" Comment 2:
+NYbill on 2016-04-07:
+"Americanism's?" Comment 3:
+Dave Morriss on 2016-04-07:
+"Not an Americanism to my knowledge" Comment 4:
+Ken Fallon on 2016-04-08:
+"Why not what" Comment 5:
+NYbill on 2016-04-08:"[no title]"
+
+hpr2005
+(2016-04-08) "How I prepare and record my HPR Kdenlive voiceover shows."
+by Geddes.
+ Comment 1:
+NYbill on 2016-04-10:
+"Well done." Comment 2:
+Ken Fallon on 2016-04-17:
+"Such Effort"
+
+hpr2006
+(2016-04-11) "Basic Audio Production - Compression"
+by Nacho Jordi.
+ Comment 1:
+Ken Fallon on 2016-04-17:
+"Great Addition"
+
+hpr2007
+(2016-04-12) "My new laptop"
+by Dave Morriss.
+ Comment 1:
+Ken Fallon on 2016-04-17:
+"Suspect" Comment 2:
+Dave Morriss on 2016-04-18:
+"I dunno what you're talking about" Comment 3:
+Alpha32 on 2016-04-26:
+"Interesting show"
+
+hpr2008
+(2016-04-13) "HPR needs shows to survive."
+by Ken Fallon.
+ Comment 1:
+0xf10e on 2016-04-13:
+"But Ken, " Comment 2:
+Jonathan Kulp on 2016-04-14:
+"sure you can!" Comment 3:
+Ken Fallon on 2016-04-17:
+"Thanks"
+
+hpr2009
+(2016-04-14) "Understanding the GNU/Screen Hardstatus line"
+by Curtis Adkins (CPrompt^).
+ Comment 1:
+Ken Fallon on 2016-04-22:
+"Great show"
+
+hpr2010
+(2016-04-15) "Parsing JSON with Python"
+by klaatu.
+ Comment 1:
+Zen_Floater2 on 2016-04-14:
+"squirrel" Comment 2:
+Ken Fallon on 2016-04-22:
+"Don't like xpath !"
+
+hpr2011
+(2016-04-18) "Introduction to sed - part 4"
+by Dave Morriss.
+ Comment 1:
+b-yeezi on 2016-04-18:
+"Wow" Comment 2:
+Dave Morriss on 2016-04-19:
+"Thanks" Comment 3:
+Ken Fallon on 2016-04-22:
+"Nice one"
+
+hpr2012
+(2016-04-19) "Parsing XML in Python with Untangle"
+by klaatu.
+ Comment 1:
+Ken Fallon on 2016-04-22:
+"Normal Parsers"
+
+hpr2013
+(2016-04-20) "Parsing XML in Python with Xmltodict"
+by klaatu.
+ Comment 1:
+sigflup on 2016-04-19:
+"cool" Comment 2:
+Ken Fallon on 2016-04-22:
+"large complex files "
+
+hpr2014
+(2016-04-21) "A first look at the Owon B35T Part 2"
+by NYbill.
+ Comment 1:
+Mike Ray on 2016-04-21:
+"Great Show" Comment 2:
+NYbill on 2016-04-21:
+"Its a brand new bench! " Comment 3:
+Ken Fallon on 2016-04-25:
+"Logging in android"
+
+hpr2015
+(2016-04-22) "Linux in the Church"
+by Joe.
+ Comment 1:
+jan on 2016-04-24:"[no title]" Comment 2:
+Ken Fallon on 2016-04-25:
+"Great episode"
+
+hpr2016
+(2016-04-25) "Echoprint"
+by laindir.
+ Comment 1:
+Ken Fallon on 2016-04-25:
+"Thank you Thank you Thank you Thank you "
+
+hpr2019
+(2016-04-28) "a pi project and an owncloud project"
+by Matt McGraw (g33kdad).
+ Comment 1:
+Matt (g33kdad) on 2016-04-23:
+"Some photos" Comment 2:
+Jonathan Kulp on 2016-04-30:
+"Muttonchop too"
+
+hpr2020
+(2016-04-29) "Automotive Billing"
+by brian.
+ Comment 1:
+Frank on 2016-04-30:"[no title]"
+
+

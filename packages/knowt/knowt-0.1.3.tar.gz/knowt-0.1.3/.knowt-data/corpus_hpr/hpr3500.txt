@@ -1,0 +1,8 @@
+## hpr3500 :: Contrast Layer Modes
+
+ Layer Modes, sometimes called Blending Modes, allow you to combine layers in a variety of ways. We continue with the Contrast Modes, which are ways of combining layers that can heighten the contrast my making light pixels lighter and dark pixels darker. These are the Layer Modes available on the latest (at the time I write this) version of GIMP, 2.10.24.
+Links:
+
+https://docs.gimp.org/2.10/en/gimp-concepts-layer-modes.html
+https://www.ahuka.com/gimp/darken-modes/
+

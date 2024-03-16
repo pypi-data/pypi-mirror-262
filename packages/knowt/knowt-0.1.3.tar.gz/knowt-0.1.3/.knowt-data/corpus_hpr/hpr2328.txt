@@ -1,0 +1,21 @@
+## hpr2328 :: Baofeng UV5R VHF/UHF Handset part 8
+
+ In this episode I cover the menus 12 to 24 of the Baofeng UV5R VHF / UHF Hand Held Transceiver
+
+Menu 12, T-DCS - Transmitter DCS: [ D023N -- D754I , OFF ], DCS Wikpedia
+https://en.wikipedia.org/wiki/Squelch#DCS
+Menu 13, 13 T-CTCS - Transmitter CTCSS [ 67.0 -- 254.1, OFF ], CTCSS Wikipedia
+https://en.wikipedia.org/wiki/Continuous_Tone-Coded_Squelch_System
+Menu 14, VOICE - Voice Prompt [ ENG / CHI / OFF ]
+Menu 15, ANI-ID - Automatic Number ID Baofeng UV-5R
+Menu 16, DTMFST - DTMF tone of transmit [1, 2, 3, 0]
+Menu 17, S-CODE - Signal Code [ 1-15 ]
+Menu 18, SC-REV - Scanner Resume Method (Time, Carrier, Search) [ TO / CO / SE ]
+Menu 19, PTT-ID - When to send the PTT-ID (Beginning, End Both) [ BOT / EOT BOTH ]
+Menu 20, PTT-LT - Signal code sending delay. [ 0 -- 30 ]
+Menu 21, MDF-A - Channel Mode A Display [ NAME / FREQ ]
+Menu 22, MDF-B - Channel Mode B Display [ NAME / FREQ ]
+Menu 23, BCL - Busy Channel Lock-out [ OFF / ON ]
+Menu 24, 24 AUTOLK - Automatic Keypad Lock [ ON/ OFF ]
+DTMF, Wikipedia
+https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling

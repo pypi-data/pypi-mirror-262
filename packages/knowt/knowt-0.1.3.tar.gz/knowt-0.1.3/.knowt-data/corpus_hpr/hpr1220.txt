@@ -1,0 +1,7 @@
+## hpr1220 :: Cinnarch 64 bit, Installation Review
+
+ 
+Howdy folks, this is FiftyOneFifty, and today I wanted to talk about my experiences installing the 64 bit version of Cinnarch net edition on a dual core notebook. Cinnarch of course is a relatively new Arch based distro running the Cinnamon fork of Gnome. I had previously installed Arch proper on this notebook, but when I rebooted to the hard drive, I lost the Ethernet connection. This is not uncommon, but there the notebook sat while until I had time to work the problem. I wanted to start using the notebook, and I'd heard good things about Cinnarch, so it seemed like a simple solution. I went into knowing Cinnarch was in alpha, so i shouldn't have been surprised when an update broke the system less then a week after the install, but that comes later in my story.
+
+
+Complete show notes are available here: https://hackerpublicradio.org/eps/hpr1220/index.html

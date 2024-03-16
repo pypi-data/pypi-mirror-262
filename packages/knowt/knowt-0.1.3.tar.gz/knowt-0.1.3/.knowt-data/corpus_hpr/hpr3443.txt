@@ -1,0 +1,21 @@
+## hpr3443 :: Neuton battery replacement
+
+ Audio Notes
+During the audio I repeatedly called it the Neutron mower instead of the Neuton mower. I was too lazy edit those mispronunciations.
+Introduction
+After recently reclaiming my Neuton EM 4.1 electric lawn mower from my parents, I needed to replace the battery to make it operational. This mower was purchased in the early 2000s, and replacement batteries for it are no longer available from the manufacturer. Thankfully replacement 12V 10A batteries are available through third parties.
+Replacing Parts
+I faced two issues with finding replacement parts. The Neuton mowers run at 24V and need batteries that can provide 10 amps of current. They come with a battery case that holds two 12V 10A batteries connected in series. The case holds the batteries and provides a connector and circuitry for a 24V DC charger. When I received the mower back from my parents, it didn't have a battery case with it. While the Neuton website is still online, and looks like you can order some accessories still, they no longer carry replacement battery cases or batteries. I was able to find just the case on EBay. I then found replacement batteries on Amazon.
+Installing the batteries in the case is simple. One side of the case has a lid. The lid is held in place by plastic notches on the bottom and two screws at the top. The screws have size 10 star heads. The batteries sit side by side in the case, with their terminals facing the lid. I connected the inner terminals (negative of one battery to positive of the other) with the jumper wire that came with the case. I then connected the outer terminals to the battery case terminal wires, slid the batteries all the way into case, closed, and fastened the lid.
+Conclusion
+The batteries are currently charging. The red charging light did come on when I plugged in the 24V DC charger, and nothing has exploded yet, so I am optimistic I will be able to use the mower again shortly.
+References
+
+Neuton CE5.4 24 volt rechargeable battery CASE ONLY - EBay item
+Mighty Max Battery 12V 10AH Replaces HE12V127 HGL1012 LCRB1210P NEUTON CE5 POWPS12100 Battery - 2 Pack Brand Product - Amazon item
+
+Attribution
+The transition sound used between audio clips is found on freesound.org:
+Name: Harp Transition Music Cue
+Author: DanJFilms
+License: Creative Commons Zero

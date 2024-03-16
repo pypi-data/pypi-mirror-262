@@ -1,0 +1,74 @@
+## hpr1859 :: A Mouse in a Maze on the Raspberry PI
+
+ This podcast is about a little programming exercise I learned in my first programming class. The idea is to generate a random text-based maze and make mouse ('@') search the maze systematically to find the cheese ('V'). If it does so before it runs out of energy (moves) it wins ('$' == happy mouse). Otherwise it starves ('%' == dead mouse).
+You can find my git repos for the Raspberry PI code including this program at these locations:
+
+https://gitlab.com/catrpi/catrpi.git
+https://github.com/ctelfer/catrpi.git
+
+The Mouse-in-a-maze program also requires the catlib library as well which is at:
+
+https://gitlab.com/catlib/catlib.git
+https://github.com/ctelfer/catlib.git
+
+You may note that these directories are different from those in my previous RPI episodes. The repositories used to be on gitorious. However since gitlab acquired gitorious, I have migrated the repositories. They currently live on both github and gitlab and I have pushing updates to both for the time being. So I have been waffling about which one will be the ultimate master for these projects. But since, I am doing most all the work on this code myself, it doesn't much matter for the time being.
+If this is your first time playing with bare metal programming in the RPI you can get more info and tips from HPR episodes 1619, 1630 and 1666. Note that the gitorious links in those episodes are outdated as mentioned above. The github links therein should still be fine though.
+The mouse code itself is in the apps/mouse0 directory. If you haven't played with this environment before you'll need to do the following:
+
+Get a compatible ARM toolchain up and running to build for the RPI. I recommend using: https://github.com/dwelch67/build_gcc/blob/master/build_arm
+You'll need a USB-to-TTL serial cable to hook up to the RPI. I use: https://www.adafruit.com/products/954
+You'll also need a small SD card to boot from.
+Follow the steps in catrpi/README.txt to
+
+create an SD-card with a loader on it.
+build catlib for the RPI locally (a prereq for building mouse0.bin)
+set up your serial connection to the RPI
+start up a minicom instance to connect to the RPI
+
+
+Once those prerequisites are taken care of you can:
+
+change directory to /path/to/catrpi/apps/mouse0 type make to build
+mouse0.bin power on the RPI at the loader prompt, type 'x' in the
+serial console to start X-modem reception on the RPI
+use your terminal program to send the mouse0.bin file via X-modem. In minicom you do this by CTRL-A followed by 's'. You then select 'xmodem' as the protocol and navigate to and select the file mouse0.bin to send.
+when the transfer completes type 's' to start the program
+
+These pages describe VT100 Terminal codes:
+
+https://ascii-table.com/ansi-escape-sequences-vt-100.php
+https://www.termsys.demon.co.uk/vtansi.htm
+
+Sample traversal:
+  ########################################
+  #+0****## #+#...###...#..$ ##  #  #    #
+  ##+###+## #+++......#...# ##       #   #
+  # #.+++++#....#   #      #    #      # #
+  #  #+++++#+.+..#  #  #          #      #
+  #  #.##.+++#+.### #     #   #   ##     #
+  #  ###.+.##++.##     #   ###     #   # #
+  ####+.#..#++#.##   #      #####   ##   #
+  #++#.#.###+.##    ##       ##    #   # #
+  #++++++.##.++.#   #  ##     #  # #  # ##
+  #+++++#..##.##      ## #  #### # #    ##
+  #+.....#..#.  ##   #      #     ##  ## #
+  #+..+.......   # #      #      #  ##   #
+  #+...#..###       # #  #          ##  ##
+  #.#..#.........# # # # ##### # #    ## #
+  #.......##  ##....  #        ###   ##  #
+  ##......# ##   ##..#  #####          # #
+  #.+.#...###    ###. ##          ##  # ##
+  ##.+...#  #      ####      #   ##    # #
+  ########################################
+  Mouse found the cheese!  :)  Press any key to restart!
+Links
+
+https://gitlab.com/catrpi/catrpi.git
+https://github.com/ctelfer/catrpi.git
+https://gitlab.com/catlib/catlib.git
+https://github.com/ctelfer/catlib.git
+https://github.com/dwelch67/build_gcc/blob/master/build_arm
+https://www.adafruit.com/products/954
+https://ascii-table.com/ansi-escape-sequences-vt-100.php
+https://www.termsys.demon.co.uk/vtansi.htm
+

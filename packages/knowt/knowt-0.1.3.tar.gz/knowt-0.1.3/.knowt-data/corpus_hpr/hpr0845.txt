@@ -1,0 +1,100 @@
+## hpr0845 :: Open Source Radio Software
+
+ 
+In todays show AukonDK leads us on a tour of Open Source Radio Software
+
+
+
+Icecast
+https://www.icecast.org/
+Icecast, the project, is a collection of programs and libraries for streaming audio over the Internet. This includes: 
+
+icecast, a program that streams audio data to listeners 
+libshout, a library for communicating with Icecast servers 
+IceS, a program that sends audio data to Icecast servers 
+
+
+
+
+BUTT
+https://butt.sourceforge.net/
+butt (broadcast using this tool) is an easy to use, multi OS streaming tool.
+It supports ShoutCast and IceCast.
+butt runs on Linux, MacOS and Windows.
+
+
+IDJC
+https://idjc.sourceforge.net/
+
+Internet DJ Console is a project started in March 2005 to provide a powerful yet
+easy to use source-client for individuals interested in streaming live radio shows over the
+Internet using Shoutcast or Icecast servers.
+Because of the large number of streaming applications that already existed but did little more
+than stream a pair of audio channels or a fixed playlist, it was decided that IDJC would be the opposite
+and simulate audio hardware to cut down the expense of creating a home studio.
+In addition to providing a large number of show production features, this software has been written
+with the aim of producing the best possible experience for the listeners and DJ alike. To that end features
+like VoIP integration were conceived of from the very start resulting in the choice of Jack Audio Connection
+Kit to base the audio.
+This has afforded IDJC audio processing capabilities that were they built in would be considered excessive. Enjoy
+integration with powerful programs such as the well known Skype, Jack Rack (offering audio sound effects plugins),
+Jamin (the powerful audio compressor/equalizer), and many more.
+Fortunately IDJCs power does not come at the expense of a well organized user interface, nor
+have requests for features been permitted to diminish the application's intuitive feel yet throughout development
+the main goals have always been that of stability and audio quality.
+
+
+Liquidsoap
+https://savonet.sourceforge.net/index.html
+
+
+        Liquidsoap is a powerful and flexible language
+        for describing your streams.
+        It offers a rich collection of operators that you can
+        combine at will,
+        giving you more power than you need for creating or transforming
+        streams.
+        But liquidsoap is still very light and easy to use,
+        in the Unix tradition of simple strong components working together.
+        
+
+
+Airtime
+https://www.sourcefabric.org/en/airtime/
+
+Airtime is the open radio software for scheduling and remote station management. Remote access to the station’s media management, multi-file upload and automatic metadata verification is coupled with a collaborative online scheduling calendar and playlist management. The scheduling calendar is managed through an easy-to-use web-interface and triggers audio playout with sub-second precision for fading.
+
+
+Rivendell
+https://www.rivendellaudio.org/
+Rivendell
+ is a complete radio 
+      broadcast automation solution, with facilities for the acquisition, 
+      management, scheduling and playout of audio content. It has all of the 
+      features one would expect in a modern, fully-fledged radio automation 
+      system, including support for both PCM and MPEG audio encoding, full 
+      voicetracking and log customization as well as support for a wide variety 
+      of third party software and hardware. As a robust, functionally complete 
+      digital audio system for broadcast radio applications, Rivendell uses 
+      industry standard components like the GNU/Linux Operating System, the AudioScience HPI Driver 
+      Architecture and the MySQL Database 
+      Engine. Rivendell is available under the GNU Public License.
+
+
+
+RAAbuntu
+https://rrabuntu.sourceforge.net/
+
+
+        Rivendell Radio Automation Live CD installer for Ubuntu. This is a modified version of Ubuntu 10.04. It has been customised using the Ubuntu Customization Kit (UCK) and the Rivendell DEB packages developed by Alban in France.  https://blog.tryphon.org/alban/
+
+
+
+Frederick Henderson created all the install scripts for the greatly improved installer
+
+
+
+Email: aukondk@aukondk.com
+Twitter/Identica: aukondk
+gplus.to/aukondk
+www.aukondk.com

@@ -1,0 +1,13 @@
+## hpr3570 :: The Filesystem
+
+ One key to working with DOS is to understand the file system. This is not just about organizing files, though that is certainly a part of it, but also about keeping your system running smoothly and recovering lost files in some circumstances.
+Links:
+
+https://en.wikipedia.org/wiki/File_Allocation_Table
+https://en.wikipedia.org/wiki/Disk_sector
+https://en.wikipedia.org/wiki/Track_(disk_drive)
+https://en.wikipedia.org/wiki/Data_cluster
+https://en.wikipedia.org/wiki/File_system_fragmentation
+https://en.wikipedia.org/wiki/Root_directory
+https://www.ahuka.com/dos-lessons-for-self-study-purposes/dos-lesson-9-the-file-system/
+

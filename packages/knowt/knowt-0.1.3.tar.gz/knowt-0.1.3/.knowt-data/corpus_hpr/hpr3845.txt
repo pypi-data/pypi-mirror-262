@@ -1,0 +1,104 @@
+## hpr3845 :: Using tmux, the terminal multiplexer Overview
+
+ Using tmux, the terminal multiplexer on multiple machines
+
+Terminal is ROXTerm
+Uncheck 'Show Menubar'
+
+ROXTerm on Github
+What is Tmux?
+Tmux wiki on Github
+Getting started
+Tmux Getting Started page on
+Github
+Tmux Cheat Sheet & Quick Reference
+Tmux
+Cheat Sheet
+Basic .tmux.conf
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+setw -g window-status-activity-style "fg=colour27,bg=colour234,none"
+Remote .tmux.conf
+set -g prefix C-f
+unbind C-b
+bind C-f send-prefix
+setw -g window-status-activity-style "fg=colour27,bg=colour234,none"
+Start tmux
+tmux a -d
+
+Split pane horizontal - Prefix + %
+Split pane vertical - Prefix + "
+
+Tmux resurrect
+Key bindings
+    prefix + Ctrl-s - save
+    prefix + Ctrl-r - restore
+About
+This plugin goes to great lengths to save and restore all the details
+from your tmux environment. Here's what's been taken care of:
+
+all sessions, windows, panes and their order
+current working directory for each pane
+exact pane layouts within windows (even when zoomed)
+active and alternative session
+active and alternative window for each session
+windows with focus
+active pane for each window
+"grouped sessions" (useful feature when using tmux with multiple
+monitors)
+programs running within a pane! More details in the restoring
+programs doc.
+
+Optional:
+
+restoring vim and neovim sessions
+restoring pane contents
+restoring a previously saved environment
+
+Installing TPM (Tmux Plugin Manager) , Tmux Resurrect and Tmux
+Continuum
+
+In ~/.tmux/plugins/
+
+git clone https://github.com/tmux-plugins/tpm.git
+git clone https://github.com/tmux-plugins/tmux-resurrect.git
+git clone https://github.com/tmux-plugins/tmux-continuum.git
+
+In a tmux window
+
+prefix + I
+
+Installs new plugins from GitHub or any other git
+repository
+Refreshes TMUX environment
+Create a directory ~/.tmux/resurrect/
+
+This is where tmux-resurrect and tmux-continuum saves are
+located
+Do nothing and tmux-continuum saves automatically every 15 mins
+At any time use Prefix + Ctrl-s to save a snapshot of
+your session
+To restore a session to the last save before a reboot
+
+use Prefix + Ctrl-s
+
+
+
+Here are the steps to restore to a previous point in time:
+
+make sure you start this with a "fresh" tmux instance
+$ cd ~/.tmux/resurrect/
+locate the save file you'd like to use for restore (file names have
+a stamp)
+symlink the last file to the desired save file: $
+ln -sf <file_name> last
+do a restore with tmux-resurrect key:
+Prefix + Ctrl-r
+
+Tmux on laptop
+tmux_laptop.conf
+Tmux on remote machine
+tmux_remote.conf
+Screenshot
+

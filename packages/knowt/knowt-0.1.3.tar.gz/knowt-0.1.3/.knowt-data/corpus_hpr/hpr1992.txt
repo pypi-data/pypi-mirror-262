@@ -1,0 +1,14 @@
+## hpr1992 :: How I'm handling my podcast-subscriptions and -listening
+
+ 
+podget https://aur.archlinux.org/packages/podget-git
+rennpod https://gitlab.com/swegryps/rennpod
+puddletag https://puddletag.sourceforge.net
+toogg https://gitlab.com/swegryps/toogg
+opconv https://gitlab.com/swegryps/opconv
+spalt https://gitlab.com/swegryps/spalt
+Rockbox https://www.rockbox.org
+https://listenlive.nl
+
+Editor's Note 2018-06-12: The links above which previously referenced GitHub
+have been updated to reflect the new location of the software, GitLab.

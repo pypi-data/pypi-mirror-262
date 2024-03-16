@@ -1,0 +1,33 @@
+## hpr3625 :: Shell Tips and Snippets - Collaborative Effort
+
+ Carl talks about a method to move function definitions to the bottom of a script using sed:
+#!/bin/sh
+source <(sed '1,/^exit/ d' $0)
+
+__say "hello"
+
+exit
+
+__say()
+{
+    echo $1
+}
+
+Guest Host #1 (scroll to the bottom to ruin the surprise) talks about the shift command using this example:
+startdate="$1" # Pick up date
+shift
+days=0
+
+# Loop through args and create events
+while [ $1 ] ; do # as many times as you add a timestamp
+        [ $1 != "off" ] && khal new $(date -j -v+"$days"d -f %Y-%m-%d +%Y-%m-%d $startdate) $1 8H Work
+        let days++
+        shift
+done
+
+Guest Host #2 provides tips and examples on how to use variables safely and politely provide default values. One example of assigning a default value is:
+foo=${foo:-"blah"}
+
+Carl then closes out with the : (colon) shell builtin and provides a variation on the above default value:
+: ${foo:="blah"}
+

@@ -1,0 +1,73 @@
+## hpr2713 :: Resources in 4x game
+
+ Raw resources are integral part for most 4x games. Here’s one way of modeling them in Haskell. I wanted a system that is easy to use, doesn’t require too much typing and is type safe.
+RawResource is basic building block:
+newtype RawResource a = RawResource { unRawResource :: Int }
+    deriving (Show, Read, Eq)
+It can be parametrised with anything, but I’m using three different types:
+data Biological = Biological
+data Mechanical = Mechanical
+data Chemical = Chemical
+Example of defining harvest being 100 units of biological raw resources:
+  harvest :: RawResource Biological
+  harvest = RawResource 100
+Raw resources are often manipulated (added and subtracted mostly). Defining Num instance allows us to use them as numbers:
+instance Num (RawResource t) where
+    (+) (RawResource a) (RawResource b) = RawResource $ a + b
+    (-) (RawResource a) (RawResource b) = RawResource $ a - b
+    (*) (RawResource a) (RawResource b) = RawResource $ a * b
+    abs (RawResource a) = RawResource $ abs a
+    signum (RawResource a) = RawResource $ signum a
+    fromInteger a = RawResource $ fromInteger a
+For example, adding harvest to stock pile:
+  stock :: RawResource Biological
+  stock = RawResource 1000
+
+  harvest :: RawResource Biological
+  harvest = RawResource 100
+
+  newStock = stock + harvest
+Comparing size of two resource piles is common operation. Ord instance has methods we need for comparing:
+instance Ord (RawResource t) where
+    (<=) (RawResource a) (RawResource b) = a <= b
+One function is enough, as rest is defined in terms of it. Sometimes (usually for reasons of optimization), one might want to define other functions too.
+Another way to add bunch of resources of same type together is defining Monoid instance:
+instance Semigroup (RawResource t) where
+    (<>) a b = a + b
+
+instance Monoid (RawResource t) where
+    mempty = RawResource 0
+For example, combining harvests of many fields can be achieved as:
+  harvests :: [RawResource Biological]
+  harvests = [RawResource 20, RawResource 50, RawResource 25]
+
+  total :: RawResource Biological
+  total = mappend harvests
+All these functions keep track of type of resources being manipulated. Compiler will emit an error if two different types of resources are being mixed together.
+Raw resources are often grouped together for specific purpose. This again uses phantom types to keep track the intended usage:
+data RawResources a = RawResources
+    { ccdMechanicalCost :: RawResource Mechanical
+    , ccdBiologicalCost :: RawResource Biological
+    , ccdChemicalCost :: RawResource Chemical
+    } deriving (Show, Read, Eq)
+
+data ResourceCost = ResourceCost
+data ConstructionSpeed = ConstructionSpeed
+data ConstructionLeft = ConstructionLeft
+data ConstructionDone = ConstructionDone
+data ResourcesAvailable = ResourcesAvailable
+And in order to be able to combine piles of RawResources, we’ll define Semigroup and Monoid instances. Notice how both instances make use of Semigroup and Monoid instances of RawResource:
+instance Semigroup (RawResources t) where
+    (<>) a b = RawResources
+        { ccdMechanicalCost = ccdMechanicalCost a <> ccdMechanicalCost b
+        , ccdBiologicalCost = ccdBiologicalCost a <> ccdBiologicalCost b
+        , ccdChemicalCost = ccdChemicalCost a <> ccdChemicalCost b
+        }
+
+instance Monoid (RawResources t) where
+    mempty = RawResources
+        { ccdMechanicalCost = mempty
+        , ccdBiologicalCost = mempty
+        , ccdChemicalCost = mempty
+        }
+For those interested seeing some code, source is available at https://github.com/Tuula/deep-sky/ (https://github.com/Tuula/deep-sky/tree/baa0807dd36b61fd02174b17c10013862af4ec18 is situation before lots of Elm related changes that I mentioned in passing in the previous episode)

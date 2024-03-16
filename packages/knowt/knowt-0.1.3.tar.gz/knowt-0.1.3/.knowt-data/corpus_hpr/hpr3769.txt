@@ -1,0 +1,183 @@
+## hpr3769 :: Crouching laptop, hidden server (part 0).
+
+ Crouching laptop, hidden
+server (part 0).
+Virtualized battlegrounds.
+
+Archer72's system: Acer
+Aspire 5750-6866
+
+CPU: Intel Core i3 2350M (2.3 GHz max, 2 cores, 3MB cache).
+RAM: 4GB DDR3-1600 SODIMM (2 x 2GB currently, 2 x 4GB upgrade
+planned).
+Video: Integrated Intel GMA HD 3000.
+DISK: 120GB SATA SSD.
+NIC: Integrated 1000 mbps.
+
+802.11 b/g/n Wi-Fi.
+Bluetooth not installed.
+
+
+SGOTI's system: HP Notebook
+14-ck0052cl
+
+CPU: Intel Core i3-8130U (2.2 GHz - 4 GHz max, 2 cores, 4MB
+cache).
+RAM: 16GB DDR4-2400 SDRAM (2 x 8GB, upgraded).
+Video: Integrated Intel UHD Graphics 620.
+DISK: 1TB 5400 rpm SATA HDD (with empty m.2 SATA slot).
+NIC: Integrated 10/100/1000 GbE LAN.
+
+802.11 b/g/n Wi-Fi & Bluetooth 4.2 combo.
+
+
+
+
+Software
+and documumentation mentioned during the show.
+
+Running Laptop, server style, with the Lid closed.
+
+Edit logind.conf
+sudo vim /etc/systemd/logind.conf.
+Remove the # from these lines then set values to
+ignore:
+
+HandleSuspendkey=ignore
+HandleLidSwitch=ignore
+HandleLidSwitchDocked=ignore
+
+Save then quit.
+
+I'm not going to tell you how ;)
+
+Finally, restart systemd-logind.
+
+sudo systemctl restart systemd-logind.service
+
+
+
+Way of the Archer72.
+
+Proxmox Homepage.
+
+Proxmox VE is a complete open-source platform for enterprise
+virtualization. With the built-in web interface you can easily manage
+VMs and containers, software-defined storage and networking,
+high-availability clustering, and multiple out-of-the-box tools on a
+single solution.
+Proxmox backup
+documentation.
+Proxmox
+backup documentation .pdf download.
+Proxmox video
+tutorials
+Proxmox
+wiki.
+Proxmox vLAN
+networking information.
+Proxmox
+NAT config information.
+
+Youtube
+video: install/config Proxmox.
+Duck DNS
+
+hosted on AWS, with no upfront cost to the user.
+Dynamic DNS service; dynamically update DNS records without the need
+for human interaction. Connect to your home/local network from a remote
+network using a domain name instead of an IP address.
+
+
+Way of the SGOTI.
+
+RHEL
+Documentation: Creating guests with virt-install
+
+RHEL
+9 product documentation list
+You can use the virt-install command to create virtual
+machines and install operating system on those virtual machines from the
+command line. virt-install can be used either interactively
+or as part of a script to automate the creation of virtual
+machines.
+
+virt-manager
+
+The virt-manager application is a desktop user
+interface for managing virtual machines through libvirt. It primarily
+targets KVM VMs, but also manages Xen and LXC (linux containers).
+virt-install is a command line tool which provides an
+easy way to provision operating systems into virtual machines.
+virt-viewer is a lightweight UI interface for
+interacting with the graphical display of virtualized guest OS. It can
+display VNC or SPICE, and uses libvirt to lookup the graphical
+connection details.
+virt-clone is a command line tool for cloning existing
+inactive guests. It copies the disk images, and defines a config with
+new name, UUID and MAC address pointing to the copied disks.
+virt-xml is a command line tool for easily editing
+libvirt domain XML using virt-install’s command line options.
+virt-bootstrap is a command line tool providing an easy
+way to setup the root file system for libvirt-based containers.
+
+qemu documentation
+
+qemu
+wiki: User documentation
+qemu wiki: KVM
+
+KVM homepage
+
+KVM (for Kernel-based Virtual Machine) is a full virtualization
+solution for Linux on x86 hardware containing virtualization extensions
+(Intel VT or AMD-V). It consists of a loadable kernel module, kvm.ko,
+that provides the core virtualization infrastructure and a processor
+specific module, kvm-intel.ko or kvm-amd.ko.
+Using KVM, one can run multiple virtual machines running unmodified
+Linux or Windows images. Each virtual machine has private virtualized
+hardware: a network card, disk, graphics adapter, etc.
+
+Cockpit
+
+Cockpit is a web-based graphical interface for servers, intended for
+everyone.
+RHEL
+9: web console/cockpit documentation
+Cockpit
+Deployment Guide
+RHEL intro
+to Cockpit guide.
+
+Youtube
+video: Fedora server on a Laptop.
+
+14:45, editing /etc/systemd/logind.conf
+
+Youtube
+video: Deploying Nextcloud AIO containers.
+
+Additional Information.
+
+What
+is an IP address?
+What's my IP
+address?
+What is
+DDNS?
+Cloudflare
+DDNS glossary
+How To Forward a Port.
+
+A port forward is a way of making a computer on your home or
+business network accessible to computers on the internet, even though
+they are behind a router or firewall. It is commonly used in gaming,
+security cameras, home automation, and the Internet of Things (IoT).
+Port forwards are setup in your router. A forwarded port is also known
+as open. After you have forwarded a port you have an open port.
+
+List of
+DDNS solutions (with no upfront cost to the user).
+Duck Duck Go Search for Dynamic
+DNS
+

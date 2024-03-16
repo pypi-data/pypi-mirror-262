@@ -1,0 +1,19 @@
+## hpr3034 :: How to bridge Freenode IRC rooms to Matrix.org
+
+ 
+Attribution
+
+Clacke - HPR Episode 2169 on Matrix
+Dave Lee - Helped a great deal in getting me on board with Matrix bridging. Check out his other podcasts at The Other Side Podcast Network
+
+Matrix.org is a Free, open source, and decentralized messaging system. One of the strong points of this system is its ability to bridge multiple protocols together into one interface.
+Riot.im
+Bridging to Freenode's IRC server is built into Matrix.org. If you already have a registered Nick on Freenode it is a simple process to associate your Matrix and Freenode accounts.
+Steps to bridge to a Freenode IRC room
+
+Start a direct message with @freenode_NickServ:matrix.org and send the command identify nick pass (replacing nick and pass with your credentials).
+Direct message @appservice-irc:matrix.org with the command !storepass nick:pass
+Join the room #freenode_#oggcastplanet:matrix.org. You can really join any room on freenode with #freenode_#CHANNAME:matrix.org
+PROFIT!!!!
+
+

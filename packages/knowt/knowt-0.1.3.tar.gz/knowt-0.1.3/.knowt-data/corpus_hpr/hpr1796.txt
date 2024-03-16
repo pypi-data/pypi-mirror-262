@@ -1,0 +1,17 @@
+## hpr1796 :: Audacity - Chains, Notches and Labels
+
+ 
+I expand some on Jon Kulp's  show on using Labels in Audacity. Specifically, I comment on importing a Label track from a Tab separated text file.
+
+
+I go on to talk about using Notch filters, a Nyquist-effect plugin for Audacity. Notch filters work extremely well on certain frequency centered noise like mains hum.
+
+
+
+I follow up by talking about chains. A way of doing batch operations directly in Audacity.
+
+Links
+
+https://wiki.audacityteam.org/wiki/Nyquist_Effect_Plug-ins#Notch_Filter 
+https://manual.audacityteam.org/o/man/chains_for_batch_processing_and_effects_automation.html
+

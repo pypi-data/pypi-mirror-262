@@ -1,0 +1,68 @@
+## hpr3376 :: Making books with Linux - part 2
+
+ Hosts
+
+Andrew Conway (mcnalu)
+Dave Morriss
+
+Handling incoming HPR shows
+
+Dave, with his Janitor hat on
+
+Processes incoming notes, to generate HTML
+Plain text is turned to Markdown. Otherwise various Markdown flavours are acceptable, or an HTML5 fragment
+If images are included the Markdown can refer to them with URLs such as: https://hackerpublicradio.org/eps/hprNNNN/name.jpg
+
+The hprNNNN element is a directory using the number you chose for your show.
+In the directory will be the images you sent.
+Other assets will go there too so you can refer to these in your notes as well.
+If you’re sending plain text, then markers such as >> Picture name.jpg here << will let me make the appropriate Markdown.
+
+The directory also needs an index.html file, but my scripts will generate this if needed.
+I intend to document this soon.
+
+
+How Dave makes HPR shownotes
+
+Uses scripts to manage show note generation
+Uses Markdown when writing the notes
+
+Scripts generate note templates and a Makefile
+Automation using make
+
+Uses Template Toolkit features inside notes to allow extra features
+
+Notes go through a pre-processor (a script with access to the show metadata)
+The end product is Markdown which is processed with Pandoc
+
+Template Toolkit (TT2)
+
+A Perl (and Python) tool kit for making templates
+Good for generating HTML, but can generate any text
+
+TT2 macros can be used to display scripts in shows relating to the subject, and to run them and capture the output. This makes it certain that the script on display really generated the output shown!
+The 'Falkon' browser (originally called QupZilla) is great for monitoring notes since it updates when the HTML changes.
+
+Dave confused it with Pale Moon (a fork of Firefox/Mozilla) when talking about tab grouping features
+
+Should this (personalised) bundle of software be released to the world?
+
+Probably yes, since the thoughts in it may be useful even if the code is not.
+
+
+Consolidating show notes into a book
+
+We had discussed the following topic a little in other contexts, and offline, but didn’t really look at it in this show. In brief, and for the record, the plans are:
+
+There was a series on 'sed', the stream editor from the GNU project. It was called “Introduction to sed”, and consisted of 5 parts, which ran through 2016.
+Each episode had short and long notes as well as several examples.
+Work has begun on consolidating all of the long notes into a single document which will be released on the HPR site, in HTML and PDF formats. Perhaps ePub will be included if feasible.
+It’s seen as critical that an index be provided so that topics can be found easily. At the moment this is simplest to achieve with the PDF version, using Andrew’s index generator as discussed in part 1 of this pair of shows.
+
+
+Digression about experiences in UK Higher Education
+
+Change of funding through the 1980’s to the 2000’s, particularly in IT
+Moving from (often very clever) “home-brew” solutions to products from the big players like Microsoft and Oracle.
+The change of management style to something more like the industry methods of earlier times, many of which had been discarded.
+Perhaps there is scope for more discussion on this subject in another HPR show!

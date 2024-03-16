@@ -1,0 +1,95 @@
+## hpr1838 :: Waking up with Windigo
+
+ This is a quick summary of my alarm clock system, written in bash and highly
+unreliable.
+
+Hardware
+
+My preferred hardware platform is a Dell Mini 9.
+
+Software
+
+My alarm clock is an embarrassing combination of bash scripts and Audacious, my
+favorite media player. Any media player will do, as long as it's scriptable.
+
+How It Works
+
+There are currently two bash scripts in my crappy alarm setup. One script is
+called "wakeup" and the other is called "wakeup-at".
+
+
+wakeup is simply a wrapper that adds some error handling around audacious. It
+launches audacious if it can't find an instance running already, waits five
+seconds for it to get itself together, and then causes it to play. It is also
+currently broken, so the 'launching audacious' part doesn't work. I have to
+manually start audacious myself. FAILURE.
+
+wakeup script:
+
+#!/bin/bash
+audacious &
+
+sleep 5s
+
+audacious -p &
+
+
+You've noticed that the "wakeup" script doesn't actually have any timing
+involved; If you want to use it as an alarm, you get to combine it with the bash
+"sleep" command. This is not a failure, this is by design! An example alarm:
+
+
+sleep 8h; wakeup
+
+
+One problem with this methodology is that it requires math, and is prone to
+errors. If I'm going to sleep at 10:46:33 PM and need to wake up at 7:00 AM, I
+need to chain sleep commands together for each unit of time:
+
+
+sleep 7h; sleep 14m; sleep 27s; wakeup
+
+
+Get some of that math wrong, and you wake up at the wrong time. FAILURE.
+
+
+"wakeup-at" is a wrapper around "wakeup" that uses the "at" utility to schedule
+the wakeup script. So, instead of using multiple sleep commands, it accepts any
+of the time formats that at accepts:
+
+
+wakeup-at 7:00 AM
+wakeup-at 6:00AM 2018-02-02
+wakeup-at teatime
+
+
+Here is the wakeup-at script:
+
+
+#!/bin/bash
+
+## Make sure we have enough arguments
+if [ $# -lt 1 ]
+then
+  echo "Usage: `basename $0` <time>"
+  exit 1
+fi
+
+echo "$@"
+
+## Add custom time keywords
+case "$1" in
+"eternaldarkness")
+	echo wakeup | at 3:33 AM
+	;;
+
+## Catch-all; send all arguments to at
+*)
+	echo wakeup | at $@
+	;;
+esac
+
+
+If you make a syntax error, "at" tells you about it immediately. Its only
+failings are what it inherits from the original "wakeup" script.
+

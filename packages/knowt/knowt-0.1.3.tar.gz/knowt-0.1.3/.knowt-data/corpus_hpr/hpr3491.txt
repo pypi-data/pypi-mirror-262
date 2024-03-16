@@ -1,0 +1,32 @@
+## hpr3491 :: My Github and flickmetrix
+
+ 
+main github (other stuff one there like SC_BADGER etc)
+https://github.com/freeload101
+flickmetrix script
+https://github.com/freeload101/SCRIPTS/blob/7279338b610c914812169e107cbbea45e4ca5254/fu.txt#L102
+High_Contrast_Toggle_AutoHotkey.ahk
+https://github.com/freeload101/SCRIPTS/tree/master/AutoHotkey
+smart nmap
+https://github.com/freeload101/SCRIPTS/blob/master/Bash/NMAP_SMART_FAST.sh
+clean up script for media cool find regex here
+https://raw.githubusercontent.com/freeload101/SCRIPTS/master/Bash/RMEMPTY.sh
+good movies page
+https://github.com/freeload101/SCRIPTS/blob/master/Bash/flickmetrix_good_movies.sh
+mobile mass SSL depinning script
+https://github.com/freeload101/SCRIPTS/blob/master/JS/universal-android-ssl-pinning-bypass-with-frida.js
+android debloat and dump app names/ with file names
+https://github.com/freeload101/SCRIPTS/blob/master/Windows_Batch/Android_Debloat_N_Dump.bat
+help debug CPU hogging apps in android logs
+https://github.com/freeload101/SCRIPTS/blob/master/Windows_Batch/Android_logcat_cat.sh
+script that kills all processes and then cleans temp files etc
+https://github.com/freeload101/SCRIPTS/blob/master/Windows_Batch/BleachBit_Quickkill.bat
+Cool script that debloats,hardends,installs cygwin and chocolatey apps
+https://github.com/freeload101/SCRIPTS/blob/master/Windows_Batch/Chocolatey_Cygwin.cmd
+dump windows system info ,dxdiag info and battery info
+https://github.com/freeload101/SCRIPTS/blob/master/Windows_Batch/DUMP_WINDOWS_INFO.bat
+youtube downloader (now yt-dlp) script to mass download multi threaed media all at the same time.
+https://github.com/freeload101/SCRIPTS/blob/master/Windows_Batch/Youtube-dl-ffmpeg-aria2c-updater-downloader.bat
+bunch of 'old' one liners etc
+https://github.com/freeload101/SCRIPTS/blob/master/fu.txt
+

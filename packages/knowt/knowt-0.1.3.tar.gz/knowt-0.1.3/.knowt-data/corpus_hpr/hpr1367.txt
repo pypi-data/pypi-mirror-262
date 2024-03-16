@@ -1,0 +1,12 @@
+## hpr1367 :: I'm Sorry Dan
+
+ 
+How many times has Dan asked me to run the spec test before pushing code to staging? probably 5. I'm sorry Dan.
+
+
+The script I used as my pre-commit hook is available at https://hoof.jezra.net/snip/of
+
+
+Oh, have I ever mentioned how much I dislike convoluted nomenclature?
+When I use 'git add', apparently I am adding a file or a change to the 'index',
+and it is the index that gets commited when I run 'git commit'

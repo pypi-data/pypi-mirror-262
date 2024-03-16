@@ -1,0 +1,116 @@
+## hpr3876 :: Recording An Episode For Hacker Public Radio
+
+ Hello again, my name is André Jaenisch, also known as Ryuno-Ki.
+Last week I recorded my first episode for Hacker Public Radio, the
+podcast you are listening to right now. This one is recorded on 15th May
+2023. Again I'm publishing it under a Creative Commons Attribution
+Share-Alike 4.0 International License.
+Getting contacted
+I was surprised to get mentioned on the Fediverse after submitting my
+show. You can find me there at RyunoKi@layer8.space (no dash, eight as
+digit, link in the shownotes) in case you want to reach out to me.
+I'm also delighted to have received an email even before my last
+episode was airing. I was asked whether I am interested in recording an
+episode on my experience with contributing to Hacker Public Radio for
+the first time. So this is going to be the topic for today. As a warning
+upfront: I have a reputation of overthinking stuff. I blame my
+neurodiversity for it. That being said I'm positive that sharing my
+thought process can help make the service better for everyone.
+About recording software
+I'm recording this episode again using Audacity. Now there is choice
+about which software you can use for a podcast. Online based as well as
+offline one. Audacity was in the news for sending analytics home.
+However I couldn't find any indication in the settings for it (to
+opt-out). The forks of the software weren't packaged up for Debian as
+far as I could tell. Or perhaps they require an additional sources.list
+entry, I don't know.
+Before recording my very first podcast here I had only experience
+with some video recording. Oftentimes done by the host but I also
+prepared a few videos for an online course (which I couldn't publish
+because life happened) and talks I gave during the pandemic years.
+Learning about how to
+podcast
+As I often do when I enter a new subject, I went to the library and
+grabbed some books to learn more. In particular I lended Podcasts by
+Dirk Hildebrand. A small
+book in German published at Haufe. I add a link in the
+shownotes.
+Reading through it I learned that I'm doing okay. It's really easy to
+start a podcast as HPR promises! The thing I should spend some attention
+on is keeping a consistent distance to the microphone, enable some level
+of feedback during the recording so that I can listen to what is
+recorded while speaking (using my gaming headset Logitech G230) and
+prepare a script.
+I don't have to think about designing images for the show or episode
+because HPR will take care of that for me. It might be different if I
+start my own podcast. Perhaps using Funkwhale or Castopod. Right now I'm not taking
+steps towards that. Mainly because I need to rent some webspace first.
+In my experience streaming media takes considerable amount of bandwidth.
+Pair that with hosters that try hard to convince you to buy your domains
+with them as well and the choice shrinks. I have my DNS provider
+already, thank you very much.
+Adapting lessons learned
+I looked into how to do that in Audacity and I think the best I could
+do for now is hitting on the microphone icon next to the meters in the
+upper right of the interface and enable observation before I start
+recording. Also leaving a little bit of time before and after the
+recording allows me to cut keyboard clicks for starting and stopping the
+recording. In HPR 3802 I also learned about skipping silences which is a
+Effect in the Special category here. I hope I don't have pauses so long
+that it warrants to truncate them.
+My main thought about going with Audacity was post-processing
+directly after the recording. I learned from my talks that I already
+feel comfortable with a script in front of me. It gives me the security
+I need to avoid too many ums.
+What's missing on HPR
+However, I feel like a few things are missing. Considering that this
+is a podcast that is distributed through HPR and its partners I would
+like to have chapter markers. I couldn't find a hint on how to add them
+in the form I was presented. Using timestamps it allows to easily see
+the outline of a recording which aids in the decision making process on
+whether it's worth the time to listen to a particular episode. I hope
+you consider the episodes here useful to make time for them :) Thank
+you.
+Another question mark I had when preparing the recording were the
+settings. I'm used to have a guideline when recording videos for an
+online talk. Things like preferred format and container, to technical
+details like stereo or mono to the sampling rate (value and whether
+static or variable). The only thing I found is a hint that submissions
+will be transcoded to mono. I record in stereo with the default 44,1 kHz
+sampling rate here. There was no recommendations on the format so I went
+with OGG Vorbis instead of MP3 because of license freedom. Audacity
+appear to not support FLAC so I have to use a lossy format. It's true
+that MP3 enjoys wide support, but I want to encourage freedom when given
+the choice. I could have chosen WAV files but those tend to become huge
+really fast.
+Adding metadata
+Now I also add metadata to the recording. Vorbis offers comments for
+that. You can compare it to ID3 tags for MP3 files. Given that I
+couldn't find a way to enter these chapter information in HPR web forms
+I'm experimenting with EasyTAG from the debian repository. From reading
+the source code of my podcatcher of choice (AntennaPod for Android as
+distributed in the F-Droid app store) I can tell that it parses these
+comments at least. If that doesn't yield results I hope to see, there is
+vorbiscomment of the vorbis-tools package for the command line. And Kid3
+with a Qt or CLI interface. Expect some slightly different metadata by
+me over the course of my contributions.
+Writing shownotes
+Last thing I want to highlight before ending this episode is
+shownotes. Now I have more experience with blogging than recording a
+podcast. When researching recommendations online there is all this SEO
+fluff that goes into writing subtitles. Usually with catchy titles,
+clickbait and all the rest. I have opinions here. However, I enjoy that
+there is no „leave a rating and a review” part in the episodes I
+listened to so far, because a podcast is a special RSS feed basically.
+Why would I want to bind myself to a special platform? But then I also
+want to be able to read up and search through the content of a podcast
+episode. Right now I'm sharing my prepared script as a shownote. It
+could come off as a wall of text. I'm open to feedback on this front.
+You can find my Keyoxide profile below. Please do reach out to me.
+Closing
+And that's it for today. I thank you for listening to me. Looking
+forward to hear from you. Be it in writing or as an episode on HPR.
+Homepage: jaenis.ch
+E-Mail: andre.jaenisch.wdc@posteo.net
+Keyoxide: andre.jaenisch@posteo.de
+Mastodon: @RyunoKi@layer8.space

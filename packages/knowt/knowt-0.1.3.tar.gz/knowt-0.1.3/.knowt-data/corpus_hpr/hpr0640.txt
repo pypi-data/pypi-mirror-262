@@ -1,0 +1,34 @@
+## hpr0640 :: About microphones
+
+ 
+Errata:
+
+Sample rate issues with previous shows.
+It's called sample rate not bit rate. Bit rate has to do with compression formats.
+Links for more information on mumble. 
+
+Info on the new recording feature in mumble. https://mumble.sourceforge.net/1.2.3
+Info on compiling Mumble from source. https://mumble.sourceforge.net/BuildingLinux
+A not very good walk-through on recording mumble output using pulse audio. https://files.kral.ws/Tobias/Gentoo/mumble-conference_record_with_pulseaudio_and_gstreamer.txt
+
+
+How does a microphone work?
+
+Condenser
+
+Phantom Power 
+
+Dynamic
+Ribbon 
+
+What does a microphone pre-amplifier do? 
+What types of capture devices you can use?
+
+USB
+
+v1.0 vs. v2.0 
+
+PCI
+FireWire
+
+

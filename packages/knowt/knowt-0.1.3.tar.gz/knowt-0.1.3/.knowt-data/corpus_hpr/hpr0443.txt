@@ -1,0 +1,3 @@
+## hpr0443 :: How to Sign C Files with GPG
+
+ In this show SigFLUP shares a script that can be used to sign your c files with gpg so that they may be directly verifiable by gpg and look un-changed to your c compiler. You can download it at tmd.freeshell.org/gog_bless

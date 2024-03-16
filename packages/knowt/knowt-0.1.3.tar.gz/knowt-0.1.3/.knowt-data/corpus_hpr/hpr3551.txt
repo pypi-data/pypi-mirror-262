@@ -1,0 +1,33 @@
+## hpr3551 :: Bash snippet - some possibly helpful hints
+
+ Overview
+I write a moderate number of Bash scripts these days. Bash is not a programming language as such, but it’s quite powerful in what it can do by itself, and with other tools it’s capable of many things.
+I have enjoyed writing such scripts for many years on a variety of hardware and operating systems, and Bash is my favourite - partly because Linux itself is so flexible.
+This is just a short show describing three things I tend to do in Bash scripts to assist with some tasks I find I need to undertake.
+
+Generate Bash variables from a text file - usually output from a program
+Fill Bash arrays with data from a file or other source
+Use environment variables to control the Bash script’s execution
+
+Long notes
+Follow this link to read the detailed notes associated with this episode.
+Links
+
+Various links:
+
+What is the “eval” command in bash?
+A Complete Guide on How To Use Bash Arrays
+Bash mapfile builtin command
+Bash manual 3.7.1 Simple Command Expansion
+
+
+
+Previous episodes in this series about arrays:
+
+Bash Tips - 16
+Bash Tips - 17
+Bash Tips - 18
+Bash Tips - 19
+Bash Tips - 20
+
+

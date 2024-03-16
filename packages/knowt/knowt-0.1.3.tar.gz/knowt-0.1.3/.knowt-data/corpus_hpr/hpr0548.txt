@@ -1,0 +1,14 @@
+## hpr0548 :: How to Prevent Spam
+
+ Setup
+Sets up a real email address eg real@example.com and another one for spam eg: spam@example.com
+Per Company emails
+A rule is set so that any messages that is not destined for a real/configured email address goes to spam@example.com.
+Give companies unique email addresses on your domain, and set up a rule to redirect that to the real address if the domain that is sending is the same as the prefix.
+For example hackerpublicradio.org@example.org coming from admin@hackerpublicradio.org would be sent to real@example.com. While hackerpublicradio.org@example.org coming from spammer@spammer.org would be sent to spam@example.com.
+Throwaway emails
+someword.x.user@spamgourmet.com where someword is a word you have never used before, x (optional) is the number of email messages you want to receive at this address (up to 20, and the number 3 will be used if you leave it out), and user is your username.
+
+https://www.spamgourmet.com/
+
+

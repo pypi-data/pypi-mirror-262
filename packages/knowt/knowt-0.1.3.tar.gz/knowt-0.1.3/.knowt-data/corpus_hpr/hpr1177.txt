@@ -1,0 +1,281 @@
+## hpr1177 :: HPR Community News Dec 12/Jan 13
+
+ New hosts
+Welcome to our new hosts: 
+
+Dick Thomas, 
+Delwin, 
+Charles in NJ, 
+Dude-man, 
+Beto, 
+Peter64, 
+johanv, 
+Emilien Klein, 
+NYbill, , and
+K5TUX.
+
+Apologies and Thanks
+
+Dude-Man for missing that he was a new podcaster.
+Thanks to Emilien for the patch to the readme
+Thanks to Mike Hingley, and Dave for the heads up about the problems with the website
+Big thanks to everyone who supported the New Year Show.
+Apologies to everyone that was offended by my posts to the mail lists
+
+Show Review
+
+
+id
+title
+host
+
+
+
+1132
+LiTS 019: Kill the worms!
+Dann
+
+1133
+How I got in to Linux
+Dick Thomas
+
+1134
+Scannerdrome Ep. 1 - Lola Lariscy
+Various Hosts
+
+1135
+TGTM Newscast for 12/01/2012
+deepgeek
+
+1136
+01 Introduction to Office software
+Ahuka
+
+1137
+Open Street Maps
+NewAgeTechnoHippie
+
+1138
+Programming languages 2 - Python
+garjola
+
+1139
+The missing episode
+MrGadgets
+
+1140
+TGTM Newscast for 12/9/2012
+deepgeek
+
+1141
+mumble client intro
+Delwin
+
+1142
+LiTS 020: pgrep and pkill
+Dann
+
+1143
+The N Days of Christmas? Intro to Recreational Math
+Charles in NJ
+
+1144
+Who Owns Your Files
+Ahuka
+
+1145
+TGTM Newscast for 12/20/2012
+deepgeek
+
+1146
+Wireshark-1
+NewAgeTechnoHippie
+
+1147
+Eulogy for the Netbook
+AukonDK
+
+1148
+Development Discussion
+Dave Morriss
+
+1149
+02 LibreOffice Writer Default Template
+Ahuka
+
+1150
+Hacking Karma And Reincarnation With The Forgiveness Discipline
+deepgeek
+
+1151
+Hacker Public Radio New Year Show Part 1
+Various Creative Commons Works
+
+1152
+Hacker Public Radio New Year Show Part 2
+Various Creative Commons Works
+
+1153
+Hacker Public Radio New Year Show Part 3
+Various Creative Commons Works
+
+1154
+Hacker Public Radio New Year Show Part 4
+Various Creative Commons Works
+
+1155
+Hacker Public Radio New Year Show Part 5
+Various Creative Commons Works
+
+1156
+Hacker Public Radio New Year Show Part 6
+Various Creative Commons Works
+
+1157
+Hacker Public Radio New Year Show Part 7
+Various Creative Commons Works
+
+1158
+Hacker Public Radio New Year Show Part 8
+Various Creative Commons Works
+
+1159
+Food - Health - Nutrially Densce food
+Dude-man
+
+1160
+TGTM Newscast for 1/8/2013 DeepGeek
+deepgeek
+
+1161
+PAM Two Factor Auth SSH
+Beto
+
+1162
+LiTS 021 - killall
+Dann
+
+1163
+Installing PYWWS on a Raspberry Pi
+Peter64
+
+1164
+About git
+johanv
+
+1165
+TGTM Newscast for 1/17/2013
+deepgeek
+
+1166
+Airtime Radio Automation
+AukonDK
+
+1167
+Kernels in the Boot, or What to Do When Your /boot folder Fills Up
+FiftyOneFifty
+
+1168
+How I started my local Linux User Group
+Emilien Klein
+
+1169
+Autotools
+Nido Media
+
+1170
+TGTM Newscast for 1/20/2013
+deepgeek
+
+1171
+Tech and Loathing 13 - Remote Desktop Protocols
+K5TUX
+
+1172
+LiTS 022: Sort
+Dann
+
+1173
+Sonar GNU/linux
+Jonathan Nadeau
+
+1174
+Low Tech Fab (PCB Etching)
+NYbill
+
+1175
+how to start irssi in screen after reboot
+Lord Drachenblut
+
+
+
+Events
+
+https://www.socallinuxexpo.org/scale11x Scale11x. The Eleventh Annual Southern California Linux Expo February 22-24, 2013 Hilton Los Angeles International Airport
+https://www.northeastlinuxfest.org/NELF: pokey: The Northeast Gnu/Linux Fest March 16 and 17
+https://www.linuxfestnorthwest.org/LFNW: LinuxFest Northwest 2013 Bellingham, WA • April 27th and 28th, Contact: David Whitman 
+
+Mail List Discussions
+
+Setup for the New Year Show - there is no cli client for mumble or for piping to ice-cast 
+DeepGeek asks for help in a new Segment about corporate use for web proxies
+cobra2 discusses RSS torrents
+Problems playing episodes ? Always mail admin@hackerpublicradio.org
+KT4KB_Jon Lambdin [Hpr] CQ CQ CQ de KT4KB - Let's do a podcast Via Amateur  Radio
+Aaron Swartz - passed away
+Stickers! 
+Nido Media HPR Saturday Sessions (Digest is a once a day thing)
+Reassign the shows to the TGTM News Team
+Changes to the owner of TGTM Tech News Show
+Should we add the intro/outro - yes if you want to
+klaatu https://radio.pittsburgharts.org:8000, dosman is running a part15 radio station at my house. While most people agree with the explicit tag, Ken strongly disagreed with the suggestion.
+
+Reminder of how HPR is governed
+
+While Stankdwag pays for the hosting, HPR is run by the community, not the Admins! That means what the community decides is the direction we take it. 
+
+Filtering "Clean" shows
+
+The necessary changes to accommodate a per show explicit field has been made. 
+To get the filtered feeds, please append 'explicit=0' to the end of any of the fields. 
+This will trigger the field 'rss/channel/item/itunes:explicit="Clean"'
+
+
+https://hackerpublicradio.org/hpr_mp3_rss.php?explicit=0
+https://hackerpublicradio.org/hpr_ogg_rss.php?explicit=0
+https://hackerpublicradio.org/hpr_spx_rss.php?explicit=0
+https://hackerpublicradio.org/hpr_total_rss.php?explicit=0
+https://hackerpublicradio.org/hpr_total_ogg_rss.php?explicit=0
+https://hackerpublicradio.org/hpr_total_spx_rss.php?explicit=0
+
+This will leave the <itunes:explicit> on the <channel> as "Yes" but will
+toggle the <item> to <itunes:explicit>clean</itunes:explicit>.
+Currently the only shows flagged as 'explicit=0' are the ones from
+klaatu. For those wishing to reclassify your shows please review the
+attached guidelines from the FCC and follow the link to Apples website
+https://www.apple.com/itunes/podcasts/specs.html. Apple has a policy of
+banning incorrectly flagged shows, so we could loose approximately 7 -
+20 % of HPR listeners in one fell swoop if you classify your show
+incorrectly.
+
+Please alert me or admin@hackerpublicradio.org if anything strange
+starts to happen.
+
+Ken (as HPR Admin)
+
+Website Changes
+
+Website Updates, RSS Feeds, Cal page: new list, new post script, explains how the queuing is done. Still need to update the contribute, readme and intro outro.
+HPR Transcode script - Help needed by one and all
+Cannot get the mailing list to archive
+
+Sonar Fundraiser
+
+The Sonar Project is to build a Linux operating system focused on accessibility. There are 1 billion people in the world with some type of disability. Jonathan Nadeau is a blind user and has already made the Sonar GNU/Linux distribution completely accessible to blind people. Now he needs our help to take it to the next level.
+Pimp and pay https://www.indiegogo.com/sonar
+
+We need shows
+
+There are 14 shows in the queue. https://hackerpublicradio.org/calendar.php
+
+

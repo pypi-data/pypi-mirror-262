@@ -1,0 +1,25 @@
+## hpr2714 :: Airplane stalls and Angle of Attack
+
+ stalls, a primer on why aircraft fly, and don’t fly
+YouTube video of stall with narration (35 seconds)
+https://www.youtube.com/watch?v=SiOiVHUEYao
+AoA gauge from T-38 manual
+https://goo.gl/images/ZH5UYx
+Some definitions
+
+chord - an imaginary line from the front of the wing to the back
+relative wind - movement of air relative to the chord
+angle of attack - the angle of the chord of the wing to the relative wind
+stall - a condition where the air on the top of the wing is not flowing smoothly over the wing
+critical angle of attack - the angle that the wing becomes stalled
+fun - stalling and spinning and aircraft when its safe to do so
+scary - stalling and spinning and aircraft when you don’t want to
+
+Things not mentioned
+This discussion pertained to subsonic speeds, super sonic flight introduces a whole other realm of issues.
+The wings of aircraft do not stall all at once. They are designed (usually) to stall from the wing root (where the wing is attached to the fuselage) towards the tips. This ensures good roll control at slow speed and into the stall. This stalling characteristic is achieved by designing twist in the wing (washout) allowing different parts of the wing to hit the critical angle of attack at different times.
+The most dangerous situation that you can find yourself in is a low altitude situation where one wing is stalled more than the other. The airplane then enters a spin. The dangerous part is the low altitude. Spins are fun, and the plane is still controllable, but you need altitude to recover. A wise man told me when turning low to the ground keep your nose down and speed up.
+Most light aircraft will shudder or buffet as you approach the critical angle of attack this happens because of the disturbed airflow hitting the aircraft’s fuselage or tail. In larger aircraft no (i.e. airliners) no feel is given naturally as the plane approaches a stalled condition so systems like stick shakers vibrate the control artificially as you approach the critical angle of attack as measured by the AoA sensors. DC-9 stick shaker, a big cell phone vibrator artificial stall warning is mandatory in fly-by-wire aircraft (i.e. Airbus, f-16) as well as pure hydraulic controls (i.e. Boeing 757)
+Author: Brian
+Created: 2018-12-01 Sat 07:34
+Emacs 25.3.1 (Org mode 8.2.10)

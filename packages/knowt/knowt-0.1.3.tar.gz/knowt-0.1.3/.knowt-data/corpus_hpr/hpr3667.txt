@@ -1,0 +1,255 @@
+## hpr3667 :: 2021-2022 New Years Show Part 2
+
+ Hacker Public Radio New Years Eve Show 2021 - 2022
+Part 2
+Massachusetts MCAS Tests
+https://www.doe.mass.edu/mcas/
+A Level Test mention -
+http://www.gostudyuk.com/a-levels-and-equivalents/
+COVID-19: quarantine, masks, vaccination, testing, etc.
+Michael Mina @michaelmina_lab
+https://twitter.com/michaelmina_lab
+West Virginia & Kentucky Accents
+https://www.dialectsarchive.com/west-virginia
+https://www.dialectsarchive.com/kentucky
+Netminer talks about being a security guard & Security Guard tools of the trade
+Detex Clock
+https://www.watchmanclocks.com/productdetails.aspx?ProductID=56
+Mag light flashlight
+https://maglite.com/
+Ohio Linux Fest
+https://olfconference.org/
+Not Curses
+https://notcurses.com/notcurses.3.html
+Sixel
+https://en.wikipedia.org/wiki/Sixel
+The Book Of Boba Fett
+https://www.imdb.com/title/tt13668894/
+https://en.wikipedia.org/wiki/The_Book_of_Boba_Fett
+Under The Helmet : The Legacy of Boba Fett
+https://www.imdb.com/title/tt15715890/
+Mordancy talks about Mark from Command Line Magic
+Command Line Magic Homepage - http://www.climagic.org/
+Command Line Magic Youtube - https://www.youtube.com/user/climagic/videos
+Command Line Magic Twitter - https://twitter.com/climagic
+Command Line Magic Mastadon - https://mastodon.social/@climagic
+Mordancy also suggests
+https://www.commandlinefu.com/commands/browse
+https://explainshell.com/
+More Website Suggestions
+Regex Crossword is a crossword puzzle game, where the crossword clues are defined using regular expressions
+https://regexcrossword.com
+Learn VIM while playing a game
+https://vim-adventures.com/
+Tennesee Valley Authority
+https://www.tva.com/
+https://en.wikipedia.org/wiki/Tennessee_Valley_Authority
+West Virginia Coal Mines
+https://www.americangeosciences.org/critical-issues/maps/interactive-map-coal-mines-west-virginia
+Nuclear Power Plants in the USA
+https://en.wikipedia.org/wiki/Nuclear_power_in_the_United_States
+https://www.eia.gov/tools/faqs/faq.php?id=207&t=3
+Moss Wants to Build a Pi Hole
+https://pi-hole.net/
+Take The Long Way Home (SuperTramp)
+https://youtu.be/zKGOCOAI_2c
+Push To Talk Mumble Settings
+https://www.mumble.com/support/mumble-server-push-to-talk.php
+Dont use Balena Etcher, try instead https://bztsrc.gitlab.io/usbimager/ USBImager is a really really simple GUI application that writes compressed disk images to USB drives and creates backups. Available platforms: Windows, MacOS and Linux. Its interface is as simple as it gets, totally bloat-free. It is very small below 300 KB compared to more the than 130 MB of Etcher.
+A Maintenance Tool For Ubuntu
+uCareSystem Core basic
+https://ostechnix.com/ucaresystem-core-basic-maintenance-tool-ubuntu/
+https://github.com/Utappia/uCareSystem
+To get rid of old kernels with no work - just paste in the commandline
+echo $(dpkg --list | grep linux-image | awk '{ print $2 }' | sort -V | sed -n '/'`uname -r`'/q;p') $(dpkg --list | grep linux-headers | awk '{ print $2 }' | sort -V | sed -n '/'"$(uname -r | sed "s/\([0-9.-]*\)-\([^0-9]\+\)/\1/")"'/q;p') | xargs echo sudo apt-get -y purge
+
+the result is a sudo command to remove old kernels. And finally this one:
+sudo apt autoremove && sudo apt autoclean && sudo apt clean
+Moss talks about ArcoLinux
+https://arcolinux.com/
+Minnix uses Funk Whale
+https://funkwhale.audio/
+Moss announces the passing of Betty White - RIP
+https://www.cnn.com/2022/01/10/entertainment/betty-white-cause-of-death/index.html
+https://www.rollingstone.com/tv-movies/tv-movie-news/betty-white-dead-obituary-197806/
+https://en.wikipedia.org/wiki/The_Golden_Girls
+https://www.grunge.com/659496/the-truth-about-betty-whites-guinness-world-record/
+The guys mention - Ultramarines : A Warhammer 40k movie
+https://en.wikipedia.org/wiki/Ultramarines:_A_Warhammer_40,000_Movie
+https://youtu.be/3fpvOyD5Jr0
+Warhammer Cosplay
+https://youtu.be/9RpfpSyWGhk
+https://youtu.be/VZ8_aU0G094
+https://www.belloflostsouls.net/2020/08/40k-cosplay-the-ultramarine-by-upw-designs.html
+https://www.instructables.com/Warhammer-40K-Tech-Priest-Cosplay-SKS-Props/
+Matrix Movie (Matrix Resurrections) + other NPH (Neil Patrick Harris) films
+https://en.wikipedia.org/wiki/The_Matrix_Resurrections
+https://www.imdb.com/title/tt10838180/
+8-Bit Christmas
+https://www.imdb.com/title/tt11540284/
+Doctor Horrible's Sing-Along
+https://www.imdb.com/title/tt1227926/
+Bruce Campbell in Black Friday + other Bruce projects
+https://www.imdb.com/title/tt11649338/
+Deadite (Evil Dead films)
+https://evildead.fandom.com/wiki/Deadite
+Burn Notice
+https://www.imdb.com/title/tt0810788/
+The Adventures of Brisco County Jr.
+https://www.imdb.com/title/tt0105932/
+Burn Notice Movie - The Fall of Sam Axe
+https://www.imdb.com/title/tt1697851/
+Ash Vs Evil Dead (TV Series)
+https://www.imdb.com/title/tt4189022/
+https://evildead.fandom.com/wiki/Ash_vs_Evil_Dead
+Christian Clemenson
+https://www.imdb.com/name/nm0166061/
+https://en.wikipedia.org/wiki/Christian_Clemenson
+Freddie Highmore
+https://en.wikipedia.org/wiki/The_Good_Doctor_(TV_series)
+https://www.imdb.com/title/tt6470478/
+Chat about Lenovo ThinkCentre Products
+https://pcsupport.lenovo.com/us/en/products/desktops-and-all-in-ones/thinkcentre-m-series-desktops/thinkcentre-m58
+https://www.lenovo.com/in/en/desktops/thinkcentre/m-series-sff/m83/
+https://www.lenovo.com/gb/en/desktops-and-all-in-ones/thinkcentre/m-series-tiny/M700-Tiny/p/11TC1MTM700
+Moss Plugs - https://itsmoss.com/ and talks about installing Linux on his ThinkCentre
+https://itsmoss.com/2021/12/22/installing-linux-on-a-thinkcentre-tiny-m700/
+A Deeper Dive Into Funk Whale
+https://funkwhale.audio/
+https://funkwhale.audio/en_GB/faqs#decentralized-and-federated
+https://wiki.archlinux.org/title/Funkwhale
+https://twitter.com/funkwhaleaudio
+Peer Tube - Free software to take back control of your videos
+https://joinpeertube.org/
+https://twitter.com/joinpeertube
+Joe and Danny talk 3-D Printing & Core XY Printers
+Voron Design
+https://vorondesign.com/
+The Best CoreXY 3D Printers in 2022
+https://all3dp.com/1/best-corexy-3d-printer/
+The Voron 2.4 Build Experience
+https://youtu.be/0E0dM0ZdpRE
+Core XY Explained
+https://youtu.be/_ramiM3KHYE
+Volcano Hot End & Block
+https://e3d-online.com/products/volcano-hotend
+https://e3d-online.com/products/volcano-block-for-sensor-cartridges
+CES 2022
+https://www.ces.tech/About-CES.aspx
+Danny gives a thumbs up to the Android Playstation 2 Emulator - Aethersx2
+https://play.google.com/store/apps/details?id=xyz.aethersx2.android
+X-Files : Resist Or Serve for the Playstation 2
+https://en.wikipedia.org/wiki/The_X-Files:_Resist_or_Serve
+Walkthrough for X-Files : Resist Or Serve
+https://youtu.be/_1DoMfufliQ
+PCSX2 - An Open-Source Playstation 2 Emulator supporting over 98% Of the PS2 library
+https://pcsx2.net/
+GTA Vice City
+https://www.rockstargames.com/games/vicecity
+Armored Core : Masters Of Arena
+https://armoredcore.fandom.com/wiki/Armored_Core:_Master_of_Arena
+http://www.cheatcodes.com/guide/walkthrough-armored-core-master-of-arena-playstation-16686/
+Joe Has Some Tech Repairs to Do
+Playstation 3 that needs the optical drive repaired
+https://www.ifixit.com/Guide/PlayStation+3+Blu-ray+Disc+Drive+Replacement/3484
+Xbox 360 Drive replacement
+https://www.ifixit.com/Guide/Xbox+360+Optical+Drive+Replacement/3358
+Skullcandy HESH 3 Battery Replacement
+https://youtu.be/PLM7wfTCzms (generic headphone battery replacement video)
+LG Tone Repair
+https://youtu.be/DJvzWsT_ESY
+Open Razer
+https://openrazer.github.io/
+Clonezilla has built in SSH support
+https://clonezilla.org/
+Radio Shack reviving, rebranding into cryptocurrency platform
+https://www.foxbusiness.com/markets/radioshack-rebrands-cryptocurrency-exchange-platform
+https://www.nbcnews.com/pop-culture/pop-culture-news/radioshack-clarify-twitter-wasnt-hacked-just-sell-crypto-now-rcna36112
+Deal Extreme
+https://www.dx.com/
+Brick & Mortar Computer Stores Past & Present
+COMP USA
+https://www.compusa.com/
+Fry's Electronics
+https://www.frys.com/
+https://en.wikipedia.org/wiki/Fry%27s_Electronics
+Micro Center
+https://www.microcenter.com/
+Tiger Direct
+https://www.tigerdirect.com/
+Ben Heck & Oscilloscopes
+https://youtu.be/RuC8XmDX9iA
+Mordancy has projects
+https://www.proxmox.com/en/
+https://www.docker.com/
+https://jitsi.org/
+https://joinpeertube.org/
+https://matrix.org/
+https://bitbucket.org/product
+F(x)tec Pro¹ Phone
+https://www.fxtec.com/
+Joe and Mordancy chat Cryptocurrency
+https://www.investopedia.com/terms/c/cryptocurrency.asp
+Nishant gives up Windows for Fedora
+https://getfedora.org/en/workstation/download/
+Linux LPIC Certifications
+https://www.lpi.org/our-certifications/summary-of-certifications
+https://www.lpi.org/our-certifications/lpic-1-overview
+https://www.lpi.org/our-certifications/lpic-2-overview
+ITIL Certification
+https://www.axelos.com/certifications/itil-service-management
+3M PELTOR ComTac™ VI Hearing Defender
+https://www.3m.com/3M/en_US/p/d/v100849027/
+TP-120 Socket
+https://connectors.nexus.com/item/telephone-plugs-and-jacks/telephone-plugs/tp-120
+Fluke 107 Pocket Digital Multimeter
+https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/pocket-107
+Razer Nari Ultimate Headset
+https://www.razer.com/gaming-headsets/razer-nari-ultimate/RZ04-02670100-R3U1
+Garuda Linux
+https://garudalinux.org/
+Centos
+https://www.centos.org/
+FreeBSD
+https://www.freebsd.org/
+Q-tile - A full-featured, hackable tiling window manager written and configured in Python
+http://www.qtile.org/
+Adam WIlliamson - Fedora Team
+https://fedoraproject.org/wiki/User:Adamwill
+https://www.happyassassin.net/
+https://twitter.com/adamw_ha
+https://fedoramagazine.org/fedora-qa-adam-williamson/
+Raspberry Pi Price Jump
+https://www.tomshardware.com/news/raspberry-pi-4-supply-issues
+Headphone Repair Chat
+BeyerDynamic DT770
+https://www.sweetwater.com/store/detail/DT770pro80--beyerdynamic-dt-770-pro-80-ohm-closed-back-studio-mixing-headphones
+Audio Technica ATH-M50X
+https://www.audio-technica.com/en-us/ath-m50x
+HP Thin Client Model T6xx (watch for them on Ebay)
+https://support.hp.com/us-en/document/c06433828
+Firefox Phone
+https://firefoxosdevices.org/en/#type:smartphones|coming-devices:yes
+https://en.wikipedia.org/wiki/Firefox_OS
+Love 2D Gaming Engine
+https://love2d.org/
+Roblox
+https://www.roblox.com/
+Minecraft
+https://www.minecraft.net/en-us
+Alpine Linux
+https://www.alpinelinux.org/
+Rick & Morty
+https://rickandmorty.fandom.com/wiki/Rick_and_Morty_(TV_series)
+Gravity Falls
+https://en.wikipedia.org/wiki/Gravity_Falls
+Final Space
+https://en.wikipedia.org/wiki/Final_Space
+Peter Cushing Dr. Who movies
+https://tardis.fandom.com/wiki/Peter_Cushing
+https://en.wikipedia.org/wiki/Dr._Who_and_the_Daleks
+https://en.wikipedia.org/wiki/Daleks%27_Invasion_Earth_2150_A.D.
+Blake's 7
+https://en.wikipedia.org/wiki/Blake%27s_7
+Gorillaz - Clint Eastwood
+https://youtu.be/1V_xRb0x9aw

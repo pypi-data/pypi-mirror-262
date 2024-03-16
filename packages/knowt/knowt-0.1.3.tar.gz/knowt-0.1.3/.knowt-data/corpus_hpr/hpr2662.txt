@@ -1,0 +1,16 @@
+## hpr2662 :: Repairing a motherboard
+
+ Continued from hpr2549 :: DVD ripping using old hardware
+Acquired new user tower, replaced old tower with blown caps
+Dell Pentium 4 CPU 3.20GHz, 2Gb RAM
+sudo shred -n 5 -vz /dev/sdX
+
+  -n, --iterations=N 
+  -v, --verbose
+    show progress 
+  -z, --zero
+    add a final overwrite with zeros to hide shredding
+Used same Slackware USB from old tower
+Used soldering iron from Amazon - Weller WLC100 40-Watt Soldering Station
+https://www.amazon.com/gp/product/B000AS28UC/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1
+https://photos.app.goo.gl/VpRxvZLBy49PCo5DA

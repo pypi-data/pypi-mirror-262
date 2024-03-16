@@ -1,0 +1,11 @@
+## hpr3991 :: YOU ARE A PIRATE 
+
+ XGP-save-extractor
+Python script to extract/backup savefiles out of Xbox Game Pass for
+PC games.
+When run, the script produces a ZIP file for each supported game save
+found in the system.
+In most cases the files in the ZIP can be copied to the save
+directory of the Steam/Epic version of the game. To find out the save
+file location, check PCGamingWiki.
+https://github.com/Z1ni/XGP-save-extractor/releases

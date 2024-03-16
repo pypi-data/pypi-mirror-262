@@ -1,0 +1,27 @@
+## hpr1172 :: LiTS 022: Sort
+
+ The sort command does just that, it sorts input.  Input can be a list of files, standard in, or files with standard in. The first example presents this simple file, shopping.txt,  containing a list of items:
+chicken
+fish
+sour cream
+bread crumbs
+milk
+eggs
+bread
+sinkers
+fishing hooks
+Issuing the sort command on this file:
+sort shopping.txt
+Would present the following output:
+bread
+bread crumbs
+chicken
+eggs
+fish
+fishing hooks
+milk
+sinkers
+sour cream
+
+For more information including a complete video please see https://www.linuxintheshell.com/2013/01/29/episode-022-sort/
+

@@ -1,0 +1,44 @@
+## hpr1366 :: What I do with my Raspberry Pi
+
+ 
+Use case 1: Astronomy computer
+
+
+Dobsonian telescope https://en.wikipedia.org/wiki/Dobsonian_telescope
+
+
+Kstars desktop planetarium and star chart program (should be in most distributions repositories as one of the KDE education packages) https://edu.kde.org/kstars/
+
+
+The Messier catalog https://messier.seds.org/
+The Messier marathon https://messier.seds.org/xtra/marathon/marathon.html
+
+
+Texas Star Party amateur telescope making page https://texasstarparty.org/activities/atm/2013-2/ my entry is about 2/3s of the wat down the page and you can see the Motorola lapdock mounted on my 20 inch (50.8 cm) dobsonian telescope on the right of the photo (the Raspberry Pi is behind the screen of the lapdock).  The whole telescope isn't shown, it's about 9 feet (2.75 meters) tall.
+
+
+Use case 2: Home server
+
+
+Mashpodder podcast catcher: https://code.google.com/p/mashpodder/
+Bashpodder: https://lincgeek.org/bashpodder/
+
+
+Rsync programs I'm using on Android
+Botsync SSH SFTP https://botsync.com/ simple to setup
+Rsync backup for Android https://android.kowalczuk.er/rsync4android/ full featured and uses dropbear ssh keys for authentication.  Between recording the audio and writing the show notes, I switched completely to using Rsync backup to sync my podcasts to my Galaxy S4 phone
+
+
+Not mentioned on the podcast but the audio player I'm using on Android is Music Folder Player https://sites.google.com/site/zorillasoft/
+
+
+That gui admin tool for samba I couldn't remember while recording: gadmin-samba (useful tool despite my PEBCAK problem) https://freecode.com/projects/gadmin-samba
+
+
+Calibre ebook management tool https://calibre-ebook.com/
+
+
+Distributions discussed
+Raspbian https://www.raspbian.org/ Debian for the Raspberry Pi
+PiBang https://pibanglinux.org/ Raspbian derivative using openbox and conky setup from Crunchbang
+Crunchbang https://crunchbang.org/ No cruft linux distribution based on debian with Openbox and a great conky configuration (audio and show notes for this podcast edited on laptop running Crunchbang). 

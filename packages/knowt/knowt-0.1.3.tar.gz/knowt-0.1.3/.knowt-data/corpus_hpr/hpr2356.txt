@@ -1,0 +1,23 @@
+## hpr2356 :: Safely enabling ssh in the default Raspbian Image
+
+ In this post I will show you how to take a default Raspbian Image and safely enable ssh by allowing remote access only with authorized keys.
+Recently, and correctly, the official Raspbian Pixel distribution disabled ssh with the note that from now on SSH will be disabled by default on our images.To understand why this is a good thing please read A security update for raspbian pixel. In short, having 11 million computers out there in the hands of non security professionals, with a known username and password, is not a good idea.
+That said there are many cases where you want to access your Pi remotely, and a key part of that is the ability to access it securely via ssh.
+The Raspberry Pi site offers a solution for how to reactivate ssh. One option is via the GUI, Preferences > Interfaces> SSH > Enabled. Another is via the console sudo raspi-config > Interfacing Options > SSH > Yes > Ok > Finish. The third offers a more interesting option.
+For headless setup, SSH can be enabled by placing a file named ssh, without any extension, onto the boot partition of the SD card. When the Pi boots, it looks for the ssh file. If it is found, SSH is enabled, and the file is deleted. The content of the file does not matter: it could contain text, or nothing at all.
+This is exactly what we want. Normally you would burn the image, then boot it in a Pi with a keyboard, screen and mouse attached, and then add the file. A shortcut to that would be to burn the image, eject it, insert it again, mount the sdcard boot partition, and then create a file called ssh.
+I don't like either of these solutions as they involve varying amounts of user intervention. I want a solution that will automatically leave me with a modified image at the end without any intervention (aka human error) on my part.
+So I want to build a script that can handle the following steps:
+
+Download the latest image zip file
+Verify it is valid
+Extract the image itself
+Enable ssh
+Change the default passwords for the root and pi user
+Secure the ssh server on the Pi
+
+I could add to this list and customize every aspect of the image, but my experience has shown that the more you modify, the more maintenance you will need to do. When changes are made to the base Raspbian image, you will need to fix your scripts, and worse is the job of updating all those already deployed Pi's.
+A better approach is to use the base images and control them with automation tools like Ansible, chef, puppet, cfengine, etc. This allows the images to be treated as Cattle rather than Pets, to see what that means see Architectures for open and scalable clouds, by Randy Bias, VP Technology at EMC, Director at OpenStack Foundation.
+Another approach to consider would be to Network Boot your Raspberry Pi and in that way the sdcard is barely used, and all traffic is run off the network. If you are deploying a lot of pi's in a area with a good physical network then this is a great option as well. This has the advantage that all the files are kept on the network and can be completely controlled from a central location.
+If you can't be bothered to stick around and find out how I did it, you can download the script fix-ssh-on-pi.bash from git hub. Remember that it is intended more as inspiration rather than a working tool out of the box. I deliberately wrote it so you must edit it to make it fit your needs.
+See the  complete show notes for the step by step instructions that lead to the creation of the script file, with credit been given to the sites that offered each part of the solution.

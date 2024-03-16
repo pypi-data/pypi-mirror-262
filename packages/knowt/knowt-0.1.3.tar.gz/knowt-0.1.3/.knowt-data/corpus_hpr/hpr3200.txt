@@ -1,0 +1,15 @@
+## hpr3200 :: Better Social Media 17 - OcapPub
+
+ Social media has some problems, and even federated media is not immune to them. OcapPub proposes to help reduce some problems by moving away from a fundamentally broken model revolving around identity and access to a better model involving objects and capabilities. This could help reduce to problems of identity theft, and help against web site problems like clickjacking and Cross-Site Request Forgery. It is a proposal being worked on, not a finished technology, but it is promising.
+Links:
+
+https://gitlab.com/spritely/ocappub/blob/master/README.org
+https://hacks.mozilla.org/2018/11/decentralizing-social-interactions-with-activitypub/
+https://www.w3.org/TR/activitypub/
+https://en.wikipedia.org/wiki/Actor_model#Fundamental_concepts
+https://en.wikipedia.org/wiki/Gamergate_controversy
+https://en.wikipedia.org/wiki/Speakers%27_Corner
+https://waterken.sourceforge.net/aclsdont/current.pdf
+https://en.wikipedia.org/wiki/Principle_of_least_privilege
+https://www.zwilnik.com/better-social-media/ocappub/
+

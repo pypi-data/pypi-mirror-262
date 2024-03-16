@@ -1,0 +1,13 @@
+## hpr2025 :: Using a Smartphone as a microphone
+
+ Hello citizen of the Internet, my name is njulian, and in my first Episode for HPR I want to talk about an App called "Microphone". This App is available for Android in the F-Droid repository, link is in the Shownotes.
+All it does is sending the audio input from the microphone directly into the audio output. This causes horrible feedback loops, if the output happens to be the Phone's speakers. But if you plug a Male-to-Male 3.5mm cable into your Phone and the other end into your Computer you can use your Smartphone as a Microphone. Actually I am using this right now to record this show with Audacity on my Laptop. The reasons for that are pretty simple: I don't have enough free space on my Phone to record a show with Urecord and the other is that I was curious if this app really works.
+Well, actually there is not much more I could tell about the App. It has no menu, no way to customize it, and as you can hear no noise suppression.
+That's about it, thanks for listening.
+The App: https://f-droid.org/repository/browse/?fdfilter=microphone&fdid=net.bitplane.android.microphone
+The Cable: https://en.wikipedia.org/wiki/Phone_connector_%28audio%29
+Links
+
+https://f-droid.org/repository/browse/?fdfilter=microphone&fdid=net.bitplane.android.microphone
+https://en.wikipedia.org/wiki/Phone_connector_%28audio%29
+

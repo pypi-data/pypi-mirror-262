@@ -1,0 +1,30 @@
+## hpr0327 :: Mozilla Profiles
+
+ Commands
+
+firefox -P : opens Firefox at profile prompt
+firefox -P "Foo" : opens Firefox with Foo profile
+
+Change "firefox" for "thunderbird" to do the same for email profiles.
+Locations (on Linux), these are hidden .folders.
+
+Firefox : /home/foo/.mozilla/firefox/profiles.ini
+Thunderbird : /home/foo/.mozilla-thunderbird/profiles.ini
+
+Locations for Windows & Mac users.
+Profiles.ini settings
+
+Name : name used in profile
+Path : path to profile folder
+Default : default profile used when just "firefox" or "thunderbird" are exectuted
+
+Firefox Extensions
+
+FEBE : Firefox Environment Backup Extension
+OPIE : Ordered Preference Import/Export
+CLEO : Compact Library Extension Organizer
+
+Thunderbird Extensions
+
+Gmail IMAP
+

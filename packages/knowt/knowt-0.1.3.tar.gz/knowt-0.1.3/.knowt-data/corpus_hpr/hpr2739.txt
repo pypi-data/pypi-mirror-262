@@ -1,0 +1,54 @@
+## hpr2739 :: Bash Tips - 19
+
+ Arrays in Bash (Supplemental auxiliary Bash tips)
+This is the fourth and last of a small group of shows on the subject of arrays in Bash. It is also the nineteenth show in the Bash Tips sub-series.
+In the last show we continued with the subject of parameter expansion in the context of arrays. There are other aspects of this that could be looked at, but we’ll leave it for the moment and may revisit it in the future.
+In this episode we will look in more depth at the declare (typeset) built in command and at some commands that are related (readonly and local), We will also look at the commands that assist with loading data into arrays: mapfile (readarray) and read.
+Long notes
+As usual I have provided detailed notes and examples for this episode, and these can be viewed here.
+Links
+
+“GNU BASH Reference Manual”
+
+Section on “Bash Arrays”
+Section on “4 Shell Builtin Commands”
+
+Section on “4.1 Bourne Shell Builtins”
+Section on “4.2 Bash Builtin Commands”
+
+
+
+
+Linux Documentation Project: Advanced Bash-Scripting Guide
+
+Chapter 27: Arrays
+
+HPR series: Bash Scripting
+Previous episodes under the heading Bash Tips:
+
+HPR episode 1648 “Bash parameter manipulation”
+HPR episode 1843 “Some Bash tips”
+HPR episode 1884 “Some more Bash tips”
+HPR episode 1903 “Some further Bash tips”
+HPR episode 1951 “Some additional Bash tips”
+HPR episode 2045 “Some other Bash tips”
+HPR episode 2278 “Some supplementary Bash tips”
+HPR episode 2293 “More supplementary Bash tips”
+HPR episode 2639 “Some ancillary Bash tips - 9”
+HPR episode 2649 “More ancillary Bash tips - 10”
+HPR episode 2659 “Further ancillary Bash tips - 11”
+HPR episode 2669 “Additional ancillary Bash tips - 12”
+HPR episode 2679 “Extra ancillary Bash tips - 13”
+HPR episode 2689 “Bash Tips - 14 (Some auxiliary Bash tips)”
+HPR episode 2699 “Bash Tips - 15 (More auxiliary Bash tips)”
+HPR episode 2709 “Bash Tips - 16 (Further auxiliary Bash tips)”
+HPR episode 2719 “Bash Tips - 17 (Additional auxiliary Bash tips)”
+HPR episode 2729 “Bash Tips - 18 (Extra auxiliary Bash tips)”
+
+
+
+Resources:
+
+Examples: bash19_ex1.sh, bash19_ex2.sh, bash19_ex3.sh
+
+

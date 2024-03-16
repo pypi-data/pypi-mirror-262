@@ -1,0 +1,327 @@
+## hpr1258 :: How to Build a Desktop Computer
+
+ Show Notes for How to Build a Desktop
+
+
+
+Build vs Buy
+Do you have the interest and time to
+research and build a desktop computer?
+You probably won't save a lot of money,
+but with all the research you may get better quality parts.
+You will know exactly what's in your
+system should issues or questions ever arise.
+
+
+Gather requirements
+Define the purpose of the system 
+
+Use:  gaming,
+video/photo processing, web browsing/documents
+Applications
+should drive most of your hardware decisions.
+Data protection: 
+how much data, how resilient (on-site mirroring, RAID vs. off-site)
+Power protection: 
+surge suppression, UPS
+Physical
+protection:  keyed case lock (disassembly prevention), cable anchor
+
+
+Define a budget 
+
+Decide what are
+you willing to spend (max, target, min)
+  Check
+off-the-shelf models to get the going price points
+Understand there
+are trade-offs and if everything is needed at once
+Adding
+capabilities later can help with sticker shock
+If you have time,
+buy components when prices dip
+Be careful about
+return policies...some 30 or 90 days
+
+
+Learn about current technology &
+prices
+Core:  CPU,
+memory, motherboard, graphics controller, power supply
+Storage:  solid
+state drives, rotating hard drives, removable media (DVD, USB)
+Auxiliary:  audio,
+monitor, power protection, web cam, printer/scanner, backup drive
+Interfaces:  SATA,
+IDE, DDR2, DDR3, PCI, PCI-e, USB, eSATA
+Determine
+approximate price range
+Where to research
+this stuff:  Wikipedia, Tom's Hardware, Anandtech, Specs on vendor web sites
+Where to shop:  NewEgg.com,
+Amazon.com, Dell.com
+
+
+Understand compatibility
+Hardware-Hardware
+compatibility
+	Check qualified
+hardware list (QHL) on CPU/memory/motherboard
+	Also known as CPU
+support list, memory support list, qualified vendor list, etc.
+	If you can stick
+to the QHL parts, h/w compatibility is more assured
+Hardware-Operating
+System compatibility 
+
+Drivers, either
+built into the OS or from vendor web site
+Pay attention to
+32-bit vs. 64-bit in both operating systems and drivers
+Operating
+System-Application compatibility
+	I'm not going to
+address this, but it is something to research and understand.
+
+
+Define what components you need
+You will need the
+core and storage components.
+
+
+If you have
+components (particularly auxiliary components) from a previous
+system, you may find you can use them with the new system.  Speakers,
+printer, and monitors are all prime candidates.
+
+
+Steps
+
+CPU
+
+
+Decide on CPU brand (typically
+	Intel or AMD)
+Decide on CPU model, which is
+	dictated by your needs and budget
+CPU will dictate motherboard
+	socket type
+Be sure to buy CPU in box set so
+	it includes CPU fan & heat-sink.  Otherwise, you'll need to
+	figure out the thermal dissipation needs and physical dimension
+	limitations of the case in order to select an appropriate 3rd party
+	CPU fan & heat-sink.  This can involve liquid cooling solutions.
+	 I'm not covering thermal solutions in detail here.
+
+
+Motherboard
+
+
+Narrow search to motherboards with
+	socket type that matches CPU.
+Decide on motherboard form factor
+	(ATX, Mini-ATX, Micro-ATX, Mini-ITX, etc.).  See Wikipedia.
+Video on-board or discrete.  
+	
+
+If on-board, check if it has
+	dedicated memory or borrows memory from main system.  If it borrows
+	from the main system, you may want to increase your memory size. 
+	Recommend using discrete if 3-D requirements exist.  You can go
+	discrete later, but you'll have wasted money on the motherboard.
+If discrete, ensure motherboard
+	has enough high-end PCI-e slots for your needs. 
+	
+
+
+
+Audio on-board, discrete or
+	external.
+
+If on-board, check motherboard has
+	suitable output ports for your needs.
+If discrete, ensure motherboard
+	has a slot for the audio card.
+
+
+If external audio system will be
+	used, make sure motherboard has ports to support it.
+WiFi / Blue Tooth
+While a few motherboards have these,
+	they are generally considered inferior for connectivity and security
+	on a non-mobile device like a desktop.  It's also easy to add a card
+	or USB device to obtain them.  Also, when integrated on the
+	motherboard, they are harder to upgrade later.
+
+
+
+Outputs ports meet your needs
+	(PS2, Parallel, Serial COM, USB, eSATA, S/PDIF, HDMI, Ethernet,
+	etc.)
+At this point, you search should
+	be fairly narrow – compare prices, read reviews and compare
+	ratings. 
+	
+Decide on motherboard vendor and
+	model
+
+
+Memory
+
+
+Based on motherboard, find
+	matching memory type.  DDR2 and DDR3 are the common types.  
+	
+There are 5 memory properties:  
+	
+
+DDR revision (currently they
+	include DDR, DDR2, and DDR3)
+Chip Classification (like
+	DDR2-1333) where the number (1333) is the maximum clock speed (in
+	MHz) the memory chips support, which is halved for real clock speed
+	(666.5MHz).
+Module Classification (like
+	PC3-10666) where the number (10666) is the maximum transfer rate (in
+	MB/s).  This is typically 8 times the first memory chip
+	classification clock speed, so DDR400 transfers data at 3,200 MB/s. 
+		
+Timing (like 7-8-8-24) measures
+	the time the memory chip delays doing something internally.
+Voltage (like 1.5v)  
+	
+
+
+
+Note the memory properties are
+	maximums.  Actual rates will be lower based on the motherboard. 
+	Match the first 3 properties – DDR revision, chip classification
+	and module classification.  DDR revision must match.  If you can't
+	get an exact match on Chip and Module classifications, make sure the
+	memory module is faster (higher numbers) than the motherboard.
+If you plan to over-clock, you'll
+	need to pay attention to all 5 properties, but I'm not going to
+	cover over-clocking.
+For more assurance, buy memory
+	that's on the motherboard maker's certified list.
+Recommend buying memory in higher
+	capacities per module for future expansion.  If you have 4 memory
+	module slots which can accept 1G, 2G, and 4G modules, opt for the 4G
+	modules.
+Recommend that all memory modules
+	be the same size, optimally the same brand/model if possible.
+
+
+Video Card
+
+
+If using on-board video
+	controller, you've already decided this.
+If using discrete video card,
+	narrow search to available motherboard slots.  
+	
+For example, if you only have one
+	PCI-e 16x slot, narrow search to video cards that can use that slot.
+	 Don't worry about AMD's CrossfireX or NVIDIA's SLI card linking
+	because you don't have two slots. 
+	
+If you buy a high-end discrete
+	card or cards, be sure to check the video card vendor's recommended
+	power supply wattage and required power connector.  These cards
+	often require a separate power connector from the power supply.
+
+
+Internal Storage 
+
+
+By internal
+	storage, I mean storage devices that will be housed inside the
+	computer case.
+Most
+	motherboards come with an on-board storage controller, typically
+	SATA 2.  Some have an IDE controller for legacy support.  Server
+	motherboards may have some version of SCSI or SAS (serial attached
+	storage) controllers.
+These
+	on-board controllers are configured from within the BIOS or UEFI. 
+	Depending on the motherboard's south bridge chipset, it may support
+	a few RAID levels, usually levels 0 (striping) and 1 (mirroring).
+Storage
+	devices come in different physical sizes which require different
+	sized bays - 5.25 inch, 3.5 inch, 2.5 inch, and 1.8 inch.  These
+	refer the size of the storage medium, not the actual bay size.  The
+	5.25 inch bays come in half-height versions, which are the standard
+	for CD and DVD drives in todays' computers.  The 3.5 inch bays are
+	usually used for floppy or Zip drives...more legacy equipment.  See
+	Wikipedia.
+Storage
+	devices can vary significantly in storage capacity.  Often, the
+	larger the storage capacity, the higher the latency in storing and
+	retrieving data.  Cache on-board the disk can mitigate this latency,
+	so larger cache sizes are preferred particularly for large capacity
+	drives.  Cache sizes currently include 8MB, 16MB, 32MB and 64MB.
+With rotating
+	magnetic disks, the speed at which they rotate can also mitigate
+	this latency.  Rotation speeds include 5400 rpm, 7200 rpm, and 10000
+	rpm and 15000 rpm with each step in speed requiring more power and
+	giving off more heat.
+If you need
+	more than 2 or 3 drives, you'll need to ensure your case has
+	adequate physical space for them and that your power supply is sized
+	appropriately.
+
+
+
+
+Case & Power Supply
+
+
+Some cases are bundled with a
+	power supply, which might work great for average to low-end system
+	configurations.
+Based on motherboard form factor
+	and internal storage requirements, pick out a computer case.  
+	
+Case features to consider:
+
+Power supply location is always
+	in rear, but can be on top or bottom of a tower configuration.  If
+	the computer will sit on the floor, having the power supply on the
+	bottom might turn it into a dust bunny haven.
+Number and type of storage drive
+	bays.
+Removable and/or washable dust
+	filters.
+Lighting kits
+Front panel ports and static
+	suppression
+
+
+
+The number and size of fans is
+	limited by the case design.  Typically a case will come with one
+	rear fan, but most offer front, side, or top vents where fans can be
+	mounted. Fan sizes range from 25mm to 250mm, with popular sizes at
+	80mm, 92mm, 120mm and 140mm.
+Make sure power supply is sized
+	correctly:
+
+Physical dimensions fits in case
+	(beware “slim” power supplies for smaller form factor cases).
+Wattage output, which is driven by
+	video cards and number of internal storage devices.
+Connectors required by the
+	motherboard, CPU fan, case fans, video card and internal storage
+	devices.
+
+
+
+Without a discrete video card and
+	2-3 internal storage devices, 300-400 Watts power supplies are
+	typical.  If getting a discrete video card, check on its power
+	requirements.
+Power supplies also have
+	efficiency ratings under the "80 PLUS" certifications, which
+	span from vanilla 80 PLUS, Bronze, Silver, Gold and Platinum.  See
+	Wikipedia for more info.
+

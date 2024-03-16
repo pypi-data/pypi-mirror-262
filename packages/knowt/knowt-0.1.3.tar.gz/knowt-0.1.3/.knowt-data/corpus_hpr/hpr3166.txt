@@ -1,0 +1,7 @@
+## hpr3166 :: Using Ansible to mirror a Git repo
+
+ 
+I came up with a way to easily clone a repo living on Github and mirror it, with all the latest commits, on another Git host. You can schedule Ansible to run periodically to ensure your mirror stays updated.
+
+
+This is Dwayne Lee's improved implementation based on my original script.

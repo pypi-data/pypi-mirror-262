@@ -1,0 +1,82 @@
+## hpr1768 :: An Intro To C Episode 1 : Introduction and Types
+
+ Episode 1:  History and Basic Types
+Explain who you are and what you do.
+
+Name: Colin Mills, (cjm) 
+Occupation: Software Engineering Student in Canada
+I have been a UNIX geek and open source software FANATIC for about four years now.
+Website: c-jm.github.io
+
+Start to go into the history of C and explain where it came from.
+Abstract
+
+C was originally developed by Dennis Ritchie between 1969 and 1973 at AT&T 
+Bell Labs,[5] and used to (re-)implement the Unix operating system.[6] 
+It has since become one of the most widely used programming languages of all 
+time, [7][8] with C compilers from various vendors available for the
+majority of existing computer architectures and operating systems. 
+C has been standardized by the American National Standards Institute (ANSI) > since 1989 (see ANSI C) and subsequently by the 
+International Organization for Standardization (ISO).
+
+
+From: Wikipedia On C
+
+Explain Types and their meanings
+
+SIGNED: It means it can hold either negative or positive values.
+UNSIGNED: Unsigned means it can only hold positive values.
+
+Retrieved From: Wikipedia On Signedness
+int:
+
+An int is a variable that is at leas 16 bits in size.
+It is actually the most efficent for the processor itself.
+Capable of storing -32767 -> 32767
+
+Int Specifiers
+
+short: 16 bits in size
+short int intThatIsAShort = 0;
+long: 32 bits in size
+long intThatIsALong = 0; 
+long long: 64 bits in size
+long long reallyBigInteger = 0;
+
+char
+
+One byte in memory. (8 bits).
+Holds a character but can also hold a number
+char thisCanHoldALetter = 'x';
+char thisCanHoldANumber = 72;
+
+Note about the ascii table
+
+ASCII is just a number corresponding with a letter.
+Look here for more information.
+
+float
+
+Holds floating point numbers
+float thisIsAFloat = 72.2;
+
+Double
+
+Like a float but bigger.
+double thisIsADouble = 0;
+
+Arrays
+
+Arrays are collections of multiple things
+Have to be a set size.
+Use braces to initalize
+If you initalize one you initalize all. 
+int arrayOfNums[100] = {0};
+
+Strings
+
+"Strings" are made up of mutliple chars. (Yes it does make sense! :))
+char arrayOfChars[81] = {0};
+Null termination is added to the end.
+'\0'
+

@@ -1,0 +1,117 @@
+## hpr3715 :: Secret hat conversations, Part 2.
+
+ 
+Quantum computing
+
+Quantum
+computing is a type of computation whose operations can harness the
+phenomena of quantum mechanics, such as superposition, interference, and
+entanglement. Devices that perform quantum computations are known as
+quantum computers. Though current quantum computers are too small to
+outperform usual (classical) computers for practical applications,
+larger realizations are believed to be capable of solving certain
+computational problems, such as integer factorization (which underlies
+RSA encryption), substantially faster than classical computers.
+Today’s quantum
+systems only include tens or hundreds of entangled qubits, limiting
+them from solving real-world problems. To achieve quantum practicality,
+commercial quantum systems need to scale to over a million qubits and
+overcome daunting challenges like qubit fragility and software
+programmability.
+Quantum
+computers, if they mature enough, will be able to crack much of
+today's encryption. That'll lay bare private communications, company
+data and military secrets. Today's quantum computers are too rudimentary
+to do so. But data surreptitiously gathered now could still be sensitive
+when more powerful quantum computers come online in a few years.
+Simple
+passwords can be cracked using brute force; this is where an
+attacker uses tools that try every possible password until the correct
+one is found. This generally done using a dictionary attack, where an
+attacker will try known passwords and words until they find the one that
+unlocks an account. There are databases available on the internet that
+contain personal names as well as dictionary and slang words, in scores
+of languages, along with passwords found in data breaches, and
+more.
+
+Encryption.
+
+The Advanced
+Encryption Standard (AES) specifies a FIPS-approved cryptographic
+algorithm that can be used to protect electronic data. The AES algorithm
+is a symmetric block cipher that can encrypt (encipher) and decrypt
+(decipher) information. Encryption converts data to an unintelligible
+form called ciphertext; decrypting the ciphertext converts the data back
+into its original form, called plaintext. The AES algorithm is capable
+of using cryptographic keys of 128, 192, and 256 bits to encrypt and
+decrypt data in blocks of 128 bits.
+The National Security Agency (NSA) reviewed all the AES
+finalists, including Rijndael, and stated that all of them were secure
+enough for U.S. Government non-classified data. In June 2003, the U.S.
+Government announced that AES could be used to protect classified
+information: For cryptographers, a cryptographic "break" is anything
+faster than a brute-force attack – i.e., performing one trial decryption
+for each possible key in sequence. A break can thus include results that
+are infeasible with current technology. Despite being impractical,
+theoretical breaks can sometimes provide insight into vulnerability
+patterns. The largest successful publicly known brute-force attack
+against a widely implemented block-cipher encryption algorithm was
+against a 64-bit RC5 key by distributed.net in 2006.
+
+Password Management.
+
+Bitwarden
+KeepassXC
+Tips
+for creating a strong password
+
+Enable Two-Factor authentication whenever possible. While a great
+passphrase will help secure you and the Commonwealth’s data, a second
+factor makes it that much more difficult for hackers to gain
+access.
+
+
+Password Generation.
+
+pwgen : found in most linux repos
+Man page for pwgen
+Example : pwgen -y 50 3 : generates a 50 character password with
+symbols, with 3 choices
+
+Google and Amazon are listening
+
+CNET article on Google and
+Amazon
+
+
+    "I don't blame anyone who doesn't want to fill their house with cameras and
+    microphones, but I also don't blame anyone who's willing to trade some of their
+    data with a company they feel comfortable with in order to bring some new
+    convenience and utility into their lives. It's nearly impossible to navigate
+    today's age without making trades like that on a daily basis."
+
+What is Web
+Scraping? Web scraping is an automatic method to obtain large
+amounts of data from websites.
+What is Machine
+Learning? Machine Learning, as the name says, is all about machines
+learning automatically without being explicitly programmed or learning
+without any direct human intervention. This machine learning process
+starts with feeding them good quality data and then training the
+machines by building various machine learning models using the data and
+different algorithms.
+
+
+The October
+Suprise.
+The fruit
+of the poisonous tree.
+This Is the Data Facebook Gave Police to Prosecute
+a Teenager for Abortion.
+Google is giving
+data to police based on search keywords, court docs show.
+Google bans dad for ‘child porn’ after he
+sent pics of toddler’s swollen genitals to doctor.
+Proton VPN Transparency
+Report & Warrant Canary.
+

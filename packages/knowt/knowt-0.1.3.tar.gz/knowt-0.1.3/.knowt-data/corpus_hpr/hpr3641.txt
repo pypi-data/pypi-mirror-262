@@ -1,0 +1,99 @@
+## hpr3641 :: Turntable audio capture Part 2
+
+ Update to HPR 3507
+hpr3507 :: USB Turntable fix and sound journey 
+record_capture_wav.sh
+#!/bin/bash
+
+echo "Record name?"
+read record
+echo "Which side is this?"
+read side
+
+arecord --device='hw:CARD=CODEC,DEV=0' --rate=96000 --channels=2 --vumeter=stereo --duration=1500 --format=dat --file-type wav $record"_Side_"$side.wav
+
+record_capture_flac.sh
+#!/bin/bash
+
+ echo "Record name"
+ read record
+ echo "Which side is this?"
+ read side
+
+arecord --device='hw:CARD=CODEC,DEV=0' --rate=96000 --channels=2 --vumeter=stereo --duration=1500 --format=dat --file-type wav - | flac - -o $record"_Side_"$side.flac
+Used hw:CARD=CODEC,DEV=0 derived from 'arecord -L'
+hw:CARD=CODEC,DEV=0 USB Audio CODEC, USB Audio Direct hardware device without any conversions
+arecord manpage
+...
+
+-f --format=FORMAT
+
+    Sample format
+    Recognized sample formats are: S8 U8 S16_LE S16_BE U16_LE U16_BE S24_LE S24_BE U24_LE U24_BE S32_LE S32_BE U32_LE U32_BE FLOAT_LE FLOAT_BE
+    FLOAT64_LE FLOAT64_BE IEC958_SUBFRAME_LE IEC958_SUBFRAME_BE MU_LAW A_LAW IMA_ADPCM MPEG GSM SPECIAL S24_3LE S24_3BE U24_3LE U24_3BE S20_3LE
+    S20_3BE U20_3LE U20_3BE S18_3LE S18_3BE U18_3LE
+
+    Some of these may not be available on selected hardware
+    The available format shortcuts are:
+
+    -f cd (16 bit little endian, 44100, stereo) [-f S16_LE -c2 -r44100]
+    -f cdr (16 bit big endian, 44100, stereo) [-f S16_BE -c2 -f44100]
+    -f dat (16 bit little endian, 48000, stereo) [-f S16_LE -c2 -r48000]
+
+    If no format is given U8 is used.
+
+-d, --duration=#
+    Interrupt after # seconds. A value of zero means infinity. The default is zero, so if this option is omitted then the arecord process will run until it is killed.
+
+-t, --file-type TYPE
+    File type (voc, wav, raw or au). If this parameter is omitted the WAVE format is used.
+
+...
+
+
+hpr2881 :: Automatically split album into tracks in Audacity 
+Changes as of 5-20-2022
+
+Old way : Select the entire track and select Analyze > Silence Finder
+Update : Select the entire track and select Analyze > Label Sounds
+
+Label sounds menu
+ Click the thumbnail to see the full-sized image 
+Silence detection options
+ 
+HowTo: Split MP3s by silence detection using mp3splt
+https://blog.dornea.nu/2012/04/01/howto-split-mp3s-by-silence-detection-using-mp3splt/
+mp3splt -s -p th=-40,min=6,rm
+Parameters explanation:
+'-s': silence mode; activate silence detection
+'-p': specify arguments for the silence mode
+'th=-40': threshold level (dB) to be considered silence
+'min=6': minimum number of seconds to be considered as splitpoint
+'rm': remove silence from splitted files
+What worked for me
+mp3splt -s -p th=-30,min=0.5,rm $1
+Fix tracks not splitting
+
+Manually seek the silence in mplayer/mpv
+Note the silent areas
+Cut with ffmpeg ie.
+
+ffmpeg -i track.flac -ss 00:03:05 -to 00:06:00 -acodec copy track-cut1.flac
+
+
+References
+How to rip vinyl in Manjaro
+https://forum.manjaro.org/t/howto-rip-vinyl-lps-in-manjaro/83300
+mp3splt
+https://mp3splt.sourceforge.net
+Man pages
+https://mp3splt.sourceforge.net/mp3splt_page/documentation/man.html
+https://manpages.ubuntu.com/manpages/xenial/en/man1/mp3splt.1.html
+Youtube downloader
+https://ytgram.com/en/youtube-video-downloader
+Screen capture of youtube link download on YTGram
+ Click the thumbnail to see the full-sized image 
+Sample album
+J̲o̲urney - D̲eparture̲ (Full Album) 1980
+
+https://www.youtube.com/watch?v=eoG9U8n0dWo

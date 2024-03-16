@@ -1,0 +1,27 @@
+## hpr0886 :: Product lifecycle management (PLM)
+
+ 
+In today's show Ken has a discussion with Alister Munroe about product lifecycle management at OggCamp 11
+Product lifecycle management
+From Wikipedia, the free encyclopedia
+A generic lifecycle of products
+
+
+In industry, product lifecycle management (PLM) is the process of managing the entire lifecycle of a product from its conception, through design and manufacture, to service and disposal. PLM integrates people, data, processes and business systems and provides a product information backbone for companies and their extended enterprise.
+
+
+Product lifecycle management (PLM) should be distinguished from 'Product life cycle management (marketing)' (PLCM). PLM describes the engineering aspect of a product, from managing descriptions and properties of a product through its development and useful life; whereas, PLCM refers to the commercial management of life of a product in the business market with respect to costs and sales measures.
+
+
+Product lifecycle management is one of the four cornerstones of a corporation's information technology structure. All companies need to manage communications and information with their customers (CRM-customer relationship management), their suppliers (SCM-supply chain management), their resources within the enterprise (ERP-enterprise resource planning) and their planning (SDLC-systems development life cycle). In addition, manufacturing engineering companies must also develop, describe, manage and communicate information about their products.
+
+
+One form of PLM is called people-centric PLM. While traditional PLM tools have been deployed only on release or during the release phase, people-centric PLM targets the design phase.
+As of 2009, ICT development (EU-funded PROMISE project 2004–2008) has allowed PLM to extend beyond traditional PLM and integrate sensor data and real time 'lifecycle event data' into PLM, as well as allowing this information to be made available to different players in the total lifecycle of an individual product (closing the information loop). This has resulted in the extension of PLM into closed-loop lifecycle management (CL2M).
+Links
+
+https://www.3ds.com/products/delmia/welcome/
+
+https://en.wikipedia.org/wiki/Product_lifecycle_management
+
+

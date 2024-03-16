@@ -1,0 +1,20 @@
+## hpr3147 :: NIST's Quantum Cryptography Update
+
+ NIST initiated a competition to find and test algorithms for quantum encryption that would resist quantum decryption back in December of 2016. Two rounds of testing have been completed, and an initial group of 69 submissions have been winnowed to 15. These 15 are now in Round Three of the testing process, and it is anticipated that as many as 4 of them will be approved as standards. This news update is intended to bring you up to date on the process.
+Links:
+
+https://www.zwilnik.com/security-and-privacy/encryption-and-quantum-computing/
+https://hackerpublicradio.org/eps.php?id=2860
+https://letsencrypt.org/
+https://en.wikipedia.org/wiki/Public-key_cryptography
+https://en.wikipedia.org/wiki/Whitfield_Diffie
+https://en.wikipedia.org/wiki/Martin_Hellman
+https://en.wikipedia.org/wiki/Ralph_Merkle
+https://en.wikipedia.org/wiki/Pretty_Good_Privacy
+https://gcn.com/articles/2016/12/22/nist-quantum-encryption.aspx
+https://gcn.com/articles/2019/02/04/nist-quantum-semifinals.aspx
+https://csrc.nist.gov/publications/detail/nistir/8309/final
+https://www.nist.gov/news-events/news/2020/07/nists-post-quantum-cryptography-program-enters-selection-round
+https://www.schneier.com/blog/archives/2005/02/cryptanalysis_o.html
+https://www.zwilnik.com/security-and-privacy/nists-quantum-cryptography-update-20200815/
+

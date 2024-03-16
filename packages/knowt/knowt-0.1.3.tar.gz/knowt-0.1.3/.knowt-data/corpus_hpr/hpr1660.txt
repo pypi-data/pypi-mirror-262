@@ -1,0 +1,69 @@
+## hpr1660 :: Trying out Slackware
+
+ 
+mcnalu wrote a article about Slackware in Linux Voice, Issue 6.
+
+
+
+https://www.linuxvoice.com/issue-6/
+
+
+Beni read this article which lead to him trying out Slackware and being very
+impressed by its simplicity.
+
+
+That's why he asked mcnalu to do a HPR episode about Slackware, which is
+probably the oldest Linux Distro that's still around and whose developer follows
+a no-nonsense strategy and is very conservative when it comes switching to new
+stuff that comes up in the Linux world (like PAM or systemd)
+
+
+The distro is one of the if not the most Unix-like Linux distro. It uses a BSD
+style init system instead of widely used sysvinit.
+
+
+Beni and mcnalu talk about the installation process, finding dokumentation and
+why the website is outdated.
+
+
+Further they discuss the package manager and what it means that it doesn't
+resolve dependencies. They also explain why this isn't necessariliy a bad
+thing and where to find binary packages.
+
+
+In the end they talk about where the Slackware community meets and who is in
+charge of Slackware.
+
+
+https://www.slackware.com/
+https://en.wikipedia.org/wiki/Slackware
+
+
+Slackware documentation isn't as good the BSDs dokumentation or the Arch
+Wiki. But it's definitely getting better
+
+
+https://docs.slackware.com/
+
+
+and there is also 'Slackware essentials', a book that's also available online:
+
+
+https://www.slackware.com/book/
+
+
+The Slackware forum on Linux Questions is pretty much the official Slackware
+forum:
+https://www.linuxquestions.org/questions/slackware-14/
+
+
+mcnalu announced his Article in the Linux Questions forum:
+https://www.linuxquestions.org/questions/slackware-14/linux-voice-issue-6-a-4175513762/
+
+
+To support the development of Slackware you could buy yourself a Christmas
+present from the Slackware store:
+
+
+https://store.slackware.com
+

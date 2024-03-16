@@ -1,0 +1,7 @@
+## hpr3855 :: SSH (or OpenSSH) Escape Sequences
+
+ 
+BSD Now Episode 504: https://www.bsdnow.tv/504
+Closing a Stale SSH Connection: https://davidisaksson.dev/posts/closing-stale-ssh-connections/
+Using the SSH "Konami Code" (OpenSSH Control Sequences): https://www.sans.org/blog/using-the-ssh-konami-code-ssh-control-sequences/
+

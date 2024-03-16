@@ -1,0 +1,30 @@
+## hpr1728 :: Requested Topic: Favourite Browser Extensions
+
+ 
+NoScript is great for blocking JavaScript that may be undesirable. Scripts tend to track users or load obtrusive or undesirable content in my experience.
+NoScript also blocks Adobe Flash and Java which can be resource hogs. A simple click will activate them. Scripts can be enabled or disabled by site.
+
+
+HTTPS Everywhere will automatically direct your browser to a secure https version of sites you visit, if available. Great for security (obviously).
+
+
+Adblock Edge is a great ad blocker. It blocks all ads no matter how obtrusive they are. Does not contain hidden white-list like more popular ad blocker: Adblock Plus.
+
+
+LibreJS targets non free JavaScript. I think it is a fantastic idea but makes too many sites unusable. I prefer NoScript as I can more easily micro-manage scripts per domain.
+
+Links:
+
+FireFox https://www.firefox.com/
+
+Ahuka's show about security certificates https://hackerpublicradio.org/eps.php?id=1720
+
+NoScript https://noscript.net/
+
+HTTPS Everywhere https://www.eff.org/https-everywhere/
+
+Adblock Edge https://adstomper.bitbucket.org/
+
+LibreJS https://www.gnu.org/software/librejs/
+
+

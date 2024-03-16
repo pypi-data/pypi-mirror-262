@@ -1,0 +1,19 @@
+## hpr1277 :: Icecast 102
+
+ 
+Klaatu talks about how to feed Icecast with different sources like
+MPD and BUTT, and how to use the front-ends ncmpcpp and gmpc.
+
+
+Here are the simple and ugly shell scripts that Klaatu uses to manage
+his Icecast streaming station. They aren't quite finished products yet
+but they'll give you an idea of how one might realistically manage an
+internet radio station from the shell:
+
+
+https://slackermedia.info/radio
+
+
+Klaatu is indebted to Delwin, The Last Known God, and Ruji for their
+help on this episode.
+

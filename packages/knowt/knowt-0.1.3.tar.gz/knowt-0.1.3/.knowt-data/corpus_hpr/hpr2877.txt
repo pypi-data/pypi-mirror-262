@@ -1,0 +1,21 @@
+## hpr2877 :: Using Zenity with Pdmenu
+
+ Overview
+I use pdmenu a lot to help me do work on my main desktop PC. I did an HPR show on pdmenu on 13 December 2017 and the author Joey Hess responded in show 2459.
+In the intervening time I have also integrated Zenity into my menus. This is a GUI tool which generates a number of different pop-up windows known as dialogs, which can display information, or into which information can be typed. The capabilities provided by pdmenu are a little too basic to enable me to do what I need to do.
+I thought it might be of interest to show some examples of how I use this tool with pdmenu.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+Pdmenu:
+
+Pdmenu website
+Joey Hess
+
+Zenity
+
+Wikipedia page
+Zenity Manual
+
+

@@ -1,0 +1,36 @@
+## hpr3552 :: Unboxing a PineTime development kit
+
+ Synopsis
+In this episode, Rho`n unboxes his new PineTime smart watch development kit, and gives his initial impressions. The development kit consists of two watches. One watch is fully assembled and ready for daily use. The other watch is disassembled, consisting of a watch band, the watch back cover, and the assembled display, system on a chip (SOC), CPU, and battery. The kit also comes with a serial cable for connecting from your computer to the SOC.
+The following are the photographs taken during the unboxing.
+
+
+
+
+
+Box containing PrimeTime development kit beside PineTime Pogopin Jig
+
+
+
+
+Open box displaying watch faces
+
+
+
+
+Contents of the development kit
+
+
+
+
+Assembled watch on a charger
+
+
+References
+
+InfiniTime firmware - https://github.com/InfiniTimeOrg/InfiniTime
+PineTime watch - https://www.pine64.org/pinetime/
+PineTime development kit - https://pine64.com/product/pinetime-dev-kit/
+PineTime forum - https://forum.pine64.org/forumdisplay.php?fid=134
+PineTime Pogopin Jig - https://pine64.com/product/pinetime-pogopin-jig/
+
