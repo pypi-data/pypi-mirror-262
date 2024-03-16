@@ -1,0 +1,9 @@
+sopel_twitter/__init__.py,sha256=zfLSJ8KsBXIO8bk2NuNw8-Eyh0rVlh0My3yBZlP7leo,12068
+tests/__init__.py,sha256=eoZ6GfifbqhMLNzjlqRDVil-yyBkOmVN9ujSgJWNBlY,15
+tests/test_twitter.py,sha256=kWugY2yNRGaQA0iS7Uafc9WHFZJvidETajcYKNEY4KU,296
+sopel_twitter-1.3.6.dist-info/COPYING,sha256=GMjS0NE2IKS6zNYcSKb0YX0RM1HoLI_I6tgJVMFThl4,1022
+sopel_twitter-1.3.6.dist-info/METADATA,sha256=vEmjUY-czwnOd19oFx8NisvlNa1lU7W88Ysm-2Gi6Es,8510
+sopel_twitter-1.3.6.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+sopel_twitter-1.3.6.dist-info/entry_points.txt,sha256=1DJqF7j5f3r_FJdmjDQjvscLXTD5Dp7eoVDq4avuv2o,40
+sopel_twitter-1.3.6.dist-info/top_level.txt,sha256=put4i5SDo-r6UYRK4s0nTQbK6A09hEARHwWp9YmogF0,20
+sopel_twitter-1.3.6.dist-info/RECORD,,
