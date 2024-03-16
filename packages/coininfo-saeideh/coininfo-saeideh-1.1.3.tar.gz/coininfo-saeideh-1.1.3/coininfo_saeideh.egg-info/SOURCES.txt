@@ -1,0 +1,11 @@
+README.md
+setup.py
+coininfo-saeideh/__init__.py
+coininfo-saeideh/info.py
+coininfo_saeideh.egg-info/PKG-INFO
+coininfo_saeideh.egg-info/SOURCES.txt
+coininfo_saeideh.egg-info/dependency_links.txt
+coininfo_saeideh.egg-info/requires.txt
+coininfo_saeideh.egg-info/top_level.txt
+tests/__init__.py
+tests/test_project.py
