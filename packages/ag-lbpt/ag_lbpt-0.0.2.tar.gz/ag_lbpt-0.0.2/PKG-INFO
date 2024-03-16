@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ag_lbpt
+Version: 0.0.2
+Summary: Algoritmo Genético
+Author: Luis Beltran Palma Ttito
+Author-email: luis.palma@unsaac.edu.pe
+License: GPL
+Description-Content-Type: text/markdown
+Requires-Dist: folium
+Requires-Dist: networkx
+Requires-Dist: csv
+
+
+
+# **Algoritmos Metaheurísticos para el problema TSP**
+
