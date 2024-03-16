@@ -1,0 +1,87 @@
+[tool.poetry]
+name = "llmbanter"
+version = "0.6.0"
+description = "LLM Banter: See 2 large language models (LLMs) banter, debate and chat with each other."
+authors = ["Dylan Hogg <dylanhogg@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/dylanhogg/llmbanter"
+keywords = ["LLM"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+]
+include = [
+    "llmbanter/bots/human.yaml",
+    "llmbanter/bots/assistant.yaml",
+    "llmbanter/bots/system/jailbreaker.yaml",
+    "llmbanter/bots/expert/python.yaml",
+    "llmbanter/bots/expert/shell.yaml",
+    "llmbanter/bots/expert/psychiatrist.yaml",
+    "llmbanter/bots/famous/einstein.yaml",
+    "llmbanter/bots/famous/cobain.yaml",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-dotenv = "^1.0.1"
+click = "^8.1.7"
+typer = "^0.9.0"
+rich = "^13.7.0"
+tqdm = "^4.66.1"
+loguru = "^0.7.2"
+openai = "^1.11.1"
+litellm = "^1.22.3"
+pygame = "^2.5.2"
+tenacity = "^8.2.3"
+pyyaml = "^6.0.1"
+omegaconf = "^2.3.0"
+pygments = "^2.17.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+black = "^24.1.1"
+ruff = "^0.2.0"
+coverage = "^7.4.1"
+pre-commit = "^3.6.0"
+pip-audit = "^2.7.0"
+pyright = "^1.1.351"
+monkeytype = "^23.3.0"
+
+[tool.black]
+line-length = 120
+target-version = ['py39']
+
+[tool.poetry.scripts]
+llmbanter = 'llmbanter.console:app'
+
+[tool.ruff]
+line-length = 120
+extend-exclude = [".joblib_cache"]
+target-version = "py39"
+
+[tool.ruff.lint]
+# https://docs.astral.sh/ruff/rules/
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "C",   # flake8-comprehensions
+    "B",   # flake8-bugbear
+    "C90", # mccabe complexity
+]
+ignore = [
+    "E501", # line too long, handled by black
+    "D203", # 1 blank line required before class docstring
+]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"

@@ -1,0 +1,5 @@
+version: 1.0
+bot_type: HumanInputBot
+name: a person
+voice: male_voice1
+multiline: False
