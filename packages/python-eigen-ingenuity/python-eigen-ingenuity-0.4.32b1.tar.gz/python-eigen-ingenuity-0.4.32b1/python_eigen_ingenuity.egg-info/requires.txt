@@ -1,0 +1,10 @@
+numpy
+pandas
+pyserial
+requests
+setuptools
+urllib3
+msal
+cryptography
+keyring
+pyarrow
