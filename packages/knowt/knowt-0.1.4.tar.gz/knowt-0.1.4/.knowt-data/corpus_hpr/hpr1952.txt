@@ -1,0 +1,26 @@
+## hpr1952 :: Time now Ladies and Gents
+
+ In the show "hpr1943 :: HPR AudioBook Club 11.5 - Interview with David Collins-Rivera" pokey asked if there was a way to get the duration for media. The following three options springs to mind immediately.
+The first option is fix_tags and was written by our own Dave Morriss.
+$ date --utc --date="@$(echo $(fix_tags *mp3 *ogg 2>/dev/null | \
+awk -F '\\(|\\)' '/length/ {print $2}' | \
+sed 's/ sec//g' ) | \
+sed 's/ /+/g' | bc )"  +"%T"
+03:09:49
+
+Next up is mediainfo which provides a lot of information on media files.
+$ date -ud @$(echo $(mediainfo --full --Output=XML *mp3 *ogg | \
+xmlstarlet sel -T -t -m "Mediainfo/File/track[@type='Audio']/Duration[1]" -v "." -n - | \
+sed 's/.\{3\}$//') | \
+sed 's/ /+/g' | bc)  +"%T"
+03:09:49
+
+The last option is to use ffprobe from the ffmpeg team.
+$ date -ud @$(echo $(for i in *mp3 *ogg;\
+do  \date -ud 1970-01-01T$(ffprobe -i $i 2>&1 | \
+grep Duration | awk '{print $2}'| \
+sed 's/,//g' ) +%s;done) | \
+sed 's/ /+/g' | bc)  +"%T"
+03:09:49
+
+For complete shownote please visit https://hackerpublicradio.org/eps/hpr1952.html

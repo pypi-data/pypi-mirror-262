@@ -1,0 +1,18 @@
+## hpr1607 :: Migrating from Drupal 6 to Nikola
+
+ 
+I talk about the migration of my blog from Drupal 6 to Nikola. I explain
+why I wanted to migrate, and I tell about the script I used.
+
+
+Details and scripts can be found on my blog:
+https://blog.johanv.org/posts/drupal-nikola.html
+
+
+See also:
+
+
+https://getnikola.com/
+
+https://hackerpublicradio.org/eps.php?id=1577
+

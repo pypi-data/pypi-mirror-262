@@ -1,0 +1,20 @@
+## hpr2140 :: Vim Plugins I Use
+
+ Vim Plugins I Use
+
+vim-pathogen
+vim-unimpaired
+vim-surround
+vim-speeddating
+vim-repeat
+vim-markdown
+vimwiki
+csv.vim
+vim-airline
+align.vim
+tabular
+nerdtree
+nerdcommenter
+ctrlp
+vim-rdf
+

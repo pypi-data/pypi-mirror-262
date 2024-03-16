@@ -1,0 +1,788 @@
+<html>
+<head>
+<title>Chapter 8: Lists</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap07.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap09.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 8</h2>
+
+
+
+<h1>Lists</h1>
+<p>
+A <b>list</b> is an ordered set of values, where each value is
+identified by an index.  The values that make up a list are
+called its <b>elements</b>.  Lists are similar to strings, which are
+ordered sets of characters, except that the elements of a list can
+have any type.  Lists and strings <s>&nbsp; &nbsp;</s> and other things that behave like
+ordered sets <s>&nbsp; &nbsp;</s> are called <b>sequences</b>.
+
+<a name=1></a>
+<h3>8.1 List values</h3>
+<p>
+There are several ways to create a new list; the simplest is to
+enclose the elements in square brackets (<tt><font size=-1>[</font></tt> and <tt><font size=-1>]</font></tt>):
+
+<p><tt><font size=-1>[10, 20, 30, 40]
+<br>[<font color=red>"spam"</font>, <font color=red>"bungee"</font>, <font color=red>"swallow"</font>]
+<br></font></tt></p>
+
+<p>
+The first example is a list of four integers.  The second is a list of
+three strings.  The elements of a list don't have to be the same type.
+The following list contains a string, a float, an integer, and
+(mirabile dictu) another list:
+
+<p><tt><font size=-1>[<font color=red>"hello"</font>, 2.0, 5, [10, 20]]
+<br></font></tt></p>
+
+<p>
+A list within another list is said to be <b>nested</b>.
+<p>
+Lists that contain consecutive integers are common, so Python provides a
+simple way to create them:
+
+<p><tt><font size=-1>&gt;&gt;&gt; range(1,5)
+<br>[1, 2, 3, 4]
+<br></font></tt></p>
+
+<p>
+The <tt><font size=-1>range</font></tt> function takes two arguments and returns a list that
+contains all the integers from the first to the second, including the
+first but not including the second!
+<p>
+There are two other forms of <tt><font size=-1>range</font></tt>.  With a single argument, it
+creates a list that starts at 0:
+
+<p><tt><font size=-1>&gt;&gt;&gt; range(10)
+<br>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+<br></font></tt></p>
+
+<p>
+If there is a third argument, it specifies the space between
+successive values, which is called the <b>step size</b>.  This example
+counts from 1 to 10 by steps of 2:
+
+<p><tt><font size=-1>&gt;&gt;&gt; range(1, 10, 2)
+<br>[1, 3, 5, 7, 9]
+<br></font></tt></p>
+
+<p>
+Finally, there is a special list that contains no elements.  It is
+called the empty list, and it is denoted <tt><font size=-1>[]</font></tt>.
+<p>
+With all these ways to create lists, it would be disappointing if we
+couldn't assign list values to variables or pass lists as arguments
+to functions.  We can.
+
+<p><tt><font size=-1>vocabulary = [<font color=red>"ameliorate"</font>, <font color=red>"castigate"</font>, <font color=red>"defenestrate"</font>]
+<br>numbers = [17, 123]
+<br>empty = []
+<br><font color=black>print</font> vocabulary, numbers, empty
+<br>[<font color=red>'ameliorate'</font>, <font color=red>'castigate'</font>, <font color=red>'defenestrate'</font>] [17, 123] []
+<br></font></tt></p>
+
+
+<a name=2></a>
+<h3>8.2 Accessing elements</h3>
+<p>
+The syntax for accessing the elements of a list is the same as the
+syntax for accessing the characters of a string <s>&nbsp; &nbsp;</s> the bracket
+operator (<tt><font size=-1>[]</font></tt>).  The expression inside the brackets
+specifies the index.  Remember that the indices start at 0:
+
+<p><tt><font size=-1><font color=black>print</font> numbers[0]
+<br>numbers[1] = 5
+<br></font></tt></p>
+
+<p>
+The bracket operator can appear anywhere in an expression.  When it
+appears on the left side of an assignment, it changes one of the
+elements in the list, so the one-eth element of <tt><font size=-1>numbers</font></tt>, which
+used to be 123, is now 5.
+<p>
+Any integer expression can be used as an index:
+
+<p><tt><font size=-1>&gt;&gt;&gt; numbers[3-2]
+<br>5
+<br>&gt;&gt;&gt; numbers[1.0]
+<br>TypeError: sequence index must be integer
+<br></font></tt></p>
+
+<p>
+If you try to read or write an element that does not exist, you
+get a runtime error:
+
+<p><tt><font size=-1>&gt;&gt;&gt; numbers[2] = 5
+<br>IndexError: list assignment index out of range
+<br></font></tt></p>
+
+<p>
+If an index has a negative value, it counts backward from the
+end of the list:
+
+<p><tt><font size=-1>&gt;&gt;&gt; numbers[-1]
+<br>5
+<br>&gt;&gt;&gt; numbers[-2]
+<br>17
+<br>&gt;&gt;&gt; numbers[-3]
+<br>IndexError: list index out of range
+<br></font></tt></p>
+
+<p>
+<tt><font size=-1>numbers[-1]</font></tt> is the last element of the list, <tt><font size=-1>numbers[-2]</font></tt>
+is the second to last, and <tt><font size=-1>numbers[-3]</font></tt> doesn't exist.
+<p>
+It is common to use a loop variable as a list index.
+
+<p><tt><font size=-1>horsemen = [<font color=red>"war"</font>, <font color=red>"famine"</font>, <font color=red>"pestilence"</font>, <font color=red>"death"</font>]
+<br>
+<br>i = 0
+<br><font color=black>while</font> i &lt; 4:
+<br>&nbsp; <font color=black>print</font> horsemen[i]
+<br>&nbsp; i = i + 1
+<br></font></tt></p>
+
+<p>
+This <tt><font size=-1><font color=black>while</font></font></tt> loop counts from 0 to 4.  When the loop variable
+<tt><font size=-1>i</font></tt> is 4, the condition fails and the loop terminates.  So the
+body of the loop is only executed when <tt><font size=-1>i</font></tt> is 0, 1, 2, and 3.
+<p>
+Each time through the loop, the variable <tt><font size=-1>i</font></tt> is used as an index
+into the list, printing the <tt><font size=-1>i</font></tt>-eth element.  This pattern of
+computation is called a <b>list traversal</b>.
+
+<a name=3></a>
+<h3>8.3 List length</h3>
+<p>
+The function <tt><font size=-1>len</font></tt> returns the length of a list.  It is a good
+idea to use this value as the upper bound of a loop instead of a
+constant.  That way, if the size of the list changes, you won't have
+to go through the program changing all the loops; they will work
+correctly for any size list:
+
+<p><tt><font size=-1>horsemen = [<font color=red>"war"</font>, <font color=red>"famine"</font>, <font color=red>"pestilence"</font>, <font color=red>"death"</font>]
+<br>
+<br>i = 0
+<br><font color=black>while</font> i &lt; len(horsemen):
+<br>&nbsp; <font color=black>print</font> horsemen[i]
+<br>&nbsp; i = i + 1
+<br></font></tt></p>
+
+<p>
+The last time the body of the loop is executed, <tt><font size=-1>i</font></tt> is <tt><font size=-1>len(horsemen) - 1</font></tt>, which is the index of the last element.  When <tt><font size=-1>i</font></tt> is equal to <tt><font size=-1>len(horsemen)</font></tt>, the condition fails and the body
+is not executed, which is a good thing, because <tt><font size=-1>len(horsemen)</font></tt> is
+not a legal index.
+<p>
+Although a list can contain another list, the nested
+list still counts as a single element.  The length of this list is
+four:
+
+<p><tt><font size=-1>[<font color=red>'spam!'</font>, 1, [<font color=red>'Brie'</font>, <font color=red>'Roquefort'</font>, <font color=red>'Pol le Veq'</font>], [1, 2, 3]]
+<br></font></tt></p>
+
+
+<blockquote><i>As an exercise, write a loop that traverses the previous
+list and prints the length of each element.  What happens if
+you send an integer to <tt><font size=-1>len</font></tt>?</i>
+</blockquote>
+
+<a name=4></a>
+<h3>8.4 List membership</h3>
+<p>
+<tt><font size=-1><font color=black>in</font></font></tt> is a boolean operator that tests membership in a sequence.
+We used it in <a href="chap07.html#10">Section 7.10</a> with strings, but it also works with
+lists and other sequences:
+
+<p><tt><font size=-1>&gt;&gt;&gt; horsemen = [<font color=red>'war'</font>, <font color=red>'famine'</font>, <font color=red>'pestilence'</font>, <font color=red>'death'</font>]
+<br>&gt;&gt;&gt; <font color=red>'pestilence'</font> <font color=black>in</font> horsemen
+<br>True
+<br>&gt;&gt;&gt; <font color=red>'debauchery'</font> <font color=black>in</font> horsemen
+<br>False
+<br></font></tt></p>
+
+<p>
+Since "pestilence" is a member of the <tt><font size=-1>horsemen</font></tt> list, the <tt><font size=-1><font color=black>in</font></font></tt>
+operator returns true.  Since "debauchery" is not in the list, <tt><font size=-1><font color=black>in</font></font></tt> returns false.
+<p>
+We can use the <tt><font size=-1><font color=black>not</font></font></tt> in combination
+with <tt><font size=-1><font color=black>in</font></font></tt> to test whether an element is not a member of a list:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=red>'debauchery'</font> <font color=black>not in</font> horsemen
+<br>True
+<br></font></tt></p>
+
+
+<a name=5></a>
+<h3>8.5 Lists and <tt><font size=-1><font color=black>for</font></font></tt> loops</h3>
+<p>
+The <tt><font size=-1><font color=black>for</font></font></tt> loop we saw in <a href="chap07.html#3">Section 7.3</a> also works with
+lists.
+The generalized syntax of a <tt><font size=-1><font color=black>for</font></font></tt> loop is:
+
+<p><tt><font size=-1><font color=black>for</font> VARIABLE <font color=black>in</font> LIST:
+<br>&nbsp; BODY
+<br></font></tt></p>
+
+<p>
+This statement is equivalent to:
+
+<p><tt><font size=-1>i = 0
+<br><font color=black>while</font> i &lt; len(LIST):
+<br>&nbsp; VARIABLE = LIST[i]
+<br>&nbsp; BODY
+<br>&nbsp; i = i + 1
+<br></font></tt></p>
+
+<p>
+The <tt><font size=-1><font color=black>for</font></font></tt> loop is more concise because we can 
+eliminate the loop variable, <tt><font size=-1>i</font></tt>.
+Here is the previous loop written with a <tt><font size=-1><font color=black>for</font></font></tt> loop.
+
+<p><tt><font size=-1><font color=black>for</font> horseman <font color=black>in</font> horsemen:
+<br>&nbsp; <font color=black>print</font> horseman
+<br></font></tt></p>
+
+<p>
+It almost reads like English: "For (every) horseman
+in (the list of) horsemen, print (the name of the) horseman."
+<p>
+Any list expression can be used in a <tt><font size=-1><font color=black>for</font></font></tt> loop:
+
+<p><tt><font size=-1><font color=black>for</font> number <font color=black>in</font> range(20):
+<br>&nbsp; <font color=black>if</font> number % 2 == 0:
+<br>&nbsp; &nbsp; <font color=black>print</font>&nbsp; number
+<br>
+<br><font color=black>for</font> fruit <font color=black>in</font> [<font color=red>"banana"</font>, <font color=red>"apple"</font>, <font color=red>"quince"</font>]:
+<br>&nbsp; <font color=black>print</font> <font color=red>"I like to eat "</font> + fruit + <font color=red>"s!"</font>
+<br></font></tt></p>
+
+<p>
+The first
+example prints all the even numbers between zero and nineteen.
+The second example expresses enthusiasm for various fruits.
+
+<a name=6></a>
+<h3>8.6 List operations</h3>
+<p>
+The <tt><font size=-1>+</font></tt> operator concatenates lists:
+
+<p><tt><font size=-1>&gt;&gt;&gt; a = [1, 2, 3]
+<br>&gt;&gt;&gt; b = [4, 5, 6]
+<br>&gt;&gt;&gt; c = a + b
+<br>&gt;&gt;&gt; <font color=black>print</font> c
+<br>[1, 2, 3, 4, 5, 6]
+<br></font></tt></p>
+
+<p>
+Similarly, the <tt><font size=-1>*</font></tt> operator repeats a list a given number of times:
+
+<p><tt><font size=-1>&gt;&gt;&gt; [0] * 4
+<br>[0, 0, 0, 0]
+<br>&gt;&gt;&gt; [1, 2, 3] * 3
+<br>[1, 2, 3, 1, 2, 3, 1, 2, 3]
+<br></font></tt></p>
+
+<p>
+The first example repeats <tt><font size=-1>[0]</font></tt> four times.  The second example
+repeats the list <tt><font size=-1>[1, 2, 3]</font></tt> three times.
+
+<a name=7></a>
+<h3>8.7 List slices</h3>
+<p>
+The slice operations we saw in <a href="chap07.html#4">Section 7.4</a>
+also work on lists:
+
+<p><tt><font size=-1>&gt;&gt;&gt; list = [<font color=red>'a'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>, <font color=red>'f'</font>]
+<br>&gt;&gt;&gt; list[1:3]
+<br>[<font color=red>'b'</font>, <font color=red>'c'</font>]
+<br>&gt;&gt;&gt; list[:4]
+<br>[<font color=red>'a'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>]
+<br>&gt;&gt;&gt; list[3:]
+<br>[<font color=red>'d'</font>, <font color=red>'e'</font>, <font color=red>'f'</font>]
+<br></font></tt></p>
+
+<p>
+If you omit the first index, the slice starts at the beginning.
+If you omit the second, the slice goes to the end.  So if you
+omit both, the slice is really a copy of the whole list.
+
+<p><tt><font size=-1>&gt;&gt;&gt; list[:]
+<br>[<font color=red>'a'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>, <font color=red>'f'</font>]
+<br></font></tt></p>
+
+
+<a name=8></a>
+<h3>8.8 Lists are mutable</h3>
+<p>
+Unlike strings, lists are mutable, which means we can change
+their elements.  Using the bracket operator on the left side
+of an assignment, we can update one of the elements:
+
+<p><tt><font size=-1>&gt;&gt;&gt; fruit = [<font color=red>"banana"</font>, <font color=red>"apple"</font>, <font color=red>"quince"</font>]
+<br>&gt;&gt;&gt; fruit[0] = <font color=red>"pear"</font>
+<br>&gt;&gt;&gt; fruit[-1] = <font color=red>"orange"</font>
+<br>&gt;&gt;&gt; <font color=black>print</font> fruit
+<br>[<font color=red>'pear'</font>, <font color=red>'apple'</font>, <font color=red>'orange'</font>]
+<br></font></tt></p>
+
+<p>
+With the slice operator we can update several elements at once:
+
+<p><tt><font size=-1>&gt;&gt;&gt; list = [<font color=red>'a'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>, <font color=red>'f'</font>]
+<br>&gt;&gt;&gt; list[1:3] = [<font color=red>'x'</font>, <font color=red>'y'</font>]
+<br>&gt;&gt;&gt; <font color=black>print</font> list
+<br>[<font color=red>'a'</font>, <font color=red>'x'</font>, <font color=red>'y'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>, <font color=red>'f'</font>]
+<br></font></tt></p>
+
+<p>
+We can also remove elements from a list by assigning the empty list to
+them:
+
+<p><tt><font size=-1>&gt;&gt;&gt; list = [<font color=red>'a'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>, <font color=red>'f'</font>]
+<br>&gt;&gt;&gt; list[1:3] = []
+<br>&gt;&gt;&gt; <font color=black>print</font> list
+<br>[<font color=red>'a'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>, <font color=red>'f'</font>]
+<br></font></tt></p>
+
+<p>
+And we can add elements to a list by squeezing them into an empty
+slice at the desired location:
+
+<p><tt><font size=-1>&gt;&gt;&gt; list = [<font color=red>'a'</font>, <font color=red>'d'</font>, <font color=red>'f'</font>]
+<br>&gt;&gt;&gt; list[1:1] = [<font color=red>'b'</font>, <font color=red>'c'</font>]
+<br>&gt;&gt;&gt; <font color=black>print</font> list
+<br>[<font color=red>'a'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>, <font color=red>'f'</font>]
+<br>&gt;&gt;&gt; list[4:4] = [<font color=red>'e'</font>]
+<br>&gt;&gt;&gt; <font color=black>print</font> list
+<br>[<font color=red>'a'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>, <font color=red>'f'</font>]
+<br></font></tt></p>
+
+
+<a name=9></a>
+<h3>8.9 List deletion</h3>
+<p>
+Using slices to delete list elements can be
+awkward, and therefore error-prone.  Python provides an alternative
+that is more readable.
+<p>
+<tt><font size=-1><font color=black>del</font></font></tt> removes an element from a list:
+
+<p><tt><font size=-1>&gt;&gt;&gt; a = [<font color=red>'one'</font>, <font color=red>'two'</font>, <font color=red>'three'</font>]
+<br>&gt;&gt;&gt; <font color=black>del</font> a[1]
+<br>&gt;&gt;&gt; a
+<br>[<font color=red>'one'</font>, <font color=red>'three'</font>]
+<br></font></tt></p>
+
+<p>
+As you might expect, <tt><font size=-1><font color=black>del</font></font></tt> handles negative indices
+and causes a runtime error if the index is
+out of range.
+<p>
+You can use a slice as an index for <tt><font size=-1><font color=black>del</font></font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; list = [<font color=red>'a'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>, <font color=red>'f'</font>]
+<br>&gt;&gt;&gt; <font color=black>del</font> list[1:5]
+<br>&gt;&gt;&gt; <font color=black>print</font> list
+<br>[<font color=red>'a'</font>, <font color=red>'f'</font>]
+<br></font></tt></p>
+
+<p>
+As usual, slices select all the elements up to, but not
+including, the second index.
+
+<a name=10></a>
+<h3>8.10 Objects and values</h3>
+<p>
+If we execute these assignment statements,
+
+<p><tt><font size=-1>a = <font color=red>"banana"</font>
+<br>b = <font color=red>"banana"</font>
+<br></font></tt></p>
+
+<p>
+we know that <tt><font size=-1>a</font></tt> and <tt><font size=-1>b</font></tt> will refer to a
+string with the letters <tt><font size=-1><font color=red>"banana"</font></font></tt>.  But we can't
+tell whether they point to the <i>same</i> string.
+<p>
+There are two possible states:
+
+<p align="center"><img src="illustrations/list1.png"></p>
+<p>
+In one case, <tt><font size=-1>a</font></tt> and <tt><font size=-1>b</font></tt> refer to two different things that
+have the same value.  In the second case, they refer to the same
+thing.  These "things" have names <s>&nbsp; &nbsp;</s> they are called <b>objects</b>.
+An object is something a variable can refer to.
+<p>
+Every object has a unique <b>identifier</b>, which we can obtain with
+the <tt><font size=-1>id</font></tt> function.  By printing the identifier of <tt><font size=-1>a</font></tt>
+and <tt><font size=-1>b</font></tt>, we can tell whether they refer to the same object.
+
+<p><tt><font size=-1>&gt;&gt;&gt; id(a)
+<br>135044008
+<br>&gt;&gt;&gt; id(b)
+<br>135044008
+<br></font></tt></p>
+
+<p>
+In fact, we get the same identifier twice, which means that
+Python only created one string,
+and both <tt><font size=-1>a</font></tt> and <tt><font size=-1>b</font></tt> refer to it.
+<p>
+Interestingly, lists behave differently.
+When we create two lists, we get two objects:
+
+<p><tt><font size=-1>&gt;&gt;&gt; a = [1, 2, 3]
+<br>&gt;&gt;&gt; b = [1, 2, 3]
+<br>&gt;&gt;&gt; id(a)
+<br>135045528
+<br>&gt;&gt;&gt; id(b)
+<br>135041704
+<br></font></tt></p>
+
+<p>
+So the state diagram looks like this:
+
+<p align="center"><img src="illustrations/list2.png"></p>
+<p>
+<tt><font size=-1>a</font></tt> and <tt><font size=-1>b</font></tt> have the same value but do not
+refer to the same object.
+
+<a name=11></a>
+<h3>8.11 Aliasing</h3>
+<p>
+Since variables refer to objects, if we assign one
+variable to another, both variables refer to the same object:
+
+<p><tt><font size=-1>&gt;&gt;&gt; a = [1, 2, 3]
+<br>&gt;&gt;&gt; b = a
+<br></font></tt></p>
+
+<p>
+In this case, the state diagram looks like this:
+
+<p align="center"><img src="illustrations/list3.png"></p>
+<p>
+Because the same list has two different names, <tt><font size=-1>a</font></tt> and <tt><font size=-1>b</font></tt>, we
+say that it is <b>aliased</b>.  Changes made with one alias affect
+the other:
+
+<p><tt><font size=-1>&gt;&gt;&gt; b[0] = 5
+<br>&gt;&gt;&gt; <font color=black>print</font> a
+<br>[5, 2, 3]
+<br></font></tt></p>
+
+<p>
+Although this behavior can be useful, it is sometimes unexpected or
+undesirable.  In general, it is safer to avoid aliasing when you
+are working with mutable objects.  Of course, for immutable
+objects, there's no problem.  That's why Python is free to
+alias strings when it sees an opportunity to economize.
+
+<a name=12></a>
+<h3>8.12 Cloning lists</h3>
+<p>
+If we want to modify a list and also keep a copy of the original, we
+need to be able to make a copy of the list itself, not just the
+reference.  This process is sometimes called <b>cloning</b>, to avoid the
+ambiguity of the word "copy."
+<p>
+The easiest way to clone a list is to use the slice operator:
+
+<p><tt><font size=-1>&gt;&gt;&gt; a = [1, 2, 3]
+<br>&gt;&gt;&gt; b = a[:]
+<br>&gt;&gt;&gt; <font color=black>print</font> b
+<br>[1, 2, 3]
+<br></font></tt></p>
+
+<p>
+Taking any slice of <tt><font size=-1>a</font></tt> creates a new list.  
+In this case the slice happens to consist of the whole list.
+<p>
+Now we are free to make changes to <tt><font size=-1>b</font></tt> without worrying about <tt><font size=-1>a</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; b[0] = 5
+<br>&gt;&gt;&gt; <font color=black>print</font> a
+<br>[1, 2, 3]
+<br></font></tt></p>
+
+
+<blockquote><i>As an exercise, draw a state diagram for <tt><font size=-1>a</font></tt> and <tt><font size=-1>b</font></tt>
+before and after this change.</i>
+</blockquote>
+
+<a name=13></a>
+<h3>8.13 List parameters</h3>
+<p>
+Passing a list as an argument actually passes a reference to the
+list, not a copy of the list.
+For example, the function <tt><font size=-1>head</font></tt> takes a list as an argument
+and returns the first element:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>head</font>(list):
+<br>&nbsp; <font color=black>return</font> list[0]
+<br></font></tt></p>
+
+<p>
+Here's how it is used:
+
+<p><tt><font size=-1>&gt;&gt;&gt; numbers = [1, 2, 3]
+<br>&gt;&gt;&gt; head(numbers)
+<br>1
+<br></font></tt></p>
+
+<p>
+The parameter <tt><font size=-1>list</font></tt> and the variable <tt><font size=-1>numbers</font></tt> are
+aliases for the same object.  The state diagram looks like
+this:
+
+<p align="center"><img src="illustrations/stack5.png"></p>
+<p>
+Since the list object is shared by two frames, we drew
+it between them.
+<p>
+If a function modifies a list parameter, the caller sees the change.
+For example, <tt><font size=-1>deleteHead</font></tt> removes the first element from a list:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>deleteHead</font>(list):
+<br>&nbsp; <font color=black>del</font> list[0]
+<br></font></tt></p>
+
+<p>
+Here's how <tt><font size=-1>deleteHead</font></tt> is used:
+
+<p><tt><font size=-1>&gt;&gt;&gt; numbers = [1, 2, 3]
+<br>&gt;&gt;&gt; deleteHead(numbers)
+<br>&gt;&gt;&gt; <font color=black>print</font> numbers
+<br>[2, 3]
+<br></font></tt></p>
+
+<p>
+If a function returns a list, it returns a reference to the list.  For
+example, <tt><font size=-1>tail</font></tt> returns a list that contains all but the first
+element of the given list:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>tail</font>(list):
+<br>&nbsp; <font color=black>return</font> list[1:]
+<br></font></tt></p>
+
+<p>
+Here's how <tt><font size=-1>tail</font></tt> is used:
+
+<p><tt><font size=-1>&gt;&gt;&gt; numbers = [1, 2, 3]
+<br>&gt;&gt;&gt; rest = tail(numbers)
+<br>&gt;&gt;&gt; <font color=black>print</font> rest
+<br>[2, 3]
+<br></font></tt></p>
+
+<p>
+Because the return value was created with the slice operator, it
+is a new list.  Creating <tt><font size=-1>rest</font></tt>, and any subsequent changes
+to <tt><font size=-1>rest</font></tt>, have no effect on <tt><font size=-1>numbers</font></tt>.
+
+<a name=14></a>
+<h3>8.14 Nested lists</h3>
+<p>
+A nested list is a list that appears as an element in another
+list.  In this list, the three-eth element is a nested list:
+
+<p><tt><font size=-1>&gt;&gt;&gt; list = [<font color=red>"hello"</font>, 2.0, 5, [10, 20]]
+<br></font></tt></p>
+
+<p>
+If we print <tt><font size=-1>list[3]</font></tt>, we get <tt><font size=-1>[10, 20]</font></tt>.  To extract an
+element from the nested list, we can proceed in two steps:
+
+<p><tt><font size=-1>&gt;&gt;&gt; elt = list[3]
+<br>&gt;&gt;&gt; elt[0]
+<br>10
+<br></font></tt></p>
+
+<p>
+Or we can combine them:
+
+<p><tt><font size=-1>&gt;&gt;&gt; list[3][1]
+<br>20
+<br></font></tt></p>
+
+<p>
+Bracket operators evaluate from left to right, so this expression
+gets the three-eth element of <tt><font size=-1>list</font></tt> and extracts the one-eth
+element from it.
+
+<a name=15></a>
+<h3>8.15 Matrices</h3>
+<p>
+Nested lists are often used to represent matrices.  For example,
+the matrix:
+
+<p align="center"><img src="illustrations/matrix.png"></p>
+<p>
+might be represented as:
+
+<p><tt><font size=-1>&gt;&gt;&gt; matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+<br></font></tt></p>
+
+<p>
+<tt><font size=-1>matrix</font></tt> is a list with three elements, where each
+element is a row of the matrix.  We can select an entire row from the
+matrix in the usual way:
+
+<p><tt><font size=-1>&gt;&gt;&gt; matrix[1]
+<br>[4, 5, 6]
+<br></font></tt></p>
+
+<p>
+Or we can extract a single element from the matrix using the
+double-index form:
+
+<p><tt><font size=-1>&gt;&gt;&gt; matrix[1][1]
+<br>5
+<br></font></tt></p>
+
+<p>
+The first index selects the row, and the second index selects the
+column.  Although this way of representing matrices is common, it is
+not the only possibility.  A small variation is to use a list of
+columns instead of a list of rows.  Later we will see a more
+radical alternative using a dictionary.
+
+<a name=16></a>
+<h3>8.16 Strings and lists</h3>
+<p>
+Two of the most useful functions in the <tt><font size=-1>string</font></tt> module involve
+lists of strings.  The <tt><font size=-1>split</font></tt> function breaks a string into a
+list of words.  By default, any number of whitespace characters is
+considered a word boundary:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>import</font> string
+<br>&gt;&gt;&gt; song = <font color=red>"The rain in Spain..."</font>
+<br>&gt;&gt;&gt; string.split(song)
+<br>[<font color=red>'The'</font>, <font color=red>'rain'</font>, <font color=red>'in'</font>, <font color=red>'Spain...'</font>]
+<br></font></tt></p>
+
+<p>
+An optional argument called a <b>delimiter</b> can be used to specify which
+characters to use as word boundaries.
+The following example
+uses the string <tt><font size=-1>ai</font></tt> as the delimiter:
+
+<p><tt><font size=-1>&gt;&gt;&gt; string.split(song, <font color=red>'ai'</font>)
+<br>[<font color=red>'The r'</font>, <font color=red>'n in Sp'</font>, <font color=red>'n...'</font>]
+<br></font></tt></p>
+
+<p>
+Notice that the delimiter doesn't appear in the list.
+<p>
+The <tt><font size=-1>join</font></tt> function is the inverse of <tt><font size=-1>split</font></tt>.  It
+takes a list of strings and
+concatenates the elements with a space between each pair:
+
+<p><tt><font size=-1>&gt;&gt;&gt; list = [<font color=red>'The'</font>, <font color=red>'rain'</font>, <font color=red>'in'</font>, <font color=red>'Spain...'</font>]
+<br>&gt;&gt;&gt; string.join(list)
+<br><font color=red>'The rain in Spain...'</font>
+<br></font></tt></p>
+
+<p>
+Like <tt><font size=-1>split</font></tt>, <tt><font size=-1>join</font></tt> takes an optional delimiter
+that is inserted between elements:
+
+<p><tt><font size=-1>&gt;&gt;&gt; string.join(list, <font color=red>'_'</font>)
+<br><font color=red>'The_rain_in_Spain...'</font>
+<br></font></tt></p>
+
+
+<blockquote><blockquote><i>As an exercise, describe the relationship between <tt><font size=-1>string.join(string.split(song))</font></tt> and <tt><font size=-1>song</font></tt>.  Are they the same
+for all strings?  When would they be different?</i>
+</blockquote>
+</blockquote>
+
+<a name=17></a>
+<h3>8.17 Glossary</h3>
+
+<dl>
+<dt>list</dt>
+<dd>A named collection of objects, where each object is
+identified by an index.</dd>
+<dt>index</dt>
+<dd>An integer variable or value that indicates an element of a
+list.</dd>
+<dt>element</dt>
+<dd>One of the values in a list (or other sequence).  The
+bracket operator selects elements of a list.</dd>
+<dt>sequence</dt>
+<dd>Any of the data types that consist of an ordered set of
+elements, with each element identified by an index.</dd>
+<dt>nested list</dt>
+<dd>A list that is an element of another list.</dd>
+<dt>list traversal</dt>
+<dd>The sequential accessing of each element in a list.</dd>
+<dt>object</dt>
+<dd>A thing to which a variable can refer.</dd>
+<dt>aliases</dt>
+<dd>Multiple variables that contain references to the same object.</dd>
+<dt>clone</dt>
+<dd>To create a new object that has the same value as an
+existing object.  Copying a reference to an object creates an alias
+but doesn't clone the object.</dd>
+<dt>delimiter</dt>
+<dd>A character or string used to indicate where a
+string should be split.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap07.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap09.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

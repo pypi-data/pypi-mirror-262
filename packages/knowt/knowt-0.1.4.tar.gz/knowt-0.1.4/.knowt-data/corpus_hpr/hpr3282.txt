@@ -1,0 +1,66 @@
+## hpr3282 :: HP Laptop with AMD Ryzen 3 Mobile with Radeon Graphics
+
+ HP Laptop with AMD Ryzen 3 Mobile Processors with Radeon Graphics
+HP Laptop Info.
+
+model: 14-dk1025wm (I own this model)
+Product ID: 1A491UA#ABA
+
+
+Walmart Link 01
+Walmart Link 02
+
+NATO phonetic alphabet
+
+Specifications.
+
+AMD Ryzen 3 3250U (2.6 GHz base clock, up to 3.5 GHz max boost clock, 1 MB L2 cache, 2 cores)
+
+CPU Cores: 2
+CPU Threads: 4
+GPU Cores: 3
+System Memory Specification: Up to 2400MHz (No need to go big, keep it simple and cheap.)
+Launch Date: 06/01/2020 (January 06, 2020)
+
+Memory/Ram: 4 GB DDR4-2400 SDRAM (1 x 4 GB)
+
+ECC Type: Non-ECC
+Form Factor: SODIMM
+Pin Count: 260-pin
+PC Speed: PC4-19200
+Ram is upgradable (Two slots)
+
+Walmart has "Maximum RAM Supported 4 GB" for model: 14-dk1025wm; this is false information.
+Amazon Link 01: 8 gb SODIMM
+Amazon Link 02: 8 gb SODIMM
+
+Note:
+
+Installed 16 GB ram but system only accepts/recognizes 14 GB ram. Attempted two different ram manufacture type (Crucial and PNY Ram)
+
+
+Video graphics: AMD Radeon Vega 3 Graphics
+Hard drive: 1 TB 5400 rpm SATA III HDD
+
+Also includes, SATA III 6 Gb/s, M.2 2280 Slot for additional storage.
+
+Western Digital Blue 500 GB M.2 2280 SSD.
+Western Digital Blue 500 GB 2.5 inch SSD, SATA III 6 Gb/s,Up to 560 MB/s
+
+
+Wifi: Realtek RTL8821CE 802.11b/g/n/ac (1x1) and Bluetooth® 4.2 Combo.
+
+Open Source DKMS Drivers in Ubuntu (and Ubuntu based Distros).
+
+Battery Life: 9 hrs (Nope!)
+
+Won't be seeing that in GNU/Linux.
+
+
+Secure Boot!
+
+Ubuntu is able to boot with secure boot enabled.
+
+Once disabled, you can load other Distros.
+
+

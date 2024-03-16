@@ -1,0 +1,110 @@
+## hpr3656 :: Importance of Small toy projects
+
+ Importance of Small toy projects
+Inspired by
+
+https://talkpython.fm/episodes/transcript/327/little-automation-tools-in-python
+
+Automating little things
+
+hpr3558 :: How I'm learning Haskell
+
+The Host talks about learning Haskell and says something like
+Finishing a small project is better than Starting a big project and not completing it.
+And You can not learn to code by reading, you need practice
+
+
+My recommendation for learning a new language.
+
+Think about a small problem you want to solve with code.
+Start banging away at it.
+Redo over and over, its OK
+Same project but better
+Learn new tech and practice
+
+An example of one of my small projects
+
+Original intent of my podfaded project
+
+Mostly Tech/Linux podcasts
+Find every podcast I could
+Track release cadence
+Rate how podfaded the feed is
+Use search API to find RSS feeds
+
+
+First attempt plan
+
+Scrape podcast networks
+
+used beautiful soup - something I wanted to learn anyway
+HTML
+
+Jinja templating - something I wanted to learn anyway
+Bootstrap - something I wanted to learn anyway
+Different colors based on how podfaded
+
+
+
+First attempt problems
+
+individual script per network
+4-5 different scripts
+took forever to run
+Broke when networks changed their page layout
+
+Redo
+
+Test Driven Development and pytest
+
+Red Green Refactor
+Confidence to change code
+
+Simplify - one scrapper script
+Embed audio player for latest episode
+
+How it works - Scraping pages for feeds
+
+scrape_for_feeds.py
+Provide a list of websites that have lists of podcasts
+Search the page for any links
+Check if the feed is valid by trying to parse it with feedparser
+Add feed to database
+
+Podcasts pages I scrape
+
+https://wiki.ubuntu.com/Podcasts
+http://www.thelinuxlink.net
+http://freeculturepodcasts.org
+
+How it works - Checking the feeds
+
+feed_info.py
+loop through feeds
+use feedparser to find latest episode
+
+title and enclosure (audio file)
+
+
+HTML Output
+
+https://podfaded.norrist.xyz/
+Currently hosted on a Free Tier VPS
+No Promises it will be there forever
+
+Feedback Welcome
+
+https://gitlab.com/norrist/podfaded2
+Bugs
+
+Sometimes the title is missing, so some of the CSS coloring doesn't work
+Excluded podcasts still occasionally show up on the list
+
+Looking for more curated lists of podcast pages
+
+not search sites
+
+Maybe scrape HPR podcast recommendation episodes
+
+Example
+

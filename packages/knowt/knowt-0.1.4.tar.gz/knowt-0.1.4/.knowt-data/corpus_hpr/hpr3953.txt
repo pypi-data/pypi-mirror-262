@@ -1,0 +1,116 @@
+## hpr3953 :: Large language models and AI don't have any common sense
+
+ Hobson and Greg are working with volunteers to develop an open source
+AI that we call Qary (QA for question answering). We're adding plugins
+to support open source large language models (LLMs) like GPT-2 and
+Llama2. Here's how you can use LLMs in your own Python Programs.
+
+Create a Hugging Face account:
+
+
+huggingface.co/join
+
+
+Create and copy your access token:
+
+
+Your user
+profile
+
+
+Create a .env file with your access token string:
+
+echo "HUGGINGFACE_ACCESS_TOKEN=hf_..." >> .env
+
+Load the .env variables in your python script using
+dotenv package and os.environ:
+
+
+TIP: Use os.environ to retrieve the dict of variable
+values rather than dotenv.load_values- Otherwise other
+environment variables that have been set by other shell scripts such as
+.bashrc will be ignored.
+This confused us when we were getting our GitLab CI-CD pipeline
+working and deploying to Render.com.
+Each of your cloud services will have different approaches to
+setting environment variables.
+This token string can be passed as a keyword argument to most of the
+pipeline and model classes.
+
+import dotenv
+dotenv.load_dotenv()
+import os
+env = dict(os.environ)
+token = env['HUGGINGFACE_ACCESS_TOKEN']
+
+Find the path and name for the model on Hugging Face hub you want to
+use:
+
+
+search for "llama2" in the top search bar on huggingface.co/
+TIP: don't hit enter at the end of your search, instead click on
+"See 3958 model results for llama2"
+I clicked on meta-llama/Llama-2-7b-chat-hf
+to see the documentation
+
+
+On the documentation page for your model you may have to apply for a
+license if it's not really open source but business source like Meta
+does with its AI so you can't use their models to compete with them
+
+
+Apply for a license to use Llama2 on ai.meta.com
+using the same e-mail you used for your Hugging Face account.
+
+
+Follow the instructions on
+huggingface.co to authenticate your python session
+
+
+TIP: You'll need to use the kwarg use_auth_token in the
+AutoModel.from_pretrained or pipeline
+functions.
+And it should be set to the token from your Hugging Face profile
+page. The hugging face documentation says to use the token
+kwarg, but that never worked for me.
+
+from transformers import pipeline, set_seed
+generator = pipeline('text-generation', model='openai-gpt')
+q = "2+2="
+responses = generator(
+    q,
+    max_length=10,
+    num_return_sequences=10
+    )
+responses
+[{'generated_text': '2+2= 2.2, 1.1 and'},
+ {'generated_text': '2+2= 3336 miles. they'},
+ {'generated_text': '2+2= 2, = 2 = 2'},
+ {'generated_text': '2+2= 4 = 2 = 5 \n'},
+ {'generated_text': '2+2= 0 ( 1 ) = ='},
+ {'generated_text': '2+2= 6 times the speed of sound'},
+ {'generated_text': '2+2= 2 times 5, 865'},
+ {'generated_text': '2+2= 3 / 7 / 11 ='},
+ {'generated_text': '2+2= 2 2 \n 2 of 2'},
+ {'generated_text': '2+2= 1, 9 = 1,'}]
+Here's the cow leg counting question:
+    q = "There are 2 cows and 2 bulls, how many legs are there?"
+    responses = generator(
+        f"Question: {q}\nAnswer: ",
+        max_length=30,
+        num_return_sequences=10)
+    answers = []
+    for resp in responses:
+        text = resp['generated_text']
+        answers.append(text[text.find('Answer: ')+9:])
+    answers
+     'four. \n " let me see if i have this straight',
+     'only 3. and three cows and 2 bulls are bigger than',
+     '2, 2, 1, 2. \n " not yet',
+     "one per cow, that's all there is. in fact",
+     '30. and what am i? oh, yes, about',
+     'one. the big, white bull that is bigger than 1',
+     'three. they need to be introduced to the cow population before',
+     "1. i don't know how many and where exactly ;",
+     'no 2. 2. two bulls for 1 bull and 2',
+     '1, there are 1.2, and 2, there are']

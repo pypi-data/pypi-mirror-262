@@ -1,0 +1,57 @@
+## hpr3277 :: Microsoft in my Debian repo
+
+ Raspberry pi foundation added vscode repo to raspberry OS.
+Raspberry Pi OS's tried:
+
+Raspberry Pi OS
+https://www.raspberrypi.org/software/
+Debian 10
+https://raspi.debian.net/
+Fedora 33
+https://fedoraproject.org/wiki/Architectures/ARM/Raspberry_Pi#Downloading_the_Fedora_ARM_image
+
+To try later:
+
+Arch for Arm
+https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4
+TPLink dongle. Actually, it has a 6-7 inch antenna for greater range.
+https://www.amazon.com/Wireless-desktop-10-9-10-14-Archer-T2U/dp/B07P5PRK7J/
+https://github.com/aircrack-ng/rtl8812au.git
+
+sudo apt install dkms
+
+cd rtl8812au
+
+sudo make dkms_install
+References.
+
+Gardiner Bryant (The Linux Gamer)
+https://www.youtube.com/watch?v=TuYPIohzo2Y
+Found after this recording is a more in-depth way to remove Microsoft's hands from your Raspberry Pi OS.
+
+From Ham Radio operator KM4ACK
+https://github.com/km4ack/pi-scripts
+https://raw.githubusercontent.com/km4ack/pi-scripts/417aaf3a9347c5e6a475071dcbbbe8cae68c1f75/removeMS
+
+
+The following code snippet was edited for readability.
+#Hold raspberrypi-sys-mods package
+sudo apt-mark hold raspberrypi-sys-mods
+
+#Redirect calls to packages.microsoft.com to localhost
+sudo echo "0.0.0.0 packages.microsoft.com" >> /etc/hosts
+
+#remove MS Key file
+sudo rm -vf /etc/apt/trusted.gpg.d/microsoft.gpg
+
+#create empty dummy key file
+sudo touch /etc/apt/trusted.gpg.d/microsoft.gpg
+
+#lock the dummy key file
+sudo chattr +i /etc/apt/trusted.gpg.d/microsoft.gpg
+
+#comment out vscode.list
+sudo sed -i 's/deb/#deb/' /etc/apt/sources.list.d/vscode.list
+
+#lock the vscode.list file
+sudo chattr +i /etc/apt/sources.list.d/vscode.list

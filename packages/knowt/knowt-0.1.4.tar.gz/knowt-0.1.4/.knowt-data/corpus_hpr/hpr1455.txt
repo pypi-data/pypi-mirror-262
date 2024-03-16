@@ -1,0 +1,8 @@
+## hpr1455 :: 23 - LibreOffice Writer Other Page Layout Options
+
+ Other Page Layout Options
+As we mentioned in beginning our look at Page Layout, you have some options other than just Page Styles and Frame Styles, useful though they are. So let’s spend a few moments looking at these other options and see how they work.
+Tables
+Tables can be a useful tool for more than just displaying tabular data. You can place different object in each cell of a table and so have some control over how things are laid out on the page. You could, for instance, place your sub-heads in a left-hand column, and the associated text in an adjoining column, which gives you the same effect as using the Marginalia style. And you can add pictures, charts, and other objects as well. You can even insert a table into a cell of another table to get more fine-grained control. In fact, in the days before Cascading Style Sheets and Javascript, tables were the primary way of laying out Web pages, though these days that is frowned upon, and in any case most Web pages are now created using some kind of CMS software like WordPress, or Drupal. The idea of using tables was more attractive when we realized you could turn-off the cell borders and make them invisible. Of course, in Writer documents that only works when they are printed. When opened on a computer the table borders are still visible, as indeed they would have to be for you to edit the document.
+
+For the remainder of this article please see https://www.ahuka.com/?page_id=676

@@ -1,0 +1,40 @@
+## hpr3503 :: Configuring Mumble
+
+ 
+The complete shownotes are available in our mumble how-to. 
+
+
+When using Mumble you should always use a microphone and headset positioned close to your mouth but slightly off to the side.
+
+
+The Mumble website offers download and install instructions for different operating systems.
+
+
+Once you have installed the client then connect to the HPR Room on Mumble.
+
+There is a first run wizard that will step you through the process of configuring Mumble the first time. This will open up a series of configuration options.
+
+
+It is very important that you set Push to Talk (PTT) and you Disable Text-To-Speech, as you will disturb the other people in the room if you select the other methods. It may seem to be working fine to you, but it will result in issues for the others.
+
+
+You are expected to have a digital certificate when connecting to Mumble servers. An automatically created one is usually fine.
+
+
+Once you have the Mumble client set up we can now start the process of connecting to the HPR Room on Mumble.
+
+
+If at any time you need to add the HPR server open mumble and press Server - Connect, press Add New...and enter the following information for the HPR server:
+
+
+Address: chatter.skyehaven.net
+Port: 64738
+Username: Your Username
+Label: chatter.skyehaven.net
+
+
+Think about your username a bit as if you register it on the server you will not be able to change it again.
+
+
+Before connecting to any room it's good etiquette to make sure your audio is working correctly. The room Audio Test will allow you to speak and the OpieTheRepeatherBot will record your speech and after 10 seconds will play it back for you.
+

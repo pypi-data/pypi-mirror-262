@@ -1,0 +1,46 @@
+## hpr3482 :: Introduction to Post Apocalyptic Robotics Meta Technology
+
+ https://solarbotics.net/bftgu/default.htm
+https://www.bitchute.com/video/jwD4sZhnXrEk/
+Hail to my Loyal Henchmen and fellow SuperVillains, welcome new recruits and greetings to the hackers of HPR.
+This is Mechatroniac the mechatronics maniac with the zeroth installment of Robot Warlords of the Apocalypse, where I will talk about post apocalyptic robotics and share my projects, philosophy and future ambitions.
+I am doing this podcast contribution for hacker public radio.
+hackerpublicradio.org
+After this has aired on HPR I will be adding video and to this presentation which will be uploaded to my channel at:
+https://bitchute.com/channel/mechatroniac point youtube-dl at it and download them all.
+Mechatronics is code, electronics and mechanics working together as a system. I am weak in all 3, but have built mini battlebot style robots completely from scratch, with every chassis part, every motor and wheel, and every circuit that drives them sourced for free from junk like discarded printers, dvds, tvs, computers and UPS.
+I am calling this ethos and the resultant aesthetic, Post Apocalyptic Robotics, that is robots that can be built by reclaiming existing post consumer products to create something new.
+Currently they are confined to smooth surfaces like battlebot arenas, but more rugged terrain bots are currently also being worked on, and I want to work towards autonomous and swarm robots as well.
+The recipes I release here, can be followed by anyone to build their own robots and devices, by simply gathering the required scrap units or similar as described; then disassembling, then finally reassembling into a new meta technological device.
+I hope that others will do the same, and come up with their own innovations and new recipes that can be added to our incipient swarms of meta-technological bots as they evolve ever more sophistication.
+Welcome to post apocalyptic robotics.
+Introduction to Post-Apocalypse Robotics Meta-technology
+Tech Prepping, Building a 'battlebot' out of junk
+Meteors, asteroids, comets. Cataclysmic solar flares, massive volcanic eruptions and earthquakes triggering massive tsunamis, social unrest, runaway climate change, ransomware and EMPs attacks striking electric grids, deadly viral pandemics, mass hysteria, big boats blocking waterways, obscured malware in a systemd update, management engines at the heart of CPUs providing backdoors to Intel and AMD hardware at root -3 privilege... what could go wrong there?
+There are a large number of looming events which could collapse technological society as it is, wiping out most of the internet and shipping and transport and hopefully maybe even the government.
+Tech Prepping is more important than food prepping
+While most survivalist and prepper types concentrate on stacking cans of beans, seeds, fuel and ammo, the robot prepper will also be hoarding books on pdf, component datasheets, software libraries, breakout boards and every post EOL electronics product they can get their hands on.
+In a semi apocalyptic scenario where the trucks stop rolling, a lot of people who save seeds will be able to grow food in their communities, so food won't be such a big deal.
+There might even be some that figure out how to make petroleum from wood like mrteslonian channel on youtube.
+But a real crux will be analog, digital electronics technology, IT and mechatronics. Those communities with working electronics, mechatronics, and information technology infrastructure, will be at a distinct competitive advantage. They will be able to leverage this in such things as automation of agriculture, from watering schedules to weed pulling along with many other applications that will make the PAR communities ascendant. All else being equal, PAR will be a force multiplier vs hostile neighbours starved of their slaveslabs swiping because facebook no longer exists, or remnants of the tyrannical state coming out of their DUMB bunkers and thinking they still have the right to rule.
+It's a good thing then, that we have a boost up to a mechatronic technological society all around us in the electronic consumer devices that although they may be decrepit, soiled and/or dead, nonetheless contain a wealth of component parts -most of which are hardy enough to function for a very long time, components that can be reused in new applications.
+It's like there is a supply chain for robot factories all around us. It's not infinite but it is very plentiful at the moment. Sadly, our society is blind to the current and future worth of the technological legacy in our midst and the electronics recycling is electronics destruction.
+Meta technology
+Antecedents: BEAM, cyberpunk, road warrior
+Fellow Travellers/Parallels: Maker, Right to repair, hardware hacking(Valerio De Giampietro - Hardware Hacking Tutorial), CollapseOS
+One of this new meta technology's main antecedents is BEAM(Biology Evolution Aesthetics Mechanics) robotics, Mark Tilden's robot projects that eschewed microprocessors in favour of circuits built of discrete components that mimic biological nerves and can react to environmental stimuli. There is a nice archive of BEAM related documents on the solarbotics site.
+Mark Tilden even wrote a book called 'Junk Bots', so must have had some of the same ideas I have... but where Mark uses transistors as the nerves and brains, I am using arduino since microprocessors are now very inexpensive.
+The use of arduino is the only thing keeping my projects from being completely PAR, but one day wish to have entirely PAR
+Thus right to repair and hardware hacking are thus two important aspects to utilizing the processors inside consumer products to run other operating systems for our use. Unless we hoard thousands of atmega328p chips, it will be difficult to find processors that we can use unless they have been liberated via techniques described by Valerio De Giampietro. Reusing processors from printers and other products is a goal for the future, but right now, let's have some fun.
+FUN and Education The first arduino PAR battlebot I built - the herald/interceptor; is powered by 5 18650 cells from trashed laptops, powertrain is a custom hybrid relay/MOSFET H-bridge, and it is driven by four electric motors and wheels harvested from PA printers. It has IR remote control and is very fast to the extent that I had to add rubber bumpers to it to keep it and others safe.
+I departed somewhat from the PAR ethos, with added front and rear ultrasonic sensors, and an mp3 player powering a tv speaker. Hence, it is the herald/interceptor
+I think it has an interesting road warrior cyberpunk aesthetic, with the grey steel, aluminum and black ABS parts, and but for the wheels; star wars for the bolted on look of it
+Can we set up PAR tournaments where we can bring our bots and battle it out? Cost is no longer a barrier.
+I could see a challenging new sport that is a cross between battlebots and junkyard wars, where contestants would have a set amount of time to build a bot from junk, and then compete in racing or sumo matches.
+Obviously you are going to learn a lot building a robot and the best way to learn is by doing.
+Alright, now that I have shown some of the important strategic and fun implications of PAR meta technology, by raiding trashed consumer electronics for their components: I hope at the very least that everyone hearing this never again take their post use electronics to one of those recycling centers where all those precious components are destroyed, instead of keeping it in your basement where it belongs. You'd do better taking it to a landfill where perhaps some future wretched mutant can discover and make use of it, than take it to electronics recycling.
+Next episode I'll show you how to build your PAR laboratory and give you the ingredients to the herald/interceptor battlebot, but if you're already excited to get started you can order an arduino Uno or nano, or an arduino kit with a bunch of sensors like I did when I got started. You can also start gathering things like printers, tvs, dvds, UPS and other waste, and get a soldering station if you don't already have one.
+In the coming episodes I will share the detailed recipe for my first post apocalyptic battlebot style robot I built complete with arduino code, and will show you how to build your own robot for free except for the arduino*. I'll also do email tech support for anyone having problems.
+I also want to go further into other tech prepper archiving, in case all or large parts of the internet are no longer accessible, and this may be where you programming specialists might be able to help. They kind of gave me weird looks on the arduino forums when I asked for a way to download all the libraries but was finally able to beg a script that let me download a lot of them, if not all.
+Also, all the component datasheets would be handy... it seems it would be prudent to have datasheets on all the components and microprocessors that you possibly can, and to have all the software libraries it would be practical to archive.
+I'll also go into more aspects and implications of this exciting meta technology, and I hope you will join me in building post apocalypse robotics and mechatronics fun.

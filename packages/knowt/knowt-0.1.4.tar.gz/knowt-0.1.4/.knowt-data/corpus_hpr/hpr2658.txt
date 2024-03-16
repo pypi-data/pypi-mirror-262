@@ -1,0 +1,71 @@
+## hpr2658 :: Questions on podcast production
+
+ HPR Chat with Al
+Al asks Dave a number of questions about podcast audio recording and post-production.
+Al is thinking of doing National Podcast Post Month in November
+National Podcast Post Month (or NaPodPoMo) is a challenge in a similar vein to National Novel Writing Month (or NaNoWriMo) in which participants are challenged to produce and publish a piece of audio as a podcast, every day for the month of November.
+Bad podcast audio
+Audio quality is as important as the content that's being presented. Bad audio is going to be what causes new podcasters the most damage in subscriber numbers. An example of good audio is the true crime podcast, One Eye Open, which Dave started listening to a couple of weeks ago. He also picked up a couple of other true crime podcasts as a result of listening to One Eye Open where the audio quality is so bad, that they can't be heard!
+Loudness is a measurement of how loud something is perceived to be. Levelling is a process of ensuring that individual tracks in a podcasts are an an equivalent level, but also the podcast overall is at an equivalent level to other podcasts that have been levelled the same way.
+Our setups
+Al and Dave have a very similar microphone setup.
+
+Samson Q2U - XLR and USB capable microphone
+Pop filters and wind screens
+Boom arm
+Shock mount
+
+What is a compressor
+The non-technical definition is that it brings up the quiet bits and brings down the louder bits so that your voice has less of a variance if you shout or whisper.
+Different microphone types
+
+Cardioid - focuses on sounds coming from in front of the mic
+Omnidirectional - can theoretically pick up sound from all directions
+Dynamic - well suited for vocal use
+Condenser - overall better quality sound than dynamic, but more susceptible to background noise, so requires a really quiet studio environment
+
+Your level
+You can measure your own level in Audacity - make sure you stay in the green! If you stray into yellow or even red, either lower your level or move slightly away from the mic.
+Other people's levels
+Concentrate on your own, get others to manage theirs. If you're recording multiple tracks, it can be managed in post-production, but once it's been merged into a single track it's virtually impossible.
+File formats
+
+FLAC/ALAC - lossless formats
+MP3/OGG/M4A - lossy formats
+
+Record in a lossless format, and do your edits and post-production in a lossless format. Only transcode to a lossy format once you're ready to publish your final file.
+Monitoring
+If you're recording yourself, and you don't want to hear yourself through headphones, take the headphones off.
+If you're recording with someone else who is not in the same room, you are better off hearing yourself through your headphones at the same level as the person you're talking to.
+Post-production
+
+Use Audacity to:
+
+align the tracks so that everyone is in the right place
+convert coughs, sneezes, burps, keyboard sounds, mouse clicks, etc to silence
+
+Use Auphonic to:
+
+level the individual tracks so that everyone sounds as "loud" as anyone else
+merge the individual tracks into a single output file (a Multitrack production)
+
+Dave also gives a specific use case for adding music into the final mix.
+
+NaPodPoMo revisited
+This will be Al's first attempt at NaPodPoMo, but not for Dave. Dave wants to make sure that he plans for this year, so he doesn't run out of material on day 7!!
+Dave will interview another NaPodPoMo participant at least once a week during November. Looks like Al will be one of them!
+
+Al's NaPodPoMo website and RSS feed
+Dave's NaPodPoMo website and RSS feed
+
+Dave's final thought
+Podcasting isn't rocket science. You don't need lots of expensive equipment to produce a podcast. You just need something to record into (e.g. a mobile phone or portable recorder) and somewhere to host it. You can host on your own website or on one of a number of free services, like Anchor, AudioBoom, or indeed Hacker Public Radio!
+The obligatory podcast plug
+
+Admin Admin Podcast
+The Bugcast
+
+Errata
+
+Dave originally said that the pickup pattern that picks up 360 degrees was "unidirectional" - it should have been "omnidirectional" and has been fixed in the edit, but it sounds like it was added in afterwards... which, of course, it was!!
+

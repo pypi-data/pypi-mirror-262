@@ -1,0 +1,38 @@
+## hpr3393 :: We need to talk about XML
+
+ Klaatu introduces XML.
+
+The sample XML document discussed in this episode is:
+
+
+
+<xml>
+  <sol>
+    <planet>
+      <name>
+        Mercury
+      </name>
+      <albedo>
+        0.11
+      </albedo>
+    </planet>
+    <planet>
+      <name>
+        Venus
+      </name>
+      <albedo>
+        0.7
+      </albedo>
+    </planet>
+    <planet>
+      <name>
+        Terra
+      </name>
+      <albedo>
+        0.39
+      </albedo>
+    </planet>
+  </sol>
+</xml>
+
+

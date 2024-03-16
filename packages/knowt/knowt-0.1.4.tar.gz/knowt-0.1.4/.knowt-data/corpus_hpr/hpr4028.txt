@@ -1,0 +1,236 @@
+## hpr4028 :: Passwords with a Pi Pico
+
+ norrist uses
+a raspberry pi pico to type passwords
+Password Managers
+
+I like using a password managers
+Every site has a different complex password
+I use the browser plugin or copy paste.
+I recently switched from last pass to bit warden.
+
+I was one of the users that did not get prompted to increase the
+number of password iterations from 1000.
+
+They work basically the same.
+
+My stupid bank
+
+The normal procedure for changing passwords is
+
+fill in old password
+generate new random password
+copy paste new password into the new password field
+
+For some reason, my bank's site uses JavaScript to block paste into
+the new password fields
+I don't know why banks or anyone disable pasting into a browser
+field
+The only way I could change my password, was to generate a password
+simple enough that it could be manually typed into the change
+fields
+
+First solution
+
+I wanted to find something like a programmable keyboard where you
+could input an input string and have the device type out the
+characters
+I found a few keyboards that used macros, but they seemed too simple
+to use for a complex password.
+I saw somewhere online that you could use a micro-controller to
+emulate a keyboard.
+I had a circuit playground express that I wasn't using for
+anything.
+The circuit playground express has 2 built in buttons
+I found a circuit python tutorial for emulating keystrokes and
+modified it so it would emulate the keystrokes for a password.
+Button A would output a password and button B would output a
+different password.
+
+Problems
+
+The passwords were stored as variables in the code
+The circuit playground express has a lot of built in LED's and touch
+pads. It was really being wasted to only use it as a keyboard emulation
+device
+I have another project I want to use the playground express for
+
+Next Solution
+
+Raspberry Pi Pico - $4 micro controller
+I was able to get circuit python to micro controller a keyboard on
+the pi pico
+Not many ways to get physically interact with board.
+No buttons and only one LED.
+I decided the best way was to have a count down timer
+blink the led to indicate where the timer was in the countdown
+output the keystrokes when the countdown timer reached zero
+
+More problems
+
+Circuit python devices work by exposing a small file system when
+plugged in via USB.
+You can mount the file system and edit the code running on the micro
+controller
+Once the device is powered on, it starts emulating keystrokes every
+time the countdown timer cycles
+to keep the micro controller keystrokes from interfering with any
+work you were doing I would have to mount the device and quickly comment
+out part of the code so it would stop sending keystrokes
+As a fix, I added a check to only send keystrokes if a file named
+send_keys exists
+Now, I can work on the code and only add the send_keys
+file when I an ready.
+
+Storing the password
+
+I didn't like that the password I want to send as keystrokes was
+stored as a variable in the code.
+I modified that python to read the password from a separate file
+named pw.txt
+
+Setup the Pi Pico
+Install circuit python
+
+https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/circuitpython
+
+Bundle
+
+https://github.com/adafruit/Adafruit_CircuitPython_Bundle
+-> Releases
+Download adafruit-circuitpython-bundle-py-20231219.zip
+or current version.
+Create a lib directory on the circuit python
+drive.
+Copy the directory lib/adafruit_hid from the zip to
+lib on the circuit python drive.
+
+Code.py
+
+Circuit python execute code.py
+Copy the code to send the passwords to the file
+code.py
+
+How to use
+
+Plug in the pico to your PC and mount the drive
+The LED will blink - 1 second on and 1 second off
+Save the password you want to input as keystrokes in the file
+pw.txt
+When you are ready for the pico to do the typing, create the file
+send_keys
+The LED's will blink fast 5 times, then 4 times, ...
+Wait for the LED flashes to count down.
+The pico will send the keystrokes and restart the countdown.
+Remove the file send_keys so stop the input.
+Overwrite pw.txt to be extra secure.
+
+Adapted from Ada
+fruit circuit python examples
+
+MIT
+Licensed
+Keyboard
+Example
+
+Code
+Gitlab
+Repo
+
+import os
+import time
+
+import board
+import digitalio
+import usb_hid
+
+# https://github.com/adafruit/Adafruit_CircuitPython_Bundle
+from adafruit_hid.keyboard import Keyboard
+from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
+from adafruit_hid.keycode import Keycode
+
+led = digitalio.DigitalInOut(board.LED)
+led.direction = digitalio.Direction.OUTPUT
+
+with open("pw.txt", "r") as pw_file:
+    pw = pw_file.read()
+
+a_keys_pressed = [Keycode.A, pw]
+control_key = Keycode.SHIFT
+
+# The keyboard object!
+time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems
+keyboard = Keyboard(usb_hid.devices)
+keyboard_layout = KeyboardLayoutUS(keyboard)  # We're in the US :)
+
+def blink_count(i, delay):
+    for _ in range(i):
+        led.value = True
+        time.sleep(delay)
+        led.value = False
+        time.sleep(delay)
+    time.sleep(1)
+
+def countdown_and_send():
+    for i in reversed(range(6)):
+        print(i)
+        blink_count(i, delay=0.2)
+    print(f"Sending {a_keys_pressed} as keystrokes")
+    for key in a_keys_pressed:
+        if isinstance(key, str):  # If it's a string...
+            keyboard_layout.write(key)  # ...Print the string
+
+while True:
+    print("Hello, CircuitPython!")
+    try:
+        os.stat("send_keys")
+        countdown_and_send()
+    except OSError:
+        blink_count(1, 1)
+        print("touch send_keys to enable keypresses")
+Playground express version
+# SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
+#
+# SPDX-License-Identifier: MIT
+
+"""CircuitPython Essentials HID Keyboard example"""
+import time
+
+import usb_hid
+from adafruit_circuitplayground import cp
+from adafruit_hid.keyboard import Keyboard
+from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
+from adafruit_hid.keycode import Keycode
+
+a_keys_pressed = [Keycode.A, "aaaabbbbccccdddd@@"]
+b_keys_pressed = [Keycode.A, "eeeeffffgggghhhh@@"]
+
+
+control_key = Keycode.SHIFT
+
+time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems
+keyboard = Keyboard(usb_hid.devices)
+keyboard_layout = KeyboardLayoutUS(keyboard)  # We're in the US :)
+
+
+print("Waiting for key pin...")
+
+while True:
+    if cp.button_a:
+        print("A")
+        for key in a_keys_pressed:
+            if isinstance(key, str):  # If it's a string...
+                keyboard_layout.write(key)  # ...Print the string
+    elif cp.button_b:
+        print("B")
+        for key in b_keys_pressed:
+            if isinstance(key, str):  # If it's a string...
+                keyboard_layout.write(key)  # ...Print the string
+
+    time.sleep(0.1)
+Links
+
+https://circuitpython.org/
+https://learn.adafruit.com/adafruit-circuit-playground-express/overview
+https://www.raspberrypi.com/products/raspberry-pi-pico/
+

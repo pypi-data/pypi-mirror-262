@@ -1,0 +1,13 @@
+## hpr3544 :: All my microphones
+
+ I used the following microphones in roughly reverse order of my expectations of their quality:
+
+Blue Yeti via USB
+Plantronics headset via USB (no link as over 10 years old)
+Laptop (ASUS ZenBook UX550VD) internal mic
+Desktop mic on a Windows 10 PC via a jack plug (no link as over 10 years old)
+Phone (Samsung S9+) internal microphone
+Same phone but with T1 bluetooth earbuds
+
+All audio is mono. I used Audacity to record on my laptop at 44.1kHz. For the desktop mic I had to resort to using my son's desktop Windows 10 PC and Windows recording app which defaulted to 48kHz and I think it was the app rather than the mic that resulted in the surprisingly poor quality. It definitely sounds like some kind of noise gate is being applied but I didn't dig around to see what settings were available. For my phone's built-in mic I used Samsung's voice recording app which I presume came pre-installed on the phone. Recording via bluetooth on an android phone turned out to be tricky as the OS only wants you to use a bluetooth microphone for calls however I found an app called Bluetooth Headset Voice Recorder and then enabled call audio on bluetooth and was able to record (the rubbish) audio.
+I edited this show in audacity and contrary to my normal practice I did not remove noise from any of the recordings so that you can hear any hiss in all its glory. I did however tweak the gain on each track manually so that they were about the same volume.

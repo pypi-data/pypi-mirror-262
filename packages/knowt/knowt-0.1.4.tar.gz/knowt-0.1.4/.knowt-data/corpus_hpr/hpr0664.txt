@@ -1,0 +1,18 @@
+## hpr0664 :: A Little Bit of Python: Episode 13
+
+ 
+A Little Bit of Python is an occasional podcast on all things Python. The four protagonists on the show are all core Python developers and members of the Python Software Foundation. They are: Michael Foord (author of IronPython in Action and maintainer of unittest), Andrew Kuchling (creator of PyCrypto and one of the python.org webmasters), Steve Holden (PSF chairman), Dr. Brett Cannon (author of importlib amongst other things) and Jesse Noller (maintainer of multiprocessing).
+
+
+Several topics are covered in this 40-minute episode:
+
+
+Python 2.7 beta 1 released.
+PEP 3147: New bytecode directory layout.
+Google's Summer of Code beginning.
+SEC proposes mandating Python's use in financial filings.
+PyCon interview: Dr Tim Couper
+How to Fund Python Development
+Python for Beginners: Getting started on Windows.
+
+

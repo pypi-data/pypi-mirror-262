@@ -1,0 +1,404 @@
+## hpr3705 :: The Year of the FreeBSD Desktop
+
+ Getting an installer
+Link to FreeBSD downloads
+Choose the correct arch for your system. amd64 is probably the one you want if you know nothing about computer architectures.
+you will have a lot of options:
+
+*-bootonly.iso is a netinstall image that is for burning to a CD
+*-disc1.iso is a supplementary CD image for *-bootonly.iso
+*-dvd1.iso is a complete DVD image with extra packages
+*-memstick.img is a complete image for burning to a USB stick
+*-mini-memstick.img is a netinstall image for burning to a USB stick
+
+I typically download and use one of the compressed memstick images. The mini image is fine but you probably want the regular memstick image if this is the first time you've ever installed FreeBSD. It alleviates some of the stress that comes with installing wireless drivers.
+To burn a memstick image, use the disk destroyer program:
+root@fbsd# xunz FreeBSD-13.1-RELEASE-amd64-memestick.img.xz
+root@fbsd# sudo dd if=./FreeBSD-13.1-RELEASE-amd64-memestick.img of=/dev/sdx status=progress
+root@fbsd# sudo eject /dev/sdx
+
+
+Initial installation
+pre-installation
+The standard steps for installing Linux apply:
+
+disable secure boot
+enable USB booting
+select boot device at startup time
+
+Because this is hardware specific, it's a homework assignment for the audience.
+Installation
+FreeBSD has a menu driven installer that walks the user through various steps:
+1. set keymap (leave default if you don't know)
+2. set hostname
+3. select sets
+There are many sets to choose from. New users probably want to install all of them. I typically only install the lib32 set and add the rest later.
+4. Partitioning
+bsdinstall makes it easy to partition your drives. The Auto(ZFS) option is probably what you want as the default UFS configuration is unjournaled.
+In the Auto(ZFS) menu, for a single hard drive installation, you want to stripe one disk. Select your hard drive.
+If you want full disk encryption, select the Encrypt Disks option.
+You also want to bump up the swap size to ram*1.5 as a general rule (so, for 4g of ram you will set 6g of swap, for 8g or ram you set 12g swap). If you selected Encrypt Disks, you should also select Encrypt Swap
+When you are done, proceed with the installation. You will gt a confirmation message asking if you want to destroy the disk(s) you selected. This is your last chance to go back.
+If you selected Encrypt Disks, you will be presented with a password prompt. This is the disk encryption password, not any user password.
+5. Wait for sets to install
+6. Configure root user
+After the sets are installed, you will set a root password.
+7. Network Config
+If your wireless card is supported, all the hard parts are already done for you. If your wireless card is not supported, you might need to plug in an ethernet cable and compile the drivers into the kernel.
+Select your card (em* is ethernet, wifi cards are named after their drivers)
+If you choose wifi, the installer will scan for networks and give you a menu to select one. If the network is encrypted, you will be presented with a password prompt.
+8. Time and date setup
+9. Service setup
+You will be presented with a menu that enables/disables services on system startup. You probably want all of them except local_unbound.
+10. Security config
+The next menu enables/disables security features. If nothing else, select disable_sendmail and clear_tmp
+11. Add users
+Simply add your user. You might want to add him to the wheel group if you plan on using sudo. I set my shell to tcsh but you can always change this later. A
+12. Final configuration
+You may want to install the handbook or modify any configurations you've made so far. This will take some time. When you are done, apply the config and exit.
+13. Manual config
+Before you reboot the system and exit the installer, you are given a last opportunity to make any manual configurations. This is rarely needed for the average desktop user.
+Post installation
+
+What, no GUI?
+
+Update system
+Login as root and update the system:
+root@fbsd# freebsd-update fetch
+root@fbsd# freebsd-update install
+root@fbsd# reboot
+
+Installing packages
+Before we begin modifying the system, we need a better editor.
+The pkg utility is used in a nearly identical way to any Linux package manager. The syntax pkg $verb $object persists. Verbs include install, remove, update, upgrade, search, etc.
+Because the only editors installed by default are vi, ed, and ee, let's install vim.
+There are multiple vim flavors, I like vim-tiny.
+root@fbsd# pkg bootstrap
+root@fbsd# pkg update
+root@fbsd# pkg search vim
+root@fbsd# pkg install vim-tiny
+
+We probably want sudo (or doas) also:
+root@fbsd# pkg install sudo
+root@fbsd# visudo
+
+Find the line that says:
+# %wheel ALL=(ALL:ALL) ALL
+
+and move the #  from the beginning of the line to enable the wheel group to do actions as root.
+Bootloader tweaks
+We can tweak the bootloader to make the system more desktop-like. Edit /boot/loader.conf
+# /boot/loader.conf
+# -----------------
+[ lots of default stuff ]
+
+# custom stuff
+
+# boot faster
+autoboot_delay=2
+
+Refer to loader.conf(5) for more tweaks and /boot/defaults/loader.conf for examples.
+init tweaks
+We can tweak the init system also. Edit /etc/rc.conf
+# /etc/rc.conf
+# -----------------
+[ lots of default stuff ]
+
+# enable graphics
+kld_list="i915kms"
+
+# faster booting
+background_dhclient="YES"
+
+See rc.conf(5) and /etc/defaults/rc.conf for more information on what you can do.
+Snapshotting a sane fresh installation
+At this point, it is wise to take a recursive snapshot of your FreeBSD installation. This provides us with an easy way to roll back to a fresh, known working system configuration.
+root@fbsd# zfs snapshot -r zroot@freshinstall
+root@fbsd# zfs list - tsnapshot
+
+If the system becomes unrepairable, we can simply rollback instead of reinstalling with a simple command:
+root@fbsd# zfs rollback -r zroot@freshinstall
+
+To rollback every dataset, we can use xargs:
+root@fbsd# zfs list -t snapshot | grep freshinstall | cut -d ' ' -f 1 | xargs -I % zfs rollback %
+
+Using zfs snapshots before and after making any potentially dangerous configuration changes saves a lot of headache in the long run because zfs is accessible from the recovery shell. Rollback with caution, user data may be lost.
+Homework assignment: write a series of cron jobs that automatically takes snapshots (and cleans up the old ones) of user data as a form of last line of defense version control
+
+Graphical user interfaces
+Install graphics drivers
+This varies depending on your GPU.
+root@fbsd# pkg install drm-kmod
+
+After installing this package, you will see a message on how to enable the driver for your specific hardware:
+For amdgpu: kld_list="amdgpu"
+For Intel: kld_list="i915kms"
+For radeonkms: kld_list="radeonkms"
+
+To enable one of these, you will need to add a line to your /etc/rc.conf. The earlier you place this line in the file, the sooner the kmods will load. For intel graphics, for example, you will add the following line:
+# /etc/rc.conf
+# -----------------
+[ lots of other stuff ]
+
+# intel graphics drivers
+kld_list="i915kms"
+
+To load the kmod on the fly (for larger resolution vt), run:
+root@fbsd# kldload i915kms
+
+You will also need to add your non-root user to the video group.
+root@fbsd# pw groupmod video -m $user
+
+Audio
+(hopefully) audio will just work. Supported audio interfaces are enumerated in man snd(4) and details on enabling/disabling drivers in /boot/lodaer.conf are also explained.
+To manage volume, use the mixer command. For example, setting the mic volume to 50% and the speaker volume to 95%:
+user@fbsd% mixer mic 50:50
+user@fbsd% mixer vol 95:95
+
+The mixertui command can also be used. This program functions similarly to alsamixer on Linux.
+Depending on your hardware, the volume keys on your keyboard might not work. Adding a keybinding to a shell script is the usual solution and should be familiar to anyone who uses a desktop free window manager.
+Getting xorg
+root@fbsd# pkg install xorg
+
+The twm window manager is included with xorg by default. We can use it for testing our xorg configuration, mouse support, etc before continuing with larger desktop environments. Early troubleshooting always prevents foot shooting. Test early, test often.
+root@fbsd# startx
+
+Desktop Environments
+Refer to The handbook's instructions on desktops for instructions on non-suckless (ie suckmore setups). I have tested some of them on FreeBSD. KDE and Xfce are reliable. GNOME is mostly reliable. If you are running a big DE, you might have to modify polkit rules to do things like reboot the system from the GUI. Many larger desktops rely on FreeDesktop.org components. I personally do not like dbus so instead I use the suckless tools.
+But, for the sake of completeness, I will install a few for the masses. I installed each one of these independently and sequentially on the same system using zfs snapshots to roll back to a bare bones system without any DE installed.
+GNOME
+root@fbsd# pkg install gnome
+root@fbsd# printf 'proc\t/proc\tprocfs\trw\t0\t0\n' >> /etc/fstab
+root@fbsd# sysrc dbus_enable="YES"
+root@fbsd# sysrc gdm_enable="YES"
+root@fbsd# sysrc gnome_enable="YES"
+root@fbsd# reboot
+
+
+KDE
+root@fbsd# pkg install kde5 sddm
+root@fbsd# printf 'proc\t/proc\tprocfs\trw\t0\t0\n' >> /etc/fstab
+root@fbsd# sysrc dbus_enable="YES"
+root@fbsd# sysrc sddm_enable="YES"
+root@fbsd# reboot
+
+
+Xfce
+root@fbsd# pkg install xfce xfce4-goodies
+root@fbsd# sysrc dbus_enable="YES"
+
+Xfce does not provide it's own login manager, unlike GNOME or KDE. Let's pick lightdm because it's small and the graphical toolkit matches Xfce.
+root@fbsd# pkg install lightdm-gtk-greeter
+root@fbsd# sysrc lightdm_enable="YES"
+root@fbsd# reboot
+
+
+
+Suckless
+suckless: tools that suck less.
+This is how I use FreeBSD (and how I use most computers). I wrote a makefile that modifies the compile options so that the tools will build on FreeBSD and (optionally) adds the theme I use. You can find my suckless duct tape in this git repo.
+I also use xdm because it's small and fast.
+user@fbsd% sudo pkg install xdm
+user@fbsd% sudo service xdm enable
+
+
+A final note on desktops
+Sometimes desktops behave unexpectedly on FreeBSD (ie users cannot manage power settings, reboot the system, etc). Make sure your login user is in the wheel group (it's your computer, you probably are already in the wheel group) and most of the issues will be resolved. For users you don't want in the wheel group, you'll need to write a few polkit rules.
+Additionally, big desktops are typically compiled without the graphical components for modifying network connections.
+Similar to Arch or Gentoo, there is a bit of legwork left to the end user. You'll never know what you might learn about systems administration if you don't wilfully give yourself the opportunity.
+Shell tweaks
+I like colors in the shell for systems I use regularly. I also like aliases. We can modify our csh configuration file to automatically do the fancy for us.
+# ~/.cshrc
+# -----------------
+[ lots of stuff ]
+
+# prompt section
+if ($?prompt) then
+    # An interactive shell -- set some stuff up
+    #set prompt = "%N@%m:%~ %# "
+    #set prompt = "%{\033[31m%}%N@%m:%~ %#%{\033[0m%} "
+    set prompt = "%{\033[1m%}%N@%m:%~ %#%{\033[0m%} "
+    set promptchars = "%#"
+
+    set filec
+    set history = 1000
+    set savehist = (1000 merge)
+    set autolist = ambiguous
+    # Use history to aid expansion
+    set autoexpand
+    set autorehash
+    set mail = (/var/mail/$USER)
+
+    if ( $?tcsh ) then
+        bindkey "^W" backward-delete-word
+        bindkey -k up history-search-backward
+        bindkey -k down history-search-forwarrd
+        bindkey "^R" i-search-back
+    endif
+endif
+
+# alias section
+alias la    ls -aF
+alias lf    ls -FA
+alias ll    ls -lAF
+alias ls    ls -GF
+alias lc    ls -GF
+
+Some other packages
+The things I like:
+user@fbsd% sudo pkg install firefox gimp feh mpv ffmpeg ImageMagick7 mutt newsboat
+
+If you install a large DE, most of the applications are pulled in as well. If not, you can always use xargs to pull in hundreds of gigabytes of programs:
+user@fbsd% sudo pkg search $desktop | cut -d ' ' -f 1 | xargs sudo pkg install -y
+
+Going GNU:
+user@fbsd% sudo pkg install coreutils emacs bash gcc gmake
+
+Do a few package searches. What you want is probably there. If not, time to start porting :)
+Once you have everything configured how you want it, it's a good time to take another zfs snapshot.
+
+Quickstart
+Init system
+Instead of systemd, FreeBSD uses rc scripts for starting and stopping services. Everything is pretty much shell scripts. To modify the startup process, you simply edit /etc/rc.conf in a text editor.
+For systemctl like starting/stopping/enabling, you can do the following:
+root@fbsd# service sshd enable
+root@fbsd# service sshd start
+root@fbsd# service sshd restart
+root@fbsd# service sshd stop
+root@fbsd# service sshd disable
+root@fbsd# service sshd onestart
+root@fbsd# service sshd status
+
+Each service has it's own init file so sometimes a specific service might take different arguments than the standard ones you might expect.
+Networking
+Network interfaces are configured classically using ifconfig(8). If you want a network interface to persist across reboots, you add the information in /etc/rc.conf.
+WiFi is managed with wpa_supplicant. Refer to man wpa_supplicant.conf(8) for more information.
+Firewall
+use the pf firewall, I like it
+General upgrade process
+root@fbsd# pkg update && pkg upgrade
+root@fbsd# freebsd-update upgrade -r 13.1-RELEASE
+root@fbsd# freebsd-update install
+root@fbsd# reboot
+root@fbsd# freebsd-update install
+root@fbsd# pkg update && pkg upgrade
+root@fbsd# freebsd-update install
+root@fbsd# reboot
+
+Shells
+FreeBSD uses tcsh(1) as the default shell and includes sh(1) for bourne-like compatibility. You can install bash if you want.
+Package management
+There are two primary ways of managing software: binary packages and ports. Don't mix them if you don't know what you're doing, it can cause problems.
+To be brief: ports are like Gentoo. You spend a lot of time watching compiler output. The following programs help: synth, portmaster, poudriere.
+to be verbose: here is a quick guide on using the binary package management system:
+pkg update
+pkg upgrade
+pkg search foobar
+pkg install foobar
+pkg remove foobar
+pkg autoremove
+
+As you can see, the syntax is nearly identical to dnf or apt.
+Filesystem
+The hierarchy of FreeBSD is slightly different than a typical Linux system. Refer to man hier(7) for more information.
+The biggest difference is that FreeBSD a logically organized system. For example: On Linux, everything seems to end up in /bin (which is a symlink to /usr/bin). Additionally, /sbin is just a symlink to /usr/sbin. On FreeBSD, the system is more organized. For example:
+/bin contains everything required to boot the system and /sbin contains everything required for fundamental administration.
+/usr/bin contains most everything else
+/usr/local contains everything installed by the package management system.
+User installed programs are configured in /usr/local/etc. This might be confusing at first but you'll get the hang of it.
+This logical separation might cause confusion when compiling software from source on FreeBSD but it's not too difficult to solve if you already know how about linker options and makefile modification.
+As for filesystems, apparently ext2, ext3, and ext4 have read/write support using the ext2fs(5) driver. I probably wouldn't boot from them but this exists. UFS is not journaled by default, proceed with caution. ZFS is very good.
+ZFS non-starter
+ZFS is cool because we can create partitions on a whim. Here is some shell output demonstrating listing datasets, creating datasets with a quota, destroying datasets, creating and using encrypted datasets, etc.
+root@freebsd:/ #
+root@freebsd:/ # zfs list
+NAME                                        USED  AVAIL     REFER  MOUNTPOINT
+zroot                                      3.97G   434G       96K  /zroot
+zroot/ROOT                                 3.82G   434G       96K  none
+zroot/ROOT/13.1-RELEASE_2022-09-18_143644     8K   434G     1.07G  /
+zroot/ROOT/default                         3.82G   434G     3.71G  /
+zroot/tmp                                   208K   434G      112K  /tmp
+zroot/usr                                   157M   434G       96K  /usr
+zroot/usr/home                              157M   434G      157M  /usr/home
+zroot/usr/ports                              96K   434G       96K  /usr/ports
+zroot/usr/src                                96K   434G       96K  /usr/src
+zroot/var                                  1.04M   434G       96K  /var
+zroot/var/audit                              96K   434G       96K  /var/audit
+zroot/var/crash                              96K   434G       96K  /var/crash
+zroot/var/log                               424K   434G      300K  /var/log
+zroot/var/mail                              192K   434G      128K  /var/mail
+zroot/var/tmp                               160K   434G       96K  /var/tmp
+root@freebsd:/ # zfs list -t snapshot
+NAME                                                     USED  AVAIL     REFER  MOUNTPOINT
+zroot@freshinstall                                        64K      -       96K  -
+zroot/ROOT@freshinstall                                    0B      -       96K  -
+zroot/ROOT/13.1-RELEASE_2022-09-18_143644@freshinstall     0B      -     1.07G  -
+zroot/ROOT/default@2022-09-18-14:36:44-0                76.7M      -     1.07G  -
+zroot/ROOT/default@freshinstall                         35.0M      -     1.21G  -
+zroot/tmp@freshinstall                                    96K      -      112K  -
+zroot/usr@freshinstall                                     0B      -       96K  -
+zroot/usr/home@freshinstall                               96K      -      128K  -
+zroot/usr/ports@freshinstall                               0B      -       96K  -
+zroot/usr/src@freshinstall                                 0B      -       96K  -
+zroot/var@freshinstall                                     0B      -       96K  -
+zroot/var/audit@freshinstall                               0B      -       96K  -
+zroot/var/crash@freshinstall                               0B      -       96K  -
+zroot/var/log@freshinstall                               124K      -      188K  -
+zroot/var/mail@freshinstall                               64K      -       96K  -
+zroot/var/tmp@freshinstall                                64K      -       96K  -
+root@freebsd:/ # zfs create zroot/crypt
+root@freebsd:/ # zfs set quota=5g zroot/crypt
+root@freebsd:/ # zfs list zroot/crypt
+NAME                                        USED  AVAIL     REFER  MOUNTPOINT
+zroot/crypt                                  96K  5.00G       96K  /zroot/crypt
+root@freebsd:/ # zfs destroy zroot/crypt
+root@freebsd:/ # zfs create -o encryption=on -o keylocation=prompt -o keyformat=passphrase zroot/crypt
+Enter new passphrase:
+Re-enter new passphrase:
+root@freebsd:/ # zfs list zroot/crypt
+NAME                                        USED  AVAIL     REFER  MOUNTPOINT
+zroot/crypt                                 200K   434G      200K  /zroot/crypt
+root@freebsd:/ # touch /zroot/crypt/supersecret
+root@freebsd:/ # ls /zroot/crypt/
+supersecret
+root@freebsd:/ # zfs get encryption zroot/crypt
+NAME         PROPERTY    VALUE        SOURCE
+zroot/crypt  encryption  aes-256-gcm  -
+root@freebsd:/ # zfs unmount zroot/crypt
+root@freebsd:/ # zfs unload-key -r zroot/crypt
+1 / 1 key(s) successfully unloaded
+root@freebsd:/ # zfs mount zroot/crypt
+cannot mount 'zroot/crypt': encryption key not loaded
+root@freebsd:/ # zfs get keystats zroot/crypt
+root@freebsd:/ # zfs get keystatus zroot/crypt
+NAME         PROPERTY   VALUE        SOURCE
+zroot/crypt  keystatus  unavailable  -
+root@freebsd:/ # zfs load-key -r zroot/crypt
+Enter passphrase for 'zroot/crypt':
+zfs 1 / 1 key(s) successfully loaded
+root@freebsd:/ # zfs mount -a
+root@freebsd:/ # ls /zroot/crypt/
+supersecret
+
+
+A conclusion
+Really, I think FreeBSD is a viable desktop operating system for the types of people who already use Linux in a terminal-centric capacity. After all, UNIX is UNIX.
+
+Other stuff
+Running Firefox inside of a jail
+Another way to run Firefox inside of a jail
+FreeBSD Distros that come with a desktop out of the box:
+GhostBSD - FreeBSD with MATE
+HelloSystem - FreeBSD with an Apple-like GUI (still in development)
+MidnightBSD - FreeBSD with Xfce and a different package management system
+NomadBSD - Live GUI FreeBSD with OpenBoX
+
+Additional Links
+ Linux to FreeBSD quick start: 
+https://klarasystems.com/articles/easily-migrate-from-linux-to-freebsd/
+
+Supported hardware: 
+https://wiki.freebsd.org/Laptops
+https://bsd-hardware.info/
+https://dmesgd.nycbug.org/index.cgi
+Editor's Note: This section was included from the comment sent by binrc.

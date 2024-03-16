@@ -1,0 +1,731 @@
+<html>
+<head>
+<title>Chapter 20: Trees</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap19.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="app01.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 20</h2>
+
+
+
+<h1>Trees</h1>
+<p>
+Like linked lists, trees are made up of nodes.  A common kind of tree
+is a <b>binary tree</b>, in which each node contains a reference to two
+other nodes (possibly null).  These references are referred to as the
+left and right subtrees.  Like list nodes, tree nodes also contain
+cargo.  A state diagram for a tree looks like this:
+
+<p align="center"><img src="illustrations/tree1.png"></p>
+<p>
+To avoid cluttering up the picture, we often omit the
+<tt><font size=-1>Nones</font></tt>.
+<p>
+The top of the tree (the node <tt><font size=-1>tree</font></tt> refers to) is called the
+<b>root</b>.  In keeping with the tree metaphor, the other nodes are
+called branches and the nodes at the tips with null references are
+called <b>leaves</b>.  It may seem odd that we draw the picture with
+the root at the top and the leaves at the bottom, but that is not the
+strangest thing.
+<p>
+To make things worse, computer scientists mix in another
+metaphor <s>&nbsp; &nbsp;</s> the family tree.  The top node is sometimes called
+a <b>parent</b> and the nodes it refers to are its <b>children</b>.
+Nodes with the same parent are called <b>siblings</b>.
+<p>
+Finally, there is a geometric vocabulary for talking
+about trees.  We already mentioned left and right, but there is
+also "up" (toward the parent/root) and "down" (toward the
+children/leaves).  Also, all of the nodes that are the same
+distance from the root comprise a <b>level</b> of the tree.
+<p>
+We probably don't need three metaphors for talking about trees,
+but there they are.
+<p>
+Like linked lists, trees are recursive data structures because
+they are defined recursively.
+
+<blockquote>A tree is either:
+
+<ul>
+<li>the empty tree, represented by <tt><font size=-1>None</font></tt>, or</li>
+<li>a node that contains an object reference and two
+tree references.</li>
+</ul>
+
+</blockquote>
+
+<a name=1></a>
+<h3>20.1 Building trees</h3>
+<p>
+The process of assembling a tree is similar
+to the process of assembling a linked list.
+Each constructor invocation builds a single node.
+
+<p><tt><font size=-1><font color=black>class</font> Tree:
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self, cargo, left=None, right=None):
+<br>&nbsp; &nbsp; self.cargo = cargo
+<br>&nbsp; &nbsp; self.left&nbsp; = left
+<br>&nbsp; &nbsp; self.right = right
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>__str__</font>(self):
+<br>&nbsp; &nbsp; <font color=black>return</font> str(self.cargo)
+<br></font></tt></p>
+
+<p>
+The <tt><font size=-1>cargo</font></tt> can
+be any type, but the arguments for <tt><font size=-1>left</font></tt> and <tt><font size=-1>right</font></tt> should be
+tree nodes.  <tt><font size=-1>left</font></tt> and <tt><font size=-1>right</font></tt> are optional; the default
+value is <tt><font size=-1>None</font></tt>.
+<p>
+To print a node, we just print the cargo.
+<p>
+One way to build a tree is from the bottom up.
+Allocate the child nodes first:
+
+<p><tt><font size=-1>left = Tree(2)
+<br>right = Tree(3)
+<br></font></tt></p>
+
+<p>
+Then create the parent node and link it to the children:
+
+<p><tt><font size=-1>tree = Tree(1, left, right);
+<br></font></tt></p>
+
+<p>
+We can write this code more concisely by nesting constructor
+invocations:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tree = Tree(1, Tree(2), Tree(3))
+<br></font></tt></p>
+
+<p>
+Either way, the result is the tree at the beginning of the
+chapter.
+
+<a name=2></a>
+<h3>20.2 Traversing trees</h3>
+<p>
+Any time you see a new data structure, your first
+question should be, "How do I traverse it?"  The most natural
+way to traverse a tree is recursively.  For example, if the
+tree contains integers as cargo, this function returns their sum:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>total</font>(tree):
+<br>&nbsp; <font color=black>if</font> tree == None: <font color=black>return</font> 0
+<br>&nbsp; <font color=black>return</font> total(tree.left) + total(tree.right) + tree.cargo
+<br></font></tt></p>
+
+<p>
+The base case is the empty tree, which contains no cargo, so
+the sum is 0.
+The recursive step
+makes two recursive calls to find the sum of the child trees.
+When the recursive calls complete,
+we add the cargo of the parent and return the
+total.
+
+<a name=3></a>
+<h3>20.3 Expression trees</h3>
+<p>
+A tree is a natural way to represent the structure of an expression.
+Unlike other notations, it can represent the computation
+unambiguously.  For example, the infix expression <tt><font size=-1>1 + 2 * 3</font></tt> is
+ambiguous unless we know that the multiplication happens before the
+addition.
+<p>
+This expression tree represents the same computation:
+
+<p align="center"><img src="illustrations/tree2.png"></p>
+<p>
+The nodes of an expression tree can be operands like <tt><font size=-1>1</font></tt> and
+<tt><font size=-1>2</font></tt> or operators like <tt><font size=-1>+</font></tt> and <tt><font size=-1>*</font></tt>.  Operands are leaf nodes;
+operator nodes contain references to their operands.  (All of these
+operators are <b>binary</b>, meaning they have exactly two operands.)
+<p>
+We can build this tree like this:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tree = Tree(<font color=red>'+'</font>, Tree(1), Tree(<font color=red>'*'</font>, Tree(2), Tree(3)))
+<br></font></tt></p>
+
+<p>
+Looking at the figure, there is no question what the order of
+operations is; the multiplication happens first in order to compute
+the second operand of the addition.
+<p>
+Expression trees have many uses.  The example in this chapter uses
+trees to translate expressions to postfix, prefix, and infix.
+Similar trees are used inside compilers to parse, optimize, and
+translate programs.
+
+<a name=4></a>
+<h3>20.4 Tree traversal</h3>
+<p>
+We can traverse an expression tree and print the contents like this:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printTree</font>(tree):
+<br>&nbsp; <font color=black>if</font> tree == None: <font color=black>return
+<br>&nbsp; print</font> tree.cargo,
+<br>&nbsp; printTree(tree.left)
+<br>&nbsp; printTree(tree.right)
+<br></font></tt></p>
+
+<p>
+In other words, to print a tree, first print the contents of
+the root, then print the entire left subtree, and then print the
+entire right subtree.  This way of traversing a tree is called
+a <b>preorder</b>, because the contents of the root appear <i>before</i>
+the contents of the children.
+For the previous example, the output is:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tree = Tree(<font color=red>'+'</font>, Tree(1), Tree(<font color=red>'*'</font>, Tree(2), Tree(3)))
+<br>&gt;&gt;&gt; printTree(tree)
+<br>+ 1 * 2 3
+<br></font></tt></p>
+
+<p>
+This format is different from both postfix and infix; it is another
+notation called <b>prefix</b>, in which the operators appear before
+their operands.
+<p>
+You might suspect that if you traverse the tree in a
+different order, you will get the expression in a different
+notation.  For example, if you print the subtrees first and then
+the root node, you get:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printTreePostorder</font>(tree):
+<br>&nbsp; <font color=black>if</font> tree == None: <font color=black>return</font>
+<br>&nbsp; printTreePostorder(tree.left)
+<br>&nbsp; printTreePostorder(tree.right)
+<br>&nbsp; <font color=black>print</font> tree.cargo,
+<br></font></tt></p>
+
+<p>
+The result, <tt><font size=-1>1 2 3 * +</font></tt>, is in postfix!
+This order of traversal is called <b>postorder</b>.
+<p>
+Finally, to traverse a tree <b>inorder</b>,
+you print the left tree, then the root, and then the right tree:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printTreeInorder</font>(tree):
+<br>&nbsp; <font color=black>if</font> tree == None: <font color=black>return</font>
+<br>&nbsp; printTreeInorder(tree.left)
+<br>&nbsp; <font color=black>print</font> tree.cargo,
+<br>&nbsp; printTreeInorder(tree.right)
+<br></font></tt></p>
+
+<p>
+The result is <tt><font size=-1>1 + 2 * 3</font></tt>, which is the expression in infix.
+<p>
+To be fair, we should point out that we have omitted an
+important complication.  Sometimes when we write an expression
+in infix, we have to use parentheses to preserve the order of
+operations.  So an inorder traversal is not quite sufficient to
+generate an infix expression.
+<p>
+Nevertheless, with a few improvements, the expression tree and the
+three recursive traversals provide a general way to translate
+expressions from one format to another.
+
+<blockquote><i>As an exercise, modify <tt><font size=-1>printTreeInorder</font></tt> so that it
+puts parentheses around every operator and pair of operands.
+Is the output correct and unambiguous?  Are the parentheses
+always necessary? </i>
+</blockquote>
+<p>
+If we do an inorder traversal and keep track of what level
+in the tree we are on, we can generate a graphical representation
+of a tree:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printTreeIndented</font>(tree, level=0):
+<br>&nbsp; <font color=black>if</font> tree == None: <font color=black>return</font>
+<br>&nbsp; printTreeIndented(tree.right, level+1)
+<br>&nbsp; <font color=black>print</font> <font color=red>'&nbsp; '</font>*level + str(tree.cargo)
+<br>&nbsp; printTreeIndented(tree.left, level+1)
+<br></font></tt></p>
+
+<p>
+The parameter <tt><font size=-1>level</font></tt> keeps track of where we are in the
+tree.  By default, it is initially 0.  Each time we make a
+recursive call, we pass <tt><font size=-1>level+1</font></tt> because the child's level
+is always one greater than the parent's.  Each item is indented by
+two spaces per level.  The result for the example tree is:
+
+<p><tt><font size=-1>&gt;&gt;&gt; printTreeIndented(tree)
+<br>&nbsp; &nbsp; 3
+<br>&nbsp; *
+<br>&nbsp; &nbsp; 2
+<br>+
+<br>&nbsp; 1
+<br></font></tt></p>
+
+<p>
+If you look at the output sideways, you see a simplified version
+of the original figure.
+
+<a name=5></a>
+<h3>20.5 Building an expression tree</h3>
+<p>
+In this section, we parse infix expressions and build the
+corresponding expression trees.  For example, the expression
+<tt><font size=-1>(3+7)*9</font></tt> yields the following tree:
+
+<p align="center"><img src="illustrations/tree3.png"></p>
+<p>
+Notice that we have simplified the diagram by leaving
+out the names of the attributes.
+<p>
+The parser we will write handles expressions that include numbers,
+parentheses, and the operators <tt><font size=-1>+</font></tt> and <tt><font size=-1>*</font></tt>.
+We assume that the input string has already
+been tokenized into a Python list.  The token list for
+<tt><font size=-1>(3+7)*9</font></tt> is:
+
+<p><tt><font size=-1>[<font color=red>'('</font>, 3, <font color=red>'+'</font>, 7, <font color=red>')'</font>, <font color=red>'*'</font>, 9, <font color=red>'end'</font>]
+<br></font></tt></p>
+
+<p>
+The <tt><font size=-1>end</font></tt> token is useful for preventing the parser from
+reading past the end of the list.
+
+<blockquote><i>As an exercise, write a function that takes an expression
+string and returns a token list.</i>
+</blockquote>
+<p>
+The first function we'll write is <tt><font size=-1>getToken</font></tt>, which takes a token
+list and an expected token as arguments.  It compares the expected
+token to the first token on the list: if they match, it removes the
+token from the list and returns true; otherwise, it returns false:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>getToken</font>(tokenList, expected):
+<br>&nbsp; <font color=black>if</font> tokenList[0] == expected:
+<br>&nbsp; &nbsp; <font color=black>del</font> tokenList[0]
+<br>&nbsp; &nbsp; <font color=black>return</font> True
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; <font color=black>return</font> False
+<br></font></tt></p>
+
+<p>
+Since <tt><font size=-1>tokenList</font></tt> refers to a mutable object, the changes made
+here are visible to any other variable that refers to the same object.
+<p>
+The next function, <tt><font size=-1>getNumber</font></tt>, handles operands.
+If the next token in <tt><font size=-1>tokenList</font></tt> is a number,
+<tt><font size=-1>getNumber</font></tt> removes it and returns a leaf node containing
+the number; otherwise, it returns <tt><font size=-1>None</font></tt>.
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>getNumber</font>(tokenList):
+<br>&nbsp; x = tokenList[0]
+<br>&nbsp; <font color=black>if not</font> isinstance(x, int): <font color=black>return</font> None
+<br>&nbsp; <font color=black>del</font> tokenList[0]
+<br>&nbsp; <font color=black>return</font> Tree (x, None, None)
+<br></font></tt></p>
+
+<p>
+Before continuing, we should test <tt><font size=-1>getNumber</font></tt> in isolation.  We
+assign a list of numbers to <tt><font size=-1>tokenList</font></tt>, extract the first,
+print the result, and print what remains of the token list:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tokenList = [9, 11, <font color=red>'end'</font>]
+<br>&gt;&gt;&gt; x = getNumber(tokenList)
+<br>&gt;&gt;&gt; printTreePostorder(x)
+<br>9
+<br>&gt;&gt;&gt; <font color=black>print</font> tokenList
+<br>[11, <font color=red>'end'</font>]
+<br></font></tt></p>
+
+<p>
+The next method we need is <tt><font size=-1>getProduct</font></tt>, which builds an
+expression tree for products.  A simple product has two numbers as
+operands, like <tt><font size=-1>3 * 7</font></tt>.
+<p>
+Here is a version of <tt><font size=-1>getProduct</font></tt> that handles
+simple products.
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>getProduct</font>(tokenList):
+<br>&nbsp; a = getNumber(tokenList)
+<br>&nbsp; <font color=black>if</font> getToken(tokenList, <font color=red>'*'</font>):
+<br>&nbsp; &nbsp; b = getNumber(tokenList)
+<br>&nbsp; &nbsp; <font color=black>return</font> Tree (<font color=red>'*'</font>, a, b)
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; <font color=black>return</font> a
+<br></font></tt></p>
+
+<p>
+Assuming that <tt><font size=-1>getNumber</font></tt> succeeds and returns a singleton tree,
+we assign the first operand to <tt><font size=-1>a</font></tt>.
+If the next character is <tt><font size=-1>*</font></tt>, we get the second number
+and build an expression tree with <tt><font size=-1>a</font></tt>, <tt><font size=-1>b</font></tt>,
+and the operator.
+<p>
+If the next character is anything else, then we just return
+the leaf node with <tt><font size=-1>a</font></tt>.  Here are two examples:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tokenList = [9, <font color=red>'*'</font>, 11, <font color=red>'end'</font>]
+<br>&gt;&gt;&gt; tree = getProduct(tokenList)
+<br>&gt;&gt;&gt; printTreePostorder(tree)
+<br>9 11 *
+<br></font></tt></p>
+
+
+<p><tt><font size=-1>&gt;&gt;&gt; tokenList = [9, <font color=red>'+'</font>, 11, <font color=red>'end'</font>]
+<br>&gt;&gt;&gt; tree = getProduct(tokenList)
+<br>&gt;&gt;&gt; printTreePostorder(tree)
+<br>9
+<br></font></tt></p>
+
+<p>
+The second example implies that we consider a single
+operand to be a kind of product.  This definition of
+"product" is counterintuitive, but it turns out to
+be useful.  
+<p>
+Now we have to deal with compound products, like like <tt><font size=-1>3 * 5 *
+<br>13</font></tt>.  We treat this expression as a product of products, namely <tt><font size=-1>3
+<br>* (5 * 13)</font></tt>.  The resulting tree is:
+
+<p align="center"><img src="illustrations/tree4.png"></p>
+<p>
+With a small change in <tt><font size=-1>getProduct</font></tt>, we can handle
+an arbitrarily long product:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>getProduct</font>(tokenList):
+<br>&nbsp; a = getNumber(tokenList)
+<br>&nbsp; <font color=black>if</font> getToken(tokenList, <font color=red>'*'</font>):
+<br>&nbsp; &nbsp; b = getProduct(tokenList)&nbsp; &nbsp; &nbsp; &nbsp;<font color=#009000># this line changed
+</font><br>&nbsp; &nbsp; <font color=black>return</font> Tree (<font color=red>'*'</font>, a, b)
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; <font color=black>return</font> a
+<br></font></tt></p>
+
+<p>
+In other words, a product can be either a singleton or a tree with
+<tt><font size=-1>*</font></tt> at the root, a number on the left, and a product on the right.
+This kind of recursive definition should be starting to feel
+familiar.
+<p>
+Let's test the new version with a compound product:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tokenList = [2, <font color=red>'*'</font>, 3, <font color=red>'*'</font>, 5 , <font color=red>'*'</font>, 7, <font color=red>'end'</font>]
+<br>&gt;&gt;&gt; tree = getProduct(tokenList)
+<br>&gt;&gt;&gt; printTreePostorder(tree)
+<br>2 3 5 7 * * *
+<br></font></tt></p>
+
+<p>
+Next we will add the ability to parse sums.  Again, we
+use a slightly counterintuitive definition of "sum."
+For us, a sum can be a tree with <tt><font size=-1>+</font></tt> at the root,
+a product on the left, and a sum on the right.  Or, a sum
+can be just a product.
+<p>
+If you are willing to play along with this definition, it has a nice
+property: we can represent any expression (without parentheses) as a
+sum of products.  This property is the basis of our parsing algorithm.
+<p>
+<tt><font size=-1>getSum</font></tt> tries to build a tree with a product on the left and a
+sum on the right.  But if it doesn't find a <tt><font size=-1>+</font></tt>, it just builds a
+product.
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>getSum</font>(tokenList):
+<br>&nbsp; a = getProduct(tokenList)
+<br>&nbsp; <font color=black>if</font> getToken(tokenList, <font color=red>'+'</font>):
+<br>&nbsp; &nbsp; b = getSum(tokenList)
+<br>&nbsp; &nbsp; <font color=black>return</font> Tree (<font color=red>'+'</font>, a, b)
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; <font color=black>return</font> a
+<br></font></tt></p>
+
+<p>
+Let's test it with <tt><font size=-1>9 * 11 + 5 * 7</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tokenList = [9, <font color=red>'*'</font>, 11, <font color=red>'+'</font>, 5, <font color=red>'*'</font>, 7, <font color=red>'end'</font>]
+<br>&gt;&gt;&gt; tree = getSum(tokenList)
+<br>&gt;&gt;&gt; printTreePostorder(tree)
+<br>9 11 * 5 7 * +
+<br></font></tt></p>
+
+<p>
+We are almost done, but we still have to handle parentheses.
+Anywhere in an expression where there can be a number, there can
+also be an entire sum
+enclosed in parentheses.  We just need to modify <tt><font size=-1>getNumber</font></tt> to
+handle <b>subexpressions</b>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>getNumber</font>(tokenList):
+<br>&nbsp; <font color=black>if</font> getToken(tokenList, <font color=red>'('</font>):
+<br>&nbsp; &nbsp; x = getSum(tokenList)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<font color=#009000># get the subexpression
+</font><br>&nbsp; &nbsp; getToken(tokenList, <font color=red>')'</font>)&nbsp; &nbsp; &nbsp; <font color=#009000># remove the closing parenthesis
+</font><br>&nbsp; &nbsp; <font color=black>return</font> x
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; x = tokenList[0]
+<br>&nbsp; &nbsp; <font color=black>if not</font> isinstance(x, int): <font color=black>return</font> None
+<br>&nbsp; &nbsp; tokenList[0:1] = []
+<br>&nbsp; &nbsp; <font color=black>return</font> Tree (x, None, None)&nbsp; &nbsp; 
+<br></font></tt></p>
+
+<p>
+Let's test this code with <tt><font size=-1>9 * (11 + 5) * 7</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tokenList = [9, <font color=red>'*'</font>, <font color=red>'('</font>, 11, <font color=red>'+'</font>, 5, <font color=red>')'</font>, <font color=red>'*'</font>, 7, <font color=red>'end'</font>]
+<br>&gt;&gt;&gt; tree = getSum(tokenList)
+<br>&gt;&gt;&gt; printTreePostorder(tree)
+<br>9 11 5 + 7 * *
+<br></font></tt></p>
+
+<p>
+The parser handled the parentheses correctly; the addition happens
+before the multiplication.
+<p>
+In the final version of the program, it would be a good idea
+to give <tt><font size=-1>getNumber</font></tt> a name
+more descriptive of its new role.
+
+<a name=6></a>
+<h3>20.6 Handling errors</h3>
+<p>
+Throughout the parser, we've been assuming that expressions are
+well-formed.  For example, when we reach the end of a
+subexpression, we assume that the next character is a close
+parenthesis.  If there is an error and the next character is something
+else, we should deal with it.
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>getNumber</font>(tokenList):
+<br>&nbsp; <font color=black>if</font> getToken(tokenList, <font color=red>'('</font>):
+<br>&nbsp; &nbsp; x = getSum(tokenList)&nbsp; &nbsp; &nbsp; &nbsp;
+<br>&nbsp; &nbsp; <font color=black>if not</font> getToken(tokenList, <font color=red>')'</font>):
+<br>&nbsp; &nbsp; &nbsp; <font color=black>raise</font> ValueError, <font color=red>'missing parenthesis'</font>
+<br>&nbsp; &nbsp; <font color=black>return</font> x
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; <font color=#009000># the rest of the function omitted
+</font><br></font></tt></p>
+
+<p>
+The <tt><font size=-1><font color=black>raise</font></font></tt> statement creates an exception; in this
+case a <tt><font size=-1>ValueError</font></tt>.  If the function that called
+<tt><font size=-1>getNumber</font></tt>, or one of the other functions in the
+traceback, handles the exception, then the program
+can continue.  Otherwise, Python will print an error message
+and quit.
+
+<blockquote><i>As an exercise, find other places in these functions where errors
+can occur and add appropriate <tt><font size=-1><font color=black>raise</font></font></tt> statements.
+Test your code with improperly
+formed expressions.</i>
+</blockquote>
+
+<a name=7></a>
+<h3>20.7 The animal tree</h3>
+<p>
+In this section, we develop a small program that uses a tree
+to represent a knowledge base.
+<p>
+The program interacts with the user to create a tree of questions
+and animal names.  Here is a sample run:
+
+<p><tt><font size=-1>Are you thinking of an animal? y
+<br>Is it a bird? n
+<br>What <font color=black>is</font> the animals name? dog
+<br>What question would distinguish a dog <font color=black>from</font> a bird? Can it fly
+<br>If the animal were dog the answer would be? n
+<br>
+<br>Are you thinking of an animal? y
+<br>Can it fly? n
+<br>Is it a dog? n
+<br>What <font color=black>is</font> the animals name? cat
+<br>What question would distinguish a cat <font color=black>from</font> a dog? Does it bark
+<br>If the animal were cat the answer would be? n
+<br>
+<br>Are you thinking of an animal? y
+<br>Can it fly? n
+<br>Does it bark? y
+<br>Is it a dog? y
+<br>I rule!
+<br>
+<br>Are you thinking of an animal? n
+<br></font></tt></p>
+
+<p>
+Here is the tree this dialog builds:
+
+<p align="center"><img src="illustrations/tree5.png"></p>
+<p>
+At the beginning of each round, the program starts at the top of the
+tree and asks the first question.  Depending on the answer, it moves
+to the left or right child and continues until it gets to a leaf
+node.  At that point, it makes a guess.  If the guess is not correct,
+it asks the user for the name of the new animal and a question that
+distinguishes the (bad) guess from the new animal.  Then it adds a
+node to the tree with the new question and the new animal.
+<p>
+Here is the code:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>animal</font>():
+<br>&nbsp; <font color=#009000># start with a singleton
+</font><br>&nbsp; root = Tree(<font color=red>"bird"</font>)
+<br>
+<br>&nbsp; <font color=#009000># loop until the user quits
+</font><br>&nbsp; <font color=black>while</font> True:
+<br>&nbsp; &nbsp; <font color=black>print
+<br>&nbsp; &nbsp; if not</font> yes(<font color=red>"Are you thinking of an animal? "</font>): <font color=black>break</font>
+<br>
+<br>&nbsp; &nbsp; <font color=#009000># walk the tree
+</font><br>&nbsp; &nbsp; tree = root
+<br>&nbsp; &nbsp; <font color=black>while</font> tree.getLeft() != None:
+<br>&nbsp; &nbsp; &nbsp; prompt = tree.getCargo() + <font color=red>"? "</font>
+<br>&nbsp; &nbsp; &nbsp; <font color=black>if</font> yes(prompt):
+<br>&nbsp; &nbsp; &nbsp; &nbsp; tree = tree.getRight()
+<br>&nbsp; &nbsp; &nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; &nbsp; &nbsp; tree = tree.getLeft()
+<br>
+<br>&nbsp; &nbsp; <font color=#009000># make a guess
+</font><br>&nbsp; &nbsp; guess = tree.getCargo()
+<br>&nbsp; &nbsp; prompt = <font color=red>"Is it a "</font> + guess + <font color=red>"? "</font>
+<br>&nbsp; &nbsp; <font color=black>if</font> yes(prompt):
+<br>&nbsp; &nbsp; &nbsp; <font color=black>print</font> <font color=red>"I rule!"</font>
+<br>&nbsp; &nbsp; &nbsp; <font color=black>continue</font>
+<br>
+<br>&nbsp; &nbsp; <font color=#009000># get new information
+</font><br>&nbsp; &nbsp; prompt&nbsp; = <font color=red>"What is the animal's name? "</font>
+<br>&nbsp; &nbsp; animal&nbsp; = raw_input(prompt)
+<br>&nbsp; &nbsp; prompt&nbsp; = <font color=red>"What question would distinguish a %s from a %s? "</font>
+<br>&nbsp; &nbsp; question = raw_input(prompt % (animal,guess))
+<br>
+<br>&nbsp; &nbsp; <font color=#009000># add new information to the tree
+</font><br>&nbsp; &nbsp; tree.setCargo(question)
+<br>&nbsp; &nbsp; prompt = <font color=red>"If the animal were %s the answer would be? "</font>
+<br>&nbsp; &nbsp; <font color=black>if</font> yes(prompt % animal):
+<br>&nbsp; &nbsp; &nbsp; tree.setLeft(Tree(guess))
+<br>&nbsp; &nbsp; &nbsp; tree.setRight(Tree(animal))
+<br>&nbsp; &nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; &nbsp; tree.setLeft(Tree(animal))
+<br>&nbsp; &nbsp; &nbsp; tree.setRight(Tree(guess))
+<br></font></tt></p>
+
+<p>
+The function <tt><font size=-1>yes</font></tt> is a helper; it prints a prompt and then
+takes input from the user.  If the response
+begins with <i>y</i> or <i>Y</i>, the function returns true:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>yes</font>(ques):
+<br>&nbsp; <font color=black>from</font> string <font color=black>import</font> lower
+<br>&nbsp; ans = lower(raw_input(ques))
+<br>&nbsp; <font color=black>return</font> (ans[0] == <font color=red>'y'</font>)
+<br></font></tt></p>
+
+<p>
+The condition of the outer loop is <tt><font size=-1>True</font></tt>, which means it will
+continue until the <tt><font size=-1><font color=black>break</font></font></tt> statement executes, if the user
+is not thinking of an animal.
+<p>
+The inner <tt><font size=-1><font color=black>while</font></font></tt> loop walks the tree from top to bottom,
+guided by the user's responses.
+<p>
+When a new node is added to the tree, the new question replaces
+the cargo, and the two children are the new animal and the original
+cargo.
+<p>
+One shortcoming of the program is that when it exits, it forgets
+everything you carefully taught it!
+
+<blockquote><i>As an exercise, think of various ways you might save
+the knowledge tree in a file.  Implement the one you think
+is easiest.</i>
+</blockquote>
+
+<a name=8></a>
+<h3>20.8 Glossary</h3>
+
+<dl>
+<dt>binary tree</dt>
+<dd>A tree in which each node refers to zero, one, or
+two dependent nodes.</dd>
+<dt>root</dt>
+<dd>The topmost node in a tree, with no parent.</dd>
+<dt>leaf</dt>
+<dd>A bottom-most node in a tree, with no children.</dd>
+<dt>parent</dt>
+<dd>The node that refers to a given node.</dd>
+<dt>child</dt>
+<dd>One of the nodes referred to by a node.</dd>
+<dt>siblings</dt>
+<dd>Nodes that share a common parent.</dd>
+<dt>level</dt>
+<dd>The set of nodes equidistant from the root.</dd>
+<dt>binary operator</dt>
+<dd>An operator that takes two operands.</dd>
+<dt>subexpression</dt>
+<dd>An expression in parentheses that acts
+as a single operand in a larger expression.</dd>
+<dt>preorder</dt>
+<dd>A way to traverse a tree, visiting each node
+before its children.</dd>
+<dt>prefix notation</dt>
+<dd>A way of writing a mathematical expression
+with each operator appearing before its operands.</dd>
+<dt>postorder</dt>
+<dd>A way to traverse a tree, visiting the children
+of each node before the node itself.</dd>
+<dt>inorder</dt>
+<dd>A way to traverse a tree, visiting the left subtree,
+then the root, and then the right subtree.</dd>
+</dl>
+<p>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap19.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="app01.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

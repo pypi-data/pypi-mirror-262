@@ -1,0 +1,44 @@
+## hpr3626 :: The stuff Evil Steve doesn't want you to know S01E06: Use a Password Manager
+
+ The stuff Evil Steve doesn't want you to know with Lurking Prion. This is Season 1, Episode 6. Picking up from the last episode, we are now delving in to the security measures we can implement to make ourselves a less attractive for Evil Steve. After implementing 2FA, we should now be setting up and using a password manager. Then we look for and changed passwords involved in known breaches (haveibeenpwned - link in show notes). The show is approximately 19 minutes long.
+Links:
+
+Has your password been involved in a breach?
+https://haveibeenpwned.com/
+Password Manager Reviews:
+https://www.tomsguide.com/us/best-password-managers,review-3785.html
+https://www.pcmag.com/picks/the-best-password-managers
+https://www.nytimes.com/wirecutter/reviews/best-password-managers/
+Stand-Alone Password Managers
+
+
+KeePass https://keepass.info/
+KeePassXC https://keepassxc.org/
+
+Recent Authenticator App Reviews
+https://www.pcmag.com/picks/the-best-authenticator-apps
+https://www.nytimes.com/wirecutter/reviews/best-two-factor-authentication-app/
+Google password manager articles
+https://privacycrypts.com/password-managers/guides/is-chrome-password-manager-safe/
+https://www.experian.com/blogs/ask-experian/is-google-passwordmanager-secure/
+Apple iCloud Keychain
+https://www.imore.com/icloud-keychain
+https://www.intego.com/mac-security-blog/mac-and-ios-keychain-tutorial-how-apples-icloud-keychain-works/
+https://www.podfeet.com/blog/2021/06/icloud-keychain-vs-1password/
+iCloud Keychain 2FA - how to
+https://www.guidingtech.com/use-icloud-keychain-two-factor-authentication/
+Apple iCloud Keychain security issues
+https://www.wired.com/story/keysteal-apple-keychain-attack-shenanigans/
+Microsoft Authenticator vs Google Authenticator
+https://www.365tech.ca/which-one-is-better-microsoft-authenticator-or-google-authenticator/
+Google Authenticator
+https://www.techdim.com/what-is-google-authenticator/
+Google Authenticator security issue
+https://privacypros.io/u2f/stop-using-google-auth/
+Microsoft Authenticator
+https://www.androidauthority.com/microsoft-authenticator-987754/
+Microsoft Authenticator security issue
+https://www.transmitsecurity.com/blog/microsoft-authenticator-a-false-sense-of-security
+Permanent link because it's very cool.
+https://threatmap.checkpoint.com/
+

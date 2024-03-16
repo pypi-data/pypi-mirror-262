@@ -1,0 +1,11 @@
+## hpr2120 :: WEBDUMP wmap EyeWitness phantomjs selenium
+
+ 
+video
+https://vimeo.com/180974163
+video for Burp suite wmap Change Request Method Active Scanner
+https://vimeo.com/178749543
+Cygwin webdump script that uses curl,sed,gawk ( needs to auto detect https or http.. only supports https on port 443 …)
+https://rmccurdy.com/scripts/WEBDUMP_BURP
+eyewitness
+https://github.com/ChrisTruncer/EyeWitness

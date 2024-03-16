@@ -1,0 +1,4 @@
+## hpr2857 :: Creating CounterParty Collectible Tokens for the Bitcorn Game
+
+ Bitcorn is an idle farming game created with and played using Bitcoin tokens using the CounterParty protocol. I’ll walk you through how it all works, how to get started and what all that means.
+In this episode we’ll walk through the basics of creating and submitting a Bitcorn collectible card to be included in the game, along with setting up a wallet so you can buy and sell them.

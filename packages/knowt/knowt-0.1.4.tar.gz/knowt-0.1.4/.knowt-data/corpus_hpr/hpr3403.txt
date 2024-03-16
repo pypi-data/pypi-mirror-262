@@ -1,0 +1,21 @@
+## hpr3403 :: Forth on microcontrollers
+
+ 
+microlisp
+lisp on avr microcontrollers (and others)
+https://www.ulisp.com/
+ben eater
+https://eater.net/
+computer on breadboards
+https://6502.org/
+forth on avr microcontrollers
+
+eforth https://forth.org/eforth.html
+amforth https://amforth.sourceforge.net/
+flash forth https://www.flashforth.com/
+
+incantations
+
+  sudo avrdude -c usbtiny -p m328p -e -U flash:w:uno.hex:i -U eeprom:w:uno.eep.hex:i
+  sudo avrdude -c usbtiny -p m328p -e -U flash:w:uno.hex:i -U eeprom:w:uno.eep.hex:i
+  sudo avrdude -P usbtiny -p m328p -e -U efuse:w:0x05:m -U hfuse:w:0xD9:m -U lfuse:w:0xFF:m

@@ -1,0 +1,51 @@
+## hpr1501 :: AWK
+
+ 
+First of all, a correction. In the podcast, I mistakenly refer to one of the
+coauthors of the language as Kevin Weinberger. My humblest apologies to Mr.
+Weinberger, whose actual first name is Peter. I also neglected to mention one
+of AWK's most interesting features: its automatic field splitting. I hope to
+submit a followup podcast soon in order to rectify these two glaring mistakes.
+
+
+AWK is a loosely typed interpreted programming language. Many useful functions
+in a UNIX programming environment, such as reading files, looping over input,
+matching regular expressions, and splitting strings into fields have been
+abstracted and are presented to the programmer as native parts of the language.
+This makes AWK ideal for text processing.
+
+
+The basic structure of an AWK program is a list of rules. Each rule is made up
+of an optional pattern and an optional action. If the pattern is matched, the
+corresponding action is run. When AWK starts up, it loads the supplied program
+text, runs any rules with the special BEGIN pattern, then in turn, opens each
+file supplied on the command line (or stdin if no files or a - are specified).
+Each file is split into records based on the value in the RS (record separator)
+variable. AWK then loops through each record, splits it into fields based on
+the value in the FS (field separator) variable, and loops through each rule in
+the program. An empty pattern matches all records, so actions with no pattern
+run for every record. An empty action causes the current record to be printed.
+
+
+The operator most unique to AWK is the $ (field access) operator. When followed
+by an integer literal or variable holding an integer value, it returns the
+corresponding field in the current record (counting from 1 up to NF, the number
+of fields special variable). $0 returns the entire record. If the supplied
+integer is greater than NF, it is treated as an uninitialized variable, which,
+in AWK, is treated dually as either the empty string, or the number 0,
+depending on the context in which it is referenced.
+
+
+The most common type of pattern used in AWK (excepting, perhaps, the empty
+pattern) is a regular expression literal. It consists of a regular expression
+enclosed in forward slashes. This syntax is inherited from ed, the standard
+text editor, and has been passed down all the way to javascript. In AWK, a
+regular expression literal, alone as a pattern, is shorthand for $0 ~ /regex/,
+where ~ is the regular expression match operator (the string $0, current
+record, matches the supplied regular expression).
+
+
+POSIX AWK: https://pubs.opengroup.org/onlinepubs/009696699/utilities/awk.html
+
+The AWK Programming Language: https://books.cat-v.org/computer-science/awk-programming-language/The_AWK_Programming_Language.pdf
+

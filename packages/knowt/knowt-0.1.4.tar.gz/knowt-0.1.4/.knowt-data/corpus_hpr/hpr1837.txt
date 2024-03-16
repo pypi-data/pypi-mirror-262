@@ -1,0 +1,29 @@
+## hpr1837 :: Put an SSD in your Linux Box
+
+ 
+Some commands I mentioned that you should check out:
+
+
+Check SSD disk specs: 
+
+
+sudo hdparm -I /dev/sdb
+
+
+Check for TRIM support: 
+
+
+sudo fstrim -v /
+
+
+Perform TRIM support 
+
+
+sudo hdparm -I /dev/sdb | grep -i TRIM
+
+Detailed SSD Info
+
+https://en.wikipedia.org/wiki/Solid-state_drive#Linux_systems
+
+https://wiki.archlinux.org/index.php/Solid_State_Drives
+

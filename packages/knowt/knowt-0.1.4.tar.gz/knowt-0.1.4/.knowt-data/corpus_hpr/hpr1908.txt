@@ -1,0 +1,55 @@
+## hpr1908 :: Arduino Pumpkin
+
+ Code for Pumpkin
+
+
+
+
+
+
+
+
+
+
+
+
+
+int ledPin1 = 5;
+int ledPin2 = 6;
+int motorPin = 8;
+int lightPin = 3;
+int lightVal;
+int potPin = 0;
+int potVal;
+
+void setup(){
+  Serial.begin(9600);
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(motorPin, OUTPUT);
+  pinMode(potPin, INPUT);
+  pinMode(lightPin, INPUT);
+  digitalWrite(ledPin1, LOW);
+  digitalWrite(ledPin2, LOW);
+  digitalWrite(motorPin, LOW);
+}
+
+void loop(){
+  potVal = analogRead(potPin);
+  lightVal = analogRead(lightPin);
+  Serial.println(lightVal);
+  if (lightVal < potVal){
+    animate();
+  }
+}
+
+void animate(){
+  digitalWrite(ledPin1, HIGH);
+  digitalWrite(ledPin2, HIGH);
+  digitalWrite(motorPin, HIGH);
+  delay(100);
+  digitalWrite(ledPin1, LOW);
+  digitalWrite(ledPin2, LOW);
+  digitalWrite(motorPin, LOW);
+}
+

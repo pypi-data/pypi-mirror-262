@@ -1,0 +1,12 @@
+## hpr0924 :: LiTS 000: redirection
+
+ Welcome to the first entry of Linux in the Shell.  Before delving into specific commands, redirection will be explored as redirection will be used frequently in the examples going forward.  The Unix philosophy posits program simplicity and that a program should do one thing and do it well (Mike Gancarz, the Unix Philosophy).  Eric Raymond adds the Rule of Composition:  "Design programs to be connected to other programs."  Redirection is the glue that achieves this design.
+
+Redirection is applied to any of the following standard streams to achieve results beyond simply outputting some value from a single command:
+
+Standard Input (stdin) – 0
+Standard Output (stdout) – 1
+Standard Error (stderr) – 2
+
+For the rest of this article and accompanying video please go to https://www.linuxintheshell.com/2012/02/16/entry-000-redirection/
+The video can be downloaded https://www.archive.org/download/LinuxInTheShellEpisode000-Redirection/lits-000.ogv

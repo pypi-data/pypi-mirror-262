@@ -1,0 +1,59 @@
+## hpr3528 :: Slackware on a netbook
+
+ Installed Slackware on Acer Aspire One
+
+4.4.14-smp #2 SMP Fri Jun 24 14:44:24 CDT 2016 i686 Intel(R) Atom(TM) CPU N270 @ 1.60GHz GenuineIntel GNU/Linux
+1 Gb ram
+[mark@archer72:~ ] $ free total --mega
+    total    used  free  shared  buff/cache   available
+Mem:           1009         172         376           0         459         692
+Swap:          1048           0        1048
+Runs a little warm
+[mark@archer72:~ ] $ sensors
+
+coretemp-isa-0000
+Adapter: ISA adapter
+Core 0:       +45.0 &#8451;  (crit = +90.0 &#8451;)
+Ignore lid switch
+echo on >/sys/bus/acpi/drivers/button/$PLATFORM\:00/power/control
+Or in this case
+echo on > /bus/acpi/drivers/button/LNXPWRBN\:00/power/control
+Clear screen in BASH
+
+Enter in ~/.bashrc the line:
+bind -x $'"\C-l":clear;'
+Not working between reboots
+
+
+
+If you always want the content of your .bashrc file processed, you can add the following lines to your .bash_profile file, creating that file if it does not already exist:
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+Per its man page, bash "[...] looks for ~/.bash_profile, ~/.bash_login, and ~/.profile, in that order, and reads and executes commands from the first one that exists and is readable." Conventions and policies of your local system will determine which, if any, of these files already exist.
+A word of caution: be aware that creating a new .bash_profile in your home directory could have the unintended side-effect of preventing the reading and executing of commands in a .bash_login or .profile file already present, changing further the behavior of subsequent logins. 
+https://stackoverflow.com/questions/18393521/bashrc-not-loading-until-run-bash-command
+
+Change lilo menu timeout to 5 seconds
+
+edit /etc/lilo.conf
+.
+.
+# This is given in tenths of a second, so 600 for every minute:
+# timeout = 1200
+timeout = 50
+.
+.
+
+Add custom bash prompt.
+  PS1=""[\d \t \u@\h:\w ]" $ "
+  [Sat Feb 05 18:11:15 mark@archer72:~ ] $
+For a more concise prompt:
+  PS1="[\u@\h:\w ] $
+  [mark@archer72:~ ] $
+Not authorized to control networking
+sudo usermod -G netdev -a yourusername
+
+https://askubuntu.com/questions/304159/not-authorized-to-control-networking#304181
+
+

@@ -1,0 +1,42 @@
+## hpr0967 :: Raspberry Pi spec review
+
+ 
+In today's show Klaas-Jan walks Ken throught the possibilities of the Raspberry Pi. The Raspberry Pi is a credit-card sized computer that plugs into your TV and a keyboard. It’s a capable little PC which can be used for many of the things that your desktop PC does, like spreadsheets, word-processing and games. It also plays high-definition video. We want to see it being used by kids all over the world to learn programming. All for under $35.
+Connectors
+
+
+Composite video is the format of an analog television (picture only) signal before it is combined with a sound signal and modulated onto an RF carrier. In contrast to component video (YPbPr) it contains all required video information, including colors in a single line-level signal. Like component video, composite-video cables do not carry audio and are often paired with audio cables (see RCA connector).
+
+
+
+HDMI (High-Definition Multimedia Interface) is a compact audio/video interface for transmitting encrypted uncompressed digital data. HDMI implements the EIA/CEA-861 standards, which define video formats and waveforms, transport of compressed, uncompressed, and LPCM audio, auxiliary data, and implementations of the VESA EDID. HDMI supports, on a single cable, any uncompressed TV or PC video format, including standard, enhanced, high definition and 3D video signals; up to 8 channels of compressed or uncompressed digital audio; a Consumer Electronics Control (CEC) connection; and an Ethernet data connection.
+
+
+General Purpose Input/Output (a.k.a. GPIO) is a generic pin on a chip whose behavior (including whether it is an input or output pin) can be controlled (programmed) through software.
+GPIO pins have no special purpose defined, and go unused by default. The idea is that sometimes the system integrator building a full system that uses the chip might find useful to have a handful of additional digital control lines, and having these available from the chip can save the hassle of having to arrange additional circuitry to provide them. For example, the Realtek ALC260 chips (audio codec) have 4 GPIO pins, which go unused by default. Some system integrators (Acer laptops) employing the ALC260 use the first GPIO (GPIO0) to turn on the amplifier used for the laptop's internal speakers and external headphone jack.
+
+
+A Universal Asynchronous Receiver/Transmitter, abbreviated UART is a type of "asynchronous receiver/transmitter", a piece of computer hardware that translates data between parallel and serial forms. UARTs are commonly used in conjunction with communication standards such as EIA, RS-232, RS-422 or RS-485. The universal designation indicates that the data format and transmission speeds are configurable and that the actual electric signaling levels and methods (such as differential signaling etc.) typically are handled by a special driver circuit external to the UART.
+A UART is usually an individual (or part of an) integrated circuit used for serial communications over a computer or peripheral device serial port. UARTs are now commonly included in microcontrollers. A dual UART, or DUART, combines two UARTs into a single chip. Many modern ICs now come with a UART that can also communicate synchronously; these devices are called USARTs (universal synchronous/asynchronous receiver/transmitter).
+
+
+I²C ("i-squared cee"; Inter-Integrated Circuit; generically referred to as "two-wire interface") is a multi-master serial single-ended computer bus invented by Philips that is used to attach low-speed peripherals to a motherboard, embedded system, cellphone, or other electronic device. Since the mid 1990s, several competitors (e.g., Siemens AG (later Infineon Technologies AG), NEC, Texas Instruments, STMicroelectronics (formerly SGS-Thomson), Motorola (later Freescale), Intersil, etc.) brought I²C products on the market, which are fully compatible with the NXP (formerly Philips's semiconductor division) I²C-system. As of October 10, 2006, no licensing fees are required to implement the I²C protocol. However, fees are still required to obtain I²C slave addresses allocated by NXP.
+SMBus, defined by Intel in 1995, is a subset of I²C that defines the protocols more strictly. One purpose of SMBus is to promote robustness and interoperability. Accordingly, modern I²C systems incorporate policies and rules from SMBus, sometimes supporting both I²C and SMBus with minimal re-configuration required.
+
+
+The Serial Peripheral Interface Bus or SPI (pronounced like "S.P.I." or "spy") bus is a synchronous serial data link standard named by Motorola that operates in full duplex mode. Devices communicate in master/slave mode where the master device initiates the data frame. Multiple slave devices are allowed with individual slave select (chip select) lines. Sometimes SPI is called a "four-wire" serial bus, contrasting with three-, two-, and one-wire serial buses.
+
+Links
+
+https://www.raspberrypi.org/
+https://en.wikipedia.org/wiki/Raspberry_Pi
+https://www.raspberrypi.org/faqs
+https://en.wikipedia.org/wiki/Raspberry_Pi
+https://en.wikipedia.org/wiki/Composite_video
+https://en.wikipedia.org/wiki/HDMI
+https://en.wikipedia.org/wiki/General_Purpose_Input/Output
+https://en.wikipedia.org/wiki/Universal_asynchronous_receiver/transmitter
+https://en.wikipedia.org/wiki/I%C2%B2C
+https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus
+https://en.wikipedia.org/wiki/USB#Mini_and_Micro_connectors
+

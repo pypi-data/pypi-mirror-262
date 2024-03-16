@@ -1,0 +1,59 @@
+## hpr2778 :: Functor and applicative in Haskell
+
+ Two common patterns that I seem to run all the time while working on my 4x space game are functor and applicative. This episode explains them briefly.
+Functor
+Functor is a way to apply function over a structure we don’t want to alter. Type of the structure stays same, but values inside of it can change. One of the most common one is list, but there are many others.
+Functor type class is defined below. There’s one function fmap that takes two parameters: a function from a to b and structure f a. Result will be structure f b.
+class Functor f where
+    fmap :: (a -> b) -> f a -> f b
+This is fairly abstract, so couple example might help. First we define a little helper function that raises it’s argument to 2nd power (in the episode I talk about doubling the value, my mistake there).
+-- | this really raises x to 2nd power and doesn't double it
+double x = x * x
+Given a list of Int we can raise them to power of two by using fmap:
+> fmap double [1, 2, 3, 4, 5]
+[1, 4, 9, 16, 25]
+Since function being applied to structure is type of (a -> b), we can change type of the value inside of the structure. Below is example of turning list of Int to list of Text.
+> fmap show [1, 2, 3, 4, 5]
+["1", "2", "3", "4", "5"]
+This pattern isn’t limited to list and there are many others. You can even define your own ones, if you’re so inclined. The pattern stays the same. One function, fmap, that takes function of type (a -> b) and structure f a and turns it into structure of f b. Details how this is actually done depend on the specific functor.
+Other common functor is Maybe that is often used in cases where data might or might not be present. Maybe a has two possible values Just a indicating that value a is present and Nothing indicating that there is no value present. When fmap is used in this context, Just a will turn to Just b and Nothing will stay as Nothing.
+> fmap (x -> x * x) $ Just 2
+Just 4
+> fmap (x -> x * x) Nothing
+Nothing
+Either a b is sometimes used for value that can be correct or an error. It has two value constructors Right b indicates that value is correct, Left a indicates an error case. a and b don’t have to be of same type (and usually aren’t). For example, if we have Either Text Int, then we have value where error case is Text and correct value is Int.
+> fmap double $ Right 5
+Right 25
+> fmap double $ Left "distance calculation failed because of flux-capacitor malfunction"
+Left "distance calculation failed because of flux-capacitor malfunction"
+Functors can be placed inside of functors. The only difference is that you have to reach through multiple layers. Simplest way of doing that is to compose multiple fmap functions together like in the example below. Pay attention to in which order nested functors are defined as Maybe [Int] and [Maybe Int] are different things. Former is for case where list of Int might or might not be present. Latter is for case where there’s always list, but single element inside of the list might or might not be present.
+> (fmap . fmap) double (Just [1, 2, 3, 4])
+Just [1, 4, 9, 16]
+> (fmap . fmap) double Nothing :: Maybe Int
+Nothing
+> (fmap . fmap) double [Just 1, Just 2, Nothing, Just 3]
+[Just 1, Just 4, Nothing, Just 9]
+There’s also infix operator, that does exactly same thing as fmap, called <$>. The choice which one to use is often either personal or depends on the surrounding code (because Haskell doesn’t use parenthesis in function application, so sometimes it’s easier to use fmap and sometimes <$>).
+> fmap show [1, 2, 3, 4, 5]
+["1", "2", "3", "4", "5"]
+
+> show <$> [1, 2, 3, 4, 5]
+["1", "2", "3", "4", "5"]
+There are many more functors, one place to check them is: https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-Functor.html
+Applicative
+While functor works fine when function applied has only one parameter, we need applicative in cases of multiparameter functions. Calling fmap (+) [1, 2] will produce list of functions waiting for second parameter. While it would be possible to handle these cases manually, we like to abstract it to more general solution.
+class Functor f => Applicative f where
+    pure :: a -> f a
+    (<*>) :: f (a -> b) -> f a -> f b
+Applicative is similar to functor. The big difference is that function being applied is now embedded inside of same type of structure. While functor has (a -> b), applicative has f (a -> b).
+Below is an example of using list applicative to calculate all possible ways of summing two lists of Int.
+> (+) <$> [1, 2, 3] <*> [4, 5, 6]
+[5,6,7,6,7,8,7,8,9]
+Maybe Int works with the same pattern. First we use <$> to get started, this results Maybe containing a function that is waiting for second parameter. Then we use <*> to apply the second parameter so we get the result.
+> (+) <$> Just 2 <*> Just 5
+Just 7
+> (+) <$> Just 2 <*> Nothing
+Nothing
+As long as there’s only Just a in play, result is Just, but as soon as there’s even single Nothing the end result will be nothing.
+If you have questions or comments, I would be delighted to hear about them. You can catch me on fediverse, where I’m Tuula@mastodon.social. Even better, you could record your own HPR episode.
+Ad astra!

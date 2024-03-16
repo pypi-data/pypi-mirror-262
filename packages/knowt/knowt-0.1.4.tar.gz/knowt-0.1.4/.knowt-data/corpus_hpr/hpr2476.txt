@@ -1,0 +1,88 @@
+## hpr2476 :: Gnu Awk - Part 9
+
+ Awk Series Part 9 - printf
+The printf function allows for greater control over the output, in comparison to print.
+To follow along, you can either use these show notes or refer to the gawk manual.
+There are 3 main areas to cover:
+
+Basic printf syntax
+Format Control letters
+Format modifiers
+
+Syntax
+printf format, item1, item2, …
+The big difference in the syntax of printf statements is the format argument. It allows you to use complex formatting and layouts for outputs. Unlike print, printf does not automatically start a new line after the function. This can be useful when you want to print all of the items in a column on a single line.
+For example, remember the example file, file1.csv:
+name,color,amount
+apple,red,4
+banana,yellow,6
+strawberry,red,3
+grape,purple,10
+apple,green,8
+plum,purple,2
+kiwi,brown,4
+potato,brown,9
+pineapple,yellow,5
+Look at the difference between the following outputs:
+awk -F, 'NR!=1{print "Color", $2, "has", $3}' file1.csv
+and
+awk -F, 'NR!=1{printf "Color %s has %s. ", $2, $3}' file1.csv
+Control Letters
+Control letters control or cast the output to specific types. Use it as a way to convert ints to floats, ints to chars, etc.
+%c = to char. printf "%c", 65 prints a
+%i, %d = to int. printf "%i", 3.4 prints 3
+%f = to float. printf "%c", 65 prints 65.000000
+%e, %E = to scientific notation. printf "%e", 65 prints 6.500000e+01. If you use %E will use a capital E instead of e.
+%g = to either scientific notation or int. printf "%.2g", 65 prints 65, while printf "%.1g", 65 prints 6e+01
+%s = to string. printf "%s", 65 prints 65
+%u = to unsigned int. printf "%u", -6 prints 18446744073709551610
+There are others. See documentation.
+Formatting
+N$ = positional specifier. printf "%2$s %1$s", "second", "first"
+n = spaces to the left of the string.
+-n = spaces to the right of string.
+space = prefix positive numbers with a space, negative numbers with a -
++ = prefix all numbers with a sign (either + or -)
+0n = leading 0's before input. printf "%03i", 65 prints 065.
+' = comma place holder for thousands. printf "%'i", 6500 prints 6,500
+Below is an (crude) illustration of how I like to think when formatting output:
+          7          2
+├──────┼───────┼────┼──┤
+ Color: RedXXXX Sum: X6
+       18            3
+├──────────────────╂───┤
+ Total Sum:XXXXXXXX X34
+See the following awk file
+BEGIN {
+    FS=",";
+}
+NR != 1 {
+    a[$2]+=$3;
+    c+=$3;
+    d+=1;
+}
+END {
+    for (b in a) {
+        printf "Color: %-7s Sum: %2i\n", b, a[b];
+    }
+    print "----------------------"
+    printf "%-18s %3i\n", "Total Sum:", c;
+    printf "%-18s %3i\n", "Total Count:", d;
+    printf "%-18s %3.1f\n", "Mean:", c / d;
+}
+This gives the following output:
+Color: brown   Sum: 13
+Color: purple  Sum: 12
+Color: red     Sum:  7
+Color: yellow  Sum: 11
+Color: green   Sum:  8
+----------------------
+Total Sum:          51
+Total Count:         9
+Mean:              5.7
+Resources
+
+https://www.gnu.org/software/gawk/manual/gawk.html#Printf
+https://www.grymoire.com/Unix/Awk.html
+https://datascienceatthecommandline.com/
+

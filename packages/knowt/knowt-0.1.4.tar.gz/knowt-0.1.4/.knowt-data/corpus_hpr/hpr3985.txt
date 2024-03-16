@@ -1,0 +1,274 @@
+## hpr3985 :: Bash snippet - be careful when feeding data to loops
+
+ 
+Overview
+Recently Ken Fallon did a show on HPR, number
+3962, in which he used a Bash
+pipeline of multiple commands feeding their output into a
+while loop. In the loop he processed the lines produced by
+the pipeline and used what he found to download audio files belonging to
+a series with wget.
+This was a great show and contained some excellent advice, but the
+use of the format:
+pipeline | while read variable; do ...
+reminded me of the "gotcha" I mentioned in my own show
+2699.
+I thought it might be a good time to revisit this subject.
+So, what's the problem?
+The problem can be summarised as a side effect of pipelines.
+What are pipelines?
+Pipelines are an amazingly useful feature of Bash (and other shells).
+The general format is:
+command1 | command2 ...
+Here command1 runs in a subshell and produces output (on
+its standard output) which is connected via the pipe symbol
+(|) to command2 where it becomes its
+standard input. Many commands can be linked together in this
+way to achieve some powerful combined effects.
+A very simple example of a pipeline might be:
+$ printf 'World\nHello\n' | sort
+Hello
+World
+The printf command (≡'command1') writes two
+lines (separated by newlines) on standard output and this is
+passed to the sort command's standard input
+(≡'command2') which then sorts these lines
+alphabetically.
+Commands in the pipeline can be more complex than this, and in the
+case we are discussing we can include a loop command such as
+while.
+For example:
+$ printf 'World\nHello\n' | sort | while read line; do echo "($line)"; done
+(Hello)
+(World)
+Here, each line output by the sort command is read into
+the variable line in the while loop and is
+written out enclosed in parentheses.
+Note that the loop is written on one line. The semi-colons are used
+instead of the equivalent newlines.
+Variables and subshells
+What if the lines output by the loop need to be numbered?
+$ i=0; printf 'World\nHello\n' | sort | while read line; do ((i++)); echo "$i) $line"; done
+1) Hello
+2) World
+Here the variable 'i' is set to zero before the
+pipeline. It could have been done on the line before of course. In the
+while loop the variable is incremented on each iteration
+and included in the output.
+You might expect 'i' to be 2 once the loop exits but it
+is not. It will be zero in fact.
+The reason is that there are two 'i' variables. One is
+created when it's set to zero at the start before the pipeline. The
+other one is created in the loop as a "clone". The expression:
+((i++))
+both creates the variable (where it is a copy of the one in the
+parent shell) and increments it.
+When the subshell in which the loop runs completes, it will delete
+this version of 'i' and the original one will simply
+contain the zero that it was originally set to.
+You can see what happens in this slightly different example:
+$ i=1; printf 'World\nHello\n' | sort | while read line; do ((i++)); echo "$i) $line"; done
+2) Hello
+3) World
+$ echo $i
+1
+These examples are fine, assuming the contents of variable
+'i' incremented in the loop are not needed outside it.
+The thing to remember is that the same variable name used in a
+subshell is a different variable; it is initialised with the value of
+the "parent" variable but any changes are not passed back.
+How to avoid the
+loss of changes in the loop
+To solve this the loop needs to be run in the original shell, not a
+subshell. The pipeline which is being read needs to be attached to the
+loop in a different way:
+$ i=0; while read line; do ((i++)); echo "$i) $line"; done < <(printf 'World\nHello\n' | sort)
+1) Hello
+2) World
+$ echo $i
+2
+What is being used here is process
+substitution. A list of commands or pipelines are enclosed with
+parentheses and a 'less than' sign prepended to the list
+(with no intervening spaces). This is functionally equivalent to a
+(temporary) file of data.
+The redirection feature allows for data being read from a
+file in a loop. The general format of the command is:
+while read variable
+    do
+       # Use the variable
+    done < file
+Using process substitution instead of a file will achieve what is
+required if computations are being done in the loop and the results are
+wanted after it has finished.
+Beware of this type of
+construct
+The following one-line command sequence looks similar to the version
+using process substitution, but is just another form of pipeline:
+$ i=0; while read line; do echo $line; ((i++)); done < /etc/passwd | head -n 5; echo $i
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+0
+This will display the first 5 lines of the file but does it by
+reading and writing the entire file and only showing the first 5 lines
+of what is written by the loop.
+What is more, because the while is in a subshell in a
+pipeline changes to variable 'i' will be lost.
+Advice
+
+Use the pipe-connected-to-loop layout if you're aware of
+the pitfalls, but will not be affected by them.
+Use the read-from-process-substitution format if you
+want your loop to be complex and to read and write variables in the
+script.
+Personally, I always use the second form in scripts, but if I'm
+writing a temporary one-line thing on the command line I usually use the
+first form.
+
+Tracing pipelines (advanced)
+I have always wondered about processes in Unix. The process you log
+in to, normally called a shell runs a command language
+interpreter that executes commands read from the standard input or
+from a file. There are several such interpreters available, but we're
+dealing with bash here.
+Processes are fairly lightweight entities in Unix/Linux. They can be
+created and destroyed quickly, with minimal overhead. I used to work
+with Digital Equipment Corporation's OpenVMS operating system
+which also uses processes - but these are much more expensive to create
+and destroy, and therefore slow and less readily used!
+Bash pipelines, as discussed, use subshells. The description
+in the Bash man page says:
+
+Each command in a multi-command pipeline, where pipes are created, is
+executed in a subshell, which is a separate process.
+
+So a subshell in this context is basically another child
+process of the main login process (or other parent process), running
+Bash.
+Processes (subshells) can be created in other ways. One is to place a
+collection of commands in parentheses. These can be simple Bash
+commands, separated by semi-colons, or pipelines. For example:
+$ (echo "World"; echo "Hello") | sort
+Hello
+World
+Here the strings "World" and "Hello", each
+followed by a newline are created in a subshell and written to standard
+output. These strings are piped to sort and the end result
+is as shown.
+Note that this is different from this example:
+$ echo "World"; echo "Hello" | sort
+World
+Hello
+In this case "World" is written in a separate command,
+then "Hello" is written to a pipeline. All
+sort sees is the output from the second echo,
+which explains the output.
+Each process has a unique numeric id value (the process id
+or PID). These can be seen with tools like ps or
+htop. Each process holds its own PID in a Bash variable
+called BASHPID.
+Knowing all of this I decided to modify Ken's script from show
+3962 to show the processes being created - mainly for my interest,
+to get a better understanding of how Bash works. I am including it here
+in case it may be of interest to others.
+#!/bin/bash
+
+series_url="https://hackerpublicradio.org/hpr_mp3_rss.php?series=42&full=1&gomax=1"
+download_dir="./"
+
+pidfile="/tmp/hpr3962.sh.out"
+count=0
+
+echo "Starting PID is $BASHPID" > $pidfile
+
+(echo "[1] $BASHPID" >> "$pidfile"; wget -q "${series_url}" -O -) |\
+    (echo "[2] $BASHPID" >> "$pidfile"; xmlstarlet sel -T -t -m 'rss/channel/item' -v 'concat(enclosure/@url, "→", title)' -n -) |\
+    (echo "[3] $BASHPID" >> "$pidfile"; sort) |\
+    while read -r episode; do
+
+        [ $count -le 1 ] && echo "[4] $BASHPID" >> "$pidfile"
+        ((count++))
+
+        url="$( echo "${episode}" | awk -F '→' '{print $1}' )"
+        ext="$( basename "${url}" )"
+        title="$( echo "${episode}" | awk -F '→' '{print $2}' | sed -e 's/[^A-Za-z0-9]/_/g' )"
+        #wget "${url}" -O "${download_dir}/${title}.${ext}"
+    done
+
+echo "Final value of \$count = $count"
+echo "Run 'cat $pidfile' to see the PID numbers"
+The point of doing this is to get information about the pipeline
+which feeds data into the while loop. I kept the rest
+intact but commented out the wget command.
+For each component of the pipeline I added an echo
+command and enclosed it and the original command in parentheses, thus
+making a multi-command process. The echo commands write a
+fixed number so you can tell which one is being executed, and it also
+writes the contents of BASHPID.
+The whole thing writes to a temporary file
+/tmp/hpr3962.sh.out which can be examined once the script
+has finished.
+When the script is run it writes the following:
+$ ./hpr3962.sh
+Final value of $count = 0
+Run 'cat /tmp/hpr3962.sh.out' to see the PID numbers
+The file mentioned contains:
+Starting PID is 80255
+[1] 80256
+[2] 80257
+[3] 80258
+[4] 80259
+[4] 80259
+Note that the PID values are incremental. There is no guarantee that
+this will be so. It will depend on whatever else the machine is
+doing.
+Message number 4 is the same for every loop iteration, so I stopped
+it being written after two instances.
+The initial PID is the process running the script, not the login
+(parent) PID. You can see that each command in the pipeline runs in a
+separate process (subshell), including the loop.
+Given that a standard pipeline generates a process per command, I was
+slightly surprised that the PID numbers were consecutive. It seems that
+Bash optimises things so that only one process is run for each element
+of the pipe. I expect that it would be possible for more processes to be
+created by having pipelines within these parenthesised lists, but I
+haven't tried it!
+I found this test script quite revealing. I hope you find it useful
+too.
+Links
+
+Bash pipelines:
+
+GNU
+Bash manual: 3.2.3 Pipelines
+
+
+
+Bash loops:
+
+GNU
+Bash manual: 3.2.5.1 Looping Constructs
+
+
+
+Bash process substitution:
+
+GNU
+Bash manual: 3.5.6 Process Substitution
+
+
+
+HPR shows referenced:
+
+hpr2045 ::
+Some other Bash tips
+hpr2699 ::
+Bash Tips - 15
+hpr3962 ::
+It's your data
+
+
+

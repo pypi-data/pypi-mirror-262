@@ -1,0 +1,15 @@
+## hpr3315 :: tesseract optical character recognition
+
+ Tesseract (software)
+From Wikipedia, the free encyclopedia
+
+Tesseract is an optical character recognition engine for various operating systems. It is free software, released under the Apache License. Originally developed by Hewlett-Packard as proprietary software in the 1980s, it was released as open source in 2005 and development has been sponsored by Google since 2006.
+In 2006, Tesseract was considered one of the most accurate open-source OCR engines then available.
+
+
+
+$ tesseract -l eng english-page.jpg english
+$ tesseract -l nld dutch-page.jpg dutch
+$ ls
+dutch.txt english.txt 
+

@@ -1,0 +1,36 @@
+## hpr2688 :: Explaining the controls on my Amateur HF Radio Part 5
+
+ 
+The controls covered are
+
+AF / RF gain
+
+(1A) AF, Audio frequency gain control (Volume)
+Turns the volume up and down
+(1B) RF, Radiofrequency gain control (From the Kenwood manual)
+RF GAIN is controlled by changing the AGC (Auto Gain Control) threshold voltage. Adjusting the RF GAIN so that the S-meter reading increases to a point just lower than speech peaks. This also reduces noise during reception. For normal operation, this control should be turned fully clockwise for maximum sensitivity.
+
+CW VBT (From the Kenwood manual)
+
+Carrier Wave Variable Bandwidth Tuning Control
+This control is very similar to the SSB Slope tuning controls. However, with the CW VBT control, both sides of the IF passband are narrowed at the same time.
+
+SSB Slope Tune (High pass low pass audio filter)
+
+High pass filter
+https://en.wikipedia.org/wiki/High-pass_filter
+Low-pass filter
+https://en.wikipedia.org/wiki/Low-pass_filter
+
+
+I mention that the radio uses phase locked loop technologies.
+Below is an article in Wikipedia about PLL (Phase locked loop)
+https://en.wikipedia.org/wiki/Phase-locked_loop
+I mention that the radio doesn’t use valves.
+Below is an article in Wikipedia about valves (Vacuum tubes)
+https://en.wikipedia.org/wiki/Vacuum_tube
+Dry joint
+I mention that the radio developed a dry joint
+Below is an article in Wikipedia about soldering that covers dry joints
+https://en.wikipedia.org/wiki/Soldering#Dry_joint
+

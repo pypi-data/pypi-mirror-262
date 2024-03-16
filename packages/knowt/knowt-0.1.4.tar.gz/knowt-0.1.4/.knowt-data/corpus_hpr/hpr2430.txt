@@ -1,0 +1,26 @@
+## hpr2430 :: Scanning books
+
+ 
+I want to scan my Son's school books so that he doesn't get back problems lugging books to and from school. Something that for now at least remains legal in the Netherlands.
+
+Steps involved
+
+Scan all the images using the entire length of your scanner. I use scantoimage.bash
+Confirm that there are no missing pages, and that every other page is upright and then upside down etc. If they are scan them and rename them so the name fits in between the pages
+Back up all the scanned images
+Manually crop the areas of the scans outside the area of the page. Usually this is on the side and bottom of the flat bed. Save is as something like ~/x.jpg
+Use GraphicsMagick Image Processing System to identify the dimensions of the cropped image. 
+
+gm identify ~/x.jpg
+/home/me/x.jpg JPEG 2477x2609+0+0 DirectClass 8-bit 3.2Mi 0.000u 0m:0.000002s
+
+Crop all the images to that dimension 
+gm mogrify -crop 2477x2609+0+0 *.jpg
+
+Rotate every second image by 180 degrees. rotate-every-second-image.bash
+Create a directory for the book and in there create a subdirectory for each section of the book. Manually copy all the images to the sub directory for that section. 
+Then go to the root where there are no files only subdirs and run the command 
+for i in *;do echo $i;gm convert "${i}/*.jpg" "${i}.pdf"; done
+
+
+At the end you will have a pdf file for each section of the book.

@@ -1,0 +1,58 @@
+## hpr2933 :: A walk through my PifaceCAD Python code – Part 1
+
+ In this series a do whirl wind tour of the Python code I developed to control my PifaceCAD raspberry pi add on board. I this use to control a music player running on a remote raspberry pi upstairs.
+In this episode I cover my use of global variables.
+List of global variables along with associated comments explaining what they are used for
+# GLOBAL VARIABLES
+
+RemoteDevice = "pi@192.168.1.13"
+# Username and ip address of the remote device to control
+
+SeekMin = -6
+# Sets the minimum value of the variable SeekPosition
+
+SeekMax = 6
+# Sets the maximum value of the variable SeekPosition
+
+SeekPosition = 0
+# stores seek menu position,
+
+SeekMenu = False
+# used to track seek menu state, ie are we in seek menu or not
+
+FirstPass = True
+# Used to track 1st time button 5 (backlight toggle) is pushed, turns off blinkstick
+
+LcdLightOn = False
+# used to track toggle sate of backlight button 5
+
+MenuMin = 0
+# Sets the minimum value of variable "Menu"
+
+MenuMax = 2
+# Sets the maximum value of variable "Menu"
+
+Menu = 0
+# global variable used to keep trak of selected menu
+
+IrActive = False
+# used to track toggle state of active infrared buttons, when false disables
+# all buttons on the remote control except the blue button.
+
+StoredTime = 0
+# Stores curent time in seconds when a button is pushed, used by double button tap feature
+
+#GET_IP_CMD = "hostname –all-ip-addresses"
+# Debian 7 wheezy, Command to get IP adress
+
+GET_IP_CMD = "hostname --all-ip-addresses | cut -d' ' -f1"
+# Debian 8 jessie, Command to get IP adress
+
+#GET_ESSID_CMD = "iwconfig wlan0 | grep 'ESSID:' | cut -d':' -f2"
+# Debian 7 wheezy, Command to get wifi ESSID
+
+GET_ESSID_CMD = "/sbin/iwconfig wlan0 | grep 'ESSID:' | cut -d':' -f2"
+# Debian 8 wheezy, Command to get wifi ESSID
+
+GET_WIFI_STRENGTH_CMD = "/sbin/iwconfig wlan0 | grep 'Link Quality=' | awk '{ print $2 }'"
+# Command to get wifi signal strength

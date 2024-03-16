@@ -1,0 +1,42 @@
+## hpr2901 :: Describing how I listen to podcasts PART 3
+
+ In this series I cover how I listen to podcasts and how the process has changed over the years. In this episode I cover the 1st add-on board I purchased for one of my raspberry pi’s I then go on to explain what I do with it.
+
+Raspberry pi
+https://en.wikipedia.org/wiki/Raspberry_Pi
+Piface Digital IO, pictures and links
+https://www.piface.org.uk/products/piface_digital/
+https://www.piface.org.uk/products/piface_digital_2/
+Software Documentation https://piface.github.io/pifacedigitalio/
+Command used to install the software & libraries to use the Piface Digital IO board, command from companies website:
+
+    sudo apt-get install python{,3}-pifacedigitalio
+
+Picture 1, shows the Piface Digital IO board installed on top of my raspberry pi
+
+Picture 2, shows the extension board I built. The extension board increases the number of available LED’s and switches. The board is attached via a ribbon cable with the ends of the wire inserted into the green and orange screw down chocolate blocks attached to the Piface Digital IO board.
+
+Command to toggle between play and pause in moc is
+mocp -G or mocp –toggle-pause
+moc man page https://www.mankier.com/1/mocp
+moc homepage https://moc.daper.net/
+Uptime man page https://linux.die.net/man/1/uptime
+
+Explanation of how to read a binary display
+The board I built which attaches to the Piface Digital board has a total of 8 LED’s. I use the 8 LED’s to display a number in binary format. In binary each LED has only two values either on or off, with 1 LED you can count to 1 with two LED’s you can count to 3. This may seem confusing if you’ve never dealt with binary before. Starting from the right each subsequent LED represents double the value of the previous one so the 1st LED has a value of 1 the 2nd LED has a value of 2, the third LED has a value of 4 and so on. See below
+LED Number   8   7   6   5  4  3  2  1
+LED VALUES 128, 64, 32, 16, 8, 4, 2, 1
+LED on represents 1, LED off represents 0
+[Example 1]    0   0   0   0  0  0  0  1  [Represented value 1]
+1st LED on value = 1
+[Example 2]    0   0   0   0  0  0  1  1  [Represented value 3]
+1st and 2nd LED on, LED VALUE 1 + 2 = 3
+[Examples 3]   0   0   0   0  1  0  1  0  [Represented value 10]
+2nd and 4th LED on, LED VALUE 2 + 8 = 10
+With practice it gets easy to convert from binary to decimal, at my work we still have a very old computer which contains a front panel with LED’s and binary switches. To load the computer instructions must be loaded in binary using flip switches and LED’s with practice it becomes second nature.
+Links
+
+Further information on binary numbers https://en.wikipedia.org/wiki/Binary_number
+df man page (Disk Free) https://linux.die.net/man/1/df
+aplay man page https://linux.die.net/man/1/aplay
+

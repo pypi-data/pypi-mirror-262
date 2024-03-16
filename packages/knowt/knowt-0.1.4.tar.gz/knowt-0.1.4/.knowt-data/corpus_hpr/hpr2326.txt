@@ -1,0 +1,400 @@
+## hpr2326 :: HPR Community News for June 2017
+
+ 
+New hosts
+
+Welcome to our new hosts: 
+Mongo, 
+    bjb.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+2304
+Thu
+2017-06-01
+Using Gnome 3 for the First Time
+Shane Shennan
+
+
+2305
+Fri
+2017-06-02
+Configuring an HP Laptop for Dual Boot Linux and Windows 10
+Mongo
+
+
+2306
+Mon
+2017-06-05
+HPR Community News for May 2017
+HPR Volunteers
+
+
+2307
+Tue
+2017-06-06
+Baofeng UV5R VHF/UHF Handset part 4
+MrX
+
+
+2308
+Wed
+2017-06-07
+Everyday package operations in Guix
+clacke
+
+
+2309
+Thu
+2017-06-08
+Crowdsourcing Accessibility
+Jon Kulp
+
+
+2310
+Fri
+2017-06-09
+Kdenlive Part 6 Workflow and Conclusion. 
+Geddes
+
+
+2311
+Mon
+2017-06-12
+Baofeng UV5R VHF/UHF Handset part 5
+MrX
+
+
+2312
+Tue
+2017-06-13
+Troubleshooting Websites with XAMPP
+Frank Bell
+
+
+2313
+Wed
+2017-06-14
+NilFS2
+klaatu
+
+
+2314
+Thu
+2017-06-15
+Bad Caps
+NYbill
+
+
+2315
+Fri
+2017-06-16
+Penguicon 2017 Report
+Ahuka
+
+
+2316
+Mon
+2017-06-19
+Baofeng UV5R VHF/UHF Handset part 6
+MrX
+
+
+2317
+Tue
+2017-06-20
+Bash snippet - extglob and scp
+Dave Morriss
+
+
+2318
+Wed
+2017-06-21
+Talking about my thinkpads
+swift110
+
+
+2319
+Thu
+2017-06-22
+Minimal Music Site 17.05.39 now available on sourceforge.net
+mattkingusa
+
+
+2320
+Fri
+2017-06-23
+Living Computers: Museum + Labs
+JWP
+
+
+2321
+Mon
+2017-06-26
+Baofeng UV5R VHF/UHF Handset part 7
+MrX
+
+
+2322
+Tue
+2017-06-27
+A bit of background on virtualenvwrapper
+bjb
+
+
+2323
+Wed
+2017-06-28
+How to Configure Mumble in Real Time
+Thaj Sara
+
+
+2324
+Thu
+2017-06-29
+Opensusecon 2017 and Ubuntu 16.04
+JWP
+
+
+2325
+Fri
+2017-06-30
+Insurance - How It Works
+Ahuka
+
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available in the archives run
+externally by Gmane
+(see below) and on the HPR server under Mailman.
+
+Note: since the summer of 2016 Gmane has changed location and is currently
+being reestablished. At the moment the HPR archive is not available there.
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2017-June/thread.html
+Comments this month
+These are comments which have been made during the past month, either to shows
+released during the month or to past shows.
+There are 38 comments in total.
+There are 14 comments on
+7 previous shows:
+hpr2187
+(2016-12-20) "The Toshiba Libretto 100ct"
+by m1rr0r5h4d35.
+
+
+
+Comment 4:
+Bob Jonkman on 2017-06-07:
+"Fixing dead pixels"
+hpr2278
+(2017-04-26) "Some supplementary Bash tips"
+by Dave Morriss.
+
+
+
+Comment 3:
+clacke on 2017-06-15:
+"How people record"
+
+Comment 4:
+clacke on 2017-06-15:
+"On using echo"
+
+Comment 5:
+Dave Morriss on 2017-06-15:
+"On recording"
+
+Comment 6:
+Dave Morriss on 2017-06-15:
+"Using echo, printf and ls"
+
+Comment 7:
+Ken Fallon on 2017-06-15:
+"Comment limit"
+
+Comment 8:
+clacke on 2017-06-16:
+"printf episode"
+hpr2283
+(2017-05-03) "Saving money shaving with double and single edge safety razors"
+by Dave Yates.
+
+
+
+Comment 6:
+jwp on 2017-06-03:
+"Hi Dave"
+hpr2284
+(2017-05-04) "Resurrecting a dead ethernet switch"
+by mirwi.
+
+
+
+Comment 3:
+jwp on 2017-06-03:
+"great show"
+hpr2287
+(2017-05-09) "Desparately Seeking Saving RMS - Introduction"
+by dodddummy.
+
+
+
+Comment 3:
+rtsn on 2017-06-15:"[no title]"
+hpr2291
+(2017-05-15) "Arch on CELES"
+by Hannah, of Terra, of Sol.
+
+
+
+Comment 1:
+Hannah, of Terra, of Sol on 2017-06-04:
+"A repo, maybe?"
+
+Comment 2:
+rtsn on 2017-06-16:
+"good episode"
+hpr2297
+(2017-05-23) "More Magnatune Favourites"
+by Dave Morriss.
+
+
+
+Comment 3:
+Dave Lee on 2017-06-21:
+"CC licenses and subscription model"
+
+Comment 4:
+Dave Morriss on 2017-06-22:
+"Re: CC licenses and subscription model"
+
+There are 24 comments on 10 of this month's shows:
+hpr2304
+(2017-06-01) "Using Gnome 3 for the First Time"
+by Shane Shennan.
+
+Comment 1:
+b-yeezi on 2017-06-01:
+"xfdashboard"
+hpr2305
+(2017-06-02) "Configuring an HP Laptop for Dual Boot Linux and Windows 10"
+by Mongo.
+
+Comment 1:
+Steve on 2017-06-07:
+"Excellent tutorial"Comment 2:
+Mongo on 2017-06-08:"[no title]"
+hpr2308
+(2017-06-07) "Everyday package operations in Guix"
+by clacke.
+
+Comment 1:
+Ken Fallon on 2017-05-25:
+"I check this one while processing"Comment 2:
+clacke on 2017-05-29:
+"Theme song"Comment 3:
+clacke on 2017-06-04:
+"Theme song is up"Comment 4:
+b-yeezi on 2017-06-07:
+"GNU Stow please"Comment 5:
+clacke on 2017-06-15:
+"GNU Stow in the pipeline"
+hpr2309
+(2017-06-08) "Crowdsourcing Accessibility"
+by Jon Kulp.
+
+Comment 1:
+Dave Morriss on 2017-06-11:
+"Interesting project; interesting word"Comment 2:
+Jonathan Kulp on 2017-06-11:
+"absquatulate"
+hpr2313
+(2017-06-14) "NilFS2"
+by klaatu.
+
+Comment 1:
+folky on 2017-06-14:
+"More ;-)"
+hpr2314
+(2017-06-15) "Bad Caps"
+by NYbill.
+
+Comment 1:
+Dave Morriss on 2017-06-18:
+"Thanks for this"Comment 2:
+NYbill on 2017-06-18:"[no title]"Comment 3:
+Jonathan Kulp on 2017-06-19:
+"The suspense is killing me "Comment 4:
+Ken Fallon on 2017-06-19:
+"Do not reply in the comments"Comment 5:
+Jonathan Kulp on 2017-06-19:
+"I'll do a show next time"Comment 6:
+NYbill on 2017-06-19:"[no title]"Comment 7:
+NYbill on 2017-06-19:
+""Do not reply in the comments""Comment 8:
+Ken Fallon on 2017-06-20:
+"Great more shows"
+hpr2317
+(2017-06-20) "Bash snippet - extglob and scp"
+by Dave Morriss.
+
+Comment 1:
+Jonathan Kulp on 2017-06-28:
+"Clarity!"Comment 2:
+Dave Morriss on 2017-06-29:
+"Clear as mud? :-)"
+hpr2320
+(2017-06-23) "Living Computers: Museum + Labs"
+by JWP.
+
+Comment 1:
+Dave Morriss on 2017-06-23:
+"AWK series/ DEC hardware"
+hpr2322
+(2017-06-27) "A bit of background on virtualenvwrapper"
+by bjb.
+
+Comment 1:
+b-yeezi on 2017-06-27:
+"Great Show. My follow-up to com"
+hpr2325
+(2017-06-30) "Insurance - How It Works"
+by Ahuka.
+
+Comment 1:
+clacke on 2017-06-15:
+"Great show"
+
+Any other business
+
+Podcrawl Glasgow 2017
+The annual Podcrawl Glasgow will take place on Saturday July 29th
+	    at 6pm, starting in The State Bar, Holland Street, Glasgow ... and
+	    going on to who knows where!  
+ See Kevie's blog
+	    for the details.  
+ We hope to see some HPR listeners and contributors there!  
+
+UK Table Kit
+From @timttmy:
+ Could you mention on the community news that I still have the
+		HPR table kit and if anyone needs it to let me know via the
+		mailing list. Sadly I won't be able to make oggcamp this year
+		and I'm a more than a little gutted as this will be the first
+		time I've missed the event. I hope somebody can represent HPR
+		this year but I've not heard any chatter of excitement about
+		it on the interwebs from anyone yet. 
+
+

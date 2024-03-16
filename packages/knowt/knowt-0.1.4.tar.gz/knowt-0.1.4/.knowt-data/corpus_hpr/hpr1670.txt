@@ -1,0 +1,21 @@
+## hpr1670 :: Digital Signatures and Certificates
+
+ 
+Digital Signatures are something that is very important in understanding security on the Internet. While we have seen it in the context of personal e-mail, the applications are much broader, in particular to the use of certificates to establish communication.
+
+
+Recall from our discussion of e-mail that there are two things you can do with an e-mail using PGP or GPG. First is you can encrypt the message, which you do using the public key of the recipient, and then they can decrypt the message using their private key. The other was putting a digital signature on a message. But how does that work? - For more go to https://www.zwilnik.com/?page_id=655
+
+
+Links:
+
+
+https://en.wikipedia.org/wiki/X.509
+
+https://en.wikipedia.org/wiki/Transport_Layer_Security
+
+https://www.eff.org/Https-everywhere
+
+https://www.zwilnik.com/?page_id=655
+
+

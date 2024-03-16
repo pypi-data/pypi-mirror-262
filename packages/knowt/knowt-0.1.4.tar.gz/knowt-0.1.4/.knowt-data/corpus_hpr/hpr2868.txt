@@ -1,0 +1,42 @@
+## hpr2868 :: Custom data with Persistent
+
+ Podcast episode is about two things, serializing custom data with Persistent and IsString typeclass.
+I’m using Persistent in conjunction with Yesod (web framework). Process in short is that data is defined in /config/models file that is used in compile time to generate data type definitions for Haskell. Same information is used to create schema for the database when Yesod application starts. It can even do simple migrations if schema changes, but I wouldn’t recommend using that in production.
+Persistent maps information between database and program written in Haskell. There’s pre-existing mappings for things like text and various kinds of numbers. In case one wants to use custom data type, compiler can automatically generate needed mapping. This automatic generation works well with enumerations and very complex data.
+For example, following piece defines enumeration BuildingType that is mapped in varchar field in database. Enumeration is thus stored as text.
+data BuildingType = SensorStation
+    | ResearchComplex
+    | Farm
+    | ParticleAccelerator
+    | NeutronDetector
+    | BlackMatterScanner
+    | GravityWaveSensor
+    deriving (Show, Read, Eq)
+
+derivePersistField "BuildingType"
+For newtypes, automatic deriving works too, but generates (in my opinion) extra information that isn’t needed. This extra information causes data saved as text. For those cases, manual mapping can be used.
+Our example is for StarDate, which is just glorified Int. I’m using newtype to make StarDate distinct from any other Int, even when it behaves just like Int.
+newtype StarDate = StarDate { unStarDate :: Int }
+    deriving (Show, Read, Eq, Num, Ord)
+
+instance PersistField StarDate where
+    toPersistValue (StarDate n) =
+        PersistInt64 $ fromIntegral n
+
+    fromPersistValue (PersistInt64 n) =
+        Right $ StarDate $ fromIntegral n
+
+    fromPersistValue _ =
+        Left "Failed to deserialize"
+
+
+instance PersistFieldSql StarDate where
+    sqlType _ = SqlInt64
+One more trick, that doesn’t directly relate to Persistent is IsString type class. Instead of having to specify all the time what type text literal is, one can let compiler to deduce it from usage.
+For example, if I had a newtype like:
+newtype PlanetName = PlanetName { unPlanetName :: Text }
+I can turn on OverloadedStrings pragma and create IsString instance:
+instance IsString PlanetName where
+    fromString = PlanetName . fromString
+Now I can write: placeName = "Earth" instead of placeName = PlanetName "Earth" and compiler can deduce correct type based on how the placeName is used.
+Thanks for listening, if you have any questions or comments, you can reach me via email or in the fediverse, where I’m Tuula@mastodon.social.

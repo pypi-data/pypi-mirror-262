@@ -1,0 +1,9 @@
+## hpr0770 :: byobu
+
+ 
+byobu is a script that launches GNU screen in the byobu configuration. This enables the display of system information and status notifications
+within two lines at the bottom of the screen session. It also enables multiple tabbed terminal sessions, accessible through simple keystrokes. 
+
+
+https://help.ubuntu.com/10.04/serverguide/C/byobu.html
+https://manpages.ubuntu.com/manpages/karmic/en/man1/byobu.1.html

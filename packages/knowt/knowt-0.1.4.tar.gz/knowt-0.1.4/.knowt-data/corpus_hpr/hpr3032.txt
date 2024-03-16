@@ -1,0 +1,15 @@
+## hpr3032 :: piCore on a Raspberry Pi 1 Model B
+
+ In this episode, I discuss how I revived my Raspberry Pi 1 Model B using piCore, a specialized version of Tiny Core Linux for the Raspberry Pi, on a 128 MB SD card that I had laying around. I also mention nanoBSD and Alpine Linux as possible alternatives to try out.
+
+Tiny Core Linux
+https://tinycorelinux.net/
+piCore Releases
+https://www.tinycorelinux.net/9.x/armv6/
+nanoBSD
+https://www.freebsd.org/doc/en_US.ISO8859-1/articles/nanobsd/index.html
+https://www.freebsd.org/doc/en_US.ISO8859-1/articles/nanobsd/howto.html
+Alpine Linux
+https://alpinelinux.org/
+https://wiki.alpinelinux.org/wiki/Raspberry_Pi
+

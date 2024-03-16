@@ -1,0 +1,51 @@
+## hpr2864 :: One weird trick to add a --help option to your awk scripts
+
+ 
+The first method is in Awk itself.
+
+
+#!/usr/bin/awk -f
+#
+# USAGE EXAMPLE:
+# echo the input of some var
+# $ foo -v var=8
+#
+
+BEGIN {
+    if (length(var) == 0) {
+        printf "%s %s\n", ENVIRON["_"], "is a proof-of-concept help message";
+        printf "%s\n", "Usage:";
+        printf "%s\n", "------";
+        printf "%s %s %s\n", "$", ENVIRON["_"], "-v var=NUM";
+        printf "%s\n", "substitute NUM with the number you want echoed";
+        exit
+    }
+    else {
+        printf "%s %s\n", "You have entered ", var;
+    }
+}
+
+
+The disadvantage to this is that it only provides a help message if no option is provided. If you actually type --help, then you get Awk's help message, which is not useful in this context.
+
+
+The shell script wrapper method uses the shell to parse options, which are then passed to an embedded Awk script:
+
+
+#!/bin/sh
+
+if [ "${1}" = "--help" -o "${1}" = "-h" -o "${1}" = "" ]; then
+    echo "This is a help message."
+    exit
+fi
+
+/usr/bin/awk -v var="${1}" '
+
+BEGIN {
+printf "%s %s\n", "You provided", var;
+}'
+
+
+
+The disadvantage here is only that you're not just writing an Awk script, you're writing a shell script with embedded Awk. I can't think of a reason not to do it this way (even though in the script that served as the inspiration for this episode, I don't use this method).
+

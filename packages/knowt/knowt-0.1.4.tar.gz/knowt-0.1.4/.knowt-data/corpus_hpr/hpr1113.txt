@@ -1,0 +1,159 @@
+## hpr1113 :: TermDuckEn aptsh - screen - guake
+
+ I recently discovered apt shell
+(aptsh), a psuedo shell which gives users of distributions which use
+apt for package management quick access to the functionality of
+apt-get.  You should find aptsh in the repositories of Debian based
+distros.  Once installed, you can launch 'aptsh' as root from the
+command prompt (i.e. 'sudo aptsh').
+
+
+
+One of the drawbacks of installing software from the terminal is that
+sometimes you don't know the exact name of the package you want to
+install.  From the aptsh> prompt, 'ls'  plus a search string will
+show all the packages that have that string in their names.  You can
+type 'install' plus a partial package name and use TAB completion to
+finish the instruction.  The function of the 'update' and 'upgrade'
+commands are self explanatory, unfortunately, you can't string them
+together on the same line like you can in bash:
+
+
+sudo apt-get update && sudo
+apt-get -y safe-upgrade 
+
+
+
+Instead, you use the backtick [ ` ] key
+to put aptsh into queue mode. In queue mode, you can enter commands
+one by one to be launched in sequence at a later time.  To bring your
+system up to date, you could run:
+
+
+aptsh> ` 
+
+* aptsh> update 
+
+* aptsh> upgrade 
+
+* aptsh> ` 
+
+aptsh> queue-commit-say yes 
+
+
+
+Backtick toggles queue entry, and
+queue-commit runs the queue.  “queue-commit-say y” tells aptsh to
+answer in the affirmative to any queries from the commands executed
+in the queue in much the same way “apt-get -y safe-upgrade”
+confirms software updates without user interaction.  Apt shell is
+capable of other apt related tasks, but I think I've covered the most
+useful ones.
+
+
+The trouble with running aptsh is that
+unless you start it in a terminal with the computer and leave it
+running all day (as opposed to opening it as a new shell within you
+terminal every time you want to update or install), despite the
+convienience of package name search and TAB completion, it really
+won't save you any keystrokes.  With that in mind, I started looking
+for ways to have the apt shell available at a keystroke (we will
+leave the wisdom of leaving a shell open with a subset of root
+privileges for another day).  I had guake installed, but rarely used
+it because I usually have multiple terminal tabs open since I am
+logged into my server remotely. [Actually, I had forgotten guake
+supports tabbed terminals quite well.  You can open a new tab with
+<Shift><Ctrl>T and switch between terminal tabs by
+<Ctrl><PgUp> and <Ctrl><PgDn> or clicking
+buttons that appear at the bottom of the guake window.  I had how,
+forgotten this until doing further research on this story.  Since
+this revelation ruins my story, we will forget about tabbed terminal
+support in guake and not mention it again.]
+
+
+I am also going to assume everyone is
+familiar with guake.  If not, suffice it to say guake is a terminal
+that pops down in the top third of the screen when you hit a hotkey,
+<F12> being the default.  It returns to the background when you
+press <F12> again or click the lower part of the desktop.  It
+is patterned after the command shell in the game Quake that let you
+input diagnostic and cheat codes, hence the name.  Since I wasn't
+using guake as a terminal anyway, I  wanted to see if I could make it
+run apt shell by default.  I found you can access guake's graphical
+configuration manager by right clicking inside the open terminal and
+selecting preferences.  
+
+
+
+On the first preferences tab, I found
+“command interpreter”, but since aptsh is only a pseudo shell, it
+isn't found in the dropdown list.  However, one option was “screen”,
+which would give me a way to run multiple terminals that I thought
+guake lacked.  Next, I had to look up how to configure screen.  I
+figured there must be a way to make screen run aptsh in one session
+by default, and I found it.  In the show notes I've included my
+.screenrc file from my home folder, which I make with the help of
+this article from the online Red Hat Magazine: 
+
+https://magazine.redhat.com/2007/09/27/a-guide-to-gnu-screen/
+
+
+**
+
+
+hardstatus alwayslastline 
+
+hardstatus string '%{= kG}[ %{G}%H
+%{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%=
+%{g}][%{B}%Y-%m-%d %{W}%c %{g}]' 
+
+# Default screens 
+
+screen -t shell1        0 
+
+screen -t apt-shell    1       sudo
+aptsh 
+
+screen -t server        2       ssh
+5150server
+screen -t laptop        3       ssh
+5150@Redbook
+
+
+
+**
+
+
+The first two lines set up the screen
+status line, the first puts it at the bottom of the terminal, the
+second sets up the status line to display the hostname and date, and
+an indicator that highlights which screen windows you are looking at.
+ The # Default screens section below sets up sessions screen opens by
+default.  The first line opens up a regular terminal named “shell1”
+and assigns it to session zero.  The second opens a window called
+“apt-shell” (this is how it's identified on the status line) and
+launches apt  shell.  The last two log me into my server (host name
+aliasing made possible by configuring my homefolder/.ssh/config ,
+thanks Ken Fallon) and my laptop running Fedora respectively.  I
+still have to cycle through your screen windows and type in my
+passwords for sudo and ssh. The configuration could be set up to
+launch any bash command or script by default.  The cited article
+doesn't include any more configuration tips, but I'm certain there
+are ways to set up other options, such as split windows by default.  
+
+
+
+Since I also run screen on my remote
+connection to my server, I have to remember the command prefix is
+<Crtl>a,a.  Ergo, if I want to move to the next window in the
+screen session (running under guake) on the local PC, the command is
+<Ctrl>a, then n.  To go to the next screen window in the screen
+session on my server, running inside another screen session on my
+local PC, it's <Ctrl>a,a,n. 
+
+
+
+So, that's how I learned to run apt
+shell inside screen inside guake.  I can be contacted at
+FiftyOneFifty@linuxbasement.com
+or by using the contact form on TheBigRedSwitch.DrupalGardens.Com

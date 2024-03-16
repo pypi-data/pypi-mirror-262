@@ -1,0 +1,17 @@
+## hpr0014 :: Databases 101 Part 2
+
+ RDBMS - Relational Database Management System
+Relational Model: when there are relationships between items of
+data such as products, customers and orders
+A database contains two-dimensional tables which are similar in
+concept to spreadsheets. Each table contains columns and rows like
+a spreadsheet, but these are called fields and records in
+database terminology
+Data is stored in tables but is broken down into the most efficient form
+such that there is no duplication. This process is called
+normalisation.
+Fields have data types associated with them, such as numeric fields for
+storing numbers or text fields for storing text.
+Tables have keys to simplify searching. Primary keys are
+used to make records in a table unique.
+Shownotes by: Dave Morriss, 2015-08-14

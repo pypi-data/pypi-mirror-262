@@ -1,0 +1,19 @@
+## hpr2100 :: Re-Enable Copy and Paste in Browsers
+
+ 
+This episode deals with the annoying, and frustrating practice of disabling copy and paste on websites through the use of javascript. 
+
+
+For a detailed explanation of the why please read this excellent article by Nicholas Miller
+Re-Enable Copy & Paste on Annoying Sites That Block It. In this article Nicholas explains that you can set dom.event.clipboardevents.enabled in Firefox to prevent this. 
+
+
+In Chrome, you are going to need to install extensions to get the same functionality. The following ones worked for me:
+
+
+Allow Copy
+Don't Fuck With Paste
+
+
+https://www.troyhunt.com/the-cobra-effect-that-is-disabling/
+

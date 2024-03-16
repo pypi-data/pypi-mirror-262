@@ -1,0 +1,19 @@
+## hpr2064 :: Test-Driving Devuan
+
+ Frank Bell takes the Devuan Beta for a test drive and finds it accelerates smoothly, corners nicely, and rides comfortably.
+Links:
+
+Debian’s SystemD Announcement: https://wiki.debian.org/Debate/initsystem/systemd
+The Devuan fork announcement: https://devuan.org/os/debian-fork/
+Announcement of the Beta: https://www.theregister.co.uk/2016/04/29/systemd_free_debian_fork_devuan_reaches_beta/ Approx. one year behind schedule.
+Devuan website: https://devuan.org/
+Debian website: https://www.debian.org/
+Some news stories about the Debian SystemD controversy:
+
+PCWorld: https://www.pcworld.com/article/2841873/meet-systemd-the-controversial-project-taking-over-a-linux-distro-near-you.html
+ZDNet: https://www.zdnet.com/article/linus-torvalds-and-others-on-linuxs-systemd/
+Technet: https://www.tecmint.com/systemd-replaces-init-in-linux/
+ADTMag’s Dev Watch blog: https://adtmag.com/blogs/dev-watch/2014/11/debian-problems.aspx
+Linux Voice Interview with Leonart Poettering: https://www.linuxvoice.com/interview-lennart-poettering/
+
+

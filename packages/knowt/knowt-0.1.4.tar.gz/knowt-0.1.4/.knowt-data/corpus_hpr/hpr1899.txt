@@ -1,0 +1,22 @@
+## hpr1899 :: MyTinyTodo List
+
+ This show is about my favorite tool to keep track of stuff I have to do, stuff I want to do, gift ideas for my family, books I want to read, HPR topics to record, etc. It's called MyTinyTodo. It's a web app that you can host on your own server and access from any device that has a web browser.
+The website claims that it is already mobile friendly, but I did not like the mobile interface they had, and also did not like the fact that I had to use a different URL to get the mobile interface, so I hacked the stylesheet and the index.html file in the code to make it a responsive design. Now it looks great on all of my devices.
+Features
+
+Multiple lists
+Task notes
+Tags (and tag cloud)
+Due dates (input format: y-m-d, m/d/y, d.m.y, m/d, d.m)
+Priority (-1, 0, +1, +2)
+Different sortings including sort by drag-and-drop
+Search
+Password protection
+
+System requirements
+
+PHP 5.2.0 or greater;
+PHP extensions: php_mysql (MySQL version), php_pdo and php_pdo_sqlite (SQLite version).
+
+Installation
+Setup is very easy as these things go. Check out the installation instructions at their website.

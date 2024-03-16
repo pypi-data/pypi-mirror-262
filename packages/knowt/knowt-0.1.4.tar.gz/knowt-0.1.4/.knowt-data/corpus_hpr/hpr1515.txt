@@ -1,0 +1,10 @@
+## hpr1515 :: 29 - LibreOffice Calc - Models and "What-If" Analysis
+
+ 
+The next topic is extremely important because it addresses where most beginning users of spreadsheets get into trouble. First, understand that building models and doing "What-If" analysis is fundamental to the success and widespread adoption of spreadsheets all over the world. A model can be thought of as a mathematical representation of a process of some kind. It could be financial, such as projecting my sales over the next year, or perhaps working out when my car loan will be paid off. Or it could be scientific, such as projecting out the reaction times and quantities in a chemical reaction. The only real requirement is that whatever you are modeling has to be something that can be represented using mathematical formulas of some kind.
+
+
+"What-If" analysis takes this model and lets you experiment to see how how changes in different variables affect the results in your model. If I am figuring out when my car loan will be paid off, I might ask how paying an extra $20 per month against the principle would affect my results (presumably, it should lead to getting it paid off sooner if I set the model up correctly.) Or in the case of the chemical process, how would different temperatures or pressures affect the reaction times and quantities? By experimenting with different values in my model I can do this comparison easily. But only if I built the model properly in the first place.
+
+
+For the remainder of the show notes please see https://www.ahuka.com/?page_id=752

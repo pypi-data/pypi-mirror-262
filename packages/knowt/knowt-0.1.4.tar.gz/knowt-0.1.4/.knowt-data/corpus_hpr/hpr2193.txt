@@ -1,0 +1,5 @@
+## hpr2193 :: a clean podcast with no swearing
+
+ 
+(replace-regex-in-string "fuck" "rainbows")
+

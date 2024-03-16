@@ -1,0 +1,74 @@
+## hpr2573 :: Foundations of git rebase
+
+ A git rebase is like a git merge done through rose-coloured glasses.
+
+You can see it for yourself by doing this little experiment. Assuming the alice directory is a valid git repository:
+
+$ cd alice
+$ echo "foo" >> rebase.episode
+$ git add rebase.episode ; git commit -m 'begin rebase episode'
+$ git checkout -b monsters
+
+$ git branch
+* monsters
+master
+$ echo "ghoul" >> ghoul.txt
+$ git add ghoul.txt ; git commit -m 'ghoul'
+$ git checkout master
+$ echo "rogue" >> rogue.txt
+$ git add rogue.txt ; git commit -m 'rogue'
+
+$ git checkout monsters
+$ echo "dragon" >> dragon.txt
+$ git add dragon.txt ; git commit -m 'dragon'
+
+$ git checkout master
+$ echo "paladin" >> paladin.txt
+$ git add paladin.txt ; git commit -m 'paladin'
+
+
+You have now emulated a bunch of activity on two separate branches of a git repository.
+Create a copy of the repo so that you can perform two separate git actions.
+
+$ cd ..
+$ cp -r alice alice-merge
+$ cp -r alice alice-base
+
+
+Do an honest merge:
+
+$ cd alice-merge
+$ git checkout master
+$ git merge monsters
+
+
+The log shows you an accurate representation what got merged, and how all those changes came to be:
+
+$ git log --oneline
+123456 Merged monsters into master
+789101 paladin
+112131 dragon
+415161 rogue
+718191 ghoul
+7ef217 begin rebase episode
+
+
+Now perform a rebase.
+
+$ cd ../alice-base
+$ git checkout master
+$ git rebase monsters
+
+
+The log displays a different story than what really happened.
+
+123456 Merged monsters into master
+8e9122 paladin
+21d163 rogue
+912a3f dragon
+51c098 ghoul
+7ef217 begin rebase episode
+
+
+Better? Worse? YOU DECIDE!
+

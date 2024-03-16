@@ -1,0 +1,65 @@
+## hpr1832 :: Simplify writing using markdown and pandoc
+
+ 
+My Document Creation workflow using Markdown and Pandoc
+b-yeezi
+
+Show Notes
+I write almost exclusively in Markdown https://daringfireball.net/projects/markdown when writing documents and taking notes. I use the program, Pandoc https://www.pandoc.org to convert markdown to different formats, including odt, docx, and pdf.
+The original purpose of Markdown: 1 > Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
+Markdown has since been extended to include more features and functionality. Extended versions include Github-flavored markdown https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet and multi-markdown https://fletcherpenney.net/multimarkdown.
+Some of the basic syntax:
+
+Headings - use one or more # to make headings
+bold - use __ or ** for bold
+italics - use _ or * for italics
+hyperlinks - use [text](link) for hyperlinks
+
+images - ![text](link) for images
+tables - Head1 | Head2 | Head3----- | ----- | -----stuff | stuff | stuff
+lists - use - or * or + at the beginning of a line
+quotes and code - ` for single code item, > for block quote, tab for block code, ``` for fenced code. Highlighting is available
+
+Pandoc: 2 Pandoc can convert documents in markdown, reStructuredText, textile, HTML, DocBook, LaTeX, MediaWiki markup, TWiki markup, OPML, Emacs Org-Mode, Txt2Tags, Microsoft Word docx, EPUB, or Haddock markup to
+
+HTML formats: XHTML, HTML5, and HTML slide shows using Slidy, reveal.js, Slideous, S5, or DZSlides.
+Word processor formats: Microsoft Word docx, OpenOffice/LibreOffice ODT, OpenDocument XML
+Ebooks: EPUB version 2 or 3, FictionBook2
+Documentation formats: DocBook, GNU TexInfo, Groff man pages, Haddock markup
+Page layout formats: InDesign ICML
+Outline formats: OPML
+TeX formats: LaTeX, ConTeXt, LaTeX Beamer slides
+PDF via LaTeX
+Lightweight markup formats: Markdown (including CommonMark), reStructuredText, AsciiDoc, MediaWiki markup, DokuWiki markup, Emacs Org-Mode, Textile
+Custom formats: custom writers can be written in lua
+
+I use Ubuntu because it is the only distro that does not bundle pandoc in the haskell libraries. With pandoc, you can specify the template that you are using, so that the same one document can be formatted quickly in many different ways and file formats.
+Workflow:
+
+Write using vim or other text editor. When I was starting, I used a markdown previewer
+Create the template for the client
+Convert document appropriately
+
+Use markdown for:
+
+taking notes
+creating SOPs
+Creating User guides (Image Magick mogrify)
+Creating things for my website
+
+Other programs and tools:
+
+Retext
+Haroopad
+discount
+stackedit.io
+atom
+texlive for going direct to pdf
+
+
+
+
+from https://daringfireball.net/projects/markdown↩
+from https://www.pandoc.org↩
+
+

@@ -1,0 +1,16 @@
+## hpr2448 :: Useful Bash functions - part 3
+
+ Useful Bash functions - part 3
+Overview
+This is the third show about Bash functions. These are a little more advanced than in the earlier shows, and I thought I'd share them in case they are useful to anyone.
+As before it would be interesting to receive feedback on these functions and would be great if other Bash users contributed ideas of their own.
+Full Notes
+Since the notes explaining this subject are long, they have been placed here.
+Links
+
+Previous HPR episodes in this group Useful Bash functions:
+
+Part 1: 'pad' and 'yes_no' functions
+Part 2: 'yes_no' revisited
+
+Download the read_value, check_value and read_and_check functions and the trace of read_value.

@@ -1,0 +1,319 @@
+## hpr1791 :: Organizing Photos with Bash
+
+ Summary
+In this episode I provide an overview of how I use bash to automate my process
+    for orgainizing photographs on my computer.
+There are two main objectives of this script:
+
+Organize photographs in a folder structure that makes sense to me, e.g. 2015/2015-05-22
+Allow me to back up my photographs using a variety of methods.
+
+Download the Script
+This script is hosted on Github and you can download the latest version using following command:
+git clone https://gist.github.com/81e489b2a7397bb17305.git
+Script
+
+
+#!/bin/bash
+
+shopt -s -o nounset
+
+# Create variables and configure script.
+declare -rx SCRIPT=${0##*/}
+declare TMPDIR=/tmp/photos
+declare -r CURRENTDIR=`pwd`
+declare FILES=$TMPDIR/*
+declare DESTINATION=/media/Tyr/Pictures/Photos
+declare -r GOOGLEUSER="tnyplz@gmail.com"
+declare -r  OPTSTRING="-h, -d:"
+declare -r  LONGOPTSTRING="help, destination-directory, no-google-backup, sd-card, tmp-dir, no-delete, backup"
+declare RESULT
+declare GOOGLE_BACKUP=true
+declare SD=false
+declare SDDIR
+declare NODELETE=false
+declare S3=false
+
+# Executable dependencies
+declare -rx find="/usr/bin/find"
+declare -rx gphoto2="/usr/bin/gphoto2"
+declare -rx google="/usr/bin/google"
+declare -rx dcraw="/usr/bin/dcraw"
+declare -rx rsync="/usr/bin/rsync"
+declare -rx rename="/usr/bin/rename"
+declare -rx tar="/usr/bin/tar"
+declare -rx s3cmd="/usr/bin/s3cmd"
+
+# Sanity Checks
+if test -z $BASH; then
+    printf "$SCRIPT:$LINENO: please run this script with the BASH shell\n" >&2
+    exit 192
+fi
+# check for find
+if test ! -x $find; then
+    printf "$SCRIPT:$LINENO: the $find command is not available -- \
+aborting\n" >&2
+    exit 192
+fi
+# check for gphoto2
+if test ! -x $gphoto2; then
+    printf "$SCRIPT:$LINENO: the $gphoto2 command is not available -- \
+aborting\n" >&2
+    exit 192
+fi
+# check for google
+if test ! -x $google; then
+    printf "$SCRIPT:$LINENO: the $google command is not available -- \
+aborting\n" >&2
+fi
+# check for dcraw
+if test ! -x $dcraw; then
+    printf "$SCRIPT:$LINENO: the $dcraw command is not available -- \
+aborting\n" >&2
+fi
+# check for rename
+if test ! -x $rename; then
+    printf "$SCRIPT:$LINENO: the $rename command is not available -- \
+aborting\n" >&2
+    exit 192
+fi
+# check for rsync
+if test ! -x $rsync; then
+    printf "$SCRIPT:$LINENO: the $rsync command is not available -- \
+aborting\n" >&2
+fi
+# check for tar
+if test ! -x $tar; then
+    printf "$SCRIPT:$LINENO: the $tar command is not available -- \
+aborting\n" >&2
+fi
+# check for glacier-cmd
+if test ! -x $s3cmd; then
+    printf "$SCRIPT:$LINENO: the $s3cmd command is not available -- \
+aborting\n" >&2
+fi
+
+
+# Check for Options
+# =================
+
+getopt -T
+if [ $? -ne 4 ]; then
+    printf "$SCRIPT:$LINENO: %s\n" "getopt is in compatibility mode" >&2
+    exit 192
+fi
+
+RESULT=$(getopt --name "$SCRIPT" --options "$OPTSTRING" --longoptions "$LONGOPTSTRING" -- "$@")
+if [ $? -gt 0 ]; then
+    exit 192
+fi
+
+eval set -- "$RESULT"
+
+while [ $# -gt 0 ]; do
+    case "$1" in
+    -h | --help) # show help
+        printf "%s\n" "
+This script helps you automate the process of downloading photos from
+your camera, uploading backups to Google Picasa, and syncing the files
+with a specified directory.
+
+Dependendies:
+  gphoto2
+  dcraw
+  googlecl
+  rsync
+  s3cmd
+
+usage: $SCRIPT [options]
+
+Options:
+  -h | --help                        Show help for $SCRIPT
+  --destination-directory {LOCATION} Set the location where the photos will be
+                                     copied to.
+  --tmp-dir {LOCATION}               Set the temporary directory where images
+                                     will be downloaded to initially. The
+                                     default is /tmp/photos.
+  --no-google-backup                 Disable uploading low rez copies to Google
+                                     Plus.
+  --sd-card {LOCATION}               Set the location of the sd card.
+  --no-delete                        Do not delete from temp file.
+  --backup {FOLDER} {S3 BUCKET}      Create archive from folder and upload to S3.
+  "
+        exit 0
+        ;;
+    --destination-directory ) shift
+        if [ $# -eq 0 ]; then
+            printf "$SCRIPT:$LINENO: %s\n" "Invalid argument for destination. No destination given." >&2
+            exit 192
+        fi
+        DESTINATION="$1"
+        ;;
+    --tmp-dir ) shift
+        if [ $# -eq 0 ]; then
+            printf "$SCRIPT:$LINENO: %s\n" "Invalid argument for tmp-dir.  No temporary directory given." >&2
+            exit 192
+        fi
+        TMPDIR="$1"
+        FILES=$TMPDIR/*
+        ;;
+    --no-google-backup ) shift
+        GOOGLE_BACKUP=false
+        ;;
+    --sd-card ) shift
+        SD=true
+        if [ $# -eq 0 ]; then
+            printf "$SCRIPT:$LINENO: %s\n" "Invalid argument for sd directory. No sd card directory given." >&2
+            exit 192
+        fi
+        SDDIR="$1"
+        ;;
+    --no-delete ) shift
+	NODELETE=true
+	;;
+    --backup ) shift
+        if [ $# -eq 0 ]; then
+            printf "$SCRIPT:$LINENO: %s\n" "Invalid argument for AWS Glacier Backup. Backup folder and vault must be specified."
+        fi
+        S3=true
+        BACKUP_FOLDER="$1"
+        BUCKET="$2"
+        ;;
+    esac
+    shift
+done
+
+# Functions
+# =========
+
+# function to convert a raw image to jpg.
+# input: requires the user to specify the file extention ($1).
+function convert_to_jpg () {
+  FILES2CONVERT=$TMPDIR/*"$1"
+  for FILE in $FILES2CONVERT
+  do
+    FILE2BACKUP=$TMPDIR/Backup/`basename "$FILE" "$1"`'.jpg'
+    if [ -e $FILE2BACKUP ]; then
+        printf "$SCRIPT:$LINENO: Skipping $FILE, jpg file already exists\n"
+    elif [ -e $FILE ]; then
+        printf "$SCRIPT:$LINENO: Converting $FILE to $FILE2BACKUP\n"
+        $dcraw -cvz -w -o 1 -q 3 "$FILE" | cjpeg -quality 80 -optimize > "$FILE2BACKUP"
+    else
+        printf "Did not convert $FILE\n"
+    fi
+  done
+}
+
+# function to resize jpeg to upload to picasa
+function resize_to_thumb () {
+    FILES2RESIZE=$TMPDIR/Backup/* # TODO pass this in as argument along with destination directory
+    for FILE in $FILES2RESIZE
+    do
+        printf "$SCRIPT:$LINENO: Creating thumbnail for $FILE..."
+        convert $FILE -resize 2048x2048 $TMPDIR/Backup/Upload/`basename "$FILE" ".jpg"`'_thumb.jpg'
+        printf "done\n"
+    done
+}
+
+# function to import photos
+function import_photos () {
+    printf "$SCRIPT:$LINENO: Importing Photos\n"
+    if $SD; then
+        cp -p "$SDDIR"/* .
+    else
+        $gphoto2 --quiet --get-all-files
+    fi
+}
+
+# function to remove spaces in file names
+function remove_spaces () {
+    $find $1 -depth -name "* *" -execdir $rename 's/ /_/g' "{}" \;
+}
+
+# function to sort images into direcotries based on date.
+# input: directory to sort ($1)
+#        directory to sort into ($2)
+function sort_images () {
+    SORTDIR=$2'/Sorted/'
+    for FILE in $1
+    do
+        printf "$SCRIPT:$LINENO: Sorting $FILE\n"
+        DATEDIR=$SORTDIR`date -r "$FILE" +%Y`'/'`date -r "$FILE" +%Y-%m-%d`
+        mkdir -p $DATEDIR
+        cp "$FILE" $DATEDIR/
+    done
+}
+
+# function create archive and upload to AWS S3
+# input: directory to create an archive for ($1)
+#        s3 bucket name ($2)
+function archive_folder () {
+    ARCHIVE=$TMPDIR/$(basename $1).tar.bz2
+    printf "$SCRIPT:$LINENO: archiving $ARCHIVE\n"
+    $tar -cvjf $ARCHIVE $1
+    $s3cmd put $ARCHIVE $2
+}
+
+# Create temporary directory
+mkdir -p $TMPDIR
+cd $TMPDIR
+
+# Create AWS Glacier archive
+if $S3; then
+    archive_folder $BACKUP_FOLDER $BUCKET
+    cd $CURRENTDIR
+    if [ $NODELETE = false ]; then
+        rm -rf $TMPDIR
+    fi
+    exit 0
+fi
+
+# Import files from camera
+import_photos
+printf "$SCRIPT:$LINENO: Importing Photos Done!\n"
+
+# Remove Spaces in Filenames
+remove_spaces $TMPDIR
+
+#Convert all files to lower case
+printf "$SCRIPT:$LINENO: Converting Photos to Lower Case.\n"
+for FILE in *
+do
+    f=`echo $FILE | tr '[:upper:]' '[:lower:]'`
+    mv "$FILE" "$f"
+done
+printf "$SCRIPT:$LINENO: Converting Photos to Lower Case Done!\n"
+
+# Sort files
+sort_images "$FILES" "$TMPDIR"
+printf "$SCRIPT:$LINENO: Sorting Images Done!\n"
+
+# Create backup jpgs and upload them to Picassa
+mkdir -p $TMPDIR/Backup
+cp $TMPDIR/*.jpg $TMPDIR/Backup/
+
+convert_to_jpg ".nef"
+convert_to_jpg ".nrw"
+mkdir -p $TMPDIR/Backup/Upload
+resize_to_thumb
+
+if $GOOGLE_BACKUP; then
+    # Upload jpgs to Picassa
+    # Requires that you authorize googlecl through the web browser.
+    $google picasa create --user $GOOGLEUSER --title "Backup "`date +%Y-%m` $TMPDIR/Backup/Upload/*
+fi
+
+# Copy files to final locations
+$rsync -ravv $TMPDIR/Sorted/ $DESTINATION # TODO test to make sure destination works
+
+cd $CURRENTDIR
+
+# Remove temp folder
+if [ $NODELETE = false ]; then
+    rm -rf $TMPDIR
+fi
+
+printf "$SCRIPT:$LINENO: Processing Complete!\n"
+exit 0
+
+

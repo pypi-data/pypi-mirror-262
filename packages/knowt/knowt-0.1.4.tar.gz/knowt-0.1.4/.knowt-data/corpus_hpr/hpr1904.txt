@@ -1,0 +1,25 @@
+## hpr1904 :: Windows Command Line Tips and Tricks
+
+ Hello, HPR. I am OnlyHalfTheTime, the Reluctant Windows Admin. I am a Linux user at home and at heart. I run VPSs on Digital Ocean, host websites all in Linux, mostly Ubuntu. By day, however, I work for an Managed Services Provider which deals with all Windows boxes.
+Today, I would like to talk about some tips and tricks I have come across while being forced to make the best out of a Windows environment. Being a Linux user, I find that many functions are more quickly completed if you drop to a Command Line Interface. This holds true for many Windows functions as well.
+First, let's establish the kind of environment you will need.
+Unfortunately, there is no sudo command built in to Windows. What we will need to do is run a command prompt as an administrator. On Windows 7, you can accomplish this by clicking the start menu, typing cmd, then rightclicking the command prompt program and choosing 'run as administrator'. In Windows 8 and 10, you can right click the start menu directly and click Command Prompt Admin.
+This is almost the equivalent to running as root. You can affect almost anything except some system protected files. No rm -rf /* for you! The windows user most like root would be SYSTEM. Running a command prompt as SYSTEM is possible to accomplish a few ways, but is very very rarely needed. I can make another podcast about that later, but it is out-of-scope here.
+Lets get into our first example: User creation is so much easier at the Windows command line. For example, I want to add a local user to a system with administrative rights. From an admin command prompt, I type:
+net user john hunter2  /add
+this creates the user john with the password hunter2. Then I type:
+net localgroup administrators john /add
+This adds john to the local group administrators. This group has admin rights on this local machine. Say john abuses this privilege and needs to have his permissions revoked.
+net localgroup administrators john /delete
+This is much easier than going to the control panel, searching for users, adding a user, defining a password, choosing to make it an admin user. For me at least.
+Another thing the net command is used for is restarting services. Does that sounds silly to you? I agree! Regardless, let say you want to restart the print spooler on a troubled workstation. You could open a run prompt by hitting Windowskey+R and type "services.msc". This opens up the services window where you can find the service "print spooler" and right click it to restart. or you could just type:
+net stop spooler
+net start spooler
+This is easier to script as well, in case a user is always having trouble printing. Provide a simple batch file (the equivalent of a shell script) to resolve and get on with your day.
+Affecting files can be a pain in Windows as the paths tend to be esoteric and alien to a Linux user. For example. Let's say I want to copy file foo.bar in the openVPN programs folder to my desktop. I could type:
+copy "C:\Program Files (x86)\OpenVPN Technologies\OpenVPN Client\etc\profile\foo.bar" "C:\Users\john\desktop\foo.bar"
+Gotta remember those doublequotes since Windows has spaces AND parentheses in the full path. Wow. Even with tab completion, that's a lot of work. I have a better solution if you have access to the GUI. Find the file you wish to copy and drag and drop it into the command window. Windows will enter the full path into the prompt. If the files does not already exist where you want it you can't drag it into the prompt. There are variables that can speed up this process. It may not be as elegant and simple as ~, but Windows does have a variable for the local user's home directory. You can type:
+%HOMEPATH%\desktop\foo.bar
+But you are saying, wait OnlyHalfTheTime, this doesn't save me any time or keystrokes! This is true in this specific case, but in scripting, it becomes important to use variables instead of full paths. I may not have Windows installed in the "C" drive for example. Also, some are real time-savers. if you use %APPDATA% for example, it maps to C:{username}.
+Now, let's say I am going to be doing a lot of work in a specific directory. I could keep entering the full path, but come on, no one likes that guy. I could open a command prompt and cd or change directory, just like in Linux. or I could find the directory in the file explorer and right click in the folder while holding down shift. This gives you and extra option in the context menu named 'open command windows here' which does exactly that. You will get a command window opened with the working directory set as the folder in which you right clicked.
+Hopefully some of these methods will help folks like me: Windows admin by day, Linux enthusiast by night. This is OnlyHalfTheTime, the Reluctant Windows Admin, signing off.

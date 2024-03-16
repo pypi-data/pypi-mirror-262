@@ -1,0 +1,13 @@
+## hpr2073 :: The power of GNU Readline - part 1
+
+ The power of GNU Readline - part 1
+We all use GNU Readline if we we use the CLI in Linux because it manages input, line editing and command history in Bash and in many tools.
+I have been using Unix and later Linux since the 1980's, and gradually learnt how to do things like jump to the start or the end of the line, delete a character backwards up to a space, or delete the entire line.
+I think that learning GNU Readline is worthwhile since it contains a lot more features than what I just described. I thought I would do a few episodes on HPR to introduce some of what I consider to be the most useful features.
+I want to keep the episodes short since this is a dry subject, and, if you are anything like me, you can't take in more than a few key sequences at a time.
+The source of my information is the GNU Readline Manual. This is very well written, if a little overwhelming.
+To read the rest of the notes for this episode follow this link: https://hackerpublicradio.org/eps/hpr2073/full_shownotes.html
+Links
+
+Wikipedia article on GNU Readline: https://en.wikipedia.org/wiki/GNU_Readline
+GNU Readline manual: https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html

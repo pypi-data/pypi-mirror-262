@@ -1,0 +1,48 @@
+## hpr0013 :: LPI Certifications Part 1
+
+ Ken Fallon, wants his 'Linux Professional Institute Certification' (LPIC). He must be serious, because he's publicly preparing for it on HPR – no pressure, Ken. In this first episode of the series, he explains the certification process, sets up his practice system, and begins covering study material, for the 101 exam. He's using a detailed study guide, provided by IBM developerWorks. 
+ IBM Developer Works: (LPI) exam prep  
+ 
+The Booting Process of the PC   
+
+System Boot Sequence 
+https://www.pcguide.com/ref/mbsys/bios/boot_Sequence.htm  
+ https://en.wikipedia.org/wiki/Booting  
+ https://en.wikipedia.org/wiki/Bootstrapping_%28computing%29  
+
+
+----------------------------------------------
+Other Links: 
+----------------------------------------------
+LPI Certification Self-Study Guide
+https://www.happy-monkey.net/LPI/  
+
+Wiki Book: LPI Certification 
+https://en.wikibooks.org/wiki/LPI_Linux_Certification  
+
+----------------------------------------------
+Software: 
+---------------------------------------------- 
+Vmware Server 
+ https://www.vmware.com/download/server/VMware-server-1.0.4-56528.tar.gz  
+
+CentOS 
+ https://isoredirect.centos.org/centos/5/isos/i386/CentOS-5.1-i386-netinstall.iso  
+Select FTP Site from mirror list 
+https://www.centos.org/modules/tinycontent/index.php?id=13
+./5.1/os/i386/  
+E.g for ftp location: 
+ftp.tudelft.nl 
+pub/Linux/centos.org/5.1/os/i386/images
+
+Debian Netinstall
+ https://cdimage.debian.org/debian-cd/4.0_r1/i386/iso-cd/debian-40r1-i386-netinst.iso   
+
+---------------------------------------------- 
+Online Assesment  
+---------------------------------------------- 
+https://www.redhat.com/apps/training/assess/ 
+
+https://www.linux-praxis.de/lpisim/lpi101sim/index.html  
+
+Shownotes by: diggsit

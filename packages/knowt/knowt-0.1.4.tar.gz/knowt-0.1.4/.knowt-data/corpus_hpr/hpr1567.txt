@@ -1,0 +1,6 @@
+## hpr1567 :: Multiboot Partitioning with Linux
+
+ I like to distro-hop some and try out new things. Sometimes, I want to have 2 or more Linux distros on my system at the same time so I can compare and contrast them. Initially I used a separate /home and mounted it to each distro on my system. This led to config file corruption and I needed a new approach. I hope this will help somebody! Thanks. ~Matt aka @sahg33kdad https://g33kdad.thestrangeland.net
+Links:
+Original guest blog post on knightwise.com which inspired this episode: https://knightwise.com/the-perfect-partition-setup-for-a-multibooting-system/
+Image of filesystem tree: https://thestrangeland.net/images/directory_list.png

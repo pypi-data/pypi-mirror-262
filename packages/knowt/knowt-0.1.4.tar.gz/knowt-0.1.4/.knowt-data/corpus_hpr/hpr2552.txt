@@ -1,0 +1,5 @@
+## hpr2552 :: What is stow?
+
+ stow was perfected in 2002 with stow 1.3.3. Then it was silent for 9 years, and in 2011 stow 2.1.0 came out. It received a few updates until stow 2.2.2 in 2015, but don't worry. It's still relevant, and it won't eat your homework. I don't even know what these 2.x versions are about. You still just stow mything, stow -R mything and stow -D mything like you always did.
+If stow is too limiting to you, listen to hpr2198 :: How awesome is Guix and why will it take over the world about its big brother, which has all of the advantages of stow except radical simplicity, and none of the drawbacks.
+For a shorter and more practical episode on Guix, see hpr2308 :: Everyday package operations in Guix.

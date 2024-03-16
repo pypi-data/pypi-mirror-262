@@ -1,0 +1,16 @@
+## hpr1052 :: LiTS 013: Top of Top
+
+ The top command is a very complex and feature-full application. When executed from the command line the top command displays two sections of information: Summary information (contained in the yellow box in the screen-shot below) and running application field information (contained in the red box):
+
+The focus of this entry will be on the Summary window of top:
+
+The screen shot above shows the summary section. The first line contains the following information in this order by default:
+
+The current time
+up time
+how many users are logged in
+load average
+
+
+For the rest of the show notes and the video please go to https://www.linuxintheshell.com/2012/08/14/episode-013-top-of-top/
+

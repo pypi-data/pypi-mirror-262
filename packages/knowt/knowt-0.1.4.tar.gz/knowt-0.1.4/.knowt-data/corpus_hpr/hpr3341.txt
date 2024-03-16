@@ -1,0 +1,15 @@
+## hpr3341 :: Linux on a serial Terminal - And Jorome's MainFrame Challenge
+
+ Well its bit of challenge for Jerome to teach me how to do a Mainframe on a PI with serial terminal. I started the project using a old HPE 700/96 terminal amber. I used this site as my prime info.
+https://www.cyberciti.biz/hardware/5-linux-unix-commands-for-connecting-to-the-serial-console/
+
+First is seeing if you have a serial port
+
+    dmesg | egrep --color 'serial|ttyS'
+
+Then install getty if its not there
+Then add your config line to /etc/gettydefs
+Then make work if you reboot.
+The do report
+Then you have the log in prompt on the terminal
+

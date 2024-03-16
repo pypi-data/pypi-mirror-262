@@ -1,0 +1,461 @@
+## hpr2046 :: HPR Community News for May 2016
+
+ New hosts
+
+Welcome to our new hosts: 
+Bitbox, 
+    njulian, 
+    schism, 
+    pope523, 
+    Steve Saner, 
+    matthew, 
+    Lyle Lastinger.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+2021
+Mon
+2016-05-02
+HPR Community News for April 2016
+HPR Volunteers
+
+
+2022
+Tue
+2016-05-03
+Whats in my bag
+Bitbox
+
+
+2023
+Wed
+2016-05-04
+Setting up my Raspberry Pi 3
+Dave Morriss
+
+
+2024
+Thu
+2016-05-05
+Remapping Keys with xmodmap
+Jon Kulp
+
+
+2025
+Fri
+2016-05-06
+Using a Smarphone as a microphone
+njulian
+
+
+2026
+Mon
+2016-05-09
+What's in my Bag... Again!
+Christopher M. Hobbs
+
+
+2027
+Tue
+2016-05-10
+Old Engineers and New Engineers
+Gabriel Evenfire
+
+
+2028
+Wed
+2016-05-11
+Some basic info on alarm systems
+schism
+
+
+2029
+Thu
+2016-05-12
+The DSO138 Oscilloscope Kit
+NYbill
+
+
+2030
+Fri
+2016-05-13
+Book Review: The Pocket Ref
+m1rr0r5h4d35
+
+
+2031
+Mon
+2016-05-16
+A quick intro to OBD2 with Android
+pope523
+
+
+2032
+Tue
+2016-05-17
+How I Came to Linux
+Steve Saner
+
+
+2033
+Wed
+2016-05-18
+Distro Review: Bodhi Linux
+m1rr0r5h4d35
+
+
+2034
+Thu
+2016-05-19
+Frank's Five Seed Bread
+Frank Bell
+
+
+2035
+Fri
+2016-05-20
+Building Community
+droops
+
+
+2036
+Mon
+2016-05-23
+Glasgow Podcrawl 2016
+Dave Morriss
+
+
+2037
+Tue
+2016-05-24
+Alpha32's Pinhead Oats
+Alpha32
+
+
+2038
+Wed
+2016-05-25
+Attempting to fix a plastic boat
+Jezra
+
+
+2039
+Thu
+2016-05-26
+Blather Configuration Part 0: Initial Setup
+Jon Kulp
+
+
+2040
+Fri
+2016-05-27
+Why I Use Linux
+matthew
+
+
+2041
+Mon
+2016-05-30
+Router Antennas More = better ?
+Lyle Lastinger
+
+
+2042
+Tue
+2016-05-31
+My podcast list
+janedoc
+
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This discussion takes
+place on the Mail List which is open to all
+HPR listeners and contributors. The discussions are open and available on the
+Gmane
+archive.
+
+The main threads this month were:
+
+From: Ken Fallon <ken@...>
+Date: 2016-04-05 20:20:08 +0200
+Subject: Call for shows
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1160
+Messages: 2
+From: Ken Fallon <ken@...>
+Date: 2016-05-07 17:17:26 +0200
+Subject: HPR Policy Change - HTML default in RSS Feed
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1197
+Messages: 24
+From: Ken Fallon <ken@...>
+Date: 2016-05-08 11:30:50 +0200
+Subject: HPR On Goggle Play
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1205
+Messages: 1
+From: Mike Ray <mike@...>
+Date: 2016-05-10 08:41:34 +0100
+Subject: Libre Office Calc - closing the docked styles dialog with the keyboard
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1206
+Messages: 4
+From: Venant <venant@...>
+Date: 2016-05-10 23:07:52 -0400
+Subject: Re: Libre Office Calc - closing the docked styles dialog with	the keyboard
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1217
+Messages: 2
+From: Ken Fallon <ken@...>
+Date: 2016-05-24 14:20:42 +0200
+Subject: HPR Short listed for the The People's Choice Podcast Awards
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1228
+Messages: 6
+From: Ken Fallon <ken@...>
+Date: 2016-05-25 15:56:03 +0200
+Subject: Fwd: Ohio LinuxFest 2016 Call for Presentations
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1232
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2016-05-28 09:35:37 +0200
+Subject: Site Changes to fix Navigation
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1235
+Messages: 1
+From: Dave Morriss <perloid@...>
+Date: 2016-05-30 09:48:04 +0100
+Subject: HPR Community News - next Saturday on 2016-06-04T18:00:00Z
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1238
+Messages: 1
+
+Total messages this month: 42
+Comments this month
+These are comments which have been made during the past month, either to shows
+released during the month or to past shows.
+There are 57 comments:
+
+hpr1580
+(2014-08-22) "The FAT and NTFS File Systems"
+by JWP.
+ Comment 1:
+Ramiro on 2016-05-05:
+"FAT, FAT32" Comment 2:
+Dave Morriss on 2016-05-06:
+"Title change" Comment 3:
+Ken Fallon on 2016-05-08:
+"Done"
+
+hpr1967
+(2016-02-16) "How I saw the Linux Light at the end of the Windows tunnel"
+by Nacho Jordi.
+ Comment 1:
+Windigo on 2016-05-15:"[no title]"
+
+hpr1976
+(2016-02-29) "Introduction to sed - part 1"
+by Dave Morriss.
+ Comment 3:
+Frank on 2016-05-26:"[no title]" Comment 4:
+Dave Morriss on 2016-05-26:
+"Good luck with regex"
+
+hpr2007
+(2016-04-12) "My new laptop"
+by Dave Morriss.
+ Comment 4:
+Dave Morriss on 2016-05-02:
+"Thanks"
+
+hpr2008
+(2016-04-13) "HPR needs shows to survive."
+by Ken Fallon.
+ Comment 4:
+Frank on 2016-05-01:
+"I don't quite get it" Comment 5:
+Ken Fallon on 2016-05-02:
+"Because it was"
+
+hpr2009
+(2016-04-14) "Understanding the GNU/Screen Hardstatus line"
+by Curtis Adkins (CPrompt^).
+ Comment 2:
+Eric Suess on 2016-05-03:
+"Thank you."
+
+hpr2010
+(2016-04-15) "Parsing JSON with Python"
+by klaatu.
+ Comment 3:
+rstackhouse on 2016-05-24:"[no title]"
+
+hpr2015
+(2016-04-22) "Linux in the Church"
+by Joe.
+ Comment 3:
+Todd on 2016-05-11:
+"Great show!"
+
+hpr2016
+(2016-04-25) "Echoprint"
+by laindir.
+ Comment 2:
+laindir on 2016-05-23:
+"Late"
+
+hpr2019
+(2016-04-28) "a pi project and an owncloud project"
+by Matt McGraw (g33kdad).
+ Comment 3:
+Matt (g33kdad) on 2016-05-07:
+"Thanks, John"
+
+hpr2020
+(2016-04-29) "Automotive Billing"
+by brian.
+ Comment 2:
+Jon Kulp  on 2016-04-30:
+"Awesome! " Comment 3:
+JimZat on 2016-05-02:
+"Honest Auto Mechanics" Comment 4:
+mysterio2 on 2016-05-05:"[no title]" Comment 5:
+Todd on 2016-05-25:"[no title]"
+
+hpr2021
+(2016-05-02) "HPR Community News for April 2016"
+by HPR Volunteers.
+ Comment 1:
+Matt (g33kdad) on 2016-05-09:
+"Thanks!" Comment 2:
+Dave Morriss on 2016-05-11:
+"Great!"
+
+hpr2022
+(2016-05-03) "Whats in my bag"
+by Bitbox.
+ Comment 1:
+Jon Kulp on 2016-05-03:
+"What's in your cab?" Comment 2:
+JWP on 2016-05-04:
+"Great Podcast" Comment 3:
+Christopher M. Hobbs on 2016-05-07:
+"Tell us about truckin'!"
+
+hpr2023
+(2016-05-04) "Setting up my Raspberry Pi 3"
+by Dave Morriss.
+ Comment 1:
+Mike Ray on 2016-05-04:
+"Pi3 in a Metal Box" Comment 2:
+JWP on 2016-05-04:
+"GNU Nano Editor" Comment 3:
+Dave Morriss on 2016-05-04:
+"Faraday cage, Pibow and Nano" Comment 4:
+Mike Ray on 2016-05-07:
+"Metal boxes and Emacs" Comment 5:
+Beeza on 2016-05-16:
+"Alternative Pi Server Setup" Comment 6:
+Dave Morriss on 2016-05-16:
+"SSHFS; SSD"
+
+hpr2024
+(2016-05-05) "Remapping Keys with xmodmap"
+by Jon Kulp.
+ Comment 1:
+b-yeezi on 2016-05-05:
+"Interesting approach" Comment 2:
+Dave Morriss on 2016-05-30:
+"Nice idea"
+
+hpr2027
+(2016-05-10) "Old Engineers and New Engineers"
+by Gabriel Evenfire.
+ Comment 1:
+Steve Saner on 2016-05-10:"[no title]" Comment 2:
+Gabriel Evenfire on 2016-05-13:
+"Glad you liked it" Comment 3:
+Dave Morriss on 2016-05-30:
+"A most interesting show"
+
+hpr2028
+(2016-05-11) "Some basic info on alarm systems"
+by schism.
+ Comment 1:
+Frank on 2016-05-13:"[no title]" Comment 2:
+Bill on 2016-05-23:"[no title]" Comment 3:
+Frank on 2016-05-24:"[no title]" Comment 4:
+Todd on 2016-05-25:"[no title]" Comment 5:
+Dave Morriss on 2016-05-30:
+"Interesting subject"
+
+hpr2029
+(2016-05-12) "The DSO138 Oscilloscope Kit"
+by NYbill.
+ Comment 1:
+Dave Morriss on 2016-05-30:
+"Was tempted to get one"
+
+hpr2030
+(2016-05-13) "Book Review: The Pocket Ref"
+by m1rr0r5h4d35.
+ Comment 1:
+Frank on 2016-05-13:"[no title]"
+
+hpr2032
+(2016-05-17) "How I Came to Linux"
+by Steve Saner.
+ Comment 1:
+Peri Saner on 2016-05-17:
+"Wife" Comment 2:
+Jonathan Kulp on 2016-05-17:
+"Bring on the rockets" Comment 3:
+NYbill on 2016-05-18:
+"The old gray beards in the basement." Comment 4:
+Dave Morriss on 2016-05-30:
+"Really enjoyed this"
+
+hpr2034
+(2016-05-19) "Frank's Five Seed Bread"
+by Frank Bell.
+ Comment 1:
+Frank on 2016-05-18:"[no title]" Comment 2:
+Frank on 2016-05-20:"[no title]" Comment 3:
+Dave Morriss on 2016-05-30:
+"Must try this, or a modification thereof"
+
+hpr2035
+(2016-05-20) "Building Community"
+by droops.
+ Comment 1:
+Tony Hughes on 2016-05-20:
+"building community" Comment 2:
+droops on 2016-05-20:
+"Tech Podcasts" Comment 3:
+Dave Morriss on 2016-05-20:
+"Show tags" Comment 4:
+Tony Hughes on 2016-05-20:
+"Building Comunity" Comment 5:
+amunizp on 2016-05-22:
+"app"
+
+hpr2037
+(2016-05-24) "Alpha32's Pinhead Oats"
+by Alpha32.
+ Comment 1:
+Dave Morriss on 2016-05-26:
+"Cooking! Yay!"
+
+hpr2038
+(2016-05-25) "Attempting to fix a plastic boat"
+by Jezra.
+ Comment 1:
+Jon Kulp on 2016-05-24:
+"Hilarious" Comment 2:
+Dennis New on 2016-05-27:
+"Hilarious Indeed" Comment 3:
+FiftyOneFifty on 2016-05-28:
+"Good Times"
+
+

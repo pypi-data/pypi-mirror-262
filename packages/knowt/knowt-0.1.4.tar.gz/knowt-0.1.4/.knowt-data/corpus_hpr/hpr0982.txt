@@ -1,0 +1,15 @@
+## hpr0982 :: LiTS 006: pmount
+
+ 
+In our continuing journey around the command line, Dann takes us to visit the outer edges and talks about the pmount command.
+
+
+NAME
+       pmount - mount arbitrary hotpluggable devices as normal user
+
+
+As ever the very very detailed shownotes can be found on his site https://www.linuxintheshell.com
+
+
+Don't forget that he also has a video component, and as ever this one is worth a watch.
+

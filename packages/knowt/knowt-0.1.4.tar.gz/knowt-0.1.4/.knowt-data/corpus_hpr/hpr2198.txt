@@ -1,0 +1,41 @@
+## hpr2198 :: How awesome is Guix and why will it take over the world
+
+ I heard a "holy crap" somewhere in there, so I guess this show is explicit. That's about the level you can expect. :-)
+I recorded this together with @cwebber@identi.ca over a year ago, on 2015-12-01. I told him I was hoping to get it out in time for FOSDEM. I didn't clarify which FOSDEM. :-D
+So this thing has been lying around, and I've been polishing it and I've been thinking "man, 90 minutes is a bit rich for an HPR episode, I should edit this thing at some point". Procrastinator strikes again!
+Well, that point never came in the course of one year, and HPR needs episodes, so this is what you get. I skipped around in it for QA reasons (audio sync) and I found that I wanted to listen to it again myself, so if your interests are anything like mine, I think it will be able to hold your attention. We had great fun recording it, and now that I've got it out of the gate, maybe I won't be ashamed to ask Chris to record another one about one of the many topics that came up during this show.
+In the year since we recorded this, Guix has released versions 0.10.0, 0.11.0 and 0.12.0. It has functioning GNOME (based on Wingo's elogind) and can boot from a LUKS-encrypted drive.
+DMD, the Daemon-Managing Daemon that was at the core of GuixSD, is now Shepherd, and still at the core of GuixSD.
+Chris's project 8Sync is at version 0.2 and has a real GNU homepage (generated from S-expressions by Haunt!) and Guile 2.2 is closer than ever. 8Sync 0.2 uses some experimental features available in Guile 2.1 snapshots.
+Guix and Software Conservancy still need your money (The FSF accepts Bitcoin!), and FOSDEM is still, or again, around the corner. I won't be going there this year, though, due to scheduling conflicts.
+On my latest laptop I'm running NixOS and it's running just great. My Guix VM on the other machine is no longer running Enlightenment, now that GNOME is ready. :-)
+I haven't fixed clusterssh in either Nix nor Guix, but tmux-cssh works pretty great too!
+Someone should still write guix-bisect!
+GuixOps has been dormant during 2016, but as late as two months ago there was some slight movement on the mailing list.
+Links to various things and people mentioned in the show:
+
+Chris Webber: blog pump.io
+Chris's Guile tutorial
+
+
+Guile
+Official Guile tutorial
+
+
+Arne Babenhauserheide homepage/blog OStatus 
+WISP, S-expressions without so many parentheses
+
+
+Guix and GuixSD
+Nix and NixOS
+Andy Wingo: blog twitter github
+Mark Weaver: https://savannah.gnu.org/users/mhw is as good as it gets, it seems.
+Ludovic Courtès: home page, you can see under software that Chris was right about him being on Nix first, before he created Guix. :-)
+David Thompson homepage OStatus
+SICP
+A means of composition and a means of abstraction
+
+
+hy, a LISP hosted in Python
+The Reasoned Schemer is a dead-trees book.
+Actually there is a package manager for Guile called guildhall, but the latest commit was in 2015 (by Arne Bab, mentioned above!), and the trend to put Guile packages right into Guix seems to continue. There is also a generic Scheme package repository called Snow, but it doesn't seem to support guile, at least not officially.

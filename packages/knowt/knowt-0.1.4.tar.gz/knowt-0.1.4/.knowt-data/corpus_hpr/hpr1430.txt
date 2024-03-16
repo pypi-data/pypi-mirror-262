@@ -1,0 +1,44 @@
+## hpr1430 :: thebestofyoutube.com download script
+
+ In episode "Thu 2013-12-19: hpr1404 Editing pre-recorded audio in Audacity" I walked you through editing a podcast, by the magic of editing this is been posted after the other show has aired. The plan here is to get people to share their useful hacks to show how elegant, or in my case ugly, code can be. As Knightwise says "Getting technology to work for you."™ Feel free to share your own hacks with us.
+https://hackerpublicradio.org/eps.php?id=1404https://hackerpublicradio.org/eps/hpr1430-downloader.bash.txt
+
+#!/bin/bash
+# Downloads videos from youtube based on selection from https://thebestofyoutube.com
+# (c) Ken Fallon https://kenfallon.com
+# Released under the CC-0
+
+maxtodownload=10
+savepath="/mnt/media/Videos/tv/youtube/bestofyoutube"
+savedir="${savepath}/$(\date -u +%Y-%m-%d_%H-%M-%SZ_%A)"
+mkdir -p ${savedir}
+logfile="${savepath}/downloaded.log"
+
+# Gather the list
+seq 1 ${maxtodownload} | while read videopage;
+do 
+  thisvideolist=$(wget --quiet "https://bestofyoutube.com/index.php?page=${videopage}" -O - | 
+  grep 'www.youtube.com/embed/' | 
+  sed 's#^.*www.youtube.com/embed/##' | 
+  awk -F '"|?' '{print "https://www.youtube.com/watch?v="$1}')
+  for thisvideo in $(echo $thisvideolist);
+  do 
+    if [ "$( grep "${thisvideo}" "${logfile}" | wc -l )" -eq 0 ];
+    then
+      echo "Found the new video ${thisvideo}"
+      echo ${thisvideo} >> ${logfile}_todo
+    else
+      echo "Already downloaded ${thisvideo}"
+    fi
+  done
+done
+
+# Download the list
+if [ -e ${logfile}_todo ];
+then
+  tac ${logfile}_todo | youtube-dl --batch-file - --ignore-errors --no-mtime --restrict-filenames \
+    --max-quality --format mp4 --write-auto-sub -o ${savedir}'/%(autonumber)s-%(title)s-%(id)s.%(ext)s'
+  cat ${logfile}_todo >> ${logfile}
+  rm ${logfile}_todo
+fi
+

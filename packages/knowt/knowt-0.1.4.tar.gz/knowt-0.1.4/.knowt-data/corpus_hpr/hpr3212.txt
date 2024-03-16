@@ -1,0 +1,13 @@
+## hpr3212 :: A Pi Model 3B as your daily driver? You must be joking.
+
+ My Dell laptop had to go away to have a new cooling fan fitted. I've got 3 other laptops to call upon, but instead I decided to conduct an experiment I've theorised about for ages. Could a Raspberry Pi 3B serve as my daily driver?
+This idea goes back some way and since then, of course, the much more powerful model 4 has been released. However, there must be thousands of 3Bs out there doing nothing, so perhaps they could have a new lease of life providing basic browsing and internet capabilities to people who might otherwise not be in a position to buy a computer.
+Hardware: Raspberry Pi Model 3B
+OS: Raspberry Pi OS (current version as of 31st October 2020)
+MicroSD: SanDisk 16GB
+ADDITIONAL SOFTWARE INSTALLED
+
+Audio Editor: mhWaveEdit 1.4.23
+Audio Format Converter: SoundConverter 2.1.3
+Image Editor: GIMP 2.10
+

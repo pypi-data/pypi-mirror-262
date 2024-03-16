@@ -1,0 +1,59 @@
+## hpr3173 :: Manage your Raspberry Pi fleet with Ansible
+
+ 
+This is the final show in the miniseries on how to manage your RaspberryPis with ansible. The goal is to produce a common base Raspberry Pi OS image that doesn't change often but, once it's installed, can automatically be customized, maintained, and managed remotely.
+
+
+We will create the base image using the script fix-ssh-on-pi which is available on GitHub. 
+
+
+Then we will identify the hosts on the network with tips from operat0r in show hpr3090 :: Locating Computers on a Enterprise Network, or for simpler networks from my own show hpr3052 :: Locating computers on a network.
+
+
+Finally we will provision the devices using tips from hpr3080 :: Ansible ping, and hpr3162 :: Introduction to Ansible 
+
+
+This show has been been simultaneously published as an article on opensource.com.
+
+Links
+
+https://hackerpublicradio.org/correspondents/0036.html
+https://hackerpublicradio.org/correspondents/0078.html
+https://hackerpublicradio.org/eps.php?id=2356
+https://hackerpublicradio.org/eps.php?id=3052
+https://hackerpublicradio.org/eps.php?id=3080
+https://hackerpublicradio.org/eps.php?id=3090
+https://hackerpublicradio.org/eps.php?id=3162
+https://man7.org/linux/man-pages/man8/losetup.8.html
+https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
+https://docs.ansible.com/ansible/latest/modules/apt_module.html
+https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
+https://en.wikipedia.org/wiki/Ansible_%28software%29%23Design_goals
+https://en.wikipedia.org/wiki/Comparison_of_open-source_configuration_management_software
+https://en.wikipedia.org/wiki/DevOps
+https://en.wikipedia.org/wiki/Domain_Name_System
+https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol
+https://en.wikipedia.org/wiki/Enterprise_resource_planning
+https://en.wikipedia.org/wiki/Hostname
+https://en.wikipedia.org/wiki/Idempotent
+https://en.wikipedia.org/wiki/ISO_9000
+https://en.wikipedia.org/wiki/MAC_address
+https://github.com/kenfallon/fix-ssh-on-pi
+https://github.com/nmcclain/raspberian-firstboot
+https://wiki.debian.org/DebianReleases
+https://www.amazon.com/StarTech-com-4-Slot-USB-C-Card-Reader/dp/B07HVPNQRQ/
+https://www.ansible.com/
+https://www.cyberciti.biz/faq/ansible-apt-update-all-packages-on-ubuntu-debian-linux/
+https://www.raspberrypi.org/blog/raspberry-pi-4-on-sale-now-from-35/#comment-1510410
+https://www.raspberrypi.org/documentation/configuration/raspi-config.md
+https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/net_tutorial.md
+https://www.raspberrypi.org/documentation/raspbian/updating.md
+https://www.raspberrypi.org/education/
+https://www.raspberrypi.org/products/raspberry-pi-1-model-b-plus/
+https://www.raspberrypi.org/products/raspberry-pi-2-model-b/
+https://www.raspberrypi.org/products/raspberry-pi-3-model-a-plus/
+https://www.raspberrypi.org/products/raspberry-pi-3-model-b/
+https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/
+https://www.raspbian.org/

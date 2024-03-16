@@ -1,0 +1,116 @@
+## hpr2340 :: Tracking the HPR queue in Python
+
+ In this episode I explain how I use python to track the number of shows in the HPR queue and then turn on a blinkstick to indicate the size of the queue.
+
+Stack exchange
+https://stackoverflow.com/
+urllib (Python 3), urllib2 (Python 2)
+https://docs.python.org/2/library/urllib.html
+re - regular expressions in python
+https://docs.python.org/2/library/re.html
+Blinkstick
+https://www.blinkstick.com/
+
+Python code included below
+#!/usr/bin/env python3
+
+### This is a scratchpad file I've created to try out snippets of code in python
+
+# The script below is for use with Python 3
+# This script should work out of the box on most systems running a version of Python 3 
+# If you happen to have a blinkstick lying about then your can uncomment the blinkstick module
+# and uncomment the references at the bottom of the program that call the blinkstick functions
+# Regards, Mr X
+
+
+# Imported modules
+from time import sleep          # used to pause program
+#from blinkstick import blinkstick  # used to control blinkstick nano attached to usb port of raspberry pi
+import urllib.request           # used to capture hpr webpage content to get the number of HPR shows in the que
+import re               # regular expressions, used to find sting in HPR webpage (get_hpr_que)
+
+
+# These functions control a blink stick nano attached to my raspberry pi USB port #################
+# They can be ignored or deleted if you don't have one
+
+
+def bstick_off():
+# Search for all attached blinksticks and turn them all off
+    for bstick in blinkstick.find_all():
+        bstick.turn_off()   # Turn front blinkstick LED off
+        bstick.set_color(channel=0, index=1, name="black")  # Turn rear blinkstick led off
+        print("Blinkstick: " + bstick.get_serial() + " turned off")
+
+
+def bstick_on(colour):
+# Turn blinkstick on and set led colour to string value stored in var colour
+# valid colours are, black, silver, gray, white, maroon, red, purple, fuchsia, green, lime, olive, yellow, navy, blue, teal, aqua
+    for bstick in blinkstick.find_all():
+        bstick.set_max_rgb_value(30)        # Sets max blinkstick RGB value to 15, makes LED dimm
+        bstick.set_color(name=colour)       # Turn blinkstick on, var colour determines colour
+        print ("Blinkstick: " + bstick.get_serial() + " | Colour: " + bstick.get_color(color_format="hex") + " [" + colour + "]")
+#hex
+
+def bstick_on_random():
+# Turn blinkstick on colour random
+    for bstick in blinkstick.find_all():
+        bstick.set_random_color()
+        print ("Blinkstick: " + bstick.get_serial() + " | Colour: " + bstick.get_color(color_format="hex"))
+
+
+def bstick_blink_red():
+# Flash blinkstick colour red
+    for bstick in blinkstick.find_all():
+        bstick.blink(name="red")
+        print ("Blinkstick: " + bstick.get_serial() + " | Colour: " + bstick.get_color(color_format="hex"))
+
+################################################################################
+
+
+def get_hpr_que():
+# Goto hacker public radio calendar page and extract the number of shows in the queue
+# then return the number of shows as an integer
+# also turns on blinkstick LED and sends number of HPR shows in the que to the display
+
+    url = 'https://hackerpublicradio.org/calendar.php'   # HPR url for calendar page
+    try:
+        html_content = urllib.request.urlopen(url).read()   # Try to read hpr calendar page
+    except:
+        print("ERROR: Problem acessing url " + url)     # if error accessing url then return -1
+        hpr_shows = -1
+        return hpr_shows
+    html_page = str(html_content)   # convert to string
+    line_begin = html_page.find('There are only <strong>') # find position of string in html page
+    line_end = line_begin + 70 # Store line end position (start position + 70)
+    line = html_page[line_begin:line_end]  # Capture string line
+    #print(line) # DEBUG Print line string
+    digit = re.findall(r'\d+',line)         # Find digits in line
+    #print(digit[0])    # print the 1st digit
+    try:
+        hpr_shows = int(digit[0])   # convert digit list to integer days
+    except:                         # If show numbers not found then return -1
+        print("ERROR: Problem getting number of HPR shows in que.")
+        hpr_shows = -1
+        return hpr_shows
+    #print(hpr_shows) # DEBUG
+    #return hpr_shows
+    if hpr_shows > 9:       # If hpr show que > 9 turn on green LED
+        print("Turn on green blinkstick LED")
+        #bstick_on("green")
+    elif hpr_shows > 5:     # Else if hpr show que > 5 turn on blue LED
+        print("Turn on blue blinkstick LED")
+        #bstick_on("blue")
+    elif hpr_shows > -1:    # Else if hpr show que > -1 turn on ref LED
+        print("Turn on red blinkstick LED")     
+        #bstick_on("red")
+    else:
+        print("Flash red blinkstick LED")
+        #bstick_blink_red() # Else blink LED to show error
+    print("The are " + str(hpr_shows) + " shows in the HPR que...")
+    sleep(4)
+    print("Turn off all blinkstick LED's")
+    #bstick_off()           # Turn blinkstick off
+
+
+# Main program
+get_hpr_que()

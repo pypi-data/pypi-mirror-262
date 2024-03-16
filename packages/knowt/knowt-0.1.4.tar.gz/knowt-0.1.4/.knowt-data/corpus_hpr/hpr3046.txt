@@ -1,0 +1,306 @@
+## hpr3046 :: HPR Community News for March 2020
+
+ 
+New hosts
+
+Welcome to our new host: 
+crvs.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+3021
+Mon
+2020-03-02
+HPR Community News for February 2020
+HPR Volunteers
+
+
+3022
+Tue
+2020-03-03
+FOSDEM 2020 Stand Interviews
+Ken Fallon
+
+
+3023
+Wed
+2020-03-04
+Critique My Script, Episode 1 - Qots-Crew-Gen
+Carl
+
+
+3024
+Thu
+2020-03-05
+A funny thing happened the other day
+MrX
+
+
+3025
+Fri
+2020-03-06
+Keep unwanted messages off the Fediverse
+Ahuka
+
+
+3026
+Mon
+2020-03-09
+Hex Bug and Battle Bots
+operat0r
+
+
+3027
+Tue
+2020-03-10
+What is quantum computing and why should we care?
+mightbemike
+
+
+3028
+Wed
+2020-03-11
+Monads and Haskell
+crvs
+
+
+3029
+Thu
+2020-03-12
+At Union Station with a train delay
+Archer72
+
+
+3030
+Fri
+2020-03-13
+My new Samsung tablet
+MrX
+
+
+3031
+Mon
+2020-03-16
+Daniel Persson - Me? Me!
+Daniel Persson
+
+
+3032
+Tue
+2020-03-17
+piCore on a Raspberry Pi 1 Model B
+Claudio Miranda
+
+
+3033
+Wed
+2020-03-18
+32 Bit Time Travel
+monochromec
+
+
+3034
+Thu
+2020-03-19
+How to bridge Freenode IRC rooms to Matrix.org
+Thaj Sara
+
+
+3035
+Fri
+2020-03-20
+Decentralised Hashtag Search and Subscription in Federated Social Networks
+Ahuka
+
+
+3036
+Mon
+2020-03-23
+WiiU is dead long live WiiU!
+operat0r
+
+
+3037
+Tue
+2020-03-24
+Ambient recording at Union Station
+Archer72
+
+
+3038
+Wed
+2020-03-25
+Solo Magic
+klaatu
+
+
+3039
+Thu
+2020-03-26
+Making a Raspberry Pi status display
+Dave Morriss
+
+
+3040
+Fri
+2020-03-27
+Why use GNU Autotools
+klaatu
+
+
+3041
+Mon
+2020-03-30
+How to use GNU Autotools
+klaatu
+
+
+3042
+Tue
+2020-03-31
+The COVID-19 Work From Home Stream - Day 0
+Thaj Sara
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 23 comments in total.
+Past shows
+There are 2 comments on
+2 previous shows:
+
+hpr3009
+(2020-02-13) "Linux Inlaws S01 E01"
+by monochromec.
+
+
+
+Comment 5:
+bittin on 2020-03-05:
+"yay"
+hpr3019
+(2020-02-27) "Linux Inlaws S01E02 FOSDEM shenanigans"
+by monochromec.
+
+
+
+Comment 1:
+ClaudioM on 2020-03-05:
+"FLOSS Weekly #568"
+
+This month's shows
+There are 21 comments on 8 of this month's shows:
+hpr3023
+(2020-03-04) "Critique My Script, Episode 1 - Qots-Crew-Gen"
+by Carl.
+
+Comment 1:
+Dave Morriss on 2020-03-04:
+"Bash arithmetic"Comment 2:
+Dave Morriss on 2020-03-04:
+"Another Bash-ism that might be useful"Comment 3:
+nobody on 2020-03-04:
+"There must be an easier way"Comment 4:
+nobody on 2020-03-04:
+"Little correction to my comment"Comment 5:
+Carl on 2020-03-05:
+"Thanks for the comments"Comment 6:
+Carl on 2020-03-05:
+"Thanks for the comments"Comment 7:
+nobody on 2020-03-05:
+"Re: Re:"Comment 8:
+nobody on 2020-03-05:
+"Standalone increment in ash"Comment 9:
+Carl on 2020-03-05:
+"Neat"Comment 10:
+nobody on 2020-03-05:
+"$(())"Comment 11:
+Carl on 2020-03-05:
+"Version 3"
+hpr3024
+(2020-03-05) "A funny thing happened the other day"
+by MrX.
+
+Comment 1:
+Tuula on 2020-03-05:
+"great storytelling"Comment 2:
+MrX on 2020-03-07:
+"Re great storytelling"
+hpr3025
+(2020-03-06) "Keep unwanted messages off the Fediverse"
+by Ahuka.
+
+Comment 1:
+Ken Fallon on 2020-03-09:
+"I disagree"Comment 2:
+Ahuka on 2020-03-09:
+"Further discussion"
+hpr3026
+(2020-03-09) "Hex Bug and Battle Bots"
+by operat0r.
+
+Comment 1:
+Windigo on 2020-03-25:
+"Great episode"
+hpr3028
+(2020-03-11) "Monads and Haskell"
+by crvs.
+
+Comment 1:
+Tuula on 2020-03-11:
+"welcome!"Comment 2:
+crvs on 2020-03-11:
+"Re: welcome!"
+hpr3031
+(2020-03-16) "Daniel Persson - Me? Me!"
+by Daniel Persson.
+
+Comment 1:
+Klaatu on 2020-03-22:
+"History"
+hpr3032
+(2020-03-17) "piCore on a Raspberry Pi 1 Model B"
+by Claudio Miranda.
+
+Comment 1:
+Windigo on 2020-03-26:
+"Minimal distros are the best"
+hpr3034
+(2020-03-19) "How to bridge Freenode IRC rooms to Matrix.org"
+by Thaj Sara.
+
+Comment 1:
+Klaatu on 2020-03-22:
+"Did not know this"
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2020-March/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+Tags and Summaries
+Thanks to the following contributors for sending in updates in the past month:
+crvs, Windigo, Archer72, Dave Morriss
+Over the period tags and/or summaries have been added to 28 shows which were without them.
+If you would like to contribute to the tag/summary project visit the summary page at https://hackerpublicradio.org/report_missing_tags.php and follow the instructions there.

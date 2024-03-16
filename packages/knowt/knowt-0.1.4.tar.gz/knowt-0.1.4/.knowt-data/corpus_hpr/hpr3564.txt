@@ -1,0 +1,86 @@
+## hpr3564 :: Removing EXIF data from an image
+
+ Introduction
+I’m writing a script to process image files sent in by HPR hosts with their shows. One of the things the script does is to strip Exif metadata from such images. That’s because this metadata may contain details that could identify the creator of the image - their camera, their location, and other things. Many people will be alert to this, but in case anything slips through it seems a courtesy to anonymise images sent to HPR.
+As I was implementing this I realised that one piece of Exif data: 'Orientation', can’t just be removed. Sometimes images are created with a particular orientation by the camera but are written with an Exif orientation setting that shows another orientation. If this is just removed the image might be shown wrongly.
+This short episode describes the journey I had learning about this issue and finding how to get round it.
+The Problem
+A show was sent in early March 2022 which had three images with orientation values in the Exif metadata. They had apparently been taken with one orientation but were being rotated for viewing.
+I later discovered that the orientation setting can be viewed with the exiftool command:
+$ exiftool -orientation testimage.jpg
+Orientation                     : Rotate 90 CW
+You can find information about the Orientation tag on the ExifTool web site.
+The actual image in this case is rotated 90° anti-clockwise (the top of the image is to the left) and this needs to be reversed. The setting 'Rotate 90 CW' causes it to be displayed after rotating 90° in the clockwise direction. The actual value for this setting is 6.
+The problem is that removing all the Exif data causes such an image to revert to its raw state as explained below.
+Investigation
+Demonstration
+It took me a little while to understand this problem because I couldn’t find a good explanation of what was going on.
+I found a repository on GitHub which would take a picture and generate all of the possible Exif orientations from it. I used it to generate pictures from one (a thumbnail) I used in an old HPR show. Here’s the original picture with an orientation setting of 6 (Rotate 90 CW), and then with the Exif metadata removed.
+Original image with orientation 6
+
+Same image with Exif stripped
+
+Methods used to fix this
+I found and installed some tools:
+
+jpegexiforient - reads or writes the Exif Orientation Tag
+exifautotran - transforms Exif files so that Orientation becomes 1
+jpegtran - lossless transformation of JPEG files
+
+Note that these only operate on JPEG images.
+The exifautotran tool is a shell script that uses jpegexiforient to find the orientation and jpegtran to undo whatever rotation (or other transformation) has been defined.
+Reading the exifautotran script helped me understand all of this, but I did not use these tools in the end.
+In the script I had written to manage images I also needed to do other image operations:
+
+interrogate the image to find its size to determine whether a thumbnail was needed
+make a thumbnail if necessary
+
+To do this I had started to use the GraphicsMagick package.
+This package actually caters for the orientation transformation I wanted to perform and can handle many image types, not just JPEG.
+The technique is to use the command 'gm convert' with two options:
+
+-strip - remove all profiles and text attributes from the image
+-auto-orient - orient (rotate) the image so it is upright; adjusts the image orientation so that it is suitable for viewing
+
+Example:
+gm convert -strip -auto-orient sideways_pic.jpg normal_pic.jpg
+
+
+Running this on the images in question removed the Exif orientation after having rotated the pixels of the image to the 'Horizontal (normal)' state.
+Conclusion
+I have modified my picture management script to use this technique, and so far it seems to do the job perfectly. It has to be admitted that images with Exif orientation metadata are rare though.
+The GraphicsMagick documentation indicates that the transformations needed to generate an upright image could cause problems with some images, so we will be alert to any issues. For the moment, it looks as if the problem is largely solved.
+Personally, I gained several things from this journey of discovery:
+
+I ended up understanding images a bit better.
+Using exiftool to examine these images helped me to understand the power of this tool1.
+I also discovered that if opened the example image with Gimp it spotted the orientation issue and asked if I wanted it to perform the transformation discussed above.
+I installed a KDE image tool called ShowFoto and it also reported the fact that the image existed in two forms, in the same way, and allowed Exif editing.
+
+Links
+
+Exif:
+
+Wikipedia article about Exif
+ExifTool by Phil Harvey
+
+EXIF tag names
+
+Github repository of Exif orientation examples
+
+
+
+GraphicsMagick:
+
+Wikipedia article about GraphicsMagick
+GraphicsMagick main website
+
+
+
+
+
+For the record, removing all Exif data with exiftool is achieved with the command:
+exiftool -all= image.jpg
+↩︎
+
+

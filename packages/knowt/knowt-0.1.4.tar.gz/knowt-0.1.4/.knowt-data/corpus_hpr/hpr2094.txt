@@ -1,0 +1,30 @@
+## hpr2094 :: Custom Keystrokes for Desktop Navigation on Gnome
+
+ 
+In this episode I talk about how to set up custom keystrokes so that you can launch or switch to applications easily using the super key on your keyboard. I do this on the classic Gnome desktop environment and have not tested it on Gnome 3 or Unity to see whether it works on those.
+To create a new custom keystroke, open System Settings, then go to Keyboard and Shortcuts. Click on the plus sign to open the dialog box where you specify the name of the keystroke and the command that is to be launched when the keystroke is executed. Click "Apply" and then click "Disabled" and it will allow you to type the keystroke you want to use.
+At this point the keystroke configuration is ready, but you have to either log out of the current session and log back in, or find some other way to reload the desktop environment configuration before you can actually use the keystroke.
+I also talked about how I use my own scripts to check to see whether a program is running, and then either switch to that program if it's running or launch it if it's not. Here is an example for launching or switching to LibreOffice.
+#!/bin/bash
+
+# Look for the string "LibreOffice" on the list of 
+# window titles and check the return code
+
+checktitle=$(wmctrl -l | grep "LibreOffice" &> /dev/null ; echo $?)
+
+# If the return code is 0 that means it found the 
+# string, so I use wmctrl to switch to the window 
+# that has that string in the title. 
+
+if [ $checktitle == 0 ] ; then
+    wmctrl -a "LibreOffice"
+    
+# If it returns a 1, then that means it did not 
+# find a window with that string in it so I 
+# launch the application.
+    
+  else
+    loffice &
+fi
+
+Save the script somewhere in your PATH, make it executable, and then use the script name in the command when you're setting up the keystroke.

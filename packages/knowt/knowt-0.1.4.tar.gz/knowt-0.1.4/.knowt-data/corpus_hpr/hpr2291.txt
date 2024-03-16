@@ -1,0 +1,195 @@
+## hpr2291 :: Arch on CELES
+
+ ArchLinux on a CELES
+Samsung Chromebook 3
+Before begining
+
+Required tools
+
+Screwdriver
+Install medium (Arch-Anywhere)
+USB keyboard (Built-in needs pinctrl-cherryview.c)
+Internet connecion
+Other Device (Maybe)
+
+Links
+
+https://www.startpage.com/do/dsearch?query=xe500c13
+https://mrchromebox.tech/#fwscript
+
+Packages to expect/build
+
+linux-galliumos-braswell
+galliumos-braswell-config
+
+Packages to consider
+
+modprobed-db 
+
+
+How-to
+
+Remove HW write-protect screw
+
+Guide on Github by maxwyb
+
+Developer mode
+
+Enable Developer mode
+
+
+
+...press, and hold the Esc + F3 (Refresh) keys – then press the Power button. This enters Recovery Mode...
+
+
+...press Ctrl + D. It will ask you to confirm, then the system will revert its state and enable Developer Mode...
+
+
+...press Ctrl + Alt + F2 (F2 is the "forward" arrow on the top row, →)
+
+
+...Use chronos as the username...
+
+
+SU & FW
+
+Escalate privileges. sudo -i
+ChromeOS Firmware Utility Script
+
+Install RW_LEGACY
+Set GBB Flags (1 second, SeaBIOS/Legacy)
+Remove ChromeOS Bitmaps (To look cool)
+
+
+OS & Kernel
+
+Install ArchLinux
+Install yaourt
+Install kernel with IRQ patch:
+yaourt -G linux-galliumos-braswell&&cd !:2
+makepkg -sifCc --skipinteg
+Install galliumos-braswell-config:
+
+yaourt -S --force galliumos-braswell-config
+
+
+Grub
+
+Regenerate Grub configuration file
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+
+
+Extra
+
+GREETS
+
+@Brbr of BrakeSec Podcast for the audio hardware
+Nick of youtube & twitter fame for the Chromebook
+InfosecAddicts for being good people
+Hackers everywhere for Hacking on
+
+Pods
+
+No Agenda
+Unfilter
+Congressional Dish
+Breaking Down Security
+Embedded
+The Dollop
+My Favorite Murder
+Mysteries Abound
+
+
+Sources
+
+/etc/default/grub
+
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="Arch"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash irqpoll"
+GRUB_CMDLINE_LINUX=""
+GRUB_PRELOAD_MODULES="part_gpt part_msdos"
+GRUB_TERMINAL_INPUT=console
+GRUB_GFXMODE=1024x768
+GRUB_GFXPAYLOAD_LINUX=keep
+GRUB_DISABLE_LINUX_UUID=true
+GRUB_DISABLE_RECOVERY=true
+GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
+GRUB_SAVEDEFAULT="true"
+
+/etc/pacman.conf
+
+RootDir     = /
+DBPath      = /var/lib/pacman/
+CacheDir    = /var/cache/pacman/pkg/
+LogFile     = /var/log/pacman.log
+GPGDir      = /etc/pacman.d/gnupg/
+HookDir     = /etc/pacman.d/hooks/
+HoldPkg     = pacman glibc
+CleanMethod = KeepInstalled
+UseDelta    = 0.7
+Architecture = auto
+IgnorePkg   =
+IgnoreGroup =
+NoUpgrade   =
+NoExtract   =
+UseSyslog
+Color
+TotalDownload
+CheckSpace
+VerbosePkgLists
+ILoveCandy
+SigLevel = PackageRequired
+LocalFileSigLevel = Optional
+RemoteFileSigLevel = Required
+[core]
+Include = /etc/pacman.d/mirrorlist
+[extra]
+Include = /etc/pacman.d/mirrorlist
+[community]
+Include = /etc/pacman.d/mirrorlist
+[arch-anywhere]
+Server = https://arch-anywhere.org/repo/$arch
+SigLevel = Never
+
+lscpu
+
+Architecture :        x86_64
+Mode(s) opératoire(s) des processeurs : 32-bit, 64-bit
+Boutisme :            Little Endian
+Processeur(s) :       2
+Liste de processeur(s) en ligne : 0,1
+Thread(s) par cœur : 1
+Cœur(s) par socket : 2
+Socket(s) :           1
+Nœud(s) NUMA :       1
+Identifiant constructeur : GenuineIntel
+Famille de processeur : 6
+Modèle :             76
+Nom de modèle :      Intel(R) Celeron(R) CPU  N3050  @ 1.60GHz
+Révision :           3
+Vitesse du processeur en MHz : 642.089
+Vitesse maximale du processeur en MHz : 2160,0000
+Vitesse minimale du processeur en MHz : 480,0000
+BogoMIPS :            3200.00
+Virtualisation :      VT-x
+Cache L1d :           24K
+Cache L1i :           32K
+Cache L2 :            1024K
+Nœud NUMA 0 de processeur(s) : 0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology tsc_reliable nonstop_tsc aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes rdrand lahf_lm 3dnowprefetch epb tpr_shadow vnmi flexpriority ept vpid tsc_adjust smep erms dtherm ida arat
+
+lspci
+
+00:00.0 Host bridge: Intel Corporation Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series SoC Transaction Register (rev 21)
+00:02.0 VGA compatible controller: Intel Corporation Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Integrated Graphics Controller (rev 21)
+00:0b.0 Signal processing controller: Intel Corporation Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series Power Management Controller (rev 21)
+00:14.0 USB controller: Intel Corporation Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series USB xHCI Controller (rev 21)
+00:1b.0 Audio device: Intel Corporation Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series High Definition Audio Controller (rev 21)
+00:1c.0 PCI bridge: Intel Corporation Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series PCI Express Port #1 (rev 21)
+00:1c.2 PCI bridge: Intel Corporation Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series PCI Express Port #3 (rev 21)
+00:1f.0 ISA bridge: Intel Corporation Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series PCU (rev 21)
+02:00.0 Network controller: Intel Corporation Wireless 7265 (rev 59)

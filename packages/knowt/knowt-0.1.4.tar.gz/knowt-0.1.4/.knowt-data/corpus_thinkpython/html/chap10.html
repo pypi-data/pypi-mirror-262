@@ -1,0 +1,504 @@
+<html>
+<head>
+<title>Chapter 10: Dictionaries</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap09.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap11.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 10</h2>
+
+
+
+<h1>Dictionaries</h1>
+<p>
+The compound types you have learned about <s>&nbsp; &nbsp;</s> strings, lists, and
+tuples <s>&nbsp; &nbsp;</s> use integers as indices.  If you try to use any other type as
+an index, you get an error.
+<p>
+<b>Dictionaries</b> are similar to other compound types except that
+they can use any immutable type as an index.  As an example, we will
+create a dictionary to translate English words into Spanish.  For this
+dictionary, the indices are <tt><font size=-1>strings</font></tt>.
+<p>
+One way to create a dictionary is to start with the empty dictionary
+and add elements.  The empty dictionary is denoted <tt><font size=-1>{}</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; eng2sp = {}
+<br>&gt;&gt;&gt; eng2sp[<font color=red>'one'</font>] = <font color=red>'uno'</font>
+<br>&gt;&gt;&gt; eng2sp[<font color=red>'two'</font>] = <font color=red>'dos'</font>
+<br></font></tt></p>
+
+<p>
+The first assignment creates a dictionary named <tt><font size=-1>eng2sp</font></tt>; the
+other assignments add new elements to the dictionary.  We can print
+the current value of the dictionary in the usual way:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> eng2sp
+<br>{<font color=red>'one'</font>: <font color=red>'uno'</font>, <font color=red>'two'</font>: <font color=red>'dos'</font>}
+<br></font></tt></p>
+
+<p>
+The elements of a dictionary appear in a comma-separated list.  Each
+entry contains an index and a value separated by a colon.  In a
+dictionary, the indices are called <b>keys</b>, so the elements are
+called <b>key-value pairs</b>.
+<p>
+Another way to create a dictionary is to provide a list of key-value
+pairs using the same syntax as the previous output:
+
+<p><tt><font size=-1>&gt;&gt;&gt; eng2sp = {<font color=red>'one'</font>: <font color=red>'uno'</font>, <font color=red>'two'</font>: <font color=red>'dos'</font>, <font color=red>'three'</font>: <font color=red>'tres'</font>}
+<br></font></tt></p>
+
+<p>
+If we print the value of <tt><font size=-1>eng2sp</font></tt> again, we get a surprise:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> eng2sp
+<br>{<font color=red>'one'</font>: <font color=red>'uno'</font>, <font color=red>'three'</font>: <font color=red>'tres'</font>, <font color=red>'two'</font>: <font color=red>'dos'</font>}
+<br></font></tt></p>
+
+<p>
+The key-value pairs are not in order!  Fortunately, there is no reason
+to care about the order, since the elements of a dictionary are never
+indexed with integer indices.  Instead, we use the keys to look up the
+corresponding values:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> eng2sp[<font color=red>'two'</font>]
+<br><font color=red>'dos'</font>
+<br></font></tt></p>
+
+<p>
+The key <tt><font size=-1><font color=red>'two'</font></font></tt> yields the value <tt><font size=-1><font color=red>'dos'</font></font></tt> even though it
+appears in the third key-value pair.
+
+<a name=1></a>
+<h3>10.1 Dictionary operations</h3>
+<p>
+The <tt><font size=-1><font color=black>del</font></font></tt> statement removes a key-value pair from a dictionary.
+For example, the following dictionary contains the names of various
+fruits and the number of each fruit in stock:
+
+<p><tt><font size=-1>&gt;&gt;&gt; inventory = {<font color=red>'apples'</font>: 430, <font color=red>'bananas'</font>: 312, <font color=red>'oranges'</font>: 525, 
+<br><font color=red>'pears'</font>: 217}
+<br>&gt;&gt;&gt; <font color=black>print</font> inventory
+<br>{<font color=red>'oranges'</font>: 525, <font color=red>'apples'</font>: 430, <font color=red>'pears'</font>: 217, <font color=red>'bananas'</font>: 312}
+<br></font></tt></p>
+
+<p>
+If someone buys all of the pears, we can remove the entry from the
+dictionary:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>del</font> inventory[<font color=red>'pears'</font>]
+<br>&gt;&gt;&gt; <font color=black>print</font> inventory
+<br>{<font color=red>'oranges'</font>: 525, <font color=red>'apples'</font>: 430, <font color=red>'bananas'</font>: 312}
+<br></font></tt></p>
+
+<p>
+Or if we're expecting more pears soon, we might just change the
+value associated with pears:
+
+<p><tt><font size=-1>&gt;&gt;&gt; inventory[<font color=red>'pears'</font>] = 0
+<br>&gt;&gt;&gt; <font color=black>print</font> inventory
+<br>{<font color=red>'oranges'</font>: 525, <font color=red>'apples'</font>: 430, <font color=red>'pears'</font>: 0, <font color=red>'bananas'</font>: 312}
+<br></font></tt></p>
+
+<p>
+The <tt><font size=-1>len</font></tt> function also works on dictionaries; it returns the
+number of key-value pairs:
+
+<p><tt><font size=-1>&gt;&gt;&gt; len(inventory)
+<br>4
+<br></font></tt></p>
+
+
+<a name=2></a>
+<h3>10.2 Dictionary methods</h3>
+<p>
+A <b>method</b> is similar to a function <s>&nbsp; &nbsp;</s> it takes arguments and
+returns a value <s>&nbsp; &nbsp;</s> but the syntax is different.  For example, the <tt><font size=-1>keys</font></tt> method takes a dictionary and returns a list of the keys that
+appear, but instead of the function syntax <tt><font size=-1>keys(eng2sp)</font></tt>, we use
+the method syntax <tt><font size=-1>eng2sp.keys()</font></tt>.
+
+<p><tt><font size=-1>&gt;&gt;&gt; eng2sp.keys()
+<br>[<font color=red>'one'</font>, <font color=red>'three'</font>, <font color=red>'two'</font>]
+<br></font></tt></p>
+
+<p>
+This form of dot notation specifies the name of the function, <tt><font size=-1>keys</font></tt>, and the name of the object to apply the function to, <tt><font size=-1>eng2sp</font></tt>.  The parentheses indicate that this method has no
+parameters.
+<p>
+A method call is called an <b>invocation</b>; in this case, we would
+say that we are invoking <tt><font size=-1>keys</font></tt> on the object <tt><font size=-1>eng2sp</font></tt>.
+<p>
+The <tt><font size=-1>values</font></tt> method is similar; it returns a list of the values in
+the dictionary:
+
+<p><tt><font size=-1>&gt;&gt;&gt; eng2sp.values()
+<br>[<font color=red>'uno'</font>, <font color=red>'tres'</font>, <font color=red>'dos'</font>]
+<br></font></tt></p>
+
+<p>
+The <tt><font size=-1>items</font></tt> method returns both, in the form of a
+list of tuples <s>&nbsp; &nbsp;</s> one for each key-value
+pair:
+
+<p><tt><font size=-1>&gt;&gt;&gt; eng2sp.items()
+<br>[(<font color=red>'one'</font>,<font color=red>'uno'</font>), (<font color=red>'three'</font>, <font color=red>'tres'</font>), (<font color=red>'two'</font>, <font color=red>'dos'</font>)]
+<br></font></tt></p>
+
+<p>
+The syntax provides useful type information.  The square brackets
+indicate that this is a list.  The parentheses indicate that
+the elements of the list are tuples.
+<p>
+If a method takes an argument, it uses the same syntax as a function
+call.  For example, the method <tt><font size=-1>has_key</font></tt> takes a key
+and returns
+true (1) if the key appears in the dictionary:
+
+<p><tt><font size=-1>&gt;&gt;&gt; eng2sp.has_key(<font color=red>'one'</font>)
+<br>True
+<br>&gt;&gt;&gt; eng2sp.has_key(<font color=red>'deux'</font>)
+<br>False
+<br></font></tt></p>
+
+<p>
+If you try to call a method without specifying an object, you get an
+error.  In this case, the error message is not very helpful:
+
+<p><tt><font size=-1>&gt;&gt;&gt; has_key(<font color=red>'one'</font>)
+<br>NameError: has_key
+<br></font></tt></p>
+
+
+<a name=3></a>
+<h3>10.3 Aliasing and copying</h3>
+<p>
+Because dictionaries are mutable, you need to be aware of aliasing.
+Whenever two variables refer to the same object, changes to one affect
+the other.
+<p>
+If you want to modify a dictionary and keep a copy of the original,
+use the <tt><font size=-1>copy</font></tt> method.  For example, <tt><font size=-1>opposites</font></tt> is a
+dictionary that contains pairs of opposites:
+
+<p><tt><font size=-1>&gt;&gt;&gt; opposites = {<font color=red>'up'</font>: <font color=red>'down'</font>, <font color=red>'right'</font>: <font color=red>'wrong'</font>, <font color=red>'true'</font>: <font color=red>'false'</font>}
+<br>&gt;&gt;&gt; alias = opposites
+<br>&gt;&gt;&gt; copy = opposites.copy()
+<br></font></tt></p>
+
+<p>
+<tt><font size=-1>alias</font></tt> and <tt><font size=-1>opposites</font></tt> refer to the same object; <tt><font size=-1>copy</font></tt>
+refers to a fresh copy of the same dictionary.  If we modify <tt><font size=-1>alias</font></tt>, <tt><font size=-1>opposites</font></tt> is also changed:
+
+<p><tt><font size=-1>&gt;&gt;&gt; alias[<font color=red>'right'</font>] = <font color=red>'left'</font>
+<br>&gt;&gt;&gt; opposites[<font color=red>'right'</font>]
+<br><font color=red>'left'</font>
+<br></font></tt></p>
+
+<p>
+If we modify <tt><font size=-1>copy</font></tt>, <tt><font size=-1>opposites</font></tt> is unchanged:
+
+<p><tt><font size=-1>&gt;&gt;&gt; copy[<font color=red>'right'</font>] = <font color=red>'privilege'</font>
+<br>&gt;&gt;&gt; opposites[<font color=red>'right'</font>]
+<br><font color=red>'left'</font>
+<br></font></tt></p>
+
+
+<a name=4></a>
+<h3>10.4 Sparse matrices </h3>
+<p>
+In <a href="chap08.html#14">Section 8.14</a>, we used a list of lists to represent a
+matrix.  That is a good choice for a matrix with mostly nonzero
+values, but consider a sparse matrix like this one:
+
+<p align="center"><img src="illustrations/sparse.png"></p>
+<p>
+The list representation contains a lot of zeroes:
+
+<p><tt><font size=-1>matrix = [ [0,0,0,1,0],
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[0,0,0,0,0],
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[0,2,0,0,0],
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[0,0,0,0,0],
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[0,0,0,3,0] ]
+<br></font></tt></p>
+
+<p>
+An alternative is to use a dictionary.
+For the keys, we can use tuples that contain the row and column
+numbers.  Here is the dictionary representation of the same matrix:
+
+<p><tt><font size=-1>matrix = {(0,3): 1, (2, 1): 2, (4, 3): 3}
+<br></font></tt></p>
+
+<p>
+We only need three key-value pairs, one for each nonzero element of the
+matrix.  Each key is a tuple, and each value is an integer.
+<p>
+To access an element of the matrix, we could use the <tt><font size=-1>[]</font></tt>
+operator:
+
+<p><tt><font size=-1>matrix[0,3]
+<br>1
+<br></font></tt></p>
+
+<p>
+Notice that the syntax for the dictionary representation is not the
+same as the syntax for the nested list representation.  Instead of
+two integer indices, we use one index, which is a tuple of integers.
+<p>
+There is one problem.
+If we specify an element that is zero, we get an
+error, because there is no entry in the dictionary with that key:
+
+<p><tt><font size=-1>&gt;&gt;&gt; matrix[1,3]
+<br>KeyError: (1, 3)
+<br></font></tt></p>
+
+<p>
+The <tt><font size=-1>get</font></tt> method solves this problem:
+
+<p><tt><font size=-1>&gt;&gt;&gt; matrix.get((0,3), 0)
+<br>1
+<br></font></tt></p>
+
+<p>
+The first argument is the key; the second argument is the value
+<tt><font size=-1>get</font></tt> should return if the key is not in the dictionary:
+
+<p><tt><font size=-1>&gt;&gt;&gt; matrix.get((1,3), 0)
+<br>0
+<br></font></tt></p>
+
+<p>
+<tt><font size=-1>get</font></tt> definitely improves the semantics of accessing
+a sparse matrix.  Shame about the syntax.
+
+<a name=5></a>
+<h3>10.5 Hints</h3>
+<p>
+If you played around with the <tt><font size=-1>fibonacci</font></tt> function from
+<a href="chap05.html#7">Section 5.7</a>, you might have noticed that the bigger
+the argument you provide, the longer the function takes to run.
+Furthermore, the run time increases very quickly.  On one of our
+machines, <tt><font size=-1>fibonacci(20)</font></tt> finishes instantly, <tt><font size=-1>fibonacci(30)</font></tt>
+takes about a second, and <tt><font size=-1>fibonacci(40)</font></tt> takes roughly forever.
+<p>
+To understand why, consider this <b>call graph</b> for
+<tt><font size=-1>fibonacci</font></tt> with <tt><font size=-1>n=4</font></tt>:
+
+<p align="center"><img src="illustrations/fibonacci.png"></p>
+<p>
+A call graph shows a set function frames, with lines connecting each
+frame to the frames of the functions it calls.  At the top of the
+graph, <tt><font size=-1>fibonacci</font></tt> with <tt><font size=-1>n=4</font></tt> calls <tt><font size=-1>fibonacci</font></tt> with <tt><font size=-1>n=3</font></tt> and <tt><font size=-1>n=2</font></tt>.  In turn, <tt><font size=-1>fibonacci</font></tt> with <tt><font size=-1>n=3</font></tt> calls
+<tt><font size=-1>fibonacci</font></tt> with <tt><font size=-1>n=2</font></tt> and <tt><font size=-1>n=1</font></tt>.  And so on.
+<p>
+Count how many times <tt><font size=-1>fibonacci(0)</font></tt> and <tt><font size=-1>fibonacci(1)</font></tt> are
+called.  This is an inefficient solution to the problem, and it gets
+far worse as the argument gets bigger.
+<p>
+A good solution is to keep track of values that have already been
+computed by storing them in a dictionary.  A previously computed value
+that is stored for later use is called a <b>hint</b>.  Here is
+an implementation of <tt><font size=-1>fibonacci</font></tt> using hints:
+
+<p><tt><font size=-1>previous = {0:1, 1:1}
+<br>
+<br><font color=black>def</font> <font color=orange>fibonacci</font>(n):
+<br>&nbsp; <font color=black>if</font> previous.has_key(n):
+<br>&nbsp; &nbsp; <font color=black>return</font> previous[n]
+<br>&nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; newValue = fibonacci(n-1) + fibonacci(n-2)
+<br>&nbsp; &nbsp; previous[n] = newValue
+<br>&nbsp; &nbsp; <font color=black>return</font> newValue
+<br></font></tt></p>
+
+<p>
+The dictionary named <tt><font size=-1>previous</font></tt> keeps track of the Fibonacci
+numbers we already know.  We start with only
+two pairs: 0 maps to 1; and 1 maps to 1.
+<p>
+Whenever <tt><font size=-1>fibonacci</font></tt> is called, it checks the dictionary to
+determine if it contains the result.
+If it's there, the function can return
+immediately without making any more recursive calls.  If not, it has
+to compute the new value.  The new value is added to the dictionary
+before the function returns.
+<p>
+Using this version of <tt><font size=-1>fibonacci</font></tt>, our machines can compute
+<tt><font size=-1>fibonacci(40)</font></tt> in an eyeblink.  But when we try to compute
+<tt><font size=-1>fibonacci(50)</font></tt>, we see the following:
+
+<p><tt><font size=-1>&gt;&gt;&gt; fibonacci(50)
+<br>20365011074L
+<br></font></tt></p>
+
+<p>
+The <tt><font size=-1>L</font></tt> at the end of the result indicates that the answer
++(20,365,011,074) is too big to fit into a Python integer.  Python
+has automatically converted the result to a long integer.
+
+<a name=6></a>
+<h3>10.6 Long integers</h3>
+<p>
+Python provides a type called <tt><font size=-1>long</font></tt> that can handle any size
+integer.  There are two ways to create a <tt><font size=-1>long</font></tt> value.  One is
+to write an integer with a capital <tt><font size=-1>L</font></tt> at the end:
+
+<p><tt><font size=-1>&gt;&gt;&gt; type(1L)
+<br>&lt;type <font color=red>'long'</font>&gt;
+<br></font></tt></p>
+
+<p>
+The other is to use the <tt><font size=-1>long</font></tt> function to convert a value to a
+<tt><font size=-1>long</font></tt>.  <tt><font size=-1>long</font></tt> can accept any numerical type and even
+strings of digits:
+
+<p><tt><font size=-1>&gt;&gt;&gt; long(1)
+<br>1L
+<br>&gt;&gt;&gt; long(3.9)
+<br>3L
+<br>&gt;&gt;&gt; long(<font color=red>'57'</font>)
+<br>57L
+<br></font></tt></p>
+
+<p>
+All of the math operations work on <tt><font size=-1>long</font></tt>s, so in general
+any code that works with integers will also work with long
+integers.  Any time the result of a computation is too big
+to be represented with an integer, Python detects the overflow
+and returns the result as a long integer.  For example:
+
+<p><tt><font size=-1>&gt;&gt;&gt; 1000 * 1000
+<br>1000000
+<br>&gt;&gt;&gt; 100000 * 100000
+<br>10000000000L
+<br></font></tt></p>
+
+<p>
+In the first case the result has type <tt><font size=-1>int</font></tt>; in the
+second case it is <tt><font size=-1>long</font></tt>.
+
+<a name=7></a>
+<h3>10.7 Counting letters</h3>
+<p>
+In <a href="chap07.html">Chapter 7</a>, we wrote a function that counted the number
+of occurrences of a letter in a string.  A more general version of
+this problem is to form a histogram of the letters in the string, that
+is, how many times each letter appears.
+<p>
+Such a histogram might be useful for compressing a text
+file.  Because different letters appear with different frequencies, we
+can compress a file by using shorter codes for common letters and
+longer codes for letters that appear less frequently.
+<p>
+Dictionaries provide an elegant way to generate a histogram:
+
+<p><tt><font size=-1>&gt;&gt;&gt; letterCounts = {}
+<br>&gt;&gt;&gt; <font color=black>for</font> letter <font color=black>in</font> <font color=red>"Mississippi"</font>:
+<br>...&nbsp; &nbsp;letterCounts[letter] = letterCounts.get (letter, 0) + 1
+<br>...
+<br>&gt;&gt;&gt; letterCounts
+<br>{<font color=red>'M'</font>: 1, <font color=red>'s'</font>: 4, <font color=red>'p'</font>: 2, <font color=red>'i'</font>: 4}
+<br></font></tt></p>
+
+<p>
+We start with an empty dictionary.  For each letter in the string, we
+find the current count (possibly zero) and increment it.  At the end,
+the dictionary contains pairs of letters and their frequencies.
+<p>
+It might be more appealing to display the histogram in alphabetical
+order.  We can do that with the <tt><font size=-1>items</font></tt> and <tt><font size=-1>sort</font></tt> methods:
+
+<p><tt><font size=-1>&gt;&gt;&gt; letterItems = letterCounts.items()
+<br>&gt;&gt;&gt; letterItems.sort()
+<br>&gt;&gt;&gt; <font color=black>print</font> letterItems
+<br>[(<font color=red>'M'</font>, 1), (<font color=red>'i'</font>, 4), (<font color=red>'p'</font>, 2), (<font color=red>'s'</font>, 4)]
+<br></font></tt></p>
+
+<p>
+You have seen the <tt><font size=-1>items</font></tt> method before, but <tt><font size=-1>sort</font></tt> is the
+first method you have encountered that applies to lists.  There are
+several other list methods, including <tt><font size=-1>append</font></tt>, <tt><font size=-1>extend</font></tt>, and
+<tt><font size=-1>reverse</font></tt>.  Consult the Python documentation for details.
+
+<a name=8></a>
+<h3>10.8 Glossary</h3>
+
+<dl>
+<dt>dictionary</dt>
+<dd>A collection of key-value pairs that maps from
+keys to values.
+The keys can be any immutable type, and the values can be any type.</dd>
+<dt>key</dt>
+<dd>A value that is used to look up an entry in a dictionary.</dd>
+<dt>key-value pair</dt>
+<dd>One of the items in a dictionary.</dd>
+<dt>method</dt>
+<dd>A kind of function that is called with a different syntax and
+invoked "on" an object.</dd>
+<dt>invoke</dt>
+<dd>To call a method.</dd>
+<dt>hint</dt>
+<dd>Temporary storage of a precomputed value to avoid redundant
+computation.</dd>
+<dt>overflow</dt>
+<dd>A numerical result that is too large to be represented
+in a numerical format.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap09.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap11.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+## hpr1938 :: How I prepare HPR shows
+
+ How I prepare HPR shows
+Introduction
+I have been contributing shows to Hacker Public Radio since 2012. In those far off days (!) we sent everything in via FTP, and had to name the files with a combination of our host id, our name, the slot number and the title. The show notes had to contain a chunk of metadata in a defined format to signal all of the various attributes of the show. I found myself making numerous mistakes with this naming and metadata formatting and so started designing and writing some tools to protect myself from my own errors.
+I started developing a Bash script in mid-2013 which I called hpr_talk. I used Bash since I thought I might be able to make something with a small footprint that I could share, which might be useful to others. The script grew and grew and became increasingly complex and I found I needed to add other scripts to the toolkit and to resort to Perl and various Perl modules to perform some actions.
+Then in 2014 Ken changed the upload procedure to what it is now. This is a much better design and does away with the need to name files in odd ways and add metadata to them. However, this left my toolkit a bit high and dry, so I shelved the plans to release it.
+Since then I have been enhancing the hpr_talk toolkit, adding features that I found useful and removing bugs, until the present time. Now it is probably far too complex and idiosyncratic to be of direct use to others, and is rather too personalised to my needs to be easily shared. Nevertheless, it is available on GitLab and I am going to describe it here in case it (or the methods used) might be of interest to anyone.
+I have written out a moderately long set of notes about this subject and these are available here https://hackerpublicradio.org/eps/hpr1938_full_shownotes.html.
+Audio Notes
+I had to record this in two parts. In the second part there was a constant background hum which I tried to remove. My removal process was not particularly successful I'm afraid, so it cuts in and out. I'm still learning how to do this sort of thing in Audacity!
+Links
+
+My hpr_talk toolkit on GitLab: https://gitlab.com/davmo/hpr-talk
+The Template Toolkit for Perl and Python: https://template-toolkit.org/about.html
+

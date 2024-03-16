@@ -1,0 +1,12 @@
+## hpr1734 :: Vim Hints 003
+
+ Moving Around
+In this episode I want to look at how you move around the file you are editing in Vim. I also want to add some more elements to the configuration file we started building in the last episode.
+Full Notes
+Since the notes explaining this subject are long (the size limit is 4000 characters), they have been placed here: https://hackerpublicradio.org/eps/hpr1734_full_shownotes.html
+I usually create my notes with Markdown and pandoc. As an experiment this time I have used a pandoc template which uses the same CSS that provides the style for the main HPR pages. I hope it makes these notes look better than the very bare HTML I have produced in the past.
+Links
+
+Vim Hints Episode 1 https://hackerpublicradio.org/eps.php?id=1714
+Vim Hints Episode 2 https://hackerpublicradio.org/eps.php?id=1724
+

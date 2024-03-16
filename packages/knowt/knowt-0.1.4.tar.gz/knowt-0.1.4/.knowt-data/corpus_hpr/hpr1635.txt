@@ -1,0 +1,7 @@
+## hpr1635 :: 41 - LibreOffice Calc - Data Manipulation 1: Sorting and AutoFilter
+
+ The next major area of investigation for this series is how we can do data manipulation in Calc. Although Calc is not a database, it can be used for some data analysis and manipulation. When I worked for the finance department of a hospital, it was very common for the financial analysts to get a data dump from a centralized system as a CSV file, load it up in a spreadsheet, and then slice-and-dice the data to get the answers they wanted. It is not anywhere near what you can do with a good relational database and a structured query, but you can do some quick-and-dirty analysis here. - For more go to https://www.ahuka.com/?page_id=879
+
+https://biostat.mc.vanderbilt.edu/wiki/Main/DataSets?CGISESSID=10713f6d891653ddcbb7ddbdd9cffb79
+https://www.ahuka.com/wp-content/uploads/2014/06/data.ods
+https://www.ahuka.com/?page_id=879

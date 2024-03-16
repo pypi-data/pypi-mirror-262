@@ -1,0 +1,132 @@
+## hpr2000 :: How to Point a Satellite Dish
+
+ 
+Spoiler
+Ken did not fall of the roof in a storm
+This show is dedicated to Procrastination, the avoidance of doing a task which needs to be accomplished.
+I've been trying to record this particular show for ages but I can never seem to finish it. I find the topic just too interesting. When I start then I get distracted by some other aspect. Every time I try to record it Murphy gets in the way, with lost recordings and broken cards etc. This is the email that prompted this show.
+-------- Forwarded Message --------
+Subject: TWAT - Satellite communications
+Date: Tue, 13 Dec 2005 12:00:54 +0100
+
+Hi Droops,
+
+I heard your call for content and I'd like to send you some shows. I
+don't have a lot of spare time with work and a young family so I can't
+do a regular show but I can send you a series on a topic. I was
+thinking of doing a series on Satellite Communications.
+...
+Ken
+
+https://en.wikipedia.org/wiki/Murphy%27s_law
+So after eleven years, I set the deadline of episode 2000 to force myself to finish this show.
+Let's start.
+What are orbits ?
+https://en.wikipedia.org/wiki/Orbit
+In physics, an orbit is the gravitationally curved path of an object about a point in space, for example the orbit of a planet about a star or a natural satellite around a planet. Orbits of planets are typically elliptical, and the central mass being orbited is at a focal point of the ellipse.
+Newton's cannonball was a thought experiment Isaac Newton used to hypothesize that the force of gravity was universal, and it was the key force for planetary motion. It appeared in his book A Treatise of the System of the World.
+https://en.wikipedia.org/wiki/Newton%27s_cannonball
+https://upload.wikimedia.org/wikipedia/commons/7/73/Newton_Cannon.svg
+
+
+No orbit
+Suborbital trajectories, trajectory intersects the atmosphere so that it does not complete one orbital revolution.
+Orbital trajectories (or simply "orbits")
+Open (or escape) trajectories
+
+It is worth noting that orbital rockets are launched vertically at first to lift the rocket above the atmosphere (which causes frictional drag), and then slowly pitch over and finish firing the rocket engine parallel to the atmosphere to achieve orbit speed.
+Once in orbit, their speed keeps them in orbit above the atmosphere. If e.g., an elliptical orbit dips into dense air, the object will lose speed and re-enter (i.e. fall). Occasionally a space craft will intentionally intercept the atmosphere, in an act commonly referred to as an aerobraking maneuver.
+Types of orbits
+There are many ways to classify orbits 
+https://en.wikipedia.org/wiki/List_of_orbits
+The choice of which orbit to use is based on the intended purpose of the satellite. 
+
+Centric classifications: Based on what they orbit
+Altitude classifications: Based on how high they are
+Inclination classifications: Based on the angle of rotation with respect to the Equator. 
+Eccentricity classifications: Based on their path
+Synchronicity classifications: Based on how often they rotate
+
+Low Earth orbit (LEO)
+0 to 2,000 km (0–1,240 miles).
+
+0 km / mi - Sea Level.
+37.6 km / 23.4 mi - Self Propelled Jet Aircraft Flight Ceiling (Record Set in 1977).
+215 km / 133.6 mi - Sputnik-1 The first artificial satellite of earth.
+340 km / 211.3 mi - International Space Station.
+390 km / 242.3 mi - Former Russian Space Station MIR.
+595 km / 369.7 mi - Hubble Space Telescope.
+600 - 800 km / 372.8 - 497.1 mi - Sun-synchronous Satellites.
+
+These satellites orbit the Earth in near exact polar orbits north to south. They cross the equator multiple times per day and each time they are at the same anglewith respect to the sun. Satellites on these types of orbits are particularly useful for capturing images of the Earth’s surface or images of the sun
+Medium Earth orbit (MEO)
+Geocentric orbits ranging in altitude from 2,000 km (1,240 miles) to just below geosynchronous orbit at 35,786 kilometers (22,236 mi). 
+GPS (Global Positioning System) Satellites reside here. These Satellites are on a Semi-synchronous Orbit (SSO) meaning that they orbit the earth in exactly 12 hours (twice per day)
+Geosynchronous orbit (GSO) and Geostationary orbit (GEO)
+Orbits around Earth matching Earth's sidereal rotation period. 42,164 km (26,199 mi). Sidereal time is a "time scale that is based on the Earth's rate of rotation measured relative to the fixed stars" rather than the Sun.
+https://en.wikipedia.org/wiki/Sidereal_time
+Geosynchronous satellites orbit the Earth at the same rate that the Earth rotates. Thus they remain stationary over a single line of longitude. A geostationary satellite will remain in a fixed location as observed from the surface of the earth, allowing a satellite dish to be alligned to it.
+
+High Earth orbit
+Geocentric orbits above the altitude of geosynchronous orbit 35,786 km (22,240 miles).
+Polar orbits
+They are often used for earth-mapping, earth observation, capturing the earth as time passes from one point, reconnaissance satellites, as well as for some weather satellites. The Iridium satellite constellation also uses a polar orbit to provide telecommunications services. The disadvantage to this orbit is that no one spot on the Earth's surface can be sensed continuously from a satellite in a polar orbit.
+Molniya orbit
+Orbita was a system that consisted of 3 highly elliptical Molniya satellites, Moscow-based ground uplink facilities and about 20 downlink stations, located in cities and towns of remote regions of Siberia and Far East. Each station had a 12-meter receiving parabolic antenna and transmitters for re-broadcasting TV signal to local householders.
+https://en.wikipedia.org/wiki/Molniya_orbit
+
+https://upload.wikimedia.org/wikipedia/commons/8/82/Orbitalaltitudes.jpg
+Atmospheric electromagnetic opacity
+
+Satelites
+Sputnik 1
+https://en.wikipedia.org/wiki/Sputnik_1
+Sputnik 1 was the first artificial Earth satellite. The Soviet Union launched it into an elliptical low Earth orbit on October 4, 1957. It was a 58 cm (23 in) diameter polished metal sphere, with four external radio antennae to broadcast radio pulses. It was visible all around the Earth and its radio pulses were detectable. This surprise success precipitated the American Sputnik crisis and triggered the Space Race, a part of the larger Cold War. The launch ushered in new political, military, technological, and scientific developments.
+ProtoStar II Mission Overview
+https://www.ilslaunch.com/sites/default/files/pdf/A2G_MO.pdf
+ASTRA 2G SATELLITE MISSION
+ASTRA 2G is the third spacecraft of a three satellite investment programme (ASTRA 2E, 2F and 2G) that SES contracted with Airbus Defence and Space in order to provide replacement as well as incremental satellite capacity in the orbital arc of 28.2/28.5 degrees East. 
+ASTRA 2G carries 62 Ku-band transponders as well as 4 Ka-band transponders. The different beams provide coverage over the UK and Ireland, Europe and West Africa.
+
+https://www.ses.com/4628824/astra-2g
+Components of a Communications Satelites
+
+Rocket motors
+Fuel tanks
+Solar panels
+Batteries
+Computer
+Antennas and transceivers/transponders
+
+https://en.wikipedia.org/wiki/Transponder_%28satellite_communications%29
+The word "transponder" is derived from the words "transmitter" and "responder." 
+A communications satellite's transponder is the series of interconnected units that form a communications channel between the receiving and the transmitting antennas. It is mainly used in satellite communication to transfer the received signals.
+A transponder is typically composed of
+
+An input band limiting device (a band pass filter)
+An input low-noise amplifier (LNA), designed to amplify the (normally very weak, because of the large distances involved) signals received from the earth station
+A frequency translator (normally composed of an oscillator and a frequency mixer) used to convert the frequency of the received signal to the frequency required for the transmitted signal
+An output band pass filter
+A power amplifier (this can be a traveling-wave tube or a solid state amplifier)
+
+https://www.jsati.com/why-satellite-how-Spacesegment4.asp
+Boeing commercial communications satellites geosynchronous orbit
+
+https://www.boeingimages.com/Docs/BOE/Media/TR3_WATERMARKED/1/a/2/a/BI231995.jpg
+Finding Astra 28.2E
+This is one of the many sites that will give you a birds eye view of where you need to point your dish.
+https://www.dishpointer.com/
+Terms needed when pointing a dish
+
+https://commons.wikimedia.org/wiki/File:Azimut_altitude.svg
+
+The Dish, on Kens Roof.
+
+Reading the elevation from the dish assembley.
+
+FreeSat
+Freesat is broadcast from the same satellites (Astra 28.2E and Eurobird 1) as Sky Digital.
+This is a list of all of the free-to-air channels that are currently available via satellite from SES Astra satellites (Astra 2E/2F/2G) located at 28.2 °E. 
+https://en.wikipedia.org/wiki/List_of_free-to-air_channels_at_28%C2%B0E
+Here is a link to a page on how to get mythtv working with FreeSat.
+https://parker1.co.uk/mythtv_freesat.php

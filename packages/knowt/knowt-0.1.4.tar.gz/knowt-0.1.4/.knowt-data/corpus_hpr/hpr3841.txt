@@ -1,0 +1,193 @@
+## hpr3841 :: The Oh No! News.
+
+ The Oh No! news.
+Oh No! News is Good
+News.
+
+
+Threat analysis; your attack surface.
+Article: US
+Marshals Service Computer System Hit by Ransomware Attack.
+
+Author: Michael Kan. (2023,
+Feb 28).
+The agency uncovered the intrusion on Feb. 17 2023, when it
+discovered “a ransomware and data exfiltration event affecting a
+standalone USMS system.” That means the hackers stole information from
+the computer while planting malicious code capable of encrypting the
+data inside.
+“The affected system contains law enforcement sensitive information,
+including returns from legal process, administrative information, and
+personally identifiable information pertaining to subjects of USMS
+investigations, third parties, and certain USMS employees,” the agency
+says.
+
+Article: US
+Shuts Down 'Netwire' Malware That Posed as Legit Remote Admin Tool.
+
+Author: Michael Kan. (2023,
+Mar 10).
+Worldwiredlabs.com has been around since at least 2012(Opens in a
+new window), offering a software product called “Netwire,” which is
+supposedly designed to help IT support staff manage computers remotely.
+Before the site was seized, it was offering Netwire for $10 per month or
+$60 per year. However, US investigators say the site was a front to sell
+the software as a hacking tool to cybercriminals.
+
+Supporting Article: Federal
+Authorities Seize Internet Domain Selling Malware Used to Illegally
+Control and Steal Data from Victims’ Computers.
+
+Author: U.S. Attorney's Office, Central District of
+California. (2023, Mar 9).
+A seizure warrant approved by a United States Magistrate Judge on
+March 3 and executed on Tuesday led to the seizure of
+www.worldwiredlabs.com, which offered the NetWire remote access trojan
+(RAT), a sophisticated program capable of targeting and infecting every
+major computer operating system. “A RAT is a type of malware that allows
+for covert surveillance, allowing a ‘backdoor’ for administrative
+control and unfettered and unauthorized remote access to a victim’s
+computer, without the victim’s knowledge or permission,” according to
+court documents filed in Los Angeles.
+
+Supporting Article: FBI
+takes down cybercrime forum that touted data connected to breach
+affecting US lawmakers.
+
+Author: Sean Lyngaas. (2023, Mar 24).
+The FBI has arrested the alleged founder of a popular cybercriminal
+forum that touted data stolen in a hack affecting members of Congress
+and thousands of other people and taken the website down, the Justice
+Department said Friday.
+
+Article: Data
+Breach at DC Health Insurance Exchange Ensnares US Lawmakers.
+
+Author: Michael Kan. (2023,
+Mar 9).
+A data breach at a health insurance exchange in Washington, D.C. has
+led a hacker to steal the personal information of US lawmakers and their
+staff.
+
+Article: Independent
+Living Systems Provides Notice of Data Event.
+
+Author: Independent Living Systems, LLC. (2023, Mar
+14).
+The types of impacted information varies by individual and could
+have included: name, address, date of birth, driver's license, state
+identification, Social Security number, financial account information,
+medical record number, Medicare or Medicaid identification, CIN#, mental
+or physical treatment/condition information, food delivery information,
+diagnosis code or diagnosis information, admission/discharge date,
+prescription information, billing/claims information, patient name, and
+health insurance information.
+
+Supporting Article: Data
+Breach Notifications.
+
+Author: Maine Attorney General. (2023, Mar
+14).
+Total number of persons affected (including residents):
+4,226,508
+Total number of Maine residents affected: 238
+If the number of Maine residents exceeds 1,000, have the consumer
+reporting agencies been notified:
+Date(s) Breach Occurred: 06/03/2022
+Date Breach Discovered: 01/17/2023
+Description of the Breach:
+External system breach (hacking)
+Information Acquired - Name or other personal identifier in
+combination with: Social Security Number
+
+Article: Alleged
+BreachForums owner Pompompurin arrested on cybercrime charges.
+
+Author: Sergiu
+Gatlan. (2023, Mar 17).
+U.S. law enforcement arrested on Wednesday a New York man believed
+to be Pompompurin, the owner of the BreachForums hacking forum.
+
+Supporting Article: FBI
+takes down cybercrime forum that touted data connected to breach
+affecting US lawmakers.
+
+Author: Sean Lyngaas. (2023, Mar 24).
+The FBI has arrested the alleged founder of a popular cybercriminal
+forum that touted data stolen in a hack affecting members of Congress
+and thousands of other people and taken the website down, the Justice
+Department said Friday.
+
+
+
+
+User space.
+Article: After
+PayPal Revokes Controversial Misinformation Policy, Major Concerns
+Remain Over $2,500 Fine..
+
+Author: Emily Mason (2022, Oct 22).
+After facing backlash earlier this month, PayPal PYPL -1.5%
+rescinded a line in its policy stating that spreading misinformation on
+the platform would be subject to a $2,500 fine. Today, the remaining
+language leaves users and elected officials demanding more clarity over
+how the platform defines fine-worthy speech.
+
+Bumble Bee's first experience of the HPR website.
+
+
+
+Additional Information.
+
+What is a
+Data Breach? A data breach is a security violation, in which
+sensitive, protected or confidential data is copied, transmitted,
+viewed, stolen, altered or used by an individual unauthorized to do
+so.
+What is
+Malware? Malware (a portmanteau for
+malicious software) is any software intentionally designed to cause
+disruption to a computer, server, client, or computer network, leak
+private information, gain unauthorized access to information or systems,
+deprive access to information, or which unknowingly interferes with the
+user's computer security and privacy.
+What is
+a Payload? In the context of a computer virus or worm, the payload
+is the portion of the malware which performs malicious action; deleting
+data, sending spam or encrypting data. In addition to the payload, such
+malware also typically has overhead code aimed at simply spreading
+itself, or avoiding detection.
+What is
+Phishing? Phishing is a form of social
+engineering where attackers deceive people into revealing sensitive
+information or installing malware such as ransomware. Phishing
+attacks have become increasingly sophisticated and often transparently
+mirror the site being targeted, allowing the attacker to observe
+everything while the victim is navigating the site, and transverse any
+additional security boundaries with the victim.
+What is
+Information Security (InfoSec)? Information security, sometimes
+shortened to InfoSec, is the practice of protecting information by
+mitigating information risks.
+It is part of information
+risk management.
+What is a
+Vulnerability (computing)? Vulnerabilities are flaws in a computer
+system that weaken the overall security of the device/system.
+Vulnerabilities can be weaknesses in either the hardware itself, or the
+software that runs on the hardware.
+What is an
+"Attack Surface"? The attack surface of a software environment is
+the sum of the different points (for "attack vectors") where an
+unauthorized user (the "attacker") can try to enter data to or extract
+data from an environment. Keeping the attack surface as small as
+possible is a basic security measure.
+What is an
+"Attack Vector"? In computer security, an attack vector is a
+specific path, method, or scenario that can be exploited to break into
+an IT system, thus compromising its security. The term was derived from
+the corresponding notion of vector in biology. An attack vector may be
+exploited manually, automatically, or through a combination of manual
+and automatic activity.
+
+

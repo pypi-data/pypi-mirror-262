@@ -1,0 +1,12 @@
+## hpr3508 :: Differences between C# and Haskell
+
+ This episode covers some of the differences between C# and Haskell. I'm probably going to omit lot of things accidentally.
+
+Origin: practical language for solving real world problems vs. programming language research
+Main paradigm: object oriented vs purely functional
+Changing data: mutability vs. immutability
+Data structures: inheritance vs. composition
+Execution model: strict vs. nonstrict
+Side effects: anywhere vs. specifically marked areas in the code
+
+Thanks for listening, if you have any questions or comments, you can reach me via email or in fediverse, where I'm Tuula@tech.lgbt. Or even better, you could record your own hacker public radio episode.

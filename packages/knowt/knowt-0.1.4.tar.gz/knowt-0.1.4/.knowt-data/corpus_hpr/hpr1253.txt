@@ -1,0 +1,7 @@
+## hpr1253 :: LiTS 030: vmstat
+
+ 
+Episode 30 of Linux in the Shell talks about the use of the vmstat 
+command. Learn about Linux Virtual Memory managment and the files in 
+/proc where vmstat gathers information.
+For the full write-up of the command and the corresponding video examples check out https://www.linuxintheshell.com/2013/05/22/episode-030-vmstat/

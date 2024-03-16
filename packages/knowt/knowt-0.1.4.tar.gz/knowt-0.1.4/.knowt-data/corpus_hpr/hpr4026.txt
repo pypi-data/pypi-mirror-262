@@ -1,0 +1,37 @@
+## hpr4026 :: Using NLP to get better answer options for language learning
+
+ Code snippets
+Install the Levenshtein package.
+>>> pip install levenshtein
+Use the Levenshtein package to calculate the edit distance.
+>>> import Levenshtein
+>>> Levenshtein.distance("cat", "dog")
+3
+>>> Levenshtein.distance("cat", "can")
+1
+Install the TheFuzz package.
+>>> pip install thefuzz
+Use TheFuzz to calculate the similarity ratio.
+>>> from thefuzz import fuzz
+>>> fuzz.ratio("cat", "dog")
+0
+>>> fuzz.ratio("cat", "can")
+67
+Use TheFuzz to calculate the similarity ratio for each item in a
+list.
+>>> from thefuzz import process
+>>> options = ["dog", "can"]
+>>> process.extract("cat", options, limit=2)
+[('can', 67), ('dog', 0)]
+>>> process.extract("cat", options, limit=1)
+[('can', 67)]
+>>> process.extract("cat", options, limit=2, scorer=fuzz.ratio)
+[('can', 67), ('dog', 0)]
+Other resources
+
+Ethan Nam's Understanding
+the Levenshtein Distance Equation for Beginners
+Levenstein
+package
+TheFuzz
+

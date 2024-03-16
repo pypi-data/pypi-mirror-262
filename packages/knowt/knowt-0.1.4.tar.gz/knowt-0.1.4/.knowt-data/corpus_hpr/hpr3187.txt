@@ -1,0 +1,130 @@
+## hpr3187 :: Ansible for Dynamic Host Configuration Protocol
+
+ Ansible DHCPD and DNS
+Using Ansible to configure DHCPD and NDS on OpenBSD
+
+Host data is stored in csv files
+Ansible templates to create config files
+Restart services
+
+hostname-setup.yml
+---
+- hosts: localhost
+  tasks:
+  - name: read subnet 10
+    read_csv:
+      path: 10.csv
+      fieldnames: mac,ip,hostname
+    register: subnet_10
+  - name: read subnet 11
+    read_csv:
+      path: 11.csv
+      fieldnames: mac,ip,hostname
+    register: subnet_11
+  - name: read static
+    read_csv:
+      path: static.csv
+      fieldnames: hostname,ip
+    register: static_ip
+
+  - name: write dhcp file
+    template:
+      src: dhcpd.conf.j2
+      dest: /etc/dhcpd.conf
+      validate: dhcpd -nc %s
+  - name: write local.lan zone file
+    template:
+      src: local.lan.zone.j2
+      dest: /var/nsd/zones/master/local.lan
+      owner: root
+      group: _nsd
+      validate: nsd-checkzone local.lan %s
+  - name: nsd_conf
+    copy:
+      src: nsd.conf
+      dest: /var/nsd/etc/nsd.conf
+      owner: root
+      group: _nsd
+      validate: nsd-checkconf %s
+  - name: restart nsd
+    service:
+      name: nsd
+      state: restarted
+  - name: restart dhcpd
+    service:
+      name: dhcpd
+      state: restarted
+  - name: restart unbound
+    service:
+      name: unbound
+      state: restarted
+10.csv
+b8:27:eb:8b:7a:6d,192.168.10.100,pi3a
+b8:27:eb:ef:f2:d4,192.168.10.101,pi3b
+28:10:7b:25:d5:60,192.168.10.79,ipcam3
+28:10:7b:0c:fa:7b,192.168.10.80,ipcam1
+f0:7d:68:0b:ca:56,192.168.10.81,ipcam2
+static.csv
+tplink,192.168.10.2
+gate,192.168.10.10
+www,192.168.10.10
+fox,192.168.10.17
+dhcpd.conf.j2
+option  domain-name "local.lan";
+option  domain-name-servers 192.168.10.10;
+
+subnet 192.168.10.0 netmask 255.255.255.0 {
+        option routers 192.168.10.10;
+        range 192.168.10.161 192.168.10.179;
+        {% for host in subnet_10.list %}
+        host static-client { hardware ethernet {{ host.mac }};fixed-address {{ host.ip }};} #{{ host.hostname }}
+        {% endfor %}
+}
+
+subnet 192.168.11.0 netmask 255.255.255.0 {
+    option routers 192.168.11.10;
+    range 192.168.11.72 192.168.11.127;
+{% for host in subnet_11.list %}
+host static-client { hardware ethernet {{ host.mac }};fixed-address {{ host.ip }};} #{{ host.hostname }}
+{% endfor %}
+}
+
+Rendered DHCP entires
+host static-client { hardware ethernet b8:27:eb:de:2f:38;fixed-address 192.168.10.45;} #pi3a
+host static-client { hardware ethernet 28:10:7b:25:d5:60;fixed-address 192.168.10.79;} #ipcam3
+host static-client { hardware ethernet 28:10:7b:0c:fa:7b;fixed-address 192.168.10.80;} #ipcam1
+
+local.lan.zone.j2
+$TTL 3600
+local.lan. IN     SOA    a.root-servers.net. root. (
+                2016092901  ; Serial
+                3H          ; refresh after 3 hours
+                1H          ; retry after 1 hour
+                1W          ; expire after 1 week
+                1D)         ; minimum TTL of 1 day
+
+IN  NS  gate.
+
+IN  MX  50 gate.local.lan.
+
+local.lan.      IN A    192.168.10.10
+
+{% for host in static_ip.list%}
+{{ host.hostname }} IN A {{ host.ip }}
+{% endfor %}
+
+{% for host in subnet_10.list%}
+{{ host.hostname }} IN A {{ host.ip }}
+{% endfor %}
+
+{% for host in subnet_11.list%}
+{{ host.hostname }} IN A {{ host.ip }}
+{% endfor %}
+
+Rendered A records
+pi3b IN A 192.168.10.101
+pi3a IN A 192.168.10.45
+ipcam3 IN A 192.168.10.79
+ipcam1 IN A 192.168.10.80
+Run the playbook
+ansible-playbook hostname-setup.yml

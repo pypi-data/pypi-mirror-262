@@ -1,0 +1,324 @@
+## hpr1959 :: FOSDEM 2016 K building level 2
+
+ Table of Contents
+
+Mozilla
+Apache_Software_Foundation
+Jenkins
+XWiki
+DokuWiki
+Tiki
+MediaWiki
+Linux_from_scratch
+Perl
+Barghest
+Coala
+Google_Summer_of_Code
+Ultimaker
+
+Mozilla
+
+
+At Mozilla, we’re a global community of technologists, thinkers and builders working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.
+
+
+Mozilla is a free-software community, created in 1998 by members of Netscape. The Mozilla community uses, develops, spreads and supports Mozilla products, thereby promoting exclusively free software and open standards, with only minor exceptions. The community is supported institutionally by the Mozilla Foundation and its tax-paying subsidiary, the Mozilla Corporation.
+
+Mozilla produces many products such as the Firefox web browser, Thunderbird e-mail client, Firefox Mobile web browser, Firefox OS mobile operating system, Bugzilla bug tracking system and other projects.
+
+Listen to the interview with Francisco Picolini, Community Events Manager
+
+
+
+
+
+Links
+
+Project Website: https://www.mozilla.org/en-US/
+Personal Website: https://francjp.net/wp
+Twitter: @mozilla
+Twitter: @francjp
+email: franc.nospam@nospam.mozilla.com
+Facebook: https://www.facebook.com/mozilla
+Wikipedia: https://en.wikipedia.org/wiki/Mozilla
+Linkedin: https://www.linkedin.com/in/francjp
+Brian King hpr1452 :: HPR Coverage at FOSDEM 2014 Part 3
+
+Apache Software Foundation
+
+
+The mission of the Apache Software Foundation (ASF) is to provide software for the public good. We do this by providing services and support for many like-minded software project communities of individuals who choose to join the ASF.
+
+Listen to the interview with Lars Eilebrecht
+
+
+
+
+
+Links
+
+Project Website: https://www.apache.org/
+History of the ASF:  https://www.apache.org/history/
+Apache Projects Directory:  https://projects.apache.org/
+ASF Mailing Lists:  https://www.apache.org/foundation/mailinglists.html#foundation-wide-mailing-lists
+Twitter: @TheASF
+email: lars.nospam@nospam.apache.org
+Wikipedia: https://en.wikipedia.org/wiki/Apache_Software_Foundation
+Linkedin: https://www.linkedin.com/in/eilebrecht
+
+Jenkins
+
+
+In a nutshell, Jenkins is the leading open source automation server. Built with Java, it provides hundreds of plugins to support building, testing, deploying and automation for virtually any project. 
+
+Jenkins is an award-winning, cross-platform, continuous integration and continuous delivery application that increases your productivity. Use Jenkins to build and test your software projects continuously making it easier for developers to integrate changes to the project, and making it easier for users to obtain a fresh build. It also allows you to continuously deliver your software by providing powerful ways to define your build pipelines and integrating with a large number of testing and deployment technologies.
+
+Listen to the interview with Kohsuke Kawaguchi
+
+
+
+
+
+Links
+
+Project Website: https://jenkins-ci.org/
+Personal Website: https://kohsuke.org/
+Twitter: @kohsukekawa
+email: kk.nospam@nospam.kohsuke.org https://kohsuke.org/about/pgp/
+Wikipedia: https://en.wikipedia.org/wiki/Jenkins_(software)
+Linkedin: https://www.linkedin.com/in/kohsukekawaguchi
+Kohsuke Kawaguchi hpr1453 :: HPR Coverage at FOSDEM 2014 Part 4
+
+XWiki
+
+
+XWiki Enterprise is a professional wiki with enterprise features such as Blog, strong rights management, LDAP authentication, PDF export, full skining and more. It also includes an advanced Form and scripting engine making it a development environment for data-based applications. It has powerful extensibility features such as scripting in pages, plugins and a highly modular architecture.
+
+See the full feature list for more: https://enterprise.xwiki.org/xwiki/bin/view/Main/Features.
+
+Listen to the interview with Anca Luca
+
+
+
+
+
+Links
+
+Project Website: https://xwiki.org
+Twitter: @lucaa, @xwiki
+email: lucaa.nospam@nospam.xwiki.com
+Wikipedia: https://en.wikipedia.org/wiki/XWiki
+Linkedin: https://www.linkedin.com/in/lucaa
+
+DokuWiki
+
+
+DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database. It is loved by users for its clean and readable syntax. The ease of maintenance, backup and integration makes it an administrator's favorite. Built in access controls and authentication connectors make DokuWiki especially useful in the enterprise context and the large number of plugins contributed by its vibrant community allow for a broad range of use cases beyond a traditional wiki.
+
+Listen to the interview with Michael Hamann
+
+
+
+
+
+Links
+
+Project Website: https://www.dokuwiki.org/
+Personal Website: https://www.content-space.de/
+Twitter: @dokuwiki, @Michitux
+email: michael.nospam@nospam.content-space.de
+Facebook: https://www.facebook.com/dokuwiki/
+Google+: https://plus.google.com/+dokuwiki/posts
+Wikipedia: https://en.wikipedia.org/wiki/DokuWiki
+Linkedin: https://www.linkedin.com/in/michael-hamann-3079992a
+GitHub: https://github.com/splitbrain/dokuwiki
+
+Tiki
+
+
+Tiki is the Free / Libre / Open Source Web Application Platform with the most built-in features. Whatever feature you can imagine running in a browser window, chances are Tiki does it.
+
+
+Tiki Wiki CMS Groupware or simply Tiki, originally known as TikiWiki, is a free and open source Wiki-based content management system and online office suite written primarily in PHP and distributed under the GNU Lesser General Public License (LGPL) license. In addition to enabling websites and portals on the internet and on intranets and extranets, Tiki contains a number of collaboration features allowing it to operate as a Geospatial Content Management System (GeoCMS) and Groupware web application.
+
+
+Listen to the interview with Jean-Marc Libs
+
+
+
+
+
+Links
+
+Project Website: https://tiki.org
+Personal Website: https://alsawiki.com/HomePage?no_bl=y
+IRC: https://tiki.org/Connecting+To+IRC
+Mailing-Lists: https://tiki.org/Mailing+Lists
+Twitter: @jml67, @tikiwiki
+Fediverse: https://identi.ca/group/tikiwiki
+email: mailto:jyhem.nospam@nospam.tiki.org
+Facebook: https://www.facebook.com/groups/6607687318/
+Google+: https://plus.google.com/100068718540627516168/
+Wikipedia: https://en.wikipedia.org/wiki/Tiki_Wiki_CMS_Groupware
+Linkedin: https://www.linkedin.com/groups/Tiki-Wiki-CMS-Groupware-118987
+Ohloh: https://www.ohloh.net/projects/39
+Last.fm: https://www.last.fm/group/Tikiwiki
+SlideShare: https://www.slideshare.net/search/slideshow?q=tikiwiki
+Ustream: https://www.ustream.tv/channel/tikifests
+Flickr: https://www.flickr.com/search/show/?q=tikiwiki
+YouTube: https://www.youtube.com/results?search_query=tikiwiki
+Delicious: https://delicious.com/search?p=tikiwiki
+
+MediaWiki
+
+
+The Wikimedia Foundation, Inc. is a nonprofit charitable organization dedicated to encouraging the growth, development and distribution of free, multilingual, educational content, and to providing the full content of these wiki-based projects to the public free of charge. The Wikimedia Foundation operates some of the largest collaboratively edited reference projects in the world, including Wikipedia, a top-ten internet property.
+
+Listen to the interview with Marius Hoch
+
+
+
+
+
+Links
+
+Project Website: https://www.mediawiki.org
+Twitter: @Wikimedia
+email: hoo.nospam@nospam.online.de, mflaschen.nospam@nospam.wikimedia.org
+Wikipedia: https://en.wikipedia.org/wiki/MediaWiki
+Linkedin: https://www.linkedin.com/in/marius-hoch-337467105
+Wikibase: https://wikiba.se/
+Wikidata: https://wikidata.org/
+Flow: https://www.mediawiki.org/wiki/Extension:Flow
+Echo: https://www.mediawiki.org/wiki/Extension:Echo
+Quim Gil hpr1699 :: FOSDEM 2015 Part 3 of 5
+
+Linux from scratch
+
+
+Linux From Scratch (LFS) is a type of a Linux installation and the name of a book written by Gerard Beekmans, among others. The book gives readers instructions on how to build a Linux system from source. The book is available freely from the Linux From Scratch site and is currently in version 7.8.
+
+Linux From Scratch is a way to install a working Linux system by building all components of it manually. This is, naturally, a longer process than installing a pre-compiled Linux distribution. According to the Linux From Scratch site, the advantages to this method are a compact, flexible and secure system and a greater understanding of the internal workings of the Linux-based operating systems.
+
+Listen to the interview with Jean-Philippe Mengual
+
+
+
+
+
+Links
+
+Project Website: https://www.linuxfromscratch.org/, https://lists.linuxfromscratch.org
+email: jmengual.nospam@nospam.linuxfromscratch.org
+Wikipedia: https://en.wikipedia.org/wiki/Linux_From_Scratch
+
+Perl
+
+
+Powerful, stable, mature, portable
+
+Perl 5 is a highly capable, feature-rich programming language with over 27 years of development. Perl 5 runs on over 100 platforms from portables to mainframes and is suitable for both rapid prototyping and large scale development projects.
+
+"Perl" is a family of languages, "Perl 6" is part of the family, but it is a separate language which has its own development team. Its existence has no significant impact on the continuing development of "Perl 5".
+
+Listen to the interview with Wendy G.A. van Dijk, Mark "shadowcat" Keating, and Curtis "Ovid" Poe
+
+
+
+
+
+
+
+Links
+
+Project Website: https://www.perl.org
+Personal Website Wendy G.A. van Dijk: https://www.wendy.org/
+Personal Website Mark Keating: https://shadowcat.co.uk
+Personal Website Curtis "Ovid" Poe: https://allaroundtheworld.fr
+Twitter: @perlfoundation
+Twitter: @shadowcat_mdk
+Twitter: @OvidPerl
+email: site.nospam@nospam.wendy.org
+email: m.keating.nospam@nospam.shadowcat.co.uk
+email: ovid.nospam@nospam.allaroundtheworld.fr
+Wikipedia: https://en.wikipedia.org/wiki/Perl
+Linkedin: https://www.linkedin.com/in/wendyga
+Linkedin: https://www.linkedin.com/in/markkeating
+Linkedin: https://fr.linkedin.com/in/curtispoe
+Wendy G.A. van Dijk hpr1454 :: HPR Coverage at FOSDEM 2014 Part 5
+
+Barghest
+Listen to the interview with Jean-Baptiste Laurent and Kevin Gruber
+
+
+
+
+Links
+
+Project Website: https://barghest.org
+email: jeanbaptiste.laurent.nospam@nospam.protonmail.com
+email: kevin.gruber.kg.nospam@nospam.gmail.com
+
+Coala
+
+
+A Language Independent Code Analysis Application. coala is an application that makes it very easy, writing analysis for any programming language or even arbitrary textual data. It is a useful abstraction that provides a convenient user interface and takes away a lot of common tasks from the algorithm developer, effectively making bare research available for production use.
+
+Listen to the interview with Lasse Schuirmann
+
+
+
+
+
+Links
+
+Project Website: https://coala-analyzer.org/
+Personal Website: https://schuirmann.net
+Twitter: @LSchuirmann
+email: Lasse.nospam@nospam.Schuirmann.net
+coala Documentation: https://docs.coala-analyzer.org/
+coala Core Repository: https://github.com/coala-analyzer/coala/
+
+Google Summer of Code
+
+
+The Google Summer of Code (GSoC) is an international annual program, first held from May to August 2005, in which Google awards stipends (of US$5,500, as of 2015) to all students who successfully complete a requested free and open-source software coding project during the summer. The program is open to students aged 18 or over – the closely related Google Code-In is intended for students under the age of 18.
+
+Listen to the interview with Mary Radomile
+
+
+
+
+
+Links
+
+Project Website: https://developers.google.com/open-source/gsoc/
+Twitter: @gsoc
+email: maryr.nospam@nospam.google.com
+Facebook: https://www.facebook.com/pages/Google-Developers/967415219957038
+Google+: https://plus.google.com/+GoogleDevelopers/posts
+Wikipedia: https://en.wikipedia.org/wiki/Google_Summer_of_Code
+Linkedin: https://www.linkedin.com/in/maryradomile
+GSOC: https://www.google-melange.com/
+Blog: https://googledevelopers.blogspot.com/
+Medium: https://medium.com/google-developers
+YouTube: https://www.youtube.com/user/GoogleDevelopers
+
+Ultimaker
+
+
+We wanted everyone to be able to enjoy the experience of making. Whether it was a cat dressed as an astronaut or a mechanical masterpiece. We set it as our goal to enable you to make those things. So we built a pioneering device that everyone could use and enjoy. We made it open source so everyone really could pitch in. And we started to grow.
+
+Listen to the interview with Olliver Schinagl
+
+
+
+
+
+Links
+
+Project Website: https://www.ultimaker.com/
+Twitter: @Ultimaker
+email: o.schinagl.nospam@nospam.ultimaker.com
+Wikipedia: https://en.wikipedia.org/wiki/Ultimaker
+

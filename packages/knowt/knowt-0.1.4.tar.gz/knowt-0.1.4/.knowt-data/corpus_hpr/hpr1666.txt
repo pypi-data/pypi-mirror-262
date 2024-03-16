@@ -1,0 +1,62 @@
+## hpr1666 :: Bare Metal Programming on the Raspberry Pi (Part 3)
+
+ 
+This is the third episode in a series on bare metal programming on the Raspberry
+Pi.  This episode rounds out my initial stab at doing a series on RPI embedded
+programming based on my summer vacation project.  This episode discusses how to 
+write code with an eye towards using it in an embedded environment.  It 
+continues with a discussion of how coprocessors fit into the ARM architecture.
+It also describes how to manage coprocessors programatically in a very hackerish
+way using self-modifying code.  Finally, the episode describes how to enable the
+virtual memory subsystem in the ARM as well as the cache.  It includes some
+performance measurements of my code both with and without the cache enabled.
+
+
+Here is some of the source material that I reference in this episode.  See
+the previous episode show notes for information on how to get your own
+bare metal Raspberry Pi setup up and running.
+
+CATRPI
+
+Homepage: https://gitorious.org/catrpi
+
+Git repo: git://gitorious.org/catrpi/catrpi.git
+
+My own repository of code that I wrote during this little project.
+
+
+Hacker's Delight by Henry S. Warren Jr.
+
+https://www.hackersdelight.org/
+
+A fantastic book on low level computer mathematics.  I find it a joy to read.
+   I cannot recommend it highly enough.  It belongs on anyone's shelf next
+   to Knuth and other "programming bibles".
+
+
+ARM ARM
+
+https://www.scss.tcd.ie/~waldroj/3d1/arm_arm.pdf
+
+https://morrow.ece.wisc.edu/ECE353/arm_reference/ddi0100e_arm_arm.pdf
+
+Contains the ARM assembly language as well as chip architecture overview.
+
+You'll need the ARM 11 Architecture Reference Manual
+
+
+ARM TRM
+
+https://infocenter.arm.com/help/topic/com.arm.doc.ddi0301h/DDI0301H_arm1176jzfs_r0p7_trm.pdf
+
+Contains info about the specific SOC that the Raspberry PI uses
+
+
+dwelch67's bare metal repository
+
+As always, the best guide I know on this topic.  Very thorough and what I 
+   used as my starting point.
+
+https://github.com/dwelch67/raspberrypi
+
+

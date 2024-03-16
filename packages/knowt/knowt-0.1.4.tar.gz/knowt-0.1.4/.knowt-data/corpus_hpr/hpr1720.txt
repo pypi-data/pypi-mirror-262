@@ -1,0 +1,40 @@
+## hpr1720 :: 15 Certificate Issues and Solutions
+
+ 
+Last time we looked at some basics about how TLS and SSL work, and saw that this is basically an application of the same technology used to encrypt e-mails. But we also noted that there are some problems with this approach. We need to recognize that in security there is never a permanent solution, and that vulnerabilities are constantly being discovered, and ideally then being fixed. Some of these may involve highly technical issues about cryptographic methods, but I think the largest category of issues is about the processes around the use of certificates.
+For more go to https://www.zwilnik.com/?page_id=686
+
+Links:
+
+https://en.wikipedia.org/wiki/Root_certificate
+
+https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/included/
+
+https://www.zdnet.com/microsoft-warns-of-fake-google-and-yahoo-domains-7000031463/
+
+https://nakedsecurity.sophos.com/2013/12/09/serious-security-google-finds-fake-but-trusted-ssl-certificates-for-its-domains-made-in-france/
+
+https://www.eff.org/deeplinks/2011/09/post-mortem-iranian-diginotar-attack
+
+https://en.wikipedia.org/wiki/Man-in-the-middle_attack
+
+https://www.eff.org/deeplinks/2011/09/post-mortem-iranian-diginotar-attack
+
+https://support.mozilla.org/en-US/questions/994708
+
+https://convergence.io/
+
+https://addons.mozilla.org/en-US/firefox/addon/certificate-patrol/
+
+https://www.duosecurity.com/
+
+https://www.certificate-transparency.org/what-is-ct
+
+https://en.wikipedia.org/wiki/Transport_Layer_Security
+
+https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
+
+https://en.wikipedia.org/wiki/OCSP_stapling
+
+https://www.zwilnik.com/?page_id=686
+

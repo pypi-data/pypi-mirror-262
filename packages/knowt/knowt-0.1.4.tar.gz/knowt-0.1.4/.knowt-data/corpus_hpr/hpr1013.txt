@@ -1,0 +1,14 @@
+## hpr1013 :: Saving Programs From TiVo
+
+ kmttg, which I use to download from TiVo, can be found at: https://code.google.com/p/kmttg/
+The Java Runtime Environment should be in your distro's repositories, but you can also get it at: https://java.com/en/download/index.jsp
+tivodecode is available at the kmttg site as above.
+curl, mencoder, and ffmpeg should all be found in your distro's repositories.
+Handbrake can be found at: https://handbrake.fr/downloads.php
+Comskip can be found at: https://www.kaashoek.com/comskip/
+AtomicParsley can be found at: https://atomicparsley.sourceforge.net/
+kdenlive can be found in your distro's repositories or at https://www.kdenlive.org/
+And finally, all of the information in this program can also be found at my web site at: https://www.zwilnik.com/?page_id=138
+
+To submit a talk for Ohio LinuxFest, please go to https://ohiolinux.org/callfortalks for more information.
+Remember to support free software!

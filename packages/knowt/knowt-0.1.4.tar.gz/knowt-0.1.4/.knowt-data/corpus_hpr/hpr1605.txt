@@ -1,0 +1,6 @@
+## hpr1605 :: 38 - LibreOffice Calc - simple Descriptive Statistics
+
+ In Statistics there are generally speaking two types of analysis, broken down between Descriptive and Inferential statistics. The difference has to do what what claims you are making about the data. If you are simply stating something about the data (e.g. there were more men than women in the sample) that is descriptive. But if you make a claim that something is not likely to occur by chance, for instance, or that something is statistically significant (and both of those statements are essentially the same thing) then you are in the realm of inferential statistics. Calc has functions to do both kinds of analysis, and this tutorial will examine some of the common descriptive statistics in Calc and how they are used. - For more go to https://www.ahuka.com/?page_id=844
+
+https://www.ahuka.com/?attachment_id=856
+https://www.ahuka.com/?page_id=844

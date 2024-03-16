@@ -1,0 +1,54 @@
+## hpr3996 :: Holiday Challenges Series - Ep 1 - Advent of Code
+
+ Holiday
+Challenges Series - Ep 1 - Advent of Code
+Since some of the information you are about to hear is time specific,
+I want to let you know that I am recording this near the end of November
+in 2023.
+Whichever holidays you celebrate this time of year, life generally
+gets busy and stressful.
+It could be shopping
+or cooking
+or cleaning
+or school activities
+or buying, assembling, wrapping, and delivering gifts
+or planning time with family
+or dealing with visiting family
+or scheduling time off from work
+or managing extra work while others have scheduled time off
+or a whole plethora of other things.
+This time of year can be stressful.
+A few years ago, I discovered a fun activity, which challenged my
+mind and helped me focus and detach from the stress for a little while
+each day, through the month of December. It helped me manage the stress
+in an enjoyable way.
+Since then, I have found and tried several other similar activities,
+so I wanted to share a little about them with you for the next few
+episodes so you can see what might work for you.
+The first I would like to share is called the Advent of Code
+Challenge (https://adventofcode.com/). In HPR episodes 2973 (https://hackerpublicradio.org/eps/hpr2973/index.html)
+and 3744 (https://hackerpublicradio.org/eps/hpr3744/index.html),
+Daniel Perrson shared some great details about this challenge. I
+encourage you to go review his episodes.
+But the TLDR (Or maybe the TLDL -- Too Long Didn't Listen?) for
+Advent of Code is that it is a 25 day challenge which begins on December
+1. Once you register at adventofcode.com, Each day, you will be
+presented with a problem to solve and some sample data to use for
+verification that your program works. You can choose to use any
+programming language or application you desire produce the answer. Last
+year, I used this to brush up on my Python skills. Others use Visual
+Basic, C (and all its variants), Rust, Go, etc. I have seen people use
+Cobol, Fortran, and Pascal, or even Microsoft Excel. It is really up to
+you. You are then presented a dataset which is unique to your login, and
+against which you run your code. When complete, you submit the answer
+came up with on the adventofcode.com web site and they will tell you if
+you are correct or not.
+If you are competitive (And REALLY GOOD) there is a Global
+Leaderboard. If you want to compete with a group of friends, you can
+build your own leaderboard and invite others to take part with you.
+There are tons of resources online, from youtube channels to reddit
+(https://www.reddit.com/r/adventofcode/), to Discord (https://discord.gg/tXJh262)
+So, if you are looking for a way to challenge your mind and detach
+from holiday stress, Advent of Code may be something you might try.
+If this is not your cup of tea, I will be sharing several other
+options for holiday challenges in future episodes.

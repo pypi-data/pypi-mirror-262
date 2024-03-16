@@ -1,0 +1,45 @@
+## hpr2309 :: Crowdsourcing Accessibility
+
+ In order to meet basic accessibility standards, I need to have text alternatives to the audio of my online video lectures for my music appreciation class. I have a transcription tool called Dragon Dictate that can do most of the heavy lifting as far as getting a raw transcript of the audio, but the transcription it generates needs a lot of attention in terms of correction, capitalization, and punctuation. It also needs to have all of the text separated into logical paragraphs and it really helps to have proper section headings. 
+There are 20 lectures in all, and I have finished doing 11 of them, but I still have nine to go and no time to do it. I had an idea to crowdsource this effort by giving extra-credit points to my students for doing little bits of it at a time. They get one extra-credit point for every one minute of lecture that they correct.
+I got the idea for this from the Distributed Proofreaders project, where volunteers work to help correct any mistakes that are found in the OCR scans of public-domain books before being posted on a website like Project Gutenberg. So far I've gotten about 30 minutes of lecture transcripts corrected by students who needed extra credit, and I have high hopes that we will finish the project either this summer or next fall.
+One excellent tool that I found while I was figuring out how to handle this project logistically is the Linux command line tool called mp3splt. I use this tool to cut the long lecture files up into one-minute segments like so:
+mp3splt -t 1.0.0 L13audio.mp3
+I also wrote my own script that will generate an HTML page with individual audio players for all of these one-minute audio files so that students can very easily choose an audio file to work on that is exactly one minute long. The script also pushes all of the audio files over to my server after creating ogg versions of the mp3s using mp32ogg.
+#!/bin/bash
+
+url='https://servername.edu/path/to/filedir'
+page=$(pwd)/$(basename $(pwd))_page.html
+
+LESSON=$(ls *.mp3 |head -n1 | sed -e 's/audio.*$//')
+
+cat >> $page <<EOFtop
+<h2><a href="https://servername.edu/path/to/filedir/$LESSON.html">RAW TRANSCRIPT HERE</a></h2>
+EOFtop
+
+for i in *.mp3; do
+  stem=$(basename $i .mp3)
+  mp32ogg $i 
+  sleep .2
+cat >> $page <<EOF
+
+<h3>File: "$i"</h3>
+<div class="centered">
+	<audio controls>
+		<source src="$url/$stem.mp3" type="audio/mpeg">
+		<source src="$url/$stem.ogg" type="audio/ogg">
+	</audio>
+</div>
+EOF
+done
+
+scp *.ogg servername:~/path/to/filedir/
+sleep 1
+scp *.mp3 servername:~/path/to/filedir/
+#sleep 1
+scp $page servername:~/path/to/filedir/
+
+Links
+
+Bloviate: to speak or write verbosely and windily—pundits bloviating on the radio
+

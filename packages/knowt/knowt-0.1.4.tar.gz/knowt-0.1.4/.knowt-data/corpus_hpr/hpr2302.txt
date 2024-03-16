@@ -1,0 +1,40 @@
+## hpr2302 :: Bash snippet - nullglob
+
+ Bash snippet - nullglob
+I recently did an HPR show about Bash filename expansion and described the 'shopt' command and its options. One of the options I talked about was 'nullglob' which controls what is returned from an expansion when no files match.
+When 'nullglob' is enabled, and a pattern does not match, nothing is returned. When it is disabled (the default) then the pattern itself is returned.
+Although I didn't think I'd ever need to, I recently wrote a script where I used 'nullglob', and thought I would share a snippet of the code to demonstrate what I did.
+The script is for managing mail messages containing tag and summary updates. I use Thunderbird for my mail and have configured it to drop these messages into a directory so I can process them. I use Thunderbird's message filters to do this. A certain amount of Spam is also received, and sometimes valid messages need a bit of work before they can be processed.
+The directory where the messages are saved (the spool area) is stored in the variable 'MAILDROP' earlier in the script.
+  1 #
+  2 # Find the files and store their names in an array. Use 'nullglob' so we get
+  3 # nothing when there is nothing, then revert to the original setting
+  4 #
+  5 NG="$(shopt -p nullglob)"
+  6 shopt -s nullglob
+  7 MESSAGES=( $MAILDROP/*.eml )
+  8 eval "$NG"
+  9 
+ 10 #
+ 11 # Exit if there's nothing to do or report what's there
+ 12 #
+ 13 if [[ ${#MESSAGES[@]} -gt 0 ]]; then
+ 14     echo "Files in the spool area:"
+ 15     printf "%s\n" "${MESSAGES[@]}"
+ 16 else
+ 17     echo "The spool area is empty"
+ 18     exit
+ 19 fi
+The variable 'NG' holds the state of 'nullglob' before the script modifies it. Remember that 'shopt -p' returns a list of commands that will revert the named options to their current state.
+Next (line 6) the 'nullglob' option is enabled.
+The array 'MESSAGES' is created on line 7 to hold the list of mail files found in the spool area. This is done with a pattern which matches files that end with the string '.eml'. If we didn't have 'nullglob' enabled then when there were no files the array would contain the pattern - which would be misleading.
+Having collected the file details 'nullglob' is turned off by executing the command in the variable 'NG' on line 8.
+You might think that the script could just turn 'nullglob' on then turn it off again when it's no longer needed. However, I prefer to use the technique I have shown here because it needs to have no knowledge of the state of the option before it's set, and restores that state afterwards.
+By line 13 the array 'MESSAGES' either contains a list of files or is empty. The script checks for these two cases by determining how many elements are in the array. Greater than zero means we have files to process and they are listed in lines 14 and 15. The script then goes on to do various things with the files.
+If there were no files then the script reports this and exits.
+That's it! This is not the only way to do this, but I like to write scripts that call as few sub-processes as I can, and this way appeals for that reason.
+Links
+
+HPR show 1648 Bash parameter manipulation looks at variables and arrays in Bash
+HPR show 2278 Some supplementary Bash tips introduces 'shopt' and 'nullglob'.
+

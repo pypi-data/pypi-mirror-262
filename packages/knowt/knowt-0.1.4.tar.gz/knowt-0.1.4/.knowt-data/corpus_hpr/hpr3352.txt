@@ -1,0 +1,23 @@
+## hpr3352 :: 2020-2021 New Years Eve Show Episode 4
+
+ Welcome to the 9th Annual Hacker Public Radio New Years Eve Show
+
+Text editors
+x11 and wayland
+Linux check for X11/Wayland
+
+
+loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}'
+
+Firefox new tab override - https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
+Distributed Search https://yacy.net/index.html
+Join Mastodon - https://joinmastodon.org/
+edit correspondent page by posting a new show...
+https://distrohoppersdigest.blogspot.com/
+https://addons.mozilla.org/en-US/firefox/addon/open-with/?utm_source=addons.mozilla.org
+https://addons.mozilla.org/en-US/firefox/addon/videospeed/?utm_source=addons.mozilla.org
+X2go Graphical interface over ssh https://wiki.x2go.org/doku.php
+Filk Music discussion: Filk music is a musical culture, genre, and community tied to science fiction, fantasy and horror fandom and a type of fan labor. The genre has been active since the early 1950s, and played primarily since the mid-1970s.
+Dresden Files and books
+happy new year from the Fallon family
+

@@ -1,0 +1,49 @@
+## hpr3285 :: Upgrading Lubuntu on my Samsung N150 Plus netbook
+
+ Samsung N150 Plus upgrade from Lubuntu 16.04 LTS to Lubuntu 20.04.1 - performed 17/12/20
+Backup and prep process
+
+Copied all documents and important files from Samsung laptop to removable hard drive. Used Lubuntu gui file manager which crashed at least twice, probably due to netbook limited RAM.
+Found out that a direct upgrade from 16.04 LTS to 20.04 LTS is not possible, refer to the following links.
+
+Upgrade path from 16.04 LTS to 20.04 LTS
+Ubuntu release-cycle
+
+Downloaded Lubuntu 20.04.1
+Found a spare 32GB USB stick and copied all the files that were on it to a removable hard drive.
+Opened downloaded Lubuntu image using Disk Image writer (1st time I've used this), wrote image to 32GB SD, found process very easy
+On Samsung netbook hit F2 at boot time to select boot from USB
+Booted from USB stick containing LUBUNTU 20.04.1
+
+Live distro 1st boot.
+
+Once booted I found the trackpad speed to be very slow and my first attempt at adjusting the speed in preferences made no difference.
+Connected to WiFi, setting this up seemed much more clunky than previous connection method, however it did work.
+Went to Youtube and played some video, everything worked fine, also found that volume keys on netbook worked.
+
+Install Process
+
+Went through install and selected manual partitioning,
+Used existing swap on sda6 and format and mounted new Lubuntu root filesystem on sda7 replacing 16.04 with 20.04.1
+
+After first boot
+
+Upon first boot was surprised that it had remembered my WiFi connection details and told me there were updates
+It asked if I wanted to perform a full upgrade without giving any details. At the time I didn't know what this meant. I wasn't sure I would remain on an LTS or upgrade to 20.10. After the full upgrade I check OS release using the following command. This confirmed I was still running 20.04 LTS
+  cat /etc/os-release
+The logon screen has desktop options, by default it's set to Lubuntu, I found this to be a bit slow and unresponsive also the screen decoration on terminals was rather clunky taking up unnecessary screen space.
+The next time I entered the logon screen I selected LXQT. I was pleased to find that this option was remembered. The netbook was now a bit more responsive though not quite as good as it was before the upgrade. The terminal screen was now much tidier and more usable.
+Preferences / LXQT settings / Keyboard and mouse / Mouse and Touch Pad / Acceleration speed now 5.0 think was 0.1, also selected single click to activate item
+Installed mc, ncdu, screen, pv, moc, ssh
+Generated RSA ssh keys and copied them to Pi13, they installed with no problems and allowed me to SSH into my Pi13.
+Copied all my files and documents from my portable hard drive back onto the laptop. This time I used mc "Midnight Commander" to copy the files back which I found much easier than using the GUI file manager the first time around. Midnight commander is an Ncurses file manager.
+I had forgotten just how good the ncurses file manager Midnight commander is.
+Midnight Commander gave a constant percentage progress of each individual file being copied and the overall progress which was very useful and reassuring with such a slow laptop. The first time around the laptop actually crashed a couple of times when I was using the LUBUNTU GUI file manager to try and copy the files from the laptop to the hard drive.
+Also even though I generally use keyboard shortcuts for copy and paste operation I still tend to use the track pad at places when using a file manager. It's easy to limit yourself to keyboard navigation using mc. I found this to be greatly reassuring and I feel doing this makes the likelihood of disastrous errors much less likely.
+
+General thoughts and Observations
+
+The keyboard screen brightness buttons don't work however I can adjust it within preferences. Further investigation will be needed to resolve this minor annoyance if / when I get the time and inclination.
+The netbook now has a much slower boot time
+The netbook now feels a little sluggish but I think it's still perfectly usable. I have a feeling this might be the last upgrade this netbook sees as it's now getting a bit long in the tooth. It also has a broken power switch which I believe was a common fault. I have to use a pair of scissors to turn it on.
+

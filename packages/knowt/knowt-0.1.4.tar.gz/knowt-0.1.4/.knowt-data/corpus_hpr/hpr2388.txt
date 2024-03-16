@@ -1,0 +1,10 @@
+## hpr2388 :: Apt Spelunking 4: Planet of the Apts
+
+ It's another exciting episode of Apt Spelunking! The fourth installation, which covers the following packages:
+dunst - Lightweight notification daemon
+Dunst is a lightweight, customizeable desktop notification daemon. Similar to Ubuntu's notify-osd, it displays passive notifications with very minimal resources. It has customizeable keystrokes, and its colors can be configured as well.
+i3 - Lightweight tiling window manager
+i3 is my window manager of choice; tiling, extremely customizeable, and absurdly light. With fantastic support for multiple monitors, and vim keybindings, it eventually finds its way onto every machine I use.
+uqm - Ur-Quan Masters
+Derived from Star Control II, Ur-Quan Masters is a fantastic retro game about spaceships and aliens. Earth has been seized, and is isolated from the rest of the galaxy. Luckily, you happen to have yourself a ship built with ancient mystic technology and whatnot.
+Fun, funny, and dangerously addictive; make sure to stay away from this game if you have things to do.

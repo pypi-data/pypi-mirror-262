@@ -1,0 +1,221 @@
+## hpr2748 :: Writing Web Game in Haskell - Special events
+
+ Intro
+I was tasked to write kragii worms in the game and informed that they’re small (10cm / 4 inches) long worms that burrow in ground and are drawn to farming fields and people. They’re dangerous and might eat harvest or people.
+Special events build on top of the new system I explained in episode 2733. They are read from same API as regular news and need same ToJSON, FromJSON, ToDto and FromDto instances as regular news (for translating them data transfer objects and then into JSON for sending to client).
+Loading
+Starting from the API interface, the first real difference is when JSON stored into database is turned into NewsArticle. Two cases, where special news have available options added to them and regular news are left unchanged. These options tell player what choices they have when dealing with the situation and evaluated every time special event is loaded, because situation might have changed since special event got stored into database and available options might have changed.
+addOptions (key, article) = case article of
+                                Special news ->
+                                    (key, Special $ availableOptions news)
+                                _ ->
+                                    (key, article)
+
+availableOptions :: SpecialNews -> SpecialNews
+availableOptions x =
+    case x of
+        KragiiWorms event _ choice ->
+            KragiiWorms event (eventOptions event) choice
+eventOptions is one of the events defined in SpecialEvent type class that specifies two functions every special event has to have. eventOptions lists what options the event has currently available and resolveEvent resolves the event according to choice user might have made (hence Maybe in it).
+Type class is parametrized with three types (imaginatively named to a, b and c). First is data type that holds information about special event (where it’s happening and to who for example), second one is one that tells all possible choices player has and third one lists various results that might occur when resolving the event. In this example they’re KragiiWormsEvent, KragiiWormsChoice and KragiiResults.
+data KragiiWormsEvent = KragiiWormsEvent
+    { kragiiWormsPlanetId   :: Key Planet
+    , kragiiWormsPlanetName :: Text
+    , kragiiWormsSystemId   :: Key StarSystem
+    , kragiiWormsSystemName :: Text
+    , kragiiWormsDate       :: Int
+    }
+
+data KragiiWormsChoice =
+    EvadeWorms
+    | AttackWorms
+    | TameWorms
+
+data KragiiResults =
+    WormsStillPresent
+    | WormsRemoved
+    | WormsTamed
+    | CropsDestroyed (RawResource Biological)
+    | FarmersInjured
+Definition of the SpecialEvent type class is shown below. Type signature of resolveEvent is gnarly because it’s reading and writing database.
+class SpecialEvent a b c | a -> b, a -> c where
+    eventOptions :: a -> [UserOption b]
+    resolveEvent :: ( PersistQueryRead backend, PersistQueryWrite backend
+                    , MonadIO m, BaseBackend backend ~ SqlBackend ) =>
+                    (Key News, a) -> Maybe b -> ReaderT backend m (Maybe EventRemoval, [c])
+One more piece we need is UserOption. This records options in a format that is useful in the client side. Each option player has are given title and explanation that are shown on UI.
+data UserOption a =
+    UserOption { userOptionTitle :: Text
+               , userOptionExplanation :: [Text]
+               , userOptionChoice :: a
+               }
+Current implementation of eventOptions doesn’t allow database access, but I’m planning on adding that at the point where I need it. Example doesn’t show all different options, as they all have same structure. Only first option in the list is shown:
+eventOptions _ = [ UserOption { userOptionTitle = "Avoid the worms"
+                              , userOptionExplanation = [ "Keep using fields, while avoiding the worms and hope they'll eventually leave."
+                                                        , "50 units of biologicals lost"
+                                                        , "25% chance of worms leaving"
+                                                        ]
+                              , userOptionChoice = EvadeWorms
+                            }
+                   , ...
+                   ]
+Making choice
+putApiMessageIdR handles updating news with HTTP PUT messages. First steps is to check that caller has autenticated and retrieve id of their faction. News article that is transferred in body as JSON is parsed and checked for type. Updating regular news articles isn’t supported and is signaled with HTTP 403 status code. One more check to perform is to check that news article being edited actually belong to the faction player is member of. If that’s not the case HTTP 404 message is returned.
+If we got this far, news article is updated with the content sent by client (that also contains possible choice made by user). There’s no check that type of news article doesn’t change or that the option selected doesn’t change (I need to add these at later point). In the end, list of all messages is returned back to the client.
+putApiMessageIdR :: Key News -> Handler Value
+putApiMessageIdR mId = do
+    (_, _, fId) <- apiRequireFaction
+    msg <- requireJsonBody
+    let article = fromDto msg
+    _ <- if isSpecialEvent article
+            then do
+                loadedMessages <- runDB $ selectList [ NewsId ==. mId
+                                                     , NewsFactionId ==. fId ] [ Asc NewsDate ]
+                if length loadedMessages == 0
+                    then apiNotFound
+                    else runDB $ update mId [ NewsContent =. (toStrict $ encodeToLazyText article) ]
+            else apiForbidden "unsupported article type"
+    loadAllMessages fId
+Resolving event
+Special event occured, user made (or did not) a choice. Now it’s time to simulate what happens. Below is resolveEvent for kragii attack.
+resolveEvent keyEventPair (Just choice) =
+    runWriterT . runMaybeT $
+        case choice of
+                EvadeWorms ->
+                    chooseToAvoid keyEventPair
+
+                AttackWorms ->
+                    chooseToAttack keyEventPair
+
+                TameWorms ->
+                    chooseToTame keyEventPair
+
+resolveEvent keyEventPair Nothing =
+    runWriterT . runMaybeT $ noChoice keyEventPair
+runWriterT and runMaybeT are used as code being called uses monad transformers to add some extra handling. WriterT adds ability to record data (KragiiResult in this case) and MaybeT adds ability to stop computation early if one of the steps return Nothing value.
+Let’s walk through what happens when user has chosen to avoid kragii worms and keep working only part of the fields. First step is to load faction information. If faction couldn’t be found, we abort. Next amount of biological matter consumed and how much is left is calculated. Again, if calculation isn’t possible, we’ll abort. This step reaches into database and updates amount of biological matter stored by the faction (again, possibility to stop early). Final step is to check if kragii leave or not (again, chance of abort).
+chooseToAvoid :: ( MonadIO m, PersistQueryWrite backend
+                 , BaseBackend backend ~ SqlBackend ) =>
+                 (Key News, KragiiWormsEvent)
+                 -> MaybeT (WriterT [KragiiResults] (ReaderT backend m)) EventRemoval
+chooseToAvoid (_, event) = do
+    faction <- getFaction event
+    (cost, bioLeft) <- calculateNewBio (RawResource 50) (entityVal faction)
+    _ <- destroyCrops faction cost bioLeft
+    removeNews $ PercentileChance 25
+Loading faction has several step. Id is stored in the event is used to load planet. Planet might or might have an owner faction, depending on if it has been settled. This faction id is used to load faction data. Loading might fail if corresponding record has been removed from database and planet might not be settled at the given time. Any of these cases will result Nothing be returned and whole event resolution being aborted. I’m starting to really like that I don’t have to write separate if statements to take care of these special cases.
+getFaction :: ( MonadIO m, PersistStoreRead backend
+              , BaseBackend backend ~ SqlBackend ) =>
+              KragiiWormsEvent
+              -> MaybeT (WriterT [KragiiResults] (ReaderT backend m)) (Entity Faction)
+getFaction event = MaybeT $ do
+    planet <- lift $ get $ kragiiWormsPlanetId event
+    let owner = join $ fmap planetOwnerId planet
+    res <- lift $ mapM getEntity owner
+    return $ join res
+Amount of biological matter in store is stored in faction information. If it’s zero or less, Nothing is returned as there’s nothing to do really. In other cases, amount of biological matter left is calculated and result returned in form of ( cost, biological matter left ). I’m carrying around the cost, as it’s later needed for reporting how much matter was removed.
+calculateNewBio :: Monad m =>
+                RawResource Biological -> Faction
+                -> MaybeT (WriterT [KragiiResults] m) ((RawResource Biological), (RawResource Biological))
+calculateNewBio cost faction = MaybeT $ do
+    let currentBio = factionBiologicals faction
+    return $ if currentBio > 0
+                then Just $ ( cost
+                            , RawResource $ max 0 (currentBio - unRawResource cost))
+                else Nothing
+destroyCrops updates database with new amount of biological matter in store for the faction and records amount of destruction in CropsDestroyed. tell requires that we have Writer at our disposal and makes recording information nice and easy.
+destroyCrops :: ( MonadIO m, PersistQueryWrite backend, BaseBackend backend ~ SqlBackend ) =>
+                Entity Faction -> RawResource Biological
+                -> RawResource Biological -> MaybeT (WriterT [KragiiResults] (ReaderT backend m)) ()
+destroyCrops faction cost bioLeft = MaybeT $ do
+    _ <- lift $ updateWhere [ FactionId ==. entityKey faction ]
+                            [ FactionBiologicals =. unRawResource bioLeft ]
+    tell [ CropsDestroyed cost ]
+    return $ Just ()
+Final step is to roll a percentile die against given odds and see what happens. In case of Success, we record that worms were removed and value of function will be Just RemoveOriginalEvent. If we didn’t beat the odds, WormsStillPresent gets recorded and value of function is Just KeepOriginalEvent. Return value will then be used later to mark special event handled.
+removeNews :: ( PersistStoreWrite backend, MonadIO m, BaseBackend backend ~ SqlBackend ) =>
+              PercentileChance -> MaybeT (WriterT [KragiiResults] (ReaderT backend m)) EventRemoval
+removeNews odds = MaybeT $ do
+res <- liftIO $ roll odds
+    case res of
+        Success -> do
+            _ <- tell [ WormsRemoved ]
+            return $ Just RemoveOriginalEvent
+        Failure -> do
+            _ <- tell [ WormsStillPresent ]
+            return $ Just KeepOriginalEvent
+So result of this whole matter is:
+( [KragiiResults], Maybe EventRemoval )
+and whole lot of database activity.
+Handling events during simulation
+Pieces are now in place, time to put things in motion. When handling special events for a faction, first step is to load all unhandled ones and then call handleSpecialEvent for each of them.
+handleFactionEvents :: (BaseBackend backend ~ SqlBackend
+                       , PersistStoreWrite backend, PersistQueryRead backend
+                       , PersistQueryWrite backend, MonadIO m) =>
+                       Time -> Entity Faction -> ReaderT backend m [Key News]
+handleFactionEvents date faction = do
+    loadedMessages <- selectList [ NewsFactionId ==. (entityKey faction)
+                                 , NewsSpecialEvent ==. UnhandledSpecialEvent ] [ Desc NewsDate ]
+    let specials = mapMaybe extractSpecialNews $ parseNewsEntities loadedMessages
+    mapM (handleSpecialEvent (entityKey faction) date) specials
+resolveEvent resolves event based on choice user maybe made (this is what we explored earlier in the episode). Depending on the result of resolveEvent, event gets marked to handled and dismissed. In any case, a news article spelling out what happend is created and saved.
+handleSpecialEvent :: (PersistQueryWrite backend, MonadIO m
+                      , BaseBackend backend ~ SqlBackend) =>
+                      Key Faction -> Time -> (Key News, SpecialNews) -> ReaderT backend m (Key News)
+handleSpecialEvent fId date (nId, (KragiiWorms event _ choice)) = do
+    (removal, results) <- resolveEvent (nId, event) choice
+    _ <- when (removal /= Just KeepOriginalEvent) $
+                    updateWhere [ NewsId ==. nId ]
+                                [ NewsSpecialEvent =. HandledSpecialEvent
+                                , NewsDismissed =. True ]
+    insert $ report fId date event choice results
+Result article creation is abstracted by ResultReport type class. It has single function report that takes parameters: database key of the faction the event concerns of, current time, special event that was processed, choice that was made and list of records telling what happened during resolution. It will return News that is ready to be saved into database.
+class ResultsReport a b c | a -> b, a -> c where
+report :: Key Faction -> Time -> a -> Maybe b -> [c] -> News
+
+quite long and verbose instance
+essentially take event, choice and results and build a string explaining what actually happened
+<> is monoid operation for combining things, here used for text
+
+Instance declaration is pretty long, because there’s many different cases to account for and by definition they’re all pretty verbose. I have included it in its entirity below, as it might be interesting to glance over and see different kinds of combinations that resolution might create.
+instance ResultsReport KragiiWormsEvent KragiiWormsChoice KragiiResults where
+    report fId date event choice results =
+        let
+            content = KragiiNews { kragiiNewsPlanetId = kragiiWormsPlanetId event
+                                 , kragiiNewsPlanetName = kragiiWormsPlanetName event
+                                 , kragiiNewsSystemId = kragiiWormsSystemId event
+                                 , kragiiNewsSystemName = kragiiWormsSystemName event
+                                 , kragiiNewsExplanation = repText
+                                 , kragiiNewsDate = timeCurrentTime date
+                                 }
+        in
+            mkNews fId date $ KragiiResolution content
+        where
+            repText = header choice <> " " <> removed choice (WormsRemoved `elem` results) <> " " <> injury <> " " <> destruction <> " "
+
+            header (Just EvadeWorms) = "Local farmers had chosen to work on their fields, while avoiding the kragii worms."
+            header (Just AttackWorms) = "Local farmers had decided to attack the worms with chemicals and burning."
+            header (Just TameWorms) = "Decision to try and tame the kragii had been taken."
+            header Nothing = "No decision what to do about worms had been taken."
+
+            removed (Just EvadeWorms) True = "After some time, there has been no new kragii sightings and it seems that the threat is now over."
+            removed (Just AttackWorms) True = "Attacks seem to have worked and there has been no new kragii sightings."
+            removed (Just TameWorms) True = "Kragii has been tamed and put into use of improving soil quality."
+            removed Nothing True = "Despite farmers doing nothing at all about the situation, kragii worms disappeared eventually."
+            removed (Just EvadeWorms) False = "Kragii are still present on the planet and hamper farming operations considerability."
+            removed (Just AttackWorms) False = "Despite the best efforts of farmers, kragii threat is still present."
+            removed (Just TameWorms) False = "Taming of the worms was much harder than anticipated and they remain wild."
+            removed Nothing False = "While farmers were debating best course of action, kragii reigned free and destroyed crops."
+
+            injury = if FarmersInjured `elem` results
+                        then "Some of the personnel involved in the event were seriously injured."
+                        else "There are no known reports of personnel injuries."
+
+            totalDestroyed = mconcat $ map (x -> case x of
+                                                    CropsDestroyed n -> n
+                                                    _ -> mempty) results
+            destruction = if totalDestroyed > RawResource 0
+                            then "In the end, " <> pack (show (unRawResource totalDestroyed)) <> " units of harvest was destroyed."
+                            else "Despite of all this, no harvest was destroyed."
+While there are still pieces left that need a bit work or are completely missing, the overall structure is in place. While this one took quite a bit of work to get working, I’m hoping that the next special event will be a lot easier to implement. Thanks for listening the episode.
+Easiest way to catch me nowdays is either via email or on fediverse where I’m Tuula@mastodon.social

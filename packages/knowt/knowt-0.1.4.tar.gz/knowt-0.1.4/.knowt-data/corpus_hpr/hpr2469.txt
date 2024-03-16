@@ -1,0 +1,17 @@
+## hpr2469 :: A flight itinerary in Bash
+
+ A flight itinerary in Bash
+My daughter flew out to New Zealand before Christmas 2017 to spend some time with her brother, who had been there with his girlfriend since November. I saw her flight itinerary from the airline, but had no idea of how the times related to time back home, so I wrote a little Bash script to calculate times in UTC (my local timezone).
+Both of my children have travelled a fair bit in the past few years. I like to keep track of where they are and how they are progressing through their journeys because otherwise I tend to worry. This one was a reasonably simple journey, two flights via Doha in Qatar, with not too long a wait between them. The overall journey was long of course.
+When my daughter flew out to Indonesia in 2015 (4 flights and a boat trip, over 38 hours travel time) I built a spreadsheet. Just whatever provides a good distraction!
+The rest of the notes, including details of the date command and the script I wrote can be found here.
+Links
+
+GNU documentation for date (You can also use man date or info date for the full details. I prefer the HTML version because I don't like the info tool very much).
+The GNU Bash Reference Manual
+Dann Wasko's "Linux in the Shell" episode hpr1182 :: LiTS 023: Date, which is full of useful information.
+Resources:
+
+The script I wrote, called edi_akl (named to denote the starting and ending airports).
+
+

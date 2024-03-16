@@ -1,0 +1,41 @@
+## hpr3068 :: Keeping track of downloads in Elm
+
+ Background
+I have page that requests several resources from server. To keep track what is going on, I initially had model like:
+type alias Model =
+    { availableChassis : List Chassis
+    , chassisLoaded : Bool
+    , chassisLoading : Bool
+    ...
+    }
+Problem with this is that I have to remember to check those boolean flags while rendering on screen. And it’s possible to have inconsistent state (both loading and loaded).
+Solution
+We can model state with algebraic datatypes and we don’t even have to write it by ourselves as there’s RemoteData library.
+Now we can change our model to following:
+import RemoteData exposing (RemoteData(..), WebData)
+
+type alias Model =
+    { availableChassis : WebData (List Chassis)
+    }
+
+availableChassis has four states it can be in:
+
+NotAsked, data isn’t available and it hasn’t been requested from server
+Loading, data isn’t available, but it has been requested from server
+Success (List Chassis), data has been loaded from server
+Failure Http.Error, there was error while loading data
+
+
+For example, while rendering the view, you could do
+    case model.availableChassis of
+        NotAsked ->
+            renderEmptyTable
+
+        Loading ->
+            renderLoadingTable
+
+        Success chassis ->
+            renderChassisList chassis
+
+        Failure error ->
+            renderErrorMessage error

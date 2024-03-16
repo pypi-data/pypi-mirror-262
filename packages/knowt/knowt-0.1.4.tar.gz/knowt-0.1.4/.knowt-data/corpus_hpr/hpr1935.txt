@@ -1,0 +1,40 @@
+## hpr1935 :: Quick Bashpodder Fix
+
+ 
+Bashpodder is a great Bash script for downloading the latest episodes of podcasts and other media from their feeds.
+
+
+There are a few feeds that are not handled properly by Bashpodder, namely, the TED Talks podcast feed and the NPR digest show called the TED Radio Hour.
+
+
+The URLs for the audio files have a number of additional fields at the end of the string after the media file name, and Bashpodder picks up the last field as if it were the media file name for the show. So every TED Radio Hour episode is called "510298". If you download more than one episode at a time, only the last episode to be saved will survive. Each new file clobbers the last one, because they all get the same filename.
+
+
+Charles in NJ made a simple fix to Bashpodder.shell to correct this problem, and he shares it in this episode.
+
+Links:
+
+Bashpodder: https://lincgeek.org/bashpodder
+
+TED Talks: https://blog.ted.com/audio_podcasts/
+
+TED Radio Hour:  https://www.npr.org/podcasts/510298/ted-radio-hour
+
+
+Additional Resources:
+
+Original version of Bashpodder.shell 
+https://hackerpublicradio.org/eps/hpr1935-bashpodder_original.shell
+
+Revised version with fixes to pick up TED-related podcast files 
+https://hackerpublicradio.org/eps/hpr1935-bashpodder.shell
+
+Abbreviated example of bp.conf configuration file that tells Bashpodder what resources to fetch 
+https://hackerpublicradio.org/eps/hpr1935-bp.conf
+
+Abbreviated example of podcast.log that shows how Bashpodder stores its history, including some sample TED links.
+https://hackerpublicradio.org/eps/hpr1935-podcast.log
+
+
+
+Happy New Year from Charles in NJ. 

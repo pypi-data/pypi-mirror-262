@@ -1,0 +1,12 @@
+## hpr3616 :: Filling free Slots from the Reserve Queue
+
+ 
+In today's show the Janitors discuss how the erratic feast/famine nature of the queue may be helped by filling free slots in the main feed from a reserve queue.
+
+
+The current Emergency Queue would be renamed to the Reserve Queue.
+If a free slot in the calendar is not filled in time, then a show will be used from the Reserve Queue.
+Shows will be taken from the Reserve Queue on a first in first out basis.
+Hosts can either schedule a show for a particular slot or have their shows added to the Reserve Queue.
+Eventually we will we work on a dedicated upload option, but for now hosts can pick a random slot and just make a note in the show notes that the show is intended for the Reserve Queue.
+

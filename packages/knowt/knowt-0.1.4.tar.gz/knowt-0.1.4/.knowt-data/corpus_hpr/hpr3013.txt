@@ -1,0 +1,88 @@
+## hpr3013 :: Bash Tips - 21
+
+ The Environment (More collateral Bash tips)
+Overview
+You will probably have seen references to The Environment in various contexts relating to shells, shell scripts, scripts in other languages and compiled programs.
+In Unix and Unix-like operating systems an environment is maintained by the shell, and we will be looking at how Bash deals with this in this episode. When a script, program or subprocess is invoked it is given an array of strings called the environment. This is a list of name-value pairs, of the form name=value.
+Using the environment
+The environment is used to convey various pieces of information to the executing script or program. For example, two standard variables provided by the shell are 'HOME', which is set to the current user’s home directory and 'PWD, set to the current working directory. The shell user can set, change, remove and view environment variables for their own purposes as we will see in this episode. The Bash shell itself creates and in some cases manages environment variables.
+The environment contains global data which is passed down to subprocesses (child processes) by copying. However, it is not possible for a subprocess to pass information back to the superior (parent) process.
+Viewing the environment
+You can view the environment in a number of ways.
+
+From the command line the command printenv can do this (this is usually but not always a stand-alone command: it’s /usr/bin/printenv on my Debian system). We will look at this command later.
+The command env without any arguments does the same thing as printenv without arguments. This is actually a tool to run a program in a modified environment which we will look at later. The environment printing capability can be regarded as more of a bonus feature.
+Scripting languages like awk (as well as Python and Perl, to name just a few) can view and manipulate the environment.
+Compiled languages such as C can do this too of course.
+There are other commands that will show the environment, and we will look at some of these briefly.
+
+Changing variables in the environment
+The variables in the environment are not significantly different from the shell parameters we have seen throughout this Bash Tips series. The only difference is that they are marked for export to commands and sub-shells. You will often see variables (or parameters) in the environment referred to as environment variables. The Bash manual makes a distinction between ordinary parameters (variables) and environment variables, but many other sources are less precise about this in my experience.
+The standard variables in the environment have upper-case names (HOME, SHELL, PWD, etc), but there is no reason why a variable you create should not be in lower or mixed case. In fact, the Bash manual suggests that you should avoid using all upper-case names so as not to clash with Bash’s variables.
+Variables can be created and changed a number of ways.
+
+They can be set up at login time (globally or locally) through various standard configuration files. It is intended to look at this subject in an upcoming episode so we will leave discussing the subject until then.
+By preceding the command or script invocation with name=value expressions which will temporarily place these variables into the environment for the command
+Using the export command
+Using the declare command with the -x option
+The value of an environment variable (once established) can be changed at any time in the sub-shell with a command like myvar=42, just as for a normal variable
+The export command can also be used to turn off the export marker on a variable
+Deletion is performed with the unset command (as seen earlier in the series)
+
+We will look at all of these features in more detail later in the episode.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+“GNU BASH Reference Manual”
+
+Section “3.7.3 Command Execution Environment”
+Section “3.7.4 Environment”
+
+GNU Coreutils Manual
+
+Section 23.2 env: Run a command in a modified environment
+
+Wikipedia page on the env command
+HPR series: Bash Scripting
+Previous episodes under the heading Bash Tips:
+Episode number
+
+HPR episode 1648 "Bash parameter manipulation"
+HPR episode 1843 "Some Bash tips"
+HPR episode 1884 "Some more Bash tips"
+HPR episode 1903 "Some further Bash tips"
+HPR episode 1951 "Some additional Bash tips"
+HPR episode 2045 "Some other Bash tips"
+HPR episode 2278 "Some supplementary Bash tips"
+HPR episode 2293 "More supplementary Bash tips"
+HPR episode 2639 "Some ancillary Bash tips - 9"
+HPR episode 2649 "More ancillary Bash tips - 10"
+HPR episode 2659 "Further ancillary Bash tips - 11"
+HPR episode 2669 "Additional ancillary Bash tips - 12"
+HPR episode 2679 "Extra ancillary Bash tips - 13"
+HPR episode 2689 "Bash Tips - 14 (Some auxiliary Bash tips)"
+HPR episode 2699 "Bash Tips - 15 (More auxiliary Bash tips)"
+HPR episode 2709 "Bash Tips - 16 (Further auxiliary Bash tips)"
+HPR episode 2719 "Bash Tips - 17 (Additional auxiliary Bash tips)"
+HPR episode 2729 "Bash Tips - 18 (Extra auxiliary Bash tips)"
+HPR episode 2739 "Bash Tips - 19 (Supplemental auxiliary Bash tips)"
+HPR episode 2756 "Bash Tips - 20 (Some collateral Bash tips)"
+
+
+
+Resources:
+
+Examples:
+
+bash21_ex1.sh
+bash21_ex2.sh
+bash21_ex3.awk
+bash21_ex4.sh
+bash21_ex5.sh
+bash21_ex6.sh
+bash21_ex6_1.cfg
+bash21_ex6_2.cfg
+
+
+

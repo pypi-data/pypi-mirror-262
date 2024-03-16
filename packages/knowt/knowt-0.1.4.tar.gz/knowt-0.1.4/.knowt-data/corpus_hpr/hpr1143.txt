@@ -1,0 +1,134 @@
+## hpr1143 :: The N Days of Christmas? Intro to Recreational Math
+
+ 
+Hacker Public Radio: 206 203 5729
+
+The N Days of Christmas? Intro to Recreational Math
+Part Zero: Calendar Counting
+
+First episode of HPR that contains a direct discussion of a math topic.
+ - Episode 479 Ohio Linux Fest, Klaatu interviews DWick about math 
+      software for Linux
+      
+ - Episode 523 Using Petunia software to teach math
+
+
+Inspired by a traditional song that is proof that some songs do not
+   need to be recorded by William Shatner to be annoying.
+ - Repetitive and formulaic
+ - Involves a lot of counting, and that's our focus here. 
+ 
+ 
+What is the 12 Days of Christmas?
+ - Starts on Christmas Day, runs through the day before the next Season
+ - Hint: That's 'Epiphany', which starts January 6.
+ - Counting calendar days comes hard, so we tend to use our fingers
+ - Turns out that using our fingers is quite mathematical. Here's why.
+ 
+Finger Counting: How do I count Twelve Days?
+ - Let's start easy, with the fingers on one hand. My hands have five.
+ - To name the Five Days of New Years is easy: January 1-5 <done>
+ 
+ - What about the Five Days of Christmas?
+        Physical way                   General way
+   * Christmas Day gets 1 (thumb)     Dec 25 is one day after Dec 24
+   * Dec 26 gets 2 (index)            26 - 24 = 2 days
+   * Dec 27 gets 3 (salute finger)    27 - 24 = 3 days
+   * Dec 28 gets 4 (ring)             28 - 24 = 4 days
+   * Dec 29 gets 5 (pinky)            29 - 24 = 5 days
+ 
+ - Notice that counting 5 days, starting with Dec 25, is the same
+     as numbering the days after Dec 24 (Christmas Eve).
+   * In math, we call this "1-1 correspondence with natural numbers"
+   * Math can give you the same certainty as using your fingers.  
+   * But it handles larger problems, because you don't run out.
+ 
+ - Example: I'm booked to speak on Day 4 of a 5-day conference
+   * Starts on the 25th of the month
+   * When do I have to show up?
+     - Wrong: Add 4 to first day (25), and arrive a day late.
+     - Correct: Add 4 to date of pre-registration cocktail party (24),
+          and arrive on time.
+      
+ - OK. Back to Twelve Days of Christmas.  
+   * The labeling approach tells us that December can hold only the 
+       first seven of the Twelve Days of Christmas, 
+   * December 31 - December 24 gives me 7 days.
+ 
+ 
+ Partitioning: Adding hands full of additional fingers as needed
+  - How do we handle the case where we go into the next month?
+  - Key insight: Running out of December days for the Twelve Days is 
+       like running out of fingers on one hand when we count to 8.
+  - We are so good at counting on our fingers that we don't recognize 
+       the act of partitioning the number 8 between our two hands.
+    *  Left hand gets 1, 2, 3, 4 and 5.
+    *  Right hand picks up 6, 7 and 8 by mapping them to fingers 1,2,3.
+
+  - To count even higher, we could:
+      1) keep borrowing other people's hands, or
+      2) track the number of times we reuse our two hands as we go
+    
+    * First method mirrors calendar math ("Annexing" hands, or months)
+    * Second is positional notation ("base 10" and all that)
+
+
+Back to the Twelve Days
+ - I have Twelve Days: 1, 2, ... 12 to assign to dates, even though I 
+     may only be interested in the first and last dates right now.
+   * Start: How many can I fit into December?
+   * December 31st is last. It gets assigned 31 - 24, or 7. 
+   * By "finger math", that means I have mapped 7 of the Twelve Days
+   * That leaves 12 - 7, or 5 days into January.
+ 
+ - Who can tell me which days are assigned in January? Anyone?
+   * That's right, Ken.  January 1, 2, 3, 4 and 5.
+   * So the Twelve Days of Christmas runs 25 December to 5 January 
+
+
+Question: What if there were 72 Days of Christmas?  When would it end?
+ - Note: Don't worry.  This is purely hypothetical.
+
+ - Let's attack this with finger math, with partitioning and annexing
+   * December, as we have seen, accounts for 7 days: 25 through 31
+   * That leaves 72 - 7, or 65 days
+   * January easily picks up 31 days: 1 to 31, leaving 65 - 31 = 34 days
+   * February can handle either 28 days, or 29 on a leap year.
+   * This leaves us either 5 or 6 days into March
+
+ - Final Answer: 72 Days of Christmas would run from Christmas until the
+     following March 5 (leap year), or March 6 (all other years).
+   * On Day 73, everyone would enter treatment for Christmas overdose.
+
+Let's check the answer: Day 72 would end ten weeks and 2 days after 
+   the opening cocktail party (Monday). So Day 72 should be Wednesday.
+   * Next year is not a leap year, so last day is March 6.
+   * By the Doomsday perpetual calendar method, Feb 28 is Thursday.
+   
+   Doomsday method: https://en.wikipedia.org/wiki/Doomsday_rule
+   
+   * So March 7 is Thursday, and March 6 is Wednesday.
+   * It worked.
+ 
+Why should I bother with Calendar Math?
+ - I learn to look for ways to partition hard problems into easier ones.
+ - I learn the same skills that I'll need to debug "off-by-one" errors
+     and other boundary violations, which kill you in C programs.
+ - I will never miss a speaking engagement, as long as I count my 
+     Conference Days from the cocktail party, not from the Keynote.
+
+
+Next episode: Part One
+  Counting partridges and gold rings with Pascal
+  - Warning: There will be two semi-magic formulas at the end.
+  - I'll show you an easy way to do running sums in a spreadsheet.
+  - You can skip the formulas, and I'll never know.
+  - Since this is HPR, not school.  We can look up the formulas.
+
+
+Contact: Charles in NJ
+Email: catintp@yahoo.com
+
+Charlie + Alpha + Tango + India + November + Tango + Papa.
+
+

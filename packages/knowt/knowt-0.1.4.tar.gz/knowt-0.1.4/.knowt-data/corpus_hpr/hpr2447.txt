@@ -1,0 +1,25 @@
+## hpr2447 :: Server Basics 104 OpenVPN Server
+
+ In this episode, Klaatu demonstrates how to:
+
+
+
+Install OpenVPN
+
+
+Generate certificates for your OpenVPN server
+
+
+Generate a private key for your OpenVPN server
+
+
+Configure the /etc/openvpn/server.conf file
+
+
+Start the OpenVPN daemon
+
+
+In case it is not clear, you can follow along with Klaatu, using the exact same options and configuration values as he is using for a successful install. You do not need to change
+In the next episode, he will demonstrate how to do all of the above for OpenVPN clients.
+
+VPN is a big topic that warrants a whole miniseries unto itself, so this and the next episode concentrate on getting a VPN up and running, with clients connected and pinging back to the server on a dedicated subnet. Additional config options based on your specific use-case are left for you to explore on your own.

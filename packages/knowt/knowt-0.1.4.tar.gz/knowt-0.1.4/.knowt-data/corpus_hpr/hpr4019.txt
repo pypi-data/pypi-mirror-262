@@ -1,0 +1,55 @@
+## hpr4019 :: Fairy lights and Powerful Pixies
+
+ 
+'Twas the night before Christmas, when all through the house Not a
+creature was stirring, not even a mouse;
+
+OK wrong story.
+
+In his lonely man cave, a HPR Janitor is visited by the ghost of
+procrastination. Two years later he is again visited, but this time by
+the ghost of desperation. And then finally by the ghost of rambling.
+
+Today we learn about AC and DC voltage, about Ohms Law and how to
+wire up a LED to a USB connector.
+A long rambling show which in the end came down to using ohms law to
+find the value of the resister.
+Knowing any 2 of the 3 values in Ohms law will give us the resistor
+we need.
+The current will be the same, so we can just measure, and it turns
+out to be 22 mA (milliamperes) or 0.022 amp. This is measured in Amps,
+and has the symbol I
+The voltage we need to use up is 2 volts as we are going from 5 Volts
+USB AC Adapter to 3 Volts used by the two AA battery in series. Giving
+us 2 Volts with unit of V.
+We can then find the Resistance measured in Ohms by dividing 2 Volts,
+by 0.022 Amps to give us 90 Ohms of Resistance.
+The V is always on top of the triangle with I and R underneath.
+So not having a 90 Ohm resistor a 100 Ohm would work just as
+well.
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.electronics-tutorials.ws/diode/diode_8.html
+https://en.wikipedia.org/wiki/Light-emitting_diode
+https://www.wolframalpha.com/input?i=.022+amp
+https://www.eevblog.com/forum/projects/smd-led-size-for-beginners/
+https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds/all
+https://www.electronicshub.org/led-light-emitting-diode/
+https://en.wikipedia.org/wiki/Resistor
+https://en.wikipedia.org/wiki/Coulomb
+https://en.wikipedia.org/wiki/Ampere
+https://en.wikipedia.org/wiki/Georg_Ohm
+https://en.wikipedia.org/wiki/Ohm
+https://en.wikipedia.org/wiki/AA_battery
+

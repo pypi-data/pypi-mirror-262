@@ -1,0 +1,99 @@
+## hpr3817 :: The Oh No! News.
+
+ The Oh No! news.
+Oh No! News is Good News.
+
+
+firewalltimes:
+Recent Data Breaches – 2023.
+
+sec:
+On January 5, 2023, - T-Mobile Discloses Data Breach Affecting 37
+Million Customers.
+On January 5, 2023, T-Mobile US, Inc. identified that a bad actor
+was obtaining data through a single Application Programming Interface
+(“API”) without authorization.
+
+bleepingcomputer:
+TruthFinder, Instant Checkmate confirm data breach affecting 20M
+customers.
+
+instantcheckmate:
+2019 Account List Data Security Incident.
+truthfinder:
+2019 Account List Data Security Incident.
+"We learned recently that a list, including name, email, telephone
+number in some instances, as well as securely encrypted passwords and
+expired and inactive password reset tokens, of Instant Checkmate
+subscribers was being discussed and made available in an online forum.
+We have confirmed that the list was created several years ago and
+appears to include all customer accounts created between 2011 and 2019.
+The published list originated inside our company."
+
+sec:
+SEC Charges NBA Hall of Famer Paul Pierce for Unlawfully Touting and
+Making Misleading Statements about Crypto Security.
+
+The Securities and Exchange Commission today announced charges
+against former NBA player Paul Pierce for touting EMAX tokens, crypto
+asset securities offered and sold by EthereumMax, on social media
+without disclosing the payment he received for the promotion and for
+making false and misleading promotional statements about the same crypto
+asset. Pierce agreed to settle the charges and pay $1.409 million in
+penalties, disgorgement, and interest.
+
+sec:
+SEC Charges Terraform and CEO Do Kwon with Defrauding Investors in
+Crypto Schemes.
+
+The Securities and Exchange Commission today charged Singapore-based
+Terraform Labs PTE Ltd and Do Hyeong Kwon with orchestrating a
+multi-billion dollar crypto asset securities fraud involving an
+algorithmic stablecoin and other crypto asset securities.
+
+discourse.ubuntu:
+Ubuntu Flavor Packaging Defaults.
+
+To maintain this focus while also providing user choice, Ubuntu and
+its flavors consider debs and snaps the default experience. Users have
+the freedom of choice to get their software from other sources,
+including Flatpak. A way to install these alternatives is, and will
+continue to be, available for installation from the Ubuntu archive with
+a simple command.
+
+
+
+
+References (APA format).
+
+Heiligenstein,
+M. X. (2023, January 27). Recent Data Breaches - 2023.
+Firewalltimes. https://firewalltimes.com/recent-data-breaches/
+U.S. Securities and Exchange Commission (2023, January 19). Form 8-K
+[T-Moble data breach]. SEC. https://www.sec.gov/ix?doc=/Archives/edgar/data/0001283699/000119312523010949/d641142d8k.htm
+Abrams, L. (2023, February 3) TruthFinder, Instant Checkmate confirm
+data breach affecting 20M customers. bleepingComputer. https://www.bleepingcomputer.com/news/security/truthfinder-instant-checkmate-confirm-data-breach-affecting-20m-customers/
+instantcheckmate. (2023, January). 2019 Account List Data Security
+Incident. instantcheckmate. https://www.instantcheckmate.com/security-incident-alert/
+truthfinder. (2023, January). 2019 Account List Data Security
+Incident. truthfinder. https://www.truthfinder.com/security-incident-alert/
+U.S. Securities and Exchange Commission (2023, February 17). SEC
+Charges NBA Hall of Famer Paul Pierce for Unlawfully Touting and Making
+Misleading Statements about Crypto Security. SEC. https://www.sec.gov/news/press-release/2023-34
+U.S. Securities and Exchange Commission (2023, February 16). SEC
+Charges Terraform and CEO Do Kwon with Defrauding Investors in Crypto
+Schemes. SEC. https://www.sec.gov/news/press-release/2023-32
+@kewisch (2023,
+February 21). Ubuntu Flavor Packaging Defaults. [Ubuntu Discourse]. https://discourse.ubuntu.com/t/ubuntu-flavor-packaging-defaults/34061
+Ljubuncic
+I. (2019, August 29). A technical comparison between snaps and debs.
+ubuntu. https://ubuntu.com/blog/a-technical-comparison-between-snaps-and-debs
+[ts.] (2022, March 22). Re: apt installs snap packages. ubuntu
+lists. https://lists.ubuntu.com/archives/foundations-bugs/2022-March/470881.html
+Tilloy O. (2022, February 7). Re: If apt installs snap package, then
+warn, because maybe i dont want snap package. ubuntu lists. https://lists.ubuntu.com/archives/foundations-bugs/2022-February/468140.html
+@reducing
+activity (2021, June 12). How can I stop apt from installing snap
+packages? askubuntu. https://askubuntu.com/questions/1345385/how-can-i-stop-apt-from-installing-snap-packages
+
+

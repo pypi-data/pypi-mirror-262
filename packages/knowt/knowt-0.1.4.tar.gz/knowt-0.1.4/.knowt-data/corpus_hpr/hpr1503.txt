@@ -1,0 +1,21 @@
+## hpr1503 :: Making Waves-The DSO Pocket Oscilloscope
+
+ 
+NYbill discusses the DSO Pocket Oscilloscope v3. A few test circuits are set up to put the scope through its paces. 
+
+
+The DSO at Adafruit:
+https://www.adafruit.com/products/468
+
+
+The 555 timer chip:
+https://electronicsclub.info/555timer.htm#astable
+
+
+The script used to blink the Teensy:
+https://www.pjrc.com/teensy/loader_linux.html
+
+
+Pictures for the episode:
+https://media.gunmonkeynet.net/u/nybill/collection/pics-for-an-hpr-ep-making-waves/
+

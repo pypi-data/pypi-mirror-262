@@ -1,0 +1,62 @@
+## hpr2793 :: bash coproc: the future (2009) is here
+
+ If you want the full manuscript, that’s at gitlab: hpr2793_bash_coproc_manuscript.adoc. It’s almost a transcript, but I added spontaneous commentary while reading the examples, so that’s not in the manuscript.
+Episode errata:
+
+Command substitution with $() is perfectly valid according to POSIX, and is accepted both by dash and by bash --posix. It’s not to be considered a bashism.
+I fumbled the pronunciation of the printf format string in one place and said "parenthesis" instead of "percentage sign".
+I tried to say "space" every time there’s a space, but I know I forgot it in a few places. But you probably need to look at the show notes to really make sense of the commands anyway.
+
+Example #1:
+$ echo $(echo hacker public radio)
+hacker public radio
+$ $(echo echo hacker public radio)  # It can even supply the command itself, not just parameters. Note the word splitting.
+hacker public radio
+$ "$(echo echo hacker public radio)"  # Counteract word splitting by putting the command substitution in quotes.
+bash: echo hacker public radio: command not found
+$ `echo echo hacker public radio`  # Old-style command substitution
+hacker public radio
+More on command substitution in Dave’s hpr1903: Some further Bash tips.
+Example #2:
+$ echo <(echo hacker public radio)
+/dev/fd/63
+$ cat <(echo hacker public radio)
+hacker public radio
+You can also combine process substitution with redirection.
+Example #3:
+$ echo hacker public radio > >(sed -e 's/$/!/')  # You need the space between the greater-thans here!
+hacker public radio!
+More on process substitution in Dave’s hpr2045: Some other Bash tips.
+For a description of a hack for creating bidirectional anonymous pipes in bash, see my Fediverse post on this, and I owe you a show.
+A coprocess in bash is a subshell to which you have access to two file descriptors: Its stdin and its stdout.
+The two file descriptors will be put in a bash array. To learn more about arrays, check out Dave’s series within the bash series, a whopping five-part quadrology including hpr2709, hpr2719, hpr2729, hpr2739 and hpr2756.
+You create a coprocess using the coproc keyword, brand spanking new since bash 4 from 2009. I am filing issues to pygments and GNU src-highlite to support it.
+There are two ways to call coproc. The first way is to give coproc a simple command.
+Example #4:
+$ coproc :; declare -p COPROC
+[1] 25155
+declare -a COPROC=([0]="63" [1]="60")
+[1]+  Done                    coproc COPROC :
+The other way is to give coproc an explicit name and a Command Grouping.
+Example #5:
+$ coproc HPR (:); declare -p HPR
+[1] 25469
+declare -a HPR=([0]="63" [1]="60")
+[1]+  Done                    coproc HPR ( : )
+Slightly less contrived example #6:
+$ coproc GREP (grep --line-buffered pub); printf '%s\n' hacker public radio >&${GREP[1]}; cat <&${GREP[0]}
+[1] 25627
+public
+^C
+$ kill %1
+[1]+  Terminated              coproc GREP ( grep --color=auto --line-buffered pub )
+Here grep and cat wait forever for more input, so we have to kill them to continue our lesson.
+But we know that GREP will only return one line, so we can just read that one line. And when we are done feeding it lines, we can close our side of its stdin, and it will notice this and exit gracefully.
+I’m glad I stumbled over that {YOURVARIABLE}>&- syntax for having a dereferenced variable as the left FD of a redirection. Originally I used an ugly eval.
+Example #7:
+$ coproc GREP (grep --line-buffered pub); printf '%s\n' hacker public radio >&${GREP[1]}; head -n1 <&${GREP[0]}; exec {GREP[1]}>&-
+[1] 25706
+public
+[1]+  Done                    coproc GREP ( grep --color=auto --line-buffered pub )
+There we go! Not the most brilliant example, but it shows all the relevant moving parts, and we covered a couple of caveats.
+Now go out and play with this and come back with an example on how this is actually useful in the real world, and submit a show!

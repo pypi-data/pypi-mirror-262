@@ -1,0 +1,38 @@
+## hpr1732 :: Renovating another Public-Domain Counterpoint Textbook
+
+ 
+I mistakenly referred to episode 1516 while I was speaking. I meant to say 1512. The two musical bumpers I used in the show are by J.S. Bach, examples 90 and 91 in the textbook "Applied Counterpoint," by Percy Goetschius. These are my own MIDI renditions so they have no copyright burden upon them. 
+
+
+My html-to-epub conversion command (requires calibre): 
+
+
+ebook-convert foobar.html foobar.epub \
+--output-profile=tablet \
+--disable-font-rescaling \
+--smarten-punctuation \
+--change-justification=left \
+--preserve-cover-aspect-ratio \
+--cover=./pathto/cover.jpg \
+--use-auto-toc \
+--level1-toc "//h:h1" \
+--level2-toc "//h:h3"
+
+Links
+
+hpr1512 :: Adopting and Renovating a Public-Domain Counterpoint Textbook: https://hackerpublicradio.org/eps.php?id=1512
+
+The counterpoint page on my website, with links to all versions of the counterpoint textbooks I mentioned: https://jonathankulp.org/gratis.html
+
+My handy E-Reader App Compatibility Chart: https://jonathankulp.org/ereader_compatibility_tables.html
+
+Blog post "Why Renovate an Old Counterpoint Book?":  https://jonathankulp.org/goetschius_rationale.html
+
+Calibre: https://calibre-ebook.com/
+
+Manual for Calibre's Command Line Interface: https://manual.calibre-ebook.com/cli/cli-index.html
+
+Monocle embedded eBook reader project: https://monocle.inventivelabs.com.au/
+
+
+

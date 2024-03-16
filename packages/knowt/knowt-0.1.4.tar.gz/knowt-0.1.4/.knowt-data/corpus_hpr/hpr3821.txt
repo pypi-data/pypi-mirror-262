@@ -1,0 +1,153 @@
+## hpr3821 :: The Oh No! News.
+
+ The Oh No! news.
+Oh No! News, is Good
+News.
+
+
+Threat analysis; your attack surface.
+
+TAGS: Malware, Phishing, Security Breach
+
+GoDaddy, a Web Hosting Provider Hit Multiple Times by the
+Same Group.
+
+This month, GoDaddy, a leading web hosting provider, revealed that
+it had experienced a major security breach over several years, resulting
+in the theft of company source code, customer and employee login
+credentials, and the introduction of malware onto customer
+websites.
+Major Security Breach: Spanning several years.
+
+Data Breach:
+Employee login credentials & customer data.
+10-k
+form Filled with the U.S. Securities and Exchange Commission.
+sec:
+GoDaddy Announces Security Incident Affecting Managed WordPress
+Service.
+Malware:
+Compromising customer websites managed by GoDaddy.
+Phishing Attacks: Exposed customer data including login credentials,
+email addresses, and SSL private keys.
+
+
+Chick-Fil-A Customers are Victims of a Data Breach.
+
+Fast-food chain Chick-fil-A has issued a warning to customers
+regarding a recent data security breach. The incident occurred between
+Dec. 18, 2022 and Feb. 12, 2023, during which unauthorized parties
+gained access to customer information, according to a statement posted
+on the California Attorney General’s website on Tuesday.
+
+Data Breach:
+membership numbers, mobile pay numbers, QR codes, last 4 digits of
+credit/debit card numbers, credits on Chick-fil-A accounts, birthdays,
+phone numbers, and addresses.
+
+
+New phishing campaign uses fake ChatGPT platform to scam
+eager investors.
+
+Bitdefender Antispam Labs confirmed that these scams initiate with
+an email containing a link that directs users to a copycat version of
+ChatGPT. The goal of this copycat version is to convince users that they
+can earn as much as $10,000 per month on the duplicate ChatGPT
+platform.
+Phishing: Email
+based scam.
+
+LassPass Security Incident Update and Recommended
+Actions.
+
+Major Security Breach: Spanning multiple years.
+
+Data Breach:
+Employee login credentials, source code & other intellectual
+property, customer data.
+Malware:
+Attackers exploited third-party software to compromise company systems
+by delivering a keylogger type malware.
+
+
+
+
+
+InfoSec; the language of security.
+
+TAGS: Information Security, Monitoring
+
+Bitwarden flaw can let hackers steal passwords using
+iframes.
+
+Bitwarden highlights that the autofill feature is a potential risk
+and even includes a prominent warning in its documentation,
+specifically mentioning the likelihood of compromised sites abusing the
+autofill feature to steal credentials.
+Phishing: Sniff
+credentials from a webpage HTML inline frame.
+wikipedia:
+An inline frame places another HTML document in a frame. Unlike an
+<object /> element, an <iframe> can be the "target" frame
+for links defined by other elements, and it can be selected by the user
+agent as the focus for printing, viewing its source, and so on. The
+content of the element is used as alternative text to be displayed if
+the browser does not support inline frames. A separate document is
+linked to a frame using the src attribute inside the <iframe />,
+an inline HTML code is embedded to a frame using the srcdoc attribute
+inside the <iframe /> element. First introduced by Microsoft
+Internet Explorer in 1997, standardized in HTML 4.0 Transitional,
+allowed in HTML5.
+
+
+
+
+User space.
+
+TAGS: Solutions, Services
+
+Flathub’s Got Big Plans for 2023.
+
+Developers are flocking to Flathub in droves, which means users are
+too, and even Linux distributions (well, bar one) are getting in on the
+action by making making it easier to install apps from Flathub with the
+friction of setting things up using terminal commands or odd sounding
+download files.
+Flathub Beta site: Welcome
+to Flathub, the home of hundreds of apps which can be easily installed
+on any Linux distribution. Browse the apps online, from your app center
+or the command line.
+
+
+
+
+References (APA format).
+
+CySecurity News. (2023, March 01). [GoDaddy Hit Multiple Times by
+the Same Group]. CySecurity. https://www.cysecurity.news/2023/03/godaddy-web-hosting-provider-hit.html
+Gatlan S. (2021, November 22). [GoDaddy data breach hits 1.2 million
+Managed WordPress customers]. Bleepingcomputer. https://www.bleepingcomputer.com/news/security/godaddy-data-breach-hits-12-million-managed-wordpress-customers/
+GoDaddy. (2023, February 16). Statement on recent website redirect
+issues. GoDaddy. https://aboutus.godaddy.net/newsroom/company-news/news-details/2023/Statement-on-recent-website-redirect-issues/default.aspx
+Gatlan S. (2020, May 04). GoDaddy notifies users of breached hosting
+accounts. Bleepingcomputer. https://www.bleepingcomputer.com/news/security/godaddy-notifies-users-of-breached-hosting-accounts/
+Ilascu I. (2019, April 26). Hundreds of GoDaddy Accounts Used for
+"Miracle" Product Scams. Bleepingcomputer. https://www.bleepingcomputer.com/news/security/hundreds-of-godaddy-accounts-used-for-miracle-product-scams/
+Cross T. (2023, March 08). Chick-Fil-A Customers are Victims of a
+Data Breach. Safetydetectives. https://www.safetydetectives.com/news/chick-fil-a-customers-are-victims-of-a-data-breach/
+Oguejiofor-Abugu K. (2023, March 07). New phishing campaign uses
+fake ChatGPT platform to scam eager investors. Safetydetectives. https://www.safetydetectives.com/news/new-phishing-campaign-uses-fake-chatgpt-platform-to-scam-eager-investors/
+Toulas B. (2023, March 08). Bitwarden flaw can let hackers steal
+passwords using iframes. Bleepingcomputer. https://www.bleepingcomputer.com/news/security/bitwarden-flaw-can-let-hackers-steal-passwords-using-iframes/
+Toubba K. (2023, March 01). Security Incident Update and Recommended
+Actions. LassPass. https://blog.lastpass.com/2023/03/security-incident-update-recommended-actions/
+Toubba K. (2022, December). Incident 2 – Additional details of the
+attack. LassPass. https://support.lastpass.com/help/incident-2-additional-details-of-the-attack
+Toubba K. (2023, February). What have we done to secure LastPass.
+LassPass. https://support.lastpass.com/help/what-have-we-done-to-ensure-lastpass-is-safe-to-use
+Sneddon J. (2023, March 07). Flathub’s Got Big Plans for 2023. OMG
+ubuntu. https://www.omgubuntu.co.uk/2023/03/flathub-has-big-plans-for-2023
+McQueen R. (2023, March 07). [The personal blog of Robert McQueen].
+ramcq. https://ramcq.net/2023/03/07/flathub-in-2023/
+
+

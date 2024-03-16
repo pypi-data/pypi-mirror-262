@@ -1,0 +1,75 @@
+## hpr3089 :: For my Entertainment
+
+ Reasoning.
+I have a file server with Slackware running on a Pi4. I wanted to make themovies and TV Shows easily accessible on the TV without using a DVD or Blu rayplayer.
+It would give my wife and I a chance to sit and watch a show without muchfuss. The latest show we are on is Sue Thomas F.B. Eye.The main character, Sue has been deaf from about the age of 4 years.She is adept at reading lips and learned to speak despite being deaf.
+https://en.wikipedia.org/wiki/Sue_Thomas:_F.B.Eye
+Hardware.
+The Pi4 is enclosed in a stripped out power supply that died on me. The fanstill worked, so I wired it to the Pi on the 5v line. It runs at half thespeed it was designed for, but that makes it run almost silent. With theheatsinks added, stays about 35C when idle and 50C when encoding video.
+Pi Networking.
+I have 2 Pi's connected via ethernet. One is on 192.168.2.5 with a gateway of192.168.2.6, with the other on 192.168.2.6 with a gateway of 192.168.2.5.Essentially just a crossover network. The reason for this is running Kodi on Pi4has choppy video, but is better at running video encoding. So I linked it to aPi3 to run Kodi via a samba share from the Pi4.
+Used OSMC for the kodi interface.It was the distribution that was stable on my Pi and booted right to the Kodiinterface.
+https://osmc.tv/download/
+lsblk - List block devicesdd status=progress if=osmc.img of=/devsdX
+Installing Slackware.
+Get sourceshttps://sarpi.fatdog.eu/index.php?p=getslack
+root@mynixbox:/tmp# mkdir /slackarm
+root@mynixbox:/tmp# mount /dev/sdc1 /slackarm
+root@mynixbox:/tmp# cd /slackarm
+root@mynixbox:/slackarm#
+To download Slackware ARM 14.2, type the following at the command prompt:
+root@mynixbox:/slackarm# rsync -Prv --deleteftp.slackware.uk::slackwarearm/slackwarearm-14.2 .
+[FatDog says ...] DON'T forget the period "." at the end of the rsync commandor it won't work!
+I made a directory called extras, under the /slackarm directory
+https://sarpi.fatdog.eu/index.php?p=rpi4getcurrent
+upgradepkg --install-new (for each of these packages, after finishing the main Slackware installation.)
+System Packages
+kernel_sarpi4-5.4.40-armv7l-1_slackcurrent_13May20_sp1.txz 
+kernel-modules-sarpi4-5.4.40-armv7l-1_slackcurrent_13May20_sp1.txz 
+sarpi4-boot-firmware-armv7l-1_slackcurrent_13May20_sp1.txz
+sarpi4-hacks-4.0-armv7l-1_slackcurrent_13May20_sp1.txz
+Partitioning example
+After mounting the sd card listed by the lsblk command, run cfdisk /dev/mmcblk0 to partition the card.
+mmcblk0 179:0 0 59.5G 0 disk |-mmcblk0p2 179:2 0 4G 0 part [SWAP]|-mmcblk0p3 179:3 0 55.3G 0 part /`-mmcblk0p1 179:1 0 150M 0 part root@slack-server:mark # df -h / Filesystem Size Used Avail Use% Mounted on /dev/root 55G 25G 28G 48% /
+
+mkfs.vfat /dev/mmcblk0p1mkswap /dev/mmcblk0p2
+Samba snippet
+[MediaServer.Movies]path = /mnt/media2/Movies/writable = nobrowsable = yesread only = noguest ok = nopublic = no
+fstab snippet (Kodi)
+//192.168.2.5/MediaServer.Movies /mnt/Movies cifs noauto,users,username=mark,password=*********** 0 0
+Script to connect to the wifi network
+mark@osmc:~$ cat /usr/bin/net.sh#!/bin/bashconnmanctl enable wificonnmanctl connect wifi_HASH_managed_psk
+Systemd service file
+mark@osmc:~$ cat /lib/systemd/system/net.service[Unit]Description=Wifi network auto connect on bootAfter=http-time.service
+[Service]Type=simpleRestart=alwaysExecStart=/bin/bash /usr/bin/net.sh 
+[Install]WantedBy=multi-user.target
+Edit:
+Since I sent the show notes, I had problems using the GUI way to set up a static IP address on the OSMC section. Here is a more concise way to go about
+it.
+https://discourse.osmc.tv/t/solved-setting-ip-static/1439/14
+It seems OSMC uses connman, so in order to create an ethernet static IP:
+
+
+Create a config file with your editor:
+sudo vim /var/lib/connman/osmc.config
+
+
+
+Add the following contents:
+[global]
+Name = OSMC
+Description = OSMC static network configuration
+[service_osmc]
+Type = ethernet
+IPv4 = 192.168.0.21/255.255.255.0/192.168.0.1
+Nameservers = 8.8.8.8,8.8.4.4
+
+Make sure to change the IPv4 line to match your own network/netmask/gateway and Nameservers to use the ones you want.
+
+
+Reboot your RPi or restart the connman service:
+sudo systemctl restart connman
+
+
+
+If you opt to restart connman, you’ll loose the connection.

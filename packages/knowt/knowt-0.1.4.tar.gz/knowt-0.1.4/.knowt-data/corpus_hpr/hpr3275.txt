@@ -1,0 +1,41 @@
+## hpr3275 :: D1 Mini Close Lid to Scan
+
+ wemos-close-to-scan
+Use a Wemos to monitor if the lid is open or closed on a network scanner.
+
+https://github.com/kenfallon/wemos-close-to-scan
+https://hackerpublicradio.org/eps.php?id=3275
+
+History
+In episode hpr2430 :: Scanning books, I had a bash file trigger a network scan. This required two steps, one to close the lid and the next to press a key for scantoimage.bash to trigger the next page of the scan.
+In the intervening time I looked at several solutions to improve this situation.
+The most obvious step was to put a magnetic switch on the scanner lid so that a device could detect the lid been closed.
+I tried a Raspberry PI but my scanner drivers are only available for Intel and not Arm. Then then accessing the pi using Remote GPIO, but it got very complex to setup and run.
+Inspired by hpr3077 :: Video conference Push to Talk Hosted by DanNixon on 2020-05-19, I tried using an arduino talking over serial to a Intel Compute Stick. But that was very flakey.
+Hardware
+Finally I settled on using a Clone of LOLIN D1 mini, and some Reed Contacts.
+
+Makerfire D1 Mini NodeMcu 4M Bytes Lua WIFI Development Board Base on ESP8266 ESP-12F N Compatible NodeMcu Arduino
+https://www.digikey.com/en/products/detail/zf-electronics/MP201801/361987
+https://switches-sensors.zf.com/us/product/magnetic-position-sensor-mp2018/
+ZF MP201801 Reedcontact 1x NO 175 V/DC, 175 V/AC 500 mA 10 W
+ZF AS201801 Bedienmagneet voor reedcontact
+
+Wiring
+Wire one end of the reed contact to 3.3v, and the other end to ground via a 10K resistor.
+Have a sensor wire go from the 10K resistor to pin D5 on the D1 Mini.
+
+
+
+Code
+D1 Mini
+See wemos-close-to-scan.ino
+Laptop
+See wemos-scantoimage.bash
+Operation
+
+Plug in D1 Mini and monitor the serial port to get its IP Address.
+Change the server="YOUR-WEMOS-IP-ADDRESS" in wemos-scantoimage.bash to the ip address.
+Change the image_path="/PATH/TO/YOUR/SCANS/" in wemos-scantoimage.bash to where your want the files saved.
+Close scanner and scan.
+

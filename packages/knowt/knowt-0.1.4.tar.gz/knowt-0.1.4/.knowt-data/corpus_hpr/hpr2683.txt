@@ -1,0 +1,12 @@
+## hpr2683 :: Using Open source tools to visualize the heartrate and blood oxygen saturation level of my stepchild
+
+ Using Python, PHP, JQuery and Linux to visualize the heartrate and blood oxygen saturation level of my stepdaughter.
+Jeroen Baten talks about how he used his knowledge of a couple of open source tools to visualize the heartrate and oxygen saturation in the blood of one of his children and how this aided a pediatrician at the Wilhelmina childrens hospital to come to the right conclusion and treatment. This talk is a mix of tech and 43 surgery sessions on one single human being.
+Links
+Details, including source code, graphs and all can be found
+here:
+https://www.jeroenbaten.nl/cardio-oxygen-saturation-monitoring-home/
+
+Editor's Note
+Jeroen's link above was added after the show had been aired.
+

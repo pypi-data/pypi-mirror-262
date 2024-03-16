@@ -1,0 +1,45 @@
+## hpr3485 :: 50 years since the 1st Edition of Unix was published
+
+ top ten of the first unix commands
+50 years after the 1st Edition of Unix was published, Ken (Fallon not Thompson) checks his unix like computer to see how many commands still exist (38) and how many are not installed by default (23).
+Thanks to @bsdimp on twitter for the post. Also to @atoponce@fosstodon.org and @obra@mastodon.social for the tip.
+Packages I don't have installed
+Many are available under another name but I have not installed them. Seven of the of the twenty two relates to tapes.
+
+B     -- language
+bas   -- basic
+bcd   -- binary coded decimal conversion
+boot  -- reboot system
+chdir -- change working directory
+check -- file system consistency check
+db    -- debug
+dbppt -- dump binary paper tape
+dsw   -- delete interactively
+dtf   -- DECtape format
+for   -- fortran
+form  -- form letter generator
+hup   -- hang up typewriter
+lbppt -- load binary paper tapes
+rew   -- rewind tape
+rkd   -- dump RK disk to tape
+rkf   -- format RKO3 disk pack
+rkl   -- reload RK disk from tape
+roff  -- format text
+sdate -- set date and time
+tap   -- manipulate DECtape
+tm    -- provide time information
+un    -- undefined symbols
+
+Top 10 most popular 50 year old commands !
+
+     1  10108 ls
+     2   2847 find
+     3   1985 rm
+     4   1482 mv
+     5    887 cat
+     6    649 for
+     7    544 mkdir
+     8    341 cp
+     9    280 rmdir
+    10    202 df
+

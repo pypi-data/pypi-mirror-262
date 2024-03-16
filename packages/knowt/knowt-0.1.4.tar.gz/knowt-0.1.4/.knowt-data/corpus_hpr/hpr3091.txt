@@ -1,0 +1,158 @@
+## hpr3091 :: fuguserv
+
+ 
+Where you can go to get your copy of the fuguita OS.
+https://fuguita.org
+Additional book references.
+https://nostarch.com/pf3
+https://nostarch.com/obenbsd2e
+
+The files I cover in the /etc/ directory first..
+dhclient.conf
+interface "em0" {
+#      ignore domain-name-servers;
+      reject 192.168.1.1;
+}
+#supersede domain-name-servers 127.0.0.1;
+dhcpd.conf
+option domain-name-servers 192.168.1.1;
+subnet 192.168.1.0 netmask 255.255.255.0 {
+        option routers 192.168.1.1;
+        range 192.168.1.40 192.168.1.190;
+        host myserver {
+                fixed-address 192.168.1.2;
+                hardware ethernet 00:00:00:00:00:00;
+                }
+        host darkstar {
+                fixed-address 192.168.1.210;
+                hardware ethernet a0:d3:7a:42:aa:1d;
+                }
+        host zenbig   {
+                fixed-address  192.168.1.215;
+                hardware ethernet 14:d6:4d:aa:6c:c6;
+                }
+        host zenstar  {
+                fixed-address 192.168.1.205;
+                hardware ethernet 2c:6e:85:bf:72:91;
+                }
+        host mini10   {
+                fixed-address 192.168.1.200;
+                hardware ethernet 88:25:2C:B2:94:8C;
+                }
+        host nexus9   {
+                fixed-address 192.168.1.195;
+                hardware ethernet 44:91:60:9e:d2:73;
+                }
+        host diningpi {
+                fixed-address 192.168.1.197;
+                hardware ethernet b8:27:eb:09:bb:1e;
+                }
+        host think330 {
+                fixed-address 192.168.1.193;
+                hardware ethernet 50:5B:C2:E5:CA:F5;
+                }
+        host largedongle1 {
+                fixed-address 192.168.1.211;
+                hardware ethernet 00:C0:CA:82:EC:30;
+                }
+        host largedongle2 {
+                fixed-address 192.168.1.212;
+                hardware ethernet 00:C0:CA:82:E6:29;
+                }
+dhcpd.interfaces
+athn0
+hostname.athn0
+inet            192.168.1.5    255.255.255.0    192.168.1.255
+media           autoselect
+mediaopt        hostap
+chan            4
+wpa
+nwid            fuguserv
+wpakey          1234567890ABCD#
+up
+hostname.bridge0
+add vether0
+add em0
+add athn0
+blocknonip vether0
+blocknonip em0
+blocknonip athn0
+up
+hostname.em0
+dhcp
+inet6 autoconf
+hostname.vether0
+inet 192.168.1.1 255.255.255.0 192.168.1.255
+pf.conf
+nt_if="{ vether0 em0 athn0 }"
+broken="224.0.0.22 127.0.0.0/8 192.168.0.0/16 172.16.0.0/12
+        10.0.0.0/8 169.254.0.0/16 192.0.2.0/24
+        198.51.100.0/24, 203.0.113.0/24,
+        169.254.0.0/16 0.0.0.0/8 240.0.0.0/4 255.255.255.255/32"
+table <bruteforce> persist
+set block-policy drop
+set loginterface egress
+set skip on lo0
+match in all scrub (no-df random-id max-mss 1440)
+match out on egress inet from !(egress:network) to any nat-to (egress:0)
+antispoof quick for (egress)
+block quick from <bruteforce>
+block in quick on egress from { $broken no-route urpf-failed } to any
+block in quick inet6 all
+block return out quick inet6 all
+#block return out quick log on egress proto { tcp udp } from any to any port 53
+block return out quick log on egress from any to { no-route $broken }
+block in all
+pass out quick inet keep state
+pass in on $int_if inet
+pass in on egress inet proto tcp from any to (egress) port 22 keep state (max-src-conn 40, max-src-conn-rate 40/172800 ,overload <bruteforce> flush global)
+pass in quick on $int_if proto udp from any to ! 192.168.1.1 port 123 rdr-to 192.168.1.1
+sysctl.conf
+net.inet.ip.forwarding=1
+net.inet.ip.redirect=0
+kern.bufcachepercent=50
+net.inet.ip.ifq.maxlen=1024
+net.inet.tcp.mssdflt=1440
+machdep.allowaperture=2 # See xf86(4)
+machdep.lidaction=0
+net.inet6.ip6.forwarding=0
+net.inet6.ip6.mforwarding=0
+hw.smt=1
+rc.conf.local
+check_quotas=NO
+dhcpd_flags="vether0"
+ntpd_flags=""
+#pkg_scripts=dnscrypt_proxy -config /etc/dnscrypt-proxy.toml
+sndiod_flags=NO
+unbound_flags=""
+/var/unbound/etc/unbound.conf
+# $OpenBSD: unbound.conf,v 1.14 2018/12/16 20:41:30 tim Exp $
+server:
+    username: _unbound
+    directory: /var/unbound
+    chroot: /var/unbound
+
+    interface: 192.168.1.1
+    interface: 127.0.0.1
+    do-ip6: no
+
+    access-control: 127.0.0.0/8 allow
+    access-control: 192.168.1.0/24 allow
+    hide-identity: yes
+    hide-version: yes
+    do-not-query-localhost: no
+
+    tcp-upstream: yes
+
+    private-address: 10.0.0.0/8
+    private-address: 172.16.0.0/12
+    private-address: 192.168.0.0/16
+
+remote-control:
+        control-enable: yes
+        control-use-cert: no
+        control-interface: /var/run/unbound.sock
+
+forward-zone:
+    name: "."
+    forward-addr: 127.0.0.1

@@ -1,0 +1,259 @@
+## hpr3928 :: RE: Klaatu.
+
+ HPR Shows by Klaatu.
+
+Source: hpr3887 ::
+10 must-know commands for a new cloud admin.
+Source: hpr3882 ::
+Alternatives to the cd command.
+
+Hot sauce lady.
+
+Source: Franks Red Hot Queen
+2011.
+
+pwd && ls --group-directories-first --classify --almost-all
+
+# some more ls aliases
+alias la='ls -l --human-readable --group-directories-first --classify --almost-all'
+alias ll='ls --group-directories-first --classify --almost-all'
+alias lr='ls -l --human-readable --group-directories-first --classify --recursive'
+alias lar='ls -l --human-readable --group-directories-first --classify --almost-all --recursive'
+alias lap='ls -l --human-readable --group-directories-first --classify --almost-all | less'
+
+# safety first ;)
+alias rmi='rm --interactive --verbose'
+alias mvi='mv --interactive --verbose'
+alias cpi='cp --interactive --verbose'
+alias .shred='bleachbit --shred'
+
+# cd multi dir
+alias ..='cd ..;'
+alias .2='cd ../..;'
+alias .3='cd ../../..;'
+alias .4='cd ../../../..;'
+alias .5='cd ../../../../..;'
+
+# Directory controls.
+function cd () {
+clear;
+builtin cd "$@" && ls --group-directories-first --classify --almost-all;
+
+history -w;
+}
+
+#function pp () {
+#builtin pushd +$@ && ls --group-directories-first --classify --almost-all
+#}
+
+function pushup (){
+builtin pushd $HOME/.config/vim/sessions/
+builtin pushd $HOME/.local/bin/
+builtin pushd $HOME/.thunderbird/*.default-release/
+builtin pushd $HOME/Documents/non-of-your-business/
+builtin pushd $HOME/Downloads/in/
+builtin pushd $HOME/Downloads/out/
+builtin pushd $HOME/Downloads/playground/
+builtin pushd $HOME/Music/hpr/shows/
+builtin pushd $HOME/projects/
+builtin pushd $HOME/projects/hprbank/bp/
+builtin pushd $HOME/symlinks/
+builtin pushd $HOME/tmp/
+builtin pushd +11
+
+builtin dirs -v
+}
+
+alias pd='pushd'
+alias dirs='dirs -v'
+
+# Update
+alias .upg='sudo apt update && sudo apt upgrade -y;'
+
+# shutdown | reboot
+alias .sd='sudo shutdown -P now;'
+alias .rs='sudo reboot;'
+
+# Misc
+alias ccb='cat $HOME/cb | xsel --input --clipboard && echo "Copy. $(date "+%F %T")";'
+alias pcb='xsel --output --clipboard > $HOME/cb && echo "Copy. $(date "+%F %T")";'
+alias zz='xsel -c -b && echo "Clipboard Cleared. $(date "+%F %T")";'
+
+# File Mods
+alias 700='chmod --verbose =700'
+alias 600='chmod --verbose =600'
+alias 400='chmod --verbose =400'
+
+###############################################################################
+# Functions
+###############################################################################
+
+function .s () {
+ln --symbolic --verbose --target-directory=$HOME/symlinks/ $(pwd)/${1};
+}
+
+function extract () {
+if [ -f $1 ]
+then
+    case $1 in
+    *.tar.bz2) tar -vxjf $1 ;;
+    *.tar.gz) tar -vxzf $1 ;;
+    *.tar) tar -xvf $1 ;;
+    *.bz2) bunzip2 $1 ;;
+    *.rar) unrar -x $1 ;;
+    *.gz) gunzip $1 ;;
+    *.tar) tar -vxf $1 ;;
+    *.tbz2) tar -vxjf $1 ;;
+    *.tgz) tar -vxzf $1 ;;
+    *.zip) unzip $1 ;;
+    *.Z) uncompress $1 ;;
+    *.7z) 7z -x $1 ;;
+    *) echo "Good Heavens, '$1' will NOT extract..." ;;
+    esac
+else
+    echo "Good Heavens, '$1' is NOT a valid file."
+fi
+}
+
+function myip () {
+ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/';
+}
+
+function .mkd (){
+mkdir -v $(date +%F) && pushd $(date +%F);
+}
+
+function .mkt (){
+tmpdir=$(mktemp -d /tmp/$(date +%F).XXXXXXXX) && pushd ${tmpdir}
+}
+
+function .d (){
+echo $(date +%F)$1 | xsel -i -b;
+}
+
+
+function .sh () {
+NEWSCRIPT=${1}.sh
+
+cat >> ${NEWSCRIPT} << EOS
+#!/bin/bash
+# License: GPL v3
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+#Name: ${NEWSCRIPT}
+#Purpose:
+#Version: beta 0.01
+#Author: SGOTI (Some Guy On The Internet)
+#Date: $(date +%F)
+
+#variables:
+
+#start:
+
+exit;
+EOS
+
+if [ -f "${NEWSCRIPT}" ]
+then
+    chmod 700 ${NEWSCRIPT}
+else
+    echo "Good Heavens! There isn't a "${NEWSCRIPT}""
+fi
+}
+
+function .fmd () {
+xsel -o -b | fmt -w 76 | sed 's/$/  /g
+s/  /    /g
+s/   /    /g
+s/     /    /g
+s/$/  /g
+s/  *$/  /g
+s/ / /g' | xsel -i -b;
+}
+
+#!/bin/bash
+# License: GPL v3
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+#Name: bfn.sh
+#Purpose: Create better file names.
+#Version: beta 0.01
+#Author: SGOTI (Some Guy On The Internet)
+#Date: 2022-11-08
+
+#variables:
+oldname=$(echo ${1%.*})
+newname=$(echo $oldname | sed 's/ /-/g;s/_/-/g;s/./-/g;s/--*/-/g;/\/d' | tr [:upper:] [:lower:])
+ext1=".$(echo ${1##*.})"
+ext2=".$(echo ${1##*.} | tr [:upper:] [:lower:])"
+
+#start:
+function bcase () {
+    if [ -f $1 ]
+    then
+        echo -e "renaming $oldnamen";
+        mv -v "$oldname$ext1" "$newname$ext2";
+    else
+        mv -v "$oldname" "$newname";
+    fi
+}
+
+bcase
+exit;
+#!/bin/bash
+# License: GPL v3
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+#Name: perm.sh
+#Purpose:
+#Version: beta 0.01
+#Author: SGOTI (Some Guy On The Internet)
+#Date: 2023-01-13
+
+#variables:
+var_dir=${1}
+
+#start:
+function bfp () {
+    find "${var_dir}" -type d -exec chmod -R =700 {} +
+    find "${var_dir}" -type f -exec chmod -R =600 {} +
+}
+
+bfp
+
+exit;
+This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License.

@@ -1,0 +1,27 @@
+## hpr1562 :: Android For The cli/c Junkie
+
+ 
+These are the places your sdk/ndk/ant goes:
+
+
+/usr/local/share/android-ndk-r9d
+/usr/local/share/android-sdk-linux
+/usr/local/share/ant
+
+
+This is an archive of /usr/local/share/android-sdk-linux/bin, which is the directory you create.
+https://theadesilva.com/hpr_bin.tar.gz
+
+
+This is what /etc/profile.d/android.sh looks like:
+
+
+export ANT_HOME=/usr/local/share/ant
+export JAVA_HOME=/usr/
+export PATH=$PATH:/usr/local/share/android-sdk-linux/bin:$ANT_HOME/bin
+
+
+here's the example app:
+https://theadesilva.com/pants.tar.gz
+uncompress it and type "make", that produces app.apk to run on your device.
+

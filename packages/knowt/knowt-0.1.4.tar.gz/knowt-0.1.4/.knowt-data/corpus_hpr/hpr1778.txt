@@ -1,0 +1,61 @@
+## hpr1778 :: Nethack and Vi cursor keys
+
+ Hi I'm Steve Bickle and this episode is "Nethack and Vi cursor keys", its my contribution partially inspired by the recent series of vi/vim podcasts and Frank Bell's recent episode Introduction to Rogue Class Linux. 
+
+In addition to my piece here, I also want to use this opportunity to point out an excellent podcast about vim, that's complementary to the series on HPR. 
+I was pleased to see recently that Thomas Gideon's The Command Line podcast is back from a hiatus and want to make sure that others are aware. His 12th of April podcast is an essay entitled "Hope and Fear in the World of vim" where he discusses his use of vim throughout his career as a programmer.  You can find this podcast at thecommandline.net
+
+The text editor vi was written long ago by Bill Joy in the late 70's before the advent of the PC keyboard and cursor keys, so the default key mappings for left/down/up/right being H,J,K and L are not immediately familiar to a pc keyboard user. 
+
+
+The original UNIX machine for which vi was written used the AD-M3A terminal    where H,J,K and L had the cursor arrows engraved.
+Vi is installed as a default choice on many distros, and where it is not, there is invariably a package available that can be easily added. 
+
+Some, if not most, distros come vim installed by default (vim by the way stands for vi improved). This does have the cursor keys mapped nicely for a modern PC keyboard as well as the original keys. Vim is always aliased as vi, so if it's been installed when you enter vi you get vim. 
+
+Vi is a pretty light weight bit of code whereas VIM has more dependencies so sometimes vi is still preferred as the default install package. For instance Debian and many of its derivatives have vi rather than vim installed by default.
+If you are distro hopping or working on other peoples systems you can generally rely on having vi available, but you can't be sure to get vim so it is useful to be conversant with the vi key mappings, along with a working knowledge of some of the basic commands. Then you will never be at a loss for a text editor when needing to hack around in a Linux box.
+
+For me as an occasional user of vi the most challenging keys to remember to use are the H,J,K and L. cursor keys, since muscle memory has my fingers diving for the arrow keys. This is where the game Nethack comes in, which is what this article/episode is really about.
+
+Nethack is a terminal based dungeon adventure games which uses the same cursor keys as vi and other old UNIX programs. Play this game for a few hours and you will ever struggle with vi cursor keys again. 
+
+The goal of the game is to retrieve the 'Amulet' from the lowest level of the dungeon and return to the surface with it for your god.
+
+Nethack presents as a text based adventure with each level gradually being revealed to you in the on-screen character based level map. As you travel through the dungeon more of the level is revealed. As you play, your character gains more experience and levels up its capabilities.
+
+You play as one of a number of types of character, and race. These include many of the usual dungeons and dragons types, archaeologists most likely inspired by Indiana Jones and tourists which definitely owe much to Terry Pratchet. Each role and race has their own initial characteristics, default inventory items, levelsof resilience and ability to learn various skills. For instance a wizard will advance his spell making capabilities faster than a footpad.
+
+Although seemingly a simplistic terminal based game there's more going on in Nethack than is at first apparent. Originally released in 1987 it was actively developed with improvements to game play features until 2003. Since then there have been minor updates and ports for different platforms have been added, however there is rumoured to be a release with further game play improvements some-time this year. 
+
+The game has real depth and subtlety that is gradually revealed the more you play. It is not an easy game to win (from my experience to date that may not even be possible) but the more you play it the better strategies you will devise and the more rewarding the game becomes. There's more complexity to this game than almost any modern 3d HD graphic adventure.
+
+Although there is a Nethack Wiki where information about how to play can be sought, the true elite apparently learn through playing. I'd suggest having a go, then when you become familiar with YASDs (yet another stupid death), there's a lot of them, you will have enough experience to answer a few burning question with the Wiki in order to be able to play a more satisfying game.
+
+Although a challenging game, it is not a difficult game to play once you have remembered a few keyboard commands. And this game can be played just about anywhere. Because the game has GPL license there are many ports and flavours available. It is possible to play on most platforms: I have tried it on Linux, Android and even as a Google Chrome app, although the IOS port was not usable on our old iPad or a colleague's new iPhone.
+
+There are various ports for the Windows platform, some of which replace the character based interface with Windows 3.1 style tile interface or a 3d isometric graphic interface. Personally I'd prefer to stick with the traditional character interface since the graphics don't really add anything to the game play. In fact when I play the game on Windows laptop, I use a minimal Debian install running on VirtualBox. I have set it up to auto-run Nethack and shutdown when exiting the game. Then I launch the VM directly with a shortcut containing the virtualbox command on the desktop.
+
+This is how I set up my Nethack VM: 
+First I created a VirtualBox VM with 1 core 256M of RAM and an 8GB hard drive (I could have easily got away with 2GB actually). 
+
+Then I installed a minimal install of Debian, configured networking and installed nethack using apt-get install. 
+
+Once nethack was installed I disabled networking so I don't have to wait for a network connection to time-out when if my machine is not online.
+
+To make Debian auto-start with a particular user account you can edit the /etc/inittab and alter one of the tty invocations. I changed the line:
+1:2345:respawn:/sbin/mingetty tty1
+
+To login my account 'steve' 
+1:2345:respawn:/sbin/mingetty –autologin steve tty1
+
+To get Nethack to run on start-up, and the vm to shutdown on exiting the game edit the user's .bashrc file and append these three commands to the end of the file
+
+clear          # this ensures that the screen is clean prior to running the game
+nethack    # to run the game
+sudo shutdown -h now  # to close the VM when you exit the game
+
+
+Because Nethack is a terminal based game it doesn't hammer the battery in portable machines, making it an ideal travel game for a commuter.
+
+Even if you are not a gamer its worth a look at Nethack, it might be the one computer game that really grabs your attention.

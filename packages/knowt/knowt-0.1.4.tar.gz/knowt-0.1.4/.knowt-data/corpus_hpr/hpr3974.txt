@@ -1,0 +1,17 @@
+## hpr3974 :: About USBimager - part 2/2
+
+ Because you want to make changes on a storage device, you are asked
+to enter your password. You can add your user to the group: disk to
+avoid this.
+who or whoami - my login-name
+id - more details
+groups - all your groups
+less /etc/group | grep disk - focus on disk
+Add an existing user to another group, like this:
+sudo usermod -aG disk LOGIN-NAME
+I saw my entry not immediately check it with:
+cat /etc/group
+
+Under releases http://gitlab.com/bztsrc/usbimager
+you may find your preferred pre built binary, if not, I recommend this
+link http://gitlab.com/bztsrc/usbimager/tree/binaries

@@ -1,0 +1,5 @@
+## hpr0463 :: Finux Interviews Moxie Marlinspike about SSL
+
+ Finux talks to Moxie Marlinspike about a variety of vulnerabilities in most common implementations of SSL, such as hijacking the switch from http to https, universal wildcard certs, SSLsniff and more.
+
+ogg version! 

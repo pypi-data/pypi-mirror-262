@@ -1,0 +1,79 @@
+## hpr1736 :: How I run my small business using Linux
+
+ Hardware
+
+System76 Galago Ultrapro - Ubuntu 14.04
+
+Synology DiskStation DS213j
+
+LG G2
+
+
+Proprietary Applications
+
+Synology Cloud Station
+
+Wireframe Sketcher
+
+
+Free Applications
+
+pandoc
+
+discount
+-firefox
+
+chromium
+
+gvim
+
+libreoffice
+
+planner
+
+hamster
+
+todo.txt
+
+gnucash
+
+virtualbox
+
+thunderbird
+
+enigmail
+stationary
+
+
+california
+
+ranger
+
+L2TP/IPSEC vpn client
+
+meld
+
+deja-dup -> Box
+
+Systemback
+
+rsync
+
+
+Links
+
+https://synology.com
+
+https://wireframesketcher.com
+
+https://www.system76.com
+
+https://todotxt.com/
+
+https://www.pandoc.org
+
+https://daringfireball.net/projects/markdown/
+
+https://launchpad.net/l2tp-ipsec-vpn
+
+

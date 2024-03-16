@@ -1,0 +1,8 @@
+## hpr3140 :: GIMP: Selection Tools
+
+ Selection Tools define the area that other tools will work within. For example, if you want to add color to an image, you probably want to add it to a specific area, not to the entire image. Selection Tools help you to pick the area precisely, and are useful for photo retouching purposes.
+Links:
+
+https://docs.gimp.org/2.8/en/
+https://www.ahuka.com/gimp/tools-selection/
+

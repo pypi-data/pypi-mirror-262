@@ -1,0 +1,9 @@
+## hpr1182 :: LiTS 023: Date
+
+ 
+Spring is in the air and Valentine's day is just around the corner and Dann Sexy Washko tells us all we need to know about dates on his regular Linux In The Shell series.
+The date command will not only display or let you change the current date and time but is the go-to utility for getting date and time information into scripts. Invoked by itself the date command will output the current system date based upon the rules of the LC_TIME format. The LC_TIME format defines the rules for formatting dates and times. LC_TIME is a subset of locale which defines the overall environment based upon the chosen language and cultural conventions. You can see the current LC value by issuing the locale command. You can see time specific information for your system by issuing:
+locale -m LC_TIME
+
+https://www.linuxintheshell.com/2013/02/12/episode-023-date/
+

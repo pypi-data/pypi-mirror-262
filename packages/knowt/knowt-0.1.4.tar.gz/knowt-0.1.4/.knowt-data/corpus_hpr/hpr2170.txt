@@ -1,0 +1,21 @@
+## hpr2170 :: soundtrap.io
+
+ 
+Back in hpr1894 :: Interview with Davide Zilli and Dr Marianne Sinka of the HumBug Project, the topic of an open-source acoustic logger came up. Today Ken tracks down Prof. Alex Rogers  from the Department of Computer Science at University of Oxford, to talk about the project.
+
+
+The prototype device is based on the Silicon Labs Gecko processor range and provides a low-cost acoustic logger which can record uncompressed audio to an SD card at 48,000 samples per second. Onboard acoustic recognition algorithms allow the device to decide when and what to record, and allow the computation and storage of acoustic features and complexity indices, rather than raw waveforms.
+
+
+EFM32 Gecko processor
+WAV recordings to SD card
+48,000 samples per second
+Powered by 3 x AAA batteries
+Analog MEMS microphone
+Measures just 50 x 38 x 12 mm
+Configurable USB interface
+Onboard real time clock
+
+
+
+https://soundtrap.io/

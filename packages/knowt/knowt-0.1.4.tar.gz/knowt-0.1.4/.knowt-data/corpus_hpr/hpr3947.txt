@@ -1,0 +1,25 @@
+## hpr3947 :: Archiving Floppy Disks
+
+ Archiving Floppy Disks
+Summary
+This show describes how I go about archiving old floppy
+disks. These disks date back to the early 90s when floppy disks were a
+common way of installing software on personal computers. They were
+also used as a portable storage mechanism for data files.
+Equipment That I'm Using
+
+IBM ThinkCentre desktop computer with a 3.5in floppy disk drive
+Installed the 32-bit version of Slackware 14.2
+
+Making an image of an entire floppy disk
+dd if=/dev/fd0 of=filename.dsk
+Making a floppy disk from a disk image
+dd if=filename.dsk of=/dev/fd0
+Copy files from a floppy disk
+
+mount -t msdos /dev/fd0 /mnt/floppy
+cd /mnt/floppy
+cp filename /some/destination/path/filename
+cd
+umount /mnt/floppy
+

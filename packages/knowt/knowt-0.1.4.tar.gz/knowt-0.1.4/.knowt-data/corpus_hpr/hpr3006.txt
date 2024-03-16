@@ -1,0 +1,32 @@
+## hpr3006 :: Hijack Auxiliary Input of your car!
+
+ https://www.myg37.com/forums/audio-video-and-electronics/285929-2015-infiniti-q40-4dr-with-crap-audio.html
+https://rmccurdy.com/.scripts/downloaded/www.nicoclub.com/FSM/Q40/2015%20Q40/
+Updated: Solved: The audio could use a dac or something nice but this will do. Not (DO NOT PLUG IN THE HARNESS WRONG ORDER OR YOU WILL BLOW AT LEAST 4 FUSES ) I had to swap out 3 in the passenger side and 1 for the rear lights on the IPDM E/R next to the battery in a #@$% spot.
+pulled the pins and soldered a audio jack to them and fed it though the AC vent :
+pin 1 - G : Satellite radio sound signal LH pin 2 + R : Satellite radio sound signal LH pin 3 - w : Satellite radio sound signal RH pin 4 + b : Satellite radio sound signal RH
+Reference:
+
+https://www.myg37.com/forums/audio-v...ml#post4253485
+https://rmccurdy.com/.scripts/downlo...5%20Q40/av.pdf pg 42
+
+NOT SOLVED 08/21/2019 : So I'm sick of this jank setup .. the software is wonky and works about 1/2 the time .. I have to ƒ@#$ with it for about 5-10 min every time I want to use it … WIRELINQ is crap.. and I don't want the 600$ BT mod .. I just want AUX in !! I dont care if CD or SAT is spliced!
+
+NO I'm not using a Apple device ..
+NO I'm not going BT because its crap audio ..
+NO I'm not using MONO or anything like that (discord) because that's even worse then BT…
+NO I'm not using a FM Transmitter because that's just stupid its a 2015 car it should have AUX input ..
+
+maybe I can hack it myself the issue is that the SAT is in the @^ing trunk .. so I would have to find the wires that go to the trunk. I use a long speaker wire with alligator clips on it and a continuity tester (volt meter ) to hunt for it …
+Part No
+2591a 1ma5e
+Model No
+cv-vn01e04d
+"11 12 Infiniti G25 G37 Radio CD Player 2591A-1MA5E Bulk 711"
+SOLVED 01/20/2018 : YAY ! this works and I dont have to have grap BT audio
+
+2015 INFINITI Q40 NONAV ANDROID
+IPOD WIRELINQ GROM-WLQ
+Electop 2 Pack USB 2.0 A Female to USB Micro Female Adapter Converter
+Wsken Mini2 Micro USB Magnetic LED Display Data Sync Fast Charge 3.28ft Cable for Android (Silver)
+

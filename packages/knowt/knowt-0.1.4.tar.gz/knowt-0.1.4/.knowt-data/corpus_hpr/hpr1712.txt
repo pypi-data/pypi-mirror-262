@@ -1,0 +1,77 @@
+## hpr1712 :: What's in my Crate
+
+ 
+Back in the summer of 2014 I started going to the Surrey Linux User Group.
+
+
+I was asked to give a short presentation about Linux accessibility and how,
+although I am totally blind, I still write code and muck about with Linux.
+
+
+I was then asked to give the same presentation at the Portsmouth LUG.
+
+
+This time I made it more comprehensive and took more kit.
+
+
+So I take this opportunity to give my version of the "What's in my bag"
+shows that some folks have been doing.  As I am unemployed, like a lot of blind
+folks, I have been unable to justify this before now because I don't lug
+an interesting collection of stuff to and from work.
+
+
+Here's a simple bullet list about the crate and it's contents:
+
+
+The crate is a 35 litre capacity 'Really Useful Box'
+
+First in were 2 Dell Latitude D630 (64-bit) laptops
+
+Next in was a Dell Inspiron (32-bit) laptop, clunky and slow
+
+The three laptops were sandwhiched between 3-ply layers of bubble-wrap
+
+Next in was a Seika 40-cell refreshable Braille display
+
+Next was a clear polycarbonate, zip-up pencil case stuffed with audio leads
+
+Then a 'Mesh' Bluetooth and line-in external speaker
+
+And a Braun external speaker/FM radio/micro-SD boom-box
+
+A four-way mains power splitter
+
+The three AC adaptors for the laptops
+
+On the top of the box, because it was too wide to go in, was a USB keyboard
+
+Mobile phone charging battery 'brick', for the Raspberry Pi
+
+A Raspberry Pi, a Banana Pi and some Arduino bits and pieces
+
+
+
+Here's what I demonstrated with two of the laptops:
+
+
+Trisquel Linux and accessibility in the Gnome desktop with Orca
+
+Accessibility in the console with Debian and the Braille display on the Inspiron
+
+
+
+The second Latitude was with me so I could get some sighted help with
+BIOS settings.
+
+
+My thanks have to go to Tony Wood for the lift to and from both of these
+accessibility presentations.  I could not have done either, especially the Portsmouth one without his help.
+
+
+Thanks also to Lisi, the coordinator of the Portsmouth LUG and to the folks of that LUG for their enthusiasm.
+
+
+Here's the link to the HPR show about my Raspberry Pi tts code fix:
+
+
+https://hackerpublicradio.org/eps.php?id=1649

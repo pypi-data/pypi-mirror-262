@@ -1,0 +1,27 @@
+## hpr2260 :: Managing tags on HPR episodes - 2
+
+ Managing tags on HPR episodes - 2
+Introduction
+This is the second show looking at the subject of Managing Tags.
+In the first show we looked at why we need tags, examined the present system and considered its advantages and disadvantages.
+In this episode we will look at a solution using a separate table of tags.
+Long notes
+This is a detailed subject so I have written out a set of longer notes for this episode and these are available here.
+Links
+
+Previous show in this set:
+
+“Managing tags on HPR episodes - 1” - episode 2245
+
+HPR web page listing shows missing summaries and tags
+Stack Overflow article about splitting CSV data
+A more detailed article about tags in a database
+HPR show 1965 “Adding SQLite as a datasource to SQLeo”
+Resources:
+
+Detailed notes for this episode
+SQL to define a ‘tags’ table, its indexes and code to populate it: normalise_tags_1.sql
+SQL to perform the emptying of the ‘tags’ table and its repopulation: refresh_tags.sql
+SQL to find all shows related to a given show using tags: find_shows_sharing_tags.sql
+Perl script to manage the tag table: refresh_tags
+

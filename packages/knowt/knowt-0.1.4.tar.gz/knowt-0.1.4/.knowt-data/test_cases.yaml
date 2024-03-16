@@ -1,0 +1,28 @@
+# test_cases.yaml
+-
+  corpus: corpus_hpr
+  temperature: 0.1
+  prompt: "search results comprehension exam"
+  llm: "mistralai/mistral-7b-instruct"
+  examples:
+    -
+      - 'Explain phone phreaking to me'
+      - 
+        - 'Phreaking is the practice of studying, experimenting with, or explori...'
+        - 'Phone phreaking is a term used for individuals who study, experiment ...'
+      - ['phreak', 'teleph', 'experi']
+-
+  corpus: corpus_hpr
+  prompt: "search results comprehension exam"
+  llm: "mistralai/mistral-7b-instruct"
+  examples:
+    -
+      - "What is the healthiest fruit?"
+      -
+        - 'The healthiest fruits recommended for people with diabetes and glycem...'
+      - ['glycemic', 'diabetes', 'fat', 'coconut', 'raw', 'organic berries']
+    -
+      - 'How much exercise is healthiest?'
+      -
+        - 'The amount of exercise that is healthy for an individual is not speci...'
+      - ['exercis', 'healthy', 'not specified']

@@ -1,0 +1,3 @@
+## hpr0252 :: Google App Engine 101
+
+ oogle launched the App Engine service earlier this year to immense interest from the web development community. App Engine allows running applications on Google infrastructure, including BigTable, Google’s non-relational, massively scalable database. App Engine is appealing both at the low end, where small shops don’t want to have to deal with hardware procurement and systems administration, and at the high end, where the kind of “instant scaling” App Engine promises to deal with bursty traffic is the holy grail of infrastructure planning.

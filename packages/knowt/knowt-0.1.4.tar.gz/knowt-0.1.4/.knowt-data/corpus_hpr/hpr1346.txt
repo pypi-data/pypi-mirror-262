@@ -1,0 +1,24 @@
+## hpr1346 :: How to properly evangelize linux or why I use linux as my daily driver.
+
+ Twitter/Identi.CA: @rileyinchina(Twitter)
+How to properly evangelize technology or why I use linux as my daily driver.
+Background:
+I started linux in 2007 with ubuntu 7.04 because I bought a cheap laptop in china that only had the entry level windows vista in the belief that I could change the language. I use linux on both my work and home pc’s htpc and a server, it really is just amazing the different applications and things you can do with it.
+Current PC is using: ubuntu 12.04
+Some rules of the road:
+Find the right time to broach the subject.Maybe when a person has to reinstall windows or they get a virus, or need to repurchase some piece of DRMed software.
+Don’t talk down to anyone, laugh at them or be a jerk. The people we are trying to convert don’t use linux everyday or probably have a vague idea or understanding of what linux is, your mission is to be as patient as possible.
+Don’t harp on how bad the system they are currently using is, find a situation in which they could benefit from the use of linux. The reason why fanboys exist is because we have this inherent need to not believe we are not wrong, if we are not wrong then surely the other guy is.
+Don’t attempt to tell the person what free as free not free as in beer is. News alert, nobody cares, unfortunate as it may be nobody cares about these things.
+Use practical examples as to why open source just works better: for me that’s wowing my coworkers by running a webserver on my desktop and having them test the various pieces of software before we settle on which one to put on our work server.
+Show them how you use linux or other open source projects in your daily life, to me the best WOW factor comes from XBMC on a Home Theatre PC, add in a PVR and you’ll easily see people’s mouths drop.
+Explain how open source is inherently more secure Linux has less exploited exploits
+Use current events: NSA, Viruses the end of lifing of XP to show them why they should at least attempt it.
+Ask them what they seriously use their computer for, my gut feeling is that about 75% of computer users don’t use anything on their computers that doesn’t already exist or have a worthy replacement in linux or an easy web application. And if worse comes to worse show them that they have the umbilical cord of WINE and or a virtual machine.
+Appeal to their frugality:
+Finally but probably most importantly put your money where your mouth is if you are taking the time to evangelize a product give a person some insurance:
+
+Give a guaranteed tech support certificate to anyone that is willing to try.
+Tell them to give linux a one day, one week and one month trial.
+Help them install it.
+Train them, most of us know that desktop linux is for all intents and purposes essentially the same as desktop Windows or Mac OSX

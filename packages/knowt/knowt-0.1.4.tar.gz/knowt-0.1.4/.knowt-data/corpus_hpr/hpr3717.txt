@@ -1,0 +1,174 @@
+## hpr3717 :: Video editing with Shotcut on a low end PC
+
+ Links
+Shotcut video editor website
+Useful
+Shortcut keys for the Shotcut video editor
+C = copy
+V = paste
+A = duplicate
+X = ripple delete
+Ctrl + X = ripple delete but send to clipboard
+S = split
+Tip not covered in my
+Podcast
+Splits are not fixed and can be adjusted. Once you've split up clips
+and put them in the right order on the timeline you can still adjust the
+cut point even though you previously split the clip because the clip is
+referenced to the original file in the playlist.
+Introduction
+Hello and welcome Hacker Public Radio audience my name is Mr X
+welcome to this podcast. As per usual I'd like to start by thanking the
+people at HPR for making this podcast possible. HPR is a Community led
+podcast provided by the community for the community that means you can
+contribute to. The HPR team have gone to great deal of effort to
+simplify and streamline the process of providing podcasts. There are
+many ways to record an episode these days using phones tablets PCs and
+alike. The hardest barrier is sending in your first show. Don't get too
+hung up about quality, it's more important just to send something in.
+The sound quality of some of my early shows wasn't very good. If I can
+do it anyone can and you might just get hooked in the process.
+Well it's been almost a year since I've sent in a show. Looking at
+the HPR site my last episode was back in November 2021. I suspect like
+many others life has become more complicated and I find I have much less
+spare time and because I have much less spare time I have much less time
+to pursue my hobbies and because of this I have less to speak about and
+because of this I have less time to record what I've been doing and it
+all turns into to vicious circle. Fortunately I recently had some time
+off work and had a lovely holiday. During the holiday I ended up
+recording some video which I decided I wanted to edit. I've done some
+video editing in the past using various video editing packages. The best
+and most recent of which is shotcut.
+Specific details and
+equipment
+Video resolution 1920 x 1080, Codec h264 mpeg-4, Frame rate 30 frames
+per second.
+Computer Dell Optiplex 780. Fitted with 4 GB of internal RAM and
+onboard video graphics card.
+Shotcut version 22.06.23 Shotcut is a free open-source cross-platform
+video editor licenced under the GNU general public licence version
+3.0
+This episode will only cover basic shotcut video editing techniques.
+Shotcut contains many advanced features and effects that will not be
+covered in this episode. A lot of the workflow I’ll share with you today
+is intended to get around limitations imposed by my low spec PC
+I'll try my best to cover the video editing process in this podcast
+using words alone; however I am conscious that an accompanying video
+would make it easier to follow along.
+Shotcut workflow
+Start by creating a folder to hold all the required media files.
+Audio tracks and sound effects can be added to this folder later. Make
+sure all your video files are using the same frame rate in my case 30
+frames per second.
+Open each video file in VLC one at a time going through each video
+file looking for the best portions of video. Make a note of where the
+best portions of the video are by writing down the start and end points
+in minutes and seconds.
+I do this because the interface of VLC is more responsive than
+shortcut and the resolution of displayed video is far greater than the
+preview in shortcut. This makes it quicker and easier to find the best
+portions of video.
+Open shortcut and make sure the new project is set to the same frames
+per second as the media files you're working with, in my case 30 frames
+per second. You can check the frame rate of your project by looking at
+the selected video mode in the new projects window. If you select
+automatic it will ensure the project resolution and frame rate
+automatically match that of your media files.
+Start by adding all the video files to the playlist, this can be done
+in a number of ways for example it can be done by clicking on the open
+file button in the top toolbar or within the open files menu.
+Alternatively you can drag and drop files into the playlist. I find this
+to be the easiest way to add media files to a project. Once this is done
+save your project.
+Drag the first file from the Playlist to the timeline making sure
+that the start of the video starts at 0 seconds.
+Click on the timeline in the position where the first start point of
+interest is needed. Use the S key to split the video at this point.
+Don't worry about being too accurate as this can be moved at a later
+stage.
+Repeat this process for the end point of interest.
+Repeat this again for all the other sections of start and end points
+of interest.
+Remove the unwanted sections of video by clicking on a section then
+hitting the delete key. This will remove the unwanted section leaving an
+empty space behind.
+Once all the unwanted sections are removed click on the sections of
+video and pull them to the left to close the gaps up. I find it useful
+to leave some space between the good sections of video as it makes it
+easier to see where splits are and makes it easier later on to rearrange
+the order of the individual clips.
+Check the start and end points of the remaining sections of video to
+see that the start and end points stop in the correct place. You can do
+this by clicking the play button on the preview window. The video start
+and end points can be adjusted by dragging the section left or right in
+in the timeline section; this is where leaving spaces Between each
+section of video can be handy as it allows for fine tuning.
+Add a new blank video track to the timeline to hold the next video.
+Note this wasn't required when adding the first video track but it is
+needed for each subsequent track. A video track can be added by right
+clicking on an empty portion of the timeline and selecting add video
+track. Alternatively use the ctrl + I key.
+Drag your second video from the playlist onto the newly created blank
+video track in the timeline. As before make sure that the start of the
+video starts at 0 seconds.
+Before previewing any section of the second video track click the
+small eye shaped hide icon in the left section of the first video track
+labelled output. This will prevent previewing both video tracks at the
+same time.
+Repeat the process above of chopping the second video track into
+sections using the S key to split the video up. Remove the unwanted
+sections. Finally adjust the start and end points of the remaining
+sections.
+Repeat the steps above to add the remaining video files one at a time
+from the playlist to the timeline.
+When complete you end up with separate video tracks in the timeline
+each containing good sections of video.
+At this stage I can't be too specific about how to continue as there
+are a number of different options depending on your particular Project.
+You can for example start by combining the good sections of video into
+one video track by dragging them from one track to another then add if
+required an audio track or you can add the audio track first and then
+try to sync things up to the audio track moving bits and pieces of video
+into one video track remembering to hide the unwanted sections of video
+by clicking on the small hide eye icons. Don't do too much editing
+without saving the project. If you get a message about low memory save
+the project then reopen it.
+To export the final video click on the export button in the toolbar.
+I pick the default option, this creates an H.264/AAC MP4 file suitable
+for most users and purposes. You can check the frame rate is the same as
+your original media files by clicking on the advanced tab. Click the
+export file button and give it a file name. It may take some time to
+create the export file. This will be dependent on the speed of your
+computer and the length and resolution of your project.
+While Shotcut is far from perfect on my puny PC it is surprisingly
+usable and stable and is the best option I’ve found so far.
+Finally here are some general shotcut tips I have when doing video
+editing on a puny PC with limited ram, slow processor and built in
+graphics card such as mine.
+General Tips
+when working with a low powered PC
+Close all open applications leaving only shortcut open this helps
+with RAM usage
+Shortcut is surprisingly stable with a feeble PC such as mine. I
+would still recommend saving your project regularly as it is quick and
+very easy to do.
+If you get a message about running out of RAM then try not to do too
+much more editing before saving the project. Once saved close shotcut
+and then reopen it. The longer your project is and the higher your
+project resolution the more RAM you will need.
+When you are about to export your final video save the project close
+shortcut reopen shotcut and immediately export your project as any
+previous editing may be taking up precious ram.
+Be patient when clicking on the timeline to repositioned the play
+head. Always wait for the preview window to update. This can sometimes
+take a few seconds.
+When trying to sync video to audio you need to zoom in in quite a
+long way before getting an audio preview. When doing this and moving the
+play head you'll get a choppy version of the audio with this it is still
+perfectly possible to find the beat of the music allowing you to sync
+your video to the music. If this doesn't seem to work for you then try
+zooming in closer.
+Ok that's about it for this podcast. Hope it wasn't too boring and it
+made some sense. If you want to contact me I can be contacted at
+mrxathpr at googlemail.
+Thank you and goodbye.

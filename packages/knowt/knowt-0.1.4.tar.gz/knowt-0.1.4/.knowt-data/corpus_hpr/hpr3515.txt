@@ -1,0 +1,55 @@
+## hpr3515 :: ADB and scrcpy
+
+ Android Debugging
+
+Android Debug Bridge (adb) homepage
+
+Install ADB Tools
+There are multiple guides online as to how to install, but I found dnf install android-tools.x86_64 adb-enhanced.noarch the easiest. Similar commands are available for the other distros. Use your package manager to search for adb.
+
+https://www.xda-developers.com/install-adb-windows-macos-linux/
+
+Enable Developer options
+Go to Settings. Usually via the pulldown menu from the top twice, and click the cog icon. Search for 'Build Number', it's usually in Click on 'About Phone' Click on 'Build Number' seven times.
+Go back and then search for 'Developer options' it's usually in the System section
+You'll need to turn on two features 'Android Debugging' and 'ADB over network'
+While we are at it, go back and then search for 'IP Address' it's usually in the About phone section. You should see a IPv4 address eg: 192.168.1.100. Make note of the IP address as we'll use it later.
+Using ADB
+To get help use the command adb help
+
+global options: Tell you how to connect to the phone
+general commands: Shows your devices, and gives help
+networking: Allows you to connect over the network but also to port forward and reverse traffic
+file transfer: The only reliable way to get files to and from your device.
+internal debugging: Shows how to control the server
+
+USB
+Plug your phone using a usb cable. There will be a notification and a popup to allow the connection.
+Run adb shell and all going well you should see your phone. Commands like ls, cd, and find work well. For example find /storage/self/primary/.
+Network
+Unfortunately if you unplug your phone you no longer have a connection to it, but you can enable network access via tcp. Leave your phone connected to USB and then tell it to use a TCP/IP connection with the command adb tcpip 5555.
+Then connect to the phone using the phones IP address and port 5555, adb connect 192.168.1.100:5555. It should reply with a connected to message
+$ adb connect 192.168.1.100:5555
+connected to 192.168.1.100:5555
+Now commands like adb shell should allow you to access the phone even if it's not physically connected via usb.
+Multiple devices
+Got multiple devices then you can connect them all in the same way as shown above. The only issue is you need to tell adb which one you want to address.
+The first thing you need to do is list the devices
+$ adb devices -l
+List of devices attached
+192.168.1.100:5555   device product:XXXX model:XXXX device:XXXX transport_id:9
+192.168.1.101:5555   device product:YYYY:ZZZZ device:ZZZZ transport_id:14
+The important bit is the transport_id at the end. You can then use the adb command as normal but specifying the -t option
+-t: allocate a pty if on a tty (-tt: force pty allocation)
+So for example adb -t 14 shell would connect to phone YYYY
+So that's it for remote control from the shell, but what if you want to see and interact with the screen itself ?
+Remote screen sharing with scrcpy
+From Wikipedia
+scrcpy is a free and open-source screen mirroring application that allows control of an Android device from a Windows, macOS, or Linux desktop computer. The software is currently developed by Genymobile, which also developed Genymotion, an Android emulator.
+The source code is available on github. It's available via apt install scrcpy on Ubuntu. In Fedora you'll need to enable it from the copr repo.
+dnf copr enable zeno/scrcpy
+dnf install scrcpy
+With only one phone connected you can just type scrcpy and the screen will appear. Remember right click is power, and the mouse is your finger ;-).
+If you have multiple devices connected you can connect using scrcpy --tcpip=192.168.1.101:5555
+scrcpy is a wonderful tool that deserves a show in itself, but in short it lets you interact with your phone as if it was a VNC/Remote Desktop session. You can copy text from the phone as well.
+It allows for control of the screen, as well as screen recording.

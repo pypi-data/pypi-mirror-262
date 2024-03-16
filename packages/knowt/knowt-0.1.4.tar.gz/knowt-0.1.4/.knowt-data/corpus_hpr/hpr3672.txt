@@ -1,0 +1,95 @@
+## hpr3672 :: 2021-2022 New Years Show Part 3
+
+ Hacker Public Radio New Years Eve Show 2021 - 2022
+Part 3
+WebRTC with RPi Zero - resolution of the ribbon cable camera could be better.
+Tried without success: uv4l (h264) https://www.linux-projects.org
+Raspberry Pi Zero
+https://www.raspberrypi.com/products/raspberry-pi-zero/
+ESP 32 Camera
+https://makeradvisor.com/esp32-camera-cam-boards-review-comparison/
+CHDK - Canon Hack Development Kit
+https://chdk.fandom.com/wiki/CHDK
+uStreamer (mjpg stream) https://github.com/pikvm/ustreamer
+PiKrellCam (mjpeg stream) https://billw2.github.io/pikrellcam/pikrellcam.html
+to forward H264 instead of mjpeg
+WebRTC-streamer https://github.com/mpromonet/webrtc-streamer
+WebRTC streamer (RWS) https://github.com/kclyu/rpi-webrtc-streamer
+CET Germany and 45 more Brussels, Madrid, Paris, Rome, Algiers
+Moss talks about investing with Robin Hood
+https://robinhood.com/us/en/
+Robin Hood Controversy With Game Stop
+https://www.nytimes.com/2021/02/18/business/gamestop-robinhood-hearing.html
+FOSS North
+https://foss-north.se/
+The Grahm Norton Show
+https://www.bbc.co.uk/programmes/b006xnzc
+Stephen Colbert
+https://www.cbs.com/shows/the-late-show-with-stephen-colbert/
+Jon Stewart
+https://en.wikipedia.org/wiki/Jon_Stewart
+Highest Point in the Netherlands
+https://en.wikipedia.org/wiki/Vaalserberg
+Seinfeld TV Show
+https://www.imdb.com/title/tt0098904/
+Big Bang Theory
+https://www.imdb.com/title/tt0898266/
+https://en.wikipedia.org/wiki/The_Big_Bang_Theory
+Joe Talks Installing Linux on Tablets
+ASUS Transformer Line - where Joe started his journey with installing Linux on tablets
+https://en.wikipedia.org/wiki/Asus_Transformer
+Dell Tablets
+https://www.dell.com/en-us/shop/handhelds-tablet-pcs/ac/4327
+https://i.dell.com/sites/doccontent/corporate/secure/en/Documents/dell-venue-11pro-brochure.pdf
+https://www.dell.com/support/home/en-us/product-support/product/dell-venue-11i-pro/overview
+https://www.dell.com/support/manuals/en-us/dell-venue-11-pro-7000-7140/dell_venue11pro_7140_ug-v1/specifications?guid=guid-ed3189c3-1247-45a2-8265-e9851188ff3e
+Installing Linux On Chromebooks
+https://itsfoss.com/install-linux-chromebook/
+https://www.pcmag.com/how-to/install-linux-on-your-chromebook
+Netherlands Vs. Holland - Whats the difference?
+https://www.holland.com/global/tourism/information/general/netherlands-vs-holland.htm
+Mark Shuttleworth
+https://en.wikipedia.org/wiki/Mark_Shuttleworth
+https://www.markshuttleworth.com/
+Endless OS
+https://endlessos.com/home/
+https://distrowatch.com/table.php?distribution=endless
+Hannah Montana Linux
+http://hannahmontana.sourceforge.net/
+Ittoqqortoormiit is in Greenland
+https://en.wikipedia.org/wiki/Ittoqqortoormiit
+https://visitgreenland.com/destinations/ittoqqortoormiit/
+Joe Suggests Reading Brandon Sanderson
+https://www.brandonsanderson.com/
+How Did Napoleon Influence What Side of the Road We Drive On Today?
+https://nationalmotormuseum.org.uk/ufaqs/why-do-we-drive-on-the-left-side-of-the-road-in-the-uk-but-most-other-countries-drive-on-the-right/
+The War of 1812
+https://www.history.com/topics/war-of-1812/war-of-1812
+American Doesn't Use the Metric System Because of Pirates?
+https://www.washingtonpost.com/news/speaking-of-science/wp/2017/09/19/pirates-yes-pirates-may-be-why-the-u-s-doesnt-use-the-metric-system/
+Transcontinental Railroad
+https://en.wikipedia.org/wiki/Transcontinental_railroad
+Dutch East India Company
+https://en.wikipedia.org/wiki/Dutch_East_India_Company
+Dutch Saint Nicholas / Christmas In The Netherlands
+https://en.wikipedia.org/wiki/Sinterklaas
+https://www.whychristmas.com/cultures/netherlands
+Rio Grande River Damns
+https://en.wikipedia.org/wiki/List_of_Rio_Grande_dams_and_diversions
+Hurricane Harvey & Katrina
+https://en.wikipedia.org/wiki/Hurricane_Katrina
+https://en.wikipedia.org/wiki/Hurricane_Harvey
+How Much Of The Netherlands Is Below Sea Level
+https://www.holland.com/global/tourism/information/general/dutch-water-facts.htm
+Chicago Is Sinking
+https://www.smithsonianmag.com/smart-news/chicago-can-blame-glaciers-sinking-city-180971643/
+https://www.nytimes.com/interactive/2021/07/07/climate/chicago-river-lake-michigan.html
+Rotterdamn - The Largest Harbor in Europe
+https://www.shipafreight.com/knowledge-series/largest-ports-in-europe/
+https://en.wikipedia.org/wiki/Port_of_Rotterdam
+Zeeland
+https://en.wikipedia.org/wiki/Zeeland
+https://www.holland.com/global/tourism/destinations/provinces/zeeland.htm
+Frisian Languages
+https://en.wikipedia.org/wiki/Frisian_languages
+https://www.babbel.com/en/magazine/what-is-frisian

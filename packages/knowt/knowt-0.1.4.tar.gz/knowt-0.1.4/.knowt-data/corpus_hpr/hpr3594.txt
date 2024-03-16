@@ -1,0 +1,141 @@
+## hpr3594 :: Peely-wally in Edinburgh
+
+ 
+Introduction
+Hosts:
+
+MrX
+Dave Morriss
+
+We recorded this on Sunday April 24th 2022. This is effectively a continuation of the last show, since we found we had lots more to talk about!
+Note on the title: again we spoke about the Scots language on the show, so it seemed like a good idea to include more of it in the notes and so on.
+Topics discussed
+
+Dampers (in relation to coal fires), a topic we discussed last time:
+
+MrX found a version of the Damper song on YouTube
+
+
+
+PC issues:
+
+Dave’s home-built desktop PC had another disk problem
+Running a SMART daemon (under SystemD) gives warnings of imminent disk problems
+HP Proliant MicroServer - an AMD-based machine sold in the 2010’s (?) by HP with a substantial discount. (Prices cited in the audio are probably not reliable!)
+Regarding the failed PSU mentioned last time, there was speculation about whether turning off at the mains every day is a good idea. MrX is inclined to think that it is not.
+
+
+
+Remote-controlled plugs:
+
+Dave used a set of Brennenstuhl plugs for a while until several of them were destroyed!
+Now has two Sonoff plugs which can be flashed with firmware and controlled with MQTT as part of a Smart Home
+
+
+
+Programming:
+
+MrX has recently been writing a Bash script, and found it difficult to get back into it.
+Dave had written in DEC Pascal on a VAXCluster for many years, but can’t remember any of it any more.
+Discussion of Delphi, Borland C++
+Neither MrX nor Dave has used C very much
+
+
+
+Difficulty of producing HPR shows:
+
+Pandemic effects on motivation
+Complications of working from home
+Happily the rate of contributions to HPR has been increasing in the past few months
+Adding pictures to shows still needs documentation
+
+
+
+Smart speakers:
+
+MrX already had two Google Home devices and got a free Amazon Echo (with Alexa software) from his ISP.
+The Echo didn’t prove to be very useful as a means of listening to BBC radio, and the sign-up was intrusive.
+The Google Home devices are preferable; they give easier access to BBC Radio as well as services like Spotify.
+Dave is avoiding all such devices!
+
+
+
+Old computing equipment:
+
+Dave has an old 132-column Anadex matrix printer with a Centronics interface in his attic - found recently when clearing it out.
+MrX remembered removable Diablo disks.
+Dave reminisced about writing software in Coral66 on a CTL Modular 1 computer in the 1970s, which also had removable disks.
+
+
+
+Being back at work again:
+
+MrX is now in the office twice a week
+The Scotland mask mandate has ended but many people are still wearing them
+People are catching SARS-CoV-2 at work, and particularly from children who are back at school, but vaccination means the effects tend to be milder.
+
+
+
+Hayfever (seasonal allergies):
+
+MrX is taking a 30C remedy (a remedy labeled 30C has been serially diluted 1:100 thirty times, so is extremely dilute)
+Dave still suffers from hayfever and takes Cetirizine through spring and summer
+Dave thinks he developed hayfever in the hot summer and drought of 1976 on a field course in Gloucestershire. (BBC News story: Could the ladybird plague of 1976 happen again?)
+
+
+
+Medical issues:
+
+Rheumatoid arthritis - auto-immune origins
+Trigger finger (also known as stenosing tenosynovitis)
+
+
+Scots vocabulary
+
+swither
+noun: A state of indecision or doubt, a pondering, hesitation, uncertainty.
+
+verb: To be in a state of uncertainty of purpose, to be perplexed about what to do or choose, be in two minds, to doubt, hesitate, dither.
+
+
+
+peely-wally (or peelie-wallie or peelie-wally)
+adjective: pale, wan and off-colour; insipid and colourless.
+
+
+Links
+
+Scots words:
+
+Scots Language
+The online Scots dictionary (English to Scots)
+
+
+
+Smart Speakers:
+
+Wikipedia article on Smart Speakers
+
+
+
+Old computing equipment:
+
+Wikipedia article on Centronics printers
+Wikipedia article on Diabolo disks
+Wikipedia article on Computer Technology Limited (CTL)
+
+
+
+Homeopathic dilutions:
+
+Wikipedia article on Homeopathic dilutions
+
+
+
+Medical matters
+
+Wikipedia article on Rheumatoid arthritis
+Wikipedia article on Trigger finger
+
+
+

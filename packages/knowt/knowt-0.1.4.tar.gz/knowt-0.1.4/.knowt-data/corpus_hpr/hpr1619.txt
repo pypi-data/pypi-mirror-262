@@ -1,0 +1,89 @@
+## hpr1619 :: Bare Metal Programming on the Raspberry Pi (Part 1)
+
+ 
+This show is about programming on a Raspberry Pi with on operating
+system or libraries.  In this programming environment, the only software
+that the CPU executes is the software that you write.  This episode
+introduces how to configure the build environment and get a basic
+application up and running.  From here one can leverage these techniques
+to build more sophisticated applications and deepen ones knowledge of
+systems programming.
+
+
+Here is some of the source material that I used while working on this
+little learning experience.
+
+
+dwelch67's bare metal repository
+
+
+https://github.com/dwelch67/raspberrypi
+
+The best guide I know on this topic.  Very thorough and what I used
+   as my starting point.
+
+
+
+CATRPI
+
+
+Homepage: https://gitorious.org/catrpi
+
+Git repo: git://gitorious.org/catrpi/catrpi.git
+
+My own repository of code that I wrote during this little project.
+
+
+
+Adafruit USB to TTL cable
+
+
+https://www.adafruit.com/products/954
+
+
+
+Script to build the ARM toolchain
+
+
+https://github.com/dwelch67/build_gcc/blob/master/build_arm
+
+
+
+ARM ARM
+
+
+https://morrow.ece.wisc.edu/ECE353/arm_reference/ddi0100e_arm_arm.pdf
+
+Contains the ARM assembly language as well as chip architecture overview.
+
+You'll need the ARM 11 Architecture Reference Manual
+
+
+
+ARM TRM
+
+
+https://infocenter.arm.com/help/topic/com.arm.doc.ddi0301h/DDI0301H_arm1176jzfs_r0p7_trm.pdf
+
+Contains info about the specific SOC that the Raspberry PI uses
+
+
+
+RPI Schematics
+
+
+https://www.raspberrypi.org/wp-content/uploads/2012/04/Raspberry-Pi-Schematics-R1.0.pdf
+
+Shows how the Raspberry Pi is wired up
+
+
+
+RPI Peripherals
+
+
+https://www.raspberrypi.org/wp-content/uploads/2012/02/BCM2835-ARM-Peripherals.pdf
+
+Describes functionality and programming model for the various Raspberry Pi
+   peripherals.
+
+

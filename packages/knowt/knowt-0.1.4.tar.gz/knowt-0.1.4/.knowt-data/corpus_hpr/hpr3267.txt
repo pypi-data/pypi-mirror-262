@@ -1,0 +1,40 @@
+## hpr3267 :: Ripping Media 2021
+
+ 
+android has newpipes for downloading youtube
+windows youtube-DL script:
+https://github.com/freeload101/SCRIPTS/blob/master/Windows_Batch/Youtube-dl-ffmpeg-aria2c-updater-downloader.bat
+
+ffmpeg notes:
+
+I started out by wanting to download facebook live streams and ended up missing it all together
+Reference (no longer live by the time I got online... ): https://www.facebook.com/FormulaDRIFT/videos/452016008942956/
+live video looks like something about mpd files with facebook also looks like you need ffmpeg complied with --enable-libxml2
+this is where I found a WONDERFUL script https://github.com/jb-alvarado/media-autobuild_suite
+also located other untested projects (pre compiled binaries ;/ ) https://www.videohelp.com/software/Hybrid
+windows binary of youtube-dl for facebook/twitch.tv and youtube etc ..
+https://ytdl-org.github.io/youtube-dl/download.html
+oneliner to download/run media-autobuild_suite to "%userprofile%media-autobuild_suite-masterbuildffmpeg-gitbuild-static-64bit"
+
+powershell   -Exec Bypass "IEX (New-Object System.Net.WebClient).DownloadFile('https://github.com/jb-alvarado/media-autobuild_suite/archive/master.zip',"%userprofile%desktopmaster.zip");   Expand-Archive -LiteralPath  "%userprofile%desktopmaster.zip"  -DestinationPath  "%userprofile%desktop"     ;Start-Process "%userprofile%desktopmedia-autobuild_suite-mastermedia-autobuild_suite.bat" "
+
+this took over 8hrs to compile on a i7 I disabled items that had warnings and comments about issues and useless of codes that have issues etc
+missing libopenh264.dll when I launched ffmpeg_g.exe
+the dll was not built but I'm not sure it's something I messed up I'm sure
+only post I saw online about it was that it's useless and -full should never be used flaming etc
+start media-autobuild_suite-mastermsys64mingw64.exe and run the following
+Reference : https://bluexmas.tistory.com/category/OS not sure what the flags were for but copied the DLL into the folder and it appears to run
+
+git clone https://github.com/cisco/openh264.git
+cd openh264
+export "CFLAGS=-fno-stack-protector"
+export "LDFLAGS=-lssp"
+make
+
+also had to apply this fix for AR etc in platform-mingw_nt.mk folder
+
+find / -iname "platform-mingw_nt.mk" -exec sed 's/x86_64-w64-mingw32-//g' -i.bak '{}' ;
+youtube-dl -f bestvideo+bestaudio "link to youtube video"
+If that gives you an error, try the following instead:
+youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "link to youtube video"
+Here you download the best video and audio separately and then merge into a, in this case mp4 file. You can change the output format on the merged video as well.

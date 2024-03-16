@@ -1,0 +1,24 @@
+## hpr3249 :: Linux Inlaws S01E21: The Big Linux Inlaws Peep Show
+
+ 
+Rust for the Linux kernel: https://github.com/Rust-for-Linux/linux
+Linus opinion on C++ in the Linux kernel: https://lkml.org/lkml/2004/1/20/20
+gdb: https://www.gnu.org/software/gdb
+lldb: https://lldb.llvm.org
+Novell's Netware: https://en.wikipedia.org/wiki/NetWare
+strace: https://strace.io
+ltrace: https://www.ltrace.org
+DTrace: https://dtrace.org/blogs/about
+ptrace: https://en.wikipedia.org/wiki/Ptrace#Linux
+Capabilities: https://wiki.archlinux.org/index.php/capabilities
+Extended attributes: https://en.wikipedia.org/wiki/Extended_file_attributes#L
+inux
+eBPF: https://ebpf.io
+BCC: https://github.com/iovisor/bcc
+BCC toolchain: https://iovisor.github.io/bcc
+Linux kernel tracing: https://www.kernel.org/doc/html/latest/trace/index.html
+Cathy O'Neil's Weapons of Math Destruction: https://en.wikipedia.org/wiki/Weapon
+s_of_Math_Destruction
+Audacity: https://manual.audacityteam.org
+Jitsi (Meet): https://github.com/jitsi/jitsi-meet
+

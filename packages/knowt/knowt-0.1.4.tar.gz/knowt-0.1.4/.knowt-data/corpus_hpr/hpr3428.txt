@@ -1,0 +1,12 @@
+## hpr3428 :: Bad disk rescue
+
+ Here I tell the tale of a bad disk rescue. Is the rescue bad or just the disk? Well the disk is most certainly bad but please listen and tell me if the rescue was good or bad or could have been done better.
+Guest stars in this show include:
+
+dd
+ddrescue
+losetup
+mount
+badblocks
+smartctl
+The System rescue distro

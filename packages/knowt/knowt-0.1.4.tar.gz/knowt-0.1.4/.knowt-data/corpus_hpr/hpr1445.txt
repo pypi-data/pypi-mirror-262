@@ -1,0 +1,10 @@
+## hpr1445 :: 22 - LibreOffice Writer Other Frame Styles
+
+ 
+This continues our look at frames by looking at frame styles for things other than text.
+
+LibreOffice Writer Other Frame Styles
+In the previous tutorial we looked at using the frame style for text, which is not called the Text style, but the Frame style, which may be confusing. This is a very common use of frames, but there are others. To start the discussion, let’s get back to the basic concept of objects. LibreOffice is an object-oriented program and you should keep this in mind when dealing with this software.
+A piece of text can be an object, and it can contain other objects (paragraphs, sentences, words, characters), or it can be contained within other objects (section, chapter, document). In the case we are looking at, a frame is an object, which contains other objects, and is in turn contained within larger objects (page, section, document). Depending on the objects being contained, the frame styles can be different, and that is what we need to look at now.
+
+Please see https://www.ahuka.com/?page_id=671 for the rest of the article

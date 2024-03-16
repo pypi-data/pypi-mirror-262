@@ -1,0 +1,7 @@
+## hpr3322 :: Tune system performance with tuned
+
+ 
+The tuned-adm command switches profiles to help you fine-tune your Linux system's performance.
+
+
+For more about performance, see Powertop Linuxcon 2015 presentation and maybe listen to my GNU World Order episode

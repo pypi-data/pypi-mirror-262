@@ -1,0 +1,26 @@
+## hpr2451 :: Server Basics 105 OpenVPN Client
+
+ In the previous episode of this series, you set up an OpenVPN server. In this episode, Klaatu walks you through:
+
+
+Installing OpenVPN on a client machine.
+
+
+Generating a key and certificate request.
+
+
+Signing a client cert from the server.
+
+
+Configuring the client.conf file.
+
+
+Configuring the client routing table to use the VPN subnet.
+
+
+Pinging the server over VPN!!!
+
+
+Where to go from here? 
+
+Your next steps should be to investigate how your org wants to use VPN, how your clients actually want to join the VPN (Network Manager has some nice features that makes joining a VPN fairly transparent). Have fun!

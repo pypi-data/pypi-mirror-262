@@ -1,0 +1,155 @@
+## hpr1217 :: HPR Community News for March 2013
+
+ New hosts
+
+Welcome to our new hosts: 
+Jon Kulp, 
+b1ackcr0w, 
+Steve Bickle, and
+Christopher M. Hobbs.
+
+Show Review
+
+
+id
+title
+host
+
+
+
+1196
+HPR Community News Feb 2013
+Various Hosts
+
+1197
+What I do with bash scripts
+Jon Kulp
+
+1198
+THEATER OF THE IMAGINATION: 05
+lostnbronx
+
+1199
+Old Time Radio on the web
+Frank Bell
+
+1200
+CJE Computer Jargon Explained 01
+b1ackcr0w
+
+1201
+In My Feed - Episode 01
+Steve Bickle
+
+1202
+LiTS 025: bc
+Dann
+
+1203
+templer: a static html generator
+Chess Griffin
+
+1204
+My Magnatune Downloader
+Dave Morriss
+
+1205
+TGTM Newscast for 3/10/2013
+Tgtm News Team
+
+1206
+Resolving Issues (The Vhost Config File)
+NYbill and Windigo
+
+1207
+Icecast 101
+klaatu
+
+1208
+Northeast Linux Fest 2013 p1-3
+NYbill
+
+1209
+Northeast Linux Fest 2013 p2-3
+NYbill
+
+1210
+Northeast Linux Fest 2013 p3-3
+NYbill
+
+1211
+NELF Wrapup
+Various Hosts
+
+1212
+TGTM Newscast for 3/22/2013 Rebecca "Bobobex" Newborough
+Tgtm News Team
+
+1213
+LiTS 026: units
+Dann
+
+1214
+LinuxFest Northwest is April 27, 28,2013
+David Whitman
+
+1215
+Pair Programming
+Christopher M. Hobbs
+
+
+
+Other News
+
+FiftyOneFifty shows to be scheduled on "old" rules
+README has been updated (several times)
+https://hackerpublicradio.org/README.txt
+https://hackerpublicradio.org/sample_shownotes.html
+
+Website and Feeds are released at Midnight was PST (-8) and is now UTC
+Photos from NELF https://media.gunmonkeynet.net
+NELF Chatter/SWAG
+HPR Mailing List will be archived on https://gmane.org/subscribe.php as our own archiver is broken.
+What's a "hacker"?
+Booth kit is going to LFNW
+Latest HPR Presentation
+https://hackerpublicradio.org/media/hpr-presentation.odp
+https://hackerpublicradio.org/media/hpr-presentation.pdf
+
+Coffee cup logo
+Android app development
+Requested topics https://www.hackerpublicradio.org/contribute.php#requested_topics
+Part 2 off ...I Love Food, Good Food, April 6.
+Search was removed, Google added, some discussion happened
+To wordpress or not to wordpress, how to safely accept input from the web
+FTP Server moved off web server - README has moved
+Implemented a deny list on HPR
+Preview upcomming shows for hosts
+
+Todo List
+
+Automate the presentation
+Securing the website
+Search options
+Introduction to HPR video
+Upload Form
+Add ATOM Feed
+Opus Support
+Introduction of show Tags
+Events Page
+Twitter/Identi.CA Feed
+Upload to Archive.org
+Automatic tagging of media files
+Automating media upload, identification and transcoding
+Fixing broken links
+Fixing broken HTML/Converting to HTML5/CSS3
+
+Events
+
+https://www.linuxfestnorthwest.org/LFNW: LinuxFest Northwest 2013 Bellingham, WA April 27th and 28th, Contact: David Whitman 
+OCPLive May https://ocplive.com/ Sometime ?
+
+We need shows
+
+There are 22 shows in the queue from 7 hosts and 175 slots to fill this year so please consider contributing a show. https://hackerpublicradio.org/calendar.php
+

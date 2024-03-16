@@ -1,0 +1,13 @@
+## hpr3560 :: LCh Components Layer Modes
+
+ Layer Modes, sometimes called Blending Modes, allow you to combine layers in a variety of ways. We continue with the LCh Components Modes, which brings us to yet another color model, in this case the Hue, Saturation, and Value model. We've already looked at RGB, which is the model used for most broadcast and online uses, and the CMYK model which is used for printing, and in the previous tutorial we looked at the HSV model. This wraps up our look at color models, and also concluded our look at Layer Modes (or Blending Modes). These are the Layer Modes available on the latest (at the time I write this) version of GIMP, 2.10.24.
+Links:
+
+https://docs.gimp.org/2.10/en/gimp-concepts-layer-modes.html
+https://ninedegreesbelow.com/photography/determine-image-tonality-and-palette-part-1.html
+https://en.wikipedia.org/wiki/CIELAB_color_space
+https://en.wikipedia.org/wiki/CIELUV#Cylindrical_representation_.28CIELCH.29
+https://en.wikipedia.org/wiki/List_of_color_spaces_and_their_uses
+https://en.wikipedia.org/wiki/Luminance
+https://www.ahuka.com/gimp/lch-components-layer-modes/
+

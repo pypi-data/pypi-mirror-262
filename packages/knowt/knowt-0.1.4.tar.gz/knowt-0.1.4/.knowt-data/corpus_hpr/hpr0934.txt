@@ -1,0 +1,10 @@
+## hpr0934 :: LiTS 001: qrencode
+
+ In the second in the series, Dann concentrates on producing a image from the command line, QR codes to be precise. 
+
+He says: "The qrencode application is a tool to rapidly produce qrcodes.  Qrcodes are handy little images that embed information many cell-phone cameras can read to do a number of tasks like provide a link to install applications, provide links to web sites or videos, or to add contacts into the address book.  With qrencode, in seconds you can generate these images.
+
+Find the excellent write up and video at
+https://www.linuxintheshell.com/2012/03/01/entry-001-qrencode/
+or if you prefer:
+

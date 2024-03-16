@@ -1,0 +1,58 @@
+## hpr2238 :: Gnu Awk - Part 6
+
+ Gnu Awk - Part 6
+Introduction
+This is the sixth episode of the “Learning Awk” series that b-yeezi and I are doing.
+Recap of the last episode
+Regular expressions
+In the last episode we saw regular expressions in the ‘pattern’ part of a ‘pattern {action}’ sequence. Such a sequence is called a ‘RULE’, (as we have seen in earlier episodes).
+$1 ~ /p[elu]/ {print $0}
+Meaning: If field 1 contains a ‘p’ followed by one of ‘e’, ‘l’ or ‘u’ print the whole line.
+$2 ~ /e{2}/ {print $0}
+Meaning: If field 2 contains two instances of letter ‘e’ in sequence, print the whole line.
+It is usual to enclose the regular expression in slashes, which make it a regexp constant.
+We had a look at many of the operators used in regular expressions in episode 5. Unfortunately, some small errors crept into the list of operators mentioned in that episode. These are incorrect:
+
+\A (beginning of a string)
+\z (end of a string)
+\b (on a word boundary)
+
+The first two operators exist, in languages like Perl and Ruby, but not in GNU Awk.
+For the ‘\b’ sequence the GNU manual says:
+
+In other GNU software, the word-boundary operator is ‘\b’. However, that conflicts with the awk language’s definition of ‘\b’ as backspace, so gawk uses a different letter. An alternative method would have been to require two backslashes in the GNU operators, but this was deemed too confusing. The current method of using ‘\y’ for the GNU ‘\b’ appears to be the lesser of two evils.
+
+The corrected list of operators is discussed later in this episode.
+Replacement
+Last episode we saw the built-in functions that use regular expressions for manipulating strings. These are sub, gsub and gensub. Regular expressions are used in other functions but we will look at them later.
+We will be looking at sub, gsub and gensub in more detail in this episode.
+Long notes
+I have written out a set of longer notes for this episode and these are available here.
+Links
+
+GNU Awk User’s Guide
+Previous shows in this series on HPR:
+
+“Gnu Awk - Part 1” - episode 2114
+“Gnu Awk - Part 2” - episode 2129
+“Gnu Awk - Part 3” - episode 2143
+“Gnu Awk - Part 4” - episode 2163
+“Gnu Awk - Part 5” - episode 2184
+
+The “Learning sed” series:
+
+“Introduction to sed - part 1” - episode 1976
+“Introduction to sed - part 2” - episode 1986
+“Introduction to sed - part 3” - episode 1997
+“Introduction to sed - part 4” - episode 2011
+“Introduction to sed - part 5” - episode 2060
+
+The “Mockaroo” data generator site
+The Vim plugin “csv.vim”
+Resources:
+
+ePub version of these notes
+PDF version of these notes
+Demonstration of some regex operators: contacts.awk
+File of dummy contacts: contacts.txt
+

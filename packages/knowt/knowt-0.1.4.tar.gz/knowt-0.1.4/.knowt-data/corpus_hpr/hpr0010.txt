@@ -1,0 +1,14 @@
+## hpr0010 :: The Linux Boot Process Part 1
+
+ Linux Boot Process - Part I
+SystemV vs BSD Style Scripts
+
+In part one of the Linux Boot Series we take a top level look at the Linux boot process and discuss some of the differences between SystemV based systems and BSD style systems. 
+ I focus on RedHat, Slackware, Ubuntu (Debian) and Arch Linux.  Below are some resources for further information.
+Redhat - RHL 9 boot - shutdown process 
+Slackware Boot Process 
+Debian Boot Process 
+Basic overview of SystemV vs BSD Systems 
+IBM developer works book - Linux Boot Process
+Gentoo Handbook for x86 - It's hard to specify one chapter because Gentoo's documentation is top notch and very informative.  Review the installation and initscripts chapters in particular.
+

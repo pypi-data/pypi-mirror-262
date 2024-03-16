@@ -1,0 +1,125 @@
+## hpr3836 :: Using 'zoxide', an alternative to 'cd'
+
+ 
+
+Overview
+I like the idea that there are tools available to enhance the
+'cd' command, remembering places you have been in the file
+system and taking you there easily.
+I use 'pushd'
+and 'popd' for moving in and out of directories from a
+place I want to do most of my work, but something more powerful than
+these or cd have always seemed desirable.
+I was using 'autojump' for a while last year, but didn’t
+really get on with it. This was mainly because there was no way of
+excluding certain directories which had been visited from its list.
+Recently I heard of 'zoxide', which I have been trying
+and really like.
+
+zoxide
+What is it?
+From the GitHub
+page:
+
+zoxide is a smarter cd command, inspired by z1 and
+autojump.
+It remembers which directories you use most frequently, so you can
+“jump” to them in just a few keystrokes. zoxide works on all major
+shells.
+
+In its man page it’s billed as “A faster way to navigate your
+filesystem”.
+It’s written in Rust so is very fast.
+What does it do?
+
+It offers the functionality of the Linux/Unix 'cd'
+command.
+It collects the directories you have visited into a database and
+gives them a ranking relating to the number of times they have been
+visited. It applies aging rules and removes these when the ranking drops
+below one. It uses frecency to do this - a combination of
+frequency and recency. (See the Wikipedia page
+explaining this word)
+It performs algorithmic matching on the directory you specify and
+takes you to the highest ranking best match.
+It can resolve conflicts between matching directories or can
+allow selection through an interactive interface.
+It can interface to fzf, a general-purpose
+command-line fuzzy finder.
+It “knows” where it is (in the Bash shell) by calling a function
+out of the PROMPT_COMMAND variable. This can be used to
+execute one or more commands before displaying the prompt for a new
+command. This is a common way to hook monitoring commands into
+a Bash session.
+
+Where can you get it?
+I installed it from the Debian Testing repo, but I got
+'zoxide v0.4.3-unknown' whereas the latest version is
+0.9.0. Installing from the GitHub page seems the
+best option if you want the latest version.
+There is an installation script on the GitHub page and it’s possible
+to download it with curl and pipe it to Bash. I’m never
+comfortable doing this, but that’s your choice.
+I also installed fzf from the Debian Testing repo,
+though I’m still learning what this can do, since it’s very rich in
+features!
+How do you set it up?
+This process is shell-specific. I run Bash so I have added it to my
+~/.bashrc and the command there is:
+eval "$(zoxide init bash)"
+What this does is generate a number of Bash functions and aliases and
+some commands which are fed into eval and executed in the
+current context.
+Function z is created which gives a way of invoking
+zoxide in fewer keystrokes, though the full functionality
+of zoxide is not available through this function, use the
+full zoxide command.
+Function zi lists all of the stored directories courtesy
+of fzf. I haven’t tested this without fzf, so
+I’m not sure what it does if it’s not available. The scrollable list can
+be navigated and a directory chosen with the Enter key (or
+double mouse click). In the scrollable list, if characters are typed
+they are used to select directories from the list, so that it’s simple
+to find a directory whose exact name you have forgotten.
+How to tune it?
+The zoxide behaviour can be modified through environment
+variables (and at setup time).
+For example it is possible to define directories which are not to be
+stored using the environment variable _ZO_EXCLUDE_DIRS.
+This must be done before running zoxide init. In my case, I
+have the following in my ~/.bashrc:
+export _ZO_EXCLUDE_DIRS="/media/extras:/media/extras/*"
+eval "$(zoxide init bash)"
+The setup details are to be found in the GitHub documentation.
+Conclusion
+I really like this. It’s fast and configurable, and with
+fzf gives some great command-line features. There are
+editor plugins, such as zoxide.vim for Vim and Neovim (not
+used yet). It also integrates with other third-party tools.
+It seems to be the best of its type!
+Links
+
+HPR show “hpr1843 :: Some
+Bash tips” covers pushd, popd and
+dirs.
+zoxide
+GitHub page
+fzf GitHub
+page
+Wikipedia page on
+the word frecency
+The 'z' tool on
+GitHub
+The
+'autojump' tool on GitHub
+
+
+
+
+I didn’t know what 'z'
+was when recording the audio. I did some research and found it, and can
+see how 'zoxide' has similar behaviour. I have added a link
+in case you want to investigate this yourself.↩︎
+
+
+

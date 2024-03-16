@@ -1,0 +1,204 @@
+## hpr3305 :: Nagios part 2
+
+ I did not get any feed back on my first nagios episode, so I can only assume that I perfectly explained what nagios is. And my installation instructions were so good, that no one had any questions. So I will move on to some additional nagios topics.
+Why use nagios
+One thing I meant to talk about but forgot in the intro is why you may want to run nagios as a hobbyist.
+
+Education, learning a new technology for fun
+Network Monitoring is a valuable skill and benefit your career if you work in IT
+Early warning for failing hardware
+Monitoring self hosted applications
+Notification for home security devices IP cameras
+
+Most of the benefits of nagios are not specific to nagios. There are plenty of other options for monitoring, and all of them are worth exploring.
+Notification Options
+Email
+I had planned on discussing how to set up postfix to send emails. But, that is such a big topic I will have to skip it. I will instead talk about what I do to send email. And Maybe you can do something similar.
+Spammers have ruined the ability to directly send email. Most residential ISPs block port 25 outbound to prevent malware from sending email. Some Virtual hosting providers may not block sending mail, but many mail servers will not accept mail from VPS IP ranges.
+There are a few ways to get around this problem. I use the email delivery service Sendgrid. They do all the work of staying off the list of spammers, and most email providers trust mail send via Sendgrid.
+I wont go into the instructions for configuring postfix to relay outgoing mail via Sendgrid, but their documentation is easy to follow.
+There are plenty of services like sendgrid. And most have a free tier. So unless you are blasting out alerts you probably will not have to pay. If you want to send alerts from nagios via email, I recommend finding a email sending service that works for you.
+Push alerts
+There are a few options (besides email) for getting alerts on your phone.
+aNag
+The easiest way to get alerts is probably the aNag Android app. aNag connects to the nagios UI to get status updates. It can be configured to check in periodically and there generate notifications for failed checks.
+One downside to aNag is the phone has to be able to connect to the nagios server. So, if nagios is on a private network, you will need a VPN when you are not on the same network.
+If you decide to put nagios on a public network, be sure to configure apache to only use HTTPS. certbot makes this really easy.
+Pushover
+Another option is to us a Push Notification service that can send notifications that are triggered by API calls.
+I like to use the pushover.net You pay $5 when you download the pushover app from the app store, and then notifications are sent for free. They offer a 30 day trial if you want to evaluate the service.
+To use pushover, we will add a new contact to nagios. The command for the pushover contact is a script that calls the pushover API via curl.
+Remember from the previous episode, nagios has a conf.d directory and will load any files in that directory. So we will create a new file /etc/nagios4/conf.d/pushover.cfg and restart nagios. The contents of the pushover file will be in the show notes.
+To use pushover for specific checks, and the contact to that check. See the example in the show notes. Or if you want to use pushover for everything Modify the definitions for the host and service templates to use pushover as a contact
+The script that calls the Pushover API is at https://github.com/jedda/OSX-Monitoring-Tools/blob/master/notify_by_pushover.sh Save a copy of the script in the nagios plugins directory.
+pushover.cfg
+# 'notify-host-pushover' command definition
+
+define command{
+        command_name    notify-host-pushover
+        command_line    $USER1$/notify_by_pushover.sh -u $CONTACTADDRESS1$ -a $CONTACTADDRESS2$ -c 'persistent' -w 'siren' -t "Nagios" -m "$NOTIFICATIONTYPE$ Host $HOSTNAME$ $HOSTSTATE$"
+        }
+
+# 'notify-service-pushover' command definition
+
+define command{
+        command_name   notify-service-pushover
+        command_line   $USER1$/notify_by_pushover.sh -u $CONTACTADDRESS1$ -a $CONTACTADDRESS2$ -c 'persistent' -w 'siren' -t "Nagios" -m "$HOSTNAME$ $SERVICEDESC$ : $SERVICESTATE$ Additional info: $SERVICEOUTPUT$"
+        }
+
+define contact{
+        name                            generic-pushover
+        host_notifications_enabled      1
+        service_notifications_enabled   1
+        host_notification_period        24x7
+        service_notification_period     24x7
+    service_notification_options    w,c,r
+    host_notification_options       d,r
+        host_notification_commands      notify-host-pushover
+        service_notification_commands   notify-service-pushover
+        can_submit_commands             1
+        retain_status_information       1
+        retain_nonstatus_information    1
+        contact_name           Pushover
+        address1               {{ pushover_user_key }}
+        address2               {{ pushover_app_key }}
+}
+writing custom checks
+One of the big advantages of nagios is the ability to write custom checks. In the previous episode, I mentioned that the status of the nagios checks are based on exit code.
+
+
+
+Exit Code
+status
+
+
+
+
+0
+OK/UP
+
+
+1
+WARNING
+
+
+2
+CRITICAL
+
+
+
+So, to write a custom check, we need a script that will perform a check, and exit with an exit code based on the results of the check.
+Verify recent log entry
+I have a server where occasionally the syslog daemon stop running,
+Instead of trying to figure out why syslog keeps crashing, I wrote a script to check the log file is being updated. The script looks for the expected log file and tests that it has been modified in the last few minutes. The script will:
+
+exit 0 if the syslog file is less than 1 minute old
+exit 1 if the syslog file is less than 10 minutes old
+exit 2 if the syslog file is more that than 10 minutes old or does not exist
+
+Since the server with the crashy syslog is not the same server running nagios, I need a way for nagios to execute the script on the remote server.
+Nagios has a few ways to run check commands on remote servers. I prefer to use ssh, but there are some disadvantages to using ssh. Specifically the resources required to establish the ssh connection can be heavier than some of the other remote execution methods.
+The check_by_ssh plugin can be used to execute check commands on another system. Typically ssh-key authentication is set up so the user that is running the nagios daemon can log in to the remote system without a password
+You can try the command to make sure it is working.
+cd /usr/lib/nagios/plugins
+./check_by_ssh -H RemoteHost -u RemoteUser \
+-C /path/to/remote/script/check_log_age.sh
+The new command can be added to a file in the nagios conf.d directory
+define command {
+    command_name check_syslog_age
+    command_line    $USER1$/check_by_ssh  -u RemoteUser -C /remote/path/check_log_age.sh
+        }
+After adding the command definition, check_syslog_age can be added as a service check.
+The Log Check script:
+#!/usr/bin/bash
+
+TODAY=$(date +%Y%m%d)
+LOGPATH="/syslog"
+TODAYSLOG="$TODAY.log"
+if test `find "$LOGPATH/$TODAYSLOG" -mmin -1`
+then
+    echo OK
+    exit 0
+elif test `find "$LOGPATH/$TODAYSLOG" -mmin -10`
+then
+    echo WARNING
+    exit 1
+else
+    echo CRITICAL
+    exit 2
+fi
+Using snmp to monitor load average and disk usage
+SNMP can get complicated and I have mixed feelings about using it. I am not going to go into the SNMP versions or the different authentication options for SNMP. But I will show a minimal setup that allows some performance data to be checked by nagios
+The SNMP authentication that I am demonstrating is only appropriate for isolated networks. If you plan to use snmp over a public network, I recommend looking into more secure versions of SNMP or tunnelling the check traffic via ssh or a VPN.
+If you want to learn more about SNMP, I recommend "SNMP Mastery" by Michael W Lucas. https://www.tiltedwindmillpress.com/product/snmp-mastery/
+SNMP setup
+First we need to configure the client to respond to SNMP request. On Ubuntu, apt install snmpd
+By default, snmpd listens on localhost. Replace the existing snmpd.conf with this example to set a read only community string and listen on all IP addresses.
+And don't forget, I do not recommend this for a Public Network. Restart snmpd and open port 161 if there is a firewall enabled.
+agentAddress udp:161,udp6:[::1]:161
+rocommunity NEW_SECURE_PASSWORD
+disk /
+SNMP nagios checks
+The nagios plugin package installs several pre-defined snmp checks in /etc/nagios-plugins/config/snmp.cfg Look through the file to get an idea of the checks that can be performed via SNMP.
+Below is an example of a client configuration that uses SNMP. If you look at how the command definitions, most of them have an option to accept arguments to modify how the check is done The argument placeholders re represented by $ARG1$
+In most cases, the arguments are optional. This particular SNMP check for disk space requires an argument to complete the disk ID being checked.
+When the service check is defined, the arguments are separated by ! You can also see in the example how you can
+
+add additional contacts
+Change the check attempts - number or retires before sending an alert
+Frequency of checks, the default is every 5 minutes
+
+define host {
+  host_name ServerIP
+  use linux-server
+}
+define service {
+  use generic-service
+  host_name ServerIP
+  contacts Pushover
+  max_check_attempts 1
+  check_interval 1
+  service_description DISK
+  check_command snmp_disk!NEW_SECURE_PASSWORD!1!1 # first arg is disk number
+  # command in /etc/nagios-plugins/config/snmp.cfg
+}
+define service {
+  use generic-service
+  host_name ServerIP
+  contacts Pushover
+  service_description LOAD
+  check_command snmp_load!NEW_SECURE_PASSWORD
+  # command in /etc/nagios-plugins/config/snmp.cfg
+}
+define service {
+  use generic-service
+  host_name ServerIP
+  service_description Memory
+  check_command snmp_mem!NEW_SECURE_PASSWORD
+  # command in /etc/nagios-plugins/config/snmp.cfg
+}
+define service {
+  use generic-service
+  host_name ServerIP
+  service_description Swap
+  check_command snmp_swap!NEW_SECURE_PASSWORD
+  # command in /etc/nagios-plugins/config/snmp.cfg
+}
+Check servers for updates
+Nagios has plugins that can check if there are system updates required.
+
+Number of updates
+Check will be CRITICAL if any of the updates are security related.
+Is a reboot required to load the latest kernel.
+
+The check plugin is installed on the remote server. The plugin for Debian based systems is nagios-plugins-contrib or nagios-plugins-check-updates for Red Hat based systems.
+The command definitions are below. Since the plugins take longer to run, you will probably need to modify the nagios plugin timeout.
+define command {
+    command_name check_yum
+        command_line    $USER1$/check_by_ssh -H $HOSTADDRESS$ -t 120 -u root -C "/usr/lib64/nagios/plugins/check_updates -t120"
+    }
+define command {
+       command_name check_apt
+       command_line    $USER1$/check_by_ssh -H $HOSTADDRESS$ -t 120 -u nagios-ssh -C "/usr/lib/nagios/plugins/check_apt -t60"
+        }
+That's probably all the nagios I can handle for now. Leave a comment if there are nagios topics you would like to hear about. Thanks for listening and I will see you next time.

@@ -1,0 +1,42 @@
+## hpr3537 :: getting to blinky with flashforth
+
+ 
+intro Donation link
+what you'll need
+
+hardware
+
+arduino uno or nano
+programmer
+https://hackerpublicradio.org/eps.php?id=2799
+cables
+
+software
+
+flashforth https://www.sourceforge.net/projects/flashforth
+avrdude https://www.nongnu.org/avrdude/
+terminal program
+emacs: M-x serial-term
+
+datasheet
+
+the install
+
+the guide https://flashforth.com/atmega.html
+did it work?
+
+troubleshooting
+
+check connections
+permission issues
+set fuses separately, one at a time
+double checkterminal baud rate
+
+
+
+hello-world
+
+: hw1 ." Hello, world!" ;
+: led-on %00100000 PORTB mset ;
+: led-off %00100000 PORTB mclr ;
+: flash-led begin led-on #1000 ms led-off #1000 ms again ;

@@ -1,0 +1,32 @@
+## hpr2068 :: Podcasts I listen to and how I fetch them.
+
+ 
+Subscriptions
+Right out of my ~./podget/serverlist:
+
+https://thelinuxlink.net/tllts/tllts.rss TECH The Linux Link
+https://duffercast.org/feed/podcast/ CULTURE The Duffercast
+https://exworker.libsyn.com/rss/ SOCIETY The Ex-Worker
+https://hackerpublicradio.org/hpr_ogg_rss.php TECH Hacker Public Radio
+https://feeds.feedburner.com/thememorypalace/ STORIES The Memory Palace
+https://feeds.themoth.org/themothpodcast/ STORIES The Moth
+https://www.ourbattletech.com/feed/ GAMES Our BattleTech
+https://wfmu.org/podcast/FC.xml CULTURE WMFU Radio Free Culture
+https://hourofslack.libsyn.com/rss/ BOB Subgenius Hour of Slack
+https://feed.thisamericanlife.org/talpodcast NPR This American Life
+https://kpfa.org/program/puzzling-evidence/feed/ BOB Puzzling Evidence
+https://2600.com/otw-broadband.xml TWOSIXZEROZERO Off the Wall
+https://2600.com/oth-broadband.xml TWOSIXZEROZERO Off the Hook
+https://radioopensource.org/feed/ SOCIETY Open Source
+https://feed.loveandradio.org/loveplusradio STORIES Love and Radio
+https://feeds.podtrac.com/luI2ebVqX-WW TECH OReilly Hardware Podcast
+https://embedded.fm/?format=rss TECH EmbeddedFM
+
+Tools
+
+podget - https://podget.sourceforge.net/
+podracer - https://podracer.sourceforge.net/
+gPodder - https://gpodder.org
+
+Configuration
+I can supply my podgetrc upon request. It’s pretty basic.

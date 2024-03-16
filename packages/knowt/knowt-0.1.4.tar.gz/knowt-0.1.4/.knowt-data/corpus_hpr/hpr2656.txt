@@ -1,0 +1,19 @@
+## hpr2656 :: Explaining the controls on my Amateur HF Radio Part 2
+
+ Radio Mode and frequency controls on Amateur HF Radio TS940S
+
+UK HF band plan information
+https://rsgb.org/main/operating/band-plans/hf/
+Morse code (CW), Carrier Wave
+https://en.wikipedia.org/wiki/Morse_code
+Article about Sideband, including Lower Side Band (LSB) and Upper Side Band (USB)
+https://en.wikipedia.org/wiki/Sideband
+Amplitude Modulation (AM)
+https://en.wikipedia.org/wiki/Amplitude_modulation
+Frequency Modulation (FM)
+https://en.wikipedia.org/wiki/Frequency_modulation
+Frequency Shift Keying (FSK)
+Note the CW ident di da dit or dot dash dot is not as I thought the letter “K” in Morse code, silly me, it’s actually the letter “R”. Told you I wasn’t great at Morse.
+https://en.wikipedia.org/wiki/Frequency-shift_keying
+
+The “T-F Set” button is used to set the Transmit frequency when working in split mode. In split mode, you can set the radio to transmits on one frequency and receives on a different frequency.

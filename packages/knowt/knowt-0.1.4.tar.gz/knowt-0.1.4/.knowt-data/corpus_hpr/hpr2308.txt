@@ -1,0 +1,27 @@
+## hpr2308 :: Everyday package operations in Guix
+
+ Back at hpr2198 :: How awesome is Guix and why will it take over the world I wrote a comment about how I use guix in everyday practice. Here's the full episode for that comment.
+The most common operations I do are:
+
+guix environment --ad-hoc ncdu, where ncdu stands for something I heard about and want to try out, or something I only use once a month. It is then “installed” in the spawned sub-shell only. This is an awesome feature.  
+If you haven’t heard about ncdu, look it up.
+Also in ~/.bash_aliases
+Also in ~/.local/share/applications
+Using stow, of course
+
+guix package -i ncdu if it turned out to be something I like and use every day
+guix pull to get the latest definitions for this user
+guix package -u to upgrade my permanently installed stuff for this user
+guix package -d to erase history of what I had installed before and release these references for collection
+guix gc to reclaim my precious disk space
+
+Followup episode material:
+
+What's in my .bash_aliases?
+Decentralized source control, for real this time, with git-ssb
+What's so great about execline?
+What's a stow?How I got rid of stow and learned to love guix to the fullest (Future episode. That's not where I am today.)
+Listen kids, stow is not a package manager (warning: fediverse drama ahead). It's a symlink farm manager that I use for package management.
+Very short episode: ncdu, eh?
+
+

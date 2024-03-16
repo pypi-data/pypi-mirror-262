@@ -1,0 +1,9 @@
+## hpr2617 :: Exposing a Raspberry Pi database through a REST API
+
+ Links from the episode
+
+Wikipedia - REST API
+Wikipedia - WSGI
+Bottle Framework
+SQLite
+

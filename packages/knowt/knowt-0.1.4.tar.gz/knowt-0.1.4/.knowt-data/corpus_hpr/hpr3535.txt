@@ -1,0 +1,186 @@
+## hpr3535 :: template Haskell
+
+ There's certain amount of boilerplate code in my game that keeps repeating time after time. I can't quite remove it, but I can hide it with template haskell.
+newtype recap
+I'll be using PlanetName as an example throughout the show. newtype is Haskell's way of defining a new type, that wraps around an old type. This lets us to give better meaning to the wrapped type. Instead of talking about Text, we can talk about PlanetName and we won't accidentally mix it up with StarName or ContentsOfAlexandrianLibrary. It comes with no performance cost at all, as the wrapping is removed during the compilation.
+Below is how our PlanetName is defined:
+newtype PlanetName
+   = MkPlanetName {_unPlanetName :: Text}
+   deriving (Show, Read, Eq)
+
+It has:
+
+type constructor PlanetName
+data constructor MkPlanetName
+single field _unPlanetName
+type for that field Text
+deriving clause, telling compiler to automatically generate Show, Read and Eq instances
+
+If it were wrapping a Integer, we would add Ord and Num instances too.
+These instances give us some basic functions that we can use to turn out value into String and back or compare two values to see if they're equal or not. Ord lets us compare their relative size and Num adds some basic arithmetics like addition and subtraction.
+Remember, type constructor is used when talking about the type (function signatures, declaring type of a value, etc.), while data constructor is used to create values of the type ("Earth", "Mars", etc.). isPlanet :: PlanetName -> Bool states that isPlanet function takes one parameter of type PlanetName and returns value of type Bool. planet = MkPlanetName "Earth" creates a new value planet, that has type PlanetName and which value is MkPlanetName "Earth".
+Boilerplate
+When PlanetName is defined, I need to add some instances by hand: IsString, ToJSON, FromJSON, PersistField and PersistFieldSql.
+IsString lets me use string literals in code, without having to call the data constructor. Compiler is smart enough to infer from context if string I typed should be PlanetName or something else.
+ToJSON and FromJSON are used to turn value to and from json for transferring back and forth between client and server. In json our value is just simple string, but we still need to program that transformation.
+PersistFieldSql tells Persistent (database layer I'm using) what type of database field should be created to hold this data in database.
+PersistField contains functions for serializing our value to database and loading it from there.
+Below is full code that I want to abstract out as much as I can:
+newtype PlanetName
+   = MkPlanetName {_unPlanetName :: Text}
+   deriving (Show, Read, Eq)
+
+instance IsString PlanetName where
+   fromString = (MkPlanetName . fromString)
+
+instance ToJSON PlanetName where
+   toJSON = (toJSON . _unPlanetName)
+
+instance FromJSON PlanetName where
+   parseJSON = (withText "PlanetName") (return . MkPlanetName)
+
+instance PersistField PlanetName where
+   toPersistValue (MkPlanetName s) = PersistText s
+   fromPersistValue (PersistText s) = (Right $ MkPlanetName s)
+   fromPersistValue _ = Left "Failed to deserialize"
+
+instance PersistFieldSql PlanetName where
+   sqlType _ = SqlString
+
+Template Haskell
+Template Haskell is an extension that adds metaprogramming capabilities to Haskell. One can write function that generates Haskell code and call it in appropriate place in source file. During compilation the function gets executed and resulting code injected in source file. After this source file is compiled normally. If you have used lisp macros, this is the similar thing.
+Generating the code
+We want a function that can be called like $(makeDomainType "PlanetName" ''Text) and it will create all the boiler plate for us.
+The function is show below:
+makeDomainType :: String -> Name -> Q [Dec]
+makeDomainType name fType = do
+    tq <- reify fType
+    case tq of
+        TyConI (DataD _ tName _ _ _ _) ->
+            selectDomainType name tName
+        _ -> do
+            Language.Haskell.TH.reportError "Only simple types are supported"
+            return []
+
+reify is interesting function. When called during compile time and given a name, it'll figure what the name refers to and construct datastructure that contains relevant information about the thing. If you were to give it name of a function, you would have access to code inside of the function and could introspect it.
+Here we're using tq <- reify fType to find out what kind of type our code should wrap. Code uses pattern matching to match TyConI (DataD _ tName _ _ _ _). This is referring to a type constructor. In all other cases (more complex types, functions and so on), code reports and error.
+Since code should support different types of types and the respective generated code differs, next there's check to find out what kind of code to generate:
+selectDomainType :: String -> Name -> Q [Dec]
+selectDomainType name fType
+    | fType == ''Text = makeTextDomainType name
+    | fType == ''Int  = makeIntDomainType name
+    | otherwise = do
+                    Language.Haskell.TH.reportError "Unsupported type"
+                    return []
+
+This uses guard clause to check if fType is Text or Int and call respective function to generate it. Again, if there's no match, code reports an error.
+I could have written a function that generates all the code, but that would have been pretty long and hard to maintain. Instead of that, I opted to split generation in parts. makeTextDomainType calls these functions, one at a time and combines the results together to form the final code to be generated.
+makeTextDomainType :: String -> Q [Dec]
+makeTextDomainType name = do
+    td <- makeNewTypeDefinition name ''Text
+    si <- makeIsStringInstance name
+    tj <- makeToJSONInstance name
+    fj <- makeFromJSONInstanceForText name
+    mp <- makePersistFieldInstanceForText name
+    mps <- makePersistFieldSqlInstance name ''Text
+    return $ td ++ si ++ tj ++ fj ++ mp ++ mps
+
+Some of the functions called are specific for Text type, while others are written to work with Text and Int. The latter ones have extra parameter passed in to indicate which type of code should be generated.
+Actual code generation
+Now we're getting into actual code generation. First one is makeNewTypeDefinition, which generates code for newtype.
+makeNewTypeDefinition :: String -> Name -> Q [Dec]
+makeNewTypeDefinition name fType = do
+    deriv <- derivClausForNewType fType
+    return $
+        [NewtypeD []
+                 (mkName name)
+                 []
+                 Nothing
+                 (RecC (mkName $ "Mk" ++ name)
+                       [(mkName $ "_un" ++ name, Bang NoSourceUnpackedness NoSourceStrictness, (ConT fType))])
+                 [ DerivClause Nothing deriv]]
+
+First step is to call derivClausForNewType to create deriving clause (we'll look into that just in a bit). The major part of the code consist of generating newtype definition. There's two ways for code generation: quoting (which works very similar to lisp macros) and writing abstract syntax tree by hand. No matter what I tried, I couldn't get the quoting work for newtype, so I had to write the AST out by hand. And as you can see, it's not particularly pleasant experience. Constructor names are short and cryptic and there's plenty of them there. Some major parts:
+
+NewtypeD starts definition for newtype
+(mkName name) creates Name for the newtype, PlanetName in our example
+RecC record constuctor. We have a single record in our newtype, remember?
+DerivClause deriving clause, which istructs compiler to autogenerate some useful instances for us
+
+And RecC takes a bunch of parameters to guide what kind of record we're actually creating:
+
+(mkName $ "Mk" ++ name) creates Name for our record constructor, MkPlanetName in our case
+then there's a list of tuples defining fields of constructor, which has only one element in our case
+first is name of the field mkName $ "_un" ++ name, which is _unPlanetName in our case
+Bang controls source packedness (that I don't know what it really is) and strictness (when value should be computed)
+finally, ConT fType creates type constructor call, indicating type of the field: Text in our case
+
+That's quite lot to write and keep track of. It's especially tedious to come back to code and figure out what it is exactly doing.
+Lets not forget our deriving clause:
+derivClausForNewType :: Name -> Q [Type]
+derivClausForNewType fType
+    | fType == ''Text = return $ (ConT . mkName) <$> [ "Show", "Read", "Eq" ]
+    | fType == ''Int = return $ (ConT . mkName) <$> [ "Show", "Read", "Eq", "Ord", "Num" ]
+    | otherwise = do Language.Haskell.TH.reportError "Unsupported type"
+                     return []
+
+Again we're using guard to check if we're working with Text or Int and in any other case signal an error. <$> is used to call (ConT . mkName) function to elements in list of strings, getting back a list of type constructors.
+Next step, we create IsString instance for turning string literals into our domain type.
+makeIsStringInstance :: String -> Q [Dec]
+makeIsStringInstance name = do
+    [d|instance IsString $(conT $ mkName name) where
+            fromString = $(conE $ mkName $ "Mk" ++ name) . fromString|]
+
+Here I could get quoting to work. In the example, everything inside of [d| ... |] is quoted literally, ie. I don't have to bother with AST, but can just write in plain Haskell what I want the result to be. $ that is immediately followed with another symbol is used to unquote. $(conT $ mkName name) executes conT $ mkName name and splices result inside the quote. Because name is a String, we can create a new String by appending "Mk" at the start of it. This creates our data constructor MkPlanetName. Notice how we use conT when creating a type constructor and conE for applying data constructor.
+For transforming our domain type to and from json we need ToJSON and FromJSON instances. Generating them is very similar than generating IsString instance, but I have included them below for sake of completeness.
+makeToJSONInstance :: String -> Q [Dec]
+makeToJSONInstance name = do
+    [d|instance ToJSON $(conT $ mkName name) where
+            toJSON = toJSON . $(varE $ mkName $ "_un" ++ name)|]
+
+makeFromJSONInstanceForText :: String -> Q [Dec]
+makeFromJSONInstanceForText name = do
+    [d|instance FromJSON $(conT $ mkName name) where
+            parseJSON =
+                withText name
+                    (return . $(conE $ mkName $ "Mk" ++ name))|]
+
+Next we'll take serializing to and from database. Since Persistent takes care of the details, it's enough that we have two instances that interface with Persistent. First one of them is PersistField as show below:
+makePersistFieldInstanceForText :: String -> Q [Dec]
+makePersistFieldInstanceForText name = do
+    let constName = mkName $ "Mk" ++ name
+        constPatt = conP constName [varP $ mkName "s"]
+        pTextPatt = conP (mkName "PersistText") [varP $ mkName "s"]
+    [d|instance PersistField $(conT $ mkName name) where
+            toPersistValue $constPatt =
+                PersistText s
+
+            fromPersistValue $pTextPatt =
+                Right $ $(conE constName) s
+
+            fromPersistValue _ =
+                Left "Failed to deserialize"|]
+
+This has more code into it as the type class requires us to implement three functions. Imagine how tedious this would be to write out as plain AST. But thanks to quoting, we can write most of the code as it were regular Haskell and just splice in the parts that vary.
+First notable part in it is constPatt = conP constName [varP $ mkName "s"], which creates a pattern used in pattern matching. When toPersistValue is called with MkPlanetName s as parameter, our pattern matches and we have access to s. When then call data constructor PersistText s and let Persistent to save this newly created value into database.
+Second pattern in the code is conP (mkName "PersistText") [varP $ mkName "s"] and we use it in fromPersistValue function. So when that function is called with PersistText s, our pattern matches and we have access to s. Which we then use to call MkPlanetName s to construct our domain type. If fromPersistValue would be called with something else, say numeric value from database, fromPersistValue _ pattern matches and we'll report an error. This normally shouldn't happen, but it's good practice to always cover all patterns, otherwise we get a nasty runtime exception and whole program grinds to halt.
+Last piece in our long puzzle is PersistFieldSql, which tells Persistent the type of the backing field in database.
+makePersistFieldSqlInstance :: String -> Name -> Q [Dec]
+makePersistFieldSqlInstance name fType = do
+    let typeName = mkName name
+    let backingType = selectBackingSqlType fType
+    [d|instance PersistFieldSql $(conT typeName) where
+            sqlType _ = $backingType|]
+
+selectBackingSqlType :: Name -> ExpQ
+selectBackingSqlType fType
+    | fType == ''Text = conE $ mkName "SqlString"
+    | fType == ''Int  = conE $ mkName "SqlInt64"
+    | otherwise = do Language.Haskell.TH.reportError "Unsupported type"
+                     return $ ConE $ mkName "SqlString"
+
+This is probably starting to look familiar to you by now. We create instance of PersistFieldSql for our domain type. For Text we want to save data as SqlString and for Int we use SqlInt64. The actual, concrete and definite, column type is actually selected by Persistent based on this information. Persistent supports different kinds of databases, so it'll take care of mapping this information for the actual database product we're using.
+In closing
+Using template Haskell can cut down amount of boiler plate code. It also lets you create new abstractions that might not be possible with the tools offered by regular Haskell. All this is nice until things don't work as planned and you have to figure out why. Debugging complicated template Haskell, especially if written by somebody else, can be tedious.
+As usual, if you have any questions, comments or feedback, feel free to reach out for me via email or in fediverse where I'm Tuula@tech.lgbt. Or even better, record your own episode telling us where you use template Haskell or why did you choose not to use it at all.
+ad astra!

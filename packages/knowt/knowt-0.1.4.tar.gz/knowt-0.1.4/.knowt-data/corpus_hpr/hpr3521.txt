@@ -1,0 +1,45 @@
+## hpr3521 :: Upgrades to Acer Aspire 5 Slim
+
+ Upgrades to Aspire 5 Slim A515-43-R19L
+Replacement for the Acer Aspire 5750
+Aspire A515-43 How to Install an Additional Hard Drive
+https://www.youtube.com/watch?v=XiadRhJ70Rs
+Specs
+{
+ CPU: AMD Ryzen 3 3200U
+    GPU: AMD Radeon RX Vega 3
+    Display: 15.6”, Full HD (1920 x 1080), IPS
+    Storage: 128GB SSD, NMVE
+    RAM: 4GB DDR4, upgradeable to 32Gb
+    Weight: 1.90 kg (4.2 lbs)
+ Ports and connectivity
+    2x USB Type-A 2.0
+    1x USB Type-A 3.2 Gen 1 (5 Gbps)
+    HDMI
+}
+Why?
+
+The system would randomly kick me out, back to the login screen.
+This was due to low RAM (4Gb) and high RAM usage from Firefox
+
+What?
+
+RAM: 16Gb DDR4
+HD: 500Gb spinning drive
+
+Other uses for the upgrade
+
+Room for Virtual Machines
+
+Future upgrade
+
+SSD
+
+Screw locations
+ Click the thumbnail to see the full-sized image
+Inside the laptop
+ Click the thumbnail to see the full-sized image
+Power/Battery plug location
+ Click the thumbnail to see the full-sized image
+Legend for inside the laptop
+ Click the thumbnail to see the full-sized image

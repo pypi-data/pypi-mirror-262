@@ -1,0 +1,19 @@
+## hpr1789 :: The Ubuntu Quickly Ebook Template and Ebooks in General
+
+ Ubuntu Quickly Ebook Template
+I recorded this conversation with Mike Hingley about a year ago (12 June 2014) but never released it because I thought the audio didn't sound very good and I didn't feel like editing it at the time. Honestly I forgot all about it until now when the HPR queue is low again. I apologize for the slightly clippy quality of my audio, I must have had my microphone too hot on the mumble. It's really interesting to listen to this conversation a year later because I have worked out so many of the problems that I was mentioning to Mike, including the automation of the entire build process using command-line tools from Calibre.
+Links
+
+Quickly Ebook Template on Launchpadhttps://launchpad.net/quickly-ubuntu-ebook
+Jon's Counterpoint Projects https://jonathankulp.org/gratis.html
+Calibre: https://calibre-ebook.com/
+Manual for Calibre's Command Line Interface: https://manual.calibre-ebook.com/cli/cli-index.html
+FBReader: free (and ad-free) multi-platform ebook reader. https://fbreader.org/
+Free ebooks - Project Gutenberg: https://www.gutenberg.org/
+Mike's projects and info: https://titaniumbunker.com/
+Humble eBook Bundle: https://www.humblebundle.com/books
+
+Credits
+
+Music bumpers are from Kimiko Ishizaka's The Open Goldberg Variations: https://www.opengoldbergvariations.org/, used by permission of their CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
+

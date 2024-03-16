@@ -1,0 +1,25 @@
+## hpr1834 :: Password Cards
+
+ How to Hide a Password Using a Password Card
+It's okay to write your password down and keep it in your wallet, but it's best to try to hide it as well. Here's how to keep your password secure and handy at the same time by embedding it in a password card.
+Method 1
+Generate a fancy symbol-and-color-coded password card at passwordcard.org: https://www.passwordcard.org/en. Follow the directions there on how to use it best.
+Method 2
+Make your own. Use the password generation package pwgen on Linux to generate a whole bunch of random passwords. In the following example, the -s flag tells it you want secure passwords that are generated randomly, not suitable for human memory. The -y flag tells it to include special characters, and 24 indicates how many characters each password should contain.
+
+pwgen -sy 24
+
+Then either use one of the passwords that was generated from this command or embed your own existing password somewhere inside the giant block of gibberish such that only you will know where your password begins and ends. You can put a copy of this in your wallet. 
+
+4b$0<k=#;?MJ^K:Uw\6zmP5sY;4T3G+jUwJ!R+DT{2=6-^$"!]""YmR%x.2uG"MGhm)TLyJA}L)xpxG\1n"\]bC#+/t<a1*@'3^B`&mSHP@2p1s0;.Rrz_8kskXLD!YAq|Ic!Y9(?DZKD:Oq;#/)sCz7PEbly7>/W|KlbveOa0}amC@^{+aKhnHMgc$qq$XXA#!o2FhIkD1Fu(K?nE!Szru4iDAw2=MIa~KE)q'C>S|`A*q.Y=g'_0i{BOXr8O4N11f8&yRf~+r^kB%#4o;zs:HWA/a'4U#`3":6E$PQ:y%D=^ENM5;!q^n4i"n~oy"4KT/XYY2IV_A%3Sg\/evf,L5NSX$2-5b;OvZuhN$_ds4ZD.t/!0yqcey.1?%P'M!u'GDS-jBN+'NB}cr7~Wy=;JSEaI&7Byy$79Yf#gU|>@x_3IY2-jyziY2pZ5M*#iL?9p+^F%POQUj&|HVDw2#x+t`1&zW"'Rp{
+
+If you want extra security make two columns or increase the character count.
+
+ra;aH5v"}2lF()\;K0f-G;YT 3XGq>wQ6")UvSU#NpYfr,M(hPCgM%L)O[mra3vgsX{"0rV"0 7>qSluuegS<#;V-nI"uyc$bXJE+4MxT/[t&i0\(ndpE(z\%@ }ZS\3<xdG1]G%wf9;k6*_94%FFZ}gR9hyZ=EsC6QgMz:n$=U h&-O+Wz7L8LmehF&znhF8#Igp`4C3PN^1F"AmlQe=[pkz<EM /,FOfQtR|"c8EzN8ug?i359=a%i;X3~g0SqbKM|]#{hReCmP }.#EOVPxCX)b!r_>o@V9J_^9H-<FAQ4I]SPlX!$o#I?~2ACy -<JE82-'YV@bl;O_>(nxPgVHPNHYp2_[-q9G?$Z:m?yZiAH. Xj(mZ0,7EabI-TL4-7RWK]n9HCmiaZV{8EHREpS5Ppi_^SCl DTzK!CkZ#.c<3I;#}A#D(n$c<koQz[`F99"{/vB~GcSt@n,* :J&*}n~.#F%{ErSs7j:}eyly=!F:m65sA5utY,<AU\8~Omz2 @P"*SIR/\Ln0H;1JjM7P"{[08hk%p-)_3(P>;p.ROtRevNX_ BbwP00-Vq-5:38O.Z9MGom-n9,txEI%j+'7=7T@?X7^j^*`U ;!R<$|r3(QuJmsZe6}C(7%&sX]`(;_6S@@<}Ia[&fZ3*naG7 fij5f)Mkp;EDO.CP""*~8{-^S2_'(C8Fn&[%nJ%`S3&r.N2< *$o\Nrl*vJ0;zq7G3}wtMd0h%is{8%'^[b$Cu;a5_RYpy]LM k-=7(<\uQ|hQH-m9.WYq6tx+Vmb&c!$.@P>\`1;1@ln(B#GY eQu\~"L'*xX%_)CTl*}8#2oD=6I'>(_nIsu=D2J{l4a4tf5x 3/7J1Rm.G.Hwo=Xm=Lv"o}jFRYV/lC1|t&;!]@4#2r-h<88/ o[B[qZq@;=/MD8hX|nnZ-0$j5k`x|:.0G{sra@WiuhHr^aU> Dy@Df^op.WCT)3jD(|T,I7E"
+
+Links
+
+Generate a fancy color-coded password card at passwordcard.org: https://www.passwordcard.org/en
+
+KeePass Password Safe
+

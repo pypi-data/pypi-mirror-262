@@ -1,0 +1,3 @@
+## hpr3119 :: Converting to FFS2
+
+ I talk about converting my I386 Dell Mini 10 running OpenBSD6.7 to the new FFS2 file system. I also talk about the two new features of FuguIta 6.7 which are data encryption and the use of UUID's in the noasks file which is used for automatic booting. I also talk about 9 volt batteries and high technology transistor radios. I am also surprised by an SD card discovery I found on my Dell Mini 10.

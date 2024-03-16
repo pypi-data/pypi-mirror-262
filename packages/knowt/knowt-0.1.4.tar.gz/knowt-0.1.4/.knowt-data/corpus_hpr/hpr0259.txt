@@ -1,0 +1,6 @@
+## hpr0259 :: Drupal: From blank to blog in 30 minutes
+
+ UTOSC 2008: Drupal: From blank to blog in 30 minutes by Dirk Howard 
+
+Drupal is an extensible Content Management System (CMS) that is used for blogs, forums, photo galleries and many other uses. Installing Drupal on a blank website can be done in as little as 30 minutes. All you need is a web server that can handle PHP, a MySQL or PostgreSQL database, and either FTP or shell access to the web server. Within 30 minutes you can be blogging on your own site that you can customize anyway you want.
+

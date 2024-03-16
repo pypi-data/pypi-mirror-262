@@ -1,0 +1,46 @@
+## hpr2944 :: ONICS Basics Part 4: Network Flows and Connections
+
+ Terminology
+
+connection - a bi-directional communication channel between two programs over a network
+client - the initiator of a connection
+server - the receiver of the connection
+port - a common term for the address of a program or service on a given machine
+5-tuple - the combination of protocol, client machine network address, client port, server machine network address, server port that uniquely identifies a connection
+flow - a grouping of packets to be treated in a common way
+microflow - a flow with a fine level of granularity such as the packets from one direction of traffic in a connection
+
+The topflow.sh Script
+#!/bin/sh
+
+# Start a capture in the background that drops the packets
+# and just reports the flow events
+pktin $1 | nftrk -d -f /tmp/flows.txt &
+PID=$!
+
+# On CTRL-C clean kill the capture and clean up
+trap "kill $PID ; rm -f /tmp/flows.txt /tmp/topflows.txt /tmp/namecache.txt ; exit 0" INT TERM
+
+# Once per second do
+#   look at the last 100 flows
+#   sort them by 5-tuple
+#   remove duplicates
+#   convert ports, protocols and addresses to names
+#   sort by data usage per flow in reverse order (highest first)
+#   a little more pretty printing
+#   only take the top 20 lines
+#   clear the screen and print the result
+while [ 1 ] ; do
+    tail -100 /tmp/flows.txt |
+            sort -s -t '|' -k 3,3 |
+            awk -f uniqflows.awk  |
+            awk -f prflow.awk  |
+            sort -s -t ',' -k 3 -r |
+            awk -f columns.awk |
+            head -20 > /tmp/topflows.txt
+    clear
+    cat /tmp/topflows.txt
+    sleep 1
+done
+
+You can find the complete code at: https://gitlab.com/onics/onics-examples

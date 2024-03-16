@@ -1,0 +1,22 @@
+## hpr3386 :: What's for dinner?
+
+ Overview
+I live on my own, but I cook for members of my family from time to time. Each week we all get together and cook dinner for Wednesday and Thursday. I usually do the cooking but we are starting to share these duties for certain meals.
+In 2019 I thought it would be useful if I had some sort of random chooser to decide what next week’s meal was going to be. I wrote a Bash script called choose_meal, using a simple CSV file of meal names and the date last eaten to avoid choosing the same one too often. The shortcomings of this approach soon became apparent!
+It wasn’t long before choose_meal was rewritten in Perl. This time I decided to use a database, and chose SQLite to create it. My database contained just two tables, one for the meals themselves (called slightly confusingly 'meal_history'), and another for a record of the choices made (called 'meal_log') – the ability to produce historical reports seemed like a desirable feature!
+In 2019 the design of this system was very specific to our needs: one choice per week on a Wednesday. It was not something that could be used by anyone else – which seemed like a bad idea.
+In late 2020 and early 2021 the system was redesigned, as will be discussed in the detailed notes. In May 2021 a more general design was added to the public GitLab repository and the preparation of this show was begun.
+I had never intended this system to hold recipes. This was partly because I have built a collection of recipes I have constructed from various sources and amended as I have made them. I print these and keep them in a ring-binder for reference as I cook. In some cases the meals described in the database are multi-component ones (such as the dishes that make up a curry for example), so it doesn’t seem appropriate to hold these here.
+I might rethink this in the future however.
+Long notes
+Follow this link to read the detailed notes associated with this episode.
+Links
+
+Perl
+
+Perl 5: (currently v5.35.0)
+Raku: originally called Perl 6, a totally different scripting language.
+Perl 7: updates to Perl 5, removal of some historical stuff
+
+SQLite: a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine.
+GitLab repository for Weekly Menus

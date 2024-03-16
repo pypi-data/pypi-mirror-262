@@ -1,0 +1,36 @@
+## hpr3797 :: How to submit changes to HPR
+
+ 
+HPR is switching to a static site and in today's show Rho`n explains to Ken how to submit changes to the code.
+
+
+
+[user@pc fix]$ git clone gitea@repo.anhonesthost.net:rho_n/hpr_generator.git
+[user@pc fix]$ cd hpr_generator/
+[user@pc hpr_generator]$ git status
+[user@pc hpr_generator]$ git checkout -b I70_Fix_links_to_audio
+
+
+
+Edit the files. Once complete:
+
+
+[user@pc hpr_generator]$ git add file/to/commit
+[user@pc hpr_generator]$ git commit
+[user@pc hpr_generator]$ git push origin I70_Fix_links_to_audio
+
+
+
+You can now login to the rho_n/hpr_generator git repo and you should be able to see several branches.
+Next to your branch you can press New Pull Request
+
+
+Review your changes and if you're happy press the green  New Pull Request
+Fill in the description and a detailed comment 
+Use the HPR convention [<issue number>] <brief_description> The brief description is usually based on the title of the issue
+When Create Pull Request
+
+
+
+Full show notes are available.
+

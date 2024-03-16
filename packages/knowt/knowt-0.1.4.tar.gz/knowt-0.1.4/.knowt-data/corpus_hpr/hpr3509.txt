@@ -1,0 +1,16 @@
+## hpr3509 :: Linux Inlaws S01E46: The Matrix Project (Without Neo)
+
+ In this episode, the Inlaws are hosting Neil Johnson, VP of Engineering at Element. But this is
+not just about this popular Matrix graphical user interface but rather about this federated communication
+network dubbed as the next big thing after Mastodon and Discord, soon to take over the world (pretty
+much like the Inlaws themselves - it's gonna get crowded... :-).
+Links:
+
+The Matrix Foundation: https://matrix.org/foundation
+Element: https://github.com/vector-im/element-web
+Synapse (Matrix reference implementation in Python): https://github.com/matrix-org/synapse
+Dendrite (Matrix implementation in Gloang): https://github.com/matrix-org/dendrite
+Conduit (Matrix implementation in Rust): https://github.com/timokoesters/conduit
+EU interoperability: https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf
+Terry Pratchett: https://en.wikipedia.org/wiki/Terry_Pratchett#Works
+

@@ -1,0 +1,290 @@
+## hpr2222 :: FOSDEM 2017 K (level 1, group A)
+
+ Table of Contents
+
+KDE
+GNOME
+LibreOffice
+Kopano
+CiviCRM
+GNU Taler
+pEp foundation
+FreeBSD Project
+illumos
+OpenSUSE
+CentOS
+Fedora Project
+
+
+
+https://www.kde.org/
+
+KDE is an international community that creates Free Software for desktop and portable computing. Among KDE's products are a modern desktop system for Linux and UNIX platforms, and comprehensive office productivity and groupware suites. KDE offers hundreds of software titles in many categories including web applications, multimedia, entertainment, educational, graphics and software development.
+
+Listen to the interview with Jonathan Riddell
+
+
+
+
+
+
+
+Links
+
+Source: https://www.kde.org/download/
+Wikipedia: https://en.wikipedia.org/wiki/KDE
+IRC: https://webchat.freenode.net/?channels=kde
+Google+: https://plus.google.com/communities/102942756287167879504
+Linkedin: https://www.linkedin.com/company-beta/29561/
+Mailinglist: https://www.kde.org/support/mailinglists/
+Twitter: https://twitter.com/kdecommunity
+Facebook: https://www.kde.org/images/facebook.png
+YouTube: https://www.kde.org/images/gplus.png
+
+
+
+https://www.gnome.org/
+
+GNOME 3 is an easy and elegant way to use your computer. It is designed to put you in control and bring freedom to everybody. GNOME 3 is developed by the GNOME community, a diverse, international group of contributors that is supported by an independent, non-profit foundation.
+
+Listen to the interview with Bastian Ilso
+
+
+
+
+
+Links
+
+Source: https://git.gnome.org/browse/
+Wikipedia: https://en.wikipedia.org/wiki/GNOME
+IRC: https://wiki.gnome.org/Community/GettingInTouch/IRC
+Google+: https://plus.google.com/108054458791366257368/posts
+Linkedin: https://www.linkedin.com/company-beta/792348/
+Mailinglist: https://mail.gnome.org/mailman/listinfo
+RSS: https://www.gnome.org/feed/
+Twitter: https://twitter.com/gnome
+FediVerse: https://identi.ca/gnome
+Facebook: https://www.facebook.com/GNOMEDesktop
+YouTube: https://www.youtube.com/user/GNOMEDesktop
+About: https://www.gnome.org/about/
+
+
+
+https://www.libreoffice.org/
+
+LibreOffice is the most widely used free open source office software. It is a community-driven project of The Document Foundation. LibreOffice is developed by professionals and by users, just like you, who believe in the principles of free software and in sharing their work with the world in a non-restrictive way. At the core of these principles is the promise of better-quality, highly-reliable and secure software that gives you greater flexibility at zero cost and no end-user lock-in.
+
+Listen to the interview with Italo Vignoli
+
+
+
+
+
+Links
+
+Source: https://www.libreoffice.org/about-us/source-code/
+Wikipedia: https://en.wikipedia.org/wiki/LibreOffice
+IRC: https://webchat.freenode.net/?channels=libreoffice
+Google+: https://plus.google.com/+libreoffice/
+Linkedin: https://www.linkedin.com/groups/4935274
+Mailinglist: https://www.libreoffice.org/get-help/mailing-lists
+Twitter: https://twitter.com/libreoffice
+Facebook: https://www.facebook.com/libreoffice.org
+YouTube: https://www.youtube.com/channel/UCQAClQkZEm2rkWvU5bvCAXQ
+About: https://www.libreoffice.org/about-us/who-are-we/
+Reddit: https://www.reddit.com/r/libreoffice
+
+
+
+https://www.kopano.io/
+
+Kopano is a thoroughly modern communication stack. It's fully MAPI based server (Core) provides access to email, contacts, calendaring through a web interface (WebApp), on the desktop (DeskApp) and can be used with mobile devices. Integration with online meetings tools based on WebRTC (Web Meetings) and integration with file storage services (Files) provide a complete set of tools to work together.
+
+Listen to the interview with Michael Kromer
+
+
+
+
+
+Links
+
+Source: https://stash.kopano.io/repos?visibility=public
+IRC: https://webchat.freenode.net/?channels=kopano
+Google+: https://plus.google.com/communities/112491981669914076429
+Linkedin: https://www.linkedin.com/company/10815502
+Twitter: https://twitter.com/kopanobv
+Facebook: https://www.facebook.com/meet.kopano/
+YouTube: https://www.youtube.com/channel/UCl8Nd0TDVgHeZFuOdkiSzIA
+About: https://kopano.com/about/
+
+
+
+https://civicrm.org
+
+CiviCRM is an open source CRM built by a community of contributors and supporters, and coordinated by the Core Team. CiviCRM is web-based software used by a diverse range of organisations, particularly not-for-profit organizations (nonprofts and civic sector organizations). CiviCRM offers a complete feature set out of the box and can integrate with your website.
+
+Listen to the interview with Alain Benbassat
+
+
+
+
+
+Links
+
+Source: https://github.com/civicrm/civicrm-dev-docs
+Wikipedia: https://en.wikipedia.org/wiki/CiviCRM
+IRC: https://webchat.freenode.net/?channels=civicrm
+Google+: https://plus.google.com/communities/114972789429616596475
+Linkedin: https://www.linkedin.com/groups/1418647
+Mailinglist: https://lists.civicrm.org/lists/
+Twitter: https://twitter.com/civicrm
+Facebook: https://facebook.com/civicrm
+YouTube: https://www.youtube.com/channel/UCbmFxo3HyO9gaNG40byQjiQ
+About: https://civicrm.org/about
+
+
+
+https://taler.net/
+
+Taler is an electronic payment system providing the ability to pay anonymously using digital cash. Taler consists of a network protocol definition (using a RESTful API over HTTP), a Mint (which creates digital coins), a Wallet (which allows customers
+
+Listen to the interview with Christian Grothoff
+
+
+
+
+
+Links
+
+Source: https://ftp.gnu.org/gnu/taler/
+Mailinglist: https://savannah.gnu.org/mail/?group=taler
+
+
+
+https://pep.foundation
+
+The Swiss-based PEP foundation that intends to encrypt all digital written communication fully automatically giving "Privacy by Default"
+
+Listen to the interview with Hernâni Matques
+
+
+
+
+
+Links
+
+Source: https://pep.foundation/source-code/index.html
+Twitter: https://twitter.com/pEpCouncil
+About: https://pep.foundation/about/index.html
+
+
+
+https://www.freebsd.org/
+
+FreeBSD is an advanced computer operating system used to power modern servers, desktops, and embedded platforms. A large community has continually developed it for more than thirty years. Its advanced networking, security, and storage features have made FreeBSD the platform of choice for many of the busiest web sites and most pervasive embedded networking and storage devices.
+
+Listen to the interview with Benedict Reuschling
+
+
+
+
+
+Links
+
+Source: https://github.com/freebsd
+Wikipedia: https://en.wikipedia.org/wiki/FreeBSD
+IRC: https://www.freebsd.org/community/irc.html
+Linkedin: https://www.linkedin.com/company/freebsd-foundation/
+Mailinglist: https://www.freebsd.org/community/mailinglists.html
+Twitter: https://twitter.com/freebsdfndation
+Facebook: https://www.facebook.com/FreeBSDFoundation
+About: https://www.freebsd.org/about.html
+
+
+
+https://illumos.org/
+
+This is the home of the illumos project, the open source fork of Sun's OpenSolaris. Launched in 2010, the project enjoys financial and technical support from several key companies which rely on the illumos kernel as the technological foundation for their own products, as well as the backing of a growing developer community.
+
+Listen to the interview with Hans Rosenfeld
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Illumos
+IRC: https://webchat.freenode.net/?channels=illumos
+Mailinglist: https://wiki.illumos.org/display/illumos/illumos+Mailing+Lists
+Twitter: https://twitter.com/illumosnews
+Facebook: https://www.facebook.com/groups/illumos/
+YouTube: https://www.youtube.com/channel/UC1hkQmdXxDjR5m363iwPhvg
+About: https://wiki.illumos.org/display/illumos/About+illumos
+
+
+
+https://www.opensuse.org/
+
+openSUSE, formerly openSUSE Leap 42.1 and openSUSE Tumbleweed, is a international Linux project with different distributions sponsored by SUSE Linux GmbH and other companies. It is widely used throughout the world, particularly in Germany. The focus of its development is creating usable open source tools for software developers and system administrators, while providing user friendly desktops, and a feature rich server environment.
+
+Listen to the interview with Douglas DeMaio
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/OpenSUSE
+IRC: https://en.opensuse.org/openSUSE:IRC_list
+Google+: https://plus.google.com/+openSUSE/posts
+Linkedin: https://www.linkedin.com/company-beta/254270/
+Mailinglist: https://en.opensuse.org/openSUSE:Mailing_lists_subscription
+Twitter: https://twitter.com/opensuse
+Facebook: https://www.facebook.com/en.openSUSE
+YouTube: https://www.youtube.com/user/opensusetv
+
+
+
+https://www.centos.org/
+
+The CentOS Project is a community-driven free software effort focused on delivering a robust open source ecosystem. For users, we offer a consistent manageable platform that suits a wide variety of deployments. For open source communities, we offer a solid, predictable base to build upon, along with extensive resources to build, test, release, and maintain their code.
+
+Listen to the interview with Fabian Arrotin
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/CentOS
+IRC: https://wiki.centos.org/irc
+Linkedin: https://www.linkedin.com/company-beta/963243/
+Mailinglist: https://wiki.centos.org/GettingHelp/ListInfo
+About: https://www.centos.org/about/
+
+
+
+https://getfedora.org/en/
+
+Fedora is an operating system based on the Linux kernel, developed by the community-supported Fedora Project and sponsored by Red Hat. Fedora contains software distributed under a free and open-source license and aims to be on the leading edge of such technologies.
+
+Listen to the interview with Justin W. Flory
+
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Fedora_(operating_system)
+IRC: https://fedoraproject.org/wiki/IRC
+Google+: https://plus.google.com/112917221531140868607
+Linkedin: https://www.linkedin.com/company-beta/32178/
+Mailinglist: https://fedoraproject.org/wiki/Mailing_lists
+Twitter: https://twitter.com/fedora
+Facebook: https://www.facebook.com/TheFedoraProject
+

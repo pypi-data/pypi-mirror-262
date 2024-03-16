@@ -1,0 +1,65 @@
+## hpr3179 :: MakeMKV to back up media, and a Question
+
+ Installed Fedora 32 on a spare laptop
+Quick tip
+To ignore the handle switch on the laptop triggering a power off:
+Put HandleLidSwitch=ignore in /etc/systemd/logind.conf
+Install MakeMKV from source
+dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+dnf install zlib-devel openssl-devel expat-devel ffmpeg ffmpeg-devel qt5-qtbase-devel
+mkdir git/makemkv.source
+
+cd makemkv.source
+wget https://www.makemkv.com/download/makemkv-oss-1.15.2.tar.gz
+wget https://www.makemkv.com/download/makemkv-bin-1.15.2.tar.gz
+
+tar xpf makemkv-oss-1.15.2.tar.gz
+tar xpf makemkv-bin-1.15.2.tar.gz
+
+cd makemkv-oss-1.15.2/
+./configure
+make
+sudo make install
+
+cd ../makemkv-bin-1.15.2/
+make
+sudo make install
+Install MakeMKV from flathub
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.makemkv.MakeMKV
+Install ccextractor
+dnf install libtesseract-dev autoconf sysconftool
+
+git clone https://github.com/CCExtractor/ccextractor.git
+cd ccextractor/linux/
+./build
+Enable expert mode
+
+
+Provide path to the ccextractor binary
+
+
+Re-encoding MKV file
+ffmpeg -i $1 -b:a 128k -b:v 2000k -vcodec mpeg4 -acodec aac "encoded"/"`basename -s .mkv $1`-_2000k_aac.mkv"
+Updated registration key (Good for 2 months?)
+Updated registration key for MakeMKV
+MakeMKV registration code update script (Untested)
+Github link to MakeMKV registration update script
+Other links
+How to install MakeMKV on Fedora Linux  Forum post for MakeMKV on Linux
+How to play/rip Blu-ray discs on Mplayer command line
+For DVD's
+mplayer dvd:///_/dvd/mount/dir_
+For Blu-ray discs  Download keydb.cfg and place it in ~/.config/aacs/  Link to keydb.cfg
+mplayer br:///_/bluray/mount/dir_
+ie. mplayer br:////dev/sr0 <br>
+note the 3 forward slashes before the block device, as the disk will not be read otherwise
+Ripping:
+mplayer br:////dev/sr0 -alang en -dumpstream -dumpfile $movie.mpg
+Encoding:
+mkdir encoded
+ffmpeg -i $1 -map 0:0 -map 0:1 -b:a 128k -b:v 2000k -vcodec mpeg4 "encoded"/"`basename -s .mpg $1`.mkv"
+Questions for the Community:
+Is it antiquated to want to rip Blu-ray/DVD disks to a server?
+Is there a better way to accomplish this, rather than using MakeMKV, which continues to be Beta software, and not Free and Open Source?

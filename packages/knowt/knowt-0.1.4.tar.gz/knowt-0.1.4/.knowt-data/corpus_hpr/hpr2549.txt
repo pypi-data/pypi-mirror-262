@@ -1,0 +1,41 @@
+## hpr2549 :: DVD ripping using old hardware
+
+ 
+Had a tower with a bad motherboard.
+Wife found one at the Savers (Goodwill) for $8
+Board worked, but had no video
+Bought a 8mb video card for $10
+Power supply fan seized, $10,
+
+Got a warning about danger of opening up a power supply.
+
+Distro should be on a USB key, and run headless
+
+Easy way to back up the system
+
+Had Arch installed, no 32 bit support after end of 2017
+Installed Slackware, only working distribution for my hardware
+
+Found it useful to have a script to chroot from the install media to the Slackware install.
+Added a boot delay to mkinitrc for usb, otherwise it would boot with a message about not finding /mnt in /etc/fstab
+
+Set up ssh with alternative port
+Installed mplayer and tmux, and ripit with sbopkg
+
+Mplayer to rip streams for movies and shows
+Tmux is my favorite for resuming from a different PC or mobile
+
+Needed a way to rip any media regardless of encryption
+
+Only need libdvdcss to read
+Includes Disney (Star Wars, Tron)
+
+CD ripping was a bonus
+
+Ripit to rip CDs
+
+Scripts are on Github
+
+https://github.com/ricemark20/CD-DVD-ripping-on-Slackware
+
+Happy ripping!

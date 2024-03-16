@@ -1,0 +1,22 @@
+## hpr1290 :: MultiSystem: The Bootable Thumb Drive Creator
+
+ 
+MultiSystem is a tool for creating bootable USB thumb drives that give
+you the option launching multiple ISO images and other built in
+diagnostic utilities. It can be an invaluable tool for system repair
+techs.  Not to mention the many recovery and repair Live CDs that are
+available to fix Linux, most bootable Windows repair and anti-virus
+utilities run from a Linux based ISO.  The tech can even create ISO
+images of Windows installation media and replace a stack of DVDs with
+one thumb drive.  Besides the installable package, there is also a
+MultiSystem LiveCD https://sourceforge.net/projects/multisystem/ that, if
+I understand correctly, contains some recomended ISOs to install on your
+thumb drive.
+
+
+
+
+
+For complete episode show notes please see 
+https://hackerpublicradio.org/eps/hpr1290.html
+

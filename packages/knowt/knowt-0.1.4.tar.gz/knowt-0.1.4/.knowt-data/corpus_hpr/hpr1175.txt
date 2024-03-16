@@ -1,0 +1,22 @@
+## hpr1175 :: how to start irssi in screen after reboot
+
+ 
+In this episode Lord Drachenblut shows us how to start irssi in screen after reboot.
+
+
+crontab -e # opens editor for crontab 
+@reboot /usr/bin/screen -dmUS irc /usr/bin/irssi
+
+
+-d -m   Start screen in "detached" mode. This creates a new session but doesn't attach to it. This is useful for system startup scripts.
+       -U   Run  screen  in  UTF-8  mode.  This  option tells screen that your terminal sends and understands UTF-8 encoded characters. It also sets the
+            default encoding for new windows to `utf8'.
+       -S sessionname
+            When creating a new session, this option can be used to specify a meaningful name for the session. This  name  identifies  the  session  for
+            "screen -list" and "screen -r" actions. It substitutes the default [tty.host] suffix.
+
+
+
+https://www.gnu.org/software/screen/
+https://www.irssi.org/
+https://en.wikipedia.org/wiki/Cron

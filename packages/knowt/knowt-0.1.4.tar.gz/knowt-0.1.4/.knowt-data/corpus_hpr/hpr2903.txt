@@ -1,0 +1,52 @@
+## hpr2903 :: What is PMEM
+
+ What is persistent memory?
+In brief, PMEM is next generation memory technology whose data transfer speed is as good as DRAM (50-300 ns, 100 times faster than SSDs) and unlike DRAM, it can even retain the data after reboots.
+In detail persistent memory (PMEM) is a solid-state high-performance byte-addressable memory device that resides on the memory bus. Being on the memory bus allows PMEM to have DRAM-like access to data, which means that it has nearly the same speed and latency of DRAM and the nonvolatility of NAND flash. NVDIMM (nonvolatile dual in-line memory module) and Intel 3D XPoint DIMMs (also known as Optane DC persistent memory modules) are two examples of persistent memory technologies.
+Persistent memory, such as Intel® Optane™ DC Persistent Memory, provides a future-proofed solution. Installed alongside traditional RAM, PMEM has many of the advantages of DRAM, including low latency access. But it comes in greater capacities. Intel® Optane™ DC, for example, will be available in 128GB, 256GB and 512GB sizes.
+Persistent Memory Benefits
+Persistent memory in the data center allows applications to run without incurring the latency penalty of going out to storage.
+The main advantages of persistent memory include:
+
+Provides access latencies less than those of flash SSDs.
+Increases throughput more than flash storage.
+Cheaper than DRAM.
+PMEM is cacheable. This is a huge advantage over PCIe interconnect, which cannot be cached in the CPU.
+Real-time access to data; allows ultrafast access to large datasets.
+Data persists in memory after power interruption, like flash.
+Persistent Memory Use Cases
+
+Fraud detection
+Cyberthreat analysis
+Web-scale personalization
+Financial trading
+Internet of Things (IoT)
+
+
+    Non       \
+    Volatile  /- Non-volatile: you plug it off and on again, and the Information is still there
+
+    Double    \
+    In-line   | DIMM: This the HW format
+    Memory    |
+    Module    /
+Persistent Memory Vs. NVRAM
+Nonvolatile random-access memory (NVRAM) is random-access memory that retains its information even if there is no power. If power is lost before the data is written to disk, you don’t lose the data because it can be recovered from NVRAM. NVRAM uses battery backup to keep data persistent. During this time it can flash the data out to a flash device that is attached directly. In most cases, NVRAM resides on the PCIe bus.
+PMEM or NVDIMM-N can also be backed up by battery. It resides only on the memory bus.
+Where PMEM is going
+It’s no wonder that this sort of ‘in-memory’ computing has exploded in recent years. According to Gartner, 75 percent of cloud-native application development will use in-memory/PMEM computing by 2019, and by 2021, at least 25 percent of large and global organisations will adopt platforms using in-memory technologies.
+Drawbacks of PMEM
+
+PMEM is a local store.
+Host failures can result in loss of availability.
+In the case of catastrophic errors you may lose all data and must take manual steps to reformat the PMEM.
+
+Reference Notes
+
+https://www.netapp.com/us/info/what-is-persistent-memory.aspx
+https://www.intel.co.uk/content/www/uk/en/it-management/cloud-analytic-hub/pmem-next-generation-storage.html
+https://vthinkbeyondvm.com/vsphere-6-7-what-is-pmem-and-how-vsphere-drs-works-with-pmem-configured-vms/
+https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-EB72D358-9C2C-4FBD-81A9-A145E155CE31.html
+https://vmsplice.net/~stefan/nvdimm_slides_public.pdf
+https://www.theregister.co.uk/2018/09/07/persistent_memory_whirlwind_is_spinning_up/
+

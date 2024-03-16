@@ -1,0 +1,7 @@
+## hpr3125 :: GIMP: The Canvas
+
+ The Canvas is the main stage on which all of the action takes place, and it controls some aspects of the final image. When you get ready to export, you only export what is on the canvas.
+Links:
+
+https://en.wikipedia.org/wiki/XCF_(file_format)
+https://www.ahuka.com/gimp/the-canvas/

@@ -1,0 +1,25 @@
+## hpr3077 :: Video conference Push to Talk
+
+ For the sake of archival, "state of the world" refers to the COVID-19 pandemic.
+The code and CAD files for this project can be found here.
+Relevant links:
+
+PulseAudio is the sound server used by many Linux distributions
+pulsectl is a Python library that allows you to control a PulseAudio server
+NeoPixels are cool addressable LEDs
+The Teensy is a small but powerful microcontroller development board
+pySerial is a library allowing you to use serial ports in Python
+PlatformIO is a tool for making software development for embedded platforms easy
+
+Early prototype:
+
+Assembled electronics fitted into case ready to be closed:
+
+View of the top of the case, showing Cherry switch and NeoPixel LED indicator:
+
+View of the bottom of the case, showing USB port and some of the nicer M3 screws from my parts bin:
+
+Plugged in and powered on, showing the muted state:
+
+Button pushed, showing the unmuted/mic live state:
+

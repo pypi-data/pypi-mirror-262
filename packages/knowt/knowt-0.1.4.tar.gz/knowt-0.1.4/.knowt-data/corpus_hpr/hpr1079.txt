@@ -1,0 +1,20 @@
+## hpr1079 :: Distributed Systems Podcast
+
+ 
+In today's show we feature the Distributed Systems Podcast - all you ever wanted to hear and learn about building with DDD, CQRS, Cloud and much more!
+
+Episode 12: LMAX
+by Rinat Abdullin on April 2, 2012
+In this episode, Jonathan and Rinat interview Mike Barker who helped architect the LMAX Disruptor project, a high-performance, ultra-low latency structure for producer/consumer operations.
+Notes:
+
+Official Project - Google Code: https://code.google.com/p/disruptor/
+Google Group:https://groups.google.com/forum/#!forum/lmax-disruptor 
+.NET Disruptor port: https://code.google.com/p/disruptor-net/
+Technical paper: https://disruptor.googlecode.com/files/Disruptor-1.0.pdf
+Mike's blog-Bad Concurrency: https://bad-concurrency.blogspot.com
+Mike's co-worker's blog-Mechanical Sympathy: https://mechanical-sympathy.blogspot.com/
+Mike's co-worker's blog-Mechanitis: https://mechanitis.blogspot.com/
+Martin Fowler's review: https://martinfowler.com/articles/lmax.html
+
+Enjoy.

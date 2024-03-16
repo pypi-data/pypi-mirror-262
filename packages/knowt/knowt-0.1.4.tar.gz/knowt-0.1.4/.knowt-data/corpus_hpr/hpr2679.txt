@@ -1,0 +1,40 @@
+## hpr2679 :: Extra ancillary Bash tips - 13
+
+ Extra ancillary Bash tips - 13
+Making decisions in Bash
+This is the thirteenth episode in the Bash Tips sub-series. It is the fifth and final of a group of shows about making decisions in Bash.
+In the last four episodes we saw the types of test Bash provides, and we looked briefly at some of the commands that use these tests. We looked at conditional expressions and all of the operators Bash provides to do this. We concentrated particularly on string comparisons which use glob and extended glob patterns then we devoted an episode to Bash regular expressions.
+Now we want to look at the final topic within regular expressions, the use of capture groups.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+“GNU BASH Reference Manual”
+
+“Bash Conditional Constructs”
+“Bash Conditional Expressions”
+“Bourne Shell Builtins”
+“The set Builtin”
+“Bash Pattern Matching”
+
+“POSIX Shell Command Language” - documentation of all of the POSIX features mentioned in this series.
+HPR series: Bash Scripting
+Previous episodes under the heading Bash Tips:
+
+HPR episode 1648 “Bash parameter manipulation”
+HPR episode 1843 “Some Bash tips”
+HPR episode 1884 “Some more Bash tips”
+HPR episode 1903 “Some further Bash tips”
+HPR episode 1951 “Some additional Bash tips”
+HPR episode 2045 “Some other Bash tips”
+HPR episode 2278 “Some supplementary Bash tips”
+HPR episode 2293 “More supplementary Bash tips”
+HPR episode 2639 “Some ancillary Bash tips - 9”
+HPR episode 2649 “More ancillary Bash tips - 10”
+HPR episode 2659 “Further ancillary Bash tips - 11”
+HPR episode 2669 “Additional ancillary Bash tips - 12”
+
+Resources:
+
+Examples: bash13_ex1.sh, bash13_ex2.sh, bash13_ex3.sh, bash13_ex4.sh, bash13_ex4.txt
+

@@ -1,0 +1,62 @@
+## hpr2919 :: hosting software in HPR show notes
+
+ #!/usr/bin/env python
+import urllib.request
+import json
+import re
+import subprocess
+
+# see https://www.weather.gov/documentation/services-web-api
+
+#where are we? GPS coordinates
+lat = 39.275235
+lon = -120.9199507
+#what is the user agent string?
+agent = "Jezra's fun lil script"
+#minimum wind speed in mph?
+min_speed = 9
+
+def get_api_data(endpoint):
+  print(endpoint)
+  #prepare the connection with custom headers
+  request = urllib.request.Request(endpoint, headers={"User-Agent":agent})
+  #create a handler for the request
+  handler = urllib.request.urlopen(request)
+  #get the text
+  text = handler.read()
+  #parse the json text to a python object
+  obj = json.loads(text)
+  return obj
+
+def wind_is_good(s):
+  #use regex to find the matches
+  matches = re.findall("[0-9]+",s)
+  for match in matches:
+    #convert string to int
+    m = int(match)
+    #is the speed good?
+    if(m>=min_speed):
+      return True
+  #if we get here, there is no match :(
+  return False
+
+start_url = "https://api.weather.gov/points/{0},{1}".format(lat,lon)
+#get the json response from the start_url as a python object
+obj = get_api_data(start_url)
+
+#get the forecast url from the returned data
+forecast_url = obj['properties']['forecast']
+
+# process the forecast url
+forecast = get_api_data(forecast_url)
+
+#loop through the forcast periods
+for period in forecast['properties']['periods']:
+  #put name and windspeed into easier to handle variable names
+  name= period['name']
+  wind = period['windSpeed']
+  print (name, wind)
+  #check the wind speed
+  if wind_is_good(wind):
+    subprocess.call(["textjezra","{0}: {1}".format(name,wind)])
+

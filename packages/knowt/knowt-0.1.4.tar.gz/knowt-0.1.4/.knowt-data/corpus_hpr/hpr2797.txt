@@ -1,0 +1,32 @@
+## hpr2797 :: Writing Web Game in Haskell - Simulation at high level
+
+ So far we have been concentrating on separate pieces of the game. Now it’s time to put some of them together as a simulation.
+Overview of simulation
+Simulation is done in discrete steps. Each step is roughly 1 earth month (completely arbitrary decision). Shorter than that and there might not be enough happening during turns to keep things interesting. Much longer than that and player might not have enough control on how to react things.
+In any case, current time is stored in database in table time. There should be only one row in that table at any given time. And that row has only one value, current time. Time is stored as integer as I didn’t want to deal with problems that you get when adding fractions to a float time after time. So current time (March 2019) would be 2019.3 in game terms and stored as 20193 in database.
+Main processing is done in function called processTurn that is shown below. It advances time for one decimal month, removes all expired statuses as explained in episode 2768 and then loads all factions.
+After that, various steps of the simulation are carried out for all loaded factions. These include handling special events as explained in episode 2748 and doing observations and report writing in manner described episode 2703.
+processTurn :: (BaseBackend backend ~ SqlBackend,
+    BackendCompatible SqlBackend backend, PersistUniqueRead backend,
+    PersistQueryWrite backend,
+    PersistQueryRead backend, PersistStoreWrite backend, MonadIO m) =>
+    ReaderT backend m Time
+processTurn = do
+    newTime <- advanceTime
+    _ <- removeExpiredStatuses newTime
+    factions <- selectList [] [ Asc FactionId ]
+    _ <- mapM (handleFactionEvents newTime) factions
+    mapM_ handleFactionFood factions
+    mapM_ (handleFactionConstruction newTime) factions
+    _ <- mapM (addSpecialEvents newTime) factions
+    -- Doing observations should always be done last to ensure players have
+    -- recent reports of property they have full control, ie. planets.
+    -- Otherwise it's possible that they'll receive reports that are one
+    -- turn out of sync.
+    mapM_ (handleFactionObservations newTime) factions
+    return newTime
+More mapping
+Remember map and fmap that are used to run a function to each element in a list or general structure? mapM works in a similar way, but is used in monadic context. In processTurn function, we’re dealing with input and output and have IO monad present to allow us to do that (MonadIO m part of the type signature).
+If you step back a bit and squint a bit, then map :: (a -> b) -> [a] -> [b] and fmap :: (a -> b) -> f a -> f b and mapM :: Monad m => (a -> m b) -> t a -> m (t b) look pretty similar. Each take a function, structure and produce a new structure which values were created by running the given function for each element of the original structure.
+The difference is that map works only for lists, fmap works for functors (that were covered in episode 2778) and mapM works for structures in monadic context.
+Best way to contact me nowadays is either by email or through fediverse where I’m Tuula@mastodon.social.

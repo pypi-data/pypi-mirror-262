@@ -1,0 +1,35 @@
+## hpr2240 :: Amateur Radio Round Table
+
+ HPR Amateur Radio Round Table
+2017-01-27, 0300 UTC
+Participants:
+
+cmhobbs KD5RYO
+Jon KT4KB
+Steve KD0IJP
+Michael DL4MGM
+Tyrel KG5RHT
+
+After a short introduction of the hosts, we start discussing the question that came up on the mailinglist:
+How do you get started at all? How do you get the license to participate in amateur radio?
+Probably the amateur radio organisation in your country will provide the essential information required for obtaining an amateur radio license. Start looking at the International Amateur Radio Union at https://www.iaru.org and track down your country. From there you can search for information about your local area and local groups. In the US, look for the ARRL at https://www.arrl.org.
+If you do not chose to get involved with the local club before taking the test to get the license, we suggest you do so after that. Local events and clubs can provide the insight into the vast possibilities amateur radio has to offer. This will allow you to chose much better, where your personal interests are and where to start. Radio "nets", are mentioned as a good starting point to actually get "on the air" and to overcome any possible shyness.
+Acronyms explained along the way
+
+VFO: Variable Frequency Oscillator. The thing behind the main tuning dial to adjust the frequency, an important building block of radio equipment. In modern gear the VFO-mode is the mode where you can continuously change the frequency in certain increments, as opposed to memory mode, where you normally select from a set of fixed frequencies previously stored.
+CW: Continuous Wave. Used to reference to Morse code telegraphy as an operating mode.
+VHF: Very High Frequency. Generally this references the frequency range 30 Mhz to 300 MHz. In the context of a radio user, it normally means the sub range in there, that is assigned to the specific use.
+UHF: Ultra High Frequency. 300 MHz to 3 GHz
+HF: High Frequency. Range 3 MHz to 30 MHz. Also referenced to as "short wave" frequencies. Several amateur radio "bands" are spread out in that frequency range.
+
+We often reference frequency ranges by wavelength. E.g. the "20m band", which is the frequency allocation for amateur radio at 14 MHz. The connection is: Wavelength = c / frequency, with c being the speed of light. A rule of thumb is: Wavelength [m] = 300 / frequency [MHz]
+Hint: The manufacturer Tektronix offers a nice poster with the world wide frequency assignments worked in: https://info.tek.com/rs/tektronix/images/eGuide-to-RF-Signals.pdf
+We went on describing a bit where our personal interests in amateur radio are.
+Our combined interests cover all the way from Morse code over voice communication to digital modes and "foxhunt" (the radio sport of Amateur Radio Direction Finding). Note that there are many other facets to amateur radio. Even our combined interests are just a small segment of the possible activities within the avocation.
+We talk about getting started with just listening to amateur radio traffic on the short wave frequencies.
+Why do you need a license, why not just do it?
+First, without a license, it is ILLEGAL.
+Law makers have acknowledged that one important goal of amateur radio is education and experimentation. We are allowed to modify equipment or even build it completely from scratch and operate it legally on the assigned frequencies. This is a unique privilege that sets amateur radio apart from any other radio users which have to use certified equipment.
+We give some amateur related podcast recommendations, among those: Linux in the ham shack (https://lhspodcast.info) and HamRadio 360 (https://hamradio360.com).
+The Next Edition of the Amateur Radio Round Table
+Next ham radio round table will be held in about a month, with a time that will be better suited for European time zones. We welcome anyone to participate, whether or not you are a licensed ham. Watch the HPR email list for announcements and details.

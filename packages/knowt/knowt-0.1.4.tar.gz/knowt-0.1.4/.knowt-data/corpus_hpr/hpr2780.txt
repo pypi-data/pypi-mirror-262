@@ -1,0 +1,23 @@
+## hpr2780 :: My SBC Nextcloud Install Pt. 1 - Hardware
+
+ I explain the build process for my home Nextcloud server using a single board computer and a 4 bay RAID enclosure. This is part 1 of a 3 part series.
+My parts list for the server build:
+
+Rockpro64
+https://www.pine64.org/?product=rockpro64-4gb-single-board-computer
+eMMC module
+https://www.pine64.org/?product=16gb-emmc
+USB Adapter for eMMC module
+https://www.pine64.org/?product=usb-adapter-for-emmc-module
+Power supply
+https://www.pine64.org/?product=rockpro64-12v-5a-us-power-supply
+Heatsink
+https://www.pine64.org/?product=rockpro64-20mm-mid-profile-heatsink
+90˚ male to female USB extension
+https://www.amazon.com/wawpi-Cable-Extension-Degree-Female/dp/B01EDOGO4E
+4 bay RAID enclosure
+https://www.mediasonic.ca/product.php?id=1358153144
+HDDs
+The 4TB HDDs were ones I already had but you can use any ones, just make sure they are the same brand/model/size/etc to minimize any complications.
+
+minnix at uymail dot com for help, questions, or just general chatter

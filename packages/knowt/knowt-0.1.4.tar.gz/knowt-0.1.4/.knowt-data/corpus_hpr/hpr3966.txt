@@ -1,0 +1,89 @@
+## hpr3966 :: Vim Hints: 006
+
+ My .vimrc config.
+" General
+set confirm                                                      " Display confirmation dialog when closing unsaved files
+set number                                                       " Show line numbers
+set number relativenumber                                        " Show line numbers relative to curser
+set cursorline                                                   " Highlight the current line
+set guicursor=
+set scrolloff=23                                                 " Number of screen lines above and below the cursor
+set colorcolumn=80                                               " Line 76 and 80 are colored
+:hi ColorColumn ctermbg=Magenta                                  " Column colors
+set nowrap                                                       " Do not wrap lines
+set list
+set listchars=eol:
+,tab:⭾⭾,trail:~,extends:>,precedes:<,space:⎵
+set showmatch                                                    " Highlight matching brace
+set visualbell                                                   " Use visual bell (no beeping)
+set showcmd                                                      " Show partial commands in the last line
+
+set hlsearch                                                     " Highlight all search results
+set smartcase                                                    " Enable smart-case search
+set ignorecase                                                   " Always case-insensitive
+set incsearch                                                    " Searches for strings incrementally
+set wildmenu                                                     " Display tab complete options menu
+set encoding=utf-8                                               " Use an encoding that supports unicode
+
+"set autoindent                                                  " Auto-indent new lines
+"set smartindent                                                 " Enable smart-indent
+"set smarttab                                                    " Enable smart-tabs
+set shiftwidth=4                                                 " Number of auto-indent spaces
+set softtabstop=4                                                " Number of spaces per Tab
+set tabstop=4                                                    " Indent using four spaces
+set expandtab                                                    " Convert tabs to spaces.
+
+" Advanced
+set ruler                                                        " Show row and column ruler information
+"set showtabline=2                                               " Show tab bar
+set cmdheight=2                                                  " Command line height
+
+set undolevels=1000                                              " Number of undo levels
+set backspace=indent,eol,start                                   " Backspacing over indention, line breaks and insertion start
+set dir=~/.cache/vim                                             " Directory to store swap files
+set backupdir=~/.cache/vim                                       " Directory to store backup files
+set undodir=~/.cache/vim/undo                                    " Directory to store undo cache
+
+nnoremap <silent> <C-l> :nohl<CR>
+nnoremap <silent> <C-s> :term<CR>
+nnoremap <silent> <leader>[ :bp<CR>
+nnoremap <silent> <leader>] :bn<CR>
+nnoremap <leader>so :so ~/.config/vim/sessions/
+nnoremap <silent> <F3> :set list!<CR>
+nnoremap <silent> <leader>cc :set cc-=5<CR>:set cc-=76<CR>
+nnoremap <silent> <leader>cc1 :set cc+=5<CR>:set cc-=76<CR>
+nnoremap <silent> <leader>cc2 :set cc+=76<CR>:set cc-=5<CR>
+vnoremap <silent> <F6> :w !xsel -ib<CR><CR>
+nnoremap <silent> <F7> :-r !xsel -ob<CR>
+
+nnoremap <leader>7 :setlocal spell spelllang=en_us<CR>
+nnoremap <leader>8 :setlocal nospell<CR>
+My markdown.vim
+custom session.
+iabbr 3* * * *
+
+nnoremap <leader>1 I- <Esc>
+nnoremap <leader>2 I    - <Esc>
+nnoremap <leader>3 I        - <Esc>
+nnoremap <leader>f3 :%s/–/-/ge <bar> s/[d*]//ge <bar> %s/—/-/ge <bar> w <CR>
+nnoremap <leader>h1 I# <Esc>A #<Esc>02o<Esc>
+nnoremap <leader>h2 I## <Esc>A ##<Esc>02o<Esc>
+nnoremap <leader>h3 I### <Esc>A ###<Esc>02o<Esc>
+nnoremap <leader>l1 1k0v$hdI- **Source:** [<Esc>pA](<Esc>gJA) <Esc>0:w<CR>
+nnoremap <leader>l2 1k0v$hdI- **Supporting Source:** [<Esc>pA](<Esc>gJA) <Esc>0:w<CR>
+nnoremap <leader>l3 i[]()  <Esc>b
+vnoremap <leader>n1 :s/  *$/ \/e <bar> .v/ \$/norm A <CR>:nohl<CR>
+vnoremap <leader>n2 :s/ \$/  /e <bar> .v/  $/norm A  <CR>:nohl<CR>
+
+vnoremap <leader>c1 di``<Esc>1hp
+vnoremap <leader>c2 di```<CR>```<Esc>1kp
+vnoremap <leader>f1 :s/  */ /g <bar> w <bar> :nohl <bar>, !fmt -w 76 <CR>:w<CR>
+vnoremap <leader>f2 :s/  */ /g <bar> w <bar> :nohl <bar>, !fmt -w 76 <CR>VG:s/$/ \/ <bar> w <bar> :nohl<CR>2o<Esc>:w<CR>
+
+vnoremap <C-b> di****<Esc>2hp
+vnoremap <C-i> di**<Esc>1hp
+Just source this file.
+:so ~/path/to/file.vim
+Just because I don't want to be a tease; here is the Thunderbird
+one-liner. Don't die on that hill!
+nnoremap <leader>1 2dw$x0:s/ OR /rOR /g<CR>gg02f,<C-v>G$ugg02f,<C-v>G$:sort u<CR>gg0VG:s/$/ /<CR>gg0VG:s/  *$/ /<CR>ggVGJIcondition="<Esc>A"<Esc>0:s/ "$/"/<CR>:w<CR>

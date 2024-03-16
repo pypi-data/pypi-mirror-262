@@ -1,0 +1,13 @@
+## hpr0953 :: LiTS 003: cut
+
+ 
+In the third in his series Dann, shows us the benefits of the cut command:
+
+
+
+The cut command, as the man page states, "removes sections from each line of a file." The cut command can also be used on a stream and it can do more than just remove section.  If a file is not specified or "-" is used, the cut command takes input from standard in. The cut command can be used to extract sections from a file or stream based upon a specific criteria.  An example of this would be cutting specific fields from a csv (comma separated values) file.  For instance, cut can be used to extract the name and email address from a csv file with the following content:
+
+
+
+https://www.linuxintheshell.com/2012/03/28/episode-003-cut/ for the complete shownotes, including video.
+

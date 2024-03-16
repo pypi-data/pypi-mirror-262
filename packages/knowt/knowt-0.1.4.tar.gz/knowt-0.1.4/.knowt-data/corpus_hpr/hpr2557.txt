@@ -1,0 +1,8 @@
+## hpr2557 :: Styx -- The Purely Functional Static Site Generator
+
+ I switched phones, and complained about the microphone. It probably made a greater difference that I was recording in 16 kHz Vorbis, because I was on a fresh install of Audio Recorder. Always double-check your settings, and apologies for the quality.
+
+I am currently in the process of converting our website from Hugo to Styx.
+Styx is s static site generator written entirely in the Nix language. It is able to figure out exactly what pages need to be rebuilt depending on what you changed in your page source and data sources, and all intermediate results are stored in the Nix store.
+The parsing of AsciiDoc and (multi)Markdown is done by external tools, but the templating and layouts is all Nix.
+I thought I may have dreamed the bit about carnix or buildRustPackage parsing TOML within Nix, because I couldn’t find any evidence of them ever having done that. But then I discovered it was in nixpkgs-mozilla I had seen it! That’s Mozilla’s overlay for nixpkgs, which makes Rust Nightly always available in Nix, so it’s kind of Nix’s rustup equivalent. So yeah, I guess I had dreamed who did it, but not that somebody did it. :-)

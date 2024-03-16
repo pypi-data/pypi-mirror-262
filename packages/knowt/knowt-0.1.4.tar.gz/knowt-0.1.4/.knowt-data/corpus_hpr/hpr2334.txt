@@ -1,0 +1,33 @@
+## hpr2334 :: Our Adventure Begins!
+
+ In this HPR episode, I discuss the open-sourcing of Colossal Cave Adventure (a text adventure computer game), my childhood exposure to text adventure games, and passing along the text adventure torch to my middle son thanks to the "bsdgames" package.
+Opening sound clip taken from "The Hobbit: An Unexpected Journey." Closing song is "The Free Software Song" performed by Mark Forry, Yvette Osborne, Ron Fox, Steve Finney, Bill Cope, Kip McAtee, Ernie Provencher, Dan Auvil (https://www.gnu.org/music/free-software-song.en.html).
+E-mail: claudio@linuxbasement.com
+IRC: ClaudioM on irc.freenode.net, #oggcastplanet
+Links
+
+Wikipedia: Colossal Cave Adventure
+https://en.wikipedia.org/wiki/Colossal_Cave_Adventure
+The Advent of ADVENT
+https://esr.ibiblio.org/?p=7536
+The Adventure Begins Again
+https://esr.ibiblio.org/?p=7540
+Github: Open Adventure
+https://gitlab.com/esr/open-adventure
+ClaudioM's Blog: The Adventure Begins Again, and it Begins for Us!
+https://claudiomiranda.wordpress.com/2017/05/30/the-adventure-begins-again-and-it-begins-for-us/
+LinuxQuestions Wiki: BSD Games
+https://wiki.linuxquestions.org/wiki/BSD_games
+Youtube: "Aventure 2: Pirate Cove" for the Commodore VIC-20 / Commodore VC-20
+https://www.youtube.com/watch?v=04ghPx8WjLM
+Wikipedia: Infocom
+https://en.wikipedia.org/wiki/Infocom
+Wikipedia: Mattel Aquarius
+https://en.wikipedia.org/wiki/Mattel_Aquarius
+Wikipedia: Zork
+https://en.wikipedia.org/wiki/Zork
+Wikipedia: Hunt the Wumpus
+https://en.wikipedia.org/wiki/Hunt_the_Wumpus
+SourceForge: Frotz, A Portable Z-Machine Interpreter
+https://frotz.sourceforge.net/
+

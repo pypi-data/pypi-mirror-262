@@ -1,0 +1,74 @@
+## hpr3294 :: Update to MakeMKV to back up media
+
+ This is an update on my previous episode hpr3179 :: MakeMKV to back up media.
+In the past month, MakeMKV.com has been updated to include Raspberry Pi support.
+Sources:
+
+MakeMKV on Linux post
+https://forum.makemkv.com/forum/viewtopic.php?f=3&t=224
+MakeMKV on ARM release
+https://forum.makemkv.com/forum/viewtopic.php?p=105912#p105912
+
+It was a very uneventful "It's here"
+MakeMV on Raspberry Pi (ARM)
+ Click the thumbnail to see the full-sized image
+wget https://www.makemkv.com/download/makemkv-bin-1.16.1.tar.gz
+wget https://www.makemkv.com/download/makemkv-oss-1.16.1.tar.gz
+Unpack both packages and starting from source package and do the following steps:
+For makemkv-oss package:
+./configure
+make
+sudo make install
+For makemkv-bin package:
+make
+sudo make install
+Install ccextractor and necessary packages
+sudo apt install libtesseract-dev autoconf sysconftool
+
+git clone https://github.com/CCExtractor/ccextractor.git
+cd ccextractor/linux/
+./build
+nnn: command line file browser with vim-like keybindings
+https://github.com/jarun/nnn
+Script to rip TV episodes
+makemkv.tv.sh
+#!/bin/bash
+#echo "Series?"
+series=Battlestar
+echo "Series: $series"
+echo "What Season is this?"
+read season
+echo "Season: $season"
+echo "Which disc # is this?"
+read disknum
+echo "This is disk #$disknum"
+echo "Starting with which episode?"
+read episode
+
+eject -x20
+mkdir ""disc."$disknum"
+makemkvcon mkv --progress=-same --minlength=2100 disc:0 all ""disc."$disknum"
+cd ""disc."$disknum"
+
+#episode=1
+episode=$episode
+for track in *.mkv
+do
+  mv $track $series"_S"$season"_D"$disknum"_E"$episode.mkv
+  episode=$((episode+1))
+done
+
+cd ..
+Script to convert multiple episodes
+mkv2mkv_mult.sh
+#!/bin/bash
+mkdir encoded
+for i in *.mkv
+do
+  HandBrakeCLI --first-subtitle --subtitle-default=none -i $i -o "encoded"/"`basename -s .mkv $i`.mkv"
+done
+Before and after the rename loop
+Before rename
+
+After rename
+

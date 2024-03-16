@@ -1,0 +1,19 @@
+## hpr3659 :: Developing an HPR static site generator
+
+ Synopsis
+In this episode, I describe my ongoing attempt to develop a static site generator for the HPR website. As a search through the community mailing list will reveal, the idea for moving the HPR website has been rattling around for a few years. I have been interested in helping out with the website for a while, so when the latest round of discussion occurred I decided to give it a whirl.
+While I have read about various static site generators over the years, the only one I had any experience with was Template-Toolkit (TT2) when helping Ken Fallon and Dave Morriss develop the Free Culture Podcasts webpage. It is the tool Dave uses for various projects. Since they are the janitors for HPR, I figured a website generator based on the TT2 would be something relatively painless enough for them to use, and update when needed.
+The code for this generator is hosted at https://repo.anhonesthost.net/rho_n/hpr_generator. The generator is written in Perl and generates the pages using TT2 templates.
+Anyone interested in helping out is encouraged to create an account on repo.anhonesthost.net and start hacking away.
+References
+
+site-generator source code; https://repo.anhonesthost.net/rho_n/hpr_generator
+Template Tookit website; http://template-toolkit.org/
+Comprehensive Perl Archive Network (CPAN) website; https://www.cpan.org/
+HPR repositories at anHonestHost.net; https://repo.anhonesthost.net/explore/repos
+Rho`n's public test HPR website; https://hpr.horning.us
+Free Culture Podcasts; https://freeculturepodcasts.org/
+HPR Mailing list: Static Site Generators - NOT a flat file CMS; message thread; https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2019-April/014388.html
+HPR Mailing list: Source Code for the HPR website.; message thread; https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2022-June/015296.html
+MySQL to SQLite conversion script; https://github.com/dumblob/mysql2sqlite
+

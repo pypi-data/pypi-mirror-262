@@ -1,0 +1,35 @@
+## hpr2607 :: Processing
+
+ Get Processing from processing.org. Download, extract, and launch. On Linux, just click the processing file.
+Processing requires that either OpenJDK or Java to be installed.
+Processing requires a void setup() function, which is a function that Processing expects whenever an application is launched. If you don't have a setup function, your application still launches, but with basic Processing defaults. Try this to start with:
+void setup() {
+    size(480,720);
+}
+Click the Run button in the top left corner to launch your [very simple] application: an empty window that is 480 pixels wide and 720 pixels tall.
+Draw a rectangle on your canvas by invoking Processing's void draw() function:
+void draw() {
+    rect(10,10,80,80);
+}
+Click the Run button in the top left corner to launch your application.
+Add some colour to your rectangle:
+void draw() {
+    fill(8,120,90);
+    rect(10,10,80,80);
+}
+Click the Run button in the top left corner to launch your application.
+Make a simple painting app:
+void setup() {
+    size(480,720);
+}
+
+void draw() {
+    if (mousePressed) {
+        fill(20,120,90);
+        ellipse(mouseX,mouseY,25,25);
+    } else {
+        fill(random(10,120),random(10,80),random(20,200));
+    }
+}
+More Processing tricks: you can export your application as a standalone Java app, or as an Android .apk as long as you have the Android SDK installed.
+Processing's documentation is excellent. It has examples for all functions, with pictures.

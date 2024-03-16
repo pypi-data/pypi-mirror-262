@@ -1,0 +1,23 @@
+## hpr1695 :: 46 - LibreOffice Calc - The Object Model and Using Templates
+
+ 
+As I said in the last tutorial, Templates can be understood as a container for a number of settings, most particularly Styles. This follows the object model, which is a lot like those Russian dolls inside of each other. The File for your spreadsheet is an object, and it contains individual Sheets which are objects. Each Sheet contains Cells which are objects. And each Cell contains various Characters which are objects, which can be used to represent numbers, formulas, addresses, labels, etc. Objects exhibit two features we always want to keep in mind. First, objects have properties that are particular to the kind of object. The properties of a file might include who the author is, where the file resides on the system, any access restrictions (like making the file password-protected), and so on. 
+
+
+The properties of each sheet might include things like the name of the sheet, the orientation (landscape vs. portrait), headers and footers, etc. Then the properties of the cell might include the type of cell and how 
+it is formatted (text, currency, general number, etc.). And finally the properties of the Character include the font family, font style, font size, and so on.
+
+
+https://extensions.libreoffice.org/
+
+https://extensions.openoffice.org/en/project/professional-template-pack-english
+
+https://extensions.openoffice.org/en/project/professional-template-pack-ii-english
+
+https://templates.libreoffice.org/template-center/account-id-management
+
+https://templates.libreoffice.org/template-center/gantt-chart-template
+
+https://www.ahuka.com/?page_id=953
+
+

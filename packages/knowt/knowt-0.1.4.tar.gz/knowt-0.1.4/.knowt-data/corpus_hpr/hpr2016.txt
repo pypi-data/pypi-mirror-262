@@ -1,0 +1,8 @@
+## hpr2016 :: Echoprint
+
+ Ken's message asking about programmatically checking for the intro and outro: 
+https://thread.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1039
+The Echoprint website: https://echoprint.me
+Codegen source code: https://github.com/echonest/echoprint-codegen
+Echoprint - An Open Music Identification Service: https://www.ee.columbia.edu/~dpwe/pubs/EllisWP11-echoprint.pdf
+Server source codehttps://github.com/echonest/echoprint-server

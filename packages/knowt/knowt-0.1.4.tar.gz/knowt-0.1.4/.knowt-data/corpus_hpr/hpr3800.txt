@@ -1,0 +1,26 @@
+## hpr3800 :: NIST Quantum Cryptography Update 20221008
+
+ The process NIST initiated in 2016 continues as it looks for
+encryption algorithms that will be secure against the anticipated
+arrival of practical quantum computing. In this update I report on the
+first 4 Candidates to be Standardized, and the timeline for completion.
+It is coming faster than you may have realized.
+Links:
+
+https://miracl.com/blog/backdoors-in-nist-elliptic-curves/
+https://en.wikipedia.org/wiki/Qubit
+https://en.wikipedia.org/wiki/Transport_Layer_Security
+https://csrc.nist.gov/Projects/post-quantum-cryptography
+https://www.zwilnik.com/security-and-privacy/encryption-and-quantum-computing/
+http://hackerpublicradio.org/eps.php?id=2860
+https://www.zwilnik.com/security-and-privacy/nists-quantum-cryptography-update-20200815/
+http://hackerpublicradio.org/eps.php?id=3147
+https://csrc.nist.gov/News/2016/Post-Quantum-Cryptography-Proposed-Requirements
+https://csrc.nist.gov/Projects/post-quantum-cryptography/selected-algorithms-2022
+https://csrc.nist.gov/Projects/post-quantum-cryptography/round-4-submissions
+https://csrc.nist.gov/projects/pqc-dig-sig/standardization/call-for-proposals
+https://www.nist.gov/blogs/taking-measure/post-quantum-cryptography-qa-nists-matt-scholl
+https://thehackernews.com/2022/07/nist-announces-first-four-quantum.html
+https://csrc.nist.gov/Projects/post-quantum-cryptography
+https://www.zwilnik.com/security-and-privacy/nist-quantum-cryptography-update-20221008/
+

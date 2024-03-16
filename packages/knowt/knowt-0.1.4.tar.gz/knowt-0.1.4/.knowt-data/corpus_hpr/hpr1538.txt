@@ -1,0 +1,22 @@
+## hpr1538 :: Overhauling the School of Music website
+
+ 
+I discuss the process of overhauling a badly out-of-date website to make it conform to accessibility standards and give it a responsive design. I also discuss how I came up with my own content management system by Bash scripting.
+
+
+Links
+
+
+School of Music website: https://music.louisiana.edu/
+
+TinyPNG, Web-based tool for optimizing PNG images: https://tinypng.com/
+
+Google developer tool for testing page speed: https://developers.google.com/speed/pagespeed/insights/
+
+WebAIM, Web accessibility testing tool: https://wave.webaim.org/
+
+HTML compressor: https://code.google.com/p/htmlcompressor/
+
+Font-Awesome Icons: https://fortawesome.github.io/Font-Awesome/icons/
+
+

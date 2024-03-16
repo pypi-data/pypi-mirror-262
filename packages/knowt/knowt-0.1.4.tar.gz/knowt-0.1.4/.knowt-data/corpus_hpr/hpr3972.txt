@@ -1,0 +1,42 @@
+## hpr3972 :: Thunderbird inbox filtering: keeping a clean/orderly inbox.
+
+ Thunderbird
+inbox filtering: keeping a clean/orderly inbox.
+
+Source: Thunderbird: Free Your
+Inbox.
+
+Supporting Source: Organize
+Your Messages by Using Filters.
+
+Message filters allow you to set up Thunderbird to organize your
+messages automatically. Each account has its own set of filters. Filters
+can move messages to folders, delete them, forward them to other email
+addresses, and more.
+When you receive new mail - This is when Getting New Mail is
+selected (the default). Filters are applied to new mail in the inbox.
+This can occur either before Thunderbird does its assessment of the mail
+as junk, or after. If you have difficulty with filtering the message
+body, select after classification.
+Automatically applied filters are applied only to the inbox, with
+the exception of Archive and after send filters, which apply only to the
+mails involved in the action to send or archive. Other folder types are
+not affected.
+
+Supporting Source: Protect
+your Thunderbird passwords with a Primary Password.
+
+Thunderbird can save passwords for each account, so you don't have
+to re-enter them when you check for new messages. You can view them and
+remove the ones you don't use anymore.
+Do you want to prevent others from seeing your
+messages? If you are sharing a computer, the most secure way is
+to create a separate OS user account on the operating system for each
+person, and make sure your OS account requires a password. Thunderbird
+stores accounts, messages and password information separately for each
+operating system account.
+
+
+
+This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License.

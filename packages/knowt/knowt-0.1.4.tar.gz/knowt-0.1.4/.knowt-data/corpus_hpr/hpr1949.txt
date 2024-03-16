@@ -1,0 +1,25 @@
+## hpr1949 :: The Kindle/Kobo Open Reader (KOReader)
+
+ In this episode I talk about installing an alternate ebook reader app on your Kindle paperwhite. The one I'm using is called the Kindle/Kobo Open Reader (KOReader), and it has many features that the stock Kindle reader does not have:
+
+Epub support
+Word-breaking hyphenation
+PDF reflow
+Take screenshot with diagonal swipe
+Export highlights to Evernote
+Fills more screen space
+User-installed fonts
+
+How to get it running:
+
+Jailbreak your Kindle, refer to this post. Jailbreaking doesn't give you any new programs. What it does is unlock the potential of the device and allows you to install different launchers and applications.
+Install alternate launcher, such as KUAL, the Kindle Unified Application Launcher. This is a framework that allows developers to create menu items that will launch applications on a jailbroken Kindle.
+Install KOreader. Instructions
+Install Dictionary files for whatever languages you want to have (optional)
+install Tesseract language data (optional)
+
+You can allow KOreader to take over styling of whatever book you're reading. If you don't like the style rules it applies, you can hack the epub CSS file located here: /koreader/data/epub.css
+Links
+
+KOreader Docs
+

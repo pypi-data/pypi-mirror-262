@@ -1,0 +1,39 @@
+## hpr3056 :: Jitsi
+
+ Jitsi is a collection of free and open-source multiplatform voice, videoconferencing and instant messaging applications for the web platform, Windows, Linux, Mac OS X and Android
+Jitsi          (Editor's Note: show notes amended 2020-06-13 from comment)
+systemctl stop docker
+
+rm -Rf /var/lib/docker
+rm -Rf ~/.jitsi-meet-cfg
+
+# change docker-data to your path you want to put images in
+mount --rbind /media/moredata/docker-data /var/lib/docker
+
+apt-get remove --purge install docker-ce docker-ce-cli containerd.io
+apt-get install docker-ce docker-ce-cli containerd.io
+
+curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+git clone https://github.com/jitsi/docker-jitsi-meet && cd docker-jitsi-meet
+
+systemctl restart docker
+
+cp env.example .env
+mkdir -p ~/.jitsi-meet-cfg/{web/letsencrypt,transcripts,prosody,jicofo,jvb}
+
+docker-compose --log-level DEBUG up -d --force-recreate --remove-orphans
+
+tail -f `find /var/lib/docker/containers -iname "*.log" `
+
+docker container ls
+
+docker exec -it d4c89a799fd7 bash
+
+# side that will be controlled needs to run
+https://github.com/jitsi/jitsi-meet-electron/releases/latest
+
+https://rmccurdy.com/.scripts/videos/rmccurdy_com/HPR_Jitsi.mp4
+https://rmccurdy.com/.scripts/videos/rmccurdy_com/HPR_Jitsi.mp3
+

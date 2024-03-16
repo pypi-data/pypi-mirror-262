@@ -1,0 +1,38 @@
+## hpr2045 :: Some other Bash tips
+
+ Some other Bash tips
+Expansion
+As we saw in the last episode 1951 (and others in this sub-series) there are eight types of expansion applied to the command line in the following order:
+
+Brace expansion (we looked at this subject in episode 1884)
+Tilde expansion (seen in episode 1903)
+Parameter and variable expansion (this was covered in episode 1648)
+Command substitution (seen in episode 1903)
+Arithmetic expansion (seen in episode 1951)
+Process substitution
+Word splitting
+Pathname expansion
+
+We will look at process substitution and word splitting in this episode but since there is a lot to cover in these subjects, we'll save pathname expansion for the next episode.
+I have written out a moderately long set of notes about this subject and these are available here https://hackerpublicradio.org/eps/hpr2045/full_shownotes.html.
+Links
+
+HPR episode 1648 "Bash parameter manipulation": https://hackerpublicradio.org/eps.php?id=1648
+HPR episode 1843 "Some Bash tips": https://hackerpublicradio.org/eps.php?id=1843
+HPR episode 1884 "Some more Bash tips": https://hackerpublicradio.org/eps.php?id=1884
+HPR episode 1903 "Some further Bash tips": https://hackerpublicradio.org/eps.php?id=1903
+HPR episode 1951 "Some additional Bash tips": https://hackerpublicradio.org/eps.php?id=1951
+
+
+"Introduction to sed" series on HPR:
+
+Part 1: https://hackerpublicradio.org/eps.php?id=1976
+Part 2: https://hackerpublicradio.org/eps.php?id=1986
+Part 3: https://hackerpublicradio.org/eps.php?id=1997
+Part 4: https://hackerpublicradio.org/eps.php?id=2011
+
+
+
+Wikipedia article on the "Named pipe": https://en.wikipedia.org/wiki/Named_pipe
+Wikipedia article on the "IFS" variable: https://en.wikipedia.org/wiki/Internal_field_separator
+Advanced Bash-Scripting Guide: Section 9.1 Bash Internal Variables (including IFS): https://www.tldp.org/LDP/abs/html/internalvariables.html

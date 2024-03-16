@@ -1,0 +1,57 @@
+## hpr3067 :: Getting my Python3 code working in Python2
+
+ I have a raspberry Pi model B with the original Pifacecad add on board
+I recently upgraded the operating system on my raspberry pi from Wheezy (Debian 7) to Jessie (Debian 8), all seemed fine till I tried to run my Python3 project. It reported that the pifacecad module wasn’t present. I tried to install the module using the standard apt-get command given in the Pifacecad documentation. It installed OK for python 2 but It would not install for python 3 as there was a dependency issue with the python-lirc library. I’m guessing the upgrade broke something.
+I installed a fresh minimal installation of raspbian Stretch (Debian 9) onto a new SD card and ran the standard installation command in the Pifacecad documentation. It all installed but there was a warning about Spi which I had forgotten to enable. I enabled this using the raspi-config util and rebooted the pi.
+I then tested the installation by running the sys-info.py example that is mentioned in the installation documentation that comes with the pifacecad board.
+Running this example gave a warning saying that the pifacecad hardware could not be found at this point I gave up and decided instead to run my project in python 2.
+Of course at first the code wouldn’t run using python 2 and I had to do a bit of digging around to find out what was going wrong.
+You may find this useful in the unlikely event that you have a project written in python 3 that you want to run in python 2, it might also be useful if you’re going in the other direction.
+One other thing that I briefly stumbled upon was that I believe there is a tool available that attempts to convert python 2 code to python 3 I don’t know anything about it and didn’t bother looking to see if there is a tool to go in the opposite direction which is what I needed. I’ve included a link to the tool below https://docs.python.org/2/library/2to3.html
+I’ve got the two versions of code loaded into the excellent graphical diff tool meld and I’ll just briefly cover the things that I had to change.
+Link to meld diff tool: https://meldmerge.org/
+After some mucking about I got it partially working by installing Piface module for Python 2.7
+Had to do the following changes to get the code working in Python 2.7:
+
+Changed first line of code from python3 to python2 so that code was run using the correct interpreter
+Print statement fixed by see
+https://stackoverflow.com/questions/32032697/how-to-use-from-future-import-print-function
+Python 3 uses the urllib.request command. For Python 3 I used
+
+    urllib.request.urlopen(url).read()
+
+https://docs.python.org/3/library/urllib.request.html
+
+
+Python 2 uses the urllib2 command. For Python 2 I used the following
+
+    urllib2.urlopen(url).read()
+
+https://docs.python.org/2/library/urllib2.html
+
+
+hostname --all has different output on this version of Debian, now includes mac address which I did not want.
+Getting the wifi ESSID information. I used iwconfig to get this information. The path to iwconfig command changed in this version of Debian and I now had to give the full path to get it to work.
+Python 2 and 3 seemed to handle strings differently when converting from an array to a plain string.
+Python 3 handles input different from python 2
+If python 2 comes across a non numeric value it quits with an exception
+
+so for python 2 I used the command
+
+      raw_input()
+
+for python 3 I used the command
+
+      input()
+
+Two article about incorporating future statements in Python 2
+https://docs.python.org/3/library/__future__.html
+
+https://simeonvisser.com/posts/how-does-from-future-import-work-in-python.html
+Related shows about my PiFaceCAD add on board for the raspberry pi
+
+hpr2933 :: A walk through my PifaceCAD Python code – Part 1
+hpr2951 :: A walk through my PifaceCAD Python code – Part 2
+hpr2963 :: A walk through my PifaceCAD Python code – Part 3
+hpr2976 :: A walk through my PifaceCAD Python code – Part 4
+

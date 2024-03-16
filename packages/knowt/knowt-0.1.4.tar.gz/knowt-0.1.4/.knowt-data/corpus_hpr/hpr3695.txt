@@ -1,0 +1,85 @@
+## hpr3695 :: How I watch youtube with newsboat
+
+ How I watch youtube with newsboat
+I find that the youtube web ui is designed to keep users on the site by feeding them an unending stream of information. Bright colors, distracting thumbnails, peanut galleries, etc. I prefer to consume my videos in the same way I consume everything else: via RSS.
+RSS is my favorite way of aggregating things that other people have made because it allows me, the user, to interact with their things
+The only dependencies not on a standard UNIX system are newsboat and a video player. I also use yt-dlp to download videos for later viewing. I like mpv but you can substitute your own.
+$ sudo $pkgmrg install newsboat mpv yt-dlp
+Getting RSS feeds from youtube
+Youtube (currently) provides RSS feeds for channels.
+Finding Youtube channel ID
+Sometimes channels have vanity URLs that can make it difficult to find the channel ID. Other times, the URL contains the channel ID. All youtube channel IDs start with the string UC so we can easily grep for them.
+$ curl https://www.youtube.com/c/RMCRetro | grep --color "href=\"https://www.youtube.com/channel/UC\""
+[ lots of nonsense ]
+href="https://www.youtube.com/channel/UCLEoyoOKZK0idGqSc6Pi23w"
+[ lots of nonsense ]
+In order to turn this channel ID into something useful, we create the following URL:
+https://www.youtube.com/feeds/videos.xml?channel_id=UCLEoyoOKZK0idGqSc6Pi23w
+Google takeout can also be used to export youtube subscriptions.
+The export format is a CSV that contains the channel IDs for all of our subscriptions.
+Channel Id,Channel Url,Channel Title
+UCLEoyoOKZK0idGqSc6Pi23w,http://www.youtube.com/channel/UCLEoyoOKZK0idGqSc6Pi23w,RMC - The Cave
+Newsboat url list
+Newsboat reads it’s list of URLs from ~/.config/newsboat/urls. Every url we add to this list will be automaticlly fetched. You can make separate URL lists for your list of videos and list of standard text based RSS feeds
+If you have an exported CSV, you can easily modify it so that newsboat will accept it as a list of URLs by deleting row 1, column 1+comma, and replacing the comma between the URL and channel name with a tab character. Doing a sed 's/channel\//feeds\/videos.xml?channel_id=/g' on the file is an easy way to replace the website URL with the feed url. Newsboat only reads the first field of every row so the channel name can be kept for easier subscription management.
+http://www.youtube.com/feeds/videos.xml?channel_id=UCLEoyoOKZK0idGqSc6Pi23w     RMC - The Cave
+Newsboat config
+In order to play videos, we need to add some macros to the newsboat config file at ~/.config/newsboat/config
+Mine looks like this.
+# load URLS on launch
+auto-reload  yes
+
+# vim binds
+bind-key j down
+bind-key k up
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+bind-key l open
+bind-key h quit
+bind-key a toggle-article-read
+bind-key n next-unread
+bind-key N prev-unread
+bind-key D pb-download
+bind-key U bashow-urls
+bind-key x pb-delete
+
+# macro setup
+browser linkhandler
+macro , open-in-browser
+
+# launch video player
+macro v set browser "setsid -f mpv" ; open-in-browser ; set browser linkhandler
+
+# download video
+macro d set browser "yt-dlp"; open-in-browser ; set browser linkhandler
+
+# download audio only
+macro a set browser "yt-dlp --embed-metadata -xic -f bestaudio/best" ; open-in-browser ; set browser linkhandler
+Video demo
+This is a demo of using newsboat with videos. In order to execute the macros, you type , then v or whatever other letter you set the macro to.
+video in webm format your web browser or operating system does not support free video codecs :(
+A url list to get you started
+https://www.youtube.com/feeds/videos.xml?channel_id=UC3ts8coMP645hZw9JSD3pqQ        Andreas Kling
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA        Computerphile
+https://www.youtube.com/feeds/videos.xml?channel_id=UC15BJjhPr4d5gTClhmC4HRw        Elliot Coll
+https://www.youtube.com/feeds/videos.xml?channel_id=UCxQKHvKbmSzGMvUrVtJYnUA        Learn Linux TV
+https://www.youtube.com/feeds/videos.xml?channel_id=UCm9K6rby98W8JigLoZOh6FQ        LockPickingLawyer
+https://www.youtube.com/feeds/videos.xml?channel_id=UCl2mFZoRqjw_ELax4Yisf6w        Louis Rossmann
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA        Luke Smith
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA        Mental Outlaw
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjFaPUcJU1vwk193mnW_w1w        Modern Vintage Gamer
+https://www.youtube.com/feeds/videos.xml?channel_id=UCLEoyoOKZK0idGqSc6Pi23w        RMC - The Cave
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4rqhyiTs7XyuODcECvuiiQ        Scott The Woz
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5I2hjZYiW9gZPVkvzM8_Cw        Techmoan
+https://www.youtube.com/feeds/videos.xml?channel_id=UCy0tKL1T7wFoYcxCe0xjN6Q        Technology Connections
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8uT9cgJorJPWu7ITLGo9Ww        The 8-Bit Guy
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5UAwBUum7CPN5buc-_N1Fw        The Linux Experiment
+https://www.youtube.com/feeds/videos.xml?channel_id=UCFMx-JitepTttWc-ABHhu8A        This Week in Retro
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsnGwSIHyoYN0kiINAGUKxg        Wolfgang's Channel
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJ8V9aiz50m6NVn0ix5v8RQ        decino                

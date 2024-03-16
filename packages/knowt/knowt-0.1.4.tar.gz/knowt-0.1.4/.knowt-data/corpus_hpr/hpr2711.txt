@@ -1,0 +1,41 @@
+## hpr2711 :: Raspberry Pi 3A+ Review
+
+ Raspberry Pi 3A+ review
+In this episode of HPR, I will do a quick review of the Raspberry Pi 3A+, the latest release of the Raspberry Pi foundation.
+ 
+Specs
+The Raspberry Pi 3A+ has almost the same hardware as its big brother/sister the 3B+ :
+
+BCM2837 BO SOC (system on chip), a quad core 64-bit ARM v8 processor, running at 1.4 GHz
+On board wireless :
+
+WiFi : 2.4 and 5 GHz 802.11 c/y/n/ac
+Bluetooth : 4.2 and BLE
+
+MicroSD card for storing the operating system and the data
+Full size HDMI connector
+3.5 mm jack connector for audio and composite video output
+MicroUSB connector for the power supply
+40-pin header with the same pinout as every other Raspberry Pi
+
+The differences are :
+
+Only one full size USB connector, instead of four on the 3B+
+No ethernet connector
+Only 512 MB or SDRAM instead of 1 GB on the 3B+
+
+Size
+The Raspberry Pi 3A+ is 6.7 x 5.6 cm (2.6 x 2.2 in) and 11 mm high (.45 in). But if you plug a ribbon in the header, then it takes a lot of space.
+
+In this case, it’s probably better to unsolder the header, and solder a right angle header in place, so the pins are pointing to the side of the board and not upwards
+ 
+With a bit of caution and the help of some desoldering wick, it’s not a complex operation, because there is no component near the GPIO header.
+Of course if you plan on using a HAT, then you’re better off using the straight header. The Raspberry Pi 3A+ is actually the same size than a standard HAT.
+ 
+Use case
+
+Since the Raspberry Pi 3A+ doesn’t have an ethernet port, I think I will not use it for server stuff like Mosquitto or Pi-Hole, for which a good network connection is required. Also, those servers sometimes need a keyboard and a mouse, and with only one USB port, that’s not too practical.
+For me, the A+ will be used to upgrade projects currently using a Raspberry Pi ZeroW, and for which I need a little more power. The on board WiFi and the small form factor, combined with the extra power, makes the 3A+ an ideal replacement for the ZeroW.
+Credits
+
+The sound used for the opening and closing sequence is Speaker X-Clash by Daniel H, and is released under a CC-BY-NC license.

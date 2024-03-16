@@ -1,0 +1,280 @@
+## hpr3423 :: "upg.sh" my "dump.txt" to "note.md"
+
+ upg.sh my dump.txt to note.md
+SYNOPSIS: upg.sh
+
+Upgrade your system and store stdout into a markdown file.
+
+#!/bin/bash
+# upg.sh
+
+FILENAME=sys-upgrade$(date +%m-%d-%Y).md
+DIRECTORY="${HOME}/Documents/"
+
+# step 1: formatting.
+echo -e "# **System Upgrade:** $(date)\n" \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "**Command:** \`sudo apt-get update; sudo apt-get upgrade --yes\`\n" \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "**Command Breakdown:**" \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "- \`sudo\`, Admin Privilages." \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "- \`apt-get\`, Package Manager." \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "- \`update;\`, Package Manager's task; update the system software repositories." \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "- \`sudo apt-get upgrade\`, Perform system upgrade with updated repositories." \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "- \`--yes\`, Answers yes to the prompt." \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+# step 2: run commands with formatting.
+echo -e "\n**Command std-output:**\n" \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\`\`\`" \
+    | tee -a ${DIRECTORY}${FILENAME}
+    echo $(date) \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+sudo apt-get update \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\n# System update completed.\n" \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+sudo apt-get upgrade --yes \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\n# System upgrade completed.\n" \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\`\`\`\n" \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+# step 3: additional details with more formatting.
+echo -e "**Upgraded Package Details:**\n" \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\`\`\`" \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+PKGLIST=$(sed -n "/The following packages will be upgraded:/,/^.. upgraded/p" ${FILENAME} \
+    | sed '1d;$d' | xargs -n 1 | sed '/:i386$/d') \
+
+PKGCACHE=$(echo -e "${PKGLIST}\n" \
+    | xargs -n1 -I _ apt-cache search _)
+echo "${PKGCACHE}" > ${DIRECTORY}delete.txt
+
+echo "${PKGLIST}" \
+    | xargs -n 1 -I _ echo "sed -n '/^_ /p'" "${DIRECTORY}delete.txt" \
+    | bash | tee -a ${DIRECTORY}${FILENAME};
+
+echo -e "\`\`\`" \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+rm -v ${DIRECTORY}delete.txt;
+PKGLIST=
+PKGCACHE=
+
+# step 4: place EOF (end of file).
+    sed -i '/EOF/d' ${DIRECTORY}${FILENAME}
+echo "EOF" >> ${DIRECTORY}${FILENAME}
+#EOF
+
+Script breakdown: upg.sh
+
+First, we declare bash as our shell with #!/bin/bash. We could also use #!/bin/sh for a more portable script.
+I like to paste the name of the script we're working on into the script itself # upg.sh.
+Setup a couple of variables to shorten the syntax.
+
+FILENAME=sys-upgrade$(date +%m-%d-%Y).md
+DIRECTORY="${HOME}/Documents/"
+
+
+# step 1: formatting.
+
+Build labels and a short breakdown of the update/upgrade commands used.
+
+
+echo -e "# **System Upgrade:** $(date)\n" \                                                    <-- formatting: label with date.
+    | tee -a ${DIRECTORY}${FILENAME}                                                           <-- path/to/file
+echo -e "**Command:** \`sudo apt-get update; sudo apt-get upgrade --yes\`\n" \                 <-- formatting: command label.
+    | tee -a ${DIRECTORY}${FILENAME}                                                           <-- path/to/file
+echo -e "**Command Breakdown:**" \                                                             <-- formatting: label.
+    | tee -a ${DIRECTORY}${FILENAME}                                                           <-- path/to/file
+echo -e "- \`sudo\`, Admin Privilages." \                                                      <-- formatting: label.
+    | tee -a ${DIRECTORY}${FILENAME}                                                           <-- path/to/file
+echo -e "- \`apt-get\`, Package Manager." \                                                    <-- formatting: label.
+    | tee -a ${DIRECTORY}${FILENAME}                                                           <-- path/to/file
+echo -e "- \`update;\`, Package Manager's task; update the system software repositories." \    <-- formatting: label.
+    | tee -a ${DIRECTORY}${FILENAME}                                                           <-- path/to/file
+echo -e "- \`sudo apt-get upgrade\`, Perform system upgrade with updated repositories." \      <-- formatting: label.
+    | tee -a ${DIRECTORY}${FILENAME}                                                           <-- path/to/file
+echo -e "- \`--yes\`, Answers yes to the prompt." \                                            <-- formatting: label.
+    | tee -a ${DIRECTORY}${FILENAME}                                                           <-- path/to/file
+
+
+# step 2: run commands with formatting.,
+
+Setup labels and an area for the stdout to be store with markdown formatting.
+We place the time and date into the stdout area then run the commands.
+
+
+echo -e "\n**Command std-output:**\n" \                                                        <-- formatting: label.
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\`\`\`" \                                                                             <-- formatting: markdown.
+    | tee -a ${DIRECTORY}${FILENAME}
+    echo $(date) \                                                                             <-- command: date.
+    | tee -a ${DIRECTORY}${FILENAME}
+
+sudo apt-get update \                                                                          <-- command: update.
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\n# System update completed.\n" \                                                     <-- formatting: label.
+    | tee -a ${DIRECTORY}${FILENAME}
+
+sudo apt-get upgrade --yes \                                                                   <-- command: upgrade with "--yes" option.
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\n# System upgrade completed.\n" \                                                    <-- formatting: label.
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\`\`\`\n" \                                                                           <-- formatting: markdown.
+    | tee -a ${DIRECTORY}${FILENAME}
+
+
+# step 3: additional details with more formatting.,
+
+List the packages that were upgraded with details from system cache.
+
+
+echo -e "**Upgraded Package Details:**\n" \                                                    <-- formatting: label.
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\`\`\`" \                                                                             <-- formatting: markdown.
+    | tee -a ${DIRECTORY}${FILENAME}
+
+PKGLIST=$(sed -n "/The following packages will be upgraded:/,/^.. upgraded/p" ${DIRECTORY}${FILENAME} \  <--| variable with list of packages within it.
+    | sed '1d;$d' | xargs -n 1 | sed '/:i386$/d') \                                            <--| sed: filter the first and last lines then remove the :i386 duplicate packages.
+
+PKGCACHE=$(echo -e "${PKGLIST}\n" \                                                            <--| variable with massive apt-cache search results.
+    | xargs -n1 -I _ apt-cache search _)                                                       <--| xargs runs the PKGLIST (the _ is the value of PKGLIST) into the apt-cache search.
+echo "${PKGCACHE}" > ${DIRECTORY}delete.txt                                                    <--| I had to put the PKGCACHE in a file. I couldn't get sed to filter a variable (yet).
+
+echo "${PKGLIST}" \                                                                            <--| use that PKGLIST to create a few sed commands to filter the file called "delete.txt".
+    | xargs -n 1 -I _ echo "sed -n '/^_ /p'" "${DIRECTORY}delete.txt" \                        ^--| xargs is used to create the sed commands.
+    | bash | tee -a ${DIRECTORY}${FILENAME};                                                   <--| run the sed commands through bash then store them.
+
+echo -e "\`\`\`" \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+rm -v ${DIRECTORY}delete.txt;                                                                  <--| use rm to delete the file called "delete.txt" it has the apt-cache search results in it.
+PKGLIST=                                                                                       <--| empty the variable. why? why not!
+PKGCACHE=                                                                                      <--| empty the variable. why? why not!
+
+
+# step 4: place EOF (end of file).,
+
+Add EOF (END OF FILE) to the end of the file. If one is already there, -
+it's removed then replaced in the correct position.
+
+
+    sed -i '/EOF/d' ${DIRECTORY}${FILENAME}                                                    <--| search for EOF then remove it. we don't want multiple EOF if we run the script multiple times in the same day.
+echo "EOF" >> ${DIRECTORY}${FILENAME}                                                          ^--| adds the EOF (End Of File) at the end of the file.  I read it was a nice thing to do.
+#EOF                                                                                           <--| Yep. it's there.
+
+
+
+SYNOPSIS: note.sh "command" "filename"
+
+example: note.sh "ls -lhA" "basic-list"
+make markdown notes of your commands.
+
+#!/bin/bash
+# note.sh "command" "filename" no extentions.
+
+# variables
+FILENAME=$2$(date +%m-%d-%Y).md
+DIRECTORY="${HOME}/Documents/"
+
+# step 1: create file with formatting.
+echo -e "# **Command:** \` $1 \`\n" \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "**Command Breakdown:**" \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo "$1" | tr " " '\n' \
+    | awk '{ print "- `" $0 "`, info." }' \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+# step 2: run command with more formatting.
+echo -e "\n**Command std-output:**" \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\`\`\`\n$(date)" \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+echo $1 | bash \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+echo -e "\`\`\`" \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+echo -ne "\n${FILENAME} has been updated $(date)."
+
+# step 3: insert EOF (End Of File).
+sed -i '/EOF/d' ${DIRECTORY}${FILENAME}
+echo EOF >> ${DIRECTORY}${FILENAME}
+
+Script breakdown: upg.sh
+
+First, we declare bash as our shell with #!/bin/bash. We could also use #!/bin/sh for a more portable script.
+I like to paste the name of the script we're working on into the script itself # upg.sh.
+Setup a couple of variables to shorten the syntax.
+
+FILENAME=$2$(date +%m-%d-%Y).md                                                                <--| the "$2" is the second user input (file name) from the commandline.
+DIRECTORY="${HOME}/Documents/"
+
+
+# step 1: create file with formatting.
+
+Build labels for Command Name with a short breakdown of the command(s) used.
+Note: the breakdown must be entered manually.
+
+
+echo -e "# **Command:** \` $1 \`\n" \                                                          <--| the "$1" is the first user input (the command) from the commandline.
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "**Command Breakdown:**" \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo "$1" | tr " " '\n' \                                                                      <--| This just breaks the command into parts then adds some markdown formatting for use to add -
+    | awk '{ print "- `" $0 "`, info." }' \                                                    ^--| details to later. I just added the word info so you know to provide info about the command. -
+    | tee -a ${DIRECTORY}${FILENAME}                                                           ^--| the formatting gets a bit crazy if you use something like: awk {' print $1 $2 $3 '} path/to/file;  each space becomes a newline with the markdown formatting.
+
+
+# step 2: run command with more formatting.
+
+Echo the Command into bash with markdown formatting for stdout.
+
+
+echo -e "\n**Command std-output:**" \
+    | tee -a ${DIRECTORY}${FILENAME}
+echo -e "\`\`\`\n$(date)" \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+echo $1 | bash \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+echo -e "\`\`\`" \
+    | tee -a ${DIRECTORY}${FILENAME}
+
+echo -ne "\n${FILENAME} has been updated $(date)."
+
+
+# step 3: insert EOF (End Of File).
+
+Add EOF (END OF FILE) to the end of the file. If one is already there, -
+it's removed then replaced in the correct position.
+
+
+sed -i '/EOF/d' ${DIRECTORY}${FILENAME}
+echo EOF >> ${DIRECTORY}${FILENAME}
+
+
+Correspondent: Some Guy On The Internet.
+Host ID: 391
+E-mail: Lyunpaw.nospam@nospam.gmail.com
+
+use "hpr391" as the subject line for all emails to avoid the junk filter.
+show notes markdown file  This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+

@@ -1,0 +1,231 @@
+## hpr4022 :: dumping roms for fun and profit
+
+ disassembling - hex2bin is used for converting hexadecimal files into
+a binary file. - used z80dasm to disassemble machine code into
+hexadecimal - use xxd to view the hex code and machine code side by side
+- ghidra, reverse engineering suite used for analysis
+https://www.noagendashow.net/ https://twostopbits.com/
+https://en.wikipedia.org/wiki/Programmable_ROM https://en.wikipedia.org/wiki/Dual_in-line_package https://www.tablix.org/~avian/blog/articles/z80dasm/ https://ghidra-sre.org/
+https://hex2bin.sourceforge.net/
+1.prom-location-on-board.jpg 2.prom-ready-to-read.jpg
+Intelhex file snipet:
+:100600003E0FCD8E043E0ECD8E04211441360023C4
+:1006100036003A6341326A41CDB204CDC404CD61A3
+:1006200005215541CB46C46306210F41CB6E281CE2
+:10063000210241CB4E28CE210F41CB7E2809FEEC72
+:10064000CAC306FEED287CCD45071849CB66284570
+:10065000210741CB76203B21154134CB8ECB9ECB5D
+:10066000961832FEFFC8CB4E2808FEE42004CB8E3D
+:10067000D1C9211941BED0FE31D8215541CB6628C0
+:1006800003FE31C8321341CBA7CBAF215541CBD6A6
+:10069000D1C9CD45072114413400003A2E41BEC2D4
+:1006A0001E0636000000211541CB46216B417E2BF2
+:1006B0002016BE200F3E132B772124413600210F38
+:1006C000413EFFC934C31806BE28EA3EC9CD8E0498
+:1006D0002115417EC60477CB5E200CCBA6AF01006E
+:1006E00041CD9104C31E063E2018F3210F41CB6675
+:1006F000202DCB6E28093A1341FEE4CCD107C93E28
+:10070000FFC9CDEB06210F41CB662013CB6E28EF3E
+:100710003A1341FEE12804FEE22004CDD107C93A94
+:100720001341C93E200614219042772310FCC921B1
+:100730002541367C233614CD5207C9212541362068
+:1007400023362018F2FB2125413680233601CD5374
+:1007500007C9F31680211241CBCECB964E0640CB73
+xxd output showing text that's displayed on the screen when the
+device boots
+000025d0: f4f5 f6f7 f9ef e1e2 0ded e8f8 30e4 3d3b  ............0.=;
+000025e0: 272f e550 3839 4f4b 4c2c 2e49 3637 5548  '/.P89OKL,.I67UH
+000025f0: 4a4e 4d59 3435 5446 4756 4252 3233 4553  JNMY45TFGVBR23ES
+00002600: 4458 4357 e631 5141 5ae7 20ec ebea 2020  DXCW.1QAZ. ...
+00002610: 2020 2020 0f53 454c 4543 5420 4143 5449      .SELECT ACTI
+00002620: 5649 5459 1053 454c 4543 5420 434c 4153  VITY.SELECT CLAS
+00002630: 5320 312d 3906 4c45 5353 4f4e 1053 454c  S 1-9.LESSON.SEL
+00002640: 4543 5420 4c45 5645 4c20 312d 3405 4c45  ECT LEVEL 1-4.LE
+00002650: 5645 4c12 5345 4c45 4354 2053 4543 5449  VEL.SELECT SECTI
+00002660: 4f4e 2031 2d32 1231 2d45 5841 4d50 4c45  ON 1-2.1-EXAMPLE
+00002670: 2050 524f 4752 414d 5310 322d 4241 5349   PROGRAMS.2-BASI
+00002680: 4320 434f 4d50 5554 4552 1045 5841 4d50  C COMPUTER.EXAMP
+00002690: 4c45 2050 524f 4752 414d 530e 5052 452d  LE PROGRAMS.PRE-
+000026a0: 4241 5349 4320 5631 2e30 1253 454c 4543  BASIC V1.0.SELEC
+z80dasm output:
+    push af         ;0040   f5  .
+    push bc         ;0041   c5  .
+    push de         ;0042   d5  .
+    push hl         ;0043   e5  .
+    ld hl,0410fh        ;0044   21 0f 41    ! . A
+    res 4,(hl)      ;0047   cb a6   . .
+    res 5,(hl)      ;0049   cb ae   . .
+    set 6,(hl)      ;004b   cb f6   . .
+    bit 0,(hl)      ;004d   cb 46   . F
+    jr nz,27        ;004f   20 19     .
+    bit 1,(hl)      ;0051   cb 4e   . N
+    jr z,41     ;0053   28 27   ( '
+    ld hl,0410eh        ;0055   21 0e 41    ! . A
+    inc (hl)            ;0058   34  4
+    ld a,(hl)           ;0059   7e  ~
+    cp 032h     ;005a   fe 32   . 2
+    jr nz,32        ;005c   20 1e     .
+    ld (hl),000h        ;005e   36 00   6 .
+    ld hl,0410ch        ;0060   21 0c 41    ! . A
+    inc (hl)            ;0063   34  4
+    jr nz,24        ;0064   20 16     .
+    inc hl          ;0066   23  #
+    inc (hl)            ;0067   34  4
+    jr 20       ;0068   18 12   . .
+    ld hl,0410ch        ;006a   21 0c 41    ! . A
+    inc (hl)            ;006d   34  4
+    jr nz,14        ;006e   20 0c     .
+    inc hl          ;0070   23  #
+    inc (hl)            ;0071   34  4
+    ld a,(hl)           ;0072   7e  ~
+    cp 00ch     ;0073   fe 0c   . .
+    jr nz,7     ;0075   20 05     .
+    ld hl,0410fh        ;0077   21 0f 41    ! . A
+    set 2,(hl)      ;007a   cb d6   . .
+If you've gotten this far, the forth code, read bottom up:
+-promreader
+marker -promreader
+
+2variable low-mem
+2variable high-mem
+
+\ 22-29
+$22 constant LOW-BYTE
+$21 constant DDRA
+$20 constant PINA
+
+\ 53=PB0, 52=PB1
+$25 constant PAGE
+$24 constant DDRB
+$23 constant PINB
+%0000.0001 constant PAGE-SELECT
+%0000.0010 constant CHIP-ENABLE
+
+\ 37-30 (reversed on board)
+$28 constant HIGH-BYTE
+$27 constant DDRC
+$26 constant PINC
+
+\ 49-42 (reversed on board)
+$10b constant  PORTL
+$10a constant  DDRL
+$109 constant  DATA
+
+variable LineFeed
+variable Address
+variable CheckSum
+
+$10 constant ByteCount
+0 constant RecordType
+
+: port-init ( -- )
+  PAGE-SELECT DDRB mset
+  CHIP-ENABLE DDRB mset
+  $ff DDRA mset
+  $ff DDRC mset
+  $ff DDRL mclr
+  $ff PORTL mset
+  CHIP-ENABLE PAGE mset
+  PAGE-SELECT PAGE mclr
+;
+
+: hex>ascii ( n -- c c ) dup $f0 and 4 rshift swap $0f and digit swap digit ;
+
+: checksum+ ( n -- )  CheckSum @ + CheckSum ! ;
+
+: .output ( n -- )  ( dup ) ( checksum+ ) emit emit ;
+
+: address ( n -- )
+  Address @
+  dup $ff00 and 8 rshift swap
+  $00ff and swap
+  dup checksum+
+  hex>ascii
+  .output
+  hex>ascii
+  .output
+;
+
+: add>bytes ( n -- n n ) dup $ff00 and 8 rshift swap $00ff and ;
+
+: build-record ( n -- ) dup checksum+ hex>ascii .output ;
+
+: header ( -- )
+    ." :"
+    ByteCount build-record
+    Address @ add>bytes swap build-record build-record
+    RecordType build-record
+;
+
+: .checksum ( -- )
+  CheckSum @ invert 1+
+  build-record
+  0 CheckSum !
+  cr
+;
+
+
+: address+ ( -- n ) Address @ 1+ dup Address ! ;
+
+: line-feed+ ( -- )
+  LineFeed @ 1+
+  dup
+  ByteCount = if
+    ( .checksum )
+    0 LineFeed !
+    cr
+  else
+    LineFeed !
+  then
+;
+
+: read-data ( -- d )
+  CHIP-ENABLE PAGE mclr 10 ms
+  DATA c@ 10 ms
+  CHIP-ENABLE PAGE mset 10 ms
+  ;
+
+: set-high-byte HIGH-BYTE c! ;
+
+: set-low-byte LOW-BYTE c! ;
+
+: get-data ( -- n )
+  Address @ add>bytes
+  set-low-byte
+  set-high-byte
+  read-data
+  build-record
+;
+
+: page-read ( -- )
+  0 CheckSum ! 0 Address ! cr
+  begin
+    0
+    header
+    begin
+      get-data
+      Address @ 1+ Address !
+      1+
+      dup 16 =
+    until
+    drop
+    .checksum
+    Address @
+    0=
+  until
+  ." :00000001FF" cr
+;
+
+
+: dump-prom ( -- )
+  port-init
+  ." Page 1" cr
+  page-read
+  PAGE-SELECT PAGE mset
+  ." Page 2" cr
+  page-read
+  ;
+PROM location on board
+
+PROM ready to read
+

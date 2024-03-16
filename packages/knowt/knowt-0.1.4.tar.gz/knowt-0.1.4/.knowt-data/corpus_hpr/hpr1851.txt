@@ -1,0 +1,466 @@
+## hpr1851 :: HPR Community News for August 2015
+
+ 
+In today's show Jon, Dave and Ken discuss some topics such as, 
+
+What format to upload show notes in ?
+Multimeter Tutorials https://www.youtube.com/watch?v=ZBbgiBU96mM
+https://www.youtube.com/user/mjlorton
+
+Lack of community contributions
+
+
+
+Hi All,
+
+I am concerned as to the health of HPR, and I touched (went on a rant to
+be honest) on this in the Community News show that will be released
+tomorrow.
+
+We have 16,495 subscribers and 260 slots per year, so we need to have
+only 2.5% subscribers contributing to have a different host for every
+day. Unfortunately only 62 managed to contribute a show in the last 365
+days. I don't need Charles in NJ to tell me that that's only 0.38% of
+our subscriber base.
+
+As a project that is supposed to be a "Community Podcast", but we're
+looking less like a bar camp and more like a TED talk.
+
+It gets worse. Dave ran the query of how many shows were contributed by
+each host over the last 365 days. It shows that 50% of the shows have
+been contributed by just 5 hosts. This is not to say that submitting
+multiple shows is bad, far from it. But it's the difference between
+wanting to submit multiple shows and *needing* to submit multiple shows,
+that I'm concerned about.
+
+So a few questions for the list:
+
+- Is this a problem ?
+- If so, how do we fix it ?
+
+*Please* do not derail this discussion about your intentions to record a
+show. I have a in box full of "I plan to do a show about this" or "I'm
+definitely doing a series on that". More than one are from myself.
+Basically if it's not on the server, it's not a show.
+
+You can always add a topic to the requested topic page.
+https://gitlab.anhonesthost.com/HPR/HPR_Public_Code/blob/master/www/reque
+sted_topics.html
+
+
+
+More Info: https://hackerpublicradio.org/eps/hpr1851_HPR_Health_2015-09-06.ods
+
+Raw SQL Dump here: 
+
++--------+--------------------------------+-------+
+| hostid | host                           | shows |
++--------+--------------------------------+-------+
+|    198 | Ahuka                          |    38 |
+|    238 | Jon Kulp                       |    24 |
+|    159 | HPR Volunteers                 |    18 |
+|    225 | Dave Morriss                   |    17 |
+|    131 | FiftyOneFifty                  |    17 |
+|     30 | Ken Fallon                     |    14 |
+|     78 | klaatu                         |     7 |
+|    209 | David Whitman                  |     7 |
+|    280 | semioticrobotic                |     6 |
+|    235 | NYbill                         |     6 |
+|    288 | beni                           |     6 |
+|    195 | Frank Bell                     |     6 |
+|     24 | Lord Drachenblut               |     6 |
+|    287 | corenominal                    |     5 |
+|    282 | Mike Ray                       |     5 |
+|    129 | JWP                            |     4 |
+|    265 | Kevin Wisher                   |     4 |
+|    240 | Steve Bickle                   |     4 |
+|    297 | swift110                       |     4 |
+|    286 | cjm                            |     3 |
+|    285 | 2BFrank                        |     3 |
+|    107 | lostnbronx                     |     3 |
+|    259 | Gabriel Evenfire               |     3 |
+|    215 | Windigo                        |     3 |
+|    296 | Kevie                          |     3 |
+|    300 | b-yeezi                        |     3 |
+|    284 | Steve Smethurst                |     2 |
+|    233 | johanv                         |     2 |
+|    252 | Curtis Adkins (CPrompt^)       |     2 |
+|    294 | daw                            |     2 |
+|    302 | Stilvoid                       |     2 |
+|    197 | garjola                        |     1 |
+|    134 | PipeManMusic                   |     1 |
+|    268 | Andrew Conway                  |     1 |
+|    283 | Inscius                        |     1 |
+|    289 | pyrrhic                        |     1 |
+|    290 | Al                             |     1 |
+|    158 | Various Creative Commons Works |     1 |
+|    109 | Various Hosts                  |     1 |
+|    291 | Rill                           |     1 |
+|    292 | Michal Cieraszynski            |     1 |
+|    270 | Thaj Sara                      |     1 |
+|    293 | Rho`n                          |     1 |
+|    295 | Cibola Jerry                   |     1 |
+|    246 | Beeza                          |     1 |
+|    201 | MrX                            |     1 |
+|    298 | tcuc                           |     1 |
+|    111 | Knightwise                     |     1 |
+|    299 | Fin                            |     1 |
+|    301 | amp                            |     1 |
+|    157 | HPR_AudioBookClub              |     1 |
+|    303 | Alpha32                        |     1 |
+|    306 | GNULinuxRTM                    |     1 |
+|    305 | kurakura                       |     1 |
+|    229 | Charles in NJ                  |     1 |
+|    263 | Tony Pelaez                    |     1 |
+|    307 | cheeto4493                     |     1 |
+|    271 | mirwi                          |     1 |
+|    255 | Matt McGraw (g33kdad)          |     1 |
+|    308 | A Shadowy Figure               |     1 |
+|    309 | folky                          |     1 |
+|    115 | sigflup                        |     1 |
++--------+--------------------------------+-------+
+
+Regards,
+
+Ken Fallon
+https://kenfallon.com
+https://hackerpublicradio.org/correspondents/0030.html
+
+New hosts
+
+Welcome to our new hosts: 
+A Shadowy Figure, 
+    folky.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+1826
+Mon
+2015-08-03
+HPR Community News for July 2015
+HPR Volunteers
+
+
+1827
+Tue
+2015-08-04
+How I make bread
+Dave Morriss
+
+
+1828
+Wed
+2015-08-05
+Multimeter Mod's Part 1
+NYbill
+
+
+1829
+Thu
+2015-08-06
+My "New" Used Kindle DX
+Jon Kulp
+
+
+1830
+Fri
+2015-08-07
+How Holland Works: GreenWheels
+Ken Fallon
+
+
+1831
+Mon
+2015-08-10
+Are speed listening and slow background music compatible?
+A Shadowy Figure
+
+
+1832
+Tue
+2015-08-11
+Simplify writing using markdown and pandoc
+b-yeezi
+
+
+1833
+Wed
+2015-08-12
+Resurrecting an IBM T40
+swift110
+
+
+1834
+Thu
+2015-08-13
+Password Cards
+Jon Kulp
+
+
+1835
+Fri
+2015-08-14
+59 - LibreOffice Impress - Pictures
+Ahuka
+
+
+1836
+Mon
+2015-08-17
+The Statusnet Shuffle
+NYbill
+
+
+1837
+Tue
+2015-08-18
+Put an SSD in your Linux Box
+2BFrank
+
+
+1838
+Wed
+2015-08-19
+Waking up with Windigo
+Windigo
+
+
+1839
+Thu
+2015-08-20
+My "New" Used Pickup Truck
+Jon Kulp
+
+
+1840
+Fri
+2015-08-21
+Running external commands in Kate
+Ken Fallon
+
+
+1841
+Mon
+2015-08-24
+My way into Linux
+folky
+
+
+1842
+Tue
+2015-08-25
+TiT Radio 20 You've Been Pwned (probably)
+FiftyOneFifty
+
+
+1843
+Wed
+2015-08-26
+Some Bash tips
+Dave Morriss
+
+
+1844
+Thu
+2015-08-27
+The Marantz PMD 660 Professional Solid State Recorder
+Jon Kulp
+
+
+1845
+Fri
+2015-08-28
+60 - LibreOffice Impress - The Gallery and Themes
+Ahuka
+
+
+1846
+Mon
+2015-08-31
+UNI-T UT61E Review
+NYbill
+
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This discussion takes
+place on the Mail List which is open to all
+HPR listeners and contributors. The discussions are open and available on the
+Gmane
+archive.
+
+The main threads this month were:
+
+From: Dave Morriss <perloid@...>
+Date: 2015-08-15 14:57:43 +0100
+Subject: Help with tags and summaries
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/906
+Messages: 1
+From: Kevin O'Brien <zwilnik@...>
+Date: 2015-08-15 19:17:10 -0400
+Subject: Jon Kulp and group efforts
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/907
+Messages: 2
+From: Ken Fallon <ken@...>
+Date: 2015-08-19 11:48:59 +0200
+Subject: Do you owe me a show ?
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/909
+Messages: 2
+
+Total messages this month: 5
+Comments this month
+There are 36 comments:
+
+hpr1612
+(2014-10-07) "Don't Forget the Referbs"
+by NYbill.
+ Comment 5:
+NYbill on 2015-08-15:
+"Sorry I'm late..."
+
+hpr1810
+(2015-07-10) "17 - LastPass Hacked - What Does It Mean?"
+by Ahuka.
+ Comment 1:
+amp on 2015-08-08:
+"but it is not free software"
+
+hpr1827
+(2015-08-04) "How I make bread"
+by Dave Morriss.
+ Comment 1:
+Charlie Ebert on 2015-08-03:
+"Me." Comment 2:
+Daniel Worth on 2015-08-07:
+"Great!" Comment 3:
+Dave Morriss on 2015-08-10:
+"Thanks for the feeedback"
+
+hpr1828
+(2015-08-05) "Multimeter Mod's Part 1"
+by NYbill.
+ Comment 1:
+Jon Kulp  on 2015-08-05:
+"Awesome" Comment 2:
+NYbill on 2015-08-06:"[no title]"
+
+hpr1829
+(2015-08-06) "My "New" Used Kindle DX"
+by Jon Kulp.
+ Comment 1:
+Fweeb on 2015-08-07:
+"BQ Cervantes?" Comment 2:
+cybergrue on 2015-08-07:
+"One thing you missed" Comment 3:
+Jon Kulp  on 2015-08-07:
+"good catch (PDFs)" Comment 4:
+Jon Kulp  on 2015-08-07:
+"Cervantes Reader"
+
+hpr1830
+(2015-08-07) "How Holland Works: GreenWheels"
+by Ken Fallon.
+ Comment 1:
+FiftyOneFifty on 2015-07-16:
+"I thought this was about the dikes" Comment 2:
+Dave Morriss on 2015-08-11:
+"Thanks for the insight"
+
+hpr1831
+(2015-08-10) "Are speed listening and slow background music compatible?"
+by A Shadowy Figure.
+ Comment 1:
+Jon Kulp  on 2015-08-09:
+"1.7x" Comment 2:
+Kevin O'Brien on 2015-08-10:
+"1.7x works for me" Comment 3:
+A Shadowy Figure on 2015-08-10:
+"Thanks, now I have a starting point" Comment 4:
+Windigo on 2015-08-17:
+"Normal - 1.5x"
+
+hpr1832
+(2015-08-11) "Simplify writing using markdown and pandoc"
+by b-yeezi.
+ Comment 1:
+0xf10e on 2015-08-11:
+"thx, very useful" Comment 2:
+Jon Kulp on 2015-08-12:
+"plus HTML as needed" Comment 3:
+Dave Morriss on 2015-08-17:
+"Excellent episode"
+
+hpr1836
+(2015-08-17) "The Statusnet Shuffle"
+by NYbill.
+ Comment 1:
+0xf10e on 2015-08-17:
+"you should put up some VPS based blog ;)" Comment 2:
+NYbill on 2015-08-18:
+"maybe some day..."
+
+hpr1837
+(2015-08-18) "Put an SSD in your Linux Box"
+by 2BFrank.
+ Comment 1:
+0xf10e on 2015-08-18:
+"correction on TRIM" Comment 2:
+noah on 2015-08-21:
+"minimizing writes"
+
+hpr1838
+(2015-08-19) "Waking up with Windigo"
+by Windigo.
+ Comment 1:
+Jon Kulp  on 2015-08-19:
+"The Very Essence" Comment 2:
+Dave Morriss on 2015-08-19:
+"I wouldn't have done it that way..." Comment 3:
+NYbill on 2015-08-20:"[no title]" Comment 4:
+Beeza on 2015-08-20:
+"Geekdom At Its Very Best"
+
+hpr1841
+(2015-08-24) "My way into Linux"
+by folky.
+ Comment 1:
+Windigo on 2015-08-31:
+"Great first episode!"
+
+hpr1842
+(2015-08-25) "TiT Radio 20 You've Been Pwned (probably)"
+by FiftyOneFifty.
+ Comment 1:
+0xf10e on 2015-08-25:
+"Re: Car Malware " Comment 2:
+Mike Ray on 2015-08-25:
+"We're doomed I tell eee"
+
+hpr1843
+(2015-08-26) "Some Bash tips"
+by Dave Morriss.
+ Comment 1:
+Ken Fallon on 2015-08-26:
+"Obsolete ?" Comment 2:
+Dave Morriss on 2015-08-28:
+"Maybe obsolescent or outmoded"
+
+hpr1844
+(2015-08-27) "The Marantz PMD 660 Professional Solid State Recorder"
+by Jon Kulp.
+ Comment 1:
+Mike Ray on 2015-08-29:
+"Quality" Comment 2:
+Jon Kulp on 2015-08-30:
+"Open Goldberg!" Comment 3:
+Kevin O'Brien on 2015-08-31:
+"Agree with Mike"
+

@@ -1,0 +1,41 @@
+## hpr0885 :: Redo Backup and Recovery 1.0.1.
+
+ 
+This is a short podcast on Redo Backup and Recovery 1.0.1.
+www.redobackup.org
+
+Easy Backup, Recovery & Bare Metal Restore
+
+
+
+Redo Backup and Recovery is so simple that anyone can use it. It is the easiest, most complete disaster recovery solution available. It allows bare-metal restore. Bare metal restore means that even if your hard drive melts or gets completely erased by a virus, you can have a completely-functional system back up and running in as little as 10 minutes.
+All your documents and settings will be restored to the exact same state they were in when the last snapshot was taken. Redo Backup and Recovery is a live CD, so it does not matter if you use Windows or Linux. You can use the same tool to backup and restore every machine. And because it is open source released under the GPL, it is completely free for personal and commercial use.
+More Features, Less Complex
+Redo Backup has the most features coupled with the simplest, most user-friendly interface:
+
+Easy graphical user interface boots from CD in less than a minute
+No installation needed; runs from a CD-ROM or a USB stick
+Saves and restores Windows and Linux machines
+Automatically finds local network shares
+Access your files even if you can't log in
+Recover deleted pictures, documents, and other files
+Internet access with a full-featured browser to download drivers
+Live CD download size is only about 200MB
+
+Links
+
+https://www.redobackup.org/
+
+https://sourceforge.net/projects/redobackup/
+
+https://en.wikipedia.org/wiki/Redo_Backup_and_Recovery
+
+https://freecode.com/projects/redo-backup-and-recovery
+
+https://www.addictivetips.com/windows-tips/redo-backup-recovery-live-cd-that-recovers-your-hard-drive/
+
+https://itmanagement.earthweb.com/osrc/article.php/3909906/50-Awesome-Open-Source-Apps-Youve-Probably-Never-Heard-Of.htm
+
+https://oakdome.com/k5/tutorials/clone-with-usb-drive/clone-with-usb-drive.php
+
+

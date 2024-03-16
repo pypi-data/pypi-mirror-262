@@ -1,0 +1,212 @@
+## hpr3353 :: My terminal journey, part 01.
+
+ Book TLCL
+The Linux Command Line: https://www.linuxcommand.org/tlcl.php
+My .bashrc alias
+# ls aliases
+alias la='ls -Alh --group-directories-first'
+alias lr='ls -lh --group-directories-first --recursive'
+alias lar='ls -Alh --group-directories-first --recursive'
+
+# safety first ;)
+alias rmi='rm --interactive --verbose'
+alias mvi='mv --interactive --verbose'
+alias cpi='cp --interactive --verbose'
+
+# cd reverse dir
+alias ..='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# cd dir
+alias cd.d='cd ~/Documents/.dump'
+
+# shutdown | reboot
+alias ssn='sudo shutdown -P now'
+alias sr='sudo reboot'
+
+# Misc
+alias nrpt='echo -e "\n\n---\n\nNew Report\n\n---\n\n"'
+
+My dump script
+#!/bin/bash
+
+dump=dump$(date +%m-%d-%Y).txt
+pdat=$(date +%a_%b_%d_%Y_%T)
+
+touch $dump;
+
+echo -e "$pdat" > $dump; echo -e "\n\nThis file is used to store terminal output for later use; now get out!\n\n" >> $dump;
+
+echo -e "\n\nDump file $dump is ready for use (created on $(date +%m-%d-%Y_%T)).\n\n"
+
+My Upgrade script
+#!/bin/bash
+
+dp=dump$(date +%m-%d-%Y).txt
+
+date | tee -a ./$dp; echo -e "\n" | tee -a ./$dp;
+
+sudo apt-get update | tee -a ./$dp; echo -e "\n" | tee -a ./$dp;
+echo -e "System Update Completed." | tee -a ./$dp; echo -e "\n" | tee -a ./$dp;
+
+sudo apt-get upgrade --yes | tee -a ./$dp; echo -e "\n" | tee -a ./$dp;
+echo -e "System Upgrade Completed." | tee -a ./$dp; echo -e "\n" | tee -a ./$dp;
+
+Commands
+
+the upgrade example sudo apt-get update | tee -a ~/Documents/.dump/dump05-05-2021.txt; nrpt >> ./dump05-05-2021.txt;
+the nmap example (plus the other command I couldn't remember while recording) apt-cache search nmap >> ./dump05-05-2021.txt; nrpt >> ./dump05-05-2021.txt; apt-cache showpkg nmap
+the depends example apt-cache depends nmap >> ./dump05-05-2021.txt;
+the download example sudo apt-get download dict dictd dict-wn dict-gcide artha
+vim sudo apt-get vim; vimtutor
+Terminal examples ~= home folder, CTRL + R= command search , CTRL + L= clear terminal, xdg-open= open files with default app.
+Searching with grep example ls -lhAr ~ | grep -i bash >> ./dump05-05-2021.txt
+the dump05-05-2021.txt file
+
+Wed_May_05_2021_12:22:43
+
+This file is used to store terminal output for later use; now get out!
+
+
+Hit:1 https://dl.google.com/linux/chrome/deb stable InRelease
+Ign:2 https://mirror.cs.jmu.edu/pub/linuxmint/packages ulyana InRelease
+Get:3 https://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+Hit:4 https://mirror.cs.jmu.edu/pub/linuxmint/packages ulyana Release
+Hit:5 https://mirror.cogentco.com/pub/linux/ubuntu focal InRelease
+Hit:6 https://mirror.cogentco.com/pub/linux/ubuntu focal-updates InRelease
+Hit:7 https://archive.canonical.com/ubuntu focal InRelease
+Hit:8 https://mirror.cogentco.com/pub/linux/ubuntu focal-backports InRelease
+Fetched 109 kB in 1s (158 kB/s)
+Reading package lists...
+
+---
+
+New Report
+
+---
+
+brutespray - Python bruteforce tool
+dindel - determines indel calls from short-read data
+doscan - port scanner for discovering services on large networks
+forensics-all - Debian Forensics Environment - essential components (metapackage)
+forensics-all-gui - Debian Forensics Environment - GUI components (metapackage)
+libfile-map-perl - Perl module providing simple and safe memory mapping
+libnmap-parser-perl - module to parse nmap scan results with perl
+libwlocate-dev - Library for doing location lookup based on free openwlanmap.org data
+libwlocate0 - Library for doing location lookup based on free openwlanmap.org data
+mapsembler2 - bioinformatics targeted assembly software
+masscan - TCP port scanner
+ncat - NMAP netcat reimplementation
+ncrack - High-speed network authentication cracking tool
+ndiff - The Network Mapper - result compare utility
+nmap - The Network Mapper
+nmap-common - Architecture independent files for nmap
+nmapsi4 - graphical interface to nmap, the network scanner
+p0f - Passive OS fingerprinting tool
+pads - Passive Asset Detection System
+pnscan - Multi threaded port scanner
+psad - Port Scan Attack Detector
+python-libnmap-doc - Python NMAP Library (common documentation)
+python3-libnmap - Python 3 NMAP library
+python3-nmap - Python3 interface to the Nmap port scanner
+python3-scapy - Packet generator/sniffer and network scanner/discovery (Python 3)
+samblaster - marks duplicates, extracts discordant/split reads
+tophat-recondition - post-processor for TopHat unmapped reads
+xprobe - Remote OS identification
+xscreensaver-gl - GL(Mesa) screen saver modules for screensaver frontends
+
+---
+
+New Report
+
+---
+
+nmap
+  Depends: nmap-common
+  Depends: libc6
+  Depends: libgcc-s1
+  Depends: liblinear4
+  Depends: liblua5.3-0
+  Depends: libpcap0.8
+  Depends: libpcre3
+  Depends: libssl1.1
+  Depends: libstdc++6
+  Depends: lua-lpeg
+  Depends: zlib1g
+  Suggests: ncat
+  Suggests: ndiff
+  Suggests: <zenmap>
+
+NATO Phonetic Alphabet
+The NATO phonetic alphabet is a Spelling Alphabet; a set of words used instead of letters in oral communication (i.e. over the phone or military radio). Each word ("code word") stands for its initial letter (alphabetical "symbol"). The 26 code words in the NATO phonetic alphabet are assigned to the 26 letters of the English alphabet in alphabetical order as follows: Symbol, Code Word, Morse Code, Phonic.
+(pronunciation)
+A, Alfa/Alpha, AL FAH.
+B, Bravo, BRAH VOH.
+C, Charlie, CHAR LEE.
+D, Delta, DELL TAH.
+E, Echo, ECK OH.
+F, Foxtrot, FOKS TROT.
+G, Golf, GOLF.
+H, Hotel, HOH TELL.
+I, India, IN DEE AH.
+J, Juliett, JEW LEE ETT.
+K, Kilo, KEY LOH.
+L, Lima, LEE MAH.
+M, Mike, MIKE.
+N, November, NO VEMBER.
+O, Oscar, OSS CAH.
+P, Papa, PAH PAH.
+Q, Quebec, KEH BECK.
+R, Romeo, ROW ME OH.
+S, Sierra, SEE AIRRAH.
+T, Tango, TANG OH.
+U, Uniform, YOU NEE FORM.
+V, Victor, VIK TAH.
+W, Whiskey, WISS KEY.
+X, X-ray, ECKS RAY.
+Y, Yankee, YANG KEY.
+Z, Zulu, ZOO LOO.
+
+Hacker Public Radio
+Correspondent: Some Guy On The Internet. Host ID: 391 E-mail: Lyunpaw@gmail.com
+
+use hpr391 as the subject for all emails. If not, junk filter.
+
+license: Creative Commons Attribution-ShareAlike 4.0 International
+Shows:
+
+In GNU/Linux, there is no "diversity", we're all just data.
+
+ogg: https://hackerpublicradio.org/local/hpr3272.ogg
+spx: https://hackerpublicradio.org/local/hpr3272.spx
+mp3: https://hackerpublicradio.org/local/hpr3272.mp3
+
+Embrace Firefox
+
+ogg: https://hackerpublicradio.org/local/hpr3273.ogg
+spx: https://hackerpublicradio.org/local/hpr3273.spx
+mp3: https://hackerpublicradio.org/local/hpr3273.mp3
+
+HP Laptop with AMD Ryzen 3 Mobile with Radeon Graphics
+
+ogg: https://hackerpublicradio.org/local/hpr3282.ogg
+spx: https://hackerpublicradio.org/local/hpr3282.spx
+mp3: https://hackerpublicradio.org/local/hpr3282.mp3
+
+Poisoning The Well
+
+ogg: https://hackerpublicradio.org/local/hpr3298.ogg
+spx: https://hackerpublicradio.org/local/hpr3298.spx
+mp3: https://hackerpublicradio.org/local/hpr3298.mp3
+
+let's talk about Thunderbird
+
+ogg: https://hackerpublicradio.org/local/hpr3308.ogg
+spx: https://hackerpublicradio.org/local/hpr3308.spx
+mp3: https://hackerpublicradio.org/local/hpr3308.mp3
+
+
+This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.

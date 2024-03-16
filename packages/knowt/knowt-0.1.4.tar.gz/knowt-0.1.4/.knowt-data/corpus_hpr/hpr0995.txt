@@ -1,0 +1,30 @@
+## hpr0995 :: Do the four freedoms extend beyond software ?
+
+ 
+On Linux For The Rest Of Us #74 - The Legistrative Session, one of our correspondents Mr. Gadgets, called in the following question. The segment begins at  at 01:00:30 and in it he describes a conversation about the four freedoms where someone whose opinion he respected stated "the four freedoms only cover programming. It is only the code that is covered in the four freedoms".
+
+
+For those of you who don't know The Free Software Definition boils down to the following rules:
+
+
+Freedom 0: The freedom to run the program for any purpose.
+Freedom 1: The freedom to study how the program works, and change it to make it do what you wish.
+Freedom 2: The freedom to redistribute copies so you can help your neighbor.
+Freedom 3: The freedom to improve the program, and release your improvements (and modified versions in general) to the public, so that the whole community benefits.
+
+
+If you read the The Free Software Definition, then yes all the references are to "software" only....
+...that is of course until you get to the section Beyond Software, in the same document,  which states: 
+
+
+
+Software manuals must be free, for the same reasons that software must be free, and because the manuals are in effect part of the software.
+
+The same arguments also make sense for other kinds of works of practical use - that is to say, works that embody useful knowledge, such as educational works and reference works. Wikipedia is the best-known example.
+
+Any kind of work can be free, and the definition of free software has been extended to a definition of free cultural works applicable to any kind of works.
+
+
+
+So in summary, as HPR is now released under a Creative Commons Attribution-ShareAlike 3.0 Unported lisence, any shows that provide useful knowledge, such as educational works and reference works are covered by the four freedoms.
+

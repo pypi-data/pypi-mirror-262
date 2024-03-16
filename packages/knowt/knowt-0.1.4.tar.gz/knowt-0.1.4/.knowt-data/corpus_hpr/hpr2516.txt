@@ -1,0 +1,67 @@
+## hpr2516 :: Intro to git branch
+
+ 
+These are all the commands covered in this episode. This is not a sequence, it's just all the commands in the episode, listed one after another.
+
+
+Get changes from the remote repo:
+
+
+$ git fetch
+
+
+See all branches:
+
+
+$ git branch --all
+
+
+View a remote branch after you have fetched it:
+
+
+$ git checkout origin/dev
+
+
+Create a copy of a fetched remote branch in your local repo:
+
+
+$ git checkout dev
+
+
+Merge changes from remote origin/master into your local master branch:
+
+
+$ git merge master origin/master
+
+
+Fetch and merge automatically:
+
+
+$ git pull
+
+
+Create a new branch, and change to it:
+
+
+$ git checkout -b dev
+
+
+Merge dev into master:
+
+
+$ git checkout master
+$ git merge master dev
+
+
+Merge master into dev
+
+
+$ git checkout dev
+$ git merge dev master
+
+
+Delete the dev branch:
+
+
+$ git branch -d dev
+

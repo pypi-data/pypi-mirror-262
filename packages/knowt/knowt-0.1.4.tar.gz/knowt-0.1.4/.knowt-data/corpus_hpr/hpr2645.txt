@@ -1,0 +1,12 @@
+## hpr2645 :: Blinking LED
+
+ 
+During the New Year Show Ken soldered a component tester. Unfortunately this did not work. 
+
+
+NYBill offered to fix it and he succeeded in his show hpr2591 :: International Troubleshooting. When he shipped it back he included two 555 timers with the message: Now, figure out how to make LED's blink
+with those 555's! 
+
+
+
+In this show Ken uses the online guide FLASHING L.E.D. USING 555 TIMER By Trilesto to do this. 

@@ -1,0 +1,18 @@
+## hpr1856 :: ssh config
+
+ Put a file called 'config' into ~/.ssh and you can define any option you would normally provide as part of the command as an automatically-detected configuration.
+
+For example:
+
+
+host foo
+    hostname foo.org
+    identityfile /home/klaatu/.ssh/foo_rsa
+    port 2740
+    protocol 2
+
+
+Makes the command 'ssh klaatu@foo' look like this to SSH:
+
+
+ssh -p2740 -i ~/.ssh/foo_rsa klaatu@foo.org

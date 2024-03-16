@@ -1,0 +1,85 @@
+## hpr3020 :: Validating data in Haskell
+
+ Background
+The space game I working on needs a admin interface that can by used by game masters to view and modify the simulation.
+For start, I added interface for viewing, modifying and creating new people. It has three HTTP endpoints that are defined below. In this episode, I’ll concentrate on creating a new person and especially making sure that parameters used are valid.
+/api/admin/people              AdminApiPeopleR     GET
+/api/admin/people/#PersonId    AdminApiPersonR     GET PUT
+/api/admin/addPerson           AdminApiAddPersonR  POST
+Types and parsing
+There are two important approaches on making sure that data is valid. Making illegal state unpresentable and parsing instead of validation.
+If it’s impossible to create invalid data, you don’t have to validate it. Instead of using Integer and checking that given parameter is 0 or more, you should use Natural. Since Natural can’t have negative values, you don’t have to validate it. Similarly, instead of using a list, you could use NonEmpty to make sure that there’s at least one element present in the collection.
+Parse, don’t validate is similar approach. Instead of having a lax parser and then validating the result, parser should reject data that doesn’t make sense. By selecting suitable datatypes to represent data in the system, simply parsing incoming message is sometimes enough to validate it at the same time.
+Person creation
+Function in charge of generating a new person has signature of generatePersonM :: RandomGen g => StarDate -> PersonOptions -> Rand g Person. Given a current StarDate and PersonOptions describing what kind of person is needed, it will return a computation that can be executed to generate a random person.
+PersonOptions is very barebones. There’s only one field to tell what kind of age the person should have and even that is an optional field.
+data PersonOptions = PersonOptions
+    { personOptionsAge :: Maybe AgeOptions
+    } deriving (Show, Read, Eq)
+AgeOptions has two possibilities. AgeBracket describes case where age should be inside of given range. ExactAge specifies exactly what age should be.
+data AgeOptions =
+    AgeBracket Age Age
+    | ExactAge Age
+    deriving (Show, Read, Eq)
+Age is newtype wrapping Natural, thus Age can never be less than zero.
+newtype Age = Age { unAge :: Natural }
+    deriving (Show, Read, Eq, Num, Ord)
+Hand written FromJSON instance takes care of rejecting numbers that aren’t integers and at least zero. One could skip the checks here and parsed Age still couldn’t be negative. Advantage of explicit checks is that we get much nicer error message instead of just annoying runtime exception.
+instance FromJSON Age where
+    parseJSON =
+        withScientific "age"
+            (\x -> case toBoundedInteger x of
+                Nothing ->
+                    mempty
+
+                Just n ->
+                    if n >= 0 then
+                        return $ Age $ fromIntegral (n :: Int)
+
+                    else
+                        mempty)
+So, when creating a new person, you can have:
+
+no age options at all, computer can pick something
+specific age, computer calculates date of birth based on current date
+age bracket, computer calculates date of birth based on current date and bracket
+age is always integer that is 0 or more
+
+There’s still possibility of error. Nothing ensure that age bracket makes sense. It could be AgeBracket (Age 10) (Age 5) (bracket from 10 to 5). We need to add a bit of validation.
+Data.Validation is “a data-type like Either but with an accumulating Applicative”. What this means to me is that I can validate multiple aspects and collect errors in a list. It’s handy for getting all the problems at once, instead of having to fix them one by one and retry after each fix.
+Our validation function has signature validateAddPerson :: PersonOptions -> Validation [ErrorCode] PersonOptions. Given PersonOptions, it will give list of ErrorCode and original PersonOptions. Multiple validation functions can be combined for more complex validations.
+In our example validateAgeOptions validates only age related options of the data. validateAddPerson is supposed to validate whole data, but currently it just delegates to validateAgeOptions. In the future, we can add more validations by adding more functions and chaining them with <* operator.
+validateAddPerson :: PersonOptions -> Validation [ErrorCode] PersonOptions
+validateAddPerson opt =
+        pure opt
+            <* validateAgeOptions opt
+
+validateAgeOptions :: PersonOptions -> Validation [ErrorCode] PersonOptions
+validateAgeOptions opt =
+    case personOptionsAge opt of
+        Nothing ->
+            _Success # opt
+
+        Just (AgeBracket a b) ->
+            if a <= b
+                then _Success # opt
+                else _Failure # [ AgeBracketStartIsGreaterThanEnd ]
+
+        Just (ExactAge _) ->
+            _Success # opt
+Putting it all together
+Function that handles POST message and creates a new person is shown below:
+postAdminApiAddPersonR :: Handler Value
+postAdminApiAddPersonR = do
+    _ <- apiRequireAdmin
+    msg <- requireJsonBody
+    date <- runDB $ starDate
+    _ <- raiseIfFailure $ validateAddPerson msg
+    g <- liftIO newStdGen
+    let person = evalRand (generatePersonM date msg) g
+    pId <- runDB $ insert person
+    returnJson (Entity pId person)
+It does several things: - check that current user is admin - get json content and parse it to PersonOptions - get current star date from database - validate PersonOptions and return error if validation fails - get new random number generator - generate new person - insert it into database - return tuple of (PersonId, Person)
+Closing
+Types should represent only valid states. By having invalid state unpresentable, we can avoid many errors. Likewise, parsing should reject invalid data. This usually follows from having invalid states being unpresentable (you can’t parse invalid message to invalid data if you don’t have way to represent that invalid data).
+Questions, comments and feedback welcome. Best way to reach me is either by email or in mastodon, where I’m Tuula@mastodon.social.

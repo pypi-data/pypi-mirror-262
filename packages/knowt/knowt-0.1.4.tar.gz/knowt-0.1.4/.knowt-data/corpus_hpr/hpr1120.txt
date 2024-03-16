@@ -1,0 +1,18 @@
+## hpr1120 :: Jerome Leclanche from the razor-qt project
+
+ 
+Razor-qt is an advanced, easy-to-use, and fast desktop environment based on Qt technologies. It has been tailored for users who value simplicity, speed, and an intuitive interface. Unlike most desktop environments, Razor-qt also works fine with weak machines.
+https://razor-qt.org/ Home Page
+https://github.com/Razor-qt/razor-qt/wiki/ Wiki
+https://groups.google.com/forum/?hl=en&fromgroups#!forum/razor-qt Mail List
+
+Razor-qt 0.5.0 is out!
+The Razor-qt team is proud to release version 0.5.0. It is the culmination of all our efforts since our last release in February of 2012.
+There have been several improvements and added features for 0.5.0, as noted in the Change Log, but the most noticeable are:
+
+New Appearance GUI for configuring themes
+Several new plugins for added functionality
+Many bug fixes resulting in better performance
+New Notification daemon
+
+ The Razor-qt team would like to thank its staff of 8 members for all the hard work, and the community as well, for all the support. A list of the Razor-qt development team is available  here, on github.

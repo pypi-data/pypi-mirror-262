@@ -1,0 +1,3 @@
+## hpr2814 :: Spectre and Meltdown and OpenBSD and our future
+
+ I discuss the entire Spectre and Meltdown issues and where we might go post an Intel world. My objective is to encourage others to leave Speculative processing backed by management engine based chips. SCATTER HUMANS!!! WE MUST LEAVE!!!!

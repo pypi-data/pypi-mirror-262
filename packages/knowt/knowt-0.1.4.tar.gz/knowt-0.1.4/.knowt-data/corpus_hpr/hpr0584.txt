@@ -1,0 +1,6 @@
+## hpr0584 :: A Little Bit of Python: 12 Global Interpreter Lock; Concurrency
+
+ A Little Bit of Python is an occasional podcast on all things Python. The four protagonists on the show are all core Python developers and members of the Python Software Foundation. They are: Michael Foord (author of IronPython in Action and maintainer of unittest), Andrew Kuchling (creator of PyCrypto and one of the python.org webmasters), Steve Holden (PSF chairman), Dr. Brett Cannon (author of importlib amongst other things) and Jesse Noller (maintainer of multiprocessing).
+
+We discuss the significance of the Global Interpreter Lock (or GIL) and recent work at improving it, PEP 3148 proposing futures as a new asynchronous execution method, some recent IronPython work, and a new Python podcast.
+

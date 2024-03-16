@@ -1,0 +1,94 @@
+## hpr0991 :: Making a Music Sampler with Midi and Pygame
+
+ 
+Pygame Midi documentation:
+https://www.pygame.org/docs/ref/midi.html
+
+
+Pygame Mailing List:
+https://www.pygame.org/wiki/info
+
+
+Midi.py sample from pygame example folder: 
+https://bitbucket.org/pygame/pygame/src/25e3f2cee879/examples/midi.py
+
+
+Sampler/Sound Looper made from python, pygame and midi:
+https://www.pygame.org/project-BadPenni+-+MIDI+Triggered+Sound+Looper-1734-.html 
+
+
+Sample values that populate midi_events variable:
+
+
+     Middle C note key press (notice the data1 is 60 and data2 is 127)
+     <Event(34-Unknown {'status': 144, 'vice_id': 2, 'timestamp': 6701, 'data1': 60, 'data3': 0, 'data2': 127})>
+
+
+     Middle C note key release (notice the data1 is 60 and data2 is 0)
+     <Event(34-Unknown {'status': 128, 'vice_id': 2, 'timestamp': 6764, 'data1': 60, 'data3': 0, 'data2': 0})>
+
+
+     Middle C# note key press (notice the data1 is now 61)
+     <Event(34-Unknown {'status': 144, 'vice_id': 2, 'timestamp': 206684, 'data1': 61, 'data3': 0, 'data2': 127})>
+
+
+Python code snippet that pulls the note number from the midi_events list and appends an "off" string if it is a key release. 
+
+
+    if str(midi_events[0][0][2]) != "0":
+        midinote = str(midi_events[0][0][1])
+    else:
+        midinote = str(midi_events[0][0][1]) + "off"
+
+
+Controlling sounds with if statements and our midinote variable:
+
+
+    distbassrollloop = pygame.mixer.Sound("7FullCircleDistBassRollLoop.wav")
+    distsnarerollloop = pygame.mixer.Sound("7FullCircleDistSnareRollLoop.wav")
+    distbass = pygame.mixer.Sound("7FullCircleDistBassPad.wav")
+    distsnare = pygame.mixer.Sound("7FullCircleDistSnare.wav")
+
+    if midinote == "48":
+        distbass.play()
+
+    if midinote == "49":
+        distbassrollloop.play(1000)
+
+    if midinote == "49off":
+        distbassrollloop.stop()
+
+    if midinote == "50":
+        distsnare.play()
+
+    if midinote == "51":
+        distsnarerollloop.play(1000)
+
+    if midinote == "51off":
+        distsnarerollloop.stop()
+
+
+Contact info:
+
+
+    bgryderclock on Google+:
+https://plus.google.com/u/0/114032638902983586355
+
+
+    bgryderclock on Twitter:
+https://twitter.com/bgryderclock
+
+
+    bgryderclock on Identica:
+https://identi.ca/bgryderclock
+
+Links
+
+https://www.pygame.org/docs/ref/midi.html
+https://www.pygame.org/wiki/info
+https://bitbucket.org/pygame/pygame/src/25e3f2cee879/examples/midi.py
+https://www.pygame.org/project-BadPenni+-+MIDI+Triggered+Sound+Looper-1734-.html
+https://plus.google.com/u/0/114032638902983586355
+https://twitter.com/bgryderclock
+https://identi.ca/bgryderclock
+

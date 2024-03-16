@@ -1,0 +1,20 @@
+## hpr1997 :: Introduction to sed - part 3
+
+ Introduction to sed - part 3
+In the last episode we looked at sed at a more advanced level. We looked at all of the command-line options which we will cover in this series and examined the s command in much more detail. We covered many more details of regular expressions.
+In this episode we will look at more sed commands and how to use them.
+To read the rest of the notes for this episode follow this link: https://hackerpublicradio.org/eps/hpr1997/full_shownotes.html
+Links
+
+Introduction to sed - part 1: https://hackerpublicradio.org/eps.php?id=1976
+Introduction to sed - part 2: https://hackerpublicradio.org/eps.php?id=1986
+GNU sed manual: https://www.gnu.org/software/sed/manual/sed.html
+Wikipedia entry for sed: https://en.wikipedia.org/wiki/Sed
+"Sed - An Introduction and Tutorial" by Bruce Barnett: https://www.grymoire.com/Unix/Sed.html
+The Geek Stuff Unix Sed Tutorial: https://www.thegeekstuff.com/2009/09/unix-sed-tutorial-printing-file-lines-using-address-and-patterns/
+Example files:
+
+Demonstration of grouping: https://hackerpublicradio.org/eps/hpr1997/demo2.sed
+Example 6 sed commands: https://hackerpublicradio.org/eps/hpr1997/example_6.sed
+Example 7 executable sed script: https://hackerpublicradio.org/eps/hpr1997/example_7.sed
+

@@ -1,0 +1,7 @@
+## hpr2524 :: General problem solver
+
+ 
+Building Problem Solvers by Kenneth D. Forbus and Johan de Kleer: https://www.qrg.northwestern.edu/BPS/readme.html
+Paradigms of Artificial Intelligence Programming by Peter Norvig: https://github.com/norvig/paip-lisp
+Engineer's Journey, Tuula's blog: https://engineersjourney.wordpress.com/
+Blog entry about solving n-queens puzzle with general problem solver: https://engineersjourney.wordpress.com/2018/03/09/n-queens-puzzle-solved-in-hy-and-cps/

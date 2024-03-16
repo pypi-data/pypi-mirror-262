@@ -1,0 +1,27 @@
+## hpr1394 :: Setting Up Your Own Blog
+
+ Keith Murray talks about the things you need to consider when setting up your own blog. Topics discussed include hosting options, software platforms and a brief discussion of some of the underlying technologies involved.
+Links to many of the topics and projects discussed are included below.
+Links
+Project Pages
+
+Apache: https://httpd.apache.org/
+nginx: https://wiki.nginx.org/Main
+Wordpress: https://wordpress.org/
+Joomla: https://www.joomla.org/
+Drupal: https://drupal.org/
+Jekyll: https://jekyllrb.com/
+Second Crack: https://www.marco.org/secondcrack
+Markdown: https://daringfireball.net/projects/markdown/
+
+Installation Guides
+
+Wordpress: https://codex.wordpress.org/Installing_WordPress
+Drupal: https://drupal.org/documentation/install
+Joomla: https://docs.joomla.org/J3.2:Installing_Joomla
+
+Wikipedia Links
+
+Blog: https://en.wikipedia.org/wiki/Blog
+Virtual Private Server: https://en.wikipedia.org/wiki/Virtual_private_server
+Plain Text: https://en.wikipedia.org/wiki/Plain_text

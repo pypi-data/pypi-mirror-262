@@ -1,0 +1,36 @@
+## hpr1886 :: Moral Volcano's Linux Tips & Tricks podcast for Hacker Public Radio
+
+ 
+Welcome to my first podcast for Hacker Public Radio. 
+
+
+Like Gnome 3? Good for you.
+
+Don't like Gnome 3 or like Gnome 2 more? Then, get a Linux distro with the Mate desktop. Mate desktop was forked from Gnome 2. Gnome 2 development was stopped by the Gnome 3 team.
+After installing the Mate desktop, install the Nimbus theme and Compiz desktop effects.
+https://www.dropbox.com/s/47579lbgjsqgazz/nimbus-icon-theme_0.1.4-2_all.deb?dl=0
+https://www.dropbox.com/s/ndei6yi4lj2zmid/gtk2-engines-nimbus_0.1.4-2_amd64.deb?dl=0
+   I don't have the 32-bit edition.
+
+Have a USB wireless modem? Use wvdial or gnome-ppp with "stupid mode" enabled.
+Change gnome-terminal color scheme to Green-On-Black and the the following line to your .bashrc for a colorful and usable terminal window.
+   PS1="\a\n\n\e[31;1m\u@\h on \d at \@\n\e[33;1m\w\e[0m\n$ "
+https://www.vsubhash.com/article.asp?id=13&info=Ubuntu_and_Gnome_Diary#change_terminal_prompt
+Install CMU fonts from
+https://canopus.iacp.dvo.ru/~panov/cm-unicode/
+Download Google fonts using this bash script
+   wget https://googlefontdirectory.googlecode.com/hg/ofl/ -r -nc -nd -np -A.ttf
+   This command takes a while to parse all the pages and find the fonts that need to be downloaded.
+https://www.youtube.com/watch?v=Cj6zhjW7ZS0
+Good Artists Copy, Great Artists Steal; Jonathan Schwartz; March 2010
+https://jonathanischwartz.wordpress.com/2010/03/09/good-artists-copy-great-artists-steal/
+Undead Myths In The Wake Of iDead Steve Jobs; V. Subhash; November 2011
+https://www.vsubhash.com/article.asp?id=112&info=Undead_Myths_In_The_Wake_Of_iDead_Steve_Jobs
+Support free software
+https://my.fsf.org/donate
+https://mate-desktop.org/donate/
+https://www.linuxmint.com/donors.php
+
+Firestarter firewall - I think it needs only a little attention from Linux developers before it can be extremely useful again. Most of it still works.
+https://fs-security.com/
+

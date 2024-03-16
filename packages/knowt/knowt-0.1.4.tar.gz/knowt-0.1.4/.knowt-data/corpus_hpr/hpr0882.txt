@@ -1,0 +1,7 @@
+## hpr0882 :: RPM format
+
+ Klaatu continues his three-part series on packaging applications for GNU Linux and BSD.  In this second episode, he covers the RPM format and howto use rpmbuild to create both binary and source RPM packages.  He uses SigFLUP's yesplz as an example again, so be sure to grab the source if you'll be following along.
+Fedora Project RPM HOWTO
+Maximum RPM at rpm.org
+yesplz.spec
+Get this episode in ogg vorbis courtesy the GNU World Order.

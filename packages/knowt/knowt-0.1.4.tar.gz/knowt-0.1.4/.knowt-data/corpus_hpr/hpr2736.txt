@@ -1,0 +1,19 @@
+## hpr2736 :: Response to show 2720
+
+ Introduction
+On January 4th 2019 Ken Fallon did a great show entitled hpr2720 :: Download youtube channels using the rss feeds where he presented a Bash script called youtube-rss.bash for managing YouTube downloads through RSS feeds.
+Ken said he welcomed constructive feedback ☺
+When I see a Bash script these days I usually find myself looking for ways to rewrite it to make it fit in with what I have been learning while doing my Bash Tips sub-series. Either that or I find it’s got some better ideas than I’ve been using which I have to find out about.
+I also spend time going over my own old scripts (I was writing them in the 1990’s in some cases) and trying to incorporate newer Bash features.
+Suffice it to say that I spotted some areas for improvement in Ken’s script and thought this might be the way to share my thoughts about them. We’re low on shows as I write this, so that gave me more motivation to make a show rather than add a comment or send Ken an email.
+Apology: I’m still suffering from the aftermath of some flu-like illness so have had to edit coughing fits out of the audio at various points. If you detect any remnants then I’m sorry!
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+HPR episode 2720 “hpr2720 :: Download youtube channels using the rss feeds”
+youtube-rss.bash
+Wikipedia article on cat
+
+Useless use of cat
+

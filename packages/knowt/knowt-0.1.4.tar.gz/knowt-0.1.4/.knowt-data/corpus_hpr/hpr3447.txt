@@ -1,0 +1,37 @@
+## hpr3447 :: BlacKernel's Journey Into Technology: Episode 2
+
+ Talking Points
+
+W*ndows Power User
+	
+Programmed a few Visual BASIC programs, but was underwhelmed with how BASIC the programming language was
+Tried installing Python and Ruby to much frustration
+Tried installing Cygw*n to make Python/Ruby easier to work with
+Read on the Cygw*n site about something called Linux
+Started working with C and C++
+
+Customizing my deck
+	
+Tried to customize as much as I could about my W*ndows install
+Utilized tools to change the boot logo, the start menu, the init scripts, etc.
+Hit a few snags with problems boot-looping, not loading graphically, etc
+Tried editing the W*ndows registry and realized that the programs I was using to edit the operating system necessarily break the security and stability of the OS
+Didn't really know/care about open source, but was getting frustrated that I wasn't able to just reach in to my system's code to fix it.
+
+
+
+Show Notes
+Important Links:
+
+I couldn't really find any of the stuff that I used and, at this point, I'm not super motivated to find them.
+
+Wikipedia Articles:
+
+https://en.wikipedia.org/wiki/Thomas_Hobbes
+
+
+Contact Me
+
+Email: izzyleibowitz at pm dot me
+Mastodon: at blackernel at nixnet dot social
+

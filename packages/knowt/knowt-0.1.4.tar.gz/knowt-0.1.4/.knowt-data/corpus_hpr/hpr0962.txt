@@ -1,0 +1,30 @@
+## hpr0962 :: LiTS 004: paste
+
+ 
+In the fourth in his series Dann, shows us the benefits of the paste command:
+
+The paste command merges the lines of two or more files or a file and standard in if a second file is not specified or a "-" is used in place of the second file. Consider the following two files. The first file, test1.txt contains the following lines:
+a
+one
+three
+cat
+good
+The second file, test2.txt contains the following lines:
+tuna
+blue finch
+dogs
+fish
+eats
+The paste command can be used to paste these two files like so:
+paste test1.txt test2.txt
+producing the following output:
+a         tuna
+one     blue finch
+three   dogs
+cat      fish
+good   eats
+Each line in test1.txt has been “pasted” to the corresponding line in test2.txt. 
+
+
+https://www.linuxintheshell.com/2012/04/10/episode-004-paste/ for the complete shownotes, including video.
+

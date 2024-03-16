@@ -1,0 +1,7 @@
+## hpr0053 :: Codecs Part 4
+
+ In this final episode of the series, Klaatu covers some proprietary codec packages. He then explains how to use free software and the linux command line to transcode a video using the open codec, Theora. 
+https://theora.org/  
+ https://linuxreviews.org/man/ffmpeg2theora/  
+
+Shownotes by: diggsit

@@ -1,0 +1,27 @@
+## hpr2270 :: Managing tags on HPR episodes - 3
+
+ Managing tags on HPR episodes - 3
+Introduction
+This is the third (and last) show looking at the subject of Managing Tags relating to HPR shows.
+In the first show we looked at why we need tags, and examined the advantages and disadvantages of the present system of storage. We considered the drawbacks of this design when searching the tags.
+Then in the second show we looked at a simple way of making a tags table and how to query it in order to fulfil the requirements defined in the first show.
+In this show we’ll look at a more rigorous, efficient, “normalised” solution.
+Long notes
+I have written out a set of longer notes for this episode and these are available here.
+Links
+
+Previous shows in this set:
+
+“Managing tags on HPR episodes - 1” - episode 2245
+“Managing tags on HPR episodes - 2” - episode 2260
+
+Mike Ray’s show on this subject: episode 1569, “Many-to-many data relationship howto”
+HPR page listing shows missing summaries and tags
+Included files:
+
+Detailed notes for this episode
+Image representing a many to many relationship: table_relationships.svg
+SQL to create the tables: normalise_tags_2.sql
+SQL to create a view: eps_hosts_tags_view.sql
+Perl script to manage the tables: refresh_tags_2
+

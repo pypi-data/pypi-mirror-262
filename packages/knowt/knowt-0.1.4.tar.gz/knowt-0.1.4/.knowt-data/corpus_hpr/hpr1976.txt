@@ -1,0 +1,11 @@
+## hpr1976 :: Introduction to sed - part 1
+
+ Introduction to sed - part 1
+sed is an editor which expects to read a stream of text, apply some action to the text and send it to another stream. It filters and transforms the text along the way according to instructions provided to it. These instructions are referred to as a sed script.
+The name "sed" comes from Stream Editor, and sed was developed from 1973 to 1974 as a Unix utility by Lee E. McMahon of Bell Labs. GNU sed added several new features including better documentation, though most of it is only available on the command line through the info command. The full manual is of course available on the web.
+To read the rest of the notes for this episode follow this link: https://hackerpublicradio.org/eps/hpr1976/full_shownotes.html
+Links
+
+GNU sed manual: https://www.gnu.org/software/sed/manual/sed.html
+"Sed - An Introduction and Tutorial" by Bruce Barnett: https://www.grymoire.com/Unix/Sed.html
+Example file for processing: https://hackerpublicradio.org/eps/hpr1976/sed_demo1.txt (extracted from https://hackerpublicradio.org/about.php)

@@ -1,0 +1,29 @@
+## hpr1533 :: Beginner's guide to the night sky 2
+
+ 
+This is a review of some astronomy software, as used
+on the Earth in the early 21st Century, by a somewhat
+geeky chap. In this episode, I talk a little about two astronomy apps
+available for Android and another two available for GNU/Linux (and other)
+desktops.
+
+
+Erratum: I referred to Star Map but I meant Star Chart. Doh!
+
+
+In reverse order of how much I use and like them (most used/liked last):
+
+
+https://www.stellarium.org - Available for all major operating systems.
+This link shows you how to add your own comets: https://www.wikihow.com/Add-Comet-ISON-to-Stellarium
+
+
+https://edu.kde.org/kstars/ - KStars is part of the KDE SC Software Compilation) and so will be easy to install if you're a KDE user, or if you're not, "easy" after a few dependencies are installed.
+
+
+Google Sky Map can be installed on your mobile device using either f-droid or Google Play: https://f-droid.org/repository/browse/?fdfilter=sky&fdid=com.google.android.stardroid
+https://play.google.com/store/apps/details?id=com.google.android.stardroid
+
+
+If you like eye-candy, then Star Chart may be for you, get it on Google Play here:
+https://play.google.com/store/apps/details?id=com.escapistgames.starchart

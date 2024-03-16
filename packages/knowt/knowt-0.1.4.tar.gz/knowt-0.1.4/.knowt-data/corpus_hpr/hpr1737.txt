@@ -1,0 +1,37 @@
+## hpr1737 :: Five Steps to Vim
+
+ 
+The vim editor is based on the venerable vi editor, which dates from the very
+early days of Unix.  Many persons find it intimidating for the absence of a
+menu bar, a terse command set that is very much its own, and its "modal"
+design.
+
+
+Nevertheless, under its plain surface is a powerful and versatile tool.  Frank
+Bell describes his five steps to learning to use and love vim.
+
+
+Use a .vimrc file.
+Train yourself to change modes.
+Learn and use a few basic commands.  These should be enough to get you
+going:  x, dd, dw (to delete text); cw (change a work); yy ("yank" or copy a
+line); p and P (to paste text); u (undo); w ("write") or save text; q (quit vim).
+Don't force yourself to move the cursor with the h-j-k-l keys if that doesn't feel natural.
+Use the arrow keys.
+Use vim to write stuff.
+
+Links:
+
+Linux Voice vim tutorial: https://www.linuxvoice.com/download-linux-voice-issue-1-with-audio/
+Linux Voice vim video: https://www.linuxvoice.com/learn-to-love-vim/
+
+
+vim homepage:  https://www.vim.org/index.php
+
+
+vim spellcheck:  https://vimdoc.sourceforge.net/htmldoc/spell.html
+
+
+Dave Morriss's vim hints HPR series:  https://hackerpublicradio.org/series/0082.html
+
+

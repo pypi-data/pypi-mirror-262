@@ -1,0 +1,21 @@
+## hpr0922 :: Updating a Garmin GPS for free
+
+ Notice **I am not condoning this method I am just reporting that I have read on numerous sites the steps and procedures on how to do this.****Sources:
+https://www.haklabs.com/2011/garmin-2012-map-update/
+https://www.youtube.com/watch?v=DBlS0fzWjbY
+https://thepiratebay.org/torrent/6536173/Garmin_City_Navigator_North_America_NT_2012.10_IMG
+ Updating a Garmin GPS for free
+ This is a guide that I have compiled on how to upgrade a Garmin GPS to the 2012 maps for free. First you must torrent the "Garmin City Navigator 2012.10 torrent file, or the 2012.20 torrent file.
+ 2012.10 https://www.megaupload.com/?d=9DAC19AT
+ 2012.20 https://www.multiupload.com/L4AVMTU4WA
+ Then you extract the contents of that into a folder and
+
+
+
+Connect your device to the computer.
+Go into the Nuvi files and backup the file named gmapprom.img to your computer.
+Delete the gmapprom.img file from the device. (note: make sure you empty the recycle bin after this step)
+Delete any unused Language files too..
+Copy the unlocked gmapprom.img file that you downloaded into the device. If the downloaded file is named something else, rename it to gmapprom.img and then put it on your devices internal memory.
+Restart your device and check your map info via : Tools>Settings>Map>Map Info.
+ There you have it! You have done it.

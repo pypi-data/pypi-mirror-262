@@ -1,0 +1,40 @@
+## hpr2664 :: My git workflow
+
+ My git workflow
+In this episode of HPR I present the workflow I use to contribute to opensource projects using git. I have no idea if this workflow is something that is commonly used, but it is working for me, so I thought I’d share it with the HPR community.
+The first thing I do is fork the project I want to contribute to. This is done on github most of the time, although this workflow can work on gitlab, bitbucket, or even some self hosted git platform.
+Once the project is forked, I clone it on my machine :
+$ git clone git://server/path/to/myproject.git
+Git automatically names my remote project origin.
+Then I add a reference to the original project :
+$ git remote add upstream https://server/path/to/originalproject.git
+Now my local repository references my fork under the name origin and the original project under the name upstream.
+In this workflow, I never work on the master branch. So, when I need to fix a bug for example, I create a new branch :
+$ git checkout -b bugfix
+I can then make changes, test my code, make sure everything is ok, stage and commit my changes :
+$ git add .
+$ git commit -m "commit message"
+Now I need to push this local branch to my repository on github :
+$ git push -u origin bugfix
+Since I forked the original project, github knows that origin and upstream are linked. If there are no conflicts, github will show me a big green button to create a pull request. Once the pull request is created, I just have to wait for the maintainer to merge it in upstream’s master branch. Then, I need to sync both my local copy and my fork on github with the original project. In order to do that, on my local copy, I checkout my master branch, fetch upstream’s changes, and merge them :
+$ git checkout master
+$ git fetch upstream
+$ git merge upstream/master
+Now my local master branch is ahead of origin’s master branch, so I push those changes to github :
+$ git push
+I don’t need the bugfix branches (the local one and the github one), so I can delete those :
+$ git branch -d bugfix
+$ git push origin -d bugfix
+And now, my local repository is even with both origin and upstream, and I can start again.
+To summarize, here’s the complete workflow :
+$ git checkout -b myawesomefeature
+$ git add .
+$ git commit -m "Awesome commit message"
+$ git push -u origin myawesomefeature
+Create a pull request, wait for the maintainer to merge it.
+$ git checkout master
+$ git fetch upstream
+$ git merge upstream/master
+$ git push
+$ git branch -d myawesomefeature
+$ git push origin -d myawesomefeature

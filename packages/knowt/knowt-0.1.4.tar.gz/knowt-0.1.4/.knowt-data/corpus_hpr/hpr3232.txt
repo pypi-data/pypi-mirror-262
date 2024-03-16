@@ -1,0 +1,56 @@
+## hpr3232 :: Nextcloud
+
+ I've been running NextCloud since it was OwnCloud. In this episode, I encourage other people to install and run NextCloud. It's a great way to get out of the Google ecosystem, and it doesn't require much to set up or maintain.
+
+Here's the script I use to update one of the Nextcloud instances I maintain, running on a dirt-cheap VPS slice from Blue Host er something:
+
+#/test/before/using/bash
+# GNU All-Permissive License
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+if [ "${1}" == "--help" ]; then
+    echo "usage:"
+    echo "$0 https://path-to-nextcloud.bz2"
+    echo "WARNING: You MUST put your Nextcloud instance into maintenance mode first"
+    exit
+fi
+
+set -e
+
+# get rid of the old Nextcloud tarball from the last time you upgraded
+trash nextcloud*bz2 || true
+
+# get rid of old backups as long as they are empty of actual data
+[[ -e cloud/data ]] && trash cloud-deleteme
+
+#download the source tarball
+wget "${1}"
+
+#rename old cloud
+mv nextcloud cloud-deleteme
+
+# untar source
+# grab your data from old cloud
+tar xvf nextcloud*bz2 && mv cloud-deleteme/data/ nextcloud/
+
+# copy your config
+cp cloud-deleteme/config/config.php nextcloud/config/
+
+# enter the cloud
+pushd nextcloud
+
+# perform upgrade
+php ./occ upgrade
+
+# leave the cloud
+popd
+
+
+Don't use my upgrade script blindly, and please do test first. It works for my setup, but has been tested ONLY on my setup. Also, it doesn't put your Nextcloud instance into maintenance mode (probably because I wrote it before I knew Awk...), so you must do that manually.
+
+
+Happy hacking!
+

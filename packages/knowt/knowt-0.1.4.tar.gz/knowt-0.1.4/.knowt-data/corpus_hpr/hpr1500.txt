@@ -1,0 +1,14 @@
+## hpr1500 :: Key Signing
+
+ 
+One of the issues in using public key encryption is ensuring you know who you are communicating with, and that you have correctly matched the owner to the key. Otherwise, your communication could be intercepted and decrypted by a third-party. The way we solve this problem is with key signing, which is often done at key signing parties. We discuss all this with Tony Bemus of the Sunday Morning Linux Review. 
+
+Links:
+
+https://play.google.com/store/apps/details?id=org.thialfihar.android.apg&hl=en
+
+https://smlr.us/
+
+https://www.zwilnik.com/?page_id=546
+
+

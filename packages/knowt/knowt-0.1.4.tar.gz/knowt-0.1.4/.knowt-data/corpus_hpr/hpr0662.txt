@@ -1,0 +1,30 @@
+## hpr0662 :: DD-WRT
+
+ Apologies for the bad quality.  I really was installing DD-WRT whilst recording, for the first time!  I tried to tidy it up but it’s still fairly rough!
+
+Go the the DD-WRT website.
+Go to Router Database.
+Search for your Router (or one you might want to buy), in my case the Linksys WRT54GL from NewEgg (note:  NOT a sponsored link and other shops are available).
+Read this stuff: https://www.dd-wrt.com/phpBB2/viewtopic.php?t=51486
+Notes:  Initial flashing ‘Mini Generic’ via web interface.   Give it at least 2 mins after reboot!
+Installation guide: https://www.dd-wrt.com/wiki/index.php/Installation
+Lifehacker article: https://lifehacker.com/178132/hack-attack-turn-your-60-router-into-a-600-router
+Short version:                                                                                                                                                                  
+
+Plug in the router
+Install the mini-generic DD-WRT firmware
+Reboot the router if it doesn’t restart itself
+Install the full DD-WRT firmware.  It should restart
+Enjoy the shininess of the new firmware!
+Reset the password and username!
+
+
+
+Thoughts.
+The router restarts itself when you flash the firmware, which is nice.
+If you change the IP of the router you may have to disconnect and reconnect the network through linux to force it to update the new IP address.  Don’t forget like I did!
+
+To set up a Wii via Wi-Fi you need to set the router up as ‘Ad-Hoc’ else it doesn’t seem to show in the Wii menu.
+I had problems with my previous router being 192.168.1.1 and the DSL being 192.168.0.1 making me hard reset and set the details back up.  Might be unrelated to this, however changing the IP to 192.168.10.1 for the router and keeping 192.168.0.1 for the DSL resolved this problem.
+It was pretty damn simple!  At least a lot simple and faster then installing windows!
+Total time isn’t too long, but I’d recommend having a second router on hand (if you can) to keep internet access in case things go hairy!

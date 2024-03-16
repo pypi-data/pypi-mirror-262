@@ -1,0 +1,11 @@
+## hpr0618 :: Installing Windows XP in VirtualBox
+
+ 
+I use GNU/Linux for everything except one program that I need for work. Even the odd Windows games I've played run nicely in wine now, but not this. I have looked for Open Source alternatives but so far have not come across anything I can use in the same way so that means I have to have an install of Windows on hand just for this one purpose. 
+
+
+In this podcast I am talking through setting up a virtual machine using VirtualBox, and installing Windows XP on that virtual machine.
+
+
+
+If you would like me to make further episodes on this topic, maybe installing a different OS, or how to tweak this WinXP install once it is up and running then please drop me a line either on Twitter or identi.ca; I am @arfab; or email me on: arfab@lavabit.com

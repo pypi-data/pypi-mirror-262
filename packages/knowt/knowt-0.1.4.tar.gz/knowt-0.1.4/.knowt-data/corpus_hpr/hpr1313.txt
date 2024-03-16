@@ -1,0 +1,49 @@
+## hpr1313 :: How I Manage Contacts
+
+ How I Manage Contacts
+About a year ago I decided to try to clean up my contacts. 
+The problem: CRUFT! 
+
+Importing, exporting re-importing in different accounts and in different email clients and several computers etc over span of ~10 years.
+1200+ gmail contacts
+Many duplicates
+
+What I wanted:
+
+1 set of contacts across platforms with single source file from which all
+others are generated
+plain-text format, easy to use w/scripting & text editor
+No duplicates
+no cruft
+easy to maintain
+easy to import/export in T-bird, ownCloud
+sync with phone
+
+Steps to Success:
+
+Turn off Gmail default setting that saves every incoming email address in your address book
+Deleted all extraneous contacts (went from ~1200 down to about 400)
+Tedious part here: compare duplicates, consolidate info
+Decide on source-file format
+T-bird = LDIF
+OwnCloud = vCard
+LDIF wins b/c found script to convert to vCard, but not good script for other direction
+Convert all disparate contacts lists to LDIF, begin consolidating into one file
+LDIF ready? Import to T-bird
+Perl script to convert LDIF to vCard –> import to ownCloud
+CardDAV-sync to sync from o.c. to phone
+Bash script to create new LDIF entries, convert to vcf, add to master file easily
+
+Wishlist 
+
+Make t-bird sync w/owncloud (t-bird SOGO extension broken)
+CLI API to update owncloud contacts via a script instead of having to use the web interface
+
+Links 
+
+CardDAV-sync android app https://play.google.com/store/apps/details?id=org.dmfs.carddav.sync&hl=en
+OwnCloud https://owncloud.org/
+Thunderbird Addon: Duplicate Contact Manager https://addons.mozilla.org/en-us/thunderbird/addon/duplicate-contact-manager/
+Original ldif2vcf perl script https://www.barninger.com/ldif_to_vcard/
+My modified version: https://paste.jonkulp.net/view/d47bbeca
+My ldif creator bash script https://paste.jonkulp.net/view/32922107

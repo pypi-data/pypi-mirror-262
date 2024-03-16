@@ -1,0 +1,11 @@
+## hpr0558 :: xscreensaver
+
+ Shownotes: https://www.kenfallon.com 
+xscreensaver howto: https://www.jwz.org/xscreensaver/man1.html#9 
+
+Commands:
+vi .kde/Autostart/xscreensaver.desktop 
+sudo cp /usr/lib/kde4/libexec/kscreenlocker 
+sudo vi /usr/lib/kde4/libexec/kscreenlocker 
+sudo chmod +x /usr/lib/kde4/libexec/kscreenlocker 
+sudo apt-get install xscreensaver xli xloadimage xfishtank qcam streamer 

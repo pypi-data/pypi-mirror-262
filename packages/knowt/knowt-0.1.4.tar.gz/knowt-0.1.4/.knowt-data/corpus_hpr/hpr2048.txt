@@ -1,0 +1,98 @@
+## hpr2048 :: The Hubot chat-bot
+
+ Hubot
+Intro
+Hubot is a chat-bot written by the folks at GitHub. It is a node.js application written in CoffeeScript.
+Hubot has a variety of adapters that allow it to connect to a variety of chat platforms. These range from IRC to Slack. So, the platform
+you are interested in probably already has an adapter available for it.
+Hubot uses individual CoffeeScript scripts to provide chat-bot functionality. There are a slew of existing scripts available in the npm. Just search for hubot-scripts.
+You can also write your own in order to make sure that Hubot provides the functionality that you need.
+Install
+Hubot is available as an npm package. So, you will need to install node.js and npm on your system. I will leave this as an exercise for the listener.
+I will however, throw out a tip for those of you using a Raspberry Pi for this. The node.js platform should be deployed on an ARM system using the armhf (ARM hard float) architecture. The nod
+e.js stack needed to run Hubot will not properly install if you are using the armel (ARM soft float) architecture.
+Once you have node.js and npm installed, you can install hubot and its dependencies with the following command.
+npm install -g hubot yo generator-hubot coffee-script
+You create your own instance of hubot by using yeoman generator. You need to do this as a non-root user. When you create your bot, you will give it a name and
+specify the adapter to use. These can be specified as command line flags, or the generator will prompt you for this information.
+
+Owner
+Name
+Description
+Adapter
+
+Interactive
+yo hubot
+Providing the answers
+yo hubot --name mybot --description "My Helpful Robot" --adapter shell --defaults
+Running
+Once hubot is installed, you can run it with the following. I will use the shell adapter, which provides an interactive shell from which to trigger hubot scripts.
+./bin/hubot --adapter shell
+Our Hubot instance is now active and ready to receive commands. We will start with a simple ping command.
+mybot> mybot ping
+mybot> PONG
+We can see the available commands by asking Hubot for help
+mybot> mybot help
+mybot adapter - Reply with the adapter
+mybot animate me <query> - The same thing as `image me`, except adds a few parameters to try to return an animated GIF instead.
+mybot echo <text> - Reply back with <text>
+mybot help - Displays all of the help commands that Hubot knows about.
+mybot help <query> - Displays all help commands that match <query>.
+mybot image me <query> - The Original. Queries Google Images for <query> and returns a random top result.
+mybot map me <query> - Returns a map view of the area returned by `query`.
+mybot mustache me <url|query> - Adds a mustache to the specified URL or query result.
+mybot ping - Reply with pong
+mybot pug bomb N - get N pugs
+mybot pug me - Receive a pug
+mybot the rules - Make sure hubot still knows the rules.
+mybot time - Reply with current time
+mybot translate me <phrase> - Searches for a translation for the <phrase> and then prints that bad boy out.
+mybot translate me from <source> into <target> <phrase> - Translates <phrase> from <source> into <target>. Both <source> and <target> are optional
+ship it - Display a motivation squirrel
+We will try a couple more.
+mybot> mybot echo "Hello world"
+"Hello world"
+mybot> mybot the rules
+0. A robot may not harm humanity, or, by inaction, allow humanity to come to harm.
+1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+2. A robot must obey any orders given to it by human beings, except where such orders would conflict with the First Law.
+3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
+Adding Scripts
+npm scripts
+npm install hubot-simpsons
+Add hubot-simpsons to the array in the external-scripts.json file.
+mybot> mybot simpsons quote
+mybot> Disco Stuâ¦ likes disco.
+Writing scripts
+https://github.com/github/hubot/blob/master/docs/scripting.md
+You can add your own custom scripts by adding them to the scripts directory. An examples.coffee script was included when Hubot was installed. It includes a variety of examples of things Hubot can do. I will illustrate by paring this down to a simple single script that responds to requests to open doors. Our simple script will open most doors, but will politely refuse to open the 'pod bay' doors.
+The script uses the respond method on the robot module. This method takes a regex patten to respond to. It returns a result that contains a match array when the pattern has been detected. In our script we capture the group between 'onen the' and 'doors'. We then use this to determine which response to provide. The response is triggered with the robots reply method.
+module.exports = (robot) ->
+
+ robot.respond /open the (.*) doors/i, (res) ->
+   doorType = res.match[1]
+   if doorType is "pod bay"
+     res.reply "I'm afraid I can't let you do that."
+   else
+     res.reply "Opening #{doorType} doors"
+Restart Hubot by...
+Now we can use our new, useful Hubot script.
+mybot> mybot open the french doors
+mybot> Shell: Opening french doors
+mybot> mybot open the pod bay doors
+mybot> Shell: I'm afraid I can't let you do that.
+Aliases
+A rose by any other name... If you would like your Hubot to respond to another name, you can assign your Hubot aliases to respond to. I really like this feature and I assign the '!' as my Hubot alias. This allows me to invoke Hubot with a single character.
+mybot> ! open the pod bay doors
+mybot> Shell: I'm afraid I can't let you do that.
+Adapters
+Obviously the shell adapter is not very useful aside from allowing us to play with or develop Hubot scripts. Hubot comes with several adapters that allow it to integrate with existing chat systems. These include: * IRC * XMPP * Campfire * HipChat * Slack * IRC * IRC
+Conclusion
+I hope this gives you a sense of what Hubot can do and how you can utilize it. Personally, I use Hubot in a variety of ways ranging from silly entertainment to useful communication tool. Using the eight-ball script, I can see if I will have a good day.
+mybot> mybot eight-ball Will I have a good day?
+mybot> Shell: Most certainly!
+mybot> :-)
+Using a modified version of of the sms script, I can send text messages to my family members who are not available online.
+mybot> mybot sms trinity   See you on the other side!
+mybot> Shell: Sent sms to 3125550690
+mybot> :-)

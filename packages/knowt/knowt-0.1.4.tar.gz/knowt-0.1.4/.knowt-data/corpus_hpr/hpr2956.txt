@@ -1,0 +1,284 @@
+## hpr2956 :: HPR Community News for November 2019
+
+ 
+New hosts
+
+Welcome to our new hosts: 
+Nihilazo, 
+    Daniel Persson.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+2935
+Fri
+2019-11-01
+The work of fire fighters, part 3
+Jeroen Baten
+
+
+2936
+Mon
+2019-11-04
+HPR Community News for October 2019
+HPR Volunteers
+
+
+2937
+Tue
+2019-11-05
+Lord D's Film Reviews: His Girl Friday
+lostnbronx
+
+
+2938
+Wed
+2019-11-06
+Naming pets in space game
+Tuula
+
+
+2939
+Thu
+2019-11-07
+Submit a show to Hacker Public Radio in 10 easy steps
+b-yeezi
+
+
+2940
+Fri
+2019-11-08
+Better Social Media 05 - Mastodon
+Ahuka
+
+
+2941
+Mon
+2019-11-11
+Server Basics 107: Minishift and container management
+klaatu
+
+
+2942
+Tue
+2019-11-12
+Why I love lisps
+Nihilazo
+
+
+2943
+Wed
+2019-11-13
+Music as Life
+brian
+
+
+2944
+Thu
+2019-11-14
+ONICS Basics Part 4: Network Flows and Connections
+Gabriel Evenfire
+
+
+2945
+Fri
+2019-11-15
+Saturday at OggCamp Manchester 2019
+Ken Fallon
+
+
+2946
+Mon
+2019-11-18
+Sunday at OggCamp Manchester 2019
+Ken Fallon
+
+
+2947
+Tue
+2019-11-19
+The Mimblewimble Protocol
+mightbemike
+
+
+2948
+Wed
+2019-11-20
+Testing with Haskell
+Tuula
+
+
+2949
+Thu
+2019-11-21
+Grin and Beam: The 2 major mimblewimble blockchains
+mightbemike
+
+
+2950
+Fri
+2019-11-22
+NotPetya and Maersk: An Object Lesson
+Ahuka
+
+
+2951
+Mon
+2019-11-25
+A walk through my PifaceCAD Python code – Part 2
+MrX
+
+
+2952
+Tue
+2019-11-26
+Publishing your book using open source tools
+Jeroen Baten
+
+
+2953
+Wed
+2019-11-27
+How I got started in Linux
+Archer72
+
+
+2954
+Thu
+2019-11-28
+Wrestling As You Like It episode 1
+TheDUDE
+
+
+2955
+Fri
+2019-11-29
+Machine Learning / Data Analysis Basics
+Daniel Persson
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 16 comments in total.
+Past shows
+There are 2 comments on
+1 previous show:
+
+hpr1585
+(2014-08-29) "36 - LibreOffice Calc - Financial Functions - Loan Payments"
+by Ahuka.
+
+
+
+Comment 1:
+timttmy on 2019-11-30:
+"Thanks"
+
+Comment 2:
+Ahuka on 2019-11-30:
+"I'm glad it helped"
+
+This month's shows
+There are 14 comments on 8 of this month's shows:
+hpr2935
+(2019-11-01) "The work of fire fighters, part 3"
+by Jeroen Baten.
+
+Comment 1:
+Ken Fallon on 2019-11-05:
+"That sucks"Comment 2:
+Ken Fallon on 2019-11-05:
+"That blows"Comment 3:
+Ken Fallon on 2019-11-05:
+"You're Fired"
+hpr2936
+(2019-11-04) "HPR Community News for October 2019"
+by HPR Volunteers.
+
+Comment 1:
+lostnbronx on 2019-11-04:
+"Ken's Voice Is Better Than espeak"Comment 2:
+Jon Kulp on 2019-11-05:
+"Pots"Comment 3:
+clacke on 2019-11-19:
+"Release order or episode order?"
+hpr2939
+(2019-11-07) "Submit a show to Hacker Public Radio in 10 easy steps"
+by b-yeezi.
+
+Comment 1:
+Ken Fallon on 2019-11-07:
+"Clarification"
+hpr2940
+(2019-11-08) "Better Social Media 05 - Mastodon"
+by Ahuka.
+
+Comment 1:
+ClaudioM on 2019-11-08:
+"Simple Mastodon Timeline View Option"
+hpr2942
+(2019-11-12) "Why I love lisps"
+by Nihilazo.
+
+Comment 1:
+Tuula on 2019-11-12:
+"welcome"Comment 2:
+Carl on 2019-11-21:
+"Well Done"Comment 3:
+gerryk on 2019-11-22:
+"loved it"
+hpr2943
+(2019-11-13) "Music as Life"
+by brian.
+
+Comment 1:
+Carl on 2019-11-21:
+"Interesting Episode"
+hpr2944
+(2019-11-14) "ONICS Basics Part 4: Network Flows and Connections"
+by Gabriel Evenfire.
+
+Comment 1:
+Dave Morriss on 2019-11-27:
+"This is wonderful"
+hpr2955
+(2019-11-29) "Machine Learning / Data Analysis Basics"
+by Daniel Persson.
+
+Comment 1:
+b-yeezi on 2019-11-29:
+"Great first episode"
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2019-November/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+Stand at FOSDEM
+Our proposal for a “Free Culture Podcasts” stand at FOSDEM was accepted for the Sunday 2nd February. This is fantastic news as this is the largest FLOSS event in Europe and is absolutely thronged the whole day.
+https://fosdem.org/2020/news/2019-11-19-accepted-stands/
+Anyone going to FOSDEM, and who would like to help staff the booth on Sunday please get in touch.
+Tags and Summaries
+Thanks to the following contributor for sending in updates in the past month: Dave Morriss
+Over the period tags and/or summaries have been added to 5 shows which were without them.
+If you would like to contribute to the tag/summary project visit the summary page at https://hackerpublicradio.org/report_missing_tags.php and follow the instructions there.

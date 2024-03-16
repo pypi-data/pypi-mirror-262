@@ -1,0 +1,20 @@
+## hpr0279 :: cfengine
+
+ 
+Ken talks to Ian Southam about using cfengine to manage your servers. 
+
+Overview of CFengine 
+https://en.wikipedia.org/wiki/Cfengine
+
+The Promise of System Configuration: Google Tech Talks - November 5, 2008 
+https://www.youtube.com/watch?v=4CCXs4Om5pY
+
+A simple overview of cfengine: Debian Administration
+https://www.debian-administration.org/articles/223
+
+Centralized Host Configuration With Cfengine: Sun BigAdmin System Administration Portal
+https://www.sun.com/bigadmin/features/articles/cfengine_part1.html
+https://www.sun.com/bigadmin/features/articles/cfengine_part2.html
+
+Ian Southam:
+https://www.schubergphilis.com/

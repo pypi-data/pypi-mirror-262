@@ -1,0 +1,13 @@
+## hpr1980 :: Fixing An Audio Problem while having a rant
+
+ This podcast details how I solved an audio problem I discovered while trying to record another episode for HPR. I'll hopefully get around to recording my original idea at a later date.
+The recording was done in a bit of a hurry and I was a bit flustered so please excuse the fast talking and ranting.
+Link to article that solved my problem https://blog.tiger-workshop.com/ubuntu-rear-microphone-not-working-on-ad1988b-sound-chip/
+Command I used to install the app that solved my audio problem. App is from the standard Ubuntu 14.04 repo
+sudo apt-get install alsa-tools-gui
+Command to run from terminal to launch gui tool that solved the problem
+hdajackretask
+Links
+
+https://blog.tiger-workshop.com/ubuntu-rear-microphone-not-working-on-ad1988b-sound-chip/
+

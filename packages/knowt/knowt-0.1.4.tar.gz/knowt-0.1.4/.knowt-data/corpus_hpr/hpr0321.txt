@@ -1,0 +1,17 @@
+## hpr0321 :: Parrot
+
+ 
+Parrot is a virtual machine designed to efficiently compile and execute bytecode for dynamic languages.
+
+
+Parrot currently hosts a variety of language implementations in various stages of completion, including Tcl, Javascript, Ruby, Lua, Scheme, PHP, Python, Perl 6, APL, and a .NET bytecode translator.
+
+
+Parrot is not about parrots, though we are rather fond of them for obvious reasons.
+
+
+Guru at Guru Labs for 1.5 years. I teach, work on courseware, and assorted Perl programming. In my spare time I work on Parrot and recently a roguelike. I've been working on Parrot for about a year, in which time I've written a LOLCODE and Ruby compiler and done a lot of work on Exceptions and some work implementing features in Perl 6.
+
+
+I'd like to talk about Parrot and/or Perl 6! That's about as specific as I get. If nobody has any more-specific requests, I'd like to run through implementing a simple language and the parts of a Parrot compiler. Maybe scheme? I haven't decided yet.
+

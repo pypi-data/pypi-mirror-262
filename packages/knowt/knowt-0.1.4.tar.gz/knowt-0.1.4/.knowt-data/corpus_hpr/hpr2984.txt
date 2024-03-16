@@ -1,0 +1,5 @@
+## hpr2984 :: RHEL 8 Workstation first looks 
+
+ Hi Everyone a bit random ideas about RHEL 8 on a low end laptop.
+Interesting Git and flatpak are already installed out of the box.
+MS Teams works great.

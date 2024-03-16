@@ -1,0 +1,176 @@
+## hpr1330 :: Programming languages 3 - C
+
+ Hi, my name is Garjola and you are listening to a contribution to
+HPR. This is episode 3 of my programming language series and is entitled
+“Getting started with the C programming language”.
+I am not going to teach you C, but just whet your appetite.
+1 Intro
+
+What C is useful for
+
+Systems programming
+Number crunching
+Graphics
+Embedded systems
+
+Arduino
+
+
+Advantages
+
+speed
+fine grained control of the memory management
+close to the metal
+the portable assembly language
+
+Drawbacks
+
+fine grained control of the memory management
+close to the metal
+the portable assembly language
+
+
+2 History of the language
+
+developed by Ken Thompson and Dennis Ritchie between 1969 and
+1973 at AT&T Bell Labs.
+The origin of C is closely tied to the development of the Unix
+operating system, originally implemented in assembly language on a PDP-7
+by Ritchie and Thompson, incorporating several ideas from colleagues.
+Eventually they decided to port the operating system to a PDP-11. B’s
+inability to take advantage of some of the PDP-11’s features, notably
+byte addressability, led to the development of an early version of
+C.
+
+3 Uses
+C is often used for “system programming”, including implementing
+operating systems and embedded system applications, due to a combination
+of desirable characteristics such as code portability and efficiency,
+ability to access specific hardware addresses, ability to pun types to
+match externally imposed data access requirements, and low run-time
+demand on system resources. C can also be used for website programming
+using CGI as a “gateway” for information between the Web application,
+the server, and the browser. Some reasons for choosing C over
+interpreted languages are its speed, stability, and near-universal
+availability.
+One consequence of C’s wide availability and efficiency is that
+compilers, libraries, and interpreters of other programming languages
+are often implemented in C. The primary implementations of Python
+(CPython), Perl 5, and PHP are all written in C.
+Due to its thin layer of abstraction and low overhead, C allows
+efficient implementations of algorithms and data structures, which is
+useful for programs that perform a lot of computations.
+C is sometimes used as an intermediate language by implementations of
+other languages. This approach may be used for portability or
+convenience; by using C as an intermediate language, it is not necessary
+to develop machine-specific code generators.
+C has also been widely used to implement end-user applications, but
+much of that development has shifted to newer languages.
+4 Characteristics of the
+language
+
+imperative, compiled, static, weakly typed
+structured programming
+
+Uses functions but it is not functional, but rather procedural
+control flow if/else, for, while
+curly braces, semi-colons
+
+all parameters are passed by value and references are simulated
+using pointers
+A program is a function called main
+
+5 Tooling and environment
+
+editor
+compiler
+
+makefiles for convenience, although higher level tools such as
+autoconf/automake or cmake exist
+
+debugger
+IDEs
+gnu tools for everything
+
+emacs, pico, gedit, vi
+gcc, clang
+gnumake
+gdb, xgdb, ddd
+kdevelop
+
+
+6 Hello World
+#include <stdio.h>
+
+int main(void) {
+    printf("hello, world\n");
+    return 0;
+}
+7 How to make a C program
+
+Write your main function into a file called myprogram.c
+compile your program
+
+gcc -o myprogram myprogram.c
+
+if you use other libraries than C’s standard library, you will need
+to use a linker, like ld
+
+Examples taken from An
+Introduction to GCC by Brian J. Gough, foreword by Richard M.
+Stallman
+The classic example program for the C language is Hello World. Here
+is the source code for our version of the program:
+#include <stdio.h>
+
+int main (void) { printf ("Hello, world!\n"); return 0; }
+We will assume that the source code is stored in a file called
+'hello.c'.
+To compile the file 'hello.c' with gcc, use
+the following command:
+$ gcc -Wall hello.c -o hello
+To run the program, type the path name of the executable like
+this:
+$ ./hello
+Hello, world!
+8 Pointers!
+C supports the use of pointers, a type of reference that records the
+address or location of an object or function in memory. Pointers can be
+dereferenced to access data stored at the address pointed to, or to
+invoke a pointed-to function. Pointers can be manipulated using
+assignment or pointer arithmetic. The run-time representation of a
+pointer value is typically a raw memory address (perhaps augmented by an
+offset-within-word field), but since a pointer’s type includes the type
+of the thing pointed to, expressions including pointers can be
+type-checked at compile time.
+9 The standard library
+
+just use man!
+
+On Unix-like systems, the authoritative documentation of the actually
+implemented API is provided in form of man pages. On most systems, man
+pages on standard library functions are in section 3; section 7 may
+contain some more generic pages on underlying concepts (e.g. man 7
+math_error in Linux).
+apropos sqrt | grep \(3\)
+
+man 3 sqrt
+
+man 3 qsort history
+
+the not-so-standard libraries
+
+gsl
+gtk
+X
+
+
+10 Languages of the C family
+
+C++, ObjectiveC, Java, C#, Go
+
+11 Resources
+
+Learning GNU C by
+Ciaran O’Riordan.
+

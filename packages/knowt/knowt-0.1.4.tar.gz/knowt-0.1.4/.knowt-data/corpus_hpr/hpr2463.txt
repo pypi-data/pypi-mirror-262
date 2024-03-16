@@ -1,0 +1,19 @@
+## hpr2463 :: Setting up a 32 Bit Ubuntu Server
+
+ So what is the purpose - I had an old windows backup workstation at work that I did a lot backups with. It got to the point where it was just too slow and low spec to handle the windows 7 updates and with my company switching to the 365/sharepoint/one drive it was not needed anymore. So I wanted not to throw it away as I had sprung for 160GB hard drive a long time ago. “I know at work and purchasing a hard drive for work.” But it lasted more than 10 years doing my outlook backups and file shares.
+So my first problem was I was pretty sure I only had 32 bit.
+So no centos or suse in 32 bit. I could have went fedora but I wanted a really long time with support. So it came down to ubuntu 16.04, Debian or Net BSD with I386 repos I could use long term. I was more comfortable with Ubuntu and 16.04 has about 3 years support left on it.
+Its a small form factor computer so I carried it home for a few days. And got the ISO down loaded again no usb drive boot only DVD.
+So what is it. I did a uname -a and and looked at the proc cpu to see what the cpu was.
+https://www.tecmint.com/find-out-linux-system-is-32-bit-or-64-bit/
+https://www.computerhope.com/issues/ch001121.htm
+The second linked worked best.
+I had a lot of trouble with lamp and own/next cloud with both snaps and straight install. I broke the install several times. In the end I said what do really know how do well with it right now. So I installed Open SSH server, tightVNC, A really thin xfce 4, ffmpeg and youtube-dl and uget. So I will play with snaps only in the future and keep this basic config.
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-16-04
+Note I did not auto start VNC because I found in my creations of this server that it used too much RAM vs just starting it and killing it.
+It is the perfect video processing machine in the moment. If youtube-dl can’t get it I can use uget via vnc and that will then transcode if needed. Mostly for mp3.
+https://rg3.github.io/youtube-dl/ youtube-dl is a command-line program to download videos from YouTube.com and a few more sites. It requires the Python interpreter, version 2.6, 2.7, or 3.2+, and it is not platform specific. It should work on your Unix box, on Windows or on Mac OS X. It is released to the public domain, which means you can modify it, redistribute it or use it however you like.
+I will work on the nextcloud snap and other snaps as they are easy to install or remove without hurting the base system.
+Possible other projects - Owncloud or Storj
+https://storj.io/share.html
+One you can make a little money with it :)

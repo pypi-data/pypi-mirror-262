@@ -1,0 +1,18 @@
+## hpr1658 :: Cool Stuff Part 2
+
+ 
+Today I Found Out: https://www.todayifoundout.com/
+
+
+Daily Knowledge Podcast: https://www.todayifoundout.com/index.php/category/podcast/
+
+
+Command Line Tips: using CTRL + Left / Right arrow will allow you to move through a long command word by word instead of moving through each letter.  Makes making adjustments to a long command much quicker.
+Use the "cd -" to move back and forth between previous directories. cd into a directory, then cd into a different one.  Now do "cd -" and you will be back to the first directory.  
+
+
+XFCE : script that uses xdtool to move window from one monitor to the next  https://makandracards.com/makandra/12447-how-to-move-a-window-to-the-next-monitor-on-xfce-xubuntu
+
+
+Hyperkin Pixel Art Controller: https://hyperkin.com/hyperkin-pixel-art-controller-for-pc-mac-computers-1265.html. Use with the SNES9x emulator.  Works very well
+

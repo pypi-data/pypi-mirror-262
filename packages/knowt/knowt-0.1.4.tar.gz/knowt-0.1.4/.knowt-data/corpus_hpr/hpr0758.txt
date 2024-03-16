@@ -1,0 +1,24 @@
+## hpr0758 :: Interview with Jon "The Nice Guy" Spriggs
+
+ CCHits.net is a site promoting and featuring Creative Commons licensed music and the podcasts that play them. The site was designed with more than just this in mind. Here are some of the highlights
+
+
+Encourage and Discover Great Music
+There's a lot of great Creative Commons Licensed Music out there, and not enough people know just what you can get hold of! To help ease the burdon of this issue, there are three things that we do:
+
+By linking directly to artist's home sites rather than to our own holding pages for artists, we ensure that the artists get maximum exposure for their own material, without having to update our site when their own information changes!
+By linking to the source of the individual track, gives listeners a greater awareness of music sources, which hopefully should increase the exposure for sites who promote and list Creative Commons licensed music.
+By linking to podcasts which play Creative Commons licensed music, we give listeners the opportunity to find other shows that play the music they like - ultimately giving listeners a greater fountain of great music to select from, and hopefully giving them the opportunity to discover new artists and genres to add to their personal list of favourites.
+
+
+
+Support Communities
+An attendor at various social groups, the original author of the code which drives cchits.net was unable to provide consistent, suitable background music for events he was involved in organising or just attending. This site was originally designed to find tracks which are generally acceptable for public play, and are available under a suitable license for public performance (which Creative Commons music should be!) By asking all submitters of music to identify the license under which the tracks are made available, as well as selecting whether tracks may not be suitable for work or family listening, it should be possible (once the code is in-place) to request from the site a suitable selection of music for playback at venues such as hackspaces, youth centres, or even just hold music for a business. Note that this site is not being created to build a re-licensing business, but instead to promote awareness of great music - there are other, better sites, that can advise and assist in the selection of Creative Commons music which are suitable for your business endeavour, but if you just want something for backing music for an hour or a whole day, this site might be (eventually!) just the thing for you.
+
+
+Create Podcasts and Improve Coding Techniques
+At the time of writing, cchits.net is the work of one person. For several months, Jon "The Nice Guy" Spriggs had been considering starting a podcast, however, he's not exactly known for finishing projects! By making a system which is automated enough to create a daily podcast, a weekly podcast and a monthly podcast, playing music that he likes to hear, he thought it might encourage him to stick to it - especially when there are other amazing goals (see above) which come out as a side benefit. He normally has described himself as a writer of "bad PHP code", and each project he starts improves the techniques he has learned.
+In this instance, CCHits.net has introduced Jon to the concept of writing an API that works, a system of remote execution of code, the generation of synthesized speech and the generation of an audio track, entirely in code! Never being shy of criticism from the community, especially where code is concerned, the code has all been released under a license which encourages reuse and requires the code is re-released under the same license.
+
+
+If you already podcast, and you play Creative Commons Licesed Music on a regular basis, you might be interested in using the API on this site to track the music that people who listen to your show have expressed an interest in. Contact show@cchits.net to find out more

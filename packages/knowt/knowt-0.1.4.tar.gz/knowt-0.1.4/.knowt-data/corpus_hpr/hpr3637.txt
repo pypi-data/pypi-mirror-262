@@ -1,0 +1,68 @@
+## hpr3637 :: HPR feed to Sqlite
+
+ 
+Mailing list discussion - Source Code for the HPR website
+
+What are the best ways to reproduce the HPR site using a static site generator.
+I would like the DB to be made public, but I understand why that may not be possible
+
+
+One interesting thing I read during the discussion is Ken said Every thing needed to recreate an HPR site is in the feed
+
+Challenge accepted
+
+A lot of my toy projects have been around RSS and podcasts
+I am working on a Episode describing a project I did looking for podcasts that have podfaded.
+I starting thinking about what data is in the feed and thinking through a process for using the RSS data to recreate the HPR site
+
+Project
+
+Link to Project https://gitlab.com/norrist/hprfeed2db
+
+DATA pulled directly from feed
+
+explicit
+title
+author_name
+author_email
+link
+description
+summary - I think this is the same as description
+pubdate
+enclosures
+Episode ID - extracted from title - HPR2341
+feedparser and peewee
+full feed to SQLite specs
+
+40 Seconds on My Machine
+20M hpr.sqlite
+
+
+Notably Missing from the RSS feeds
+
+Episode Series
+Episode Tags
+
+Next steps
+
+markdown from db info
+
+Main page
+Corespondent pages
+Episode pages
+comments from comments feed
+
+Manually build other markdown for static pages
+about, contributing, ...
+Static site generator
+I don't think the tags are in the feed data
+
+
+git clone https://gitlab.com/norrist/hprfeed2db
+cd hprfeed2db/
+python3 -m venv venv
+source venv/bin/activate
+pip install feedparser peewee
+python data_models.py
+python feed.py
+sqlite3 hpr.sqlite "select count(*) from episode"

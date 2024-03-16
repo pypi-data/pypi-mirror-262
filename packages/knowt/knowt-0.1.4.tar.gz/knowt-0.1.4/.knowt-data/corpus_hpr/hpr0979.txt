@@ -1,0 +1,164 @@
+## hpr0979 :: Sunday Morning Linux Review Episode 029
+
+ https://smlr.us
+Total Running Time: 54:30
+Intro:
+Mat Enders, Tony Bemus, and Mary Tomich
+Intro Sound bite by Mike Tanner
+Kernel News: Mat
+Time: 4:56
+Release Candidate:
+No Release Candidate This Week
+Mainline:
+3.4-rc4
+Stable Updates:
+On Sun, 22 Apr 2012 16:47:47 PDT Greg Kroah-Hartman released kernel 3.0.29
+There were 55 files changed, 500 inserted, 207 deleted
+On Sun, 22 Apr 2012 16:49:38 PDT Greg Kroah-Hartman released kernel 3.2.16
+There were 69 files changed, 488 inserted, 247 deleted
+On Sun, 22 Apr 2012 16:50:18 PDT Greg Kroah-Hartman released kernel 3.3.3
+There were 78 files changed, 538 inserted, 319 deleted
+On Fri, 27 Apr 2012 10:14:55 PDT Greg Kroah-Hartman released kernel 3.0.30
+There were 66 files changed, 314 inserted, 266 deleted
+On Fri, 27 Apr 2012 10:46:54 PDT Greg Kroah-Hartman released kernel 3.3.4
+There were 96 files changed, 544 inserted, 382 deleted
+Distro Talk: Tony
+Time: 7:13
+Distrowatch.com 
+
+4-24 – Tails 0.11 – Debian-based live DVD designed for anonymous Internet surfing
+4-24 – Scientific Linux 5.8  – distribution rebuilt from source packages for Red Hat Enterprise Linux 5.8 and enhanced with extra software and tools useful in academic environments
+4-24 – Linux Mint 201204 “Debian” – Linux Mint 201204 “Debian” edition
+4-24 –  Untangle Gateway  – Debian-based distribution designed for firewalls and gateways
+4-25 – Tiny Core Linux 4.5 – ast and minimalist Linux distribution for desktop use
+4-25 – Dragora GNU/Linux 2.2 – “libre” distribution built from scratch and featuring Xfce as the default desktop
+4-25 – ClearOS 6.2 “Community” – based on Red Hat Enterprise Linux 6.2 and designed for small business servers and gateways
+4-25 – Swift Linux 0.2.0 – lightweight desktop distribution with IceWM – now based on Linux Mint’s “Debian” edition
+4-26 – BackBox Linux 2.05 – Ubuntu-based distribution designed to perform penetration tests and security assessments
+4-26 – * Ubuntu 12.04 – Canonical’s flagship operating system featuring the Unity user interface and Head-Up Display menu system
+4-27 – Proxmox 2.1 “Virtual Environment” – an open-source virtualization platform for running virtual appliances and virtual machines, based on Debian GNU/Linux
+4-28 – ROSA 2012 RC – Mandriva Linux and enhanced with a variety of innovative desktop utilities and applications
+
+ROSA Icons – Making KDE look even better
+http://www.linuxbsdos.com/2012/04/21/replace-oxygen-with-rosa-theme-on-any-kde-powered-distribution/
+Creepy – A python program that aggregates twitter and flickr geolocation information.
+https://diveintoinfosec.wordpress.com/
+Distro of the Week: Tony
+
+Magia – 1453
+Swift – 1457
+Fedora – 1727
+Ubuntu – 4732
+Mint – 5153
+
+Tech News:
+Time: 21:09
+Google Drive Released, Not So Much For Linux
+The long rumored on line storage from Google has been announced as a reality. Unless of course you are running a Linux desktop. I don’t know but if it where me and my entire business was built on top of Linux that it might be the first client I produced. They have an Android client how difficult can it be.
+Every subscriber will get 5GB for free with the opportunity to upgrade to any of the following plans.
+Storage       Monthly Rate
+25 GB           $2.49
+100 GB         $4.99
+200 GB         $9.99
+400 GB         $19.99
+1 TB              $49.99
+2 TB              $99.99
+4 TB              $199.99
+8 TB              $399.99
+16 TB            $799.99
+You can access the service at dirve.google.com. Although it is currently not ready for me (insert picture). It will support over 30 file types that you will be able to open right in your browser. It will integrate with Google+, Gmail, and Google Docs. You can share files or folders with anyone, and control whether they will be able to view, edit or comment on your stuff. Extensive search capabilities including OCR for pictures and scanned documents. And my favorite feature document rollback for up to thirty days. Google Drive tracks all changes so that when you save a document, a new revision is saved. You can look back as far as 30 days.
+
+Slackware Alive And Well Despite Rumors
+When the main website for Slackware went down the rumor mill went into hyper-drive. These Discussions where hot and heavy on LinuxQuestions.org and DistroWatch. The discussions very quickly shifted from website problems to the long term viability of Slackware. This was compounded by Eric Hameleers, a top Slackware contributor, when he posted this early in the LinuxQuestions discussion “Old hardware, lack of funds…”. I am sure that it was not his intended effect but this was like throwing gasoline onto an already raging fire. The conversation quickly veered into the what can be done to save Slackware land.
+The fires where then fanned even higher when Caitlyn Martin, developer of Yarok Linux, made this statement on Distrowatch disparaging the long term viability of Slackware:
+“You remember that comment about my involvement in the development of a Slackware derivative? Forget it. We’re already discussing about delaying the release and rebasing off of something with a more secure future,”
+This successfully torqued off a large number of people in the discussions on both websites. She responded to these comments by maintaining her stance that she was only concerned about upstream stability. The positive to come out of Martin’s comments was that it prodded Hameleers into clarifying his comments:
+“The slackware.com server is down. This is a technical malfunction. It costs money to do something about that. Something will be done about that server, but if it takes a while, it is most likely caused by prioritizing and finances. Slackware was without its own web server for a long time in the past. And still active are ftp.slackware.com and connie.slackware.com, so what’s the big deal?
+This turning of the rumour mill is pretty much unfounded, and I see some of the same old people pouring oil on the fire as usual.
+There is no reason to doubt the availability, stability and long term viability of Slackware, the distribution. It has not been a one-man show for some time, the development effort is substantial and plainly visible in the ChangeLog, and there are no plans to switch to another development model or even ditch the distribution.”
+Hameleers went into greater detail about Slackwares finacial situation on LinuxQuestions:
+“It’s not that difficult: if everybody suddenly stops buying stuff from the Slackware store, then Slackware will not last another year in its present form–the Store sales are Pat’s income (and it feeds several other people too), but remember, the core team surrounding Pat do not get a penny of these revenues at all. Therefore, the rest of the team is not impacted in any way by Slackware sales figures and we will keep working with Pat on the distribution just like we have been doing for the past years. Look at the ChangeLog–sometimes there is a period of relative silence but that does not mean that no work is being done. Like last week, the updates can come in big gulps. Slackware will not die, its philosophy will not change, the team is dedicated and full of ideas.
+“If people start chickening out and cancel their subscriptions, then that is a pity. Thankfully, I see lots of other Slackware users who decided that this is a good point to make a donation or buy something at the Store (if their financial situation allows it). Thanks to all of you for ‘supporting the cause.’ And remember–if you can not financially support Slackware, then helping your fellow Slackware users in forums like this one is an invaluable form of support as well! Slackware will not die because of financial issues, it will die if all of its users leave.”
+As Hameleers points out a project like Slackware can never really go away as long as there is a strong community around it. Even if the project folds financially and Patrick did not transfer the copyrights on Slackware to the community it would continue under a different name. However for now there is absolutely no indication that any of that is either in the near or distant future.
+
+Hungarian Government Solidifies Commitment To ODF
+Last year the Hungarian government announced that from April 2012 forward all government documents needed to be produced in an internationally recognized open document standard. To further this commitment they are going to invest 370 million HUF (Hungarian Forint) which is approximately 1.7 million USD in applications that utilize the open document format (ODF). The two main beneficiaries of this investment will be the Department of Software Engineering at the University of Szeged and Multiráció, an open source development company.
+Multiráció developed an open office suite, originally based on OpenOffice.org, called EuroOffice. they are now going to produce a version for tablets and improve the collaborative functions within EuroOffice. Kázmér Koleszár, a developer at Multiráció, said that the development responsibilities would break out like this:
+“The University of Szeged will do the quality assurance and usability related research and tool development. Multiráció will develop the office application and work on several extensions.”
+All I have to say is good on you Hungary I wish that countries like mine would do more to push open formats. I have even considered suing entities like may state government for their continued use of proprietary formats on their websites.
+
+Microsoft Office 15 to support ODF 1.2
+Microsoft has told attendees at the ODF Plugfest in Brussels that the next versions of Microsoft’s Office products, Office 15 and Office 365, will support Open Document Format (ODF) 1.2.
+https://www.h-online.com/open/news/item/Microsoft-Office-15-to-support-ODF-1-2-1560464.html
+
+Less Than 25% Of OSS Used In Corporations Managed Correctly
+Sonatype released the results of a recent survey showing that 500 out of 2500 respondents said they were locked down to only use corporate approved components. Only 49% said that their companies had a policy in place. Then 63% indicated that their corporate standards where not enforced or that they did not have a policy.
+Sonatype also noted that the use of open source components is on the rise. Almost 80% of respondents said they used open source tools regularly. Around 50% have migrated to an open source development stack. Also over 65% claimed to contribute to open source projects.
+In their press release Sonatype said this about the use of open source:
+“Key to modern development practices is the use of open source components to build mission critical applications,”
+
+Red Hat, SUSE, And IBM Form Partnership While Canonical Stays On The Sidelines
+IBM’s new POWER server line will be available with either Red Hat or SUSE Linux but not Ubuntu. After more than a year in development IBM rolled out their new POWER server systems and solutions. These machines are Linux specific utilizing the POWER7 processor-based hardware. These machines are targeted at midrange to large range enterprises. they are designed for big data analisis and delivering open source infrastructure services. Canonical chose not not to offer their server product on these units. Coould that be due to a fear of having to actually support an enterprise class customer.
+This is how IBM envisions the use of this new server line:
+“The new PowerLinux Solutions and supporting systems are designed to provide customers with lower deployment time and costs, and greater performance, dependability and workload density than competitive x86 platforms at similar price points.”
+So where was Canonical in all of this? they had been working with IBM to deliver Ubuntu on IBM’s System p mini computer. That partnership however floundered into nothing.
+Here is how Mark Shuttleworth, Canonical’s founder, spun the announcement:
+“We don’t support POWER because, by mutual agreement with IBM, there’s little to no overlap between the POWER user base and Ubuntu. People are choosing Ubuntu for farms of commodity servers, and POWER has been adopted for highly-specialized mission-critical roles. If IBM ever wanted to reach either the cloud or bulk computing market with POWER, then I expect the stats above would be relevant for their choice of OS, because they reflect the real choices of those markets.”
+Hunh? I had a hard time following that statment but what I think it boils down to is this. IBM and Ubuntu agree that Ubuntu would be hard pressed to actually support a large enterprise customer. IBM, Red Hat, and SUSE still believe that their is a market out there for the big machine built on quality hardware. As opposed to large farms of x86 systems trying to do the job of a bigger machine.
+Convention Scene
+Time: 36:17
+AnDevCon III
+Android Developers conference
+May 14 – 17
+AnDevCon III is the technical conference for software developers building Android apps.
+https://www.andevcon.com/AndevCon_III/index.html
+Libre Graphics Meeting 2012
+May 2 – 5 2012
+The 7th Libre Graphics Meeting will take place in Vienna at the UAS Technikum.
+The conference is the number one event for users and developers of free software for graphic design, photography, 3D modeling and animation.
+https://libregraphicsworld.org/
+Flossie 2012
+May 25 – May 26, 2012 , London
+Flossie 2012 is a free, two-day event for women who work with or are otherwise interested in Free and Open Source Software (FLOSS) and in Open Data, Knowledge and Education.
+https://www.flossie.org/?tribe_events=flossie-unconference-for-spring
+Linaro Connection
+May 28/ through 6/1
+Gold Coast Hotel Hong Kong.
+Convention to discuss and develop features, infrastructure and optimizations for the Linux kernel, Android, Ubuntu and beyond on ARM.
+https://www.linaro.org/
+LinuxTag
+May 23 – 26, 2012
+Linux Tag the most important place for Linux and open source software in Europe. The 18th LinuxTag will take place o at the Berlin Fairgrounds.
+https://www.linuxtag.org/2012/
+FOSSCOMM
+May 12 – 13 2012
+FOSSCOMM (Free and Open Source Software Communities) is a Greek conference aiming at Open Source enthusiasts, developers, and communities. The fifth FOSSCOMM will take place at the Technological Educational Institute of Serres, Greece.
+https://serres.fosscomm.gr/
+Open Source Business Conference (OSBC) 2012
+May 21-22 2012
+San Francisco, CA, USA – Hyatt Regency San Francisco
+Open sources influence on cCloud, data, mobile software
+https://www.eiseverywhere.com/ehome/31601/50188/?&
+The Samba eXPerience 2012
+in Göttingen, Germany is the 11th international Samba conference for users and developers. Meet the Samba Team and discuss requirements, new features and get an update on current developments! The conference is organized by SerNet.
+May 8th – 11th, 2012 – Hotel Freizeit In Göttingen – Germany
+The Utah Open Source Foundation
+Utah Open Source Conference
+“Storming the cloud 5/3-5
+This year’s conference will be graciously hosted by Utah Valley University in their Computer Science and Engineering Building,
+Mil-OSS
+Military Open Source Software
+The Rise of Open Source in a Declining Budget
+Charleston, SC 5/22-24
+Penguicon
+Time: 39:36
+Mat – grsecurity, sound redirection (ls -la > /dev/dsp)
+Mary – HP Lovecraft
+Tony – BYOBU
+Chrome Remote Desktop – Provide remote connection between two computers. Chrome Remote Desktop is available in the Chrome Web Store
+Listner Feedback
+Time: 46:19
+J. Mathis – Trisquel Gnu/Linux
+Outtro Music
+Time: 48:32
+Can’t stop it by Shearer

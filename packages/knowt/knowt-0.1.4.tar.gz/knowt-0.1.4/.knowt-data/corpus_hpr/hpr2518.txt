@@ -1,0 +1,65 @@
+## hpr2518 :: Converting My Laptop to Dual Boot
+
+ Converting My Laptop to Dual Boot
+Summary
+In this episode I describe how I converted my Linux-only laptop to dual-boot with Windows 10. Specifically, using information from a previous HPR episode.
+Reference
+The procedure used in this project drew heavily from the information presented in HPR episode 2305 by Mongo.
+Target Laptop
+
+Lenovo Thinkpad T550
+Intel i7-5600U Dual-Core
+8GB RAM
+256GB SSD
+
+Laptop was purchased in Jan 2016 as a factory refurb unit from an Ebay seller. The model was about 1 year old at the time. As soon as I got it, I summarily removed any trace of Windows, with prejudice, and installed Linux.
+The Problem
+I am needing to run some Windows software that doesn't work in either Wine or a virtual machine environment. Specifically Autodesk Fusion 360.
+Some Challenges
+
+No longer have Windows install media. I was able to download a Lenovo recovery USB image.
+https://support.lenovo.com/us/en/solutions/ht103653
+I didn't think that a 256GB drive would be big enough for both Linux and Windows. I purchased a 512GB SSD drive.
+I was happy with my Xubuntu setup and configuration and didn't want to have to start all over on that. I hoped that restoring my home directory would take care of that.
+
+The Procedure
+
+Backed up my home directory, just in case.
+Replaced the hard drive.
+Tried to boot from Lenovo Windows thumb drive.
+Found that the BIOS was set to legacy mode, so reset BIOS to factory.
+Told the installer to use the entire drive.
+Went through the entire Windows install and update process.
+Used the instructions provided by Mongo to resize Windows filesystem size.
+Used the instructions provided by Mongo to turn of fast boot.
+Used the instructions provided by Mongo to turn of Secure Boot in BIOS.
+Booted from Xubuntu 16.04 thumb drive.
+Did Xubuntu install as normal, choosing the install type of installing along side Windows Boot Manager.
+Installed all of the updates.
+Mounted the old hard drive with a USB drive enclosure, which was a bit of a challenge because that drive was encrypted. The drive has 2 partitions. A small boot partition and then a large LUKS encrypted partition.
+This is a procedure that can be used to mount such a partition.
+
+First you must decrypt the partition and map it to a device. This can be done with the following command (assuming the partition mount point is /dev/sdb2):
+cryptsetup luksOpen /dev/sdb2 cryptdrive
+This command will map the partition to the following device:
+/dev/mapper/cryptdrive
+Normally you could then mount the filesystem as follows:
+mount /dev/mapper/cryptdrive /mnt
+However, in this case the encrypted filesystem is actually an LVM volume that contains two volume groups that made up the partitions of the previous Linux install, so you can't directly mount it.
+I had to first install the LVM tools, which had not been installed by default.
+apt-get install lvm
+Then I had to issue the following command to activate the LVM volume groups.
+vgchange -ay
+That resulted in two more devices being created.
+/dev/xubuntu-vg/swap
+/dev/xubuntu-vg/root
+I could then finally mount the old root filesystem with:
+mount /dev/xubuntu-vg/root /mnt
+
+Copied by entire home directory from the old hard drive to the new install.
+cd /home
+cp -rp /mnt/home/username .
+Rebooted computer and Xubuntu came up will all of my desktop settings intact. Just need to install non-default packages.
+
+Result
+This ended up being a totally successful process. The computer is now dual-boot. It boots into Xubuntu by default, but you can choose Windows. Xubuntu system is mostly restored back to the way it was.

@@ -1,0 +1,331 @@
+## hpr3871 :: HPR Community News for May 2023
+
+ 
+New hosts
+
+Welcome to our new host: 
+Ryuno-Ki.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+3846
+Mon
+2023-05-01
+HPR Community News for April 2023
+HPR Volunteers
+
+
+3847
+Tue
+2023-05-02
+All about Synchrotrons
+Clinton Roy
+
+
+3848
+Wed
+2023-05-03
+Editing Thunderbird email filters using vim.
+Some Guy On The Internet
+
+
+3849
+Thu
+2023-05-04
+trouble shooting
+Brian in Ohio
+
+
+3850
+Fri
+2023-05-05
+New Mexico 2
+Ahuka
+
+
+3851
+Mon
+2023-05-08
+Firefox extensions
+Ken Fallon
+
+
+3852
+Tue
+2023-05-09
+UDM ubiquiti Setup for 2023
+operat0r
+
+
+3853
+Wed
+2023-05-10
+Creating a Prompt for ChatGPT to generate an HPR show
+MrX
+
+
+3854
+Thu
+2023-05-11
+2022-2023 New Years Show Episode 7
+HPR Volunteers
+
+
+3855
+Fri
+2023-05-12
+SSH (or OpenSSH) Escape Sequences
+Claudio Miranda
+
+
+3856
+Mon
+2023-05-15
+Painting toy soldiers
+Klaatu
+
+
+3857
+Tue
+2023-05-16
+Yesterday I saw a solar flare
+Andrew Conway
+
+
+3858
+Wed
+2023-05-17
+The Oh No! News.
+Some Guy On The Internet
+
+
+3859
+Thu
+2023-05-18
+My Live in Devices
+JWP
+
+
+3860
+Fri
+2023-05-19
+Civilization II
+Ahuka
+
+
+3861
+Mon
+2023-05-22
+How To find Things on your home Network
+JWP
+
+
+3862
+Tue
+2023-05-23
+Firefox Extensions
+Archer72
+
+
+3863
+Wed
+2023-05-24
+HPR episode about ChatGPT produced by ChatGPT
+MrX
+
+
+3864
+Thu
+2023-05-25
+2022-2023 New Years Show Episode 8
+HPR Volunteers
+
+
+3865
+Fri
+2023-05-26
+When did the Internet get so boring?
+Klaatu
+
+
+3866
+Mon
+2023-05-29
+Introducing myself
+Ryuno-Ki
+
+
+3867
+Tue
+2023-05-30
+Leap 15.4 Docker Install
+JWP
+
+
+3868
+Wed
+2023-05-31
+News.
+Some Guy On The Internet
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 15 comments in total.
+Past shows
+There are 3 comments on
+3 previous shows:
+
+hpr3275
+(2021-02-19) "D1 Mini Close Lid to Scan"
+by Ken Fallon.
+
+
+
+Comment 1:
+Ken Fallon on 2023-05-11:
+"I need to put this on some Perfboard"
+hpr3538
+(2022-02-23) "Installing the Tenacity audio editor"
+by Archer72.
+
+
+
+Comment 3:
+Archer72 on 2023-05-15:
+"My memory"
+hpr3816
+(2023-03-20) "Post Apocalyptic 4s5 Battery Pack  "
+by Mechatroniac.
+
+
+
+Comment 1:
+Reto on 2023-04-29:
+"The podcast"
+
+This month's shows
+There are 12 comments on 10 of this month's shows:
+hpr3848
+(2023-05-03) "Editing Thunderbird email filters using vim."
+by Some Guy On The Internet.
+
+Comment 1:
+Some Guy On the Internet on 2023-05-01:
+"Live streamed the process."
+hpr3849
+(2023-05-04) "trouble shooting"
+by Brian in Ohio.
+
+Comment 1:
+Kevin O'Brien on 2023-05-05:
+"Good advice"Comment 2:
+Joe on 2023-05-16:
+"Troubleshooting is an Art"
+hpr3850
+(2023-05-05) "New Mexico 2"
+by Ahuka.
+
+Comment 1:
+Stache_AF on 2023-05-06:
+"Space Museum"Comment 2:
+Kevin O'Brien on 2023-05-07:
+"Didn't know about it."
+hpr3851
+(2023-05-08) "Firefox extensions"
+by Ken Fallon.
+
+Comment 1:
+Joe on 2023-05-16:
+"Plugins I Never Heard Of"
+hpr3855
+(2023-05-12) "SSH (or OpenSSH) Escape Sequences"
+by Claudio Miranda.
+
+Comment 1:
+ClaudioM on 2023-05-02:
+"$ man ssh"
+hpr3856
+(2023-05-15) "Painting toy soldiers"
+by Klaatu.
+
+Comment 1:
+= on 2023-05-31:
+"toy soldiers"
+hpr3858
+(2023-05-17) "The Oh No! News."
+by Some Guy On The Internet.
+
+Comment 1:
+Kevin O'Brien on 2023-05-18:
+"Great series"
+hpr3865
+(2023-05-26) "When did the Internet get so boring?"
+by Klaatu.
+
+Comment 1:
+hammerron on 2023-05-27:
+"Why Did The Internet Get So Boring"
+hpr3866
+(2023-05-29) "Introducing myself"
+by Ryuno-Ki.
+
+Comment 1:
+Archer72 on 2023-05-12:
+"Show Ideas"
+hpr3868
+(2023-05-31) "News."
+by Some Guy On The Internet.
+
+Comment 1:
+JWP on 2023-05-31:
+"The News show"
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2023-May/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+Server move
+We are currently in the process of moving the HPR server. A server
+has been set up on Amazon AWS, and we are currently setting up a copy of
+the database, mail system and Mailman mailing list service.
+The Gitea Git repository has already been moved and is in
+use. The static site created by rho`n is being set up to
+provide the main HPR website. Work is being done to provide the
+interactive facilities that need the database, such as show and comment
+submission.
+Contacting old hosts
+The rate of show submission is unusually low this year. The number of
+active contributors is low too, with a small group of hosts keeping the
+HPR project from sinking below the waves.
+A question for the HPR Community - can we contact old hosts to ask
+them to contribute again?
+Conversion
+of Windows-1252 characters to UTF-8 Unicode
+As mentioned on the last Community News the Windows-1252
+characters (aka Latin1) in the database were converted to the
+UTF-8 Unicode format apparently without exceptions. If anyone finds any
+unexpected characters in episode titles, summaries, tags or notes from
+now onwards please let us know and we'll fix them too!

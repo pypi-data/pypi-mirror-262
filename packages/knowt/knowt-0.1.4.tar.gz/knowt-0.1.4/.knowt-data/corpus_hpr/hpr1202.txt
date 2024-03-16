@@ -1,0 +1,7 @@
+## hpr1202 :: LiTS 025: bc
+
+ Math from the Linux command line is one of those tasks that is not as straight forward as you may think. There are many tools that will allow you to perform mathematical functions accessible to you, but to perform simple arithmetic is not as simple as just entering some equation. You can use the echo command to perform basic mathematical problems but it does not allow for decimals making division in particular problematic. 
+
+
+For more on this post and to see the video please see the main article https://www.linuxintheshell.com/2013/03/12/episode-025-bc/
+

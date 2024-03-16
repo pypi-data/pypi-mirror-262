@@ -1,0 +1,3 @@
+## hpr3183 :: Don't trust zipfiles
+
+ This show explains the concept of injecting symbolic links into zipfiles and how those can be used to attack a web application.

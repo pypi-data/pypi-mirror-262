@@ -1,0 +1,33 @@
+## hpr1109 :: Astricon 2012 - Virtues of the Open Source Telephony Platform
+
+ 
+
+Host - sunzofman1 -> https://bkaeg.org/blog
+Guests - Randy Resnick, Allison Smith, Eric Ostenberg, Kevin Bushong
+
+
+Randy discusses the history of the VUC (VoIP Users Conference)->  https://vuc.me
+Early Talkshoe days (RIP Talkshoe), pre-dates mumble servers.
+Allison (voice of Asterisk) explains how she got involved with the telephony and asterisk in general.
+She graciously authenticates herself with a genuine echo test ;-)	
+Eric and Kevin wax poetic about their early experiences with telcos and telephony.
+Everyone talks about some of the useful features and applications within Asterisk.
+
+
+DISA
+
+chan_dahdi
+
+SIP
+
+g722 codec
+
+We later get into what we believe asterisk will become in the future.
+
+
+Supplement GSM networks
+
+Automobile telematics (sunzofman1 has a special place in his heart for telematics)
+
+Host encourages everyone to contribute a HPR show! 
+

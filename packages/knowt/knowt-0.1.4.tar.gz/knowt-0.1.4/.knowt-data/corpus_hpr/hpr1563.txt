@@ -1,0 +1,48 @@
+## hpr1563 :: Starting Programs at boot on the Raspberry Pi
+
+ How I start programs at boot on my Raspberry Pi. Below is a copy of the /etc/rc.local file I use on my raspberry pi.
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+  printf "My IP address is %s\n" "$_IP"
+fi
+
+################## Added by MrX 28/12/12, ############################################################
+#  V1, 21/03/14, titied up script, added explination, run didiwiki and got detached screen working at boot
+
+# items are run in a subshell enclosing command in ( and )
+# the commands are terminted with a & to run as background task
+# by default programs are run as root if this is not required "su" is used to switch user to pi
+# becuse each program is run as a subsheel they all run in parallel this is why the sleep
+# command is needed, each sleep command must be longer than the sum of the sleeps before
+# which ensures the commands are run in sequence and not together
+# exit 0 was from the original file to ensure the file exited with status 0
+# if the script doesn't exit with status 0 then the pi will not fully boot
+
+
+# At boot fources audio aoutput to headphones socket (Analogue output)
+# from magpie magazine pdf, issue 3 page 4
+(sleep 1; /usr/bin/amixer cset numid=3 1) &
+
+
+# At boot run the command didiwiki as user pi, listening on IP 192.168.1.13 port 8000
+(sleep 3; su pi -c "/usr/bin/didiwiki -l 192.168.1.13 -p 8000") &
+
+
+# run a detached screen session at boot
+(sleep 6; su pi -c "cd /home/pi ; /usr/bin/screen -dmS pi-debian -c /home/pi/.screenrc.multiwin") &
+
+exit 0

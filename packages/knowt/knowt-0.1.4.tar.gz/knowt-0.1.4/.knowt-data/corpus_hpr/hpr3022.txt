@@ -1,0 +1,601 @@
+## hpr3022 :: FOSDEM 2020 Stand Interviews
+
+ Table of Contents
+
+Previously Interviewed Projects
+Projects we did not get to Interview (yet)
+0 A.D.
+AdoptOpenJDK
+Apache Camel
+Checkmk
+Coderdojo
+Eclipse Foundation
+GitLab
+GNU Health
+Javascript
+Jenkins-x
+Kopano
+KubeVirt and Metal3
+Micropython and Espruino
+Nuspell
+openHAB
+OpenStack Foundation
+OpenTAP
+OpenUK
+openWifi
+OWASP
+Percona
+PineTime
+PostGraphile
+Skolelinux / AlekSIS / Teckids
+Technoethical
+Tiny Go
+XCP-ng
+Zenroom
+Fenster
+
+Previously Interviewed Projects
+
+Apache Software Foundation
+Automotive Grade Linux
+CentOS
+CiviCRM
+Coreboot
+Debian
+Flashrom
+Foreman
+FreeBSD Project
+Free Software Foundation Europe
+Gentoo Linux
+GNOME
+Godot Engine
+Google Summer of Code (Saturday)
+Grafana
+Haiku (Saturday)
+illumos
+Infobooth on amateur radio (HAM Radio)
+Jenkins
+KDE
+LibreOffice
+Linux Professional Institute (Saturday)
+Matrix
+Mozilla
+Musescore (Saturday)
+Nextcloud
+OpenEmbedded
+OpenMandriva
+openSUSE Project
+oVirt
+OW2 Open Source Community
+Perl
+PostgreSQL
+ReactOS (Sunday)
+Software Freedom Conservancy (Sunday)
+The Fedora Project
+wolfSSL
+
+Projects we did not get to Interview (yet)
+
+3Box (Sunday)
+Davx
+FOSSASIA (Sunday)
+Free Culture Podcasts (Sunday)
+Linphone
+LinuxBoot
+Mattermost
+Mautic (Saturday)
+MIT App Inventor (Sunday)
+ntopng (Sunday)
+ONLYOFFICE
+Open Source Design (Sunday)
+Open Source Test Management (Sunday)
+Pharo (Sunday)
+PINE64 (Sunday)
+Raku
+Sugar Labs (Saturday)
+Syndesis
+Tine 2.0 (Saturday)
+Tracim (Sunday)
+YottaDB
+
+0 A.D.
+
+
+0 A.D. is a free and open-source, real-time strategy game under development by Wildfire Games. It is a historical war and economy game focusing on the years between 500 BC and 1 BC for the first part, and a planned second part for the years 1 AD to 500 AD. The game is cross-platform, playable on Windows, macOS, FreeBSD, Linux, and OpenBSD. It aims to be entirely free and open-source, using the GPLv2+ license for the game engine and CC BY-SA for the game art. 
+
+
+Wildfire Games is a global group of volunteer game developers. We create open source games and mods.
+
+Listen to the interview with Stanislas Dolcini from 0 A.D.
+
+
+
+
+
+Links
+
+Project Website: https://play0ad.com
+Source Code: https://github.com/StanleySweet?tab=repositories
+Wikipedia: https://en.wikipedia.org/wiki/0_A.D._(video_game)
+https://wildfiregames.com/
+
+AdoptOpenJDK
+
+
+Prebuilt OpenJDK Binaries for Free!
+Java™ is the world's leading programming language and platform. AdoptOpenJDK uses infrastructure, build and test scripts to produce prebuilt binaries from OpenJDK™ class libraries and a choice of either the OpenJDK HotSpot or Eclipse OpenJ9 VM. All AdoptOpenJDK binaries and scripts are open source licensed and available for free.
+
+Listen to the interview with Stewart X Addison AdoptOpenJDK
+
+
+
+
+
+Links
+
+Project Website: https://adoptopenjdk.net/
+Source Code: https://github.com/AdoptOpenJDK
+Wikipedia: https://en.wikipedia.org/wiki/OpenJDK#OpenJDK_builds
+
+Apache Camel
+
+
+Apache Camel is an open source framework for message-oriented middleware with a rule-based routing and mediation engine that provides a Java object-based implementation of the Enterprise Integration Patterns using an application programming interface (or declarative Java domain-specific language) to configure routing and mediation rules. The domain-specific language means that Apache Camel can support type-safe smart completion of routing rules in an integrated development environment using regular Java code without large amounts of XML configuration files, though XML configuration inside Spring Framework is also supported. Camel is often used with Apache ServiceMix, Apache ActiveMQ and Apache CXF in service-oriented architecture projects. 
+
+Listen to the interview with Rachel Yordán from Apache Camel
+
+
+
+
+
+Links
+
+Project Website: https://camel.apache.org/
+Source Code: https://github.com/apache/camel/
+Wikipedia: https://en.wikipedia.org/wiki/Apache_Camel
+
+Checkmk
+
+
+Best-in-class infrastructure and application monitoring. Helping you stay up and running from simple to the most complex environments.
+
+Listen to the interview with Marcel Arentz from Checkmk
+
+
+
+
+Links
+
+Project Website: https://checkmk.com/
+Source Code: https://github.com/tribe29/checkmk
+Wikipedia: https://en.wikipedia.org/wiki/Check_MK
+https://tribe29.com/
+
+Coderdojo
+
+
+CoderDojo organizes free coding workshops (called Dojo’s) for girls and boys from 7 to 18 years old. A Dojo is entirely prepared and led by volunteers. If you are older, then you can help out at an existing Dojo or start your very own CoderDojo!      
+
+Listen to the interview with Coderdojo
+
+
+
+
+Links
+
+Project Website: https://coderdojobelgium.be/en
+Wikipedia: https://en.wikipedia.org/wiki/CoderDojo
+
+Eclipse Foundation
+
+
+The Eclipse Foundation provides our global community of individuals and organizations with a mature, scalable, and business-friendly environment for open source software collaboration and innovation. The Foundation is home to the Eclipse IDE, Jakarta EE, and over 350 open source projects, including runtimes, tools, and frameworks for a wide range of technology domains such as the Internet of Things, automotive, geospatial, systems engineering, and many others.
+
+Listen to the interview with Mikaël Barbero, Release Engineer, Eclipse Foundation
+
+
+
+
+
+Links
+
+Project Website: https://www.eclipse.org/org/
+Wikipedia: https://en.wikipedia.org/wiki/Eclipse_Foundation
+
+GitLab
+
+
+GitLab is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking and CI/CD pipeline features, using an open-source license, developed by GitLab Inc.
+
+Listen to the interview with David Planella Director Of Community Relations at GitLab
+
+
+
+
+
+Links
+
+Project Website: https://about.gitlab.com/
+Wikipedia: https://en.wikipedia.org/wiki/GitLab
+
+GNU Health
+
+
+GNU Health combines the socioeconomic determinants of health with state-of-the-art technology in bioinformatics and clinical genetics. It manages the internal processes of a health institution, such as financial management, stock and pharmacies or laboratories (LIMS)
+
+Listen to the interview with Axel K. Braun about GNU Health
+
+
+
+
+
+Links
+
+Project Website: https://www.gnuhealth.org/
+Source Code: https://savannah.gnu.org/projects/health
+Wikipedia: https://en.wikipedia.org/wiki/GNU_Health
+https://www.gnusolidario.org/
+
+Javascript
+
+
+Hackages is a community-based tech company with education at its core. We help you boost your skills and realise your projects through our expertise in training, product development, consultancy and community building.
+
+Listen to the interview with Marta Moliz about Javascript
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/JavaScript
+https://hackages.io/
+
+Jenkins-x
+
+
+Jenkins X provides pipeline automation, built-in GitOps, and preview environments to help teams collaborate and accelerate their software delivery at any scale.
+
+Listen to the interview with Kara de la Marck, Open Source Community Manager at CloudBees, about Jenkins-x
+
+
+
+
+
+Links
+
+Project Website: https://jenkins-x.io/
+Source Code: https://github.com/jenkins-x
+Wikipedia: https://en.wikipedia.org/wiki/Jenkins_(software)
+
+Kopano
+
+
+100% Open source collaboration tools: email, calendaring, Mattermost chat, webRTC video meetings, document collaboration with LibreOffice Online, integration with file storage services and more.
+
+Listen to the interview with Brian Joseph about Kopano
+
+
+
+
+
+Links
+
+Project Website: https://kopano.io/
+Source Code: https://stash.kopano.io/repos?visibility=public
+Wikipedia: https://en.wikipedia.org/wiki/Kopano_(software)
+
+KubeVirt and Metal3
+
+
+Virtual Machine Management on Kubernetes. Building a virtualization API for Kubernetes. KubeVirt technology addresses the needs of development teams that have adopted or want to adopt Kubernetes but possess existing Virtual Machine-based workloads that cannot be easily containerized. More specifically, the technology provides a unified development platform where developers can build, modify, and deploy applications residing in both Application Containers as well as Virtual 
+
+
+
+There are a number of great open source tools for bare metal host provisioning, including Ironic. Metal3.io aims to build on these technologies to provide a Kubernetes native API for managing bare metal hosts via a provisioning stack that is also running on Kubernetes. We believe that Kubernetes Native Infrastructure, or managing your infrastructure just like your applications, is a powerful next step in the evolution of infrastructure management.
+
+Listen to the interview with KubeVirt and Metal3
+
+
+
+
+Links
+
+Project Website: https://kubevirt.io/
+Source Code: https://github.com/kubevirt
+Project Website: https://metal3.io/
+Source Code: https://github.com/metal3-io/metal3-docs
+
+Micropython and Espruino
+
+
+MicroPython is a lean and efficient implementation of the Python 3 programming language that includes a small subset of the Python standard library and is optimised to run on microcontrollers and in constrained environments. 
+
+
+
+Espruino is an open-source JavaScript interpreter for microcontrollers. It is designed for devices with small amounts of RAM (as low as 8kB). Espruino was created by Gordon Williams in 2012 as an attempt to make microcontroller development truly multiplatform. It was made open-source in 2013 after a successful Kickstarter campaign for a development board running the software.
+
+Listen to the interview with Christine Spindler from Micropython and Gordon Williams from Espruino
+
+
+
+
+
+Links
+
+Project Website: https://micropython.org/
+Source Code: https://github.com/micropython
+Wikipedia: https://en.wikipedia.org/wiki/MicroPython
+Project Website: https://www.espruino.com/
+Source Code: https://github.com/espruino
+Wikipedia: https://en.wikipedia.org/wiki/Espruino
+
+Nuspell
+
+
+
+Listen to the interview with Sander van Geloven from Nuspell
+
+
+
+
+
+Links
+
+Project Website: https://nuspell.github.io
+Source Code: https://github.com/nuspell/nuspell
+https://hellebaard.nl
+
+openHAB
+
+
+Empowering the smart home. A vendor and technology agnostic open source automation software for your home.
+
+Listen to the interview with Thomas Bail about openHAB
+
+
+
+
+Links
+
+Project Website: https://www.openhab.org/
+Source Code: https://github.com/openhab
+Wikipedia: https://en.wikipedia.org/wiki/OpenHAB
+
+OpenStack Foundation
+
+
+The OpenStack Foundation promotes the global development, distribution and adoption of open infrastructure with more than 105,000 community members from 187 countries around the world. The OpenStack Foundation was founded in September 2012 to provide an independent home for the OpenStack cloud operating system, which has since become one of the largest and most diverse open source projects in history.
+
+Listen to the interview with Jeremy Stanley about OpenStack Foundation
+
+
+
+
+Links
+
+Project Website: https://www.openstack.org/foundation/
+Source Code: https://opendev.org/openstack
+Wikipedia: https://en.wikipedia.org/wiki/OpenStack
+
+OpenTAP
+
+
+OpenTAP is an open source project for test automation. An open source test sequencing engine. The project is available online at 
+https://Gitlab.com/OpenTAP/OpenTAP
+
+Listen to the interview with Michael Dieudonné about OpenTAP
+
+
+
+
+Links
+
+Project Website: https://www.opentap.io/
+Source Code: https://gitlab.com/OpenTAP/opentap
+
+OpenUK
+
+
+We are a UK organisation committed to develop and sustain UK leadership in Open Technology. We promote businesses, projects and people, who use Open. We strive to collaborate across all existing organisations for Open.
+
+Listen to the interview with Amanda Brock about OpenUK
+
+
+
+
+
+Links
+
+Project Website: https://openuk.uk
+https://openuk.uk/profiles/amanda-brock/
+
+openWifi
+
+
+openwifi: Linux mac80211 compatible full-stack IEEE802.11/Wi-Fi design based on SDR (Software Defined Radio).
+
+Listen to the interview with XianJun Jiao about openWifi
+
+
+
+
+
+Links
+
+Source Code: https://github.com/open-sdr/openwifi
+
+OWASP
+
+
+The Open Web Application Security Project (OWASP) is a nonprofit foundation that works to improve the security of software. Through community-led open source software projects, hundreds of local chapters worldwide, tens of thousands of members, and leading educational and training conferences, the OWASP Foundation is the source for developers and technologists to secure the web.
+
+Listen to the interview with Antonis Manaras about OWASP
+
+
+
+
+
+Links
+
+Project Website: https://owasp.org/
+Wikipedia: https://en.wikipedia.org/wiki/OWASP
+
+Percona
+
+
+Percona is a leading provider of unbiased open source database solutions that allow organizations to easily, securely and affordably maintain business agility, minimize risks, and stay competitive.
+
+Listen to the interview with Evgeniy Patlan about Percona
+
+
+
+
+Links
+
+Project Website: https://www.percona.com/
+
+PineTime
+
+
+An Open Source Smartwatch For Your Favorite Devices. Low Cost, High Fidelity.
+
+The PineTime is a free and open source smartwatch capable of running custom-built open operating systems. Some of the notable features include a heart rate monitor, a week-long battery as well as a capacitive touch IPS display that is legible in direct sunlight. It is a fully community driven side-project, which means that it will ultimately be up to the developers and end-users to determine when they deem the PineTime ready to ship. 
+
+Listen to the interview with Koen Zandberg about PineTime
+
+
+
+
+
+Links
+
+Project Website: https://www.pine64.org/pinetime/
+Source Code: https://github.com/bergzand
+Wikipedia: https://en.wikipedia.org/wiki/Pine_Microsystems
+
+PostGraphile
+
+
+Extensible high-performance automatic GraphQL API for PostgreSQL
+
+Listen to the interview with Benjie Gillam, OSS Maintainer PostGraphile
+
+
+
+
+
+Links
+
+Project Website: https://www.graphile.org/
+Source Code: https://github.com/graphile
+
+Skolelinux / AlekSIS / Teckids
+
+
+At Teckids, all children and adolescents become part of the Free Software community - as users and contributors. Our young tutors aged between 9 and 16 regularly work together on their workshops, which they then lead for children and adolescents of the same age.
+
+Listen to the interview with Niels Bradek from Skolelinux / AlekSIS / Teckids
+
+
+
+
+Links
+
+Project Website: https://www.teckids.org/en/
+https://wiki.debian.org/DebianEdu/
+
+Technoethical
+
+
+Technoethical is an online shop that sells hardware compatible with operating systems that fully respect users' freedom as defined by the GNU Project. We are based in Bucharest, Romania (European Union) and we ship worldwide.
+
+Listen to the interview with Tiberiu Turbureanu about Technoethical
+
+
+
+
+Links
+
+Project Website: https://tehnoetic.com/
+
+Tiny Go
+
+
+TinyGo is a project to bring the Go programming language to microcontrollers and modern web browsers by creating a new compiler based on LLVM. You can compile and run TinyGo programs on several different microcontroller boards such as the BBC micro:bit and the Arduino Uno. TinyGo can also be used to produce WebAssembly (WASM) code which is very compact in size.
+
+Listen to the interview with Ron "Dead Program" Evans about Tiny Go
+
+
+
+
+Links
+
+Project Website: https://tinygo.org/
+Source Code: https://github.com/tinygo-org/tinygo
+Wikipedia: https://en.wikipedia.org/wiki/Go_(programming_language)
+https://hybridgroup.com/
+
+XCP-ng
+
+
+Turnkey Open Source Hypervisor. Based on XenServer, XCP-ng is the result of massive cooperation between individuals and companies, to deliver a product without limits. No restrictions on features and every bit available on GitHub! 
+
+Listen to the interview with Olivier Lambert about XCP-ng
+
+
+
+
+
+Links
+
+Project Website: https://xcp-ng.org/
+Source Code: https://github.com/xcp-ng
+Wikipedia: https://en.wikipedia.org/wiki/Hypervisor
+
+Zenroom
+
+
+Zenroom: easy cryptography to the people. Zenroom is a tiny and portable virtual machine that authenticates and manages access to data using human-readable smart contracts. Zenroom is easy to program to performs fast cryptographic operations for end-to-end encryption and runs on: desktop, embedded, mobile phones, clouds and web browsers.
+
+Listen to the interview with Denis "Jaromil" Roio from Zenroom
+
+
+
+
+
+Links
+
+Project Website: https://zenroom.org/
+Source Code: https://github.com/DECODEproject/zenroom/
+https://dyne.org
+
+Fenster
+Fenster - Free Software Song
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Free_Software_Song
+Official: https://www.gnu.org/music/free-software-song.html
+Remix: https://freesoft.potlatch20.net/
+RMS sings: https://www.youtube.com/watch?v=1BH7poMtPVU
+GNU: https://audio-video.gnu.org/audio
+
+Track name : Free Software Song
+Performer : Fenster
+Recorded date : 2002
+Copyright : Copyright (C) 2002, 
+Fenster LLC. Verbatim copying of this entire recording is permitted in any medium, 
+provided this notice is preserved. 
+Performers: 
+Paul Robinson (vocals), 
+Roman Kravec (guitar), 
+Ed D'Angelo (bass), 
+Dave Newman (drums), 
+Brian Yarbrough (trumpet), 
+Tony Moore (trumpet). 
+

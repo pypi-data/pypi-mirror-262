@@ -1,0 +1,237 @@
+## hpr2224 :: FOSDEM 2017 K (level 2 Stands 1 to 9)
+
+ Table of Contents
+
+Mozilla
+diaspora
+Apache Software Foundation
+OW2
+Jenkins
+Tiki
+XWiki
+WikiSuite
+OpenNMS
+Kolab
+Turris Omnia
+
+
+
+https://www.mozilla.org/en-US/
+
+Hi. We're Mozilla, the proudly non-profit champions of the Internet, helping to keep it healthy, open and accessible to all.
+
+Listen to the interview with Ludovic Hirlimann
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Mozilla
+Twitter: https://twitter.com/mozilla
+
+
+
+https://diasporafoundation.org/
+
+diaspora* is a true network, with no central base. There are servers (called "pods") all over the world, each containing the data of those users who have chosen to register with it. These pods communicate with each other seamlessly, so that you can register with any pod and communicate freely with your contacts, wherever they are on the network.
+
+Listen to the interview with Lukas Matt
+
+
+
+
+
+Links
+
+Source: https://github.com/diaspora/diaspora/
+Wikipedia: https://en.wikipedia.org/wiki/Diaspora_(social_network)
+IRC: https://webchat.freenode.net/?channels=diaspora
+
+
+
+https://www.apache.org/
+
+The mission of the Apache Software Foundation (ASF) is to provide software for the public good. We do this by providing services and support for many like-minded software project communities of individuals who choose to join the ASF.
+
+Listen to the interview with Mechtilde Stehmaan
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Apache_Software_Foundation
+Twitter: https://twitter.com/TheASF
+
+
+
+https://www.ow2.org/bin/view/Main/
+
+OW2 is an independent, global, open-source software community. The mission of OW2 is to a) promote the development of open-source middleware, generic business applications, cloud computing platforms and b) foster a vibrant community and business ecosystem. OW2 developments follow a flexible, component-based approach. These components range from specific software frameworks, protocols and applications through to integrated, service-oriented platforms.
+
+Listen to the interview with Cedric Thomas
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/OW2_Consortium
+Linkedin: https://www.linkedin.com/groups?gid=683257
+RSS: https://www.ow2.org/bin/view/Main/RssFeeds
+Twitter: https://www.twitter.com/ow2
+YouTube: https://www.youtube.com/user/channelOW2
+
+
+
+https://jenkins.io/index.html
+
+Jenkins is an open source automation server which enables developers around the world to reliably build, test, and deploy their software. Jenkins, originally founded in 2006 as "Hudson", is one of the leading automation servers available. Using an extensible, plugin-based architecture developers have created hundreds of plugins to adapt Jenkins to a multitude of build, test, and deployment automation workloads.
+
+Listen to the interview with Robert Sandell
+
+
+
+
+
+Links
+
+Source: https://github.com/jenkinsci
+Mailinglist: https://groups.google.com/forum/#!forum/jenkinsci-users
+Twitter: https://twitter.com/jenkinsci
+
+
+
+https://tiki.org/
+
+Tiki Wiki CMS Groupware or simply Tiki, originally known as TikiWiki, is a free and open source Wiki-based content management system and online office suite written primarily in PHP and distributed under the GNU Lesser General Public License (LGPL) license. In addition to enabling websites and portals on the internet and on intranets and extranets, Tiki contains a number of collaboration features allowing it to operate as a Geospatial Content Management System (GeoCMS) and Groupware web application. 
+
+Listen to the interview with Alexander Mette
+
+
+
+
+
+Links
+
+Source: https://www.openhub.net/p/39
+Wikipedia: https://en.wikipedia.org/wiki/Tiki_Wiki_CMS_Groupware
+IRC: https://tiki.org/Connecting+To+IRC
+Google+: https://plus.google.com/100068718540627516168/
+Linkedin: https://www.linkedin.com/groups/Tiki-Wiki-CMS-Groupware-118987
+Mailinglist: https://tiki.org/Mailing+Lists
+Twitter: https://twitter.com/tikiwiki
+FediVerse: https://identi.ca/group/tikiwiki
+Facebook: https://www.facebook.com/groups/6607687318/
+YouTube: https://www.youtube.com/results?search_query=tikiwiki
+About: https://tiki.org/Introduction
+Last.fm: https://www.last.fm/group/Tikiwiki
+SlideShare: https://www.slideshare.net/search/slideshow?q=tikiwiki
+Ustream: https://www.ustream.tv/channel/tikifests
+Flickr: https://www.flickr.com/search/show/?q=tikiwiki
+Delicious: https://delicious.com/search?p=tikiwiki
+
+
+
+https://xwiki.org/
+
+XWiki Enterprise is a professional wiki with enterprise features such as Blog, strong rights management, LDAP authentication, PDF export, full skining and more. It also includes an advanced Form and scripting engine making it a development environment for data-based applications. It has powerful extensibility features such as scripting in pages, plugins and a highly modular architecture. 
+
+Listen to the interview with Ludovic Dubost
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/XWiki
+Twitter: https://twitter.com/xwiki
+
+
+
+https://wikisuite.org/Software
+
+WikiSuite is especially suited to knowledge-centric organizations and offers most (80%+) of the data and information management features all organizations need
+
+Listen to the interview with Marc Laporte
+
+
+
+
+
+Links
+
+Linkedin: https://www.linkedin.com/groups/8493103
+Twitter: https://twitter.com/WikiSuite
+Facebook: https://www.facebook.com/WikiSuite
+
+
+
+https://www.opennms.org
+
+OpenNMS is a free and open-source enterprise grade network monitoring and network management platform. It is developed and supported by a community of user and developers as well as by the The OpenNMS Group, offering commercial services, training and support. The goal is for OpenNMS to be a truly distributed, scalable management application platform for all aspects of the FCAPS network management model while remaining 100% free and open source.
+
+Listen to the interview with Tarus Balog
+
+
+
+
+
+
+Links
+
+Source: https://github.com/OpenNMS
+Wikipedia: https://en.wikipedia.org/wiki/OpenNMS
+Google+: https://plus.google.com/105624063334939417498
+RSS: https://www.opennms.org/en/blog.rss
+Twitter: https://twitter.com/opennms/
+Facebook: https://www.facebook.com/OpenNMS/
+YouTube: https://www.youtube.com/user/opennms
+
+
+
+https://kolab.org/
+
+The Kolab Groupware Solution offers Personal Information Management for deployments of any size. It runs on a Rasberry Pi and in clouds spread over multiple data centres. Kolab provides a secure, scalable and reliable collaboration server. Since it is Free Software, it is not only used by large companies and organisation, but also by many individuals who care about being in control of their personal information.Kolab is a free and open source groupware suite.
+
+Listen to the interview with Christian Mollekopf
+
+
+
+
+
+Links
+
+Source: https://git.kolab.org/
+Wikipedia: https://en.wikipedia.org/wiki/Kolab
+IRC: https://webchat.freenode.net/?channels=kolab
+Mailinglist: https://lists.kolab.org/mailman/listinfo
+Twitter: https://twitter.com/kolaborg
+
+
+
+https://omnia.turris.cz/en/
+
+More than just a router. The open-source center of your home. Home router is necessary to connect you to the Internet but it is idle most of the time, just eating electricity. Why not use it for more tasks? With powerful hardware, Turris Omnia can handle gigabit traffic and still be able to do much more. You can use it as a home server, NAS, printserver and it even has a virtual server built-in.
+
+Listen to the interview with Michal Hrušecký / Václav Zbránek
+
+
+
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Turris_Omnia
+Google+: https://plus.google.com/114880789978280332635
+Twitter: https://twitter.com/turris_cz
+Facebook: https://www.facebook.com/CZ.NIC/
+

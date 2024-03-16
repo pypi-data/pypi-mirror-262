@@ -1,0 +1,96 @@
+## hpr2723 :: Using Elm in context of 4X game client
+
+ Original idea I had with my toy game project was to have Yesod render most of the user interface as static HTML and have as little client side scripting as possible. Later I realized that there would be parts with significant amount of client side code and it might be better if whole site was written in Elm.
+Couple goals I had in my mind when I started this:
+
+easy to work with
+type safe
+extensible
+user authorization
+
+regular player
+administrator
+
+
+Backend is written in Haskell and front end in Elm. Communication between them is via REST interface and most of the data is in JSON. All JSON encoding / decoding is centralized (more or less), same with initiating requests to server.
+API Endpoints
+End points used for REST calls are defined in single data type that captures their name and parameters. These are used when initiating requests, meaning there’s smaller chance of typo slipping through.
+type Endpoint
+    = ApiStarDate
+    | ApiResources
+    | ApiStarSystem
+    | ApiStar
+    | ApiPlanet
+    | ApiPopulation PlanetId
+    | ApiBuilding PlanetId
+    | ApiConstructionQueue PlanetId
+    | ApiConstruction Construction
+    | ApiBuildingConstruction
+    | ApiAvailableBuildings
+For example, sending a GET request to retrieve all construction projects on a planet is done as:
+Http.send (ApiMsgCompleted << ConstructionsReceived) (get (ApiConstructionQueue planetId) (list constructionDecoder))
+GET Request is sent to ApiConstructionQueue endpoint and it has planetId as parameter. When server sends response, our program will parse content of it will be a list that is parsed with constructionDecoder and create “ApiMsgCompleted ConstructionsReceived” message with result of the parsing. Update function will process this and store list of constructions somewhere safe for further use.
+Update function
+Update function is in charge of reacting to messages (mouse clicks, page changes, responses from server). In a large program update function will quickly get big and unwieldy. Breaking it into smaller pieces (per page for example), will make maintenance easier. This way each page has their own message type and own update function to handle it. In addition there’s few extra ones (cleaning error display, processing API messages and reacting to page changes).
+Same way as API end points are encoded in a type, pages are too:
+type Route
+    = HomeR
+    | ProfileR
+    | StarSystemsR
+    | StarSystemR StarSystemId
+    | PlanetR StarSystemId PlanetId
+    | BasesR
+    | FleetR
+    | DesignerR
+    | ConstructionR
+    | MessagesR
+    | AdminR
+    | LogoutR
+    | ResearchR
+routeToString function is used to map Route into String, that can be placed in hyperlink. Below is an excerp:
+routeToString : Route -> String
+routeToString route =
+    case route of
+        HomeR ->
+            "/home"
+
+        StarSystemR (StarSystemId sId) ->
+            "/starsystem/" ++ String.fromInt sId
+
+        PlanetR (StarSystemId sId) (PlanetId pId) ->
+            "/starsystem/" ++ String.fromInt sId ++ "/" ++ String.fromInt pId
+Because mapping needs to be bi-directional (Route used to define content of a href and string from a href used to define Route), there’s mapping to other direction too:
+routes : Parser (Route -> a) a
+routes =
+    oneOf
+        [ map HomeR top
+        , map ProfileR (s "profile")
+        , map ResearchR (s "research")
+        , map StarSystemsR (s "starsystem")
+        , map StarSystemR (s "starsystem" </> starSystemId)
+        , map PlanetR (s "starsystem" </> starSystemId </> planetId)
+        , map BasesR (s "base")
+        , map FleetR (s "fleet")
+        , map DesignerR (s "designer")
+        , map ConstructionR (s "construction")
+        , map MessagesR (s "message")
+        , map AdminR (s "admin")
+        , map LogoutR (s "logout")
+]
+Result of parsing is Maybe Route, meaning that failure will return Nothing. Detecting and handling this is responsibility of the calling code, usually I just default to HomeR.
+Breadcrumbs
+Borrowing from Yesod, client uses recursive function to define breadcrumb path. This is hierarchical view of current location in the application, allowing user to quickly navigate backwards where they came.
+Breadcrumb path consists of segments that are tuple of (String, Maybe Route). String tells text to display and Route is possible parent route of the segment. This allows hierarchical definition: “Home / Star systems / Sol / Earth”. Because route has only (for example) PlanetId, we need to pass Model too, so that the data retrieved from server can be used to figure out what name such a planet has.
+{-| Build complete breadcrumb path and wrap it in enclosing HTML
+-}
+breadcrumbPath : Model -> Html Msg
+
+{-| Recursively build list of breadcrumbs from segments
+Last one is plain text, while parents of it are links
+-}
+breadcrumb : Model -> Bool -> Route -> List (Html Msg)
+
+{-| Get segment of given route in form of ( String, Maybe Route )
+String denotes text describing the segment, Maybe Route is possible parent
+-}
+segment : Model -> Route -> ( String, Maybe Route )

@@ -1,0 +1,21 @@
+## hpr3184 :: Linux Inlaws S01E15: IT Security and stick insects
+
+ In this episode Martin discovers that protecting pictures of stick insects (rated XXX or not)
+on USB sticks (pun intended) can be an ardous endeavour indeed. Never mind eventually turning
+this into a business including web servers, shared file spaces and password storage. Additional
+bonus: the lovely Emma from Rainbow Escorts makes another cameo apperance supported by some Irish, um, students.
+Shownotes:
+
+Linux Unified Key Setup (LUKS): https://gitlab.com/cryptsetup/cryptsetup/blob/master/README.md
+EncFS: https://vgough.github.io/encfs
+EcryptFS: https://www.ecryptfs.org
+Keepass: https://keepass.info/
+Snort: https://www.snort.org
+Fail2ban: https://www.fail2ban.org/wiki/index.php/Main_Page
+PSAD: https://cipherdyne.org/psad
+Nextcloud: https://nextcloud.com
+Tor: https://torproject.org
+OPENVPN: https://openvpn.net
+WireGuard: https://www.wireguard.com
+boringtun: https://github.com/cloudflare/boringtun
+DistroWatch: https://distrowatch.com

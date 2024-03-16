@@ -1,0 +1,56 @@
+## hpr1350 :: The Origin of ONICS (My Intro)
+
+ 
+This show is about the Open Network Inspection Command Suite (ONICS).  
+It is a project I have been working on at home for a couple of years now.
+The idea is to create a set of command line tools that work like cat, sed,
+awk, grep, etc but for network packets instead of lines of text.  This
+podcast is actually less about the tools and more about the process that
+I went through to build it.  So its more a tale of the project that was
+never done than an explanation of how to use the tools.
+
+
+Contact info: 
+
+
+Gabriel Evenfire email: evenfire@sdf.org
+
+ONICS Gitorious Page:  https://gitorious.org/onics
+
+ONICS Wiki Page: https://gitorious.org/onics/pages/Home
+
+
+
+Quick Start Guide for Building ONICS
+
+
+git clone git://gitorious.org/catlib/catlib.git catlib
+
+git clone git://gitorious.org/onics/onics.git onics
+
+cd catlib/src
+
+make
+
+cd ../../onics
+
+make
+
+sudo make install # (optional) 
+
+
+
+The microphone I ended up jury rigging to record this:
+
+
+
+https://hackerpublicradio.org/eps/hpr1350/0_Evenfire-00-mic-back1.jpg
+
+
+
+https://hackerpublicradio.org/eps/hpr1350/0_Evenfire-00-mic-back2.jpg
+
+
+
+https://hackerpublicradio.org/eps/hpr1350/0_Evenfire-00-mic-front.jpg
+

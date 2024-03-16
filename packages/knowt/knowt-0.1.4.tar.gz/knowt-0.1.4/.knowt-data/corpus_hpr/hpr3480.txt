@@ -1,0 +1,15 @@
+## hpr3480 :: Darken Layer Modes
+
+ Layer Modes, sometimes called Blending Modes, allow you to combine layers in a variety of ways. We continue with the Darken Modes, except for Burn, which was covered in the previous tutorial. Darken modes do what they say on the tin, they make things darker, and so they are kind of the inverse of the Lighten Modes. These are the Layer Modes available on the latest (at the time I write this) version of GIMP, 2.10.24. I also take the time to discuss image formats such as JPG, PNG, and RAW.
+Links:
+
+https://www.ahuka.com/gimp/lighten-layer-modes/
+https://en.wikipedia.org/wiki/Portable_Network_Graphics
+https://en.wikipedia.org/wiki/JPEG
+https://en.wikipedia.org/wiki/Raw_image_format
+https://www.youtube.com/watch?v=XbcA9iSTudY
+https://daviesmediadesign.com/project/open-raw-images-gimp-2-10/
+https://en.wikipedia.org/wiki/Dodging_and_burning
+https://docs.gimp.org/2.10/en/gimp-concepts-layer-modes.html
+https://www.ahuka.com/gimp/darken-modes/
+

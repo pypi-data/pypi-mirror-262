@@ -1,0 +1,10 @@
+## hpr1895 :: 65 - LibreOffice Impress - OLE Objects, Spreadsheets, and Charts
+
+ 
+The next topic we want to cover involves something called OLE, which stands for Object Linking and Embedding. This was developed by Microsoft, but has spread to the free software world as well. What it means is that you can use data from two different programs together, and changes made in place are automatically reflected in the other place. A great example comes with spreadsheets, since you create them in a spreadsheet program like Calc, but you might want to take a table created there and put it into a slide to display. 
+For more go to https://www.ahuka.com/?page_id=1275
+
+Links
+
+https://www.ahuka.com/?page_id=1275
+

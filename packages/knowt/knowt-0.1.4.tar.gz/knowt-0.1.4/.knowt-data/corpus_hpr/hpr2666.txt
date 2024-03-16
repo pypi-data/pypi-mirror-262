@@ -1,0 +1,10 @@
+## hpr2666 :: Slackware Post-Install
+
+ This episode started out as just some thoughts on why I decided to move back to Slackware after having been away from it for a few years, and wound up being a short set of notes on the post install configuration of Slackware 14.2
+This is by no means a definitive or exhaustive in its scope. It’s just a few thoughts and tips on the post-install process that might not be completely clear to a new user.
+
+Website - https://www.slackware.com/
+Slackware Install Guide - https://docs.slackware.com/slackware:install
+Slackware Post Install Beginner’s Guide - https://docs.slackware.com/slackware:beginners_guide
+Wikipedia Slackware Page - https://en.wikipedia.org/wiki/Slackware
+

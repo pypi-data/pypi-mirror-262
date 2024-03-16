@@ -1,0 +1,105 @@
+## hpr3286 :: Wireguard How To
+
+ Wireguard How To
+Firstly, I am not an expert. These are just my findings setting up wireguard at home and in my office at work.
+I've used a program called sshuttle for 7/8 years to attach myself to my home and work networks when on public/untrusted networks or if I need to access some resource at work from home.
+Sshuttle for the main part works great and the main benefit is that the only port you ever need to open on the server network is whichever port you have your ssh server running on.
+The downside to sshuttle is that it won't work with my android devices so I've been using a paid for VPN called PIA on untrusted networks or just staying on 3g/4g and not have any way to connect to my home or work network.
+Sshuttle is written in python and a few weeks ago Arch Linux moved to python 3.8 which broke sshuttle. There is a workaround using pyenv and a bug has been filled with the python team and a it's already been fixed upstream https://bugs.python.org/issue35415.
+Anyway.
+I thought it was about time I looked at setting up a proper VPN on my work network.
+So I spent a couple of hours reading up on openVPN and creating client and server certificates making a server config on the work server forwarding the port on the router to the server.
+Then I spent a couple more hours poking around trying to figure out why it wouldn't work.
+I eventually gave up frustrated.
+I'm not blaming openVPN, I know it works for many many people, but I couldn't see what was wrong.
+So I did what we all do in a situation like this.
+I took to social media, which in my case is my pleroma server and posted a message to the fediverse.
+"OpenVPN has fried my brain. Need booze"
+Then I had a beer, a nice cold Stiegl goldbrau if I remember right.
+A few minutes later a message popped up from theru, it contained one word with a smiley face. Wireguard.
+Now I had looked at wireguard a while ago. You might remember it hit the headlines because Linus Torvalds had praised how beautifully written the code was for it. It turns out what he said was "It's beautiful when compared to openVPN's code". Back then the how to guides were really hard, for me anyway to follow.
+There were just examples of two machines on the same LAN connected together and I really struggled to get my head around it being serverless and both machines being peers to each other; after all openVPN has clients and servers and even sshuttle on my laptop connects to a server machine.
+There where a couple of wiki pages that I read on Christmas Eve that gave me a lightbulb moment and some clarity on the way it worked. So I decided to try and set it up.
+The articles acknowledge that it is a peer to peer technology and then go on to call one peer a server and the other peer the client.
+Also I would recommend for your first client use an android device with the wireguard app. It's more user friendly in that some of the config is auto filled for you and then you can export the config file and examine it in a text editor later to get a better handle on things.
+I'm going to assume that you have installed the wireguard packages for your system and that you have given your server a static IP on your network.
+I'm using Arch linux on my servers but I see the Linode Debian 'how to' works in the same way.
+So we are going to log into the server and start the setup.
+1st create Private and Public keys
+Create directory for Keys
+cd ~
+mkdir wireguard
+cd wireguard
+Create Server Keys
+umask 077
+wg genkey | tee privatekey | wg pubkey > publickey
+Create sub directory for client1 keys
+mkdir client1
+cd client1
+wg genkey | tee privatekey | wg pubkey > publickey
+Repeat for as many clients as needed
+Create/edit wireguard config
+Check the interface name facing the internet is correct before copy/paste
+ifconfig
+Before you continue you will need to forwrd a port from your internet facing router to your server. Somewhere in your router settings you'll find a port forward setting. At home I have a Fritzbox and it's buried under network / permitted access. At work it's a Linksys ac1200 and it's under gaming / apps / single port forwarding. I'm sure you will find it.
+The wireguard default port is 51820 and you'll find this port named in most of the how to's on the web. I use a different port number just to add a little bit of obsurity/security to my setup so if you choose to forward a different port from your router then remember to use that number in the configs.
+Below is the working wg0.conf file from my arch server with one client
+[root@arch-server marshall]# cat /etc/wireguard/wg0.conf
+[Interface]
+Address = 10.0.0.1/24
+MTU = 1500
+SaveConfig = false
+ListenPort = 8801
+PrivateKey = sBNF2igw+xxxxxHh0HWJL2SHZ0ltR+xxxxxaCN/Wu3o=
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o enp2s0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D
+POSTROUTING -o enp2s0 -j MASQUERADE
+
+[Peer]
+# BBKey2
+PublicKey = Aeo8ya/wCW9dlfO1a5cEaApLTbCfqJVw/stVDi2gDh8=
+AllowedIPs = 10.0.0.2/32
+Below is the working wg0.conf file from my archarm server with one client
+[root@alarmpi wireguard]# cat wg0.conf
+[Interface]
+Address = 10.0.0.1/24
+MTU = 1500
+SaveConfig = false
+ListenPort = 8801
+PrivateKey = GOzcxxxxx4+Gjs/50Ln+XFrlX0XXXXXKpeuf59IDnc=
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D
+POSTROUTING -o eth0 -j MASQUERADE
+
+[Peer]
+# BBKey2
+PublicKey = CSJyWwknPQyhF+dRrB6TOBX55gJXnreNIpBiz3qsSm0=
+AllowedIPs = 10.0.0.2/32
+Enable IPv4 forwarding
+On the server enable IPv4 forwarding using sysctl
+sysctl -w net.ipv4.ip_forward=1
+To make the change permanent. Add
+net.ipv4.ip_forward = 1
+to /etc/sysctl.d/99-sysctl.conf
+Check if everything works!
+Bring the tunnel up.
+wg-quick up wg0
+Check tunnel state and see currently connected peers.
+wg
+If it all works then use systemd to start the tunnel on boot.
+systemctl enable wg-quick@wg0.service
+If it doesn't
+More than likely it's IPv4 forwarding.
+Try running sysctl -w net.ipv4.ip_forward=1 again, or DNS on the client is set wrong.
+Arch linux
+pacman -S wireguard-tools wireguard-arch dkms linux-headers
+ArchArm dkms + headers
+pacman -S dkms wireguard-tools wireguard-dkms linux-raspberrypi-headers
+Links
+
+https://hackerpublicradio.org/eps.php?id=1263 <--- the old sshuttle episode with NYbill
+https://aur.archlinux.org/packages/networkmanager-wireguard-git/
+https://github.com/max-moser/network-manager-wireguard
+https://wiki.archlinux.org/index.php/WireGuard
+https://www.linode.com/docs/networking/vpn/set-up-wireguard-vpn-on-ubuntu/
+

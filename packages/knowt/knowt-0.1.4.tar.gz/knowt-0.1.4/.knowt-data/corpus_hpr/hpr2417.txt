@@ -1,0 +1,10 @@
+## hpr2417 :: Transmeta Crusoe - Fujitsu-Siemens Futro S210 (ThinClient) - Trouble Shooting and Debian 9 Install
+
+ I did the long awaited basement clean up project.
+lots of old geeky stuff went to the bins and recycle yards :(
+The Transmeta company made chips around 2000 and made chip x86 ready though a software layer. Since I love almost anything that is not Intel it was a match made in heaven.
+The best info I found about the FSI 210 was at this site:
+Fujitsu-Siemens Futro S210 (ThinClient)
+If you want to do a project at raspberry PI prices just go to Ebay and type Futro - they have a lot of Thin clients with other chips.
+About the chip:
+https://en.wikipedia.org/wiki/Transmeta_Crusoe

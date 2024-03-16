@@ -1,0 +1,20 @@
+## hpr0944 :: LITS 002: tr
+
+ In the third in the series, Dann introduces us to the tr command. 
+
+
+Here's a flavour:
+
+The tr, or translate (aka: transliterate) command, substitutes one more characters for another set of characters or it will delete a specified set of characters.  The tr command takes input from standard in and writes to standard out.  This simple example of the tr command translates some numbers into a word:
+
+echo "12234" |tr '1234' 'aple'
+
+The output:
+
+apple
+
+
+
+The entire article, including links to the videos can be found on his site:
+https://www.linuxintheshell.com/2012/03/15/episode-002-tr/
+

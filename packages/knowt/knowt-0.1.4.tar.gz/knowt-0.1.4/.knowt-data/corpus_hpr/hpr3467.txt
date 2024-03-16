@@ -1,0 +1,39 @@
+## hpr3467 :: Protonmail in the terminal
+
+ I use email in the terminal with a combination of:
+
+protonmail-bridge-cli
+local IMAP server to fetch Protonmail mails
+
+tmux
+to run protonmail-bridge in
+
+isync (or offlineimap etc)
+to sync IMAP with maildirs
+
+notmuch
+to tag and search mails
+
+afew
+to move mails found by certain notmuch queries in certain maildirs
+
+alot
+to read, compose, search and tag mails
+
+msmtp
+to send mails
+
+w3m (or lynx etc)
+to read HTML mails in the terminal
+
+rsync
+to copy archived mails
+
+a shell function and an alias
+to make it all less ridiculous
+
+
+To most, Thunderbird will be suitable, the target audience here is unreasonable people.
+Complete Show Notes
+
+Follow this link for the complete show notes: https://hackerpublicradio.org/eps/hpr3467/

@@ -1,0 +1,88 @@
+## hpr1187 :: I live in GNU/Emacs
+
+ 
+
+I live in GNU/Emacs
+===================
+
+1 Emacs on HPR 
+===============
+Klaatu's 3 part series
+- ep0852
+- ep0856
+- ep0861
+
+2 EmacsWiki 
+============
+- Ultimate source of information for GNU/Emacs
+- [https://emacswiki.org/]
+
+3 Appearance 
+=============
+- no menus nor scroll bars
+- black background on a tiling window, full screen (no decorations)
+  - people often think that I am on the console (no X)
+
+4 Daemon 
+=========
+- [https://www.emacswiki.org/emacs/EmacsAsDaemon]
+- so that clients can connect (org protocol)
+- use the same emacs from the consoles
+  - if x crashes, for instance
+
+5 Editing code 
+===============
+- c++
+- with repls
+  - lisp/scheme/clojure/elisp (slime and geiser)
+  - python
+  - octave
+- compilation
+- latex
+
+6 Org 
+======
+- [https://orgmode.org/]
+- Note taking
+- GTD, agenda, spreadsheet
+- Reports, papers, slides, blog
+- export to mobile org
+
+7 Gnus 
+=======
+- [https://www.emacswiki.org/emacs/GnusTutorial]
+- Mails
+- RSS and mailing lists via gwene
+- store links into and open from org-mode
+
+8 w3m 
+======
+- [https://www.emacswiki.org/emacs/emacs-w3m]
+- search and more and more navigation
+
+9 Conkeror (in/out) 
+====================
+- [https://conkeror.org/]
+- only when javascript is required
+- org protocol for vzpturing links
+- org open link to open pages
+
+10 ERC for IRC 
+===============
+- [https://www.emacswiki.org/emacs/ERC]
+
+11 Small utilities 
+===================
+- Info reader
+  - [https://emacswiki.org/emacs/InfoMode]
+- Calendar
+  - [https://emacswiki.org/emacs/CalendarMode]
+- Scratch buffer as calculator
+  - Evaluating expressions
+  - [https://emacswiki.org/emacs/EvaluatingExpressions]
+- Dired
+  - [https://emacswiki.org/emacs/DiredMode]
+- Docview
+  - [https://www.emacswiki.org/emacs/DocViewMode]
+- Version control
+  - [https://emacswiki.org/emacs/VersionControl]

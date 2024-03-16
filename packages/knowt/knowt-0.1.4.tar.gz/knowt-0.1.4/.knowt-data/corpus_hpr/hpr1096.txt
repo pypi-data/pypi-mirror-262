@@ -1,0 +1,14 @@
+## hpr1096 :: KeepassX
+
+ Frank Bell discusses KeepassX, a versatile cross platform password manager for Linux and other *nix operating systems, Windows, and MAC.  He talks about how he learned about it and why he has become a user after years of resisting password vaults.
+
+Related links:
+KeepassX:  https://www.keepassx.org/
+Twofish encryption:  https://en.wikipedia.org/wiki/Twofish
+AES (Rijndael) encryption:  https://csrc.nist.gov/archive/aes/rijndael/wsdindex.html
+PwManager:  https://extragear.kde.org/apps/pwmanager/
+Gnome Keyring:  https://live.gnome.org/GnomeKeyring
+Kwallet:  https://utils.kde.org/projects/kwalletmanager/
+Linux Journal article on KeepassX:  https://www.linuxjournal.com/content/keepassx-keeping-your-passwords-safe
+KeepassX Slackbuild:  https://slackbuilds.org/repository/13.37/office/keepassx/
+Keepass, the inspiration of KeepassX:   https://keepass.com/

@@ -1,0 +1,12 @@
+## hpr1495 :: 27 - LibreOffice Calc - Calculations and the Formula Bar
+
+ Since the main purpose of a spreadsheet is to perform calculations it is appropriate that we consider just how this is done.
+In general, a cell of a spreadsheet can contain one of three things:
+
+A number
+Text
+A formula
+
+All calculations are done using formulas. A formula occurs whenever a cell has contents that begin with an equals sign, which is the signal to Calc that it needs to perform a calculation. For instance, if a cell contains "A3+B3", Calc would examine this, see the letters and the plus sign, and decide that the contents of the cell were a text string. After all, it cannot be a pure number with those other things there. But place an equals sign in front, so that the contents now read "=A3+B3" and Calc knows that this is formula, and will perform the calculation. And one of the best ways to interact with a cell that contains a formula is to use the Formula Bar, which normally appears just above the cells of the spreadsheet proper:
+For the remainder of the show notes please read: https://www.ahuka.com/?page_id=723
+

@@ -1,0 +1,97 @@
+## hpr3848 :: Editing Thunderbird email filters using vim.
+
+ Prerequisites:
+
+Backups of ALL your data (especially your
+Thunderbird directory).
+
+Confirm your backups are working as expected.
+
+Vim text editor installed with at least a basic/novice level
+knowledge of vim.
+
+Thunderbird email client installed with at least a basic/novice
+level knowledge of the Thunderbird email client.
+
+Web browser (preferably Firefox).
+
+
+Thunderbird Directories.
+I’m on a GNU/Linux system (Pop_OS!) and I have Thunderbird installed
+via the apt system package manager (.deb).
+
+System package manager install.
+
+$HOME/.thunderbird/
+
+Snap package manager install.
+
+$HOME/snap/.thunderbird/
+
+Flatpak package manager install.
+
+$HOME/.var/.thunderbird/
+
+Windows 10 install.
+
+C:\Users\your-account\AppData\Roaming\Thunderbird\
+
+Your Thunderbird email filters are located in this subdirectory
+(msgFilterRules.dat).
+
+$HOME/.thunderbird/*.default-release/ImapMail/imap.email-accounts.com/msgFilterRules.dat
+
+
+Vim Directories.
+I’ve created subdirectories within $HOME/.config/ as a
+place to store my vim sessions. You may not have these directories on
+your system, but you can create them using the mkdir
+command.
+
+
+$HOME/.config/vim/sessions/session-files-here.vim
+
+Vim session file.
+I’ve created session files for purposes of editing my Thunderbird
+email filters. This session only stores the shortcuts needed to make
+flawless edits to my email filters. I will share them with you.
+
+nnoremap <leader>1 2dw$x0:s/ OR /\rOR /g<CR>
+nnoremap <leader>2 Icondition="<Esc>A"<Esc>0:s/ "$/"/<CR>
+nnoremap <leader>n1 gg0VG:s/$/ /<CR>gg0VG:s/  *$/ /<CR>gg0
+nnoremap <leader>s1 gg02f,<C-v>G$ugg02f,<C-v>G$:sort u<CR>gg0
+Web sources.
+
+Article: Vim
+- the ubiquitous text editor
+
+Supporting Article: Vim Documentation:
+The vim book (pdf file).
+
+
+Article: Thunderbird is a free email application
+that’s easy to set up and customize...
+
+Supporting Article: Thunderbird Support site.
+
+Supporting Article: Keyboard shortcuts. Perform common
+Thunderbird tasks quickly.
+
+Supporting Article: Protect your
+Thunderbird passwords with a Primary Password.
+
+Supporting Article: Organize
+Your Messages by Using Filters.
+
+Supporting Article: Profiles. Where Thunderbird stores
+your messages and other user data.
+
+
+Article: Vim’s
+sessions, a tool to instantly save the state of everything in your
+current Vim session.
+
+
+Creative work License.
+This work is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License.

@@ -1,0 +1,16 @@
+## hpr2866 :: Intro to Bitcoin for techies
+
+ This is a broad introduction to Bitcoin from a technical perspective. We do not talk about finance or economics, and we don’t compare distributed ledger technologies. We’re not addressing exchanges, layer 2 technologies, mainstream adoption, etc.
+We’re also going to avoid going deep into forks, fungibility, mining or the math of Bitcoin.
+In this episode we introduce these fundamental Bitcoin topics:
+
+What is Bitcoin?
+Blockchains and blocks
+What are transactions?
+What are miners and what do they do?
+Proof of Work in Bitcoin - SHA256 hashing
+Bitcoin consensus mechanism
+How do wallets work?
+Brief discussion about various types of wallets and wallet security
+
+I hope this is accessible and informative and look forward to doing more in the future.

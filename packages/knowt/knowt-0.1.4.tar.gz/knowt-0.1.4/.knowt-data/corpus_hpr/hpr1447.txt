@@ -1,0 +1,139 @@
+## hpr1447 :: HPR Coverage at FOSDEM 2014 Part 1/5
+
+ HPR Coverage at FOSDEM 2014
+
+The following are a series of interviews recorded at FOSDEM 2014.
+
+
+FOSDEM is a free event that offers open source communities a place to meet, share ideas and collaborate.
+
+
+For more information see the website https://fosdem.org/2014/, where you can watch a recording of the many talks https://video.fosdem.org/2014/
+
+An example of one of the many FOSDEM signs.
+Day1
+00:00:30 Introduction
+Ken and Dave introduce the show
+00:01:55 FOSDEM Volunteers
+
+The first chat was with Kristof Provost. By day a Embedded Software Engineer, but at fosdem he transforms into a cloak room attendant and we chat about how you can help out at FOSDEM.
+https://www.codepro.be
+
+00:04:52 OSGeo project
+
+Next was a chat with Anne Ghisla from the OSGeo project.
+
+
+The Open Source Geospatial Foundation
+OSGeo was created to support the collaborative development of open source geospatial software, and promote its widespread use. Join us by signing up to our mailing lists or check out the Getting Started page to become more involved.
+
+
+https://www.osgeo.org/
+
+Dirk Frigne and Anne Ghisla
+00:08:29 Geomajas
+Sample folders at the booth
+
+Following on we talk to Dirk Frigne
+
+
+What is Geomajas?
+Geomajas is an enterprise-ready open source GIS framework for the web. It has client-server integration for displaying and editing of geographic data.
+Geomajas has integrated security and is endlessly scalable. It is compliant with OGC standards such as WMS, WFS, etc and also supports spatial databases.
+It integrates with your system and provides out-of-the-box functionality through plug-ins. By leveraging GWT on the client, development is all-Java making it easier and more efficient for your team.
+
+
+https://geomajas.org/
+
+00:16:09 OpenStreetMap
+
+Last in the mapping trio we speak to Gaël Musquet, président d'OpenStreetMap France.
+
+Open Street Map demos Sat devices
+The tuner referred to in the interview
+The pc referred to in the interview
+
+OpenStreetMap powers map data on hundreds of web sites, mobile apps, and hardware devices. OpenStreetMap is built by a community of mappers that contribute and maintain data about roads, trails, cafés, railway stations, and much more, all over the world.
+
+
+https://www.openstreetmap.org/about
+https://learnosm.org/en/
+
+00:39:46 Libre Graphics magazine
+
+Changing the pace from mapping we get to talk with ginger "all-lower-case" coons :) about producing the Libre Graphics magazine using all Free Software
+
+
+A Libre Graphics Magazine is long overdue. In a market dominated by magazines devoted to design discourse built around proprietary tools and the latest computer graphics tricks and techniques, users of Libre Graphics software are underserved and unrecognized. We know that these users exist, both professionally and as hobbyists. We know this because we are they. We are graphic designers, media artists, photographers and web designers. We use Libre Graphics software, quietly and without regard. Our peers, used to proprietary alternatives, question our choice of tools. Our work, when executed well, is indistinguishable from work produced by more traditional means. Thus, our choices are invisible, unless we make an issue of them.
+
+
+https://libregraphicsmag.com
+
+00:45:18 openSUSE
+
+Next we talk to Richard Brown one of the board members of the openSUSE team.
+
+
+openSUSE is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!
+
+
+https://www.opensuse.org/en/
+https://sysrich.co.uk/
+https://en.opensuse.org/openSUSE:Board
+
+00:56:48 The Debian Project
+
+Debian developer and T-Shirt salesman, Joost van Baal-Ilić takes some time away from the booth to give us the run down on Debian.
+
+
+The Debian Project is an association of individuals who have made common cause to create a free operating system. This operating system that we have created is called Debian.
+
+An operating system is the set of basic programs and utilities that make your computer run. At the core of an operating system is the kernel. The kernel is the most fundamental program on the computer and does all the basic housekeeping and lets you start other programs.
+
+Debian systems currently use the Linux kernel or the FreeBSD kernel. Linux is a piece of software started by Linus Torvalds and supported by thousands of programmers worldwide. FreeBSD is an operating system including a kernel and other software.
+
+
+https://www.debian.org/
+https://ad1810.com/
+
+01:08:04 HelenOS
+
+Google Summer of Code mentors Martin Děcký, and Jakub Jermář talk to us about HelenOS, a project which has mentored GSOC student coders.
+
+Martin Děcký, and Jakub Jermář
+HelenOS Screen Shot
+
+HelenOS is an operating system based on a multiserver microkernel design. Rather sooner than later, HelenOS will become a complete and usable modern operating system, offering room for experimenting and research. HelenOS uses its own microkernel written from scratch and supports SMP, multitasking and multithreading on both 32-bit and 64-bit, little-endian and big-endian processor architectures, among which are AMD64/EM64T (x86-64), ARM, IA-32, IA-64 (Itanium), 32-bit MIPS, 32-bit PowerPC and SPARC V9. Thanks to the relatively high number of supported architectures and suitable design, HelenOS is very portable. On top of the microkernel, HelenOS provides services such as file systems, networking, device drivers and user interface. Most of these services are composed of multiple independent server processes, which makes HelenOS one of the most modular operating systems.
+
+
+https://www.helenos.org/
+https://jakubsuniversalblog.blogspot.nl/
+https://twitter.com/mdecky
+
+01:23:28 CAcert
+
+I took Michael Tänzer away from checking passports and drivers licenses to explain to us what's the idea behind CACert.org
+
+
+CAcert.org is a community driven Certificate Authority that issues certificates to the public at large for free. CAcert's goal is to promote awareness and education on computer security through the use of encryption, specifically with the X.509 family of standards. We have compiled a document base (Wiki) that has helpful hints and tips on setting up encryption with common software, and general information about Public Key Infrastructures (PKI). CAcert Inc. is a non-profit association, incorporated in New South Wales, Australia.
+
+
+https://www.cacert.org/
+
+Music
+
+Track name                               : Free Software Song
+Performer                                : Fenster
+Recorded date                            : 2002
+Copyright                                : Copyright (C) 2002, 
+Fenster LLC. Verbatim copying of this entire recording is permitted in any medium, 
+provided this notice is preserved. 
+Performers: 
+Paul Robinson (vocals), 
+Roman Kravec (guitar), 
+Ed D'Angelo (bass), 
+Dave Newman (drums), 
+Brian Yarbrough (trumpet), 
+Tony Moore (trumpet). 
+Free software info at www.gnu.org speeches at audio-video.gnu.org/audio
+
