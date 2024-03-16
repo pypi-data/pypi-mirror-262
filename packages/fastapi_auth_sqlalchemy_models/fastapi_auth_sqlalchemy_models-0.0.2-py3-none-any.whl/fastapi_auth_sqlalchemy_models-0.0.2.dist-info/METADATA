@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: fastapi_auth_sqlalchemy_models
+Version: 0.0.2
+Summary: Sqlalchemy repositories and models for fastapi-auth library
+Author: zayycev22
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Requires-Dist: auth-fastapi>=0.2.1
+Requires-Dist: greenlet>=3.0.0
+Requires-Dist: sqlalchemy>=2.0.0
+Requires-Dist: typing-extensions
