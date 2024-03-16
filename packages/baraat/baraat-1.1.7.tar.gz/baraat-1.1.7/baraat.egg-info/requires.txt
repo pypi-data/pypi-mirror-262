@@ -1,0 +1,10 @@
+transformers
+tokenizers
+datasets
+fasttext
+huggingface_hub
+xformers==0.0.22.post7
+gradio
+bitsandbytes
+accelerate
+peft
