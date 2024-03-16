@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+JSD_project/__init__.py
+JSD_project/enums_consts.py
+JSD_project/gameDSL.tx
+JSD_project/interpreter.py
+JSD_project/main.py
+JSD_project/pythonClassesDSL.py
+JSD_project/testGame.game
+JSD_project.egg-info/PKG-INFO
+JSD_project.egg-info/SOURCES.txt
+JSD_project.egg-info/dependency_links.txt
+JSD_project.egg-info/requires.txt
+JSD_project.egg-info/top_level.txt
