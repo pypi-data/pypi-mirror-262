@@ -1,0 +1,56 @@
+[build-system]
+requires      = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cat-scaling"
+version = "v2024.0315-beta"
+description = "Build Catalysts Adsorption Energy Scaling Relations"
+readme = "README.md"
+authors = [{ name = "Haoyu(Daniel) Yang", email = "yanghaoyu97@outlook.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["catalysts", "adsorption-energy", "scaling-relations"]
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit_learn",
+    "matplotlib",
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["pytest", "pre-commit", "black", "isort", "bumpver"]
+
+[project.urls]
+Homepage = "https://github.com/DanielYang59/cat-scaling"
+
+[tool.ruff]
+line-length = 79
+
+[tool.black]
+line-length = 79
+
+[tool.bumpver]
+current_version = "v2024.0315-beta"
+version_pattern = "vYYYY.0MDD[-TAG]"
+commit_message = "bump version {old_version} -> {new_version}"
+tag_message = "{new_version}"
+tag_scope = "default"
+pre_commit_hook = ""
+post_commit_hook = ""
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+]
+"README.md" = [
+    "{version}",
+    "{pep440_version}",
+]
