@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: ARflames
+Version: 1.0.0
+Summary: This is fun Games Package for FLAMES Game
+Home-page: https://pypi.org/user/ARRM03/
+Author: Abdurrahim
+Author-email: ar.rahimdeve7418@gmail.com
+License: MIT
+Project-URL: Source Code, https://github.com/ARRahim7418/Python-Packages.git
+Project-URL: Documentation, https://github.com/ARRahim7418/Python-Packages.git
+Keywords: FLAMES Game,Games,String,GUI
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: License.txt
+Requires-Dist: Rahimcalc
+Requires-Dist: pillow
+
+FLAMES game of the programs<h1><center><b>ARflames</b></center><h1>
+
+<img title="ARflames Fun" alt="Poster" src="https://raw.githubusercontent.com/ARRahim7418/Python-Packages/main/ARflames/ARflames/static/Poster.png">
+
+## Package Name:
+- ARflames
+
+</br>
+
+
+### Programmer 
+- Abdurrahim
+
+
+</br>
+
+
+### Package install comment
+
+- type in cmd  <i>(command prompt)</i>
+
+   > <b>Python -m pip install ARflames</b>
+
+</br>
+
+
+#### How To Execute: <i>(after installation)</i>
+
+- type in cmd 
+
+   > <b>ARflames GE</b>
+
+- type in cmd 
+
+   > <b>ARflames SE (Name) (Name)</b>
+
+- type in cmd
+
+   > <b>ARflames UI</b>
+
+</br>
+</br>
+
+---
+
+#### Result:
+<center>
+<img title="ARflames Fun" alt="Poster" src="https://raw.githubusercontent.com/ARRahim7418/Python-Packages/main/ARflames/ARflames/static/GUI.PNG">
+<br>
+<br>
+<br>
+<img title="ARflames Fun" alt="Poster" src="https://raw.githubusercontent.com/ARRahim7418/Python-Packages/main/ARflames/ARflames/static/Result.PNG">
+
+---
