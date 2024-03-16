@@ -1,0 +1,15 @@
+consumerdemands/__init__.py,sha256=MDhyrwxqiJ5MivdZhi5mXc3OBBn_Qdl3cZ7punUjuoo,409
+consumerdemands/_core.py,sha256=OF56qyozg7qnPuJI0gfDIT7I7JxXlDEXNeHNQpjvYgQ,4337
+consumerdemands/_utils.py,sha256=REocb_-ro7WaHPB8SeR5d4bXmeoTYi5RnGjNoOLUDsI,2261
+consumerdemands/demands.py,sha256=q8DlZvvADMmGF_dzG84zkFW4xqBHw4xD3PtsaEUNs8Y,1230
+consumerdemands/demands_class.py,sha256=JEOYrrPj2ak6hk5IkgHE7A9PSCZxMaP6BMs5w5PLYIw,7017
+consumerdemands/engel_curves.py,sha256=OW9Rqr19dZ4jrjH5SV6GVxKK5z1CRJbkPcqZlra3GGE,6141
+consumerdemands/frischian.py,sha256=XVfAGZRI5bhB0Ophe0uZ1wyhFhpzQc3wVLP-Ocjbx8Y,1233
+consumerdemands/hicksian.py,sha256=8aXRDEvecJIpqLn29vOeaSBHle19Vdy9OqWfAZViZps,919
+consumerdemands/marshallian.py,sha256=C0WQ7x5XvlFO2Zs53Pr5vHorMMH-BPWWGvFQdNVQJ8E,2040
+consumerdemands/root_with_precision.py,sha256=WbtFuVLP2wBhwuHrGvdYednexJ7rVWAc_apIIZMP5sk,2843
+ConsumerDemands-0.4.2.dev0.dist-info/LICENSE.txt,sha256=qImFXcRJwxIHS80FE7uOx6FhmLY8apd4Y12aR54QU7w,282
+ConsumerDemands-0.4.2.dev0.dist-info/METADATA,sha256=MrLNtPV0YHhugNChN0sQ4l_DddBjHjFNMOgvpJKVRO4,1249
+ConsumerDemands-0.4.2.dev0.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+ConsumerDemands-0.4.2.dev0.dist-info/top_level.txt,sha256=SPWt4S1rKc2PsjQG2Q4af2awAUeMMvjRLMXNPV7QbEw,16
+ConsumerDemands-0.4.2.dev0.dist-info/RECORD,,
