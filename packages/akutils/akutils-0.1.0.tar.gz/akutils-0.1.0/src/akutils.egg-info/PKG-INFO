@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: akutils
+Version: 0.1.0
+Summary: A utility library providing generic methods for performing recurrent data manipulation in Pandas and Python.
+Author-email: Alexandre Khalifé <alexandre.khalife.oelp2@slmail.me>
+Project-URL: Homepage, https://gitlab.com/AlexandreKhalife/akutils
+Requires-Python: <3.11,>=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas==2.1.4
+Requires-Dist: pyarrow>=14.0.0
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: flake8>=5.0.4
+Requires-Dist: pytest>=7.2.2
+Requires-Dist: pytest-cov>=4.0.0
+Requires-Dist: mypy>=1.9.0
+Requires-Dist: pandas_stubs>=2.2.0.24
+
+# akutils
+
+A utility library providing generic methods for performing recurrent data manipulation \
+in Pandas and Python.
