@@ -1,0 +1,10 @@
+transformers
+tokenizers
+datasets
+fasttext
+torch==2.1.1
+huggingface_hub
+gradio
+bitsandbytes
+accelerate
+peft
