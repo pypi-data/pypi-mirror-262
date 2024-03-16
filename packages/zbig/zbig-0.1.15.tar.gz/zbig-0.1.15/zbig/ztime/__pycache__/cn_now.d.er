@@ -1,0 +1,8 @@
+##[pylyzer] failed /home/bigzhu/Sync/Projects/zbig/zbig/ztime/cn_now.py 1708919514 281
+.___v_desugar_1 = pyimport "datetime"
+.datetime: {datetime.DateTime}
+.pytz = pyimport "pytz"
+
+.tz_SH: Never
+.cn_now: () -> Str
+
