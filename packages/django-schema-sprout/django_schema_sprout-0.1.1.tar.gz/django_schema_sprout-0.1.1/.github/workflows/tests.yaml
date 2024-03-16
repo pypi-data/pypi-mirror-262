@@ -1,0 +1,34 @@
+name: Run-Tests
+
+on: [pull_request]
+
+
+jobs:
+  # black:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     # In order to test workflows locally with act don't use `psf/black@stable` as act has problems with it
+  #     # Issue: https://github.com/nektos/act/issues/1767
+  #     - uses: actions/checkout@v3
+  #     - name: Set up Python environment
+  #       uses: actions/setup-python@v4
+  #     - run: pip install black
+  #     - run: black --check --diff .
+  # flake8:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Set up Python environment
+  #       uses: actions/setup-python@v4
+  #     - run: pip install flake8
+  #     - run: flake8
+  pytetst:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python environment
+        uses: actions/setup-python@v4
+      - run: pip install -e ".[test]"
+      - run: pip install -e .
+      - run: pytest
