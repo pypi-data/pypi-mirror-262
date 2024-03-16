@@ -1,0 +1,41 @@
+
+tbody>tr:hover {
+    --bs-table-bg: var(--ADE-dark-grey) !important;
+}
+
+thead>tr:hover {
+    --bs-table-bg: var(--bs-table-bg) !important;
+}
+
+.overview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem;
+}
+
+.pagination > ul {
+    margin: 0;
+}
+
+.pagination > span {
+    margin: 1rem;
+}
+
+.global-filter {
+    margin: 1rem;
+    width: 500px;
+}
+
+.cell-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
