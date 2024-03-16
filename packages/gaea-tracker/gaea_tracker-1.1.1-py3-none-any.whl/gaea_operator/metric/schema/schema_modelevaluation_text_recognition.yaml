@@ -1,0 +1,32 @@
+title: Image/OCR
+type: object
+properties:
+  accuracy:
+    type: number
+    format: float
+    description: >
+      Accuracy is the proportion of correct predictions among the total number of character processed.
+  editDistance:
+    type: number
+    format: float
+    description: >
+      A way of quantifying how dissimilar two strings .
+  precision:
+    type: number
+    format: float
+    description: >
+      Precision is the fraction of correctly predicted character out of all of the character that were predicted.
+  recall:
+    type: number
+    format: float
+    description: >
+      Recall is the fraction of the correctly predicted character out of all of the character.
+  _timestamp:
+    type: string
+    format: date-time
+    description: >
+      The time formatted according to ISO.
+required:
+  - accuracy
+  - editDistance
+  - _timestamp

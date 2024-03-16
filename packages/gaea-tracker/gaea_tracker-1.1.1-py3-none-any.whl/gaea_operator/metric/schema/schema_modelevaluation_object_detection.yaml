@@ -1,0 +1,76 @@
+title: /Image/ObjectDetection
+type: object
+properties:
+  boundingBoxIouMetrics:
+    type: array
+    description: >
+      Metric for the intersection-over-union threshold value.
+    items:
+      type: object
+      properties:
+        iouThreshold:
+          type: number
+          format: float
+          description: >
+            The intersection-over-union threshold value used to compute this metrics entry.
+        meanAveragePrecision:
+          type: number
+          format: float
+          description: >
+            The mean average precision, most often close to `auPrc`.
+  boundingBoxCategoryMetrics:
+    type: array
+    description: >
+      The bounding boxes match metrics for every category.
+    items:
+      type: object
+      properties:
+        categoryName:
+          type: string
+          description: >
+            Category name.
+        iouThreshold:
+          type: number
+          format: float
+          description: >
+            The intersection-over-union threshold value used to compute this metrics entry.
+        averagePrecision:
+          type: number
+          format: float
+          description: >
+            The mean average precision, most often close to `auPrc`.
+        averageRecall:
+          type: number
+          format: float
+          description: >
+            The mean average precision, most often close to `auPrc`.
+        confidenceMetrics:
+          type: array
+          description: >
+            Metrics for each label-match confidence threshold from. Precision-recall curve is derived from them.
+          items:
+            type: object
+            properties:
+              confidenceThreshold:
+                type: number
+                format: float
+                description: >
+                  The confidence threshold value used to compute the metrics.
+              recall:
+                type: number
+                format: float
+                description: >
+                  Recall under the given confidence threshold.
+              precision:
+                type: number
+                format: float
+                description: >
+                  Precision under the given confidence threshold.
+  boundingBoxMeanAveragePrecision:
+    type: number
+    format: float
+    description: >
+      The single metric for bounding boxes evaluation:
+      the `meanAveragePrecision` averaged over all `boundingBoxMetrics`.
+required:
+  - boundingBoxMeanAveragePrecision

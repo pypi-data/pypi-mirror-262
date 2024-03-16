@@ -1,0 +1,40 @@
+title: /Image/SemanticSegmentation
+type: object
+properties:
+  meanPixelAccuracy:
+    type: number
+    format: float
+    description: >
+      The ratio of correct pixels is computed in a per-class basis and then averaged over the total
+      number of classes. reference: https://arxiv.org/pdf/1704.06857.pdf
+  meanIou:
+    type: number
+    format: float
+    description: >
+      IoU is the area of overlap between the predicted segmentation and the ground truth divided by the area of union
+      between the predicted segmentation and the ground truth.
+  categoryMetrics:
+    type: array
+    description: >
+      The match metrics for every category.
+    items:
+      type: object
+      properties:
+        categoryName:
+          type: string
+          description: >
+            Category name.
+        pixelAccuracy:
+          type: number
+          format: float
+          description: >
+            The ratio of correct pixels is computed over the total number for every category.
+        iou:
+          type: number
+          format: float
+          description: >
+            IoU is the area of overlap between the predicted segmentation and the ground truth
+            for every category.
+required:
+  - meanPixelAccuracy
+  - meanIOU
