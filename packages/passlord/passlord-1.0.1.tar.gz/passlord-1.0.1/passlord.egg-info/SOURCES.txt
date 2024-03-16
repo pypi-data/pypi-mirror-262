@@ -1,0 +1,12 @@
+LICENCE
+README.md
+setup.py
+passlord/__init__.py
+passlord/passlord.py
+passlord.egg-info/PKG-INFO
+passlord.egg-info/SOURCES.txt
+passlord.egg-info/dependency_links.txt
+passlord.egg-info/entry_points.txt
+passlord.egg-info/top_level.txt
+passlord/patterns/__init__.py
+passlord/patterns/rules.txt
