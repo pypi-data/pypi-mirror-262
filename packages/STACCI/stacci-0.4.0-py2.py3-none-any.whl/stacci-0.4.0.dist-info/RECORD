@@ -1,0 +1,9 @@
+STACCI/__init__.py,sha256=mmB0684QwMPUaT6XVuMN6c51iQXzXC-lspP52H9d264,139
+STACCI/data_handler.py,sha256=R0x-_BJ-626HGs_cN4MpPwaj2VzhjSufXFt7swJujdI,10224
+STACCI/model.py,sha256=wJtxCDcTODDyowBKVlqlVud4LjzEZzLBrNPc6P1Ij_I,6348
+STACCI/pipeline.py,sha256=CanGjK7P4INdga2RwtD0Ib9RmNH-Rgn8ZtlBL-0eBgY,5549
+STACCI/trainer.py,sha256=TPhOFBROq-G4DuvHlblpa2uor3WKCC5pm3uLOj7n9UU,3791
+STACCI/utils.py,sha256=Sg9IQJP6PRE_ROvj-bFDbAUOkW7rqSgZm69yDb3-kqw,29129
+stacci-0.4.0.dist-info/METADATA,sha256=_mPnLt9KWXmDG2QHyTM3XYYs_KG8Z3MRLmpzFxHGPoE,5364
+stacci-0.4.0.dist-info/WHEEL,sha256=RsNcXn1ku1cI7LVkdbiD4HxFH-ZNt6-iSezWxkqUYi4,92
+stacci-0.4.0.dist-info/RECORD,,
