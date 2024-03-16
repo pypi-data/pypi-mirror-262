@@ -1,0 +1,111 @@
+<entryway> {
+    portrayal "the entryway of a haunted house"
+    contains key, flashlight, chest, magic_wand
+    ::
+    N -> hallway
+    ::
+}
+
+<hallway> {
+    portrayal "a dimly lit hallway"
+    contains key, flashlight, chest, katana
+    ::
+    N -> kitchen,
+    S -> entryway
+    ::
+    environmental_dmg damage 33
+}
+
+<kitchen> {
+    portrayal "the spooky kitchen"
+    ::
+    N -> backyard,
+    S -> hallway
+    ::
+    requirements key,flashlight
+}
+<backyard> {
+    portrayal "the backyard! Congratulations, you won!"
+    ::
+    S -> kitchen
+    ::
+}
+
+
+[chest] {
+    portrayal "A wooden chest on the ground."
+    contains twix, mars
+    isStatic True
+}
+[twix] {
+    portrayal "A twix bar. Caramel, shortbread and chocolate delightfully restoring health."
+    activation heal 50
+    isStatic False
+}
+[mars] {
+    portrayal "A mars bar. Caramel and chocolate delightfully restoring health."
+    activation heal 700
+    isStatic False
+}
+
+[key] {
+    portrayal "A mysterious key lies on the ground."
+    isStatic False
+}
+[flashlight] {
+    portrayal "A flashlight lies on the ground."
+    activation heal 10
+    isStatic False
+}
+
+(adventurer) {
+    portrayal "You are an intrepid adventurer."
+    health 100
+    mana 100
+    unarmed_damage 10
+    mana_damage 5
+    defence 5
+    mana_defence 0
+    intelligence 5
+    vigor 10
+    strength 10
+    endurance 10
+    currentExperience 0
+    neededExperienceForLevelUp 20
+    level 1
+    inventory {
+        twix
+    }
+    position entryway
+}
+
+((young_dragon)) {
+    portrayal "A young playful dragon looking for trouble."
+    health 1000
+    damage 40
+    xp 50
+    position kitchen
+    drops {
+        twix,
+        mars
+    }
+    dropsWeapon {
+        katana
+    }
+}
+
+[[katana]] {
+    damage 10
+}
+
+[[magic_wand]] {
+    damage 20
+}
+
+*settings* {
+    dropOldWeapon False
+    additionalTurnAfterUse False
+}
+
+start_position entryway
+final_position backyard
