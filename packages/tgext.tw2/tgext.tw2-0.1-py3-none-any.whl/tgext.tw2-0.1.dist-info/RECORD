@@ -1,0 +1,9 @@
+tgext/__init__.py,sha256=0c0Tagm0dHRDAWM0VlMfrnsCJVmHJYKyyVXXayDlge4,66
+tgext/tw2/__init__.py,sha256=zbJTNaKTLLEUry0tFrQzULNpEzCjCnmMIGabLZWCKv8,215
+tgext/tw2/component.py,sha256=6HPsr91K25xeQhfzDjFEPFiwDCeQDbrQF4FyNYFBNrI,4917
+tgext/tw2/validation.py,sha256=uxLdPrhOJ487cqyZjAMDKreNhiL7tSEqs3bGX_hCen0,801
+tgext.tw2-0.1.dist-info/LICENSE,sha256=oAHq1s3LWoCneYmg87xLnjN8KeOktixtKI8nIwqAs2c,1067
+tgext.tw2-0.1.dist-info/METADATA,sha256=n7mpDfmlThMtTujrW1RSOg4mTVntcBVE97lFu6bN0L4,568
+tgext.tw2-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tgext.tw2-0.1.dist-info/top_level.txt,sha256=9GOdqCqmKLB46HuPrbPBKzHTdFxg1i1NN_HaZm9w_6Q,6
+tgext.tw2-0.1.dist-info/RECORD,,

@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: tgext.tw2
+Version: 0.1
+Summary: Enable support for ToscaWidgets2 form and validation library
+Author-email: Alessandro Molina <amol@turbogears.org>
+Keywords: turbogears2.extension
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tw2.core
+Requires-Dist: TurboGears2 >=2.5.0
+
+# tgext.tw2
+Support ToscaWidgets2 forms and validation in TurboGears 2.5+
+
+## Usage
+
+```
+    import tgext.tw2
+
+    cfg = FullStackApplicationConfigurator()
+    tgext.tw2.plugme(cfg)
+    cfg.make_wsgi_app({}, {})
+```
