@@ -1,0 +1,2 @@
+[console_scripts]
+pooledMySQL = customisedLog.customisedLog.__main__:main
