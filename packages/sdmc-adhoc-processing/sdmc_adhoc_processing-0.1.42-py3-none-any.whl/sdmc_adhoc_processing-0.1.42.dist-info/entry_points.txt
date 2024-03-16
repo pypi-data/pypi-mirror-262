@@ -1,0 +1,3 @@
+[console_scripts]
+gen-data-dict = sdmc_adhoc_processing:gen_data_dict
+hello-world = sdmc_adhoc_processing:hello_world
