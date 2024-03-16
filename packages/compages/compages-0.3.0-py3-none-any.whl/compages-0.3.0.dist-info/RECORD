@@ -1,0 +1,12 @@
+compages/__init__.py,sha256=zxzoRnOtea5DyLmR_6a9Dc7zvDdO7xqGSfILkkLGgxQ,1935
+compages/_common.py,sha256=TdK3rFS7WnEcejancs0ZZOD0qPuTWeo2pkJbtv_5h4k,3402
+compages/_structure.py,sha256=Lz1gRWpowUfpOq3NGkdRYDU-qpD6T8rS7dE8rzhAyyU,2951
+compages/_structure_handlers.py,sha256=AboJped7k1L1-7085lsrMM9HxjSB6Dfg19SkVUMmIY8,8164
+compages/_unstructure.py,sha256=tHmlOpVQ8azheV7zPNyf04YFUg5s0b4EgAyuP8BC4zY,2767
+compages/_unstructure_handlers.py,sha256=U1byfSNa_ZLdPnmsXeRv3rOdC8f7omlwodFUi8Z8TNs,8253
+compages/path.py,sha256=UvTZ7AsVQrAsCvLnDNbxqS9geowOU4oM3xAZxEhu4dE,818
+compages/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+compages-0.3.0.dist-info/WHEEL,sha256=B19PGBCYhWaz2p_UjAoRVh767nYQfk14Sn4TpIZ-nfU,87
+compages-0.3.0.dist-info/METADATA,sha256=Ee0-boa2p3yH1NMrdSIXfDCpw7hJ7OXC6_QHLySlxoI,1829
+compages-0.3.0.dist-info/licenses/LICENSE.md,sha256=cnFFGTlXqfEzTHVqk7iiCqmSN2E4CywxE1Xs2ehp-Zg,1059
+compages-0.3.0.dist-info/RECORD,,
