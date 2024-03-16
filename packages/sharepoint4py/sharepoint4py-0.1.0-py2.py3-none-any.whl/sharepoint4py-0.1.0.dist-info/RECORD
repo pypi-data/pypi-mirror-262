@@ -1,0 +1,15 @@
+sharepoint4py/__init__.py,sha256=4HdQwt0THUMqpeZYurIKBFtsVSwIp2POj8aHcrizAgQ,410
+sharepoint4py/errors.py,sha256=iJZHtgI0-pppRRlq4zRdez2kX8sIVLYfuWm6I6YyYtY,273
+sharepoint4py/folder.py,sha256=xAu641dssI8JZtgyoDby_XSO7M_dOopycuOjy-6CzDM,5041
+sharepoint4py/list.py,sha256=8VNKggf-gcGllcXc2az0_DMneolgKHjjdi0Pl4Lvo5E,29578
+sharepoint4py/list_dict.py,sha256=AuH5QOFz7uaya0SU2ABrWSEkrd6UrtwTRcuXmEWIFI4,2360
+sharepoint4py/office365.py,sha256=PMbVM9oGUw4Y8QQlazsxBzP9ZFBMeha3QEe1m8y0o4w,4212
+sharepoint4py/request_helper.py,sha256=uj2ylKra9FrzGRmilLiZRBcpXFt4q1a61J82T6bjQsE,1009
+sharepoint4py/site.py,sha256=nnM4Ls4VqW9EUVGx9TovVXLnXAyhl4cG1ZGMav7XA5s,22261
+sharepoint4py/soap.py,sha256=gsu9SKR9ynQc0g_pTydVL-WEUpVhNUM_GFXxHnYwveU,4659
+sharepoint4py/version.py,sha256=QTYqXqSTHFRkM9TEgpDFcHvwLbvqHDqvqfQ9EiXkcAM,23
+sharepoint4py-0.1.0.dist-info/LICENSE.txt,sha256=tFOVKIGHDRE2kEiOBFUjW9WA8IID5X6IAJz-jiiIoMQ,1090
+sharepoint4py-0.1.0.dist-info/METADATA,sha256=NCGJBWjS-RIXBuRBF2lxCK27n-p3JsS8vQvFGiJdOGA,4234
+sharepoint4py-0.1.0.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+sharepoint4py-0.1.0.dist-info/top_level.txt,sha256=e-j0BGOr84ZKw2xhKZvm4inCvOiaBtXIQhO51QIIQzU,14
+sharepoint4py-0.1.0.dist-info/RECORD,,
