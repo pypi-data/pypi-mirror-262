@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: excsv
+Version: 0.1.1
+Summary: little utility for skimming CSV files from the command line
+Home-page: https://github.com/dannguyen/excsv
+Author: Dan Nguyen
+License: Apache License, Version 2.0
+Project-URL: Issues, https://github.dannguyen/dannguyen/excsv/issues
+Project-URL: CI, https://github.com/dannguyen/excsv/actions
+Project-URL: Changelog, https://github.com/dannguyen/excsv/releases
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: test
+
+# excsv
+
+A command-line utility for quickly inspecting CSV files 
+
+
+Install this tool using `pip`:
+
+
+
+```bash
+pip install excsv
+```
+
+
+
+
+## Notes
+
+2024-03-14: just a placeholder for now
+
+
+
+
+## Dev and Testing
+
+
+```sh
+# install locally
+$ pip install -e .
+
+
+# run all tests
+$ pytest
+
+# run just alpha tests
+$ pytest -m 'alpha'
+
+
+# skip alpha tests
+$ pytest -m 'not alpha'
+```
+
+
+
+
