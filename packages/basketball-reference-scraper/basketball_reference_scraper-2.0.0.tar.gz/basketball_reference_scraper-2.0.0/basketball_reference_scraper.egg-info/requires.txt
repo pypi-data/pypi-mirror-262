@@ -1,0 +1,15 @@
+beautifulsoup4
+bs4
+lxml
+numpy
+pandas
+python-dateutil
+pytz
+requests
+six
+soupsieve
+Unidecode
+selenium
+
+[test]
+unittest
