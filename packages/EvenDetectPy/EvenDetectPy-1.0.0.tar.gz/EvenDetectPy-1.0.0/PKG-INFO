@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: EvenDetectPy
+Version: 1.0.0
+Summary: A small package to detect if a number is even.
+Home-page: https://github.com/yourusername/your-package-name
+Author: Toby Killen
+Author-email: itoby24@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# EvenDetectPy
+
+## Python Package which will confrim if int is even.

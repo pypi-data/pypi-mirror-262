@@ -1,0 +1,7 @@
+README.md
+setup.py
+EvenDetectPy.egg-info/PKG-INFO
+EvenDetectPy.egg-info/SOURCES.txt
+EvenDetectPy.egg-info/dependency_links.txt
+EvenDetectPy.egg-info/top_level.txt
+tests/test_iseven.py
