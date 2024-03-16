@@ -1,0 +1,246 @@
+GameWorld:
+    regions += Region
+    items += Item
+    player = Player
+    enemies += Enemy
+    weapons += Weapon
+    settings += GeneralSettings
+    'start_position' start_position = [Region]
+    'final_position' final_position = [Region]
+;
+
+GeneralSettings:
+    '*settings*' '{'
+        'dropOldWeapon' dropOldWeapon = BOOL?
+        'additionalTurnAfterUse' additionalTurnAfterUse = BOOL?
+    '}'
+;
+
+Region:
+    '<' name = GWID '>' '{'
+        properties *= RegionProperties
+        '::'
+        connections *= Connection[',']
+        '::'
+        ('requirements' requirements += Requirement[','])?
+        ('environmental_dmg' environmental_dmg = EnvironmentalDamage)?
+    '}'
+;
+
+Enemy:
+    '((' name = GWID '))' '{'
+        properties *= EnemyProperties
+    '}'
+;
+
+Requirement:
+    item = GWID
+;
+
+Player:
+    '(' name = GWID ')' '{'
+        properties *= PlayerProperties
+    '}'
+;
+
+Weapon:
+    '[[' name = GWID ']]' '{'
+        properties *= WeaponProperties
+    '}'
+;
+
+Item:
+    '[' name = GWID ']' '{'
+        properties *= ItemProperties
+        'isStatic' isStatic = BOOL
+    '}'
+;
+
+
+
+Connection:
+    direction = Direction '->' target = GWID
+;
+
+RegionProperties:
+    BasicProperties | ContainsProperties
+;
+
+ContainsProperties:
+    'contains' contains *= [Containable][',']
+;
+
+Containable:
+    Item | Weapon
+;
+
+EnemyProperties:
+    BasicProperties | PositionProperties | HealthProperties | ActivationProperties | InventoryProperties | WeaponProperties | ItemsToDrop | WeaponsToDrop | Experience
+;
+
+PlayerProperties:
+    BasicProperties | MovementProperties | PositionProperties | HealthProperties | InventoryProperties | AttributeProperties | LevelProperties | BasicStatProperties
+;
+
+BasicStatProperties:
+    ManaProperties | HealthProperties | UnarmedDamageProperties | ManaDamageProperties | DefenceProperties | ManaDefenceProperties
+;
+
+AttributeProperties:
+    VigorAttribute | EnduranceAttribute | StrengthAttribute | IntelligenceAttribute
+;
+
+BasicProperties:
+    PortrayalProperties
+;
+
+InventoryProperties:
+    'inventory' '{' inventory *= [Item][','] '}'
+;
+
+LevelProperties:
+    CurrentExpProperty | NeededExpProperty | LevelProperty
+;
+
+CurrentExpProperty:
+    'currentExperience' currentExperience = INT
+;
+
+NeededExpProperty:
+    'neededExperienceForLevelUp' neededExperienceForLevelUp = INT
+;
+
+LevelProperty:
+    'level' level = INT
+;
+
+Experience:
+    'xp' xp = INT
+;
+
+ItemProperties:
+    BasicProperties | ActivationProperties | ContainsProperties
+;
+
+WeaponProperties:
+    'damage' damage = INT
+;
+
+ActivationProperties:
+    'activation' action = ActivationAction
+;
+
+ActivationAction:
+    HealAction | AttackAction
+;
+
+HealAction:
+    'heal' amount = INT
+;
+
+AttackAction:
+    'attack' amount = INT
+;
+
+EnvironmentalDamage:
+    'damage' amount = INT
+;
+
+PortrayalProperties:
+    'portrayal' portrayal = STRING
+;
+
+ItemsToDrop:
+    'drops' '{' inventory *= [Item][','] '}'
+;
+
+WeaponsToDrop:
+    'dropsWeapon' '{' inventory *= [Weapon][','] '}'
+;
+
+PositionProperties:
+    'position' position = [Region]
+;
+
+HealthProperties:
+    'health' health = INT
+;
+
+ManaProperties:
+    'mana' mana = INT
+;
+
+UnarmedDamageProperties:
+    'unarmed_damage' unarmed_damage = INT
+;
+
+ManaDamageProperties:
+    'mana_damage' mana_damage = INT
+;
+
+DefenceProperties:
+    'defence' defence = INT
+;
+
+ManaDefenceProperties:
+    'mana_defence' mana_defence = INT
+;
+
+VigorAttribute:
+    'vigor' vigor = INT
+;
+
+EnduranceAttribute:
+    'endurance' endurance = INT
+;
+
+StrengthAttribute:
+    'strength' strength = INT
+;
+
+IntelligenceAttribute:
+    'intelligence' intelligence = INT
+;
+
+MovementProperties:
+    MoveCommand | OpenCommand | TakeCommand | DropCommand | UseCommand
+;
+
+MoveCommand:
+    'move' direction = Direction
+;
+
+OpenCommand:
+    'open' object = GWID
+;
+
+TakeCommand:
+    'take' object = GWID
+;
+
+DropCommand:
+    'drop' object = GWID
+;
+
+UseCommand:
+    'use' object = GWID
+;
+
+Keyword:
+    'start_position' | 'final_position' | 'drop' | 'take' | 'open' | 'move' | 'N' | 'S' | 'E' | 'W' |
+    'portrayal' | 'position' | 'heal' | 'health' | 'contains' | 'inventory' | 'isStatic' |
+    'requirements' | 'damage' | 'environmental_dmg' | 'xp' | 'vigor' | 'endurance' | 'strength' | 'currentExperience' |
+    'neededExperienceForLevelUp' | 'dropsWeapon' | 'level'
+;
+
+GWID:
+    !Keyword ID
+;
+
+Direction:
+    'N' | 'S' | 'E' | 'W'
+;
+
+Comment:
+    /\/\*(.|\n)*?\*\//
+;
