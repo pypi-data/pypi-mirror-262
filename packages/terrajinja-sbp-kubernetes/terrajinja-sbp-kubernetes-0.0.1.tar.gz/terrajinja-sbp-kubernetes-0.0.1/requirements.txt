@@ -1,0 +1,2 @@
+# this is only usable for terrajinja
+cdktf-cdktf-provider-kubernetes>=11.0.0
