@@ -1,0 +1,11 @@
+takeoff_sdk/__init__.py,sha256=Gd7XCtV31MVDMoNoOOt1KHLnxt8NAhorbrJk1Mah3EM,105
+takeoff_sdk/main.py,sha256=kc1XLSFxPmMCOQD4SSmMEgSuPzM_Vg3k9Th5LAh1sUY,2801
+takeoff_sdk/sdk/__init__.py,sha256=mBb3v3JrNde0pCePh9J38ZhQl51kb0bY1VrrfNS8L5E,122
+takeoff_sdk/sdk/schema.py,sha256=WZgitCi6yO18tQBY8gAz3Lb3rlF_pggfcJtfZjXuSFM,5367
+takeoff_sdk/sdk/takeoff.py,sha256=rprBOOyMQ_OY4WHVc4BzoRkvrcAlgKWStztSTMuQeq4,5220
+takeoff_sdk/sdk/utils.py,sha256=6hF7UdmDf93gZOnB9xvFD3aJJEMDOd4A4bDJ3GHu-UY,6008
+takeoff_sdk-0.3.3.dist-info/METADATA,sha256=44A9tqSOhhJXVMp_IY1POmvtnDyujuTxWsy9MLmAswM,3217
+takeoff_sdk-0.3.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+takeoff_sdk-0.3.3.dist-info/entry_points.txt,sha256=5akzVbEb3a_rQAeWETF4cy3F4yOAoxGGrxfoQhuahKw,46
+takeoff_sdk-0.3.3.dist-info/top_level.txt,sha256=fV9a39t8v0nWOnwHX_33Y0yiScpHahPOFYDFOSO0USs,12
+takeoff_sdk-0.3.3.dist-info/RECORD,,
