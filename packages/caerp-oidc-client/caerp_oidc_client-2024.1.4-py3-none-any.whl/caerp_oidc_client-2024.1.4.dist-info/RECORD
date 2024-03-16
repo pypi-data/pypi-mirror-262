@@ -1,0 +1,9 @@
+caerp_oidc_client/__init__.py,sha256=jKxNVXS59sgkiwbmhxAnYNGxW-swlBPVhADxiAJkBvA,194
+caerp_oidc_client/models.py,sha256=znOS4ZSEBerUkekHIunwjo1p59TFAGr39izDmzP9cl8,1255
+caerp_oidc_client/utils.py,sha256=bux5MKGA5etraK7knqCZ1-8SPDa2yxuObsbkx4Te320,1103
+caerp_oidc_client/views.py,sha256=Lbi2wZXxpxFHXiIAJkFZS9tt2Q0S5mdpE3RA6LvsBKI,9882
+caerp_oidc_client-2024.1.4.dist-info/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+caerp_oidc_client-2024.1.4.dist-info/METADATA,sha256=85nNpdTU1JN-vX58GCdeypcJivVNJ9FodGdVDzUqEI0,2674
+caerp_oidc_client-2024.1.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+caerp_oidc_client-2024.1.4.dist-info/top_level.txt,sha256=kDfuNrjrWam7q4qJO4T7gY4QDTPdElD6amIuKuvKlOM,18
+caerp_oidc_client-2024.1.4.dist-info/RECORD,,
