@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyPM5
+Version: 0.0.2
+Summary: Package to interface Virginia Diodes PM5 Powermeter with Python
+Author: Matt Jamieson
+Author-email: <mjamieson21@outlook.com>
+Keywords: python,terahertz,powermeter,PM5,Virginia Diodes
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+
+A package that uses pyvisa to interface with the Virginia Diodes PM5 terahertz powermeter, allowing for power readings and remote control via Python.
