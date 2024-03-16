@@ -1,0 +1,9 @@
+hammadcore/__init__.py,sha256=nVPk9-QZXWr57qQUWriwMsPk5_IjMqkitGwODbyiER8,22
+hammadcore/core.py,sha256=9Qydl1M9LeB9Amx3qd29-tNYZgKWkyIgvS7WuLJrE5c,1091
+hammadcore/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hammadcore/modules/loaders.py,sha256=3NWp-TiimUc5JMw4wz58Ea44ajr3OWopwbhRhuf27_4,3091
+hammadcore/modules/text.py,sha256=SDRzQnBrXX-MqLeyAls1tRftuv884t5uzmm4L6DS_DQ,5276
+hammadcore-0.0.1.dist-info/METADATA,sha256=KhEwT_ycphCIX7WpRpLp3DDwkzL6WWKRcMByStzbihA,622
+hammadcore-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hammadcore-0.0.1.dist-info/top_level.txt,sha256=kZ18ImbwAP6ugP-_uSRzs9VEYrVV8VAbzWLom0iJTFo,11
+hammadcore-0.0.1.dist-info/RECORD,,
