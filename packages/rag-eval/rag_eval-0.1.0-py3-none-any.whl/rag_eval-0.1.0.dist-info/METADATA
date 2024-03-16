@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: rag-eval
+Version: 0.1.0
+Summary: 
+License: Apache-2.0
+Author: Joaquin Dominguez
+Author-email: joaquin.dominguez@proton.me
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: black (>=24.3.0,<25.0.0)
+Requires-Dist: pydantic (>=2.6.4,<3.0.0)
+Requires-Dist: pyright (>=1.1.354,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: qdrant-client (>=1.8.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# RAG-eval
+Evaluation Framework for RAG applications
+
