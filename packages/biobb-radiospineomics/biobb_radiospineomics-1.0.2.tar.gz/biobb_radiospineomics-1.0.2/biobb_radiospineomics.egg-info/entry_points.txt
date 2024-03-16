@@ -1,0 +1,2 @@
+[console_scripts]
+template = biobb_template.template.template:main
