@@ -1,0 +1,15 @@
+fedem/__init__.py,sha256=nqoOdTCJsCXlRTFRiLjZWaviDnAPUYly4tNPi9_oOnU,41
+fedem/client/__init__.py,sha256=E9bmOGxBZxNa1W_bnSMlNW-_cJJTp-WLV1C7-VL2v5o,7195
+fedem/configurations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fedem/configurations/mamba.py,sha256=-yCdidWSpfp_UYLmu_CxMVUgb_M86ufx9onmGQ8OvBc,1316
+fedem/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fedem/models/mamba.py,sha256=MGnIln77jNihCVS1oKrbvXFIBG8RNKNu-HuK8Vo8haA,11252
+fedem/server/__init__.py,sha256=0OBgb2ge4wq-zEUxbtdh97Z702GAZ7KtC5v2TubkLoc,10270
+fedem/trainer/__init__.py,sha256=AkIhpRbqLeCiWffmPj53wXHh8HkRcSzvkwPKvwUfBjs,536
+fedem/utils/__init__.py,sha256=9ACvNPFaIiruOIDkNx08W3laIq9gFKlE-KLWtb8h8Ic,3384
+fedem/utils/huggingface.py,sha256=x1pTfFfMfEVAUiIlGttRHj7X05RS5qWlKJwTKMvGx2Q,1620
+fedem-0.0.6.dist-info/LICENSE.md,sha256=phxKicRnhghuJ6w9Xo2qd6LK__IHhvJIUSqzbBvKcJ8,1068
+fedem-0.0.6.dist-info/METADATA,sha256=3MapSYoFFZkk-hhPUui-HJu-efbzdwNuc8Gs7qEL44g,12676
+fedem-0.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fedem-0.0.6.dist-info/top_level.txt,sha256=7YYgR0adWviWPEivC5L-oclXT36VFmLHX5d1UA0oqRA,6
+fedem-0.0.6.dist-info/RECORD,,
