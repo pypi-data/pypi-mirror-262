@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tawashipkg
+Version: 1.0.1
+Summary: This is a test package for youtube lecture.
+Author: Tawashi
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Click ~=7.0
+
+# markdown形式
+このパッケージは「Python実践講座part22」で用いるパッケージ「tawashipkg」です。
+
+特に何の機能も入っていない空のパッケージです。
