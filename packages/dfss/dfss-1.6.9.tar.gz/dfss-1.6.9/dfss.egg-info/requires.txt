@@ -1,0 +1,5 @@
+paramiko
+progressbar
+ping3
+datetime
+importlib_metadata
