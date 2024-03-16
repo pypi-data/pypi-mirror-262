@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: cs.app.myke
+Version: 20240316.1
+Summary: my make program; parallel make tool with superior expression syntax
+Author-email: Cameron Simpson <cs@cskk.id.au>
+License: GNU General Public License v3 or later (GPLv3+)
+Project-URL: URL, https://bitbucket.org/cameron_simpson/css/commits/all
+Keywords: python3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Description-Content-Type: text/markdown
+
+My make programme, a parallel make tool with superior expression syntax.
+
+*Latest release 20240316.1*:
+Fixed release upload artifacts.
+
+
+
+# Release Log
+
+
+
+*Release 20240316.1*:
+Fixed release upload artifacts.
+
+*Release 20240316*:
+Fixed release upload artifacts.
+
+*Release 20240305.2*:
+Several internal updates.
+
+*Release 20240305.1*:
+Several internal updates.
+
+*Release 20240305*:
+Several internal updates.
+
+*Release 20220805*:
+Initial PyPI release.
+
