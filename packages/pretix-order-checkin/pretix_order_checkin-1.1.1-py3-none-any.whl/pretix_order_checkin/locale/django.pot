@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-16 02:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: pretix_order_checkin/apps.py:17
+msgid "Pretix Order Check-in Buttons"
+msgstr ""
+
+#: pretix_order_checkin/apps.py:20
+msgid "Adds check-in related buttons to the order overview page."
+msgstr ""
+
+#: pretix_order_checkin/templates/pretix_order_checkin/check_in_button.html:10
+msgid "Check-in"
+msgstr ""
+
+#: pretix_order_checkin/templates/pretix_order_checkin/check_out_button.html:12
+msgid "Check-out"
+msgstr ""
+
+#: pretix_order_checkin/templates/pretix_order_checkin/delete_check_in_button.html:10
+msgid "Delete Check-in"
+msgstr ""
