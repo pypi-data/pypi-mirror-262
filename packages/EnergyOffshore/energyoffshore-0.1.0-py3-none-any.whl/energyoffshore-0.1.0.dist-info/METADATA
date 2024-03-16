@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: EnergyOffshore
+Version: 0.1.0
+Summary: DT Climate Energy Offshore use case
+Project-URL: Homepage, https://earth.bsc.es/gitlab/digital-twins/de_340/energy_offshore
+Author-email: Aleksi Nummelin <aleksi.nummelin@fmi.fi>, Jonni Lehtiranta <jonni.lehtiranta@fmi.fi>, Andrew Twelves <andrew.twelves@fmi.fi>
+License-File: LICENCE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# DT CLIMATE - ENERGY OFFSHORE USE CASE
+
+This package uses the Destination Earth: Digital Twin of Climate simulations
+to produce a set of statistics in support of offshore wind
+farm siting and long term operations. Please see the [use case homepage](https://earth.bsc.es/gitlab/digital-twins/de_340/energy_offshore) for more details.
