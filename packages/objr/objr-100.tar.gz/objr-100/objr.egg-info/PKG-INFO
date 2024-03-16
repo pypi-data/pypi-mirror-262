@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: objr
+Version: 100
+Summary: objects runtime
+Author-email: xobjectz <objx@proton.me>
+License: Public Domain
+Project-URL: home, https://pypi.org/project/objr
+Project-URL: bugs, https://github.com/xobjectz/objr/issues
+Project-URL: source, https://github.com/xobjectz/objr
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: Public Domain
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Description-Content-Type: text/x-rst
+
+NAME
+
+::
+
+    OBJR - objects runtime
+
+
+SYNOPSIS
+
+::
+
+    >>> from objx import Object
+    >>> from objr import fetch, sync
+    >>> o = Object()
+    >>> path = sync(o)
+    >>> oo = Object()
+    >>> fetch(oo, path)
+
+
+DESCRIPTION
+
+::
+
+    OBJR has all you need to program a unix cli program, such as disk
+    perisistence for configuration files, event handler to handle the
+    client/server connection, code to introspect modules for
+    commands, deferred exception handling to not crash on an error, a
+    parser to parse commandline options and values, etc.
+
+    OBJR is Public Domain.
+
+
+FILES
+
+::
+
+    ~/.local/pipx/venvs/objr/
+
+AUTHOR
+
+::
+
+    Bart Thate <objx@proton.mel>
+
+COPYRIGHT
+
+::
+
+    OBJR is Public Domain.
