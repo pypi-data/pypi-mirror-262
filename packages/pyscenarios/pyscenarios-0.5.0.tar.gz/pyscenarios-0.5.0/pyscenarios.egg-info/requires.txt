@@ -1,0 +1,4 @@
+dask[array]>=2.2
+numba>=0.47
+numpy>=1.16
+scipy>=1.3
