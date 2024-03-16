@@ -1,0 +1,5 @@
+pnu-libpnu>=1.3.0
+colorama
+defusedxml
+html2text
+packaging
