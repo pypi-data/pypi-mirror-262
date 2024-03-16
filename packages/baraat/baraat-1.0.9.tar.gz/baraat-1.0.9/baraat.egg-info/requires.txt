@@ -1,0 +1,7 @@
+transformers==4.32.1
+tokenizers==0.13.2
+datasets==2.12.0
+torch==2.1.0
+fasttext
+seamless_communication
+huggingface_hub
