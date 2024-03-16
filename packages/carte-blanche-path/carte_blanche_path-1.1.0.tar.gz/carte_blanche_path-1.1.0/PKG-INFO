@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: carte_blanche_path
+Version: 1.1.0
+Summary: A utility for setting project root directory
+Home-page: https://github.com/huffmsa/carte-blanche-path
+Author: Sam Huffman
+Author-email: huffmsa@gmail.com
+License: MIT
+Description: # Carte Blanche Path
+        A utility for appening the root path of a project to the syspath to simplify importing modules.
+        
+Platform: UNKNOWN
