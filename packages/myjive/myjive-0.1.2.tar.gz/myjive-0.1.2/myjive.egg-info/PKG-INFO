@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: myjive
+Version: 0.1.2
+Summary: Personal implementation of jive C++ library in Python
+Home-page: https://gitlab.tudelft.nl/apoot1/myjive
+Download-URL: https://gitlab.tudelft.nl/apoot1/myjive/-/archive/v0.1.2/myjive-v0.1.2.tar.gz
+Author: Anne Poot
+Author-email: a.poot-1@tudelft.nl
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE.txt
+Requires-Dist: matplotlib==3.5.2
+Requires-Dist: numba==0.56.4
+Requires-Dist: numpy==1.23.5
+Requires-Dist: pytest==7.1.2
+Requires-Dist: scikit-sparse==0.4.12
+Requires-Dist: scipy==1.8.1
