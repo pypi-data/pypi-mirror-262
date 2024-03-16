@@ -1,0 +1,8 @@
+DigitalSoul.py
+LICENSE
+README.md
+setup.py
+DigitalSoul.egg-info/PKG-INFO
+DigitalSoul.egg-info/SOURCES.txt
+DigitalSoul.egg-info/dependency_links.txt
+DigitalSoul.egg-info/top_level.txt
