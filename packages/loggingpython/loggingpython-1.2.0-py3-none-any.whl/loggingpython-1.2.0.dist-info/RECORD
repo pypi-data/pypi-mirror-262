@@ -1,0 +1,13 @@
+loggingpython/__init__.py,sha256=iDVgvx2IsOzncte-3yBzo7XE0VikDCGnp5zh6oyWRHE,2457
+loggingpython/consolehandler.py,sha256=NK-eaTXiARSeklZ8LBrLq_7meskB3hh00AwQgEPB6u4,4598
+loggingpython/filehandler.py,sha256=LCSLkM0wSj5MyjfeAtyQ3b9h6CUD-KjMHUw5Nscf6nI,3840
+loggingpython/handler.py,sha256=xqTfQEC8AiFOWCjdxIlPipiJvbBtcVepZct_J03vCJc,1002
+loggingpython/jsonhandler.py,sha256=4pkuSGz5fTvzVB_ez19rr5Dr_4fLUmVKqCXmhjI021k,5010
+loggingpython/log_levels.py,sha256=odE463YrosuYzmiRhrG9suSgDI8769HslKI9E8-fW1g,163
+loggingpython/logger.py,sha256=RHeoFWbi3sykXAMx_J6ll6d51djmGk9xHPMHcGfjypU,6829
+loggingpython/sqlhandler.py,sha256=vLDBvUdWT1CQ6JEzgynGKB6Rx4lvFLNxQbYNkCxXSQQ,5044
+loggingpython-1.2.0.dist-info/LICENSE,sha256=o4qtbIQV_9-oIXbemUzZXUxXPOj12pOoK7tCo6YD02I,1087
+loggingpython-1.2.0.dist-info/METADATA,sha256=8FfMgLxvHWc4o8JaBHyJlCN4C2bw20X8wLddSudasso,3961
+loggingpython-1.2.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+loggingpython-1.2.0.dist-info/top_level.txt,sha256=MmItiwPZL9y0qWvgnt2epw6ALDZflrTn91ogSy1Lkzg,14
+loggingpython-1.2.0.dist-info/RECORD,,
