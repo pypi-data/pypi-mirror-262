@@ -1,0 +1,17 @@
+ndcsv/__init__.py,sha256=kQ83_oW-_kMJZG01Md5M6lghDEClfUfm4ysuND1N3ko,337
+ndcsv/proper_unstack.py,sha256=n47AubCiuJ3i_52SaqR-n96fqIIC1UuNdraJFTq88pk,1867
+ndcsv/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ndcsv/read.py,sha256=Thp83gGUCVSz9neU_XezeMOrTvBhH4C_xERWRcAeOnU,11868
+ndcsv/write.py,sha256=jJnj9kTnm1aX_ElkRiX0EdHBogOuXxbI1qvV8pKZDAU,7341
+ndcsv/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ndcsv/tests/test_io.py,sha256=fqqu4mWo0CUny8v98knKWFSyzIQZp7PIzzFPQROGzLs,849
+ndcsv/tests/test_pandas.py,sha256=y7CqDvW2TUMp5T_8mAO4MDTz7Vf670zRwwBg9MvIX9w,1445
+ndcsv/tests/test_proper_unstack.py,sha256=sk-6FWB6b3Zg_ViNwoDQUqqFC-CTRJNKKe81qzf0PGA,3765
+ndcsv/tests/test_read.py,sha256=5d8ov_6iBAwy58NBRQUAeHKA3zMEFkUgnPGAkwhsjSU,6336
+ndcsv/tests/test_roundtrip.py,sha256=mazTltcXeIQL7KjpOKVlKAUxv6WSFWpledDlfqR8fx4,8732
+ndcsv/tests/test_write.py,sha256=r7MiCMD5FRhvzlrskrzlWss4xMOx1ckrjw3-AIVKoHE,1838
+ndcsv-1.2.0.dist-info/LICENSE,sha256=c7p036pSC0mkAbXSFFmoUjoUbzt1GKgz7qXvqFEwv2g,10273
+ndcsv-1.2.0.dist-info/METADATA,sha256=nJDGnDG_TbAK_K31INtkYVJybyMjsiSDOE1buOzv6do,1924
+ndcsv-1.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ndcsv-1.2.0.dist-info/top_level.txt,sha256=x81XREBV3aeOazovv9qYe5fBcO7EYG6XhELALO7edBY,6
+ndcsv-1.2.0.dist-info/RECORD,,
