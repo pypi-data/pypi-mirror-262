@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ip-check
+Version: 1.4.1
+Summary: Powerful cdn network speed test utils.
+Home-page: UNKNOWN
+Author: nobitaqaq
+Author-email: xiaoleigs@gmail.com
+License: UNKNOWN
+Keywords: cdn,speed test,network speed
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Requires-Dist: geoip2
+Requires-Dist: ipaddress (~=1.0.23)
+Requires-Dist: requests (~=2.28.2)
+Requires-Dist: tcppinglib (~=2.0.3)
+Requires-Dist: tqdm (~=4.28.1)
+Requires-Dist: urllib3 (~=1.26.15)
+
+UNKNOWN
+
+
