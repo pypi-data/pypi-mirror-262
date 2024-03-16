@@ -1,0 +1,16 @@
+# The burst parameters below have been generated using settle, via
+# beans(p)
+# See 1808_mock_bursts1.secret for the model parameters
+#
+# Column six gives the flag whether or not the burst was observed
+#
+# The last comment line before the data gives the column names and units
+#
+#"Burst start time (t_25) [MJD]" "Bolometric fluence (i.e. integrated bol. flux) [1e-6 erg/cm^2]" "Error on bolometric fluence" "Ratio of integrated persistent flux to burst fluence" "Error on alpha value" "Likely source origin (name refers to separate source catalog)"
+52562.32883	6.9170	0.0195	0.0	0.0	True
+52562.96368	6.9170	0.0195	97.2	2.1	False
+52563.59553	6.9136	0.0195	97.0	2.1	False
+52564.30514	7.0223	0.0195	102.4	2.1	True
+52565.22033	7.3623	0.0195	113.7	2.1	True
+52566.52853	8.1406	0.0195	128.2	2.1	True
+52568.64852	9.9199	0.0195	144.9	2.1	False
