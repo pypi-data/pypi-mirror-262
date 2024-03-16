@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "streamlit-signin-auth-ui"
+version = "1.0.0"
+authors = [
+  { name="Samad88", email="samadtaoufik@gmail.com" },
+]
+description = "Login page with Streamlit in french Language"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/GitSamad88/streamlit-signin-ui"
+Issues = "https://github.com/GitSamad88/streamlit-signin-ui/issues"
