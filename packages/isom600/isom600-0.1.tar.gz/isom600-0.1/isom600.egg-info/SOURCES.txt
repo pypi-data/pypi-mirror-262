@@ -1,0 +1,7 @@
+setup.py
+isom2600/__init__.py
+isom2600/data.py
+isom600.egg-info/PKG-INFO
+isom600.egg-info/SOURCES.txt
+isom600.egg-info/dependency_links.txt
+isom600.egg-info/top_level.txt
