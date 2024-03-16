@@ -1,0 +1,7 @@
+LICENSE
+setup.py
+snet.contracts.egg-info/PKG-INFO
+snet.contracts.egg-info/SOURCES.txt
+snet.contracts.egg-info/dependency_links.txt
+snet.contracts.egg-info/requires.txt
+snet.contracts.egg-info/top_level.txt

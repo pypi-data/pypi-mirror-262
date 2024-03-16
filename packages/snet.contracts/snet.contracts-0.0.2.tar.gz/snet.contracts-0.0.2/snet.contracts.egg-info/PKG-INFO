@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: snet.contracts
+Version: 0.0.2
+Summary: SingularityNET Ecosystem Contracts
+Home-page: https://github.com/singnet/snet-ecosystem-contracts
+Author: SingularityNET Foundation
+Author-email: info@singularitynet.io
+License: MIT
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: web3==6.11.1
