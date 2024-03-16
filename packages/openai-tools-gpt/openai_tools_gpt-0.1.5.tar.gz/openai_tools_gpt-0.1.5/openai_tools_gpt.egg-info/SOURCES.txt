@@ -1,0 +1,9 @@
+README.md
+setup.py
+openai_tools_gpt/__init__.py
+openai_tools_gpt/main.py
+openai_tools_gpt.egg-info/PKG-INFO
+openai_tools_gpt.egg-info/SOURCES.txt
+openai_tools_gpt.egg-info/dependency_links.txt
+openai_tools_gpt.egg-info/requires.txt
+openai_tools_gpt.egg-info/top_level.txt
