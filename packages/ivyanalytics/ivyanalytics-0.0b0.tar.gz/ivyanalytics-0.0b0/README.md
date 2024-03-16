@@ -1,0 +1,126 @@
+# ivyanalytics
+Python bindings for ingesting conversational data into ivyanalytics
+
+
+## Requirements
+
+Python 3.7+
+
+## Installation 
+
+```sh
+pip install ivyanalytics
+```
+
+
+### Tests
+
+Execute `pytest` to run the tests.
+
+## Getting Started
+
+Please follow the [installation procedure](#Installation) and then run the following:
+
+```python
+
+import ivyanalytics
+from ivyanalytics.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.ivyanalytics.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ivyanalytics.Configuration(
+    host = "https://api.ivyanalytics.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: HTTPBasic
+configuration = ivyanalytics.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+
+# Enter a context with an instance of the API client
+with ivyanalytics.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ivyanalytics.ConversationApi(api_client)
+    conversation_data_schema = ivyanalytics.ConversationDataSchema(conversation_data_schema = ivyanalytics.ConversationDataSchema(conversations=
+        [
+            {
+                "conversation_id": "my_historical_conv_id_1",
+                "tenant_id": "<my_unique_tenant_id>",
+                "conversation_created_at": "2020-02-20T20:19:34Z",
+                "messages": [
+                    {
+                        "id": "message_id",
+                        "role": "user",
+                        "body": "What time does the team arrive?",
+                        "created_at": "2020-02-20T20:19:34Z",
+                    },
+                    {
+                        "id": "message_id",
+                        "role": "assistant",
+                        "body": "The team arrives at 6pm.",
+                        "created_at": "2020-02-20T20:20:23Z",
+                    },
+                ],
+                "metadata": {
+                    "model": "gpt-3.5-turbo-16k",
+                    "user_id": "2947451",
+                    "metadata_1": "value",
+                    "metadata_2": "value",
+                },
+            },
+            {
+                "conversation_id": "my_historical_conv_id_2",
+                "tenant_id": "<my_unique_tenant_id>",
+                "conversation_created_at": "2020-02-20T20:19:34Z",
+
+                "messages": [
+                    {
+                        "id": "message_id",
+                        "role": "user",
+                        "body": "What time does the team arrive?",
+                        "created_at": "2020-02-20T20:19:34Z",
+                    },
+                    {
+                        "id": "message_id",
+                        "role": "assistant",
+                        "body": "The team arrives at 6pm.",
+                        "created_at": "2020-02-20T20:20:23Z",
+                    },
+                ],
+                "metadata": {
+                    "model": "gpt-3.5-turbo-16k",
+                    "user_id": "2947451",
+                    "metadata_1": "value",
+                    "metadata_2": "value",
+                },
+            },
+        ]) )  
+
+    try:
+        # Log a batch of conversations to BigQuery
+        api_response = api_instance.ingest_conversations(conversation_data_schema)
+        print("The response of ConversationApi->ingest_conversations:\n")
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ConversationApi->ingest_conversations: %s\n" % e)
+
+```
+
+## Documentation for API Endpoints
+
+All URIs are relative to *https://api.ivyanalytics.io*
+
+Class | Method | HTTP request | Description
+------------ | ------------- | ------------- | -------------
+*ConversationApi* | [**ingest_conversations**](https://www.notion.so/API-Endpoints-be26c8031ebb4a3dbc53afbb380f93ce) | **POST** /v1/conversations | Log a batch of conversations to BigQuery
+
+
+
