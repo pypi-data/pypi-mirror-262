@@ -1,0 +1,16 @@
+epyseri/__init__.py,sha256=GaMWcBAcZkDSNmXcAZcMZWiidRQcJ4FnZWFZb2hkznQ,106
+epyseri/integration/__init__.py,sha256=WsYYNdkiqHo2YMYGr15tWNCDIqTQ51nOyCXzbg4N7Lo,28
+epyseri/integration/trident_trace/TridentTraceClient.py,sha256=sefQNUUUMsP3hPsmCLe-EyOL3IiMuAiX_7MNTtKETCw,11713
+epyseri/integration/trident_trace/__init__.py,sha256=AuRf2tKetJa9mx1Xahk6vv_h_nNHt3M57Qi93XAmRMA,53
+epyseri/integration/trident_trace/auth.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+epyseri/integration/trident_trace/config.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+epyseri/integration/trident_trace/core.py,sha256=b08sZT1oRwJUtiSq7mXyzds7lz4snRwt-dG1pUdV4HM,5714
+epyseri/integration/trident_trace/error.py,sha256=ttAV9FQH94l7EjDM0CWy74mwT3bjn9AOI6J8Eot0Yb0,426
+epyseri/integration/trident_trace/helper.py,sha256=k9Y0BmEhI4wi-wO_vf3hesGJS6nEZ8c4fjpnww_wHDU,6942
+epyseri/integration/trident_trace/schemas.py,sha256=oE_iyNFwq_jEBVeJAmyCh-LwZq0fHFhZku5DDkVsVwA,828
+epyseri/integration/trident_trace/settings.py,sha256=Z26Rp9nUzIR0QEZPyEla1gZsvEcUalpaguF1UJ07wog,63
+epyseri/integration/trident_trace/utils.py,sha256=bPZ-4t8wnPqoFNQbQnjf-e-LpCc3u6kCzS-_q5rgLvU,4974
+epyseri-0.0.1.dist-info/METADATA,sha256=lh_zSODGynZAwKuOhE2zEfABA5dZ9mbkq-0NXHkoA3o,647
+epyseri-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+epyseri-0.0.1.dist-info/top_level.txt,sha256=dlMt0-qCqyfl2U2KZwUob2hb127YQAtwaoq8q1Ai-L8,8
+epyseri-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: epyseri
+Version: 0.0.1
+Home-page: https://bitbucket.org/efishery/epyseri-eay/src/main/
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: httpx >=0.26.0
+Requires-Dist: numpy >=1.26.3
+Requires-Dist: python-slugify >=8.0.2
+Requires-Dist: opencv-python-headless >=4.9.0.80
+Requires-Dist: pydantic >=2.6.0
+Requires-Dist: rich >=13.7.0
+
