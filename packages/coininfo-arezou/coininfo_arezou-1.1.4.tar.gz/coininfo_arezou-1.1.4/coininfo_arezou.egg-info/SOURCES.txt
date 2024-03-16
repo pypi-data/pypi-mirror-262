@@ -1,0 +1,9 @@
+README.md
+setup.py
+coininfo_arezou/__init__.py
+coininfo_arezou/info.py
+coininfo_arezou.egg-info/PKG-INFO
+coininfo_arezou.egg-info/SOURCES.txt
+coininfo_arezou.egg-info/dependency_links.txt
+coininfo_arezou.egg-info/requires.txt
+coininfo_arezou.egg-info/top_level.txt
