@@ -1,0 +1,146 @@
+[build-system]
+requires = ["hatchling<=1.21.0"]  
+build-backend = "hatchling.build"
+
+[project]
+name = "easysciencecore"
+version = "0.5.0"
+description = "Generic logic for easyScience libraries"
+readme = "README.md"
+authors = [
+    {name = "Simon Ward"},
+    {name = "Andreas Pedersen", email = "andreas.pedersen@ess.eu"}
+]
+maintainers = [
+    {name = "Andreas Pedersen", email = "andreas.pedersen@ess.eu"}
+]
+license = "BSD-3-Clause"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    "Development Status :: 3 - Alpha"
+]
+requires-python = ">=3.9,<3.12"
+dependencies = [
+    "asteval",
+    "bumps",
+    "DFO-LS",
+    "lmfit",
+    "numpy",
+    "pint",
+    "uncertainties",
+    "xarray"
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "codecov",
+    "flake8",
+    "matplotlib",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "tox-gh-actions"
+]
+docs = [
+    "doc8",
+    "readme-renderer",
+    "Sphinx",
+    "sphinx-rtd-theme",
+    "sphinx-autodoc-typehints", 
+    "sphinx-gallery",
+    "toml"
+]
+
+[project.urls]
+homepage = "https://github.com/easyScience/easyCore"
+documentation = "https://github.com/easyScience/easyCore"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["easyCore"]
+
+[tool.coverage.run]
+source = ['easyCore']
+
+[tool.github.info]
+organization = 'easyScience'
+repo = 'easyCore'
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = True
+envlist = py{39,310,311}
+[gh-actions]
+python =
+    3.9: py39
+    3.10: py310
+    3.11: py311
+[gh-actions:env]
+PLATFORM =
+    ubuntu-latest: linux
+    macos-latest: macos
+    windows-latest: windows
+[testenv]
+passenv =
+    CI
+    GITHUB_ACTIONS
+    GITHUB_ACTION
+    GITHUB_REF
+    GITHUB_REPOSITORY
+    GITHUB_HEAD_REF
+    GITHUB_RUN_ID
+    GITHUB_SHA
+    COVERAGE_FILE
+deps = coverage
+commands =
+    pip install -e '.[dev]'
+    pytest --cov --cov-report=xml
+"""
+
+[tool.ruff]
+line-length = 127
+exclude = [
+    "docs",
+    "examples_old",
+    "tests"
+]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.per-file-ignores]
+# allow asserts in test files
+"*test_*.py" = ["S101"]
+
+[tool.ruff.lint]
+ignore-init-module-imports = true
+select = [
+    # flake8 settings from existing CI setup
+    "E9", "F63", "F7", "F82",
+    # Code should be polished to fulfill all cases bellow
+    # https://docs.astral.sh/ruff/rules/
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+#    "UP",
+    # flake8-bugbear
+#    "B",
+    # flake8-simplify
+#    "SIM",
+    # isort
+    "I",
+    # flake8-bandit
+    "S",
+]
+
+[tool.ruff.lint.isort]
+force-single-line = true
