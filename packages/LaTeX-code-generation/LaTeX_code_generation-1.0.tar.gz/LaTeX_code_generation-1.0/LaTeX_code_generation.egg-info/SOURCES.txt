@@ -1,0 +1,5 @@
+setup.py
+LaTeX_code_generation.egg-info/PKG-INFO
+LaTeX_code_generation.egg-info/SOURCES.txt
+LaTeX_code_generation.egg-info/dependency_links.txt
+LaTeX_code_generation.egg-info/top_level.txt
