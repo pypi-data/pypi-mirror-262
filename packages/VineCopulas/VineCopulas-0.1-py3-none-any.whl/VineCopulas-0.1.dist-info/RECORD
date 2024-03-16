@@ -1,0 +1,9 @@
+vinecopula/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vinecopula/bivariate.py,sha256=obsmscw1P3UE476AVMgtUI7uzvnuoUMQMWJbTlOEx1Q,34756
+vinecopula/marginals.py,sha256=sMRqFSl7TUTtTUcznzvvXv_vzzyCG7ca8IbfK2qqMmw,8358
+vinecopula/vinecopula.py,sha256=bwDH6Tr0wAqPY4ykCnqHDp-p2n5kykL_vRsltoQyBSM,160736
+VineCopulas-0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+VineCopulas-0.1.dist-info/METADATA,sha256=qgmvqXknyKdGC1XR93QTTv9Sq5yOoAxwJq3AXy7GK8c,1610
+VineCopulas-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+VineCopulas-0.1.dist-info/top_level.txt,sha256=b0zncmM2gMgs9mG0fq9Zfn8sc-WK1zeqCLYCNiXsfxg,11
+VineCopulas-0.1.dist-info/RECORD,,

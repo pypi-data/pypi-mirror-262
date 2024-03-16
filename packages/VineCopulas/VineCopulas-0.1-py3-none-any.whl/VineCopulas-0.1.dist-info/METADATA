@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: VineCopulas
+Version: 0.1
+Author-email: Judith Claassen <j.n.claassen@vu.nl>
+License: GNU GENERAL PUBLIC LICENSE Version 3
+Project-URL: Homepage, https://github.com/IVM-VU/VineCopulas
+Project-URL: Documentation, https://vinecopulas.readthedocs.io/en/latest/
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: networkx
+Provides-Extra: docs
+Requires-Dist: jupyter ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+
+# VineCopulas
+<img align="right" width="200" alt="Logo" src="https://raw.githubusercontent.com/VU-IVM/VineCopulas/master/doc/logo2.png">
+
+
+[![github repo badge](https://img.shields.io/badge/github-repo-000.svg?logo=github&labelColor=gray&color=blue)](https://github.com/VU-IVM/VineCopulas)
+[![github license badge](https://img.shields.io/github/license/VU-IVM/VineCopulas)](https://github.com/VU-IVM/VineCopulas)
+[![Documentation Status](https://readthedocs.org/projects/vinecopulas/badge/?version=latest)](https://vinecopulas.readthedocs.io/en/latest/?badge=latest) 
+
+A pure python implementation for vine copulas
+
+**Please note:** This package is still in development phase. In case of any problems, or if you have any suggestions for improvements, please raise an *issue*. 
