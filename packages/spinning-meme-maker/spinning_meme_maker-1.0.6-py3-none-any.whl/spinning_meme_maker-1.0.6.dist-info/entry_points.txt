@@ -1,0 +1,2 @@
+[console_scripts]
+spin = spinning_meme_maker.spin:spinning_model
