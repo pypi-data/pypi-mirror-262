@@ -1,0 +1,9 @@
+README.md
+setup.py
+coininfo_vitaliy/__init__.py
+coininfo_vitaliy/info.py
+coininfo_vitaliy.egg-info/PKG-INFO
+coininfo_vitaliy.egg-info/SOURCES.txt
+coininfo_vitaliy.egg-info/dependency_links.txt
+coininfo_vitaliy.egg-info/requires.txt
+coininfo_vitaliy.egg-info/top_level.txt
