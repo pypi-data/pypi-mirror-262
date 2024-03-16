@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyuuid_util
+Version: 1.0.0
+Summary: uuid助手
+Home-page: https://github.com/buyfakett
+Author: buyfakett
+Author-email: buyfakett@vip.qq.com
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pycryptodome
+
+<h1 align="center">pyuuid_util</h1>
+
+- uuid_util.py
+
+把uuid的第一个值提取出来，做一层文件夹，可以让oss上快速查询和把第一层文件夹给去掉

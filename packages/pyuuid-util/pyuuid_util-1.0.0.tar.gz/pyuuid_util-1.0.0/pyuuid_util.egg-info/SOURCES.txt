@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pyuuid_util/__init__.py
+pyuuid_util/uuid_util.py
+pyuuid_util.egg-info/PKG-INFO
+pyuuid_util.egg-info/SOURCES.txt
+pyuuid_util.egg-info/dependency_links.txt
+pyuuid_util.egg-info/requires.txt
+pyuuid_util.egg-info/top_level.txt
+pyuuid_util.egg-info/zip-safe
