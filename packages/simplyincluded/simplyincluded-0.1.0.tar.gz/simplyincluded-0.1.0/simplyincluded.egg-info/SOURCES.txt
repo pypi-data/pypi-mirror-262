@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+simplyincluded/__init__.py
+simplyincluded/simplyincluded.py
+simplyincluded.egg-info/PKG-INFO
+simplyincluded.egg-info/SOURCES.txt
+simplyincluded.egg-info/dependency_links.txt
+simplyincluded.egg-info/requires.txt
+simplyincluded.egg-info/top_level.txt
