@@ -1,0 +1,16 @@
+sporestack/__init__.py,sha256=bUxzpBBh4Ij2zJz5xpnPVpKAPECjx09l3dESrZrMYXw,163
+sporestack/_cli_utils.py,sha256=YH8UKBMFnQuPqOA3j5IP-h4BMV-8i6oeupLeoFO9Ry4,628
+sporestack/_models.py,sha256=enOPeAOFwhx8MhtW54pzfQO2-lH_VCVbF_JK5GjMnqQ,210
+sporestack/api.py,sha256=cT7lsqv7ei6Mp11Kxh_duNU5J_rG4ZZ75kQ77BUHpJQ,4705
+sporestack/api_client.py,sha256=DtECFOcnd0mC-_mW6ydOr83PuT0vaMOatEHSeoTJIbo,11904
+sporestack/cli.py,sha256=Cu4Hw819UDD6y4-bVfwJrOUPu82I9N13-nbXf2EKjU4,39574
+sporestack/client.py,sha256=uP-UasRQGg0La2mtP7Q6O3xmfve_njBfrNKIhVdWryE,6603
+sporestack/exceptions.py,sha256=onIP-MQmweyK7cg4b_cE64BssHowb2_pD5DzVtasJ_k,300
+sporestack/models.py,sha256=yYsZxy9C0i2Ub3mnJYb5uhoLlemB_JBLmxn0qL8ibYE,3614
+sporestack/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sporestack/utils.py,sha256=sYfCAZKG1S4x2vsbwbtfK-T8SCIdnSc-4DtxosmilJI,711
+sporestack-11.1.0.dist-info/entry_points.txt,sha256=dEKCd9M__EXcW1U4XHnc9tGHxGd4mSm51uF6Mu-GS2E,49
+sporestack-11.1.0.dist-info/LICENSE.txt,sha256=fhLl30uuEsshWBuhV87SDhmGoFCN0Q0Oikq5pM-U6Fw,1211
+sporestack-11.1.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+sporestack-11.1.0.dist-info/METADATA,sha256=DSOOh9Jk9As0h3fMZqJXCSujM9IUKK1o-JNFNdVR6MU,2924
+sporestack-11.1.0.dist-info/RECORD,,
