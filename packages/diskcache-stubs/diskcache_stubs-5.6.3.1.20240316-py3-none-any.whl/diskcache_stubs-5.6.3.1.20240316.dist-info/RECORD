@@ -1,0 +1,12 @@
+diskcache/__init__.pyi,sha256=e_E4NwXT-oqPw_nbd_DSFG9MnAIVSrkSxVaOOnZXUc0,1508
+diskcache/_typeshed.pyi,sha256=wL8prsOdvcE_FCOWDcMKRucdAZaPLNuUyXAqhv-8RTE,8858
+diskcache/cli.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+diskcache/core.pyi,sha256=36qw_nLcHFeEIdHRJy4X77-gHGMtwyJeNWbdhYMMq6k,16244
+diskcache/djangocache.pyi,sha256=sDlyobHp3prGCp-YBuS0rdJLtxAdzwirxucBNBOq3zQ,2148
+diskcache/fanout.pyi,sha256=On4eVtVuSHV6CaDV8HtyxAJolE0zIx2FR7mlziVQDFo,1569
+diskcache/persistent.pyi,sha256=5NM5u3u-mcVgeETf0zjxT-fZLKB8Wj-cgZLLdvQYkNQ,5327
+diskcache/recipes.pyi,sha256=72GuEZBjxOXTFQkvquQM19MYlpqa0Wlk7isT7Vemo4M,2704
+diskcache_stubs-5.6.3.1.20240316.dist-info/METADATA,sha256=IC9bqsqhVGmpGbHitU_CaTIu-CGRtrTGZW2XKDgAj7M,15800
+diskcache_stubs-5.6.3.1.20240316.dist-info/WHEEL,sha256=BLLCEE40Rfjo8jwRub1wGKjUkeOWfyP-q5USh3YvGoA,87
+diskcache_stubs-5.6.3.1.20240316.dist-info/licenses/LICENSE,sha256=jb6pkfjogGFaGtbm4TT9Y_ELI2dggS4YbtXZwFdogc0,11344
+diskcache_stubs-5.6.3.1.20240316.dist-info/RECORD,,
