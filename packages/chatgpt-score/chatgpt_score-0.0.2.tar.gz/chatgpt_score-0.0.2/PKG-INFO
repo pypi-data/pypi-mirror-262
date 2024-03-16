@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: chatgpt_score
+Version: 0.0.2
+Home-page: https://github.com/fuzihaofzh/chatgpt_score
+Author: 
+Author-email: 
+Keywords: Shell env
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+
+# ChatGPT Score
