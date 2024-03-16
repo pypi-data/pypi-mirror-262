@@ -1,0 +1,208 @@
+<!-- base_index.htmlとindex.htmlに含んでいる -->
+{% if not analytics_set %}
+
+<!-- アナリティクスアプリの初期設定が完了していな場合 -->
+{% include 'analytics/include_not_analytics_set.html' %}
+
+{% else %}
+{% if user.is_staff %}
+<!-- Nav Message Modal -->
+{% include 'analytics/include_nav_message_modal.html' %}
+{% endif %}
+
+<!-- Container -->
+<div class="{{ analytics_set.container }}">
+  <div class="row">
+    <div class="col-{{ analytics_set.col_left }}">
+      <!-- Bootstrap グリッドシステム左側 -->
+    </div>
+    <div class="col-lg-{{ analytics_set.col_center }} col-12">
+      <!-- Bootstrap グリッドシステム中央 -->
+
+      <!-- Heading -->
+      <figure class="text-center">
+	<blockquote class="blockquote">
+	  <p>{{ analytics_set.heading_ja }}</p>
+	  <figcaption class="blockquote-footer">
+	    {{ analytics_set.heading_us }}
+	  </figcaption>
+	</blockquote>
+      </figure>
+
+      {% if not dd_exist %}
+      <!-- アナリティクスデータが空だった場合 -->
+      <figure class="text-center">
+	<blockquote class="blockquote">
+	  <i class="bi bi-cone-striped" style="font-size: 400%; color: red;"></i><h1 class="display-1">準備中...</h1>
+	</blockquote>
+	<figcaption class="blockquote-footer">
+	  in preparation
+	</figcaption>
+      </figure>
+
+      {% else %}
+      <!-- Select Form -->
+      <form id="ajax_chenge" action="{% url 'analytics:pulldown' %}" method="GET">
+	<div class="row">
+	  <div class="col">
+	    <select id="select_data" class="form-select" aria-label="Default select example" onclick='document.getElementById("ch_servings_submit").click();'>
+
+	      <!-- option selected>データ名</option -->
+	      <option value="users">アクセス数</option>
+	      <option value="new_users">新規ユーザー数</option>
+	      <option value="page_views">ページビュー数</option>
+	      <option value="sessions">セッション数</option>
+	      {% if user.is_staff %}
+	      <option value="ad_revenue">広告収益</option>
+	      <option value="ad_impressions">インプレッション数</option>
+	      {% endif %}
+	    </select>
+	  </div>
+	  <div class="col">
+	    <select id="select_date" class="form-select" aria-label="Default select example" onclick='document.getElementById("ch_servings_submit").click();'>
+	      <option selected>日付</option>
+	      <option value="1">全て</option>
+	      <option value="2">１年前から現在</option>
+	      <option value="3">半年前から現在</option>
+	    </select>
+	  </div>
+	</div>
+	<input type="submit" value="送信" id="ch_servings_submit" style="display:none;">
+      </form>
+
+      <!-- Google Charts -->
+      <div id="chart_div"></div>
+
+      <!-- Table -->
+      <div class="table-scroll" id="table-scroll">
+	<table class="table table-hover">
+	  <thead>
+	    <tr>
+	      <th scope="col">日付</th>
+	      <th id="table_head" scope="col">アクセス数</th>
+	    </tr>
+	  </thead>
+	  <tbody id="data_table" class="table-group-divider">
+	    {% for index, row in data_table.iterrows %}
+	    <tr>
+	      <th scope="row">{{ index }}</th>
+	      <td>{{ row.users }}</td>
+	    </tr>
+	    {% endfor %}
+	  </tbody>
+	</table>
+      </div>
+
+      {% endif %}
+    </div>
+    <div class="col-{{ analytics_set.col_right }}">
+      <!-- Bootstrap グリッドシステム右側 -->
+    </div>
+  </div>
+</div>
+
+{% if dd_exist %}
+<!-- data_graphデータフレームが空でなければ読み込む -->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<!-- Google Charts -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+$('#ajax_chenge').on('submit', e => {
+  e.preventDefault();
+
+  // Ajax処理
+  $.ajax({
+    'url': "{% url 'analytics:pulldown' %}",
+    'type': 'GET',
+    'data': {
+      'data_name': $('#select_data').val(),
+      'date_value': $('#select_date').val(),
+    },
+    'dataType': 'json'
+  }).done(response => {
+    // Google Charts
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawChart);
+    let chart_array = [['日付', response.data_table_head]]
+    for (const graph of response.data_graph) {
+      chart_array.push(graph)
+    }
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable(chart_array);
+
+      var options = {
+	chart: {
+	  title: response.data_table_head,
+	  // 2xxx年x月-2xxx年x月
+	  subtitle: chart_array[1][0]+'-'+chart_array[chart_array.length-1][0],
+	},
+	colors: ['#33ac71'],
+	width: '100%',// グラフの横長
+	height: 400,// グラフの縦長
+	vAxis: {format: 'decimal'},// 左側軸のフォーマット
+	hAxis: {textPosition: 'out', title: ''},
+	legend: { position: 'none', textStyle: {fontSize: 10}},// 凡例の位置（'none'しか効かない）
+      };
+      var chart = new google.charts.Bar(document.getElementById('chart_div'));
+      chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+
+    // テーブル処理
+    if (response.data_table.length <= 12){
+      $('.table-scroll').removeAttr('class'); // スクロール指定した属性を削除
+    }else{
+      $('#table-scroll').attr('class', 'table-scroll'); // スクロールを有効にする
+    }
+    $('#table_head').empty(); // #table_head内の要素を削除
+    $('#data_table').empty(); // #data_table内の要素を削除
+
+    $('#table_head').text(response.data_table_head); // #table_head内に要素を追加
+    // ループ処理
+    for (const table of response.data_table) {
+      // 必要なテーブルタグを作成
+      const tr = $('<tr>');
+      const th = $('<th>', { scop:'row', text: table[0] });
+      const td = $('<td>', {text: table[1]});
+      // #data_table内にテーブルを追加
+      $('#data_table').append(tr.append(th).append(td));
+    }
+  });
+});
+// デフォルトのGoogle Chart
+google.charts.load('current', {'packages':['bar']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ['日付', 'アクセス数'],
+    {% for index, row in data_graph.iterrows %}
+    ['{{ index }}', {{ row.users }}],
+    {% endfor %}
+  ]);
+
+  // セレクトフォームの実装次第で「202402」のような要素だった場合、アクシズ（hAxis）のフォーマットを変更する。
+  var options = {
+    chart: {
+      title: 'アクセス数',
+      subtitle: '{{ data_graph_subtitle }}',//'2024年1月-2024年12月',
+    },
+    colors: ['#33ac71'],
+    width: '100%',// グラフの横長
+    height: 400,// グラフの縦長
+    vAxis: {format: 'decimal'},// 左側軸のフォーマット
+    hAxis: {textPosition: 'out', title: ''},
+    legend: { position: 'none', textStyle: {fontSize: 10}},// 凡例の位置（'none'しか効かない）
+  };
+
+  var chart = new google.charts.Bar(document.getElementById('chart_div'));
+
+  chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+</script>
+<!-- data_graphデータフレームが空でなければ読み込む -->
+{% endif %}
+<!-- アナリティクスアプリの初期設定が完了しているか　-->
+{% endif %}
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

@@ -1,0 +1,58 @@
+/* analytics/index.html */
+.card-body pre {
+  text-align: left;
+  background-color: black;
+  color: white;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.navbar {
+  background-color: greenyellow;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar h4 {
+  color: limegreen;
+}
+
+figure {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+p {
+  font-weight: bold;
+}
+
+.display-1 {
+  font-weight: bold;
+}
+
+form {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#chart_div {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.table {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* テーブルのスクロール */
+.table-scroll {
+  height: 600px;
+  overflow-y: scroll;
+  margin-bottom: 50px;
+}
+
+.title {
+  color: white;
+}
+
