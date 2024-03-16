@@ -1,0 +1,9 @@
+isne_recommendation/FeatureRatingsKNN.py,sha256=qhEK1Xravb50uXpVkrBzVonYx2tgdMCUVGbvmBdVU7s,5518
+isne_recommendation/Hybrid.py,sha256=BfOG5t-DUpWaAwCdzL2amjkI0uIgeylJY4T5AGy4H08,7068
+isne_recommendation/TfidfLinearKernel.py,sha256=hLYcgzjZkx8ByDFY4QoI9FUcEIWp5IpYXv5Co5e1hS4,4030
+isne_recommendation/TfidfLinearKernel_old.py,sha256=d8tdhJBr-DnAzLE_jn_SkhNDDgcOU5svfFNV0nd_dSc,3579
+isne_recommendation/__init__.py,sha256=GKCL1cFzKTuBkzCXyT_nAcG476Y4TbqOVzYwKpwKRrM,143
+isne_recommendation-0.0.6.dist-info/METADATA,sha256=p4BhY-6jx3Eiu-5evzGiWjpg3_T7dnrTNVYhmvSIp-E,2830
+isne_recommendation-0.0.6.dist-info/WHEEL,sha256=FHGKCzrifO4GGZPHPeN2DpkuMPnZ7-0I8R_-S9ePsno,87
+isne_recommendation-0.0.6.dist-info/licenses/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+isne_recommendation-0.0.6.dist-info/RECORD,,
