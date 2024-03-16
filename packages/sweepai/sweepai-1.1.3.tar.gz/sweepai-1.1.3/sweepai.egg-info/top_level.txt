@@ -1,0 +1,10 @@
+bin
+cli
+data
+dist
+logn_logs
+node_modules
+notebooks
+platform
+probot
+sweepai
