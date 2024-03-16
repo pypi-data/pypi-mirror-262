@@ -1,0 +1,6 @@
+parsel
+selenium
+pandas
+torch
+scikit-learn
+scipy
