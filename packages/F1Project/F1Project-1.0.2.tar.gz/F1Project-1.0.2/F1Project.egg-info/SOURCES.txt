@@ -1,0 +1,8 @@
+README.md
+setup.py
+F1Project.egg-info/PKG-INFO
+F1Project.egg-info/SOURCES.txt
+F1Project.egg-info/dependency_links.txt
+F1Project.egg-info/top_level.txt
+cpr/__init__.py
+cpr/f1p.py
