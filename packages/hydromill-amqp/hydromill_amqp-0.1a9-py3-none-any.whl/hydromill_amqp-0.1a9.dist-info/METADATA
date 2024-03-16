@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: hydromill-amqp
+Version: 0.1a9
+Summary: AMQP Pub/Sub for the Hydromill project. This project is a direct port of https://github.com/ThreeDotsLabs/watermill-amqp.
+Home-page: https://github.com/mczudowski/hydromill-amqp
+License: MIT
+Author: Marek Czudowski
+Author-email: marek.czudowski@pm.me
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: elasticapm
+Requires-Dist: aio-pika
+Requires-Dist: elastic-apm ; extra == "elasticapm"
+Requires-Dist: hydromill
+Project-URL: Repository, https://github.com/mczudowski/hydromill-amqp
+Description-Content-Type: text/markdown
+
+# Hydromill AMQP Pub/Sub
+
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
+
+AMQP Pub/Sub for the Hydromill project. This project is a direct port of [Watermill AMQP Pub/Sub](https://github.com/ThreeDotsLabs/watermill-amqp).
+
+## Usage
+
+Example publisher:
+```py
+amqp_uri = "amqp://guest:guest@localhost:5672/"
+amqp_config = await new_durable_pubsub_config(amqp_uri)
+
+publisher = await new_publisher(amqp_config)
+
+message = Message(payload=b"simple")
+await publisher.publish("topic", messages=[message])
+```
+
+## References
+
+[Watermill AMQP Pub/Sub](https://github.com/ThreeDotsLabs/watermill-amqp)
+
+## License
+
+[MIT License](./LICENSE)
+
