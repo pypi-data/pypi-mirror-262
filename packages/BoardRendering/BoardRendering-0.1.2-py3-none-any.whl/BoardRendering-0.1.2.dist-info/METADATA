@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: BoardRendering
+Version: 0.1.2
+Summary: Renders 2D Board in console that allows you to change different position in it to different Unicode charecters
+Author: Cybreak
+Author-email: cybreak@cybreak.dev
+Keywords: python,2D,Console,Board Render
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+
