@@ -1,0 +1,2 @@
+[console_scripts]
+autoinit = autoinit.cli:main
