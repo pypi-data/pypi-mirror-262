@@ -1,0 +1,15 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "bilkom"
+authors = [{name = "wnuczek", email = "mail@pawelwnuk.pl"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version"]
+readme = "README.md"
+description = "BILKOM train info"
+
+[project.urls]
+Home = "https://github.com/wnuczek/bilkom"
