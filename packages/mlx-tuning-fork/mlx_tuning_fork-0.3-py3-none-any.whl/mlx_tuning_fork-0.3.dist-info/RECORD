@@ -1,0 +1,16 @@
+mlx_tuning_fork/__init__.py,sha256=xOYLPVGVtegeUSkxplbhgVv35ENzx264RSqAD2xnNtw,19
+mlx_tuning_fork/config.py,sha256=IP1FdvOi1T-2xxOBdD_V48hsfR3EpEZn1teYuUuFiD0,1361
+mlx_tuning_fork/dataset.py,sha256=behLJgPTvg1g3h7mFtgMKylsnFhO70utLh5fx6DNlHA,558
+mlx_tuning_fork/reporting.py,sha256=sMBenyWW8GXXs35mX0j-3vEzVdP1k5yP61T3r9a6Kjc,799
+mlx_tuning_fork/training.py,sha256=Dkolm7O-jety1zHhy9gHA-EYI-D7p6bbix8-RRxk06A,16444
+mlx_tuning_fork/wandb_sweep.py,sha256=AH9RSCAu2uDVFGyUESVW1nzNFUYd87VaxpCnK8sUgfk,4332
+mlx_tuning_fork/prompt_templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlx_tuning_fork/prompt_templates/chatml.py,sha256=P5UAWCLcYrKST7wpVYVimi89ekhtJPOryB14JmP5xIQ,417
+mlx_tuning_fork/prompt_templates/mistral.py,sha256=EzmdNifL6-D5LAuw9i_jY7LxLrXf2h1bpBUDyJreE_0,590
+mlx_tuning_fork/tuning/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlx_tuning_fork/tuning/dynamic_learning/__init__.py,sha256=LSS-VqFYcHvS9Xdf3DmJFKtZpxrSutkmA3L5L6kEwPs,2949
+mlx_tuning_fork-0.3.dist-info/LICENSE,sha256=6Vq4m5PAhejup27tMJEaXnbGtANWSVD8uA4nxDp2NKg,1069
+mlx_tuning_fork-0.3.dist-info/METADATA,sha256=0ZxXfrFoEgzr7__kJ7OD5QpJm4IHhLdje_F2MxA5WNE,11500
+mlx_tuning_fork-0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mlx_tuning_fork-0.3.dist-info/top_level.txt,sha256=egesCTPRdimEAhzgqTYPkmPwm7pFOXLLNEg-YXdZM04,16
+mlx_tuning_fork-0.3.dist-info/RECORD,,
