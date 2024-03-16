@@ -1,0 +1,3 @@
+[console_scripts]
+pycx3 = pycx3.cli:compile
+
