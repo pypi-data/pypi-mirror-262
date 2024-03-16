@@ -1,0 +1,73 @@
+#app-grid {
+    layout: grid;
+    grid-size: 2;  /* two columns */
+    grid-columns: 1fr;
+    grid-rows: 20% 80%;
+}
+
+#date {
+    width: 20;
+}
+
+Label {
+    text-align: center;
+    align-vertical: middle;
+    border: blank black;
+}
+
+Input.-valid {
+    border: ascii $success 60%;
+}
+
+Input.-valid:focus {
+    border: ascii $success;
+}
+
+Input {
+    border: ascii red;
+}
+
+#new_tag, #notes {
+    border: ascii $success 60%;
+}
+
+#new_tag:focus, #notes:focus {
+    border: ascii $success;
+}
+
+#year {
+    width: 11;
+}
+
+#month, #day, #t1h, #t1m, #t2h, #t2m {
+    width: 9;
+}
+
+#date_row {
+    column-span: 2;
+}
+
+#week {
+    dock: right;
+    color: black;
+    background: yellowgreen;
+}
+
+.box {
+    height: 100%;
+    border: solid green;
+}
+
+Tabs {
+    dock: top;
+}
+
+.white_text_on_red_background {
+    color: white;
+    background: red;
+}
+
+.black_text_on_yellowgreen_background {
+    color: black;
+    background: yellowgreen;
+}

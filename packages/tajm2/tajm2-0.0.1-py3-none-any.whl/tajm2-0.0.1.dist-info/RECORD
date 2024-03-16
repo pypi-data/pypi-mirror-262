@@ -1,0 +1,12 @@
+tajm2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tajm2/base_model.py,sha256=44vNajLRQHHRZjoUqNuU9UAPKFyGycivnVzlqLCntQQ,363
+tajm2/constants.py,sha256=AMuJ0-89eOcPz3iRfeekp2RejKpW7BPLbZ0WWn_flGw,297
+tajm2/custom_inputs.py,sha256=YxHSkFdNtQLTzaxz2yW4g2BuOMQUdn37qN-3FJocuOs,3754
+tajm2/custom_validators.py,sha256=tw64fNs28Xcg0GfAjIPN7TEFlxYJy6pKCEuzft_FkYA,1285
+tajm2/layout.tcss,sha256=U1kGq-IgSt1f7IAf2Ki9jwGA7rTnWV2SC3q3RYabcw8,989
+tajm2/tajm2.py,sha256=oD5PPyk8mdBHn7orTDrHr2_K62QeVpWFEMeePNFUl9o,23115
+tajm2/time_slot.py,sha256=YhyjAry6q9E1muK64cgk7yJQ-ZPtEGJqoZzDvN7y1Rs,1438
+tajm2-0.0.1.dist-info/METADATA,sha256=bVlaeP9nMWLXdUj2LdwHkidVsLzkL4nQboXE1BleWKs,842
+tajm2-0.0.1.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+tajm2-0.0.1.dist-info/licenses/LICENSE,sha256=Q2ptU2E48gOsMzhYz_kqVovmJ5d1KzrblLyqD2_-fvY,1235
+tajm2-0.0.1.dist-info/RECORD,,
