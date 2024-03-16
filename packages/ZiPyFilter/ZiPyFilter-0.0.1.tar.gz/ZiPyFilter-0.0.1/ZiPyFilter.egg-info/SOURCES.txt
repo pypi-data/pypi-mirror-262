@@ -1,0 +1,10 @@
+LICENSE
+README.md
+builder.py
+lib.zig
+pyproject.toml
+setup.py
+ZiPyFilter.egg-info/PKG-INFO
+ZiPyFilter.egg-info/SOURCES.txt
+ZiPyFilter.egg-info/dependency_links.txt
+ZiPyFilter.egg-info/top_level.txt
