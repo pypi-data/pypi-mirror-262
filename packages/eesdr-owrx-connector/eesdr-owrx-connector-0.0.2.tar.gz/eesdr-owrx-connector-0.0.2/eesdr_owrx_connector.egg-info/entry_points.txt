@@ -1,0 +1,2 @@
+[console_scripts]
+eesdr-owrx-connector = eesdr_owrx_connector.connector:main

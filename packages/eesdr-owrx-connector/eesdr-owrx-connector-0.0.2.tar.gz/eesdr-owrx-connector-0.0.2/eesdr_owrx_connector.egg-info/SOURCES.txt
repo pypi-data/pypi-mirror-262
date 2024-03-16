@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+eesdr_owrx_connector/connector.py
+eesdr_owrx_connector.egg-info/PKG-INFO
+eesdr_owrx_connector.egg-info/SOURCES.txt
+eesdr_owrx_connector.egg-info/dependency_links.txt
+eesdr_owrx_connector.egg-info/entry_points.txt
+eesdr_owrx_connector.egg-info/requires.txt
+eesdr_owrx_connector.egg-info/top_level.txt
