@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: workshop-sergio
+Version: 0.1.0
+Summary: 
+Author: lucasdcsilva04
+Author-email: jeffersond1silva@hotmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+## workshop
+
