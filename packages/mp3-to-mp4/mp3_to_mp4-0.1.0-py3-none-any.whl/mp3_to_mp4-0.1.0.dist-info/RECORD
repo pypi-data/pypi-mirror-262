@@ -1,0 +1,10 @@
+mp3_to_mp4/__init__.py,sha256=8ITUFkRMcV0xC4MKks_jpjm-EuLfEFKOQ84vOvy8kTs,1509
+mp3_to_mp4/__main__.py,sha256=tVDknVen2u0XWnFCIgZ6pSIPa4lJp8-yhON4NYCgKp0,196
+mp3_to_mp4/cli.py,sha256=J3xrJSME1rFOtfkr-lAw6u1YsCu2tP6f8ncgL3neZJU,3660
+mp3_to_mp4/config.py,sha256=Sioe-6buX9gG1CjgVINSxv8E-fc8zPKR9xwV1PSMWDc,1992
+mp3_to_mp4/renderer.py,sha256=pTaNJniEdLYa4KiMGnvawj-fpbILgu8Q7tax7cv9u_U,7022
+mp3_to_mp4-0.1.0.dist-info/entry_points.txt,sha256=AYfGD5xG88pbSq7L9uubvLYJyN6PgnnvFl1qlfhrZ_Y,55
+mp3_to_mp4-0.1.0.dist-info/LICENSE.md,sha256=CJlYu7fB5m4dAUCGL-K8kCup5m2xa9LoQLWEywhvycQ,32949
+mp3_to_mp4-0.1.0.dist-info/METADATA,sha256=lKtIU9dDBZvt3ZU0kFtC1GCQRE6voikn250P5CxxDyo,4830
+mp3_to_mp4-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+mp3_to_mp4-0.1.0.dist-info/RECORD,,
