@@ -1,0 +1,6 @@
+# Official Documentation for Jupyter Lab/Notebooks .css styles
+https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+
+# Github Discussion shedding some light on which file to edit
+# for .css styling in the cookiecutter project template
+https://github.com/jupyterlab/jupyterlab/issues/9948
