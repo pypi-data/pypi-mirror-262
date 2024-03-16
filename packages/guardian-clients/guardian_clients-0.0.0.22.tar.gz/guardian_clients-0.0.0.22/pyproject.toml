@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "guardian-clients"
+version = "0.0.0.22"
+license = "Apache License 2.0"
+description = "Reference client implementations for Guardian product - SDKs, CLIs, CURL scripts, etc."
+authors = ["ProtectAI <community@protectai.com>"]
+readme = "README.md"
+packages = [
+    { include = "guardian_clients" },
+]
+exclude = ["guardian_clients/bash", "Makefile", ".env"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+pyjwt = "^2.8.0"
+click = "^8.1.7"
+
+[tool.poetry.group.dev]
+optional = true
+[tool.poetry.group.dev.dependencies]
+black = "22.8.0"
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target-version = ['py39', 'py310', 'py311']
+include = '\.pyi?$'
+
+[tool.poetry.scripts]
+guardian-scanner = "guardian_clients:guardian"
