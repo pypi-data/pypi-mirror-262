@@ -1,0 +1,3 @@
+[console_scripts]
+desculpa_p_faltar_aula=workshop_sergio.main:desculpa_para_faltar_na_aula
+
