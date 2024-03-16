@@ -1,0 +1,12 @@
+{
+    "$schema": "./schema.json",
+    "mappings": {
+        "normal": "NC",
+        "Normal": "NC",
+        "OV": "OV",
+        "Ovarian Cancer": "OV",
+        "Uterine Cancer": "UCEC",
+        "Some title": "Translated title",
+        "log2(TPM)": "log₂(TPM)"
+    }
+}
