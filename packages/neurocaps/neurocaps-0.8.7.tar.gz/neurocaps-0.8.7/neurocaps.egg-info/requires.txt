@@ -1,0 +1,7 @@
+pybids
+nilearn
+pandas
+numpy
+matplotlib
+seaborn
+kneed
