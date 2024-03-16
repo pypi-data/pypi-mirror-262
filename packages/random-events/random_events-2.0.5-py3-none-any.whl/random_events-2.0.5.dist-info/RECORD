@@ -1,0 +1,8 @@
+random_events/__init__.py,sha256=dVcGCZ5wUWMpOJgTrQrOvt6L6HdIhykCRMVFZFr-q20,22
+random_events/events.py,sha256=zSPrC5lhoFJ6fn-oSZ0CCZD3nUnfepTc3vQCtdRDuh8,25363
+random_events/utils.py,sha256=TDzqMXcfcNY2BrrlAVAyV4368DFZiCDAcLWT972JRWM,450
+random_events/variables.py,sha256=PQdCThW5lqJUwxqAV9kWmcP1szYyja_0fREadyGxqoQ,8480
+random_events-2.0.5.dist-info/METADATA,sha256=ZWStr9JTPyYSt5TPhrf8JHIchQ3fBCRrs8kW68cNaZw,1200
+random_events-2.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+random_events-2.0.5.dist-info/top_level.txt,sha256=yXAk_i6PJjcqhR6T6PVZWCj5rKndL602BjqQ89HtxOs,14
+random_events-2.0.5.dist-info/RECORD,,
