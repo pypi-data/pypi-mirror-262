@@ -1,0 +1,2 @@
+[console_scripts]
+niceapp4 = niceapp4:main

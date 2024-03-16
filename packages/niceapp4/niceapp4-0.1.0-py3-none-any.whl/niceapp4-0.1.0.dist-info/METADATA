@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: niceapp4
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Masuda Shinsuke <shinsuke.masuda@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# niceapp4
+
+Describe your project here.
