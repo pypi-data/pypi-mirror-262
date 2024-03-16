@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_configuration.py
+tests/test_toscawidgets.py
+tests/test_validation.py
+tgext/__init__.py
+tgext.tw2.egg-info/PKG-INFO
+tgext.tw2.egg-info/SOURCES.txt
+tgext.tw2.egg-info/dependency_links.txt
+tgext.tw2.egg-info/requires.txt
+tgext.tw2.egg-info/top_level.txt
+tgext/tw2/__init__.py
+tgext/tw2/component.py
+tgext/tw2/validation.py
