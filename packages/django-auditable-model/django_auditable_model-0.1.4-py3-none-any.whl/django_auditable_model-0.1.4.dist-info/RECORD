@@ -1,0 +1,12 @@
+django_auditable_model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_auditable_model/admin.py,sha256=p6xop1PuuDG2Uwv3G_aRfldxOfBzTRfMaoZmORVkqyU,66
+django_auditable_model/apps.py,sha256=pMDYODKr-5ouH4ppln0WkEj4A7aA0x6WBB6HnErci9Y,180
+django_auditable_model/models.py,sha256=LSuD9DLLSDafriDGkqM3iT19ihnO8M3xAhVpPgzPCXo,801
+django_auditable_model/serializers.py,sha256=OJGVoESXmGTW6qm8CuHIevnohTiqxcMqVCcYVSIKbgU,467
+django_auditable_model/tests.py,sha256=2uDafv3Ns6f7Vy1ekUtgYxCZEi1KRyesZDTAFhYcX-E,63
+django_auditable_model/views.py,sha256=u0FhL7RT5byf5IlcnZEMrcH2TOnQkdfRQU2SjtA26m0,66
+django_auditable_model/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_auditable_model-0.1.4.dist-info/METADATA,sha256=ESzsF97fz-Vfobow8VJRD5DwjhZCD4A5BOz4DqUuO2k,3163
+django_auditable_model-0.1.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_auditable_model-0.1.4.dist-info/top_level.txt,sha256=I-p_6nHONdKYUKAYGmHvNH4iVStGz2a0pnuKMqAwP_U,23
+django_auditable_model-0.1.4.dist-info/RECORD,,
