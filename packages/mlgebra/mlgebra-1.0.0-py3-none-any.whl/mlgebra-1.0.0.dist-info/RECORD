@@ -1,0 +1,11 @@
+mlgebra/MLgebra.py,sha256=qSCf7G7SosZKn39_JLvqLBtUBcFcyvCfqaAN05Qj05U,1671
+mlgebra/__init__.py,sha256=tpbB4kJbR6GUnNvuK-kfTYueWrRbHIjRvaE6Yo9D4Fs,20
+mlgebra/exception.py,sha256=teW6ImGF5WpP08L4rzunVB_jOI-fPZ4Rhf4C1PWmJj0,828
+mlgebra/layer.py,sha256=7z8HzH3kDKl_vhtbScr7dKq1sqtJzjlftCccn3Tvg7M,6685
+mlgebra/model.py,sha256=KKABoA2xzRB5nBKPcGB1droBZpOuSivSmnLEE1hWTWc,22608
+mlgebra/neuron.py,sha256=Azhsf4JbfuP6_-YlbJLjRI0p61BqaJwtFBC5oAD_VSY,1657
+mlgebra-1.0.0.dist-info/LICENSE.txt,sha256=6TTz8uVM-YNGpb_IG7AnO_3s9gbgpnb-kdr7OYXxpH8,1067
+mlgebra-1.0.0.dist-info/METADATA,sha256=I0bp1J0tVo_gwZO8zGePQiCLRuldnBzrecyVBZ-0kA0,9041
+mlgebra-1.0.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+mlgebra-1.0.0.dist-info/top_level.txt,sha256=cvG80GwfM1BoaOd0Svk2Ht6XGW0BoCg9qgpP9gFxAQc,8
+mlgebra-1.0.0.dist-info/RECORD,,
