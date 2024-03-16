@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: pycobol2parquet
+Version: 0.0.3
+Summary: A Python library to convert COBOL ebcdic file to parquet format based on copybook
+Home-page: https://github.com/jasonli-lijie/pycobol2parquet
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Author: Jason Li
+Author-email: niomobileapp@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/jasonli-lijie/pycobol2parquet/issues
+Keywords: COBOL,parquet
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyarrow
+
+# pycobol2parquet
+
+pycobol2parquet is a Python library to convert COBOL ebcdic file to parquet format. 
+
+I released [pycobol2csv](https://pypi.org/project/pycobol2csv/) back in 2021 and it has been deployed to multiple production systems. One feedback I received is about the possibility of converting from Cobol to Parquet directly for analytical workload. 
+
+It is straightforward to reuse the same underline knowledge and code to generate Parquet file.
+
+
+Install the python module:
+
+`pip install pycobol2parquet`
+
+To use the module:
+
+```
+from pycobol2parquet import convert_cobol_file, decode_copybook_file
+
+row_length, cobol_struc = decode_copybook_file(copybook_file)
+
+convert_cobol_file(copybook_file, data_file, output_file, codepage, debug=False)
+
+```
+
+- copybook_file: copybook filename
+- data_file: data filename 
+- output_file: output parquet filename
+- codepage: codepage for edibic, refer to https://docs.python.org/3.7/library/codecs.html#standard-encodings for details
+- debug: enable for more debug information, default is OFF
+
+Please refer to _convert_cobol_test_main.py_ for details. 
+
+## test 
+
+2 sets of test data have been created from scratch. Each set includes a copybook and an EBCDIC data file.
+
+To test:
+
+```
+python convert_cobol_test_main.py --copybook testdata\test2\DWSTUB.txt --data testdata\test2\DWSTUB_DATA.DAT --output DWSTUB_DATA_output.parquet
+```
+
+## known issues and limitations
+
+- Be aware of the resources available in your runtime environment and make sure the Cobol file size is not beyond the limit or cause any performance issue.
+
+To handle large Cobol files, you can split the files into smaller chunks and then process the chunks in parallel. Please refer to the [medium post](https://medium.com/@jasonli.lijie/process-large-cobol-files-efficiently-with-pycobol2csv-pycobol2parquet-f023533607e4) for details.
+
+- When creating Parquet files the library detects data type automatically. This is to simplify the parameters passed to the conversion function.
+
+<!-- Repo: https://github.com/jasonli-lijie/pycobol2parquet -->
