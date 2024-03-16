@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "python_pyenv_poetry_template"
+version = "0.7.1"
+description = "A GitHub template for Python projects using Pyenv and Poetry"
+authors = [ "Fabio Calefato <fcalefato@gmail.com>",]
+readme = "README.md"
+repository = "https://github.com/bateman/python_pyenv_poetry_template"
+license = "MIT"
+
+[build-system]
+requires = [ "poetry-core",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+rich = "*"
+pretty-errors = "*"
+tomlkit = "*"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "*"
+mypy = "*"
+pre-commit = "*"
+
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+pytest-cov = "*"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "*"
+mkdocstrings = "*"
+mkdocs-autorefs = "*"
+mkdocstrings-python = "*"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.ruff]
+fix = true
+line-length = 88
+indent-width = 4
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+extend-select = [ "I", "D", "S"]
+ignore = [ "D203", "D211", "D213", ]
+ignore-init-module-imports = true
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = 60
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 88
+
+[tool.pytest.ini_options]
+addopts = [ "--cov-fail-under=5", "--cov-report=term-missing", "--cov=python_pyenv_poetry_template",]
