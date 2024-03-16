@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: ksy-simple
+Version: 0.0.1
+Summary: PYPI tutorial package creation written by kyeob
+Home-page: https://github.com/kyeob1107/package_upload_test
+Author: kyeob
+Author-email: koak1107@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: kyeob,python code kata,python tutorial,pypi
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6

@@ -1,0 +1,10 @@
+README.md
+setup.py
+ksy-simple/__init__.py
+ksy-simple/ksy_simple.py
+ksy_simple.egg-info/PKG-INFO
+ksy_simple.egg-info/SOURCES.txt
+ksy_simple.egg-info/dependency_links.txt
+ksy_simple.egg-info/not-zip-safe
+ksy_simple.egg-info/requires.txt
+ksy_simple.egg-info/top_level.txt
