@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/__init__.py
+data/analysis/__init__.py
+data/analysis/uie/__init__.py
+data/analysis/uie/extract/__init__.py
+data/analysis/uie/extract/tool/__init__.py
+data/analysis/uie/extract/tool/jms/__init__.py
+data/analysis/uie/extract/tool/jms/data_analysis_uie_tool.py
+data_analysis_uie_extract_tool_jms.egg-info/PKG-INFO
+data_analysis_uie_extract_tool_jms.egg-info/SOURCES.txt
+data_analysis_uie_extract_tool_jms.egg-info/dependency_links.txt
+data_analysis_uie_extract_tool_jms.egg-info/requires.txt
+data_analysis_uie_extract_tool_jms.egg-info/top_level.txt
