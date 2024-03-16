@@ -1,0 +1,9 @@
+foostrap/__init__.py,sha256=0ekkcUcKdd2y6Wu15M5RtQr5ne4cEhnQLUNftfIYHEw,31
+foostrap/estimators.py,sha256=LU-wUM-9HW5FdcJ0tMPtMVJTgSVJJ87XYG1lyZCRTKg,7745
+foostrap/interface.py,sha256=YSmYY0Ydk264QhaoeXHk2vyuToGNGC7MOQ6fCooRQWY,4031
+foostrap/preproc.py,sha256=b3cwpviDox7-d2GYrL80SKKEIDEj1LU3RXwA4qEbyLw,7633
+foostrap/samplers.py,sha256=-VmzkRKX_ErhQyjqtvLQ4VOpaQscgbuGWYz7-S7MfHM,4104
+foostrap-1.1.0.dist-info/METADATA,sha256=R8sn3k8m248fbs4Og47clgLBpXsmWMtKtGec26v7zfM,4871
+foostrap-1.1.0.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+foostrap-1.1.0.dist-info/licenses/LICENSE,sha256=RWPrwDzJRfAnwMpaWs5gT_0MopEW24K-DigqIKnr8PE,1071
+foostrap-1.1.0.dist-info/RECORD,,
