@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: guardian-clients
+Version: 0.0.0
+Summary: Reference client implementations for Guardian product - SDKs, CLIs, CURL scripts, etc.
+License: Apache-2.0
+Author: ProtectAI
+Author-email: community@protectai.com
+Requires-Python: >=3.9,<3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: pyjwt (>=2.8.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# TODO
+
+# Testing client with Auth - TODO this is draft
+
+```
+export GUARDIAN_SCANNER_CLIENT_ID=guardian-sdk
+export GUARDIAN_SCANNER_CLIENT_SECRET=
+export GUARDIAN_SCANNER_OIDP_TOKEN_ENDPOINT=https://auth.dev.radar.protectai.com/realms/radar-unstable/protocol/openid-connect/token
+export GUARDIAN_SCANNER_ENDPOINT=https://scanner.dev.protectai.local
+export SCAN_TARGET_LOCATION=s3://guardian.protectai
+
+python clients/python/guardian.py http://localhost:8000 s3://ml-pipeline-storage/mlflow/143466328962531796/67277e75e29a49c3a723180de76c712c/ --threshold high --log-level info || echo $?
+```
