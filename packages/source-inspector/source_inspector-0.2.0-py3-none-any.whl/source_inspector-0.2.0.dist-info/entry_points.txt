@@ -1,0 +1,3 @@
+[scancode_scan]
+source_string = source_inspector.strings_xgettext:XgettextStringScannerPlugin
+source_symbol = source_inspector.symbols_ctags:CtagsSymbolScannerPlugin
