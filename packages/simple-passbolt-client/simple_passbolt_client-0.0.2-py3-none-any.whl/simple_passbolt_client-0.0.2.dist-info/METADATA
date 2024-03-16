@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: simple-passbolt-client
+Version: 0.0.2
+Summary: Simple Python client for passbolt
+Home-page: https://github.com/slazzaris/pybolt
+Author: Simone Lazzaris
+License: Apache License Version 2.0
+Keywords: passbolt,gpgauth
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: certifi ==2024.2.2
+Requires-Dist: cffi ==1.16.0
+Requires-Dist: charset-normalizer ==3.3.2
+Requires-Dist: cryptography ==42.0.5
+Requires-Dist: idna ==3.6
+Requires-Dist: PGPy ==0.6.0
+Requires-Dist: pyasn1 ==0.5.1
+Requires-Dist: pycparser ==2.21
+Requires-Dist: requests ==2.31.0
+Requires-Dist: urllib3 ==2.2.1
+
+# pybolt
+
+Simple modern python library for accessing secrets stored in passbolt
+
+## Rationale
+
+I needed a simple way to access credentials stored in passbolt; I've found only obsolete
+packages and decided to write a quick one.
+
+## Usage
+
+You need:
+- a working passbolt server (let's say at `https://mypassbolt.domain.example`)
+- a set of credentials for that server:
+  - an ascii-armored private key (e.g. in file `myprivatekey.asc`)
+  - the passphrase for that key (e.g. `mysecretpassphrase`)
+- the uuid of a secret you want to know
+
+Then you can just import pybolt and use it like this:
+
+```python
+import pybolt
+
+url="https://mypassbolt.domain.example"
+passphrase="mysecretpassphrase"
+private_key="myprivatekey.asc"
+secret_uuid='31d79219-86e8-4cbf-b5ac-0b49f7aefa7b'
+
+b = pybolt.Bolt(url, private_key, passphrase)
+b.verify()
+b.login()
+secret = b.get_secret(secret_uuid)
+print(f"PASSWORD: '{secret['password']}'")
+```
+## Installation
+
+Easy:
+
+```sh
+pip install pypassbolt
+```
+
+(no, I couldn't use `pybolt` as pypi package name as it is already used).
+
