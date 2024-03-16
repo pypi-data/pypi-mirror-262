@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/merrygo/__init__.py
+src/merrygo/__main__.py
+src/merrygo.egg-info/PKG-INFO
+src/merrygo.egg-info/SOURCES.txt
+src/merrygo.egg-info/dependency_links.txt
+src/merrygo.egg-info/entry_points.txt
+src/merrygo.egg-info/requires.txt
+src/merrygo.egg-info/top_level.txt

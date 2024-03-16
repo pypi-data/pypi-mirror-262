@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "merrygo"
+authors = [{name = "Manuel Šarić", email = "manujelko@gmail.com"}]
+description = "Person Python project manager"
+readme = "README.md"
+license = {file = "LICENSE"}
+version = "0.0.2"
+requires-python = ">= 3.8"
+classifiers = [
+    "Operating System :: Unix",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "rich",
+    "typer",
+]
+
+[project.urls]
+Homepage = "https://github.com/manujelko/merrygo"
+Issues = "https://github.com/manujelko/merrygo/issues"
+
+[project.optional-dependencies]
+dev = [
+    "bpython",
+    "mypy>=0.3.2",
+    "pdbpp",
+    "ruff",
+]
+
+[project.scripts]
+merrygo = "merrygo.__main__:main"

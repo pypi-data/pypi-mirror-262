@@ -1,0 +1,2 @@
+[console_scripts]
+merrygo = merrygo.__main__:main
