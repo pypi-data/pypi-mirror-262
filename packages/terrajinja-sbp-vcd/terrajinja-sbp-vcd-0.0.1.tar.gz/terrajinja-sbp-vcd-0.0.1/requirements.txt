@@ -1,0 +1,3 @@
+# this is only usable for terrajinja
+terrajinja-imports-vcd>=3.11.0
+terrajinja-sbp-generic>=0.0.1

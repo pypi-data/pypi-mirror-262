@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+terrajinja-imports-vcd = ">=3.11.0"
+terrajinja-sbp-generic = ">=0.0.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
