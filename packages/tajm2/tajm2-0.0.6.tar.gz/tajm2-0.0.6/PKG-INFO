@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: tajm2
+Version: 0.0.6
+Summary: tajm2 is a command line GUI tool built on Textual to manage time slots.
+Project-URL: Homepage, https://github.com/davsva/tajm2
+Project-URL: Issues, https://github.com/davsva/tajm2/issues
+Author-email: David Svanberg <david.svanberg@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# tajm2
+
+tajm2 is a command line GUI tool built on Textual to manage time slots.
+
+> _"tajm2 is the only tool needed keeping track of my time slots."_ -The author
+
+The data is stored locally in a SQLite3 database. You'll need to have Python installed and from a command prompt enter:
+
+```
+pip install tajm2
+tajm2
+```

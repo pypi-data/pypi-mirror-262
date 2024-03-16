@@ -1,0 +1,8 @@
+{
+    "logViewer.watch": [
+        {
+            "title": "app log",
+            "pattern": "${workspaceFolder}\\*.log"
+        }
+    ]
+}
