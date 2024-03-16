@@ -1,0 +1,38 @@
+Metadata-Version: 2.3
+Name: tiny_solver
+Version: 0.3.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: numpy
+Summary: Factor graph solver
+Keywords: factor graph,ceres-solver,minisam
+Home-Page: https://github.com/powei-lin/tiny-solver-rs
+Author: Powei Lin <poweilin1994@gmail.com>
+Author-email: Powei Lin <poweilin1994@gmail.com>
+License: MIT OR Apache-2.0
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/powei-lin/tiny-solver-rs
+
+# tiny-solver-rs
+Inspired by ceres-solver and tiny-solver. This is a re-implemented version of [tiny-solver](https://github.com/keir/tinysolver/tree/master) in rust.
+
+### Installation
+#### rust
+
+#### python
+
+### Usage
+Under development.
+
+### Example
+#### rust
+```sh
+cargo run -r --example m3500_benchmar
+```
+
+#### python
+```
+python3 examples/python/m3500.py
+```
