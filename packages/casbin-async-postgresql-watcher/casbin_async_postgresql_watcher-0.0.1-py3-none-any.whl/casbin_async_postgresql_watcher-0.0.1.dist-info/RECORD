@@ -1,0 +1,7 @@
+async_postgres_watcher/__init__.py,sha256=Zohf161pTZ_1W3PPzv7dHpgCVM0A28Ngd4J433S2Tuo,663
+async_postgres_watcher/watcher.py,sha256=jRPFKRG51XXPuUesh64Gi7V0JeMqGiHJnr6N8OSE-8g,3497
+casbin_async_postgresql_watcher-0.0.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+casbin_async_postgresql_watcher-0.0.1.dist-info/METADATA,sha256=61YYqBKc0scO8BGH_iBWd6aF-CdRBbexPv23KsKQhiM,3502
+casbin_async_postgresql_watcher-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+casbin_async_postgresql_watcher-0.0.1.dist-info/top_level.txt,sha256=wHLBZ0RHOe2eMS3zxgGVbDss_StzDfzqxf7Xl63m-6M,23
+casbin_async_postgresql_watcher-0.0.1.dist-info/RECORD,,
