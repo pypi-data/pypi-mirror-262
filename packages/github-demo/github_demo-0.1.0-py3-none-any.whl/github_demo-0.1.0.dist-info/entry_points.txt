@@ -1,0 +1,3 @@
+[console_scripts]
+github_demo=github_demo.cli.demo:capitalize
+
