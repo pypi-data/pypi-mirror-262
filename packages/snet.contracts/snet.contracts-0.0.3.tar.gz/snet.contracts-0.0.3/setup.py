@@ -1,0 +1,27 @@
+from setuptools import setup, find_packages
+from os import path
+
+PACKAGE_NAME = "snet.contracts"
+
+version_dict = {}
+with open("./version.py") as fp:
+    exec(fp.read(), version_dict)
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
+setup(
+    name=PACKAGE_NAME,
+    version=version_dict['__version__'],
+    packages=find_packages(include=['snet.*']),
+    url='https://github.com/singnet/snet-ecosystem-contracts',
+    author='SingularityNET Foundation',
+    author_email='info@singularitynet.io',
+    description='SingularityNET Ecosystem Contracts',
+    license='MIT',
+    python_requires='>=3.10',
+    install_requires=[
+        'web3==6.11.1',
+    ],
+)
