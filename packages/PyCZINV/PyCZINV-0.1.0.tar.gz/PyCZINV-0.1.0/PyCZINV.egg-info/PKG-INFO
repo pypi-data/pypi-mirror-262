@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: PyCZINV
+Version: 0.1.0
+Summary: Python package for geophysical inversion tailored to Critical Zone Science.
+Author: Hang Chen
+Author-email: hchen8@lbl.gov
+License: MIT
+Keywords: geophysical inversion critical zone science
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: pygimli
