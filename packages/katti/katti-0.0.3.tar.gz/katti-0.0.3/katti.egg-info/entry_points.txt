@@ -1,0 +1,2 @@
+[console_scripts]
+katti = katti.main:main
