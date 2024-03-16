@@ -1,0 +1,9 @@
+Django>=3.2
+celery
+jsonschema>=4.20.0
+lxml
+beautifulsoup4
+urlobject
+requests
+Pillow>=8
+tqdm
