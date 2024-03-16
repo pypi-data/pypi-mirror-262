@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+async_postgres_watcher/__init__.py
+async_postgres_watcher/watcher.py
+casbin_async_postgresql_watcher.egg-info/PKG-INFO
+casbin_async_postgresql_watcher.egg-info/SOURCES.txt
+casbin_async_postgresql_watcher.egg-info/dependency_links.txt
+casbin_async_postgresql_watcher.egg-info/requires.txt
+casbin_async_postgresql_watcher.egg-info/top_level.txt
