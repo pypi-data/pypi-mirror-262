@@ -1,0 +1,5 @@
+keras
+keras-tuner
+pandas
+numpy
+scikit-learn
