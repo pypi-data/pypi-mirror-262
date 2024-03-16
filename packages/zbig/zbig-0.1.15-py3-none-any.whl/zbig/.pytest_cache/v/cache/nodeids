@@ -1,0 +1,6 @@
+[
+  "zfile/test_csv.py::test_read_csv",
+  "zprint/test_cn_now.py::test_now_print",
+  "zprint/test_table.py::test",
+  "ztime/test_cn_now.py::test_now"
+]
