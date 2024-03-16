@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+version.txt
+randomfun/__init__.py
+randomfun/simple.py
+randomfun.egg-info/PKG-INFO
+randomfun.egg-info/SOURCES.txt
+randomfun.egg-info/dependency_links.txt
+randomfun.egg-info/entry_points.txt
+randomfun.egg-info/requires.txt
+randomfun.egg-info/top_level.txt

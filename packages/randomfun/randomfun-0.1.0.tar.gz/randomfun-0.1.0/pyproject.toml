@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta" 
+
+
+[project]
+name = "randomfun"
+authors = [
+  {name = "A. Random Developer", email = "author@example.com" }
+]
+description = "A sample Python project"
+keywords = ["sample", "setuptools", "development"]
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+
+requires-python = ">=3.8"
+
+maintainers = [
+  {name = "A. Great Maintainer", email = "maintainer@example.com" }
+]
+
+dependencies = [
+  "numpy"
+]
+
+
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["check-manifest"]
+test = ["coverage"]
+
+[project.scripts]
+randomfun = "randomfun:main"
+
+[tool.setuptools]
+package-data = {"sample" = ["*.dat"]}
+
+[tool.setuptools.dynamic]
+version = {file = "version.txt"}
+
+
