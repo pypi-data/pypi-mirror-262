@@ -1,0 +1,2 @@
+[console_scripts]
+shscan = shscan.main:main
