@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "veco"
+version = "0.0.1a1"
+authors = [
+  { name="Yevhen Amelin", email="yevhen.amelin@gmail.com" },
+]
+description = "Yet another Git implementation in Python."
+readme = "README.md"
+requires-python = ">3.0"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Version Control :: Git",
+  "Development Status :: 2 - Pre-Alpha",
+]
+keywords = ["git", "scm", "vcs"]
+
+[project.scripts]
+veco = "veco:main"
+
+[project.urls]
+Homepage = "https://github.com/numrut/veco"
+Issues = "https://github.com/numrut/veco/issues"

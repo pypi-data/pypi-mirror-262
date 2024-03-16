@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: veco
+Version: 0.0.1a1
+Summary: Yet another Git implementation in Python.
+Project-URL: Homepage, https://github.com/numrut/veco
+Project-URL: Issues, https://github.com/numrut/veco/issues
+Author-email: Yevhen Amelin <yevhen.amelin@gmail.com>
+License-File: LICENSE
+Keywords: git,scm,vcs
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Version Control :: Git
+Requires-Python: >3.0
+Description-Content-Type: text/markdown
+
+# veco
+Yet another Git implementation in Python.
