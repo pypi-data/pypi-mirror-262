@@ -1,0 +1,15 @@
+Bytes.h
+Enum.h
+MANIFEST.in
+Py_Module.cpp
+Reader.cpp
+Reader.h
+TprData.h
+TprReader.py
+define.h
+endianswap.h
+setup.py
+TprParser.egg-info/PKG-INFO
+TprParser.egg-info/SOURCES.txt
+TprParser.egg-info/dependency_links.txt
+TprParser.egg-info/top_level.txt
