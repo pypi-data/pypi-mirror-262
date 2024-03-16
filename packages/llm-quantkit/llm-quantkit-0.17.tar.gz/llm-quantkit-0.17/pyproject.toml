@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-quantkit"
+description = "cli tool for downloading and quantizing LLMs"
+readme = "README.md"
+license = { text = "MIT License" }
+version = "0.17"
+authors = [{ name = "xhedit", email = "jevd@protonmail.com" }]
+dependencies = [
+    "click",
+    "torch>=2.0.0",
+    "einops",
+    "tqdm",
+    "transformers",
+    "huggingface_hub",
+    "safetensors",
+    "auto-gptq",
+    "autoawq",
+    "exl2conv",
+]
+
+[project.optional-dependencies]
+dev = []
+
+[project.urls]
+repository = "https://github.com/xhedit/quantkit"
+
+[project.scripts]
+quantkit = "quantkit.cli:main"
+
+[tool.setuptools]
+packages = [
+    "quantkit",
+]
