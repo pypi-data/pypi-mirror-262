@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "amqp10-codec"
+version = "0.0.1"
+description = ""
+authors = ["Gabriele Santomaggio <G.santomaggio@gmail.com>", "Erica De Giovanni <degiovannierica16@gmail.com>", "Francesco Di Bella <fdibella86@gmail.com>", "Enrico Zoboli <enricozob@gmail.com"]
+readme = "README.md"
+include = ["amqp10_codec_faster/**/*"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+cython = "^3.0.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

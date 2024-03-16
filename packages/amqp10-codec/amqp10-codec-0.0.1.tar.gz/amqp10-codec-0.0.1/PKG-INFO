@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: amqp10-codec
+Version: 0.0.1
+Summary: 
+Author: Gabriele Santomaggio
+Author-email: G.santomaggio@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cython (>=3.0.8,<4.0.0)
+Description-Content-Type: text/markdown
+
+# AMQP 1.0 Message Format
+
+![testing](https://github.com/effedib/ParserAMQP/actions/workflows/test.yml/badge.svg)
+
+The library is for encode and decode AMQP 1.0 message format. 
+
+### Use Poetry
+- create your virtual environment with `python -m venv venv`
+- activate your virtual environment with `source venv/bin/activate`
+- install poetry with `pip install poetry isort black pytest`
+- install dependencies with `poetry install`
+- run tests with `poetry run pytest`
+
+### Contributing to the project
+Format and sort the code with 
+- `poetry run black amqp10_codec tests`  
+- `poetry run isort amqp10_codec tests`.
+
+
+
