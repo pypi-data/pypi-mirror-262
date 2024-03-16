@@ -1,0 +1,23 @@
+-r base.txt
+
+# Django specific testing libraries
+django-test-migrations
+
+# factory_boy to generate dummy data in the database
+factory_boy
+
+# Flit to simplify package management
+flit
+
+# ipdb to access the IPython debugger as if it were the pdb module.
+ipdb
+
+# Mypy to support typing
+mypy
+
+# Pytest to run the tests
+pytest
+pytest-django
+
+# Tox to automate and standardize testing in Python
+tox
