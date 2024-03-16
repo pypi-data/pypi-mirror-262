@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: xarray_extras
+Version: 0.6.0
+Summary: Advanced / experimental algorithms for xarray
+Author-email: Guido Imperiale <crusaderky@gmail.com>
+License: Apache
+Project-URL: Homepage, https://github.com/crusaderky/xarray_extras
+Keywords: xarray
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: dask>=2022.6.0
+Requires-Dist: numba>=0.56
+Requires-Dist: numpy>=1.23
+Requires-Dist: pandas>=1.5
+Requires-Dist: scipy>=1.9
+Requires-Dist: xarray>=2022.11.0
+
+Advanced / experimental algorithms for xarray

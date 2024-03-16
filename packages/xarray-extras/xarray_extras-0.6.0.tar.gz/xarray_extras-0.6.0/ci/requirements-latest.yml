@@ -1,0 +1,12 @@
+name: xarray-extras
+channels:
+  - conda-forge
+dependencies:
+  - dask
+  - numba
+  - numpy
+  - pandas
+  - pytest
+  - pytest-cov
+  - scipy
+  - xarray
