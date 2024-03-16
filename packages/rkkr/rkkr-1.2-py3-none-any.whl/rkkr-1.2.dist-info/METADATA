@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: rkkr
+Version: 1.2
+Requires-Dist: keras
+Requires-Dist: keras-tuner
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+
