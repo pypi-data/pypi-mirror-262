@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+biminer/__init__.py
+biminer/danty.py
+danty.egg-info/PKG-INFO
+danty.egg-info/SOURCES.txt
+danty.egg-info/dependency_links.txt
+danty.egg-info/requires.txt
+danty.egg-info/top_level.txt

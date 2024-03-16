@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: danty
+Version: 1.0.1
+Summary: Uma biblioteca Python para mineração de criptomoedas
+Home-page: https://github.com/danty.aburai/danty-miner
+Author: Danty.aburai
+Author-email: danty.aburai@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENCE
+Requires-Dist: psutil
