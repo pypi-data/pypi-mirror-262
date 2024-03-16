@@ -1,0 +1,4 @@
+[console_scripts]
+sd=sd_tools.sd:main
+sdxl=sd_tools.sdxl:main
+
