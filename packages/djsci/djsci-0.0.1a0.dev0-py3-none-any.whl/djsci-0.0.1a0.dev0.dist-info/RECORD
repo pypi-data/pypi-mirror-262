@@ -1,0 +1,16 @@
+djsci/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djsci/admin.py,sha256=BsulWGdiOstyJsC0nMILXBwBYdnexT_5C84LgxHwfas,493
+djsci/apps.py,sha256=YblIWhb-zpZccFHVNcWObUu7zThdvgtIFHUhJFEKYQE,659
+djsci/migrations/0001_initial.py,sha256=UhO2pK7ONr0P92pb-JfSTDtSeXcETWjxaqLEOk1KQBk,952
+djsci/migrations/0002_localnotebook.py,sha256=jXrxwBBZd1s8_Mnth6jfxxoBO3nithgi_8Zdy8JRQsg,630
+djsci/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djsci/models.py,sha256=hFCwNzwRE56Eeo5eSq1dL2kGiC_Y0t--zgSMWKfiOoU,736
+djsci/settings.py,sha256=uoTbPWEVPN2HCT3gAFhTjUmpz6W8YGbWlf0LEsXaypU,411
+djsci/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+djsci/urls.py,sha256=_VgcOpNQmwWDpmsGJ9jvznqe0vp_XMqc3t_g4oGPIUg,3941
+djsci/utils.py,sha256=ZPU62qQUE1LrgRIz8ZglSwUf9ja70ie1wwxqbxLaCKU,310
+djsci/views.py,sha256=95ZoLiElGke4DTBIeZCdGzUt7cYOoRT4iFDnBnxxIx4,4781
+djsci-0.0.1a0.dev0.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+djsci-0.0.1a0.dev0.dist-info/METADATA,sha256=kPm6MIe44iHlq1pJ4u3ib2gMaYxFpTmu9t3mIAi1CZw,5214
+djsci-0.0.1a0.dev0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+djsci-0.0.1a0.dev0.dist-info/RECORD,,
