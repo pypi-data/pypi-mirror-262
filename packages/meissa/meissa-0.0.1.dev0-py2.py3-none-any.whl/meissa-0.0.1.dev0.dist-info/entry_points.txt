@@ -1,0 +1,2 @@
+[console_scripts]
+meissa = meissa.__main__:main
