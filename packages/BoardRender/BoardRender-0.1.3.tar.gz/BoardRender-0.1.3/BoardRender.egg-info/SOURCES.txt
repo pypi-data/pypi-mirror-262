@@ -1,0 +1,7 @@
+setup.py
+BoardRender.egg-info/PKG-INFO
+BoardRender.egg-info/SOURCES.txt
+BoardRender.egg-info/dependency_links.txt
+BoardRender.egg-info/top_level.txt
+BoardRenderer/BR.py
+BoardRenderer/__init__.py
