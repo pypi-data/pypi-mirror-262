@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pyaes_util
+Version: 1.0.0
+Summary: aes助手
+Home-page: https://github.com/buyfakett
+Author: buyfakett
+Author-email: buyfakett@vip.qq.com
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pycryptodome
+
+<h1 align="center">pyaes_util</h1>
+
+- aes_util.py
+
+aes非对称加密的各种封装方法，使用示例：
+
+```python
+key = '12223'
+data = 'hc刺激啊四神聪骄傲i'
+encrypt = encrypt_aes(data, key)
+print(encrypt)
+print(decrypt_aes(encrypt, key))
+```
