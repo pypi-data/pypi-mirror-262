@@ -1,0 +1,8 @@
+setup.py
+gcs_utils_package/__init__.py
+gcs_utils_package/funcs.py
+gcs_utils_package.egg-info/PKG-INFO
+gcs_utils_package.egg-info/SOURCES.txt
+gcs_utils_package.egg-info/dependency_links.txt
+gcs_utils_package.egg-info/requires.txt
+gcs_utils_package.egg-info/top_level.txt
