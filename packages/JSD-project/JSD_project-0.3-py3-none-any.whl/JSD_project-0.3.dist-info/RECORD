@@ -1,0 +1,11 @@
+JSD_project/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+JSD_project/enums_consts.py,sha256=N9Rw-vmm9Xykg0NfSk_Fi0KYAbiczBZue1JKH3HeI_8,588
+JSD_project/gameDSL.tx,sha256=j5KD9JTWqFk1LlRITWDt_AliEaBZaq_hftT2Mal7gtk,4596
+JSD_project/interpreter.py,sha256=qUZx_y4Ld-aRADnuPlaH7D9_ZdAzF8vanBfhzcHBB18,7543
+JSD_project/main.py,sha256=Yt_22cDChuuTSXtWUkeuQ8kihnUXcO7thpvWpLAjKTc,2063
+JSD_project/pythonClassesDSL.py,sha256=2dUoM6_-YeL2EzDrsdqktJ1rv6-oidlZV3fCut_ygTg,22669
+JSD_project/testGame.game,sha256=0Cx7ocxinYCAxpbtxGXel-Y7e8bD5s23v15WFMKoacg,2008
+JSD_project-0.3.dist-info/METADATA,sha256=5K-8fQrnFTZHKcjsnmjoReXAOquAwYSxTD1AuGQskOo,5672
+JSD_project-0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+JSD_project-0.3.dist-info/top_level.txt,sha256=3HxCuRPM2EkhJm1Y9UtEuGVUtvxMD0irNtfXe07WWsE,12
+JSD_project-0.3.dist-info/RECORD,,
