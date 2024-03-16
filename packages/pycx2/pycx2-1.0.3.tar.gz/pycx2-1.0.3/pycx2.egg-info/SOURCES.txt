@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+pycx2/__init__.py
+pycx2/__main__.py
+pycx2/cli.py
+pycx2/compile.py
+pycx2.egg-info/PKG-INFO
+pycx2.egg-info/SOURCES.txt
+pycx2.egg-info/dependency_links.txt
+pycx2.egg-info/entry_points.txt
+pycx2.egg-info/requires.txt
+pycx2.egg-info/top_level.txt
