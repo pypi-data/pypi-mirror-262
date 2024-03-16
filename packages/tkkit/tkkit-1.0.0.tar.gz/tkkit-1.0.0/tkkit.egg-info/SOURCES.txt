@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+tkkit/__init__.py
+tkkit/tkapp.py
+tkkit/widgets.py
+tkkit.egg-info/PKG-INFO
+tkkit.egg-info/SOURCES.txt
+tkkit.egg-info/dependency_links.txt
+tkkit.egg-info/top_level.txt
