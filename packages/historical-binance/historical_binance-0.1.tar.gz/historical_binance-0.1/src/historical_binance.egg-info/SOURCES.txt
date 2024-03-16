@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/historical_binance.py
+src/historical_binance.egg-info/PKG-INFO
+src/historical_binance.egg-info/SOURCES.txt
+src/historical_binance.egg-info/dependency_links.txt
+src/historical_binance.egg-info/top_level.txt
