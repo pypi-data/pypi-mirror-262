@@ -1,0 +1,11 @@
+README.md
+setup.py
+coininfo_elnara/__init__.py
+coininfo_elnara/info.py
+coininfo_elnara.egg-info/PKG-INFO
+coininfo_elnara.egg-info/SOURCES.txt
+coininfo_elnara.egg-info/dependency_links.txt
+coininfo_elnara.egg-info/requires.txt
+coininfo_elnara.egg-info/top_level.txt
+tests/__init__.py
+tests/test_project.py
