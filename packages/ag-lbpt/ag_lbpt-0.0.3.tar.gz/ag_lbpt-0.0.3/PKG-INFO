@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ag_lbpt
+Version: 0.0.3
+Summary: Algoritmo Genético
+Author: Luis Beltran Palma Ttito
+Author-email: luis.palma@unsaac.edu.pe
+License: GPL
+Description-Content-Type: text/markdown
+Requires-Dist: folium
+Requires-Dist: networkx
+
+
+
+# Algoritmo Genético
+
+La documentación puede encontrar en: [https://luispalma12345.github.io/ag_lbpt/index.html](https://luispalma12345.github.io/ag_lbpt/index.html)
+
+[luis.palma@unsaac.edu.pe](mailto:luis.palma@unsaac.edu.pe), Luis Beltran Palma Ttito (autor)
+
