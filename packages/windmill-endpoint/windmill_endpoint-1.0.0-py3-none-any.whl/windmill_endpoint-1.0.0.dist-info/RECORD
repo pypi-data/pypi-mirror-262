@@ -1,0 +1,9 @@
+windmillendpointv1/__init__.py,sha256=uyr6L2nfVXhYTCwqAURoglQAgV7h46Ud6RIZNsY-l2w,212
+windmillendpointv1/client/__init__.py,sha256=uyr6L2nfVXhYTCwqAURoglQAgV7h46Ud6RIZNsY-l2w,212
+windmillendpointv1/client/endpoint_client.py,sha256=WxUhCq_GQNiBPZ-3BE737tsTJqny67qe30cC7ht87jo,7730
+windmillendpointv1/client/endpoint_monitor_client.py,sha256=banD0cnEBImTrC4hQ_yxnaCfphbwPumyOfkkr6YgqPI,2348
+windmillendpointv1/client/getter.py,sha256=NPZT7zGwrGYt4CS0rCUZvXdK0mOZbk-7pwmhHRn94nU,5925
+windmill_endpoint-1.0.0.dist-info/METADATA,sha256=zJQF7X_LWXaTgnZxCOY9jFIMQv-49B6jXwvX-q655F0,659
+windmill_endpoint-1.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+windmill_endpoint-1.0.0.dist-info/top_level.txt,sha256=CsQQ-iVAIHJcbf1yuO0Clt3F4okDV0Pu42CZKzIy0cQ,19
+windmill_endpoint-1.0.0.dist-info/RECORD,,
