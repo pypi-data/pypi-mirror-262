@@ -1,0 +1,10 @@
+pydvpl/__init__.py,sha256=j6HcEFM_Ka9C2hX2xD8DshVCXrTgnWqbLpqYmFDXAgg,713
+pydvpl/__version__.py,sha256=lebb9q_xGXQRLyNC1n4OEZojMyCxTfJQtMrbCauHSvY,257
+pydvpl/_color.py,sha256=PCiucqQcj786vEOCppfetGPqo8UEYV-7fPuL5MagFEI,125
+pydvpl/_converter.py,sha256=j-3VXTfkPkJZjIrVBHyuOb0E2tW5SLE_KWwhZcN3FX8,15360
+pydvpl/_dvpl.py,sha256=CLucBZLn5Wz0aTiHlQ-tB-Qtms8CXgxL1JebfZ_4NOQ,2951
+pydvpl-0.6.0.dist-info/METADATA,sha256=AACr926erf90RCsmluchTO9FgCMmuJMv6iV1JaDawS0,3352
+pydvpl-0.6.0.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+pydvpl-0.6.0.dist-info/entry_points.txt,sha256=N2j4WZvAOSVRSwnGriUqmEQCpRs9aTVwCNmeAJNJUQo,38
+pydvpl-0.6.0.dist-info/licenses/LICENSE,sha256=vp-4I9KsXetdzwy1yF6DJiNnxFNO_bpdDgBNUgQ48tA,1062
+pydvpl-0.6.0.dist-info/RECORD,,
