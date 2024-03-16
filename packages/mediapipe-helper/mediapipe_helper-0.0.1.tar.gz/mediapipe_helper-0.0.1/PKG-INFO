@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: mediapipe_helper
+Version: 0.0.1
+Summary: A package to help you utilise landmarks in the face_landmark feature of google open source mediapipe.
+Home-page: https://github.com/LearningnRunning/py_face_landmark_helper
+Author: learningnRunning
+Author-email: max_sungrok@naver.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Education
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: mediapipe
+Requires-Dist: opencv-python
+Requires-Dist: pillow
+
+# py_face_landmark_helper
+A package to help you utilise landmarks in the face_landmark feature of google open source mediapipe.
+
+
+
+## Installation
+
+To install the mediapipe_helper library, you can use pip:
+
+```bash
+pip install mediapipe_helper
+```
+
+or
+
+```bash
+git clone https://github.com/LearningnRunning/py_face_landmark_helper
+
+python setup.py install
+```
+
+```python
+from mediapipe_helper import face_landmark_helper
+
+# Create an instance of FaceMeshProcessor
+face_mesh_processor = face_landmark_helper.FaceLandmarkProcessor()
+img_path = ""
+
+# Call the convert_landmark method to get the face landmarks
+face_landmarks = face_mesh_processor.convert_landmark(img_path)
+
+
+```
+
+
+## License
+mediapipe_helper is provided under the Apache License 2.0. 
+
