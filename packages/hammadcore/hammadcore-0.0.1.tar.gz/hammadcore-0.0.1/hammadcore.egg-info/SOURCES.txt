@@ -1,0 +1,11 @@
+setup.py
+hammadcore/__init__.py
+hammadcore/core.py
+hammadcore.egg-info/PKG-INFO
+hammadcore.egg-info/SOURCES.txt
+hammadcore.egg-info/dependency_links.txt
+hammadcore.egg-info/requires.txt
+hammadcore.egg-info/top_level.txt
+hammadcore/modules/__init__.py
+hammadcore/modules/loaders.py
+hammadcore/modules/text.py
