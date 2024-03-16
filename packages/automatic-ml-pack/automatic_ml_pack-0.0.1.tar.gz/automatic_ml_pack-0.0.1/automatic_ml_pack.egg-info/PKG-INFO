@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: automatic-ml-pack
+Version: 0.0.1
+Summary: This package is designed for swift and automated machine learning practice, catering to both classification and regression tasks. It facilitates model training, grid search application, and the preservation of the best model. Furthermore, it stores and visualizes the best scores attained by other models using commonly employed evaluation metrics.
+Author: Cyrille
+Author-email: cyrillemesue@gmail.com
+Requires-Python: >=3.11.0
+License-File: LICENSE
+Requires-Dist: auto_mix_prep==0.2.0
+Requires-Dist: catboost==1.2.3
+Requires-Dist: dill==0.3.8
+Requires-Dist: feature_engine==1.6.2
+Requires-Dist: matplotlib==3.8.3
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pandas==2.2.1
+Requires-Dist: scikit_learn==1.4.1.post1
+Requires-Dist: seaborn==0.13.2
+Requires-Dist: tqdm==4.66.2
+Requires-Dist: xgboost==2.0.3
