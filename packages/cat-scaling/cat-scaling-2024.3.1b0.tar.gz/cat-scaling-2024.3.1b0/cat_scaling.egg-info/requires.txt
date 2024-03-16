@@ -1,0 +1,11 @@
+numpy
+pandas
+scikit_learn
+matplotlib
+
+[dev]
+pytest
+pre-commit
+black
+isort
+bumpver
