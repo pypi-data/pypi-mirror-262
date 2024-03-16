@@ -1,0 +1,50 @@
+# Autogen Init: Simplify Package Initialization
+
+AutoInit is a Python utility designed to streamline the process of updating `__init__.py` files throughout your Python package, ensuring a cleaner and more accessible import structure for users. By scanning your package's directories, AutoInit dynamically updates `__init__.py` files to import all relevant classes and functions, making them directly accessible from the package level. Additionally, it provides an easy way to add version and author information to your top-level `__init__.py`, enhancing package metadata visibility.
+
+## Features
+
+- **Automatic Updates**: Quickly updates all `__init__.py` files in your package to include imports of classes and functions defined within.
+- **Metadata Addition**: Easily adds version and author information to the top-level `__init__.py` file.
+- **Customizable Overwrites**: Offers the option to overwrite existing `__init__.py` files or append new content, based on your preference.
+
+## Installation
+
+Install AutoInit via pip to integrate it into your development workflow:
+
+```
+pip install autogen-init
+```
+
+## Usage
+
+To use AutoInit, simply run the `run` function with the root directory of your package as an argument. You can also specify whether to overwrite existing `__init__.py` files and include package version and author information.
+
+```python
+from autoinit import run
+
+# Example usage
+run(
+    start_path='C:/path/to/my_package',
+    overwrite=True,
+    version="1.0.0",
+    author="Minwoo(Daniel) Park <parkminwoo1991@gmail.com>"
+)
+```
+
+### Arguments
+
+- `start_path (str)`: The root directory of your package.
+- `overwrite (bool)`: Whether to overwrite existing `__init__.py` files. Defaults to `True`.
+- `version (str)`: The version of your package to add to the top-level `__init__.py`.
+- `author (str)`: The author(s) of your package to add to the top-level `__init__.py`.
+
+
+## Contributing
+
+Contributions are welcome! Whether it's bug reports, feature requests, or code contributions, please feel free to reach out or submit a pull request.
+
+## License
+
+AutoInit is released under the MIT License. See the LICENSE file for more details.
+

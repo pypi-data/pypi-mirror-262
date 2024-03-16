@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+autogen_init.egg-info/PKG-INFO
+autogen_init.egg-info/SOURCES.txt
+autogen_init.egg-info/dependency_links.txt
+autogen_init.egg-info/entry_points.txt
+autogen_init.egg-info/top_level.txt
+autoinit/__init__.py
+autoinit/core.py
