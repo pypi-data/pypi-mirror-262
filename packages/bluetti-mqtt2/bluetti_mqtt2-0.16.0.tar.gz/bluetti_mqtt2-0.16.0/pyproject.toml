@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "bluetti_mqtt2"
+version = "0.16.0"
+authors = [
+  { name="André Wagner", email="python@techolutions.de" },
+  { name="Stephen Augenstein", email="perl.programmer@gmail.com"},
+]
+description = "MQTT interface to Bluetti power stations"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "aiomqtt",
+  "bleak",
+  "crcmod",
+  "dbus-next",
+]
+
+[project.urls]
+Homepage = "https://github.com/andrewagner86/bluetti_mqtt"
+Issues = "https://github.com/andrewagner86/bluetti_mqtt/issues"
+
+[project.scripts]
+bluetti-discovery = "bluetti_mqtt.discovery_cli:main"
+bluetti-logger = "bluetti_mqtt.logger_cli:main"
+bluetti-mqtt = "bluetti_mqtt.server_cli:main"
