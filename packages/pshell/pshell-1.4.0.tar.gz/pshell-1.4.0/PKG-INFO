@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pshell
+Version: 1.4.0
+Summary: An alternative to bash scripts
+Author-email: Guido Imperiale <crusaderky@gmail.com>
+License: Apache
+Project-URL: Homepage, https://github.com/crusaderky/pshell
+Keywords: bash,shell
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: System :: System Shells
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psutil>=5.6
+
+pshell: get rid of all bash scripts
+===================================
+[![doc-badge](https://github.com/crusaderky/pshell/actions/workflows/docs.yml/badge.svg)](https://github.com/crusaderky/pshell/actions)
+[![pre-commit-badge](https://github.com/crusaderky/pshell/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/crusaderky/pshell/actions)
+[![pytest-badge](https://github.com/crusaderky/pshell/actions/workflows/pytest.yml/badge.svg)](https://github.com/crusaderky/pshell/actions)
+[![codecov-badge](https://codecov.io/gh/crusaderky/pshell/branch/main/graph/badge.svg)](https://codecov.io/gh/crusaderky/pshell/branch/main)
+
+
+Python API to completely replace bash scripting
+
+Full documentation at http://pshell.readthedocs.io/
