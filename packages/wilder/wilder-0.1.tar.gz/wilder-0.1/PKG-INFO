@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: wilder
+Version: 0.1
+Summary: Projet des compétences acquises à la Wild Code School et des mon travail autodidacte...
+Home-page: https://github.com/MichaelTirat/wilder
+Author: Michaël Tirat
+Author-email: michaeltirat@gmail.com
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >= 3.10.9
+License-File: LICENCE
