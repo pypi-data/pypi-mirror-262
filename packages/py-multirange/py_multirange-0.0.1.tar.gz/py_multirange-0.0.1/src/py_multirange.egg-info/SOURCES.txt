@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/py_multirange.py
+src/py_multirange.egg-info/PKG-INFO
+src/py_multirange.egg-info/SOURCES.txt
+src/py_multirange.egg-info/dependency_links.txt
+src/py_multirange.egg-info/top_level.txt
