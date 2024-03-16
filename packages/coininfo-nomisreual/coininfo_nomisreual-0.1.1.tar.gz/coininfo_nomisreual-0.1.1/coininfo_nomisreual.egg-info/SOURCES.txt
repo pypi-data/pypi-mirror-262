@@ -1,0 +1,9 @@
+README.md
+setup.py
+coininfo_nomisreual/__init__.py
+coininfo_nomisreual/info.py
+coininfo_nomisreual.egg-info/PKG-INFO
+coininfo_nomisreual.egg-info/SOURCES.txt
+coininfo_nomisreual.egg-info/dependency_links.txt
+coininfo_nomisreual.egg-info/requires.txt
+coininfo_nomisreual.egg-info/top_level.txt
