@@ -1,0 +1,9 @@
+transformers
+tokenizers
+datasets
+fasttext
+huggingface_hub
+gradio
+bitsandbytes
+accelerate
+peft
