@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+composio
+pyproject.toml
+requirements.txt
+setup.py
+composio_core.egg-info/PKG-INFO
+composio_core.egg-info/SOURCES.txt
+composio_core.egg-info/dependency_links.txt
+composio_core.egg-info/requires.txt
+composio_core.egg-info/top_level.txt
+sdk/__init__.py
+sdk/client.py
+sdk/storage.py
