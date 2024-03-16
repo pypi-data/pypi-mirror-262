@@ -1,0 +1,96 @@
+title: Image/ChangeDetection/SemanticSegmentation
+type: object
+properties:
+  meanPixelAccuracy:
+    type: number
+    format: float
+    description: >
+      The ratio of correct pixels is computed in a per-class basis and then averaged over the total
+      number of classes. reference: https://arxiv.org/pdf/1704.06857.pdf
+  meanIOU:
+    type: number
+    format: float
+    description: >
+      IoU is the area of overlap between the predicted segmentation and the ground truth divided by the area of union
+      between the predicted segmentation and the ground truth.
+  categoryMetrics:
+    type: array
+    description: >
+      The match metrics for every category.
+    items:
+      type: object
+      properties:
+        categoryName:
+          type: string
+          description: >
+            Category name.
+        metrics:
+          type: array
+          description: >
+            The match metrics for each label confidence threshold.
+          items:
+            type: object
+            properties:
+              auRoc:
+                type: number
+                format: float
+                description: >
+                  The Area Under Receiver Operating Characteristic curve metric for every category.
+              auPrc:
+                type: number
+                format: float
+                description: >
+                  The Area Under Precision-Recall Curve metric for every category.
+              confidenceMetrics:
+                type: array
+                description: >
+                  Metrics for each confidenceThreshold.
+                items:
+                  type: object
+                  properties:
+                    confidenceThreshold:
+                      type: number
+                      format: float
+                      description: >
+                        Metrics are computed with an assumption that the Model never returns predictions with
+                        score lower than this value.
+                    pixelAccuracy:
+                      type: number
+                      format: float
+                      description: >
+                        The ratio of correct pixels is computed over the total number for every category.
+                    intersectionOverUnion:
+                      type: number
+                      format: float
+                      description: >
+                        IoU is the area of overlap between the predicted segmentation and the ground truth
+                        for every category.
+                    recall:
+                      type: number
+                      format: float
+                      description: >
+                        Recall (True Positive Rate) for the given confidence threshold.
+                    precision:
+                      type: number
+                      format: float
+                      description: >
+                        Precision for the given confidence threshold.
+                    falsePositiveRate:
+                      type: number
+                      format: float
+                      description: >
+                        False Positive Rate for the given confidence threshold.
+                    f1Score:
+                      type: number
+                      format: float
+                      description: >
+                        The harmonic mean of recall and precision.
+  _timestamp:
+    type: string
+    format: date-time
+    description: >
+      The time formatted according to ISO.
+required:
+  - meanPixelAccuracy
+  - meanIOU
+  - _timestamp

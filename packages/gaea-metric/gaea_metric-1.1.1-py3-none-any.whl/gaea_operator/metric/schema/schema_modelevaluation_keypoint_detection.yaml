@@ -1,0 +1,47 @@
+title: Image/KeypointDetection
+type: object
+properties:
+  objectKeypointSimilarity:
+    type: number
+    format: float
+    description: >
+      Average key point similarity of all target key points.
+      reference: https://arxiv.org/pdf/1902.09212.pdf
+  objectKeypointSimilarityMetrics:
+    type: object
+    description: >
+      The metrics for different similarity.
+    properties:
+      confidenceMetrics:
+      type: array
+      description: >
+        Metrics for each similarity confidence threshold from.
+      items:
+        confidenceThreshold:
+          type: number
+          format: float
+          description: >
+            The similarity threshold value used to compute the metrics.
+        recall:
+          type: number
+          format: float
+          description: >
+            Recall under the given similarity threshold.
+        precision:
+          type: number
+          format: float
+          description: >
+            Precision under the given similarity threshold.
+        f1Score:
+          type: number
+          format: float
+          description: >
+            The harmonic mean of recall and precision.
+  _timestamp:
+    type: string
+    format: date-time
+    description: >
+      The time formatted according to ISO.
+required:
+  - objectKeypointSimilarity
+  - _timestamp

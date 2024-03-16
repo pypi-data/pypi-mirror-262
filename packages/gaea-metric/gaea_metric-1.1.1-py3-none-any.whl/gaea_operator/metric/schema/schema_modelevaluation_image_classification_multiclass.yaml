@@ -1,0 +1,104 @@
+title: /Image/ImageClassification/MultiClass
+type: object
+properties:
+  accuracy:
+    type: number
+    format: float
+    description: >
+      Accuracy is the proportion of correct predictions among the total number of cases processed.
+  f1score:
+    type: number
+    format: float
+    description: >
+      OPTIONAL. The F1 score is the harmonic mean of the precision and recall. Multi class reference:
+      https://towardsdatascience.com/multi-class-metrics-made-simple-part-ii-the-f1-score-ebe8b2c2ca1
+  precision:
+    type: number
+    format: float
+    description: >
+      Precision is the fraction of correctly labeled positive examples out of all of the examples
+      that were labeled as positive. Multi class reference:
+      https://towardsdatascience.com/multi-class-metrics-made-simple-part-i-precision-and-recall-9250280bddc2
+  recall:
+    type: number
+    format: float
+    description: >
+      Recall is the fraction of the positive examples that were correctly labeled by the model as positive.
+  categoryMetrics:
+    type: array
+    description: >
+      The match metrics for every category.
+    items:
+      type: object
+      properties:
+        categoryName:
+          type: string
+          description: >
+            Category name.
+        auPrc:
+          type: number
+          format: float
+          description: >
+            The Area Under Precision-Recall Curve metric for every category.
+        confidenceMetrics:
+          type: array
+          description: >
+            Metrics for each confidenceThreshold.
+          items:
+            type: object
+            properties:
+              confidenceThreshold:
+                type: number
+                format: float
+                description: >
+                  Metrics are computed with an assumption that the Model never returns predictions with
+                  score lower than this value.
+              recall:
+                type: number
+                format: float
+                description: >
+                  Recall (True Positive Rate) for the given confidence threshold.
+              precision:
+                type: number
+                format: float
+                description: >
+                  Precision for the given confidence threshold.
+  confusionMatrix:
+    type: object
+    description: >
+      OPTIONAL. Confusion matrix of the evaluation.
+    properties:
+      annotationSpecs:
+        type: array
+        description: >
+          AnnotationSpecs used in the confusion matrix.
+        items:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+              description: >
+                OPTIONAL. ID of the AnnotationSpec.
+            categoryName:
+              type: string
+              description: >
+                Display name of the AnnotationSpec.
+      rows:
+        type: array
+        description: >
+          Rows in the confusion matrix. The number of rows is equal to the size of `annotationSpecs`.
+          `row[i][j]` is the number of DataItems that have ground truth of the `annotationSpecs[i]`
+          and are predicted as `annotationSpecs[j]` by the Model being evaluated.
+        items:
+          type: object
+          properties:
+            row:
+              type: array
+              items:
+                type: integer
+                format: int64
+required:
+  - accuracy
+  - precision
+  - recall
