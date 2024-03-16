@@ -1,0 +1,9 @@
+today/cli.py,sha256=p43uTfR1R1ARIql3GYP-uUMR9EnrYBt4mUkS1h12WZM,6346
+today/parser.py,sha256=V_UFSR19dlje7isJ9Apjzl5OTbEtpGU87iUzNrkTNyI,6394
+today/scripts/start.py,sha256=zbN26aPC6joNTeKRCYYeDYkRWPWgjhUysMEoxSw5CGM,1307
+today/scripts/today.py,sha256=iMnGz0aQhu5WWEkvKvjnpjjGj7K5rOp_O-tOBkKZxWY,624
+today/task.py,sha256=-oj4wuVQctRK7mOc8Y0IBQoKqGWP0UgqWKHSb0eTe9g,4125
+todo_today_cli-0.0.6.dist-info/METADATA,sha256=t4aX_nVuv4xb66JLqnbrqWVRF_69qBoDfqKL7H-201c,10032
+todo_today_cli-0.0.6.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+todo_today_cli-0.0.6.dist-info/entry_points.txt,sha256=zKwrN3a484q32gKxLNQCE1GTfWYGbiT8zxrO02cFZtc,81
+todo_today_cli-0.0.6.dist-info/RECORD,,
