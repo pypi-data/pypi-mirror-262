@@ -1,0 +1,3 @@
+[console_scripts]
+youtube-bulk-upload=youtube_bulk_upload.cli:main
+
