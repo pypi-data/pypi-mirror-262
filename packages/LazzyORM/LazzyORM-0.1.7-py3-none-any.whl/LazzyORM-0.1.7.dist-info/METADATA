@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: LazzyORM
+Version: 0.1.7
+Summary: A Powerful Lazy Loading ORM for MySQL
+Author: Dipendra Bhardwaj
+Author-email: dipu.sharma.1122@gmail.com
+Requires-Dist: mysql-connector-python
+Requires-Dist: click
+Requires-Dist: requests
+
