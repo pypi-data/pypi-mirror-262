@@ -1,0 +1,140 @@
+Metadata-Version: 2.1
+Name: pyanilist
+Version: 0.1.0
+Summary: Simple read-only Anilist API wrapper
+Home-page: https://ravencentric.github.io/pyanilist
+License: Unlicense
+Author: Raventric
+Author-email: 78981416+Ravencentric@users.noreply.github.com
+Requires-Python: >=3.9
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Typing :: Typed
+Requires-Dist: boltons (>=23.1.1)
+Requires-Dist: httpx (>=0.27.0)
+Requires-Dist: importlib-metadata (>=7.0.2) ; python_version < "3.10"
+Requires-Dist: pycountry (>=23.12.11)
+Requires-Dist: pydantic (>=2.6.4)
+Requires-Dist: pydantic-extra-types (>=2.6.0)
+Requires-Dist: strenum (>=0.4.15) ; python_version < "3.11"
+Requires-Dist: tenacity (>=8.2.3)
+Requires-Dist: typing-extensions (>=4.10.0)
+Project-URL: Documentation, https://ravencentric.github.io/pyanilist
+Project-URL: Repository, https://github.com/Ravencentric/juicenet-cli
+Description-Content-Type: text/markdown
+
+# pyanilist
+
+<br/>
+<p align="center">
+  <a href="https://github.com/Ravencentric/pyanilist">
+    <img src="./docs/assets/logo.svg" alt="Logo" width="400" height="100">
+  </a>
+  <p align="center">
+    Simple read-only Anilist API wrapper
+    <br/>
+    <br/>
+  </p>
+</p>
+
+## Table Of Contents
+
+* [About](#about)
+* [Installation](#installation)
+* [API Reference](#api-reference)
+* [License](#license)
+
+## About
+
+- Supports both sync and async. 
+- Simple *read-only* API wrapper.
+- Only supports querying the `Media` type.
+
+## Installation
+
+`pyanilist` is available on [PyPI](https://pypi.org/project/pyanilist/), so you can simply use [pip](https://github.com/pypa/pip) to install it.
+
+```sh
+pip install pyanilist
+```
+
+## Usage
+
+PyAnilist offers two main classes:
+
+1. Anilist - Synchronous class
+    - `search()` - Search a media
+
+        ```py
+        >>> from pyanilist import Anilist, MediaType
+        >>> media = Anilist().search("Attack on Titan", type=MediaType.ANIME)
+        >>> media.title
+        MediaTitle(romaji='Shingeki no Kyojin', english='Attack on Titan', native='進撃の巨人')
+        >>> media.title.romaji
+        'Shingeki no Kyojin'
+        >>> media.site_url
+        Url('https://anilist.co/anime/16498')
+        >>> media.episodes
+        25
+        ```
+    - `get()` - Get a media by it's Anilist ID
+
+        ```py
+        >>> from pyanilist import Anilist
+        >>> media = Anilist().get(21459)
+        >>> media.title
+        MediaTitle(romaji='Boku no Hero Academia', english='My Hero Academia', native='僕のヒーローアカデミア')
+        >>> media.title.english
+        'My Hero Academia'
+        >>> media.site_url
+        Url('https://anilist.co/anime/21459')
+        >>> media.episodes
+        13
+        ```
+
+2. AsyncAnilist - Asynchronous class
+    - `search()` - Search a media
+
+        ```py
+        >>> import asyncio
+        >>> from pyanilist import AsyncAnilist, MediaType
+        >>> media = asyncio.run(AsyncAnilist().search("Attack on Titan"))
+        >>> media.title
+        MediaTitle(romaji='Shingeki no Kyojin', english='Attack on Titan', native='進撃の巨人')
+        >>> media.title.romaji
+        'Shingeki no Kyojin'
+        >>> media.site_url
+        Url('https://anilist.co/anime/16498')
+        >>> media.episodes
+        25
+        ```
+    - `get()` - Get a media by it's Anilist ID
+
+        ```py
+        >>> import asyncio
+        >>> from pyanilist import AsyncAnilist
+        >>> media = asyncio.run(AsyncAnilist().get(21459))
+        >>> media.title
+        MediaTitle(romaji='Boku no Hero Academia', english='My Hero Academia', native='僕のヒーローアカデミア')
+        >>> media.title.english
+        'My Hero Academia'
+        >>> media.site_url
+        Url('https://anilist.co/anime/21459')
+        >>> media.episodes
+        13
+        ```
+
+## API Reference
+
+Checkout the complete API reference [here](https://ravencentric.github.io/pyanilist/).
+
+## License
+
+Distributed under the [Unlicense](https://choosealicense.com/licenses/unlicense/) License. See [UNLICENSE](https://github.com/Ravencentric/pyanilist/blob/main/UNLICENSE) for more information.
