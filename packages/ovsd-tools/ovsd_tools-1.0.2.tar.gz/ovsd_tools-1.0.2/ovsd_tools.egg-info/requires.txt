@@ -1,0 +1,8 @@
+torch
+openvino
+diffusers
+transformers
+accelerate
+scipy
+huggingface_hub
+opencv-python
