@@ -1,0 +1,7 @@
+setup.py
+ldr_tex_table_image_generation.egg-info/PKG-INFO
+ldr_tex_table_image_generation.egg-info/SOURCES.txt
+ldr_tex_table_image_generation.egg-info/dependency_links.txt
+ldr_tex_table_image_generation.egg-info/top_level.txt
+tex_table_image_generation/__init__.py
+tex_table_image_generation/tex_table_image_generation.py
