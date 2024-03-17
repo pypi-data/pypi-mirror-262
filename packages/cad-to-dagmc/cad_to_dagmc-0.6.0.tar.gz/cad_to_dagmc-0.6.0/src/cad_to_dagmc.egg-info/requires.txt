@@ -1,0 +1,6 @@
+trimesh
+networkx
+
+[tests]
+pytest
+vtk
