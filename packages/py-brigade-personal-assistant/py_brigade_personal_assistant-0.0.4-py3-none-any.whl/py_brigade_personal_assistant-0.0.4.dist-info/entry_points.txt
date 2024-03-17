@@ -1,0 +1,2 @@
+[console_scripts]
+get-started = personal_assistant.main:main
