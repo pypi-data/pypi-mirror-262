@@ -1,0 +1,11 @@
+pyproject_init/__init__.py,sha256=72mddvZLMHhR-nNn1nk14auIVd1y4lSRV3jDrLuhQIo,193
+pyproject_init/cli.py,sha256=9H-rFlBxQX2Wuoi2rrRXn3zm9qDq7_wWiAVBMqArA_E,2734
+pyproject_init/pyproject_initializer.py,sha256=fWAQCEH2B7iPWtB1LfISMI5GdF62_EF8AZaHsUp6Vtg,2811
+pyproject_init/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyproject_init/utils/projectfiles.py,sha256=HWt6ayJaUIpKEv8Mxff-W0W7jB6E28g7hMPi99w720Q,5776
+pyproject_init/utils/pythonfiles.py,sha256=NLbbga47vkaHkZm_84n0UUOB2qbwZwdVUiaxImufNcI,1031
+pyproject_init-1.1.0.dist-info/METADATA,sha256=go7DmMrJmtSHzZAvjcAlpt3-tRz1q4MQfAab3oMHWvk,7945
+pyproject_init-1.1.0.dist-info/WHEEL,sha256=LL0B1KxSLwaTWceo7tT-0aDLd-qq9dmbnsnk1DnXlg8,87
+pyproject_init-1.1.0.dist-info/entry_points.txt,sha256=FH2lFTLyGwwK1kWXKefbiSj1Z8RZ4REAsV1aNCWvu8c,58
+pyproject_init-1.1.0.dist-info/licenses/LICENSE,sha256=o_vUEzmHUzxgbAiD9MTIduWrQeiwqXxc7XDbL5oZszs,1069
+pyproject_init-1.1.0.dist-info/RECORD,,
