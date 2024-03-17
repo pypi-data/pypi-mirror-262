@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+/home/runner/work/sargasso/sargasso/src/funcs.cpp
+/home/runner/work/sargasso/sargasso/src/module.cpp
+include/sargasso.h
+src/funcs.cpp
+src/module.cpp
+src/sargasso/__init__.py
+src/sargasso.egg-info/PKG-INFO
+src/sargasso.egg-info/SOURCES.txt
+src/sargasso.egg-info/dependency_links.txt
+src/sargasso.egg-info/requires.txt
+src/sargasso.egg-info/top_level.txt
+tests/test_sargasso.py
