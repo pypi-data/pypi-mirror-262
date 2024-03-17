@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: playerFramework
+Version: 4.2
+Summary: A simple way to play audio in Python.
+Requires-Dist: pydub
+
+A simple way to play audio in Python.
