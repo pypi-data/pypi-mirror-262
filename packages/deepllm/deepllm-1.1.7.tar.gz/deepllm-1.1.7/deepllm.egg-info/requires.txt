@@ -1,0 +1,6 @@
+numpy
+openai
+tiktoken
+pyvis
+sentence-transformers
+vecstore
