@@ -1,0 +1,5 @@
+setup.py
+tex_table_image_generation.egg-info/PKG-INFO
+tex_table_image_generation.egg-info/SOURCES.txt
+tex_table_image_generation.egg-info/dependency_links.txt
+tex_table_image_generation.egg-info/top_level.txt
