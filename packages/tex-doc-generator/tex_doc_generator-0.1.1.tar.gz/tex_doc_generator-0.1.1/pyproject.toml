@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "tex-doc-generator"
+version = "0.1.1"
+description = ""
+authors = ["sdfg95 <ivankov.nikita2014@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
