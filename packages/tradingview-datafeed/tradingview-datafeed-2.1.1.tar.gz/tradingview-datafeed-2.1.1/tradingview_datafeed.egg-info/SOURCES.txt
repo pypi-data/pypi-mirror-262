@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+tradingview_datafeed.egg-info/PKG-INFO
+tradingview_datafeed.egg-info/SOURCES.txt
+tradingview_datafeed.egg-info/dependency_links.txt
+tradingview_datafeed.egg-info/requires.txt
+tradingview_datafeed.egg-info/top_level.txt
+tvDatafeed/__init__.py
+tvDatafeed/consumer.py
+tvDatafeed/datafeed.py
+tvDatafeed/main.py
+tvDatafeed/seis.py
