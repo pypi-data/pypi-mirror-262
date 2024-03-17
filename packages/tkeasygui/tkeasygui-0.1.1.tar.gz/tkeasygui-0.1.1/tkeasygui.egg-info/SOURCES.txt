@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+tkeasygui/__init__.py
+tkeasygui/dialogs.py
+tkeasygui/widgets.py
+tkeasygui.egg-info/PKG-INFO
+tkeasygui.egg-info/SOURCES.txt
+tkeasygui.egg-info/dependency_links.txt
+tkeasygui.egg-info/top_level.txt
