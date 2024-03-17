@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: autilsyyj
+Version: 0.1.6
+Summary: A brief utils of scripts
+Author: admon
+Author-email: admon@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: os
+Requires-Dist: imutils
+Requires-Dist: jsonpatch
+Requires-Dist: uuid
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: shutil
+Requires-Dist: tqdm
+Requires-Dist: random
+Requires-Dist: tabulate
+Requires-Dist: shapely
+Requires-Dist: pillow
+Requires-Dist: scikit-learn
+Requires-Dist: jsonpointer
+
+UNKNOWN
+
