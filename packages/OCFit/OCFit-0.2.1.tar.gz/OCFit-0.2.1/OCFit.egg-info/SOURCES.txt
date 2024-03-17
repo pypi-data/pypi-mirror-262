@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+OCFit/OC_class.py
+OCFit/__init__.py
+OCFit/ga.py
+OCFit/info_ga.py
+OCFit/info_mc.py
+OCFit.egg-info/PKG-INFO
+OCFit.egg-info/SOURCES.txt
+OCFit.egg-info/dependency_links.txt
+OCFit.egg-info/not-zip-safe
+OCFit.egg-info/requires.txt
+OCFit.egg-info/top_level.txt
