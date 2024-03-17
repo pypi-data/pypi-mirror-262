@@ -1,0 +1,9 @@
+scelda/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scelda/models.py,sha256=a3Szf33yefT0boTqV8z4cV7triNfwttqt_UIHNcGEks,17737
+scelda/nets.py,sha256=JHZ8QsjvDFGfy2x9HagWW42lybrXtpZYii4OSKOlizo,13008
+scelda/sim.py,sha256=tmk_Gc0u2WH_MCt4NteFnJjgcPMY1_PIn38pxGH468o,14579
+scelda/util.py,sha256=EdArgSDu_Uc1KqSI0vTVLwKrU56W1N7iaH8JqKLmhLU,13968
+scelda-0.0.1.dist-info/METADATA,sha256=B19hiWGIHcr0SrtW6XSfZZFZ5I-atP7VPEPVt66KdDY,183
+scelda-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+scelda-0.0.1.dist-info/top_level.txt,sha256=G2Pk3cBWesCNZAiEtLs47-YOoyS2bMAQ9zmAq-fCTKY,7
+scelda-0.0.1.dist-info/RECORD,,
