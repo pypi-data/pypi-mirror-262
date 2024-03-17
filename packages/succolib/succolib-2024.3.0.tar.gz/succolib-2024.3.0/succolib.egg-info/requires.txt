@@ -1,0 +1,7 @@
+awkward
+matplotlib
+numpy
+pandas
+scipy
+tqdm
+uproot>=4.0
