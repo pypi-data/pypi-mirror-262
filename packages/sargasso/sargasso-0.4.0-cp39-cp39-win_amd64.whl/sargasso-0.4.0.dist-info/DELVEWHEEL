@@ -1,0 +1,2 @@
+Version: 1.5.4
+Arguments: ['C:\\hostedtoolcache\\windows\\Python\\3.9.13\\x64\\Scripts\\delvewheel', 'repair', 'D:\\a\\sargasso\\sargasso\\dist\\sargasso-0.4.0-cp39-cp39-win_amd64.whl', '-w', 'wheelhouse', '--add-path', 'C:\\Miniconda\\\\envs\\\\buildenv\\\\Library\\\\bin']
