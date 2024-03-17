@@ -1,0 +1,13 @@
+torch>=1.12.1
+torch-scatter>=2.1.0
+
+[dev]
+sphinx
+
+[docs]
+sphinx_rtd_theme
+nbsphinx
+
+[test]
+pytest
+pytest-cov
