@@ -1,0 +1,12 @@
+phph/BlockUniformization.py,sha256=_vZ3zubd7rh9XknmyjH_kSEa_A7D0DpUs1Xm9BzCPzU,4292
+phph/LocalStateSpace.py,sha256=eAgPaiidwyaIcY7uWhsZzz2sUPbKY7PjulRJ4lHBtvI,4881
+phph/Queue.py,sha256=1GltdMC2y-rBBK5GKgV2OT-YNcHvuajuJSZg_Hs0MVQ,2538
+phph/SubMatrices.py,sha256=TAgdVoFg5hpE5cf7UXfdJj2KDW0daAGZJYyY8dK8nEQ,9772
+phph/Uniformization.py,sha256=TxpA6qWrt1KEc2DvrotzTfqip4ymSyVjWE6aNq3Zmhw,2523
+phph/__init__.py,sha256=ckD0AlCm8f5qW3AF-NdyvhxV32bGEkIXVZHC1CyDT9o,28
+phph/model.py,sha256=reU471-oDY-qJLOCpx_GWK2VGzQ5JJcj3nNJdbyGYcQ,23081
+phph-0.1.dist-info/LICENSE,sha256=6jovKxgq3YOyqedynTI2qfIou3gNRFpCAhjyV0kZPkc,1077
+phph-0.1.dist-info/METADATA,sha256=VrKfeLh5hoc4CebFirWjoeB4tDHcewxMW791jYqcyxU,4767
+phph-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+phph-0.1.dist-info/top_level.txt,sha256=qtceUjmwam2I5PG4OKqITIdUsWoZxfM64suoqxihV74,5
+phph-0.1.dist-info/RECORD,,
