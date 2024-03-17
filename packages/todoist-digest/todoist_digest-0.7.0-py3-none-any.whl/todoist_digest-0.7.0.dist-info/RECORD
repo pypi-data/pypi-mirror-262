@@ -1,0 +1,8 @@
+todoist_digest/__init__.py,sha256=bC6f469KmarhVpNr9F7uo3eAT7Cho6bagTJ8grGQH7c,13219
+todoist_digest/email.py,sha256=KmeI0PI3LhY4nBXKGk_LvkIQ4KQ9RPD_ohbutb54u-A,1283
+todoist_digest/patch.py,sha256=qCU794ipN2-4E63HdUIurhjZdivHZfKa6LL2kK7DFwo,930
+todoist_digest/todoist.py,sha256=7ciT0rQnGqstlz_2mk3IZcGjvNmQpj-cs0JHRmjwgZU,1588
+todoist_digest-0.7.0.dist-info/METADATA,sha256=0UconBQbmS8ow4z6P9wQTcXPH16QZE537UxQsiudVmo,3949
+todoist_digest-0.7.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+todoist_digest-0.7.0.dist-info/entry_points.txt,sha256=OMRh0VQSe1P5xryw83Uc2Ty42q-SUc5UyJyRmz8Z04Y,53
+todoist_digest-0.7.0.dist-info/RECORD,,
