@@ -1,0 +1,70 @@
+QWidget {
+    color: #242424;
+    border-color: #d1d1d1;
+    background-color: #fff;
+}
+
+QWidget:disabled {
+    color: #bdbdbd;
+    background: #f0f0f0;
+    border-color: #e0e0e0;
+}
+
+/* 边框 */
+QPushButton, QLineEdit, QDateTimeEdit, QTextEdit {
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+}
+
+QPushButton { padding: 5 12; margin: 1; }
+QPushButton:hover { background: #f5f5f5; border-color: #c7c7c7; }
+QPushButton:pressed { background: #e0e0e0; border-color: #b3b3b3; }
+QPushButton:disabled { color: #bdbdbd; background: #f0f0f0; border-color: #e0e0e0; }
+QPushButton:default { color: #fff; background: #0f6cbd; border-color: #0f6cbd; }
+QPushButton:default:hover { background: #115ea3; }
+QPushButton:default:pressed { background: #0c3b5e; }
+
+/* -------- QComboBox -------- */
+QComboBox {
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    padding: 5 10;
+}
+
+/* -------- QTextEdit -------- */
+QTextEdit { padding: 10; }
+
+/* -------- QDateTimeEdit -------- */
+QLineEdit, QDateTimeEdit {
+    padding: 5 8;
+}
+
+QLineEdit:focus {
+    border-bottom: 1px solid #0f6cbd;
+}
+
+QLabel { background-color: transparent; }
+
+/* -------- QTabWidget -------- */
+QTabWidget QTabBar::tab {
+    padding: 12 10;
+	border-bottom: 3px solid transparent;
+}
+
+QTabWidget QTabBar::tab:selected {
+	border-bottom: 3px solid #5b5fc7;
+}
+
+QTabWidget::pane { border: none; }
+
+/* -------- QAbstractItemView -------- */
+QAbstractItemView { outline: none; border: none; }
+QAbstractItemView::item:hover { background: #f5f5f5; color: #242424; }
+
+QTableView::item { padding-right: 10px; }
+QTableView::item:hover { background: none; }
+
+QComboBox QAbstractItemView { border: 1px solid #d1d1d1; }
+QComboBox QAbstractItemView::item { height: 28px; color: #242424; }
+QComboBox QAbstractItemView::item:hover { background: #f5f5f5; }
+QComboBox QAbstractItemView::item:selected { background: #cde8ff; }
