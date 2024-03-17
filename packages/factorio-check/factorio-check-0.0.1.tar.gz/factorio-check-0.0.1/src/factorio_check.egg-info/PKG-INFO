@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: factorio-check
+Version: 0.0.1
+Summary: A library for helping with factorio testing
+Author-email: Danny Farrell <16297104+danpf@users.noreply.github.com>
+Project-URL: Homepage, https://github.com/danpf/factorio-check
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
