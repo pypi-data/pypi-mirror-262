@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+Taoufiq.egg-info/PKG-INFO
+Taoufiq.egg-info/SOURCES.txt
+Taoufiq.egg-info/dependency_links.txt
+Taoufiq.egg-info/requires.txt
+Taoufiq.egg-info/top_level.txt
