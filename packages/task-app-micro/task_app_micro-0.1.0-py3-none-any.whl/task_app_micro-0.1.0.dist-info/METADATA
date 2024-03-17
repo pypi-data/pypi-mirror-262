@@ -1,0 +1,61 @@
+Metadata-Version: 2.3
+Name: task_app_micro
+Version: 0.1.0
+Summary: A small python module to create, manage and visualise Tasks and TODOs
+Author: Samuel Shiels
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11.5
+Description-Content-Type: text/markdown
+
+# Task-App-Micro
+
+# Usage
+
+```python
+from task_app_micro import TaskApp
+ta = TaskApp()
+```
+
+# Features
+
+# TODO
+
+-   Add tasks
+    -   Name
+    -   Description
+    -   Time - start+end
+    -   Date - start+end
+    -   Frequency
+        -   Periodicity
+        -   Discrete
+-   Update tasks
+-   Visualise
+    -   Table
+    -   Look ahead
+        -   To date
+        -   Set period
+            -   Weekly
+            -   Monthly
+    -   Timeline
+-   Delete
+-   Complete Tasks
+-   Fail Tasks
+    -   Re-create new Task? How to inform the application
+-   Output
+    -   HTML Table
+    -   JSON
+    -   Pickle
+    -   Open Standards?
+    -   Common apps?
+
+# Backup and Restore
+
+# Build
+
+```bash
+python -m build
+python -m twine upload dist/*
+```
