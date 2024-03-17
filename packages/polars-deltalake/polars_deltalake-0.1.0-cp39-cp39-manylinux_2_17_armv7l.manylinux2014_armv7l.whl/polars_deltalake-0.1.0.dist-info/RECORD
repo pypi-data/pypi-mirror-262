@@ -1,0 +1,6 @@
+polars_deltalake-0.1.0.dist-info/METADATA,sha256=wOlV4EvvQsCJnBzJc27SExLbIa_PoR8g8rbg_fWqgaE,861
+polars_deltalake-0.1.0.dist-info/WHEEL,sha256=kEEHvMhyt8qLsKEb-KSJylZEZtUtTWcmx3xD0wo9ClI,127
+polars_deltalake/__init__.py,sha256=HujPin5WAvF9I9a6gjKtZk0zBE4nA5q_2kJ9d8S6028,635
+polars_deltalake/_internal.pyi,sha256=B78GPEpAizpx95CJMqeDcvy0Rlrs-SwXQEexwKnwV3I,337
+polars_deltalake/_internal.cpython-39-arm-linux-gnueabihf.so,sha256=-xYQLijiG0u4N_QlgS84grBTdld1dubIqZZ6lnq1CaU,39984528
+polars_deltalake-0.1.0.dist-info/RECORD,,
