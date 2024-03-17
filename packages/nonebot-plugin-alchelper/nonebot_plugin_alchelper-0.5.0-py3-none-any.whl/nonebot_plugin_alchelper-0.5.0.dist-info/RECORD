@@ -1,0 +1,8 @@
+nonebot_plugin_alchelper-0.5.0.dist-info/METADATA,sha256=mA4_ggBkOK7yfIjnEGU0V0sZJtdZ3wh600Bg02eMSjE,3092
+nonebot_plugin_alchelper-0.5.0.dist-info/WHEEL,sha256=N2J68yzZqJh3mI_Wg92rwhw0rtJDFpZj9bwQIMJgaVg,90
+nonebot_plugin_alchelper-0.5.0.dist-info/licenses/LICENSE,sha256=mwi7btx1IocbPFev-1_lViY4cHH4_HyvcC0kh6FNpJc,1091
+nonebot_plugin_alchelper/__init__.py,sha256=8TsAB5r-HzAhihDnGY_U_JCDsCfQOt9aB7ABeG24B2k,9316
+nonebot_plugin_alchelper/config.py,sha256=BAwRi1m9mFPqgI2hj9D-zM4-6-7BPvbutoGCa6u2ehA,795
+nonebot_plugin_alchelper/migrations/a9a3810efa4a_0_5_0.py,sha256=axHu1mqDejSffkXL7T335x3cP4_iMdOBpG_rj6IJ60w,1223
+nonebot_plugin_alchelper/model.py,sha256=YmaGnGCLbmH2rZa6n-ze3RaHyEHXSMBqMTf13RSTaQ8,427
+nonebot_plugin_alchelper-0.5.0.dist-info/RECORD,,
