@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/EchoAPI/Client.py
+src/EchoAPI/Message.py
+src/EchoAPI/User.py
+src/EchoAPI/__init__.py
+src/EchoAPI/common.py
+src/EchoAPI/event.py
+src/EchoAPI/exceptions.py
+src/EchoMessagerAPI.egg-info/PKG-INFO
+src/EchoMessagerAPI.egg-info/SOURCES.txt
+src/EchoMessagerAPI.egg-info/dependency_links.txt
+src/EchoMessagerAPI.egg-info/requires.txt
+src/EchoMessagerAPI.egg-info/top_level.txt
