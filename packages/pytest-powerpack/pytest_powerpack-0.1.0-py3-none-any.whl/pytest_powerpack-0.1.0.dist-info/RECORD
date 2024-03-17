@@ -1,0 +1,5 @@
+pytest_powerpack/__init__.py,sha256=TXwmemQAo43EtcDrsCAanPQ8EUi5IpqazN1PUAUXR9U,507
+pytest_powerpack/comparison.py,sha256=L9CwO08hnxVK_0c7jvLQE7CT82T9OKO_4g4oRlFBdMw,4194
+pytest_powerpack-0.1.0.dist-info/METADATA,sha256=6sMRAHApF4_CLfIVMU12PVRHl0wkzDDHLJqQVtuv0BM,443
+pytest_powerpack-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+pytest_powerpack-0.1.0.dist-info/RECORD,,
