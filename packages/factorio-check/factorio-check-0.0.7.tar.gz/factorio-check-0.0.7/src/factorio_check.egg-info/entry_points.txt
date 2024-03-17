@@ -1,0 +1,3 @@
+[console_scripts]
+package-addons = factorio_check.packaging:main_cli
+run-factorio-test = factorio_check.factorio_controller:main_cli

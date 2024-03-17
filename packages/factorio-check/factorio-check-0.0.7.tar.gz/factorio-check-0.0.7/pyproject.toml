@@ -1,0 +1,30 @@
+[project]
+name = "factorio-check"
+description="A library for helping with factorio testing"
+requires-python = ">=3.10"
+authors = [
+  { name = "Danny Farrell", email = "16297104+danpf@users.noreply.github.com" },
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+dependencies = []
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/danpf/factorio-check"
+
+[project.scripts]
+run-factorio-test = "factorio_check.factorio_controller:main_cli"
+package-addons = "factorio_check.packaging:main_cli"
+
+[build-system]
+requires = ["setuptools>=60", "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_file = "src/factorio_check/_version.py"
+root = "../../.."
