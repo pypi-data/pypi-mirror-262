@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: niutrader
+Version: 0.0.15
+Summary: 同花顺自动交易系统
+Project-URL: homepage, https://github.com/axiaoqi/niutrader
+Project-URL: documentation, https://github.com/axiaoqi/niutrader/blob/main/README.md
+Project-URL: Bug Tracker, https://github.com/axiaoqi/niutrader/issues
+Author-email: NiuGe <1091874347@qq.com>
+License: MIT License
+        
+        Copyright (c) 2024 axiaoqi
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: pandas>=1.0.0
+Description-Content-Type: text/markdown
+
+# niutrader
+> 由于easytrader无法使用，精简了其中功能，只保留了同花顺客户端交易功能。已经修复了其中的错误，验证码识别正常。
+
+同花顺自动化交易系统
+
+## 同花顺-网上股票交易系统5.0设置
+
+1. 交易设置--默认交易费率--万一；
+2. 交易设置--默认买入价格/买入数量/卖出价格/卖出数量 都设置为 空
+3. 界面设置--显示悬浮工具栏--否
+
+## 使用流程
+1. 安装依赖：`pip install -r requirements.txt`
+2. 安装验证码识别工具tesseract，并添加到系统环境变量
+   - 官方链接：https://github.com/tesseract-ocr/tesseract
+   - 安装文档：https://tesseract-ocr.github.io/tessdoc/Installation.html
+3. 打开同花顺，登陆自己的资金账户，按上面设置一下
+4. 编写代码，测试连接同花顺客户端
