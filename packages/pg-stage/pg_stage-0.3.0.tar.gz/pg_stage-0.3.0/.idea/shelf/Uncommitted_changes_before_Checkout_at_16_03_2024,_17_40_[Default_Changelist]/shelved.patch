@@ -1,0 +1,19 @@
+Index: pyproject.toml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[tool.poetry]\nname = \"pg_stage\"\nversion = \"0.1.18\"\ndescription = \"Anonymization of data in pg_dump\"\nauthors = [\"froOzzy\"]\n\n[build-system]\nrequires = [\"hatchling\"]\nbuild-backend = \"hatchling.build\"\n\n[project]\nname = \"pg_stage\"\nversion = \"0.1.18\"\nauthors = [\n  { name=\"froOzzy\", email=\"ieme5gll6u78@mail.ru\" },\n]\ndescription = \"Anonymization of data in pg_dump\"\nreadme = \"README.md\"\nrequires-python = \">=3.7\"\nclassifiers = [\n    \"Programming Language :: Python :: 3\",\n    \"License :: OSI Approved :: MIT License\",\n    \"Operating System :: OS Independent\",\n]\ndependencies = [\"Faker >= 16.6.0\", \"typing-extensions >= 4.5.0\"]\n\n[project.urls]\n\"Homepage\" = \"https://github.com/froOzzy/pg_stage\"\n\n[tool.black]\nline-length = 120\ntarget-version = [\"py39\"]\ninclude = '\\.pyi?$'\nskip-string-normalization = true\n\n[tool.poetry.dependencies]\npython = \">=3.7\"\nFaker = \">=16.6.0\"\nmimesis = \">=4.1.3\"\ntyping-extensions = \">=4.5.0\"\n\n[tool.poetry.dev-dependencies]\npytest = \"7.3.1\"\nblack = \"23.3.0\"\nbandit = \"1.7.5\"\nmypy = \"1.4.1\"
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	(revision d7b6f35ae09f0eb4f86af6d45c2304b63bd0c655)
++++ b/pyproject.toml	(date 1710598732566)
+@@ -34,7 +34,7 @@
+ skip-string-normalization = true
+ 
+ [tool.poetry.dependencies]
+-python = ">=3.7"
++python = ">=3.9"
+ Faker = ">=16.6.0"
+ mimesis = ">=4.1.3"
+ typing-extensions = ">=4.5.0"
