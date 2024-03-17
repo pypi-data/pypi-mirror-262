@@ -1,0 +1,9 @@
+PyPDF2
+XlsxWriter
+beautifulsoup4
+numpy
+openpyxl
+pandas
+pypdf
+python-docx
+python-pptx
