@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: paperless-asn-labels
+Version: 1.0.0
+Summary: Creates archive serial number (ASN) label sheets
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: fpdf2 (>=2.7.8,<3.0.0)
+Requires-Dist: segno (>=1.6.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# paperless-asn-labels
+
+`paperless-asn-labels` generates PDF documents with archive serial numbers (ASN), both as a machine-readable QR code
+and a human-readable number.
+
+Loosely inspired by https://github.com/entropia/paperless-asn-qr-codes.
+
+## Installation
+
+```console
+pipx install paperless-asn-labels
+```
+
+## Usage
+
+Run `paperless-asn-labels --help` for supported commands and options.
+
