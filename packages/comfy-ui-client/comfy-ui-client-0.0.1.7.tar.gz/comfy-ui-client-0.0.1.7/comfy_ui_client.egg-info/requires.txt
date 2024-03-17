@@ -1,0 +1,6 @@
+websocket-client
+uuid
+requests
+
+[dev]
+pytest>=6.0
