@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: dc3client
+Version: 0.0.9
+Summary: dc3client: Client of Digital Curing3.
+Home-page: https://github.com/kawamlab/DC3-python
+Download-URL: https://github.com/kawamlab/DC3-python
+Author: Ryosuke1218
+Author-email: 34680324+being24@users.noreply.github.com
+Maintainer: Ryosuke1218
+Maintainer-email: 34680324+being24@users.noreply.github.com
+License: MIT
+Keywords: digital-curing3 dc3client
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2.0.0,>=1.25.1
+
+# dc3client
+
+[デジタルカーリング3](https://github.com/digitalcurling/DigitalCurling3/wiki)用のクライアントライブラリです。
+
+問題を発見した場合、GitHubのissueに投稿してください。
+
+## インストール
+
+Python 3.10以上が必要です。pip経由でインストールできます。
+
+```bash
+pip install dc3client
+```
+
+## 使い方
+
+ドキュメントは[こちら](https://kawamlab.github.io/DC3-python/)を参照してください。
+また、使い方や対戦環境の構築方法は[DC3-python-template](https://github.com/kawamlab/DC3-python-template)を参照してください。
+
+
+## ドキュメント更新用メモ
+
+```sh
+sphinx-quickstart docs # init
+```
+```sh
+sphinx-apidoc -f -o ./docs/source/ ./
+sphinx-build  ./docs/source/ ./docs/
+```
