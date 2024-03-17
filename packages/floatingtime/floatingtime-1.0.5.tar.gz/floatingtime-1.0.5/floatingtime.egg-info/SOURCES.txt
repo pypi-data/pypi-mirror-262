@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+floatingtime.egg-info/PKG-INFO
+floatingtime.egg-info/SOURCES.txt
+floatingtime.egg-info/dependency_links.txt
+floatingtime.egg-info/top_level.txt
