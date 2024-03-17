@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Caulimate
+Version: 0.1
+Summary: Causality on Climate Science
+Home-page: https://github.com/MinghaoFu/Caulimate
+Author: Minghao Fu
+Author-email: isminghaofu@gmail.com
+License: MIT
+Keywords: example project
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: somepackage >=1.0
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+Under construction
