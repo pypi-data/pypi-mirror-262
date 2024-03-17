@@ -1,0 +1,5 @@
+setup.py
+farkle.egg-info/PKG-INFO
+farkle.egg-info/SOURCES.txt
+farkle.egg-info/dependency_links.txt
+farkle.egg-info/top_level.txt
