@@ -1,0 +1,6 @@
+numpy
+tqdm
+torch
+matplotlib
+muon
+pyro-ppl
