@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: icengine
+Version: 0.0.1
+Summary: A Visual Game Engine For Python
+Author: Metaldev
+Author-email: <theducktalkshow@gmail.com>
+Keywords: python,game engine
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+A Visual Game Engine For Python Made To Stand Out Compared To Pygame And Pyglet
