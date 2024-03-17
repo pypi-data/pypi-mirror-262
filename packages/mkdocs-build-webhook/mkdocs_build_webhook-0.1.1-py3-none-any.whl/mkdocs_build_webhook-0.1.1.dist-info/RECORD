@@ -1,0 +1,5 @@
+mkdocs_build_webhook/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_build_webhook/__main__.py,sha256=yhETbo0CPjE1d930UNXEhO3rmZSYhRk4nQBfkhvmk2Q,2571
+mkdocs_build_webhook-0.1.1.dist-info/METADATA,sha256=HdtqDkpkWsXgY5olBPP2WMpAyn7YlpQ4FdLiq6qvglU,822
+mkdocs_build_webhook-0.1.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+mkdocs_build_webhook-0.1.1.dist-info/RECORD,,
