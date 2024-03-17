@@ -1,0 +1,7 @@
+
+[dev]
+numpy
+pandas
+torch
+torchvision
+pytorch_lightning
