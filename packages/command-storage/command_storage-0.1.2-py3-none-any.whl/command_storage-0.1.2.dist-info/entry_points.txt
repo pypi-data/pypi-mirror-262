@@ -1,0 +1,3 @@
+[console_scripts]
+cmds=command_storage.views.cli:app
+
