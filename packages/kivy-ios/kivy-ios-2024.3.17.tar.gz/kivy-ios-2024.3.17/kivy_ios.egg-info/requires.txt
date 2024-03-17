@@ -1,0 +1,5 @@
+Cython==0.29.36
+cookiecutter
+pbxproj
+Pillow
+sh
