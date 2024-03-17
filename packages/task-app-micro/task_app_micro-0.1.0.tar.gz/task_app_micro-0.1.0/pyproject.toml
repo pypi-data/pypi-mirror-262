@@ -1,0 +1,21 @@
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+[project]
+name = "task_app_micro"
+version = "0.1.0"
+authors = [
+    { name = "Samuel Shiels" },
+]
+description = "A small python module to create, manage and visualise Tasks and TODOs"
+readme = "README.md"
+requires-python = ">=3.11.5"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+]
