@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "baum"
+version = "0.1.2"
+description = "CLI tool for generating Unicode/ASCII trees"
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = ["Topic :: Utilities"]
+
+[project.urls]
+Homepage = "https://github.com/fwcd/baum"
+Repository = "https://github.com/fwcd/baum"
+
+[project.scripts]
+baum = "baum:main"
+
+[tool.setuptools.packages]
+find = {}
+
+[tool.pyright]
+include = ["baum"]

@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: baum
+Version: 0.1.2
+Summary: CLI tool for generating Unicode/ASCII trees
+License: MIT License
+        
+        Copyright (c) 2022 fwcd
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/fwcd/baum
+Project-URL: Repository, https://github.com/fwcd/baum
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Baum
+
+[![PyPI](https://img.shields.io/pypi/v/baum)](https://pypi.org/project/baum)
+[![Typecheck](https://github.com/fwcd/baum/actions/workflows/typecheck.yml/badge.svg)](https://github.com/fwcd/baum/actions/workflows/typecheck.yml)
+[![Test](https://github.com/fwcd/baum/actions/workflows/test.yml/badge.svg)](https://github.com/fwcd/baum/actions/workflows/test.yml)
+
+A small Python script that generates a Unicode or ASCII tree from a parenthesized expression.
+
+## Examples
+
+```sh
+baum "this [is [an, example, tree], with [a, bunch, of, nodes]]"
+```
+
+```
+this
+├─ is
+│  ├─ an
+│  ├─ example
+│  └─ tree
+└─ with
+   ├─ a
+   ├─ bunch
+   ├─ of
+   └─ nodes
+```
+
+In addition to the default style, which is `unicode`, a number of other styles are supported, which can be set via the `--style` flag, e.g.:
+
+```sh
+baum --style ascii "this [is [an, example, tree], with [a, bunch, of, nodes]]"
+```
+
+```
+this
++- is
+|  +- an
+|  +- example
+|  \- tree
+\- with
+   +- a
+   +- bunch
+   +- of
+   \- nodes
+```
+
+Or even emoji for visualizing file trees:
+
+```sh
+baum --style emoji "this [is [an [], example [], tree []], with [a, bunch, of, nodes]]"
+```
+
+```
+📁 this
+  📁 is
+    📁 an
+    📁 example
+    📁 tree
+  📁 with
+    📄 a
+    📄 bunch
+    📄 of
+    📄 nodes
+```
+
+Run `baum --help` for a complete overview.

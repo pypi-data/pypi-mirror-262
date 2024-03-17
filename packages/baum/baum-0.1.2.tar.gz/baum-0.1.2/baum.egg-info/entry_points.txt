@@ -1,0 +1,2 @@
+[console_scripts]
+baum = baum:main
