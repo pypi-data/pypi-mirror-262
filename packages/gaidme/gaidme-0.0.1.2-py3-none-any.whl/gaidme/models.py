@@ -1,0 +1,72 @@
+from .schema import get_command_fnc, get_command_system_prompt
+from .utils import _parse_command_from_response
+from ._errors import GaidmeError
+from openai import OpenAI, AzureOpenAI
+from typing import Union
+import logging
+import os
+
+_logger = logging.getLogger(__name__)
+
+def get_ai_client() -> Union[AzureOpenAI, OpenAI]:
+    """
+    Based on the env variable returns openai client
+    """
+    if os.getenv("OPENAI_API_KEY"):
+        return OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    elif os.getenv("AZURE_OPENAI_ENDPOINT"):
+        if os.getenv("AZURE_OPENAI_KEY"):
+            raise GaidmeError("Missing AZURE_OPENAI_KEY")
+        if os.getnev("AZURE_OPENAI_DEPLOYMENT"):
+            raise GaidmeError("Missing AZURE_OPENAI_DEPLOYMENT")
+        return AzureOpenAI(azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+                           azure_key=os.getenv("AZURE_OPENAI_KEY"),
+                           azure_deployment=os.getnev("AZURE_OPENAI_DEPLOYMENT"))
+    else:
+        raise GaidmeError("Missing OPENAI_API_KEY")
+
+def get_command(user_prompt: str) -> str:
+    client = get_ai_client()
+    _logger.debug("running get_command")
+    response = client.chat.completions.create(
+        model=os.getenv("OPENAI_API_MODEL"),
+        messages=[
+            {"role": "system", "content": get_command_system_prompt},
+            {"role": "user", "content": user_prompt}
+        ],
+        tools=[get_command_fnc],
+        tool_choice={"type": "function", "function": {
+            "name": get_command_fnc['function']['name']}}
+    )
+    command = _parse_command_from_response(response)
+
+    return command
+
+def get_reflection(user_prompt: str, system_prompt: str) -> str:
+    client = get_ai_client()
+    _logger.debug("running get_reflection")
+    _logger.debug(system_prompt)
+    response = client.chat.completions.create(
+        model=os.getenv("OPENAI_API_MODEL"),
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
+        ],
+        tools=[get_command_fnc],
+        tool_choice={"type": "function", "function": {
+            "name": get_command_fnc['function']['name']}}
+    )
+    command = _parse_command_from_response(response)
+
+    return command
+
+
+def moderation(prompt: str) -> None:
+    """
+    Use openai moderation endpoint.
+    Not in used currently
+    """
+    client = get_ai_client()
+    mod_response = client.moderations.create(input=prompt)
+    if mod_response.results[0].flagged is True:
+        raise GaidmeError("This message has been flagged as harmful by OpenAI")
