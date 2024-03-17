@@ -1,0 +1,16 @@
+setup.py
+so2sql/__init__.py
+so2sql/models.py
+so2sql/so2sql.py
+so2sql/sqldf.py
+so2sql/utils.py
+so2sql.egg-info/PKG-INFO
+so2sql.egg-info/SOURCES.txt
+so2sql.egg-info/dependency_links.txt
+so2sql.egg-info/requires.txt
+so2sql.egg-info/top_level.txt
+tests/__init__.py
+tests/mockresponses.py
+tests/test_so2sql.py
+tests/test_sqldf.py
+tests/test_utils.py
