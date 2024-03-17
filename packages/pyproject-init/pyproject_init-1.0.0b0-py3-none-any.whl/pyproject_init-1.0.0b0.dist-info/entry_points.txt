@@ -1,0 +1,2 @@
+[console_scripts]
+pyproject-init = pyproject_init.cli:cli
