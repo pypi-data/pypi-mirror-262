@@ -1,0 +1,2 @@
+[console_scripts]
+zonefilegen = zonefilegen.cli:generate
