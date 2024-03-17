@@ -1,0 +1,7 @@
+README.md
+setup.py
+nitrotype_scraper.egg-info/PKG-INFO
+nitrotype_scraper.egg-info/SOURCES.txt
+nitrotype_scraper.egg-info/dependency_links.txt
+nitrotype_scraper.egg-info/requires.txt
+nitrotype_scraper.egg-info/top_level.txt
