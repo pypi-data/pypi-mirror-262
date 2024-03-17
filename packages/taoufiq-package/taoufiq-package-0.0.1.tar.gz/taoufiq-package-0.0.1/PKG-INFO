@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: taoufiq-package
+Version: 0.0.1
+Summary: a package to test uploading a package to PyPip 
+Author: SAMAD88
+Author-email: samadtaoufik@gmail.com
+License: MIT License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+License-File: LICENSE.txt
+Requires-Dist: streamlit
+Requires-Dist: pandas
+Requires-Dist: numpy
