@@ -1,0 +1,8 @@
+yfinance
+pandas
+numpy
+prophet
+sklearn
+matplotlib.pyplot
+pandas.tseries.offsets
+currency_converter
