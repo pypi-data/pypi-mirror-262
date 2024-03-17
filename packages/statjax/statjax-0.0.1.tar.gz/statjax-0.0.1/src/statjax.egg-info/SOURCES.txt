@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/statjax/__init__.py
+src/statjax/util.py
+src/statjax.egg-info/PKG-INFO
+src/statjax.egg-info/SOURCES.txt
+src/statjax.egg-info/dependency_links.txt
+src/statjax.egg-info/top_level.txt
