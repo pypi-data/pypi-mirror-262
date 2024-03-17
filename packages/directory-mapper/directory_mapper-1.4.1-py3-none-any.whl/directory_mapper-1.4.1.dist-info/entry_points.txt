@@ -1,0 +1,2 @@
+[console_scripts]
+dirmap = src.orbit_directory_mapper:main
