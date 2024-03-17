@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mypypp
+Version: 0.1.0rc1
+Summary: Collection of experimental plugins for MyPy.
+Author: Bendabir
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: mypy (>=1.9.0,<2.0.0)
+Requires-Dist: typing-extensions (>=4.9.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# MyPy++
+
+Collection of experimental plugins for MyPy.
+
