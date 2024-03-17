@@ -1,0 +1,2 @@
+[console_scripts]
+dit = Dit.core:cli
