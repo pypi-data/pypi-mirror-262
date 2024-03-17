@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/utboxgen_py/__init__.py
+src/utboxgen_py/generator.py
+src/utboxgen_py.egg-info/PKG-INFO
+src/utboxgen_py.egg-info/SOURCES.txt
+src/utboxgen_py.egg-info/dependency_links.txt
+src/utboxgen_py.egg-info/requires.txt
+src/utboxgen_py.egg-info/top_level.txt
+src/utboxgen_py/assets/utbox_base.png
+src/utboxgen_py/assets/utbox_font_cyr.otf
+tests/test_gen.py
