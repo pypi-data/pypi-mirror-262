@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: wikidot
+Version: 3.0.0a11
+Summary: Wikidot Utility Library
+Author-email: ukwhatn <ukwhatn@gmail.com>
+Project-URL: Homepage, https://github.com/ukwhatn/wikidot.py
+Project-URL: Bug Tracker, https://github.com/ukwhatn/wikidot.py/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx ~=0.25.0
+Requires-Dist: beautifulsoup4 ~=4.12.2
+Requires-Dist: lxml ~=4.9.3
+Provides-Extra: dev
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
+# wikidot.py - A Python library for making requests to the Wikidot sites.
+
+## Installation
+```bash
+pip install wikidot
+```
+
+## Usage
