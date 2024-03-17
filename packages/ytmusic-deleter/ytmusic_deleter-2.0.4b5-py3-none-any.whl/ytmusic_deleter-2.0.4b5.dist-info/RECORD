@@ -1,0 +1,10 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+auth.py,sha256=6JiKgg0lbjCv2C4nmTYArlcPAJ8F0Rx3IEFH-Tp_Gtw,1164
+cli.py,sha256=43FNVM-3iFYXHmSs0zNwAtLqy2eoxbaebf79-JlMgD0,14519
+constants.py,sha256=pxbHgBi6zG0wy5RTjFySxxiTUFmFrBLn1SrpFQCJ-lg,138
+progress.py,sha256=-9nqvRaAYuQpUiRcbSBu54nX9w7iw9wEimHcdBcKVvM,290
+uploads.py,sha256=e4BblJ1Mb4M3uCPGyIOY4Bf-1fvYw3gUS4RcGxfrjvM,8582
+ytmusic_deleter-2.0.4b5.dist-info/METADATA,sha256=Fp5ZP6hCUV9j8vMtui-1a-TJbf4z3HrBSF_ZphFGCQ8,8095
+ytmusic_deleter-2.0.4b5.dist-info/WHEEL,sha256=N2J68yzZqJh3mI_Wg92rwhw0rtJDFpZj9bwQIMJgaVg,90
+ytmusic_deleter-2.0.4b5.dist-info/entry_points.txt,sha256=ApZ928dswwbQTHSm21VWhYgfAk3lkApDz-0GoK1rHq8,45
+ytmusic_deleter-2.0.4b5.dist-info/RECORD,,
