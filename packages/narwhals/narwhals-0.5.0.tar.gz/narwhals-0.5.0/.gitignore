@@ -1,0 +1,5 @@
+.venv
+*.pyc
+todo.md
+.coverage
+site/
