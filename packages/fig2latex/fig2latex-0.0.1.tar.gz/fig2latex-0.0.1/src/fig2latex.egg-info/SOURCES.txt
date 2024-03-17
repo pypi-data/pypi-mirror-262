@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/fig2latex/__init__.py
+src/fig2latex/fig2latex.py
+src/fig2latex.egg-info/PKG-INFO
+src/fig2latex.egg-info/SOURCES.txt
+src/fig2latex.egg-info/dependency_links.txt
+src/fig2latex.egg-info/top_level.txt
+test/test_fig_2_latex.py
