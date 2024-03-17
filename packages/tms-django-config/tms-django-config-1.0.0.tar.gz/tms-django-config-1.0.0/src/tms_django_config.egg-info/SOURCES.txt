@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/tms_django_config/__init__.py
+src/tms_django_config/admin.py
+src/tms_django_config/apps.py
+src/tms_django_config/models.py
+src/tms_django_config.egg-info/PKG-INFO
+src/tms_django_config.egg-info/SOURCES.txt
+src/tms_django_config.egg-info/dependency_links.txt
+src/tms_django_config.egg-info/requires.txt
+src/tms_django_config.egg-info/top_level.txt
+src/tms_django_config/migrations/0001_initial.py
+src/tms_django_config/migrations/__init__.py
