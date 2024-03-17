@@ -1,0 +1,4 @@
+websocket-client
+uuid
+json
+urllib.request
