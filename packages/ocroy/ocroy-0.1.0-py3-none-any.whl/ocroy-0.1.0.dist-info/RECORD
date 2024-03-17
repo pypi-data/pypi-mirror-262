@@ -1,0 +1,16 @@
+ocroy/__init__.py,sha256=omnW_bqFZ9frXSGV-AJVFXxd4GxF34oVv9Nzkw_TpKc,125
+ocroy/__main__.py,sha256=Qz3bER7ZxQn9W8Nx0XFZQlMcnArtgtzwqJEuHxs1qzk,31
+ocroy/normalize.py,sha256=4PVttRyL_3lXXCNVi4B1Pr9w3bNW1j5EX2na14-6YLk,1826
+ocroy/parser.py,sha256=g2NXUxg8NF-ABNpAmzpVfhlkcaCeqmUSRwUX0TqwyV0,917
+ocroy/reader.py,sha256=8Ih6JJy-1wg1XL_-DY6v89zifxRuh-QThBkKSCxOJ6c,176
+ocroy/recognizers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ocroy/recognizers/base.py,sha256=kO6aa7pSF9u-4F9cmQ1haEbjuaIgThz_-iCYdJ71884,127
+ocroy/recognizers/core.py,sha256=DX5qbJHMokLiLEYnApOhOLEZDxu0T3bQ90s-vt226hs,491
+ocroy/recognizers/google_vision_api.py,sha256=jUtI75I9_rZ3q0UFTEVyCrGsiQrKQRHy6zpAdBMk4TE,2139
+ocroy/recognizers/tesseract.py,sha256=btKpEB7ZSPtNk7-jdh0e4xfuJrwS3U1ulQctDJVV4hw,982
+ocroy-0.1.0.dist-info/LICENSE,sha256=IxYn-d07yIiXHhd7X3lIlYzCgVy4HmkUgnORyaijcjs,1063
+ocroy-0.1.0.dist-info/METADATA,sha256=WGgvlLmz1CMiCaGVJ-vFQu1K88bq95EEMfpyYnMDjqI,2862
+ocroy-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ocroy-0.1.0.dist-info/entry_points.txt,sha256=_kG1ZWqNUkNdy_EXnrvZxLVAKrd7xAeza4KjjsvrPD0,37
+ocroy-0.1.0.dist-info/top_level.txt,sha256=mk_v5y4mSj1FPKk8Fq7joMCf4x_L5_V6COVJEffUpbY,6
+ocroy-0.1.0.dist-info/RECORD,,
