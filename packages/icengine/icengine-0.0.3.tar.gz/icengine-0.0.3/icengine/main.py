@@ -1,0 +1,2 @@
+import icengine
+icengine.main()
