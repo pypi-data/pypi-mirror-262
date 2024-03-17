@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/ktreediff/__init__.py
+src/ktreediff/__main__.py
+src/ktreediff/file.py
+src/ktreediff/node.py
+src/ktreediff/util.py
+src/ktreediff/version.py
+src/ktreediff.egg-info/PKG-INFO
+src/ktreediff.egg-info/SOURCES.txt
+src/ktreediff.egg-info/dependency_links.txt
+src/ktreediff.egg-info/entry_points.txt
+src/ktreediff.egg-info/requires.txt
+src/ktreediff.egg-info/top_level.txt

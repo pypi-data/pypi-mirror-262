@@ -1,0 +1,2 @@
+[console_scripts]
+treediff = ktreediff.__main__:main
