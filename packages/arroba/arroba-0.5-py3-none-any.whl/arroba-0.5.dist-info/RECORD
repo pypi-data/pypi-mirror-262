@@ -1,0 +1,17 @@
+arroba/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+arroba/datastore_storage.py,sha256=WPLLZWVH_MYRsoA2osqQe0uAKbK7Cf4ZGyin3eGMO_Q,14637
+arroba/did.py,sha256=1GE2dSN339LARt9juE8jekX7yWiQBlCi_6B08udm-5s,11421
+arroba/diff.py,sha256=3YEsrNAx3qPznkDRJIc-9trVvzc6A0YLDz8HgMqCST0,8127
+arroba/mst.py,sha256=ApJKoNO5B8PlVfy6PTFUT-3eO4AFWZ8E_nyejgrQYR8,33232
+arroba/repo.py,sha256=WS3RV_BJygQcRM3Wz4k9_wsauZraPhe9QdkU4a2Z5k8,10507
+arroba/server.py,sha256=LMLEz6sg7RHMoRwECFilh4wP7FlquQV-RZTRLra4FQg,859
+arroba/storage.py,sha256=v139-jlTQdJ26LrLMIDaImoUPkWx_T8fHOF83O6bKtM,10618
+arroba/util.py,sha256=rNgmu9x0TROBMMEUWQmjLNquGXZFCXNP-KnSh5z13D0,9844
+arroba/xrpc_repo.py,sha256=3Nxug1BTReRDz_EFKXouQfn_RjlLjsj1a7rLI_WaAOI,5316
+arroba/xrpc_server.py,sha256=Bf5I-4inO4a5ruoWa7VCxZWqJ9KC4GbEo9IbMjWdARg,2258
+arroba/xrpc_sync.py,sha256=lsfYxiX7tzcSyFyBoxu9GCDBeyPEJ_8m7oilyPqkk_c,7270
+arroba-0.5.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+arroba-0.5.dist-info/METADATA,sha256=hhCfvDxjUX4_c3C5aa1BgrPH4t1Z9ETYZjvxKhFU6KY,12825
+arroba-0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+arroba-0.5.dist-info/top_level.txt,sha256=JPagKKHrMMjQ77FPrz8hwWcnOqwn8MD--nCGaHw8M88,7
+arroba-0.5.dist-info/RECORD,,
