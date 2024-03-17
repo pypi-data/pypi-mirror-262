@@ -1,0 +1,17 @@
+flect/__init__.py,sha256=Jod910OwboPyjOf3Rt443WuULkwgniLyXbEA4oKEABI,219
+flect/actions.py,sha256=61WHp-KZ1SnrvmPhyZ74diaz3wfebwP6z-iJQ529owg,1195
+flect/application.py,sha256=pXJgElHEU8qeIj_WbWbIkC-_Od6AJfuUfW2Fn9XMQyo,2325
+flect/components.py,sha256=K_VPzJUkUiewto5KL2UkqsNw8XiSzxipocXd05l64bo,10237
+flect/constants.py,sha256=5EtC0NSqovlNFhgd-VB-tYZsrkNbH-cPPuR2qHGV_rU,389
+flect/form.py,sha256=GEU7E8WUA6owtXEhnz2nbbYRvKKkgzMeKTxQ-zX19os,2632
+flect/head.py,sha256=6VRcERNLns5kHl1KNB18URFE8olXLOKZC660V2rBSGw,10152
+flect/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flect/render.py,sha256=dDWDdADoJIBE_IzEY4sNDYnwJwDbWkIBsJQ-YRQdZx0,7391
+flect/response.py,sha256=QyLkgUs1HdLE797eFC7R2fbablBWyRf-jJhbsgWEMMY,454
+flect/routing.py,sha256=sKsjruDoyjTW63Qyp5xnKP--hUVpM_QKFue6sLRrAPg,11984
+flect/sitemap.py,sha256=gteci9ljtYfCaTYS9NjN_XxlWG9yX6mlM6fVcXy1sfg,2006
+flect/version.py,sha256=SpKq9iQBgIPLCKNyLGcnF8LeSeUfGZuXpjQlMMxyBM0,73
+flect-0.2.0.dist-info/METADATA,sha256=VYrUKWZ7s7Fqw_GdZY8J2maVrxk68vyBLBKVCoV1aU8,7298
+flect-0.2.0.dist-info/WHEEL,sha256=LL0B1KxSLwaTWceo7tT-0aDLd-qq9dmbnsnk1DnXlg8,87
+flect-0.2.0.dist-info/licenses/LICENSE,sha256=eiaCAmWiDNRi6UViIG_1gMNW2P1EqgkoFlqY9nholtQ,1065
+flect-0.2.0.dist-info/RECORD,,
