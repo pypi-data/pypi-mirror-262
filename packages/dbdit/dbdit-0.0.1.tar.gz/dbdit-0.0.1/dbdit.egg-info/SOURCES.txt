@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+Dit/__init__.py
+Dit/core.py
+dbdit.egg-info/PKG-INFO
+dbdit.egg-info/SOURCES.txt
+dbdit.egg-info/dependency_links.txt
+dbdit.egg-info/entry_points.txt
+dbdit.egg-info/requires.txt
+dbdit.egg-info/top_level.txt

@@ -1,0 +1,7 @@
+setuptools
+mysql-connector-python
+rich-click
+rich
+questionary
+Flask
+requests
