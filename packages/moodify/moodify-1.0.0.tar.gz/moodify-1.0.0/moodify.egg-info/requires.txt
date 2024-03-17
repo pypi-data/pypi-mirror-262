@@ -1,0 +1,6 @@
+requests
+six
+loguru
+requests_html
+bs4
+ytmusicapi

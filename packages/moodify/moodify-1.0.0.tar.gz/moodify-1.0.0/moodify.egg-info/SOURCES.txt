@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+moodify/__init__.py
+moodify/player.py
+moodify/utils.py
+moodify.egg-info/PKG-INFO
+moodify.egg-info/SOURCES.txt
+moodify.egg-info/dependency_links.txt
+moodify.egg-info/requires.txt
+moodify.egg-info/top_level.txt
+moodify/music_artist/__init__.py
+moodify/music_artist/__main__.py
+moodify/music_artist/artist.py
+moodify/recommender/__init__.py
+moodify/recommender/api.py
