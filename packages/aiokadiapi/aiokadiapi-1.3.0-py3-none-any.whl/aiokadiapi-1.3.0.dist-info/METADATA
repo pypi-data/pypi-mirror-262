@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: aiokadiapi
+Version: 1.3.0
+Summary: 
+Author: Noname
+Author-email: noname@yandex.ru
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.9.3,<4.0.0)
+Description-Content-Type: text/markdown
+
+
