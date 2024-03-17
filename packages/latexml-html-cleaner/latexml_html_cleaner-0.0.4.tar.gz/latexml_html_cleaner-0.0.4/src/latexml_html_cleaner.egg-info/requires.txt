@@ -1,0 +1,22 @@
+beautifulsoup4
+
+[:python_version < "3.9"]
+importlib-metadata
+
+[dev]
+black
+pre-commit
+setuptools
+setuptools_scm
+wheel
+tox
+pytest
+pytest-pep8
+pytest-cov
+
+[testing]
+setuptools
+pytest
+pytest-pep8
+pytest-cov
+tox

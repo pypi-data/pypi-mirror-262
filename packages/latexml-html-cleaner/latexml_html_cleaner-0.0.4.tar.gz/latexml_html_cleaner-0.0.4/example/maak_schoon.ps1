@@ -1,0 +1,1 @@
+latexml-html-cleaner voorbeeld.html

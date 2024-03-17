@@ -1,0 +1,2 @@
+[console_scripts]
+htmlcleaner = latexml_html_cleaner.main:run
