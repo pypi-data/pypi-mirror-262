@@ -1,0 +1,7 @@
+README.md
+setup.py
+fortracc.egg-info/PKG-INFO
+fortracc.egg-info/SOURCES.txt
+fortracc.egg-info/dependency_links.txt
+fortracc.egg-info/requires.txt
+fortracc.egg-info/top_level.txt
