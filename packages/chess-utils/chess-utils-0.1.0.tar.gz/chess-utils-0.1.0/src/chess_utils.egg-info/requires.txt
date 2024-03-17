@@ -1,0 +1,5 @@
+chess
+
+[test]
+pytest
+hypothesis
