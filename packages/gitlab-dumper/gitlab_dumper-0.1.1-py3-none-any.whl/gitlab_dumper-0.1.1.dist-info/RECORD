@@ -1,0 +1,16 @@
+src/__init__.py,sha256=36SVYqoSjevKijFGlWr6Yk2ZxWg-dbYNRvcgkK46vjo,193
+src/_git.py,sha256=OW6CvmPb7_GmKNnGr2BB0wYh6Y6tJMcMJR0xZd_6FTI,2623
+src/_gitlab.py,sha256=ss3VWh0IevRl_ejkuMPRmx8Q1y5sndm_PzJviLAoia4,3373
+src/_settings.py,sha256=cIjHGbAvTonPcJ1828UicKCrWG2hLvnL0Q2M_FdEAHg,1113
+src/_utils.py,sha256=S5uCzwyh31Y5ybtyGd4V_sf-EXZcCKN4QPOAKTD1WsI,925
+src/main.py,sha256=MFrjry9xjmIs7BzYtYTILLpst5L-41RxrCuL5GfYDME,951
+src/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/commands/groups.py,sha256=g6HioPS_qe26XT29I47IQB_HpHmCLkxz29RVkJAiAzg,2302
+src/commands/projects.py,sha256=tjIwvryqrGQz4ukJ6svPpf7Vub_5Q9R7CYDiR85k2J8,5463
+src/commands/tree.py,sha256=SATc368O7E-bNHcdhcXv5uutWKDAKIKxTsT5Pyd14RM,1878
+gitlab_dumper-0.1.1.dist-info/LICENSE,sha256=KpvwLj4BTou4VvAgBtmnkuSlcpXkHb_9aetQ3x5tpW8,1074
+gitlab_dumper-0.1.1.dist-info/METADATA,sha256=D0Aov2BnwCe6ApNGwqU0xCja-HlWPh3-QxObP1DuG_s,3859
+gitlab_dumper-0.1.1.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+gitlab_dumper-0.1.1.dist-info/entry_points.txt,sha256=1IjDBnQ5i9Pylf2xjrEqzqEZbz2wbVGNfEOSjC3gnl4,48
+gitlab_dumper-0.1.1.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+gitlab_dumper-0.1.1.dist-info/RECORD,,
