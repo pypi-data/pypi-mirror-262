@@ -1,0 +1,13 @@
+moodify/__init__.py,sha256=mXn-Vtt62rlRU6XdnWCLXneTKL45d21leoHFXWpjZ_c,33
+moodify/player.py,sha256=wfXUuFwWJYGfyK72X6UKhSBcyegCHIBZmg9lVajZ6eo,4503
+moodify/utils.py,sha256=RjXWdroQ3c5GronJ3dmwKF1x8cvG3tzh_p70BziI5pk,3905
+moodify/music_artist/__init__.py,sha256=mfx-J7Wbguz9FE70i5_cB_A1WWd-pQrcDatBdB5mCzY,31
+moodify/music_artist/__main__.py,sha256=uOmOiA2pUsjtjPV6oi2OcIbSkDvrwRgXHshcUD-eFjw,634
+moodify/music_artist/artist.py,sha256=ibIp_jQirb-0-0VhkrhkTFvslLRb3gaZHB3TPSlUj3s,5214
+moodify/recommender/__init__.py,sha256=BY3Ot0ZDQkmSL6CeqDH67CMT_IA7Yxm3ydGn-cK74cQ,29
+moodify/recommender/api.py,sha256=lijZExpEBGFRKPzR6J6JouKWZGfScMMXHSBPi_lrI10,5807
+moodify-1.0.0.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+moodify-1.0.0.dist-info/METADATA,sha256=b9iHFbVncd4L_sPIR3m1aXFr6ZWjY6dv4hwJ4_Xsvwk,3368
+moodify-1.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+moodify-1.0.0.dist-info/top_level.txt,sha256=ETCZLAq2JeHCWn3bY8U4i9B_sLwKhLM49xzQ2c8HlBc,8
+moodify-1.0.0.dist-info/RECORD,,
