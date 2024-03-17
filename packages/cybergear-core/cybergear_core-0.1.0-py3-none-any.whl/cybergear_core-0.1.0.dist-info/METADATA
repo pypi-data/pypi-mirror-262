@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cybergear-core
+Version: 0.1.0
+Summary: cybergear-can-driver
+Author: meiqing.zcw, notmmao
+Author-email: meiqing.zcw@xuelangyun.com, notmmao@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: AUTHORS
+Requires-Dist: loguru
+Requires-Dist: python-can
+
+cybergear-can-driver
