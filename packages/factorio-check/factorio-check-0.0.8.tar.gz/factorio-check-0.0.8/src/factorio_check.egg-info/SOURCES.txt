@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/factorio_check/__init__.py
+src/factorio_check/_version.py
+src/factorio_check/factorio_controller.py
+src/factorio_check/packaging.py
+src/factorio_check.egg-info/PKG-INFO
+src/factorio_check.egg-info/SOURCES.txt
+src/factorio_check.egg-info/dependency_links.txt
+src/factorio_check.egg-info/entry_points.txt
+src/factorio_check.egg-info/top_level.txt
