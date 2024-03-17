@@ -1,0 +1,7 @@
+README.md
+setup.py
+libanalisis.egg-info/PKG-INFO
+libanalisis.egg-info/SOURCES.txt
+libanalisis.egg-info/dependency_links.txt
+libanalisis.egg-info/requires.txt
+libanalisis.egg-info/top_level.txt
