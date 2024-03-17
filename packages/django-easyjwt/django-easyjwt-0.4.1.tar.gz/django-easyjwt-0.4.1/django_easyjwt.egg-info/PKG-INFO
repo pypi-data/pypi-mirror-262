@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: django-easyjwt
+Version: 0.4.1
+Summary: A convenient package for building both client and server implementations for JWTs or Json Web Tokens. It
+Home-page: https://github.com/garrethcain/django-easyjwt
+Author: Garreth Cain
+Author-email: garrethccain@gmail.com
+License: MIT
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: Django>=3.2
+Requires-Dist: djangorestframework>=3.12.4
+Requires-Dist: requests>=2.24.0
