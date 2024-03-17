@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: polars-deltalake
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: polars >=0.20.10
+Summary: Native polars deltalake reader
+Author-email: Ion Koutsours <15728914+ion-elgreco@users.noreply.github.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/ion-elgreco/polars-deltalake
+Project-URL: Documentation, https://ion-elgreco.github.io/polars-deltalake/
+Project-URL: Change Log, https://github.com/ion-elgreco/polars-deltalake/releases
+Project-URL: Issue Tracker, https://github.com/ion-elgreco/polars-deltalake/issues
+
+WIP to get a native delta reader with polars and delta-rs crates
