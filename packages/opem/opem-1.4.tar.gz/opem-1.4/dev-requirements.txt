@@ -1,0 +1,8 @@
+art==6.1
+requests==2.31.0
+pytest>=5.1.0
+pytest-cov>=2.6.1
+setuptools>=40.8.3
+bandit>=1.5.1
+vulture>=1.0
+pydocstyle>=3.0.0
