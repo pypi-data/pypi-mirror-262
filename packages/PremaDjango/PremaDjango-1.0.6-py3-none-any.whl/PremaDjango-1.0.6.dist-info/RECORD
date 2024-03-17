@@ -1,0 +1,14 @@
+PremaDjango/__init__.py,sha256=EdrQeTv3WnO-7rBZT29DwBW5qCkY4o4A-gfek_7Flm0,27
+PremaDjango/settings.py,sha256=j00xY3G9PWwWCiXw8xu14Xe-SP965BUpWL9HliSUjhg,51
+PremaDjango/middlewares/__init__.py,sha256=gBQVAS-01QPhceUn5O27b47t9287sEk1Cw34RoSvCIc,69
+PremaDjango/middlewares/redis_cache_disable.py,sha256=pGUeKsN6kPpzWj0UVit6a6rcQAk4mELqcVovfiGGNTw,516
+PremaDjango/models/__init__.py,sha256=79OoerhzfXkQsrTdwbOD41oK9lxzi_47tyrBXNELO3g,64
+PremaDjango/models/field_converters.py,sha256=-N-nabDnq4Ho3ybYIwRT7lXB32uoIED6Ok3tRHB0cJ0,1653
+PremaDjango/models/field_validators.py,sha256=hi9PSga6y3icZGiaCzsAVUqtDDM4OQUyje-f7e0Lfao,4537
+PremaDjango/response_handlers/__init__.py,sha256=mcg7CX7WCJa04YhXMrjCfa_Y4d--j0MUUqqm3s3Nr-k,40
+PremaDjango/response_handlers/custom_response_handlre.py,sha256=7EZH8Kv9_j2x2OgOtRP1tONLOeMC5pDsrj8mg6eknf8,42449
+PremaDjango-1.0.6.dist-info/LICENSE.txt,sha256=xvq1LaywvPe7ZDVuX89wjbBuRICsQkN3eoAc_3NuXa0,1069
+PremaDjango-1.0.6.dist-info/METADATA,sha256=kZy7MPFM48rrvc9G6Tiqoo9Cn91qPEVOYrd6vKlRPjU,4335
+PremaDjango-1.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+PremaDjango-1.0.6.dist-info/top_level.txt,sha256=riMgu35K41OyHcbIve-vtNoXS4KKvF1gC1VsfwRWmqo,12
+PremaDjango-1.0.6.dist-info/RECORD,,
