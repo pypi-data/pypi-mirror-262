@@ -1,0 +1,9 @@
+composio/__init.py,sha256=sMc0FocZm5NIUV-c72eaqOfSgkbZSRI1GSid_e4Cd_w,39
+composio/sdk/__init__.py,sha256=T_EHF72dMQ_YbEk_S3Wi2MUpqQ7bzEkDrQ3e08n-6tA,35
+composio/sdk/client.py,sha256=AsFKchwsbFs0_OiOUZSe7luM9Ovn25LuUpGS3FMC8Vo,4219
+composio/sdk/storage.py,sha256=hJMePslG74-6qTU1uvbFTz6h_7CbyWt0FNJ9jjxoRxY,1264
+composio_core-0.0.3.data/scripts/composio-cli,sha256=v77vEvZnB5ty8Rqjgz14ayIgp12c41kKntL_HeScr8Y,4700
+composio_core-0.0.3.dist-info/METADATA,sha256=SgM12NQzm1uxAtXSBKSwZxIr6bcBgok_mCXkFZ248ag,766
+composio_core-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+composio_core-0.0.3.dist-info/top_level.txt,sha256=cl38zQOTCSSrOnDw869ji4nVnHt18nghj8bz7Vhhpf4,9
+composio_core-0.0.3.dist-info/RECORD,,
