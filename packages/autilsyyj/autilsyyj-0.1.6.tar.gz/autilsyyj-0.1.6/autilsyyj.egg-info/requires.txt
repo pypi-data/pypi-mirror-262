@@ -1,0 +1,14 @@
+os
+imutils
+jsonpatch
+uuid
+opencv-python
+numpy
+shutil
+tqdm
+random
+tabulate
+shapely
+pillow
+scikit-learn
+jsonpointer
