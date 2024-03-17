@@ -1,0 +1,13 @@
+glhf/__init__.py,sha256=1BHm6qUrSaYVUqD_7nlAikx8lFS_90GcYa5pXzK42Js,113
+glhf/base.py,sha256=fKVkqMNGlskQ-5OhyQxQn0ZQTyW3ivCX1wiXAigE0D8,5436
+glhf/bot.py,sha256=4T4_dOidGnbyg7MJ7D5FWv4g6eKGhWI8I1k0OWLu0mw,9450
+glhf/client.py,sha256=nwC2NNT0GJ4995i-fobWXV8qLSE2v-gOgl6EVx9cmpw,7751
+glhf/gui.py,sha256=PKX5Ed9FAmdh-i7KkU9ltv6SDIolgjubAgC_uHAliQk,12152
+glhf/helper.py,sha256=ToxUAVtr4gt7YkQedlJDRYa0rUhWjvK9iONW69XETrc,8872
+glhf/server.py,sha256=lQMIp9VcC8GExkuNJ1dvufl359uL9Jr-mDHukljBBuY,13990
+glhf/typing_.py,sha256=aGVzC80S3kOjAhIyCu3XlBQEFAr1fZodr-lY9hSxd3I,1019
+glhf-0.0a1.dist-info/LICENSE,sha256=EcSotBSlNDZfAtp9rZ3D5HHTWxXtMd-dQAb7KhRMREM,18429
+glhf-0.0a1.dist-info/METADATA,sha256=RYHjQT-EiYLcdko6EWsjqZ2B19LRAEUKK_wtTcZGIXc,22674
+glhf-0.0a1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+glhf-0.0a1.dist-info/top_level.txt,sha256=EatgOhsHQiYgdLITaFiIRng5os8xHy8lWKkJUJsezNw,5
+glhf-0.0a1.dist-info/RECORD,,
