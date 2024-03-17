@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: beamxs
+Version: 1.0.0
+Summary: Python Library for Structural Beam Analysis
+Home-page: https://beam-xs.readthedocs.io/
+Author: Aryan Karamtoth
+Author-email: aryankmmiv@outlook.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: setuptools
+
+A simple Python library for Structural Beam Analysis developed by students of Kakatiya Institute of Technology and Science for Civil Engineering Applications
