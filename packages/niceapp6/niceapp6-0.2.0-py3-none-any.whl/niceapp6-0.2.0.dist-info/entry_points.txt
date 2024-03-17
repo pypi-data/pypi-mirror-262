@@ -1,0 +1,3 @@
+[console_scripts]
+buildapp = niceapp6:build
+startapp = niceapp6:start
