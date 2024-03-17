@@ -1,0 +1,11 @@
+LICENSE
+README.md
+observe_http_sender.py
+pyproject.toml
+requirements.txt
+setup.py
+observe_http_sender.egg-info/PKG-INFO
+observe_http_sender.egg-info/SOURCES.txt
+observe_http_sender.egg-info/dependency_links.txt
+observe_http_sender.egg-info/requires.txt
+observe_http_sender.egg-info/top_level.txt
