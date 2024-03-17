@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1c4de1ef-99c8-4de5-871d-095b055b8de1" name="Changes" comment="Update github-actions">
+      <change afterPath="$PROJECT_DIR$/src/comradewolf/utils/utils_for_testing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/joins_test_structure_generator/fact_sales.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/joins_test_structure_generator/fact_sales.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/tables_test_structure_generator/dim_item.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/tables_test_structure_generator/dim_item.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/tables_test_structure_generator/fact_sales.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/tables_test_structure_generator/fact_sales.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/tables_test_structure_generator_incorrect_table/dim_item.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/tables_test_structure_generator_incorrect_table/dim_item.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/tables_test_structure_generator_incorrect_table/fact_sales.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/tables_test_structure_generator_incorrect_table/fact_sales.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/tables_two_tables_check_fields/dim_item.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/tables_two_tables_check_fields/dim_item.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/tables_two_tables_check_fields/fact_stock.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/tables_two_tables_check_fields/fact_stock.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_joins/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_joins/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_joins/fact_sales.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_joins/fact_sales.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_joins/fact_stock.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_joins/fact_stock.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_standard_filters/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_standard_filters/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_standard_filters/filter_one.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_standard_filters/filter_one.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tables/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tables/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tables/dim_calendar.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tables/dim_calendar.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tables/dim_item.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tables/dim_item.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tables/dim_store.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tables/dim_store.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tables/dim_warehouse.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tables/dim_warehouse.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tables/fact_sales.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tables/fact_sales.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tables/fact_stock.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tables/fact_stock.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tele_joins/fact_hyperion.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tele_joins/fact_hyperion.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tele_tables/dim_account_bud.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tele_tables/dim_account_bud.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tele_tables/dim_bud_reserv_2.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tele_tables/dim_bud_reserv_2.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tele_tables/dim_calendar.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tele_tables/dim_calendar.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tele_tables/dim_entity.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tele_tables/dim_entity.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tele_tables/dim_index_con.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tele_tables/dim_index_con.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tele_tables/dim_interco.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tele_tables/dim_interco.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tele_tables/dim_resp_center.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tele_tables/dim_resp_center.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_db_structure/test_tele_tables/hype_b.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_db_structure/test_tele_tables/hype_b.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/tests/test_query_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/test_query_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/universe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/tests/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/universe/frontend_backend_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/universe/frontend_backend_converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/universe/joins_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/universe/joins_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/universe/possible_joins.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/universe/possible_joins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/universe/query_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/universe/query_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/universe/structure_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/universe/structure_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/universe/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/utils/data_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/utils/data_types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/utils/enums_and_field_dicts.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/utils/enums_and_field_dicts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/utils/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/utils/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/utils/language_specific_builders.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/utils/language_specific_builders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comradewolf/utils/utils_for_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/comradewolf/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2dlRDssx9qqtmT2dcOMQtrpKtqy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_query_generator.TestQueryGenerator.executor": "Run",
+    "Python tests.Python tests for test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend.executor": "Run",
+    "Python tests.Python tests for test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend_a.executor": "Run",
+    "Python tests.Python tests for test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend_two_tables.executor": "Run",
+    "Python tests.Python tests in test_query_generator.py.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "CW02__new__build__system",
+    "last_opened_file_path": "C:/Users/Const/working/comradewolf/comradewolf",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.leinardi.pycharm.pylint.PylintConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Const\working\comradewolf\comradewolf" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Const\working\comradewolf\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend">
+    <configuration name="Python tests for test_query_generator.TestQueryGenerator" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="comradewolf" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/comradewolf/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_query_generator.TestQueryGenerator&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="comradewolf" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/comradewolf/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend_a" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="comradewolf" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/comradewolf/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend_a&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend_two_tables" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="comradewolf" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/comradewolf/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend_two_tables&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_query_generator.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="comradewolf" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/comradewolf/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/comradewolf/tests/test_query_generator.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests in test_query_generator.py" />
+        <item itemvalue="Python tests.Python tests for test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend_two_tables" />
+        <item itemvalue="Python tests.Python tests for test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend_a" />
+        <item itemvalue="Python tests.Python tests for test_query_generator.TestQueryGenerator.test_convert_from_frontend_to_backend" />
+        <item itemvalue="Python tests.Python tests for test_query_generator.TestQueryGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c4de1ef-99c8-4de5-871d-095b055b8de1" name="Changes" comment="" />
+      <created>1710580562481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710580562481</updated>
+      <workItem from="1710580564924" duration="11994000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial library commit">
+      <option name="closed" value="true" />
+      <created>1710590065076</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710590065076</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial library commit">
+      <option name="closed" value="true" />
+      <created>1710594378752</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710594378752</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update github-actions">
+      <option name="closed" value="true" />
+      <created>1710594516028</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710594516028</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial library commit" />
+    <MESSAGE value="Update github-actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update github-actions" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/comradewolf$.coverage" NAME=" Coverage Results" MODIFIED="1710594140108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comradewolf/tests" />
+  </component>
+</project>

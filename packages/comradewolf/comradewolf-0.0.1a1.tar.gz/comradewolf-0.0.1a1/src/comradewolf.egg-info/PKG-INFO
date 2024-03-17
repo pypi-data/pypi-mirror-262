@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: comradewolf
+Version: 0.0.1a1
+Summary: Helps build SQL queries without code
+Author-email: Konstantin Suspitsyn <konstantin.suspitsyn@xmail.ru>
+Project-URL: Homepage, https://github.com/konstantin-suspitsyn/comradewolf
+Project-URL: Issues, https://github.com/konstantin-suspitsyn/comradewolf/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Comradewolf
+
+Helps to build SQL queries without code
