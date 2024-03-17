@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/cg3d_casc_core.egg-info/PKG-INFO
+src/cg3d_casc_core.egg-info/SOURCES.txt
+src/cg3d_casc_core.egg-info/dependency_links.txt
+src/cg3d_casc_core.egg-info/top_level.txt
+src/cg3dguru/__init__.py
+src/cg3dguru/datatypes/__init__.py
+src/cg3dguru/datatypes/core.py
+src/cg3dguru/general/__init__.py
+src/cg3dguru/general/core.py
+src/cg3dguru/general/fbx.py
