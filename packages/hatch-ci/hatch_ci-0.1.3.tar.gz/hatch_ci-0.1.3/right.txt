@@ -1,0 +1,223 @@
+[ruff::resolve][DEBUG] Using configuration file (via parent) at: /home/runner/work/hatch-ci/hatch-ci/pyproject.toml
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/make.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/test_conftest.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/test_fileos.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/test_scm.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/test_script.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/conftest.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/test_text.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/test_code.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/test_tools.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/test_exceptions.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/test_cli.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/support/projects.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/support/scripter.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/support/resolver.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/support/__init__.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/tests/test_e2e.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/pyproject.toml"
+[ruff_workspace::resolver][DEBUG] Ignored path via `exclude`: "/home/runner/work/hatch-ci/hatch-ci/.git"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/_support.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/exceptions.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/hooks.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/cli.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/version_hook.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/code.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/script.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/fileos.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/tools.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/__init__.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/scm.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/common.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/text.py"
+[ruff_workspace::resolver][DEBUG] Included path via `include`: "/home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/build_hook.py"
+[ruff::commands::check][DEBUG] Identified files to lint in: 4.770916ms
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/test_e2e.py
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/make.py
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/script.py
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/scm.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'os' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pyproject_hooks._in_process._in_process' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'sys' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'json' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'build.__main__' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'argparse' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'unittest' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'shutil' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'subprocess' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/test_conftest.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'sys' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'logging' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 're' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '.' as Known(LocalFolder) (NonZeroLevel)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '__future__' as Known(Future) (Future)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 're' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pytest' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/test_conftest.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/fileos.py
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/test_fileos.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'build.__main__' as Known(ThirdParty) (NoMatch)
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/test_e2e.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/pyproject.toml
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/_support.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pytest' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'sys' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/test_fileos.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/test_scm.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'dataclasses' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'subprocess' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 're' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'io' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'subprocess' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pytest' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/test_scm.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/test_script.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'types' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'os' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'typing' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'shutil' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'stat' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'os' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'inspect' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'importlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'zipfile' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'tarfile' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'shutil' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'shutil' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/tools.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'argparse' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'argparse' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/test_script.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/conftest.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'inspect' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'functools' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'os' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'json' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'sys' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'io' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'typing' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'typing_extensions' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'typing' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '__future__' as Known(Future) (Future)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'textwrap' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'shutil' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '__future__' as Known(Future) (Future)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pytest' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'sys' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '__future__' as Known(Future) (Future)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/exceptions.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'support.projects' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'support.scripter' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'support.resolver' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/conftest.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/test_text.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '.' as Known(LocalFolder) (NonZeroLevel)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/hooks.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/test_text.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/test_code.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'argparse' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'functools' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'json' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'logging' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 're' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'jinja2' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '.' as Known(LocalFolder) (NonZeroLevel)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'typing' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '__future__' as Known(Future) (Future)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'urllib.parse' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/__init__.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pytest' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/test_code.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/version_hook.py
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/test_tools.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci.version_hook' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci.build_hook' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatchling.plugin' as Known(ThirdParty) (NoMatch)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/cli.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '.' as Known(LocalFolder) (NonZeroLevel)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatchling.version.source.plugin.interface' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '__future__' as Known(Future) (Future)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'os' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/code.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'argparse' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'functools' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'sys' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'logging' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '.' as Known(LocalFolder) (NonZeroLevel)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'typing' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '__future__' as Known(Future) (Future)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 're' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'ast' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'typing' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '__future__' as Known(Future) (Future)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/build_hook.py
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/common.py
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/support/projects.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'os' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatchling.builders.hooks.plugin.interface' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '.' as Known(LocalFolder) (NonZeroLevel)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '.' as Known(LocalFolder) (NonZeroLevel)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '.' as Known(LocalFolder) (NonZeroLevel)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/test_exceptions.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/test_exceptions.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pytest' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pytest' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/src/hatch_ci/text.py
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/test_tools.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/support/resolver.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'textwrap' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/support/__init__.py
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/support/scripter.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '__future__' as Known(Future) (Future)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'shutil' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'string' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'random' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/support/projects.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'dataclasses' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'os' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pytest' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized '__future__' as Known(Future) (Future)
+[ruff::diagnostics][DEBUG] Checking: /home/runner/work/hatch-ci/hatch-ci/tests/test_cli.py
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'collections' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'subprocess' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'contextlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'shutil' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'sys' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pytest' as Known(ThirdParty) (NoMatch)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'pathlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'contextlib' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'hatch_ci' as Known(FirstParty) (KnownFirstParty)
+[ruff_linter::rules::isort::categorize][DEBUG] Categorized 'unittest' as Known(StandardLibrary) (KnownStandardLibrary)
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/test_cli.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff_linter::fs][DEBUG] Adding per-file ignores for "/home/runner/work/hatch-ci/hatch-ci/tests/support/scripter.py" due to absolute match on "(?-u)^/home/runner/work/hatch\\-ci/hatch\\-ci/tests(?:/|/.*/).*$": {Assert, RelativeImports}
+[ruff::commands::check][DEBUG] Checked 31 files in: 13.262374ms
+tests/test_e2e.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+Found 1 error.
+[*] 1 fixable with the `--fix` option.
