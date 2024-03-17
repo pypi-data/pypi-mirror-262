@@ -1,0 +1,11 @@
+click
+pytest
+hypothesis
+negmas>=0.10.18
+joblib
+jupyter
+gif
+gymnasium
+
+[gui]
+pyqt5
