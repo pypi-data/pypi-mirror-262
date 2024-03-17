@@ -1,0 +1,11 @@
+telegrambot/__init__.py,sha256=vyeiFcssEvFtsku4OApd1jSK3_kCQbBzCVcrHY9p_v4,52
+telegrambot/__main__.py,sha256=ogwoxYearftxAmFUVQn33I2KFRBeRjcVlzeAB2PQWBg,915
+telegrambot/bot.py,sha256=9ckNeNj56Dy7KpuxsGu2zHhOSXZ3XwR-pp2E0qj7AHo,4239
+telegrambot/cli.py,sha256=yrFZl8PzpQb1gkQO-aMlN1NjikExjiLcVHGEF7dBP5s,2676
+telegrambot/utils.py,sha256=Lxf7JZRLAYfe-CnzIfFrR6FFGM5S33jbHU9OPqSh4H8,3430
+ciresbot-0.2.4.dist-info/LICENSE,sha256=bLXNCyXDadvR2RaQmUna8zLf-A0evPoAIbafEmAE-o0,1080
+ciresbot-0.2.4.dist-info/METADATA,sha256=baPle16wYaFgtz1JDK3acv0Bg2pfFziYI6vhYEdlQBg,3978
+ciresbot-0.2.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ciresbot-0.2.4.dist-info/entry_points.txt,sha256=p2U1Wt6KplPksJLru1uDlLQmaq_9ATrdVX42PmpKVK8,58
+ciresbot-0.2.4.dist-info/top_level.txt,sha256=xVxbDSGfwYVC4mnPqnmRanWqaIxwhgL-qbkesUzDczM,12
+ciresbot-0.2.4.dist-info/RECORD,,
