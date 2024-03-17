@@ -1,0 +1,13 @@
+busker/__init__.py,sha256=Nw770hbPojKRpxKLssAK5uYKadrkugJ441ZxkzKxEXc,224
+busker/history.py,sha256=kRaL6sNNEQgqPyHgQGEPrC_Vh_oamUpgEaon44zHmhY,3373
+busker/main.py,sha256=bwOQsWDoTWs1GhKJ9l2yNf_d9JK0yUGE-2LdmImG3bU,2503
+busker/scraper.py,sha256=OBPGWAY33nzrf2PbvTM7go8sy3-TPuNGuY6KRZX2eio,4460
+busker/visitor.py,sha256=3ZhhY0fQadVsjprhEXTvjo1GVVA_3dW_54Up3KKqKpQ,5476
+busker/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+busker/test/test_history.py,sha256=98fRDzfDt8kjeXMfGXzyulEbCNXW9Cv6Xbt7-636OYg,2422
+busker/test/test_scraper.py,sha256=5Rl_AQi6Gj3gRQE0bXo6Y5Z96tbrmOeJlstM93DI65A,6205
+busker-0.2.0.dist-info/METADATA,sha256=_W42KXrqgtG0g5YNwIDd5NUt9k0PZ8yIjQ-opxN6kNg,41321
+busker-0.2.0.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+busker-0.2.0.dist-info/entry_points.txt,sha256=zdcatSb6oxs9AFmXO8r2Uid-nCr3TmCKXBGsNLJe8Xk,47
+busker-0.2.0.dist-info/licenses/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+busker-0.2.0.dist-info/RECORD,,
