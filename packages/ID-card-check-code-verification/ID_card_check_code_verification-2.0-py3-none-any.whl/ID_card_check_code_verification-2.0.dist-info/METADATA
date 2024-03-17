@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ID-card-check-code-verification
+Version: 2.0
+Summary: 中国身份证校验码校验
+Home-page: https://www.baidu.com
+Author: 高乐喆
+Author-email: gaolezhe@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Verify the Chinese ID number'
