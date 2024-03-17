@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: lightningrobot-adapter-console
+Version: 0.2.1
+Summary: 闪电机器人控制台适配器。
+Home-page: https://lightningrobot.github.io/
+License: MIT
+Keywords: robot,lightningrobot,console
+Author: Zhihan
+Author-email: zhihan2727@hotmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Project-URL: Documentation, https://lightningrobot.github.io/
+Project-URL: Repository, https://github.com/LightningRobot/adapter-console/
+Description-Content-Type: text/markdown
+
+

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "lightningrobot-adapter-console"
+version = "0.2.1"
+description = "闪电机器人控制台适配器。"
+authors = ["Zhihan <zhihan2727@hotmail.com>"]
+readme = "README.md"
+homepage = "https://lightningrobot.github.io/"
+documentation = "https://lightningrobot.github.io/"
+license = "MIT"
+repository = "https://github.com/LightningRobot/adapter-console/"
+keywords = ["robot", "lightningrobot","console"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
