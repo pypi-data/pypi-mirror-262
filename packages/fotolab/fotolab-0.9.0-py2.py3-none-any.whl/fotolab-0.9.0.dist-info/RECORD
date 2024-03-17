@@ -1,0 +1,15 @@
+fotolab/__init__.py,sha256=a0NCJBRDthqiPJOuVD1dvsVwDXvm-ruruL26QiEL6q8,1237
+fotolab/__main__.py,sha256=aboOURPs_snOXTEWYR0q8oq1UTY9e-NxCd1j33V0wHI,833
+fotolab/auto.py,sha256=q_d_lOZh410nvh9yGNS3k-jg5mB0zQrhOfxSmi-nShA,2142
+fotolab/border.py,sha256=QBA-rJ0phv_3ace20NW18PlhLIbYDjdGVJwX13vDKdI,3776
+fotolab/cli.py,sha256=4IEk0DRrCPIG0PB37f4zSyWUEbrZrLSKi5qJxb1M0Is,4433
+fotolab/contrast.py,sha256=dtQ39YBDmBhFlRS0jB8XqLsoNGEz96ZYfgg71MyeLFg,2350
+fotolab/env.py,sha256=XUwy3TAFFcTMvtXAT0tLJbo-ianBo_FPK2IQfvBOhic,1400
+fotolab/resize.py,sha256=ax4IacQR4vuGGxGI3B-ito6ldiT054QkaKympiv4y20,2505
+fotolab/sharpen.py,sha256=PP1xYXupOetQxQxXijzWiUlrKNlu80lfInG37VQhVYw,2902
+fotolab/watermark.py,sha256=X7u-HlOONfOhU8VRyvOgIvXYUu_q9IKHBMEkIf-oem4,5031
+fotolab-0.9.0.dist-info/entry_points.txt,sha256=mvw7AY_yZkIyjAxPtHNed9X99NZeLnMxEeAfEJUbrCM,44
+fotolab-0.9.0.dist-info/LICENSE.md,sha256=tGtFDwxWTjuR9syrJoSv1Hiffd2u8Tu8cYClfrXS_YU,31956
+fotolab-0.9.0.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+fotolab-0.9.0.dist-info/METADATA,sha256=i_R7skWGswlLGC1_GbZWdXWkXTup2iGeQ17iaHRZ8vc,6688
+fotolab-0.9.0.dist-info/RECORD,,
