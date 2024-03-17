@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: NT.py
+Version: 4.3.4
+Summary: A package to use the nitrotype api and get player or team stats
+Home-page: https://github.com/adl212/NT.py
+Author-email: emailforpythoncoding@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# NT.py
+## What is this?
+* gets racer stats
+* gets team stats
+* access the nitrotype api
+## Racer Class
+Get the stats of a racer.
+### Arguments
+* username
+
+How to use it:
+```python
+import nitrotype
+
+scraper = nitrotype.NitroTypeScraper()
+racer = nitrotype.Racer('tranq_')
+```
+This will print out the username for tranq_
+You can see all the attributes of the Racer class [here](#racer-attributes)
+
+## Team Class
+Get the stats of a team.
+### Arguments
+* team tag
+
+How to use it:
+```python
+import nitrotype
+team = nitrotype.Team('NTA')
+print(team.leaders)
+```
+This will print out officers by type tuple (**username**, **displayname**)
+You can see all the attributes of the Team class [here](#team-attributes)
+
+# Racer Attributes
+Here are the attributes of the Racer class:
+* `success` - returns a boolean of **True** or **False**
+    * If **False**, then other attributes will not exist
+* `tag` - The racer's current team's tag
+* `userid` - The userid of the racer
