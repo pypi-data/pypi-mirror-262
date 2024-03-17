@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+mnx/__init__.py
+mnx/main.py
+mnx_math.egg-info/PKG-INFO
+mnx_math.egg-info/SOURCES.txt
+mnx_math.egg-info/dependency_links.txt
+mnx_math.egg-info/requires.txt
+mnx_math.egg-info/top_level.txt
