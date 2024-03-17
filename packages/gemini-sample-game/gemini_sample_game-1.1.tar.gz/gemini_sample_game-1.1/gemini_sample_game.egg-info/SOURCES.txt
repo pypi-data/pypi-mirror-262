@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+gemini_sample_game/gemini_sample_game.py
+gemini_sample_game.egg-info/PKG-INFO
+gemini_sample_game.egg-info/SOURCES.txt
+gemini_sample_game.egg-info/dependency_links.txt
+gemini_sample_game.egg-info/entry_points.txt
+gemini_sample_game.egg-info/top_level.txt
