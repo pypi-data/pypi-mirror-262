@@ -1,0 +1,7 @@
+torch_geometric_median-0.1.1.dist-info/METADATA,sha256=J5_Y4ZncZdZntyyuoDC5YMZhYmwQa3OQ2SI9m9vLz3o,4205
+torch_geometric_median-0.1.1.dist-info/WHEEL,sha256=N2J68yzZqJh3mI_Wg92rwhw0rtJDFpZj9bwQIMJgaVg,90
+torch_geometric_median-0.1.1.dist-info/licenses/LICENSE,sha256=Q-CgNBDVhjpDXDL0LeqpK78i_VvWYuELsM6HcnunHmA,35057
+torch_geometric_median/__init__.py,sha256=-_nrpdoLhUT1oeSBNFb431CsfO4mUaNfQTJlAGQKbSU,190
+torch_geometric_median/geometric_median.py,sha256=lKI_LPTWccQ0ulQI4Q0Ow6BAQb_HjKOTbOmpgAcigbQ,3866
+torch_geometric_median/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torch_geometric_median-0.1.1.dist-info/RECORD,,
