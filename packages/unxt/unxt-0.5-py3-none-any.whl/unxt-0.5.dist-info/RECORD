@@ -1,0 +1,16 @@
+unxt/__init__.py,sha256=Z69xSUJZxJsXWc-4BXJFERPc6ODXCzyQ9C6QWv_bbKM,650
+unxt/_base.py,sha256=LSmlJGMJue8NWEF0ZEjYU6MXxW7bA_mdd1tUakw1w4c,11975
+unxt/_compat.py,sha256=jtDJpGNg07Lcm6sFbKQf2YNZ9d3Oo_A52ZNpTyAZyp8,1124
+unxt/_core.py,sha256=WzsUX2It_YwasHX4BlYTBp7XiuEFgphLRA9s5nPqKZ4,5894
+unxt/_fast.py,sha256=9oOTvfevSEErwx7lFHmj84hQMs5IQ9w40KEGJ0YzWsA,349
+unxt/_register_dispatches.py,sha256=CM-Lu8izMnv1BZERRXnc_T8S4KMraO0o_Dwb0kbc5vA,3087
+unxt/_register_primitives.py,sha256=C3JSahBeZfzzVlzDdz8jiqBf-CV9KQskmLlgszc6_v0,86298
+unxt/_utils.py,sha256=rqgry2xJguThlvrnBTBYU5qT_cs_mAy__uqsTQordGY,1235
+unxt/_version.py,sha256=IZwV9Sc5AQxklxwpcS6Ag_wR-tDyaswa7gn0TqseSEU,406
+unxt/_version.pyi,sha256=o7uNL6MhuJoiqpEnriU7rBT6TmkJZA-i2qMoNz9YcgQ,82
+unxt/experimental.py,sha256=FWnvYfRKCK-vM-c76oOFCVbBurv_xQRnNTTijlqAGPA,4380
+unxt/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unxt-0.5.dist-info/METADATA,sha256=NiPu9LiqjduvyfhzlgJSzOSx0t_griobs7q-zBOf_nk,5283
+unxt-0.5.dist-info/WHEEL,sha256=LL0B1KxSLwaTWceo7tT-0aDLd-qq9dmbnsnk1DnXlg8,87
+unxt-0.5.dist-info/licenses/LICENSE,sha256=P6foBl0H2WeXsCnK2m4-YzKz5yA2R3i78w4p7GcF5dQ,1528
+unxt-0.5.dist-info/RECORD,,
