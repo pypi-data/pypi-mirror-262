@@ -1,0 +1,58 @@
+/* analytics/include_index.html */
+
+/* ---include_no_analytics_set.html--- */
+.card-body-analytics pre {
+  text-align: left;
+  background-color: black;
+  color: white;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+/* ---ナビゲーション関連--- */
+.nav-analytics {
+  background-color: greenyellow;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.nav-analytics h4 {
+  color: limegreen;
+}
+
+/* ---見出し関連--- */
+.figure-analytics {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* ---データが空の場合--- */
+.display-1-analytics {
+  font-weight: bold;
+}
+
+/* ---セレクトフォーム関連--- */
+.form-analytics {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* ---Googleチャート関連--- */
+#chart_div {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* ---テーブル関連--- */
+.table-analytics {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* テーブルのスクロール */
+.table-scroll-analytics {
+  height: 600px;
+  overflow-y: scroll;
+  margin-bottom: 50px;
+}
+
