@@ -1,0 +1,6 @@
+semantic_filter/__init__.py,sha256=jwRmbSEzUjmkDTMm43bBNwJBm2UKn54gB-vtIOQLgsI,781
+semantic_filter/filters.py,sha256=qgN5ZZ68DZ5Hi7xtfzJp-kmaS_hmZPsObvAUN2geXfw,1943
+semantic_filter/filterset.py,sha256=_pn7jnp2qC9zBhgkdhwec360ADOS8wqwm43oVWE9XEg,3132
+django_semantic_filter-0.1.0.dist-info/METADATA,sha256=r0o551HzlIKJCcHci-9Os9JRa3soYdw1jnQQz7IgRYM,2453
+django_semantic_filter-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+django_semantic_filter-0.1.0.dist-info/RECORD,,
