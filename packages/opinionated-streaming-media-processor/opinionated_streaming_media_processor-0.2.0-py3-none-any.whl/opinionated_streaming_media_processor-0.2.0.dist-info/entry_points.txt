@@ -1,0 +1,3 @@
+[console_scripts]
+osmp=osmp.osmp:main
+
