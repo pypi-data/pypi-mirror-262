@@ -1,0 +1,16 @@
+del_msh-0.1.22.dist-info/METADATA,sha256=vqMgNHHZ617sneAxf1zSlrLmfyt3zj1NXasU_PVBSs4,841
+del_msh-0.1.22.dist-info/WHEEL,sha256=ujIUOIChM84q2okk01hfCTGkfNmymRrIEhkXNzCT0tY,95
+del_msh-0.1.22.dist-info/license_files/LICENSE,sha256=-M5nUhPFJAVrwKGKENo20XMZvVcmQg4N21EuBVMfxVw,1094
+del_msh/BlendShape.py,sha256=kWk4QbP38CgWi9P855Ixh8eUqtw7ocHvDLV00OJfL2M,3437
+del_msh/BVH.py,sha256=0T3ZR9K4oweUKFfKQRFK8GhAdq_OqNGY8bF9TkHkVo8,2766
+del_msh/DeformMLS.py,sha256=S3pLQEi6Qk3rPUZtcOw1uIP30ChOMU14DbavrahUFAs,1838
+del_msh/KdTree.py,sha256=amxNH7rC1tDaImQXYuWlrwaQCODRSSw6WZhWcPcoAL4,586
+del_msh/PolygonMesh.py,sha256=z6OShBHkab6fskKG5Q25p7w518Zd0CPk2jDhnABK-RA,904
+del_msh/PolyLoop.py,sha256=IhOBEkLGCphH-ULYjXLVy5O-0lX5FBwvzkQS2Xja6Ak,555
+del_msh/Tet.py,sha256=0X2ohKbLCTpWw3v8evXG6yakTEApP-9Eg37LN8ZsNYU,312
+del_msh/Tri.py,sha256=BuUoPlfXr5I_ukiFqOJw6M5zEGEVXJv1wov056UX1MU,644
+del_msh/TriMesh.py,sha256=RWo5Fc-9lWtjVtktppC_ImaZzwNi0VJ7BqAhnVzHR80,13863
+del_msh/WavefrontObj.py,sha256=sjwFaKuqwBobudwA_x586U0bmdOP5jU3Pg7sR0bLCV4,3841
+del_msh/__init__.py,sha256=uCbvIQAGb9ci2wyg988_UiyZd-AduJ5pyJWtDRk4Ru4,1452
+del_msh/del_msh.cp39-win_amd64.pyd,sha256=DMHRu9LMLgPelLS0jPm9lJXHTG3Cuy2FdzrYTjBuxMU,796160
+del_msh-0.1.22.dist-info/RECORD,,
