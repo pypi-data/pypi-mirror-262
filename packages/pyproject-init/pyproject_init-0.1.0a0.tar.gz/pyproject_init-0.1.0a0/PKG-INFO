@@ -1,0 +1,62 @@
+Metadata-Version: 2.3
+Name: pyproject_init
+Version: 0.1.0a0
+Summary: A tool to initialize a python project with all basic files and configurations
+Project-URL: Repository, https://github.com/quentinhaenn/pyproject_init
+Author-email: Quentin Haenn <quentin.haenn.pro@gmail.com>
+Maintainer-email: Quentin Haenn <quentin.haenn.pro@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Quentin Haenn
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: project,project init,python project,python project init
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Requires-Dist: click
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+# PYPROJECT_INIT, the python project initializer
+
+This is a simple python project initializer. It creates any file and directory structure needed for a python project, depending on the options you provide.
+
+## ROADMAP
+
+- [ ] add function for creating the chosen license file
+- [ ] add function for creating the chosen gitignore file
+- [ ] add function for creating the chosen README file
+- [ ] modify each os.system() call to use the subprocess module
+- [ ] wrap the whole thing in a class
+- [ ] simplify entry point
+- [ ] add tests
+- [ ] add documentation
+- [ ] add pyproject.toml file
+- [ ] wrap the whole thing in a package
+- [ ] publish the package on pypi
+- [ ] add a command line interface
+- [ ] test it vanilla
