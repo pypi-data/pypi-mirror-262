@@ -1,0 +1,13 @@
+mo-collections==5.566.24076
+mo-dots==9.565.24076
+mo-future==7.546.24057
+mo-json==6.566.24076
+mo-json-config==4.566.24076
+mo-kwargs==7.565.24076
+mo-logs==8.566.24076
+mo-math==7.565.24076
+mo-threads==6.566.24076
+mo-times==5.566.24076
+
+[tests]
+mo-testing>=7.562.24075
