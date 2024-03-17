@@ -1,0 +1,9 @@
+README.md
+setup.py
+calculo_horas_ferramentas/__init__.py
+calculo_horas_ferramentas/horaextra.py
+calculo_horas_ferramentas/horanoturna.py
+calculo_horas_ferramentas.egg-info/PKG-INFO
+calculo_horas_ferramentas.egg-info/SOURCES.txt
+calculo_horas_ferramentas.egg-info/dependency_links.txt
+calculo_horas_ferramentas.egg-info/top_level.txt
