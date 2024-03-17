@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "djsci"
+version = "0.0.1a0.dev1"
+description = "djsci : django science : run jupyter notebooks in django"
+authors = ["alex oxbits clifton <oxbits@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.4"
+shortuuid = "^1.0.11"
+nbconvert = "^7.7.4"
+nbformat = "^5.9.2"
+poetry = "^1.6.1"
+papermill = "^2.5.0"
+docker = "^7.0.0"
+django-extensions = "^3.2.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
