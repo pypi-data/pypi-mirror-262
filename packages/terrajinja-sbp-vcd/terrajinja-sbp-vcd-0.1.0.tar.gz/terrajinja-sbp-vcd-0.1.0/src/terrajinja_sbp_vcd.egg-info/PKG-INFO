@@ -1,0 +1,116 @@
+Metadata-Version: 2.1
+Name: terrajinja-sbp-vcd
+Version: 0.1.0
+Summary: Terrajinja extension for automation using cdktf
+Home-page: https://gitlab/terrajinja
+Author: Terrajinja Team
+Author-email: int-terrajinja@schubergphilis.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: terrajinja-imports-vcd>=3.11.0
+Requires-Dist: terrajinja-sbp-generic>=0.0.1
+Requires-Dist: cdktf-cdktf-provider-time>=10.0.0
+Requires-Dist: cdktf-cdktf-provider-vault>=12.1.0
+
+# terrajinja-sbp-vcd
+
+This is an extension to the vault provider for the following modules.
+The original documentation can be found [here](https://registry.terraform.io/providers/vmware/vcd/latest/docs)
+
+# SBP Specific implementations
+Here is a list of supported resources and their modifications
+
+## sbp.vcd.network_routed_v2
+Original provider: [vcd.network_routed_v2](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/network_routed_v2)
+
+This custom provider adds the following:
+- simplified and generic input for a network subnet
+
+| old parameter | new parameter | description |
+| ------ | ------ | ------ |
+| static_ip_pool<br>gateway<br>prefix_length | cidr | the cidr parameter calculates and fills in the 3 replaced values. |
+| dns1<br>dns2 | dns | dns is an array of dns servers, and automticly fills dns1 and dns2 |
+
+### terrajinja-cli example
+the following is a code snipet you can used in a terrajinja-cli template file.
+This reads the `VCD group` and `Edge name` and creates a network named `mynetwork` with the given parameters.
+```
+terraform:
+  resources:
+    - task: read-virtual-datacenter-group
+      module: vcd.data_vcd_vdc_group
+      parameters:
+        name: my_vdc
+
+    - task: read-edge-gateway
+      module: vcd.data_vcd_nsxt_edgegateway
+      parameters:
+        name: my_vdc_edge
+        owner_id: $read-virtual-datacenter-group.id
+
+    - task: my-network-backend
+      module: sbp.vcd.network_routed_v2
+      parameters:
+        edge_gateway_id: $read-edge-gateway.id
+        name: mynetwork
+        cidr: 10.10.10.0/28
+        dns: ["10.10.20.2", "10.10.20.3"]
+        dns_suffix: my_domain.local
+```
+
+## sbp.vcd.vm_internal_disk
+Original provider: [vcd.vm_internal_disk](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/vm_internal_disk)
+
+## sbp.vcd.vm
+Original provider: [vcd.vm](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/vm)
+
+## sbp.vcd.rde
+Original provider: [vcd.rde](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/rde)
+
+## sbp.vcd.nsxt_nat_rule
+Original provider: [vcd.nsxt_nat_rule](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/nsxt_nat_rule)
+
+## sbp.vcd.nsxt_ip_set
+Original provider: [vcd.nsxt_ip_set](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/nsxt_ip_set)
+
+## sbp.vcd.nsxt_alb_virtual_service
+Original provider: [vcd.nsxt_alb_virtual_service](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/nsxt_alb_virtual_service)
+
+## sbp.vcd.nsxt_firewall
+Original provider: [vcd.nsxt_firewall](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/nsxt_firewall)
+
+## sbp.vcd.nsxt_distributed_firewall
+Original provider: [vcd.nsxt_distributed_firewall](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/nsxt_distributed_firewall)
+
+## sbp.vcd.nsxt_app_port_profile
+Original provider: [vcd.nsxt_app_port_profile](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/nsxt_app_port_profile)
+
+## sbp.vcd.nsxt_alb_virtual_service
+Original provider: [vcd.nsxt_alb_virtual_service](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/nsxt_alb_virtual_service)
+
+## sbp.vcd.nsxt_alb_pool
+Original provider: [vcd.nsxt_alb_pool](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/nsxt_alb_pool)
+
+## sbp.vcd.data_vcd_vm_placement_policy
+Original provider: [vcd.data_vcd_vm_placement_policy](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/data_vcd_vm_placement_policy)
+
+## sbp.vcd.data_vcd_nsxt_alb_edgegateway_service_engine_group
+Original provider: [vcd.data_vcd_nsxt_alb_edgegateway_service_engine_group](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/data_vcd_nsxt_alb_edgegateway_service_engine_group)
+
+## sbp.vcd.data_vcd_catalog_vapp_template
+Original provider: [vcd.data_vcd_catalog_vapp_template](https://registry.terraform.io/providers/vmware/vcd/latest/docs/resources/data_vcd_catalog_vapp_template)
+
+
+History
+-------
+
+0.0.1 (14-03-2024)
+---------------------
+
+* First code creation
