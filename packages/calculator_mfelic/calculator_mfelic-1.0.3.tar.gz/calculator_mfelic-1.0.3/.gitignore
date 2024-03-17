@@ -1,0 +1,20 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__
+
+# Ignore distribution/build files
+dist/
+build/
+
+# Ignore virtual environment
+venv/
+.env/
+
+# Ignore any local environment files
+.env.local
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore hypothesis files
+.hypothesis
