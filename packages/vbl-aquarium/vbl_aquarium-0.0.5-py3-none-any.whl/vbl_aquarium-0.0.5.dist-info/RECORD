@@ -1,0 +1,13 @@
+vbl_aquarium/__about__.py,sha256=vucW-Fe97d2P_nl7TMRJ2Cp458lb7VTRk6EckM_ozdM,23
+vbl_aquarium/__init__.py,sha256=RBRTKzkEeX2KVg50vK4DJEJ8FlVqilksUFXk0iiZKt0,156
+vbl_aquarium/build.py,sha256=-ldD_c6M85S8kAthUgpySX3lzaa0tReogdDht6DMNII,1630
+vbl_aquarium/generate_cs.py,sha256=dGmQINwITRKO0PBYtEnlCPYf0HOnBaxILNWJ5aGqNpg,3398
+vbl_aquarium/models_generic.py,sha256=ZhWYWmbxzveiNkFHYNNRTvVMlpWO4dPqaLmy9ezsPYE,1948
+vbl_aquarium/models_logging.py,sha256=QXtvQ9QtGwwud25hrLkm2PGThIRy5qn1QzhuZwhpkNo,171
+vbl_aquarium/models_pinpoint.py,sha256=t0gAhuinrFSW6APJqEIqPI8DQO3xkZ6BIg7XfpO-XD0,290
+vbl_aquarium/models_unity.py,sha256=rIoTD__3ntTlPf1FA8x0V9YyJ1P8Em5aiJuGpNLdvAw,577
+vbl_aquarium/models_urchin.py,sha256=NnktMZJruWQuklX4zFZKcCy8TnamPqQoo3IF3uP_OKE,1424
+vbl_aquarium-0.0.5.dist-info/METADATA,sha256=btio_sFl1Pd6oHJjEhRl0sOWFi5dJy8SGEffSNPyH3s,1275
+vbl_aquarium-0.0.5.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+vbl_aquarium-0.0.5.dist-info/licenses/LICENSE,sha256=VUe2s-MmEudOms793dhulC1CytIleOrOuExPSwEmNV0,1095
+vbl_aquarium-0.0.5.dist-info/RECORD,,

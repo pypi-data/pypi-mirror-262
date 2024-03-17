@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: vbl-aquarium
+Version: 0.0.5
+Project-URL: Documentation, https://github.com/unknown/vbl-aquarium#readme
+Project-URL: Issues, https://github.com/unknown/vbl-aquarium/issues
+Project-URL: Source, https://github.com/unknown/vbl-aquarium
+Author-email: Kenneth Yang <kjy5@uw.edu>, Daniel Birman <dbirman@uw.edu>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: jsonschema==4.21.1
+Requires-Dist: pydantic==2.6.3
+Requires-Dist: pytest==8.1.0
+Requires-Dist: requests==2.31.0
+Description-Content-Type: text/markdown
+
+# VBL Aquarium
+
+Collection of Pydantic models describing data objects passed between Virtual Brain Lab projects.
+
+Corresponding JSON schema and C# .cs struct files are generated automatically with the command `python build.py`
