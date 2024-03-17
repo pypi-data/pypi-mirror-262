@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: comfy-ui-client
+Version: 0.0.1.2
+Summary: A simple WebSocket client for Comfy UI
+Author: Gavin Bao
+Author-email: xingce.bao@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: websocket-client
+Requires-Dist: uuid
+Requires-Dist: urllib
+
+# comfy-ui-client
