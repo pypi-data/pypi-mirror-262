@@ -1,0 +1,6 @@
+pywinauto==0.6.6
+pandas
+pytesseract
+pillow
+easyutils
+urllib3
