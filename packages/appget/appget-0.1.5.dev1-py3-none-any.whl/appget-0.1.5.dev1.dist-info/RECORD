@@ -1,0 +1,12 @@
+appget/__init__.py,sha256=N_nak7iTNJUk3ZhTm1JZ5vbkM_R4RQwwFRfT9WjES6Q,166
+appget/__main__.py,sha256=5zeNy8Dz9itQ0wIBjlcp_dF05nPBTX-sgnFhso9o7-U,1224
+appget/app.py,sha256=n3OoqEzdBVj9tv60MbgQQjS5JCsYv6yIp50tfjPcgVo,767
+appget/appget.py,sha256=fjN1tJET5UXtZxAihzoYGE64rD2T1WsPxbNZlOAZmII,3164
+appget/cmd.py,sha256=JBkC9SrSOUH5di3h1dH7yjsCDmHroAbXz_a4ivvQ0qc,2432
+appget/log.py,sha256=VCcWFhh7cKjMpKLDRz5i8UtqQOL9vHVPGtQARNqIYyY,1078
+appget/system.py,sha256=tVEFqU9KWmNqNwxsbfkn2dQ3VdXeCIrqVRQFK5lbHTA,464
+appget-0.1.5.dev1.dist-info/LICENSE,sha256=NQbR2QarzM3lXAa9Tuk4Jysq1J-7i8R2LH2VhBc-ks0,1067
+appget-0.1.5.dev1.dist-info/METADATA,sha256=_Ow3835HauadUaA1wqW4FuxXv8EN6WvevHeNHktkcHI,2071
+appget-0.1.5.dev1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+appget-0.1.5.dev1.dist-info/top_level.txt,sha256=XhfPBURXh3ulJXWIYu3us6R9tsOgcnEPSqIUo4dBgCw,7
+appget-0.1.5.dev1.dist-info/RECORD,,
