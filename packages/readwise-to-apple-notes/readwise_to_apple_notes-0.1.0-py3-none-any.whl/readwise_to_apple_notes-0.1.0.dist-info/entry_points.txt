@@ -1,0 +1,3 @@
+[console_scripts]
+readwise-to-apple-notes=readwise_to_apple_notes.cli:cli
+
