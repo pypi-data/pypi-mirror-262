@@ -1,0 +1,1 @@
+WIP to get a native delta reader with polars and delta-rs crates
