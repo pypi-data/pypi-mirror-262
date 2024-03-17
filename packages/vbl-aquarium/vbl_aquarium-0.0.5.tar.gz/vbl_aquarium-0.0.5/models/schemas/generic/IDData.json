@@ -1,0 +1,1 @@
+{"properties": {"id": {"title": "Id", "type": "string"}}, "required": ["id"], "title": "IDData", "type": "object"}

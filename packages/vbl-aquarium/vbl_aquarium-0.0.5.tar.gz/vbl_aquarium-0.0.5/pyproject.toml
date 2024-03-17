@@ -1,0 +1,88 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vbl-aquarium"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Kenneth Yang", email = "kjy5@uw.edu" },
+  { name = "Daniel Birman", email = "dbirman@uw.edu" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "jsonschema==4.21.1",
+  "pydantic==2.6.3",
+  "pytest==8.1.0",
+  "requests==2.31.0"
+]
+
+[project.urls]
+Documentation = "https://github.com/unknown/vbl-aquarium#readme"
+Issues = "https://github.com/unknown/vbl-aquarium/issues"
+Source = "https://github.com/unknown/vbl-aquarium"
+
+[tool.hatch.version]
+path = "src/vbl_aquarium/__about__.py"
+
+[tool.hatch.envs.default]
+python="3.12"
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/vbl_aquarium tests}"
+
+[tool.coverage.run]
+source_pkgs = ["vbl_aquarium", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/vbl_aquarium/__about__.py",
+]
+
+[tool.coverage.paths]
+vbl_aquarium = ["src/vbl_aquarium", "*/vbl-aquarium/src/vbl_aquarium"]
+tests = ["tests", "*/vbl-aquarium/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
