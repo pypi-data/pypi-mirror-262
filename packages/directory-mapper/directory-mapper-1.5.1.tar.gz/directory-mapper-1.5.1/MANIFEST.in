@@ -1,0 +1,6 @@
+include README.md
+include manifest.json
+include LICENSE.md
+include manifest.json
+include dirmap/settings.json
+include versions-history.json
