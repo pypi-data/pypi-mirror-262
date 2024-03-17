@@ -1,0 +1,9 @@
+yoneda/__init__.py,sha256=54NGZTPPbA0Cb8rFdlRlQTtp31D0r5VP9CXpcq2TSoE,99
+yoneda/basic.py,sha256=mxxuF2es5jo6CvzL8XNfddk-lcjFJBwvkseTXo9wWrM,3786
+yoneda/monad.py,sha256=OjgeeUSLMgXycydBZZeA71PXd-kgcRdWY-DOvnMSKFA,14769
+yoneda/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yoneda/tools.py,sha256=fXRA-oYnLNV_MFkW_QUFnPkDJJjt0sigfxXHADTioUo,196
+yoneda-0.1.1.dist-info/WHEEL,sha256=B19PGBCYhWaz2p_UjAoRVh767nYQfk14Sn4TpIZ-nfU,87
+yoneda-0.1.1.dist-info/METADATA,sha256=w9BwW-g72443oY1m9ff6KGi6dVMb8l7oBCm0hiR-NKU,14092
+yoneda-0.1.1.dist-info/licenses/LICENSE,sha256=Z61vsRc9ZyRu0Tm3TkYgIeKDjUJCR3dT0hJonw9Q3i4,1067
+yoneda-0.1.1.dist-info/RECORD,,
