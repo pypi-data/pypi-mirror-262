@@ -1,0 +1,8 @@
+dc3client/__init__.py,sha256=ZQzhaPGLHrP6x9oFjJyx89WIOy8PXriz8Rb1BEChvMk,47
+dc3client/dc3client.py,sha256=IilrMRm_ugYExmwFuDJqTp-KH32hOAfUNCNL5vvhpAA,46049
+dc3client/models.py,sha256=H5JdyYGq3TdRSX531GosagwzRmPFXHiRnWqfHo2kat0,4591
+dc3client-0.0.9.dist-info/LICENSE,sha256=22htUfM07LYztBHIkyKaMAmArNRDtcoss1VBXCMp22E,1098
+dc3client-0.0.9.dist-info/METADATA,sha256=NErMwOx0INQ_YiiAPjARV9m1_zCFTPfbvbxyyhW2Zug,1413
+dc3client-0.0.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dc3client-0.0.9.dist-info/top_level.txt,sha256=1SYFsV2EvoWR2YgDa-aQ7ub93StKPp62itBs68mBPo0,10
+dc3client-0.0.9.dist-info/RECORD,,
