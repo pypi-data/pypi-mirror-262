@@ -1,0 +1,2 @@
+[console_scripts]
+generate-report = report_generation_utils.generate_report:main
