@@ -1,0 +1,43 @@
+[build-system]
+# Minimum requirements for the build system to execute.
+# build所需环境
+requires = [
+    "pywinauto==0.6.6",
+    "pandas",
+    "pytesseract",
+    "pillow",
+    "easyutils",
+    "urllib3",
+    "pywin32",
+    "hatchling"
+]
+build-backend = "hatchling.build"
+
+[project]
+# 此项目的信息
+name = "niutrader"
+version = "0.0.16"
+license = {file = "LICENSE"}
+readme = "README.md"
+description = "同花顺自动交易系统"
+authors = [{name = "NiuGe", email="1091874347@qq.com"}]
+requires-python = '>=3.6'
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pandas >= 1.0.0",
+    "pywinauto==0.6.6",
+    "pytesseract",
+    "pillow",
+    "easyutils",
+    "urllib3",
+    "pywin32"
+]  # 这个是安装niutrader时候自动安装的依赖
+
+[project.urls]
+homepage = "https://github.com/axiaoqi/niutrader"
+documentation = 'https://github.com/axiaoqi/niutrader/blob/main/README.md'
+"Bug Tracker" = "https://github.com/axiaoqi/niutrader/issues"
