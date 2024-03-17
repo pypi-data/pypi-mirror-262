@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gemini_sample_game
+Version: 1
+Summary: This package contains implementation of a sample game with Google Gemini AI integrated into it.
+Home-page: https://github.com/GlobalCreativeApkDev/gemini_sample_game
+Author: GlobalCreativeApkDev
+Author-email: globalcreativeapkdev2022@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# gemini_sample_game
+
+A sample game with Google Gemini AI integrated into it.
+
+Pre-requisites:
+
+1. Python installed in your device.
+2. .env file in the same directory as <GEMINI_SAMPLE_GAME_DIRECTORY> and has the value of GEMINI_API_KEY.
+
+Note: Replace <GEMINI_SAMPLE_GAME_DIRECTORY> with the path to the directory of the game **Gemini Sample Game**.
