@@ -1,0 +1,11 @@
+
+[dev]
+pytest
+pytest-cov
+pytest-xdist
+pytest-asyncio
+pylint
+mypy
+typing-extensions
+pre-commit
+ruff
