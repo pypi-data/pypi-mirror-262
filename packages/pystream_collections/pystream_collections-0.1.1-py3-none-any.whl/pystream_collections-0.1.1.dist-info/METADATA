@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pystream_collections
+Version: 0.1.1
+Summary: A helper library to manage collections more easily
+Author: Mariano Anaya
+Author-email: mariano_anaya@yahoo.com.ar
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
