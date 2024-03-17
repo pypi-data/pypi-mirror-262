@@ -1,0 +1,12 @@
+ktreediff/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ktreediff/__main__.py,sha256=dXfUPeZICPpBaiISGWCOJ3cPdWwm_zNXi99j-9DCSvY,3873
+ktreediff/file.py,sha256=JYYa2LzFkg3FLC8sLzoosiHT3LOkl2uoTlizH0bpeSo,6805
+ktreediff/node.py,sha256=o3LKUv0KVSAIFOXawOcomO9bjrAlhRXByvv1q1lRPR4,3794
+ktreediff/util.py,sha256=dM-VcN0fbdLD13R5HsZEgR-2dHB7I_n0qmvzwYytf2s,3003
+ktreediff/version.py,sha256=L6zbQIZKsAP-Knhm6fBcQFPoVdIDuejxze60qX23jiw,21
+ktreediff-0.1.0.dist-info/LICENSE,sha256=FqdyTl_IBA0TnpU_IMPaYCe4STDbYLyypgGsHTsQKl4,1084
+ktreediff-0.1.0.dist-info/METADATA,sha256=mAcBNijz2L9jQUXJmr2p7D7V0VPMPwTUBstdFZdCmbY,4777
+ktreediff-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ktreediff-0.1.0.dist-info/entry_points.txt,sha256=rJ7jf7v_5X4swYBhy08B6f8CM-Lz1raEibSSjzyaHL0,53
+ktreediff-0.1.0.dist-info/top_level.txt,sha256=Qks5nzjtdlJ7O-wCcWHd_FOpRtOm83pCYdP3uc0-myw,10
+ktreediff-0.1.0.dist-info/RECORD,,
