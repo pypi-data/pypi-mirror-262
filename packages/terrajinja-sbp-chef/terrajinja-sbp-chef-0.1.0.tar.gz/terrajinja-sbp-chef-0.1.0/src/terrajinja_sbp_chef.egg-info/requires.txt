@@ -1,0 +1,2 @@
+terrajinja-imports-chef>=0.4.6
+cdktf>=0.20.3
