@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: httprunner_lite
+Version: 0.0.2
+Summary: Autotest Engine: Http Request
+Home-page: https://github.com/phailin/zoology_lin
+Author: phailin
+Author-email: phailin791@hotmail.com
+License: MIT
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+License-File: LICENSE
+
+# Example Package
+This is an example package. Yor can use  to write your content -demo.
+
+# 设置LICENSE - https://choosealicense.com/
+
+# 修改setup配置信息
+	### name 包名， 需要同目录下{package_name_you_want}保持一致
+	### 其他按需修改
+
+### 测试中
