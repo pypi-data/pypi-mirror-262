@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: libanalisis
+Version: 0.1.2
+Summary: A collection of OpenSeesPy routines for performing several types of analyses
+Home-page: https://github.com/odarroyo/libanalisis
+Author: Orlando Arroyo
+Author-email: odarroyo@uc.cl
+License: LICENSE
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: openseespy>=3.5
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+
+# Your Package Name
+
+This is a package meant for structural analysis using OpenSeesPy.
+
+It includes a collection of analysis functions that are useful if you are analyzing frames or wall buildings.
+
+It stores the results in Python variables. Full description of each function is on each one's help
+
+## Installation
+
+pip install libanalisis
