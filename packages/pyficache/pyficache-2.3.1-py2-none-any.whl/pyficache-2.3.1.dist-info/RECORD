@@ -1,0 +1,16 @@
+pyficache/__init__.py,sha256=pZdPoI_RkdlY3RWdK8LoLzuRWeVUpApzRn_JzsIm-GE,2543
+pyficache/line_numbers.py,sha256=Z71XgXhWBvk_iGGMQ1NqI3TlCFT7eH-Xpb8rHr_hFkU,761
+pyficache/main.py,sha256=RFQ9yVexqnFVe-bkomNBYpl6dYpa77-ZxT00m0DeDoo,32831
+pyficache/namedtuple24.py,sha256=ofl8ni8bu4SX0d55EdEFldW3ntjLFcxsiAmCB3qB8wA,5284
+pyficache/version.py,sha256=q16MaaEnGcXhPO__R5f-_NelrV0a2j4z2zEBJ8g2Dvs,252
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/devious.py,sha256=oYQ-LUZ8nqt9NYtil7QRtNQpo_ppl0kewOzlwHbtaDU,194
+test/mapped.py,sha256=AeX7H6SpVzJLLNnvInFXHBGh6X27tCp1T1oUs4dUKGg,221
+test/test_pyficache.py,sha256=8s9YJJnrOZmN1oPOcoV0pB3mtF5ta5vydVbGrbW551s,11818
+test/test_remap.py,sha256=FEDW0zxTwd8O_vq0JzQrzTnWuAIjsHOmNgC-oNaPFDI,1928
+test/unmapped.py,sha256=xy_73RPtcAoqpZeeWfOMmmSDpguIg9k14_vyFVKO9_w,236
+pyficache-2.3.1.dist-info/COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+pyficache-2.3.1.dist-info/METADATA,sha256=7-9s5g4qzuXwgITJWiKAbbvYck-VLR1QBIYvq8hdjdY,5008
+pyficache-2.3.1.dist-info/WHEEL,sha256=CbUdLTqD3-4zWemf83rgR_2_MC4TeXw9qXwrXte5w4w,92
+pyficache-2.3.1.dist-info/top_level.txt,sha256=DvQNYmuLSS4_jUce3cDijICquhkf_1OYmHqhkFOGGJE,15
+pyficache-2.3.1.dist-info/RECORD,,
