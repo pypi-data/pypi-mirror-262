@@ -1,0 +1,22 @@
+[project]
+name = "pypoller"
+version = "0.1.1"
+description = "Lightweight polling and notification framework"
+readme = "README.md"
+dynamic = ["dependencies"]
+authors = [{name = "Mohit Chauhan", email = "mhchauhan3@gmail.com"}]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+  "License :: OSI Approved :: MIT License",
+]
+requires-python = ">= 3.9"
+
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
