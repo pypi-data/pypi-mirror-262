@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+JSONLibGem/__init__.py
+JSONLibGem/main.py
+JSONLibGem.egg-info/PKG-INFO
+JSONLibGem.egg-info/SOURCES.txt
+JSONLibGem.egg-info/dependency_links.txt
+JSONLibGem.egg-info/top_level.txt
