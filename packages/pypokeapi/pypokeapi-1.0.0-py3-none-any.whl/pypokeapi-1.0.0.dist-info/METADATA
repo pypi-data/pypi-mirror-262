@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pypokeapi
+Version: 1.0.0
+Summary: A simple python wrapper for PokeAPI with many built in functions.
+Author: Mattz
+Project-URL: Homepage, https://github.com/m-attz/py-pokeapi
+Project-URL: Issues, https://github.com/m-attz/py-pokeapi/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# pypokeapi
+
+A simple Python wrapper for "PokeAPI" built using the requests library. 
+
+
+# dependencies
+
+- Python [requests library](https://requests.readthedocs.io/en/latest/)
+
+
+# Functions 
+- Pokemon Search
+- Species Search
+- Get ability 
+- Get type
+- Get a list of pokemon
+
+# License
+
+This project uses the [GPL-3.0-or-later](https://spdx.org/licenses/GPL-3.0-or-later.html) license
