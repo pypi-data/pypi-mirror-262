@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+make_package_selector/__init__.py
+make_package_selector/make_package_selector.py
+make_package_selector.egg-info/PKG-INFO
+make_package_selector.egg-info/SOURCES.txt
+make_package_selector.egg-info/dependency_links.txt
+make_package_selector.egg-info/entry_points.txt
+make_package_selector.egg-info/requires.txt
+make_package_selector.egg-info/top_level.txt
+simple_term_menu/__init__.py
+simple_term_menu/simple_term_menu.py
+simple_term_menu/__pycache__/simple_term_menu.cpython-312.pyc
