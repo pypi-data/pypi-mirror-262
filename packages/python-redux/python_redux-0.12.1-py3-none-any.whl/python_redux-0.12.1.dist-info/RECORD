@@ -1,0 +1,11 @@
+redux/__init__.py,sha256=HSGZ1K0VYFcGKRRsKyKqmTzHOyzGNoWVdvth-gggShk,1454
+redux/autorun.py,sha256=hCpIaagu-1vmFRDj9AHpGOxiJeoMzh-UaCajAox6a-0,7163
+redux/basic_types.py,sha256=XsX1AcbKZGKqU1REgWT24P0K4p5d3aoOa90pmYwjZUo,5306
+redux/combine_reducers.py,sha256=wyarnRXpC13YQPe1crQBZWiuZynZ57qVGTbsrjl8HdE,5488
+redux/main.py,sha256=KwuSCxjegCuga8CcjQf-4y5CmwsStZumwUt0jwhbkWs,11082
+redux/test.py,sha256=1vDzXjabTCHmpJYS6D5Yi2EGvhilrw9edZcI24YqSmU,2499
+python_redux-0.12.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+python_redux-0.12.1.dist-info/METADATA,sha256=v0VOQuLopYon2lT9MyOp1ORXloAv1Yrdi2ZAqEXs3b8,8116
+python_redux-0.12.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+python_redux-0.12.1.dist-info/entry_points.txt,sha256=OsO-Hc649LsNhnIyKEFqi9GybSOqvqm9ruyArfK91_4,59
+python_redux-0.12.1.dist-info/RECORD,,
