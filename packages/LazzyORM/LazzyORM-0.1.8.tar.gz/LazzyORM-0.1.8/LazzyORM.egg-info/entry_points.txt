@@ -1,0 +1,2 @@
+[console_scripts]
+lazyorm_cli = lazyorm.cli:main
