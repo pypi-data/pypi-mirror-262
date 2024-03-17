@@ -1,0 +1,18 @@
+[project]
+name = "pypokeapi"
+version = "1.0.0"
+authors = [
+{name="Mattz"},
+]
+description = "A simple python wrapper for PokeAPI with many built in functions."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/m-attz/py-pokeapi"
+Issues = "https://github.com/m-attz/py-pokeapi/issues"

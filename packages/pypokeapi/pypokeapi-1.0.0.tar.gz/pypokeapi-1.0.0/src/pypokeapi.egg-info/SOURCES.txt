@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/pypokeapi/__init__.py
+src/pypokeapi/pokeapi.py
+src/pypokeapi.egg-info/PKG-INFO
+src/pypokeapi.egg-info/SOURCES.txt
+src/pypokeapi.egg-info/dependency_links.txt
+src/pypokeapi.egg-info/top_level.txt
