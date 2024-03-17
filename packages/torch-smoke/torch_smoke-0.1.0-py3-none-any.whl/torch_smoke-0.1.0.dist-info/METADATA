@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: torch_smoke
+Version: 0.1.0
+Summary: torch smoke
+Project-URL: homepage, https://github.com/iaalm/torch_smoke
+Project-URL: repository, https://github.com/iaalm/torch_smoke
+Project-URL: documentation, https://github.com/iaalm/torch_smoke
+Author-email: iaalm <iaalmsimon@gmail.com>
+License: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+Requires-Dist: torch
+Description-Content-Type: text/markdown
+
+# torch_smoke
