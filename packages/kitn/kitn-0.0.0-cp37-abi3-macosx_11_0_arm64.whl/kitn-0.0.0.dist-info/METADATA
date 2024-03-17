@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: kitn
+Version: 0.0.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Rust
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Software Development :: User Interfaces
+License-File: LICENSE
+Summary: The Python bindings for KitN: a creation kit for novel retro apps
+Keywords: audio,game,gamedev,graphics,gui
+Author: Takashi Kitao <takashi.kitao@gmail.com>
+Author-email: Takashi Kitao <takashi.kitao@gmail.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://github.com/kitao/kitn
+Project-URL: Repository, https://github.com/kitao/kitn.git
+Project-URL: Changelog, https://github.com/kitao/kitn/blob/main/CHANGELOG.md
+
+# KitN: a creation kit for novel retro apps
+
