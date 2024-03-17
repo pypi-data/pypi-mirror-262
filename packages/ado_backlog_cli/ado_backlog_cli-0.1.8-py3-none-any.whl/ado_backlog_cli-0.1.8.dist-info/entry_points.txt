@@ -1,0 +1,3 @@
+[console_scripts]
+ado-backlog-cli=ado_backlog_cli.cli:main
+
