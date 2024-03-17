@@ -1,0 +1,35 @@
+---
+# If the following is set to True, the manager
+# will add provenance information to the report.
+add_provenance: true
+
+# If the following is set to True, the manager
+# will add data files metadata to the report.
+add_data_files_metadata: true
+
+# If the following is set to True, the manager
+# will add runtime parameters to the report.
+add_runtime_parameters: true
+
+section_titles:
+  # This is the title of the header section.
+  header_section_title: Summary
+
+  # This is the title of the main report section.
+  main_report_section_title: Report Section
+
+  # This is the title of the runtime parameters section.
+  runtime_parameters_section_title: Runtime Parameters Section
+
+  # This is the title of the data files section.
+  data_files_section_title: Data Files Section
+
+  # This is the title of the footer section.
+  footer_section_title: Miscellaneous
+
+
+summary_description: This is the batch analysis report.
+summary_lines:
+  - For research use only.
+  - Contact lab for patient sample identifier maps.
+  - For all questions, contact the Chief Medical Officer.
