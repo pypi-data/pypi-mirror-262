@@ -1,0 +1,9 @@
+airportsdata/__init__.py,sha256=HusdiU2DKihIGgyt92sZm322bRZX0NuM931AtPlHMRg,5263
+airportsdata/airports.csv,sha256=I8UVEoxXSN8hT_IBFR2D6qKiNxhf_EweRQemIs5DLMk,3379578
+airportsdata/iata_macs.csv,sha256=jgeMECojIRDZ5e6JcTYQF0NRzGOCdJK9YCf-nB0u3Iw,4061
+airportsdata/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airportsdata-20240316.1.dist-info/LICENSE,sha256=Gra_Nl4fahiDq2oveX52GyIQgbUqMyc9hsFX_VYhBr4,1191
+airportsdata-20240316.1.dist-info/METADATA,sha256=c7onqO1kSGPhW1XnT4zCoAmAlqn4k6ZovFjVqM49bKE,8685
+airportsdata-20240316.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+airportsdata-20240316.1.dist-info/top_level.txt,sha256=pwno2lCh8ojWgA5MI3oKaEO0U96yNrH106dZIvhEbgE,13
+airportsdata-20240316.1.dist-info/RECORD,,
