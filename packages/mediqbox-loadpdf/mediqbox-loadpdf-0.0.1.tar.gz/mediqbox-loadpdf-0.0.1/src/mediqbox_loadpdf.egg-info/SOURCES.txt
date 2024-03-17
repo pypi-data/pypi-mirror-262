@@ -1,0 +1,14 @@
+README.md
+setup.py
+src/mediqbox/loadpdf/__init__.py
+src/mediqbox/loadpdf/doc.py
+src/mediqbox/loadpdf/figure.py
+src/mediqbox/loadpdf/helpers.py
+src/mediqbox/loadpdf/rect.py
+src/mediqbox/loadpdf/text.py
+src/mediqbox_loadpdf.egg-info/PKG-INFO
+src/mediqbox_loadpdf.egg-info/SOURCES.txt
+src/mediqbox_loadpdf.egg-info/dependency_links.txt
+src/mediqbox_loadpdf.egg-info/requires.txt
+src/mediqbox_loadpdf.egg-info/top_level.txt
+tests/test.py
