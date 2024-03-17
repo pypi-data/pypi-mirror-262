@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: vanillapay
+Version: 0.0.9
+Summary: This module offers a streamlined solution for seamlessly integrating the Vanilla Pay payment system into Python applications.
+Author: Vanilla Pay Team
+Project-URL: Homepage, https://github.com/Rohan29-AN/vanilla_pay_python
+Keywords: vanilla pay,fintech,online_payment
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+
+
+</br>
+</br>
+<p align="center"> 
+    <img height="80" src="https://raw.githubusercontent.com/Rohan29-AN/vanilla_pay_python/master/assets/logo_VP.png">
+</p>
+<div align="center"> 
+    <p>
+        Vanilla Pay Python library simplifies the integration of Vanilla Pay International payment functionalities into your Python applications.
+        <h4>
+            <a href="">Documentation</a>
+            <span> | </span>
+            <a href="https://github.com/Rohan29-AN/vanilla_pay_python/issues">Report bugs</a>
+            <span> | </span>
+            <a href="https://github.com/Rohan29-AN/vanilla_pay_python/fork">Contribute</a>
+        </h4>
+    </p>
+  
+</div>
+
+
+## TODO?
+-Documentation
+-Publication in the Pypi
+
+
+## How to contribute ?
+
+- Make a fork of the repository
+- Create a Pull Request 
+
+## Contributors
+
+![Image des contributeurs GitHub](https://contrib.rocks/image?repo=Rohan29-AN/vanilla_pay_python)
