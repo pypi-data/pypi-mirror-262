@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+i3_focus_group/__init__.py
+i3_focus_group/_version.py
+i3_focus_group/main.py
+i3_focus_group.egg-info/PKG-INFO
+i3_focus_group.egg-info/SOURCES.txt
+i3_focus_group.egg-info/dependency_links.txt
+i3_focus_group.egg-info/entry_points.txt
+i3_focus_group.egg-info/requires.txt
+i3_focus_group.egg-info/top_level.txt
