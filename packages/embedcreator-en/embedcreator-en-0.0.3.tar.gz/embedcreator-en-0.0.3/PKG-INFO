@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: embedcreator-en
+Version: 0.0.3
+Author: Leticia Sousa
+Author-email: leticialimasousa2007@gmail.com
+License: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: discord.py
+
+# EmbedBuilder.en
+A library in discord.py for creating custom embeds in Discord.
+This library is a briefly modified version of the original: [Dispie](https://https://github.com/PranoyMajumdar/dispie)
+
+
