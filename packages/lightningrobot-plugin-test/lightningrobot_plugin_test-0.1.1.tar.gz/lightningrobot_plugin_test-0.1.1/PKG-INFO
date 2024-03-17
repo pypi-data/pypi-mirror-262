@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: lightningrobot-plugin-test
+Version: 0.1.1
+Summary: 闪电机器人测试插件。
+Author: Zhihan
+Author-email: zhihan2727@hotmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# 闪电机器人-测试插件
