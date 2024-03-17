@@ -1,0 +1,67 @@
+kind: pipeline
+type: docker
+name: Deploy
+
+steps:
+
+- name: Fetch tags
+  image: drone/git
+  commands:
+  - git fetch --tags
+
+- name: Lint
+  image: python:3.10
+  commands:
+  - pip install --upgrade pip
+  - pip install -r requirements-dev.txt
+  - isort --check src
+  - yapf --recursive --parallel --diff src
+  - flake8 src
+  - pylint src
+  - pytype src
+
+- name: Build
+  image: python:3.10
+  commands:
+  - pip install --upgrade pip
+  - pip install build
+  - python -m build
+
+- name: Test
+  image: python:3.10
+  commands:
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+  - ./main.py --version
+
+- name: Publish to test PyPi
+  image: python:3.10
+  environment:
+    USERNAME:
+      from_secret: test_pypi_username
+    PASSWORD:
+      from_secret: test_pypi_password
+  commands:
+  - pip install --upgrade pip
+  - pip install twine
+  - twine check dist/*
+  - twine upload  --repository testpypi dist/* --username="$USERNAME" --password="$PASSWORD"
+  when:
+    event:
+    - tag
+
+- name: Publish to PyPi
+  image: python:3.10
+  environment:
+    USERNAME:
+      from_secret: pypi_username
+    PASSWORD:
+      from_secret: pypi_password
+  commands:
+  - pip install --upgrade pip
+  - pip install twine
+  - twine check dist/*
+  - twine upload dist/* --username="$USERNAME" --password="$PASSWORD"
+  when:
+    event:
+    - tag
