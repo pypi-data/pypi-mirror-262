@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: TypeHub
+Version: 1.0.1a1
+Summary: TypeHub is a Python library for enhanced typing with 
+Author: Felipe Amaral
+Author-email: lipeamaralsantos@gmail.com
+Keywords: typing type typehub
+License-File: LICENSE
