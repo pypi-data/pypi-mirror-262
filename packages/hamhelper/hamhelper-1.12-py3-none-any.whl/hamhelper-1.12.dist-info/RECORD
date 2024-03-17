@@ -1,0 +1,10 @@
+docs/__init__.py,sha256=NrIMKmnjZPy0dpTRUmJKZgAcFqclMHn-8HyqKPeIIhw,23
+hamhelper/__init__.py,sha256=tIAWGJbzmQw31feVKzp5sQjncwbrSB46ftyejDBgaEw,162
+hamhelper/colours.py,sha256=VaBDYxc-lUcahcGyKvDl0rCcbZnFJ67KfXxW1ceP9tI,20718
+hamhelper/errors.py,sha256=gzZseBvP7jjWYrO_AGvALihOgS-sTe8F57uM2jRcq7s,383
+hamhelper/plotting.py,sha256=MTr5lG5c1IxNZE0Lh5Gt3-CLUxgRT91Vb8fYUSY3wG0,2979
+hamhelper-1.12.dist-info/LICENSE,sha256=G5scZfsI6Oby2l5N8-4wnYIixG12Lphjawa3AWbpwOc,1071
+hamhelper-1.12.dist-info/METADATA,sha256=LH-17dApzbxVYI0fD1ecsNdMlP3iaf8WS_FrPhzx2Ak,4320
+hamhelper-1.12.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hamhelper-1.12.dist-info/top_level.txt,sha256=4Wj1QjL2TCABzqdq1DchALiXblUIdiolJKnJryXBolg,15
+hamhelper-1.12.dist-info/RECORD,,
