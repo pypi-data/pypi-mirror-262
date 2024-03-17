@@ -1,0 +1,10 @@
+numpy
+matplotlib
+
+[dev]
+Basemap
+pytest>=4
+coverage
+
+[map]
+Basemap
