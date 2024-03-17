@@ -1,0 +1,7 @@
+README.md
+setup.py
+ovsd_tools.egg-info/PKG-INFO
+ovsd_tools.egg-info/SOURCES.txt
+ovsd_tools.egg-info/dependency_links.txt
+ovsd_tools.egg-info/requires.txt
+ovsd_tools.egg-info/top_level.txt

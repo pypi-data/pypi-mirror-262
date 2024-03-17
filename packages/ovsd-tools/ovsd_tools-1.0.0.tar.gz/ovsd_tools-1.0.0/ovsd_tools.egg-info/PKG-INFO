@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ovsd-tools
+Version: 1.0.0
+Summary: Packages for simple implementations of Stable Diffusion with OpenVINO
+Home-page: https://github.com/suk-6/ovsd-tools
+Author: suk-6
+Author-email: me@suk.kr
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: openvino
+Requires-Dist: diffusers
+Requires-Dist: transformers
+Requires-Dist: accelerate
+Requires-Dist: scipy
+Requires-Dist: huggingface_hub
+Requires-Dist: opencv-python
+
+# OpenVINO Stable Diffusion tools
+
+This repository contains the tools for the OpenVINO Stable Diffusion project.
+
+Refer to the [Text-to-Image Generation with Stable Diffusion and OpenVINO™](https://docs.openvino.ai/2022.3/notebooks/225-stable-diffusion-text-to-image-with-output.html) for more information.
