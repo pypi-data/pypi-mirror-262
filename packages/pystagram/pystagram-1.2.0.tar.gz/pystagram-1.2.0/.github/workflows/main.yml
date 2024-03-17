@@ -1,0 +1,48 @@
+name: "Release Workflow 🚀"
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  call-workflow-check-version:
+    name: "Check versions 🏷️"
+    uses: ./.github/workflows/check-version.yml
+
+  call-workflow-build-dist:
+    name: "Build Python distribution 📦"
+    uses: ./.github/workflows/build-dist.yml
+    needs:
+      - call-workflow-check-version
+
+  call-workflow-github-release:
+    name: "Publish distribution to GitHub Releases 📦"
+    uses: ./.github/workflows/github-release.yml
+    needs:
+      - call-workflow-build-dist
+
+  call-workflow-publish-to-pypi:
+    name: "Publish distribution to PyPI 📦"
+    uses: ./.github/workflows/publish-to-pypi.yml
+    needs:
+      - call-workflow-build-dist
+
+  call-workflow-build-image:
+    name: "Build Docker image 🐳"
+    uses: ./.github/workflows/build-image.yml
+    needs:
+      - call-workflow-check-version
+
+  call-workflow-github-package:
+    name: "Publish image to GitHub Packages 💾"
+    uses: ./.github/workflows/github-package.yml
+    needs:
+      - call-workflow-build-image
+
+  call-workflow-publish-to-docker-hub:
+    name: "Publish image to Docker Hub 💾"
+    uses: ./.github/workflows/publish-to-docker-hub.yml
+    secrets: inherit
+    needs:
+      - call-workflow-build-image
