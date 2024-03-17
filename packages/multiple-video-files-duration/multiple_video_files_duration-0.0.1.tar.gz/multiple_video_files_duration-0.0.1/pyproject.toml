@@ -1,0 +1,18 @@
+[project]
+name = "multiple_video_files_duration"
+version = "0.0.1"
+authors = [
+  { name="Hemant Kumar", email="hkbiet@gmail.com" },
+]
+description = "Finds total play time of all videos present in directories and its sub directories."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+]
+
+[project.urls]
+Homepage = "https://github.com/hkbiet/Multiple-Video-Duration-python"
+Issues = "https://github.com/hkbiet/Multiple-Video-Duration-python/issues"

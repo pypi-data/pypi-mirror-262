@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: multiple_video_files_duration
+Version: 0.0.1
+Summary: Finds total play time of all videos present in directories and its sub directories.
+Author-email: Hemant Kumar <hkbiet@gmail.com>
+Project-URL: Homepage, https://github.com/hkbiet/Multiple-Video-Duration-python
+Project-URL: Issues, https://github.com/hkbiet/Multiple-Video-Duration-python/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Multiple-Video-Duration
+Finds total play time of all videos present in directories and its sub directories.
