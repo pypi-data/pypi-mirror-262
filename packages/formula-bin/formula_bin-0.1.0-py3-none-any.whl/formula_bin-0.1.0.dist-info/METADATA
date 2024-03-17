@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: formula-bin
+Version: 0.1.0
+Summary: Formula implementations in Python
+Home-page: UNKNOWN
+Author: Pain
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: coverage
+Requires-Dist: pytest
+Requires-Dist: pytest-cov
+Requires-Dist: pytest-runner
+
+UNKNOWN
+
