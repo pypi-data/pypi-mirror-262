@@ -1,0 +1,9 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name ="pompom"
+version ="0.0.1"
+dependencies = ["web-poet"]
+requires-python = ">=3.8"

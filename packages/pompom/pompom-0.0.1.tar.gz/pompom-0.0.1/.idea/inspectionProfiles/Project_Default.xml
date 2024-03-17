@@ -1,0 +1,82 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="52">
+            <item index="0" class="java.lang.String" itemvalue="hx-headers" />
+            <item index="1" class="java.lang.String" itemvalue="x-for" />
+            <item index="2" class="java.lang.String" itemvalue="x-text" />
+            <item index="3" class="java.lang.String" itemvalue="x-data" />
+            <item index="4" class="java.lang.String" itemvalue="hx-get" />
+            <item index="5" class="java.lang.String" itemvalue="hx-vals" />
+            <item index="6" class="java.lang.String" itemvalue="hx-target" />
+            <item index="7" class="java.lang.String" itemvalue="@click" />
+            <item index="8" class="java.lang.String" itemvalue="x-model" />
+            <item index="9" class="java.lang.String" itemvalue="x-effect" />
+            <item index="10" class="java.lang.String" itemvalue="@dblclick" />
+            <item index="11" class="java.lang.String" itemvalue="x-on:dblclick" />
+            <item index="12" class="java.lang.String" itemvalue="x-show" />
+            <item index="13" class="java.lang.String" itemvalue="x-transition" />
+            <item index="14" class="java.lang.String" itemvalue="hx-trigger" />
+            <item index="15" class="java.lang.String" itemvalue="x-ref" />
+            <item index="16" class="java.lang.String" itemvalue="@keyup.shift.enter" />
+            <item index="17" class="java.lang.String" itemvalue="hx-include" />
+            <item index="18" class="java.lang.String" itemvalue="hx-sync" />
+            <item index="19" class="java.lang.String" itemvalue="x-on:click" />
+            <item index="20" class="java.lang.String" itemvalue="hx-confirm" />
+            <item index="21" class="java.lang.String" itemvalue="hx-swap" />
+            <item index="22" class="java.lang.String" itemvalue="hx-delete" />
+            <item index="23" class="java.lang.String" itemvalue="@change" />
+            <item index="24" class="java.lang.String" itemvalue="@scroll" />
+            <item index="25" class="java.lang.String" itemvalue=":value" />
+            <item index="26" class="java.lang.String" itemvalue="hx-post" />
+            <item index="27" class="java.lang.String" itemvalue="@submit.prevent" />
+            <item index="28" class="java.lang.String" itemvalue="@submit.prevent.stop" />
+            <item index="29" class="java.lang.String" itemvalue="@htmx:after-on-load" />
+            <item index="30" class="java.lang.String" itemvalue="@htmx:after-on-load.window" />
+            <item index="31" class="java.lang.String" itemvalue="@show-modal.document.debounce" />
+            <item index="32" class="java.lang.String" itemvalue="x-id" />
+            <item index="33" class="java.lang.String" itemvalue=":for" />
+            <item index="34" class="java.lang.String" itemvalue=":id" />
+            <item index="35" class="java.lang.String" itemvalue="strokelinecap" />
+            <item index="36" class="java.lang.String" itemvalue="strokewidth" />
+            <item index="37" class="java.lang.String" itemvalue="classname" />
+            <item index="38" class="java.lang.String" itemvalue="strokelinejoin" />
+            <item index="39" class="java.lang.String" itemvalue="x-collapse" />
+            <item index="40" class="java.lang.String" itemvalue="x-init" />
+            <item index="41" class="java.lang.String" itemvalue="@click.outside" />
+            <item index="42" class="java.lang.String" itemvalue=":name" />
+            <item index="43" class="java.lang.String" itemvalue=":class" />
+            <item index="44" class="java.lang.String" itemvalue="x-on:keydown.escape.prevent.stop" />
+            <item index="45" class="java.lang.String" itemvalue="x-on:focusin.window" />
+            <item index="46" class="java.lang.String" itemvalue="x-on:click.outside" />
+            <item index="47" class="java.lang.String" itemvalue="x-transition.origin.top.left" />
+            <item index="48" class="java.lang.String" itemvalue="@click.prevent" />
+            <item index="49" class="java.lang.String" itemvalue="@click.once" />
+            <item index="50" class="java.lang.String" itemvalue="@click.self" />
+            <item index="51" class="java.lang.String" itemvalue="@click.self.stop" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E303" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="django.db.models.query.QuerySet.*" />
+          <option value="core.mixins.AutocompleteMixin.request" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
