@@ -1,0 +1,2 @@
+[console_scripts]
+make-package-selector = make_package_selector.make_package_selector:main
