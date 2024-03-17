@@ -1,0 +1,10 @@
+numpy>=1.17
+
+[:python_version < "3.8"]
+typing-extensions
+
+[dev]
+build
+
+[test]
+pytest

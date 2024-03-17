@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=50.0.0", "wheel"]
+# If you are wondering why requiring a setuptools >= 50.0.0 and not 61.0.0 which is the minimum version that supports
+# specifying project metadata in `pyproject.toml`, look at `setup.py` documentation, it also explains why `setup.py` is needed at all.
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xrnn"
+version = "1.1.1"
+authors = [{name = "Yazan Sharaya", email = "yazan.sharaya.yes@gmail.com"}]
+description = "Light weight fast machine learning framework."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.6"
+dependencies = [
+    "numpy>=1.17",
+    "typing-extensions; python_version<'3.8'"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest"
+]
+dev = [
+    "build"
+]
+
+[project.urls]
+Repository = "https://github.com/Yazan-Sharaya/xrnn"
+
+[tool.setuptools]
+license-files = ["LICENSE"]
+packages = ["xrnn"]
+
+[tool.setuptools.package-data]
+xrnn = ["*.c"]
+
+[tool.xrnn]
+# The compiler you want to use when building the package from source. It can be an alias (gcc for e.g.) or full path to the compiler executable.
+# The default value (empty string) will use the default compiler on your system.
+compiler = ''
+
+[tool.cibuildwheel]
+build = "cp310-*"  # Only build on CPython 3.10
+test-command = "pytest {project}"
+test-requires = ["pytest"]
