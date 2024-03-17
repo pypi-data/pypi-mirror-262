@@ -1,0 +1,54 @@
+**This package is still under development. Be aware of often updates, versions
+below 0.2 are pre-alpha, and can be changed without any warning, or without any
+backward compatibility! **
+
+# MaTan
+[![Build Status](https://ci.codeberg.org/api/badges/12476/status.svg)](https://ci.codeberg.org/repos/12476)
+![PyPI - License](https://img.shields.io/pypi/l/matan)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+Shortcut comes from **Mat**erial **An**analysis - ultimately is should contains
+modules allowing user to calculate metals and polymers
+properties from tensile, HDT (polymers) and DSC tests, as well as the
+others. There are few similar packages in PyPI, but none of them I found good to
+me, so I wrote new one.
+
+For now it includes:
+- ISO:527-1 (polymers tensile test)
+
+In near future all the findings functions will be finished, so you can describe
+your sample with thermal modifications, comments and compositions as parameter,
+as well as CI/CD. 
+
+Nextly the FEM module which will allow to create materials models will be
+implemented.  In the beginning, the first feature will allow to create tensile
+FEM material models, with calculation of mean/worst real values stress-strain
+curve, and extracting from this curve the needed parameters, like plastic
+strains, Young's Modulus etc. At this point export to .csv file will be
+implemented. Next phase will be export these models
+directly to .xml file as ANSYS is using such type, and this seems to be a FEM
+tool I will be working with. ANSYS already have tool to import from .csv file,
+so it will just make whole process faster. Later I will try to make export to
+FreeCAD's/CalculiX material models. 
+
+_**[Documentation](https://matan.codeberg.page)**_
+
+# Abstract
+
+Nowadays, Python is one of the most popular programming languages, even in
+non-informatics fields like mechanical engineering, due to its simplicity, and
+computer analysis solvers using FEM methods are part of almost all components,
+albeit access to material data is sometimes hard due to inadequate data in the
+datasheets, problems with calculations, inconsistent information, etc. To
+overcome this problem, the Python package was created, which allows to calculate
+the stress, strains, tensile modulus, and other properties from force and
+elongation data from a machine. For now, it includes only polymer tests
+according to the ISO-527-1 standard, but in the future, other standards should
+be included.
+
+Moreover, the package would need a graphical user interface, which could make it
+even simpler to use and, more importantly, allow users to upload their obtained
+results into OpenAccess databases and export plastic strains, tensile modulus,
+and other properties needed to perform FEM and other numerical analysis. That
+could make FEM methods even more accessible, which would lead to a decrease in
+the use of unnecessary materials and, due to this, less CO2 pollution.
