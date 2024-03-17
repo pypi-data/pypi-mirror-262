@@ -1,0 +1,11 @@
+*.jar
+*.jp2rt
+*.tsv
+.envrc
+.gradle/
+.hatch/
+.venv/
+.vscode/
+build/
+dist/
+venv/
