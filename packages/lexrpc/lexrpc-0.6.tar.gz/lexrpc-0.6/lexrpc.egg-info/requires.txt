@@ -1,0 +1,8 @@
+dag-cbor
+jsonschema>=4.0
+requests>=2.0
+simple-websocket
+
+[flask]
+Flask>=2.0
+flask-sock
