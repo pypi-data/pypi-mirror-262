@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+osbkca_package.egg-info/PKG-INFO
+osbkca_package.egg-info/SOURCES.txt
+osbkca_package.egg-info/dependency_links.txt
+osbkca_package.egg-info/top_level.txt
