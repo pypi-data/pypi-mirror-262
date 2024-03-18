@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: codeforcesKindOfWrapper
+Version: 1.0.0
+Summary: Python package for interacting with the Codeforces API
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: termcolor

@@ -1,0 +1,7 @@
+setup.py
+codeforcesKindOfWrapper.egg-info/PKG-INFO
+codeforcesKindOfWrapper.egg-info/SOURCES.txt
+codeforcesKindOfWrapper.egg-info/dependency_links.txt
+codeforcesKindOfWrapper.egg-info/entry_points.txt
+codeforcesKindOfWrapper.egg-info/requires.txt
+codeforcesKindOfWrapper.egg-info/top_level.txt
