@@ -1,0 +1,10 @@
+README.md
+setup.py
+hw_2/__init__.py
+hw_2/task_2_1_main.py
+hw_2/task_2_2_main.py
+hw_2/tex_generator.py
+latex_table_and_image_generator.egg-info/PKG-INFO
+latex_table_and_image_generator.egg-info/SOURCES.txt
+latex_table_and_image_generator.egg-info/dependency_links.txt
+latex_table_and_image_generator.egg-info/top_level.txt
