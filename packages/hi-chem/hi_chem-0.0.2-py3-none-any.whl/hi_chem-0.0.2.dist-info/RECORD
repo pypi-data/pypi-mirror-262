@@ -1,0 +1,12 @@
+hi_chem/__init__.py,sha256=5BtcJVRAVSuonacidtF8SD9-cjYdhxdl5UoqThtls6Y,163
+hi_chem/__version__.py,sha256=ydFncpIQyhui0Y2Ifj8_blIyPLkxn73gVOvhS0g82D4,386
+hi_chem/app.py,sha256=R0on8Wm2JBYYnrZEZdJ1y8KkAXPwJejni0H3TwJkEjY,286
+hi_chem/conformer.py,sha256=3yN6WThRRRIV9mFRGM9UwccvDDeoh6RcgHNqMN-4j3c,2251
+hi_chem/translate.py,sha256=7zdjGp8g2VFOe6jRy6qkWDfjQy9iRwwi9fKEaU27xBY,542
+hi_chem/view.py,sha256=2I-G8TqO6W9hBHQRj10NxwXSVICZNMfignGL_0Zbeho,706
+hi_chem-0.0.2.dist-info/LICENSE,sha256=hcMzkligKst6Vz9pXbSQ5vr80xLKp2IGO-ILcvAPwFY,551
+hi_chem-0.0.2.dist-info/METADATA,sha256=1PwSUyIxJm9-oS5d4u6GKsIQ5PuCCw7OQMoQ_KcoLik,775
+hi_chem-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hi_chem-0.0.2.dist-info/entry_points.txt,sha256=LxpB4kMF5Bt6xeVZzRhKic5MQAnqFMN2cGf0NMM_Uws,45
+hi_chem-0.0.2.dist-info/top_level.txt,sha256=6xNLzxEe2eb3r_OtsTwDpLH1NOSI10yONGYa6Mq69fY,8
+hi_chem-0.0.2.dist-info/RECORD,,
