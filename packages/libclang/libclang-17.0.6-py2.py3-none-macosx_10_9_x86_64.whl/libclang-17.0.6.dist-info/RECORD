@@ -1,0 +1,10 @@
+libclang-17.0.6.data/platlib/clang/__init__.py,sha256=lh2K1BnceqENjXt15fzWJMxoFAOlXOma0Urk_kp750k,595
+libclang-17.0.6.data/platlib/clang/cindex.py,sha256=qJhAszCp4rGe6D9xY4thfzpANCngJu4iAvSiq4ORdRw,134034
+libclang-17.0.6.data/platlib/clang/enumerations.py,sha256=2oGXkhtjySOwmpkFU9hnjhmyuWxnUPExhqoONFpQXBI,1108
+libclang-17.0.6.data/platlib/clang/native/__init__.py,sha256=5FQ0s_2rPa2Vpj_dOhp6usXXAHPT9X-MBVVZLP2Uoqo,23
+libclang-17.0.6.data/platlib/clang/native/libclang.dylib,sha256=aWebabrTvIEAoD4eOxdUuab6y74GKVdcklC6nGhJHgI,79181776
+libclang-17.0.6.dist-info/LICENSE.TXT,sha256=682bv3g6c9BcU7pNWGuNWBPc3zu-xQJlhgzMiF5gb0c,15140
+libclang-17.0.6.dist-info/METADATA,sha256=VbcA4A_xNTpj6qBxRS9Fmucwl4Ou3YQ_9Gid5OTb4EI,5183
+libclang-17.0.6.dist-info/WHEEL,sha256=IJUixrZ8lRHUgGTiPUvgIWGh3N0M_SL3L2Ar_mX4gSM,140
+libclang-17.0.6.dist-info/top_level.txt,sha256=VCqnbTg_nMMxDrCrGkh2eHoKHoKz9p-DeBjWjSGjJ4c,6
+libclang-17.0.6.dist-info/RECORD,,
