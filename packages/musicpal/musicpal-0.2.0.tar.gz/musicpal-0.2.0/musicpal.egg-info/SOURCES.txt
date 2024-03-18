@@ -1,0 +1,16 @@
+.gitignore
+.pre-commit-config.yaml
+LICENSE
+README.md
+mpal
+pyproject.toml
+setup.py
+.github/workflows/publish-to-test-pypi.yml
+musicpal/__init__.py
+musicpal/__main__.py
+musicpal.egg-info/PKG-INFO
+musicpal.egg-info/SOURCES.txt
+musicpal.egg-info/dependency_links.txt
+musicpal.egg-info/entry_points.txt
+musicpal.egg-info/requires.txt
+musicpal.egg-info/top_level.txt
