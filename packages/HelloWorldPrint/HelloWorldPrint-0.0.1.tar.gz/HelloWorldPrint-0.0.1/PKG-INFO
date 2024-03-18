@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: HelloWorldPrint
+Version: 0.0.1
+Summary: Just Silly Libary
+Home-page: https://github.com/FalcoTK/Hello-World-Print
+Author: Tokai Faclo
+Author-email: otsronca@gmail.com
+Keywords: python,Print,Hello World,Hello
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows

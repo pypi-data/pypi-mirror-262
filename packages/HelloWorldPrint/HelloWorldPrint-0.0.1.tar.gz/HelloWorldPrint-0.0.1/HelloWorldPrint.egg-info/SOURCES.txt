@@ -1,0 +1,5 @@
+setup.py
+HelloWorldPrint.egg-info/PKG-INFO
+HelloWorldPrint.egg-info/SOURCES.txt
+HelloWorldPrint.egg-info/dependency_links.txt
+HelloWorldPrint.egg-info/top_level.txt
