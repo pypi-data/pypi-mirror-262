@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: mpl_flags
+Version: 0.1.0
+Home-page: https://github.com/leejjoon/mpl-flags
+Author: Jae-Joon Lee
+Author-email: lee.j.joon@gmail.com
+License: BSD 3-Clause
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-mpl ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: numpydoc ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: sphinx-copybutton ; extra == 'dev'
+Requires-Dist: sphinx-autobuild ; extra == 'dev'
+Requires-Dist: sphinx-gallery >=0.8.2 ; extra == 'dev'
+Requires-Dist: autoapi ; extra == 'dev'
+Requires-Dist: mpl-simple-svg-parser ; extra == 'dev'
+Requires-Dist: tqdm ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: numpydoc ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Requires-Dist: sphinx-copybutton ; extra == 'doc'
+Requires-Dist: sphinx-autobuild ; extra == 'doc'
+Requires-Dist: sphinx-gallery >=0.8.2 ; extra == 'doc'
+Requires-Dist: autoapi ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: black ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-mpl ; extra == 'test'
+
+# mpl-flags
+
+National flags for Matplotlib.
+
+
+## Flags data
+
+`mpl-flags` contains the flag data in vector format readily usable with
+Matplotlib. The original flags data are in svg format, and are converted to
+matplotlib's `Path` data using `mpl-simple-svg-parser`. `mpl-flags` does not
+contain the original svg files, only the converted data in numpy format
+(vertices and codes).
+
+The flag data is collected from various sources. Currently, it includes flags from
+
+1. Google's noto color emoji font : https://github.com/googlefonts/noto-emoji
+2. circle-flags : https://github.com/HatScripts/circle-flags
+3. flag-icons : https://github.com/lipis/flag-icons
+
+Different sources can render the flags differently.
+
+## Usage
+
+```python
+from mpl_flags import Flags
+
+flags = Flags("noto_waved") # You initialize the Flags class specifying what kind of
+                            # flags you like to use.
+                            # `noto_waved` is flags from google's noto emoji fonts.
+
+fig, ax = plt.subplots(figsize=(3, 3))
+flags.show_flag(ax, "KR")
+```
+
+```python
+from matplotlib.offsetbox import AnnotationBbox
+
+flags = Flags("noto_original")
+
+fig, ax = plt.subplots(figsize=(3, 3))
+da = flags.get_drawing_area("KR", wmax=100)
+ab = AnnotationBbox(da, (0.5, 0.5), frameon=True,
+                    box_alignment=(0.5, 0.5))
+ax.add_artist(ab)
+```
+
+## Installation
+
+You can install using `pip`:
+
+```bash
+pip install mpl_flags
+```
+
+## Development Installation
+
+
+```bash
+pip install -e ".[dev]"
+```
+
