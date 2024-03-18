@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: latex_generator_mr
+Version: 0.2.0
+Summary: hw_2
+Author: mikhail_repkin
+Author-email: mikhail.repkin90@yandex.ru
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: openpyxl (>=3.1.2,<4.0.0)
+Requires-Dist: pandas (>=2.2.1,<3.0.0)
+Requires-Dist: pdflatex (>=0.1.3,<0.2.0)
+Requires-Dist: pylatex (>=1.4.2,<2.0.0)
+Description-Content-Type: text/markdown
+
+Класс для генерации LaTeX кода таблиц и изображений.
