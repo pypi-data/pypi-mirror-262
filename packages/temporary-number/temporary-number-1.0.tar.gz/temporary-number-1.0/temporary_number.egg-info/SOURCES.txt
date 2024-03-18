@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+temporary-number/temporary_number.py
+temporary_number.egg-info/PKG-INFO
+temporary_number.egg-info/SOURCES.txt
+temporary_number.egg-info/dependency_links.txt
+temporary_number.egg-info/requires.txt
+temporary_number.egg-info/top_level.txt
