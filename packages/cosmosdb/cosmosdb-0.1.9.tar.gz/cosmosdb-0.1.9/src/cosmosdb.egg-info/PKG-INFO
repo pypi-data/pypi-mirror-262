@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cosmosdb
+Version: 0.1.9
+Summary: Python SDK for Azure Cosmos DB NoSQL
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: home, https://github.com/moveread/azure-sdks/tree/main/sdks/cosmosdb
+Project-URL: repo, https://github.com/moveread/azure-sdks
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: azure-cosmos
+Requires-Dist: aiohttp
+Requires-Dist: haskellian
+Requires-Dist: pydantic
+
+# Cosmosdb
+
+> package_description
