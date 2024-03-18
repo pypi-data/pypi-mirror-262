@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: gmcli
+Version: 0.0.1
+Summary: CLI to interact with the Gaijin Market.
+Home-page: https://github.com/JowiAoun/Gaijin-Market-CLI
+Author: Jowi Aoun
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: python-dotenv
+
+# Gaijin-Market-CLI
+ CLI tool for Gaijin Market.
+
+
+Setup:
+1. Execute `python -m venv venv`
+2. Execute `venv\Scripts\activate` on Windows, or `source venv/bin/activate` on Unix/MacOS
+3. Install the requirements with `pip install -r requirements.txt`
+
+Run:
+1. ~~Use keyword 'gmcli' in terminal to show all commands.~~
+2. Execute `python main.py`
