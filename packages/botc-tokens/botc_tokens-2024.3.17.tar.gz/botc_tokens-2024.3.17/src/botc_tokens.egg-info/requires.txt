@@ -1,0 +1,14 @@
+wand~=0.6.13
+beautifulsoup4~=4.12.0
+html5lib~=1.1.0
+rich~=12.6.0
+
+[test]
+flake8
+flake8-bugbear
+flake8-docstrings
+flake8-import-order
+flake8-colors
+pep8-naming
+pytest
+pytest-cov
