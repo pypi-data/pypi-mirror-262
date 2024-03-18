@@ -1,0 +1,8 @@
+setup.py
+bincrypt/__init__.py
+bincrypt/bincrypt.py
+bincrypt.egg-info/PKG-INFO
+bincrypt.egg-info/SOURCES.txt
+bincrypt.egg-info/dependency_links.txt
+bincrypt.egg-info/not-zip-safe
+bincrypt.egg-info/top_level.txt
