@@ -1,0 +1,8 @@
+setup.py
+zeleva/__init__.py
+zeleva/main.py
+zeleva.egg-info/PKG-INFO
+zeleva.egg-info/SOURCES.txt
+zeleva.egg-info/dependency_links.txt
+zeleva.egg-info/requires.txt
+zeleva.egg-info/top_level.txt
