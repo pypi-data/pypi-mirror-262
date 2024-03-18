@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+Chroma Palette/__init__.py
+Chroma Palette/chroma_palette.py
+chroma_palette.egg-info/PKG-INFO
+chroma_palette.egg-info/SOURCES.txt
+chroma_palette.egg-info/dependency_links.txt
+chroma_palette.egg-info/top_level.txt
