@@ -1,0 +1,17 @@
+numpy
+xarray
+zarr
+pandas
+pytsg>=0.2.8
+typer
+
+[dev]
+pytest
+pytest-cov
+coverage
+versioneer
+black
+twine
+
+[plot]
+matplotlib

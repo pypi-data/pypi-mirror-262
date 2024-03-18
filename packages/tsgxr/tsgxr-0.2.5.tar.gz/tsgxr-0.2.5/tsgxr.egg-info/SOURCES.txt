@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+versioneer.py
+tsgxr/__init__.py
+tsgxr/_version.py
+tsgxr/cli.py
+tsgxr/read.py
+tsgxr/util.py
+tsgxr.egg-info/PKG-INFO
+tsgxr.egg-info/SOURCES.txt
+tsgxr.egg-info/dependency_links.txt
+tsgxr.egg-info/entry_points.txt
+tsgxr.egg-info/requires.txt
+tsgxr.egg-info/top_level.txt
