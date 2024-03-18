@@ -1,0 +1,10 @@
+prompit/__init__.py,sha256=p4ZoszjbnmPGeWTd-V3QVnIrHN-uO5UGhHylMnvG4Ko,142
+prompit/cli.py,sha256=zzInh0hOeXZKgrbX5TZ8MV9XWCzgQhoORvtuquIrm2g,2587
+prompit/module.py,sha256=TgqjqSxQdeS5ZabYWjuZcY70UgppZJeU2FdqrQYO1Nk,7255
+prompit/utils.py,sha256=EGigfQ397W_d_Lhf9GcJUsnRyewpNYIoCSp8q-CE4p4,27613
+prompit-0.3.3.dist-info/LICENSE,sha256=Tq38w6-e7HkksPeB679VZuBJUYpIbmCuORuJV4A0ZCc,1093
+prompit-0.3.3.dist-info/METADATA,sha256=6hafJUHXFz5un9FeaKEK7pJ4khYqa3DNu_jqdkNv5_g,3699
+prompit-0.3.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+prompit-0.3.3.dist-info/entry_points.txt,sha256=65TbxpmIux5apoUtTpjaTRrEB8FcuEkzuwT-Zzv089w,45
+prompit-0.3.3.dist-info/top_level.txt,sha256=4GiWlWjAZRkKbDh7fTUxfFOvmQkmt-6yKVQZvwrzC7k,8
+prompit-0.3.3.dist-info/RECORD,,
