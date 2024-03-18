@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: xmlsplit
+Version: 0.1.2
+Summary: split a XML file into pieces
+Author: Thiago Curvelo
+Author-email: tcurvelo@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# xmlsplit
+
+Cli utility for spliting a big XML file into smaller parts.
+
+The breakpoint will be the element of depth one (below root) that does not
+fit in the specified maximum size. Each part created will have the same
+root element.
+
+Usage:
+
+    xmlsplit size prefix [filename]
+
+Eg:
+
+    xmlsplit 1000000 part_ mydata.xml
+
+or:
+
+    cat mydata.xml | xmlsplit 1000000 part_
