@@ -1,0 +1,10 @@
+LICENCE.txt
+README.md
+pyproject.toml
+setup.py
+DataPrepKitP/__init__.py
+DataPrepKitP.egg-info/PKG-INFO
+DataPrepKitP.egg-info/SOURCES.txt
+DataPrepKitP.egg-info/dependency_links.txt
+DataPrepKitP.egg-info/requires.txt
+DataPrepKitP.egg-info/top_level.txt
