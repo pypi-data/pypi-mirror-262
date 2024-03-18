@@ -1,0 +1,9 @@
+from opeagi.tools.base import BaseTool
+
+
+
+class GoogleSerperSearchTool(BaseTool):
+    name = "Google Serper Search"
+    def _run(self, search_str: str = None):
+        from opeagi.tools.tools_db import getSerperScrape
+        getSerperScrape(searchString=search_str)
