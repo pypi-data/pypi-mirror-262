@@ -1,0 +1,13 @@
+pydvpl/__init__.py,sha256=jhaV2OEnVmFc9lMlMfhMiOjxJEWvjJ7uJNyD8k5CN2c,69
+pydvpl/_pydvpl.py,sha256=Fk9TZsrNGEeg3jie-6Uw9SVvtKzen9vdmNU9QcMza1k,20993
+pydvpl/color/__init__.py,sha256=RtXlH7uU2NxdlIhre1988Kzs3DluvkxCjtxe7j4Xam8,33
+pydvpl/color/_color.py,sha256=PCiucqQcj786vEOCppfetGPqo8UEYV-7fPuL5MagFEI,125
+pydvpl/dvpl/__init__.py,sha256=UgeSHXRX_7mPwebFUBNc0egVcWPvf6FnG2a-eip_Zmc,168
+pydvpl/dvpl/_dvpl.py,sha256=ykuqdf7lDzsrLxx792E7e2J9nSS5fOX66XTPrMjzP50,2951
+pydvpl/version/__init__.py,sha256=-w51D3mQeeLZHc65ZgqCTkjCgiO0peiPXsvvuPnh1WM,124
+pydvpl/version/_version.py,sha256=UJMbvBOsx1R_SA2GGEhz3sXQjOFPQEGcM4sX2NgZjUk,248
+pydvpl-0.8.0.dist-info/METADATA,sha256=82yawmFhwHIZ2jcIXbYZOpYhhXVHm9Tx8dugBIQI6ZY,3965
+pydvpl-0.8.0.dist-info/WHEEL,sha256=LL0B1KxSLwaTWceo7tT-0aDLd-qq9dmbnsnk1DnXlg8,87
+pydvpl-0.8.0.dist-info/entry_points.txt,sha256=N2j4WZvAOSVRSwnGriUqmEQCpRs9aTVwCNmeAJNJUQo,38
+pydvpl-0.8.0.dist-info/licenses/LICENSE,sha256=vp-4I9KsXetdzwy1yF6DJiNnxFNO_bpdDgBNUgQ48tA,1062
+pydvpl-0.8.0.dist-info/RECORD,,
