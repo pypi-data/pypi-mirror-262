@@ -1,0 +1,11 @@
+dfa_identify/__init__.py,sha256=9U7bEmH4vV6tuLcdCQlgsBxa-Ql42l7yhWiJ_uhikLo,108
+dfa_identify/active.py,sha256=cTF-TEM_xVRGMkXoQ76k62ey7-NlkHwx9fqurgpJ7xs,3618
+dfa_identify/concept_class_restrictions.py,sha256=tfD4GhX7dHi0YFc3k00rkWSyFZKSEkvFo7TmuIh0VAQ,4681
+dfa_identify/decomposed.py,sha256=PRDM23hHMDkkc2hcZtxNkQEk-H-sWN4W3bLa0-h7w1U,9044
+dfa_identify/encoding.py,sha256=RtZvPHO_90c2NVHdm11ndK0AwqqyC5NjQfl24m8iLYs,13845
+dfa_identify/graphs.py,sha256=M0llqoOelnIQpI42Bs3Ttnkg1pINpWEKNmqI4n-Tq14,4608
+dfa_identify/identify.py,sha256=SX1kpofa5A5pkURo9NRC1gixtioP3F5PXTyhYV4MC7k,11163
+dfa_identify-3.12.0.dist-info/LICENSE,sha256=3hru9_CBrGbQxZbSwyvZ8K8gX9-b0RMNUcd-9G9f2w8,1082
+dfa_identify-3.12.0.dist-info/METADATA,sha256=GCDzPMIiU6PMrojTeoAsVtzl6zwRKLCGqmDdPf_1NX4,5533
+dfa_identify-3.12.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dfa_identify-3.12.0.dist-info/RECORD,,
