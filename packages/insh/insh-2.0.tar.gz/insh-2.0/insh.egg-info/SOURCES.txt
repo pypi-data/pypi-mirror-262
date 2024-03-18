@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+insh/__init__.py
+insh/command_line.py
+insh/config.py
+insh/shell.py
+insh.egg-info/PKG-INFO
+insh.egg-info/SOURCES.txt
+insh.egg-info/dependency_links.txt
+insh.egg-info/entry_points.txt
+insh.egg-info/requires.txt
+insh.egg-info/top_level.txt
