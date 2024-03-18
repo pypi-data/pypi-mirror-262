@@ -1,0 +1,2 @@
+[console_scripts]
+gmcli = gmcli.main:main
