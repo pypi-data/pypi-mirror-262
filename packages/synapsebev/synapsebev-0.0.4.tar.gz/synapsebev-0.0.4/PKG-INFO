@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: synapsebev
+Version: 0.0.4
+Summary: A BEV visualization tool for Synapse Mobility products
+Home-page: https://github.com/synapsemobility/synapsebev
+Author: Synapse Mobility
+Author-email: apoorv@synapsemobility.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib>=3.8.3
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: PyYAML>=6.0.0
+Requires-Dist: fire
+Requires-Dist: opencv-python==4.9.0.80
+Provides-Extra: dev
+Requires-Dist: twine>=4.0.2; extra == "dev"
+
+# Synapse BEV Visualizations
+
+Use this script to launch synapse eyes and synapse plan bev visualizations!
