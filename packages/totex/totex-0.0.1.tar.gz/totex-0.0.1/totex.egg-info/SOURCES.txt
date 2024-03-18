@@ -1,0 +1,7 @@
+setup.py
+totex/__init__.py
+totex/functions.py
+totex.egg-info/PKG-INFO
+totex.egg-info/SOURCES.txt
+totex.egg-info/dependency_links.txt
+totex.egg-info/top_level.txt
