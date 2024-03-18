@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: so2sql
+Version: 0.0.13
+Summary: Library to fetch StackOverflow data and persist it to an SQL database
+Home-page: https://github.com/samuelemwangi/so2sql
+Author: samuelemwangi
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: SQLAlchemy
+Requires-Dist: StackAPI
+Requires-Dist: beautifulsoup4
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+
+Helps to fetch StackOverflow data and persist it to an SQL database. 
+Makes use of StackAPI and SQLAlchemy.
