@@ -1,0 +1,3 @@
+[console_scripts]
+mkdocs-build-webhook=mkdocs_build_webhook.__main__:main
+
