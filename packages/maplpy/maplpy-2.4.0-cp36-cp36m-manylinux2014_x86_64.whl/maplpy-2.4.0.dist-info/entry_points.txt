@@ -1,0 +1,4 @@
+[console_scripts]
+mapl = maplpy.cmd:mindopt_apl
+mindopt_apl = maplpy.cmd:mindopt_apl
+

@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: maplpy
+Version: 2.4.0
+Summary: maplpy is a Python wrapper around mindopt with Cython.
+Home-page: https://solver.damo.alibaba.com
+Author: Alibaba Cloud Team
+Author-email: solver.damo@list.alibaba-inc.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6
+
+=================
+README for maplpy
+=================
+
+DESCRIPTION
+===========
+**maplpy** is a Python wrapper around **MindOpt Apl** with **Cython**.
+
+**MindOpt Apl** (aka `mapl`, MindOpt Algebraic Programing Language) is an algebraic programing language for mathematical model.
+The goal is to solve the optimization problem.
+
+Reporting
+=========
+It may contain a number of unknown bugs and/or performance issues. Should
+the solver crash for an unclear reason, or terminate with an incorrect
+status, please do not hesitate to report the issue to:
+
+    solver.damo@list.alibaba-inc.com
+
+
+
+
+
