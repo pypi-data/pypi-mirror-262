@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/aad/__init__.py
+src/aad/main.py
+src/aad.egg-info/PKG-INFO
+src/aad.egg-info/SOURCES.txt
+src/aad.egg-info/dependency_links.txt
+src/aad.egg-info/requires.txt
+src/aad.egg-info/top_level.txt
+src/aad/fastapi/__init__.py
+src/aad/fastapi/dependency.py
+src/aad/util/__init__.py
+src/aad/util/cyrpto.py
+src/aad/util/jwks.py
+src/aad/util/meta.py
+src/aad/util/req.py

@@ -1,0 +1,6 @@
+aiohttp
+pydantic
+pyjwt
+
+[fastapi]
+fastapi
