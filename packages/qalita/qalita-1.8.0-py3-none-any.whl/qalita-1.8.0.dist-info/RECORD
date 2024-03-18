@@ -1,0 +1,17 @@
+qalita/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qalita/cli.py,sha256=YzOeyeDx6hhPzO8DMghRJFA97T9nIgeqcv6VMaj0szU,5034
+qalita/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qalita/commands/agent.py,sha256=C1BDurxtegfOREuWE37Rkm54KYyolTTrpDdQfpr1nmc,39812
+qalita/commands/pack.py,sha256=9xlH-7b19TG1vupoWoGpFL4hkuM83aHLMF18EAATKII,24509
+qalita/commands/source.py,sha256=gn6K-q3opTXx9bxFOpvvq2krjBi6MRMJ1t6U5K0cdqo,18244
+qalita/internal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qalita/internal/error_patterns.py,sha256=rynzlpfj4sWFSIkDYbZQg-_UkRP8kEsFtLM2vIA1B0g,1399
+qalita/internal/logger.py,sha256=Ft4Ioj8F3QgKGZ6SiLI3XUxrM7GqZ3_H46Aktlp5DE0,1992
+qalita/internal/request.py,sha256=uJLcb2MatOD1Cy86kjOWMhVkZ2j7XWGx632ZMl7anQA,2659
+qalita/internal/utils.py,sha256=cAs7Myh153Yro6IS-7gZ9PExsHFR1jVRjL_2hYqxRUs,542
+qalita/main.py,sha256=GzPb4pQnKkO2VpvTTDuMFbGipQ705ZyYjhf9Yab8VZ4,143
+qalita-1.8.0.dist-info/LICENSE,sha256=cZt92dnxw87-VK4HB6KnmYV7mpf4JUdBkAHzFn1kQxM,22458
+qalita-1.8.0.dist-info/METADATA,sha256=QrU5rJ6qRysEA50aeD-3q1hNZSjRrH4rS6-T9clzkD4,15115
+qalita-1.8.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+qalita-1.8.0.dist-info/entry_points.txt,sha256=8pPvEBiH-s3vVyxW360uJ2ACRH20ZgPCkEEyx2m-LXU,42
+qalita-1.8.0.dist-info/RECORD,,
