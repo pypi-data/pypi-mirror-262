@@ -1,0 +1,172 @@
+Metadata-Version: 2.1
+Name: cosmatch
+Version: 0.1.2
+Summary: 
+Author: Sbdjaro
+Author-email: kir.tearo@yandex.ru
+Requires-Python: >=3.10,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: all
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: nway
+Provides-Extra: style
+Provides-Extra: tests
+Requires-Dist: astropy (>=5.3.4,<6.0.0)
+Requires-Dist: astroquery (>=0.4.6,<0.5.0)
+Requires-Dist: catboost (>=1.2.2,<2.0.0)
+Requires-Dist: flake8 (>=6.1.0,<7.0.0) ; extra == "style" or extra == "dev"
+Requires-Dist: hyperopt (>=0.2.7,<0.3.0)
+Requires-Dist: mypy (>=1.6.1,<2.0.0) ; extra == "style" or extra == "dev"
+Requires-Dist: numpy (>=1.26.1,<2.0.0)
+Requires-Dist: nway ; extra == "nway" or extra == "all"
+Requires-Dist: pandas (>=2.1.1,<3.0.0)
+Requires-Dist: pydocstyle (>=6.3.0,<7.0.0) ; extra == "style" or extra == "dev"
+Requires-Dist: pygments (>=2.17.2,<3.0.0)
+Requires-Dist: pytest (>=7.4.2,<8.0.0) ; extra == "tests" or extra == "dev"
+Requires-Dist: pytest-cov (>=4.1.0,<5.0.0) ; extra == "tests" or extra == "dev"
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: scikit-learn (>=1.3.1,<2.0.0)
+Requires-Dist: setuptools (>=68.2.2,<69.0.0)
+Requires-Dist: sphinx (>=7.2.6,<8.0.0) ; extra == "docs" or extra == "dev"
+Requires-Dist: sphinx-autodoc-typehints (>=1.24.0,<2.0.0) ; extra == "docs" or extra == "dev"
+Requires-Dist: sphinx-mathjax-offline (>=0.0.2,<0.0.3) ; extra == "docs" or extra == "dev"
+Description-Content-Type: text/markdown
+
+##### Установка
+```
+# pip install astrocorrelate
+git clone https://gitlab.com/Sbdjaro/astrocorrelate
+python setup.py bdist_wheel
+pip install astro.whl
+```
+
+## Описание
+Пакет `astrocorrelate` представляет собой инструмент для объединения каталогов астрономических данных в оптическом и рентгеновском диапазонах. Он позволяет работать с пакетом двумя способами - через конфиг файл и через Python код.
+
+### Модуль data_handler
+
+Модуль data_handler содержит функции для подготовки данных к обучению и предсказанию. Некоторые из функций включают:
+
+- `get_raw_pairs_train()`: Функция, которая предоставляет все возможные пары между каталогами с заданной дистанцией. Это полезно для генерации данных для обучения моделей.
+
+- `get_available_columns()`: Функция, которая возвращает список возможных колонок для генерации признаков. Это позволяет выбирать и использовать нужные колонки для обучения моделей.
+
+- `get_data_to_train()`: Функция, которая создает уже разделенные на тренировочные и тестовые данные с сгенерированными признаками. Это помогает подготовить данные для обучения моделей.
+
+И другие функции для подготовки данных к обучению и предсказанию.
+
+### Модуль model_handler
+
+Модуль model_handler предоставляет функциональность для работы с моделями, их сравнения и сохранения. Главный класс этого модуля - ModelHandler. Некоторые основные функции и методы класса включают:
+
+- `load_data()`: Метод, который инициализирует модель данными, разбивает их на тренировочные и тестовые наборы, а также задает метрики для сравнения моделей.
+
+- `add_model()`: Метод, который добавляет модель для обучения. В качестве параметров принимает название модели (например, 'Catboost') и список колонок для генерации признаков.
+
+- `fit()`: Метод, который выполняет обучение модели на тренировочных данных. В качестве параметра принимает индекс модели, которую необходимо обучить.
+
+- `table`: Атрибут, который содержит таблицу с результатами сравнения моделей. Это позволяет легко оценить и сравнить эффективность различных моделей.
+
+И другие методы для работы с моделями, их сравнения и сохранения.
+
+### Модуль models
+
+Модуль models содержит реализацию моделей машинного обучения для астрофизических задач. Здесь можно найти реализации таких моделей, как Catboost, MLP (Multi-Layer Perceptron), Random Forest (Случайный лес), XGBoost и другие.
+
+### Конфиг файл
+Для использования пакета через конфиг файл, необходимо указать необходимые параметры в файле `config.yaml`. Пример файла конфигурации вы можете получить, использовав следующую команду:
+
+```shell
+python -m astro config
+```
+
+### Функции при работе из командной строки
+
+#### Обучение моделей
+Для обучения моделей и сопоставления каталогов можно использовать следующую команду:
+
+```shell
+python -m astro train
+```
+
+#### Применение обученной модели
+После обучения модели, ее можно применить к другим данным с помощью следующей команды:
+
+```shell
+python -m astro run
+```
+
+
+### Параметры обучения
+В файле конфигурации можно указать различные параметры для обучения моделей. Например, можно задать колонки для генерации фич, выбрать модели для обучения, задать гиперпараметры моделей и т.д. Некоторые из возможных моделей для выбора включают:
+
+- Catboost
+- MLP (Multi-Layer Perceptron)
+- Random Forest (Случайный лес)
+
+## Примеры работыы через python
+
+### Обучение модели.
+
+Предварительно вам необходимо заполнить config файл для входных каталогов (data_reader)
+
+```python
+from astro.data_handler import get_raw_pairs_train, get_available_columns
+from astro.model_handler import ModelHandler
+
+# Получаем каталог пар с меткой класса
+data = get_raw_pairs_train()
+# Получаем возможные признаки для генерации
+columns = get_available_columns()
+handler = ModelHandler()
+# Вариант разбиения на тест и трейн
+how_to_split = 'base'
+# Метрики для сравнения
+metrics = ['ROC_AUC+', 'PR']
+# Инициализируем каталог данными
+handler.load_data(data, how_to_split, metrics)
+# Добавляем модель
+handler.add_model('Catboost', columns)
+handler.fit(0)
+
+hanler.save_model(0,'Base Model')
+
+print(handler.table)
+```
+
+### Использование модели
+
+```python
+from astro.data_handler import get_raw_pairs_predict
+from astro.model_handler import ModelHandler
+
+# Получаем каталог пар с меткой класса
+handler = ModelHandler()
+handler.load_model('Base Model')
+# Пары для предсказаний автоматически создадутся
+pred = handler.predict(0)
+
+print(pred)
+```
+
+## Требования
+- Python 3.9 и выше
+- Библиотеки указаны в файле `requirements.txt`
+
+
+
+## Будущие добавления
+Планируется добавить предобученные модели, которые можно будет скачивать и использовать для обучения. Это позволит пользователям применять модели, обученные на больших объемах данных и с высокой точностью.
+
+### Оптические каталоги
+На данный момент, проект поддерживает только использование оптического каталога PanSTARRS для обучения моделей. Однако, в планах добавить поддержку каталога Gaia. Это позволит пользователям выбирать между различными оптическими каталогами в зависимости от их потребностей и предпочтений.
+
+### Подгрузка оптических каталогов
+В планах добавить модуль, который будет выполнять автоматическую загрузку оптических каталогов. Пользователям не будет необходимости хранить их на своем компьютере. Это сделает процесс работы с оптическими каталогами более удобным и эффективным.
+
+### Поддержка других форматов данных
+В планах добавить возможность не только работать с данными в формате CSV, но и с другими форматами данных.
