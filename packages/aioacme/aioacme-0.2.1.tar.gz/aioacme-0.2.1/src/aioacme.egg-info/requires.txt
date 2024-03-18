@@ -1,0 +1,7 @@
+aiohttp
+cryptography
+orjson
+serpyco-rs
+
+[:python_version < "3.11"]
+typing-extensions
