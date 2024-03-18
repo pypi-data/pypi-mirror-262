@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: j2yaml
+Version: 0.1.0
+Summary: Jinja2-templates inside YAML-files.
+Home-page: https://github.com/tombayo/j2yaml
+Author: tombayo
+Author-email: pypi@tombayo.com
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: Jinja2 ==3.1.3
+Requires-Dist: MarkupSafe ==2.1.5
+Requires-Dist: PyYAML ==6.0.1
+Provides-Extra: dev
+Requires-Dist: pytest >=7.0 ; extra == 'dev'
+Requires-Dist: twine >=4.0.2 ; extra == 'dev'
+
+# j2-yaml
+Jinja2-templates inside YAML-files. 
+Simply trying to mimic cookiecutter or Ansible in how Jinja is parsed within YAML-files.
+
+```yaml
+---
+# test.yaml
+foo: Demo
+bar: "{{ testvar }}"
+fez: "{{ foo }}"
+```
+
+```python
+# test.py
+import j2yaml
+
+with open('test.yaml') as file:
+  yml = file.read()
+  data = j2yaml.load(yml, {'testvar':'asd'})
+
+print(data)
+```
+
+```bash
+python test.py
+{'foo': 'Demo', 'bar': 'asd', 'fez': 'Demo'}
+```
+
