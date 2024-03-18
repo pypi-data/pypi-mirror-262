@@ -1,0 +1,3 @@
+[console_scripts]
+goodbye=testing_package_3_16_2024.testing_module:say_goodbye
+
