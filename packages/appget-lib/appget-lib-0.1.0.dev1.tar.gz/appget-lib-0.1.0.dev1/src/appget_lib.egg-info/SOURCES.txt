@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/appget_lib.egg-info/PKG-INFO
+src/appget_lib.egg-info/SOURCES.txt
+src/appget_lib.egg-info/dependency_links.txt
+src/appget_lib.egg-info/requires.txt
+src/appget_lib.egg-info/top_level.txt
+src/applib/__init__.py
