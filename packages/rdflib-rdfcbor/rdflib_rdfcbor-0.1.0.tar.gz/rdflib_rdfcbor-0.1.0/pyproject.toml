@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rdflib-rdfcbor"
+version = "0.1.0"
+authors = [
+  { name="pukkamustard", email="pukkamustard@posteo.net" },
+  { name="Moritz Feichtinger", email="moritz.feichtinger@unibas.ch" }
+]
+description = "RDFLib plugin for the RDF/CBOR serialization"
+readme = "README.md"
+requires-python = ">=3.10"
+license= { file = "COPYING" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "rdflib",
+  "cbor2"
+]
+
+[project.urls]
+"Homepage" = "https://codeberg.org/ctrlall/rdflib-rdfcbor"
+"Bug Tracker" = "https://codeberg.org/ctrlall/rdflib-rdfcbor/issues"
+
+[tool.hatch.build]
+packages = ["rdflib_rdfcbor"]
