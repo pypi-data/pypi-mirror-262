@@ -1,0 +1,114 @@
+[project]
+name = "cs.tarutils"
+description = "Assorted tar related things, including a fast tar-based copy."
+authors = [
+    { name = "Cameron Simpson", email = "cs@cskk.id.au" },
+]
+keywords = [
+    "python3",
+]
+dependencies = [
+    "cs.deco>=20240316",
+    "cs.fs>=20240316",
+    "cs.gimmicks>=20240316",
+    "cs.pfx>=20230604",
+    "cs.progress>=20230401",
+    "cs.queues>=20240318",
+    "cs.units",
+    "cs.upd>=20240316",
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+version = "20240318"
+
+[project.license]
+text = "GNU General Public License v3 or later (GPLv3+)"
+
+[project.urls]
+URL = "https://bitbucket.org/cameron_simpson/css/commits/all"
+
+[project.readme]
+text = """
+Assorted tar related things, including a fast tar-based copy.
+
+*Latest release 20240318*:
+Initial PyPI release with nice traced_cpdir() function.
+
+My most heavily used use for this is my `cpdir` script which
+does a high performance directory copy by piping 2 `tar`s
+together.
+It runs this:
+
+    from cs.tarutils import traced_cpdir
+    sys.exit(traced_cpdir(*sys.argv[1:]))
+
+## Function `tar(*srcpaths: List[str], chdirpath='.', output, tar_exe='tar', bcount=2048)`
+
+Tar up the contents of `srcpaths` to `output`.
+Return the `Popen` object for the `tar` command.
+
+Parameters:
+* `srcpaths`: source filesystem paths
+* `chdirpath`: optional directory to which to `chdir` before accessing `srcpaths`
+* `tar_exe`: optional `tar` executable, default from `TAR_EXE`: `tar`
+* `bcount`: blocking factor in 512 byte unites,
+  default from `DEFAULT_BCOUNT`: `2048`
+
+## Function `traced_cpdir(srcdirpath, dstdirpath, *, label=None, tar_exe='tar', bcount=2048, upd)`
+
+Copy a directory to a new place using piped tars with progress reporting.
+Return `0` if both tars succeed, nonzero otherwise.
+
+Parameters:
+* `srcdirpath`: the source directory filesystem path
+* `dstdirpath`: the destination directory filesystem path,
+  which must not already exist
+* `label`: optional label for the progress bar
+* `tar_exe`: optional `tar` executable, default from `TAR_EXE`: `tar`
+* `bcount`: blocking factor in 512 byte unites,
+  default from `DEFAULT_BCOUNT`: `2048`
+
+## Function `traced_untar(tarfd, *, chdirpath='.', label=None, tar_exe='tar', bcount=2048, total=None, _stat_fd=False, upd)`
+
+Read tar data from `tarfd` and extract.
+Return the `tar` exit code.
+
+Parameters:
+* `tarfd`: the source tar data,
+  suitable for `subprocess.Popen`'s `stdin` parameter
+* `chdirpath`: optional directory to which to `chdir` before accessing `srcpaths`
+* `label`: optional label for the progress bar
+* `tar_exe`: optional `tar` executable, default from `TAR_EXE`: `tar`
+* `bcount`: blocking factor in 512 byte unites,
+  default from `DEFAULT_BCOUNT`: `2048`
+
+# Release Log
+
+
+
+*Release 20240318*:
+Initial PyPI release with nice traced_cpdir() function."""
+content-type = "text/markdown"
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools >= 61.2",
+    "trove-classifiers",
+    "wheel",
+]
+
+[tool.setuptools]
+py-modules = [
+    "cs.tarutils",
+]
+
+[tool.setuptools.package-dir]
+"" = "lib/python"
