@@ -1,0 +1,12 @@
+_sargasso.cp312-win_amd64.pyd,sha256=xkVW03sdc8x1dRKLSfGcGWJLwQgl5IHo__nVtIfRI1s,115712
+sargasso/__init__.py,sha256=5LZ8w3tcBzgJSW2w0jhJHF4z3gFGACEWVfGllxEJ_to,450
+sargasso-0.5.1.data/platlib/flang-b230c7bcadeb39f3e7e9de6d960b856d.dll,sha256=7DrKKltDKoRQGfy1rEAPVx29bSfl64cVMMl38hW8PuI,1679360
+sargasso-0.5.1.data/platlib/flangrti-95c9d3d60053a668e99fd30038f11ce0.dll,sha256=6KTstJNpePR639Ugcgv_rnbii0SWPsnXx6GH__yd9yU,50688
+sargasso-0.5.1.data/platlib/libomp-23f42654910d405a7852cc2a9abb4fa3.dll,sha256=z0O154uGZMc0NmrZm756Nn_lDThE8mfJIPHmKA08Vr4,612864
+sargasso-0.5.1.data/platlib/msvcp140-f3a4bc3af4ab149c831da2c39e62f8fa.dll,sha256=oDDcLf0uyiipN1ySmJrfTa8WH5iNteFrnhBnjrDf9Mc,573008
+sargasso-0.5.1.data/platlib/openblas-847a4898def0f371ab675fd5e83d963e.dll,sha256=eWtDfqjC25kk_M0AfwenxlV8RTmjOjkMcr0ns1Urk0w,28739072
+sargasso-0.5.1.dist-info/DELVEWHEEL,sha256=iVLD6oWqo6IFTP--yIBvn4s8BXVSD7xp_414xbQSjD0,417
+sargasso-0.5.1.dist-info/METADATA,sha256=ouE2QMfHhElfsH1AYLv6G9xP8hVJ3Q4xwpgK-9Lh238,745
+sargasso-0.5.1.dist-info/RECORD,,
+sargasso-0.5.1.dist-info/top_level.txt,sha256=-AJ6cwzffuJhTy_I1ABkDOlNXqQjME5yzwLwqV5ObHU,19
+sargasso-0.5.1.dist-info/WHEEL,sha256=fZWyj_84lK0cA-ZNCsdwhbJl0OTrpWkxInEn424qrSs,102
