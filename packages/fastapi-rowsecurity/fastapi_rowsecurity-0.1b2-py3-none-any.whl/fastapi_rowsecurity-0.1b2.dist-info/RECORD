@@ -1,0 +1,10 @@
+fastapi_rowsecurity/__init__.py,sha256=KFKkRoTeokv1khbtlW1EI5PU8osECIjMX6LZR9IIyJg,750
+fastapi_rowsecurity/create_policies.py,sha256=0AkzCh9-OnN3Tavx6Y_I-zrQYrGRJfFG5SOxVIU0xNg,900
+fastapi_rowsecurity/principals.py,sha256=q-MzjJeK64gbKB_zk-sj6rmNSx98BZ3cOe6dC9muL0s,293
+fastapi_rowsecurity/register_rls.py,sha256=czoP2WGzs6Qg1cwmno7GETpSSTm2GiG6GvuJNvrX9EI,5076
+fastapi_rowsecurity/schemas.py,sha256=nyopo9dg9vIukkgK6ASgys5jFXxwAZcXGv5sleLWXUE,1847
+fastapi_rowsecurity-0.1b2.dist-info/LICENSE.txt,sha256=NxFsbjwUddvwPr1NRP_CS8H7XuEKIrL__yE7bh9Aljo,1079
+fastapi_rowsecurity-0.1b2.dist-info/METADATA,sha256=RWx1GKd8YVJ6ELN2gqcdiRuNjLRNCS2fobfYOssHXHE,4648
+fastapi_rowsecurity-0.1b2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fastapi_rowsecurity-0.1b2.dist-info/top_level.txt,sha256=wOUQthMfuWLsronVuxvhkaReM6phMIItKWQvGIUERu8,20
+fastapi_rowsecurity-0.1b2.dist-info/RECORD,,
