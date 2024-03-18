@@ -1,0 +1,10 @@
+matplotlib
+numpy
+
+[docs]
+sktda_docs_config
+
+[testing]
+pytest
+pytest-cov
+scipy
