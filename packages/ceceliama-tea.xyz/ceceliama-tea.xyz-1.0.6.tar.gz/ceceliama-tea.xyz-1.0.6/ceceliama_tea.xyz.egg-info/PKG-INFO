@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ceceliama-tea.xyz
+Version: 1.0.6
+Summary: A simple package for https://app.tea.xyz/. Example tea-xyz - https://github.com/ceceliamathis674/tea-xyz
+Home-page: https://github.com/ceceliamathis674/tea-xyz
+Author: ceceliama
+Author-email: ceceliamathis674@gmail.com
+Project-URL: Homepage, https://github.com/ceceliamathis674/tea-xyz
+Project-URL: Source, https://github.com/ceceliamathis674/tea-xyz
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: requests>=2.20.0
+Requires-Dist: ceceliama-tea.xyz
