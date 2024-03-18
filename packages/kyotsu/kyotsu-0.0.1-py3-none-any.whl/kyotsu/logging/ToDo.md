@@ -1,0 +1,37 @@
+- [ ] `__init__.py` configuration and documentation (points of interest)
+- [ ] `exceptions.py` documentation
+- [ ] `config.py` documentation
+- Groups
+  - [ ] `__init__.py` configuration and documentation
+  - [ ] `processors.py` documentation
+  - [ ] `constants.py` documentation
+- OpenSearch
+  - [ ] `__init__.py` configuration and documentation
+  - [ ] `processors.py` documentation
+- Telemetry
+  - [ ] `__init__.py` configuration and documentation
+  - [ ] `clients.py` documentation
+  - [ ] `contextvars.py` documentation
+  - [ ] `processors.py` documentation
+  - [ ] `utils.py` documentation
+- ErrorCodes
+  - [ ] ErrorCodes builder script and documentation (read file, generate from templates, fill changelog)
+  - [ ] `__init__.py` configuration and documentation (static)
+  - [ ] `dataclasses.py` documentation (static)
+  - [ ] `processors.py` documentation (static)
+  - [ ] `_definitions/__init__.py` documentation (template)
+  - [ ] `_definitions/_keeper.py` documentation (template)
+  - [ ] `_definitions/_constants.py` documentation (template)
+  - [ ] `_definitions/{{ definition }}.py` documentation (template)
+- [ ] Documentation structure
+  - Modules (as is)
+  - Recipes
+    - Logging configuration and best practices
+      - OpenSearch 
+      - Groups 
+      - Telemetry (context, middleware, managers, http clients)
+      - Error Codes
+        - Best pract
+        - Table for devs
+        - Table for HP
+        - Generating new ErrorCodes
