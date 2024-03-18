@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: floatingtime
+Version: 1.2.1
+Summary: Floating time app.
+Project-URL: Homepage, https://github.com/lbyxiafei/floatingtime
+Author-email: Binyan Li <lbyxiafei@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Install & Run
+
+```bash
+pip install floatingtime
+
+python -m floatingtime.main
+```
