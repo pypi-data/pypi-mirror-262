@@ -1,0 +1,23 @@
+{
+    "name": "openverse-api-client-js",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "rm -rf dist && mkdir dist && pnpm run build:code && pnpm run build:types",
+        "build:code": "esbuild ./src/index.ts --bundle --packages=external --outfile=dist/index.js",
+        "build:types": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "LGPL-2.1-or-later",
+    "devDependencies": {
+        "@swc/cli": "^0.3.9",
+        "@swc/core": "^1.4.0",
+        "esbuild": "^0.20.0",
+        "node-fetch": "^3.3.2",
+        "typescript": "^5.3.3"
+    }
+}
