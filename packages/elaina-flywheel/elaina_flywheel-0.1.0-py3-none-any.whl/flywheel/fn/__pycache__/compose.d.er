@@ -1,0 +1,38 @@
+##[pylyzer] failed /users/elaina/ryanvk/src/ryanvk/fn/compose.py 1701606613 3645
+.___v_desugar_1 = pyimport "__future__"
+.annotations: Never
+.___v_desugar_2 = pyimport "abc"
+.ABC: Never
+.abstractmethod: Never
+.___v_desugar_3 = pyimport "contextlib"
+.contextmanager: |F <: GenericCallable|(F) -> F
+.___v_desugar_4 = pyimport "contextvars"
+.ContextVar: Never
+.___v_desugar_5 = pyimport "typing"
+.TYPE_CHECKING: Never
+.AbstractSet: {typing.AbstractSet}
+.Any: {typing.Any}
+.Callable: {typing.Callable}
+.ClassVar: (Type) -> Type
+.Concatenate: (*Type) -> Type
+.Generator: Never
+.Generic: {typing.Generic}
+.Iterable: {typing.Iterable}
+.Self: {typing.Self}
+.___v_desugar_6 = pyimport "(...)"
+.OrderedSet: Never
+.___v_desugar_7 = pyimport "ryanvk/_runtime"
+.upstream_staff: Never
+.___v_desugar_8 = pyimport "(...)"
+.FnImplement: Never
+.___v_desugar_9 = pyimport "(...)"
+.SingletonOverload: Never
+.___v_desugar_10 = pyimport "ryanvk/typing"
+.FnComposeCallReturnType: Never
+.FnComposeCollectReturnType: Never
+.ImplementForCollect: Never
+.P: Never
+.R: Never
+.Twin: Never
+.unspecifiedCollectP: Never
+
