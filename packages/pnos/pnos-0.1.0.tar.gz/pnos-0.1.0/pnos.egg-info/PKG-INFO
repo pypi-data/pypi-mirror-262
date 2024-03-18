@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pnos
+Version: 0.1.0
+Summary: Niosem PnOS package library
+Author: StNiosem
+Author-email: niosem@hldrive.com
+Keywords: python,first package
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: network
+
+Niosem PnOS Package imports and libraries - used for PnOS Dev and Rel builds
