@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+astro_generator.egg-info/PKG-INFO
+astro_generator.egg-info/SOURCES.txt
+astro_generator.egg-info/dependency_links.txt
+astro_generator.egg-info/requires.txt
+astro_generator.egg-info/top_level.txt
