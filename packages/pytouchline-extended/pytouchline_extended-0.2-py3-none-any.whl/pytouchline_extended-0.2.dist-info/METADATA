@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pytouchline-extended
+Version: 0.2
+Summary: A Roth Touchline interface library
+Home-page: https://github.com/brondum/pytouchline
+Author: Peter Brondum
+License: MIT
+Download-URL: https://github.com/brondum/pytouchline/archive/0.1.tar.gz
+Keywords: Roth,Touchline,Home Assistant,hassio,Heat pump
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: httplib2
+Requires-Dist: faust-cchardet
+
+UNKNOWN
+
