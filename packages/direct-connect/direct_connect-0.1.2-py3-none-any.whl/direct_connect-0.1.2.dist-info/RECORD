@@ -1,0 +1,7 @@
+direct_connect/exceptions.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+direct_connect/nmdc/__init__.py,sha256=RjpEJ_KM5qey2xg4PCsTNUwancxmF88TknzYOOzngWI,64
+direct_connect/nmdc/client.py,sha256=gNfkQnm03kjLn14PIcshG1FePqYh24LAkdcEfTNmxAM,4164
+direct_connect-0.1.2.dist-info/LICENSE.md,sha256=Pz1GkMy6ztVwTOjKfNeNZ28dp80GMv_vQLZgmINtBPw,720
+direct_connect-0.1.2.dist-info/METADATA,sha256=2KqPjlBXT4_J9Ed_sNiihLhCt_6l7p22AlYFYSBXhbI,1382
+direct_connect-0.1.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+direct_connect-0.1.2.dist-info/RECORD,,
