@@ -1,0 +1,12 @@
+aioapns/__init__.py,sha256=0SdTeIudeVqGSxAz3IS_TyinmrhO4OJpTeSKn-lUwgQ,326
+aioapns/client.py,sha256=jS_k72h-dpHpqBuO3063A4Odsv-jUAZPNqP_JT3dyhE,2692
+aioapns/common.py,sha256=Ih_pgiMec9rdYmqJKPi8SxrLsctJglglGn0cVkRwa-g,3093
+aioapns/connection.py,sha256=mWJaPOGA0V09cmHMfSWVN6cbDkFNPgV19Osm5NI3yss,18193
+aioapns/exceptions.py,sha256=ElPnrfNMDyh8W5jFSLZxXMkNMLKDMo2npWpTyphAJUY,138
+aioapns/logging.py,sha256=lco3dszZx0OVCDtl5NUEYze0aBy93ufHrUqgjj36pMo,230
+aioapns/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aioapns-3.2.dist-info/LICENSE,sha256=bRr3pI_TEb64dF-91Rf49k-52Mu9hybN0i2-5m_fUcM,11348
+aioapns-3.2.dist-info/METADATA,sha256=Cl7_YXtD-xEHqsoL5kz5zarXB4T26UBiNQJI7mWyHn8,3560
+aioapns-3.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aioapns-3.2.dist-info/top_level.txt,sha256=DDgg0zmpVJly30Ig6nr0JsBVBng7Gnqr8N-NzM7b6XI,8
+aioapns-3.2.dist-info/RECORD,,
