@@ -1,0 +1,8 @@
+tiny_solver-0.3.2.dist-info/METADATA,sha256=ff7gTo5q2rdY3XNUaPEDj3La2lFtl-uSHaRwyy26O0w,2128
+tiny_solver-0.3.2.dist-info/WHEEL,sha256=n0czgnEgzrz3uJexVYlQ1gGghm0_NNCKB0gCqYwVNn8,102
+tiny_solver/tiny_solver.pyi,sha256=iIO5y0kms81Z2efjattpFO2Rd4sZ-mTWCbx4JK28zEs,383
+tiny_solver/factors/__init__.pyi,sha256=gq2Xb-R7b53qBXtOWXt04wMWcEXVsB4OkoCq3gW_SOk,187
+tiny_solver/__init__.py,sha256=NITY5LEW2L6l8gx2_aKXRlvqXPsNqSHVNNh1F-tNemc,26
+tiny_solver/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tiny_solver/tiny_solver.abi3.so,sha256=0oVur62uIh-153VA4qv2xRMCns7LquWnvG6jbMotcXc,1335384
+tiny_solver-0.3.2.dist-info/RECORD,,
