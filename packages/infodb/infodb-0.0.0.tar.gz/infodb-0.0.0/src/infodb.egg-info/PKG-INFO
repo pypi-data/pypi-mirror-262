@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: infodb
+Version: 0.0.0
+Summary: To store personal data in couchdb and access it
+Author-email: Shubh <shubhvjain@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/shubhvjain/infodb
+Keywords: couchdb,database
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Terminals
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: tomli; python_version < "3.11"
+Requires-Dist: couchdb
+Requires-Dist: jsonschema
+
+# infodb
+A python package to store personal information locally. 

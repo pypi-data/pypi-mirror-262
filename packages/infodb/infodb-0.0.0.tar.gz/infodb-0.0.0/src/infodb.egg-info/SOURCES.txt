@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/infodb/__init__.py
+src/infodb/__main__.py
+src/infodb/db.py
+src/infodb/util.py
+src/infodb.egg-info/PKG-INFO
+src/infodb.egg-info/SOURCES.txt
+src/infodb.egg-info/dependency_links.txt
+src/infodb.egg-info/requires.txt
+src/infodb.egg-info/top_level.txt
+test/test_db.py
