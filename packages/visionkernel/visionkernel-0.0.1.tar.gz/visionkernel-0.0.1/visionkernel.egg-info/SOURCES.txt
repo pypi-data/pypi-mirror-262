@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+visionkernel/__init__.py
+visionkernel/base.py
+visionkernel.egg-info/PKG-INFO
+visionkernel.egg-info/SOURCES.txt
+visionkernel.egg-info/dependency_links.txt
+visionkernel.egg-info/requires.txt
+visionkernel.egg-info/top_level.txt
