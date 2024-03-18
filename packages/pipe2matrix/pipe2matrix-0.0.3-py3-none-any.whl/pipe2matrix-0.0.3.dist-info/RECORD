@@ -1,0 +1,12 @@
+pipe2matrix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pipe2matrix/__main__.py,sha256=HL6UL_-4isbQ2MCO9FAP1jJCjL42xo62qR2s1888_MY,44
+pipe2matrix/main.py,sha256=LzTLaw4rZwvE0EWo3WO6rSRaH9PjhOjtIxvcwXANjbw,29268
+pipe2matrix/matrix_connection.py,sha256=V-TDh0btF22IfTpAsnDTcvNTc-3gkt2yw0qysMxtuOs,9839
+pipe2matrix/process_connection.py,sha256=Mf5AhcsjRBxr3T9FgcTjnkb2dROox_YJ6p9ucPuOKV4,11062
+pipe2matrix/utils.py,sha256=eTUdirvsTowTBkURkXjIJHSxZ1KX1jEOJYlTptKIEdQ,1589
+pipe2matrix-0.0.3.dist-info/LICENSE,sha256=eQRlQS8eERH8H_QHaBJYSMeVnNw9QICOyanF9j3elME,35081
+pipe2matrix-0.0.3.dist-info/METADATA,sha256=Isz3jvcQIdF9TDDkqfgsLkKSUIfVhlno4xXvVRMqqAU,4258
+pipe2matrix-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pipe2matrix-0.0.3.dist-info/entry_points.txt,sha256=CR8OPRWdTyUSmamjfgQcQzAj8g2kcZI8F7AylTbbprY,61
+pipe2matrix-0.0.3.dist-info/top_level.txt,sha256=rktaJ6vkPIsCguQGwlMDKv9Gi1-ZCnoSOqFxOgx4j6M,12
+pipe2matrix-0.0.3.dist-info/RECORD,,

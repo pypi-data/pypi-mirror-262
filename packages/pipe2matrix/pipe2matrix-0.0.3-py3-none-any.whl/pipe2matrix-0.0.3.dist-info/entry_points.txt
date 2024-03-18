@@ -1,0 +1,2 @@
+[console_scripts]
+pipe2matrix = pipe2matrix.main:entry_point
