@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: callback-factory
+Version: 0.0.2
+Summary: A simple Python library for producing parameterized and flexible callbacks that can be overriden during execution
+Home-page: https://github.com/chrisK824/callback
+Author: Chris Karvouniaris
+Author-email: christos.karvouniaris247@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# callback
+Callback factory in Python, providing two similar approaches to produce parameterized and flexible callbacks that can be overriden during execution.
+
+## Installation
+
+`pip install callback-factory`
+
+## Example
+
+```
+from callback import CallbackFactory
+
+def greet(name, greeting="Hello"):
+    return f"{greeting}, {name}!"
+
+callback = CallbackFactory(greet, "Alice", greeting="Hi")
+
+print(callback())  # Output: Hi, Alice!
+```
+One can find more usage examples in `examples.py` at the root folder of this project.
