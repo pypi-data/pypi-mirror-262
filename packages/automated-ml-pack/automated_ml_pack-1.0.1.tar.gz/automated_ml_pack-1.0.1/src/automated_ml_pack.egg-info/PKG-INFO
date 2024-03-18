@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: automated_ml_pack
+Version: 1.0.1
+Summary: This package is designed for swift and automated machine learning practice, catering to both classification and regression tasks. It facilitates model training, grid search application, and the preservation of the best model. Furthermore, it stores and visualizes the best scores attained by other models using commonly employed evaluation metrics.
+Home-page: https://github.com/CyrilleMesue/automated_ml_pack
+Author: Cyrille
+Author-email: cyrillemesue@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: auto_mix_prep==0.2.0
+Requires-Dist: catboost==1.2.3
+Requires-Dist: dill==0.3.8
+Requires-Dist: feature_engine==1.6.2
+Requires-Dist: matplotlib==3.8.3
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pandas==2.2.1
+Requires-Dist: scikit_learn==1.4.1.post1
+Requires-Dist: seaborn==0.13.2
+Requires-Dist: tqdm==4.66.2
+Requires-Dist: xgboost==2.0.3
+
+# MLPackageManager
+## _A Comprehensive Package for Automated Machine Learning_
+[![scikit-learn](https://github.com/CyrilleMesue/archives/blob/main/images/mlpack.png?raw=true)](https://scikit-learn.org/stable/)
+
+**Project Overview:**
+The goal of this project is to create an end-to-end machine learning pipeline capable of handling data ingestion, transformation, model training, and evaluation for both regression and classification tasks. Additionally, a user-friendly web application has been developed to facilitate predictions based on the trained models. The entire pipeline has been deployed to ensure accessibility and scalability.
+
+Dillinger is a cloud-enabled, mobile-ready, offline-storage compatible,
+AngularJS-powered HTML5 Markdown editor.
+
+## Installation
+
+Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+cd dillinger
+npm i
+node app
+```
+
+
+## Tutorials
+
+Want to contribute? Great!
+
+```sh
+node app
+```
+
+## License
+MIT
+**Free Software, Hell Yeah!**
+
+
+
+
+**Solution Components:**
+1. **Data Ingestion Pipeline:**
+   - Responsible for ingesting data from various sources and formats.
+   - Implements data validation, integrity checks, and cleaning processes to ensure data quality.
+2. **Data Transformation Module:**
+   - Provides a flexible environment for transforming raw data into a format suitable for model training.
+   - Incorporates feature engineering techniques, data scaling, encoding, and normalization.
+3. **Model Training and Evaluation Pipeline:**
+   - Implements machine learning algorithms suitable for regression and classification tasks.
+   - Designs a pipeline for model training, hyperparameter tuning, and cross-validation.
+4. **Web Application Development:**
+   - Developed a user-friendly web application using Flask for model predictions.
+   - Deployed the application on Azure Web Apps.
+   - Implemented monitoring, logging, and security measures to ensure reliability and data integrity.
+   - Enabled Continuous Integration through Github actions.
+- Install dependencies using
+```
+$ pip install -r requirements.txt
+```
+- Run app
+```
+$ python application.py
+```
+
+
+### Contributors 
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/CyrilleMesue"><img src="https://avatars.githubusercontent.com/CyrilleMesue" width="100px;" alt=""/><br /><sub><b>Cyrille M. NJUME</b></sub></a><br /></td>
+  </tr>
+</table>
+
+### References 
+
+[1] krishnaik06: [https://github.com/krishnaik06/mlproject](https://github.com/krishnaik06/mlproject)
+
+### Contact
+
+For any feedback or queries, please reach out to [cyrillemesue@gmail.com](mailto:cyrillemesue@gmail.com).
+
