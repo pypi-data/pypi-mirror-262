@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: LazzyORM
+Version: 0.2.2
+Summary: A Powerful Lazy Loading ORM for MySQL
+Home-page: https://pypi.org/project/LazzyORM/
+Author: Dipendra Bhardwaj
+Author-email: dipu.sharma.1122@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mysql-connector-python
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: pandas
