@@ -1,0 +1,27 @@
+## hpr1460 :: The road warrios command line combat life.
+
+ 
+Podcasting from the car Knightwise shows us his favorite command line applications and how he connects to them from anywhere.
+
+
+Shownotes 
+
+
+SSH server on Ubuntu. : Sudo apt-get install open-ssh-server
+
+Irssi : Sudo apt-get install irssi
+
+Centertim : sudo apt-get install centerim
+
+Alpine : sudo apt-get install alpine
+
+Connectbot https://play.google.com/store/apps/details?id=org.connectbot&hl=en
+
+botsync https://play.google.com/store/apps/details?id=com.botsync&hl=en
+
+Putty : https://www.chiark.greenend.org.uk/~sgtatham/putty/
+
+Secure Shell : https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=en
+
+Knightwise.com : https://www.knightwise.com
+

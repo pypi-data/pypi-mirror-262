@@ -1,0 +1,33 @@
+## hpr0755 :: LINUX JAZZ  BALLIN' THE JACK
+
+ 
+The Jack Audio Driver . . .
+For serious audio it is essential that the Linux kernel operates in real-time mode.
+Switch on through the 'Set-up' tab,  under 'Parameters, from the QJackCtrl.
+Set the sample rate, say 44,100 for maximum compatibility.
+Set the buffer size ('Frames/Rate'), say 256 which (for me) produces an 11.6 ms latency. 
+Add two lines of code to the file 'limits.conf' in the '/etc/security/' folder (before the '# End File' marker), as follows 
+@audio - rtprio 99                      and
+@audio - memlock unlimited
+Check you are part of the 'Audio' Group.
+Or use your 'username' instead of '@audio' (in my case 'tonydenton').
+
+
+Updating My Hardware . . .
+I've invested in an audio mixer - a Behringer Xenyx X1204USB Mixer.
+(https://www.behringer.com/EN/Products/1204FX.aspx)
+
+
+Re-considering My Software Bag . . .
+The Podcast is now being recorded in 'Ardour'
+(I shall to subscribe to 'Ardour' to keep Paul Davis developing the programme and urge others to do so.)
+I am using 'Audacity' for mastering, with, klaatu's configuration file.
+Another useful programme for setting or editing ID3 Tags is 'Kid3Tag'
+I'm currently trialling 'MMA'  'Musical Midi Accompaniment' and 'Muse' and 'Lilypond'
+(Hope I can dispense with Windows-based software all together.)
+
+
+My website and Blog can be found at 'www.tonydenton.com' and I am on Twitter as 'tonydenton.' My Identica name is 'Bariman' and I am occasionally found on IRC, also as 'Bariman'
+
+
+Cheers for now . . .

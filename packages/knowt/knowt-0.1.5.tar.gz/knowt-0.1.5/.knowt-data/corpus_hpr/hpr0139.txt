@@ -1,0 +1,3 @@
+## hpr0139 :: Compiling a Kernel over the Nework with distcc
+
+ klaatu talks about compiling a Kernel over the network with distcc.

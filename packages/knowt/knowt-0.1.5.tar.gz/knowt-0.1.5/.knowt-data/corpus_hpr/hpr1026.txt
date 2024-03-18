@@ -1,0 +1,17 @@
+## hpr1026 :: Setting up a WordPress blog: part 4
+
+ 
+This is the fourth and last of Frank's series on setting up a WordPress blog, now projected to be four episodes.  
+
+
+This episode discusses when and what to back up and maintaining a MySQL database using phpMyAdmin.
+
+
+Links:
+
+
+Wordpress article on backing up your database:  https://codex.wordpress.org/Backing_Up_Your_Database
+
+
+WordPress article on database maintenance:  https://codex.wordpress.org/WordPress_Site_Maintenance
+

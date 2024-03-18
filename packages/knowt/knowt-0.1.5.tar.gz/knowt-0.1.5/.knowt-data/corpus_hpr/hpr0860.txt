@@ -1,0 +1,24 @@
+## hpr0860 :: Kaizendo, GNU Parallel and some more FSCONS
+
+ Interviews and a look at FSCONS 2011
+Today you will hear two interviews from FSCONS 2010. The audio is of "conference quality", that is, there are a lot of noice in the background. Not much to do about that, I am sorry. But it is two really great interviews, so well worth it!
+But as a start I have a look at what will take place during the coming FSCONS 2011, that will start 2011-11-11 and continue through the whole weekend. I read from the schedule, and mention some of the topics and presenters who will be there.
+
+FSCONS 2011
+FSCONS 2011 Schedule
+
+Salve J. Nilsen - Kaizendo: Customizable schoolboks
+Imagine a schoolbook where the pupil and her teacher can choose the topic depth, clarity of text and homework difficulty as needed and necessary.
+Add alternatives for teachers (supporting different instructional methods, teaching styles), schools (variations in chapter content based on time constraints or policy) and parents (having a topic summary to read before helping with homework.) This is what we mean with customizable textbooks.
+
+https://kaizendo.org/
+https://vimeo.com/20875583
+
+Ole Tange - GNU Parallel
+GNU parallel is a shell tool for executing jobs in parallel using one or more computers. A job can be a single command or a small script that has to be run for each of the lines in the input. The typical input is a list of files, a list of hosts, a list of users, a list of URLs, or a list of tables. A job can also be a command that reads from a pipe. GNU parallel can then split the input and pipe it into commands in parallel.
+
+https://www.gnu.org/s/parallel/
+https://vimeo.com/20838834
+
+Shameless plugs
+You should follow me on Identi.ca and Twitter: @alltinomit or subscribe to All In IT Radio at https://aiit.se/radio/ By the way, we now also have a Google+ Page, find it at https://aiit.se/radio/+

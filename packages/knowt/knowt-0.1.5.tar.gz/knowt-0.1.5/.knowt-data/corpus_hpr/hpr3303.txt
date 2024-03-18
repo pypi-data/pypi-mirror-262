@@ -1,0 +1,55 @@
+## hpr3303 :: Slackware on RaspberryPi
+
+ a little history
+
+slackware on arm started by stuart winter in 2002
+became an official port of slackware in 2009
+lots of info at the video podcast on youtube
+
+why choose slackware
+
+can do minimal installs easy
+education
+stable and secure
+
+who should avoid slackware
+
+unwilling or unable to read and follow directions
+if you think your leet when you use apt instead of apt-get
+if you think commands like dd are 'scary'
+
+howto
+
+there is no official port of slackware arm to raspberrypi
+i think this is because of raspberrypi has a non standard way of booting compared to most arm devices
+community has stepped in
+
+on the slackware documentation project website there are 'manual' install projects
+
+took a while, had to download firmware from the raspberrypi project itself
+quite a bit of cleanup
+this is the guide if you want slackware on a pi-zero
+
+link to the sarpi project
+
+guy named phil project lead, started in 2012
+the sarpi project is also a manual process
+even if you don't do this you should look at the website content, this is the way to do a tutorial
+after you download the sources this install is exactly like any other slackware install
+when you get to the package selection its easy to customize
+
+after install
+
+you have a complete development environment
+be prepared to up your search foo
+many packages can be built from slackbuilds
+
+The only mistakes you can't learn from are, your own fatal mistakes
+Links
+
+https://arm.slackware.com/
+https://sarpi.fatdog.eu/
+https://www.youtube.com/channel/UCabC1NZDGA3FZXf2hQ-6uyA/featured
+https://docs.slackware.com/howtos:hardware:arm:start
+https://slackbuilds.org
+

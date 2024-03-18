@@ -1,0 +1,22 @@
+## hpr2830 :: 2018-2019 New Years Eve show part 1
+
+ Hacker Public Radio New Years Show episode 1
+Welcome to the 7th Annual Hacker Public Radio show. It is December the 31st 2018 and the time is 10 hundred hours UTC.
+
+Ken introduces the New year show, gives some history and thanks Kevin Wisher and HonkeyMagoo for organising this.
+Wondering where Klaatu is,
+Fifty one fifty talks about his new isphttps://www.blazinghog.com
+Ken GETS STUCK IN CAPS LOCK https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration
+ISO8601 YYYY-MM-DD https://en.wikipedia.org/wiki/ISO_8601
+https://www.hostelworld.com/hosteldetails.php/STF-IYHF-af-Chapman/Stockholm/32555
+Honkey is on his way to work
+$ alias utc='/bin/date -u +%Y-%m-%d_%H-%M-%S%Z_%A'
+https://www.youtube.com/watch?v=9PfdQod8HTw History Buffs: Tora! Tora! Tora!
+klaatu joins us, career at Red Hat, IBM takeover, teaching Linux to non-tech peoplehttps://en.wikipedia.org/wiki/Dalton_Plan
+Computer musemshttps://vonhagen.org/collection.html
+barcamp (yes related to foo)https://en.wikipedia.org/wiki/BarCamp
+Oggcamphttps://oggcamp.org/
+Mint Cast Podcasthttps://mintcast.org/
+Brexithttps://en.wikipedia.org/wiki/Brexit
+
+"we should have bought stock"

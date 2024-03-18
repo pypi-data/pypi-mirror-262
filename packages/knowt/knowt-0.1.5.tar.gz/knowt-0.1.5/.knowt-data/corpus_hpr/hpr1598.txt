@@ -1,0 +1,9 @@
+## hpr1598 :: Hashing and Password Security
+
+ Today, the most common way of providing security in giving access to data or systems is through the use of passwords. Practically every online site now expects you to create an account with a password, which will let you post comments, order products, conduct business, or just post to social media. The implication is that insisting on passwords provides some level of security. Now, following on our last tutorial we should ask a few questions about just how effective this measure is, since someone posting in your name to Twitter is significantly different from someone accessing your bank account. And since the assets being protected are very different, it would be reasonable to approach the problem of security somewhat differently in these cases. But given the ubiquity of passwords as the authentication for online accounts, we need to look at the security involved. Note that I am approaching this from the standpoint of the owner of the site in question for this tutorial, and will follow up with a look at your own role in this. For more go to https://www.zwilnik.com/?page_id=640
+Links:
+
+https://en.wikipedia.org/wiki/Cryptographic_hash_function
+https://en.wikipedia.org/wiki/SHA1
+https://www.codeproject.com/Articles/704865/Salted-Password-Hashing-Doing-it-Right
+https://www.zwilnik.com/?page_id=640

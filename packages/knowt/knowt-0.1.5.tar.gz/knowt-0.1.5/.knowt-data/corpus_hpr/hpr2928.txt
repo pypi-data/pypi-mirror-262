@@ -1,0 +1,79 @@
+## hpr2928 :: Building markov chains with Haskell
+
+ Intro
+Last time we built a weighted list, this time we’re using that to build markov chains. Wikipedia states that “A Markov chain is a stochastic model describing a sequence of possible events in which the probability of each event depends only on the state attained in the previous event.” and that they’re named after the Russian mathematician Andrey Markov.
+Configuration
+We’re after generic system, hence parametrized data types.
+First part is Configuration a that lists possible starting elements of chain and elements that can follow a particular element.
+data Config a = Config
+    { configStarts :: ![Item a]
+    , configContinuations :: !(Map a [Item a])
+    } deriving (Show, Read, Eq)
+Second part is Item a, that just holds single item that could appear in chain and relatively frequency for its appearance.
+data Item a =
+    Item (Frequency (Maybe a))
+    deriving (Show, Read, Eq)
+We’re using Maybe a as in some cases there’s chance of element being last element in chain. Thus, Nothing will represent end of chain.
+In previous episode, we implemented choose, but later on I decided to rename it to chooseM. So when you see chooseM, it’s just different name for what we implemented previously.
+Building a chain
+Since building a configuration depends on the case quite a bit, we’re just going to assume that we have one at hand.
+Our chains are built by chainM :: (Ord a, RandomGen g) => Config a -> Rand g [a]. Given a config, it creates computation that when run will return list of a, which is our chain.
+Implementation is fairly straightforward:
+chainM config = do
+    starter <- chooseM (itemToFreq <$> configStarts config)
+    case join starter of
+        Nothing ->
+            return []
+
+        Just h -> do
+            t <- tailOfChain config h
+            return $ h : t
+First we select item from starting elements. In case there isn’t one, result will be a empty list. Otherwise we use tailOfChain to compute rest of the list and return a list of starter element followed by that tail.
+For tail we need to figure out first what possible elements there are that can follow a given element. This is done by candidates function. lookup finds a possible list of elements in configContinuations. We use itemToFreq to turn this list into frequencies. Since items might be Nothing (in case where there aren’t any suitable continuations present) and any continuation in the list might be Nothing (in case where this is possibly terminating element), we have to use (fmap . fmap) to apply itemToFreq to each possible element. Moreover, concat turns our Maybe [Frequency (Maybe a)] into [Frequency (Maybe a)], if we have Nothing at this stage, result will be an empty list [].
+candidates :: (Ord a) => Config a -> a -> [Frequency (Maybe a)]
+candidates config x =
+    concat $ (fmap . fmap) itemToFreq items
+    where
+        items = lookup x (configContinuations config)
+That concat part could have been written as:
+    case (fmap . fmap) itemToFreq items of
+        Nothing ->
+            []
+
+        Just x ->
+            x
+and the end result would be identical.
+Now that we know how to figure our possible continuation elements, we can implement computing tail of chain:
+tailOfChain :: (Ord a, RandomGen g) => Config a -> a -> Rand g [a]
+tailOfChain config c = do
+    item <- chooseM (candidates config c)
+    case join item of
+        Nothing ->
+            return []
+
+        Just x -> do
+             xs <- tailOfChain config x
+             return $ x : xs
+Function first select item from candidates. If there isn’t suitable item or item is Nothing, result will be an empty list. Otherwise function recurses, computes tail starting from selected element and constructs chain starting by selected item and followed by tail.
+join item at the start of case analysis collapses two nested Maybes together:
+
+Nothing will result Nothing (no suitable continuation)
+Just Nothing will also result Nothing (end of chain reached)
+Just a will result Just a (suitable element found)
+
+In the end we have list that is sort of like: h : chooseM (candidates config h) : chooseM (candidates config h') : chooseM (candidates config h'') : ... : []
+Extra
+For convenience we define two other functions. First one is for when we don’t want to use Rand g a. It’s done by applying runRand function with our chainM function, config and RandomGen.
+chain :: (Ord a, RandomGen g) => Config a -> g -> ([a], g)
+chain config g =
+    runRand (chainM config) g
+More interesting is chains which builds infinite list of chains:
+chains :: (Ord a, RandomGen g) => Config a -> g -> [[a]]
+chains config g =
+        c : chains config g'
+    where
+        (c, g') = chain config g
+This uses chain function to create starting element (which is markov chain) and new generator g'. Then it builds a list where that first chain is followed by list of chains that is created by calling chains with that new random generator. Since there’s no termination case in the function, it will compute infinitely long list of markov chains. This works because elements are computed only when needed. For all intents and purposes for program using this infinite list, items are there when needed.
+Closing
+Hardest part working with markov chains (at least in my opinion) is building suitable configuration. When you have that configuration at hand, building chains from it requires relatively small amount of code. In the next episode we’re going to use this chains for our space game.
+Questions, comments and feedback are always welcome. Best way to reach me is by email or in fediverse where I’m Tuula@mastodon.social.

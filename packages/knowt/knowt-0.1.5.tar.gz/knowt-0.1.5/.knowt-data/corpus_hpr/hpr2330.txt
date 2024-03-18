@@ -1,0 +1,110 @@
+## hpr2330 :: Awk Part 7
+
+ In this episode, I will (very) briefly go over loops in the Awk programming language. Loops are useful when you want to run the same command(s) on a collection of data or when you just want to repeat the same commands many times.
+When using loops, a command or group of commands is repeated until a condition (or many) is met.
+While Loop
+Here is a silly example of a while loop:
+#!/bin/awk -f
+BEGIN {
+
+# Print the squares from 1 to 10 the first way
+
+    i=1;
+    while (i <= 10) {
+        print "The square of ", i, " is ", i*i;
+        i = i+1;
+    }
+
+exit;
+}
+Our condition is set in the braces after the while statement. We set a variable, i, before entering the loop, then increment i inside of the loop. If you forget to make a way to meet the condition, the while will go on forever.
+Do While Loop
+Here is an equally silly example of a do while loop:
+#!/bin/awk -f
+BEGIN {
+
+    i=2;
+    do {
+        print "The square of ", i, " is ", i*i;
+        i = i + 1
+    }
+
+    while (i != 2)
+
+exit;
+}
+Here, the commands in the do code block are executed at the start, then the looping begins.
+For Loop
+Another silly example of a for loop:
+#!/bin/awk -f
+BEGIN {
+
+    for (i=1; i <= 10; i++) {
+        print "The square of ", i, " is ", i*i;
+    }
+
+exit;
+}
+As you can see, we set the variable, set the condition and set the increment method all in the braces after the for statement.
+For Loop Over Arrays
+Here is a more useful example of a for loop. Here, we are adding the different values of column 2 into an array/hash-table called a. After processing the file, we print the different values.
+For file.txt:
+name       color  amount
+apple      red    4
+banana     yellow 6
+strawberry red    3
+grape      purple 10
+apple      green  8
+plum       purple 2
+kiwi       brown  4
+potato     brown  9
+pineapple  yellow 5
+Using the awk file of:
+NR != 1 {
+    a[$2]++
+}
+END {
+    for (b in a) {
+        print b
+    }
+}
+We get the results of:
+brown
+purple
+red
+yellow
+green
+In another example, we do a similar process. This time, not only do we store all the distinct values of the second column, we perform a sum operation on column 3 for each distinct value of column 2.
+For file.csv:
+name,color,amount
+apple,red,4
+banana,yellow,6
+strawberry,red,3
+grape,purple,10
+apple,green,8
+plum,purple,2
+kiwi,brown,4
+potato,brown,9
+pineapple,yellow,5
+Using the awk file of:
+BEGIN {
+    FS=",";
+    OFS=",";
+    print "color,sum";
+}
+NR != 1 {
+    a[$2]+=$3;
+}
+END {
+    for (b in a) {
+        print b, a[b]
+    }
+}
+We get the results of:
+color,sum
+brown,13
+purple,12
+red,7
+yellow,11
+green,8
+As you can see, we are also printing a header column prior to processing the file using the BEGIN code block.

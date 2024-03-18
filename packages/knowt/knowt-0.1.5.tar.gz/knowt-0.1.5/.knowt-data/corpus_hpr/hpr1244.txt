@@ -1,0 +1,7 @@
+## hpr1244 :: LiTS 029: ab - apache benchmark.
+
+ 
+This episode of LITS talks about using Apache Benchmark utility to test 
+websites. Learn how to use  and interpret the results of Apache Benchmark.
+
+Link to the full episode and video https://www.linuxintheshell.com/2013/05/10/episode-029-ab-apache-benchmark/

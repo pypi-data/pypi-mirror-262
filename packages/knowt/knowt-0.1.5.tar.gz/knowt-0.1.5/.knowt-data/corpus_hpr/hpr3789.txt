@@ -1,0 +1,25 @@
+## hpr3789 :: Common lisp portable games including acl2 formal logic
+
+ Source I was looking through while talking WIP:
+gopher://gopher.club/1/users/screwtape/car-game
+
+Compilers:
+
+sbcl
+https://sbcl.org/
+ecl
+https://ecl.common-lisp.dev/
+acl2
+https://www.cs.utexas.edu/users/moore/acl2/manuals/current/manual/index-seo.php/ACL2____Common_02Lisp
+
+System definition:
+
+asdf
+https://common-lisp.net/project/asdf/
+
+Books mentioned:
+
+Land of Lisp
+Advances in Formal methods (whatever by Kaufmann)
+
+

@@ -1,0 +1,26 @@
+## hpr3362 :: Spam Bot Honey Pot: Eating your own dog food
+
+ 
+In this episode, I revisit my spam bot honey pot method of spam detection for 
+web forms. The first part of the episode is a response to rtsn comment asking 
+for a follow up on how the method worked out. In the second part of the podcast 
+I use the built-in screen reader of my Pop_OS system to review my test form and 
+my work form for audible accessibility and to check that the spam catching URL 
+field is not reveled by a screen reader.  
+
+
+For my work site, I pushed the spam catcher to production on 16 February 2021. 
+The total submitted form messages from that day until today, 29 May 2021, is 661.
+Of the total submitted, the method identified 527 spam messages, and passed 
+along 134 messages. Of those 134, 38 messages were uncaught spam--while the 
+remaining 96 messages were valid inquiries. Overall, it seems to be doing a 
+good job. At one point, I thought about closing down the form, but the data 
+does show we are receiving enough valid messages to make it worth keeping around 
+and this method makes finding the good messages much easier.
+
+
+During the second part of the podcast, I find using a screen reader, like any 
+tool, takes some practice. It also reveals that making a form audibly accessible 
+does take some care, and should be reviewed with a screen reader. My method 
+for hiding the honey pot URL field from the screen reader was effective, but my 
+overall implementation to make it accessible needs more work.

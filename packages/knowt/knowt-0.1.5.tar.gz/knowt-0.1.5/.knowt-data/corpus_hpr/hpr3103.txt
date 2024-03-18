@@ -1,0 +1,7 @@
+## hpr3103 :: A warning about browser extensions and add-ons.
+
+ 
+I started getting popups while going to safe websites in chromium-browser. I disabled all browser extensions and then turned them back on individually. I found one that which was causing the problem and it is no longer on the app store. It was however still working and had not been revoked on my browser.
+
+
+Please check your extensions and add-ons to make sure they are regularly updated.

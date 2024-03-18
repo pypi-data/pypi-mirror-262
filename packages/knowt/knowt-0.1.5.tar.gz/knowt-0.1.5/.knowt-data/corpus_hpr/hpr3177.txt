@@ -1,0 +1,31 @@
+## hpr3177 :: Zero cost VPN
+
+ A basic overview of the VPN I use
+
+Linux on a free/low cost VPS
+Helper script install OpenVPN and generate client config file
+Transfer client config file to mobile device
+Install OpenVPN client on Mobile Device and import the config
+
+There are a few options for the Linux server. Free tier cloud providers
+
+AWS
+Google
+Azure
+
+VPS with Free credits ($20-$100) for new accounts I've gotten discount codes from podcasts
+
+Digital Ocean
+Linode
+
+VPS requirements for running a OpenVPN server are pretty are basic
+
+Internet accessible IP address
+Average Network speed
+root shell access
+
+The openvpn installer is on GitHub. https://github.com/angristan/openvpn-install
+On the server as root, run
+git clone https://github.com/angristan/openvpn-install.git
+/openvpn-install/openvpn-install.sh
+

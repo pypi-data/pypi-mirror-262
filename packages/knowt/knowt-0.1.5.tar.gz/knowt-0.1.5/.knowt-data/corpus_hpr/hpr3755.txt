@@ -1,0 +1,182 @@
+## hpr3755 :: Synergy over ssh
+
+ In today's show we will talk about installing synergy so that you can
+control the keyboard and mouse of another computer securely over
+ssh.
+Install synergy on both computers as root
+# dnf install synergy
+# apt install synergy
+The main pc is pc_middle and it is the one with the
+keyboard and mouse we intend to use for all the computers.
+The only other pc in this configuration is, one on the right which we
+call pc_right
+On pc_middle create a configuration file. I put it in
+~/etc/synergy-work.conf
+section: screens
+    pc_middle:
+    pc_right:
+end
+
+section: links
+pc_middle:
+    right = pc_right
+pc_right:
+    left  = pc_middle
+end
+On pc_middle add entry to ~/.ssh/config to
+allow portforwarding back, for the synergy port
+24800
+Host pc_right
+    Hostname 192.168.0.150
+    RemoteForward 127.0.0.1:24800 127.0.0.1:24800 # send back from the client to me
+On pc_middle run synergy server in the foreground with
+debug enabled
+[user@pc_middle ~]$ synergys --debug DEBUG --no-daemon --server --address 127.0.0.1 --config ~/etc/synergy-work.conf --name pc_middle --log /tmp/synergy-work.conf.log
+[2022-12-03T16:29:05] DEBUG: opening configuration "~/etc/synergy-work.conf"
+[2022-12-03T16:29:05] DEBUG: configuration read successfully
+[2022-12-03T16:29:05] DEBUG: XOpenDisplay(":0")
+[2022-12-03T16:29:05] DEBUG: xscreensaver window: 0x00c00001
+[2022-12-03T16:29:05] DEBUG: screen shape: 0,0 5760x2160 (xinerama)
+[2022-12-03T16:29:05] DEBUG: window is 0x05e00004
+[2022-12-03T16:29:05] DEBUG: adopting new buffer
+[2022-12-03T16:29:05] DEBUG: opened display
+[2022-12-03T16:29:05] WARNING: LANGUAGE_DEBUG Poll result 0
+[2022-12-03T16:29:05] DEBUG: registered hotkey ScrollLock (id=ef14 mask=0000) as id=1
+[2022-12-03T16:29:05] NOTE: started server, waiting for clients
+[2022-12-03T16:29:05] DEBUG: event queue is ready
+[2022-12-03T16:29:05] DEBUG: add pending events to buffer
+[2022-12-03T16:29:05] DEBUG: screen "pc_middle" shape changed
+On pc_middle you can check that it's running
+[user@pc_middle ~]$ netstat -anp | grep 24800
+tcp        0      0 127.0.0.1:24800     0.0.0.0:*               LISTEN      90859/synergys
+On pc_middle you can connect to
+pc_right
+[user@pc_middle ~]$ ssh pc_right
+user@pc_right:~$
+On pc_right (either on its own keyboard, or via ssh
+session from pc_middle), check that port 24800
+is listening
+user@pc_right:~$ netstat -anp | grep 24800
+tcp        0      0 127.0.0.1:24800         0.0.0.0:*               LISTEN
+On the other keyboard that is connected to the pc_right
+(see note below †)
+user@pc_right:~$ synergyc --debug INFO --no-daemon --name pc_right 127.0.0.1
+[2022-12-03T16:38:59] NOTE: started client
+        /build/synergy-3N7yN5/synergy-1.8.8-stable+dfsg.1/src/lib/synergy/ClientApp.cpp,404
+[2022-12-03T16:38:59] NOTE: connecting to '127.0.0.1': 127.0.0.1:24800
+        /build/synergy-3N7yN5/synergy-1.8.8-stable+dfsg.1/src/lib/client/Client.cpp,146
+[2022-12-03T16:38:59] NOTE: connected to server
+        /build/synergy-3N7yN5/synergy-1.8.8-stable+dfsg.1/src/lib/synergy/ClientApp.cpp,294
+Back on pc_middle, you should see the the log that you
+have connected
+[2022-12-03T16:40:15] DEBUG: Opening new socket: 18FC73A0
+[2022-12-03T16:40:15] NOTE: accepted client connection
+[2022-12-03T16:40:16] DEBUG: received client "pc_right" info shape=0,0 5760x2160 at 2787,1371
+[2022-12-03T16:40:16] NOTE: client "pc_right" has connected
+† Note: If you tried to run the client synergyc over the
+ssh connection on pc_middle it will connect, but the mouse
+will never move to the other screen.
+Now from the pc_middle, you should be able to
+move the mouse over to the pc_right screen.
+Now using the keyboard and mouse on the pc_middle, you
+should now be able to move the mouse and type on the
+pc_right screen.
+The logs on the pc_middle, should show you information
+about switching from one computer to the other.
+[2022-12-03T17:05:18] INFO: switch from "pc_middle" to "pc_right" at 0,225
+[2022-12-03T17:05:18] INFO: leaving screen
+[2022-12-03T17:05:18] WARNING: LANGUAGE_DEBUG Poll result 0
+[2022-12-03T17:05:18] DEBUG: open clipboard 0
+[2022-12-03T17:05:18] DEBUG: ICCCM fill clipboard 0
+[2022-12-03T17:05:18] DEBUG:   available targets: text/plain (654), UTF8_STRING (445), STRING (31), TEXT (444)
+[2022-12-03T17:05:18] DEBUG: added format 0 for target UTF8_STRING (445) (8 bytes)
+[2022-12-03T17:05:18] DEBUG: close clipboard 0
+[2022-12-03T17:05:18] INFO: screen "pc_middle" updated clipboard 0
+[2022-12-03T17:05:18] DEBUG: open clipboard 1
+[2022-12-03T17:05:18] DEBUG: ICCCM fill clipboard 1
+[2022-12-03T17:05:18] DEBUG:   available targets: text/plain (654), UTF8_STRING (445), STRING (31), TEXT (444), text/html (653)
+[2022-12-03T17:05:18] DEBUG: added format 1 for target text/html (653) (113 bytes)
+[2022-12-03T17:05:18] DEBUG: added format 0 for target UTF8_STRING (445) (5 bytes)
+[2022-12-03T17:05:18] DEBUG: close clipboard 1
+[2022-12-03T17:05:18] INFO: screen "pc_middle" updated clipboard 1
+[2022-12-03T17:05:18] DEBUG: sending clipboard 0 to "pc_right"
+[2022-12-03T17:05:18] DEBUG: sent clipboard size=20
+[2022-12-03T17:05:18] DEBUG: sending clipboard 1 to "pc_right"
+[2022-12-03T17:05:18] DEBUG: sent clipboard size=138
+[2022-12-03T17:05:19] INFO: switch from "pc_right" to "pc_middle" at 5757,583
+[2022-12-03T17:05:19] INFO: entering screen
+[2022-12-03T17:05:19] DEBUG: send xscreensaver command: 582 0 0
+Back on pc_right you can close the client by holding
+Control and pressing C, or Ctrl+C for short.
+The logs on the pc_middle, should show you that the
+client disconnected.
+[2022-12-03T16:40:18] NOTE: client "pc_right" has disconnected
+[2022-12-03T16:40:18] DEBUG: Closing socket: 18FC73A0
+As we are running over ssh, there is no need to configure
+--enable-crypto but you can if you wish.
+Now that everything is working correctly you can make it easier to
+start.
+As we saw before (†) the client needs to be run from the physical X
+Session that you see on the second computer.
+On pc_right create a new bash script file eg:
+nano ~/bin/start-synergy-client.bash
+#!/bin/bash
+killall synergyc
+sleep 2
+synergyc --name pc_right 127.0.0.1
+exit 0
+Still on pc_right allow the file to be executable
+chmod +x ~/bin/start-synergy-client.bash
+Still on pc_right and in the session you wish to
+control, run start-synergy-client.bash
+I find it easiest to just run this in a shell once I login on
+pc_right, but you could configure it to run
+automatically once you log in.
+Back on pc_middle, create a new bash script file eg:
+nano ~/bin/start-synergy-server.bash
+#!/bin/bash
+server_name=synergys # may also be synergy-core
+killall "${server_name}"
+${server_name} --server --address 127.0.0.1 --config ~/etc/synergy-work.conf --name pc_middle --log /tmp/synergy-work.conf.log
+setxkbmap -option "compose:ralt"
+setxkbmap -option "ctrl:nocaps"
+ssh pc_right
+Still on pc_middle allow the file to be executable
+chmod +x ~/bin/start-synergy-server.bash
+Still on pc_middle you can run the command
+start-synergy-server.bash and it will open a ssh shell to
+pc_right.
+Over that connection pc_right can send back commands to
+the server.
+A side note about the special address 127.0.0.1.
+It's often referred to as loopback, home, or
+localhost and is usually defined in
+/etc/hosts
+The address is used by programs running on a given computer to
+communicate with other programs running on the same computer.
+https://en.wikipedia.org/wiki/Localhost
+
+IPv4 network standards reserve the entire address block 127.0.0.0/8
+(more than 16 million addresses) for loopback purposes.
+
+If you are confused, then just think of it like you when your boss
+says "I'm going home now, you should also go home."
+It's clear that they mean "I'm going to my home now,
+and you should also go to your home."
+So the address 127.0.0.1 on pc_middle is only available
+on pc_middle, and equally the address 127.0.0.1 on
+pc_right is only available on pc_right.
+The server is listening on its loopback address 127.0.0.1 on
+pc_middle, while the client is listening on its loopback
+address 127.0.0.1 on pc_right
+It is the RemoteForward configuration that creates a ssh
+tunnel that is doing the heavy lifting.
+RemoteForward 127.0.0.1:24800 127.0.0.1:24800
+It tells the Remote (in this case pc_right ) to listen
+to the port 24800 its loopback address.
+This is where the client on pc_right will be talking
+to.
+The ssh connection will then Forward any packets back to the other
+side (in this case pc_middle )
+And to send to the port 24800 its loopback address.
+And on that address the server is listening.

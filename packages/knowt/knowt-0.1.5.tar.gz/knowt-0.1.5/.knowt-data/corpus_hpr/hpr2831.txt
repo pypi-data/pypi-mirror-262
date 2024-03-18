@@ -1,0 +1,10 @@
+## hpr2831 :: Interview with Robbie Ferguson
+
+ When it comes to monitoring your network, and the machines on it, you have a lot of options. But, let’s face it : none of those are easy to implement, and configuring a monitoring tool, whether it’s an open-source or a proprietary one, is often complex and time consuming.
+Well, someone took that matter into their own hands, and made NEMS. What is NEMS, how can it help us, and what infrastructure does it require? Those are a few of the questions I asked Robbie Ferguson, the maintainer of NEMS, who joined me on Easter week-end for a little chat.
+Links
+
+https://nemslinux.com/
+https://twitter.com/NEMSLinux
+https://baldnerd.com/
+

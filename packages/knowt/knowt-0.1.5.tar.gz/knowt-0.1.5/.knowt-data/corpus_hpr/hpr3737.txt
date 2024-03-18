@@ -1,0 +1,66 @@
+## hpr3737 :: Review of KOBO Libra H20 e-reader
+
+ Introduction
+I have wanted an e-ink based e-reader for a while. Reading on my
+computer is ok. Reading on my phone is doable, but is very annoying. If
+I don't keep my finger on the screen, it will go blank and then I have
+to make sure and press the power button to bring the screen back to life
+before it locks. A tablet would probably be a nice compromise, but I
+really wanted to try out an e-ink display, and didn't want the potential
+distractions of a more multi-purpose device. I wanted not only and e-ink
+display, but also one that ran a linux operating system, and a reader
+that I could potentially put a different Linux distribution on, or
+modify myself somehow. When asked what I wanted for Christmas this year
+by my wonderful girlfriend, I sent her a link to the KOBO Libra H20.
+KOBO Libra H20 specification
+
+processor - Freescale i.MX6 SLL 1 GHz
+RAM - 512 MB
+hard drive - 8GB
+display - 7 inch HD 300 PPI E Ink touchscreen with 1680 x 1264
+resolution
+dimensions - 6.3 by 5.7 by 0.3 inches (HWD) and 6.8 ounces or 159
+by 144 by 7.6 mm and 192g
+battery - 1200 mAh. Good battery life. Currently I use it
+infrequently, and have charged it maybe 4 or 5 times of the last
+year
+Connectivity -WiFi 802.11 b/g/n and Micro USB. I have it
+connected to my home network. Have only used WiFi to update the OS. I
+use the USB port to transfer books I've downloaded to my computer, and
+to charge the Kobo.
+
+Calibre ebook management
+I knew about Calibre, but had never used it. So far it has been a
+great e-book manager. Has very nice features for editing meta data and
+organizing my books. It will also transfer the books to the Libra H20
+and update its internal database. One thing I found is KOBO does have
+its own EPUB format that it uses to optimize display of books. In
+particular, it fixes an issue where images in standard EPUB format don't
+scale to the size of the page. Calibre has a plugin system, and a 3rd
+party plugin is available that will convert a standard EPUB format to
+KePUB when you transfer the book to the e-reader.
+Conclusion
+I have been enjoying my KOBO reader. It can feel a little slow at
+times, especially rendering pdf files where the page is a picture of the
+text and not made up of electronic characters, and it does render images
+in standard epub format a bit small at times. Other than these two
+things, it is very easy to read in all lighting settings, and I enjoy
+reading using the KOBO.
+References
+
+KOBO website
+KOBO
+Libra H20
+Kobo
+Libra H2O manual
+Kobo
+Libra H2O review; Sharmishta Sarkar, Dan Gardiner; May 20,
+2020
+Calibre ebook
+management
+How
+to Convert EPUB to Kepub Calibre; Ada Wang; 2/13/2020
+Kobotouchextended
+E
+Ink
+

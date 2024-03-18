@@ -1,0 +1,131 @@
+## hpr2720 :: Download youtube channels using the rss feeds
+
+ 
+I had a very similar problem to Ahuka aka Kevin, in hpr2675 :: YouTube Playlists. I wanted to be able to download an entire youtube channel and store them so that I could play them in the order that they were posted.
+See previous episode hpr2710 :: Youtube downloader for channels.
+
+
+The problem with the original script is that it needs to download and check each video in each channel and it can crawl to a halt on large channels like EEEVblog.
+
+
+The solution was given in hpr2544 :: How I prepared episode 2493: YouTube Subscriptions - update with more details in the full-length notes.
+
+
+Subscribe:Subscriptions are the currency of YouTube creators so don't be afraid to create an account to subscribe to the creators. Here is my current subscription_manager.opml to give you some ideas.
+Export:Login to https://www.youtube.com/subscription_manager and at the bottom you will see the option to Export subscriptions. Save the file and alter the script to point to it.
+Download: Run the script youtube-rss.bash
+
+How it works
+
+The first part allows you to define where you want to save your files. It also allows you to set what videos to skip based on length and strings in their titles.
+
+
+savepath="/mnt/media/Videos/channels"
+subscriptions="${savepath}/subscription_manager.opml"
+logfile="${savepath}/log/downloaded.log"
+youtubedl="/mnt/media/Videos/youtube-dl/youtube-dl"
+DRYRUN="echo DEBUG: "
+maxlength=7200 # two hours
+skipcrap="fail |react |live |Best Pets|BLOOPERS|Kids Try"
+
+
+After some checks and cleanup, we can then parse the opml file. This is an example of the top of mine.
+
+
+<?xml version="1.0"?>
+<opml version="1.1">
+  <body>
+    <outline text="YouTube Subscriptions" title="YouTube Subscriptions">
+      <outline text="Wintergatan" title="Wintergatan" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCcXhhVwCT6_WqjkEniejRJQ"/>
+      <outline text="Primitive Technology" title="Primitive Technology" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCAL3JXZSzSm8AlZyD3nQdBA"/>
+      <outline text="John Ward" title="John Ward" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC2uFFhnMKyF82UY2TbXRaNg"/>
+
+
+Now we use the xmlstarlet tool to extract each of the urls and also the title. The title is just used to give some feedback, while the url needs to be stored for later. Now we have a complete list of all the current urls, in all the feeds. 
+
+
+xmlstarlet sel -T -t -m '/opml/body/outline/outline' -v 'concat( @xmlUrl, " ", @title)' -n "${subscriptions}" | while read subscription title
+do
+  echo "Getting "${title}""
+  wget -q "${subscription}" -O - | xmlstarlet sel -T -t -m '/_:feed/_:entry/media:group/media:content' -v '@url' -n - | awk -F '?' '{print $1}'  >> "${logfile}_getlist"
+done
+
+
+The main part of the script then counts the total so we can have some feedback while we are running it. It then pumps the list from the previous step into a loop which first checks to make sure we have not already downloaded it.
+
+
+count=1
+total=$( sort "${logfile}_getlist" | uniq | wc -l )
+
+sort "${logfile}_getlist" | uniq | while read thisvideo
+do 
+  if [ "$( grep "${thisvideo}" "${logfile}" | wc -l )" -eq 0 ];
+  then
+
+
+The next part takes advantage of the youtube-dl --dump-json command which downloads all sorts of information about the video which we store to query later.
+
+
+    metadata="$( ${youtubedl} --dump-json ${thisvideo} )"
+    uploader="$( echo $metadata | jq '.uploader' | awk -F '"' '{print $2}' )"
+    title="$( echo $metadata | jq '.title' | awk -F '"' '{print $2}' )"
+    upload_date="$( echo $metadata | jq '.upload_date' | awk -F '"' '{print $2}' )"
+    id="$( echo $metadata | jq '.id' | awk -F '"' '{print $2}' )"
+    duration="$( echo $metadata | jq '.duration' )"
+
+
+Having the duration, we can skip long episodes.
+
+
+
+    if [[ -z ${duration} || ${duration} -le 0 ]]
+    then
+      echo -e "nError: The duration "${length}" is strange. "${thisvideo}"."
+      continue
+    elif [[ ${duration} -ge ${maxlength} ]]
+    then
+      echo -e "nFilter: You told me not to download titles over ${maxlength} seconds long "${title}", "${thisvideo}""
+      continue
+    fi
+
+
+Or videos that don't interest us.
+
+
+
+    if [[ ! -z "${skipcrap}" && $( echo ${title} | egrep -i "${skipcrap}" | wc -l ) -ne 0 ]]
+    then
+      echo -e "nSkipping: You told me not to download this stuff. ${uploader}: "${title}", "${thisvideo}""
+      continue
+    else
+      echo -e "n${uploader}: "${title}", "${thisvideo}""
+    fi
+
+
+Now we have a filtered list of urls we do want to keep. These we also save the description in a text file with the video id if we want to refer to it later. 
+
+
+    echo ${thisvideo} >> "${logfile}_todo"
+    echo -e $( echo $metadata | jq '.description' ) > "${savepath}/description/${id}.txt"
+  else
+    echo -ne "rProcessing ${count} of ${total}"
+  fi
+  count=$((count+1))
+done
+echo ""
+
+
+And finally we download the actual videos saving each channel in its own directory. The file names is first an ISO8601 date, then the title stored as ASCII with no space or ampersands. I then use a "⋄" as a delimiter before the video id.
+
+
+
+# Download the list
+if [ -e "${logfile}_todo" ];
+then
+  cat "${logfile}_todo" | ${youtubedl} --batch-file - --ignore-errors --no-mtime --restrict-filenames --format mp4 -o "${savepath}"'/%(uploader)s/%(upload_date)s-%(title)s⋄%(id)s.%(ext)s'
+  cat "${logfile}_todo" >> ${logfile}
+fi
+
+
+Now you have a fast script that keeps you up to date with your feeds.
+

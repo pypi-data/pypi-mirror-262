@@ -1,0 +1,173 @@
+## hpr1167 :: Kernels in the Boot, or What to Do When Your /boot folder Fills Up
+
+ Synopsis of the Problem
+
+You may have heard me mention that I purchased a used rack server a couple years ago to help teach myself Linux server administration.  It's an HP DL-380 G3 with dual single core Zeons and 12Gb of RAM.  It came with two 75Gb SCSI drives in RAID1, dedicated to the OS.  Since the seller wanted more for additional internal SCSI drives, and those old server drives are limited to 120Gb anyway, I plugged in a PCI-X SATA adapter and connected  750Gb drive externally and mounted it as /home.  I moved over the 2Gb USB drive I had on my Chumby (as opposed to transferring the files) and it shows up as /media/usb0.  I installed Ubuntu server 10.04 (recently updated to 12.04) because CentOS didn't support the RAID controller out of the box and I had frustrated the lack of support for up to date packages on Debian Lenny on the desktop.
+
+
+With 75Gb dedicated to the OS and application packages, you can imaging
+my surprise when after a update and upgrade, I had a report that my
+/boot was full.  It was until I look at the output from fdisk that
+I remembered the Ubuntu installer created a separate partition for
+/boot.  At the risk of oversimplifying the purpose of /boot, it is
+where your current and past kernel files are stored.  Unless the
+system removes older kernels (most desktop systems seem to) the storage
+required for /boot will increase with every kernel upgrade.
+
+This is the output of df before culling the kernels
+Filesystem                         1K-blocks      Used Available Use% Mounted on
+/dev/mapper/oriac-root              66860688   6593460   56870828  11% /
+udev                                 6072216         4    6072212   1% /dev
+tmpfs                                2432376       516    2431860   1% /run
+none                                    5120         0       5120   0% /run/lock
+none                                 6080936         0    6080936   0% /run/shm
+cgroup                               6080936         0    6080936   0% /sys/fs/cgroup
+/dev/cciss/c0d0p1                     233191    224953          0 100% /boot
+/dev/sda1                          721075720 297668900  386778220  44% /home
+/dev/sdb1                         1921902868 429219096 1395056772  24% /media/usb0
+
+This directory listing shows I had many old kernels in /boot
+abi-2.6.32-24-generic-pae
+abi-2.6.32-35-generic-pae
+abi-2.6.32-36-generic-pae
+abi-2.6.32-37-generic-pae
+abi-2.6.32-38-generic-pae
+abi-2.6.32-39-generic-pae
+abi-2.6.32-40-generic-pae
+abi-2.6.32-41-generic-pae
+abi-2.6.32-42-generic-pae
+abi-3.2.0-29-generic-pae
+abi-3.2.0-30-generic-pae
+abi-3.2.0-31-generic-pae
+abi-3.2.0-32-generic-pae
+config-2.6.32-24-generic-pae
+config-2.6.32-35-generic-pae
+config-2.6.32-36-generic-pae
+config-2.6.32-37-generic-pae
+config-2.6.32-38-generic-pae
+config-2.6.32-39-generic-pae
+config-2.6.32-40-generic-pae
+config-2.6.32-41-generic-pae
+config-2.6.32-42-generic-pae
+config-3.2.0-29-generic-pae
+config-3.2.0-30-generic-pae
+config-3.2.0-31-generic-pae
+config-3.2.0-32-generic-pae
+grub
+initrd.img-2.6.32-24-generic-pae
+initrd.img-2.6.32-35-generic-pae
+initrd.img-2.6.32-36-generic-pae
+initrd.img-2.6.32-37-generic-pae
+initrd.img-2.6.32-38-generic-pae
+initrd.img-2.6.32-39-generic-pae
+initrd.img-2.6.32-40-generic-pae
+initrd.img-2.6.32-41-generic-pae
+initrd.img-2.6.32-42-generic-pae
+initrd.img-3.2.0-29-generic-pae
+initrd.img-3.2.0-30-generic-pae
+initrd.img-3.2.0-31-generic-pae
+lost+found
+memtest86+.bin
+memtest86+_multiboot.bin
+System.map-2.6.32-24-generic-pae
+System.map-2.6.32-35-generic-pae
+System.map-2.6.32-36-generic-pae
+System.map-2.6.32-37-generic-pae
+System.map-2.6.32-38-generic-pae
+System.map-2.6.32-39-generic-pae
+System.map-2.6.32-40-generic-pae
+System.map-2.6.32-41-generic-pae
+System.map-2.6.32-42-generic-pae
+System.map-3.2.0-29-generic-pae
+System.map-3.2.0-30-generic-pae
+System.map-3.2.0-31-generic-pae
+System.map-3.2.0-32-generic-pae
+vmcoreinfo-2.6.32-24-generic-pae
+vmcoreinfo-2.6.32-35-generic-pae
+vmcoreinfo-2.6.32-36-generic-pae
+vmcoreinfo-2.6.32-37-generic-pae
+vmcoreinfo-2.6.32-38-generic-pae
+vmcoreinfo-2.6.32-39-generic-pae
+vmcoreinfo-2.6.32-40-generic-pae
+vmcoreinfo-2.6.32-41-generic-pae
+vmcoreinfo-2.6.32-42-generic-pae
+vmlinuz-2.6.32-24-generic-pae
+vmlinuz-2.6.32-35-generic-pae
+vmlinuz-2.6.32-36-generic-pae
+vmlinuz-2.6.32-37-generic-pae
+vmlinuz-2.6.32-38-generic-pae
+vmlinuz-2.6.32-39-generic-pae
+vmlinuz-2.6.32-40-generic-pae
+vmlinuz-2.6.32-41-generic-pae
+vmlinuz-2.6.32-42-generic-pae
+vmlinuz-3.2.0-29-generic-pae
+vmlinuz-3.2.0-30-generic-pae
+vmlinuz-3.2.0-31-generic-pae
+vmlinuz-3.2.0-32-generic-pae
+
+The Solution I Found
+I ran across some articles that
+suggested I could use 'uname -r' to identify my current running kernel
+(3.2.0-31, the -32 apparently kernel ran out of space before it
+ completed installing) and just delete the files with other
+numbers.  That didn't seem prudent, and fortunately I've found
+what seems to be a more elegant solution on upubuntu.com .
+https://www.upubuntu.com/2011/11/how-to-remove-unused-old-kernels-on.html
+
+Verify your current running kernel
+uname -r
+
+Linux will often keep older kernels so that you can boot into and older
+version from Grub (at least on a desktop).  Fedora has an
+environment setting to tell the OS just how many old kernels you want to
+maintain [installonly_limit in /etc/yum.conf].  Please leave a
+comment if you know of an analog in Debian/Ubuntu.
+
+List the kernels currently installed on you system.  
+dpkg --list | grep linux-image
+
+Cull all the kernels but the current one
+
+The next line is the key, make sure you copy and paste exactly from the
+shownotes.  I'm not much good with regular expressions, but I can
+see it's trying to match all the packages starting with 'linux-image'
+but containing a number string different from the one returned by
+'uname -r', and remove those packages.  Obviously, this specific
+command will only work with Debian/Ubuntu systems, but you should be
+able to adapt it to your distro.  The '-P' is my contribution, so
+you can see what packages you are eliminating before the change becomes
+final.
+
+sudo aptitude -P purge ~ilinux-image-\[0-9\]\(\!`uname -r`\)
+
+Make sure Grub reflects your changes
+ Finally, the author recomends running 'sudo update-grub2'  to make sure
+Grub reflects your current kernel status (the above command sees to do this
+after every operation anyway, but better safe than sorry.
+It's worth noting I still don't have my -32 kernel update, so I'll let
+you know if the is anything required to get kernel updates get started
+again.
+
+My df now shows 14%  usage in /boot and a directory listing on /boot only  shows the current kernel files.
+
+Filesystem                         1K-blocks      Used Available Use% Mounted on
+/dev/mapper/oriac-root              66860688   5405996   58058292   9% /
+udev                                 6072216        12    6072204   1% /dev
+tmpfs                                2432376       516    2431860   1% /run
+none                                    5120         0       5120   0% /run/lock
+none                                 6080936         0    6080936   0% /run/shm
+cgroup                               6080936         0    6080936   0% /sys/fs/cgroup
+/dev/cciss/c0d0p1                     233191     29321     191429  14% /boot
+/dev/sda1                          721075720 297668908  386778212  44% /home
+/dev/sdb1                         1921902868 429219096 1395056772  24% /media/usb0
+
+abi-3.2.0-31-generic-pae
+config-3.2.0-31-generic-pae
+grub
+initrd.img-3.2.0-31-generic-pae
+lost+found
+memtest86+.bin
+memtest86+_multiboot.bin
+System.map-3.2.0-31-generic-pae
+vmlinuz-3.2.0-31-generic-pae
+

@@ -1,0 +1,714 @@
+<html>
+<head>
+<title>Chapter 3: Functions</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap02.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap04.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 3</h2>
+
+
+
+<h1>Functions</h1>
+
+<a name=1></a>
+<h3>3.1 Function calls</h3>
+<p>
+You have already seen one example of a <b>function call</b>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; type(<font color=red>"32"</font>)
+<br>&lt;type <font color=red>'str'</font>&gt;
+<br></font></tt></p>
+
+<p>
+The name of the function is <tt><font size=-1>type</font></tt>, and it displays the type of
+a value or variable.  The value or variable, which is called the
+<b>argument</b> of the function, has to be enclosed in parentheses.
+It is common to say that a function "takes" an argument and "returns"
+a result.  The result is called the <b>return value</b>.
+<p>
+Instead of printing the return value, we could assign it to a variable:
+
+<p><tt><font size=-1>&gt;&gt;&gt; betty = type(<font color=red>"32"</font>)
+<br>&gt;&gt;&gt; <font color=black>print</font> betty
+<br>&lt;type <font color=red>'str'</font>&gt;
+<br></font></tt></p>
+
+<p>
+As another example, the <tt><font size=-1>id</font></tt> function takes a value or a variable and
+returns an integer that acts as a unique identifier for the value:
+
+<p><tt><font size=-1>&gt;&gt;&gt; id(3)
+<br>134882108
+<br>&gt;&gt;&gt; betty = 3
+<br>&gt;&gt;&gt; id(betty)
+<br>134882108
+<br></font></tt></p>
+
+<p>
+Every value has an <tt><font size=-1>id</font></tt>, which is a unique number related to where
+it is stored in the memory of the computer.  The <tt><font size=-1>id</font></tt> of a
+variable is the <tt><font size=-1>id</font></tt> of the value to which it refers.
+
+<a name=2></a>
+<h3>3.2 Type conversion</h3>
+<p>
+Python provides a collection of built-in functions that convert values
+from one type to another.  The <tt><font size=-1>int</font></tt> function takes any value and
+converts it to an integer, if possible, or complains otherwise:
+
+<p><tt><font size=-1>&gt;&gt;&gt; int(<font color=red>"32"</font>)
+<br>32
+<br>&gt;&gt;&gt; int(<font color=red>"Hello"</font>)
+<br>ValueError: invalid literal <font color=black>for</font> int(): Hello
+<br></font></tt></p>
+
+<p>
+<tt><font size=-1>int</font></tt> can also convert floating-point values to integers, but
+remember that it truncates the fractional part:
+
+<p><tt><font size=-1>&gt;&gt;&gt; int(3.99999)
+<br>3
+<br>&gt;&gt;&gt; int(-2.3)
+<br>-2
+<br></font></tt></p>
+
+<p>
+The <tt><font size=-1>float</font></tt> function converts integers and strings to floating-point
+numbers:
+
+<p><tt><font size=-1>&gt;&gt;&gt; float(32)
+<br>32.0
+<br>&gt;&gt;&gt; float(<font color=red>"3.14159"</font>)
+<br>3.14159
+<br></font></tt></p>
+
+<p>
+Finally, the <tt><font size=-1>str</font></tt> function converts to
+type <tt><font size=-1>string</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; str(32)
+<br><font color=red>'32'</font>
+<br>&gt;&gt;&gt; str(3.14149)
+<br><font color=red>'3.14149'</font>
+<br></font></tt></p>
+
+<p>
+It may seem odd that Python distinguishes the integer value <tt><font size=-1>1</font></tt>
+from the floating-point value <tt><font size=-1>1.0</font></tt>.  They may represent the same
+number, but they belong to different types.  The reason is that they
+are represented differently inside the computer.
+
+<a name=3></a>
+<h3>3.3 Type coercion</h3>
+<p>
+Now that we can convert between types, we have another way to deal
+with integer division.  Returning to the example from the previous
+chapter, suppose we want to calculate the fraction of an hour that has
+elapsed.  The most obvious expression, <tt><font size=-1>minute / 60</font></tt>, does integer
+arithmetic, so the result is always 0, even at 59 minutes
+past the hour.
+<p>
+One solution is to convert <tt><font size=-1>minute</font></tt> to floating-point
+and do floating-point division:
+
+<p><tt><font size=-1>&gt;&gt;&gt; minute = 59
+<br>&gt;&gt;&gt; float(minute) / 60
+<br>0.983333333333
+<br></font></tt></p>
+
+<p>
+Alternatively, we can take advantage of the rules for
+automatic type conversion, which is called <b>type coercion</b>.
+For the mathematical operators, if either operand is a <tt><font size=-1>float</font></tt>,
+the other is automatically converted to a <tt><font size=-1>float</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; minute = 59
+<br>&gt;&gt;&gt; minute / 60.0
+<br>0.983333333333
+<br></font></tt></p>
+
+<p>
+By making the denominator a <tt><font size=-1>float</font></tt>, we force Python to do
+floating-point division.
+
+<a name=4></a>
+<h3>3.4 Math functions</h3>
+<p>
+In mathematics, you have probably seen functions like <tt><font size=-1>sin</font></tt> and
+<tt><font size=-1>log</font></tt>, and you have learned to evaluate expressions like <tt><font size=-1>sin(pi/2)</font></tt> and <tt><font size=-1>log(1/x)</font></tt>.  First, you evaluate the expression in
+parentheses (the argument).  For example, <tt><font size=-1>pi/2</font></tt> is approximately
+1.571, and <tt><font size=-1>1/x</font></tt> is 0.1 (if <tt><font size=-1>x</font></tt> happens to be 10.0).
+<p>
+Then, you evaluate the function itself, either by looking it up in a
+table or by performing various computations.  The <tt><font size=-1>sin</font></tt> of 1.571
+is 1, and the <tt><font size=-1>log</font></tt> of 0.1 is -1 (assuming that <tt><font size=-1>log</font></tt>
+indicates the logarithm base 10).
+<p>
+This process can be applied repeatedly to evaluate more complicated
+expressions like <tt><font size=-1>log(1/sin(pi/2))</font></tt>.  First, you evaluate the
+argument of the innermost function, then evaluate the function, and so
+on.
+<p>
+Python has a math module that provides most of the familiar
+mathematical functions.  A <b>module</b> is a file that contains a
+collection of related functions grouped together.
+<p>
+Before we can use the functions from a module, we have to import them:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>import</font> math
+<br></font></tt></p>
+
+<p>
+To call one of the functions, we have to specify the name of the
+module and the name of the function, separated by a dot, also
+known as a period.  This format is called <b>dot notation</b>.
+
+<p><tt><font size=-1>&gt;&gt;&gt; decibel = math.log10 (17.0)
+<br>&gt;&gt;&gt; angle = 1.5
+<br>&gt;&gt;&gt; height = math.sin(angle)
+<br></font></tt></p>
+
+<p>
+The first statement sets <tt><font size=-1>decibel</font></tt> to the logarithm of 17, base
+<tt><font size=-1>10</font></tt>.  There is also a function called <tt><font size=-1>log</font></tt> that takes logarithm
+base <tt><font size=-1>e</font></tt>.
+<p>
+The third statement finds the sine of the value of the variable <tt><font size=-1>angle</font></tt>.  <tt><font size=-1>sin</font></tt> and the other trigonometric functions (<tt><font size=-1>cos</font></tt>,
+<tt><font size=-1>tan</font></tt>, etc.)  take arguments in radians. To convert from degrees
+to radians, divide by 360 and multiply by <tt><font size=-1>2*pi</font></tt>.  For example, to
+find the sine of 45 degrees, first calculate the angle in radians and
+then take the sine:
+
+<p><tt><font size=-1>&gt;&gt;&gt; degrees = 45
+<br>&gt;&gt;&gt; angle = degrees * 2 * math.pi / 360.0
+<br>&gt;&gt;&gt; math.sin(angle)
+<br>0.707106781187
+<br></font></tt></p>
+
+<p>
+The constant <tt><font size=-1>pi</font></tt> is also part of the math module.  If you know
+your geometry, you can check the previous result by comparing it to
+the square root of two divided by two:
+
+<p><tt><font size=-1>&gt;&gt;&gt; math.sqrt(2) / 2.0
+<br>0.707106781187
+<br></font></tt></p>
+
+
+<a name=5></a>
+<h3>3.5 Composition</h3>
+<p>
+Just as with mathematical functions, Python functions can be composed,
+meaning that you use one expression as part of another. For example, you can
+use any expression as an argument to a function:
+
+<p><tt><font size=-1>&gt;&gt;&gt; x = math.cos(angle + math.pi/2)
+<br></font></tt></p>
+
+<p>
+This statement takes the value of <tt><font size=-1>pi</font></tt>, divides it by 2, and adds
+the result to the value of <tt><font size=-1>angle</font></tt>.  The sum is then passed as an
+argument to the <tt><font size=-1>cos</font></tt> function.
+<p>
+You can also take the result of one function and pass it as an argument to
+another:
+
+<p><tt><font size=-1>&gt;&gt;&gt; x = math.exp(math.log(10.0))
+<br></font></tt></p>
+
+<p>
+This statement finds the log base <tt><font size=-1>e</font></tt> of 10 and then raises <tt><font size=-1>e</font></tt> to
+that power. The result gets assigned to <tt><font size=-1>x</font></tt>.
+
+<a name=6></a>
+<h3>3.6 Adding new functions</h3>
+<p>
+So far, we have only been using the functions that come with Python,
+but it is also possible to add new functions.  Creating new functions
+to solve your particular problems is one of the most useful things
+about a general-purpose programming language.
+<p>
+In the context of programming, a <b>function</b> is a named sequence of
+statements that performs a desired operation.  This operation is specified
+in a <b>function definition</b>.  The functions we have been using so far have
+been defined for us, and these definitions have been hidden.  This is a good
+thing, because it allows us to use the functions without worrying about the
+details of their definitions.
+<p>
+The syntax for a function definition is:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>NAME</font>( LIST OF PARAMETERS ):
+<br>&nbsp; STATEMENTS
+<br></font></tt></p>
+
+<p>
+You can make up any names you want for the functions you create, except that
+you can't use a name that is a Python keyword.  The list of parameters
+specifies what information, if any, you have to provide in order to
+use the new function.
+<p>
+There can be any number of statements inside the function, but they
+have to be indented from the left margin.  In the examples in this
+book, we will use an indentation of two spaces.
+<p>
+The first couple of functions we are going to write have no parameters,
+so the syntax looks like this:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>newLine</font>():
+<br>&nbsp; <font color=black>print</font>
+<br></font></tt></p>
+
+<p>
+This function is named <tt><font size=-1>newLine</font></tt>.  The empty parentheses indicate
+that it has no parameters.  It contains only a single statement, which
+outputs a newline character. (That's what happens when you use a <tt><font size=-1><font color=black>print</font></font></tt>
+command without any arguments.)
+<p>
+The syntax for calling the new function is the same as the syntax
+for built-in functions:
+
+<p><tt><font size=-1><font color=black>print</font> <font color=red>"First Line."</font>
+<br>newLine()
+<br><font color=black>print</font> <font color=red>"Second Line."</font>
+<br></font></tt></p>
+
+<p>
+The output of this program is:
+
+<p><tt><font size=-1>First line.
+<br>
+<br>Second line.
+<br></font></tt></p>
+
+<p>
+Notice the extra space between the two lines.  What if we wanted
+more space between the lines?  We could call the same function
+repeatedly:
+
+<p><tt><font size=-1><font color=black>print</font> <font color=red>"First Line."</font>
+<br>newLine()
+<br>newLine()
+<br>newLine()
+<br><font color=black>print</font> <font color=red>"Second Line."</font>
+<br></font></tt></p>
+
+<p>
+Or we could write a new function named <tt><font size=-1>threeLines</font></tt> that prints
+three new lines:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>threeLines</font>():
+<br>&nbsp; newLine()
+<br>&nbsp; newLine()
+<br>&nbsp; newLine()
+<br>
+<br><font color=black>print</font> <font color=red>"First Line."</font>
+<br>threeLines()
+<br><font color=black>print</font> <font color=red>"Second Line."</font>
+<br></font></tt></p>
+
+<p>
+This function contains three statements, all of which are indented by two
+spaces.  Since the next statement is not indented, Python knows that it is
+not part of the function.
+<p>
+You should notice a few things about this program:
+
+<ol>
+<li>You can call the same procedure repeatedly.  In fact, it is quite common
+and useful to do so.</li>
+<li>You can have one function call another function; in this case
+<tt><font size=-1>threeLines</font></tt> calls <tt><font size=-1>newLine</font></tt>.</li>
+</ol>
+<p>
+So far, it may not be clear why it is worth the trouble to create all of these
+new functions.  Actually, there are a lot of reasons, but this example
+demonstrates two:
+
+<ul>
+<li>Creating a new function gives you an opportunity to name a
+group of statements.  Functions can simplify a program by hiding a complex
+computation behind a single command and by using English words in place of
+arcane code.</li>
+<li>Creating a new function can make a program smaller by eliminating
+repetitive code.  For example, a short way to print nine consecutive new
+lines is to call <tt><font size=-1>threeLines</font></tt> three times.</li>
+</ul>
+
+<blockquote><i>As an exercise, write a function called <tt><font size=-1>nineLines</font></tt> that uses
+<tt><font size=-1>threeLines</font></tt> to print nine blank lines. How would you print 
+twenty-seven new lines?</i>
+</blockquote>
+
+<a name=7></a>
+<h3>3.7 Definitions and use</h3>
+<p>
+Pulling together the code fragments from Section 3.6, the
+whole program looks like this:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>newLine</font>():
+<br>&nbsp; <font color=black>print
+<br>
+<br>def</font> threeLines():
+<br>&nbsp; newLine()
+<br>&nbsp; newLine()
+<br>&nbsp; newLine()
+<br>
+<br><font color=black>print</font> <font color=red>"First Line."</font>
+<br>threeLines()
+<br><font color=black>print</font> <font color=red>"Second Line."</font>
+<br></font></tt></p>
+
+<p>
+This program contains two function definitions: <tt><font size=-1>newLine</font></tt> and
+<tt><font size=-1>threeLines</font></tt>.  Function definitions get executed just like other
+statements, but the effect is to create the new function.  The statements
+inside the function do not get executed until the function is called, and
+the function definition generates no output.
+<p>
+As you might expect, you have to create a function before you can
+execute it.  In other words, the function definition has to be
+executed before the first time it is called.
+
+<blockquote><i>As an exercise, move the last three lines of this program
+to the top, so the function calls appear before the definitions. Run 
+the program and see what error
+message you get.</i>
+</blockquote>
+
+<blockquote><i>As another exercise, start with the working version of the program
+and move the definition of <tt><font size=-1>newLine</font></tt> after the definition of
+<tt><font size=-1>threeLines</font></tt>.  What happens when you run this program?</i>
+</blockquote>
+
+<a name=8></a>
+<h3>3.8 Flow of execution</h3>
+<p>
+In order to ensure that a function is defined before its first use,
+you have to know the order in which statements are executed, which is
+called the <b>flow of execution</b>.
+<p>
+Execution always begins at the first statement of the program.  Statements are
+executed one at a time, in order from top to bottom.
+<p>
+Function definitions do not alter the flow of execution of the program, but
+remember that statements inside the function are not executed until the
+function is called.  Although it is not common, you can define one function
+inside another.  In this case, the inner definition isn't executed until the
+outer function is called.
+<p>
+Function calls are like a detour in the flow of execution. Instead of going to
+the next statement, the flow jumps to the first line of the called function,
+executes all the statements there, and then comes back to pick up where it left
+off.
+<p>
+That sounds simple enough, until you remember that one function can call
+another.  While in the middle of one function, the program might have to
+execute the statements in another function. But while executing that
+new function, the program might have to execute yet another function!
+<p>
+Fortunately, Python is adept at keeping track of where it is, so each time a
+function completes, the program picks up where it left off in the function that
+called it.  When it gets to the end of the program, it terminates.
+<p>
+What's the moral of this sordid tale?  When you read a program, don't read from
+top to bottom.  Instead, follow the flow of execution.
+
+<a name=9></a>
+<h3>3.9 Parameters and arguments</h3>
+<p>
+Some of the built-in functions you have used require arguments, the
+values that control how the function does its job.  For example, if
+you want to find the sine of a number, you have to indicate what the
+number is.  Thus, <tt><font size=-1>sin</font></tt> takes a numeric value as an argument.
+<p>
+Some functions take more than one argument. For example, <tt><font size=-1>pow</font></tt>
+takes two arguments, the base and the exponent.  Inside the function,
+the values that are passed get assigned to variables called <b>parameters</b>.
+<p>
+Here is an example of a user-defined function that has a parameter:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printTwice</font>(bruce):
+<br>&nbsp; <font color=black>print</font> bruce, bruce
+<br></font></tt></p>
+
+<p>
+This function takes a single argument and assigns it to a parameter
+named <tt><font size=-1>bruce</font></tt>.  The value of the parameter (at this point we
+have no idea what it will be) is printed twice, followed by a newline.
+The name <tt><font size=-1>bruce</font></tt> was chosen to suggest that the name you give a
+parameter is up to you, but in general, you want to choose something
+more illustrative than <tt><font size=-1>bruce</font></tt>.
+<p>
+The function <tt><font size=-1>printTwice</font></tt> works for any type that can be printed:
+
+<p><tt><font size=-1>&gt;&gt;&gt; printTwice(<font color=red>'Spam'</font>)
+<br>Spam Spam
+<br>&gt;&gt;&gt; printTwice(5)
+<br>5 5
+<br>&gt;&gt;&gt; printTwice(3.14159)
+<br>3.14159 3.14159
+<br></font></tt></p>
+
+<p>
+In the first function call, the argument is a string. In the second,
+it's an integer. In the third, it's a <tt><font size=-1>float</font></tt>.
+<p>
+The same rules of composition that apply to built-in functions also
+apply to user-defined functions, so we can use any kind of expression
+as an argument for <tt><font size=-1>printTwice</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; printTwice(<font color=red>'Spam'</font>*4)
+<br>SpamSpamSpamSpam SpamSpamSpamSpam
+<br>&gt;&gt;&gt; printTwice(math.cos(math.pi))
+<br>-1.0 -1.0
+<br></font></tt></p>
+
+<p>
+As usual, the expression is evaluated before the function is run, so
+<tt><font size=-1>printTwice</font></tt> prints <tt><font size=-1>SpamSpamSpamSpam SpamSpamSpamSpam</font></tt> instead of
+<tt><font size=-1><font color=red>'Spam'</font>*4 <font color=red>'Spam'</font>*4</font></tt>.
+
+<blockquote><i>As an exercise, write a call to <tt><font size=-1>printTwice</font></tt> that does print
+<tt><font size=-1><font color=red>'Spam'</font>*4 <font color=red>'Spam'</font>*4</font></tt>.  Hint: strings can be enclosed in either single or 
+double quotes, and the type of quote not used to enclose the string can be used
+inside it as part of the string.</i>
+</blockquote>
+<p>
+We can also use a variable as an argument:
+
+<p><tt><font size=-1>&gt;&gt;&gt; michael = <font color=red>'Eric, the half a bee.'</font>
+<br>&gt;&gt;&gt; printTwice(michael)
+<br>Eric, the half a bee. Eric, the half a bee.
+<br></font></tt></p>
+
+<p>
+Notice something very important here. The name of the variable we pass
+as an argument (<tt><font size=-1>michael</font></tt>) has nothing to do with the name of the
+parameter (<tt><font size=-1>bruce</font></tt>).  It doesn't matter what the value was
+called back home (in the caller); here in <tt><font size=-1>printTwice</font></tt>, we call
+everybody <tt><font size=-1>bruce</font></tt>.
+
+<a name=10></a>
+<h3>3.10 Variables and parameters are local</h3>
+<p>
+When you create a <b>local variable</b> inside a function, it only exists inside
+the function, and you cannot use it outside.  For example:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>catTwice</font>(part1, part2):
+<br>&nbsp; cat = part1 + part2
+<br>&nbsp; printTwice(cat)
+<br></font></tt></p>
+
+<p>
+This function takes two arguments, concatenates them, and then prints
+the result twice.
+We can call the function with two strings:
+
+<p><tt><font size=-1>&gt;&gt;&gt; chant1 = <font color=red>"Pie Jesu domine, "</font>
+<br>&gt;&gt;&gt; chant2 = <font color=red>"Dona eis requiem."</font>
+<br>&gt;&gt;&gt; catTwice(chant1, chant2)
+<br>Pie Jesu domine, Dona eis requiem. Pie Jesu domine, Dona eis requiem.
+<br></font></tt></p>
+
+<p>
+When <tt><font size=-1>catTwice</font></tt> terminates, the variable <tt><font size=-1>cat</font></tt> is destroyed.
+If we try to print it, we get an error:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> cat
+<br>NameError: cat
+<br></font></tt></p>
+
+<p>
+Parameters are also local.
+For example, outside the function <tt><font size=-1>printTwice</font></tt>, there is no
+such thing as <tt><font size=-1>bruce</font></tt>.  If you try to use it, Python will
+complain.
+
+<a name=11></a>
+<h3>3.11 Stack diagrams</h3>
+<p>
+To keep track of which variables can be used where, it is sometimes
+useful to draw a <b>stack diagram</b>.  Like state diagrams, stack
+diagrams show the value of each variable, but they also show the
+function to which each variable belongs.
+<p>
+Each function is represented by a <b>frame</b>.  A frame is a box
+with the name of a function
+beside it and the parameters and variables of the function inside it.
+The stack diagram for the
+previous example looks like this:
+
+<p align="center"><img src="illustrations/stack.png"></p>
+<p>
+The order of the stack shows the flow of execution.  <tt><font size=-1>printTwice</font></tt>
+was called by <tt><font size=-1>catTwice</font></tt>, and <tt><font size=-1>catTwice</font></tt> was called by <tt><font size=-1>__main__</font></tt>, which is a special name for the topmost function.  When
+you create a variable outside of any function, it belongs to <tt><font size=-1>__main__</font></tt>.
+<p>
+Each parameter refers to the same value as its corresponding
+argument.  So, <tt><font size=-1>part1</font></tt> has the same value as
+<tt><font size=-1>chant1</font></tt>, <tt><font size=-1>part2</font></tt> has the same value as <tt><font size=-1>chant2</font></tt>,
+and <tt><font size=-1>bruce</font></tt> has the same value as <tt><font size=-1>cat</font></tt>.
+<p>
+If an error occurs during a function call, Python prints the
+name of the function, and the name of the function that called
+it, and the name of the function that called <i>that</i>, all the
+way back to <tt><font size=-1>__main__</font></tt>.
+<p>
+For example, if we try to access <tt><font size=-1>cat</font></tt> from within <tt><font size=-1>printTwice</font></tt>, we get a <tt><font size=-1>NameError</font></tt>:
+
+<p><tt><font size=-1>Traceback (innermost last):
+<br>&nbsp; File <font color=red>"test.py"</font>, line 13, <font color=black>in</font> __main__
+<br>&nbsp; &nbsp; catTwice(chant1, chant2)
+<br>&nbsp; File <font color=red>"test.py"</font>, line 5, <font color=black>in</font> catTwice
+<br>&nbsp; &nbsp; printTwice(cat)
+<br>&nbsp; File <font color=red>"test.py"</font>, line 9, <font color=black>in</font> printTwice
+<br>&nbsp; &nbsp; <font color=black>print</font> cat
+<br>NameError: cat
+<br></font></tt></p>
+
+<p>
+This list of functions is called a <b>traceback</b>.  It tells you what
+program file the error occurred in, and what line, and what functions
+were executing at the time.  It also shows the line of code that
+caused the error.
+<p>
+Notice the similarity between the traceback and the
+stack diagram.  It's not a coincidence.
+
+<a name=12></a>
+<h3>3.12 Functions with results</h3>
+<p>
+You might have noticed by now that some of the functions we are using,
+such as the math functions, yield results.  Other functions, like
+<tt><font size=-1>newLine</font></tt>, perform an action but don't return a value.  That raises
+some questions:
+
+<ol>
+<li>What happens if you call a function and you don't do anything
+with the result (i.e., you don't assign it to a variable or use it as
+part of a larger expression)?</li>
+<li>What happens if you use a function without a result as part of
+an expression, such as <tt><font size=-1>newLine() + 7</font></tt>?</li>
+<li>Can you write functions that yield results, or are you stuck with
+simple function like <tt><font size=-1>newLine</font></tt> and <tt><font size=-1>printTwice</font></tt>?</li>
+</ol>
+<p>
+The answer to the last question is that you can write functions that
+yield results, and we'll do it in Chapter 5.
+
+<blockquote><i>As an exercise, answer the other two questions by trying them
+out.  When you have a question about what is legal or illegal in
+Python, a good way to find out is to ask the interpreter.</i>
+</blockquote>
+
+<a name=13></a>
+<h3>3.13 Glossary</h3>
+
+<dl>
+<dt>function call</dt>
+<dd>A statement that executes a function. It consists of
+the name of the function followed by a list of arguments enclosed in
+parentheses.</dd>
+<dt>argument</dt>
+<dd>A value provided to a function when the function is called.
+This value is assigned to the corresponding parameter in the function.</dd>
+<dt>return value</dt>
+<dd>The result of a function.  If a function call
+is used as an expression, the return value is the value of
+the expression.</dd>
+<dt>type conversion</dt>
+<dd>An explicit statement that takes a value
+of one type and computes a corresponding value of another type.</dd>
+<dt>type coercion</dt>
+<dd>A type conversion that happens automatically
+according to Python's coercion rules.</dd>
+<dt>module</dt>
+<dd>A file that contains a collection of related functions and
+classes.</dd>
+<dt>dot notation</dt>
+<dd>The syntax for calling a function in another
+module, specifying the module name followed by a dot (period) and
+the function name.</dd>
+<dt>function</dt>
+<dd>A named sequence of statements that performs some useful
+operation.  Functions may or may not take arguments and may or may not
+produce a result.</dd>
+<dt>function definition</dt>
+<dd>A statement that creates a new function,
+specifying its name, parameters, and the statements it executes.</dd>
+<dt>flow of execution</dt>
+<dd>The order in which statements are executed during
+a program run.</dd>
+<dt>parameter</dt>
+<dd>A name used inside a function to refer to the value passed
+as an argument.</dd>
+<dt>local variable</dt>
+<dd>A variable defined inside a function.  A local
+variable can only be used inside its function.</dd>
+<dt>stack diagram</dt>
+<dd>A graphical representation of a stack of functions,
+their variables, and the values to which they refer.</dd>
+<dt>frame</dt>
+<dd>A box in a stack diagram that represents a function call.
+It contains the local variables and parameters of the function.</dd>
+<dt>traceback</dt>
+<dd>A list of the functions that are executing,
+printed when a runtime error occurs.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap02.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap04.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

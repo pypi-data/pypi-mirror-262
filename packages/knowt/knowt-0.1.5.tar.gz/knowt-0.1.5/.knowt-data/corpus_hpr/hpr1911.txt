@@ -1,0 +1,40 @@
+## hpr1911 :: Thoughts on GUI v CLI and the best distro
+
+ Promotion of GUI to new users
+
+Deciding which GUI to present to a non techie, is simply a non issue as they can and do use different OS's all the time. We all have family and friends who have managed to operate phones, TV's and tablets as they iterate through their UI changes. Think about the changes in phones from Symbian to Android, iOS. The move from up and down channel tv's to DVR's, STB's and smart TV's. An then they all managed to get the hang of iPads and tablets without even calling you.
+
+Promotion of GUI to tech savvy users.
+
+Teach someone to use a GUI and they can use that computer.
+Teach someone the command line and they can use any computer.
+
+
+GUI's change and do so all the time. This happens across the board. On all OS's Windows, Mac, KDE, Android, Gnome, Nokia.
+https://en.wikipedia.org/wiki/History_of_the_graphical_user_interface
+
+
+On the other hand, if you learn to computer via the command line ONCE, then you know how to operate computers from 46 years ago, and most likely in 46 years. If you plans involve a career in the tech industry, you need to be using the command line.
+
+
+Most of the issues are the fear of not been the expert any more.
+
+Is Linux is ready for the Desktop ?
+
+Yes. Android
+https://www.businessinsider.com/iphone-v-android-market-share-2014-5?IR=T
+
+
+IS GNU/Linux is ready for the Desktop ?
+
+But you cry "Android isn't Linux".
+
+
+Yes. ChromeOS is now shipping more units to educational market than Apple.
+https://www.forbes.com/sites/anthonykosner/2014/12/01/google-unseats-apple-in-u-s-classrooms-as-chromebooks-beat-ipads/
+https://events.linuxfoundation.org/sites/events/files/slides/chrome.pdf
+
+Summary
+
+Don't worry about it. Find what works for you and use it. Try and learn as much as you can. Learning stuff that will be around in 5 years is a good investment, but that is your choice.
+

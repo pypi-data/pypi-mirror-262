@@ -1,0 +1,9 @@
+## hpr1171 :: Tech and Loathing 13 - Remote Desktop Protocols
+
+ 
+Today we are doing the last show that has been in the syndicated Thursday queue for a long time. Now that we are no longer syndicating shows, I wanted to post this today so that we can get the backlog cleared.
+
+
+The show can be found at https://techandloathing.info/2012/11/tnl-episode-13-remote-desktop-protocols/
+
+Hey listeners, another episode of Tech & Loathing is now on tap. A couple of IRC friends have joined me tonight to discuss a couple of topics. For Loathing we have Android vs. iOS and all of my frustrations with the world of mobile computing. For Tech we have a look at RDP, VNC and running applications and desktop environments remotely, either securely via SSH or VPN or insecurely using X Forwarding and other techniques. Hope everyone enjoys the show.

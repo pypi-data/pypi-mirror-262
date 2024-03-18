@@ -1,0 +1,21 @@
+## hpr3639 :: Linux Inlaws S01E60: The Job Interview
+
+ 
+
+In this episode, the Linux Inlaws interview a potential new recruit :-) call Kris Jenkins, from Kafka, an Apache project implementing a scalable distributed event streaming platform (don't know what that is? Listen to the show! :-) . A cautious warning: This episode contains strong philosophical / political views, language and insights which may change your views on messaging systems in general and Kafka in particular. Two hints: Chris shares his view on what a database *really* is and Kris Jenkins tries hard to convince our two aging heroes that he's the man for the job (teaser: he decided to stay at his current position as a dev advocate at Confluent after all). Plus: More on love, death and robots. Interested in the details? Then don't miss this show! 
+
+Links:
+
+Apache Kafka: https://kafka.apache.org
+Confluent: https://www.confluent.io
+Redis: https://redis.io
+Databases: https://en.wikipedia.org/wiki/Database
+Event-Driven Architecture: https://en.wikipedia.org/wiki/Event-driven_architecture
+RabbitMQ: https://github.com/rabbitmq
+Zookeeper note: https://medium.com/knerd/eureka-why-you-shouldnt-use-zookeeper-for-service-discovery-4932c5c7e764
+KRaft: https://docs.confluent.io/platform/current/zookeeper/kraft.html
+KIP: https://cwiki.apache.org/confluence/display/kafka/kafka+improvement+proposals
+Monster Hunter: https://www.monsterhunter.com
+LOVE DEATH + ROBOTS: https://www.imdb.com/title/tt9561862
+Unix Philosophy: https://www.linfo.org/unix_philosophy.html
+

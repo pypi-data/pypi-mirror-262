@@ -1,0 +1,72 @@
+## hpr1577 :: Introducing Nikola the Static Web Site and Blog Generator
+
+ Nikola - The Static Web Site and Blog Generator - https://getnikola.com
+Note: Please see developer notes below
+What is it? A Static Website and Blog Generator based on Python. What is a Static Website Generator? It generates posts and pages via commands. You edit those posts and pages in a text editor, then run a command to build the site, and finally, deploy/upload the generated html etc files to your webhost. That sounds kinda old school are you sure thats web 3.0? Its old and new school. Nikola gives you CMS like features without the overhead of the database server and page rendering engine. How can I install it? Use PIP and follow the handbook on the getnikola.com website. NOTE: Python 2.6 or newer or Python 3.3 or newer is required
+sudo pip install nikola
+sudo pip install nikola[extras]
+You should be good to go if you can enter nikola help in a terminal and get a list of nikola commands. Lets create our skeleton website:
+nikola init mysite 
+You will need to answer some questions now (NOTE a directory to cd into called mysite will be created if you issue mysite.. You should enter your domain name instead - mysite is just an example). The questions it asks will help populate the conf.py file in the mysite directory.
+Site Title: 
+Site Author:
+Site Author Email:
+Site Description:
+Site URL:
+Languages to support: (default en)
+Time zone: 
+Which comments system to use:
+Once complete your site will be created and in the directory you named the site as - in my case, mysite. cd into that and take a look at the files with ls. you will have:
+
+conf.py - your configuration file
+files - where you will place images etc and reference them in blog posts and pages
+galleries - where you can serve up images in a gallery
+posts - where your blog posts go
+stories - where your pages go
+
+Lets create a blog post.
+nikola new_post
+Type in the title of your blog post and hit enter. I will use foobar in this example It will report the new post is in posts/foobar.rst fire up your text editor and edit that file.
+There is a header area at the top of the file - most of it is already filled in and you wont need to change it but you should add a Tag because you can see posts by Tag once the site is generated and it gives your readers a way to find all items on that subject. These are separated by commas so enter as many or few as you like. Enter a Description in the Description area. Now move into the Write your post here area and go to town - erase that or it shows up in your post. You should read the page on ReStructuredText here: https://getnikola.com/quickstart.html but also just look at the source by clicking 'Source' on the getnikola website and you can see the markup they used. Some basics are
+*word*
+ for italics, 
+**word**
+ for bold, a single * space item for bullet points and for hyperlinks 
+`Tree Brewing Co: <https://treebeer.com/>`_.
+ a Tree Brewing Co hyperlink which will bring you when clicked to treebeer.com. Lastly issue: 
+.. image:: /files/imagefilename.jpg
+ to point to an image file that you have placed into the files directory. Ok lets say you are done your post, save it and exit. Lets now build your site and fire up the built in webserver to display it. 
+nikola build
+nikola serve -b
+Your default web browser will launch and you will see your site with blog post. Savour the moment - you have just created your first blog post. Note all the generated files you would upload to your webhost are in the output folder. Ok so thats great but I want to add pages and have it in my navigation window Ok lets do that.
+nikola new_post -p
+ Enter a name for it and press Enter. In my case I created MyPage It tells you your page is in the stories directory and shows you how it named the file. In my case its mypage.rst Open that in a text editor and compose the page - save it when complete. So that would be great but its not showing up in your navigation yet. You need to put that in your conf.py file. Open conf.py in a text editor, look for NAVIGATION_LINKS. Observe how the existing pages are linked and follow that format. Here is how I would add mypage: (/stories/mypage.html, MyPage), any page you create will show up in stories so dont forget to put that in the path.
+NAVIGATION_LINKS = {
+    DEFAULT_LANG: (
+        ("/archive.html", "Archive"),
+        ("/categories/index.html", "Tags"),
+        ("/rss.xml", "RSS feed"),
+        ("/stories/mypage.html", "MyPage"),
+    ),
+}
+Save that and rebuild your site. NOTE:: As of Today Nikola v7.0.1 requires a special command to include the new pages in navigation. This has been fixed in git but currently you must issue:
+nikola build -a
+nikola serve -b 
+Now you are viewing it - nice work - you have a page now. This site seems a bit plain, how can I theme it? Glad that you asked - issue this command.
+nikola bootswatch_theme -n custom_theme -s slate -p bootstrap3
+Now you have set it to use the slate bootswatch theme. Review the bootswatch themes on: https://bootswatch.com/ In order to let Nikola know to use this new theme you need to edit the conf.py file and look for THEME and change the value from bootstrap3 to custom_theme. Now issue these commands at the command line to view the changes:
+nikola build
+nikola serve -b 
+You can modify the themes to your liking and there is guidance on changing the theme on the nikola website. There are ways to depoly your site via rsync or ftp commands in the conf.py file. There are also other things you can set in the conf file such as google analytics, add an embeded duckduckgo or google search engine, specify options for the image galleries etc. More things you can do to spify up your posts / pages are to do with using shortcode like sytax for ReStructuredText. You can embed soundcloud, youtube videos etc - here is a list of these: https://getnikola.com/handbook.html#restructuredtext-extensions
+I hope this helps you get started on using Nikola and hope you enjoy using it as much as I do. If you have questions or comments, find me in the oggcastplanet.net irc chat room on freenode, or go to https://stevebaer.com click Tags and click HPR and leave a comment on this episodes blog post. Until next time, Cheers!
+Corrections to this episode provided by Chris Warrick
+https://stevebaer.com/posts/hpr-episode-on-using-the-static-web-site-and-blog-generator-called-nikola.html
+Some small corrections:
+
+it is recommended to use a virtualenv, `sudo pip` can be dangerous
+`pip install nikola[extras]` is enough, no need to do both steps
+new pages can be created with `nikola new_page`, too (both ways are equally supported)
+
+missing quotes around "MyPage" in example navbar codeFixed
+you can get rid of /stories/ if you change PAGES[*][1] from "stories" to an empty string.
+bootswatch themes are not everything, there is also install_theme that uses a more varied collection from https://themes.getnikola.com/

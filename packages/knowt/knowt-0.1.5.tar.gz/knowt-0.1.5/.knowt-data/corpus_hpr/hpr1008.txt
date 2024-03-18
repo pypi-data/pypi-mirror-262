@@ -1,0 +1,57 @@
+## hpr1008 :: Fix the "Sticky Keys" Bug in Minecraft
+
+ 
+  A quickie episode by Windigo
+  that covers a fix for the "Sticky Keys" bug in Minecraft on Linux.
+
+
+  The "Sticky Keys" bug causes the Minecraft client to act as if a button
+  hasn't been released when it has - which causes your character, Steve, to
+  suffer some awful consequences as a result (depending on what situation
+  you are in when the bug occurs).
+
+
+  Upgrading the LWJGL libraries/drivers that
+  come with Minecraft usually fixes this bug. To upgrade the drivers, do the
+  following:
+
+
+
+    Download an updated version of the LWJGL libraries
+    
+
+LWJGL 2.8.0
+        - Not the latest release, but worked great for me
+      
+
+
+
+    Copy the following files from lwjgl-2.8.0/jar/ in the zip
+    file you downloaded to /home/[youruser]/.minecraft/bin/,
+    replacing the existing files there:
+    
+jinput.jar
+lwjgl.jar
+lwjgl_util.jar
+
+
+
+    Copy all of the files from lwjgl-2.8.0/natives/ in the
+    zip file you downloaded to
+    /home/[youruser]/.minecraft/bin/natives/, again replacing the
+    existing files there
+  
+
+
+  If you still encounter issues with the new versions of the libraries, try a
+  newer or older version until you find one that works with your system. 2.8.0
+  happens to work for my setup (Debian Stable w. Sun Java), but YMMV - your
+  Minecraft may vary.
+
+Links
+
+https://micro.fragdev.com/windigo/
+https://minecraft.net
+https://lwjgl.org
+https://sourceforge.net/projects/java-game-lib/files/Official%20Releases/LWJGL%202.8.0/lwjgl-2.8.0.zip/download
+

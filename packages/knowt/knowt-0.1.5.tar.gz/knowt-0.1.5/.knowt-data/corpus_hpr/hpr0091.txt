@@ -1,0 +1,16 @@
+## hpr0091 :: Hosts File
+
+ 
+Hosts file locations 
+Linux:  /etc/hosts 
+Windows:        c:\windows\system32\drives\etc\hosts 
+Mac: /private/etc/hosts file 
+
+
+Example line: 
+127.0.0.1 doubleclick.net 
+
+Example hosts file (blocking ads): 
+ https://www.mvps.org/winhelp2002/hosts.htm  
+
+ Open DNS  

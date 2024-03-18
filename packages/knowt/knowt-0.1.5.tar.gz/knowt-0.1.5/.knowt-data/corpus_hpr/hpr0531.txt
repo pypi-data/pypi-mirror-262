@@ -1,0 +1,27 @@
+## hpr0531 :: bash loops 
+
+ 
+user@pc:~$ for number in 1 2 3
+> do
+> echo my number is $number
+> done
+my number is 1
+my number is 2
+my number is 3
+
+user@pc:~$ for number in 1 2 3 ; do echo my number is $number; done
+my number is 1
+my number is 2
+my number is 3
+
+user@pc:~$ cat x.txt|while read line;do echo $line;done
+one-long-line-with-no-spaces
+one ling line with spaces
+
+user@pc:~$ for line in `cat x.txt`;do echo $line;done
+one<-long-line-with-no-spaces
+one
+ling
+line
+with
+spaces

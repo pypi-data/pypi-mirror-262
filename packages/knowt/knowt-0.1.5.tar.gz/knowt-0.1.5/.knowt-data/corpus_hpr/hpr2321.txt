@@ -1,0 +1,13 @@
+## hpr2321 :: Baofeng UV5R VHF/UHF Handset part 7
+
+ In this episode I cover the menus 6 to 11 of the Baofeng UV5R VHF / UHF Hand Held Transceiver
+Link to the Free, open-source tool for programming your amateur radio. It supports a large number of manufacturers and models, as well as provides a way to interface with multiple data sources and formats. https://chirp.danplanet.com/projects/chirp/wiki/Home
+
+Menu 6, ABR - Display Illumination Time [ 1-5 or OFF ]
+Menu 7, TDR - Dual Watch, [ ON / OFF ]
+Menu 8, BEEP - Keypad Beep [ ON /OFF ]
+Menu 9, TOT - Transmission Time-out-Timer [ 15 -- 600 ]
+Menu 10, R-DCS - Receiver DCS, DCS Wikipedia
+https://en.wikipedia.org/wiki/Squelch#DCS
+Menu 11, R-CTCS - Receiver CTCSS, CTCSS Wikipedia
+https://en.wikipedia.org/wiki/Continuous_Tone-Coded_Squelch_System

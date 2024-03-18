@@ -1,0 +1,76 @@
+## hpr1909 :: Creating an Open, Embedded-Media Music Textbook
+
+ Re-Invigorating the Wheel: Creating an Open, Embedded-Media Music Textbook for the Digital Age
+
+This is a recording of a presentation I gave on November 7th, 2015, at the national joint meeting of the College Music Society (CMS) and the Association for Technology in Music Instruction (ATMI) in Indianapolis, Indiana. I even have some action photos! Click on the first image below to visit the Flickr photo album, which also includes the slides from my presentation.
+
+
+Books
+
+Percy Goetschius. Counterpoint Applied in the Invention, Fugue, Canon and Other Polyphonic Forms. New York: G. Schirmer, 1902. Download
+________. Exercises in Elementary Counterpoint. New York: G Schirmer, 1910.  Download
+Kent Kennan. Counterpoint, 4th ed. Englewood Cliffs, NJ: Prentice-Hall, 1999.
+Jonathan Kulp, Gratis ad Parnassum: A Free Workbook for 18th-Century Counterpoint. Lafayette, LA: [no publisher] 2009. view pdf
+Friedrich J. Lehmann. A Treatise on Simple Counterpoint in Forty Lessons. New York: G Schirmer, 1907. (This is the one I found on Project Gutenberg that I did not think was suitable as a textbook for my class)
+
+Resources Mentioned
+
+
+Calibre: eBook Management software. See also documentation for the Calibre command-line interface, which is what I use to create these counterpoint books.
+
+
+GIMP: the GNU Image Manipulation Program (a robust free alternative to Photoshop)
+
+
+Internet Archive: a non-profit library of millions of free books, movies, software, music, and more.
+
+
+    Kimiko Ishizaka's The Open Goldberg Variations and The Open Well Tempered Clavier, released under a CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
+
+Lilypond: Music Notation software for Windows, Mac, and Linux. 
+
+
+Marvin: iOS eBook reader app $3.99 in Apple store
+
+
+Project Gutenberg: over 50,000 free ebooks: choose among free epub books, free kindle books, download them or read them online.
+
+
+Symphony Pro: iOS Notation app $12.99 in Apple store
+
+
+E-Reader App Compatibility Chart: see which apps are best suited for reading these counterpoint books
+
+
+Trinkets: Share Code from any Device. Trinket lets you run and write code in any browser, on any device. Terrific for embedding counterpoint exercises on web pages or learning management systems.
+
+Watch My Workflow:
+
+Serious Nerds Only
+Many of the tedious repetitive processes I had to do on image files and audio files are done by bash scripts that are launched by voice commands, as demonstrated in the YouTube video above. The processes I'm talking about are things like renaming files according to my filenaming conventions, putting the files in the right place, resizing images, converting images to different formats, optimizing them for file size, converting audio from MIDI to ogg and mp3, and reducing audio from two channels to one in order to reduce file size. Below are the main tools I use for this, apart from the Linux bash shell itself. If you're interested in actually seeing the scripts I wrote to perform the magic, I am happy to share. Just drop me an email.
+
+
+Calibre command-line tools: these were essential to automate the process of converting the source HTML file into the various versions and eBook formats of the book. Without this I might have thrown up my hands in defeat long ago.
+
+
+ImageMagick: command-line image-manipulation tools
+
+
+sox: command-line audio-manipulation tool, "the Swiss Army knife of sound processing programs."
+
+
+optipng: command-line png optimizer. This is important to keep the book's file size as small as possible.
+
+
+jpegoptim: command-line jpeg optimizer.
+
+
+TiMidity++: an open-source, command-line MIDI-to-WAVE converter and player.
+
+
+LAME: high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.
+
+
+oggenc (part of vorbis-tools): Several tools to use, manipulate and create Vorbis files (vorbis is a free audio codec).
+
+

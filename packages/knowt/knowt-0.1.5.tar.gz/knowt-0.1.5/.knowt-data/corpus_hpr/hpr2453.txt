@@ -1,0 +1,18 @@
+## hpr2453 :: The power of GNU Readline - part 2
+
+ The power of GNU Readline - part 2
+In part 1 we looked at some Control key and Meta key sequences as well as the Backspace and DEL keys in the context of GNU Readline.
+The full-length notes (available here) contain a brief summary of what we covered and introduce cutting and pasting the GNU Readline way, with some examples.
+Links
+
+Consistent BackSpace and Delete Configuration
+Wikipedia article on GNU Readline
+GNU Readline manual: https://tiswww.cwru.edu/php/chet/readline/rluserman.html (Note that the widely advertised address https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html seems not to work any more. This one, which I found through the main GNU site, seems OK though)
+Previous episode:
+
+The power of GNU Readline - part 1
+
+Resources:
+
+Detailed notes
+

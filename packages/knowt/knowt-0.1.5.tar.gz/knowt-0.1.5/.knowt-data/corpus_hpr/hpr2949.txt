@@ -1,0 +1,4 @@
+## hpr2949 :: Grin and Beam: The 2 major mimblewimble blockchains
+
+ Last time we reviewed the mimblewimble protocol for blockchain networks. This is an innovative protocol focused on privacy and scalability.
+In this episode we take a closer look at the two major implementations of mimblewimble, called Grin and Beam. They are both interesting projects that take very different approaches, yet both have managed to launch working blockchains that preserve the core strengths of the protocol.

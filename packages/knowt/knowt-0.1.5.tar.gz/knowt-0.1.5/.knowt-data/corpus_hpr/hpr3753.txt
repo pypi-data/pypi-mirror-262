@@ -1,0 +1,182 @@
+## hpr3753 :: Some thoughts on "Numeronyms"
+
+ 
+Overview
+I have recently been wondering about the use of abbreviations which
+are built from the first letter of a word followed by a number and the
+last letter. The number represents the count of letters between the
+start and end letter. Thus accessibility becomes
+a11y. This came to light (to me anyway) during an email
+exchange with Mike Ray regarding the accessibility issues on the tag
+index page on the HPR site. The website issues were resolved, but I was
+left wondering how useful the term a11y is, or whether it
+just jars with me!
+According to the Wikipedia article
+this type of word is known as a numeronym, but they may also be
+referred to as alphanumeric acronyms, alphanumeric
+abbreviations, or numerical contractions.
+As the Wikipedia article notes these types of abbreviations are
+almost always used to refer to their computing sense — such as
+g11n for globalisation — in the context of computing,
+not the general context.
+Looking at a11y as an
+example
+While I sympathise with the motivation behind using
+'a11y' to mean accessibility, I do find it odd and
+counter-intuitive. I often find myself pondering the acceptability of
+this type of abbreviation. How many other words in common English fit
+patterns like this I wonder? Quite a few I would expect. How does this
+affect the admissibility of such abbreviations?
+Not only are they adventurously strange to my simple brain, but I
+find them to be aesthetically displeasing. My experiments with the
+standard Linux dictionary looking for words that fit this pattern I find
+affirmatively supportive of this view. I describe this experiment
+later.
+Algebraically, it is to be expected that there are many dictionary
+words of 13 characters which start with 'a' and end with
+'y'. Looking at them allegorically, such numeronyms convey
+little meaning except in very limited contexts since the motivation
+seems to be to reduce the need to type long words. Alternatively, if
+they were accepted by data entry software and expanded automatically a
+better case could be made for applicability, but only one word could be
+assigned to a numeronym.
+In my mind there is a certain artificiality in the use of these
+abbreviations. 
+
+You might wonder at the weird rambling nature of the above section -
+this was my (small) joke to try and use many of the words that match the
+a11y pattern.
+Here’s the result of transforming them:
+
+While I sympathise with the motivation behind
+'a11y' to mean accessibility, I do find it odd and
+counter-intuitive. I often find myself pondering the a11y
+of this type of abbreviation. How many other words in common English fit
+these patterns I wonder? Quite a few I would expect. How does this
+affect the a11y of such abbreviations?
+Not only are they a11y strange to my simple brain, but I
+find them to be a11y displeasing. My experiments with the
+standard Linux dictionary looking for words that fit this pattern I find
+a11y supportive of this view. I describe this experiment
+later.
+A11y, it is to be expected that there are many
+dictionary words of 13 characters which start with 'a' and
+end with 'y'. Looking at them a11y, such
+numeronyms convey little meaning except in very limited contexts since
+the motivation seems to be to reduce the need to type long words.
+A11y, if they were accepted by data entry software and
+expanded a11y a better case could be made for
+a11y, but only one word could be assigned to a
+numeronym.
+In my mind there is a certain a11y in the use of these
+abbreviations.
+
+
+Make your own numeronyms
+The following piece of Bash scripting scans the file
+/usr/share/dict/words and picks out words which match the
+a11y pattern (after removing those ending in
+'s). It writes the word and the numeronym
+generated from it, which it computes, though it’s unnecessary in this
+case because they all generate the same numeronym. I did it this way
+because I wanted to apply the algorithm to other words:
+while read -r word; do
+    printf '%-20s %s\n' "$word" "${word:0:1}$((${#word}-2))${word: -1}"
+done < <(grep -E -v "'s$" /usr/share/dict/words | grep -E '^a.{11}y$')
+Here’s a variant which selects all words which are 8-20 letters long,
+and picks 20 at random to which to apply the numeronym
+algorithm:
+while read -r word; do
+    printf '%-20s %s\n' "$word" "${word:0:1}$((${#word}-2))${word: -1}"
+done < <(grep -E -v "'s$" /usr/share/dict/words | grep -E '^.{8,20}$' | shuf -n 20)
+Here is a sample:
+Aconcagua            A7a
+semiweeklies         s10s
+broadened            b7d
+enlisting            e7g
+nonpolitical         n10l
+recessional          r9l
+reorganizing         r10g
+optimizations        o11s
+taunting             t6g
+subservience         s10e
+dinosaur             d6r
+hydroelectric        h11c
+mellowing            m7g
+perching             p6g
+Winnebago            W7o
+bunghole             b6e
+mundanely            m7y
+noisemaker           n8r
+rattlings            r7s
+microprocessors      m13s
+Have fun with this - if you are so inclined!
+Extremely long word (fake)
+In researching for this episode I came upon an extremely
+long word, with information about it on Wikipedia.
+The word is:
+Pneumonoultramicroscopicsilicovolcanoconiosis
+Click
+to hear it spoken on Wikipedia
+This is a made-up (possibly nonsensical) word, but I thought I could
+try my algorithm on it:
+$ word="Pneumonoultramicroscopicsilicovolcanoconiosis"
+$ printf '%-20s %s\n' "$word" "${word:0:1}$((${#word}-2))${word: -1}"
+Pneumonoultramicroscopicsilicovolcanoconiosis P43s
+Conclusion
+Numeronyms don’t appeal to me. Notwithstanding my little jokes above,
+I know the proposal is not to replace all longer words
+with them; this would cause chaos! However, as a means of denoting long
+words this seems wrong.
+I assume that their evolution occurs like this:
+
+We use a word often in a particular context
+The word is long and not easy to type
+For the sake of speed and to avoid typographic errors we make a
+numeronym
+We then tell the world that "i18n" (as an example)
+means internationalisation.
+Those in the know have no problems with it but many people who
+encounter it later puzzle over it - as I am doing here!
+
+It seems fair to say that this obscure process has fulfilled the need
+to abbreviate this awkwardly long word - in the limits of the context
+where it has evolved. However it has not conveyed information very well;
+it has mainly benefited those who write (or read) documentation relating
+to the context.
+Many editor and word processor applications have the facility of
+expanding abbreviations like this, in my experience. I would prefer to
+use this rather than embed the coded abbreviation into the language.
+On the other hand, I’m OK with
+Pneumonoultramicroscopicsilicovolcanoconiosis being replaced by
+P43s!
+I will confess that I had a similar reaction to XKCD’s “Up Goer Five”
+idea. He explains the Saturn 5 - “Explained using only the ten
+hundred words people use the most often”.
+Maybe you disagree with me! If so, feel free to add a comment to this
+show — or indeed, record a show of your own!
+Links
+
+Wikipedia article
+on Numeronyms
+
+
+XKCD:
+
+Comic 1133: Up Goer
+Five
+XKCD
+Explained - 1133: Up Goer Five
+The Up-Goer Five text
+editor
+
+
+
+Fake words:
+
+Lung disease Pneumonoultramicroscopicsilicovolcanoconiosis
+Welsh village Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch
+
+
+
+

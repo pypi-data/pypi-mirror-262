@@ -1,0 +1,14 @@
+## hpr3297 :: Nextcloud Application Updating
+
+ Simple method to autoupdate nextcloud apps. An email is sent as summary of actions.
+Scheduled for 5 AM Sunday - Cron Entry
+MAILTO=MYEMAILADDRES@MYDOMAIN.com
+0 5 * * 0 /usr/bin/php /var/www/nextcloud/occ app:update --all 2>&1
+# * * * * * command to be executed
+# - - - - -
+# | | | | |
+# | | | | +----- day of week (0 - 6) (Sunday=0)
+# | | | +------- month (1 - 12)
+# | | +--------- day of month (1 - 31)
+# | +----------- hour (0 - 23)
+# +------------- min (0 - 59)

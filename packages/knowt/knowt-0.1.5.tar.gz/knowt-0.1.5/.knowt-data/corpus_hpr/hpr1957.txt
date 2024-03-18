@@ -1,0 +1,307 @@
+## hpr1957 :: FOSDEM 2016 K building level 1 Group B and C
+
+ Table of Contents
+
+CAcert
+DRLM
+Gluster
+oVirt
+OpenVZ
+FSFE
+ReactOS
+BAREOS
+Debian
+PostgreSQL
+OpenMandriva
+Mageia
+Gentoo
+
+CAcert
+
+
+CAcert.org is a community driven Certificate Authority that issues certificates to the public at large for free. CAcert's goal is to promote awareness and education on computer security through the use of encryption, specifically with the X.509 family of standards. We have compiled a document base (Wiki) that has helpful hints and tips on setting up encryption with common software, and general information about Public Key Infrastructures (PKI). CAcert Inc. is a non-profit association, incorporated in New South Wales, Australia.
+
+Listen to the interview with Reinhard Mutz Organisation Assurer
+
+
+
+
+Links
+
+Project Website: https://www.cacert.org/
+Personal Website: https://wiki.cacert.org/ReinhardMutz
+Twitter: @CAcert_News
+email: reinhard.nospam@nospam.cacert.org
+Facebook: https://www.facebook.com/CAcert/
+Google+: https://plus.google.com/u/0/117081703972254991731/posts
+Wikipedia: https://en.wikipedia.org/wiki/CAcert.org
+Linkedin: https://www.linkedin.com/groups/89248/profile
+Michael Tänzer hpr1447 :: HPR Coverage at FOSDEM 2014 Part 1/5
+
+DRLM
+
+
+DRLM  (Disaster Recovery Linux Manager). DRLM is a Centralized Management Open Source solution for small-to-large Disaster Recovery implementations using ReaR. Is an easy-to-use software to manage your growing ReaR infrastructure. Is written in the bash language (like ReaR) and offers all needed tools to efficiently manage your GNU/Linux disaster recovery backups, reducing Disaster Recovery management costs. ReaR is great solution, but when we’re dealing with hundreds of systems, could be complex to manage well all ReaR deployments.
+
+With DRLM you can, easily and centrally, deploy and manage ReaR installations for all your GNU/Linux systems in your DataCenter(s). DRLM is able to manage all required services (TFTP, DHCP-PXE, NFS, …) with no need of manual services configuration. Only with few easy commands, the users will be able to create, modify and delete ReaR clients and networks, providing an easy way to boot and recover your GNU/Linux systems through network with ReaR. Furthermore DRLM acts as a central scheduling system for all ReaR installations. Is able to start rear backups remotely and store the rescue-boot/backup in DR images easily managed by DRLM.
+
+You can easily enable or disable the last or any previous backups to restore any client with a single command line. Currently DRLM supports PXE and NETFS(nfs) OUTPUT/BACKUP methods of ReaR, but the Development of DRLM non stops here, we are working on new 2.0 version with new features to improve performance, usability and more ReaR methods, in order to become, together with ReaR, the reference when talking about Disaster Recovery of GNU/Linux systems.
+
+Listen to the interview with Ruben Carbonell Perez
+
+
+
+
+
+Links
+
+Project Website: https://drlm.org/
+Twitter: @drlm_org
+email: ruben.nospam@nospam.brainupdaters.net, ruben.carbonell.nospam@nospam.gmail.com
+Linkedin: https://www.linkedin.com/in/ruben-carbonell-perez-6b04a174
+Relax and Recover: https://relax-and-recover.org/
+
+Gluster
+
+
+GlusterFS is a scalable network filesystem. Using common off-the-shelf hardware, you can create large, distributed storage solutions for media streaming, data analysis, and other data- and bandwidth-intensive tasks. GlusterFS is free and open source software.
+
+Listen to the interview with Niels de Vos, and Humble Devassy Chirammal
+
+
+
+
+
+
+Links
+
+Project Website: https://www.gluster.org/
+Twitter: @gluster
+email: ndevos.nospam@nospam.redhat.com (Niels de Vos)
+email: hchiramm.nospam@nospam.redhat.com (Humble Devassy Chirammal)
+Facebook: https://www.facebook.com/GlusterInc
+Google+: https://plus.google.com/communities/110022816028412595292
+Freenode: irc://irc.freenode.net/#gluster
+
+oVirt
+
+
+oVirt manages virtual machines, storage and virtualized networks. oVirt is a virtualization platform with an easy-to-use web interface. oVirt is powered by the Open Source you know - KVM on Linux.
+
+Listen to the interview with Yaniv Kaul
+
+
+
+
+
+Links
+
+Project Website: https://www.ovirt.org/Home
+Twitter: @YanivKaul, @ovirt
+email: ykaul.nospam@nospam.redhat.com
+Wikipedia: https://en.wikipedia.org/wiki/OVirt
+Linkedin: https://www.linkedin.com/in/ykaul
+Daniel Lobato and Doran Fedu hpr1452 :: HPR Coverage at FOSDEM 2014 Part 3
+
+OpenVZ
+
+
+OpenVZ is a container-based virtualization for Linux. OpenVZ creates multiple secure, isolated Linux containers (otherwise known as VEs or VPSs) on a single physical server enabling better server utilization and ensuring that applications do not conflict. Each container performs and executes exactly like a stand-alone server; a container can be rebooted independently and have root access, users, IP addresses, memory, processes, files, applications, system libraries and configuration files.
+
+OpenVZ is free open source software, available under GNU GPL.
+
+OpenVZ is the basis of Virtuozzo, a virtualization solution offered by Virtuozzo company. Virtuozzo is optimized for hosters and offers hypervisor (VMs in addition to containers), distributed cloud storage, dedicated support, management tools, and easy installation.
+
+Listen to the interview with Pavel Emelyanov
+
+
+
+
+
+Links
+
+Project Website: https://openvz.org/Main_Page
+email: xemul.nospam@nospam.parallels.com
+Wikipedia: https://en.wikipedia.org/wiki/OpenVZ
+Linkedin: https://www.linkedin.com/in/pavel-emelyanov-24773a5
+
+FSFE
+
+
+Free Software Foundation Europe is a charity that empowers users to control technology. Software is deeply involved in all aspects of our lives; and it is important that this technology empowers rather than restricts us. Free Software gives everybody the rights to use, understand, adapt and share software. These rights help support other fundamental freedoms like freedom of speech, press and privacy.
+
+Listen to the interview with Matthias Kirschner
+
+
+
+
+
+Links
+
+Project Website: https://fsfe.org/
+Personal Website: https://fsfe.org/about/kirschner
+Twitter: @fsfe, @kirschner
+email: mk.nospam@nospam.fsfe.org
+Facebook: https://facebook.com/thefsfe
+Wikipedia: https://en.wikipedia.org/wiki/Free_Software_Foundation_Europe
+Linkedin: 
+IRC: #fsfe
+Mailinglist: https://fsfe.org/contact/community.html
+RSS: https://fsfe.org/news/news.rss
+Mathias Kirschner hpr1713 :: Fosdem 2015: Surveillance vs. Free Software
+
+ReactOS
+
+
+ReactOS® is a free open source operating system based on the best design principles found in the Windows NT® architecture (Windows versions such as Windows XP, Windows 7, Windows Server 2012 are built on Windows NT architecture). Written completely from scratch, ReactOS is not a Linux based system, and shares none of the UNIX architecture. The main goal of the ReactOS® project is to provide an operating system which is binary compatible with Windows. This will allow your Windows® applications and drivers to run as they would on your Windows system. Additionally, the look and feel of the Windows operating system is used, such that people accustomed to the familiar user interface of Windows® would find using ReactOS straightforward. The ultimate goal of ReactOS® is to allow you to use it as alternative to Windows® without the need to change software you are used to.
+
+Listen to the interview with Hermès Bélusca-Maïto
+
+
+
+
+
+Links
+
+Project Website: https://www.reactos.org
+Twitter: @reactos
+email: hermes.belusca.nospam@nospam.reactos.org, victor.martinez.nospam@nospam.reactos.org
+Facebook: https://www.facebook.com/pages/ReactOS/19143619259
+Google+: https://plus.google.com/100586191925430460947/posts
+Wikipedia: https://en.wikipedia.org/wiki/ReactOS
+Linkedin: https://www.linkedin.com/in/herm%C3%A8s-b%C3%A9lusca-ma%C3%AFto-518a1b8a
+Youtube channel: https://www.youtube.com/channel/UCMo8NP-2oP35rauon-Duc9Q
+Shop: https://reactos.spreadshirt.net/
+Project Coordinator: Aleksey Bragin hpr1702 :: FOSDEM 2015 Part 5 of 5
+
+BAREOS - Backup Archiving Recovery Open Sourced
+
+
+Bareos is a 100% open source fork of the backup project from bacula.org. The fork is in development since late 2010, it has a lot of new features. The source has been published on github, licensed AGPLv3.
+
+Listen to the interview with Daniel Neuberger
+
+
+
+
+
+Links
+
+Project Website: https://bareos.org
+Twitter: @bareos_backup
+email: daniel.neuberger.nospam@nospam.dass-it.de
+Facebook: https://www.facebook.com/bareosbackup
+Google+: https://plus.google.com/+BareosBackup
+Linkedin: https://de.linkedin.com/in/daniel-neuberger-24259668/en
+RSS: https://www.bareos.org/share/bareos-project-feed.xml
+YouTube: https://www.youtube.com/channel/UCqvssYFRX17N3_Tuke7Raug
+Jörg Steffens hpr1454 :: HPR Coverage at FOSDEM 2014 Part 5
+
+Debian
+
+
+The Debian Project is an association of individuals who have made common cause to create a free operating system. This operating system that we have created is called Debian. An operating system is the set of basic programs and utilities that make your computer run. At the core of an operating system is the kernel. The kernel is the most fundamental program on the computer and does all the basic housekeeping and lets you start other programs. Debian systems currently use the Linux kernel or the FreeBSD kernel. Linux is a piece of software started by Linus Torvalds and supported by thousands of programmers worldwide. FreeBSD is an operating system including a kernel and other software.
+
+Listen to the interview with Sebastiaan Couwenberg
+
+
+
+
+Links
+
+Project Website: https://www.debian.org/
+Twitter: @debian
+Fediverse: @debian
+email: sebastic.nospam@nospam.debian.org
+Facebook: https://www.facebook.com/debian
+Google+: https://plus.google.com/111711190057359692089
+Wikipedia: https://en.wikipedia.org/wiki/Debian
+Joost van Baal-Ilić hpr1447 :: HPR Coverage at FOSDEM 2014 Part 1/5
+David Bremner hpr1698 :: FOSDEM 2015 Part 2 of 5
+
+PostgreSQL
+
+
+PostgreSQL is a powerful, open source object-relational database system. It has more than 15 years of active development and a proven architecture that has earned it a strong reputation for reliability, data integrity, and correctness. It runs on all major operating systems, including Linux, UNIX (AIX, BSD, HP-UX, SGI IRIX, Mac OS X, Solaris, Tru64), and Windows. It is fully ACID compliant, has full support for foreign keys, joins, views, triggers, and stored procedures (in multiple languages). It includes most SQL:2008 data types, including INTEGER, NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP. It also supports storage of binary large objects, including pictures, sounds, or video. It has native programming interfaces for C/C++, Java, .Net, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.
+
+Listen to the interview with Christoph Berg
+
+
+
+
+
+Links
+
+Project Website: https://www.postgresql.org/
+Twitter: @planetpostgres
+email: myon.nospam@nospam.debian.org christoph.berg.nospam@nospam.credativ.de
+Wikipedia: https://en.wikipedia.org/wiki/PostgreSQL
+GitHub: https://github.com/ChristophBerg
+
+OpenMandriva
+
+
+We are a 100% community-driven association that believes in the values of free software & collaboration. We fight to protect these values and promote solutions anyone can use, change and distribute. OpenMandriva believes in creating, improving, promoting and distributing free software in general, and its projects in particular. We also crave for promoting free exchange of knowledge and equality of opportunity in software access and development, as well as in education, science and research. Our products are developed with passion by the community and aim to be flexible in use by all.
+OpenMandriva represents the paradigm: from community to community, with passion, fun and dedication.
+
+Listen to the interview with Colin Close, President OpenMandriva
+
+
+
+
+
+Links
+
+Project Website: https://openmandriva.org
+email: itchka.nospam@nospam.compuserve.com
+Wikipedia: https://en.wikipedia.org/wiki/OpenMandriva_Lx
+Bernhard Rosenkränzer hpr1698 :: FOSDEM 2015 Part 2 of 5
+
+Mageia
+
+
+Mageia is a GNU/Linux-based, Free Software operating system. It is a community project, supported by a nonprofit organisation of elected contributors. Our mission: to build great tools for people.
+
+Listen to the interview with Chris Denice (eatdirt)
+
+
+
+
+Links
+
+Project Website: https://www.mageia.org/en/
+Twitter: @mageia_org
+email: eatdirt.nospam@nospam.mageia.org
+Wikipedia: https://en.wikipedia.org/wiki/Mageia
+Linkedin: https://www.linkedin.com/company/1365705
+Anne Nicolas hpr1698 :: FOSDEM 2015 Part 2 of 5
+
+Gentoo
+
+
+Gentoo is a free operating system based on either Linux or FreeBSD that can be automatically optimized and customized for just about any application or need. 
+Extreme configurability, performance and a top-notch user and developer community are all hallmarks of the Gentoo experience.
+
+Thanks to a technology called Portage, Gentoo can become an ideal secure server, development workstation, professional desktop, gaming system, embedded solution or something else—whatever you need it to be. Because of its near-unlimited adaptability, we call Gentoo a metadistribution.
+
+Of course, Gentoo is more than just the software it provides. It is a community built around a distribution which is driven by more than 300 developers and thousands of users. The distribution project provides the means for the users to enjoy Gentoo: documentation, infrastructure, release engineering, software porting, quality assurance, security followup, hardening and more.
+
+To advise on and help with Gentoo's global development, a 7-member council is elected on a yearly basis which decides on global issues, policies and advancements in the Gentoo project.
+
+Listen to the interview with Kristian Fiskerstrand
+
+
+
+
+
+Links
+
+Project Website: https://www.gentoo.org/
+Personal Website: https://blog.sumptuouscapital.com/
+Twitter: @krifisk
+email: k_f.nospam@nospam.gentoo.org OpenPGP fingerprint: 94CB AFDD 3034 5109 5618  35AA 0B7F 8B60 E3ED FAE3
+Facebook: https://www.facebook.com/gentoo.org
+Google+: https://plus.google.com/communities/100146718762350759856
+Wikipedia: https://en.wikipedia.org/wiki/Gentoo_Linux
+Linkedin: https://www.linkedin.com/company/16350
+

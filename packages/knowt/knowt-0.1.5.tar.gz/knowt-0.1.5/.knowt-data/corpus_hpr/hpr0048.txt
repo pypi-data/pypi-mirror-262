@@ -1,0 +1,18 @@
+## hpr0048 :: Virtualization Part 2: Qemu quickstart
+
+ 
+The commands: 
+=================================== 
+qemu -soundhw es1370 -cdrom knoppix-std-0.1.iso 
+tar -xvf freebsd6.1rel.qcow.img20060526.tar 
+cd freebsd6.1rel.qcow.img 
+qemu-img info freebsd6.1rel.qcow.img 
+cat README 
+qemu freebsd6.1rel.qcow.img 
+
+
+The Links: 
+================================== 
+ https://fabrice.bellard.free.fr/qemu/  
+ https://www.oszoo.org/wiki/index.php/Category:OS_images  
+ https://www.knoppix-std.org/download.html  

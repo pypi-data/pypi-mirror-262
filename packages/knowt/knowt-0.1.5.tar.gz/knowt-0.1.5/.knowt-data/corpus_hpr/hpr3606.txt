@@ -1,0 +1,99 @@
+## hpr3606 :: Infinity is just a big number and other proofs
+
+ Response to hpr3568
+  Title         PopKorn Episode 2: Programming, Mathematics, and Asymmetric Literacy
+  Artist        BlacKernel
+  Album         Hacker Public Radio
+  Comment       https://hackerpublicradio.org Clean; in This episOde, blackeRnel Tries to help yoU undeRstand Enough about math and programming The license is CC-BY-SA
+  Date          2022
+  Track Number  3568
+  Genre         Podcast
+
+https://en.wikipedia.org/wiki/Mathematical_joke
+Mathematicians are also shown as averse to making hasty generalizations from a small amount of data, even if some form of generalization seems plausible:
+An astronomer, a physicist and a mathematician are on a train in Scotland.
+The astronomer looks out of the window, sees a black sheep standing in
+a field, and remarks, "How odd. All the sheep in Scotland are black!" "No,
+no, no!" says the physicist. "Only some Scottish sheep are black." The
+mathematician rolls his eyes at his companions' muddled thinking and says,
+"In Scotland, there is at least one sheep, at least one side of which
+appears to be black from here some of the time."[Stewart, Ian (1995).
+Concepts of Modern Mathematics. ISBN 9780486134956.]
+
+https://en.wikipedia.org/wiki/Mathematical_proof
+A mathematical proof is an inferential argument for a mathematical
+statement, showing that the stated assumptions logically guarantee the
+conclusion.
+
+Stated assumptions
+
+https://nixnet.social/objects/bc9d7dd8-66a5-4aae-ab21-6f77ad4191d3
+  BlacKernel @BlacKernel@nixnet.social Mar 21, 2022, 19:01.
+  Saying you don't need to know math to do programming is like saying
+  you don't need to know how to read in order to write. Technically
+  true, but it makes it way easier.
+
+
+Simplifying the statement
+  Knowing math makes programming way easier.
+
+Rearrange and problem
+There are no humans that ever existed or will ever exist that will not
+find programming easier having a knowledge of maths.
+
+I exist. I do not find programming easier despite my knowledge of maths.
+Q.E.D.
+other points
+"Ability to think logically - which is what math is."
+This assumes that math is the only field where the ability to think logically exists. Math is a subset of logical thinking and not the other way around. I can think of hundreds of occupations that require logical thinking that do not require any maths. It would be difficult to argue this point as it could be argued, as most people are exposed to counting no matter what level of literacy they may have access to. So let us refer to studies with crows that shows that they do think logically - despite any math knowledge.
+
+Using the Aesop's Fable Paradigm to Investigate Causal Understanding of Water Displacement by New Caledonian Crows
+Tool Manufacture in Crows
+
+Programming is ...
+The wikipeda entry has 19 other definitions for programming but OK.
+https://en.wikipedia.org/wiki/Program
+Asymmetric literacy
+"Is an example where you can read or write in a specific language but not necessarily doing both."
+Chinese written language can be understood by multiple spoken languages. However the nuance is greater if the writer and reader shared the same language/understanding.
+"Because math and computer are the same thing under the hood if you
+understand it then you understand the programming a lot better. But if you
+use some other analogy .. you'll write programs that are perfectly fine
+and perfectly work, but it won't be as exact or as nuanced as it could be
+if you also knew math. That's what I was saying."
+
+
+Computer CPU has a bunch of instruction sets in it. Tells the computer what transistor operation to perform
+Logical extension of the instruction set
+There is nothing in programming that is not covered by the instruction set.
+Same way in math depends on axioms
+"They are the same thing, .. the exact same process"
+"Because they are the same thing under the hood, if you understand how to do math, then you'll understand how to make your programs better, because you can write your programs in a way that reflect the underlying structure of the computer which will make your programs run more efficiently as giving you insight into how errors may be occurring etc etc etc."
+
+That may have been valid in the pioneering days of computers if we just have one chip with one instruction set. Nowadays programs run on systems that run in Java Virtual Machines, which run on docker containers, running on Virtual Machines, spread across multiple clusters, finally hitting different processors each with their own different instruction sets, then down to different cores.
+Turtles all the way down.
+No they are not. Math axioms do not change from chip manufacturer to chip manufacturer.
+https://en.wikipedia.org/wiki/Comparison_of_instruction_set_architectures
+Axioms
+https://en.wikipedia.org/wiki/List_of_axioms
+
+Axiom of extensionality
+Axiom of empty set
+Axiom of pairing
+Axiom of union
+Axiom of infinity
+Axiom schema of replacement
+Axiom of power set
+Axiom of regularity
+Axiom schema of specification
+  "You take Logical Deductions from those axioms, that's what math is.
+  Math is a series of logical deductions or proofs utilizing previous
+  proofs or axioms. That's all math is. Can be in different forms."
+
+
+https://en.wikipedia.org/wiki/Euclidean_geometry#Axioms
+Axiom of infinity
+Flawed assumes infinity exists. I reject this as the proof is take a big number +1 keep adding to it. What you actually get is a even bigger integer and not infinity.
+https://en.wikipedia.org/wiki/Coastline_paradox
+Infinity is our inability to think big, and math reflecting that shows a flaw in maths.
+

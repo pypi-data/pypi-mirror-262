@@ -1,0 +1,61 @@
+## hpr0733 :: Linux Packaging Systems (too many)
+
+ Packaging systems:
+   rpm, rpm5,  deb/dpkg,  ebuild,  compressed files (archlinux),  pisi,  .tgz (tar.gz file)  slackware/vector linux,  .tlz (Vector Linux)
+Package managers:
+   Program		Distro(s)	website		notes
+   apt 		debian 
+   conary		Foresight Liux/rPath company 	handles distributed repositories, commit/rollback
+   entropy		Sabayon				consists of Equo client (textual), Sulfur client (graphical) 
+   kpackagekit	kubuntu				uses policykit (any problems if booted computer from a live cd and mounted and chroot'd?)
+   opkg		openmoko			lightweight; based on ipkg
+   pacman		archlinux
+   pirut		fedora				it calls yum so it's just a gui wrapper? not sure how widely used...?
+   pisi		pardus (Turkish distro)		was based on gentoo. as far as I can tell it now uses its own pkg format
+   poldek		Fedora				RPM
+   portage		gentoo				ebuilds,
+   slapt		slackware			tgz
+   slapt		vectorlinux			tlz;
+   smart		UnityLinux			RPM5
+   synaptic	ubuntu				DEB; graphical frontend to apt
+   urpmi		mandriva			RPM
+   yum		redhat/fedora			RPM
+   zypper		opensuse			RPM
+Other useful links:
+   https://en.wikipedia.org/wiki/List_of_software_package_management_systems
+   https://www.packagekit.org/pk-matrix.html
+apt - https://wiki.debian.org/Apt
+   conary - https://wiki.rpath.com/wiki/Conary
+   entropy - https://wiki.sabayon.org/index.php?title=En:Entropy
+   kpackagekit - https://en.wikipedia.org/wiki/KPackageKit, https://www.packagekit.org
+   opkg - https://code.google.com/p/opkg/
+   pacman - https://www.archlinux.org/pacman/
+   pirut - https://fedoraproject.org/wiki/F8_User_Guide_-_Managing_Software_with_Pirut
+   pisi - https://en.pardus-wiki.org/Making_Pisi_Packages
+   poldek - https://poldek.pld-linux.org/
+   portage - https://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=2&chap=1
+   slapt - https://vectorlinux.osuosl.org/docs/vl58/manuals/vl5_slaptget_en.html
+   smart - https://niemeyer.net/smart
+   synaptic - https://www.nongnu.org/synaptic/ 
+   urpmi - https://wiki.mandriva.com/en/Tools/urpmi
+   yum - https://yum.baseurl.org/
+   zypper - https://en.opensuse.org/Portal:Zypper
+
+Concerns:
+   1) package burn out - will it get to the point where only either large distros or commercial distros have large repos due to the effort involved?
+   2) I've lost track of the number of times i've heard from people  'our distro doesn't have enough manpower to package ...'
+   wouldn't it be helpful to not have to use our limited manpower in building redundant packages?
+   3) in 10 (or less) years when non-technical people take over at Redhat/Ubuntu/other large distro,  will they use the package system as a club to beat the other distros with? I'm not sure how, but where money is involved, you can feel assured it _will_ happen.
+   4) current state of packaging systems in linux is like sound systems were 10 yrs ago.
+   remember esd vs arts vs vs ...? each desktop environment had its own system.  sound in linux was painful and a complete joke.  it still has a ways to go but it's _SO_ much better now that it was.  does anyone want to go back to that?
+   pulseaudio isn't perfect but it's so much better than what we had before.  and it's ONE system!
+   can you image if printing and authentication were like the packaging systems?   image if everyone had their own printing system instead of CUPs?   imagine if there was no pam.d?
+   5) I believe packaging systems are NOT about choice. the exact opposite. it's about vendor lockin and NIH. 
+   (we'll do it OUR way because we can do it better or the 'proper' way.  "so-and-so does blah, which is
+   completely stupid")
+   choice is being able to write a script in php,perl,python,bash,csh,... on the SAME system. 
+   that's choice 
+   because I can CHOOSE.  If I have a debian box I can't choose to use RPM or ebuilds, same for those other systems.
+   of the systems I've used: deb,  rpm, rpm5, portage,  (and tarballs if you count linuxfromscratch)
+   and the managers I've used: yum, urpmi, smart, kpackagekit, synaptic, apt-get, emerge
+   each system has little features the others don't. but there is nothing that one system has that couldn't be added to the others. 

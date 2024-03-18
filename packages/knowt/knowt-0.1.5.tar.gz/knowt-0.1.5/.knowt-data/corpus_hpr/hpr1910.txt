@@ -1,0 +1,21 @@
+## hpr1910 :: QMMP--The Qt-based MultiMedia Player
+
+ Qmmp is an audio and video player for Linux, BSD, and Windows that's similar in appearance and functionality to Wimamp and XMMS. The Linux and BSD version are capable of playing video as well, through an mplayer plugin.
+If you like eye candy, it's skinnable; a library of skins is available from the maintainer.  In addition, it works nicely with legacy XMMS and Winamp skins. 
+Screenshots:
+Qmmp interface.
+
+Qmmp video play:
+
+Qmmp settings dialog:
+
+Links:
+Homepage:  https://qmmp.ylsoftware.com/
+Slackbuilds links:
+Qmmp:  https://slackbuilds.org/repository/14.1/audio/qmmp/
+Qmmp Plugins:  https://slackbuilds.org/repository/14.1/audio/qmmp-plugin-pack/
+Wikipedia article:  https://en.wikipedia.org/wiki/Qmmp
+Playlist (*.m3u) specification:
+https://tools.ietf.org/html/draft-pantos-http-live-streaming-17
+Skinamp:  https://www.saschahlusiak.de/skinamp/
+Librivox:  https://librivox.org/

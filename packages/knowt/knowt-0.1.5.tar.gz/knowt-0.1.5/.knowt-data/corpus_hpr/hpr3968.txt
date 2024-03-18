@@ -1,0 +1,12 @@
+## hpr3968 :: About USBimager - part 1/2
+
+ USBImager is a really really simple GUI application that writes
+compressed disk images to USB drives and creates backups.
+Available platforms: Windows, MacOSX and Linux. http://gitlab.com/bztsrc/usbimager
+Just for Windows
+
+Rufus - Windows only http://github.com/pbatard/rufus
+USB Image Tool - Windows only http://www.alexpage.de/tag/usb-image-tool/
+WIN32 Disk Imager - Windows only last update 2017-03-08 http://sourceforge.net/projects/win32diskimager/
+
+Don't miss part 2!

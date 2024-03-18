@@ -1,0 +1,53 @@
+## hpr3646 :: arm, slackware, forth oh my!
+
+ Image 1
+
+Image 2
+
+Image 3
+
+pi-top the company
+
+make educational products using the rasp-pi
+uk based company 24 million $ funding 3 employees
+products
+
+pitop ceed
+pitop 2 laptop
+pitop 3 laptop
+pitop 4 case+ for rpi4
+robot kit, etc
+
+
+my pi-top 3
+
+had a pi-top 2, keyboard was bad, battery was worse
+ebay purchase pi-top 3, wanted to try new form factor and see if the battery was better
+came with experimentor kit, included a slide in solderless breadboard, and an rpi!
+description
+modifications
+
+slackware install,lost some of the built in scripts that monitored the system, especially battery monitoring
+added a daughter board with an atmega328 running forth to do the battery monitoring
+added an rtc ds1307, installed via instructions from the sarpi website
+
+pluses
+
+better keyboard, with better mechanical design
+better battery life, charging great
+better screen
+
+minuses
+
+charging board seems closed source, that would be the keys to the kingdom
+old software hard to come by
+stuck in rpi3 form factor
+
+plans
+
++upgrade to slackware 15-64 bit+
+leave the rpi and go to a pineboard
+reverse engineer charging board?
+easier to modify case to accept new hardware
+
+

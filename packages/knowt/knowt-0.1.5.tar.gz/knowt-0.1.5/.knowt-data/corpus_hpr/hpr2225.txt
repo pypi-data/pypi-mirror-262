@@ -1,0 +1,218 @@
+## hpr2225 :: FOSDEM 2017 K (level 2 Stands 10 to 19)
+
+ Table of Contents
+
+Open Smart Grid Platform
+Perl Programming Language
+Coala
+Linux From Scratch
+Google Code-in
+GSoC
+Ultimaker
+SOFA
+MuseScore
+Matrix.org
+
+
+
+https://opensmartgridplatform.org/
+
+The Open Smart Grid Platform allows you to monitor and control hardware in the public space. With several (generic) functions ready to use, the main benefits of the Open Smart Grid Platform are: scalability & high availability, high security, its generic design, and no vendor lock-in.
+
+Listen to the interview with Sander Jansen
+
+
+
+
+
+Links
+
+Source: https://github.com/osgp
+Twitter: https://twitter.com/osgplatform
+
+
+
+https://www.perl.org/
+
+Perl 5 is a highly capable, feature-rich programming language with over 29 years of development. Perl 5 runs on over 100 platforms from portables to mainframes and is suitable for both rapid prototyping and large scale development projects. "Perl" is a family of languages, "Perl 6" is part of the family, but it is a separate language which has its own development team. Its existence has no significant impact on the continuing development of "Perl 5".
+
+Listen to the interview with Wendy G.A. van Dijk / Mark "shadowcat" Keating / Curtis "Ovid" Poe
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Perl
+IRC: https://irchelp.org/irchelp/irctutorial.html
+Twitter: https://twitter.com/perlfoundation
+
+
+
+https://coala.io/
+
+Linting and Fixing Code for All Languages
+
+Listen to the interview with Sebastian Latacz / Lasse Schuirmann
+
+
+
+
+
+Links
+
+Source: https://github.com/coala/coala
+Wikipedia: https://en.wikipedia.org/wiki/Coala_(software)
+Twitter: https://twitter.com/coala_analyzer
+
+
+
+https://www.linuxfromscratch.org/
+
+Linux From Scratch (LFS) is a type of a Linux installation and the name of a book written by Gerard Beekmans, among others. The book gives readers instructions on how to build a Linux system from source. Linux From Scratch is a way to install a working Linux system by building all components of it manually. This is a longer process than installing a pre-compiled Linux distribution. The advantages to this method are a compact, flexible and secure system and a greater understanding of the internal workings of the Linux-based operating systems.
+
+Listen to the interview with Julien Lepiller
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Linux_From_Scratch
+
+
+
+https://developers.google.com/open-source/gci/
+
+Google Code-in is an annual programming competition hosted by Google Inc. that allows pre-university students to complete tasks specified by various, partnering open source organizations. Students that complete tasks win certificates and T-shirts. Each organization also selects two grand prize award winners who will earn a trip to Google's Headquarters located in Mountain View, CA.
+
+Listen to the interview with Josh Simmons
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Google_Code-in
+Google+: https://plus.google.com/111547824495682912814
+Twitter: https://twitter.com/googledevs
+Facebook: https://www.facebook.com/Google-Developers-967415219957038/
+YouTube: https://www.youtube.com/user/GoogleDevelopers
+
+
+
+https://developers.google.com/open-source/gsoc/
+
+Spend your summer break writing code and learning about open source development while earning a stipend! Accepted students work with a mentor and become a part of the open source community. Many become lifetime open source developers! Google Summer of Code is open to post-secondary students, age 18 and older in most countries.
+
+Listen to the interview with Josh Simmons
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Google_Summer_of_Code
+Google+: https://plus.google.com/102168248469649733567
+Twitter: https://twitter.com/gsoc
+Facebook: https://www.facebook.com/Google-Developers-967415219957038/
+YouTube: https://www.youtube.com/user/GoogleDevelopers
+
+
+
+https://ultimaker.com/
+
+Professional 3D printing made accessible. Accurate, consistent results - tailored to your business. Highly complex 3D prints, industrial-grade materials, maximum performance, and future-ready 3D printing experience. With ultimate accessibility.
+
+Listen to the interview with Rodney Becker
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Ultimaker
+Twitter: https://twitter.com/Ultimaker
+Facebook: https://www.facebook.com/Ultimaker
+YouTube: https://www.youtube.com/user/Ultimaker3D
+
+
+
+https://www.sofa-framework.org/
+
+Simulation Open Framework Architecture (SOFA) is an open source multiplatform framework primarily targeted at real-time physical simulation, with an emphasis on medical simulation. It is mostly intended for the research community to help develop new algorithms, but can also be used as an efficient prototyping tool or as a physics engine.
+
+Listen to the interview with Hugo Talbot
+
+
+
+
+
+Links
+
+Source: https://github.com/sofa-framework/sofa
+Linkedin: https://www.linkedin.com/groups/8460316
+RSS: https://www.sofa-framework.org/feed/
+Twitter: https://www.twitter.com/SofaFramework
+YouTube: https://www.youtube.com/channel/UCZWXlxYc9jaeloZRGd38uRQ
+
+
+
+https://MuseScore.org
+
+MuseScore is a company devoted to helping aspiring musicians in their journey to master the music they love. MuseScore offers free, open-source, powerful, and easy-to-use music notation software to create high-quality sheet music, with audio score playback for results that look and sound beautiful. MuseScore has also formed an online community where musicians can share their creations, privately or publicly, through downloads, embeddable widgets, or MuseScore's mobile apps, while also bringing additional social features to sheet music.
+
+Listen to the interview with Nicolas Froment
+
+
+
+
+
+Links
+
+Source: https://github.com/musescore/MuseScore
+Wikipedia: https://en.wikipedia.org/wiki/MuseScore
+IRC: https://webchat.freenode.net/?channels=musescore
+Google+: https://plus.google.com/+musescore
+Linkedin: https://linkedin.com/company/musescore
+Mailinglist: https://dev-list.musescore.org
+RSS: https://musescore.org/en/news/feed/en
+Twitter: https://twitter.com/musescore
+Facebook: https://facebook.com/MuseScore
+YouTube: https://YouTube.com/musescore
+About: https://musescore.org/musescore-tour-share-and-print-your-score
+SlideShare: https://slideshare.com/musescore
+Flickr: https://Flickr.com/musescore
+Delicious: https://del.icio.us/musescore
+iTunes: https://musescore.com/ios
+GooglePlay: https://musescore.com/android
+
+
+
+https://matrix.org
+
+Matrix.org is a non-profit open source initiative dedicated to creating and maintaining the Matrix open standard for decentralised communication, whose goal is to create an open and secure ecosystem for interoperable messaging, VoIP and IoT communication and history on the internet.
+
+Listen to the interview with Matthew Hodgson
+
+
+
+
+
+Links
+
+Source: https://github.com/matrix-org
+Wikipedia: https://en.wikipedia.org/wiki/Matrix_(communication_protocol)
+IRC: https://riot.im/app/#/room/#matrix:matrix.org
+Linkedin: https://www.linkedin.com/company/matrix-org
+RSS: https://matrix.org/blog/feed/
+Twitter: https://twitter.com/matrixdotorg
+About: https://matrix.org/docs/guides/faq.html
+iTunes: https://itunes.apple.com/us/app/vector.im/id1083446067
+GooglePlay: https://play.google.com/store/apps/details?id=im.vector.alpha
+

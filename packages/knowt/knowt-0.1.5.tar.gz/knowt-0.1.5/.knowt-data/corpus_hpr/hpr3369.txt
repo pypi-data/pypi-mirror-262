@@ -1,0 +1,20 @@
+## hpr3369 :: Linux Inlaws S01E33: The Return of the Rust
+
+ In this episode - aptly named "The return of the Rust" our two heroes host
+a very special guest: no other than Steve Klabnik of Rust fame himself.
+Needless to say, this hipster programming language which is on everbody's mind
+at the moment (apart maybe from a few lost souls still crying over spilled
+coffee) plays a very important role in this show in addition to the newly
+founded Rust Foundation hosting such eclectic members such as Microsoft,
+Mozilla, Google and Facebook just to name a few looking after the language.
+Links:
+
+Rust: https://www.rust-lang.org
+Rust Foundation: https://foundation.rust-lang.org
+Steve Klabnik: https://steveklabnik.com
+Ruby on Rails: https://rubyonrails.org
+PyOxidizer: https://github.com/indygreg/PyOxidizer
+Mercurial: https://www.mercurial-scm.org
+actix controversy: https://github.com/actix/actix-web/issues/289
+OpenSearch: https://aws.amazon.com/blogs/opensource/introducing-opensearch
+

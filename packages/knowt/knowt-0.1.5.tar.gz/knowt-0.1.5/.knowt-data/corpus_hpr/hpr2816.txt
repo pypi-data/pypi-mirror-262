@@ -1,0 +1,40 @@
+## hpr2816 :: Gnu Awk - Part 14
+
+ Introduction
+This is the fourteenth episode of the “Learning Awk” series which is being produced by b-yeezi and myself.
+In this episode and the next I want to start looking at redirection within Awk programs. I had originally intended to cover the subject in one episode, but there is just too much.
+So, in the first episode I will be starting with output redirection and then in the next episode will spend some time looking at the getline command used for explicit input, often with redirection.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+GNU Awk User’s Guide
+
+Redirecting output of print and printf
+Special Files for Standard Preopened Data Streams
+Special File names in gawk
+
+
+
+Previous shows in this series on HPR:
+
+“Gnu Awk - Part 1” - episode 2114
+“Gnu Awk - Part 2” - episode 2129
+“Gnu Awk - Part 3” - episode 2143
+“Gnu Awk - Part 4” - episode 2163
+“Gnu Awk - Part 5” - episode 2184
+“Gnu Awk - Part 6” - episode 2238
+“Gnu Awk - Part 7” - episode 2330
+“Gnu Awk - Part 8” - episode 2438
+“Gnu Awk - Part 9” - episode 2476
+“Gnu Awk - Part 10” - episode 2526
+“Gnu Awk - Part 11” - episode 2554
+“Gnu Awk - Part 12” - episode 2610
+“Gnu Awk - Part 13” - episode 2804
+
+Resources:
+
+ePub version of these notes
+Examples: awk14_fruit_data.txt, awk14_ex1.awk, awk14_ex2.awk, awk14_ex3.awk
+
+

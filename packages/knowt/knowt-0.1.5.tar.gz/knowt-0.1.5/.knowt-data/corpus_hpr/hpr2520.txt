@@ -1,0 +1,15 @@
+## hpr2520 :: Diffie-Hellman and Forward Secrecy
+
+ Diffie-Hellman Key Exchange is used in a security technique called Forward Secrecy that aims to secure your encrypted communications from future decryption by unauthorized entities. While it does provide additional security it is not absolutely bullet-proof. So while we explain how it works and provides security, we will also discuss how it can go wrong. For more go to https://www.zwilnik.com/?page_id=957
+Links:
+
+https://www.eff.org/https-everywhere
+https://en.wikipedia.org/wiki/POODLE
+https://www.zwilnik.com/?page_id=686
+https://security.googleblog.com/2011/11/protecting-data-for-long-term-with.html
+https://blog.twitter.com/engineering/en_us/a/2013/forward-secrecy-at-twitter.html
+https://www.khanacademy.org/math/applied-math/cryptography/modern-crypt/v/discrete-logarithm-problem
+https://vincent.bernat.im/en/blog/2011-ssl-perfect-forward-secrecy.html#some-benchmarks
+https://www.thesslstore.com/blog/apple-will-require-use-ats-2017/
+https://www.zwilnik.com/?page_id=957
+

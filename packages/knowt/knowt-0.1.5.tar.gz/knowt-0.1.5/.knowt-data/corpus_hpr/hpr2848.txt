@@ -1,0 +1,48 @@
+## hpr2848 :: Random numbers in Haskell
+
+ There’s lots of random and similar sounding words in this episode. I hope you can still follow what I’m trying to explain, but I’m aware that it might be hard.
+Haskell functions are pure, meaning that they will always produce same values for same set of arguments. This might sound hard when you want to generate random numbers, but it turns out that the solution isn’t too tricky.
+First part to the puzzle is type class RandomGen:
+class RandomGen g where
+    next :: g -> (Int, g)
+    genRange :: g -> (Int, Int)
+    split :: g -> (g, g)
+next produces tuple, where first element is random Int and second element is new random generator. genRange returns tuple defining minimum and maximum values this generator will return. split produces tuple with two new random generators.
+Using RandomGen to produce random values of specific type or for specific range requires a bit of arithmetic. It’s easier to use Random that defines functions for that specific task:
+class Random a where
+    randomR :: RandomGen g => (a, a) -> g -> (a, g)
+    random :: RandomGen g => g -> (a, g)
+    randomRs :: RandomGen g => (a, a) -> g -> [a]
+    randoms :: RandomGen g => g -> [a]
+    randomRIO :: (a, a) -> IO a
+    randomIO :: IO a
+
+randomR, when given range and random generator, produces tuple with random number and new generator
+random, is similar but doesn’t take range. Instead it will use minimum and maximum specific to that data type
+randomRs, takes range and produces infinite list of random values within that range
+randoms, simply produces infinite list of random values using range that is specific to datatype
+randomRIO and randomIO are effectful versions that don’t need random generator, but use some default one
+
+In short, RandomGen is source of randomness and Random is datatype specific way of generating random values using random generator RandomGen.
+Final part of the puzzle is where to get RandomGen? One could initialize one manually, but then it wouldn’t be random. However, there’s function getStdGen that will seed RandomGen using OS default random number generator, current time or some other method. Since it has signature of getStdGen :: IO StdGen, one can only call it in IO monad.
+Functions that operate with IO can only be called from other IO functions. They can call pure functions, but pure functions can’t call them. So there’s two options: have the code that needs random numbers in effectful function or get RandomGen in effectful function and pass it to pure function.
+Example
+import System.Random
+import Data.List
+
+-- | get n unique entries from given list in random order
+-- | if n > length of list, all items of the list will be returned
+getR :: RandomGen g => g -> Int -> [a] -> [a]
+getR g n xs =
+    fmap (xs !!) ids
+    where
+        ids = take (min n $ length xs) $ nub $ randomRs (0, length xs - 1) g
+
+-- | Returns 4 unique numbers between 1 and 10 (inclusive)
+test :: IO [Int]
+test = do
+    g <- getStdGen
+    return $ getR g 4 [1..10]
+In closing
+Pseudo randomness doesn’t require IO, only seeding the generator does. Simple computation that don’t require many calls to random are easy enough. If you need lots of random values, MonadRandom is better suited. It takes care of carrying implicit RandomGen along while your computation progresses.
+Best way to catch me nowadays is either email or fediverse where I’m Tuula@mastodon.social

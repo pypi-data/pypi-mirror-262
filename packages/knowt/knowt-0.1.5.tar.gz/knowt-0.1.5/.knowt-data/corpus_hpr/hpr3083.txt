@@ -1,0 +1,43 @@
+## hpr3083 :: Mumbling while on lockdown
+
+ Introduction
+Two HPR hosts based in Edinburgh got together over Mumble to have a chat during the COVID-19 lockdown.
+
+MrX
+Dave Morriss
+
+Apology
+Dave’s sound was a bit distorted in this recording. Having had recent problems using the Zoom recorder as a microphone, this time the in-built microphone was resorted to, with even worse results it turned out. See the Sound processing section below if you want to know more.
+Notes
+Some of the topics we discussed
+
+Locations for recording. Ambient noises.
+WiFi versus ethernet. Dave has a 5-port switch on his dining table (not 8-port).
+ADSL routers
+Linksys NSLU2 "SLUG"
+SheevaPlug
+CUPS - printing and scanning with old non-networked printers
+Legacy computing experiences:
+
+Diablo exchangeable disks
+Line printers. Fan-fold 132 column paper
+Punched card experiences. Card sequence numbers. Card sorters.
+Checking disks for warped platters
+Magnetic tapes; recovering from damage.
+
+8-track tapes
+Museum of Communication, Fife
+
+Strowger switch electromechanical stepping switch telephone exchange system
+
+
+Links
+
+Linksys NSLU2
+SheevaPlug
+CUPS - Common Unix Printing System
+Museum of Communication, Burntisland, Fife
+
+Sound processing
+ The recording was made in multichannel mode in anticipation of problems. The distorted channel was processed by using the Clip Fix effect in Audacity, which didn’t seem to change much except reduce the sound level. It was also necessary to find and remove sounds produced by the push to talk key presses. Removal meant replacing these sounds by silence so the two channels would not get out of step. After this the two channels were merged together and silences truncated. 
+ Lessons learned: don’t use a built-in microphone if you can help it! 

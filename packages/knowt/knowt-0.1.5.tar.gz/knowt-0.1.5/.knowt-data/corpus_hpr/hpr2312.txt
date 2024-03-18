@@ -1,0 +1,24 @@
+## hpr2312 :: Troubleshooting Websites with XAMPP
+
+ Using XAMMP To Toubleshoot a Website
+XAMMP is package containing a complete LAMPP stack configured to work out of the box. It is avalable for Mac, Windows, and Linux from ApacheFriends.org and includes
+
+Apache
+MariaDB
+PHP
+Perl
+
+XAMPP is excellent for testing a new website, testing updates for an existing site, or troubleshooting a misbehaving site.
+In this podcast, Frank tells how to set up XAMPP against the background of having recently had to troubleshoot his own recalcitrant website.
+XAMPP startup messages:
+# cd /opt/lampp
+# ./lampp start
+Starting XAMPP for Linux 5.6.30-0...
+XAMPP: Starting Apache...ok.
+XAMPP: Starting MySQL...ok.
+XAMPP: Starting ProFTPD...ok.
+Links:
+
+Apache Friends: https://www.apachefriends.org/index.html
+The XAMPP Linux FAQ: https://www.apachefriends.org/faq_linux.htmlXAMPP
+Frank's Blog Post about Troubleshooting with XAMPP (on which this podcast is based): https://pineviewfarm.net/weblog/2017/03/86811/

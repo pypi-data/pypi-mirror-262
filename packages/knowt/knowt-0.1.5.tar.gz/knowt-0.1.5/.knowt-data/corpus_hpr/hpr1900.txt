@@ -1,0 +1,17 @@
+## hpr1900 :: 20 - SSH Basics
+
+ 
+So as we saw in the introductory tutorial, SSH uses the Client-Server model. Now, technically a server is just the machine you are connecting to, and there is no reason in principle that it could not be another desktop, a laptop, or even a telephone if it has the appropriate software. and in the previous tutorial we showed how you can easily install and set up an ssh server on your home network using another computer or a Raspberry Pi so that you can experiment with these commands. The model really reduces to you as the client, and the other machine as the server. As with all Internet connections there are standards and protocols involved. The original Telnet communicated over TCP through port 23. Because SSH was conceived as a replacement, it used the same TCP protocols, and was assigned the adjacent port number of 22. 
+For more go to https://www.zwilnik.com/?page_id=726
+
+Links:
+
+https://tools.ietf.org/html/rfc4253
+
+
+https://www.tiltedwindmillpress.com/?product=ssh-mastery-openssh-putty-tunnels-and-keys-ebook
+
+https://www.zwilnik.com/?page_id=726
+
+
+

@@ -1,0 +1,9 @@
+## hpr2633 :: Elm - First Impressions
+
+ 
+Official site: https://elm-lang.org/
+Online package repository: https://package.elm-lang.org/
+please-focus (package for writing lenses): https://package.elm-lang.org/packages/SwiftsNamesake/please-focus/latest
+json-extra (for working with json): https://package.elm-lang.org/packages/elm-community/json-extra/latest
+elm-decode-pipeline (another library for decoding json): https://package.elm-lang.org/packages/NoRedInk/elm-decode-pipeline/latest
+

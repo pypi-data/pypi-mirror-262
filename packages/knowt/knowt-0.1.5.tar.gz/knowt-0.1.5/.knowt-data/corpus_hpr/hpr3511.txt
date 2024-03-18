@@ -1,0 +1,18 @@
+## hpr3511 :: Podman like Vagrant
+
+ I used to use Vagrant to spin up minimal virtual machines when I needed to test code on a different distro than what I ran. Lately I've switched to Podman.
+Install Podman with your distribution's package manager.
+Configure it:
+
+$ sudo --add-subuids 200000-265536 \
+--add-subgids 200000-265536 \
+$USER
+
+Create a directory to share data between your container and your localhost:
+
+$ mkdir data
+
+Run a container, with your ./data directory mapped to /storage in the container:
+
+$ podman run -it --volume ./data:/storage:Z busybox
+

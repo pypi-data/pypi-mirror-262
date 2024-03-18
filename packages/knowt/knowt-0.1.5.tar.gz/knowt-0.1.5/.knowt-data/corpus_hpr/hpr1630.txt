@@ -1,0 +1,88 @@
+## hpr1630 :: Bare Metal Programming on the Raspberry Pi (Part 2)
+
+ 
+The second episode in a series on bare metal programming on the Raspberry Pi. This episode builds on part 1 by showing how interrupts work on the RPIs ARM chip and the framework I created to manage them.  It then goes on to describe
+how an interrupt-enabled serial driver works.  From there, the episode
+shows how we can use the serial cable in conjunction with a loader program
+to enable us to load bare-metal programs onto the RPI without having to
+copy them to the SD card each time.  In the process, the episode describes the
+XMODEM protocol that the loader users for the file transfer process.
+
+
+Here is some of the source material that I used while working on this
+little learning experience.
+
+Links
+
+dwelch67's bare metal repository
+ 
+https://github.com/dwelch67/raspberrypi
+
+The best guide I know on this topic.  Very thorough and what I used as my starting point.
+ 
+
+
+CATRPI
+ 
+Homepage: https://gitorious.org/catrpi
+
+Git repo: git://gitorious.org/catrpi/catrpi.git
+ 
+My own repository of code that I wrote during this little project.
+ 
+
+
+XMODEM Protocol
+ 
+https://textfiles.com/programming/ymodem.txt
+
+Says YMODEM but also includes specification for XMODEM.
+ 
+
+
+Adafruit USB to TTL cable
+ 
+https://www.adafruit.com/products/954
+
+
+
+Script to build the ARM toolchain
+ 
+https://github.com/dwelch67/build_gcc/blob/master/build_arm
+
+
+
+ARM ARM
+ 
+https://morrow.ece.wisc.edu/ECE353/arm_reference/ddi0100e_arm_arm.pdf
+
+Contains the ARM assembly language as well as chip architecture overview.
+ 
+You'll need the ARM 11 Architecture Reference Manual
+ 
+
+
+ARM TRM
+ 
+https://infocenter.arm.com/help/topic/com.arm.doc.ddi0301h/DDI0301H_arm1176jzfs_r0p7_trm.pdf
+
+Contains info about the specific SOC that the Raspberry PI uses
+ 
+
+
+RPI Schematics
+ 
+https://www.raspberrypi.org/wp-content/uploads/2012/04/Raspberry-Pi-Schematics-R1.0.pdf
+
+Shows how the Raspberry Pi is wired up
+ 
+
+
+RPI Peripherals
+ 
+https://www.raspberrypi.org/wp-content/uploads/2012/02/BCM2835-ARM-Peripherals.pdf
+
+Describes functionality and programming model for the various Raspberry Pi peripherals.
+ 
+
+

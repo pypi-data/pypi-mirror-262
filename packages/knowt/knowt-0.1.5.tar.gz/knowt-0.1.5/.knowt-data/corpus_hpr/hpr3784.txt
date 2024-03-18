@@ -1,0 +1,21 @@
+## hpr3784 :: Two factor authentication without a phone number
+
+ Many services implement 2FA (Two factor authentication) by sending
+you a OTP (One Time Password) using an SMS with a random code, but this
+forces you to give them your valuable phone number. What alternatives do
+exist?
+Let's dive into the HOTP,
+used by some banks years ago through a physical token and the recent TOTP,
+which both let you generate completely offline codes without
+using any phone number or any other personal detail. They use the HMAC technique usually
+with a SHA-1 one-way hashing function, but other hashing functions can
+be used too.
+Useful links:
+
+a little visual explanation I found here
+Aegis
+android OTP generator
+use TOTP in KeepassXC for a desktop generator guide
+
+Let's keep Webauthn maybe for a
+future episode, I'm still exploring it and have to do more research.

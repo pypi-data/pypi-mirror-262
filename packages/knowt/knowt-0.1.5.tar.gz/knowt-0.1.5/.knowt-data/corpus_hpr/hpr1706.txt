@@ -1,0 +1,53 @@
+## hpr1706 :: Cross-compilers part 1
+
+ 
+Cross-compilers, Part 1
+
+
+In this show I'll introduce the concept of cross-compiling software, explain what it
+is and why you might want/need to do it.
+
+
+I'll also talk about a great piece of kit for creating cross-compiler tool-chains
+on Linux; crosstool-ng.
+
+
+As with most of my shows, the show notes are far too long to fit into the restricted size, so there's an HTML version as well, at:
+
+
+https://hackerpublicradio.org/eps/hpr1706/index.html
+
+
+Here are some bullet-points:
+
+
+cross-compilers, why and what?
+
+crosstool-ng
+
+Cross-compiler tool-chain generation gotchas
+
+Raspberry Pi cross-compiling tool-chain generation with crosstool-ng
+
+Compiling a kernel on a Pi takes 15 hours
+
+On my not-so-screaming quad-core Debian machine it takes 15 minutes
+
+
+Links:
+
+Debian Linux: https://www.debian.org/
+
+Raspberry Pi: https://www.raspberrypi.org
+
+Crosstool-ng: https://crosstool-ng.org/
+
+Arch Linux ARM: https://archlinuxarm.org/developers/distcc-cross-compiling
+
+Klaatu: https://hackerpublicradio.org/correspondents/0078.html
+
+Klaatu's Kernel Compile Show: https://hackerpublicradio.org/eps.php?id=0087
+
+
+There are a few files for this show, the ct-ng .config files downloaded from Arch Linux ARM and a README.md about them. The original
+markdown source of the full show notes is in the tarball as well https://hackerpublicradio.org/eps/hpr1706/282-Mike_Ray-hpr1706-Cross-compilers_Part_1.tar.gz.

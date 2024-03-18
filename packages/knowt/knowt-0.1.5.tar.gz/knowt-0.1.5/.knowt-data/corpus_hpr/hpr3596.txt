@@ -1,0 +1,30 @@
+## hpr3596 :: Extracting text, tables and images from docx files using Python
+
+ Tools to extract data from docx files:
+
+docx2txt
+python-docx2txt
+python-docx
+
+Code Snippets
+text = docx2txt.process(src, img_dest)
+with open("data.txt", "wt") as f:
+    f.write(text)
+
+document = docx.Document(src)
+tables = document.tables
+data = []
+for table in tables:
+    table_data = []
+    for row in table.rows:
+        row_data = []
+        for cell in row.cells:
+            row_data.append(cell.text)
+        table_data.append(row_data)
+    data.append(table_table)
+
+for i, table in enumerate(tables):
+    with open(f"{i}.csv", "wt") as f:
+        writer = csv.writer(f)
+        writer.writerows(table)
+

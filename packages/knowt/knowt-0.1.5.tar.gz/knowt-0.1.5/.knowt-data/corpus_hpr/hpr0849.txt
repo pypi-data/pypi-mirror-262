@@ -1,0 +1,64 @@
+## hpr0849 :: Sunday Morning Linux Review
+
+ 
+Each Thursday we play Syndicated creative commons content. In todays show we focus on Sunday Morning Linux Review with Mat and Tony, a weekly news show for the Linux community
+https://www.smlr.us
+
+
+With:
+Tony Bemus from https://www.bemushosting.com
+Mat Enders from https://www.charter-school-it-techs.com
+
+
+Kernel News: Mat
+The Current Development kernel 3.2
+The Stable release is 3.1
+
+
+Distro News: Tony
+Distrowatch.com 
+10-27  SalineOS 1.5  Debian-based distribution with Xfce
+
+
+10-25  Puppy Linux 5.3 Slacko  binary compatibility with Slackware Linux
+Last week releases: ZevenOS 2.0 Neptune and Finnix 103
+
+
+Coming up: FreeBSD 9.0 and openSUSE 12.1
+
+
+Distro of the Week:
+Mint
+Ubuntu
+openSUSE
+Fedora
+Debian
+Other Distro News:
+
+
+Tech News:
+Amazon Introduces New Ebook Format
+The new file format, Kindle Format 8 (KF8), is based on HTML5, and with it, Amazon aims to bring some of the flexibility and power that HTML5 offers to the world of e-books. HTML5 features such as CSS3 formatting, nested tables, SVG graphics, embedded fonts, and borders are all now supported. The new format includes much richer layout options, including fixed layoutsessential for accurate reproduction of many childrens booksand panel-based layouts for comic books. Books can include sidebars and callouts, text overlaid on background images, boxes, drop caps, and more.
+
+
+Open Source: You Know, For Kids!
+Recently SCALE announced that the 2012 event, January 20-22 in Los Angeles, will include a SCALE Kids Conference
+
+
+More about: ICANN is Taking Over the Olson Time Zone Database  Astrolabe not looking for money but just wanted to make a point about infringement.
+
+
+Other Talk:
+Apple Threatens Small, Family-Run Caf Over Trademark
+Apple is threatening to sue a small, family run caf in Bonn because they are of the opinion that their logo infringes on Apples trademark. The owner of the caf Apfelkind, Christin Rmer, has registered her logo as a trademark for the service and fashion industry in June in Munich. Now Apple is claiming in a cease and desist letter that there could be confusion between the small caf in Bonn and their global entertainment brand.
+
+
+Linux Malware: Are We There Yet?
+Untrusted package sources
+Bots, rootkits and unknown commands
+
+
+More Talk:
+Tonys Projects: XBMCbuntu  HTPC: Fast Boot, Internet content, Local and network Content!
+Mats Projects: PFsense
+

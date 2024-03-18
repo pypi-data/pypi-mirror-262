@@ -1,0 +1,26 @@
+## hpr2804 :: Awk Part 13: Fix-Width Field Processing
+
+ Basic usage
+Use the FIELDWIDTHS = "n1 n2 n3 ..." annotation in the BEGIN section of an awk command to specify the widths of the fields.
+For instance, the following file has widths of 20, 10, and 12 characters.
+NAME                STATE     TELEPHONE
+John Smith          WA        418-311-4111
+Mary Hartford       CA        319-219-4341
+Evan Nolan          IL        219-532-5301
+Boris Ratinski      NC        201-553-5555
+
+Below is an example of processing such a file:
+BEGIN  { FIELDWIDTHS = "20 10 12" }
+NR > 1 {
+    name = $1
+    state = $2
+    phone = $3
+    sub(/ +$/, "", name)
+    sub(/ +$/, "", state)
+    sub(/ +$/, "", phone)
+    printf("%s lives in %s. The phone number is %s.\n", name, state, phone)
+}
+
+Then you can run the command:
+awk -f process_fixed_width.awk fixed_width.txt
+

@@ -1,0 +1,67 @@
+## hpr2764 :: Personal password algorithms
+
+ 
+Here is a bash script to generate an org-mode word list matrix.
+It requires at least one file ending in .list to be used as a source of words or strings.
+
+
+#!/bin/bash
+
+if [ -z $1 ]; then
+    DEST=matrix.org
+else
+    DEST=$1
+fi
+
+cat >> "${DEST}" <<EOF
+| | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z | ? |
+|-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|
+EOF
+
+VERT=(a b c d e f g h i j k l m n o p q r s t u v w x y z ?)
+
+cat *list > tmp || exit
+
+BIG=`wc -l tmp | cut -f1 -d' '`
+
+c="0"
+
+while [ "$c" -lt "27" ]; do
+    # horizontal row across
+    n="0"
+    v=`echo ${VERT[$c]}`
+    printf "| $v |" >> "${DEST}"
+    while [ "$n" -lt "27" ]; do
+	i=`echo $((1 + RANDOM % $BIG))`
+	w=`awk "FNR==$i" tmp`
+	#reduce chance of empty cell
+	if [[ -z $w ]]; then
+	    i=`echo $((1 + RANDOM % $BIG))`
+	    w=`awk "FNR==$i" tmp`
+	    echo "blank cell found"
+	fi
+	printf "$w | " >> "${DEST}"
+	n=$[$n+1]
+    done
+    echo " " >> "${DEST}"
+    c=$[$c+1]
+done
+
+/usr/bin/rm tmp
+
+
+When you open the resulting file (matrix.org by default) in emacs, use the fill-paragraph (m-x fill-paragraph) function to align the cells into a pretty table.
+
+
+Invent your own key, and generate some test passwords.
+Do this 6 or 8 times, and then try to reverse the key using the passwords and the table.
+If the logic to reverse the key is too simple, then try using values relying on the metadata, rather than data, of the table (for instance, the number of letters in the first word in the table starting with the same letter as the site name, or whatever).
+
+
+Do you have analogue methods of generating passwords?
+Post ideas to either the comments or, better yet, as an HPR episode!
+
+
+    Here is a word list for testing:
+https://hackerpublicradio.org/eps/hpr2764_wordlist.html
+

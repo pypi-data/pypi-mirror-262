@@ -1,0 +1,71 @@
+## hpr2349 :: Customizing my bash prompt
+
+ Basic bash prompt information
+
+Variables and files
+
+.bashrc: the RC file where all of this stuff can be set
+PS1: main prompt variable
+PS2: continuation prompt
+PROMPT_COMMAND: a bash function name, run every time prompt is displayed
+
+Colors
+
+Uses escape sequences
+There are problems with prompts and escape sequences
+
+Multiple escaping
+String interpretation and variable expansion
+
+tput to the rescue!
+
+Takes away the need for complex escape codes
+Must run tput init at the beginning of your .bashrc file
+TL;DR: Use tput for color strings, add them at the last possible moment, with brackets and backslashes
+
+
+Embedding bash scripts
+
+Single quotes are king
+Will be run every time PS1 is evaluated
+Otherwise, only run at time of assignment
+
+
+Layout of my prompt
+
+Two lines
+
+Information/status line
+Prompt line
+
+Status line
+
+Starts with current username
+
+Changes color when user has mail
+
+Next is the hostname (truncated)
+
+Separated by an @ symbol, like an email address
+Changes color when the system is in need of a reboot
+Checks for /run/reboot_required
+
+Current directory
+
+Separated from previous items by a pipe
+Truncated with a tilde if user's home is in the path
+Prepended with a number indicating the directory stack, if present
+Appended with the git (±) symbol if we're in a git branch, followed by the name of the branch
+
+
+Prompt line
+
+A blue » character
+Prepended with the number of background processes spawned from this terminal
+
+
+Screenshot:
+
+Link to Git Repository
+https://gitlab.com/windigo-configs/bash.git
+Editor's Note: added 2017-08-05

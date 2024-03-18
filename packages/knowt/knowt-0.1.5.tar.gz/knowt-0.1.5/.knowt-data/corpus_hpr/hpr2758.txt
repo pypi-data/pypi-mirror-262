@@ -1,0 +1,123 @@
+## hpr2758 :: Haskell - Data types and database actions
+
+ Intro
+I have been doing series about web programming in Haskell and realized that I might have skipped over some very basic details. Better later than never, I’ll go over some of them briefly (data types and database actions). Hopefully things will make more sense after this (like with my friend, whose last programming course was programming 101 and they said afterwards that now all that 3d and game programming is suddenly making sense).
+Data types
+Data here has nothing to do with databases (yet). This is how you can declare your own data types in Haskell. They’re declared with keyword data followed with type name, equals sign and one or more value constructors. Type name and value constructors have to start with uppercase letter.
+Simplest type is following:
+data Simple = One
+This declares a type called Simple that has single possible value: One.
+More interesting type is shown below. Colour has three possible values: Red, Green and Blue.
+data Colour =
+    Red
+    | Green
+    | Blue
+It’s possible to have parameters in value constructor. Following is Payment type that could be used to indicate how payment was done. In case of Cash amount is stored. In case of IOU free text is recorded.
+data Payment =
+    Cash Double
+    | IOU Text
+Fictional usage of the Payment is shown below. Function paymentExplanation takes a Payment as parameter and returns Text describing the payment. In case of cash payment, brief explanation of how much was paid is returned. In case of IOU slip the function returns explanation stored in IOU value.
+paymentExplanation :: Payment -> Text part is type declaration. It states that paymentExplanation takes argument of type Payment and returns result as Text.
+paymentExplanation :: Payment -> Text
+paymentExplanation payment =
+    case payment of
+        Cash amount ->
+            "Cash payment of " <> (show amount) <> " euros"
+        IOU explanation ->
+            explanation
+Parameters don’t have to be hard coded in the type definition. Parametrized types allows creating more general code. Maybe is very useful data type that is often used for data that might or might not be present. It can have two values: Nothing indicating that there isn’t value and Just a indicating that value is present.
+data Maybe a =
+    Nothing
+    | Just a
+a is type parameter that is filled in when declaring type. Below is a function that takes Maybe Payment as a parameter and if value of payment parameter is Just returns explanation of it (reusing the function we declared earlier). In case of Nothing "No payment to handle" is returned.
+invoice :: Maybe Payment -> Text
+invoice payment =
+    case payment of
+        Just x ->
+            paymentExplanation x
+        Nothing ->
+            "No payment to handle"
+Alternatively one can omit case expression as shown below and write different value constructors directly as parameters. In both cases, compiler will check that programmer has covered all cases and emit a warning if that’s not the case.
+invoice :: Maybe Payment -> Text
+invoice (Just payment) =
+    paymentExplanation payment
+
+invoice Nothing =
+    "No payment to handle"
+Having several parameters gets soon unwieldy, so lets introduce records. With them, fields have names that can be used when referring to them (either when creating or when accessing the data). Below is Person record with two fields. personName is of type Text and personAge of type Age (that we’ll define in the next step).
+data Person = Person
+    { personName :: Text
+    , personAge :: Age
+    }
+To access data in a record, just use field as a function (there’s a bug, I’m turning 40, this month (today even, to be specific, didn’t realize this until I was about to upload the episode), but forgot such a minor detail when recording the episode):
+me = Person { personName = "Tuukka", personAge = 37 }
+myAge = personAge me
+myName = personName me
+New type is special type of record that can has only one field. It is often used to make sure one doesn’t mix similar data types (shoe size and age can both be Ints and thus mixed if programmer isn’t being careful). Compiler will optimize new types away during compilation, after checking that they’re being used correctly. This offers a tiny performance boost and makes sure one doesn’t accidentally mix different things that happen to look similar.
+newtype Age = { getAge :: Int }
+One can instruct compiler to derive some common functions for the data types. There are quite many of these, but the most common ones I’m using are Show (for turning data into text), Read (turning text into data) and Eq (comparing equality).
+data Payment =
+    Cash Double
+    | IOU Text
+    deriving (Show, Read, Eq)
+Database
+In case of Yesod and Persistent, database structure is defined in models file that usually located in config directory. It is read during compile time and used to generate data types that match the database. When the program starts up, it can check structure of the database and update it to match the models file, if migrations are turned on. While this is handy for development, I wouldn’t dare to use it for production data.
+Following definitions are lifted from the models file of the game I’m working.
+StarSystem
+    name Text
+    coordX Int
+    coordY Int
+    deriving Show Read Eq
+This defines a table star_system with columns id, name, coord_x, coord_y. All columns have NOT NULL constraint on them. It also defines record StarSystem with fields starSystemName, starSystemCoordX and starSystemCoordY.
+Star
+    name Text
+    starSystemId StarSystemId
+    spectralType SpectralType
+    luminosityClass LuminosityClass
+    deriving Show Read Eq
+This works in the same way and defines table star and record Star. New here is column star_system_id that has foreign key constraint linking it to star_system table. Star record has field starStarSystemId (silly name, I know, but that’s how the generated names go), which has type Key StarSystem.
+spectral_type and luminosity_class columns in the database are textual (I think VARCHAR), but in the code they’re represented with SpectralType and LuminosityClass data types. In order this to work, we have to define them as normal data types and use derivePersistField that generates extra code needed to store them as text in database:
+data SpectralType = O | B | A | F | G | K | M | L | T
+    deriving (Show, Read, Eq)
+derivePersistField "SpectralType"
+
+data LuminosityClass = Iap | Ia | Iab | Ib | II | III | IV | V | VI | VII
+    deriving (Show, Read, Eq)
+derivePersistField "LuminosityClass"
+Final piece in the example is Planet:
+Planet
+    name Text
+    position Int
+    starSystemId StarSystemId
+    ownerId FactionId Maybe
+    gravity Double
+    SystemPosition starSystemId position
+    deriving Show Read Eq
+This introduces two new things: ownerId FactionId Maybe removes NOT NULL constraint for this column in the database, allowing us to omit storing a value there. It also changes type of planetOwnerId into Maybe (Key Faction). Thus, planet might or might not have an owner, but if it has, database ensures that the link between planet and faction (not shown here) is always valid.
+Second new thing is SystemPosition starSystemId position that creates unique index on columns star_system_id and position. Now only one planet can exists on any given position in a star system.
+Database isn’t any good, if we can’t insert any data into it. We can do that with a function shown below, that create a solar system with a single planet:
+createSolarSystem = do
+    systemId <- insert $ StarSystem "Solar system" 0 0
+    starId <- insert $ Star "Sol" systemId G V
+    planetId <- insert $ Planet "Terra" 3 systemId Nothing 1.0
+    return (systemId, starId, planetId)
+To use the function, we have to use runDB function that handles the database transaction:
+res <- runDB createSolarSystem
+There are various ways of loading data from database. For loading a list of them, selectList is used. Here we’re loading all planets that have gravity exactly 1.0 and ordering results by the primary key in ascending order:
+planets <- runDB $ selectList [ PlanetGravity ==. 1.0 ] [ Asc PlanetId ]
+Loading by primary key is done with get. It returns Maybe, because data might or might be present that match the primary key. Programmer then has to account both cases when handling the result:
+planet <- runDB $ get planetId
+Updating a specific row is done with update function (updateWhere is for multiple rows):
+_ <- runDB $ update planetId [ PlanetName =. "Earth" ]
+Finally, sometimes it’s nice to be able to delete the data:
+_ <- runDB $ delete planetId
+_ <- runDB $ deleteWhere [ PlanetGravity >. 2 ]
+While persistent is relatively easy to use after you get used to it, it lacks ability to do joins. In such cases one can use library called Esqueleto, that is more powerful and has somewhat more complex API.
+Extra
+Because functions are values in Haskell, nothing prevents storing them in data types:
+data Handler =
+    Simple (Int -> Boolean)
+    | Complex (Int -> Int -> Int)
+Handler type has two possible values: Simple has a function that turns Int into Boolean (for example odd used to check if given number is odd) and Complex that takes two values of type Int and returns Int (basic arithmetic for example, adding and subtracting).
+Hopefully this helps you to follow along as I work on the game.
+Easiest way to catch me nowadays is either via email or on fediverse where I’m Tuula@mastodon.social

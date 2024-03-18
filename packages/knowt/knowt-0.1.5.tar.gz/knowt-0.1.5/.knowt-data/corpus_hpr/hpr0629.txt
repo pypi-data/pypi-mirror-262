@@ -1,0 +1,22 @@
+## hpr0629 :: RSS 2.0 Specification with iTunes namespace
+
+ 
+Like HTML, RSS is a form of XML and today we take a look at the RSS 2.0 specification specifically how that will relate to the Hacker Public Radio feed. 
+RSS 2.0 is offered by the Berkman Center for Internet & Society at Harvard Law School under the terms of the Attribution/Share Alike Creative Commons license. The author of this document is Dave Winer, founder of UserLand software, and fellow at Berkman Center. 
+
+
+RSS 2.0 Specification
+iTunes RSS Name Space Tags
+Really Simple Syndication Best Practices Profile
+The W3C Feed Validation Service
+HPR test Feed
+
+
+https://cyber.law.harvard.edu/rss/rss.html
+https://www.apple.com/itunes/podcasts/specs.html
+https://www.rssboard.org/rss-profile
+https://validator.w3.org/feed/
+https://hackerpublicradio.org/test.xml
+https://www.w3schools.com/html/
+https://www.w3schools.com/xml/
+https://www.w3schools.com/rss/

@@ -1,0 +1,37 @@
+## hpr3133 :: Quick tip - Using MPV with Youtube links
+
+ Idea:
+Quickly copy a Youtube or other video site, and open in the MPV media player.
+Plugins:
+Vim Vixen for Firefox
+https://addons.mozilla.org/en-US/firefox/addon/vim-vixen
+Surfingkeys for Chrome/Chromium browser
+https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc?hl=en-US
+Script:
+#!/bin/bash
+## mpvurl
+
+url=`xsel -o -b`
+echo $url
+mpv $url
+Rename /usr/bin/vlc to /usr/bin/vlc.old
+Copy script to /usr/bin/vlc and chmod +x /usr/bin/vlc
+How to use:
+Vim Vixen copy is 'y' Surfingkeys copy is 'yy'
+Shortcut to open copied video url is Shift-Mod-p, with Mod being the windows key
+Tested with Gnome3, Xfce and i3
+In i3, press Mod+v then Mod+s.
+Any video played this way will be stacked under Firefox/Chromium for the rest of your session.
+Config:
+In ~/.config/i3/config
+#Paste url into mpv player
+bindsym $mod+Shift+p exec vlc
+Example screenshots:
+Example of stacked Firefox/MPV layout
+
+For Gnome3 the setting can be reached with Mod (Windows key) and Shortcuts
+
+And the Default Applications need to be changed
+
+The setting for Shortcuts in Xfce looks like this
+

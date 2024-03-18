@@ -1,0 +1,52 @@
+## hpr2727 :: Passwords
+
+ Introduction
+Hello and welcome to Hacker Public Radio, I’m Edward Miro and for this episode I decided to record an episode on the importance of good passwords. This will be part one in a series of podcasts I’m going to call “Information Security for Everyone”. As with most of the content I create in the world of infosec, my goal is to present the information in a way that a majority of people can get value from it and anyone can play this for a friend, colleague or family member and make it easy for the non-hackers in our lives to understand.
+Passwords
+One of the first things most people think about when it comes to online safety is their password. We all know that passwords are to our online accounts what keys are for our locks. Would you use the same key for your house, your car, your office and your safety deposit box? Of course not. And if you did, what would happen if a bad guy could get a copy of just that one key? They’d have access to everything. With so much of our personal, confidential, financial and medical information accessible from our various online accounts, what can we do to make things as safe as possible?
+For me personally I employ and advise a three faceted approach:
+
+Complex passwords
+Unique passwords
+Two-factor authentication (where available)
+
+Clearly the solution is to use a unique password for each account and make them complicated enough that an attacker couldn’t guess it or crack it in an amount of time that would be actionable. One problem this presents to general users is the inconvenience and difficulty in remembering these passwords or storing them in a secure way. This leads into my first bit of advice:
+Password Managers
+My recommendation is to use a password manager. I’m going to make references to managers such as LastPass because that’s the one I’ve always used, but I’m not saying it’s the best or would be the best for you. There are many great options and I would rather people use the one that works the best for them and not merely the one I like best. Anyways. Applications like LastPass give you the ability to store all passwords in your encrypted “vault” and then request them through browser add-ons or standalone applications. They also have built in features that allow you to generate secure passwords at any length or complexity.
+When using a password manager, all you have to remember is your ONE master password. When you sign in, the manager can then decrypt all your saved passwords and let you use them. When I sign up for a website, I use LastPass to generate the longest and most complex password supported by the site and it gets stored in my vault safely for later use.
+There are various options online to choose from and I suggest you do some research and try a few different ones to see what is comfortable for you. One thing to consider when using a password manager is that the master password is your single point of failure and should be a long and complex password that you don’t use ANYWHERE else.
+If you’re wondering how to come up with a secure password that you can remember there are various strategies online, but I follow this:
+Take a poem, song lyrics or phrase that is easy for you to remember. For this example I’ll use the phrase:
+"The stars at night are big and bright. Deep in the heart of Texas."
+Then I take the first letters from each word and that gives me:
+TsanababdithoT.
+Then I swap out the vowels for some numbers/special characters. And that gives me:
+T5@n@b@bd1th0T
+I checked that password on Dashlane’s Password Strength Checker, and got the following results:
+It would take a computer about 204 million years to crack your password
+And that’s just an example of a very secure password that I thought up in just a few seconds that I probably won’t ever be able to forget it.
+2FA (two-factor authentication)
+Another very important recommendation I want to touch on in this episode is using two-step authentication. I use it for all accounts that offer it and it’s very easy to set-up and use. It works in tandem with an application on my mobile device called Google Authenticator(though there are others and like LastPass this is just the one I use) and it’s available for Android and iOS. After you install the app, you access the security settings for the account you want to protect and register it with your device.
+What it does is provide a “second” password when logging it that is only used one time. When you log in, the site will prompt for the two-step authentication code, you then open the Google Authenticator app and the code for the session will be listed. The codes are only available for a short time and are constantly changing. This makes someone gaining unauthorized access to your account VERY difficult.
+A few closing thoughts
+Some information security professionals see a password manager as insecure due to it being a single point of failure. I can understand this and would respond that although this might be true, having a complex master password and using the manager in conjunction with two-step authentication makes it a pretty safe and solid system. And even if there is a breach, none of my passwords are the same and changing them is incredibly fast and easy with a manager.
+Also, I usually don’t recommend keeping hard copies of passwords, but if you can guarantee the physical security of your password list, this in my opinion is preferable to using the same, insecure password for all your accounts.
+Please remember, if you’re like most people on the internet and you use an easy to crack password or the same password on all your sites, all it takes is one compromised account to give bad guys access to everything.
+I’m also including a list of links in the bottom of the show notes to everything I mentioned and also a link to the site Have I Been Pwned. This is a service that collects accounts that have been involved in hacks and lets anyone search for their email address and see if their information is already compromised. If it is, do this NOW:
+
+Setup a password manager with a strong master password.
+Change all your passwords using the built in password generator in your password manager and save them in your vault as you go.
+In the future when breaches happen, it’s incredibly easy to change your password and you’ll also rest easy knowing that the password obtained can’t get them into anything else.
+
+I know this will take a long time. But it’s worth it. Then, you only have to remember one master password and you will be exponentially safer online.
+I also linked SplashData’s “The Top 100 Worst Passwords of 2018”. PLEASE don’t use anything on this list.
+Well, thank you for taking the time to listen to my basic introduction to passwords. I hope this will help any non-hackers in your life and like I say in all my podcasts, I don’t claim to know all there is to know and love feedback and any opportunities to learn more or collaborate with others in the field. As with most of the research and articles I’ve written in the past, these are geared toward standard users in a business setting and are meant to be a jumping off point for further research and to be a foundation for cyber security 101 level training classes. If you like what I do, and want to have me come speak to your team, or just wanna chat, feel free to email me.
+Thank you and have a safe 2019!
+Links:
+
+https://www.lastpass.com/ - My favorite password manager.
+https://howsecureismypassword.net/ - Check if your password is strong enough.
+https://twofactorauth.org/ - Setup 2FA on all the accounts you can.
+https://haveibeenpwned.com/ - See if your email/accounts have been compromised already.
+https://www.teamsid.com/100-worst-passwords/ - Top 100 Worst Passwords of 2018.
+

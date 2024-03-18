@@ -1,0 +1,42 @@
+## hpr1764 :: Introduction to Rogue Class Linux
+
+ 
+Rogue Class describes itself as "a toy Linux distribution for playing games and reading books. RCL favors turn-based games, such as puzzles and rogue-like games. "
+
+
+What are Rogue Class games?  According to a link at the Rogue Class website, Rogue Class games  are characterized by
+
+
+
+"Tactical play. The unit of action is based on the individual adventurer. The game is not twitch oriented (like Quake, rewarding reflexes & well trained actions) nor is it strategy oriented (like Civilizations or Warcraft, requiring working on the large picture)
+"Based in Hack and Slash. A roguelike isn't primarily about plot development or telling a story. It is about killing things and acquiring treasure.
+"Random games. A roguelike is a dungeon crawler where no two games are the same. The maps are different, the items are different, there are no guaranteed win paths.
+"Permadeath. You die, that is it. No restoring a savegame. Good roguelikes delete your save game after loading them. This is compensated by the replayability of the game.
+"Complex interactions of properties. While the commands for a roguelike are simple, the potential interactions are not. My favourite example is equipping a silver ring as a weapon in order to damage a creature vulnerable to silver, but not one's other weapons. [Editor: This matches the Hack branch of the roguelike tree, not the Angband branch]
+"Steam rolling monsters. If a critter is in your way, and weak, you shouldn't even notice it is there."
+
+
+
+
+(Source:  https://www.zincland.com/powder/?pagename=about)
+
+
+Rogue Class contains four dozen or so games, two of which are actually categories which in turn contain additional games, as well as a number of utilities, including a network manager, an IRC client, and more.  Some representative games include the following, picked quite at random:  Angband, Fargoal, Magus, Moria, Nethack, and Tome. 
+
+
+
+If you liked the old games, give Rogue Class a spin.
+
+
+
+Website:   https://rogueclass.org/
+
+
+
+The Rogue Class forum is located at Linux Questions.org: https://www.linuxquestions.org/questions/rogue-class-106/
+
+
+
+You can see an interesting chart of Rogue Class's graphics subsystems at this link:  
+https://www.linuxquestions.org/questions/rogue-class-106/rcl-graphics-sub-systems-4175522637
+

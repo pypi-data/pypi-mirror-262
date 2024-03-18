@@ -1,0 +1,52 @@
+## hpr3813 :: The postmarketOS Podcast
+
+ postmarketOS Podcast
+
+Website: https://cast.postmarketos.org/
+Feed: https://cast.postmarketos.org/feed.rss
+Copyright: Creative Commons Attribution-ShareAlike 4.0 International
+(CC BY-SA 4.0) License
+https://cast.postmarketos.org/episode/28-FOSDEM-2023-special/
+
+
+#28 FOSDEM 2023 Special
+Between the Saturday closing of FOSDEM 2023 and going to a restaurant, we
+managed to squeeze around a table outside the cafeteria to record the very
+first ever in-person postmarketOS podcast episode! Fresh in the moment we share
+our experiences from the FOSS on mobile devroom, meeting great people at the
+Linux on Mobile stand (and everywhere else at FOSDEM/in Brussels) and random
+other cool things that were going down.
+Featuring @spaetz (sampled in the intro), @ollieparanoid, @linmob, @craftyguy,
+@MartijnBraam, @calebccff, @PureTryOut, @z3ntu (in order of appearance).
+Photos:
+
+@calebccff: "recorded the first in person @postmarketOS podcast episode LIVE from #FOSDEM !"
+@craftyguy: "#postmarketOS core team... Assemble!"
+@awai: "The beauty and diversity of the #LinuxOnMobile bazaar!"
+@z3ntu: "The Linux on Mobile stand at #FOSDEM is pretty packed!"
+@linmob: "#FOSDEM was really awesome, it only went by too quickly!"
+@mntmn: "this was ~intense~! thanks to everyone who was interested in MNT Pocket Reform"
+
+Video recordings of the talks:
+
+Where do we go from here? (Audio fixup)
+Matrix room: #fossmo-wg:matrix.org
+
+
+FOSS on mobile devices devroom (as of writing, most talks have already been uploaded)
+
+PinePhone and Lima / Mesa:
+We're aware that
+mesa#8198
+is still causing problems for people on the PinePhone. Big thanks to @enues
+from mesa who was talking to us at the stand and is now looking into it! We
+also have issue
+pmaports#805 about
+screen freezes. If you are affected by this and would like to help out, firing
+up a profiler and making/contributing to detailed, useful bugreports upstream
+at mesa is appreciated.
+@spaetz from Mobian did a great job at moderating the devroom! (Correction:
+Ollie said from Maemo instead of Mobian in the recording.)
+Editing by: @ollieparanoid,
+Music by: The Passion HiFi
+

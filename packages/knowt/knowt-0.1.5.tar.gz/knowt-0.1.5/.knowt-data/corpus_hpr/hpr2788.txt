@@ -1,0 +1,72 @@
+## hpr2788 :: Looping in Haskell
+
+ Haskell is functional language where data is immutable. This means that regular for-loops don’t really exist. Looping however is very common pattern in programs in general. Here are some patterns how to do that in Haskell.
+Recursion
+Calculating Fibonacci numbers is common example (sort of like hello world in Haskell). There’s many different implementations at https://wiki.haskell.org/The_Fibonacci_sequence if you’re interested on having a look.
+Simple recursive definition:
+fibs :: Integer -> Integer
+fibs 0 = 0
+fibs 1 = 1
+fibs n = fibs (n-1) + fibs (n-2)
+When called with 0 result is 0. When called with 1 result is 1. For all other cases, fibs is called with values n-1 and n-1 and the results are summed together. This works fine when n is small, but calculation gets slow really quickly with bigger values.
+Another way is to define list of all Fibonacci numbers recursively:
+allFibs :: [Integer]
+allFibs = 0 : 1 : zipWith (+) allFibs (tail allFibs)
+Here a list is constructed. First element is 0, second element is 1 and rest of the list is obtained by summing the list with its tail (everything but the first element of the list). Definition is recursive and defines all Fibonacci numbers. However, Haskell doesn’t evaluate whole list, but only as much of it as is required.
+Common pattern of processing elements in a list, producing a new list:
+addOne :: [Integer] -> [Integer]
+addOne [] = []
+addOne (x:xs) = x + 1 : addOne xs
+Two cases, when called with an empty list [], result is empty list. For all other cases, list is taken apart (x:xs), x contains first element of the list and xs is rest of the list. Body of the function creates a new list where head is x + 1 and tail is addOne xs. This processes whole list of Integer by adding one to each value. It also reverses the list.
+Second common pattern is processing a list and reducing it to a single value:
+sumAll :: Integer -> [Integer] -> Integer
+sumAll n [] = n
+sumAll n (x:xs) = sumAll (n + x) xs
+If given list is empty (the terminal case), result is n. Second case again takes list apart (x:xs), adds x and n together and recursive call sumAll with tail of the list.
+This common pattern is discarding some elements of a list:
+evenOnly :: [Integer] -> [Integer]
+evenOnly [] = []
+evenOnly (x:xs) = 
+    if even x
+        then x : evenOnly xs
+        else evenOnly xs
+Again, result of empty list is just empty list. In all other cases we first check if x is even. If so, new list is constructed where head is x and tail is evenOnly xs. If x isn’t even, it’s discarded and evenOnly is called recursively with tail of the list.
+More tools
+Writing recursion by hand gets tedious and sometimes confusing (if you listened to the show, you probably noticed how I got confused and had to check that evenOnly actually works as I thought it would). For that reason, there are tools that abstract these common patterns and given them names.
+First is map. It applies given function to each element of a list, thus producing a new list:
+> map (+1) [1..10]
+[2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+> map odd [1..10]
+[True, False, True, False, True, False, True, False, True, False]
+Second is fold. There is good article at https://wiki.haskell.org/Foldr_Foldl_Foldl%27 that talks about differences between different folds.
+The basic idea behind each fold is the same, they take a function and initial value and then apply them to first element of list, producing a value. This value is then applied with the function to the second element of the list and so on, until whole list has been reduced to a single value. Calculating a sum of list is so common operation that there’s specific function for that: sum.
+> foldr (+) 0 [1..10]
+55
+> foldl (+) 0 [1..10]
+55
+> sum [1..10]
+55
+scan is similar to fold, except for returning only the final value, it also returns intermediate ones. Here it’s easier to observe how scanr and scanl differ from each other:
+> scanr (+) 0 [1..10]
+[55,54,52,49,45,40,34,27,19,10,0]
+> scanl (+) 0 [1..10]
+[0,1,3,6,10,15,21,28,36,45,55]
+Last of the trifecta is filter that is used to select some of the elements in a list based on a supplied function.
+> filter odd [1..10]
+[1, 3, 5, 7, 9]
+> filter even [1..]
+[2, 4, 6, 8, 10, 12, 14, 16...]
+> take 5 $ filter even [1..] 
+[2, 4, 6, 8, 10]
+Even more tools
+There are even more tools at our disposal. Prelude is basic library of Haskell and browsing online documentation at https://hackage.haskell.org/package/base-4.12.0.0/docs/Prelude.html might yield interesting information.
+For example, constructing some lists:
+
+iterate :: (a -> a) -> a -> [a] For list where function is applied repeatedly.
+repeat :: a -> [a] for a list that contains infinite amount of a.
+replicate :: Int -> a -> [a] For a list that contains finite amount of a.
+cycle :: [a] -> [a] For a infinite list that repeats same list over and over again.
+
+Finding tools
+It’s all about knowing the right tools and finding them when needed. Luckily, you don’t have to memorize big stack of notes, but can turn to https://hoogle.haskell.org/ which is Haskell API search engine. It can search based on name or type signature. I often use it to find out if somebody has already written a function that I’m thinking of writing myself.
+If you want to send questions or comments, I can be reached with email or at fediverse where I’m Tuula@mastodon.social. This episode is direct result of feedback that I got from previous one. If there’s Haskell topic you would love to hear more, drop me line or even better, research it by yourself and make a cool Hacker Public Radio episode.

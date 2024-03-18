@@ -1,0 +1,132 @@
+## hpr0651 :: HPR Community News 0x03
+
+ 
+New hosts
+Welcome to 
+Dismal Science, 
+N50 
+and 
+Broam.
+
+Show Review
+632 Droops:: Notebook Method for ADHD
+
+633 Skirlet:: The Language Frontier Episode 1 
+
+634 klaatu:: Urban Camping ep 5 - finding food
+
+635 Dismal Science:: Cloudy Predictions
+
+636 pokey:: Kid3-qt
+
+637 brother mouse:: Every Day Carry
+
+638 klaatu:: Urban Camping ep 6
+
+639 droops:: Podcasts are not Radio
+
+640 PipeManMusic:: About microphones
+
+641 klaatu:: Urban Camping ep 7
+
+642 brother mouse:: Hacking Your Suburban Backyard with Chickens
+
+643 droops:: Whats on my MP3 Player
+
+644 N50:: The Plop Boot Loader and UNetbootin- A Great Team
+
+645 Curbuntu and Baylee Juran:: The Dinosaur's Dilemma
+
+646 Dismal Science:: Do you need a carrier plan with Android
+
+647 brother mouse :: How I Got Into Linux
+
+648 Ken Fallon:: Wput: a command-line ftp-client
+
+649 Quvmoh and Phantom Hawk:: Doing your own auto repairs 
+
+650 Broam:: Dumpster Diving
+
+Podcasts by Phone
+
+Every listener is strongly encouraged to send us one contribution per year.
+In episode 636 pokey told us that his Mother also listens to the show from time to time
+To make it easy for everyone and anyone to contribute we now have call in lines
+US:  +1-206-312-5749 
+UK: +44-203-432-5879 
+
+Please include your name and email address.
+DON'T FORGET TO ADD THE # SIGN AT THE END
+Thanks to Russ Woodman - K5TUX and Arron 'Finux' Finnon for making this possible.
+
+Automation and RSS feed
+
+RSS Feed: Delayed as it requires DB changes
+
+Website: Site update that will allow you to upload a show on the website.
+
+
+Syndicates Shows
+
+
+I'm running into some difficulties with how best to address syndicated shows and I'd appreciate your feedback.
+
+
+The background is that I'm trying to specify scheduling rules (https://hackerpublicradio.org/calendar.php) trying to been fair to everyone but also with a view to automating the task. I've taken the view that shows produced for HPR will get priority in the schedule before syndicated shows. This brings up the question of what is a syndicated shows.
+
+
+If a show is posted to a RSS feed before been posted to HPR then it would be considered to be a syndicated show. However we have had resubmission of a series that was on a podcast that faded so probably no one heard them. Are theses shows now syndicated or do I schedule them as HPR shows ?
+
+
+We have also had submissions from a host that posts to the HPR FTP server and their own feed at the same time. Because of the delay in HPR scheduling they come out later than their own RSS feed. So are these also now syndicated ?
+
+
+After hearing 635 Dismal Science:: Cloudy Predictions I was reminded that the speech Freedom In the Cloud: Software Freedom, Privacy, and Security for Web 2.0 and Cloud Computing by A Speech given by Eben Moglen at a meeting of the Internet Society's New York branch on Feb 5, 2010 would be ideal for HPR. Then Fifty OneFifty emailed to say "I noticed there hadn't been any recordings from LUG meetings in a while.  I thought you might want to ask for submissions where meetings or talks (from various fests) are already recorded." With the scheduling rules as they are at the moment, the syndicated don't ever get played.
+
+
+Time critical
+Scheduled Slots
+New Hosts
+HPR Content on a First in First Out basis.
+Syndicated shows on a First in First Out basis.
+
+
+On the other side I've had comments that the "Flood Gates" had been opened on the HPR feed.
+
+
+So thinking about it I was thinking of reserving Tuesday and Thursday for syndicated shows, LUG talks, Speeches and the like.
+
+Feedback to the mailing list https://hackerpublicradio.org/maillist
+
+Design Competition
+I would like to have some mini-business cards made. Go to https://kenfallon.com/?p=827 for more information.
+HPR Promotion
+
+Going Linux podcast re-purposed the "Tom Merritt" episode for their Christmas-break episode 124.
+Finux interviewed me on the first episode of his new podcasts Finux's Tech Weekly
+Dan and the lads at TLLTs have been pimping HPR all month.
+Linux Outlaws gave us a big plug on episode 187
+Jonathan Nadeau over at Frost Cast for playing our promo
+Pokey has ordered the HPR stickers and thanks to Code Cruncher, Maia came to our rescue again. She uploaded all those shows to archive.org last month
+
+Mirrors
+
+Archive.org https://www.archive.org/details/hackerpublicradio
+Jason Scott's textfiles.com https://audio.textfiles.com/shows/hpr/ 
+
+Other News
+
+Thanks Dave P. for point out that Caro.net link not working 
+sp0rus has signed up for a "Nameless Infosec Podcast on the first Tuesday of the month.
+Stank tells us that there is already an icecast server set up and running so we can stream HPR shows
+Ilan Rabinovitch links to banners for scale 9 which is on between 2011/02/25 and 2011/02/27
+If you have promotion banners please send them along and we'll add them to the site.
+
+I still haven't found a way to automate the upload to Archive.org - anyone want to investigate that ? 
+We have a facebook group at hackerpublicradio.org/facebook
+
+We have a Linked-In group hackerpublicradio.org/linkedin 
+We have a iTunes page at hackerpublicradio.org/itunes
+
+A word from our spammers
+Only the last few are holding out now that we approve all comments but some still continue to visit.

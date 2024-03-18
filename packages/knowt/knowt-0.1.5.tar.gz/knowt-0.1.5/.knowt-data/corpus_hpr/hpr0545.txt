@@ -1,0 +1,13 @@
+## hpr0545 :: Little Bit of python episode nine
+
+ First released as Bit of Python on 2010-03-22
+Bits of News
+We discuss a variety of recent news items:
+
+some recent CPython changes,
+the new PyPy 1.2 release,
+crypto support and Debian packaging for IronPython,
+the PyWeek game programming contest,
+upcoming conference plans,
+and upcoming podcast plans.
+

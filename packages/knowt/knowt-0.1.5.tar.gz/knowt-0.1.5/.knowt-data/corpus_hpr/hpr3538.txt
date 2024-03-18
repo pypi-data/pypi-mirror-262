@@ -1,0 +1,62 @@
+## hpr3538 :: Installing the Tenacity audio editor
+
+ Audacity vs. Tenacity
+
+https://www.engadget.com/audacity-privacy-policy-spyware-accusations-data-collection-210001803.html
+https://hackaday.com/2021/07/23/new-privacy-policy-gets-audacity-back-on-track
+
+Tenacity project page
+
+https://tenacityaudio.org
+
+Reason for forking the Audacity project
+Motivation
+Our project initially started as a fork of Audacity as a result of multiple controversies and public relation crises, which you can find out more about here:
+
+Privacy policy which may violate the original project's GPL license
+Contributor's License Agreement (CLA) which may violate the same GPL license
+Attempts at adding telemetry using Google services for data collection
+
+Nevertheless, the goal of this project is to pick up what the original developers of Audacity the decades-long work by the original creators of Audacity and create an audio editor that is fresh, more modern, convenient and practical to use, with the help and the guidance of our users and our community.
+
+https://github.com/tenacityteam/tenacity#motivation
+
+Community section
+
+https://tenacityaudio.org/#community-buttons
+
+Flatpak nightly build
+
+https://github.com/tenacityteam/tenacity-flatpak-nightly/blob/main/README.md
+
+flatpak remote-add tenacity oci+https://tenacityteam.github.io/tenacity-flatpak-nightly
+flatpak install tenacity org.tenacityaudio.Tenacity
+
+Update Flatpak
+
+flatpak update tenacity org.tenacityaudio.Tenacity
+
+
+Build instructions for Cmake
+
+https://gist.github.com/ricemark20/17382125f04083b3cdcda3d8bed64e4a
+
+Clone Tenacity from the Tenacity GitHub project.
+
+    $ git clone https://github.com/tenacityteam/tenacity/
+    $ cd tenacity
+
+    Configure Tenacity using CMake:
+
+    $ mkdir build && cd build
+    $ cmake -G "Unix Makefiles" -Duse_ffmpeg=loaded ..
+
+    By default, Debug build will be configured. To change that, pass -DCMAKE_BUILD_TYPE=Release to CMake.
+
+    Build Tenacity:
+
+    $ make -j`nproc`
+
+    $ sudo make install
+Current version:3.0.2-895-g0665614
+

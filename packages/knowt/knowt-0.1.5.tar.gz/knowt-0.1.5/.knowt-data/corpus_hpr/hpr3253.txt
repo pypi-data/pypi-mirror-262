@@ -1,0 +1,43 @@
+## hpr3253 :: Pandas Intro
+
+ 
+Welcome to another episode of HPR I'm your host Enigma and today we are going to be talking
+about one of my favorite python modules Pandas 
+This will be the first episode in a series I'm naming: For The Love of Python. 
+
+First we need to get the module 
+pip or pip3 install pandas 
+This will install numpy as well 
+Pandas uses an object called a dataframe which is a two-dimensional data structure, 
+i.e., data is aligned in a tabular fashion in rows and columns. Think of a spreadsheet type object in memory
+ 
+Today we are going to talk about: 
+1) Importing data from various sources
+Csv, excel, sql. More advance topics like Json covered in another episode. 
+df = pd.read_csv('file name') 
+
+2) Accessing data by column names or positionally  
+print(df.head(5)) # print all columns only first 5 rows 
+print(df.tail(5)) # print all columns only last 5 rows 
+print(df.shape) # print number of rows and columns in dataframe 
+print(df.columns) print column names 
+print(df[0:1].head(5)) print first two columns first 5 values by column position 
+print(df['field1].head(5)) print same column first five values by column name 
+
+3) Setting column types.  
+df['FieldName'] = df['FieldName'].astype(int) # sets column as interger 
+df['FieldName'] = df['FieldName'].astype(str) # sets column to string 
+df['DateColumn'] = pd.to_datetime(df['DateColumn']) # sets column to Datetime 
+
+
+4) Some basic filtering/manipulation of data. 
+Splits string at the @ for one split next two lines create 2 columns that use the pieces. 
+new = df2["Email"].str.split("@", n = 1, expand = True) 
+df2["user"]= new[0] 
+df2["domain"]= new[1] 
+
+df['col'] = df['Office'].str[:3] # creates a new column grabing the first 3 positions of Office column 
+df = df[df['FieldName'] != 0] # Only keep rows that have a FieldName value not equal to zero 
+
+See example code that you can run at: 
+ Pandas Working example 

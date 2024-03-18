@@ -1,0 +1,305 @@
+## hpr2351 :: HPR Community News for July 2017
+
+ 
+New hosts
+
+Welcome to our new host: 
+Ironic Sodium.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+2326
+Mon
+2017-07-03
+HPR Community News for June 2017
+HPR Volunteers
+
+
+2327
+Tue
+2017-07-04
+A Texan's view on Why only a Native Born person can be President
+JWP
+
+
+2328
+Wed
+2017-07-05
+Baofeng UV5R VHF/UHF Handset part 8
+MrX
+
+
+2329
+Thu
+2017-07-06
+Building a Digital Clock Kit
+Dave Morriss
+
+
+2330
+Fri
+2017-07-07
+Awk Part 7
+b-yeezi
+
+
+2331
+Mon
+2017-07-10
+Liverpool Makefest 2017 Show 1
+Tony Hughes AKA TonyH1212
+
+
+2332
+Tue
+2017-07-11
+Installing DD-WRT on ASUS RT-N66U
+Ironic Sodium
+
+
+2333
+Wed
+2017-07-12
+VirtualenvWrapper for Fish Shell
+b-yeezi
+
+
+2334
+Thu
+2017-07-13
+Our Adventure Begins!
+Claudio Miranda
+
+
+2335
+Fri
+2017-07-14
+Baofeng UV5R VHF/UHF Handset part 9
+MrX
+
+
+2336
+Mon
+2017-07-17
+Liverpool Makefest 2017 Show 2
+Tony Hughes AKA TonyH1212
+
+
+2337
+Tue
+2017-07-18
+The Kobo Aura eReader
+Jon Kulp
+
+
+2338
+Wed
+2017-07-19
+Binaural recording 2 off to work
+Quvmoh
+
+
+2339
+Thu
+2017-07-20
+Podcast list additions
+Dave Morriss
+
+
+2340
+Fri
+2017-07-21
+Tracking the HPR queue in Python
+MrX
+
+
+2341
+Mon
+2017-07-24
+Liverpool Makefest 2017 Show 3
+Tony Hughes AKA TonyH1212
+
+
+2342
+Tue
+2017-07-25
+Wherein our hero fails to repair a garage door.
+Christopher M. Hobbs
+
+
+2343
+Wed
+2017-07-26
+Healthcare in the Netherlands
+Ken Fallon
+
+
+2344
+Thu
+2017-07-27
+Follow on to HPR2340 (Tracking the HPR queue in Python)
+MrX
+
+
+2345
+Fri
+2017-07-28
+Fixing a toilet roll holder
+Ken Fallon
+
+
+2346
+Mon
+2017-07-31
+Liverpool Makefest 2017 Show 4
+Tony Hughes AKA TonyH1212
+
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available in the archives run
+externally by Gmane
+(see below) and on the HPR server under Mailman.
+
+Note: since the summer of 2016 Gmane has changed location and is currently
+being reestablished. At the moment the HPR archive is not available there.
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2017-July/thread.html
+Comments this month
+These are comments which have been made during the past month, either to shows
+released during the month or to past shows.
+There are 23 comments in total.
+There are 3 comments on
+3 previous shows:
+hpr2253
+(2017-03-22) "How to make and use a stencil"
+by @einebiene.
+
+
+
+Comment 12:
+admin on 2017-07-11:
+"congrates"
+hpr2271
+(2017-04-17) "Raspberry Pi Zero W"
+by Tony Hughes AKA TonyH1212.
+
+
+
+Comment 3:
+admin on 2017-07-11:
+"thanks for info"
+hpr2322
+(2017-06-27) "A bit of background on virtualenvwrapper"
+by bjb.
+
+
+
+Comment 2:
+MrX on 2017-07-29:
+"Great first show"
+
+There are 20 comments on 8 of this month's shows:
+hpr2327
+(2017-07-04) "A Texan's view on Why only a Native Born person can be President"
+by JWP.
+
+Comment 1:
+jezra on 2017-07-05:
+"Not native born: natural born"Comment 2:
+Kevin O'Brien on 2017-07-05:
+"Jezra is correct"Comment 3:
+Canadianbob on 2017-07-08:"[no title]"
+hpr2329
+(2017-07-06) "Building a Digital Clock Kit"
+by Dave Morriss.
+
+Comment 1:
+Dave Lee on 2017-07-06:
+"Just bought one"Comment 2:
+Dave Morriss on 2017-07-06:
+"Hmm, Glasgow Podsoldering anyone?"
+hpr2333
+(2017-07-12) "VirtualenvWrapper for Fish Shell"
+by b-yeezi.
+
+Comment 1:
+klaatu on 2017-07-17:
+"homebrew virtual envs"
+hpr2334
+(2017-07-13) "Our Adventure Begins!"
+by Claudio Miranda.
+
+Comment 1:
+Kevin on 2017-07-13:"[no title]"Comment 2:
+ClaudioM on 2017-07-14:"[no title]"Comment 3:
+Dave Morriss on 2017-07-16:
+"Nostalgia"Comment 4:
+ClaudioM on 2017-07-18:
+"Re: Nostalgia"
+hpr2337
+(2017-07-18) "The Kobo Aura eReader"
+by Jon Kulp.
+
+Comment 1:
+lostnbronx on 2017-07-27:
+"Great Overview"Comment 2:
+Jonathan Kulp on 2017-07-27:
+"Kobo anagrams to Book"
+hpr2338
+(2017-07-19) "Binaural recording 2 off to work"
+by Quvmoh.
+
+Comment 1:
+Clinton Roy on 2017-07-18:"[no title]"Comment 2:
+Windigo on 2017-07-23:"[no title]"
+hpr2340
+(2017-07-21) "Tracking the HPR queue in Python"
+by MrX.
+
+Comment 1:
+Ken Fallon on 2017-05-25:
+"You don't need to scrape"Comment 2:
+MrX on 2017-05-31:
+"Re you don't need to scrape"Comment 3:
+Dave Morriss on 2017-06-01:
+"See show 1986"Comment 4:
+MrX on 2017-06-01:
+"re: See show 1986"
+hpr2343
+(2017-07-26) "Healthcare in the Netherlands"
+by Ken Fallon.
+
+Comment 1:
+b-yeezi on 2017-07-26:
+"Unexpectedly interesting"Comment 2:
+Kevin O'Brien on 2017-07-26:
+"On the way"
+
+Any other business
+
+Tags and Summaries
+In the past month we have had contributions from 
+	    bjb and
+	    Windigo 
+	    and I have added a few tags & summaries myself. Many thanks to
+	    all contributors.
+See the current status and instructions for making your own
+	    contribution at "Shows without a summary and/or tags".
+	    This page has recently been reformatted for easier navigation and
+	    a new section has been added. This section lists the hosts whose
+	    shows need attention followed by the show numbers that need work.
+Currently there are 957 shows which need summaries or tags to be
+	    added. All contributions to this project are most welcome.
+
+

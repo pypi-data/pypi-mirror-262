@@ -1,0 +1,15 @@
+## hpr3691 :: Starship.rs the best prompt I don't use
+
+ Here's the snippets I use in my .bashrc file.
+RED='\033[0;31m'
+PLAIN='\033[0m' # No Color
+WHITE='\e[97m'
+GREEN='\e[0;32m'
+PURPLE='\e[35;35m'
+CYAN='\e[36;36m'
+
+JAVA_VERSION=`java --version | head -1 | cut -f2 -d' '`
+
+IP=$(hostname -I | awk '{print $1;}' )
+source /usr/doc/git-2.35.1/contrib/completion/git-prompt.sh
+PS1='\! [\['$GREEN'\]$(hostname -s) $IP\['$PLAIN'\]] [\['$CYAN'\]$(pwd -P)\['$PLAIN'\]] $(__git_ps1 "[\['$PURPLE'\] %s\['$PLAIN'\]]")[☕ '$JAVA_VERSION']\n\['$GREEN'\]$\['$PLAIN'\] '

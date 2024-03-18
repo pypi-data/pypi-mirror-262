@@ -1,0 +1,117 @@
+## hpr2885 :: ONICS Part 2: Filtering and Extraction
+
+ In this episode we'll talk about filtering and dissecting packet traces and streams and introduce diffing. Remember that most tools have very flexible options for a variety of use cases. So check their manpages. Each man page also has multiple examples of how to use each tool.
+Counting Packets
+
+Lets start with grabbing a trace from the unit tests:
+
+   $ mkdir /tmp/packets
+   $ cd /tmp/packets
+   $ cp /path/to/onics/tests/data/packets/sample.xpkt .
+
+
+Lets see what we have inside. First, lets see how many packets there are. We'll use a new tool 'pcount'.
+
+   $ pcount sample.xpkt
+
+   90 total packets and 19082 total bytes.
+
+
+Good thing we looked first. Don't want to walk through all the packets.
+
+Scanning Packet Flows
+
+Well, lets look at the connections or "flows" in the trace. We'll do this by using the 'nftrk' command for "network flow tracker".
+Like 'pcount' this utility (and many or most ONICS utilities), this program can run on a live stream or a trace file. We'll run:
+
+   $ nftrk -dt sample.xpkt | grep END
+
+and get:
+   |FLOW END|IP:ca=192.168.0.43,sa=224.0.0.251,proto=2|Start=1565446184.543,
+   End=1565446184.544,Dur=0.001|SENT:1,60|
+   ...
+   |FLOW END|IP:ca=192.168.0.7,sa=192.168.0.255,proto=17,cpt=631,spt=631|
+   Start=1565446184.543,End=1565446184.544,Dur=0.001|SENT:3,660|
+
+
+'nftrk' tracks flows giving events like the start and end of each flow or connection. We just want a summary of all the connections so we just grep for 'END' (all caps).
+We could just as easily have grepped for START, but this way we get the final number of packets sent and received on each connection. If we just want a count of the connections we can do:
+
+   $ nftrk -dt sample.xpkt | grep START | wc -l
+
+and that tells us that there are 10 flows in the trace.
+Basic Filtering
+
+Ok, so 90 packets, in 10 flows totalling ~19000 bytes. Lets now see about filtering the connection so we just get the TCP packets.
+
+   $ pflt tcp sample.xpkt tcponly.xpkt
+
+   $ pcount tcponly.xpkt
+   73 total packets and 17184 total bytes.
+
+   $ nftrk -dt tcponly.xpkt | grep END | wc -l
+   2
+
+
+We could have been super fancy and done:
+
+   $ pflt tcp sample.xpkt |
+     pcount -p |
+     nftrk -t 2>/tmp/flows > tcponly.xpkt &&
+     echo -n "Number of flows " &&
+     grep END /tmp/flows | wc -l &&
+     rm -f /tmp/flows
+
+
+Ok, enough of that. Anyway, now we have a trace file with only the TCP connections. Running
+
+   $ nftrk -dt /tmp/tcponly.xpkt | grep END
+   |FLOW END|IP:ca=192.168.0.4,sa=192.168.0.7,proto=6,cpt=38859,spt=22|
+   Start=1566073862.612,End=1566073862.613,Dur=0.000|C2S:25,4561|S2C:30,5124|
+   |FLOW END|IP:ca=192.168.0.4,sa=64.233.169.147,proto=6,cpt=35071,spt=80|
+   Start=1566073862.613,End=1566073862.613,Dur=0.000|C2S:9,704|S2C:9,6795|
+
+Shows that the server ports are 22 and 80 for the two connections. That's SSH and HTTP.
+
+The patterns we can use to filter packets are pretty standard across most of the ONICS tools.
+We'll discuss this is more detail in a future podcast. But if you want to see the kinds of fields you can match on go to
+
+   $ man onics_proto
+
+Extracting Ranges of Packets
+
+What if we wanted to just grab specific packets out of the trace file? Say we wanted packets 3-6. For that we would run:
+
+   $ pxtr 3,6 sample.xpkt pkts-3-to-6.xpkt
+
+
+Alternately we could ask for all packets from the 7th packet to the first TCP packet. We match using the same types of matching conditions as with pflt, but we must enclose them in {}s.
+
+   $ pxtr "7,{tcp}" sample.xpkt | xpktdump
+
+
+Lets say we just wanted to drop packets 5-10 from the stream. There are several ways to do this in ONICS, but using pxtr, the way we would do it would be:
+
+   $ pxtr 1,4 sample.xpkt > not-5-to-10.xpkt
+   $ pxtr 11,NONE sample.xpkt >> not-5-to-10.xpkt
+
+
+Maybe I should add another option to pxtr to invert the boundary conditions. It's a tradeoff between having the tools do one thing and one thing well and supporting a potentially common use case.
+
+Differences Between Traces
+
+Finally, lets look at one tool that I really like. Let's see the difference between the original stream and the one that we just created:
+
+   $ pdiff sample.xpkt not-5-to-10.xpkt | less
+
+
+Sure enough that shows us that packets 5-10 were dropped from the stream. If we do the reverse
+
+   $ pdiff -v not-5-to-10.xpkt sample.xpkt | less
+
+it describes the sample.xpkt from the perspective of starting with not-5-to-10.xpkt and inserting a bunch of packets into the middle.
+Conclusion
+
+In this podcast we looked at a few tools to help analyze and dissect packet traces or packet streams.
+Next time we'll look at some of the more powerful pattern matching we can apply and
+

@@ -1,0 +1,71 @@
+## hpr3072 :: The joy of pip-tools and pyenv-virtualenv
+
+ TL;DL: What I end up recommending is that you use pip-tools for your dependency management needs, and pyenv-virtualenv for your environment management needs. In the show I explain why you would want these things.
+I talk about these tools:
+
+virtualenv
+poetry
+pipenv
+pip-tools
+virtualenvwrapper
+pyenv
+pyenv-virtualenv
+
+I mention in passing, and as fodder for further shows:
+
+reproducible builds
+Nix
+tox
+I also owe you a show on my awesome bash prompt that shows me which environment I am in.
+
+Install pyenv and pyenv-virtualenv
+git clone https://github.com/pyenv/pyenv ~/.pyenv
+git clone https://github.com/pyenv/pyenv-virtualenv ~/.pyenv/plugins/pyenv-virtualenv
+
+Add to ~/.bash_profile:
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+
+Add to ~/.bash_profile (optional):
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+The optional bits provide you with the pyenv shell functionality for setting a session-specific Python version, and automatic activation of the virtualenv. Most of the time you don’t need activation, scripts and commands run just fine via the shims, but some tooling around Python may sometimes need to know which virtualenv you’re in.
+Run the export and eval lines in your shell to have the configuration work immediately. Alternatively, do su - yourusername to login to a new session that runs the profile. The - is important.
+You might be able to get away with just opening a new tab or window in your terminal. Whether that runs the profile depends on your settings.
+Set up your pyenv virtualenv for your project
+# Creates the virtualenv named my-project-env using 
+# the python named system (your system default python)
+pyenv virtualenv system my-project-env  
+cd /path/to/my-project
+pyenv local my-project-env
+
+Your system Python may or may not work for this. You might have to install pip and virtualenv. It might still break with some message about ensurepip failing (currently both Nix (20.09pre) python and Ubuntu (18.04) python are failing for me, and older Anaconda pythons also had a broken venv). In that case, use pyenv to install a Python that works, and use that instead of the system python:
+pyenv install miniconda3-latest
+pyenv virtualenv miniconda3-latest my-project-env
+cd /path/to/my-project
+pyenv local my-project-env
+
+Install pip-tools
+You’ll want to do this inside the virtual environment that you want to manage. Don’t install pip-tools globally.
+cd /path/to/my/project
+# And, assuming you have the shims on your $PATH
+# and you set the pyenv local as shown previously
+python -m pip install pip-tools
+
+Now put your requirements in requirements.in, one on each line, in the form you would give them to pip on the command line:
+somepackage >=3, <4
+otherpackage <7
+
+Compile requirements.in to a requirements.txt:
+python -m piptools compile
+
+You could run the shorter command pip-compile for convenience, but using the long form with -m looks it up through your configured Python, and makes it less likely for you to surprise yourself and run a tool in a different virtualenv than you expected. Same with python -m pip above.
+Your requirements.txt will look something like this:
+otherpackage==6.9.3          # via -r requirements.in
+somepackage==3.4.2           # via -r requirements.in
+transitivedependency==2.7.6  # via somepackage
+
+It helpfully tells you where everything is from!
+Now to actually install these things you python -m pip -r requirements.txt.
+Now you’re good to go! Happy hacking!

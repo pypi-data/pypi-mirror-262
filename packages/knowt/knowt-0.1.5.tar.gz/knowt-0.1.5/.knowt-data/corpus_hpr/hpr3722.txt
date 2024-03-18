@@ -1,0 +1,99 @@
+## hpr3722 :: Bash snippet - plurals in messages
+
+ 
+Overview
+Have you ever written a Bash script (or any shell script) where you
+generate a message like 'Found 42 files' and the day comes
+when it reports 'Found 1 files'?
+Have you been irritated by this? I have, and I go to lengths to deal
+properly with (English) plurals in my Bash scripts.
+Method 1
+The simplest solution would be to use an 'if'
+statement:
+if [[ $fcount -eq 1 ]]; then
+    echo "Found 1 file"
+else
+    echo "Found $fcount files"
+fi
+This works, but to have to do it for every message would be a
+pain!
+Method 2
+The next approach to this problem might be to write a Bash
+function.
+pluralise () {
+    local singular="${1}"
+    local plural="${2}"
+    local count="${3}"
+
+    if [[ $count -eq 1 ]]; then
+        echo "$singular"
+    else
+        echo "$plural"
+    fi
+}
+This can be called as follows:
+$ i=1; echo "Found $i $(pluralise "file" "files" $i)"
+Found 1 file
+$ i=42; echo "Found $i $(pluralise "file" "files" $i)"
+Found 42 files
+The string being displayed with echo contains a command
+substitution ('$(command)') which returns
+'file' or 'files' depending on the value
+given.
+The first two arguments can be more complex than plain strings:
+$ i=1; echo "There $(pluralise "is 1 light" "are $i lights" $i)"
+There is 1 light
+$ i=4; echo "There $(pluralise "is 1 light" "are $i lights" $i)"
+There are 4 lights
+The pluralise
+function is available for download.
+Method 3
+The GNU project has developed a set of utilities called the GNU
+gettext utilities consisting of tools and documentation for
+translation. This is a large subject which is not suitable for a short
+HPR episode such as this one.
+Among the tools is 'ngettext' which performs the
+function we have been discussing - choosing among plural forms. It also
+implements translations if desired (and translation files are provided
+as part of the software being developed).
+We will not discuss the translation topic here, but the choice of
+plurals is something that can be used in Bash scripts.
+The 'ngettext' tool takes three mandatory
+parameters:
+
+MSGID - the singular form of the text
+MSGID-PLURAL - the plural form of the text
+COUNT - the value used to make the singular/plural
+choice
+
+There are other optional parameters and options but they are not
+relevant here.
+The tool can be used in exactly the same way as the
+'pluralise' example above.
+$ i=1; echo "There $(ngettext "is 1 light" "are $i lights" $i)"
+There is 1 light
+$ i=4; echo "There $(ngettext "is 1 light" "are $i lights" $i)"
+There are 4 lights
+Whether you use this or a Bash function is your choice.
+Conclusion
+I have been using ngettext in my scripts since I
+discovered it. If you also need to provide messages in your projects in
+other languages then this might be a good idea.
+I admit that my understanding of the GNU gettext project
+is superficial, so, on reflection it might be better to use a Bash
+function, since I don’t currently need all of the features GNU
+gettext provides.
+Links
+
+The
+pluralise function. Either add it to the script you’re
+developing or use the 'source' command to load it.
+GNU
+gettext utilities, part of the GNU Translation
+Project.
+
+Documentation
+specific to ngettext
+
+
+

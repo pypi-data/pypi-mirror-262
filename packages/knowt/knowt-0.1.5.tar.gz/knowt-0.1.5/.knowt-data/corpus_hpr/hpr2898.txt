@@ -1,0 +1,46 @@
+## hpr2898 :: Modeling people in space game
+
+ People are what makes dynasty simulators interesting and this episode will be about them. There isn’t much code this time, mainly just how data is organized. Topic is long and split over several episodes.
+Some people in game are controlled by computer, while some are controlled by player. There’s no difference on what each can do in game, computer is basically just filling in for players when there aren’t enough players.
+There’s plenty of data about people, spread over several entities and database tables. Main one is Person, which stores name, gender, sex, date of birth and some stats (and then some more).
+There are lots of various ways of naming people and I chose to model three for the starters:
+data PersonName =
+    RegularName FirstName FamilyName (Maybe Cognomen)
+    | SimpleName FirstName (Maybe Cognomen)
+    | RegalName FirstName FamilyName RegnalNumber (Maybe Cognomen)
+    deriving (Show, Read, Eq)
+The higher the rank, more complicated names you tend to have (for some reason). Later on I’ll try and see if I can add more varied names, like matronyms and patronyms.
+Sex and gender I’m modeling with simple system of two enumerations, sex can be Female, Male or Intersex, while gender has values Man, Woman, Agender and Nonbinary. System is coarse, but should be enough to get started with the game. Later on, this can be expanded to more nuanced system.
+Traits are defining features of people. These include things like brave, coward, ambitious, content, honest and such. Values are binary, character either is brave or not. And character can’t be brave and coward at the same time.
+Relations are modeled as PersonRelation and thus stored in person_relation table:
+Relation json
+    originatorId PersonId
+    targetId PersonId
+    type RelationType
+    visibility RelationVisibility
+    deriving Show Read Eq
+I find this corner of the puzzle particular interesting. This models who is parent or child, who is friend or rival. Interconnected web created by relations isn’t completely visible to players (or any other person in game). Relations have visibility, modeled as RelationVisibility, which tells how visible it is. Public ones are known by everyone, family relations are limited to small group of people and secret relations are only known by those who are in the fold. One aspect of the game is acquiring this information.
+Intel is modeled as HumanIntelligence and stored in human_intelligence table:
+HumanIntelligence json
+    personId PersonId
+    ownerId PersonId
+    level PersonIntel
+    deriving Show Read Eq
+Essentially it just lists which character has what information about certain other character. So when displaying information to players, this table has to be referenced in order to know how much to reveal to them.
+Different types of intels are listed as PersonIntel:
+data PersonIntel =
+    Stats
+    | Demesne
+    | FamilyRelations
+    | SecretRelations
+    | Opinions OpinionIntel
+    | Traits
+    deriving (Show, Read, Eq)
+Person related data is sent back to client in PersonReport record (I’m not copying it here as it’s relatively large). We can have a look on how one field is processed.
+For example, in case of traits. PersonReport has field personReportTraits :: !(Maybe [TraitReport]). Exclamation mark in the beginning of type instructs Haskell that this value should be computed immediately when record is created and not left for later. I’m doing this as I know for sure that it’ll always be used and there’s no advantage on delaying computation for the time when it might be needed.
+Report creating (high level):
+personReportTraits = if Traits `elem` targetIntel
+                        then Just $ traitReport <$> targetTraits
+                        else Nothing
+That first checks that Traits level of intel is available and then creates list of trait reports (one for each trait person has). These have things like trait name, description, trait type and how long the trait is valid. Having separate name and description fields makes it easier to work on client side as I don’t have to come up with descriptions there anymore. I can just use what the server sends to me and be happy.
+Comments, questions and feedback are welcome. Best way to catch me nowadays is email or fediverse where I’m Tuula@mastodon.social.

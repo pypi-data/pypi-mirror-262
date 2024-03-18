@@ -1,0 +1,68 @@
+## hpr3011 :: Linux is HARD rant with Intel graphics
+
+ Help me help you! I rant about linux and Video drivers etc …
+Get Video and CPU Info
+chrome://gpu
+# gives you info about video GPU in chrome!
+chrome://gpu
+phoronix-test-suite system-info
+# neat little project to dump out all kinds of info
+phoronix-test-suite system-info
+# get hard disk temperatures !
+
+hddtemp /dev/sdb
+/dev/sdb: WDC WD4003FZEX-00Z4SA0: 37°C
+hddtemp /dev/sdc
+/dev/sdc: WDC WD4003FZEX-00Z4SA0: 36°C
+vainfo - display information from VA API driver
+lspci specific device
+lspci -v -s 00:02.0
+00:02.0 VGA compatible controller: Intel Corporation UHD Graphics 630 (Desktop) (prog-if 00 [VGA controller])
+        Subsystem: ASRock Incorporation Device 3e92
+        Flags: bus master, fast devsel, latency 0, IRQ 126
+        Memory at a0000000 (64-bit, non-prefetchable) [size=16M]
+        Memory at 90000000 (64-bit, prefetchable) [size=256M]
+        I/O ports at 4000 [size=64]
+        [virtual] Expansion ROM at 000c0000 [disabled] [size=128K]
+        Capabilities: [40] Vendor Specific Information: Len=0c <?>
+        Capabilities: [70] Express Root Complex Integrated Endpoint, MSI 00
+        Capabilities: [ac] MSI: Enable+ Count=1/1 Maskable- 64bit-
+        Capabilities: [d0] Power Management version 2
+        Capabilities: [100] Process Address Space ID (PASID)
+        Capabilities: [200] Address Translation Service (ATS)
+        Capabilities: [300] Page Request Interface (PRI)
+        Kernel driver in use: i915
+        Kernel modules: i915
+lshw
+#  lshw is a small tool to extract detailed information on the hardware configuration of the machine
+
+lshw -c video
+  *-display
+       description: VGA compatible controller
+       product: UHD Graphics 630 (Desktop)
+       vendor: Intel Corporation
+       physical id: 2
+       bus info: pci@0000:00:02.0
+       version: 00
+       width: 64 bits
+       clock: 33MHz
+       capabilities: pciexpress msi pm vga_controller bus_master cap_list rom
+       configuration: driver=i915 latency=0
+       resources: irq:126 memory:a0000000-a0ffffff memory:90000000-9fffffff ioport:4000(size=64) memory:c0000-dffff
+glxinfo
+The glxinfo program shows information about the OpenGL and GLX implementations running on a given X display.
+glxinfo | egrep -i 'device|memory|OpenGL|direct'
+dmesg
+dmesg | grep -e IOMMU -e DMAR
+
+dmesg | grep -E 'drm|radeon' | grep -iE 'firmware|microcode'
+dmesg | grep -i -e i915 -e drm -e vga
+dmidecode - DMI table decoder
+dmidecode -t baseboard | grep -i 'Product'
+GPU usage
+apt-get install intel-gpu-tools | intel_gpu_top
+Google Dorks
+
+when googleing try -ubuntu -xubuntu
+when searching for start up stuff use ‘systemd’ in your query
+

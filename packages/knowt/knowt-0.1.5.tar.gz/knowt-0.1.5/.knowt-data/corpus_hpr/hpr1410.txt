@@ -1,0 +1,15 @@
+## hpr1410 :: Generating Keys on the Command Line
+
+ This is the third in our Security and Privacy series, and explains how you can generate keys on the command line in Linux using GPG.
+
+https://www.gnupg.org/documentation/guides.en.html
+https://code.google.com/p/cryptophane/
+https://www.tech-faq.com/gnupg-shell.html
+https://www.gnupg.org/related_software/gpa/index.en.html
+https://utils.kde.org/projects/kgpg/
+https://projects.gnome.org/seahorse/
+https://fedoraproject.org/wiki/Creating_GPG_Keys
+https://gnupg.org/gph/en/manual.html#INTRO
+
+This article appears on my web site at https://www.zwilnik.com/?page_id=456.
+Remember to support free software!

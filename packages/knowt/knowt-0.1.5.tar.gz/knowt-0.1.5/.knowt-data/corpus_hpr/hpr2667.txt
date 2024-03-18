@@ -1,0 +1,68 @@
+## hpr2667 :: Create PDF bookmarks with Pdftk
+
+ 
+Pdftk is a command that lets you manipulate PDFs outside of a GUI PDF creation tool.
+There are several GUI tools you can use to create PDFs with valid bookmarks and other fancy features, but pdftk is often more convenient.
+
+
+Extract pages 1 through 2, and pages 5-21, and page 261 from a big PDF into a new PDF:
+
+
+$ pdftk big.pdf cat 1-2 5-21 261 output small.pdf
+
+
+Extract bookmarks from original PDF:
+
+
+$ pdftk big.pdf dump_data output book.mark
+
+
+Here is what a bookmark file looks like:
+
+
+InfoBegin
+InfoKey: ModDate
+InfoValue: D:20181010181951-05'00'
+InfoBegin
+InfoKey: CreationDate
+InfoValue: D:20181010181934-05'00'
+InfoBegin
+InfoKey: Creator
+InfoValue: pdftk (Linux)
+InfoBegin
+InfoKey: Producer
+InfoValue: pdftk 2.02-x86_64
+PdfID0: d8deadbeeff34211ba60d80fda7611da
+PdfID1: 39186170c6134566884b79c0ffee7d59
+NumberOfPages: 261
+BookmarkBegin
+BookmarkTitle: Cover
+BookmarkLevel: 1
+BookmarkPageNumber: 1
+BookmarkBegin
+BookmarkTitle: Credits
+BookmarkLevel: 1
+BookmarkPageNumber: 2
+BookmarkBegin
+BookmarkTitle: Chapter One
+BookmarkLevel: 1
+BookmarkPageNumber: 3
+BookmarkBegin
+BookmarkTitle: Foo Section
+BookmarkLevel: 2
+BookmarkPageNumber: 5
+BookmarkBegin
+BookmarkTitle: Bar Baz
+BookmarkLevel: 3
+BookmarkPageNumber: 7
+BookmarkBegin
+BookmarkTitle: Back cover
+BookmarkLevel: 1
+BookmarkPageNumber: 19
+
+
+Apply the bookmark data back to the PDF:
+
+
+$ pdftk small.pdf update_info book.mark output final.pdf
+

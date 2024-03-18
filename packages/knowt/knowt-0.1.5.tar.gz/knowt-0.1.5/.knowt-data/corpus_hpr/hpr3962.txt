@@ -1,0 +1,24 @@
+## hpr3962 :: It's your data
+
+ This is a response show to
+hpr3959
+:: Download any HPR series with english file names "A dir with the
+series name will be created and all shows will be renamed to
+ShowTitle.mp3 inside it"
+This was the first show by gemlog and he used Bash, sed, grep, wget,
+to scrape the HPR site. This is great but as he points out any change to
+the site will break the script.
+A safer way to get the episodes is by scraping the rss feed, and the
+following is an example of how you might do that
+#!/bin/bash
+
+series_url="https://hackerpublicradio.org/hpr_mp3_rss.php?series=42&full=1&gomax=1"
+download_dir="./"
+
+wget "${series_url}" -O - | xmlstarlet sel -T -t -m 'rss/channel/item' -v 'concat(enclosure/@url, "→", title)' -n - | sort | while read episode
+do
+  url="$( echo ${episode} | awk -F '→' '{print $1}' )"
+  ext="$( basename "${url}" )"
+  title="$( echo ${episode} | awk -F '→' '{print $2}' | sed -e 's/[^A-Za-z0-9]/_/g' )"
+  wget "${url}" -O "${download_dir}/${title}.${ext}"
+done

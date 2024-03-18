@@ -1,0 +1,19 @@
+## hpr1816 :: Visualising HPR tags
+
+ As you know, HPR asks for tags to be added to the episodes we contribute. These are intended to be used to produce some kind of improved topic search at some point in the future.
+I find it difficult to decide what tags to add to my shows, and I expect many people feel the same way about it. Should I use common tags like Linux or does that not differentiate it enough? How many tags should I add, should the words be plural or singular?
+We have recently been asked to contribute to the task of adding tags to previous shows, so it's very much a hot topic at the moment.
+In thinking about this I wondered if there was a way in which existing tags could be represented in a visual way to help with the process of choosing and rationalising tags. It was the type of thought that occurs to you in the shower or while out for a walk.
+In my last job I occasionally used a package called GraphViz to generate graphical representations. I used it to generate a chart showing how the organisation (a university) was divided up into schools, departments, sections and so on in a hierarchical manner. I wondered if it could be used for this task.
+I decided to use my currently preferred scripting language, Perl, and found there was a module which let me access GraphViz. I started putting together a script.
+The script was created in an evening and is still rather rough. It performs a very simple query on the database to obtain the show numbers of shows with tags, their titles and their tags. It then uses a CSV parser to parse the tag list and builds a hash table indexed by tags, where the contents per tag are the show numbers that use this tag.
+Having built this hash table it is used to generate GraphViz data by making each tag and each show number a node and joining them together.
+Finally the script processes the graph to produce output in SVG format which is available to view.
+Bear in mind that this is not a finished project - it may never be finished! The script may not be ideal. My understanding of GraphViz may be insufficient, and the rendering of the SVG may not be good (I got various results on different browsers).
+However, you might find it interesting or even useful. Feedback on the idea is welcome.
+Links
+
+GraphViz Wikipedia entry: https://en.wikipedia.org/wiki/Graphviz
+Graphviz website: https://graphviz.org/
+Perl script to visualise tags (HTML version): https://hackerpublicradio.org/eps/hpr1816_tag_visualise.html
+Output from the tag_visualise script as an SVG file: https://hackerpublicradio.org/eps/hpr1816_tag_visualise.svg

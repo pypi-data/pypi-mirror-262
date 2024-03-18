@@ -1,0 +1,24 @@
+## hpr2595 :: New laptop bargain?
+
+ Greetings HPR listeners this is Tony Hughes again coming from Blackpool in the UK. Well, as you heard on my last episode I recently visited the computer auction I frequent here in the UK. If you want to drool over the catalogue at any time their website is here:
+https://www.realnorth.co.uk/
+So at the sale in June they had some really good 3-4 year old laptops for sale so I decided to take a trip and see if I could liberate a few bargains, and one of the items I came away with was 3 Toshiba Z30a Ultra Books of the i5 4th generation. The basic specs are:
+
+i5-4300U CPU
+128GB mSATA solid state drive
+13.3 inch display
+8Gig DDR Ram
+3 x USB3 ports
+VGA and HDMI video out
+Full Ethernet Port
+Combined Audio in/out jack
+SD card reader
+Mobile Intel ® HD Graphics with up to 1792MB dynamically allocated
+shared graphics memory.
+
+There will be a link in the show notes to the full specifications
+https://www.toshiba.co.uk/discontinued-products/portege-z30-a-1fd/
+I had also picked up some 240Gig SSD's and had planned to upgrade the storage but this is not possible with a 2.5 inch drive as it doesn't have a bay for this format. However it does support up to 128Gig High capacity SD cards so this could be an option if you don't want to go to the expense of upgrading the mSATA drive, however as luck would have it one of my other purchases had a 256Gig mSATA drive in a 2.5 inch caddy so that was quickly swapped out and both laptops got an upgrade. More of that in another show.
+So after doing the hardware upgrade I proceeded to install Ubuntu 18.04 MATE onto the PC. The install worked flawlessly and after completion and configuring the machine to my liking everything seems to be working just fine. The battery condition for a 4 year old laptop is excellent at over 90%, however a replacement can be had on Ebay for around £30 if needed and I always factor this into any second hand laptops I buy.
+Since I got it running I've installed Windows 7 in a Virtual Machine, in this case Virtual Box as I have a preconfigured Virtual Box HDD image that makes it less of a hassle to install as I don’t have to spend days waiting for all the updates to come through. When this is running in the background it doesn't over tax the host machine, and for Linux users it does mean you have access to that occasional bit of light weight MS software that you may need without the need to lug around 2 PC's.
+So did I bag a bargain, well 4 years ago on release these laptops went for £1100+ in the UK and even today they fetch £160 in good order on the likes of Ebay for a model with the specification as I originally purchased it. I would never have been in the market to spend £1000+ on a laptop now or then so the only way I can enjoy these types of machines is after they have been pre loved by someone else. Lets just say £160 is quite a bit more than I paid but with the upgrade to 256Gig mSATA drive I have a better machine for a little less than that, I personally think I bagged a bargain which will do me good service in the coming months/years.

@@ -1,0 +1,88 @@
+## hpr3458 :: Living in the Terminal 2: The Obligatory Sequel
+
+ Talking Points
+
+Listener Feedback
+		
+Dave Morriss and the Markdown/HTML debacle
+				
+Using validate_html
+Podcast logistics etc.
+
+
+hackerdefo's suggestions
+				
+.less_termcap:
+
+export LESS_TERMCAP_mb=$(tput bold; tput setaf 2)
+export LESS_TERMCAP_md=$(tput bold; tput setaf 6)
+export LESS_TERMCAP_me=$(tput sgr0)
+export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4)
+export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
+export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 7)
+export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
+export LESS_TERMCAP_mr=$(tput rev)
+export LESS_TERMCAP_mh=$(tput dim)
+export LESS_TERMCAP_ZN=$(tput ssubm)
+export LESS_TERMCAP_ZV=$(tput rsubm)
+export LESS_TERMCAP_ZO=$(tput ssupm)
+export LESS_TERMCAP_ZW=$(tput rsupm)
+					
+					.bashrc:
+
+if [ -f $HOME/.less_termcap ];then
+	. $HOME/.less_termcap
+fi
+					
+poca, castero, and gpodder cli
+My opinion on Python and Java
+ProtonMail Bridge with mutt
+
+
+Comments from the last episode
+				
+(Please go to the last episode to read the full comments)
+NOTE: If you want a timely response, please email me or mention me on Mastodon
+Operat0r: Kids these days! https://www.nethack.org/
+b-yeezi: +1 for cnus
+sesamemucho: The text
+Dave Morriss: Very enjoyable
+Gumnos: Using "c" to pause in cmus
+
+
+
+
+New Talking Points
+		
+Here Documents
+				
+cat > text.txt <<EOF
+Hello, World!
+EOF
+				
+
+NetHack
+
+
+
+
+Show Notes
+Important Links:
+
+HPR Episode 3431: Living in the Terminal by BlacKernel
+ProtonMail Bridge with Mutt by Medium
+poca by brokkr
+castero by xgi
+gpodder CLI interface
+NetHack (The best game ever)
+
+Wikipedia Articles:
+
+None
+
+
+Contact Me
+
+Email: izzyleibowitz at pm dot me
+Mastodon: at blackernel at nixnet dot social
+

@@ -1,0 +1,134 @@
+## hpr3799 :: My home router history
+
+ Router History
+Early Dialup
+
+Connection sharing
+
+DSL/Cable
+
+Linux PC with 2 NIC
+Set up IP masquerading
+Windows connection sharing
+This may have been against TOS
+$50 EBay PC
+Mandrake MNF
+
+Found a PC on the Street
+
+IPCop
+Infrequently updated
+No updates required or abandoned?
+
+OpenBSD
+
+Reputation for Security
+Something New
+Good instructions for setting up home office.
+Manual but straightforward
+
+WRT-54gl with tomato
+
+Linksys router sold specifically to run Linux
+Purchased to be AP
+Junk PC hardware failures - PSU or IDE disks
+Frequently used as backup.
+
+PCEngines Alix
+
+Basically a PC in a router form factor
+Serial port - NO VGA
+No USB boot - Had to set up PXE boot tftp server.
+Install OpenBSD
+No Video out - Serial port only
+Expensive for specs - 500MHz AMD CPU and 256M Ram
+
+Alix Limitations
+
+Worked great for a few years
+Compact Flash limited replacements.
+100M Ethernet
+Found Spare on EBay as Backup, just in case.
+
+PCEngines APU2
+
+Serial only
+OpenBSD 5.6 via USB drive
+3 NIC - Lan, Trusted, Untrusted
+Unifi AP for WiFi
+
+First playbook
+
+Missing some easy management
+
+Local DNS
+DHCP Reservations
+
+http://hackerpublicradio.org/eps.php?id=3187
+
+CSV file with IP,MAC, Hostname
+DHCP reservation and local DNS
+
+
+Restricting Internet
+
+Open DNS and port redirects
+Unbound included on OpenBSD base
+
+Caching DNS resolver
+Forward to Open DNS - Set to do some content filtering
+PF rule to redirect all incoming port 53 to unbound
+
+PF scripts
+
+PF table with IP addresses of devices
+Table always blocked
+cron jobs to add/remove IP addresses to table
+
+
+APU2 limitations
+
+Installer Recommends Auto partitioning
+
+Doesn't know how you plan to use OpenBSD
+Doesn't know the future plans for project.
+
+16G msata drive
+Small /usr
+Re-linking growth
+Moving src partitions
+
+PCEngines APU2
+
+Search /etc for changes
+Ansible Playbook for everything not covered by DNS/DHCP playbook
+
+email forwarding
+sysctls
+syslog to server
+
+Practice on OpenBSD VM
+
+198.168 172.20 as variable
+Normally with VM, I use the VirtIO NIC
+I used vitalized Intel NIC so same device names: em0, em1, ...
+
+
+Just Do It
+
+Update APU firmware - TODO retails
+
+/usr/local/share/doc/pkg-readmes/flashrom
+
+Warned family internet would be offline a few hours
+Replaced M2 Sata card with 120
+It worked the first time
+
+Links
+
+https://www.ipcop.org/index_php.html
+https://www.pcengines.ch/alix2d3.htm
+https://pcengines.ch/apu2.htm
+https://pcengines.ch/howto.htm#OS_installation
+https://www.openbsd.org/faq/pf/example1.html
+

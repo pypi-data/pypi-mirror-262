@@ -1,0 +1,38 @@
+## hpr2554 :: Gnu Awk - Part 11
+
+ Awk Part 11
+Gnu Awk Documentation: https://www.gnu.org/software/gawk/manual/gawk.html#String-Functions
+Numerical functions
+
+atan2: arctangent of y / x in randians
+cos: cosine of x in radians
+exp: ex
+int: floor float to int
+log: natrual log
+randn: (pseudo) random number between 0 and 1
+sin: sine of x in radians
+sqrt: square root
+srand: (pseudo) random between 0 and 1, manually setting the seed
+
+String functions
+
+asort: array sort. Returns array with the values sorted
+asori: array sort. Returns array with the keys (index) sorted
+gensub: Search the target string target for matches of the regular expression regexp. Returns string with substituted text.
+gsub: Search target for all of the longest, leftmost, nonoverlapping matching substrings it can find and replace them with replacement.   Returns string with substituted text.
+sub: Search target, which is treated as a string, for the leftmost, longest substring matched by the regular expression regexp. Returns string with substituted text.
+index: Search the string in for the first occurrence of the string find. Returns the position where that occurence begins
+length: returns length of string
+match: Search string for the longest, leftmost substring matched by the regular expression regexp and return the character position (index) at which that substring begins.
+split: Divide string into pieces delimted by field separator. Returns an array of strings
+sprintf: Allows you to store the a string in the that would have been the output of printf into a variable
+strtonum: Turn octal representation to number
+substr: Substring starting at position x for length of y. Returns string
+tolower: Lower-case the string
+toupper: Upper-case the string
+
+References
+
+Trigonometric functions: https://en.wikipedia.org/wiki/Trigonometric_functions
+Psuedo random number seed: https://en.wikipedia.org/wiki/Random_seed
+Natural log to log 10: https://math.stackexchange.com/questions/107574/from-natural-log-to-log-base-10#107576

@@ -1,0 +1,145 @@
+## hpr2913 :: Windows, SDN, and Firewalls
+
+ 
+Intro
+
+Last Upload was hpr1468 March 19, 2014 
+
+python
+
+>>> print (D.today() - D(2014, 3, 19)).days
+
+1999
+
+>>> 2000/365
+
+5
+
+https://unix.stackexchange.com/questions/24626/quickly-calculate-date-differences
+In the last 5 years:
+
+Traveled the world.
+Deployed a lot of things for work.
+Taken on a new role which moves me from Datacenters to Networks.
+Learned a lot about Operations, Datacenter Infrastructure, People around the world, and why it is important to have your house in order.
+Read over 3 dozen books.
+Paid off debt and focused on long term financial goals.
+Humility, Humanity, and Harmony: Three things I have continued to strive for in my personal life, work, and hobbies.
+
+Let's Start The Show off in the wrong direction
+Windows
+
+Chocolatey
+
+Great Tool for Downloading free software from the windows powershell command line
+https://chocolatey.org/docs/installation
+
+
+Sublime Text 3
+
+Fantastic Text editor and very powerful. I use this to quickly parse data using regex searches and push this to spreadsheets or other tools that allow me to organize data quickly. Overall Great tool for anyone
+
+Summary:
+
+Overall: The importance of being an everyday Windows User has allowed me to focus on solving problems in different and unique ways. I've found that the way I use Windows is not the same as most normal Windows Users. I live most of the time inside of Chrome so Windows is just another OS to get my Chrome Browser running.
+Observation: Windows has definitely matured over the past 10 years. I find myself enjoying the time I save using Windows 10.
+Contradictions: I still use Linux, but as a VM to work on things that I just can't do inside of Windows.
+
+Web Stuff
+
+Regex
+
+Test and debug your regex. It is a great tool that combines pastebin and regex debugging. This allows you to share your regex with other by simply using a link. There is a lot of useful information on the site about what each portion of your regex is doing.
+https://regex101.com
+
+Maps
+
+USGS Maps
+
+Very nice site that allows you to download PDFs of 1:24000 or 7.5 minute Maps. You can print these off and use a Map grid tool to navigate your journey. This is kind of an analog tool but you are downloading the maps to your computer or phone. Good to have maps saved offline while you hike, that way you don't get lost.
+https://store.usgs.gov/map-locator
+
+
+SDN Information
+
+If you're just starting with Software Defined Networking or are already working with it in a production environment, there is much to learn but very few places to find aggregated information. The GitHub Page called awesome-sdn has tons of links on NOS,Controllers, Libraries, and more. I have A couple of Northbound network and Aruba switches at home to use with my SDN projects. I highly recommend you start getting familiar with network automation using ansible or other automation best practices at the least. For the more technical stuff definitely start looking at SDN.
+Awesome-SDN
+
+https://github.com/sdnds-tw/awesome-sdn/blob/master/README.md
+
+Northbound Networks SDN Devices
+
+https://northboundnetworks.com/
+
+ZeroTier is an example of SDN WAN or Edge Networking
+
+https://www.zerotier.com/download/
+
+
+
+Home Hacks
+
+Home Phone
+
+Cheap way to have a home phone
+
+Google Voice Number
+OBi200 VoIP Telephone Adapter 100Mb LAN
+
+Has the Option to sign up for 911 but with just Google Voice Number it is a free way to have a house phone
+https://www.obitalk.com/info/products/obi200
+
+
+
+
+Firewalls
+
+Off the shelf vs DIY options
+
+Off The Shelf Ubiquiti Option
+
+Ubiquiti "SDN" Like FW decent enough for homes with 100Mb/s Uplinks but not for homes with 1Gb/s uplinks.
+USG3 can't handle IPS throughput past 50Mb/s
+USG3 can't handle FW PPS past 400Mb/s at 100B packets, which is around 500,000 PPS
+The Ubiquiti alternative would be to spend money on an XG which is well over $1000 USD.
+
+DIY Option
+
+The best alternative would be to purchase a used SFF PC with at least 1 Gb onboard NIC and 2 PCIe x16 or x 8 lanes. This would allow for 10Gb NIC options
+4x10Gb Intel Nics are a steal
+or 4 x 1Gb Nics which are an even better deal.
+Going SFP+ is a great option because you can use Copper or Fiber Modules in the same NIC card.
+
+
+Summary
+
+The most important part about the SFF Option, you get to use a xeon processor, at least 32 GBs of RAM, and install up to 4 HDDs in the System. You can even install a PCIe NVME or M.2 Sata using a PCIe peripheral.
+For software, PFSense or Sophos XG will be great options. If you really want to get technical, load up a hypervisor and then install the Firewall as a VM. This would allow you to leverage the SFF system for more than just a FW and allow for easy testing of other types of FW solutions.
+
+Hardware Info
+
+Intel X722DA4FH Ethernet Network Adapter X722-DA4
+
+https://g.co/kgs/j9aNJz
+
+HP Z240 SFF
+
+https://g.co/kgs/ax2hwq
+
+
+Firewall OSes
+
+PFSense
+
+https://www.pfsense.org/
+
+Sophos
+
+https://www.sophos.com/en-us/products/next-gen-firewall.aspx
+
+OPNSense
+
+https://opnsense.org/
+
+
+

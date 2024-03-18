@@ -1,0 +1,704 @@
+<html>
+<head>
+<title>Chapter 6: Iteration</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap05.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap07.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 6</h2>
+
+
+
+<h1>Iteration</h1>
+
+<a name=1></a>
+<h3>6.1 Multiple assignment</h3>
+<p>
+As you may have discovered, it is legal to
+make more than one assignment to the same variable.  A
+new assignment makes an existing variable refer to a new
+value (and stop referring to the old value).
+
+<p><tt><font size=-1>bruce = 5
+<br><font color=black>print</font> bruce,
+<br>bruce = 7
+<br><font color=black>print</font> bruce
+<br></font></tt></p>
+
+<p>
+The output of this program is <tt><font size=-1>5 7</font></tt>, because the first time
+<tt><font size=-1>bruce</font></tt> is printed, his value is 5, and the second time, his
+value is 7.  The
+comma at the end of the first <tt><font size=-1><font color=black>print</font></font></tt> statement suppresses
+the newline after the output, which is why both outputs
+appear on the same line.
+<p>
+Here is what <b>multiple assignment</b> looks like in a state diagram:
+
+<p align="center"><img src="illustrations/assign2.png"></p>
+<p>
+With multiple assignment it is especially important to distinguish
+between an assignment operation and a statement of equality.  Because
+Python uses the equal sign (<tt><font size=-1>=</font></tt>) for assignment, it is tempting to
+interpret a statement like <tt><font size=-1>a = b</font></tt> as a statement of equality. It
+is not!
+<p>
+First, equality is commutative and assignment is not.  For
+example, in mathematics, if <tt>a = 7</tt> then <tt>7 = a</tt>.  But in Python, the
+statement <tt><font size=-1>a = 7</font></tt> is legal and <tt><font size=-1>7 = a</font></tt> is not.
+<p>
+Furthermore, in mathematics, a statement of equality is always true.
+If <tt>a = b</tt> now, then <tt>a</tt> will always equal <tt>b</tt>.  In Python, an
+assignment statement can make two variables equal, but they don't have
+to stay that way:
+
+<p><tt><font size=-1>a = 5
+<br>b = a&nbsp; &nbsp; <font color=#009000># a and b are now equal
+</font><br>a = 3&nbsp; &nbsp; <font color=#009000># a and b are no longer equal
+</font><br></font></tt></p>
+
+<p>
+The third line changes the value of <tt><font size=-1>a</font></tt> but does not change the
+value of <tt><font size=-1>b</font></tt>, so they are no longer equal. (In some
+programming languages, a different symbol is used for assignment,
+such as <tt><font size=-1>&lt;-</font></tt> or <tt><font size=-1>:=</font></tt>, to avoid confusion.)
+<p>
+Although multiple assignment is frequently helpful, you should use it
+with caution.  If the values of variables change frequently, it can
+make the code difficult to read and debug.
+
+<a name=2></a>
+<h3>6.2 The <tt><font size=-1><font color=black>while</font></font></tt> statement</h3>
+<p>
+Computers are often used to automate repetitive tasks.  Repeating
+identical or similar tasks without making errors is something that
+computers do well and people do poorly.
+<p>
+We have seen two programs, <tt><font size=-1>nLines</font></tt> and <tt><font size=-1>countdown</font></tt>, that use
+recursion to perform repetition, which is also called <b>iteration</b>.
+Because iteration is so common, Python provides several language
+features to make it easier.  The first feature we are going to look
+at is the <tt><font size=-1><font color=black>while</font></font></tt> statement.
+<p>
+Here is what <tt><font size=-1>countdown</font></tt> looks like with a 
+<tt><font size=-1><font color=black>while</font></font></tt> statement:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>countdown</font>(n):
+<br>&nbsp; <font color=black>while</font> n &gt; 0:
+<br>&nbsp; &nbsp; <font color=black>print</font> n
+<br>&nbsp; &nbsp; n = n-1
+<br>&nbsp; <font color=black>print</font> <font color=red>"Blastoff!"</font>
+<br></font></tt></p>
+
+<p>
+Since we removed the recursive call, this function is not
+recursive.
+<p>
+You can almost read the <tt><font size=-1><font color=black>while</font></font></tt> statement as if it were English.
+It means, "While <tt><font size=-1>n</font></tt> is greater than 0, continue
+displaying the value of <tt><font size=-1>n</font></tt> and then reducing the value of
+<tt><font size=-1>n</font></tt> by 1.  When you get to 0, display the word <tt><font size=-1>Blastoff!</font></tt>"
+<p>
+More formally, here is the flow of execution for a <tt><font size=-1><font color=black>while</font></font></tt> statement:
+
+<ol>
+<li>Evaluate the condition, yielding <tt><font size=-1>0</font></tt> or <tt><font size=-1>1</font></tt>.</li>
+<li>If the condition is false (0), exit the <tt><font size=-1><font color=black>while</font></font></tt> statement
+and continue execution at the next statement.</li>
+<li>If the condition is true (1), execute each of the statements in the
+body and then go back to step 1.</li>
+</ol>
+<p>
+The body consists of all of the statements below the header
+with the same indentation.
+<p>
+This type of flow is called a <b>loop</b> because the third step
+loops back around to the top.  Notice that if the condition is false
+the first time through the loop, the statements inside the loop are
+never executed.
+<p>
+The body of the loop should change the value of one or more variables
+so that eventually the condition becomes false and the loop
+terminates.  Otherwise the loop will repeat forever, which is called
+an <b>infinite loop</b>.  An endless source of amusement for computer
+scientists is the observation that the directions on shampoo,
+"Lather, rinse, repeat," are an infinite loop.
+<p>
+In the case of <tt><font size=-1>countdown</font></tt>, we can prove that the loop
+terminates because we know that the value of <tt><font size=-1>n</font></tt> is finite, and we
+can see that the value of <tt><font size=-1>n</font></tt> gets smaller each time through the
+loop, so eventually we have to get to 0.  In other
+cases, it is not so easy to tell:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>sequence</font>(n):
+<br>&nbsp; <font color=black>while</font> n != 1:
+<br>&nbsp; &nbsp; <font color=black>print</font> n,
+<br>&nbsp; &nbsp; <font color=black>if</font> n%2 == 0:&nbsp; &nbsp; &nbsp; &nbsp; <font color=#009000># n is even
+</font><br>&nbsp; &nbsp; &nbsp; n = n/2
+<br>&nbsp; &nbsp; <font color=black>else</font>:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<font color=#009000># n is odd
+</font><br>&nbsp; &nbsp; &nbsp; n = n*3+1
+<br></font></tt></p>
+
+<p>
+The condition for this loop is <tt><font size=-1>n != 1</font></tt>, so the loop will continue until
+<tt><font size=-1>n</font></tt> is <tt><font size=-1>1</font></tt>, which will make the condition false.
+<p>
+Each time through the loop, the program outputs the value of <tt><font size=-1>n</font></tt>
+and then checks whether it is even or odd.  If it is even, the value
+of <tt><font size=-1>n</font></tt> is divided by 2.  If it is odd, the value is replaced by
+<tt><font size=-1>n*3+1</font></tt>. For example, if the starting value (the argument passed
+to <tt><font size=-1>sequence</font></tt>) is 3, the resulting sequence is 3, 10, 5, 16, 8, 4, 2, 1.
+<p>
+Since <tt><font size=-1>n</font></tt> sometimes increases and sometimes decreases, there is no
+obvious proof that <tt><font size=-1>n</font></tt> will ever reach 1, or that the program
+terminates.  For some particular values of <tt><font size=-1>n</font></tt>, we can prove
+termination.  For example, if the starting value is a power of two,
+then the value of <tt><font size=-1>n</font></tt> will be even each time through the loop
+until it reaches 1. The previous example ends with such a sequence,
+starting with 16.
+<p>
+Particular values aside, the interesting question is whether we can
+prove that this program terminates for <i>all positive values</i> of <tt><font size=-1>n</font></tt>.
+So far, no one has been able to prove it <i>or</i> disprove it!
+
+<blockquote><i>As an exercise, rewrite the function <tt><font size=-1>nLines</font></tt> from
+<a href="chap04.html#9">Section 4.9</a> using iteration instead of recursion.</i>
+</blockquote>
+
+<a name=3></a>
+<h3>6.3 Tables</h3>
+<p>
+One of the things loops are good for is generating tabular data.
+Before computers were readily available, people had to calculate
+logarithms, sines and cosines, and other mathematical functions
+by hand.  To make that easier, mathematics books contained long tables
+listing the values of these functions.  Creating the tables was
+slow and boring, and they tended to be full of errors.
+<p>
+When computers appeared on the scene, one of the initial reactions
+was, "This is great!  We can use the computers to generate the tables,
+so there will be no errors." That turned out to be true (mostly) but
+shortsighted.  Soon thereafter, computers and calculators were so
+pervasive that the tables became obsolete.
+<p>
+Well, almost.  For some operations, computers use
+tables of values to get an approximate answer and then perform
+computations to improve the approximation.  In some cases, there have
+been errors in the underlying tables, most famously in the table the
+Intel Pentium used to perform floating-point division.
+<p>
+Although a log table is not as useful as it once was, it still makes
+a good example of iteration.  The following program outputs a sequence
+of values in the left column and their logarithms in the right column:
+
+<p><tt><font size=-1>x = 1.0
+<br><font color=black>while</font> x &lt; 10.0:
+<br>&nbsp; <font color=black>print</font> x, <font color=red>'\t'</font>, math.log(x)
+<br>&nbsp; x = x + 1.0
+<br></font></tt></p>
+
+<p>
+The string 
+<tt><font size=-1><font color=red>'\t'</font></font></tt> represents a <b>tab</b>
+character.
+<p>
+As characters and strings are displayed on the screen,
+an invisible marker called the <b>cursor</b> keeps track of
+where the next character will go.  After a <tt><font size=-1><font color=black>print</font></font></tt> statement, the
+cursor normally goes to the beginning of the next line.
+<p>
+The tab character shifts the cursor to the right until it
+reaches one of the tab stops.  Tabs are useful for making columns of
+text line up, as in the output of the previous program:
+
+<p><tt><font size=-1>1.0&nbsp; &nbsp; &nbsp;0.0
+<br>2.0&nbsp; &nbsp; &nbsp;0.69314718056
+<br>3.0&nbsp; &nbsp; &nbsp;1.09861228867
+<br>4.0&nbsp; &nbsp; &nbsp;1.38629436112
+<br>5.0&nbsp; &nbsp; &nbsp;1.60943791243
+<br>6.0&nbsp; &nbsp; &nbsp;1.79175946923
+<br>7.0&nbsp; &nbsp; &nbsp;1.94591014906
+<br>8.0&nbsp; &nbsp; &nbsp;2.07944154168
+<br>9.0&nbsp; &nbsp; &nbsp;2.19722457734
+<br></font></tt></p>
+
+<p>
+If these values seem odd, remember that the <tt><font size=-1>log</font></tt> function uses
+base <tt><font size=-1>e</font></tt>. Since powers of two are so important in computer
+science, we often want to find logarithms with respect to base 2.  To
+do that, we can use the following formula:
+
+<p>
+<table align=center><tr><td><tt>
+log<sub>2</sub> x = <table style="display: inline; align: center; vertical-align: middle;"><tr><td>log<sub>e</sub> x</td></tr><tr><td><hr noshade color=black></td></tr><tr><td>log<sub>e</sub> 2</td></tr></table>
+</tt></td></tr></table>
+
+
+<p>
+Changing the output statement to:
+
+<p><tt><font size=-1>&nbsp; &nbsp;<font color=black>print</font> x, <font color=red>'\t'</font>,&nbsp; math.log(x)/math.log(2.0)
+<br></font></tt></p>
+
+<p>
+yields:
+
+<p><tt><font size=-1>1.0&nbsp; &nbsp; &nbsp;0.0
+<br>2.0&nbsp; &nbsp; &nbsp;1.0
+<br>3.0&nbsp; &nbsp; &nbsp;1.58496250072
+<br>4.0&nbsp; &nbsp; &nbsp;2.0
+<br>5.0&nbsp; &nbsp; &nbsp;2.32192809489
+<br>6.0&nbsp; &nbsp; &nbsp;2.58496250072
+<br>7.0&nbsp; &nbsp; &nbsp;2.80735492206
+<br>8.0&nbsp; &nbsp; &nbsp;3.0
+<br>9.0&nbsp; &nbsp; &nbsp;3.16992500144
+<br></font></tt></p>
+
+<p>
+We can see that 1, 2, 4, and 8 are powers of two because their
+logarithms base 2 are round numbers.  If we wanted to find the
+logarithms of other powers of two, we could modify the program like
+this:
+
+<p><tt><font size=-1>x = 1.0
+<br><font color=black>while</font> x &lt; 100.0:
+<br>&nbsp; <font color=black>print</font> x, <font color=red>'\t'</font>, math.log(x)/math.log(2.0)
+<br>&nbsp; x = x * 2.0
+<br></font></tt></p>
+
+<p>
+Now instead of adding something to <tt><font size=-1>x</font></tt> each time through the loop, which
+yields an arithmetic sequence, we multiply <tt><font size=-1>x</font></tt> by something, yielding a
+geometric sequence.  The result is:
+
+<p><tt><font size=-1>1.0&nbsp; &nbsp; &nbsp;0.0
+<br>2.0&nbsp; &nbsp; &nbsp;1.0
+<br>4.0&nbsp; &nbsp; &nbsp;2.0
+<br>8.0&nbsp; &nbsp; &nbsp;3.0
+<br>16.0&nbsp; &nbsp; 4.0
+<br>32.0&nbsp; &nbsp; 5.0
+<br>64.0&nbsp; &nbsp; 6.0
+<br></font></tt></p>
+
+<p>
+Because of the tab characters between the columns, the position of the
+second column does not depend on the number of digits in the first
+column.
+<p>
+Logarithm tables may not be useful any more, but for computer
+scientists, knowing the powers of two is!
+
+<blockquote><i>As an exercise, modify this program so that it outputs the powers
+of two up to 65,536 (that's <tt>2<sup>16</sup></tt>).  Print it out and memorize it.</i>
+</blockquote>
+<p>
+The backslash character in <tt><font size=-1><font color=red>'\t'</font></font></tt> indicates the
+beginning of an <b>escape sequence</b>.  Escape sequences
+are used to represent invisible characters like
+tabs and newlines.  The sequence <tt><font size=-1>\n</font></tt> represents a newline.
+<p>
+An escape sequence can appear
+anywhere in a string; in the example, the tab escape
+sequence is the only thing in the string.
+<p>
+How do you think you represent a backslash in a string?
+
+<blockquote><i>As an exercise, write a single string that
+
+<p><tt><font size=-1>produces
+<br>&nbsp; &nbsp; &nbsp; &nbsp; this
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; output.
+<br></font></tt></p>
+
+<p>
+</i>
+</blockquote>
+
+<a name=4></a>
+<h3>6.4 Two-dimensional tables</h3>
+<p>
+A two-dimensional table is a table where you
+read the value at the intersection of a row and a column.  A
+multiplication table is a good example.
+Let's say you want to print a multiplication table for the values
+from 1 to 6.
+<p>
+A good way to start is to write a loop that prints the multiples of
+2, all on one line:
+
+<p><tt><font size=-1>i = 1
+<br><font color=black>while</font> i &lt;= 6:
+<br>&nbsp; <font color=black>print</font> 2*i, <font color=red>'&nbsp; &nbsp;'</font>,
+<br>&nbsp; i = i + 1
+<br><font color=black>print</font>
+<br></font></tt></p>
+
+<p>
+The first line initializes a variable named <tt><font size=-1>i</font></tt>, which acts as a
+counter or <b>loop variable</b>.  As the loop executes, the value of
+<tt><font size=-1>i</font></tt> increases from 1 to 6.  When <tt><font size=-1>i</font></tt> is 7, the loop
+terminates.  Each time through the loop, it displays the value of <tt><font size=-1>2*i</font></tt>, followed by three spaces.  
+<p>
+Again, the comma in the <tt><font size=-1><font color=black>print</font></font></tt> statement suppresses the newline.
+After the loop completes, the second <tt><font size=-1><font color=black>print</font></font></tt> statement starts a
+new line.
+<p>
+The output of the program is:
+
+<p><tt><font size=-1>2&nbsp; &nbsp; &nbsp; 4&nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; 8&nbsp; &nbsp; &nbsp; 10&nbsp; &nbsp; &nbsp;12
+<br></font></tt></p>
+
+<p>
+So far, so good. The next step is to <b>encapsulate</b> and <b>generalize</b>.
+
+<a name=5></a>
+<h3>6.5 Encapsulation and generalization</h3>
+<p>
+Encapsulation is the process of wrapping a piece of code in a
+function, allowing you to take advantage of all the things functions
+are good for.  You have seen two examples of encapsulation:
+<tt><font size=-1>printParity</font></tt> in <a href="chap04.html#5">Section 4.5</a>; and
+<tt><font size=-1>isDivisible</font></tt> in <a href="chap05.html#4">Section 5.4</a>.
+<p>
+Generalization means taking something specific, such as printing the
+multiples of 2, and making it more general, such as printing the
+multiples of any integer.
+<p>
+This function encapsulates the previous loop and
+generalizes it to print multiples of <tt><font size=-1>n</font></tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printMultiples</font>(n):
+<br>&nbsp; i = 1
+<br>&nbsp; <font color=black>while</font> i &lt;= 6:
+<br>&nbsp; &nbsp; <font color=black>print</font> n*i, <font color=red>'\t'</font>,
+<br>&nbsp; &nbsp; i = i + 1
+<br>&nbsp; <font color=black>print</font>
+<br></font></tt></p>
+
+<p>
+To encapsulate, all we had to do was add the first line, which
+declares the name of the function and the parameter list.  To
+generalize, all we had to do was replace the value 2 with the
+parameter <tt><font size=-1>n</font></tt>.
+<p>
+If we call this function with the argument 2, we get the same output as
+before.  With the argument 3, the output is:
+
+<p><tt><font size=-1>3&nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; 9&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;15&nbsp; &nbsp; &nbsp;18
+<br></font></tt></p>
+
+<p>
+With the argument 4, the output is:
+
+<p><tt><font size=-1>4&nbsp; &nbsp; &nbsp; 8&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;16&nbsp; &nbsp; &nbsp;20&nbsp; &nbsp; &nbsp;24
+<br></font></tt></p>
+
+<p>
+By now you can probably guess how to print a multiplication table <s>&nbsp; &nbsp;</s> by
+calling <tt><font size=-1>printMultiples</font></tt> repeatedly with different arguments.  In
+fact, we can use another loop:
+
+<p><tt><font size=-1>i = 1
+<br><font color=black>while</font> i &lt;= 6:
+<br>&nbsp; printMultiples(i)
+<br>&nbsp; i = i + 1
+<br></font></tt></p>
+
+<p>
+Notice how similar this loop is to the one inside
+<tt><font size=-1>printMultiples</font></tt>.  All we did was replace the <tt><font size=-1><font color=black>print</font></font></tt> statement with
+a function call.
+<p>
+The output of this program is a multiplication table:
+
+<p><tt><font size=-1>1&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp; &nbsp; 4&nbsp; &nbsp; &nbsp; 5&nbsp; &nbsp; &nbsp; 6
+<br>2&nbsp; &nbsp; &nbsp; 4&nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; 8&nbsp; &nbsp; &nbsp; 10&nbsp; &nbsp; &nbsp;12
+<br>3&nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; 9&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;15&nbsp; &nbsp; &nbsp;18
+<br>4&nbsp; &nbsp; &nbsp; 8&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;16&nbsp; &nbsp; &nbsp;20&nbsp; &nbsp; &nbsp;24
+<br>5&nbsp; &nbsp; &nbsp; 10&nbsp; &nbsp; &nbsp;15&nbsp; &nbsp; &nbsp;20&nbsp; &nbsp; &nbsp;25&nbsp; &nbsp; &nbsp;30
+<br>6&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;18&nbsp; &nbsp; &nbsp;24&nbsp; &nbsp; &nbsp;30&nbsp; &nbsp; &nbsp;36
+<br></font></tt></p>
+
+
+<a name=6></a>
+<h3>6.6 More encapsulation</h3>
+<p>
+To demonstrate encapsulation again, let's take the code from the end of
+<a href="chap06.html#5">Section 6.5</a> and wrap it up in a function:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printMultTable</font>():
+<br>&nbsp; i = 1
+<br>&nbsp; <font color=black>while</font> i &lt;= 6:
+<br>&nbsp; &nbsp; printMultiples(i)
+<br>&nbsp; &nbsp; i = i + 1
+<br></font></tt></p>
+
+<p>
+This process is a common <b>development plan</b>.  We develop code by
+writing lines of code outside any function, or typing them in to the
+interpreter.  When we get the code working, we extract it and wrap it
+up in a function.
+<p>
+This development plan is particularly useful if you don't know, when
+you start writing, how to divide the program into functions.  This
+approach lets you design as you go along.
+
+<a name=7></a>
+<h3>6.7 Local variables</h3>
+<p>
+You might be wondering how we can use the same variable, <tt><font size=-1>i</font></tt>, in
+both <tt><font size=-1>printMultiples</font></tt> and <tt><font size=-1>printMultTable</font></tt>.  Doesn't it cause
+problems when one of the functions changes the value of the variable?
+<p>
+The answer is no, because the <tt><font size=-1>i</font></tt> in <tt><font size=-1>printMultiples</font></tt> and the
+<tt><font size=-1>i</font></tt> in <tt><font size=-1>printMultTable</font></tt> are <i>not</i> the same variable.
+<p>
+Variables created inside a function definition are local; you can't
+access a local variable from outside its "home" function.  That
+means you are free to have multiple variables with the same name as
+long as they are not in the same function.
+<p>
+The stack diagram for this program shows that the two
+variables named <tt><font size=-1>i</font></tt> are not the same variable.  They can refer to
+different values, and changing one does not affect the other.
+
+<p align="center"><img src="illustrations/stack4.png"></p>
+<p>
+The value of <tt><font size=-1>i</font></tt> in <tt><font size=-1>printMultTable</font></tt> goes from 1 to 6.  In the
+diagram it happens to be 3.  The next time through the loop it will
+be 4.  Each time through the loop, <tt><font size=-1>printMultTable</font></tt> calls
+<tt><font size=-1>printMultiples</font></tt> with the current value of <tt><font size=-1>i</font></tt> as an
+argument.  That value gets assigned to the parameter <tt><font size=-1>n</font></tt>.
+<p>
+Inside <tt><font size=-1>printMultiples</font></tt>, the value of <tt><font size=-1>i</font></tt> goes from
+1 to 6.  In the diagram, it happens to be 2.  Changing this variable
+has no effect on the value of <tt><font size=-1>i</font></tt> in <tt><font size=-1>printMultTable</font></tt>.
+<p>
+It is common and perfectly legal to have different local variables
+with the same name.  In particular, names like <tt><font size=-1>i</font></tt> and <tt><font size=-1>j</font></tt> are
+used frequently as loop variables.  If you avoid
+using them in one function just because you used them somewhere else,
+you will probably make the program harder to read.
+
+<a name=8></a>
+<h3>6.8 More generalization</h3>
+<p>
+As another example of generalization, imagine you wanted a program
+that would print a multiplication table of any size, not just the
+six-by-six table. You could add a parameter to <tt><font size=-1>printMultTable</font></tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printMultTable</font>(high):
+<br>&nbsp; i = 1
+<br>&nbsp; <font color=black>while</font> i &lt;= high:
+<br>&nbsp; &nbsp; printMultiples(i)
+<br>&nbsp; &nbsp; i = i + 1
+<br></font></tt></p>
+
+<p>
+We replaced the value 6 with the parameter <tt><font size=-1>high</font></tt>.  If we call
+<tt><font size=-1>printMultTable</font></tt> with the argument 7, it displays:
+
+<p><tt><font size=-1>1&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp; &nbsp; 4&nbsp; &nbsp; &nbsp; 5&nbsp; &nbsp; &nbsp; 6
+<br>2&nbsp; &nbsp; &nbsp; 4&nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; 8&nbsp; &nbsp; &nbsp; 10&nbsp; &nbsp; &nbsp;12
+<br>3&nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; 9&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;15&nbsp; &nbsp; &nbsp;18
+<br>4&nbsp; &nbsp; &nbsp; 8&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;16&nbsp; &nbsp; &nbsp;20&nbsp; &nbsp; &nbsp;24
+<br>5&nbsp; &nbsp; &nbsp; 10&nbsp; &nbsp; &nbsp;15&nbsp; &nbsp; &nbsp;20&nbsp; &nbsp; &nbsp;25&nbsp; &nbsp; &nbsp;30
+<br>6&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;18&nbsp; &nbsp; &nbsp;24&nbsp; &nbsp; &nbsp;30&nbsp; &nbsp; &nbsp;36
+<br>7&nbsp; &nbsp; &nbsp; 14&nbsp; &nbsp; &nbsp;21&nbsp; &nbsp; &nbsp;28&nbsp; &nbsp; &nbsp;35&nbsp; &nbsp; &nbsp;42
+<br></font></tt></p>
+
+<p>
+This is fine, except that we probably want the table to be
+square <s>&nbsp; &nbsp;</s> with the same number of rows and columns.  To do that, we
+add another parameter to <tt><font size=-1>printMultiples</font></tt> to specify how many
+columns the table should have.
+<p>
+Just to be annoying, we call this parameter <tt><font size=-1>high</font></tt>, demonstrating
+that different functions can have parameters with the same name (just like
+local variables).  Here's the whole program:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printMultiples</font>(n, high):
+<br>&nbsp; i = 1
+<br>&nbsp; <font color=black>while</font> i &lt;= high:
+<br>&nbsp; &nbsp; <font color=black>print</font> n*i, <font color=red>'\t'</font>,
+<br>&nbsp; &nbsp; i = i + 1
+<br>&nbsp; <font color=black>print
+<br>
+<br>def</font> printMultTable(high):
+<br>&nbsp; i = 1
+<br>&nbsp; <font color=black>while</font> i &lt;= high:
+<br>&nbsp; &nbsp; printMultiples(i, high)
+<br>&nbsp; &nbsp; i = i + 1
+<br></font></tt></p>
+
+<p>
+Notice that when we added a new parameter, we had to change the first line
+of the function (the function heading), and we also had to change the place
+where the function is called in <tt><font size=-1>printMultTable</font></tt>.
+<p>
+As expected, this program generates a square seven-by-seven table:
+
+<p><tt><font size=-1>1&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp; &nbsp; 4&nbsp; &nbsp; &nbsp; 5&nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; 7
+<br>2&nbsp; &nbsp; &nbsp; 4&nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; 8&nbsp; &nbsp; &nbsp; 10&nbsp; &nbsp; &nbsp;12&nbsp; &nbsp; &nbsp;14
+<br>3&nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; 9&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;15&nbsp; &nbsp; &nbsp;18&nbsp; &nbsp; &nbsp;21
+<br>4&nbsp; &nbsp; &nbsp; 8&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;16&nbsp; &nbsp; &nbsp;20&nbsp; &nbsp; &nbsp;24&nbsp; &nbsp; &nbsp;28
+<br>5&nbsp; &nbsp; &nbsp; 10&nbsp; &nbsp; &nbsp;15&nbsp; &nbsp; &nbsp;20&nbsp; &nbsp; &nbsp;25&nbsp; &nbsp; &nbsp;30&nbsp; &nbsp; &nbsp;35
+<br>6&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;18&nbsp; &nbsp; &nbsp;24&nbsp; &nbsp; &nbsp;30&nbsp; &nbsp; &nbsp;36&nbsp; &nbsp; &nbsp;42
+<br>7&nbsp; &nbsp; &nbsp; 14&nbsp; &nbsp; &nbsp;21&nbsp; &nbsp; &nbsp;28&nbsp; &nbsp; &nbsp;35&nbsp; &nbsp; &nbsp;42&nbsp; &nbsp; &nbsp;49
+<br></font></tt></p>
+
+<p>
+When you generalize a function appropriately, you often get
+a program with capabilities you didn't plan.  For
+example, you might
+notice that, because <tt>ab = ba</tt>,
+all the entries in the table appear twice.  You could save ink by printing
+only half the table.  To do that, you only have to change one line of
+<tt><font size=-1>printMultTable</font></tt>.  Change
+
+<p><tt><font size=-1>&nbsp; &nbsp; printMultiples(i, high)
+<br></font></tt></p>
+
+<p>
+to
+
+<p><tt><font size=-1>&nbsp; &nbsp; printMultiples(i, i)
+<br></font></tt></p>
+
+<p>
+and you get
+
+<p><tt><font size=-1>1
+<br>2&nbsp; &nbsp; &nbsp; 4
+<br>3&nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; 9
+<br>4&nbsp; &nbsp; &nbsp; 8&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;16
+<br>5&nbsp; &nbsp; &nbsp; 10&nbsp; &nbsp; &nbsp;15&nbsp; &nbsp; &nbsp;20&nbsp; &nbsp; &nbsp;25
+<br>6&nbsp; &nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;18&nbsp; &nbsp; &nbsp;24&nbsp; &nbsp; &nbsp;30&nbsp; &nbsp; &nbsp;36
+<br>7&nbsp; &nbsp; &nbsp; 14&nbsp; &nbsp; &nbsp;21&nbsp; &nbsp; &nbsp;28&nbsp; &nbsp; &nbsp;35&nbsp; &nbsp; &nbsp;42&nbsp; &nbsp; &nbsp;49
+<br></font></tt></p>
+
+
+<blockquote><i>As an exercise, trace the execution of this version of
+<tt><font size=-1>printMultTable</font></tt> and figure out how it works.</i>
+</blockquote>
+
+<a name=9></a>
+<h3>6.9 Functions</h3>
+<p>
+A few times now, we have mentioned "all the things functions are good
+for."  By now, you might be wondering what exactly those things are.
+Here are some of them:
+
+<ul>
+<li>Giving a name to a sequence of statements makes your program
+easier to read and debug.</li>
+<li>Dividing a long program into functions allows you to separate parts of
+the program, debug them in isolation, and then compose them into a whole.</li>
+<li>Functions facilitate both recursion and iteration.</li>
+<li>Well-designed functions are often useful for many programs.  Once you
+write and debug one, you can reuse it.</li>
+</ul>
+
+<a name=10></a>
+<h3>6.10 Glossary</h3>
+
+<dl>
+<dt>multiple assignment</dt>
+<dd>Making more than one assignment to the same
+variable during the execution of a program.</dd>
+<dt>iteration</dt>
+<dd>Repeated execution of a set of statements using
+either a recursive function call or a loop.</dd>
+<dt>loop</dt>
+<dd>A statement or group of statements that execute repeatedly until
+a terminating condition is satisfied.</dd>
+<dt>infinite loop</dt>
+<dd>A loop in which the terminating condition is
+never satisfied.</dd>
+<dt>body</dt>
+<dd>The statements inside a loop.</dd>
+<dt>loop variable</dt>
+<dd>A variable used as part of the terminating
+condition of a loop.</dd>
+<dt>tab</dt>
+<dd>A special character that causes the cursor to move to
+the next tab stop on the current line.</dd>
+<dt>newline</dt>
+<dd>A special character that causes the cursor to move to the
+beginning of the next line.</dd>
+<dt>cursor</dt>
+<dd>An invisible marker that keeps track of where the next
+character will be printed.</dd>
+<dt>escape sequence</dt>
+<dd>An escape character (<tt>\</tt>) followed by one or
+more printable characters used to designate a nonprintable character.</dd>
+<dt>encapsulate</dt>
+<dd>To divide a large complex program into components
+(like functions) and isolate the components from each other (by
+using local variables, for example).</dd>
+<dt>generalize</dt>
+<dd>To replace something unnecessarily specific (like a constant
+value) with something appropriately general (like a variable or parameter).
+Generalization makes code more versatile, more likely to be reused, and
+sometimes even easier to write.</dd>
+<dt>development plan</dt>
+<dd>A process for developing a program. In this chapter,
+we demonstrated a style of development based on developing code to do
+simple, specific things and then encapsulating and generalizing.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap05.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap07.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

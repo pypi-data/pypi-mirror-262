@@ -1,0 +1,30 @@
+## hpr4025 :: Testing V language
+
+ Pros
+
+Strong static typing
+compiles to C, no useless complexity like the JVM. Strong
+foundation, C is here to stay and compiles to most obscure
+architectures
+small binary size
+pattern matching and sum types
+immutability by default
+option/result types
+compile time reflection
+most Rust features, but memory management is automatic via GC or
+-autofree. Really useful for GUI programs
+
+Cons
+
+still in beta
+wants to be "clean", but they're adding too many features
+
+database ORM into the language
+GPU shaders
+
+
+Links
+
+Official website https://vlang.io/
+The test I did on porting a library to V https://gitlab.com/MassiminoilTrace/airone_v
+

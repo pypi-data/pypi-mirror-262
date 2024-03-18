@@ -1,0 +1,12 @@
+## hpr0910 :: Introduction to Pagekite.
+
+ 
+Welcome to my awkward second episode.
+Today I'll be introducing you to pagekite, a service for giving a public face to your local servers.
+Check it out at https://www.pagekite.net
+
+
+Bring your localhost servers on-line.
+
+PageKite is software that gives your localhost servers names and makes them globally visible. It works with any computer and any Internet connection.
+It's so easy you'll never want to think about routers, IP addresses or other technicalities again. It's open source, too!

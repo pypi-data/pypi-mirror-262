@@ -1,0 +1,20 @@
+## hpr3519 :: Rust 101: Episode 2 - Rolling With the Errors
+
+ GitLab Repository: https://gitlab.com/BlacKernel/rust-roller
+Rust-Roller Dice Roller Tutorial Application
+This is a simple dice rolling application that follows along with my Hacker Public Radio course on learning the rust programming language.
+I will attempt to make the commits follow the episodes pretty closely with one commit after every episode with the episode number in the commit message.
+Usage:
+rust-roller <number-of-dice> <number-of-sides-per-die>
+Output:
+Dice: <value-of-die-1> <value-of-die-2> ...
+Total: <sum-of-all-dice-values>
+
+List of Episodes
+Rust 101: Episode 0 - What in Tarnishing?
+Rust 101: Episode 1 - Hello, World!
+Rust 101: Episode 2 - Rolling With the Errors
+
+Contact Info:
+at blackernel at nixnet dot social
+izzyleibowitz at pm dot me

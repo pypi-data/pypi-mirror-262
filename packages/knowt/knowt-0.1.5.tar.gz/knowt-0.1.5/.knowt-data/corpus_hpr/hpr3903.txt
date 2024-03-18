@@ -1,0 +1,76 @@
+## hpr3903 :: Why I don't love systemd (yet)
+
+ I've been meaning to put down my thoughts about SystemD for the HPR
+community for some while, so here goes.
+I want to say that I am not a SystemD hater. When SystemD was a hot
+topic of debate, many became irrational over it, but I want to start by
+saying that I don't think it's a bad technology. I think it is a rather
+good technology. I just don't want it on my personal computer. So I
+would like to run things down in this order: what is it (as in, what is
+it really,) what makes it a good technology, why I don't want it now
+(but might later,) and a few tips for you if you decide that you don't
+want it currently.
+SystemD Is not an init system. SystemD includes an init system.
+SystemD Init was faster than SysVInit, but SystemD Init isn't the
+fastest init system, and SysVInit now has a parallelization helper, at
+least on Debian.
+So, if SystemD Init is not SystemD, than what is SystemD? To
+understand this we must first understand something about Linux. Linux
+operates under a model where there are root processes, and there are
+user processes. These two kinds of processes are usually called
+"layers." SystemD is actually a third layer, that can be called a system
+layer. So when SystemD is added to a Linux system, that changes the
+system so that there are three layers, a root layer, a user layer, and a
+system layer. As such, you now ask SystemD to set how the system runs.
+This is why SystemD includes things like an init system, because if you
+want to change what the system is running, you ask SystemD to change it.
+SystemD then messages an appropriate system to implement the change,
+like messaging its init system to bring up or bring down a system
+daemon. Once you play out this in your head a bit, you really realize
+that SystemD acts more like a message passing system in this regard.
+So why do I say SystemD is a good technology? Because this can
+standardize system control. Without SystemD a fleet of computers becomes
+like individual fingerprints or unique snowflakes. If you manage many
+computers, as many professional IT people do, you want them to all run
+the same, all have the same profiles and general configurations. So if
+you have a bunch of computers you are running, you can run a lot more if
+they are all run the same way. If your job requires you to run 10,000
+webservers, you want them to run identically because it is impossible to
+keep an understanding of 10,000 unique configurations in a human
+head.
+SystemD really shines in its support of virtualization as well. So
+to speak of servers, I used to run an email server for a few friends.
+Each of us had a userid and number as unix users. The mapping of unix
+userids and postfix userids can get confusing when it gets big. Thanks
+to SystemD's virtualization work, you can actually put a service like
+email into a namespace situation so that it has only the users root and
+the daemon user id (like "postfix"), so SystemD greatly enhances
+security for server installations. This might help explain its
+dominance in linux distributions that have been traditionally
+server-centric, such as debian and redhat.
+So why don't I don't want it? Well, I've been doing a lot of talking
+about professional computer work and corporate work environments, but I
+use a "Personal Computer" as a hobby. I've been out-of-industry for
+decades now. And when I say "Personal Computer" I'm not talking a
+hardware specification, rather I'm talking about "This is my personal
+computer where I do things my way, as opposed to my work computer where
+I do things my companies way". Dear listener, please remember that I did
+the first community show contribution to HPR, and my topic was about
+personalization. For me, a hobbyist interested in operating system
+experimentation, I don't want a system layer, I want a traditional
+unix-like system that operates on a two-layer model and does things my
+way, nobody else's way.
+So, what advice can I give to those who don't want SystemD now? Well,
+recently I've left Debian. Debian, you see, supports init system
+diversity, but as you now know dear listener, that is different than
+being without SystemD. You may have heard that SystemD is
+linux-specific, that is to say that it runs only on linux, not anything
+like a BSD system or a Windows system. But you may be curious to know
+that it is also Gnu-libC specific. Which means that the C compiler must
+use GNU's libC standard library. Thus, if you have a system built around
+the Musl C standard library like Alpine or Void, or a system like
+Android that runs on the Bionic C Standard library, you wont have a
+SystemD system. I'm personally learning Void as its package manager
+supports both binary and a ports collection much like the BSD's. But
+that is what I'm doing on my personal computer, I leave you in the
+freedom to do things your way on your personal computer!

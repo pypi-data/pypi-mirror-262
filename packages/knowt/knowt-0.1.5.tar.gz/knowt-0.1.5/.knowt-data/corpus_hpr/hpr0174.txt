@@ -1,0 +1,60 @@
+## hpr0174 :: VIM is my IDE
+
+ 
+Django:  
+This Week in Django
+  
+ 
+VIM  
+ SnippetsEMU  
+
+Nerd tree  
+ taglist   
+
+
+add to ~/.vimrc for shortcuts 
+
+Taglist shortcut line: 
+
+nnoremap   :TlistToggle 
+
+
+NERDtree shortcut line: 
+nnoremap   :NERDTree 
+
+
+Notes: 
+*.vba is a vimball file
+open a .vba file and follow the instructions. once in the file type :so % and hit enter to run the .vba file. that should install the vim scripts into your ~/.vim directory. it's always a good idea to run the unzip or .vba files from the directory you want to install them into, as you may come across scripts in the future that assume that's were you are. 
+
+default Debian/Ubuntu setting file is here:  /usr/share/vim/vim71/debian.vim
+yours may be under vim70 or something else depending on your version
+the global /etc/vim/vimrc runs the debian.vim file 
+ 
+SnippetsEMU notes: 
+open any SOMELANGUAGE_snippets.vim file to see examples of how to setup a snippet. once snippets are installed, open a file with vim and type a snippet phrase followed by hitting the  key and the phrase should be replaced with the bits from the snippet file. 
+
+
+NERD tree notes:
+
+
+normal vim keyboard keys work in the NERD tree window. 
+:NERDTree starts it 
+q from the NERDtree window quits 
+u for up a level
+t for down a level (traverse) 
+:help NERDTree for extensive command help 
+
+Taglist notes: 
+normal vim keyboard keys work in the taglist window. 
+taglsits are cumulative, meaning that as you open different files in the same vim session taglist creates a new taglist tree for new files you edit.
+:TlistOpen starts
+:TlistToggle toggles between opening and closeing the taglist window
+F1 for help
+q quits/closes taglist window
+ 
+
+Lodgeit Pastebin for VIM  
+NERDCommenter for VIM 
+easily comment out lines and blocks of text inside code for many languages 
+https://www.vim.org/scripts/script.php?script_id=1218  

@@ -1,0 +1,56 @@
+## hpr1496 :: wiki on the raspberry pi
+
+ 
+My experience of playing with wiki software on the raspberry pi, I forgot to mention I run the standard Raspbian distribution on my pi
+if you run something else your mileage may vary.
+
+
+When I listened to the show I noticed a few mistakes, there may be others as the show was pulled together rather hastily
+
+
+1. The raspberry pi has either 256 or 512 MB of memory Not KB's oops
+
+
+2. You can automatically create pages using camel-case words they don't need to start with the word wiki so in my example the page WikiNotes
+could just as easily be called GuffNotes. This is because at first I didnt appreciate the meaning of the word camelcase, you learn something 
+new every day!
+
+
+3. Wikidot still provides a free account, oops again!
+
+
+wikidot
+
+
+https://www.wikidot.com/
+
+
+
+dokuwiki
+
+
+https://www.dokuwiki.org/dokuwiki
+
+
+
+didiwiki
+
+
+https://c2.com/cgi/wiki?DidiWiki
+
+
+
+sed man page
+
+
+https://unixhelp.ed.ac.uk/CGI/man-cgi?sed
+
+
+
+some sed tutorial and examples
+
+
+https://www.grymoire.com/unix/sed.html
+
+
+

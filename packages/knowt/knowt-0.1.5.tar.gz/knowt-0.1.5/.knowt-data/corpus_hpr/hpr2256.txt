@@ -1,0 +1,11 @@
+## hpr2256 :: Modular Game Scaling
+
+ NOTE: the audio didn't cut together as smoothly as I remember from the first time, probably because I forgot to record at 44.1 KHz
+In this episode I explain in broad terms how I programmed a game system to adjust its display resolution using three distinct modules operating individually and in concert.
+
+The "metagame" (launcher) module accepts an argument describing the size of the window available for display
+The "gameplay" module is informed of the space available as a 'window' into the game world and uses it for one thing or another
+The "graphics" module opens a window at the specified size and modifies the graphical assets if needed
+
+Once again I recorded in parts using a program called Urecord on my pocket computer (mobile phone).
+I program using Pygame, post on a GNU Social account, maintain a personal website at NoxBanners.NET, and study programming techniques at Refactoring.com, style at Python.org, and sometimes patterns at Portland Pattern Repository

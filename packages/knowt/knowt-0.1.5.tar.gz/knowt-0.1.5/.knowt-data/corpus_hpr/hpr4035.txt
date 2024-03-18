@@ -1,0 +1,126 @@
+## hpr4035 :: Processing podcasts with sox
+
+ Processing Podcasts
+Ahuka's recent episodes about pre processing podcasts with audacity
+reminded me that I have been wanting to do an episode about
+pre-processing podcasts with sox.
+I no longer need to use sox to change the podcast tempo since now, I
+use Antena Pod on my phone
+
+When I started listening to podcasts the only playback options were
+either a PC or a mp3 player. I started out just downloading the podcasts
+to my PC from the podcast's web page.
+
+My first podcast automation was using bashpodder. bashpodder was
+simple to set up and run via cron. It would: - read a file to get a list
+of RSS feeds - Track previous downloads in a log - Download new
+episodes
+https://lincgeek.org/bashpodder/
+
+A few of the podcasts I listened to were panels of a few hosts that
+were recorded live and released later as a podcast. Some of those shows
+were unedited and had some dead air that I wanted to remove. It
+took me a few tries, but I eventually figured out how to truncate
+silence with sox
+
+Many of the podcast players I used did not have the ability to alter
+the playback speed. So I also figured out how to change the tempo using
+sox.
+
+I stuck to using dedicated mp3 players for several years. Before the
+sansa clips came out, my favorite was the sansa e200 series https://en.wikipedia.org/wiki/Sansa_e200_series They
+could run the alternative firmware, rockbox. https://www.rockbox.org/
+I remember wasting hours playing frozen bubble on my mp3 player.
+
+The sansa clips were a big innovation. Small, light, and cheap. They
+were my preferred player until I eventually switched to phones.
+
+I had a workflow set up - cron bashpodder - script to process with
+sox - script to reload podcast - mount - move from player to archive -
+move new files to player - unmount
+
+I did a HPR episode a few months ago about my first tech job. When I
+started there, I was given in iPhone. It was my first smart phone. While
+there, I had started taking walks on by lunch break. And I would get to
+listen to podcast while out.
+
+There were a few times where I would run out of episodes to listen
+to. So I decided to add some podcasts to my work iPhone. For most of the
+time I worked there, I would take my sansa with me and listen to every
+thing on it. Then if I ran out, I had my phone with me, so I would
+listen to podcasts on it.
+
+This process meant I had 2 sets of podcasts - provided by mashpodder
+- iPhone app.
+
+I kept this practice of having 2 podcast sources for a few years, but
+I eventual stopped using the sansa. Phones were getting better, and the
+sansa devices were getting harder to find.
+
+I wanted to start listening to my bashpodder podcasts on my phone. I
+looked for a few file transfer solutions, but eventually settled on
+making my own RSS feed of files I had downloaded.
+
+I found a python script that would take a directory listing of mp3s
+and build a RSS feed. Now I had a cron job that would - download -
+process with sox - create the RSS feed - rsync RSS XML file on podcast
+files to a VPS
+https://genrss.readthedocs.io/en/latest/
+
+I used a VPS so I could download new episodes to my phone from
+anywhere. After a while, I experimented with using a AWS S3 to host the
+files. I stopped using S3 when the free tier ran out, and I started
+getting charged for storage and bandwidth.
+
+Eventually, when I started working at home I no longer needed the RSS
+feed to be available from anywhere. So I just started using a http
+server in my home lab to host my RSS feed and files. I can update my
+phone with the files I download and process as long as I am on my home
+network
+
+Also, one other change I made at some point was switching from
+bashpodder to mashpodder. There were a few podcast that bashpodder was
+not able to parse.
+
+Today, I listen to podcasts via antenna pod Most of of the podcasts I
+searched for and subscribed to via the app. There are still a few
+podcasts that I get via mashpodder and pre-process with sox. Since the
+phone app is good at altering the tempo (I like 2x), I no longer have to
+use sox for speeding up. But I still use sox for leveling the audio and
+truncating silence.
+My tendency is to have the podcasts that are produced by
+studios/companies via the app and podcasts produced by enthusiasts via
+mashpodder/sox
+
+set -euo pipefail
+IFS=$'nt'
+SOX="/usr/local/bin/sox"
+cd /mashpodder/podcasts/files
+if [ -z "$(ls -A )" ]; then
+   echo "Empty"
+   exit 0
+else
+   echo "Not Empty"
+fi
+for i in *
+    do
+    $SOX  -v 0.5 $i "/mashpodder/podcasts/faster/$i.mp3" compand 0.3,1 6:-70,-60,-20 -5 -90  remix - silence 1 0.1 1% -1 0.1 1%  stat
+    mv -v $i ../archive/
+done
+
+
+Delete old file from the Archive
+Generate a RSS feed of the faster directlry
+
+find  /mashpodder/podcasts/archive/ -name "*mp3" -mtime +30 -delete
+cd /mashpodder/podcasts
+  && python2.7 ../genRSS/genRSS.py
+  -v
+  -e mp3
+  -i 'faster/faster.gif'
+  -t Faster
+  -p "Faster Podcasts"
+  -d faster
+  -H http://address.of.web.host
+  --sort-creation
+  -o faster/faster.xml

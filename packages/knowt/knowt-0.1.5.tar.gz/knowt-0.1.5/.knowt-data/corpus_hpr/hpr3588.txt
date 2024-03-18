@@ -1,0 +1,28 @@
+## hpr3588 :: Linux Inlaws S01E55: Get yer boots on for a fresh look at init systems
+
+ In this episode, Martin and Chris discuss init systems and Chris outs
+himself as a systemd fan boy (Devuan followers take note :-). Even Linux and
+other FLOSS OS geeks not interested in what happens when you flick the power
+switch on a computer may find this episode (vaguely) interesting as some light
+is also shed on the philosophy of the different system architectures and their
+history (Ever wanted to know what an /360 IPL really is? Then stay tuned...).
+Disclosure: The following text may resort to regular expressions to keep
+things concise and simple. Some of the PCRE-challenged readers may take
+offence - you have been warned.
+Links:
+
+Booting a PC: https://en.wikipedia.org/wiki/Booting#Personal_computers_(PC)
+GRUB: https://www.gnu.org/software/grub
+([A-Z][a-z]+ux) Init systems (general overview): https://arxiv.org/pdf/0706.2748v1.pdf
+SysV init: https://en.wikipedia.org/wiki/Init#SysV-style
+systemd: https://0pointer.de/blog/projects/systemd.html
+OpenRC: https://github.com/OpenRC/openrc
+Canonical's Upstart: https://upstart.ubuntu.com
+Switch from upstart to systemd: https://www.markshuttleworth.com/archives/1316
+Runlevels: https://www.linfo.org/runlevel_def.html
+Serial console: https://www.kernel.org/doc/html/latest/admin-guide/serial-console.html
+Hello Magazine: https://www.hellomagazine.com
+Unix philosophy: https://en.wikipedia.org/wiki/Unix_philosophy
+And in much more detail: https://www.catb.org/~esr/writings/taoup/html/ch01s06.html
+Devuan: https://www.devuan.org
+

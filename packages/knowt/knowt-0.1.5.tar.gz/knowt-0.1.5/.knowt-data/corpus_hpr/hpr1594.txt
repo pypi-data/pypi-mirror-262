@@ -1,0 +1,11 @@
+## hpr1594 :: Steam and wine with linux
+
+ This isn't about my worshiping of Bacchus by playing games on linux in a sauna (that's for a future show) but instead about getting a Windows-only Steam game to work on a recent 64 bit linux distro. I'm using Slackware, but I suspect the pitfalls and solutions I encountered would be similar on other distros.
+Links relevant to this adventure:
+
+https://appdb.winehq.org/objectManager.php?sClass=version&iId=19444
+https://wiki.winehq.org/winetricks
+https://www.aceofspades.com
+https://alien.slackbook.org/blog/valves-steam-client-for-linux/Further details can be found on my blog:
+
+https://blog.mcnalu.net

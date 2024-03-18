@@ -1,0 +1,3 @@
+## hpr1440 :: Creating a Key Pair - GUI Client
+
+ In the previous program we explained how to use the command line tools to generate encryption keys. This time we look at the GUI clients that some people may prefer. Using KGpg as an example, we can see that it does all the things we did last time on the command line.

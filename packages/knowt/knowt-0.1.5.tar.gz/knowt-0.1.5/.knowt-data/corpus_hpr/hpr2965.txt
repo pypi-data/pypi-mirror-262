@@ -1,0 +1,8 @@
+## hpr2965 :: instant feedback for students in maths
+
+ I'm trying to make sure that this show doesn't come across as as advertisment placement on HPR I won't provide a link to our application (which wouldn't help a lot anyway as we don't really have much of a web site anyway.).
+However I'll link to some of the technical components:
+The Computer Algebra System we use is called Maxima, its history goes back to the early 80s. It's written in common lisp.
+We have considered switching to SymPy as a more modern alternative. SymPy doesn't offer the feature completeness Maxima does, though. It has still a long way to go.
+Our servers run Debian. The current version is written in PHP but we are working on a new version based on dockerized Django with a JS frontend in Ember along with some micro services written in Go, Python and PHP.
+To render math we use MathJax in the current version and KaTeX in the new version. The PDF-export of worksheets is of course done in LaTeX.

@@ -1,0 +1,33 @@
+## hpr3101 :: Metrics
+
+ Whether you are writing a simple darts simulation 8-bit computer game or are traversing the galaxy Elite-style, you might well find yourself tangling with the mathematical concept known as the metric. In this episode I describe the mathematical concept of a metric which I address with the following questions. Brief answers are provided below but the show, I hope, gives more context and colour.
+What is a metric?
+A type of ruler that is used in mathematics.
+Why not just use a ruler?
+You can if all you want to do is measure distances in real life but if you want to work out distances from coordinates you need a metric.
+What's the simplest example of a metric?
+In 1D, distance s equals change in x coordinate.
+OK, can I have a more interesting example please?
+On a flat 2D surface, distance squared is the change in x squared plus change in y squared.
+Isn't that pythagoras?
+Yes, it is, but using the word distance and two co-ordinates.
+What other co-ordinates can we use for a flat 2D surface?
+Those x and y co-ordinates are called Cartesian co-ordinates. Instead we can use polar co-ordinates: radius r, and the angle φ (or phi) measured clockwise from the vertical. These might be more convenient in some cases, say for a dart board computer game, or if you are working with a compass bearing, eg head east for 1 km would become start at the origin (r=0) and move with phi=90° until r=1 km.
+Does Pythagoras still work in polar coords?
+Yes and no. No, it is no longer true to say that distance squared equals radius squared plus φ squared, but since the geometry is the same - a flat 2D surface - we can say that a change in distance squared equals the change in radius squared plus radius squared times the change in φ squared.
+Why do we have to talk about changes in s, r and φ?
+Because one of our coordinates now appears in the metric. That is, the radius squared multiplies on to the change in φ squared. This means that a change in φ depends on r. In other words, bigger circles have bigger circumferences. Actually, it's more intricate than that, as we must deal with infinitesimals: quantities which are very, very, very small but not zero.
+Can we use Cartesian or polar co-ordinates on the surface of the Earth?
+Only over short distances, much smaller than the radius of the Earth which is 6400 km. So up to about 100 km that's fine for many purposes, but not when flying a plane over great distances, say London to Singapore.
+Why not?
+The surface of the Earth may look locally flat but of course the Earth has a curved 2D surface. This means that this surface has a non-euclidean geometry, which means that Pythagoras does not hold and we cannot even define Cartesian co-ordinates, let alone use them.
+I want to know more OR my mind is not fully blown.
+I will probably do more shows on this.
+Can I have some links?
+Sure:
+
+Alcubierre drive
+Dart board
+Polar coordinates
+Metric
+

@@ -1,0 +1,32 @@
+## hpr3609 :: Linux Inlaws S01E57: Operating System Level Virtualisation and Martin's Faith
+
+ In this episode our two ageing heroes take a closer at operating system
+(OS) level virtualisation. The main different legacy virtualisation
+technologies like virtual machines (VMs) and this new-fangled approach is
+that the OS kernel remains the same across virtualisation domains, thus giving
+the hippsters and other followers of fashion a cheaper and potentially much
+faster solution than virtualising the kernel and surrounding hawrdware and all
+the rest of it. Plus more details on Martin's real faith. Don't miss out on
+this episode if you're interested in any of these...
+Links:
+
+Craíc: https://www.irelandlogue.com/irish-slang/irish-slang.html
+Celts: https://en.wikipedia.org/wiki/Celts
+Celtic languages: https://en.wikipedia.org/wiki/Celtic_languages#Living_languages
+[a-zA-Z]+ Virtualisation: https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/VMware_paravirtualization.pdf
+Hypervisor: https://en.wikipedia.org/wiki/Hypervisor
+BSD Jails: https://docs.freebsd.org/en/books/handbook/jails
+Solaris Zones: https://www.oracle.com/technical-resources/articles/it-infrastructure/o11-092-s11-zones-intro.html
+Docker: https://docs.docker.com/engine
+LXC: https://linuxcontainers.org
+Open Container Iniative: https://opencontainers.org
+Podman: https://podman.io
+Double-fork: https://thelinuxjedi.blogspot.com/2014/02/why-use-double-fork-to-daemonize.html
+CRI-O: https://github.com/cri-o/cri-o
+CGroups: https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html
+Namespaces: https://en.wikipedia.org/wiki/Linux_namespaces
+The gory details: https://www.haifux.org/lectures/299/netLec7.pdf
+Dockerfiles: https://docs.docker.com/engine/reference/builder
+Containerd: https://containerd.io
+From Dusk Till Dawn (TV series): https://en.wikipedia.org/wiki/From_Dusk_till_Dawn:_The_Series
+

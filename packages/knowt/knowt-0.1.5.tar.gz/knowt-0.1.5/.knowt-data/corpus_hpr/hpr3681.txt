@@ -1,0 +1,14 @@
+## hpr3681 :: Rust 101 Episode 3: Functionally Insane
+
+ In this episode BlacKernel is back! (Although a lot more loopy than I remember being while recording)
+And teaching you how to make functions, for loops, and match statements in Rust.
+Points covered in this episode:
+
+isize and usize number types in rust
+fn (function) declarations with arguments and return types
+match statements both bare and part of variable assignment
+for _ in 1..x loops. That is for loops over an iterator variable across a range of integers.
+
+
+Email: izzyleibowitz@pm.me
+Mastodon: https://nixnet.social/BlacKernel

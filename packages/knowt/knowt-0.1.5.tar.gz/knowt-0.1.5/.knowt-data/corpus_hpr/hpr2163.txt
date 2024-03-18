@@ -1,0 +1,37 @@
+## hpr2163 :: Gnu Awk - Part 4
+
+ Gnu Awk - Part 4
+Introduction
+This is the fourth episode of the series that b-yeezi and I are doing. These shows are now collected under the series title “Learning Awk”.
+Recap of the last episode
+Logical Operators
+We have seen the operators ‘&&’ (and) and ‘||’ (or). These are also called Boolean Operators. There is also one more operator ‘!’ (not) which we haven’t yet encountered. These operators allow the construction of Boolean expressions which may be quite complex.
+If you are used to programming you will expect these operators to have a precedence, just like operators in arithmetic do. We will deal with this subject in more detail later since it is relevant not only in patterns but also in other parts of an Awk program.
+The next statement
+We saw this statement in the last episode and learned that it causes the processing of the current input record to stop. No more patterns are tested against this record and no more actions in the current rule are executed. Note that “next” is a statement like “print”, and can only occur in the action part of a rule. It is also not permitted in BEGIN or END rules (more of which anon).
+The BEGIN and END rules
+The BEGIN and END elements are special patterns, which in conjunction with actions enclosed in curly brackets make up rules in the same sense that the ‘pattern {action}’ sequences we have seen so far are rules. As we saw in the last episode, BEGIN rules are run before the main ‘pattern {action}’ rules are processed and the input file is (or files are) read, whereas END rules run after the input files have been processed.
+It is permitted to write more than one BEGIN rule and more than one END rule. These are just concatenated together in the order they are encountered by Awk.
+Awk will complain if either BEGIN or END is not followed by an action since this is meaningless.
+Variables, arrays, loops, etc
+Learning a programming language is never a linear process, and sometimes reference is made to new features that have not yet been explained. A number of new features were mentioned in passing in the last episode, and we will look at these in more detail in this episode.
+Long notes
+I have written out a moderately long set of notes for this episode and these are available here https://hackerpublicradio.org/eps/hpr2163/full_shownotes.html.
+With a view to making portable notes for this series I have included ePub and PDF versions with this episode. Feedback is welcome to help decide which version is preferable, as are any suggestions on the improvement of the layout.
+Links
+
+GNU Awk User’s Guide: https://www.gnu.org/software/gawk/manual/html_node/index.html
+Previous shows on HPR:
+
+“Gnu Awk - Part 1”: https://hackerpublicradio.org/eps.php?id=2114
+“Gnu Awk - Part 2”: https://hackerpublicradio.org/eps.php?id=2129
+“Gnu Awk - Part 3”: https://hackerpublicradio.org/eps.php?id=2143
+
+Arithmetic expansion in Bash “Some additional Bash Tips”: https://hackerpublicradio.org/eps.php?id=1951
+Resources:
+
+ePub version of notes: https://hackerpublicradio.org/eps/hpr2163_full_shownotes.epub
+PDF version of notes: https://hackerpublicradio.org/eps/hpr2163_full_shownotes.pdf
+Demonstration of arithmetic assignment operators: https://hackerpublicradio.org/eps/hpr2163/arithmetic_assignment_operators.awk
+Counting frequencies of particular colours: https://hackerpublicradio.org/eps/hpr2163/color_count.awk
+

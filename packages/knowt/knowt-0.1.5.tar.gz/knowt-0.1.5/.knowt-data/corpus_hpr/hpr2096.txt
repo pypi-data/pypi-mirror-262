@@ -1,0 +1,12 @@
+## hpr2096 :: Useful Bash functions - part 2
+
+ Useful Bash functions - part 2
+Overview
+This is the second show about Bash functions. In this one I revisit the yes_no function from the last episode and deal with some of the deficiencies of that version.
+As before it would be interesting to receive feedback on these versions of the function and would be great if other Bash users contributed ideas of their own.
+Full Notes
+Since the notes explaining this subject are long, they have been placed here.
+Links
+
+Previous HPR episode in this group Useful Bash functions: https://hackerpublicradio.org/eps.php?id=1757
+

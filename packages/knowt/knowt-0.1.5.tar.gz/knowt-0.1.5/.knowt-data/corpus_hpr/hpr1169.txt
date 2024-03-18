@@ -1,0 +1,19 @@
+## hpr1169 :: Autotools
+
+ 
+Please note: the time of the hpr saturday sessions has changed to 12:00 midday EST or 6 in the evening Central European Time. Also recording has ended for this year, but you are free to join in again at 12th of January.
+
+
+This is a recording of the HPR Saturday Sessions - at the Linux Basement mumble server if you have knowledge you wish to share with your fellow listeners but don't know how to say it.
+
+
+In this episode Nido Media takes us through how to create a './configure' script using one of his own packages as an example. You can find the 'derpy' package at https://motherrabbit.foxserver.be/nido/derpy-0.2.tar.gz (be aware this version has been packaged purely as example of autotools).
+
+
+The GNU manuals for autoconf and automake:
+
+
+https://www.gnu.org/software/autoconf/manual/
+
+https://www.gnu.org/software/automake/manual/
+

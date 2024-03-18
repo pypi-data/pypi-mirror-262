@@ -1,0 +1,32 @@
+## hpr3558 :: How I'm learning Haskell
+
+ Online resources mentioned in the episode for learning Haskell:
+
+How to Learn Haskell - Chris Allen
+CIS 194 - Brent Yorgey
+Learn You a Haskell for Great Good!
+LambdaHack is a framework for Roguelike games.
+
+Books about Haskell:
+
+Haskell Programming from First Principles - Chris Allen
+Algebra-Driven Design - Sandy Maguire
+Optics by Example - Chris Penner
+Production Haskell
+Thinking With Types: Type-Level Programming in Haskell - Sandy Maguire
+What I Wish I Knew When Learning Haskell - Stephen Diehl
+
+Blogs I follow:
+
+Planet Haskell
+Monday Morning Haskell
+Alexis King
+
+Important reminders:
+
+haskell isn't impossible
+you don't need math degree to write Haskell
+you don't need to know category theory
+you need practice, you most likely can't just stare at code and learn it like that
+
+ad astra!

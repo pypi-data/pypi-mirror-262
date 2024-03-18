@@ -1,0 +1,38 @@
+## hpr2543 :: Home Theater - Part 1 Hardware
+
+ 
+Onkyo TX-NR575 7.2 Channel Network A/V Receiver
+https://www.amazon.com/Onkyo-TX-NR575-Channel-Network-Receiver/dp/B06XVFY3M8
+Onkyo Android App
+
+Zoomtak 2.4G Wireless Mini Keyboard Multifunctional Backlit with Infrared Remote Learning for Android Tv Box, IPTV,HTPC, PS3, Xbox 360, Windows, MAC, Linux OS
+https://www.amazon.com/gp/product/B06VW7XFQZ
+CyberPower CP1500AVRLCD Intelligent LCD UPS System, 1500VA/900W, 12 Outlets, AVR, Mini-Tower
+https://smile.amazon.com/gp/product/B000FBK3QK
+PowerPanel Conf file:
+
+cat /etc/pwrstatd.conf
+powerfail-delay = 60
+powerfail-active = yes
+powerfail-cmd-path = /usr/local/bin/pwrstatd-powerfail.sh
+powerfail-duration = 0
+powerfail-shutdown = no
+
+lowbatt-delay = 30
+lowbatt-active = yes
+lowbatt-cmd-path = /usr/local/bin/pwrstatd-lowbatt.sh
+lowbatt-duration = 0
+lowbatt-shutdown = yes
+enable-alarm = yes
+shutdown-sustain = 60
+turn-ups-off = yes
+lowbatt-threshold = 15
+
+ups-polling-rate = 1
+ups-retry-rate = 10
+prohibit-client-access = no
+
+Bluetooth Receiver Transmitter, Keedox V4.0 Bluetooth Music Receiver Transmitter Wireless Audio Receiver Stereo Transmitter with aptx for Headphones Car TV
+https://smile.amazon.com/gp/product/B00VJTIMIS/
+iRunzo NFC Foldable On Ear Wireless Bluetooth Headset Sports Headphones with Microphone Bass Stereo CSR4.1 180 Days Standby Gym Pedometer APP 3.5mm AUX Cable for iPhone Mac iPad Black
+https://smile.amazon.com/gp/product/B01JU59W3Q

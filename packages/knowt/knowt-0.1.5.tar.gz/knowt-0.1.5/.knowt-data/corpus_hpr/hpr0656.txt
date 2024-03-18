@@ -1,0 +1,38 @@
+## hpr0656 :: My first steps in recovering pictures
+
+ 
+This is my first podcast ever and I show you how easy it is to recover pictures from a dying disk. It's not high-tech as I found out (using the commands anyway).
+Links to the used tools and PartedMagic:
+
+
+Photorec (recover pictures and other files on havily dammaged filesystem)
+
+
+
+https://www.cgsecurity.org/wiki/PhotoRec
+
+
+
+Ddrescue {fancy imaging-tool to get data from dammaged media}
+
+
+
+https://www.gnu.org/software/ddrescue/ddrescue.html
+
+
+
+PartedMagic
+
+
+
+https://partedmagic.com/doku.php?id=start
+
+
+
+The switches I used in ddrescue as given in their documentation:
+
+
+ddrescue -f -n /dev/hdb1 /dev/hdc1 logfile
+ddrescue -d -f -r3 /dev/hdb1 /dev/hdc1 logfile
+
+Please send feedback, advise, whatever to: sven@@noblanks.org

@@ -1,0 +1,62 @@
+## hpr3457 :: Tables
+
+ 
+Mobile devices don't display them nicely.
+Most tables can be converted into a list:
+
+
+
+OSInitPkg
+
+
+Fedorasystemddnf
+
+
+SlackwareBSD-styleslackpkg
+
+
+GentooOpenRCemerge
+
+
+Can be represented as a list. In YAML terms, this is a sequence of mappings.
+
+Fedora
+Init system: systemd
+Package manager: dnf
+
+Slackware
+
+Init system: BSD-style
+Package manager: slackpkg
+
+Gentoo
+
+Init system: OpenRC
+Package manager: emerge
+
+
+A table doesn't always translate exactly to a list, but it probably can be restructured. 
+
+
+OSOpen sourceLanded on Mars
+
+LinuxYesYes
+
+
+BSDYesNo
+
+
+macOSNoNo
+
+
+Could be written like this instead:
+Linux and BSD are open source operating systems, while macOS is not. Of these POSIX-compliant systems, only Linux has landed on Mars so far.
+That's pretty casual and loses the visual impact of a table or a list. So alternately, you could summarize what's common and highlight differences:
+
+There are a few Linux systems on Mars.
+Neither BSD or macOS have yet landed on Mars.
+
+
+Linux and BSD are both open source.
+macOS is based partially on open source and includes components from the BSD, KDE, GNU, and other projects.
+

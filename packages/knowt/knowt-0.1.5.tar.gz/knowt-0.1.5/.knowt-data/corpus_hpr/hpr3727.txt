@@ -1,0 +1,462 @@
+## hpr3727 :: Expanding your filesystem with LVM
+
+ Synopis
+I installed a new 1TB Crucial MX500 SSD into my work computer. While
+we are mostly a Windows based business, as the IT guy I do get a bit of
+discretion when updating my own machine (i.e. I get to solve all the
+problems I create). Last year, I decided to run the Pop!_OS distribution
+of Linux on my work computer and run Windows in a VM on it. Recently the
+Windows image had grown and was causing disk space notifications. This
+prompted the additional hard drive.
+During the initial installation of Pop!_OS, I remember deciding not
+to bother with installing Linux Volume Management (LVM). I have used it
+in the past, but I am still much more comfortable with the old style
+device mapping and mounting disk partitions to directories. I even
+rationalized that if I needed to add more space, I will just add a new
+disk with one big partition and map it to the home directory.
+Now a year later I am adding a new HD and thinking, I really hate all
+the space that is most likely going to be wasted once I move the Windows
+image to the new drive. Ok, I guess I should figure out how to install
+LVM, and use it to manage the space on both drives. Luckily there a
+number of good blogs to be found on adding LVM to an existing system.
+The following are the steps and commands I used to accomplish my
+goal.
+Commands
+Most of the following commands need to be run as root. I decided to
+change to root user instead of typing sudo before every command. The
+basic steps to creating a single filesystem sharing the storage space
+between two physical disk partitions are:
+
+Let LVM know about the new disk.
+In my case, create a volume group and add the new disk and its full
+storage space to it.
+Copy the disk partition with the root filesystem from the origin
+disk to the new volume group
+Expand the root filesystem on the volume group to the full size of
+the volume group.
+Update system configuration to boot with the root filesystem on the
+new volume group.
+Let LVM know about the old root disk partition.
+Add the old root partition to the volume group.
+Expand the root filesystem on the volume group to include the new
+space in the volume group.
+
+root@work# pvcreate /dev/sdb
+
+root@work# pvdisplay
+  "/dev/sdb" is a new physical volume of "931.51 GiB"
+  --- NEW Physical volume ---
+  PV Name               /dev/sdb
+  VG Name
+  PV Size               931.51 GiB
+  Allocatable           NO
+  PE Size               0
+  Total PE              0
+  Free PE               0
+  Allocated PE          0
+  PV UUID               wRBz38-xxxx-xxxx-xxxx-xxxx-xxxx-xxxxxx
+
+root@work# vgcreate workvg /dev/dsb
+  No device found for /dev/dsb.
+root@work# vgcreate workvg /dev/sdb
+  Volume group "workvg" successfully created
+root@work# vgdisplay
+  --- Volume group ---
+  VG Name               workvg
+  System ID
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               931.51 GiB
+  PE Size               4.00 MiB
+  Total PE              238467
+  Alloc PE / Size       0 / 0
+  Free  PE / Size       238467 / 931.51 GiB
+  VG UUID               67DSwP-xxxx-xxxx-xxxx-xxxx-xxxx-xxxxxx
+
+root@work# pvdisplay
+  --- Physical volume ---
+  PV Name               /dev/sdb
+  VG Name               workvg
+  PV Size               931.51 GiB / not usable 1.71 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              238467
+  Free PE               238467
+  Allocated PE          0
+  PV UUID               wRBz38-xxxx-xxxx-xxxx-xxxx-xxxx-xxxxxx
+
+root@work# lvcreate -n root -L 931.51 workvg
+  Rounding up size to full physical extent 932.00 MiB
+  Logical volume "root" created.
+
+root@work# cat /dev/sda3 >/dev/mapper/workvg-root
+cat: write error: No space left on device
+Hmmm why can't it copy the smaller disk onto a larger one?
+root@work# pvdisplay
+  --- Physical volume ---
+  PV Name               /dev/sdb
+  VG Name               workvg
+  PV Size               931.51 GiB / not usable 1.71 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              238467
+  Free PE               238234
+  Allocated PE          233
+  PV UUID               wRBz38-xxxx-xxxx-xxxx-xxxx-xxxx-xxxxxx
+
+root@work# lvdisplay
+  --- Logical volume ---
+  LV Path                /dev/workvg/root
+  LV Name                root
+  VG Name                workvg
+  LV UUID                srXpUd-xxxx-xxxx-xxxx-xxxx-xxxx-xxxxxx
+  LV Write Access        read/write
+  LV Creation host, time work.example.com, 2022-10-18 08:46:34 -0400
+  LV Status              available
+  # open                 0
+  LV Size                932.00 MiB
+  Current LE             233
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:1
+Whoops, the default unit for the lvcreate is MB, and I forgot to add
+G to my size. A good reason to always include units in whatever you do
+:) Also, pay attention to any reports printed at the end of a successful
+command. When I scrolled back I realized it told me the size it
+created.
+root@work# lvextend -l +100%FREE /dev/workvg/root
+  Size of logical volume workvg/root changed from 932.00 MiB (233 extents) to 931.51 GiB (238467 extents).
+  Logical volume workvg/root successfully resized.
+
+root@work# lvdisplay
+  --- Logical volume ---
+  LV Path                /dev/workvg/root
+  LV Name                root
+  VG Name                workvg
+  LV UUID                srXpUd-xxxx-xxxx-xxxx-xxxx-xxxx-xxxxxx
+  LV Write Access        read/write
+  LV Creation host, time work.example.com, 2022-10-18 08:46:34 -0400
+  LV Status              available
+  # open                 0
+  LV Size                931.51 GiB
+  Current LE             238467
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:1
+
+root@work# cat /dev/sda3 >/dev/mapper/workvg-root
+
+root@work# mkdir /media/new-root
+
+root@work# mount /dev/mapper/workvg-root /media/new-root
+
+root@work# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/sda3                450G  421G  5.6G  99% /
+/dev/sda1                497M  373M  125M  76% /boot/efi
+/dev/sda2                4.0G  3.4G  692M  84% /recovery
+/dev/mapper/workvg-root  450G  421G  5.7G  99% /media/new-root
+Ok, the LV volume is resized but the filesystem now needs to expanded
+to use the new disk space
+root@work# umount /media/new-root/
+
+root@work# resize2fs /dev/mapper/workvg-root
+
+resize2fs 1.46.5 (30-Dec-2021)
+Please run 'e2fsck -f /dev/mapper/workvg-root' first.
+
+root@work# e2fsck -f /dev/mapper/workvg-root
+e2fsck 1.46.5 (30-Dec-2021)
+Pass 1: Checking inodes, blocks, and sizes
+Inode 7210086 extent tree (at level 2) could be narrower.  Optimize<y>? yes
+Pass 1E: Optimizing extent trees
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+
+/dev/mapper/workvg-root: ***** FILE SYSTEM WAS MODIFIED *****
+/dev/mapper/workvg-root: 827287/29974528 files (1.2% non-contiguous), 112395524/119870981 blocks
+
+root@work# resize2fs /dev/mapper/workvg-root
+resize2fs 1.46.5 (30-Dec-2021)
+Resizing the filesystem on /dev/mapper/workvg-root to 244190208 (4k) blocks.
+The filesystem on /dev/mapper/workvg-root is now 244190208 (4k) blocks long.
+
+root@work# mount /dev/mapper/workvg-root /media/new-root
+
+root@work# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/sda3                450G  421G  5.5G  99% /
+/dev/mapper/workvg-root  916G  421G  449G  49% /media/new-root
+Much better. Now we need to get the computer to boot using LVM and
+the new drive. Need to make sure /etc/fstab is updated to
+point to the new root filesystem.
+Make some in-memory filesystems available under the new root:
+root@work# mount --rbind /dev /media/new-root/dev
+root@work# mount --bind /proc /media/new-root/proc
+root@work# mount --bind /sys /media/new-root/sys
+root@work# mount --bind /run /media/new-root/run
+
+root@work# chroot /media/new-root
+
+root@work# cat /etc/fstab
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system>  <mount point>  <type>  <options>  <dump>  <pass>
+PARTUUID=949a09f0-xxxx-xxxx-xxxx-xxxxxxxxxxxx  /boot/efi  vfat  umask=0077  0  0
+PARTUUID=bbcc2068-xxxx-xxxx-xxxx-xxxxxxxxxxxx  /recovery  vfat  umask=0077  0  0
+UUID=9f1f68bb-xxxx-xxxx-xxxx-xxxxxxxxxxxx  /  ext4  noatime,errors=remount-ro  0  0
+/dev/mapper/cryptswap  none  swap  defaults  0  0
+
+root@work# vi /etc/fstab
+
+root@work# cat /etc/fstab
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system>  <mount point>  <type>  <options>  <dump>  <pass>
+PARTUUID=949a09f0-xxxx-xxxx-xxxx-xxxxxxxxxxxx  /boot/efi  vfat  umask=0077  0  0
+PARTUUID=bbcc2068-xxxx-xxxx-xxxx-xxxxxxxxxxxx  /recovery  vfat  umask=0077  0  0
+/dev/mapper/workvg-root  /  ext4  noatime,errors=remount-ro  0  0
+/dev/mapper/cryptswap  none  swap  defaults  0  0
+
+root@it05:/media/new-root/etc/initramfs-tools# lsinitramfs /boot/initrd.img-$(uname -r) | grep lvm
+etc/lvm
+etc/lvm/lvm.conf
+etc/lvm/lvmlocal.conf
+etc/lvm/profile
+etc/lvm/profile/cache-mq.profile
+etc/lvm/profile/cache-smq.profile
+etc/lvm/profile/command_profile_template.profile
+etc/lvm/profile/lvmdbusd.profile
+etc/lvm/profile/metadata_profile_template.profile
+etc/lvm/profile/thin-generic.profile
+etc/lvm/profile/thin-performance.profile
+etc/lvm/profile/vdo-small.profile
+scripts/init-bottom/lvm2
+scripts/local-block/lvm2
+scripts/local-top/lvm-workaround
+scripts/local-top/lvm2
+usr/lib/udev/rules.d/56-lvm.rules
+usr/lib/udev/rules.d/69-lvm-metad.rules
+usr/sbin/lvm
+
+root@it05:/# update-initramfs -u
+update-initramfs: Generating /boot/initrd.img-5.19.0-76051900-generic
+cryptsetup: WARNING: Resume target cryptswap uses a key file
+kernelstub.Config    : INFO     Looking for configuration...
+kernelstub.Drive     : ERROR    Could not find a block device for the a partition. This is a critical error and we cannot continue.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/kernelstub/drive.py", line 56, in __init__
+    self.esp_fs = self.get_part_dev(self.esp_path)
+  File "/usr/lib/python3/dist-packages/kernelstub/drive.py", line 94, in get_part_dev
+    raise NoBlockDevError('Couldn\'t find the block device for %s' % path)
+kernelstub.drive.NoBlockDevError: Couldn't find the block device for /boot/efi
+run-parts: /etc/initramfs/post-update.d//zz-kernelstub exited with return code 174
+
+root@it05:/# lsblk -f
+NAME FSTYPE FSVER LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
+sda
+├─sda1
+│    vfat   FAT32       D499-28CF
+├─sda2
+│    vfat   FAT32       D499-2B97
+├─sda3
+│    ext4   1.0         9f1f68bb-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+└─sda4
+     swap   1           1758e7a0-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  └─cryptswap
+     swap   1     cryptswap
+                        e874c9cc-xxxx-xxxx-xxxx-xxxxxxxxxxxx                  [SWAP]
+sdb  LVM2_m LVM2        wRBz38-xxxx-xxxx-xxxx-xxxx-xxxx-xxxxxx
+└─workvg-root
+     ext4   1.0         9f1f68bb-xxxx-xxxx-xxxx-xxxxxxxxxxxx    448.6G    46% /
+
+root@it05:/# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/workvg-root  916G  421G  449G  49% /
+tmpfs                    7.8G     0  7.8G   0% /dev/shm
+tmpfs                    1.6G  2.4M  1.6G   1% /run
+
+root@it05:/# mount /dev/sda1 /boot/efi
+
+root@it05:/# update-initramfs -u
+
+update-initramfs: Generating /boot/initrd.img-5.19.0-76051900-generic
+cryptsetup: WARNING: Resume target cryptswap uses a key file
+kernelstub.Config    : INFO     Looking for configuration...
+kernelstub           : INFO     System information:
+
+    OS:..................Pop!_OS 22.04
+    Root partition:....../dev/dm-1
+    Root FS UUID:........9f1f68bb-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    ESP Path:............/boot/efi
+    ESP Partition:......./dev/sda1
+    ESP Partition #:.....1
+    NVRAM entry #:.......-1
+    Boot Variable #:.....0000
+    Kernel Boot Options:.quiet loglevel=0 systemd.show_status=false splash
+    Kernel Image Path:.../boot/vmlinuz-5.19.0-76051900-generic
+    Initrd Image Path:.../boot/initrd.img-5.19.0-76051900-generic
+    Force-overwrite:.....False
+
+kernelstub.Installer : INFO     Copying Kernel into ESP
+kernelstub.Installer : INFO     Copying initrd.img into ESP
+kernelstub.Installer : INFO     Setting up loader.conf configuration
+kernelstub.Installer : INFO     Making entry file for Pop!_OS
+kernelstub.Installer : INFO     Backing up old kernel
+kernelstub.Installer : INFO     Making entry file for Pop!_OS
+ok, moment of truth, can i reboot into the new root filesystem
+root@it05:/# shutdown -r now
+Running in chroot, ignoring request.
+
+root@it05:/# exit
+root@work# shutdown -r now
+Whoot! Success. Booted right back up, and can verify running from new
+LV
+rhorning@icon-n.com@it05:~$ df -h
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/workvg-root  916G  421G  449G  49% /
+/dev/sda1                497M  373M  125M  76% /boot/efi
+Next step, add the original root partition (/dev/sda3) to the volume
+group so there is 1.5Gb available to the filesystem
+root@work# pvcreate /dev/sda3
+WARNING: ext4 signature detected on /dev/sda3 at offset 1080. Wipe it? [y/n]: y
+  Wiping ext4 signature on /dev/sda3.
+  Physical volume "/dev/sda3" successfully created.
+
+root@work# vgextend workvg /dev/sda3
+  Volume group "workvg" successfully extended
+
+root@work# vgdisplay
+  --- Volume group ---
+  VG Name               workvg
+  System ID
+  Format                lvm2
+  Metadata Areas        2
+  Metadata Sequence No  4
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                1
+  Open LV               1
+  Max PV                0
+  Cur PV                2
+  Act PV                2
+  VG Size               <1.36 TiB
+  PE Size               4.00 MiB
+  Total PE              355528
+  Alloc PE / Size       238467 / 931.51 GiB
+  Free  PE / Size       117061 / <457.27 GiB
+  VG UUID               67DSwP-xxxx-xxxx-xxxx-xxxx-xxxx-xxxxxx
+
+root@work# lvdisplay
+  --- Logical volume ---
+  LV Path                /dev/workvg/root
+  LV Name                root
+  VG Name                workvg
+  LV UUID                srXpUd-xxxx-xxxx-xxxx-xxxx-xxxx-xxxxxx
+  LV Write Access        read/write
+  LV Creation host, time work.example.com, 2022-10-18 08:46:34 -0400
+  LV Status              available
+  # open                 1
+  LV Size                931.51 GiB
+  Current LE             238467
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:0
+
+root@work# lvextend -l +100%FREE /dev/workvg/root
+  Size of logical volume workvg/root changed from 931.51 GiB (238467 extents) to <1.36 TiB (355528 extents).
+  Logical volume workvg/root successfully resized.
+
+root@work# lvdisplay
+  --- Logical volume ---
+  LV Path                /dev/workvg/root
+  LV Name                root
+  VG Name                workvg
+  LV UUID                srXpUd-xxxx-xxxx-xxxx-xxxx-xxxx-xxxxxx
+  LV Write Access        read/write
+  LV Creation host, time work.example.com, 2022-10-18 08:46:34 -0400
+  LV Status              available
+  # open                 1
+  LV Size                <1.36 TiB
+  Current LE             355528
+  Segments               2
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:0
+
+root@work# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+tmpfs                    1.6G  2.4M  1.6G   1% /run
+/dev/mapper/workvg-root  916G  421G  449G  49% /
+tmpfs                    7.8G     0  7.8G   0% /dev/shm
+tmpfs                    5.0M     0  5.0M   0% /run/lock
+/dev/sda1                497M  373M  125M  76% /boot/efi
+/dev/sda2                4.0G  3.4G  692M  84% /recovery
+tmpfs                    7.8G     0  7.8G   0% /run/qemu
+tmpfs                    1.6G  1.7M  1.6G   1% /run/user/1202401106
+
+root@work# resize2fs /dev/mapper/workvg-root
+resize2fs 1.46.5 (30-Dec-2021)
+Filesystem at /dev/mapper/workvg-root is mounted on /; on-line resizing required
+old_desc_blocks = 117, new_desc_blocks = 174
+The filesystem on /dev/mapper/workvg-root is now 364060672 (4k) blocks long.
+
+root@work# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+tmpfs                    1.6G  2.4M  1.6G   1% /run
+/dev/mapper/workvg-root  1.4T  421G  881G  33% /
+tmpfs                    7.8G     0  7.8G   0% /dev/shm
+tmpfs                    5.0M     0  5.0M   0% /run/lock
+/dev/sda1                497M  373M  125M  76% /boot/efi
+/dev/sda2                4.0G  3.4G  692M  84% /recovery
+tmpfs                    7.8G     0  7.8G   0% /run/qemu
+tmpfs                    1.6G  1.7M  1.6G   1% /run/user/1202401106
+
+References
+
+Move
+data from regular partition to lvm; Viewed on 2022-10-18
+How
+to Create LVM Partition in Linux – LVM Tutorial; Viewed on
+2022-10-18
+'lvextend -l
+100%FREE' resizing to the number of free extents rather than adding them
+to the current size in RHEL; Viewed on 2022-10-18
+Best
+Practice for Mounting an LVM Logical Volume with /etc/fstab; Viewed
+on 2022-10-18
+Can't
+update kernel and initramfs; Viewed on 2022-1018
+Crucial
+MX500 1TB 3D NAND SATA 2.5-inch; Viewed on 2022-10-18
+Corsair
+Dual SSD Mounting Bracket (3.5” Internal Drive Bay to 2.5", Easy
+Installation) ; Viewed on 2022-10-18
+

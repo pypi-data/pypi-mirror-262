@@ -1,0 +1,35 @@
+## hpr2808 :: Haskell function types
+
+ Haskell is statically typed language, meaning that during compilation, programs are checked for type correctness. This means that you won’t accidentally mix for example text and numbers. Haskell does type inference. The compiler will try and figure out what kind of types would make your program to be valid in terms of types. Programmer could completely omit types, but it’s often helpful to write type signatures for at least top level definitions. These will be helpful for both the programmers and compilers.
+concrete types
+Simplest case is where types are spelled out definitely. Function add below takes two Integer parameters and produces Integer value. Note that types are written in upper case.
+add :: Integer -> Integer -> Integer
+It’s possible to not use concrete types. In following example a (note the lower case) can be anything. So function takes two values of a, a Boolea and produces a. This is useful technique for writing very general functions.
+choose :: a -> a -> Boolean -> a
+ad hoc polymorphism
+In previous example, we wouldn’t be able to do much at all with a as we don’t know its type. Sometimes we need to know a bit more about type, without specifically declaring its type. For those cases type constraints are useful.
+add :: (Num a) => a -> a -> a
+This version of add again takes two parameters, both being type a and produces value a. But (Num a) => part in the signature constraints a to be instance of Num. This type class (I’ll talk about these some other time) defines that each instance of it will have set of functions: +, -, *, negate, abs, signum and fromInteger. So now our add function can use those functions, regardless of what specific type a is.
+parametrized functions
+Types used in function signature can be parametrized. If we wanted a function that returns a first element of any list, we could have following signature: first :: [a] -> Maybe a
+first takes single parameter, list of a and returns Maybe a. Maybe is a type that is used to signify a value that might or might not be present and has following definition:
+data Maybe a =
+     Nothing
+     | Just a
+So our function would return Nothing when given an empty list and Just a when given a list of at least one element.
+using functions
+Function application in Haskell doesn’t require parentheses around arguments. Calling our add function is just add 1 2. If one of the values is result of another function call, we need to tell which parameters belong to which function. Using $ is one option: add 1 $ add 2 3, another option is to use parentheses: add 1 (add 2 3).
+When function is called with less parameters than it expect, instead of run time error you’ll going to receive a function. In following example addLots 5 will produce same value as add 1000 5:
+addLots = add 1000
+addLots 5
+Another contrived example of partial application:
+findPodcasts :: [Podcast] -> Text -> [Podcast]
+search = findPodcasts loadedPodcasts
+myPodcasts = search "Tuula"
+functions as types
+Functions have type (that’s what the signature is for after all) and functions can be used as values. You can return function from another function or you can pass in a function as a parameter.
+Common example is filter, which has following signature: filter :: (a -> Bool) -> [a] -> [a]
+It takes two parameters, first one is function that has type a -> Bool and second one is list of a. Return value is list of a. You can produce a list of odd numbers between 1 and 10 with filter odd [1..10].
+anonymous functions
+Sometimes you need a function to pass in as a parameter, but the function is so small that you don’t want to give it a name. For those cases, anonymous function are good. If you wanted to produce a list of odd numbers that are greater that 5 in range from 1 10, you could write it as: filter (\x -> odd x && x > 5) [1..10]. If you squint hard enough \ looks almost like a lowercase greek letter λ.
+Easiest way to catch me is either email or fediverse where I’m Tuula@mastodon.social

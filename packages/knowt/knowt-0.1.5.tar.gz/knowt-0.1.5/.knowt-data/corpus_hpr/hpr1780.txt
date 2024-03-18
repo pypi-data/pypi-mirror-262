@@ -1,0 +1,34 @@
+## hpr1780 :: 16 - TrueCrypt and GnuPG - An Update
+
+ 
+Previously we looked at the issues around TrueCrypt and Heartbleed, and noted that a fundamental problem was that technologies we rely on to be safe are often developed and maintained by volunteers or people on a shoestring budget. There is now more news worth looking at in this respect, so it is time for an update.
+For more go to https://www.zwilnik.com/?page_id=825
+
+
+Links:
+
+
+https://www.propublica.org/article/the-worlds-email-encryption-software-relies-on-one-guy-who-is-going-broke
+
+https://www.linuxfoundation.org/programs/core-infrastructure-initiative
+
+https://spar.isi.jhu.edu/~mgreen/
+
+https://blog.cryptographyengineering.com/
+
+https://blog.cryptographyengineering.com/2015/04/truecrypt-report.html
+
+https://www.schneier.com/blog/archives/2015/04/truecrypt_secur.html
+
+https://truecrypt.ch/
+
+https://ciphershed.org/
+
+https://veracrypt.codeplex.com/
+
+https://www.grc.com/misc/truecrypt/truecrypt.htm
+
+https://www.zwilnik.com/?page_id=825
+
+
+Editor's Note 2022-03-27: Tag changed from GnuPGP to GnuPG

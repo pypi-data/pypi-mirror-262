@@ -1,0 +1,10 @@
+## hpr0753 :: ILF 2011: Interview with Klaatu of Slackermedia
+
+ In this episode KFive does unto klaatu as he has done unto others. 
+
+https://www.slackermedia.info/
+
+What is Slackermedia?
+Slackermedia is documentation providing the information a user will need to create a full multimedia studio from a Slackware base install. Inspired by Linux-From-Scratch, it is intended to be a "distro from text"; a do-it-yourself Linux studio beginning with installing Slackware and ending with what we will call "Slackermedia" with all the custom-compiled and configuration of only the best in multimedia content creation tools that Linux offers and the user requires to achieve their artistic goals. 
+Slackermedia is not a distribution, and merely builds upon Slackware proper.  Slackermedia is not a laundry list of multimedia apps that are half-finished, it is not a blueprint for how to make your distribution contain lots of multimedia apps you'll never use, it is not a series of brainless install scripts. It is a series of tutorials on what a user will need to understand, and how they can go about installing or compiling or configuring important tools like jackd, software synths, soundfonts, gimp brushes, fonts, individual apps, backends like ffmpeg and mencoder, and much more.
+NOTE: Slackermedia is currently optimized for Slackware 13.1.  A 13.37 version with the 2.6.38.4 kernel is in progress. 

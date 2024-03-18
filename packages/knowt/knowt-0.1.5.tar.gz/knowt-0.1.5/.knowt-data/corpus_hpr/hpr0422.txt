@@ -1,0 +1,19 @@
+## hpr0422 :: Comfortably Numblock'd 
+
+ ThistleWeb explains 2 tips with the keypad / numblock function. First is numblockx, a simple app which remembers the status of the numblock key across reboots. This is already installed and running in many distros but if it's not it can be added. Second is CTRL+ALT+NUMLOCK which toggles the keypad into a different mode, allowing you to move the pointer with the keypad.
+Numlockx
+
+Numlockx Project Homepage
+OpenBox - /.config/openbox/autostart.sh
+numblockx &
+
+
+Keyboard Pointer Control
+
+Penguin Pete's Blog
+CTRL+ALT+NUMBLOCK to toggle mode on and off, there should be a beep each time you toggle
+1-9 = moving pointer around the points of the compass
+0 = right click
+enter (on keypad) = enter a menu
+backspace = back to previous menu
+

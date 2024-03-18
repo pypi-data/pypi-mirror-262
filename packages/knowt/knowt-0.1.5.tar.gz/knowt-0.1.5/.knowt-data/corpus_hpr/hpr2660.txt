@@ -1,0 +1,13 @@
+## hpr2660 :: Installing a bootloader on an Arduino
+
+ 
+In this show you will learn how to install a bootloader on an Arduino using another Arduino via In-Circuit Serial Programming (ICSP)
+
+
+All credit goes to M-SHORT over at SparkFun for the excellent tutorial.
+
+
+Arduino IDE > File > Examples > 11.ArduinoISP > ArduinoISP
+Tools > Board > {your board}
+Tools > Programmer > Arduino as ISP
+Tools > Burn Bootloader

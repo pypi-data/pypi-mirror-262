@@ -1,0 +1,3 @@
+## hpr1413 :: ohmroep hpr live 3, 01-08-2013, (Power)DNS
+
+ Today Nido Media is joined by Ken Fallon as cohost. Bert Hubert from PowerDNS joins us and talks with us about what DNS actually is. What it does, how it is used, how it is implemented. What information DNS holds and what it works. He also explains what PowerDNS and we go into DNSSec a bit. Our conversation is pre-empted right at the very end because the tent was about to collapse. No comments are made about the vicinity of Bind developers.

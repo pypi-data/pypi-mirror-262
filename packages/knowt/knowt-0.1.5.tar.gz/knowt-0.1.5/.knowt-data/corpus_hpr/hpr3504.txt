@@ -1,0 +1,31 @@
+## hpr3504 :: James Webb Space Telescope
+
+ Overview
+On Christmas Day 2021 at 12:20 UTC the James Webb Space Telescope was launched. This is the largest telescope ever sent into space and the project has been delayed for many years. The entire astronomical community was very nervous about the launch and about the phase that will follow as the telescope is set up for use.
+Andrew Conway was previously a professional Astronomer, and Dave is very interested in the subject as an amateur. They got together on Mumble to witness the launch, and the dialogue was recorded and is presented here.
+The JWST
+Quote from Wikipedia (a page that is being updated as the project proceeds):
+
+The James Webb Space Telescope (JWST) is a space telescope developed by NASA with contributions from the European Space Agency (ESA), and the Canadian Space Agency (CSA). The telescope is named after James E. Webb, who was the administrator of NASA from 1961 to 1968 and played an integral role in the Apollo program. It is intended to succeed the Hubble Space Telescope as NASA’s flagship mission in astrophysics. JWST was launched 25 December 2021 on Ariane flight VA256. It is designed to provide improved infrared resolution and sensitivity over Hubble, and will enable a broad range of investigations across the fields of astronomy and cosmology, including observations of some of the most distant events and objects in the Universe such as the formation of the first galaxies, and allowing detailed atmospheric characterization of potentially habitable exoplanets.
+JWST’s primary mirror, the Optical Telescope Element, consists of 18 hexagonal mirror segments made of gold-plated beryllium which combine to create a 6.5 meter (21 ft 4 inch) diameter mirror – considerably larger than Hubble’s 2.4 m (7.9 ft) mirror. Unlike Hubble, which observes in the near ultraviolet, visible, and near infrared (0.1–1.0 μm) spectra, JWST will observe in a lower frequency range, from long-wavelength visible light (red) through mid-infrared (0.6–28.3 μm). This will enable it to observe high-redshift objects that are too old and too distant for Hubble. The telescope must be kept very cold to observe in the infrared without interference, so it will be deployed in space near the Sun–Earth L2 Lagrange point, about 1.5 million kilometers (930,000 mi) from Earth. A large sunshield made of silicon- and aluminum-coated Kapton will keep its mirror and instruments below 50 K (−223 °C; −370 °F).
+The NASA Goddard Space Flight Center (GSFC) in Maryland managed the development and the Space Telescope Science Institute is operating JWST. The prime contractor was Northrop Grumman.
+Development began in 1996 for a launch that was initially planned for 2007 with a US$500 million budget. There were many delays and cost overruns, including a major redesign in 2005, a ripped sunshield during a practice deployment, a recommendation from an independent review board, the COVID-19 pandemic, issues with the Ariane 5 rocket and the telescope itself, and communications issues between the telescope and the launch vehicle. Concerns among the involved scientists and engineers about the launch and deployment of the telescope have been well-described.
+Construction was completed in late 2016, when an extensive testing phase began. JWST was launched 12:20 UTC 25 December 2021 by an Ariane 5 launch vehicle from Kourou, French Guiana and was released from the upper stage 27 minutes later. The telescope was confirmed to be receiving power, and as of December 2021 is traveling to its target destination.
+
+Witnessing the launch
+Andrew and Dave came up with the idea of watching the launch and talking about it on Mumble. Although this was not originally planned, the audio was recorded, and is included here.
+Note: Dave’s audio had a background hum which has been reduced a little with Audacity’s notch filter. Hopefully it’s not too distracting.
+We were puzzled that the altitude of the final stage of the rocket plus telescope decreased during launch. See the link below to a YouTube episode from Anton Petrov explaining what was going on.
+In the context of orbital mechanics, Dave spoke of another mission which is heading to Mercury but passing by inner planets to adjust speed. The name couldn’t be recalled at the time, but it was BepiColombo which is taking a 7-year path to its destination.
+Deployment after launch
+At the time of preparing these notes (2022-01-02) the JWST is en route to the (Sun-Earth) L2 point, about 1 million miles (1.5 million kilometres) from Earth. Along the way it is preparing itself for use, deploying the features which were folded up or stowed away when it was being launched. See the deployment explorer site for details of what is happening.
+There are enormous amounts of information about this project on the web, some examples of which are linked below. Searching with your favourite search engine will certainly reveal more.
+Links
+
+Wikipedia article on the James Webb Space Telescope
+James Webb Space Telescope Launch — Official NASA Broadcast
+YouTube video explaining why the JWST lost altitude during launch
+Wikipedia article on Lagrange points
+NASA JWST Deployment Explorer
+Wikipedia article on BepiColombo mission
+

@@ -1,0 +1,248 @@
+## hpr0806 :: HPR Community News for Aug 2011
+
+ New hosts
+
+Welcome to our new hosts: 
+JVoeltz, 
+diablomarcus, 
+Mike Hingley, 
+Germ, 
+Sunzofman1, and
+saras fox
+
+Show Review
+
+
+id
+host
+title
+
+
+
+782
+MrGadgets
+Technological ethics of Open Source Software
+
+783
+Dismal Science
+Libertarianism + IT, a match made in heaven?
+
+784
+Robin Catling
+Full Circle Podcast Part Three The Edit
+
+785
+Quvmoh
+binaural recording
+
+786
+droops
+Streaming sporting events
+
+787
+Ken Fallon
+Grep for tab
+
+788
+JWP
+Bitcoin
+
+789
+HPR Admins
+GeekNights Git: the fast version control system
+
+790
+diablomarcus
+guake a drop-down terminal emulator
+
+791
+Ken Fallon
+Interview with Moose about Ohio LinuxFest
+
+792
+MrGadgets
+Biaural Recording
+
+793
+klaatu
+Server/Client relationship, DHCP server
+
+794
+Robin Catling
+Full Circle Podcast U-Cubed De-brief
+
+795
+Ken Fallon
+John Uren on FLOSS in the UK Civil Service
+
+796
+Ken Fallon
+Shane Marks Hacker Space Week Ireland
+
+797
+Mike Hingley
+How I got into linux
+
+798
+Germ
+The IBM Model M Keyboard
+
+799
+Robin Catling
+Part Four Assembly, Editing the Podcast
+
+800
+Sunzofman1
+WebOS
+
+801
+klaatu
+Slackbuilds
+
+802
+Ken Fallon
+Ana Nelson on Dexy software documentation
+
+803
+saras fox
+A novacut support call
+
+804
+Ken Fallon
+Wayne Myers from Fit and the Conniptions at OggCamp
+
+805
+MrGadgets
+How Monster Cable got it's name
+
+
+
+Thanks To
+
+Finux, Tony, Laura, Popey, Henderik, Yvonne, Pokey, Code Cruncher, Manon, Kevin O'Brien, Ivan Privaci, DoorToDoorGeek, Kevin Barry for all the help getting ready for OggCamp
+Joshua Knapp for the server admin work
+Becky Newborough, Philip Newborough
+Johan Paul for checking our RSS feed
+Everyone that gave feedback on the podcatcher you use
+Everyone that gave feedback on the new feed
+Le Krayon for the tip on get_flash_videos
+Henry Patrick Reilly for allowing us to use his Google+ account
+Andy Piper for the website feedback
+All the organisers and crew of OggCamp 11
+
+Apologies To
+
+Billy Crook for missing his mail about s3cmd : command line S3 client
+Germ for the delay in getting the stickers out
+StankDawg/Lunar Pages for not getting the Ad in faster
+
+OggCamp
+
+All the presentations and material are on the website https://hackerpublicradio.org/media/hpr-presentation-oggcamp/
+Shows in the main and syndicated Thursday queue will follow scheduling rules Scheduling Rules, so we still have free slots.
+
+VORC001-john-unin-uk-civil-service.WAV
+VORC002-vivean-parkhouse.WAV
+VORC003-jurgan-open-wireless-network.WAV
+VORC004-laura.WAV
+VORC005-ack.WAV
+VORC006-les-porter.WAV
+VORC007-robin-catling-full-circle.WAV
+VORC008-popey.WAV
+VORC009-dj-the-h.wav
+VORC010-alan-cocks.WAV
+VORC011-wayne-myres.WAV
+VORC012-alister-munroe-plm-software.WAV
+VORC013-jwp-oracle-linux.WAV
+VORC014-kris-finley-software-freedom-day-dundee.WAV
+VORC015-steve-lee-accessability.WAV
+VORC016-fsfe-sam-tuck.WAV
+VORC017-tony-hughes-free-cycle.WAV
+VORC018-philip-beky-crunchbang.WAV
+VORC019-ade+2hours.WAV
+VORC020-kris-freenode.WAV
+VORC021-dann.WAV
+VORC022-nathan-open-hardware.WAV
+VORC023-austrian-germans.WAV
+VORC024-amburn-elder-politics.WAV
+VORC025-marie-assen-flatter.WAV
+VORC026-marie-assen-flatter-her-email.WAV
+VORC027-les-roundup.WAV
+
+Also Shane Marks and  some time Fab.
+
+New Outro
+
+
+We have moved providers some time ago and we need to include an advertisement for our sponsor (Lunar pages) in the outro. I have edited all the episodes that are currently in the queue to have the new outro but going forward I would appreciate it if you could switch to the new outro which can be found here https://hackerpublicradio.org/media/theme-music/outro-mono.mp3. All the versions including the original slick0 master flac, can be found at https://hackerpublicradio.org/media/theme-music/
+
+
+The text for the outro is in the file hpr-outro-text.txt and I'd like to get a versions from every host and listener, with the idea of editing them together to have multiple versions with each line read by different people. Please submit those in high quality WAV or FLAC with spaces between each line to allow for easy editing.
+
+
+After recording a HPR news segment at my brother-in-law's studio he was inspired to record a intro and outro for HPR and he'd appreciate your feedback. Give the files starting in https://hackerpublicradio.org/media/theme-music/ rollercostermusic.com* a listen.
+
+
+It would also help greatly if you could provide shownotes with your episode in html as otherwise I need to listen to your shows and make the shownotes for you which will result in a delay in your show getting posted. We are now also officially CC-BY-SA so if you are releasing your show in any other format you need to make note of that
+in your show and in the shownotes.
+
+
+Month in Review 
+
+
+We have ogg and spx feed !
+We changed the mp3 feed to make it RSS 2.0 compliant - finally !
+Updated the Contribute page 
+Are you going to Derby Con
+Augmented podcast on HPR
+Check out the test site https://hobbypublicradio.org
+
+
+
+Casting Call
+A while back 5150 proposed that we produce an audiobook using only HPR contributors as actors. Several people responded positively, and said they would like to participate. Well, we now have a script. It was originally written as a screenplay, so it needs a little work to make the visual bits work as audio only, but I don't think that will take too long. It's almost ready to go as is. 5150 and Integgroll have stepped up to help me make editorial and casting decisions and get other producer type stuff done. 
+This is a casting call of sorts. We need some voice actors, but we'll also need some sound effects, and perhaps some music. I may ask people to create sound effects, and upload them to the freesound project, or just to find such sounds. I'm not sure what we'll need yet, but I'd like to know who's interested in helping out. I was considering asking the Open Source Musician's Podcast to consider doing a "tune storm" for some music, but I'd like to know if you guys think we should keep it all in house, or collaborate on that.
+The story is a SciFi/adventure that's also a lighthearted Free Software allegory, so it's a perfect fit for HPR. It will run between 50 and 80 minutes, I think, so it may be broken up into two or three episodes if it's too long for just one. I'm really not sure.
+The plan is to record with actors using mumble but also recording locally to get the best possible sound quality. I'll mix it all in audacity, unless someone else wants that job, or wants to do it with ardour or whatever.
+As is, there are 4 male roles, 3 female roles, and 6 androgynous roles. Most of the male and female roles could be swapped also to match our supply of actors. If we get more people than that, We'll add parts to make sure that everyone who's interested can participate. The protagonist and major role is female. She will have a majority of the speaking parts, thus the biggest time commitment of all the actors. 
+If you're interested, please send me a voice sample so I can sort out the cast, or let me know what you're willing to do so I have some idea about that too. Please use my personal email address for this so that we don't clutter up the regular mailing list. pdailey03@gmail.com
+Thank you for hearing me out on this.
+pokey
+
+
+The Linux News Podcast
+
+Hi fellow podcaster,
+
+I have just launched a new podcast. You know as well as I do it is hard to get the news out. I was wondering if you would please be so kind as to give it a listen. Any feedback would be appreciated. And if you like it, a mention in your podcast would be very kind. If you do, please email me so I can put a link on my website to your show.
+
+Also if you ever need a guest on your show, please feel free to email me and let me know. If you want to know a little more about me please check out my website under About. You can also email me any questions you may have.
+
+So what is my new podcast? The Linux News Podcast. The Linux News Podcast was designed to fill a much needed gap in audio shows covering exclusively Linux, Android, and Open Source news. The podcast aims to be relevant, accurate, fair, clear, timely, interesting and concise. 
+
+The podcast aims to be relevant by focusing on topic of interest to Linux users. I focus on such topics such as software freedom, Linux development, Open Source software, Android and mobile devises, security issues, and Linux distribution releases. Special attention is given to the top ten Linux distributions: Ubuntu, Linux Mint, Fedora, Debian, openSUSE, Arch, PCLinuxOS, Puppy Linux, Sabayon, and CentOS.
+
+The podcast is less than 15 minutes long and is released every Tuesday and Friday evenings.
+
+Thank you so much for your help in spreading the news.
+
+Here is the Official Press Release: https://www.prlog.org/11624836-new-linux-news-podcast.html
+
+
+
+
+
+
+
+
+
+
+Sincerely,
+
+Jay Forrest,
+
+
+
+
+
+

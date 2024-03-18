@@ -1,0 +1,3 @@
+## hpr1888 :: Diceware Passphrase
+
+ A walk through of how to use diceware (https://world.std.com/~reinhold/diceware.html) to create a passphrase and update your GPG key to use it.

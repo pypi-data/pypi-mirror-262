@@ -1,0 +1,32 @@
+## hpr0345 :: Editing the auto-generated menu in Linux
+
+ Locations
+
+Menu files (requires root to edit)
+
+/usr/shar/applications
+
+
+Icon files
+
+/usr/share/pixmaps
+/usr/share/icons/foo
+
+Edit files in plain text editor like GEdit
+
+Ellements pointed out in episode (there are plenty more, they vary per app, & distro)
+
+Name : the name it will display on the menu (may need to change Name[foo] to reflect your language)
+Language : speaks for itself
+Comment : the rollover text
+Exec : the command it will execute when clicked
+Icon : the path to the icon shown in the menu
+OnlyShowIn : useful when trying to find why an application may not be showing the menu
+Terminal : runs the command in a terminal
+Categories : (I think) this is the submenu groups where it'll appear on the menu
+
+Changes sometimes take a little while to update, restarting X or rebooting will force it to re-read that folder and apply the changes.
+XCFE Tip
+
+Right click to edit menu. Click on something like a separator, move it up, then down to it's original place. Save.
+

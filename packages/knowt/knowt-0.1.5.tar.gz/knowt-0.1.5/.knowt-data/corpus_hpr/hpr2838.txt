@@ -1,0 +1,10 @@
+## hpr2838 :: Why Haskell?
+
+ I got really good comment on episode 2778 - Functor and applicative in Haskell from Beeza that I’m including below:
+
+I’ve been writing software for over 30 years but I find the syntax of Haskell anything but intuitive - in fact less so than any other programming language I have looked at. Thanks to your excellent show notes I can make sense of it but I have to say I would not like to have to develop a project using this language.
+
+
+Obviously I am missing the point as nobody would design a language with the intention of its being difficult to use. Perhaps you could produce another episode addressing the question “Why Haskell?”
+
+In this episode, I’m trying to answer to that from my point of view.

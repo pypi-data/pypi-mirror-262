@@ -1,0 +1,40 @@
+## hpr2348 :: Vim Hints 005
+
+ Vim Hints 005
+Vim Hints is back!
+Oops! Where did half of 2015, all of 2016 and the first half of 2017 go?
+Well, life got in the way, plus motivation dwindled somewhat. This series is very demanding - the sed series was a walk in the park compared to tackling the continental-scale landscape of Vim!
+Still, the original goal was to try and introduce the really useful features of Vim and to make it manageable for everyday use. The hope was, and still is, that the series could get people started on their own journeys through its marvels.
+Also, with the currently circulating StackOverflow article on "How to exit the Vim editor?", it's worth pointing out that we dealt with that subject in episode 1, and this issue is revealed as the ridiculous meme that it really is!
+Quick recap
+To recap, the last episode of this planned series was in March 2015. Here's a list of links to all of the episodes so far:
+
+Vim Hints 001 (show 1714 2015-02-26)
+Vim Hints 002 (show 1724 2015-03-12)
+Vim Hints 003 (show 1734 2015-03-26)
+Vim Hints 004 (show 1776 2015-05-25)
+
+Let's briefly describe what was covered in these episodes to set the context.
+So far we have looked at very basic editing in episode 1, where we mentioned modes Normal, Insert and Command modes.
+In episode 2 we looked at Vim's backup mechanism, undoing and redoing changes, and file recovery in the event of a problem. We started using the .vimrc configuration file.
+We began looking at movement commands in Normal mode in episode 3, and beefed up the configuration file somewhat.
+More movement commands were covered in episode 4 as well as searching. We began looking at commands that make changes, adding, inserting, deleting and changing text in various ways. The concept of doing these things with various movements was covered. Again, a number of useful options for the configuration file were introduced.
+Full Notes
+Since the notes explaining this subject are particularly long, they have been placed here: https://hackerpublicradio.org/eps/hpr2348/full_shownotes.html and an ePub version is also available here: https://hackerpublicradio.org/eps/hpr2348/full_shownotes.epub.
+Links
+
+Stack Overflow: Helping One Million Developers Exit Vim
+Vim Help:
+
+Vim documentation: change
+Vim documentation: motion
+Vim documentation: options
+
+Previous episode: "Vim Hints Episode 4"
+Resources:
+
+Full notes in HTML form
+Full notes in ePub form
+Example .vimrc
+
+

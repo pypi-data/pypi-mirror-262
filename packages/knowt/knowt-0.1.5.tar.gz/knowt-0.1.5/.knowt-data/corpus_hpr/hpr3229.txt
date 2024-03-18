@@ -1,0 +1,19 @@
+## hpr3229 :: Linux Inlaws S01E19: Redis
+
+ In this episode our two heroes interview Itamar Haber, community liaison for Redis, a popular open-source
+in-memory NoSQL database. Technology prevails in this episode; communism, free love and drugs
+take a backseat (but only for the moment! :-). The trio discuss the legacy of redis, bemoan their old age
+and reveal why Itamar initially wanted to be a mermaid. Listen to the episode
+for more shocking epiphanies!
+Shownotes:
+
+Kaypro: https://en.wikipedia.org/wiki/Kaypro
+Salvatore Sanfilippo: https://github.com/antirez
+redis: https://github.com/redis/redis
+Redis Labs: https://redislabs.com
+Redis Streams: https://redis.io/topics/streams-intro
+Redis Modules: https://redis.io/modules
+Windows: https://bugs.launchpad.net/ubuntu/+bug/1
+WSL 2: https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux#WSL_2
+On the Bro'd: https://www.mikelacher.com/work/on-the-brod
+

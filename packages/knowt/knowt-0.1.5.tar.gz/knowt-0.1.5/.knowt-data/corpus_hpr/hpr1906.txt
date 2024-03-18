@@ -1,0 +1,150 @@
+## hpr1906 :: Apt Spelunking 2: tvtime, phatch, and xstarfish
+
+ 
+	Welcome to the another episode of apt spelunking! If you missed the first
+	episode, I should explain. Apt spelunking is the act of aimlessly searching
+	through your distribution's software repositories, and picking out the gems
+	that you find. I call it apt spelunking because I use Debian, which uses the
+	apt packaging format.
+
+
+	Let's jump into the first package: tvtime.
+
+
+	tvtime
+
+https://tvtime.sourceforge.net/
+
+	The package tvtime is a simple one, but it does what it does very well. tvtime
+	interfaces with a TV tuner - specialized hardware that allows your computer to
+	process analog television signals, via coaxial or RCA video cables. If you have
+	this hardware, usually an expansion card or USB peripheral, tvtime allows you to
+	use your computer as an analog television.
+
+
+	tvtime binds to the card of your choosing, allows you to switch between NTSC and
+	PAL modes (NTSC is what I use, that being the American standard), and shows you
+	a wonderfully grainy video. It has filters that can help smooth out the image a
+	bit, but it's still an analog video.
+
+
+	tvtime is video only, so you need to use something else to handle the audio of
+	whatever you are hooking up. Often this is done by the hardware tv tuner
+	somehow; my PCI card tuner has a 3.5mm jack that offloads any sound received
+	over the coaxial wire, and I patch that into my sound card. RCA cables have
+	separate wires for audio, and I plug those into my sound card via a converter
+	cable.
+
+
+	I have used tvtime to hook up videogame consoles, VCRs, and older computers like
+	the TRS-80. It's helped me to defeat Eternal Darkness, an old GameCube game that
+	is still worth a look, and it's allowed me to digitize old VHS tapes we have
+	lying around. More on that in another episode.
+
+
+	It is a fantastic alternative to keeping an older analog TV around. If you have
+	older equipment that needs to dump analog video somewhere, tvtime and a hardware
+	tuner makes for a great setup.
+
+
+	phatch
+https://en.wikipedia.org/wiki/Phatch
+
+	This absurdly spelled program is incredibly good at what it does. Phatch, some
+	sort of unholy combination of "photo" and "batch", is a GUI interface for
+	assembling chains of actions to manipulate image files.
+
+
+	I use this program for web development to save time when creating static photo
+	galleries or other types of images with similar constraints.
+
+
+	To use phatch, you assemble a set of operations (phatch refers to these as
+	"actions") in an ordered "action list". I'll use my gallery thumbnail action
+	list as an example.
+
+
+	There are only two actions in my thumbnail action list: "fit", and "save". Each
+	action has a set of predefined parameters and options that let you tweak what
+	happens to your files. The "fit" action resizes an image without goofing up the
+	aspect ratio. You give it a box to fit the image in, and it fits it fully into
+	that box and cuts off any extra edges. The most important parameters for this
+	action are canvas width, and canvas height - which tells phatch how big the box
+	is. The save action has parameters that let you set which image format to use,
+	which folder to save to, and even what to name the file. For my thumbnails, I
+	have it use the original filename, and append a "_t".
+
+
+	Once you have your action list together, you can tell phatch to run on an entire
+	directory and include or exclude different file types.
+
+
+	There is much, much more to phatch than just resizing images. Sounds like
+	another episode idea… anyhow, moving on!
+
+
+	xstarfish
+
+
+https://packages.debian.org/hu/jessie/xstarfish
+
+
+	I left xstarfish until the end, because it's so much fun and so very, very
+	weird. xstarfish generates a random, tileable background that can be dumped to
+	a file, or assigned directly to the X display of your choice.
+
+
+	It uses some sort of magic randomsauce to pick a color palette, some patterns,
+	and some other distortions to that you get a brand-new, unique background every
+	time you run it.
+
+
+	It can also be started in daemon mode, with a timer, to automatically change
+	your wallpaper periodically.
+
+
+	There are at least two problems with this.
+
+
+	First of all, let's start with the practical. You can set the size of the image
+	xstarfish generates, by either using the -g flag and manually setting the
+	geometry with a pixel width and/or height, or you can use the -s flag and set a
+	general size like "small", "large", or "full". If you use "full", xstarfish
+	automatically generates a full wallpaper for your display.
+
+
+	Since xstarfish generates randomness (which is often CPU intensive) and uses
+	that to generate random filters (which can be hard on your CPU) and can be set
+	to do it periodically (which, depending on frequency, could keep your CPU busy),
+	this utility can be a resource hog. I have two monitors, each running 1280x1024
+	resolution, and when I set it to generate a new background every 10 seconds...
+	well, it didn't. It just maxed out one of my CPU cores, and spit out a
+	background every once and a while. Cutting it down to only generate a single
+	monitor-sized image every 60 seconds made things much more reasonable.
+
+
+	The second, more pertinent issue with xstarfish is that it randomly picks colors
+	and patterns. It is exceptionally random about it. Imagine for a moment that you
+	needed to paint a room, and you wanted to pick random colors and patterns for a
+	room in your house. You would begin by blindfolding a friend and pushing them
+	into the paint isle at your nearest hardware store. Whatever three buckets of
+	paint they bump into first, well, that's your color palette. What do you mean
+	you don't like orange, sea foam and gunmetal grey? 
+
+
+	Then, you take those paint cans and proceed to tie one to your ceiling fan, one
+	to your eight-year-old child and swing the third around your head at a 35 degree
+	angle. Fairly quickly, you'll have your own xstarfish-inspired decor.
+
+
+	With all of the potentially awful things that can happen, I really do like
+	xstarfish. It's not something I keep running all the time, and a lot of the
+	options remind me of early 90s Encino Man fashion and school photo backdrops
+	with lasers. But sometimes the patterns are actually quite pleasing, and if I
+	keep the tile size small, it reminds me of 90s web design.
+
+
+
+	That concludes the second installment of apt spelunking. Please don't let me
+	take all the glory; take a tour through your package manager, whatever distro
+	you use, and tell us about some cool stuff you find!

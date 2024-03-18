@@ -1,0 +1,83 @@
+## hpr3654 :: Use the data in the Ogg feed to create a website.
+
+ Make a website using the HPR RSS Feed
+Welcome to part II of my experiment in how much can be done with the data ion the HPR feed
+In my previous episode https://hackerpublicradio.org/eps.php?id=3637 I discussed taking the data from the HPR feed and stuffing the useful bits into a sqlite database.
+Today, Ill discuss some of my adventures generating a static site using the feed data
+Lessons learned
+
+Maybe skip DB step
+I tend to over use Markdown - sometimes HTML is Better
+So much content on HPR
+
+Tech
+My original intent was to create markdown files that could be feed into an existing static site generator, something like Hugo or Jekyll.
+I started with markdown but had to add too much html.
+I'm am a bit fan of using Markdown, but it did not fit this particular use case
+
+Peewee - ORM - https://docs.peewee-orm.com
+Jinja - Templates - https://jinja.palletsprojects.com
+
+Feed as source of data
+I added some HTML for header footer
+
+Header
+
+bootstrap CSS columns
+hpr logo
+
+footer
+
+Links
+Copyright
+
+
+Pages
+
+Main page listing the most recent shows
+A page listing all shows
+Individual pages for each show
+A page listing all the hosts
+individual page for each host
+
+One thing I would like to see on the HPR page is a count of how many shows there are for each host. I have enough data, so I added show counts.
+Missing data
+
+host profiles - web page, avatars
+tags
+series
+Summary - The short 100 character summary of what your show is about
+License
+Other pages on the HPR site.
+
+What you need to know
+How to help out
+Requested topics
+...
+
+
+How does it work
+
+Peewee to read from sqlite file
+Python aggregates the appropriate data
+Jinja Templates for
+
+index - passed data from most recent shows
+All shows
+host page
+corespondents - all host
+
+
+TODO
+
+Incorporate Comment feed
+Generate static copy of RSS feed.
+Copy content from HPR pages that are not in the RSS feed.
+Generate Tags from Keywords in the show notes.
+Only use the Full Feed on the first run.
+
+Links
+
+Project - https://gitlab.com/norrist/hprfeed2db - Suggestions/Pull Requests are welcome
+Example site - https://hpr.norrist.xyz/
+

@@ -1,0 +1,17 @@
+## hpr2496 :: Making a Raspberry Pi inventory
+
+ Making a Raspberry Pi inventory
+Introduction
+I have a number of Raspberry Pis -- possibly too many -- and I sometimes lose track of which is which, what model, size, name, address each one is. I wanted to be able to keep an inventory of them all, and to this end I wrote myself a little script that can be run on any Pi which will report useful information about it.
+Every Pi has a unique serial number. Actually it's randomly generated so there may be a few collisions but it's close to unique! It also contains a revision number which encodes various items of information about it such as release date, model, PCB revision and memory. My script decodes this revision number for you based on a published table.
+I run a Wikimedia instance on a Pi and have used this script to record details of my Pis there as well as what they are being used for and any planned projects. I now feel more organised!
+Long notes
+The full-length notes (available here) contain a listing of the script, a brief description of it, and some example output.
+Links
+
+GitLab repository: https://gitlab.com/davmo/what_pi
+Resources to download:
+
+The script what_pi
+Example output example_output.txt
+

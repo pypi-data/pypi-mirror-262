@@ -1,0 +1,300 @@
+## hpr3306 :: HPR Community News for March 2021
+
+ 
+New hosts
+
+Welcome to our new host: 
+timttmy.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+3281
+Mon
+2021-03-01
+HPR Community News for February 2021
+HPR Volunteers
+
+
+3282
+Tue
+2021-03-02
+HP Laptop with AMD Ryzen 3 Mobile with Radeon Graphics
+Some Guy On The Internet
+
+
+3283
+Wed
+2021-03-03
+HPR RPG Club reviews Dead Earth
+klaatu
+
+
+3284
+Thu
+2021-03-04
+Introduction to gdb
+klaatu
+
+
+3285
+Fri
+2021-03-05
+Upgrading Lubuntu on my Samsung N150 Plus netbook
+MrX
+
+
+3286
+Mon
+2021-03-08
+Wireguard How To
+timttmy
+
+
+3287
+Tue
+2021-03-09
+Quick tip
+Archer72
+
+
+3288
+Wed
+2021-03-10
+Linux Inlaws S01E25: The Grumpy Old Coders
+monochromec
+
+
+3289
+Thu
+2021-03-11
+NextCloud the hard way
+Ken Fallon
+
+
+3290
+Fri
+2021-03-12
+GIMP: More on Layer Tools and Techniques
+Ahuka
+
+
+3291
+Mon
+2021-03-15
+The New Audacity and Batch Processing Macros
+Ahuka
+
+
+3292
+Tue
+2021-03-16
+Squirrel FSF blog
+Zen_Floater2
+
+
+3293
+Wed
+2021-03-17
+HPR RPG Club reviews Dungeon Raiders
+klaatu
+
+
+3294
+Thu
+2021-03-18
+Update to MakeMKV to back up media
+Archer72
+
+
+3295
+Fri
+2021-03-19
+Renewing a Let's Encrypt cert for Home Network use
+Ken Fallon
+
+
+3296
+Mon
+2021-03-22
+Spam Bot Honey Pot
+Rho`n
+
+
+3297
+Tue
+2021-03-23
+Nextcloud Application Updating
+ToeJet
+
+
+3298
+Wed
+2021-03-24
+Poisoning The Well
+Some Guy On The Internet
+
+
+3299
+Thu
+2021-03-25
+Linux Inlaws S01E26: Make your Linux harder
+monochromec
+
+
+3300
+Fri
+2021-03-26
+YouTube Channels for Learning Spanish, Part 1
+Ahuka
+
+
+3301
+Mon
+2021-03-29
+K S P Kerbal Space Program! (Game)
+operat0r
+
+
+3302
+Tue
+2021-03-30
+Input Methods on Ubuntu
+clacke
+
+
+3303
+Wed
+2021-03-31
+Slackware on RaspberryPi
+Brian in Ohio
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 15 comments in total.
+Past shows
+There are 3 comments on
+3 previous shows:
+
+hpr3153
+(2020-09-02) "Fixing eBooks with Calibre and pdfcrop"
+by Ken Fallon.
+
+
+
+Comment 2:
+Ken Fallon on 2021-03-03:
+"Thanks Again."
+hpr3241
+(2021-01-04) "HPR Community News for December 2020"
+by HPR Volunteers.
+
+
+
+Comment 4:
+clacke on 2021-03-03:
+"OpenLDAP on BDB?"
+hpr3262
+(2021-02-02) "My thoughts on diversity in Linux and open source"
+by swift110.
+
+
+
+Comment 6:
+bjhend on 2021-03-08:
+"Get rid of bad terms in IT"
+
+This month's shows
+There are 12 comments on 7 of this month's shows:
+hpr3282
+(2021-03-02) "HP Laptop with AMD Ryzen 3 Mobile with Radeon Graphics"
+by Some Guy On The Internet.
+
+Comment 1:
+frank on 2021-03-18:
+"Using your OEM Windows key in a VM"
+hpr3289
+(2021-03-11) "NextCloud the hard way"
+by Ken Fallon.
+
+Comment 1:
+monochromec on 2021-01-29:
+"apachectl restart vs. systemctl restart apache2.service"
+hpr3291
+(2021-03-15) "The New Audacity and Batch Processing Macros"
+by Ahuka.
+
+Comment 1:
+RmccurdyDOTcom on 2021-03-15:
+"audio"Comment 2:
+Gumnos on 2021-03-26:
+"Which hardware podcast player did you move to?"Comment 3:
+Kevin O'Brien on 2021-03-27:
+"Your answer"
+hpr3292
+(2021-03-16) "Squirrel FSF blog"
+by Zen_Floater2.
+
+Comment 1:
+Ken Fallon on 2021-03-09:
+"Good Question"Comment 2:
+A listener on 2021-03-16:
+"Enjoyed the podcast, but..."Comment 3:
+Kevin O'Brien on 2021-03-18:
+"Thank you"Comment 4:
+Thaj on 2021-03-27:
+"Well..."
+hpr3296
+(2021-03-22) "Spam Bot Honey Pot"
+by Rho`n.
+
+Comment 1:
+Kevin O'Brien on 2021-03-25:
+"Great show!"
+hpr3298
+(2021-03-24) "Poisoning The Well"
+by Some Guy On The Internet.
+
+Comment 1:
+Windigo on 2021-03-25:
+"Agreed"
+hpr3299
+(2021-03-25) "Linux Inlaws S01E26: Make your Linux harder"
+by monochromec.
+
+Comment 1:
+nobody on 2021-03-25:
+"Other MAC implementations"
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2021-March/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+Tags and Summaries
+Thanks to the following contributor for sending in updates in the past month:
+Dave Morriss
+Over the period tags and/or summaries have been added to 10 shows which were without them.
+There are now 404 shows which need a summary and/or tags.
+If you would like to contribute to the tag/summary project visit the summary page at https://hackerpublicradio.org/report_missing_tags.php and follow the instructions there.

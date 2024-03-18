@@ -1,0 +1,38 @@
+## hpr2637 :: Convert it to Text
+
+ Why use plain text?
+
+Portability
+Use with Unix tools
+Use with Ranger
+
+Ranger for the win
+
+Ranger is a free console file manager that gives you greater flexibility and a good overview of your files without having to leave your *nix console. It visualizes the directory tree in two dimensions: the directory hierarchy on one, lists of files on the other, with a preview to the right so you know where you’ll be going.
+The scope functionality is where converting to text pays off. Located at $HOME/.config/ranger/scope.sh, scope is the feature that allows for file preview from inside the console. Text files are highlighted based on their file extension, for non-text files, different converters can be used to coerce the file into a text representation. Some items are available out of the box, but the configuration is written in such a way that any text can be presented in the preview screen.
+The basic format of the scope switch statement is as follows:
+
+case "$extension" in
+    odt|odp)
+        try odt2txt "$path" && { dump | trim | fmt -s -w $width; exit 0; };;
+Tools in the toolset
+
+atool
+caca-utils
+poppler-utils
+catdoc
+catppt
+odt2txt
+ods2tsv
+docx2txt
+xlsx2csv
+mediainfo
+lynx/w3m/elinks
+highlight
+
+Bonus tools
+
+q
+jq
+xmlstarlet
+

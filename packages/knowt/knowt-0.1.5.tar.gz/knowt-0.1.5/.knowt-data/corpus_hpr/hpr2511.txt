@@ -1,0 +1,12 @@
+## hpr2511 :: Response to episode 2496
+
+ Links
+
+Dave's show
+Dave's script
+Raspberry Pi forum page
+Raspberry Pi tools GitHub page
+
+Command
+This is written for fish shell
+for pi in pi1 pi2 pi3 pi4; cat what_pi | ssh "$pi" bash -; done

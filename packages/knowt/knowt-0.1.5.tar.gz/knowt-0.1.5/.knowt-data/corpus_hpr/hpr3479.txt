@@ -1,0 +1,29 @@
+## hpr3479 :: Linux Inlaws S01E49: Version Control Systems and why bother
+
+ In this episode our two heroes contemplate the ins and outs of version
+control systems (VCS) and how to maintain sanity using them. Particular focus
+is on the newer generation of such as git which enabled large-scale community
+projects such as the Linux kernel, programming languages like Rust and Python
+and other shenanigans. Including a crash course on version control systems
+- you may credits at your local third-level education facility for listening
+to this episode. Just tell them the Inlaws sent you :-). Plus Martin reveals
+his favourite Pay TV channel and his gun-buying habits being a minor. Don't
+miss this episode if you're a minor and want to buy a gun in certain countries
+(details as part of the episode! :-).
+Links:
+
+V-Model: https://en.wikipedia.org/wiki/V-Model
+Mercurial: https://www.mercurial-scm.org
+Concurrent Version Control System (CVS): https://cvs.nongnu.org
+Minix: https://www.minix3.org
+Bazaar: https://bazaar.canonical.com/en
+Subversion (SVN): https://subversion.apache.org
+Git: https://git-scm.com
+Bitkeeper: https://www.bitkeeper.org
+IBM 390: https://www.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP9000.html
+gitea: https://gitea.io
+Special K: https://en.wikipedia.org/wiki/Special_K
+Special K (song): https://en.wikipedia.org/wiki/Special_K_(song)
+Special K (former country, the Wikipedia page is slightly outdated): https://en.wikipedia.org/wiki/United_Kingdom
+Imperium: https://www.imdb.com/title/tt4781612/?ref_=fn_al_tt_2
+

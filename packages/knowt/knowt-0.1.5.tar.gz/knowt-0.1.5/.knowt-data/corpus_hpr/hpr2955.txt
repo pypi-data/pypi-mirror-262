@@ -1,0 +1,21 @@
+## hpr2955 :: Machine Learning / Data Analysis Basics
+
+ In this episode, I talk about different techniques that we can use to predict the outcome of some question depending on input features.
+The different techniques I will go through are the ZeroR and OneR that will create a baseline for the rest of the methods.
+Next up, we have the Naive Bayes classifier that is simple but powerful for some applications.
+Nearest neighbor and Decision trees are next up that requires more training but is very efficient when you infer results.
+Multi-layer perceptron (MLP) is the first technique that is close to the ones we usually see in Machine Learning frameworks used today. But it is just a precursor to Convolutional Neural Network (CNN) because of the size requirements. MLPs have the same size for all the hidden layers, which makes it unfeasible for larger networks.
+CNNs, on the other hand, uses subsampling that will shrink the layer maps to reduce the size of the network without reducing the accuracy of the predictions.
+Links
+
+Some references for further reading on Wikipedia.
+
+https://en.wikipedia.org/wiki/Naive_Bayes_classifier
+https://en.wikipedia.org/wiki/Nearest_neighbor_search
+https://en.wikipedia.org/wiki/Decision_tree
+https://en.wikipedia.org/wiki/Support-vector_machine
+https://en.wikipedia.org/wiki/Multilayer_perceptron
+https://en.wikipedia.org/wiki/Convolutional_neural_network
+
+A video I made some years ago where you can see some visual aids for this subject.
+https://youtu.be/Xys1N_7MbSs

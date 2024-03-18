@@ -1,0 +1,68 @@
+## hpr2672 :: Porteus
+
+ Porteus is a portable Live Linux distro, based on Slackware, intended for use on thumbdrives or optical media.  It is, more or less, the new Slax, now that Slax has switched to Debian.
+Install
+The official means of installation is to burn Porteus to disc, and then (optionally) install Porteus onto a thumbdrive from within Porteus. To install Porteus to a thumbdrive, you need a thumbdrive with an EXT4 partition. You can try other filesystems and partition schemes, but EXT4 definitely works well.
+
+From either Porteus or Slackware (you can try other distros, but results will vary), you can do a manual install, and here are the correct commands (as of this writing, the docs on porteus.org are not accurate). Assuming you have discovered, using lsblk, that your target device (the thumbdrive) is /dev/sdx:
+
+$ sudo bash
+# mkdir -p /mnt/loop /mnt/drive
+# mount --options loop /path/to/Porteus*iso /mnt/loop
+# mount /dev/sdx1 /mnt/drive
+# rsync -av /mnt/loop/ /mnt/drive/
+# cd /mnt/drive/boot
+# chmod +x Porteus-installer-for-Linux.com
+# ./Porteus*com
+
+
+Alternately, you can use Porteus from a virtual machine and install to a thumbdrive, as long as your virtualisation software redirects USB. I have used virt-manager running on Fedora successfully for this.
+
+The other alternative, of course, is to run Porteus off of an optical disc. That means your system is unwritable, so nothing you do is persistent across reboots, but you can save your work to a thumbdrive. I've worked with Slax this way before, and it's quite manageable.
+Boot
+
+Booting to Porteus depends a lot on the firmware of the computer you're booting. Almost every Linux distro in existence has accurate docs on the changes you may or may not need to make to your BIOS or [U]EFI in order to boot to Linux, so you can find more detail on this if you need. Here's some text I borrowed from Linux Mint:
+
+ Insert your USB stick (or DVD) into the computer.
+Restart the computer.
+Before your computer boots your current operating system (Windows, Mac, Linux) you should see your BIOS or UEFI loading screen. Check the screen or your computer’s documentation to know which key to press and instruct your computer to boot on USB (or DVD). Most BIOS or UEFI have a special key you can press to select the boot device and all of them have a special key to enter a configuration screen (from which you can define the boot order). Depending on the firmware, these special keys can be Escape, F1, F2, F8, F10, F11, F12, or Delete. That information is usually briefly displayed on screen during the boot sequence.
+
+
+On Macs, keep your finger pressed on the Alt or Option key after hearing the boot sound.
+
+Boot modes
+Porteus can boot to its default persistent modes: graphical or text. Both of these modes auto load any Porteus modules you've installed and also read any changes you made since the previous boot.
+
+It can also boot to ephemeral modes: Copy to RAM and Always Fresh. These modes act as if you've never booted into Porteus before, loading a completely fresh version of the file system. They also do not load Porteus modules automatically.
+Installing software
+Porteus modules are Slackware packages converted to .xzm files, a highly-compressed SquashFS filesystem. When a Porteus module is activated, the application and other files contained in the module appear in your environment. You can think of it as a layered filesystem.
+
+To install software, you must sync up your package manager with upstream repositories:
+$ sudo usm -u all
+
+
+Once everything is updated, you can search for packages using the -k (for keyword) option:
+$ sudo usm -k foo
+
+
+And then install it:
+$ sudo usm -g foo
+
+
+You are prompted to either install or download the module. If you install it, then it becomes part of the filesystem. However, since changes to the filesystem are NOT read by the Copy to RAM or Always Fresh modes, this is probably not what you want. Instead, download the module so that you can have Porteus load it dynamically regardless of what mode you're running.
+
+Modules are downloaded, by default, to /tmp/usm/ and then converted from their native format of .t?z to .xzm files. You can copy the .xzm files to an external device if you're running off of optical media, or into a persistent area on the thumbdrive running Porteus. Modules can be made permanently available in the /mnt/sdx1/porteus/modules or /mnt/sdx1/porteus/optianal directories.
+
+Modules in the ../modules path are loaded at boot in the Graphical and Text modes, and are available to load manually in the Copy to RAM and Always Fresh modes.Modules in the ../optional path are never auto loaded.
+Modules can be activated or deactivated with this command:
+$ sudo activate foo
+
+Miscellany
+Flatpak works on Porteus, too. I have found this to be convenient for applications like GIMP and Inkscape and Kdenlive and many others that are complex enough to warrant special attention.
+
+
+Flatpak does require the glib-networking package. You will not be warned about this, because all upstream Slackware repositories assume a full install of Slackware (and glib-networking is included on Slackware, but not on Porteus). Once you install glib-networking, you can use flatpak as described, for instance, on the GIMP downloads page.
+
+
+Over-customizing the "hard-coded" parts of Porteus is unwise. For instance, keep the default user (guest), don't try to change the UID (I tried and failed), and so on. Treat the system, more or less, as if though you were a guest on someone else's multi-user system. Install and customise stuff locally and through modules when possible. That's what Porteus expects, and things can break if you try to treat it too much like a traditional Linux system.
+

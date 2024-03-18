@@ -1,0 +1,17 @@
+## hpr2690 :: A chat about the HiveMQ Broker
+
+ 
+I had the opportunity to chat with Florian Raschbichler and Anja Helmbrecht-Schaar from the company dc-square GmbH, who are developers of the HiveMQ Broker.
+
+
+If you are new to MQTT they have the ultimate kickstart for MQTT beginners. They also maintain an MQTT Client Library Encyclopedia
+
+Links
+
+https://www.hivemq.com/
+https://www.dc-square.de/en/
+https://en.wikipedia.org/wiki/Comparison_of_MQTT_Implementations
+https://en.wikipedia.org/wiki/MQTT
+https://www.hivemq.com/blog/mqtt-essentials/page/2/
+https://github.com/hivemq
+https://www.hivemq.com/mqtt-client-library-encyclopedia

@@ -1,0 +1,28 @@
+## hpr2634 :: Git tag and metadata
+
+ Tag a commit:
+
+$ git tag 0.1
+$ git tag
+0.1
+
+
+Delete a tag:
+
+
+$ git tag -d 0.1
+
+
+Get the latest commit hash:
+
+
+$ git rev-list --tags --max-count=1
+94c5715694c5715687a962008dd71191460fc4e32370425a
+
+
+Get any tag on a commit:
+
+
+$ git describe --tags 94c5715
+0.1
+

@@ -1,0 +1,96 @@
+## hpr2818 :: Writing Web Game in Haskell - Science, part 1
+
+ Background
+This is rather large topic, so I split it in two episodes. Next one should follow in two weeks if everything goes as planned. First part is about modeling research, while second part concentrates on how things change over time.
+There’s three types of research: engineering, natural sciences and social sciences. Research costs points that are produced by various buildings.
+Implementation
+There’s three database tables, which are defined below:
+CurrentResearch
+    type Technology
+    progress Int
+    factionId FactionId
+
+AvailableResearch
+    type Technology
+    category TopResearchCategory
+    factionId FactionId
+
+CompletedResearch
+    type Technology
+    level Int
+    factionId FactionId
+    date Int
+Data types
+Technology is enumeration of all possible technologies. Knowing these enable player to build specific buildings and space ships, enact various laws and so on. In the end this will be (hopefully) large list of technologies.
+data Technology =
+    HighSensitivitySensors
+    | SideChannelSensors
+    | HighTensileMaterials
+    | SatelliteTechnology
+    | BawleyHulls
+    | SchoonerHulls
+    | CaravelHulls
+    ...
+    deriving (Show, Read, Eq, Enum, Bounded, Ord)
+All research belong to one of the top categories that are shown below:
+data TopResearchCategory =
+    Eng
+    | NatSci
+    | SocSci
+    deriving (Show, Read, Eq, Ord)
+ResearchCategory is more fine grained division of research. Each of the categories is further divided into sub-categories. Only EngineeringSubField is shown below, but other two are similarly divided.
+data ResearchCategory =
+    Engineering EngineeringSubField
+    | NaturalScience NaturalScienceSubField
+    | SocialScience SocialScienceSubField
+    deriving (Show, Read, Eq)
+
+data EngineeringSubField =
+    Industry
+    | Materials
+    | Propulsion
+    | FieldManipulation
+    deriving (Show, Read, Eq)
+ResearchScore is measure of how big some research is. It has type parameter a that is used to further quantify what kind of ResearchScore we’re talking about.
+newtype ResearchScore a = ResearchScore { unResearchScore :: Int }
+    deriving (Show, Read, Eq, Ord, Num)
+TotalResearchScore is record of three different types of researches. I’m not sure if I should keep it as a record of three fields or if I should change it so that only one of those values can be present at any given time.
+data TotalResearchScore a = TotalResearchScore
+    { totalResearchScoreEngineering :: ResearchScore EngineeringCost
+    , totalResearchScoreNatural :: ResearchScore NaturalScienceCost
+    , totalResearchScoreSocial :: ResearchScore SocialScienceCost
+    }
+    deriving (Show, Read, Eq)
+Following singleton values are used with ResearchScore and TotalResearchScore to quantify what kind of value we’re talking about.
+data EngineeringCost = EngineeringCost
+    deriving (Show, Read, Eq)
+
+data NaturalScienceCost = NaturalScienceCost
+    deriving (Show, Read, Eq)
+
+data SocialScienceCost = SocialScienceCost
+    deriving (Show, Read, Eq)
+
+data ResearchCost = ResearchCost
+    deriving (Show, Read, Eq)
+
+data ResearchProduction = ResearchProduction
+    deriving (Show, Read, Eq)
+
+data ResearchLeft = ResearchLeft
+    deriving (Show, Read, Eq)
+Finally there’s Research, which is a record that uses many of the types introduced earlier. It describes what Technology is unlocked upon completion, what’s the cost is and if there are any technologies that have to have been researched before this research can start. The tier of research isn’t currently used for anything, but I have vague plans what to do about it in the future.
+data Research = Research
+    { researchName :: Text
+    , researchType :: Technology
+    , researchCategory :: ResearchCategory
+    , researchAntecedents :: [Technology]
+    , researchCost :: TotalResearchScore ResearchCost
+    , researchTier :: ResearchTier
+    }
+    deriving (Show, Read, Eq)
+Tech tree
+Putting all this together, we can define a list of Research. Since finding an entry from this list based on research type of it is such a common operation, we also define another data structure for this specific purpose. Map in other programming languages is often known as dictionary, associative array or hash map. It stores key-value - pairs. In our case Technology is used as key and Research as value. We define it based on the list previously defined:
+techMap :: Map.Map Technology Research
+techMap = Map.fromList $ (\x -> (researchType x, x)) <$> unTechTree techTree
+Next time we’ll look into how to actually use all these types and data that were defined.

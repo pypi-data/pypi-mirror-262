@@ -1,0 +1,44 @@
+## hpr2958 :: Haskell modules
+
+ With small programs it’s easy enough to have all code in single file. But as the program grows, you eventually want to organize things into separate files. In this episode I’ll talk a bit how to define modules and how to use them.
+Defining
+Each module is defined in separate file. In our example, we have file called multiplexer.hs, which contains our module definition.
+At the beginning of the file, we have following:
+module Multiplexer (mix, match, Plexer, Scooper(..))
+  where
+  ....
+We’re omitting actual function and type definitions as they aren’t important to this episode. In any case, there’s two functions: mix and match and two types: Plexer and Scooper that module exports (that is, these are available outside of the module). Plexer is imported as a type only and Scooper with field accessors or value constructors depending if it’s a record or algebraic datatype.
+Using modules
+In order to be able to use identifiers defined in separate module, we have to import them into our current one. In our imaginary program, we have main.hs that defines entry point for our program and we would like to import the definitions from Multiplexer module.
+Easiest one is to just have import Multiplexer at the start of the main. This brings all exported identifiers from Multiplexer and we can then use them. Both qualified and unqualified names are imported. Qualified means name is prepended with module name: Multiplexer.mix instead of just mix.
+If we want, we can specify what exactly should be imported: import Multiplexer (mix, match). This causes only functions mix and match be imported, while Plexer and Scooper are unavailable for us. Again, both qualified and unqualified names are imported.
+In case we want only qualified names, we’ll write import qualified Multiplexer. After this mix isn’t available, but Multiplexer.mix is (and all the other identifiers exported by Multiplexer).
+Sometimes module name is long and tedious to repeat when using qualified names. In these cases, renaming module while importing is a good option. This can be done by writing import Multiplexer as M. After this, instead of Multiplexer.mix you write M.mix.
+Final thing I’m going to mention is importing everything else except specified identifiers. This is done by writing import Multiplexer hiding (mix). This imports everything exported by Multiplexer, except mix.
+Summary
+There are many ways of importing and they can be mixed. Here’s a list of them:
+
+import Multiplexer
+import Multiplexer ()
+import Multiplexer (mix, match, Plexer, Scooper(..))
+import qualified Multiplexer
+import qualified Multiplexer (mix, match, Plexer, Scooper(..))
+import Multiplexer hiding (mix, match)
+import qualified Multiplexer hiding (Plexer, Scooper)
+import Multiplexer as M
+import Multiplexer as M (mix, match)
+import qualified Multiplexer as M
+import qualified Multiplexer as M (Plexer, Scooper(..))
+
+In short:
+
+Some identifiers can be chosen to be imported, while leaving others unimported
+Modules can be imported qualified (forcing an obligatory namespace qualifier to imported identifiers).
+Some identifiers can be skipped via the hiding clause.
+The module namespace can be renamed, with an as clause.
+
+Prelude
+Prelude is base module containing lots of helpful types and functions, which is automatically imported by every module. If this is not what you want, there’s two options. First one is to use pragma at start of the file: {-# LANGUAGE NoImplicitPrelude #-}, which causes Prelude not to be imported. Another one is to manually import Prelude, which turns of automatic import: import qualified Prelude as P.
+Closing
+When system grows, it’s helpful to break it into more manageable pieces. For this we use modules. import is used to bring identifiers from other modules into current one.
+Questions, comments and feedback is welcomed. Best way to reach me is either email or in fediverse where I’m Tuula@mastodon.social

@@ -1,0 +1,20 @@
+## hpr2809 :: The Blue Oak Model License and Its One Big Gotcha
+
+ The Blue Oak Model License 1.0.0 was just released this month. In this episode I read the license, explain where it sits in among other software licenses, and enumerate some of the problems it purports to solve.
+I’m no legal expert, so take all of this as sort of a rough introduction to the license.
+Overall, if you are looking at permissive (vs copyleft) licenses, I would strongly suggest you consider this license! It’s concise, robust, it was developed by credible people, and gives your users future-proof safety from a number of common legal traps.
+However: just note that it has a feature, some would say bug, that might be a big deciding factor in whether you feel comfortable with it (listen for details)
+Nevertheless, I believe this license, or at least its style of language, will soon become extremely common.
+Further links:
+
+The Blue Oak Model License 1.0.0 — the license itself. You may also wish to read the group’s statement about their methodology and how the license came to be.
+Deprecation Notice: MIT and BSD — the blog post I mention in the recording, by Blue Oak council member, developer and IP lawyer Kyle Mitchell. He explains some problems he sees with the MIT and BSD licenses and how the BOML addresses them.
+Discussion on Hacker News — This was a pretty good discussion. Kyle Mitchell also chimed in here to respond to some criticisms and tire-kicking of this license (you can recognize him by his handle kemitchell).
+
+Not mentioned in the recording: One thing that caused me a bit of confusion at first was the term “attribution”. Kyle and the Blue Oak folks use this term mainly to talk about license terms, not authorship or credit. So for them an attribution requirement is a requirement to include the license terms with any distributed copies, not a requirement to give authorship credit to people.
+If you want to use this license as a starting point for your own “bespoke” license, you can! As I mention in the recording, I created my own variant of the Blue Oak license for one of my own projects. My main change was a strong requirement for downstream users to give credit to upstream contributors—not just when redistributing source code, but in all published software, books and websites created with the software!
+
+The Local Yarn License 1.0.0 — This is the license as it currently sits in an experimental branch in my project’s Fossil repository
+Notes about my customizations — Another tech note from the Fossil repo.
+
+Of course, when you make your own changes, you had better think hard about them, and if possible, get the advice of an Actual Lawyer who can discuss your particular situation.

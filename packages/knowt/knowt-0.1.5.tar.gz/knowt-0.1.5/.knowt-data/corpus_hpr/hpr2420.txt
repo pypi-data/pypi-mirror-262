@@ -1,0 +1,12 @@
+## hpr2420 :: Netbooks - Keeping an old friend alive
+
+ Beeza uses an Acer Aspire One netbook as a media player (principally audio).
+The audio quality sent from the sound card out through the headphone socket really is excellent, so that when fed into a hi-fi amplifier the final reproduction is every bit as good as audio from a CD player - possibly better.
+The netbook is over 5 years old. When it was first bought most Linux distros ran very well on it. Since that time, however, the optimal hardware spec for most distros has increased quite considerably, leaving a humble netbook relatively underpowered, having typically 1 Gb RAM and a sedate CPU.
+All is not lost, fortunately. Raspbian X86, which is very closely related to the ARM version of Raspbian as used on the Pi, has a very light footprint and delivers performance on a netbook very much like what you would have experienced when they were brand new.
+Raspbian X86 is not perfect, though. It works brilliantly straight out of the box, but its security model needs a bit of simple reconfiguration to get the best from it. There are also, tweaks and cheats that can improve the Pixel user interface which, in its default setup, may not be to everybody's liking.
+In this episode Beeza explains steps he has taken to get the best from his netbook and, in the politest way possible, tells you what you can do with yours.
+POST RECORDING NOTE
+"Since recording the show I have installed Pulseaudio on top of Raspbian X86. It's a very simple install using Synaptic (or 'apt-get install pulseaudio'), after which you can run it as a daemon process with 'pulseaudio -D'.
+The advantage of Pulseaudio is that it gives you greater control over the audio channels and devices than is possible with just the default ALSA sub-system. This will be handy if you ever record from streams or USB microphones.
+If you install Pulseaudio, I strongly recommend installing pavucontrol as well - a mixer designed specifically to work with Pulseaudio".

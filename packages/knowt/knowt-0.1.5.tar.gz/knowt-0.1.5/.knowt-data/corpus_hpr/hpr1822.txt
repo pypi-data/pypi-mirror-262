@@ -1,0 +1,21 @@
+## hpr1822 :: Some tips on using ImageMagick
+
+ Some tips on using ImageMagick
+I like to use images in HPR shows if I can. I have experimented with various ways of preparing them since I first started contributing, but I'm particularly impressed with what I am able to do using ImageMagick.
+The ImageMagick system contains an enormous range of capabilities, enough for a whole series of shows. I thought I would talk about some of the features I use when preparing episodes to give you a flavour of what can be done.
+I'm the rawest amateur when it comes to this kind of image manipulation. Just reading some of the ImageMagick documentation (see links) will show you what an enormous number of possibilities there are. I am only using a few in this episode.
+I have prepared longer show notes and demonstrated some scripts to explain how I process images. These can be found here.
+Links
+
+Full show notes: https://hackerpublicradio.org/eps/hpr1822_full_shownotes.html
+EXIF Wikipedia page: https://en.wikipedia.org/wiki/Exchangeable_image_file_format
+exiftool: https://www.sno.phy.queensu.ca/~phil/exiftool
+Krita: https://krita.org/
+ImageMagick:
+
+Main site: https://www.imagemagick.org/script/index.php
+Crop: https://www.imagemagick.org/Usage/crop/
+Resize: https://www.imagemagick.org/Usage/resize/
+Thumbnails: https://www.imagemagick.org/Usage/thumbnails/
+
+

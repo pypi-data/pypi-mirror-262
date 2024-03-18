@@ -1,0 +1,20 @@
+## hpr3887 :: 10 must-know commands for a new cloud admin
+
+ Learn Linux basics so you can manage your cluster.
+
+Added by Ken
+
+
+kubectl
+curl
+unzip
+tar
+sudo
+mv
+chmod
+Using ./ before a script in the current directory
+cd to change directory
+ls
+echo
+export
+

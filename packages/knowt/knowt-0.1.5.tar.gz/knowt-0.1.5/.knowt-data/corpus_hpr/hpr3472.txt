@@ -1,0 +1,56 @@
+## hpr3472 :: consuming an AQI API
+
+ AQI
+Air Quality Index - measures particles in the air
+
+
+Ozone 
+
+good at high altitudes
+bad on the earth surface https://en.wikipedia.org/wiki/Ozone#Low_level_ozone
+
+
+
+PM2.5 
+
+Particulate Matter, 2.5 micrometers https://en.wikipedia.org/wiki/Particulates#Size,_shape_and_solubility_matter
+
+
+
+https://en.wikipedia.org/wiki/Particulates#Wildfire_smoke_risk
+Getting AQI data
+Determining air quality in my area is as simple as visiting https://www.airnow.gov and entering my zip code. Although my zip code covers 139.56 square miles, the result is accurate enough for my needs. When my zip code was submitted, the web page did not refresh. This means that the client interface made an API call to the backend server. 
+It sure would be nice if the AQI status was emailed to my phone every hour, if the AQI was above a certain threshold.  
+In order to get the data from the API, it is necessary to emulate the request made by the client to the API. This can be accomplished using Firefox.
+
+open Firefox
+go to https://www.airnow.gov
+open the Firefox developer tools, either through the menu or with CTRL+SHIFT+i
+in the dev tools, select the Network tab
+enter the zip code in the form and submit
+watch the Network tab for a POST request to https://airnowgovapi.com/reportingarea/get
+click on the request in the network tab
+
+Another set of tabs are now available to display various bits of information regarding the request. From this data, it is possible to recreate the query. 
+However, I took an even easier route, and right-clicked on the query in the Network tab, and selected Copy > Copy as cURL to get the request as a curl command complete with all necessary arguments prefilled.  Since I didn't want to write my entire AQI fetching script in bash, I copied the curl command into a text file and ported the request to Ruby. 
+The Finished Script
+#!/usr/bin/env ruby
+require 'net/http'
+require 'uri'
+require 'json'
+
+uri ="https://airnowgovapi.com/reportingarea/get"
+parsed_uri = URI.parse(uri)
+payload={latitude:39.88,longitude:-120.76,stateCode:'CA',maxDistance:50}
+response = Net::HTTP.post_form(parsed_uri, payload)
+data = JSON.parse(response.body)[0]
+aqi=data["aqi"].to_i
+category=data['category']
+parameter=data['parameter']
+
+output= "#{parameter}: #{aqi} - #{category}"
+puts output
+
+
+/opt/textjezra "#{output}"` if aqi > 70
+

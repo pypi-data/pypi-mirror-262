@@ -1,0 +1,218 @@
+## hpr1958 :: FOSDEM 2016 K building level 1 Group A
+
+ Table of Contents
+
+Fedora
+OpenSuse
+illumos
+ownCloud
+Enlightenment
+Tizen
+Kolab
+KDE
+LibreOffice
+
+Fedora
+
+
+The Fedora Project is a partnership of free software community members from around the globe. The Fedora Project builds open source software communities and produces a Linux distribution called "Fedora." The Fedora Project's mission is to lead the advancement of free and open source software and content as a collaborative community.
+
+Listen to the interview with Jiří Eischmann
+
+
+
+
+
+Links
+
+Project Website: https://getfedora.org/en/
+Personal Website: https://fedoraproject.org/wiki/User:Eischmann
+Twitter: @Sesivany @fedora_linux
+email: eischmann.nospam@nospam.redhat.com
+Wikipedia: https://en.wikipedia.org/wiki/Fedora_(operating_system)
+Linkedin: https://www.linkedin.com/in/eischmann
+Jiří Eischmann and Jaroslav Řezník hpr1452 :: HPR Coverage at FOSDEM 2014 Part 3
+Matthew Miller hpr1697 :: FOSDEM 2015 Friday Night and Saturday Morning 1 of 5 
+
+OpenSuse
+
+
+
+openSUSE, formerly openSUSE Leap 42.1 and openSUSE Tumbleweed, is a international Linux project with different distributions sponsored by SUSE Linux GmbH and other companies. It is widely used throughout the world, particularly in Germany. The focus of its development is creating usable open-source tools for software developers and system administrators, while providing  user-friendly desktops, and a feature-rich server environment.
+
+Listen to the interview with Sarah Julia Kriesch
+
+
+
+
+
+Links
+
+Project Website: https://www.opensuse.org/
+Twitter: @opensuse
+email: Sarah.Kriesch.nospam@nospam.brandmaker.com
+Facebook: https://www.facebook.com/en.openSUSE
+Google+: https://plus.google.com/+openSUSE/posts
+Wikipedia: https://en.wikipedia.org/wiki/OpenSUSE
+Linkedin: https://www.linkedin.com/in/sarah-julia-kriesch-16874b82
+YouTube: https://www.youtube.com/user/opensusetv
+Richard Brown hpr1447 :: HPR Coverage at FOSDEM 2014 Part 1/5
+
+illumos
+
+
+This is the home of the illumos project, the open source fork of Sun's OpenSolaris. Launched in 2010, the project enjoys financial and technical support from several key companies which rely on the illumos kernel as the technological foundation for their own products, as well as the backing of a growing developer community.
+
+Listen to the interview with Dan McDonald
+
+
+
+
+
+Links
+
+Project Website: https://illumos.org/
+Personal Website: https://omniti.com/
+Twitter: @kebesays
+email: danmcd.nospam@nospam.omniti.com
+Wikipedia: https://en.wikipedia.org/wiki/Illumos
+Linkedin: https://www.linkedin.com/in/danmcd
+https://fosdem.org/2016/schedule/event/illumos_overview/
+
+ownCloud
+
+
+Access, Sync and Share your data, under your control! ownCloud provides access to your data through a web interface or WebDAV while providing a platform to view, sync and share across devices easily, all under your control. ownCloud's open architecture is extensible via a simple but powerful API for applications and plugins and works with any storage.
+
+Listen to the interview with Jos Poortvliet, Community Manager/ Chief Geek Herder at ownCloud
+
+
+
+
+
+Links
+
+Project Website: https://owncloud.org
+Personal Website: 
+Twitter: @jospoortvliet
+email: jos.nospam@nospam.owncloud.com
+Wikipedia: https://en.wikipedia.org/wiki/OwnCloud
+Linkedin: https://www.linkedin.com/in/jospoortvliet
+Jan-Christoph Borchardt hpr1698 :: FOSDEM 2015 Part 2 of 5
+
+Enlightenment
+
+
+The original reason Enlightenment exists - The Window Manager. From here everything else spawned. This is really the flagship product, closely followed by EFL itself. The window manager is a lean, fast, modular and very extensible window manager for X11 and Linux. It is classed as a “desktop shell” providing the things you need to operate your desktop (or laptop), but is not a whole application suite. This covers launching applications, managing their windows and doing other system tasks like suspending, reboots, managing files etc.
+
+We are moving towards Wayland as the base display system where Enlightenment is being worked on to become a full Wayland compositor on its own. This of course takes time and has its rough edges along the way, but we are not standing still, and one day will leave X11 behind.
+
+Of course Enlightenment is built on top of EFL, using the libraries we wrote for it to do its UI as well as to run the entire compositor itself. This means that any improvements to EFL turn up in the compositor as well.
+
+Enlightenment also is the Window Manager and Compositor for Tizen due in part to its efficiency and feature-set.
+
+Listen to the interview with Philippe Caseiro
+
+
+
+
+
+Links
+
+Project Website: https://www.enlightenment.org
+Twitter: @Enlightenment
+email: pcaseiro.nospam@nospam.cadoles.com
+Facebook: https://www.facebook.com/enlightenment.org
+Google+: https://plus.google.com/118426816251488376359
+Linkedin: https://www.linkedin.com/in/philippecaseiro
+Youtube: https://www.youtube.com/channel/UCs9Xcw4TwJ1_A8QI8PxCNNA
+Wikipedia: https://en.wikipedia.org/wiki/Enlightenment_(software)
+
+Tizen
+
+
+Tizen is an open and flexible operating system built from the ground up to address the needs of all stakeholders of the mobile and connected device ecosystem, including device manufacturers, mobile operators, application developers and independent software vendors (ISVs). Tizen is developed by a community of developers, under open source governance, and is open to all members who wish to participate.
+
+Listen to the interview with Pawel Wieczorek
+
+
+
+
+Links
+
+Project Website: https://www.tizen.org/
+Twitter: @TizenProject
+email: p.wieczorek2.nospam@nospam.samsung.com
+Wikipedia: https://en.wikipedia.org/wiki/Tizen
+
+Kolab
+
+
+The Kolab Groupware Solution offers Personal Information Management for deployments of any size. It runs on a Rasberry Pi and in clouds spread over multiple data centres. Kolab provides a secure, scalable and reliable collaboration server. Since it is Free Software, it is not only used by large companies and organisation, but also by many individuals who care about being in control of their personal information.
+
+
+Kolab is a free and open source groupware suite. It consists of the Kolab server and a wide variety of Kolab clients, including KDE PIM-Suite Kontact, Horde Webfrontend, Mozilla Thunderbird and Mozilla Lightning with SyncKolab extension and Microsoft Outlook with proprietary Kolab-Connector PlugIns.
+
+Listen to the interview with Aaron Seigo
+
+
+
+
+
+Links
+
+Project Website: https://kolab.org/, https://kolabsystems.com
+Twitter: @kolaborg
+email: seigo.nospam@nospam.kolabsystems.com
+Wikipedia: https://en.wikipedia.org/wiki/Kolab
+Linkedin: https://www.linkedin.com/in/aaronseigo
+Wikipedia: https://kolab.org/overview
+Robin Edgar hpr1699 :: FOSDEM 2015 Part 3 of 5
+
+KDE
+
+
+The KDE Community is an international technology team dedicated to creating a free and user-friendly computing experience, offering an advanced graphical desktop, a wide variety of applications for communication, work, education and entertainment and a platform to easily build new applications upon. We have a strong focus on finding innovative solutions to old and new problems, creating a vibrant atmosphere open for experimentation.
+
+Listen to the interview with Jonathan Riddell
+
+
+
+
+
+Links
+
+Project Website: https://www.kde.org
+Twitter: @KdeNeon
+email: jr.nospam@nospam.jriddell.org
+Facebook: https://facebook.com/kdeneon
+Google+: https://plus.google.com/113043070111945110583
+Wikipedia: https://en.wikipedia.org/wiki/KDE
+Linkedin: https://uk.linkedin.com/in/jonathanriddell
+Jonathan Riddell hpr1452 :: HPR Coverage at FOSDEM 2014 Part 3
+Jonathan Riddell hpr1698 :: FOSDEM 2015 Part 2 of 5
+
+LibreOffice
+
+
+LibreOffice is the most widely used free open source office software. It is a community-driven project of The Document Foundation. LibreOffice is developed by professionals and by users, just like you, who believe in the principles of free software and in sharing their work with the world in a non-restrictive way. At the core of these principles is the promise of better-quality, highly-reliable and secure software that gives you greater flexibility at zero cost and no end-user lock-in. LibreOffice works natively with the Open Document Format, but also brings you support for by far the most file types for office-documents. It comes with support for over 80 languages and with a whole amount of other unique features to work with your texts, spreadsheets, presentations, drawings and data.
+
+Listen to the interview with Italo Vignoli, Director Marketing and Communications
+
+
+
+
+
+Links
+
+Project Website: https://www.libreoffice.org/, https://www.documentfoundation.org/
+Personal Website: 
+Twitter: @tdforg @libreoffice
+email: italo.vignoli.nospam@nospam.documentationfoundation.org
+Facebook: https://www.facebook.com/libreoffice.org
+Google+: https://plus.google.com/+libreoffice/
+Wikipedia: https://en.wikipedia.org/wiki/LibreOffice
+Linkedin: https://www.linkedin.com/in/italovignoli
+YouTube: https://www.youtube.com/channel/UCQAClQkZEm2rkWvU5bvCAXQ
+Cor Nouws hpr1454 :: HPR Coverage at FOSDEM 2014 Part 5
+

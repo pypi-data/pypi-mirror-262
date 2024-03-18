@@ -1,0 +1,447 @@
+## hpr3892 :: Emacs package curation, part 1
+
+ Not really every single one, because straight.el installs
+dependencies automatically.
+Here's the file I went through during this recording. Some things may
+have changed slightly since the time of recording. Save this file in
+~/.emacs.d/init.el to reproduce my exact Emacs
+configuration that I use at home and at work.
+;;; init.el ---  This is Tiago's init.el file
+;;; Commentary:
+;;; Thanks to everyone that curates Emacs packages.
+
+;;; Code:
+;; BEGIN Straight.el bootstrap
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 6))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+;; END Straight.el bootstrap
+
+(straight-use-package 'use-package)
+(setq straight-use-package-by-default t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; <<< THE ESSENTIALS >>>  ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Get minor modes off the modeline
+(use-package diminish)
+
+(use-package evil
+  :init (setq evil-want-keybinding nil)
+  :config (evil-mode)
+  :custom (evil-undo-system 'undo-redo)
+  :bind ("C-u" . evil-scroll-up))
+
+(use-package evil-collection
+  :diminish evil-collection-unimpaired-mode
+  :after evil
+  :config (evil-collection-init))
+
+(use-package evil-surround
+  :after evil
+  :config
+  (global-evil-surround-mode 1))
+
+;; In-Buffer Completion
+(use-package company
+  :diminish
+  :config (global-company-mode))
+
+;; completion with extra info box
+(use-package company-box
+  :diminish
+  :hook (company-mode . company-box-mode))
+
+;; Show key bindings as you go
+(use-package which-key
+  :diminish
+  :config (which-key-mode))
+
+;; search query feedback in the buffer
+(use-package anzu
+  :diminish
+  :config (global-anzu-mode +1))
+
+(use-package evil-anzu)
+
+;; Completion in the minibuffer (snippet from vertico)
+(use-package vertico
+  :init
+  (vertico-mode)
+
+  ;; Different scroll margin
+  ;; (setq vertico-scroll-margin 0)
+
+  ;; Show more candidates
+  ;; (setq vertico-count 20)
+
+  ;; Grow and shrink the Vertico minibuffer
+  ;; (setq vertico-resize t)
+
+  ;; Optionally enable cycling for `vertico-next' and `vertico-previous'.
+  ;; (setq vertico-cycle t)
+  )
+
+;; Persist history over Emacs restarts. Vertico sorts by history position.
+;; (use-package savehist
+;;   :init
+;;   (savehist-mode))
+
+;; A few more useful configurations...
+(use-package emacs
+  :init
+  ;; Add prompt indicator to `completing-read-multiple'.
+  ;; We display [CRM<separator>], e.g., [CRM,] if the separator is a comma.
+  (defun crm-indicator (args)
+    (cons (format "[CRM%s] %s"
+                  (replace-regexp-in-string
+                   "\\`\\[.*?]\\*\\|\\[.*?]\\*\\'" ""
+                   crm-separator)
+                  (car args))
+          (cdr args)))
+  (advice-add #'completing-read-multiple :filter-args #'crm-indicator)
+
+  ;; Do not allow the cursor in the minibuffer prompt
+  (setq minibuffer-prompt-properties
+        '(read-only t cursor-intangible t face minibuffer-prompt))
+  (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode)
+
+  ;; Emacs 28: Hide commands in M-x which do not work in the current mode.
+  ;; Vertico commands are hidden in normal buffers.
+  ;; (setq read-extended-command-predicate
+  ;;       #'command-completion-default-include-p)
+
+  ;; Enable recursive minibuffers
+  (setq enable-recursive-minibuffers t))
+
+;; Optionally use the `orderless' completion style.
+;; Get completion even if you type substrings that don't match in the
+;; same order you typed them in.
+(use-package orderless
+  :init
+  ;; Configure a custom style dispatcher (see the Consult wiki)
+  ;; (setq orderless-style-dispatchers '(+orderless-consult-dispatch orderless-affix-dispatch)
+  ;;       orderless-component-separator #'orderless-escapable-split-on-space)
+  (setq completion-styles '(orderless basic)
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles partial-completion)))))
+
+;; Enable rich annotations in the completion
+(use-package marginalia
+  ;; Either bind `marginalia-cycle' globally or only in the minibuffer
+  :bind (("M-A" . marginalia-cycle)
+         :map minibuffer-local-map
+         ("M-A" . marginalia-cycle))
+
+  ;; The :init configuration is always executed (Not lazy!)
+  :init
+
+  ;; Must be in the :init section of use-package such that the mode gets
+  ;; enabled right away. Note that this forces loading the package.
+  (marginalia-mode))
+
+;; Searching commands and lots of other stuff
+;; This is a snippet taken from consult
+(use-package consult
+  ;; Replace bindings. Lazily loaded due by `use-package'.
+  :bind (;; C-c bindings in `mode-specific-map'
+         ("C-c M-x" . consult-mode-command)
+         ("C-c h" . consult-history)
+         ("C-c k" . consult-kmacro)
+         ("C-c m" . consult-man)
+         ("C-c i" . consult-info)
+         ([remap Info-search] . consult-info)
+         ;; C-x bindings in `ctl-x-map'
+         ("C-x M-:" . consult-complex-command)     ;; orig. repeat-complex-command
+         ("C-x b" . consult-buffer)                ;; orig. switch-to-buffer
+         ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window
+         ("C-x 5 b" . consult-buffer-other-frame)  ;; orig. switch-to-buffer-other-frame
+         ("C-x r b" . consult-bookmark)            ;; orig. bookmark-jump
+         ("C-x p b" . consult-project-buffer)      ;; orig. project-switch-to-buffer
+         ;; Custom M-# bindings for fast register access
+         ("M-#" . consult-register-load)
+         ("M-'" . consult-register-store)          ;; orig. abbrev-prefix-mark (unrelated)
+         ("C-M-#" . consult-register)
+         ;; Other custom bindings
+         ("M-y" . consult-yank-pop)                ;; orig. yank-pop
+         ;; M-g bindings in `goto-map'
+         ("M-g e" . consult-compile-error)
+         ("M-g f" . consult-flymake)               ;; Alternative: consult-flycheck
+         ("M-g g" . consult-goto-line)             ;; orig. goto-line
+         ("M-g M-g" . consult-goto-line)           ;; orig. goto-line
+         ("M-g o" . consult-outline)               ;; Alternative: consult-org-heading
+         ("M-g m" . consult-mark)
+         ("M-g k" . consult-global-mark)
+         ("M-g i" . consult-imenu)
+         ("M-g I" . consult-imenu-multi)
+         ;; M-s bindings in `search-map'
+         ("M-s d" . consult-find)
+         ("M-s D" . consult-locate)
+         ("M-s g" . consult-grep)
+         ("M-s G" . consult-git-grep)
+         ("M-s r" . consult-ripgrep)
+         ("M-s l" . consult-line)
+         ("M-s L" . consult-line-multi)
+         ("M-s k" . consult-keep-lines)
+         ("M-s u" . consult-focus-lines)
+         ;; Isearch integration
+         ("M-s e" . consult-isearch-history)
+         :map isearch-mode-map
+         ("M-e" . consult-isearch-history)         ;; orig. isearch-edit-string
+         ("M-s e" . consult-isearch-history)       ;; orig. isearch-edit-string
+         ("M-s l" . consult-line)                  ;; needed by consult-line to detect isearch
+         ("M-s L" . consult-line-multi)            ;; needed by consult-line to detect isearch
+         ;; Minibuffer history
+         :map minibuffer-local-map
+         ("M-s" . consult-history)                 ;; orig. next-matching-history-element
+         ("M-r" . consult-history))                ;; orig. previous-matching-history-element
+
+  ;; Enable automatic preview at point in the *Completions* buffer. This is
+  ;; relevant when you use the default completion UI.
+  :hook (completion-list-mode . consult-preview-at-point-mode)
+
+  ;; The :init configuration is always executed (Not lazy)
+  :init
+
+  ;; Optionally configure the register formatting. This improves the register
+  ;; preview for `consult-register', `consult-register-load',
+  ;; `consult-register-store' and the Emacs built-ins.
+  (setq register-preview-delay 0.5
+        register-preview-function #'consult-register-format)
+
+  ;; Optionally tweak the register preview window.
+  ;; This adds thin lines, sorting and hides the mode line of the window.
+  (advice-add #'register-preview :override #'consult-register-window)
+
+  ;; Use Consult to select xref locations with preview
+  (setq xref-show-xrefs-function #'consult-xref
+        xref-show-definitions-function #'consult-xref)
+
+  ;; Configure other variables and modes in the :config section,
+  ;; after lazily loading the package.
+  :config
+
+  ;; Optionally configure preview. The default value
+  ;; is 'any, such that any key triggers the preview.
+  ;; (setq consult-preview-key 'any)
+  ;; (setq consult-preview-key "M-.")
+  ;; (setq consult-preview-key '("S-<down>" "S-<up>"))
+  ;; For some commands and buffer sources it is useful to configure the
+  ;; :preview-key on a per-command basis using the `consult-customize' macro.
+  (consult-customize
+   consult-theme :preview-key '(:debounce 0.2 any)
+   consult-ripgrep consult-git-grep consult-grep
+   consult-bookmark consult-recent-file consult-xref
+   consult--source-bookmark consult--source-file-register
+   consult--source-recent-file consult--source-project-recent-file
+   ;; :preview-key "M-."
+   :preview-key '(:debounce 0.4 any))
+
+  ;; Optionally configure the narrowing key.
+  ;; Both < and C-+ work reasonably well.
+  (setq consult-narrow-key "<") ;; "C-+"
+
+  ;; Optionally make narrowing help available in the minibuffer.
+  ;; You may want to use `embark-prefix-help-command' or which-key instead.
+  ;; (define-key consult-narrow-map (vconcat consult-narrow-key "?") #'consult-narrow-help)
+
+  ;; By default `consult-project-function' uses `project-root' from project.el.
+  ;; Optionally configure a different project root function.
+  ;;;; 1. project.el (the default)
+  ;; (setq consult-project-function #'consult--default-project--function)
+  ;;;; 2. vc.el (vc-root-dir)
+  ;; (setq consult-project-function (lambda (_) (vc-root-dir)))
+  ;;;; 3. locate-dominating-file
+  ;; (setq consult-project-function (lambda (_) (locate-dominating-file "." ".git")))
+  ;;;; 4. projectile.el (projectile-project-root)
+  ;; (autoload 'projectile-project-root "projectile")
+  ;; (setq consult-project-function (lambda (_) (projectile-project-root)))
+  ;;;; 5. No project support
+  ;; (setq consult-project-function nil)
+)
+
+;; workspaces
+(use-package perspective
+  :bind ("C-x C-b" . persp-list-buffers)         ; or use a nicer switcher, see below
+  :custom (persp-mode-prefix-key (kbd "C-c M-p"))  ; pick your own prefix key here
+  :init (persp-mode))
+
+;; theme
+(use-package doom-themes
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (load-theme 'doom-one t)
+
+  ;; Corrects (and improves) org-mode's native fontification.
+  (doom-themes-org-config))
+
+;; modeline
+(use-package powerline
+  :straight (:host github :repo "milkypostman/powerline")
+  :config (powerline-default-theme))
+
+;; modeline theme
+(use-package airline-themes
+  :config (load-theme 'airline-onedark t))
+
+;; makes temporary or non-editing buffers darker
+(use-package solaire-mode
+  :config (solaire-global-mode +1))
+
+;; snippets
+(use-package yasnippet
+  :diminish yas-minor-mode
+  :straight (:host github :repo "joaotavora/yasnippet")
+  :config (yas-global-mode 1))
+
+;; projects
+(use-package projectile
+  :bind-keymap
+  ("C-c p" . projectile-command-map))
+
+(use-package rg)
+
+;;;;;;;;;;;
+;;; Org ;;;
+;;;;;;;;;;;
+
+(use-package org
+  :commands (org-mode)
+  :init (setq org-directory "~/org/"
+              org-noter-notes-search-path '("~/org/roam/")
+              org-cite-global-bibliography '("~/org/biblio.bib")
+              org-capture-templates
+                     '(("n" "Note" entry
+                              (file "~/org/todo.org")
+                              "* %^{prompt}\n%U\n\n%?")
+                       ("r" "Reading list note" entry
+                              (file "~/org/reading.org")
+                              "* %^{prompt}\n%U\n\n%x"
+                              :immediate-finish :jump-to-captured)))
+  :config (require 'org-crypt)
+          (org-crypt-use-before-save-magic)
+          (require 'org-id)
+          (defun tgdnt/advice-org-ctrl-c-ctrl-c (&rest args)
+            "Run `org-todo' if point is on a visible heading."
+            (let ((do-not-run-orig-fn (org-at-heading-p t)))
+                (when do-not-run-orig-fn
+                (call-interactively #'org-todo))
+                do-not-run-orig-fn))
+          (advice-add 'org-ctrl-c-ctrl-c :before-until #'tgdnt/advice-org-ctrl-c-ctrl-c)
+  :hook (org-mode . auto-fill-mode)
+  :bind ("C-x h" . visible-mode)
+        ("C-c n a" . org-agenda)
+  :custom (org-tags-column 2)
+          (org-tags-exclude-from-inheritance '("crypt"))
+          (org-crypt-key "90A77BEA68A05915")
+          (org-crypt-disable-auto-save t)
+          (org-adapt-indentation nil)
+          (org-clock-ask-before-exiting nil)
+          (org-startup-folded t)
+          (org-startup-indented t)
+          (org-priority-start-cycle-with-default nil)
+          (org-id-link-to-org-use-id 'use-existing)
+          (org-agenda-files (append (directory-files "~/org/" t ".+\.org$")))
+          (org-agenda-custom-commands
+                '(("A" "Agenda and Unscheduled TODOs"
+                   ((agenda "")
+                    (todo "TODO" ((org-agenda-overriding-header "Unscheduled actions:")))
+                    (todo "PROJ" ((org-agenda-overriding-header "Projects:")))
+                    (todo "OPEN" ((org-agenda-overriding-header "Open items:")))
+                    (todo "HOLD" ((org-agenda-overriding-header "On Hold:"))))
+                    ((org-agenda-dim-blocked-tasks 'invisible))
+                                    nil)))
+          (org-agenda-todo-ignore-with-date t)
+          (org-agenda-start-day nil)
+          (org-agenda-start-on-weekday nil)
+          (org-agenda-span 1)
+          (org-agenda-skip-deadline-prewarning-if-scheduled t)
+          (org-agenda-prefix-format '((agenda . "%?-12t% s")
+                                      (todo . "  ")
+                                      (tags . "  ")
+                                      (search . "  ")))
+          (org-agenda-deadline-leaders '("!" "%1d" "‼"))
+          (org-agenda-scheduled-leaders '("#" "%1d"))
+          (org-enforce-todo-dependencies t)
+          (org-refile-targets '((nil :maxlevel . 2)
+                                (org-agenda-files :maxlevel . 2)))
+          (org-attach-id-dir "~/org/attachments")
+          (org-crypt-disable-auto-save t)
+          (org-crypt-tag-matcher "crypt")
+          (org-archive-location "~/org/archive/archive.org::")
+          (org-deadline-warning-days 5)
+          (org-archive-save-context-info '(time file olpath ltags itags category))
+          (org-id-link-to-org-use-id 'use-existing)
+          (org-todo-keywords '((type "TODO(t)" ;; A clearly defined action
+                                     "OPEN(o)" ;; An open item, must be clarified
+                                     "HOLD(h)" ;; An open item, must be clarified
+                                     "PROJ(p)" ;; A project, with actions within it
+                                   "|" "DONE(d)" "QUIT(q)"))))
+
+;; make visible-mode automatic when entering insert mode
+(use-package org-appear
+  :init (setq org-hide-emphasis-markers t)
+  :hook (org-mode . org-appear-mode)
+  :custom (org-appear-autolinks t))
+
+(use-package evil-org
+  :after org
+  :hook (org-mode . (lambda () evil-org-mode))
+  :config
+  (require 'evil-org-agenda)
+  (evil-org-agenda-set-keys))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; more basic settings ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq backup-directory-alist
+              `(("." . ,(concat user-emacs-directory "backups")))
+      backup-by-copying t
+      delete-old-versions t
+      kept-new-versions 6
+      kept-old-versions 2
+      version-control t)
+
+(setq-default fill-column 64
+              indent-tabs-mode nil
+              display-time-day-and-date t
+              display-time-24hr-format t)
+
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file t)
+
+(when window-system
+  (scroll-bar-mode -1)
+  (menu-bar-mode -1)
+  (tool-bar-mode -1))
+
+;; (toggle-frame-fullscreen)
+(display-time)
+(display-battery-mode)
+(server-start)
+(setq inhibit-startup-screen t)
+
+;; If on a graphical env, load init-base, if not on windows, load init-extra
+(when window-system
+  (load-file (expand-file-name "init-base.el" user-emacs-directory))
+  (require 'init-base)
+  (unless (string= (x-server-vendor) "Microsoft Corp.")
+      (load-file (expand-file-name "init-extra.el" user-emacs-directory))
+      (require 'init-extra)))
+
+(provide 'init)
+;;; init.el ends here
+In part 2, coming soon, we'll go through init-base.el and
+init-extra.el.

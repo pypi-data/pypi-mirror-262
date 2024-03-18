@@ -1,0 +1,196 @@
+## hpr1106 :: Of Fuduntu, RescaTux (or the Farmer Buys a Dell)
+
+ This is another one of my How I Did It
+Podcasts (or How I Done It if you rather) where my goal is to pass
+along the things I learn as a common Linux user administering my home
+computers and network, and engaging in the types of software
+tinkering that appeals to our sort of enthusiast.
+
+
+I'd been thinking for a while about
+replacing the small computer on my dinner table. I had been using an
+old HP TC1000, one of the original active stylus Windows tablets, of
+course now upgraded to Linux. With the snap in keyboard, it had a
+form factor similar to a netbook, with the advantage that all the
+vulnerable components were behind the LCD, up off the table and away
+from spills. It had served my purpose of staying connected to IRC
+during mealtimes, and occasional streaming of live casts, but I
+wanted more. I wanted to be able to join into Mumble while preparing
+meals, I wanted to be able to load any website I wanted without
+lockups, and I wanted to stream video content and watch DVDs.
+
+
+I was concerned that putting a laptop
+on the table was an invitation to have any spilled beverage sucked
+right into the air intakes, and I never even considered a desktop
+system in the dining room until I saw a refurbished Dell Inspiron 745
+on GearXS.com (I wouldn't normally plug a specific vendor, but now
+GearXS is putting Ubuntu on all it's used corporate castoff systems).
+This Dell had the form factor that is ubiquitous in point-of-sale, a
+vertical skeleton frame with a micro system case on one side and a
+17” LCD on the other, placing all the electronics several inches
+above the surface on which it is placed. I even found a turntable
+intended for small TVs that lets me smoothly rotate the monitor to
+either at my place on the table or back towards the kitchen where I
+am cooking. I already had a sealed membrane keyboard with an
+integrated pointer and wireless-N USB dongle to complete the package.
+Shipped, my “new” dual core 2.8Ghz Pentium D system with 80Gb
+hard drive and Intel graphics was under $150. [The turntable was $20
+and an upgrade from 1Gb to 4Gb of used DDR2 was $30, but both were
+worth it.] Since the box shipped with Ubuntu, I thought installing
+the distro of my choice would be of no consequence, and that is where
+my tale begins.
+
+
+I'm going to start my story towards the
+end, as it is the most important part. After the installation of four
+Linux distros in as many days (counting the Ubuntu 10.04 LTS the box
+shipped with, a partial installation of SolusOS 2r5, Fuduntu and
+finally Lubuntu 12.04), I discovered I couldn't boot due to Grub
+corruption (machine POSTed, but where I should have seen Grub, I got
+a blank screen with a cursor in the upper left corner). 
+
+
+
+A. I thought I would do a total disk
+wipe and start over, but DBAN from the UBCD for Windows said it
+wasn't able to write to the drive (never seen that before) 
+
+B. Started downloading the latest
+RescaTux ISO. Meanwhile, I found an article that told me I could
+repair Grub with a Ubuntu CD
+https://ubuntunigeria.wordpress.com/2010/09/02/how-to-restore-grub2-using-an-ubuntu-live-cd-or-thumb-drive/
+, so I tried booting from the Lubuntu 12.04 CD (using the boot device
+selector built into the hardware). Same black screen, preceded by a
+message that the boot device I had selected was not present. Same
+thing with the Fuduntu DVD that had worked the day before. With the
+exception of UBCD, I couldn't get a live CD to boot. 
+
+C. Now having downloaded the RescaTux
+ISO, and suspecting a problem with the optical drive, I used
+Unetbootin to make a RescaTux bootable thumb drive. RescaTux 
+
+(
+https://download2.berlios.de/rescatux/rescatux_cdrom_usb_hybrid_i386_486-amd64_0.30b7_sg2d.iso
+) has a pre-boot menu that let's you choose between 32 and 64 bit
+images, but that was as far as I got, nothing happened when I made my
+selection. 
+
+D. At this point, I am suspecting a
+hardware failure that just happened to coincide with my last install.
+This is a Ultra Small Form Factor Dell, the kind you see as point of
+sale or hospital systems, so there weren't many components I could
+swap out. I didn't have any DDR2 laying around, but I did test each
+of the two sticks the system came with separately with the same
+results. I then reasoned a Grub error should go away if disabled the
+hard drive, so I physically disconnected the drive and disabled the
+SATA connector in the BIOS. I still couldn't boot to a live CD.
+Deciding there was a reason his machine was on the secondary market,
+I hooked everything back up and reset the BIOS settings to the
+defaults, still no luck. 
+
+E. As a Hail Mary the next day, I
+burned the RescaTux ISO to a CD and hooked up and external USB
+optical drive. This time, I booted to the Live CD, did the two step
+grub repair, and when I unplugged the external drive, I was able to
+boot right into my Lubuntu install. Now booting to Live CDs from the
+original optical drive and from the thumb drive worked. RescaTux FTW.
+
+
+
+Now a little bit on how I got in this
+mess. As I said, the Dell shipped with 10.04, but I wanted something
+less pedestrian than Ubuntu (ironic I wound up there anyway). I tried
+Hybride, but once again, like my trial on the P4 I mentioned on
+LinuxBasix, the Live CD booted, but the icons never appeared on the
+desktop (I think it's a memory thing, the Dell only shipped with a
+gig, shared with the integrated video). After Hybride, I really
+wanted to be one of the cool kids and run SolusOS, but the install
+hung twice transferring boot/initrd.img-3.3.6-solusos. I casted
+around for a 64bit ISO I had on hand, and remembered I'd really
+wanted to give Fuduntu a try. Fuduntu is a rolling release fork of
+Fedora, with a Gnome 2 desktop, except that the bottom bar is
+replaced with a Mac style dock, replete with bouncy icons (cute at
+first,but I could tell right away they would get on my nerves).
+However, I found I liked the distro, despite the fact I found the
+default software choices a little light for a 900Mb download (Google
+Office, Chromium, no Firefox, no Gimp). Worst of all, no Mumble in
+the repos at all (really Fuduntu guys? While trying to install
+Mumble, do you know how many reviews I found that can be summed up as
+"Fuduntu is great, but why is there no Mumble?").
+Unfortunately, I put Mumble on the back burner while I installed and
+configured my default set of comfort apps from the repos (Firefox,
+XChat, Gimp, VLC, LibreOffice, etc). [BTW, with the anticipated
+arrival of a 2.4ghz headset, I hope to be able to use the new machine
+to join the LUG/podcast while preparing and dare I say eating
+dinner.] 
+
+
+
+I visited the Mumble installation page
+on SourceForge, and found they no longer linked to .deb files and
+fedora .rpms, as they assume you can install from your repositories.
+Thinking someone must have found an easy solution, I hit Google. The
+best answer I found was a page on the Fuduntu forums
+(https://www.fuduntu.org/forum/viewtopic.php?f=21&t=2237 ), that
+suggested downloading the Mumble and a dozen prerequisite library
+.rpm's from a third party site called rpm.pbone.net. I visited
+pbone.net, and found when I looked up each library, I got a dozen
+different links to versions of the file. Then I saw a link that
+seemed to offer the promise of simplifying my task, if I subscribed
+to pbone.net, I could add their whole catalog as a repo. While
+researching the legitimacy of pbone.net, I found them mentioned in
+the same sentence as RPMFusion as an alternate repository for Fedora.
+I decided to install the RPMFusion repos as well, thinking I might
+find some of the needed libraries in there. I registered with pbone,
+and discovered I would only have access to their repository for 14
+days free, after which it would cost $3 a month (after all, hosting
+such a service must cost money). I figured the free trial would at
+least get Mumble installed, and went through the set up. Among the
+questions I had to answer were which Fedora version I was running (I
+picked 17, since Fuduntu is rolling) and 32 or 64 bit. pbone.net
+generated a custom .repo file to place in my /etc/yum.repos.d
+directory. At this time, I'd already set up RPMFusion. 
+
+
+
+The fun started when I ran 'yum
+update'. I got "Error: Cannot find a valid baseurl for repo:
+rpmfusion-free". It turns out (
+https://optics.csufresno.edu/~kriehn/fedora/fedora_files/f10/howto/repositories.html
+) the location of the RPMFusion servers are usually commented out in
+the .repo files, Fedora must know where they are, but I guess Fuduntu
+does not. I uncommented each of the baseurl statements (there are
+three) in each of the RPMFusion .repo files (there are four files,
+free, non-free, free-testing, and non-free testing). I then re-ran
+'yum update', this time I was told the paths for the RPMFusion
+baseurl's didn't exist. I opened up the path in a browser and
+confirmed it was indeed wrong. I pruned sub directories from the path
+one by one until I found a truncated url that actually existed on the
+RPMFusion FTP server. I looked at the .repo files again and figured
+out the paths referenced included global environment variables the
+were inconstant between Fedora and Fuduntu. For instance, $release in
+Fedora would return a value like 15, 16, or 17, where in Fuduntu it
+resolves to 2012. I figured if I took the time, I could walk up and
+down the FTP server and come up with literal paths to put in the
+RPMFusion .repo files, but instead I just moved the involved .repo
+files into another folder to be dealt with another day. 
+
+
+
+I again launched 'yum update'. This
+time had no errors, but I was getting an excessive amount of new
+files from my new pbone.net repo ('yum update' updates your sources
+and downloads changed files all in one operation). It's possible the
+rolling Fuduntu is closer Fedora 16, so when I told pbone.net I was
+running 17, all the files in the alternate repo were newer than what
+i had. In any case, I had no wish to be dependent of a repo I had to
+rent at $3 a month, so I canceled the operation, admitted defeat, and
+started downloading the 64bit version of Lubuntu. I know I said I
+would rather have a more challenging distro, but because of it's
+location, this needs to be a just works PC, not a hack on it for half
+a day box. I would have like to have given Mageia, Rosa, or PCLinuxOS
+a shot, but too many packages from outside the repos (case in point,
+Hulu Desktop) are only available in Debian and Fedora flavors. You
+know the rest, I installed Lubuntu, borked my Grub, loop back to the
+top of the page.

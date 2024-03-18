@@ -1,0 +1,47 @@
+## hpr3110 :: Finding an Android phone to run LineageOS
+
+ Finding an Android phone to run LineageOS
+Affordable phone that support school apps, and allow firewall.
+TL;DR
+Don't, unless you are willing to loose the money you are paying.
+Requirements
+
+Supported for 3-5 years.
+Apps = Android = LineageOS
+Firewall = AFWall+ = Unlocked + Root
+Affordable
+
+Support
+Getting a brand new phone means that Developers have not had time to release code.
+Older phones are no longer available for purchase, and actually become more expensive.
+Too old a version and apps are no longer supported.
+Finding a phone that can be unlocked
+I use a site called Tweakers.net which allows you to do parameter search.
+Set the maximum price you are willing to pay.
+The current version of Android is 10 so select only those. You want your phone to be supported for as long as possible.
+Make any other selections that you think are critical, like memory, processor etc but be prepared to adjust this later.
+In my case I selected a minimum of 4G Ram and 64G Storage the first time.
+Sort by price low to high, and loop through, finding what support there is for TWRP. That will tell you how open the phone is. If the Manufacturer support (the spirit of) unlocking, then remove them from the list.
+
+HTC support unlocking but not don't give code to the developers so it's useless.
+Motorola support was good but since the take over by Lenovo they have stopped supporting unlocking.
+Google phones are unlocked and are ideal for developers but are too expensive.
+Xiaomi requires you to wait until the EU 14 day no questions asked warranty has expired.
+Fairphone too expensive.
+PinePhone may be an option but people report the current version being too slow.
+
+After finding a phone that can be unlocked and rooted, then check to see if there is an official version for LineageOS
+If no phone meets all the requirements then try the next one.
+It's very likely you will not find a phone. You are then faced with the choice of adjusting your parameters, for example picking a more expensive model, but at the end of the day be prepared that you may not find a phone.
+If you do find a phone, it's very likely that it may be a different version than the one supported. I have had to return several phones that I had unlocked and just hoped that the supplier would take them back and refund me.
+Even on supported phones, especially newer ones, it's quite often that a major piece of functionality will not work. I have had issues with no GPS on one phone, and bluetooth/wifi not working on another until files were manually edited on each reboot.
+Do not do this if you want a stress free life, and also if you are not willing to accept the waste of all the money, and time involved.
+Links
+
+Tweakers.net
+TWRP
+LineageOS
+scrcpy
+Android bootloader/fastboot mode and recovery mode explained/Android boot process October 31, 2015 Saad Faruque
+pinephone
+

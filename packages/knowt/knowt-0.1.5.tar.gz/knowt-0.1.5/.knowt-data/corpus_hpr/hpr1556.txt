@@ -1,0 +1,9 @@
+## hpr1556 :: Screenplay Writing On Linux and Chromebooks
+
+ Writing screenplays for TV or movies is a very precise thing. The industry expects a standardised style and format. ThistleWeb explores a couple of dedicated screenplay writing solutions. Both are dedicated applications that do one job and do it very well. The first is Trelby. It's a GPL cross platform application. It has lots of additional features such as auto completion of character names, summaries and stats.
+The second application is a cloud service called Raw Scripts. It's a Chrome extension although I think that's just a link to the site. You log in with a Google or Yahoo account. It's like a dedicated Google Docs web app. It does most of the things Trelby does. It also exports to Google if you want. You can share and collaborate with Raw Scripts. It's hosted on their server, although it's AGPL going forward, so it shouldn't be long before you can host it on your own server.
+I've just started to explore screenplay writing as a writing skillset. Both of these applications make the styling and formating incredibly easy, allowing me to concentrate on the actual story.
+Links:
+
+https://trelby.org
+https://rawscripts.com

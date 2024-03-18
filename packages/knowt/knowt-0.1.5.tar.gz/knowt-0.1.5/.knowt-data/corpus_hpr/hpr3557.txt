@@ -1,0 +1,9 @@
+## hpr3557 :: A short story about Lenovo and laptop batteries
+
+ 
+kvalitetsdatorer.se https://www.kvalitetsdatorer.se/se/ The company where I bought my refurbished Thinkpad T530
+inxi -Bxxx Command to get full information about all batteries in the system. Even on devices connected to the computer, as my Sansa Clip+ f.ex.
+Thinkpad X230 battery patch https://bystram.be/posts/thinkpad-x230-battery-ec-patch/
+batteriexperten.se https://www.batteriexperten.com/sv/
+tpacpi-bat A Perl script with ACPI calls for recent ThinkPads (such as T420 and W520) whose battery thresholds are not supported by tp_smapi
+

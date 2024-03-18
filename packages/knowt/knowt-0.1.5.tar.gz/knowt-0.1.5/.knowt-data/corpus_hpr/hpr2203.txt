@@ -1,0 +1,30 @@
+## hpr2203 :: NOT SO SMART
+
+ 
+(tracer32.exe) and LogExpert regex (warn|\berr|fail|unabl|can|not|fault)
+rsync --info=progress2 ( need to compile from source ... )
+
+https://techtitbits.com/2010/04/get-rid-of-freeze-ups-during-disk-io-activity-in-ubuntu/
+https://blog.vacs.fr/vacs/blogs/post.html?post=2010/08/28/Solving-Linux-system-lockup-when-intensive-disk-I/O-are-performed
+https://www.howtoeverything.net/linux/hardware/ubuntu-freeze-issue-after-ssd-upgrade
+https://download.gigabyte.us/FileList/BIOS/motherboard_bios_ga-ep43-ud3l_f9.exe
+https://downloads.wdc.com/fwupdater/Win/WDFirmwareUpdater.zip
+
+grub-install --force --removable --boot-directory=/s/boot /dev/sdd
+
+grub-mkconfig -o /s/boot/grub.cfg
+boot.ini ?!?!? ..( never could figure out how to boot my windows XP part from GRUB ...thought this would help with no luck )
+multi(0)disk(0)rdisk(0)partition(2)\WINXP="Microsoft Windows XP Professional"
+multi(0)disk(0)rdisk(1)partition(2)\WINXP="Microsoft Windows XP Professional"
+multi(0)disk(0)rdisk(2)partition(2)\WINXP="Microsoft Windows XP Professional"
+multi(0)disk(0)rdisk(3)partition(2)\WINXP="Microsoft Windows XP Professional"
+multi(0)disk(0)rdisk(4)partition(2)\WINXP="Microsoft Windows XP Professional"
+
+https://askubuntu.com/questions/397249/system-freezes-unresponsive-unusable-when-copying-large-file-to-usb
+
+tune2fs -c 1 ( check drives on boot )
+Linux provides other I/O schedulers such as the Noop scheduler, the Anticipatory scheduler and the Deadline scheduler.
+Dec 31 14:59:46 plexserver console-kit-daemon[1463]: missing action
+Dec 31 15:01:45 plexserver smartd[1038]: Device: /dev/sda [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 113 to 112
+Dec 31 15:01:45 plexserver smartd[1038]: Device: /dev/sdc [SAT], SMART Usage Attribute: 194 Temperature_Celsius changed from 112 to 111
+40-50C range are optimal.

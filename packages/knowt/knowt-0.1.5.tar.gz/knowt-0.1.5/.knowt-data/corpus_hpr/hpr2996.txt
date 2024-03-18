@@ -1,0 +1,23 @@
+## hpr2996 :: Spideroak Update
+
+ https://spideroak.support/hc/en-us/articles/115001891343-Command-Line-Reference
+service script:
+# Make sure you have space or link the base path to some place else
+# make sure you have R/W for the plex user
+# ln -s /media/data/SPIDEROAK_CONFIG/ /home/plex/.config/SpiderOakONE
+
+[Unit]
+Description=SPIDEROAK STARTUP
+After=network.target
+
+[Service]
+User=plex
+Group=adm
+
+Type=simple
+ExecStart=/bin/bash -c '
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin ;
+/usr/bin/SpiderOakONE --headless --verbose'
+
+[Install]
+WantedBy=multi-user.target

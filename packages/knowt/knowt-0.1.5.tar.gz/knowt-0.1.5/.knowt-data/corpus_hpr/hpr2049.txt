@@ -1,0 +1,15 @@
+## hpr2049 :: My Raspberry Pi Home Server
+
+ Knightwise talks about how he uses his Raspberry Pi to get things done, and keep his connection to the Internet secure and private when he's away from home. He also discusses a number of command line tools that he uses on the Pi which help to keep the workflow simple and clutter-free.
+
+BYOBU
+IRSSI
+CenterIM
+RTV
+NewsBeuter
+WordGrinder
+mpsYT
+Ranger
+nmon
+Transmission CLI
+Tor

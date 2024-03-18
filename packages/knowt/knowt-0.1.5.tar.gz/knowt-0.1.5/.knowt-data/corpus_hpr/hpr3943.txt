@@ -1,0 +1,23 @@
+## hpr3943 :: Why my Dell does it better on Linux.
+
+ The Config of my Dell XPS 15
+          .-:/++oooo++/:-.               knightwise@Hawking
+        `:/oooooooooooooooooo/-`           ------------------
+      -/oooooooooooooooooooo+ooo/-         OS: Ubuntu Cinnamon 22.04.3 LTS x86_
+    .+oooooooooooooooooo+/-`.ooooo+.       Host: XPS 15 7590
+   :oooooooooooo+//:://++:. .ooooooo:      Kernel: 6.2.0-26-generic
+  /oooooooooo+o:`.----.``./+/oooooooo/     Uptime: 4 mins
+ /ooooooooo+. +ooooooooo+:``/ooooooooo/    Packages: 2457 (dpkg), 19 (snap)
+.ooooooooo: .+ooooooooooooo- -ooooooooo.   Shell: bash 5.1.16
+/oooooo/o+ .ooooooo:`+oo+ooo- :oooooooo/   Resolution: 1920x1080
+ooo+:. .o: :ooooo:` .+/. ./o+:/ooooooooo   DE: Cinnamon 5.2.7
+oooo/-`.o: :ooo/` `/+.     ./.:ooooooooo   WM: Mutter (Muffin)
+/oooooo+o+``++. `:+-          /oooooooo/   WM Theme: Yaru-Cinnamon-Dark (Yaru-C
+.ooooooooo/``  -+:`          :ooooooooo.   Theme: Yaru-Cinnamon-Dark [GTK2/3]
+ /ooooooooo+--+/`          .+ooooooooo/    Icons: Yaru-Cinnamon [GTK2/3]
+  /ooooooooooo+.`      `.:++:oooooooo/     Terminal: gnome-terminal
+   :oooooooooooooo++++oo+-` .ooooooo:      CPU: Intel i7-9750H (12) @ 4.500GHz
+    .+ooooooooooooooooooo+:..ooooo+.       GPU: Intel CoffeeLake-H GT2 [UHD Gra
+      -/oooooooooooooooooooooooo/-         GPU: NVIDIA GeForce GTX 1650 Mobile
+        `-/oooooooooooooooooo/:`           Memory: 2736MiB / 31723MiB
+

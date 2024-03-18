@@ -1,0 +1,15 @@
+## hpr1476 :: Sega Genesis Music Driver
+
+ 
+sigflup and kubilus1 talk about kubilus1's vgm driver for the Sega Genesis/Megadrive. 
+
+Links
+
+DefleMask: https://www.delek.com.ar/deflemask
+
+Genesis Linux Setup: https://code.google.com/p/gendev/
+
+VGM Driver: https://code.google.com/p/gendev/source/browse/#svn%2Ftrunk%2Fextras%2Fsound_drvr%2Fdriver
+
+Spritesmind forums: https://gendev.spritesmind.net/forum
+

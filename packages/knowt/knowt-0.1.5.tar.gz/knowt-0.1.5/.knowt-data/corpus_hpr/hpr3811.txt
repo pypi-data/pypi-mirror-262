@@ -1,0 +1,9 @@
+## hpr3811 :: mkfifo and named pipes
+
+ A named pipe is like a UNIX pipe, except it takes the form of a file.
+
+$ mkfifo mypipe
+$ echo "Hacker Public Radio" > mypipe &
+$ cat mypipe
+Hacker Public Radio
+

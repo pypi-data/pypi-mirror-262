@@ -1,0 +1,5 @@
+## hpr2618 :: Yesod - First Impressions
+
+ First place to start is probably Yesod’s web site at: https://www.yesodweb.com/
+Often recommended environment for developing Haskell programs is Stack: https://docs.haskellstack.org/en/stable/README/
+My road to Haskell started with Learn You a Haskell for Great Good: https://learnyouahaskell.com/ and going through lecture notes of CIS 194: https://www.seas.upenn.edu/%7Ecis194/spring13/lectures.html

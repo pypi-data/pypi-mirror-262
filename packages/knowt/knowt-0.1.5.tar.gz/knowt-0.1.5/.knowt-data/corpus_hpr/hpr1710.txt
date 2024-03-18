@@ -1,0 +1,89 @@
+## hpr1710 :: Windows Remote Desktop on GNU/Linux
+
+ 
+Recorded using Easy Voice Recorder Pro
+
+I wrote a bash script to connect to various different windows servers from my GNU/Linux desktops. I had a few different requirements:
+
+I should be able to call it based on hostname.
+All windows should be 90% smaller than my screen.
+It should map my keyboard.
+It should map my local disk.
+It should quickly timeout if the port is not available.
+
+You can get the full script here, but let’s walk through it:
+The first line calls bash and then gets the server name from the symlink that is calling the script. The port is set as “3389”, but you can change that if you like.
+
+
+#!/bin/bash
+SERVER=`basename $0`
+PORT="3389"
+
+The next few lines finds the smallest vertical and horizontal sizes, even if you are running multiple screens. Then it calculates 90% of that to use as the size.
+
+h=$(echo "scale=0;(($(xrandr | grep '*+' | sed 's/x/ /g' | awk '{print $1}' | sort -n | head -1 )/100)*90)" | bc)
+v=$(echo "scale=0;(($(xrandr | grep '*+' | sed 's/x/ /g' | awk '{print $2}' | sort -n | head -1 )/100)*90)" | bc)
+SIZE=${h}x${v}
+
+Next we set the default username and password. I have it ask me for my password but I put it in here as an example.
+
+PASSWORD='defaultpassword'
+USERNAME='administrator'
+WORKGROUP='workgroup'
+
+In some cases the credentials may be different, so I have a case statement that will cycle through the servers and apply the differences. Depending on your naming schemes you may be able to use regular expressions here to filter out groups of servers. 
+
+case "${SERVER}" in
+  *server*) echo "Server ${SERVER}"
+    PASSWORD='work_password'
+    USERNAME='administrator'
+    WORKGROUP='WORKGROUP'
+    ;;
+ 
+  *colo*) echo "Server ${SERVER}"
+    PASSWORD='colo_server_password'
+    USERNAME='administrator'
+    WORKGROUP='COLODOMAIN'
+    ;;
+     
+  some_server ) echo "Server ${SERVER}"
+    PASSWORD='some_server_password'
+    USERNAME='some_server_password'
+    ;;
+  *) echo "No match for ${SERVER}, using defaults"
+    ;;
+esac
+
+Next we use an inbuilt bash command to see if a remote port is open and timeout after one second. 
+
+timeout 1 bash -c "echo >/dev/tcp/${SERVER}/${PORT}"
+
+I used to connect to rdp using the program rdesktop, but it is now of limited value due to the fact that there are many open bugs that are not getting fixed. Bugs such as Bug 1075697 - rdesktop cannot connect to systems using RDP version 6 or newer  and Bug 1002978 - Failed to negotiate protocol, retrying with plain RDP . I then switch to using xfreerdp. This is the client that is behind remmina.
+You can use xfreerdp /kbd-list to get a list of the available keyboard layouts.
+
+if [ $? -eq 0 ]; then
+  echo "${SERVER}:${PORT} is open"
+  xfreerdp /v:${SERVER} /size:${SIZE} /kbd-type:0x00000409 /t:${SERVER} /d:${WORKGROUP} /u:${USERNAME} /p:${PASSWORD} /a:drive,pc,/ /cert-ignore &
+else
+  echo "${SERVER}:${PORT} is closed"
+fi
+
+Next you will need to be sure that your host names are available, either in dns or in your  /etc/hosts/ file. For example:
+10.1.0.1 server1
+10.1.0.2 server2
+10.1.0.3 server3
+10.2.0.1 coloserver1
+10.2.0.2 coloserver2
+10.2.0.3 coloserver3
+192.168.1.1 some_server
+
+Edit the script to your liking and then put it into your a directory in your path, possibly /usr/local/bash or ~/bin/. You can then make symbolic links to the servers to the bash script, also in a directory in your path, using the command:
+ln -s /usr/local/bash/rdp.bash ~/bin/some_server
+chmod +x ~/bin/some_server
+
+Which links the global rdp.bash script to your personal symlink, and makes it executable.
+All that you need to do then is type the name of the server and a rdp screen should pop up.
+In our example:
+$ some_server
+
+From there your Windows Server session should pop up.

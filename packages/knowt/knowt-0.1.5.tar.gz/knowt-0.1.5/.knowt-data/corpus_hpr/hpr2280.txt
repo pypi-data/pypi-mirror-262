@@ -1,0 +1,21 @@
+## hpr2280 :: Lenovo X61s Part 2
+
+ HPR episode on Lenovo X61s part 2
+
+Cost £36 including auction fees
+OS Free (any Linux will work well)
+Upgrade to 120Gig SSD £40 of ebay
+Total outlay £76
+
+If you have to buy one then get an OS free one and don't pay more than £80-£100 depending if it has an SSD or not
+Hello HPR, a few episodes ago I talked of using the Lenovo X61s with Watt OS and said I would report back after a possible upgrade to the laptop with and SSD replacement for the hard drive.
+Well I duly ordered and received a Drevo 120 Gig SSD from ebay. These are about £40 each so make a cheap upgrade to an older laptops spinning disc see review here:
+https://www.enostech.com/drevo-x1-240gb-ssd-review/
+after installing the PC with WattOS while it did everything you would need of an OS and was absolutely fine on the X61s I was a bit disillusioned with the amount of configuration needed to get all the software I needed working, definitely not New user friendly.
+Looking at other lite Linux distributions I came upon Linux Lite
+https://www.linuxliteos.com/
+and decided that this might be a better choice as it says it is aimed at new users, and being based on Ubuntu was a familiar beast. ISO was downloaded and duly installed on the X61s and as soon as all the updates were completed I looked at the installed software and it was more comprehensive but not at the expense of still being lightweight.
+At first Boot it takes about 300mb of ram and even with the word processor and Firefox in use Ram usage was only about 700mb.
+Audacity after install worked out of the box, and I've already recorded and uploaded another show for HPR using the X61s and all went flawlessly. With the new SSD I am getting close to 5 hours of use from the 8 cell 63W battery installed on the PC and while I recognize the X61s being over 10 years old is not going to meet the needs of a power user, its fully capable of being an everyday laptop for basic office tasks, some light audio editing, and even photo editing in GIMP. I was able to edit and process a 10mb .jpg image without any issues and exporting the final image took seconds.
+I was fairly happy with the X61s performance with the 80Gig spinner it came with, but the addition of an SSD has both improved performance and battery life to the extent that I would happily take it on the road as my only PC. Actually for the porpoise of writing this review I've lived with it as my main PC for almost 2 weeks and have not really missed its big brother the X230i i3 laptop I also have. In fact I was going to record a show using that and found that as it has a composite Audio jack, and my head set requires separate mic and headphone sockets I wasn't able to, so one up to the X61s there.
+Conclusion, if you have a couple of kids and you're looking for a laptop for them to do homework, watch Utube, and surf the web (parental controls enabled) then I would look no further. And if they get broken by said kids you've not lost a bundle of dosh.

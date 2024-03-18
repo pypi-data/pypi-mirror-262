@@ -1,0 +1,22 @@
+## hpr3924 :: Mass Quick Tips for August 2023
+
+ 
+yakake :
+https://hackerpublicradio.org/eps/hpr3446/index.html
+https://github.com/freeload101/SCRIPTS/blob/master/Bash/Movie2Text.sh
+OLD : https://github.com/freeload101/SCRIPTS/blob/master/Bash/Stream_to_Text_with_Keywords.sh
+
+https://rmccurdy.com/stuff/NLP/?C=M;O=A
+https://rmccurdy.com/.scripts/downloaded/parentingadhdandautism.com/
+HighContract Blk Backfround :
+https://github.com/freeload101/SCRIPTS/tree/master/AutoHotkey/High%20Contrast%20Chrome
+VLC Compress audio quite/LOUD
+load-module module-ladspa-sink sink_name=compressor plugin=sc1_1425 label=sc1 control=5,100,-25,8,2.5,0
+https://docs.google.com/document/d/1E1xAwWpq-C4vEh8LCRw7MD7jnaclX9Faf2L3dZWiqQY/edit
+VLC .vlcrc config file and yatse custom commands:
+https://github.com/freeload101/SCRIPTS/tree/789bbf9969ae10975549ee4617a039967573c92b/MISC
+https://kinkeadtech.com/how-to-prevent-fire-tv-stick-from-going-to-sleep/
+/ ads sleep mode
+Sponsorblock for Android:
+https://www.youtube.com/watch?v=JKUmM9r63F8&feature=youtu.be
+

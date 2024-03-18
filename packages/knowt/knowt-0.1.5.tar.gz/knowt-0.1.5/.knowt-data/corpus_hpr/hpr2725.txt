@@ -1,0 +1,21 @@
+## hpr2725 :: The Illumos Shutdown Command Explained
+
+ In response to JWP's episode 2697 and ClaudioM's comment, this show covers the shutdown command as it appeared in Sun Solaris and OpenSolaris, and currently appears in both Oracle Solaris and OpenIndiana.
+
+
+The quick version:
+
+
+shutdown
+-i sets the destination init state (5 to shutdown, 6 to reboot, and so on; see man init for more)
+-y to answer "yes" to the safeguard prompt asking you whether you really want to shutdown
+-g to set how many seconds until shutdown. Default is 60.
+
+
+In practise, I don't even use the shutdown command. I use poweroff, which does a shutdown and poweroff.
+
+Both shutdown and poweroff require root permission. On OpenIndiana, you can either use sudo bash or pfexec bash to get a root prompt.
+
+Some links:
+OpenIndiana handbook
+Sun Microsystem docs (with Oracle branding on it)

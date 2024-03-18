@@ -1,0 +1,254 @@
+## hpr0899 :: Sunday Morning Linux Review - New Year Show
+
+ Episode 012
+https://smlr.us
+
+Total Running Time 1hr 22:48
+
+Intro:
+
+Mat Enders, Tony Bemus, and Mary Tomich
+Intro Sound bite by Mike Tanner
+
+Kernel News: Mat
+
+Time: 3:15
+
+Linux 3.2-rc7
+
+There it is, likely the last -rc in before final 3.2, so please do check it out in between your holiday festivities.
+
+Most of the changes are faily simple one-liners, but some qla4xxx driver updates stand out and in fact account for about 40% of the diff ("qla4xxx: fix flash/ddb support"). That, together with a VMWare DRI driver update and some dvb updates and the regular random driver fixes means that 80+% of the changes are in drivers.
+
+Some net updates, some SH updates, and then a (tiny) smattering of other stuff. The appended shortlog gives the (fairly boring) details
+- Linus
+
+Distro News: Tony
+
+Time: 7:14
+
+Distrowatch.com
+
+
+1-1 openSUSE 12.1 Edu Li-f-e
+1-1 - aptosid 2011-03 -
+12-31 - siduction 11.1 - desktop-oriented distribution and live CD/DVD based on Debian’s unstable branch, recently forked from aptosid
+12-31 - ExTiX 9 - Ubuntu-based desktop distribution for 64-bit computers with GNOME Shell and Razor-qt as the available desktop environments and the latest stable Linux kernel
+12-31 - Linux Deepin 11.12 - from China based on Ubuntu, announced its 11.12 release on the last day of the year
+12-30 - Netrunner 4.0 - a Kubuntu-based desktop distribution featuring a carefully-tuned KDE desktop and integrated KDE and GNOME applications
+12-30 - Endian Firewall 2.5 - an updated version of the project’s Red Hat-based specialist distribution for firewalls
+12-26 - Calculate Linux 11.12 - Gentoo-based distribution set with focus on desktop and server computing
+12-26 - Tiny Core Linux 4.2 - a nomadic, ultra-small graphical desktop operating system
+12-25 - Superb Mini Server 1.6.3 - a Slackware-based distribution for servers
+12-25 - Semplice Linux 2.0.0 - a lightweight desktop distribution based on Debian’s unstable branch and featuring the Openbox window manager
+12-23 - Grml 2011.12 - a Debian-based live CD with an excellent collection of GNU/Linux software and scripts for system administrators
+
+
+Distro of the Week: Tony
+
+
+Debian - 1172
+CentOS - 1223
+Fedora - 1284
+Ubuntu - 1571
+Mint - 3909
+
+
+Tech News:
+
+Time: 29:27
+Vote On SOPA Delayed Until Mid January At The Earliest
+
+The SOPA (Stop Online Piracy Act) vote scheduled for 12/21/11 was postponed until January. A committee spokesperson said that they will not set a new vote date until they return from break in January. This means that the earliest that a scheduled vote could take place would be mid January. This is the second postponement of the committee vote on SOPA, which requires ISPs, Search Engines, and other content providers to alter DNS records and search results. Resulting in the censorship of foreign websites supposedly "dedicated" to providing copyright infringing material. The committee has already had two marathon sessions that ended abruptly after opponents expressed staunch apposition.
+
+The artists are not the one behind this law. The huge corporations, lawyers, and boards who are pushing this incredibly bad legislation. Here is a list of the companies behind just one of the lobbying groups pushing SOPA:
+
+
+ABC 
+AFTRA - American Federation of Television and Radio Artists
+AFM - American Federation of Musicians
+AAP - Association of American Publishers
+ASCAP
+BMG Chrysalis
+BMI 
+CBS Corporation
+Cengage Learning
+DGA - Directors Guild of America
+Disney Publishing Worldwide, Inc.
+EMI Music Publishing
+ESPN
+Graphic Artists Guild
+Hachette Book Group
+HarperCollins Publishers L.L.C.
+Hyperion
+IATSE - International Alliance of Theatrical Stage Employees, Moving Picture Technicians, Artists and Allied Crafts of the United States, its Territories and Canada
+International Brotherhood of Teamsters
+Kaufman Astoria Studios
+Macmillan
+Major League Baseball
+Marvel Entertainment, LLC
+McGraw-Hill Education
+MPA - The Association of Magazine Media
+NFL - National Football League
+National Music Publishers’ Association
+NBCUniversal
+News Corporation
+New York Production Alliance
+New York State AFL-CIO
+Pearson Education
+Penguin Group (USA), Inc.
+The Perseus Books Group
+Producers Guild of America East
+Random House
+Reed Elsevier
+SAG - Screen Actors Guild
+Scholastic, Inc.
+Silvercup Studios
+Simon & Schuster, Inc.
+Sony Music Entertainment
+Sony/ATV Music Publishing
+Time Warner Inc.
+United States Tennis Association
+Universal Music Group
+Universal Music Publishing Group
+Viacom
+Warner Music Group
+W.W. Norton & Company
+Wolters Kluwer
+
+
+Now you know who to boycott, but you also have to let them know why you are boycotting them.
+
+Several grassroots organizations along with a few tech companies are putting forth a strong effort against this legislation. They have had some effect as arguably the most egregious section has under gone a quick rewrite by Rep. Lamar Smith, Judiciary Committee chair and sponsor of this bill. The changes revealed on Monday 12/12/2011, make the definition of "rogue websites" more narrow. It also clarifies that the take down provisions only apply to foreign websites. There were also several changes intended to alleviate concerns that this legislation would interfere with the architecture of the Internet. Because as it it stands this bill would force American companies to break dns.
+
+The NetCoalition which counts AOL, eBay, Facebook, foursquare, Google, IAC, Linkedin, Mozilla, OpnDNS, PayPal, Twitter, Wikipedia, Yahoo!, and the Zynga Game Netwrk as members is proposing a blackout day where all of these websites would go down and just show an anti-SOPA message to visitors when they come to these sites, claims Markham Erickson, who heads the NetCoalition trade association. If all of these sites went dark at the same time it would bring national commerce to a screeching halt. This action would also totally disrupt the lives of the majority of Americans hopefully alerting them to this serious issue and causing them to act.
+
+There is still time to try and defeat this horrendous legislation and the people at "DAILY KOS" have made it incredibly easy. If you click on this link it will take you directly to a page the have set up that will walk you through sending your representative an email telling them to vote no on this steaming pile of fecal matter.
+
+GoDaddy Rescinds SOPA Support After Huge Boycott Initiative
+Full disclosure, I have a domain registered with GoDaddy they are just the registrar not the host.
+
+On 12/22/2011 the fact that GoDaddy was actively supporting SOPA (Stop Online Piracy Act). The really egregious part was that not only did GoDaddy support SOPA they actually took such an active roll as righting parts of it. So a boycott was started on reddit, which took off like wildfire across the internet. One day later they announced that they were withdrawing their support for SOPA. It is however to late for many high profile domains. Wikimedia Foundation’s Jimmy Wales announced on Twitter that all Wikimedia’s domains will be moved off of GoDaddy. Cheezburger’s Ben Huh also pledged to move his 1000+ domains off of GoDaddy. Hundreds maybe even thousands more people across the internet joined them in leaving GoDaddy. YCombinator founder, Paul Graham issued a ban on all employees of any company on the official list of SOPA supporters from attending YC Demo Day. Here is what he had to say about the ban:
+
+"Several of those companies [on the list] send people to Demo Day, and when I saw the list I thought: we should stop inviting them. So yes, we’ll remove anyone from those companies from the Demo Day invite list," He then went on to say this: "If these companies are so clueless about technology that they think SOPA is a good idea, how could they be good investors?"
+Warren Adelman, Go Daddy’s CEO, had this to say about them rescinding their support for SOPA:
+
+"Fighting online piracy is of the utmost importance, which is why Go Daddy has been working to help craft revisions to this legislation - but we can clearly do better," He then went on to say this also: "It’s very important that all Internet stakeholders work together on this. Getting it right is worth the wait. Go Daddy will support it when and if the Internet community supports it."
+This is a huge win for the free and open internet. It shows that when you can manage to hit a company where it counts, in the bottom line, you really can make them change their position. When you read GoDaddy’s statement the weasilyness jumps right out at you. Which leads me to believe that they are just trying to take the heat off right now and will jump at supporting the next minor revision of SOPA.
+
+The Debian Administrator’s Handbook
+I am going to try and synopsize the information for you, however if you go to https://debian-handbook.info/ you can read the whole story ab out the book. The book is currently published in French under the title Cahier de l’admin Debian. It is the work of two Debian developers Raphaël Hertzog who maintains dpkg along with several other packages and Roland Mas who maintains argyll and a few other packages. They attempted to have several editors take on the English translation but none where willing to take the risk. The two then decided to do the translation themselves, and then self publish the work. In order to facilitate the translation they did a crowdfunding campaign which raised almost 15,000 EUR. They expect the translation to be done around April 2012. They however wanted to take this further and release the book under an open source licenses acceptable to Debian so that the book can be included in Debian as an installable package. Making it a simple apt-get away for anyone running Debian. They have set this goal at 25,000 EUR, you can make a donation to the "liberation fund" here , If you donate 10 EUR or more you are guaranteed a copy when it is ready. If they meet their goal of 25,000 EUR then everyone will be able to get a free copy. I made my donation already if I remember correctly it was about 13.74 USD. So i will get my copy but if we can push this over it would be a great thing. The last time I checked they were at about 65% of their goal.
+
+And now a little about the book. This book requires no prior knowledge of Debian. It will cover all of the topics that anyone needs to become an effective Debian administrator. From installation and update to compiling your own kernel and creating Debian packages from sources. Along with backup, migration and advanced topics like SELinux, automated installations, and virtualization. The first half of the book is for anyone who wants to run Debian. It will teach the basics like installing Debian with the Debian installer, finding documentation, basic troubleshooting, and problem solving. Then the second half of the book is server administrators. It will discuss things like securing the server, automating installations, using virtualization, and setting up common services like Apache, Postfix, OpenLDAP, SAMBA, NFS and many more. You can check out the complete table of contacts here
+
+There is also a free sample chapter available "The APT Tools." If you would like to check this out to ensure that the book is up to the quality that you expect then you can click here for a PDF of this great chapter. It covers all of the APT tools like apt-get, aptitude, and other associated tools
+
+Now to answer some of the questions you may have about this book:
+Q) Who is this book for?
+A) Anyone who’s interested by Debian. From a regular user, to the administrator of a small network, or that of a large corporation.
+
+Q) How long is it?
+A) The French paperback was about 450 pages.
+
+Q) What version of Debian does it cover?
+A) the current stable version "Squeeze"
+
+So come people lets get out there and get your copy today and move the project that much closer to their goal of Open Sourcing this book.
+
+2011 The Year Of The Tech Giant Passing
+2011 has been a year in which we lost more tech giants than ever before, a total of fourteen. Lets start with arguably the best known on this list and end with the one I believe had the biggest impact:
+
+Steven Paul Jobs
+Febuary 1955 - October 2011
+
+Jobs experimented with different pursuits before starting Apple Computers with Stephen Wozniak in the Jobs’ family garage. Steve Jobs vision in the consumer electronic market is un paralleled. Hence Apple’s many revolutionary products, such as the iPod, iPhone and iPad. Which are now seen as dictating the evolution of modern technology.
+
+Robert Morris
+The Unix Encryption Guy
+July 1932 - June 2011
+
+Among the Bell Labs researchers who worked on Unix with Thompson and Ritchie was Bob Morris, who developed Unix’s password system, math library, text-processing applications and crypt function. In 1986 Morris left to join the NSA, where he led the agency’s National Computer Security Center until 1994.
+
+John McCarthy
+Originator Of AI
+September 1927 - October 2011
+
+The creator of the Lisp programming language and the "father of artificial intelligence" (he coined the term in 1956). In 1957 McCarthy started the first work on time-sharing on a computer. That original project led to Multics, which then led to Unix. In the early 1970s he predicted online shopping. This prediction led researcher Whitfield Diffie to create public-key cryptography used in the authentication of e-commerce documents.
+
+Ken Olsen
+The Digital Man
+February 1926 - February 2011
+
+When he worked at MIT’s Lincoln Laboratory in the 50s took note of students queuing up to use an older model computer, called TX-0, even when a more modern and much faster mainframe was available. The big diffrence and the reason that the students lined up for the TX-0 was that the mainframe ran batch jobs and the TX-0 allowed for online interactivity. So in 1957 he and a colleague, Harlan Anderson, ran with that information and $70,000 in start up capital to start DEC (Digital Equipment Corp.) DEC went on to create PDP series of computers of which Ritchie and Thompson created Unix on a PDP-7.
+
+Paul Baran
+The Packet Man
+April 1926 - March 2011
+
+Baran while working as a researcher for the Rand Corp. in 1961came up the idea that messages can be broken down into smaller pieces, then sent to a destination even via multiple routes if necessary and then put back together when they arrive to ensure delivery. Arpanet adopted Packet switching as its means of communication, Arpanet then grew into the Internet, and eventually for local-area networks in the form of Ethernet.
+
+Jean Bartik
+Last of the First Programmers
+December 1924 - March 2011
+
+She was the last surviving member of the original programming team for the ENIAC. But that understates her work, she was the only female math graduate in her 1945 college, and she served as a lead programmer on the ENIAC project. Bartik also developed circuit logic and did design work under the direction of ENIAC’s hardware developer, J. Presper Eckert.
+
+Jack Keil Wolf
+Disk Drivin’ Man
+February 1926 - February 2011
+
+Wolf did more than almost anyone else to use math to cram more data into magnetic drives, flash memory and electronic communications channels. In 1984, he moved to the new Center for Magnetic Recording Research at the University of California, San Diego. It was a good choice. Wolf and his students, dubbed the "Wolf pack," cross-pollinated magnetic drive design with information theory, applying compression in increasingly creative ways, and spread Wolf’s ideas throughout the industry.
+
+Julius Blank
+Creator Of The Silicon In Silicon Valley
+June 1925 - September 2011
+
+Julius Blank one of the "Traitorous Eight" engineers who founded Fairchild Semiconductor in 1957. He and his seven colleagues had acquired that unsavory nickname when they left Nobel Prize-winning physicist William Shockley just a year after being recruited to create a new kind of transistor at Shockley Labs. Before going to college, he had been trained as a machinist. Along with eventual venture capitalist Gene Kleiner, Blank built Fairchild’s machine shop, and created the manufacturing machinery that would produce the first silicon based transistors.
+
+Robert Galvin
+Breaker Of The AT&T Mobile Monopoly
+October 1922 - October 2011
+
+Galvin broke AT&T’s monopoly on mobile-phone service in the U.S. when he demonstrated a Motorola phone for president Reagan at the White House in 1981. Ronald Reagan then pushed the FCC to approve Motorola’s proposal for a competing cellular network. By the time Galvin retired as Motorola’s chairman in 1990, the company dominated the cellphone hardware business.
+
+Gerald A. Lawson
+Creator Of The Video Game Cartridge
+December 1940 - April 2011
+
+Jerry Lawson a 6-foot-6, more than 250 lbs. African-American, which was even more of an IT industry rarity in the 1970s than today. Lawson’s creation, the Fairchild Channel F, arrived in 1976, a year before Atari’s first home game system, and sparked an industry of third-party video games. Lawson discovered that the biggest challenge with plug-in cartridges was satisfying the FCC’s radio-frequency interference requirements. In a 2006 interview he describes the process:
+
+"We had to put the whole motherboard in aluminum. We had a metal chute that went over the cartridge adapter to keep radiation in. Each time we made a cartridge, the FCC wanted to see it, and it had to be tested."
+Its biggest impact was on Lawson’s friends at Atari, who rushed their own cartridge-based home system into production. The rise of the video game had begun.
+
+George Devol
+The Man With The Robot Arm
+February 1912 - August 2011
+
+George Devol developed the first digitally programmable robot arm. He also invented a system for recording sound for movies in the 1930s, then switched to systems that used photoelectric cells to open and close doors and sort bar-coded packages. Devol turned his inventiveness to factory automation in the 1950s. The large programmable "Unimate" arm he developed used magnetic drum memory and discrete solid-state control components. It made its factory debut in 1961 on a General Motors assembly line in New Jersey, stacking freshly die-cast (and very hot) metal parts. Within 20 years, Devol’s Unimation was the biggest robotic-arm company in the world.
+
+Lee Davenport
+Anti-Aircraft Innovator
+December 1915 - September 2011
+
+Lee Davenport didn’t invent battlefield radar. He developed an anti-aircraft gun that combined radar with a computer to control anti-aircraft guns. At the Battle of the Bulge, the radar system was also used to spot German ground vehicles in the snowy terrain. In addition, the SCR-584 was used in 1944 to defend London against German buzz bombs. The SCR-584 crews were very effective in shooting down the buzz bombs.
+
+Wilson Greatbatch
+Heartbeat of the Century
+September 1919 - September 2011
+
+In 1956 Wilson Greatbatch, an electrical-engineering professor at the University of Buffalo, made an electronic mistake that led to the invention of the pacemaker. He was building a heart rhythm monitor for the school’s Chronic Disease Research Institute when he attached a wrong-size resistor to a circuit, causing it to produce intermittent electrical pulses. Greatbatch realized that this might be used to regulate a damaged heart. Two years later, doctors at the Veterans Administration hospital in Buffalo demonstrated that a 2-cubic-in. implantable device built by Greatbatch could regulate a dog’s heart. In 1960 in Buffalo, 10 patients (including two children) received Greatbatch’s device, and its battery lasted two years or more. In 1972, Greatbatch was able to re-engineer the device with a new battery that worked for more than a decade.
+
+Dennis M. Ritchie
+An Originator of Unix, Inventor of C
+September 1941 - October 2011
+
+Dennis Ritchie is one of the authors of the Unix operating system, and designed the C programming language. And he promoted both, starting in the 1970s. You may ask how influential all of that work was? Well just look at the number of closed source Unix clones we have today, not to mention their Open Source brethren the BSDs. Along with Linux a Unix work alike. Not to mention C, which eight of the top ten programming languages descend from.
+
+Raspberry Pi, a Tiny But Powerful $25 PC -
+The final Raspberry Pi will come in two flavors: A $25 version with 128MB of RAM and no network connection and a $35 one with Ethernet. Both versions will have USB and HDMI ports as well as analog video and audio outputs. It’s driven by a The 1080p video magic is driven by a 700MHz ARM processor, and the whole thing is powered by a 5-volt power supply.
+The Year in Review: Desktop Linux Developments in 2011
+The "year in review" pieces that proliferate old and new media alike around this time of year get tedious pretty fast. But because I’ve yet to see a good compilation of the major developments — and there were plenty of them — that affected desktop Linux in 2011
+Outtro Music:
+Time: 1hr 14:48
+Jamendo.com
+Stopping the World by Of The I

@@ -1,0 +1,56 @@
+## hpr2756 :: Bash Tips - 20
+
+ Tidying loose ends (Some collateral Bash tips)
+Deleting arrays
+I forgot to cover one thing on my list when doing the last show: I forgot to explain how to delete arrays and array elements. I’ll cover that topic in this episode.
+Positional and Special parameters
+I have also avoided talking much about the positional and special parameters in Bash: '$1', '$2', '$#' and the rest. I will cover (some of) these in this episode.
+Silly titles
+I stopped doing the weird episode titles by episode 14 because I thought the joke was getting tired. However, I think a few people missed them (and a certain HPR colleague was found vandalising my new titles as they were being posted ;-), so I have added them inside the notes on the older shows and am adding one here – as a homage to silliness.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+“GNU BASH Reference Manual”
+
+Section “3.4 Shell Parameters”
+Section “4 Shell Builtin Commands”
+
+Section “4.1 Bourne Shell Builtins”
+Section “4.2 Bash Builtin Commands”
+
+Section “4.3.1 The Set Builtin”
+
+
+
+POSIX Shell Command Language: unset
+HPR series: Bash Scripting
+Previous episodes under the heading Bash Tips:
+
+HPR episode 1648 “Bash parameter manipulation”
+HPR episode 1843 “Some Bash tips”
+HPR episode 1884 “Some more Bash tips”
+HPR episode 1903 “Some further Bash tips”
+HPR episode 1951 “Some additional Bash tips”
+HPR episode 2045 “Some other Bash tips”
+HPR episode 2278 “Some supplementary Bash tips”
+HPR episode 2293 “More supplementary Bash tips”
+HPR episode 2639 “Some ancillary Bash tips - 9”
+HPR episode 2649 “More ancillary Bash tips - 10”
+HPR episode 2659 “Further ancillary Bash tips - 11”
+HPR episode 2669 “Additional ancillary Bash tips - 12”
+HPR episode 2679 “Extra ancillary Bash tips - 13”
+HPR episode 2689 “Bash Tips - 14 (Some auxiliary Bash tips)”
+HPR episode 2699 “Bash Tips - 15 (More auxiliary Bash tips)”
+HPR episode 2709 “Bash Tips - 16 (Further auxiliary Bash tips)”
+HPR episode 2719 “Bash Tips - 17 (Additional auxiliary Bash tips)”
+HPR episode 2729 “Bash Tips - 18 (Extra auxiliary Bash tips)”
+HPR episode 2739 “Bash Tips - 19 (Supplemental auxiliary Bash tips)”
+
+
+
+Resources:
+
+Examples: bash20_ex1.sh, bash20_ex2.sh
+
+

@@ -1,0 +1,28 @@
+## hpr3219 :: Linux Inlaws S01E18: Voice Recognition and Text to Speech
+
+ 
+In this episode, Chris is harassed by quite a few artificial nuisance callers, among
+drug lords, Irish nurses and some random Linux Inlaws Chief Financial Officer. Based
+on these examples, our two heroes discuss the history and current state of text-to-
+speech (TTS) and voice recognition. We attempted to use voice recognition software in order
+to produce a transcript of the show.
+
+Shownotes:
+
+Wavenet: https://deepmind.com/blog/article/wavenet-generative-model-raw-audio
+Tacotron: https://ai.googleblog.com/2017/12/tacotron-2-generating-human-like-speech.html
+DeepSpeech: https://github.com/mozilla/DeepSpeech
+Lyrebird / Welcome.AI: https://www.welcome.ai/lyrebird
+Nvidia Tacotron 2: https://github.com/NVIDIA/tacotron2
+Tensorflow: https://www.tensorflow.org
+PyTorch: https://pytorch.org
+Melspectrograms: https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53
+GRAPHCORE: https://www.graphcore.ai
+FGPA: https://en.wikipedia.org/wiki/Field-programmable_gate_array
+IBM ROMP: https://en.wikipedia.org/wiki/IBM_ROMP
+Google's TTS: https://cloud.google.com/text-to-speech
+Apple M1: https://www.gsmarena.com/the_apple_m1_is_the_first_armbased_chipset_for_macs_with_the_fastest_cpu_cores_and_top_igpu-news-46222.php
+Secure Enclaves: https://support.apple.com/guide/security/secure-enclave-overview-sec59b0b31ff/web
+OSDU: https://www.opengroup.org/osdu/forum-homepage
+Jack Kerouac's On the Road: https://en.wikipedia.org/wiki/On_the_Road
+

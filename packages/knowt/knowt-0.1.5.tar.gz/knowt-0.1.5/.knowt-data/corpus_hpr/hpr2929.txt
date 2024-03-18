@@ -1,0 +1,7 @@
+## hpr2929 :: Recovering Files from a Dead MacBook Air
+
+ I talk about becoming a household hero by recovering my wife's files from her dead MacBook Air. Her laptop would not boot, shutting down seconds into the process each time she tried to start it up. I used an Ubuntu Live CD (DVD), with the commands fdisk and fsck to repair the damaged filesystem on the Mac. It still wouldn't boot even with the repaired filesystem, but I was able to mount the drive and copy her files to a USB drive.
+Links
+
+Blog post Howto: Repair/Fix MAC HFS+ Partition Using Ubuntu
+

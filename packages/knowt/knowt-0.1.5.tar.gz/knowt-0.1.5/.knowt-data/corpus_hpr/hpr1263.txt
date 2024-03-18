@@ -1,0 +1,32 @@
+## hpr1263 :: 3G Tunnels (Sshuttle)
+
+ 
+Timttmy and NYbill have a chat about 3G connectivity and Sshuttle. Sshuttle is
+app that blends VPN and SSH proxy like features. They also touch on AUR packaging and 
+the recent Linode hacks. Then start to reminisce about OGGcamps past and the good'ol days of
+the Linux Outlaw forums. And what do most geeks do when they hang out? They finish up 
+talking about their computer gear. 
+
+
+3g tethering 
+
+
+https://wiki.openwrt.org/doc/howto/usb.tethering
+
+
+
+sshuttle
+
+
+https://github.com/apenwarr/sshuttle#readme
+
+https://talk.maemo.org/showthread.php?t=68805
+
+https://manpages.ubuntu.com/manpages/natty/man8/sshuttle.8.html
+
+
+
+Timttmy https://micro-timttmy.dyndns.org/micro/
+
+
+NYbill  https://status.gunmonkeynet.net/

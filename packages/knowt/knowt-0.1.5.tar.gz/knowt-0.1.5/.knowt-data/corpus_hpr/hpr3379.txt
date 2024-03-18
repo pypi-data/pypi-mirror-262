@@ -1,0 +1,22 @@
+## hpr3379 :: Linux Inlaws S01E34: The one with the intelligence
+
+ 
+    In this fourth part of our three-part miniseries on Deep and Machine Learning our two heroes shed some
+    light on a DL architecture called Generative Pre-Trained Transformer (GPT), a pretty sophistic piece
+    of software that fools most humans when it comes to authoring text (ideal for budding writers with
+    a block in place). Other topics of discussion includes OpenAI (the company behind this framework),
+    Elon Musk, Bitcoin, Microsoft and if the GPT can actually pass the Turing test. All will be revealed -
+    don't miss this episode!
+
+Links:
+
+OpenAI: https://openai.com
+GPT: https://openai.com/projects
+The Turing Test: https://en.wikipedia.org/wiki/Turing_test
+GPT-2 source code: https://github.com/openai/gpt-2
+GPT meta-progamming: https://www.lesswrong.com/posts/zZLe74DvypRAf7DEQ/meta-programming-gpt-a-route-to-superintelligence
+GPT-3 interview: https://www.youtube.com/watch?v=PqbB07n_uQ4
+DSDS: https://en.wikipedia.org/wiki/Deutschland_sucht_den_Superstar
+GPT-3 sample 1: https://linuxinlaws.eu/files/padawans.txt
+GPT-3 sample 2: https://linuxinlaws.eu/files/HGttG.txt
+

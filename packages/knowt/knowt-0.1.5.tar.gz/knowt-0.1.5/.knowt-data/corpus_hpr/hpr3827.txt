@@ -1,0 +1,39 @@
+## hpr3827 :: Reply to hpr 3798 
+
+ 
+From Wikipedia, the free encyclopedia
+LILO (Linux Loader) is a boot loader for Linux and was the default boot loader for most Linux distributions in the years after the popularity of loadlin. Today, many distributions use GRUB as the default boot loader, but LILO and its variant ELILO are still in wide use. Further development of LILO was discontinued in December 2015 along with a request by Joachim Wiedorn for potential developers.
+For EFI-based PC hardware the now orphaned ELILO boot loader was developed,originally by Hewlett-Packard for IA-64 systems, but later also for standard i386 and amd64 hardware with EFI support.
+On any version of Linux running on Intel-based Apple Macintosh hardware, ELILO is one of the available bootloaders.
+It supports network booting using TFTP/DHCP.
+
+
+https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FLILO_%28bootloader%29%23elilo
+hpr3798
+slackware.com
+https://sourceforge.net/projects/elilo/files/elilo/
+elilo.config:
+
+prompt
+delay=20
+timeout=20
+default=g
+#default=h
+chooser=simple
+message=textmenu-message.msg
+
+image=vmlinuz-generic
+        label=g
+    initrd=initrd.gz
+        read-only
+        append="root=/dev/nvme0n1p5 resume=/dev/nvme0n1p6"
+
+image=vmlinuz-huge
+        label=h
+        read-only
+        append="root=/dev/nvme0n1p5 resume=/dev/nvme0n1p6"
+
+image=dummy
+        label=w
+slackware; reading is not an option
+Ken: added aditional links and wikipedia summary

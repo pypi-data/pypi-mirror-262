@@ -1,0 +1,36 @@
+## hpr3756 :: Verify yourself on Mastodon with PGP and Keyoxide
+
+ Keyoxide is a project that parses a PGP key and makes its data available to Mastodon for identity verification.
+Added by Ken - 2022-12-27
+To list the key
+gpg2 --list-secret-keys
+To update and export your key
+YOUR_GPG_UID=$( gpg2 --list-secret-keys | grep -A1 'sec' | tail -1 | awk '{print $NF}' )
+
+$ gpg2 --list-secret-keys ${YOUR_GPG_UID}
+
+$ gpg2 --edit-key ${YOUR_GPG_UID}
+
+gpg> uid 1
+
+gpg> primary
+
+gpg> notation
+Enter the notation: proof@ariadne.id=https://YOUR-MASTODON-SERVER/@YOUR_MASTODON_ID
+
+gpg> showpref 
+
+gpg> save 
+
+$ gpg2 --armor --export ${YOUR_GPG_UID} > pub-key.asc
+Upload to https://keys.openpgp.org/
+Select Verify email
+Click the email link
+You should get a message "Your key ${YOUR_GPG_UID} is now published for the identity YOUR_EMAIL_ADDRESS."
+Got to your mastodon server https://YOUR-MASTODON-SERVER/settings/profile
+And on the page add GPG and https://keyoxide.org/hkp/${YOUR_GPG_UID}
+Links
+
+https://opensource.com/article/22/12/verified-mastodon-pgp-keyoxide
+https://www.youtube.com/watch?v=nLhiNOa4DBs
+

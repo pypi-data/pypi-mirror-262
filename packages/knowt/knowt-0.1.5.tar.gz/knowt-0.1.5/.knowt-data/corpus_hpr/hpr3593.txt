@@ -1,0 +1,19 @@
+## hpr3593 :: Home office setup mouse shoulder and Auto Hot Key Scripts
+
+ 
+Anti Fatigue Floor Mat,Kitchen Mat
+https://smile.amazon.com/gp/product/B076SPLWQF
+FEZIBO Dual Motor Height Adjustable
+https://smile.amazon.com/gp/product/B07QCNL73Y
+WALMANN 24" Folding Shelf Brackets, Collapsible Brackets for Shelves Wall Mounted Hinges Space Saving DIY Bracket for Table Bench, Max Load 500 LBS
+https://smile.amazon.com/gp/product/B08F4VNT9P
+Adesso iMouse E9 Left-Handed Vertical Ergonomic Mouse
+https://smile.amazon.com/gp/product/B01N4WA12I
+Autohotkey macros for LEFT HANDED person!
+https://github.com/freeload101/SCRIPTS/tree/master/AutoHotkey
+
+auto installs Autohotkey
+pulls down latest config/AHK script from github
+runs it and based on IP address sets different configurations
+
+

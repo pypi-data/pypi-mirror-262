@@ -1,0 +1,17 @@
+## hpr2199 :: Replacing the Throttle Position Sensor on My Truck
+
+ When the "check engine" light came on in my truck again, it turned out to be the throttle position sensor just like when I very first bought the truck about a year-and-a-half ago. That time, I was able to fix it by spraying contact cleaner on it, but this time that didn't work. I ordered a new part. In this episode I talk while I replace the part and I also talk about the nifty diagnostic tool that I used to get the trouble code and how it sends the information to your smartphone.
+
+What you can gather with the torque diagnostic tool for Android:
+
+View live OBD engine data on your Android phone - Connect to your vehicle ECU
+Fully customisable dashboard screens - Design your own layouts and custom dials, use your own themes
+Retrieve Fault Codes (DTCs) and clear Check Engine lights - View fault descriptions using the built-in databases
+Upload live OBD2 data to your webserver or the torque web viewer in realtime
+Check the performance of your vehicle with BHP / Torque / 0-60 & Quarter Mile widgets
+
+Links
+
+Throttle Position Sensor
+Veepeak Mini WiFi Diagnostic Trouble Code Reader
+Torque App for Android: Performance and Diagnostics for your Vehicle

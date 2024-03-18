@@ -1,0 +1,88 @@
+## hpr2438 :: Gnu Awk - Part 8
+
+ Gnu Awk - Part 8
+Introduction
+This is the eighth episode of the "Learning Awk" series that
+b-yeezi and I are doing.
+Recap of the last episode
+
+The while loop: tests a condition and performs commands while the test returns true
+The do while loop: performs commands after the do, then tests afterwards, repeating the commands while the test is true.
+The for loop (type 1): initialises a variable, performs a test, and increments the variable all together, performing commands while the test is 
+true.
+The for loop (type 2): sets a variable to successive indices of an array, preforming a collection of commands for each index.
+
+These types of loops were demonstrated by examples in the last episode.
+Note that the example for 'do while' was an infinite loop (perhaps as a test of the alertness of the audience!):
+#!/usr/bin/awk -f
+BEGIN {
+
+    i=2;
+    do {
+        print "The square of ", i, " is ", i*i;
+        i = i + 1
+    }
+    while (i != 2)
+
+exit;
+}
+The condition in the while is always true:
+The square of  2  is  4
+The square of  3  is  9
+The square of  4  is  16
+The square of  5  is  25
+The square of  6  is  36
+The square of  7  is  49
+The square of  8  is  64
+The square of  9  is  81
+The square of  10  is  100
+...
+The square of  1269630  is  1611960336900
+The square of  1269631  is  1611962876161
+The square of  1269632  is  1611965415424
+The square of  1269633  is  1611967954689
+The square of  1269634  is  1611970493956
+...
+The variable i is set to 2, the print is executed, then i is set to 3. The test "i != 2" is true and will be ad infinitum.
+Some more statements
+We will come back to loops later in this episode, but first this seems like a good point to describe another statement: the switch statement.
+Long notes
+The notes for rest of this episode are available here.
+Links
+
+GNU Awk User's Guide
+Previous shows in this series on HPR:
+
+"Gnu Awk - Part 1" - episode 2114
+"Gnu Awk - Part 2" - episode 2129
+"Gnu Awk - Part 3" - episode 2143
+"Gnu Awk - Part 4" - episode 2163
+"Gnu Awk - Part 5" - episode 2184
+"Gnu Awk - Part 6" - episode 2238
+"Gnu Awk - Part 7" - episode 2330
+
+Resources:
+
+ePub version of these notes
+PDF version of these notes
+Demonstration of the switch statement:
+
+Script: switch_example.awk
+Output: switch_example.out
+
+Demonstration of the break statement:
+
+Script: divisor.awk
+Output: divisor.out
+
+Demonstration of the continue statement:
+
+Script: continue_example.awk
+
+Demonstration of the next statement:
+
+Script: next_example.awk
+Output: next_example.out
+
+
+

@@ -1,0 +1,43 @@
+## hpr2791 :: LUKS like truecrypt
+
+ 
+Create an empty file of a predetermined size:
+
+$ fallocate --length 512M foo.img
+
+Create a LUKS container on it:
+$ cryptsetup --verify-passphrase luksFormat foo.img
+
+Set it up:
+$ sudo cryptsetup luksOpen foo.img foo
+$ ls /dev/mapper
+foo
+$
+
+Make a file system on it:
+$ sudo mkfs.ext2 /dev/mapper/foo
+
+If you don't need it for anything now, you can close it:
+
+$ sudo cryptsetup luksClose foo
+$ ls /dev/mapper
+$
+
+Mount it as a usable filesystem:
+$ sudo mkdir /crypt
+$ sudo mount /dev/mapper/foo /crypt
+
+
+Depending on your system configuration, you may need to set up reasonable permissions:
+
+$ sudo mkdir /crypt/mystuff
+$ sudo chown klaatu:users /crypt/mystuff
+$ sudo chmod 770 /crypt/mystuff
+$ echo "hello world" >> /crypt/mystuff/file.txt
+
+
+When you're finished using your encrypted vault, unmount and close it:
+
+$ sudo umount /crypt
+$ sudo cryptsetup luksClose foo
+

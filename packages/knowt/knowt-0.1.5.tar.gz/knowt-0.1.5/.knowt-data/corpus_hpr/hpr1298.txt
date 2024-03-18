@@ -1,0 +1,18 @@
+## hpr1298 :: Recording for HPR using Audacity
+
+ 
+The almost failsafe short of it. Use "alsamixer" to boost all recording
+volumes on main pulse and all cards (e.g. "alsamixer -c 0"). Start Audacity,
+edit -> preferences, stay in the "device" submenu, don't bother with the
+"recording" submenu. For each of the "Hosts" (alsa/jack), try all "Device"s
+under the "Recording" tab, start speaking, notice volume (or not and try
+the next one)
+
+
+see https://www.hackerpublicradio.org/contribute.php for more text on recording
+and suggested topics
+
+
+See https://www.hackerpublicradio.org/README.txt and for more (textual)
+information about the submission process and
+https://hackerpublicradio.org/sample_shownotes.txt for sample shownotes.

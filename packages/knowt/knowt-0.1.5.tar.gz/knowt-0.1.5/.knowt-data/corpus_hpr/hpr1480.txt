@@ -1,0 +1,38 @@
+## hpr1480 :: Continuous Ink Supply System
+
+ The cost of printing
+The reason that printers are so affordable is because like game consoles, they are not. They are sold at cost or below cost. The printer manufacturers make their money by selling you replacement ink cartridges that are very expensive. While you can use replacement cartridges, the manufactures will try and dissuade you from using them by displaying messages in the screens to "alert" you to the fact, or will include chips in their printers to prevent you from refilling or swapping their cartridges for cheaper alternatives. You should consider a laser printer option as while the toner cartridges are more expensive, even those supplied by the manufacturers work out cheaper over time. But if you wish to use a Ink Jet, then a serious alternative to lower the cost of printing is to use a CISS, Continuous ink supply system.
+CISS, Continuous ink supply system
+A CISS, Continuous ink supply system, is a system where you use cheaper non brand ink in your printer, just like you would with replacement no-name brand cartridges. Instead of having to refill the cartridges as they empty you supply them via a thin hose to an external reservoir. The advantage is that you can buy your ink in bulk and refill it without having to open the printer. This brings the cost of printing down considerably.
+Now to pick a printer
+
+What Functions would you like ? In the Netherlands there is an excellent site called Tweakers.net that allow you to select devices by their features without having to gather all the information from various review sites that may/may not be influenced by outside forces. Although the site is in Dutch it should be fairly obvious what's being asked.https://tweakers.net/categorie/922/printers/producten/ (Google Translate version)
+Will it work with Linux Once you short list the printer(s) you like, head over to https://www.openprinting.org/printers to find out if it's supported by Linux and by extension Mac/iOS. Do this even if you plan to run Windows as it proves that the printer is popular and is likely to be supported.
+Will it really work with Linux Support is a big word and while it may be trivial for some to recompile a Kernel and X to get the thing working. It saves a lot of time and effort if you look around on the Linux Distributions forums to see if there are reported problems installing the printer. A good search is "${your printer model number} linux howto", check the dates on the posts as well paying more attention to the newer ones. Don't worry if you find a HowTo on another distribution than the one you are using as the chances are good that it will also apply to your install.
+Can you easily use replacement cartridges ? For to answer this, you will need to search in your local stores and on-line to see if there is a popular replacement option available. You should pay particular care to whether the cartridges require a chip or not.
+Is there a CISS option Now you need to check for a CISS supplier and to see whether they have a supported model for your printer and if there is instruction videos on how to install them For my purposes "City Ink Express" https://www.cityinkexpress.co.uk/ciss fitted the bill on both counts. They are a UK store and the only purchase I made arrived before the printer I ordered and the ink system seems to work fine.
+
+Brother MFC-J5910DW
+I ended up going with the "Brother MFC-J5910DW" as we were looking for a printer that could scan to the network, print A3, A4 duplex, as well as supporting Linux. At the time of writing the Brother printers do not use any chips and allow you to replace the cartridges. One annoying thing was that when the ink in one of the supplied cartridges went empty (after printing 10 A3 pages), it no longer allowed me to scan to the network. Fortunately I had the CISS system ready to rock and to be honest I was dreading installing it.
+Even if you don't want to purchase your CISS system from City Ink Express, you should have a look at their videos. For my printer there were three that were appropriate, namely how to Fill and prime it, how to install it and (for the future) how to refill it. I'm not going to waste time on my experiences as I have nothing to add to the videos other than to say, you may want to put on a pair of gloves and do your work over a news paper to capture any ink that spills.
+How to fill and prime brother Ciss for LC980 -LC985 - LC1100 -LC1240 - LC1280
+Ciss continuous ink system for Brother LC1220, LC1240, LC1280 Printers
+how to top up a brother ciss
+Result
+I'm not using the system or the printer long enough to give a full review but the CISS system has saved two birthday parties so not a bad start.
+
+
+Links
+
+https://en.wikipedia.org/wiki/Continuous_ink_system
+https://kenfallon.com/install-printer-hp-color-laserjet-1600/
+https://tweakers.net/categorie/922/printers/producten/
+https://translate.google.com/translate?u=http%3A//tweakers.net/categorie/922/printers/producten/&hl=en&langpair=auto|en&tbb=1&ie=ISO-8859-15
+https://www.openprinting.org/printers
+https://cups.org/
+https://www.cityinkexpress.co.uk/
+https://www.brother.co.uk/g3.cfm/s_page/215760/s_level/36230/s_product/MFCJ5910DWZU1
+https://www.youtube.com/user/cityinkexpress?feature=watch
+https://www.youtube.com/watch?v=KWh0B7-TsNg
+https://www.youtube.com/watch?feature=player_embedded&v=aI7Z3RMmbSw
+

@@ -1,0 +1,47 @@
+## hpr1692 :: Boulevard Brewing Company "Sample Twelve"
+
+ 
+Unrelated tech stuff: 
+Recently, Knightwise showed me a link to use a Raspberry Pi as a streaming music box, much like a Sonos player https://www.woutervanwijk.nl/pimusicbox/ .  I looked at the enclosures people had come up with and saw transistor radios from the 40s and 50s which were true works of art, but don't provide a great selection of controls.  It was then I remembered seeing a 1950's juke box wallbox control ( https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2050601.m570.l1313.TR2.TRC1.A0.H0.Xjuke+box+wallbox&_nkw=juke+box+wallbox&_sacat=0 ) in a local "antique" shop.  I'm never sure when addressing our European friends what parts of the American experience they are familiar with, but in the 40s to the 70s, in just about every American diner with a jukebox, at every booth there would be a remote console with a coin slot.  Usually, you would have card tiles that could be rotated by a knob or by tabs, and each song would have a code made up of a letter and a number.  Dropping in the required currency and making a selection would cause the song to be played on the jukebox (and sometimes on a set of stereo speakers in the wall unit).  As you may see from the eBay link in the shownotes, wall boxes progressed from just a dozen titles in the 40s to far more complex systems, some with digital read out in the 80s.  Most were marvels of late art deco design.
+
+
+My parents were far to frugal to let me drop coins into one of these pioneering marvels of analog networking, but thanks to a couple modders who have tied their panels into a Raspberry Pi, I can give you a general overview of how these units communicated with the central jukebox via primitive serial protocols.  First off, if you have the expectation of following in Phil Lavin's or Stephin Devlin's footsteps, be prepared to pay more for a wallbox certified to be ready to connect and work with the same brand's jukebox (while all wallboxes seemed to communicate by serial pulse, each company employed a different scheme).  Wallboxes of all conditions seem to start around $50 on eBay, but can go into the thousands.  As I said, all of the wallboxes are marvels of art deco design if they have no other purpose than to occupy your space and become a conversation piece.  Right now on eBay, there is an example of a wallbox converted into a waitorless ordering system (this looks like it is from the 70s, only now do we have this functionallity with iPads at every table).  In other words, where once was "Stairway to Heaven", now there was "Steak and Eggs: $4.95".  The add on plaque covering the face of the unit identified the system as T.O.B.Y., for Totally Order By Yourself.  I could find nothing on the tech on Google, but I really hope it was successful, because it truly would have been a master hack.
+
+
+First step. most wallboxes were powered from the jukebox, you can't just plug them into 120v alternating current, you will likely need a 25 or 30v adapter (research your model). If everything works, you should be able to drop your quarter, punch a letter number combo (which will stay down), then a motor will whir and you selected keys will punch back out.  What happens in the background, the motor will cause an energized arm to sweep in a circle, making a circuit with electrodes in it's path.  They keys selected determine how many pulses go down the output line, like a finger dialing a rotary phone.
+
+
+Each manufacturer used a different code.  In the case of Steve Devlin's Rowe Ami, there would be an initial set of pulses for the number, a pause, then a more complex set for characters A-V (earlier wallboxes had 10 letters and 0-9 to create 100 selections, later boxes had as many as 200).  Phil Lavin's Seeburg uses pulses corresponding to two base 20 digits, both protocols were discovered through trial and error.  Each gentleman uses a different method to protect his Pi from overvolt.  Devlin uses a 3.5v voltage regulator, which also makes the pulses appear more "square", Lavin uses an optical relay to electrically separate the Pi from Seeburg console entirely.
+
+
+Both Lavin and Devlin use there wallboxes to control Sonos streaming players.  My idea is more flexible, I'd like the Pi to be able to launch either streaming podcasts, or play the last ep of a selection of podcasts, or launch various home automation processes. I didn't think this talk warranted it's own podcast yet because it is clearly an unfinished idea, but I thought this application of old tech was too cool to wait until I was actually motivated to do something with it.  If I get a wallbox, I might be inclined instead to connect each button to a momentary switch and wire each in turn to one of the Pi's 40 I/O pins for an even more flexible instruction set.
+
+
+https://wallbox.weebly.com/index.html
+https://phil.lavin.me.uk/2013/11/raspberry-pi-project-a-1960s-wallbox-interfaced-with-sonos/
+
+
+Boulevard brewing Company "Sample Twelve" 
+https://www.boulevard.com K.C. Mo
+
+
+This is a unique marketing campaign from my favorite K.C. brewer.  The twelve pack contains four varieties of beer, two are established Boulevard offerings, and the other two are bottled with non gloss "generic" labels that appear to have been hand typed.  In other words, we are to believe we have been sold two prototype beers for our approval.
+
+
+80 Acre "Hoppy" Wheat Beer (the quotes are mine).  The graphics consist of an old Farmall tractor towing a pickup trailer carrying a gigantic hops bud.  From this presentation, one would expect an oppressivly hoppy beer, fortunately for the hop timid this is a rather satisfying abulation that only registers 20 IBUs.  I detect a distinct citrus taste, so I suspect Citra or related hops but Boulevard is keeping the exact specs closer to the vest than some other brewers.  The brewers escription of the beer may be found here (link in the shownotes) https://www.boulevard.com/BoulevardBeers/80-acre-hoppy-wheat-beer/  Pours corn silk yellow with lots of head but not a lot of lacing. Damp wheat aroma.
+
+
+Oatmeal Stout:  This is the first of the "generic" label "test" beers. Pours opaque dark brown with a very small lite brown head that disappears.  Milk chocolate aroma.  Thin mouth feel, choclately after taste that lasts more than a flavor washing over your tongue (i.e., you drink it, then you taste the chocolaty/coffee like essence).  For locally brewed Oatmeal Stouts, I'd give the nod to Free State in Lawrence KS, but I wouldn't turn down the brew from K.C. if they decide to produce it.  As it is not yet an "official", they don't document this beer on the Boulevard web page.
+
+
+Unfiltered Wheat Beer: There is a graphic of a farmer gathering wheat bundles to build shocks, surrounded by hops vines.  Pours the color of cloudy golden wheat straw, lots of persistent head that leaves little lacing.  Slight biscuity aroma.  Distinctly more citrusy than the 80 Acre.  Not much malt and just a little hops bitterness. Despite the name, you can safely drink this beer to th bottom without winding up with a mouthful of particulates.
+
+
+Mid Coast IPA: The last "experimental" beer. At 104 IBUs, this is where all the hops you expected from 80 Acre went.  Pours wheat straw golden, thick white head that leaves little lacing, with a hoppy aroma.  Even at 104 IBU, its has a slight sweet taste and doesn't seem to be one of those "my hops can beat up your hops beers".  The label states: "The hoppiest thing we have ever brewed.   Pretty nervy for a bunch of midwesterners".  It's a great complement to the baked ham and spicey glaze I'm having for dinner (link in the show notes, even though I had to improvise somewhat).
+https://www.tasteofhome.com/recipes/apple-cider-glazed-ham
+
+
+Before I leave you, I wanted to play the sounds of dusk from my new homesite.  I can think of no more eloquent argument why living on the lake is better than living in town.
+
+
+Note: Recorded with 2.4Ghz Creative Labs GH0220B headset.  I am not happy with the result.

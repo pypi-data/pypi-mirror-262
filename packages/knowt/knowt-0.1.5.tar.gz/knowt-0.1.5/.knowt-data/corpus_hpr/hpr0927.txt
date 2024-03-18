@@ -1,0 +1,16 @@
+## hpr0927 :: Setting up a WordPress blog: part 1
+
+ 
+Frank Bell summarizes the steps involved in setting up a WordPress blog.  This episode covers creating a database and database user, installing the WordPress software, and configuring basic WordPress settings.
+
+Related links:
+WordPress Software, including the codex, themes, and plugins. (https://wordpress.org/)
+Wordpress blog hosting site (https://wordpress.com/)
+Xampp LAMPP server stack. (https://www.apachefriends.org/en/xampp.html)
+MySQL (https://mysql.com/)
+
+Some other blog hosting sites:  
+Blogger (https://blogger.com)
+Blogspot (https://blogspot.com)
+Typepad (https://www.typepad.com/)
+Tumblr (https://www.tumblr.com/)

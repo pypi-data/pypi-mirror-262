@@ -1,0 +1,4 @@
+## hpr2625 :: My thoughts on language learning communication applications.
+
+ This is the second in the series of my thoughts on language learning. In this episode I talk about it might be useful to modify existing chat programs to use two spell checking databases, one for the native language and one for the new language and have words removed from the native language dictionary as the learner advances.
+I did forget to mention that something similar might be done with the grammar checkers, too.

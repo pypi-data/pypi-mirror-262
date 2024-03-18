@@ -1,0 +1,289 @@
+## hpr1960 :: FOSDEM 2016 AW Building and more
+
+ Table of Contents
+
+FreeBSD
+Matrix
+Brainduino
+Butterknife
+pyhurdy
+Coreboot
+OpenEmbedded
+PicoTCP
+PTXdist
+JavaCard Pro
+Knitting
+Fenster
+
+FreeBSD Foundation
+
+
+The FreeBSD Foundation is a 501(c)(3), US based, non-profit organization dedicated to supporting and building the FreeBSD Project and community worldwide. The Foundation gratefully accepts donations from individuals and businesses, using them to fund and manage projects, sponsor FreeBSD events, Developer Summits and provide travel grants to FreeBSD developers.
+
+In addition, the Foundation represents the FreeBSD Project in executing contracts, license agreements, copyrights, trademarks, and other legal arrangements which require a recognized legal entity. The FreeBSD Foundation is entirely supported by donations.
+<
+The FreeBSD Foundation will support both the development and the popularization of FreeBSD, the world's best open source operating system.
+
+Listen to the interview with Ed Maste, Director of Project Development
+
+
+
+
+
+Links
+
+Project Website: https://www.freebsdfoundation.org
+Twitter: @ed_maste, @freebsdfndation
+email: emaste.nospam@nospam.FreeBSD.org
+Facebook: https://www.facebook.com/FreeBSDFoundation
+Google+: https://plus.google.com/b/102140999376014320527/
+Wikipedia: https://en.wikipedia.org/wiki/FreeBSD_Foundation
+Linkedin: https://ca.linkedin.com/in/edmaste
+Blog: https://freebsdfoundation.blogspot.com/
+RSS: https://feeds.feedburner.com/FreebsdFoundation
+
+Matrix
+
+
+Matrix is an open standard for decentralised persistent communication over IP. It provides simple HTTP APIs and open source reference implementations for securely distributing and persisting JSON over an open federation of servers. Matrix can be used for decentralised group chat, WebRTC signaling, Internet of Things data transfer, and anywhere you need a common data fabric to link together fragmented silos of communication. Our focus is on simplicity and security.
+
+Listen to the interview with Oddvar Lovaas
+
+
+
+
+
+Links
+
+Project Website: https://matrix.org/
+Twitter: @matrixdotorg
+email: oddvar.nospam@nospam.matrix.org
+GitHub: https://github.com/matrix-org
+Wikipedia: https://en.wikipedia.org/wiki/Matrix_(communication_protocol)
+Linkedin: https://www.linkedin.com/company/5312995
+RSS: https://matrix.org/blog/feed/
+
+Brainduino Open Source Brain Computer Interface
+
+
+In the recent years, affordable Brain-Computer Interfaces are becoming more accessible for consumers. Applications range from controlling computers / machines, biofeedback and Quantified Self. At first sight, the current generation of commercial devices seem to be decent in their functionality, and various use cases are suggested. However, neurophysiological signal quality, as well as limitations of software and hardware hackability are among the greatest issues and hurdles towards advancement in user experience. This is why we started to work on Brain-Duino, an open-source brainwave amplifier shield for the Arduino and other microcontrollers. Brain-Duino is a high quality, low noise and affordable EEG / BCI for hackers, makers, researchers, artists and other enthusiasts. 
+
+Listen to the interview with Konrad Willi Döring
+
+
+
+
+
+Links
+
+Personal Website: https://www.neurofox.com
+Twitter: @brainduino
+email: willi.nospam@nospam.neurofox.com
+Facebook: https://www.facebook.com/brainduino
+Google+: https://plus.google.com/101207001631950617142
+info & buy: https://www.psychiclab.net/IBVA/kit1.html
+album:  https://plus.google.com/photos/101207001631950617142/albums/6129602618741270977
+github: https://github.com/brain-duino
+https://fosdem.org/2016/schedule/event/brainduino/
+
+Butterknife
+
+
+Butterknife is the last missing piece of the puzzle that makes Linux-based desktop OS deployment a breeze. Butterknife complements your Puppet or Salt infrastructure and reduces the time you spend setting up Linux-based desktop machines. Lauri developed Butterknife as part of his MSc thesis at KTH while preparing for deployment of 4000+ dual-boot desktops and laptops of Tallinn Education Board. Butterknife is released under MIT license, feel free to share and improve.
+
+Listen to the interview with Lauri Võsandi
+
+
+
+
+
+Links
+
+Project Website: https://butterknife.rocks
+Personal Website: https://lauri.vosandi.com
+Twitter: @laurivosandi
+GitHub: https://github.com/laurivosandi/butterknife
+email: lauri.vosandi.nospam@nospam.gmail.com
+
+pyhurdy meta-hurdy yocto project open embedded
+
+
+Eine Kliene Eingebettete Musik
+
+(A little embedded music)
+
+Replicating 12th Century Musical Instruments Using Embedded Linux
+
+Listen to the interview with Beth 'pidge' Flanagan
+
+
+
+
+
+Links
+
+Project Website: https://github.com/yoctopidge/pyhurdy, https://www.yoctoproject.org/
+Personal Website: https://hacklikeagirl.wordpress.com/
+Twitter: @yoctopidge, @yoctoproject
+email: elizabeth.flanagan.nospam@nospam.intel.com
+Facebook: https://www.facebook.com/pages/Yocto-Project/155601504475740?fref=ts
+Google+: https://plus.google.com/107524829985806817965
+Linkedin: https://www.linkedin.com/groups?gid=3636272&trk=hb_side_g https://www.linkedin.com/in/bethflanagan
+ELCE Dublin 2015: https://events.linuxfoundation.org/sites/events/files/slides/hurdy.pdf
+
+Coreboot and Flashrom
+
+
+coreboot is an extended firmware platform for delivering lightning fast and ultra secure boot experience on modern computers and embedded systems. As an Open Source project it provides auditability and helps regaining control over technology.
+
+
+flashrom is a utility for identifying, reading, writing, verifying and erasing flash chips. It is designed to flash BIOS/EFI/coreboot/firmware/optionROM images on mainboards, network/graphics/storage controller cards, and various other programmer devices.
+
+Listen to the interview with Carl-Daniel Hailfinger
+
+
+
+
+
+Links
+
+Project Website: https://www.coreboot.org/ https://www.flashrom.org
+Personal Website: https://blogs.coreboot.org/blog/author/carldanielhailfinger/
+Twitter: @coreboot_org, @flashrom_org
+email: c-d.hailfinger.devel.2006.nospam@nospam.gmx.net
+Wikipedia: https://en.wikipedia.org/wiki/Coreboot
+Wikipedia: https://en.wikipedia.org/wiki/Flashrom
+Carl-Daniel Hailfinger: hpr1702 :: FOSDEM 2015 Part 5 of 5
+
+OpenEmbedded
+
+
+Welcome to OpenEmbedded, the build framework for embedded Linux. OpenEmbedded offers a best-in-class cross-compile environment. It allows developers to create a complete Linux Distribution for embedded systems.
+
+Listen to the interview with Florian Boor
+
+
+
+
+
+Links
+
+Project Website: https://www.openembedded.org/
+email: Florian.Boor.nospam@nospam.kernelconcepts.de
+Wikipedia: https://en.wikipedia.org/wiki/OpenEmbedded
+Linkedin: https://www.linkedin.com/in/florianboor
+Paul Eggleton and Apelete Seketeli hpr1453 :: HPR Coverage at FOSDEM 2014 Part 4
+Ulf Samuelsson hpr1701 :: FOSDEM 2015 Part 4 of 5
+
+PicoTCP
+
+
+picoTCP is the answer for a size, speed and feature conscious open source TCP/IP stack for embedded devices.
+
+Each component of the stack is deployed in a separate module, allowing the user to select at compile time what needs to be included for any specific platform. This allows you to free up memory and resources, which are often mission-critical for a project.
+
+The provided API's are small, well documented and give you access to the library facilities, both from the applications and from the device drivers. The library facilitates the integration with the surroundings and minimizes the time needed to combine the stack with existing code. The support required to port to a new architecture is reduced to a set of macros defined in a header file specific for the platform.
+
+Listen to the interview with Toon Peters, Embedded Software Engineer at Intelligent Systems Belux by Altran
+
+
+
+
+
+Links
+
+Project Website: https://www.picotcp.com/
+Company Website: https://intelligent-systems.altran.com/
+Twitter: @phalox @picoTCP
+email: toon.peters.nospam@nospam.tass.be
+Linkedin: https://be.linkedin.com/in/toonpeters
+Maarten Vandersteegen hpr1702 :: FOSDEM 2015 Part 5 of 5
+
+PTXdist and Barebox
+
+
+What is the best way to build a Linux distribution for an embedded system in a reproducible way, caring about long term maintenance and small footprint? PTXdist is a GPL licensed build system for userlands, started by Pengutronix. It uses the Kconfig configuration system from the Linux kernel. Although PTXdist (without patches) still fits on one disc, a whole root filesystem can be built as easy as "ptxdist go".
+
+
+barebox is a bootloader designed for embedded systems. It runs on a variety of architectures including x86, ARM, MIPS, PowerPC and others. barebox aims to be a versatile and flexible bootloader, not only for booting embedded Linux systems, but also for initial hardware bringup and development. barebox is highly configurable to be suitable as a full-featured development binary as well as for lean production systems. Just like busybox is the Swiss Army Knife for embedded Linux, barebox is the Swiss Army Knife for bare metal, hence the name.
+
+Listen to the interview with Alexander Aring
+
+
+
+
+
+Links
+
+Project Website: https://www.pengutronix.de/software/ptxdist/index_en.html
+Project Website: https://www.barebox.org/
+email: aar.nospam@nospam.pengutronix.de
+Google+: https://plus.google.com/117647873289646969223
+Wikipedia: https://en.wikipedia.org/wiki/Barebox
+GitHub: https://github.com/alexaring
+
+JavaCard Pro
+
+
+Java Card OpenPlatform (JCOP) is a smart card operating system for the Java Card platform developed by IBM Zürich Research Laboratory. On 31 January 2006 the development and support responsibilities transferred to the IBM Smart Card Technology team in Böblingen, Germany. Since July 2007 support and development activities for the JCOP operating system on NXP / Philips silicon are serviced by NXP Semiconductors.
+
+Listen to the interview with Martin Paljak
+
+
+
+
+
+Links
+
+Project Website: https://javacard.pro/
+Twitter: @martinpaljak
+email: martin.nospam@nospam.martinpaljak.net
+Wikipedia: https://en.wikipedia.org/wiki/Java_Card_OpenPlatform
+Linkedin: https://www.linkedin.com/in/martinpaljak
+GitHub: https://github.com/martinpaljak
+Skype: martinpaljak
+
+Knitting
+
+Listen to the interview with Siobhån Cottell
+
+
+
+
+Links
+
+https://www.ravelry.com/patterns/library/equal
+https://www.ravelry.com
+www.knittinghelp.com
+email: jewelandarlin.nospam@nospam.gmail.com
+Wikipedia: https://en.wikipedia.org/wiki/Knitting
+
+Music By Fenster
+
+
+
+
+Links
+
+SoundCloud: https://soundcloud.com/lapsusone/fenster-free-software-song
+Wikipedia: https://en.wikipedia.org/wiki/Free_Software_Song
+Official: https://www.gnu.org/music/free-software-song.html
+Remix: https://freesoft.potlatch20.net/
+RMS sings: https://www.youtube.com/watch?v=1BH7poMtPVU
+GNU: https://audio-video.gnu.org/audio
+
+
+Track name : Free Software Song
+Performer : Fenster
+Recorded date : 2002
+Copyright : Copyright (C) 2002, 
+Fenster LLC. Verbatim copying of this entire recording is permitted in any medium, 
+provided this notice is preserved. 
+Performers: 
+Paul Robinson (vocals), 
+Roman Kravec (guitar), 
+Ed D'Angelo (bass), 
+Dave Newman (drums), 
+Brian Yarbrough (trumpet), 
+Tony Moore (trumpet). 
+

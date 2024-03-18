@@ -1,0 +1,160 @@
+## hpr1204 :: My Magnatune Downloader
+
+ The Problem
+
+I'm a fan of Magnatune (https://magnatune.com/) and have been buying music
+from them for 7 or 8 years. The Magnatune website itself is good for exploring
+and downloading, and interfaces for browsing and purchasing are available in
+a number of players on Linux. I have direct experience of:
+
+
+Amarok: allows you to browse, purchase, examine artist information and album
+  details.
+Rhythmbox: the plugin, which used to allow browsing and purchasing, is
+  currently unavailable, but is apparently due to return soon.
+Gnome Music Player Client: (a front-end to the Music Player Daemon, mpd)
+  offers a Magnatune browser plugin
+Magnatune Web 2.0 player: a web-based tool which will browse, play and
+  download Magnatune music.
+Magnatune Android player: a fairly basic browser and player for Android 2.0
+  and up.
+
+
+The Magnatune Web 2.0 player is the best of the bunch as far as I am
+concerned, particularly since it allows me to explore the music collection
+whilst listening to streamed music at the same time. However, none of these
+interfaces provide me with exactly what I want in terms of the download
+process, so I decided to write my own.
+
+The Plan
+
+I currently host my music on my HP Proliant microserver, share it across the
+home network, and play it with the Music Player Daemon
+(https://sourceforge.net/projects/musicpd/) on my desktop system. I normally
+keep the album cover image, artwork and related material in the same directory
+as the album itself, and I want to be able to save all files in their
+appropriate places automatically.
+
+
+Magnatune provides an API which is documented at
+https://download.magnatune.com/info/api, though this information is only available
+to members. Data is available in several formats: XML, SQlite and MySQL.
+
+Design
+
+I didn't want to launch into building a full-blown application, especially
+since I only needed a downloader, so I decided to create a collection of
+Bash and Perl scripts.
+
+
+I decided to use the XML data organised by album. This is updated on about
+a weekly or two weekly basis, and there is a signalling mechanism through
+a downloadable file containing a checksum. When this changes the large data
+file has changed and can be downloaded. At the time of writing I simply run
+this by hand when I receive an email alert from Magnatune.
+
+
+Magnatune uses an unique key made from the artist and album names which it
+refers to as the SKU (Stock Keeping Unit) or albumsku. They use this
+as an URL component and in XML tags. I use it to identify the stuff I download
+and to keep a simple inventory.
+
+
+I decided to write some basic scripts:
+
+
+To download the catalogue
+To extract information from the catalogue
+To download an album
+To unpack the downloaded items into the target directory
+
+
+I wanted to learn more about manipulating XML data, so I decided to use
+XSL, the Extensible Stylesheet Language. This lets you define
+stylsheets for XML data, including ways of identifying XML components with
+XPath and of transforming XML with XSLT.
+
+
+I have included a number of links to the resources I used in the shownotes.
+
+Repository
+
+I have placed all of the scripts, their associated files, and HTML and PDF
+README files (extended shownotes) in a GitLab repository. This can be
+browsed at https://gitlab.com/davmo/magnatune-downloader
+or, if a copy is required it can be obtained with the command:
+
+
+  git clone https://gitlab.com/davmo/magnatune-downloader.git
+
+
+This makes a local git repository containing a copy of all of the files in
+the current directory.
+
+Note: The code was originally hosted on Gitorious
+(https://gitorious.org/magnatune-downloader), but with the demise of this
+service it was moved to GitHub and the details above updated. Then since the
+Microsoft takeover of GitHub, it has been moved to GitLab and the details
+updated as needed.
+Scripts
+
+update_albums: a Bash script to download a new version of the album
+  catalogue, as a bzipped XML file, if it is different from the current
+  version.  It generates a summary of the catalogue for simple searching using
+  XSLT.
+report_albumsku: a Bash script to take a SKU code and look up the
+  album details in the XML file.
+get_album: a Bash script to download an album, cover images and artwork.
+  It takes the SKU as an argument and uses it to make an URL for an XML
+  file which points at all of the components, and this is downloaded (with
+  authentication). The script then parses this file to get the necessary URLs
+  for downloading. I only use the OGG format but it could easily collect any
+  or all formats available from Magnatune. The script records the fact that
+  this particular SKU code has been downloaded so that it isn't
+  collected again in error. All downloaded files are given names beginning
+  with the SKU code and are stored for the installation phase.
+install_download: a Perl script which unpacks the downloaded zip file to
+  its final destination then adds the cover images and artwork to the same
+  place. I used Perl because it allowed me to query the zip file to determine
+  the name of the directory that was going to be created.
+
+Further Developments
+
+I have added further scripts to this system since I created it. I have one that
+synchronises the music files from my workstation to the server, and two that
+give me a simple wish-list or queue functionality.
+
+
+Since I have a 200GB download limit per month on my broadband contract I try
+not to download music too often and avoid contention with the rest of the
+family. My queueing system is used to keep a list of stuff I'd like to buy
+from Magnatune, and I simply feed the top element from the queue into my
+download script every week or so.
+
+
+In the future I expect to be refining all of these scripts and making them
+less vulnerable to errors. For example, I have found a few cases where
+Magnatune's XML is not valid and this causes the xsltproc tool to fail.
+I'd like to be able to recover from such errors more elegantly than I'm doing
+now.
+
+
+At some point I may well be tempted to consolidate all of the current
+functions into a single Perl script.
+
+Disclaimer
+
+I have no connections to Magnatune other than being a contented customer.
+
+Links
+
+Magnatune: https://magnatune.com/
+Magnatune API: https://magnatune.com/info/api
+AsciiDoc: https://www.methods.co.nz/asciidoc/index.html
+XSLT information:
+  
+XSLT Tutorial: https://linux.dd.com.au/wiki/XSLT_Tutorial
+XSL Transformations: https://www.cafeconleche.org/books/bible3/chapters/ch15.html
+XSLT tutorial: https://www.w3schools.com/xsl/default.asp
+
+

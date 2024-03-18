@@ -1,0 +1,64 @@
+## hpr1343 :: Too Clever For Your Own Good
+
+ Too Clever For Your Own Good
+This is a story about being so lazy that I'd rather teach the computer to do something than learn how to do it myself. HPR episode 1216 (https://hackerpublicradio.org/eps.php?id=1216) piqued my curiosity, but rather than try to remember my Morse code, I decided I could teach the computer to translate it for me. This episode tells that story.
+Commands
+Uncompress the audio
+sox hpr1216.ogg hpr1216.wav
+Get the format data
+soxi hpr1216.wav
+Figure out how long the wav header is so we can skip it
+sox -t raw -b 16 -r 44100 -c 1 -e signed-integer /dev/null empty.wav
+Dump the audio data in a text format
+hexdump -s 44 -v -e '220/2 "%04x"' -e '"\n"' hpr1216.wav > hpr1216.hex
+Convert values near 0 to spaces so it's easier to parse (at least visually)
+sed -e 's/000./    /g' -e 's/fff./    /g' hpr1216.hex > hpr1216.space
+Run it through the following awk script to make it readable by morse
+awk -f morse.awk hpr1216.space > hpr1216.dot
+And the script
+
+#morse.awk
+#every line
+{
+        last = this;
+        this = $0 ~ /^ *$/; #220 samples near 0, roughly 20ms of silence
+}
+
+#consecutive lines of silence or sound
+last == this {
+        duration++;
+}
+
+#sound->silent state transition
+!last && this {
+        if(duration > 10 && duration < 20) #dit is roughly 18 lines or ~360ms
+        {
+                printf ".";
+        }
+        else if(duration > 30 && duration < 40) #dah is roughly 36 lines, 720ms
+        {
+                printf "-";
+        }
+
+        duration = 0;
+}
+
+#silent->sound state transition
+last && !this {
+        if(duration > 30 && duration < 40) #short gap (letter) is roughly 720ms
+        {
+                printf "\n";
+        }
+        else if(duration > 80) #medium gap (word) is anything over 1600ms
+        {
+                printf "\n\n ";
+        }
+
+        duration = 0;
+}
+
+Use morse to decode the translated output
+morse -d < hpr1216.dot > hpr1216.txt
+And this is what it looks like
+IOS SOS SOS THE STANDARD EMERGENCY SIGNAL IN MORSE CODE. FOR EMERGENCY SIGNALS MORSE CODE CAN BE SENT BY WAY OF IMPROVISED SOURCES THAT CAN BE EASILY KEYED ON AND OFF MAKING IT ONE OF THE SIMPLEST AND MOST VERSATILE METHODS OF TELECOMMUNICATION. THE MOST COMMON DISTRESS SIGNAL IS SOS OR THREE DOTS THREE DASHES AND THREE DOTS INTERNATIONALLY RECOGNIZED BY TREATY. MORSE CODE FROM WIKIPEDIA THE FREE ENCYCLOPEDIA MORSE CODE IS A METHOD OF TRANSMITTING TEXT INFORMATION AS A SERIES OF ON-OFF TONES LIGHTS OR CLICKS THAT CAN BE DIRECTLY UNDERSTOOD BY A SKILLED LISTENER OR OBSERVER WITHOUT SPECIAL EQUIPMENT. THE INTERNATIONAL MORSE CODE ENCODES THE ISO BASIC LATIN ALPHABET SOME EXTRA LATIN LETTERS THE ARABIC NUMERALS AND A SMALL SET OF PUNCTUATION AND PROCEDURAL SIGNALS AS STANDARDIZED SEQUENCES OF SHORT AND LONG SIGNALS CALLED DOTS AND DASHES OR DITS AND DAHS. BECAUSE MANY NON-ENGLISH NATURAL LANGUAGES USE MORE THAN THE 26 ROMAN LETTERS EXTENSIONS TO THE MORSE ALPHABET EXIST FOR THOSE LANGUAGES. EACH CHARACTER LETTER OR NUMERAL IS REPRESENTED BY A UNIQUE SEQUENCE OF DOTS AND DASHES. THE DURATION OF A DASH IS THREE TIMES THE DURATION OF A DOT. EACH DOT OR DASH IS FOLLOWED BY A SHORT SILENCE EQUAL TO THE DOT DURATION. THE LETTERS OF A WORD ARE SEPARATED BY A SPACE EQUAL TO THREE DOTS ONE DASH AND TWO WORDS ARE SEPARATED BY A SPACE EQUAL TO SEVEN DOTS. THE DOT DURATION IS THE BASIC UNIT OF TIME MEASUREMENT IN CODE TRANSMISSION. FOR EFFICIENCY THE LENGTH OF EACH CHARACTER IN MORSE IS APPROXIMATELY INVERSELY PROPORTIONAL TO ITS FREQUENCY OF OCCURRENCE IN ENGLISH. THUS THE MOST COMMON LETTER IN ENGLISH THE LETTER E HAS THE SHORTEST CODE A SINGLE DOT. MORSE CODE IS MOST POPULAR AMONG AMATEUR RADIO OPERATORS ALTHOUGH IT IS NO LONGER REQUIRED FOR LICENSING IN MOST COUNTRIES INCLUDING THE US. PILOTS AND AIR TRAFFIC CONTROLLERS USUALLY NEED ONLY A CURSORY UNDERSTANDING. AERONAUTICAL NAVIGATIONAL AIDS SUCH AS VORS AND NDBS CONSTANTLY IDENTIFY IN MORSE CODE. COMPARED TO VOICE MORSE CODE IS LESS SENSITIVE TO POOR SIGNAL CONDITIONS YET STILL COMPREHENSIBLE TO HUMANS WITHOUT A DECODING DEVICE. MORSE IS THEREFORE A USEFUL ALTERNATIVE TO SYNTHESIZED SPEECH FOR SENDING AUTOMATED DATA TO SKILLED LISTENERS ON VOICE CHANNELS. MANY AMATEUR RADIO REPEATERS FOR EXAMPLE IDENTIFY WITH MORSE EVEN THOUGH THEY ARE USED FOR VOICE COMMUNICATIONS. THERE ARE MANY APPLICATIONS IN LINUX TO HELP YOU LEARN MORSE CODE. CHECK OUT RADIO.LINUX.ORG.AU FOR A LIST OF APPLICATIONS.
+A little googling will show that this text is the brief description of Morse code given at the top of its Wikipedia article (https://en.wikipedia.org/wiki/Morse_code). Surprisingly, the only transcription error appears to be the first letter as it was slightly overlapped by the intro music. It's also interesting to note that, since music consists of almost no sounds this short, the script was able to extract the data and robustly ignored everything else. In light of this, I probably could have skipped removing the wav header. Additional time could be saved by changing the regex in the awk script to match the raw hex values and thereby eliminate the sed step.

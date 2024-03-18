@@ -1,0 +1,21 @@
+## hpr2976 :: A walk through my PifaceCAD Python code – Part 4
+
+ This is the last show in the series. The series was recorded in one go and split into multiple parts. This last section is pretty short; it covers the main program section at the bottom of my script that calls all the other functions and allows the user to quit the program. In this episode I also mention explanatory notes that I included in my script. These are mainly for my own benefit so I could remember how I set up lirc. I’ve included these notes at the end of these show notes.
+Main program
+Turn LCD backlight on, print System up message to LCD, wait a few seconds then clear screen. Activate push buttons on control and display board. Activates various IR buttons waiting on input from the remote control. Print quit message to terminal, waiting for input, repeat message until q is entered by user. When q is entered deactivate buttons and turn LCD backlight off.
+Below are my Lirc explanatory comments at the end of my Python script.
+
+lirc
+This is the Linux IR control program
+LIRC (Linux Infrared remote control) is an open source package that allows users to receive and send infrared signals with a Linux-based computer system.
+Irrecord
+Tool used to record valid IR codes from your remote control. It generates the file /etc/lirc/lircd.conf, possibly overwrites original file so use with caution. It attempts to recognise your remote control from a series of button pushes. If the remote is not recognised then it captures the codes in raw mode, I abandoned this tool and got a valid IR file for a very similar remote control on the internet, see info below
+/etc/lirc/lircd.conf
+File used to store IR codes for your remote control, either using the tool irrecord or from somewhere on the internet. This file is a direct copy of file "BN59-00861A-SAMSUNG-TV.conf" I added the Samsung TV string to the file name.
+irw
+Tool used to get the key names for your particular remote control, for this to work you must first have a valid /etc/lirc/lircd.conf file
+~/.lircrc
+This file is used to store the remote control key names that you want to activate, and what action is to be taken when the button is pushed. Adding the field "remote =" allows the use of multiple remote controls. The remote control key names can be found by using the command "irw", I created a file called ~/scripts/remote-key-names-sorted.txt to store the valid key names for my Samsung remote control
+~/scripts/remote-key-names-sorted.txt
+List of valid remote control key names for my Samsung remote control, this was generated using the irw command. I used the "tee" command to pipe output to the screen and write output to this file at the same time, see file for further details of commands I used.
+

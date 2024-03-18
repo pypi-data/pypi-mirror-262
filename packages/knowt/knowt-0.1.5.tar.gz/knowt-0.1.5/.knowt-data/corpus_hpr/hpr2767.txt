@@ -1,0 +1,64 @@
+## hpr2767 :: Djvu and other paperless document formats
+
+ 
+DjVu is a digital document format with advanced compression technology. 
+DjVu allows for the distribution of very high resolution images of scanned documents, digital documents, and photographs. 
+DjVu viewers are available for the web browser (search for djvujs in Firefox for an extension), the desktop ( Evince,  Okular an BSD/Linux, and djview on BSD/Linux/Windows/Mac), and mobile devices.
+
+
+The toolchain for encoding and decoding DjVu is 
+djvulibre
+
+
+djvu.js is a Javascript library useful for online viewing.
+
+
+djvu.org contains sample documents and specification documents.
+Creating a djvu file
+
+The tool you use to convert something to the .djvu format depends on your requirements. If you're converting a basic, black-and-white document, then cjb2 (part of the djvulibre distribution) works:
+
+
+$ cjb2 -dpi 300 foo.tiff
+$ ls
+foo.tiff
+foo.djvu
+
+
+If you want to convert something more complex, then use c44 (also a part of the djvulibre distribution):
+
+
+$ c44 -dpi 300 bar.jpg bar.djvu
+$ ls
+bar.jpg
+bar.djvu
+
+
+To put both of these files in a single DjVu container:
+
+
+$ djvm -c baz.djvu foo.djvu bar.djvu
+$ ls
+bar.djvu
+baz.djvu
+foo.djvu
+
+
+You can add bookmarks, too.
+Open a text file called book.marks (or any name you prefer) and enter:
+
+
+(bookmarks
+("Foo" "#1")
+("Bar" "#2")
+)
+
+
+And then apply it to your DjVu file:
+
+
+$ djvused -e 'set-outline book.marks' -s baz.djvu
+
+
+There's more you can do with DjVu, but this has been an overview of how I use it.
+

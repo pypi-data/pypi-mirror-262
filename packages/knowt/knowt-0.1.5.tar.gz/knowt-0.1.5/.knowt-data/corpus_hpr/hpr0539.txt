@@ -1,0 +1,5 @@
+## hpr0539 :: Little Bit of Python Episode 7
+
+ Episode 7.Bit-of-Python-2010-03-15
+Unladen Swallow
+PEP 3146 proposes that the Unladen Swallow branch, which adds a just-in-time compiler to Python, be merged into the main Python repository. We discuss what Unladen Swallow does, and what impact it's likely to have.

@@ -1,0 +1,173 @@
+## hpr1111 :: HPR Community News October 2012
+
+ 
+Featuring
+
+aparanoidshell
+bobobex
+corenominal
+Epicanis
+FiftyOneFifty
+Ken Fallon
+KT4KB-Jon
+
+New hosts
+Welcome to our new hosts: 
+
+bobobex, and
+Dave Morriss
+
+Show Review
+
+
+id
+title
+host
+
+
+
+1086
+HPR Community News September 2012
+HPR Admins
+
+1087
+The FSCONS of Jonas Öberg
+Seetee
+
+1088
+Penguicon 2012
+Ahuka
+
+1089
+Max Mether of SkySQL talks about MariaDB
+Various Creative Commons Works
+
+1090
+TGTM Newscast for 10/2/2012
+deepgeek
+
+1091
+Useful Vim Plugins
+Dave Morriss
+
+1092
+Ham Radio: The Original Tech Geek Passion
+MrGadgets
+
+1093
+Separate Presentation from Content - 2 Office Software
+Ahuka
+
+1094
+Linux, Beer, and Who Cares?
+FiftyOneFifty
+
+1095
+TGTM Newscast for 2012/10/07
+deepgeek
+
+1096
+KeepassX
+Frank Bell
+
+1097
+The Cyberunions Podcast
+Various Creative Commons Works
+
+1098
+My Journey to Geekdom
+bobobex
+
+1099
+compilers part 2
+sigflup
+
+1100
+Why Android Tablets Suck Part2
+MrGadgets
+
+1101
+Recovery of an (en)crypted home directory in a buntu based system
+FiftyOneFifty
+
+1102
+Speech Impediments
+DoorToDoorGeek
+
+1103
+Thoughtkindness: In Defense of Media Freetardation
+Epicanis
+
+1104
+TuxJam: Episode 15
+Various Creative Commons Works
+
+1105
+TGTM Newscast for 10/24/2012
+deepgeek
+
+1106
+Of Fuduntu, RescaTux (or the Farmer Buys a Dell)
+FiftyOneFifty
+
+1107
+Compilers Part 3
+sigflup
+
+1108
+What's In my Bag?
+Mike Hingley
+
+1109
+Astricon 2012 - Virtues of the Open Source Telephony Platform
+Various Creative Commons Works
+
+1110
+The Doctor Who Restoration Team
+AukonDK
+
+
+
+Other News
+Only about one third of the downloads are OGG so if you are freedom lover change over to the ogg feed. 
+https://hackerpublicradio.org/hpr_ogg_rss.php
+
+Apologies again to BuyerBrown for the show mixup.
+
+FOSDEM - HPR/Podcast table
+
+If anyone is going to FOSDEM (https://fosdem.org/2013/ and would be interested in covering a booth, please get in touch with admin at hpr
+This also counts for other podcasters who want to share a table.
+
+Reshaping HPR
+
+There has been a lot of activity on the mail list this month about changes to the scheduling rules and about the upload formats. 
+
+
+Please start by (re)listening to 0560 - Old soldiers | 2010-08-02
+
+
+As we didn't have shows to fill the feed, we introduced other Non-HPR exclusive content to fill the gaps.
+As contributions increased this resulted in a long delay in getting the HPR exclusive content out. 
+The rest can be read via manually created mail archive https://hackerpublicradio.org/archive/hpr-at-hackerpublicradio.org_2012-10-archive.pdf
+
+
+There is also a discussion about changing the upload to FLAC only
+
+Dev News
+
+The cpanel website is giving problems and Josh is working to get them fixed. 
+
+mordancy pointed out that we didn't have a full feed for the ogg and spx. So after thinking about it for too long these have also been added.
+
+
+We made some clean up to the website so please have a look around and report anything out of the ordinary.
+
+
+Epicanis has been working on a upload form which can be found https://hpr.dogphilosophy.net/hprup.php
+
+The gitorious page can be found https://gitorious.org/hpr-scheduling-system
+
+
+The rest can be read via manually created mail archive https://hackerpublicradio.org/archive/dev-at-hackerpublicradio.org_2012-10-archive.pdf
+

@@ -1,0 +1,122 @@
+## hpr3318 :: Modding a Wii classic with a DNS exploit
+
+ 
+Wii Options > Wii Settings
+Verify version is 4.3
+
+If not,
+Is the Wii connected to the internet
+If not, go to Connection Settings
+
+Pick Connection 1
+Enter wifi connection info
+perform Wii System Update (Page 3 of Wii Settings)
+
+
+Wii Settings > Internet
+
+Go to Change Settings
+A few pages over is Auto-Obtain DNS
+
+Select No and Advanced Settings
+Enter Primary DNS: 97.74.103.14
+Enter Secondary DNS: 173.201.71.14
+
+Confirm and Save Settings
+Press Ok to perform Connection Test
+This does take a while, be patient because the Wii is slow
+Go back a couple of pages to Internet Settings
+Go to User Agreements
+
+Would you like to use the Wii Shop Channel and WiiConnect24?
+Select Yes
+You must review the User Agreements before using the Wii network services.
+Select Next
+Connecting to Internet... Please wait a moment.
+Another screen will appear with message to "Please wait, this will take 1-2 minutes."
+
+Do NOT press I Accept at this point, or it will go to the previous screen.
+These next two screens will show up, one with console text, which is the exploit, and the next look like static. This is ok
+The next screen is a message not to be scammed by buying a copy of HackMii. Wait for the option to press '1' to continue.
+The HackMii menu will now appear, press 'A' to continue.
+On the HackMii installer screen, use the D-pad on the Wii to arrow up to Install The HomeBrew Channel.
+
+
+At this point the Wii can be powered off.
+
+Install Wii Homebrew Browser https://oscwii.org/
+
+I have read that a 2gb non-hd sd card was needed, but found that up to a 32gb card works just fine.
+Remove the sd card and download and extract the zip file on the main page.
+Move the folder on the root of the sd card (i.e. apps/homebrew_browser/).
+More applications can now be accessed from the Homebrew Browser.
+
+Adding roms (i.e. Nintendo 64 games)
+
+From the Homebrew Browser, add the not64 emulator, as the Wii64 would not save games for me. This is an updated version of the Wii64 emulator.
+At the root of the sd card, if it is not already there, create a not64/roms folder and place the roms in here.
+
+Play Wii games from a USB drive
+
+First need to install cIOS (custom OS)
+
+Will be installing:
+
+cIOS 249 base 56 v10 beta52, some guides say cIOS 249 base 56 beta52-alt, YMMV.
+cIOS 250 base 57 v10 beta52
+
+
+From the Homebrew Browser, go to the Utilities tab and install USBLoader and the d2x cIOS installer.
+Wait for the app to load.
+You will see the main screen, press A
+
+Change the following:
+
+cIOS to v10 beta 52 d2x-v10-beta52-alt
+base to 56
+slot to 249
+revision to 65535
+
+Press A to load these values
+
+The app will go back to the main screen, just go right back into the app.
+
+Change the following:
+
+cIOS to v10 beta 52 d2x-v10-beta52
+base to 57
+slot to 250
+revision to 65535
+
+Press A to load these values
+
+You are now ready to format the external USB drive
+
+This can be either FAT32 or ext4
+Plug in the USB drive afterwards and load the USBloader
+It only works in one USB slot, so if this is not recognized the first time, move the plug to the other slot.
+Now you can save games from Wii disks, or load roms from the same drive
+Roms are placed at the root of the USB drive with the format of /roms/
+
+
+That's all.
+
+Sources:
+
+Homebrew the Nintendo Wii WITHOUT an SD Card or the Internet Channel! (str2hax Tutorial)
+https://www.youtube.com/watch?v=Y3jq8dVe2ug&list=PLXCLabMctsBdCKq6d-lpkzVLxIK9W8hjV&index=2
+WiiBrew wiki - Configuring applications
+https://wiibrew.org/wiki/Homebrew_Channel#Configuring_Applications
+Backup & Play Wii Games on a USB Drive! - USBLoader GX Tutorial
+https://www.youtube.com/watch?v=D66pyQLQCmg&list=PLXCLabMctsBdCKq6d-lpkzVLxIK9W8hjV&index=3
+cIOS Installation
+https://sites.google.com/site/completesg/backup-launchers/installation
+str2hax is an exploit for the EULA app in the Wii that doesn't require an SD card.
+https://www.wiibrew.org/wiki/Str2hax
+
+More reading
+
+WiiBrew main wiki page
+https://www.wiibrew.org/wiki/Main_Page
+
+

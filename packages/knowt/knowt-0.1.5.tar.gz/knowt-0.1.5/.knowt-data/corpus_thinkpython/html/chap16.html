@@ -1,0 +1,608 @@
+<html>
+<head>
+<title>Chapter 16: Inheritance</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap15.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap17.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 16</h2>
+
+
+
+<h1>Inheritance</h1>
+
+<a name=1></a>
+<h3>16.1 Inheritance</h3>
+<p>
+The language feature most often associated with object-oriented
+programming is <b>inheritance</b>.  Inheritance is the ability to
+define a new class that is a modified version of an existing
+class.
+<p>
+The primary advantage of this feature is that you can add new methods
+to a class without modifying the existing class.  It is
+called "inheritance" because the new class inherits all of the
+methods of the existing class.  Extending this metaphor, the existing
+class is sometimes called the <b>parent</b> class.  The new class may
+be called the <b>child</b> class or sometimes "subclass."
+<p>
+Inheritance is a powerful feature.  Some programs that would be
+complicated without inheritance can be written concisely and simply
+with it.  Also, inheritance can facilitate code reuse, since you can
+customize the behavior of parent classes without having to modify
+them.  In some cases, the inheritance structure reflects the natural
+structure of the problem, which makes the program easier to
+understand.
+<p>
+On the other hand, inheritance can make programs difficult to read.
+When a method is invoked, it is sometimes not clear where to find its
+definition.  The relevant code may be scattered among several modules.
+Also, many of the things that can be done using inheritance can be
+done as elegantly (or more so) without it.  If the natural
+structure of the problem does not lend itself to inheritance, this
+style of programming can do more harm than good.
+<p>
+In this chapter we will demonstrate the use of inheritance as part of
+a program that plays the card game Old Maid.  One of our goals is to
+write code that could be reused to implement other card games.
+
+<a name=2></a>
+<h3>16.2 A hand of cards</h3>
+<p>
+For almost any card game, we need to represent a hand of cards.
+A hand is similar to a deck, of course.  Both are made up of
+a set of cards, and both require operations like adding and
+removing cards.  Also, we might like the ability to shuffle
+both decks and hands.
+<p>
+A hand is also different from a deck.  Depending on the game being
+played, we might want to perform some operations on hands that
+don't make sense for a deck.  For example, in poker we might classify
+a hand (straight, flush, etc.) or compare it with another hand.  In
+bridge, we might want to compute a score for a hand in order to make
+a bid.
+<p>
+This situation suggests the use of inheritance.  If <tt><font size=-1>Hand</font></tt> is a
+subclass of <tt><font size=-1>Deck</font></tt>, it will have all the methods
+of <tt><font size=-1>Deck</font></tt>, and new methods can be added.
+<p>
+In the class definition, the name of the parent class appears
+in parentheses:
+
+<p><tt><font size=-1><font color=black>class</font> Hand(Deck):
+<br>&nbsp; <font color=black>pass</font>
+<br></font></tt></p>
+
+<p>
+This statement indicates that the new <tt><font size=-1>Hand</font></tt> class inherits from
+the existing <tt><font size=-1>Deck</font></tt> class.
+<p>
+The <tt><font size=-1>Hand</font></tt> constructor initializes the attributes
+for the hand, which are <tt><font size=-1>name</font></tt> and <tt><font size=-1>cards</font></tt>.  The string <tt><font size=-1>name</font></tt>
+identifies this hand, probably by the name of
+the player that holds it.  The name is an optional parameter with
+the empty string as a default value.
+<tt><font size=-1>cards</font></tt> is the list of cards in
+the hand, initialized to the empty list:
+
+<p><tt><font size=-1><font color=black>class</font> Hand(Deck):
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self, name=<font color=red>""</font>):
+<br>&nbsp; &nbsp; self.cards = []
+<br>&nbsp; &nbsp; self.name = name
+<br></font></tt></p>
+
+<p>
+For just about any card game, it is necessary to add and
+remove cards from the deck.  Removing cards is already taken
+care of, since <tt><font size=-1>Hand</font></tt> inherits <tt><font size=-1>removeCard</font></tt> from <tt><font size=-1>Deck</font></tt>.
+But we have to write <tt><font size=-1>addCard</font></tt>:
+
+<p><tt><font size=-1><font color=black>class</font> Hand(Deck):
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>addCard</font>(self,card) :
+<br>&nbsp; &nbsp; self.cards.append(card)
+<br></font></tt></p>
+
+<p>
+Again, the ellipsis indicates that we have omitted other methods.
+The list <tt><font size=-1>append</font></tt> method adds the new card to
+the end of the list of cards.
+
+<a name=3></a>
+<h3>16.3 Dealing cards</h3>
+<p>
+Now that we have a <tt><font size=-1>Hand</font></tt> class, we want to deal cards from the
+<tt><font size=-1>Deck</font></tt> into hands.  It is not immediately obvious whether this
+method should go in the <tt><font size=-1>Hand</font></tt> class or in the <tt><font size=-1>Deck</font></tt> class,
+but since it operates on a single deck and (possibly) several hands,
+it is more natural to put it in <tt><font size=-1>Deck</font></tt>.
+<p>
+<tt><font size=-1>deal</font></tt> should be fairly general,
+since different games will have different requirements.  We may want
+to deal out the entire deck at once or add one card to each hand.
+<p>
+<tt><font size=-1>deal</font></tt> takes three parameters: the deck, a list (or tuple) of
+hands, and the total number of cards to deal.  If there are not enough
+cards in the deck, the method deals out all of the cards and stops:
+
+<p><tt><font size=-1><font color=black>class</font> Deck :
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>deal</font>(self, hands, nCards=999):
+<br>&nbsp; &nbsp; nHands = len(hands)
+<br>&nbsp; &nbsp; <font color=black>for</font> i <font color=black>in</font> range(nCards):
+<br>&nbsp; &nbsp; &nbsp; <font color=black>if</font> self.isEmpty(): <font color=black>break</font>&nbsp; &nbsp; <font color=#009000># break if out of cards
+</font><br>&nbsp; &nbsp; &nbsp; card = self.popCard()&nbsp; &nbsp; &nbsp; &nbsp;<font color=#009000># take the top card
+</font><br>&nbsp; &nbsp; &nbsp; hand = hands[i % nHands]&nbsp; &nbsp; <font color=#009000># whose turn is next?
+</font><br>&nbsp; &nbsp; &nbsp; hand.addCard(card)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font color=#009000># add the card to the hand
+</font><br></font></tt></p>
+
+<p>
+The last parameter, <tt><font size=-1>nCards</font></tt>, is optional; the default is a large
+number, which effectively means that all of the cards in the deck
+will get dealt.
+<p>
+The loop variable <tt><font size=-1>i</font></tt> goes from 0 to <tt><font size=-1>nCards-1</font></tt>.  Each
+time through the loop, a card is removed from the deck using the
+list method <tt><font size=-1>pop</font></tt>, which removes and returns the last item
+in the list.
+<p>
+The modulus operator (<tt><font size=-1>%</font></tt>) allows us to deal cards in a
+round robin (one card at a time to each hand).  When <tt><font size=-1>i</font></tt> is
+equal to the number of hands in the list, the expression
+<tt><font size=-1>i % nHands</font></tt> wraps around to the beginning of the list
+(index 0).
+
+<a name=4></a>
+<h3>16.4 Printing a Hand</h3>
+<p>
+To print the contents of a hand, we can take advantage of
+the <tt><font size=-1>printDeck</font></tt> and <tt><font size=-1>__str__</font></tt> methods inherited
+from <tt><font size=-1>Deck</font></tt>.  For example:
+
+<p><tt><font size=-1>&gt;&gt;&gt; deck = Deck()
+<br>&gt;&gt;&gt; deck.shuffle()
+<br>&gt;&gt;&gt; hand = Hand(<font color=red>"frank"</font>)
+<br>&gt;&gt;&gt; deck.deal([hand], 5)
+<br>&gt;&gt;&gt; <font color=black>print</font> hand
+<br>Hand frank contains
+<br>2 of Spades
+<br> 3 of Spades
+<br>&nbsp; 4 of Spades
+<br>&nbsp; &nbsp;Ace of Hearts
+<br>&nbsp; &nbsp; 9 of Clubs
+<br></font></tt></p>
+
+<p>
+It's not a great hand, but it has the makings
+of a straight flush.
+<p>
+Although it is convenient to inherit the existing methods,
+there is additional information in a <tt><font size=-1>Hand</font></tt>
+object we might want to include when we print one.  To do that,
+we can provide a <tt><font size=-1>__str__</font></tt> method in the <tt><font size=-1>Hand</font></tt> class
+that overrides the one in the <tt><font size=-1>Deck</font></tt> class:
+
+<p><tt><font size=-1><font color=black>class</font> Hand(Deck)
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>__str__</font>(self):
+<br>&nbsp; &nbsp; s = <font color=red>"Hand "</font> + self.name
+<br>&nbsp; &nbsp; <font color=black>if</font> self.isEmpty():
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> s + <font color=red>" is empty\n"</font>
+<br>&nbsp; &nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> s + <font color=red>" contains\n"</font> + Deck.__str__(self)
+<br></font></tt></p>
+
+<p>
+Initially, <tt><font size=-1>s</font></tt> is a string that identifies the hand.  If the hand
+is empty, the program appends the words <tt><font size=-1><font color=black>is</font> empty</font></tt> and returns the
+result.
+<p>
+Otherwise, the program appends the word <tt><font size=-1>contains</font></tt> and the string
+representation of the <tt><font size=-1>Deck</font></tt>, computed by invoking the <tt><font size=-1>__str__</font></tt> method in the <tt><font size=-1>Deck</font></tt> class on <tt><font size=-1>self</font></tt>.
+<p>
+It may seem odd to send <tt><font size=-1>self</font></tt>, which refers to the current <tt><font size=-1>Hand</font></tt>, to a <tt><font size=-1>Deck</font></tt> method, until you remember that a <tt><font size=-1>Hand</font></tt> is
+a kind of <tt><font size=-1>Deck</font></tt>.  <tt><font size=-1>Hand</font></tt> objects can do everything <tt><font size=-1>Deck</font></tt>
+objects can, so it is legal to send a <tt><font size=-1>Hand</font></tt> to a <tt><font size=-1>Deck</font></tt>
+method.
+<p>
+In general, it is always legal to use an instance of a subclass
+in place of an instance of a parent class.
+
+<a name=5></a>
+<h3>16.5 The <tt><font size=-1>CardGame</font></tt> class</h3>
+<p>
+The <tt><font size=-1>CardGame</font></tt> class takes care
+of some basic chores common to all games, such as creating the
+deck and shuffling it:
+
+<p><tt><font size=-1><font color=black>class</font> CardGame:
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self):
+<br>&nbsp; &nbsp; self.deck = Deck()
+<br>&nbsp; &nbsp; self.deck.shuffle()
+<br></font></tt></p>
+
+<p>
+This is the first case we have seen where the initialization
+method performs a significant computation, beyond initializing
+attributes.
+<p>
+To implement specific games, we can inherit from <tt><font size=-1>CardGame</font></tt>
+and add features for the new game.
+As an example, we'll write
+a simulation of Old Maid.
+<p>
+The object of Old Maid is to get rid of cards in your hand.  You do
+this by matching cards by rank and color.  For example, the 4 of Clubs
+matches the 4 of Spades since both suits are black.  The Jack of Hearts
+matches the Jack of Diamonds since both are red.
+<p>
+To begin the game, the Queen of Clubs is removed from the deck so that
+the Queen of Spades has no match.  The fifty-one remaining cards are
+dealt to the players in a round robin.  After the deal, all players
+match and discard as many cards as possible.
+<p>
+When no more matches can be made, play begins.  In turn, each player
+picks a card (without looking) from the closest neighbor to the left
+who still has cards.  If the chosen card matches a card in the
+player's hand, the pair is removed.  Otherwise, the card is added to
+the player's hand.  Eventually all possible matches are made, leaving
+only the Queen of Spades in the loser's hand.
+<p>
+In our computer simulation of the game, the computer plays
+all hands.  Unfortunately, some nuances of the real game are lost.
+In a real game, the player with the Old Maid
+goes to some effort to get their neighbor to pick that card,
+by displaying it a little more prominently, or perhaps failing
+to display it more prominently, or even failing to fail to display
+that card more prominently.  The computer simply picks a neighbor's
+card at random.
+
+<a name=6></a>
+<h3>16.6 <tt><font size=-1>OldMaidHand</font></tt> class</h3>
+<p>
+A hand for playing Old Maid requires some abilities beyond the
+general abilities of a <tt><font size=-1>Hand</font></tt>.  We will define a new class, <tt><font size=-1>OldMaidHand</font></tt>, that inherits from <tt><font size=-1>Hand</font></tt> and provides an additional
+method called <tt><font size=-1>removeMatches</font></tt>:
+
+<p><tt><font size=-1><font color=black>class</font> OldMaidHand(Hand):
+<br>&nbsp; <font color=black>def</font> <font color=orange>removeMatches</font>(self):
+<br>&nbsp; &nbsp; count = 0
+<br>&nbsp; &nbsp; originalCards = self.cards[:]
+<br>&nbsp; &nbsp; <font color=black>for</font> card <font color=black>in</font> originalCards:
+<br>&nbsp; &nbsp; &nbsp; match = Card(3 - card.suit, card.rank)
+<br>&nbsp; &nbsp; &nbsp; <font color=black>if</font> match <font color=black>in</font> self.cards:
+<br>&nbsp; &nbsp; &nbsp; &nbsp; self.cards.remove(card)
+<br>&nbsp; &nbsp; &nbsp; &nbsp; self.cards.remove(match)
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <font color=black>print</font> <font color=red>"Hand %s: %s matches %s"</font> % (self.name,card,match)
+<br>&nbsp; &nbsp; &nbsp; &nbsp; count = count + 1
+<br>&nbsp; &nbsp; <font color=black>return</font> count
+<br></font></tt></p>
+
+<p>
+We start by making a copy of the list of cards, so that we can
+traverse the copy while removing cards from the original.
+Since <tt><font size=-1>self.cards</font></tt> is modified in the
+loop, we don't want to use it to control the traversal.  Python can get
+quite confused if it is traversing a list that is changing!
+<p>
+For each card in the hand, we figure out what the matching card is and
+go looking for it.  The match card has the same rank and the other
+suit of the same color.  The expression <tt><font size=-1>3 - card.suit</font></tt> turns a
+Club (suit 0) into a Spade (suit 3) and a Diamond (suit 1) into a
+Heart (suit 2).  You should satisfy yourself that the opposite
+operations also work.  If the match card is also in the hand, both
+cards are removed.
+<p>
+The following example demonstrates how to use <tt><font size=-1>removeMatches</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; game = CardGame()
+<br>&gt;&gt;&gt; hand = OldMaidHand(<font color=red>"frank"</font>)
+<br>&gt;&gt;&gt; game.deck.deal([hand], 13)
+<br>&gt;&gt;&gt; <font color=black>print</font> hand
+<br>Hand frank contains
+<br>Ace of Spades
+<br> 2 of Diamonds
+<br>&nbsp; 7 of Spades
+<br>&nbsp; &nbsp;8 of Clubs
+<br>&nbsp; &nbsp; 6 of Hearts
+<br>&nbsp; &nbsp; &nbsp;8 of Spades
+<br>&nbsp; &nbsp; &nbsp; 7 of Clubs
+<br>&nbsp; &nbsp; &nbsp; &nbsp;Queen of Clubs
+<br>&nbsp; &nbsp; &nbsp; &nbsp; 7 of Diamonds
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 of Clubs
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Jack of Diamonds
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10 of Diamonds
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10 of Hearts
+<br>
+<br>&gt;&gt;&gt; hand.removeMatches()
+<br>Hand frank: 7 of Spades matches 7 of Clubs
+<br>Hand frank: 8 of Spades matches 8 of Clubs
+<br>Hand frank: 10 of Diamonds matches 10 of Hearts
+<br>&gt;&gt;&gt; <font color=black>print</font> hand
+<br>Hand frank contains
+<br>Ace of Spades
+<br> 2 of Diamonds
+<br>&nbsp; 6 of Hearts
+<br>&nbsp; &nbsp;Queen of Clubs
+<br>&nbsp; &nbsp; 7 of Diamonds
+<br>&nbsp; &nbsp; &nbsp;5 of Clubs
+<br>&nbsp; &nbsp; &nbsp; Jack of Diamonds
+<br></font></tt></p>
+
+<p>
+Notice that there is no <tt><font size=-1>__init__</font></tt> method for the
+<tt><font size=-1>OldMaidHand</font></tt> class.  We inherit it from <tt><font size=-1>Hand</font></tt>.
+
+<a name=7></a>
+<h3>16.7 <tt><font size=-1>OldMaidGame</font></tt> class</h3>
+<p>
+Now we can turn our attention to the game itself.
+<tt><font size=-1>OldMaidGame</font></tt> is a subclass of <tt><font size=-1>CardGame</font></tt> with a new
+method called <tt><font size=-1>play</font></tt> that takes a list of players as an argument.
+<p>
+Since <tt><font size=-1>__init__</font></tt> is inherited from <tt><font size=-1>CardGame</font></tt>,
+a new <tt><font size=-1>OldMaidGame</font></tt> object contains a new shuffled deck:
+
+<p><tt><font size=-1><font color=black>class</font> OldMaidGame(CardGame):
+<br>&nbsp; <font color=black>def</font> <font color=orange>play</font>(self, names):
+<br>&nbsp; &nbsp; <font color=#009000># remove Queen of Clubs
+</font><br>&nbsp; &nbsp; self.deck.removeCard(Card(0,12))
+<br>
+<br>&nbsp; &nbsp; <font color=#009000># make a hand for each player
+</font><br>&nbsp; &nbsp; self.hands = []
+<br>&nbsp; &nbsp; <font color=black>for</font> name <font color=black>in</font> names :
+<br>&nbsp; &nbsp; &nbsp; self.hands.append(OldMaidHand(name))
+<br>
+<br>&nbsp; &nbsp; <font color=#009000># deal the cards
+</font><br>&nbsp; &nbsp; self.deck.deal(self.hands)
+<br>&nbsp; &nbsp; <font color=black>print</font> <font color=red>"---------- Cards have been dealt"</font>
+<br>&nbsp; &nbsp; self.printHands()
+<br>
+<br>&nbsp; &nbsp; <font color=#009000># remove initial matches
+</font><br>&nbsp; &nbsp; matches = self.removeAllMatches()
+<br>&nbsp; &nbsp; <font color=black>print</font> <font color=red>"---------- Matches discarded, play begins"</font>
+<br>&nbsp; &nbsp; self.printHands()
+<br>
+<br>&nbsp; &nbsp; <font color=#009000># play until all 50 cards are matched
+</font><br>&nbsp; &nbsp; turn = 0
+<br>&nbsp; &nbsp; numHands = len(self.hands)
+<br>&nbsp; &nbsp; <font color=black>while</font> matches &lt; 25:
+<br>&nbsp; &nbsp; &nbsp; matches = matches + self.playOneTurn(turn)
+<br>&nbsp; &nbsp; &nbsp; turn = (turn + 1) % numHands
+<br>
+<br>&nbsp; &nbsp; <font color=black>print</font> <font color=red>"---------- Game is Over"</font>
+<br>&nbsp; &nbsp; self.printHands()
+<br></font></tt></p>
+
+<p>
+Some of the steps of the game have been separated into methods.
+<tt><font size=-1>removeAllMatches</font></tt> traverses the list of hands and
+invokes <tt><font size=-1>removeMatches</font></tt> on each:
+
+<p><tt><font size=-1><font color=black>class</font> OldMaidGame(CardGame):
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>removeAllMatches</font>(self):
+<br>&nbsp; &nbsp; count = 0
+<br>&nbsp; &nbsp; <font color=black>for</font> hand <font color=black>in</font> self.hands:
+<br>&nbsp; &nbsp; &nbsp; count = count + hand.removeMatches()
+<br>&nbsp; &nbsp; <font color=black>return</font> count
+<br></font></tt></p>
+
+
+<blockquote><i>As an exercise, write <tt><font size=-1>printHands</font></tt> which traverses
+<tt><font size=-1>self.hands</font></tt> and prints each hand.</i>
+</blockquote>
+<p>
+<tt><font size=-1>count</font></tt> is
+an accumulator that adds up the number of matches in each
+hand and returns the total.
+<p>
+When the total number of matches reaches twenty-five,
+fifty cards have been removed from the hands, which means that
+only one card is left and the game is over.
+<p>
+The variable <tt><font size=-1>turn</font></tt> keeps track of which player's turn
+it is.  It starts at 0 and increases by one each time;
+when it reaches <tt><font size=-1>numHands</font></tt>, the modulus operator
+wraps it back around to 0.
+<p>
+The method <tt><font size=-1>playOneTurn</font></tt> takes an argument that indicates
+whose turn it is.  The return value is the number of matches
+made during this turn:
+
+<p><tt><font size=-1><font color=black>class</font> OldMaidGame(CardGame):
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>playOneTurn</font>(self, i):
+<br>&nbsp; &nbsp; <font color=black>if</font> self.hands[i].isEmpty():
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> 0
+<br>&nbsp; &nbsp; neighbor = self.findNeighbor(i)
+<br>&nbsp; &nbsp; pickedCard = self.hands[neighbor].popCard()
+<br>&nbsp; &nbsp; self.hands[i].addCard(pickedCard)
+<br>&nbsp; &nbsp; <font color=black>print</font> <font color=red>"Hand"</font>, self.hands[i].name, <font color=red>"picked"</font>, pickedCard
+<br>&nbsp; &nbsp; count = self.hands[i].removeMatches()
+<br>&nbsp; &nbsp; self.hands[i].shuffle()
+<br>&nbsp; &nbsp; <font color=black>return</font> count
+<br></font></tt></p>
+
+<p>
+If a player's hand is empty, that player is out of the game, so he or she
+does nothing and returns 0.
+<p>
+Otherwise, a turn consists of finding the first player on the left
+that has cards, taking one card from the neighbor, and checking
+for matches.  Before returning, the cards in the hand are shuffled
+so that the next player's choice is random.
+<p>
+The method <tt><font size=-1>findNeighbor</font></tt> starts with the player to the
+immediate left and continues around the circle until it finds
+a player that still has cards:
+
+<p><tt><font size=-1><font color=black>class</font> OldMaidGame(CardGame):
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>findNeighbor</font>(self, i):
+<br>&nbsp; &nbsp; numHands = len(self.hands)
+<br>&nbsp; &nbsp; <font color=black>for</font> next <font color=black>in</font> range(1,numHands):
+<br>&nbsp; &nbsp; &nbsp; neighbor = (i + next) % numHands
+<br>&nbsp; &nbsp; &nbsp; <font color=black>if not</font> self.hands[neighbor].isEmpty():
+<br>&nbsp; &nbsp; &nbsp; &nbsp; <font color=black>return</font> neighbor
+<br></font></tt></p>
+
+<p>
+If <tt><font size=-1>findNeighbor</font></tt> ever went all the way around the circle without
+finding cards, it would return <tt><font size=-1>None</font></tt> and cause an error
+elsewhere in the program.  Fortunately, we can prove that that will
+never happen (as long as the end of the game is detected correctly).
+<p>
+We have omitted the <tt><font size=-1>printHands</font></tt> method.  You
+can write that one yourself.
+<p>
+The following output is from a truncated form of the game where only
+the top fifteen cards (tens and higher) were dealt to three players.
+With this small deck, play stops after seven matches instead of
+twenty-five.
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>import</font> cards
+<br>&gt;&gt;&gt; game = cards.OldMaidGame()
+<br>&gt;&gt;&gt; game.play([<font color=red>"Allen"</font>,<font color=red>"Jeff"</font>,<font color=red>"Chris"</font>])
+<br>---------- Cards have been dealt
+<br>Hand Allen contains
+<br>King of Hearts
+<br> Jack of Clubs
+<br>&nbsp; Queen of Spades
+<br>&nbsp; &nbsp;King of Spades
+<br>&nbsp; &nbsp; 10 of Diamonds
+<br>
+<br>Hand Jeff contains
+<br>Queen of Hearts
+<br> Jack of Spades
+<br>&nbsp; Jack of Hearts
+<br>&nbsp; &nbsp;King of Diamonds
+<br>&nbsp; &nbsp; Queen of Diamonds
+<br>
+<br>Hand Chris contains
+<br>Jack of Diamonds
+<br> King of Clubs
+<br>&nbsp; 10 of Spades
+<br>&nbsp; &nbsp;10 of Hearts
+<br>&nbsp; &nbsp; 10 of Clubs
+<br>
+<br>Hand Jeff: Queen of Hearts matches Queen of Diamonds
+<br>Hand Chris: 10 of Spades matches 10 of Clubs
+<br>---------- Matches discarded, play begins
+<br>Hand Allen contains
+<br>King of Hearts
+<br> Jack of Clubs
+<br>&nbsp; Queen of Spades
+<br>&nbsp; &nbsp;King of Spades
+<br>&nbsp; &nbsp; 10 of Diamonds
+<br>
+<br>Hand Jeff contains
+<br>Jack of Spades
+<br> Jack of Hearts
+<br>&nbsp; King of Diamonds
+<br>
+<br>Hand Chris contains
+<br>Jack of Diamonds
+<br> King of Clubs
+<br>&nbsp; 10 of Hearts
+<br>
+<br>Hand Allen picked King of Diamonds
+<br>Hand Allen: King of Hearts matches King of Diamonds
+<br>Hand Jeff picked 10 of Hearts
+<br>Hand Chris picked Jack of Clubs
+<br>Hand Allen picked Jack of Hearts
+<br>Hand Jeff picked Jack of Diamonds
+<br>Hand Chris picked Queen of Spades
+<br>Hand Allen picked Jack of Diamonds
+<br>Hand Allen: Jack of Hearts matches Jack of Diamonds
+<br>Hand Jeff picked King of Clubs
+<br>Hand Chris picked King of Spades
+<br>Hand Allen picked 10 of Hearts
+<br>Hand Allen: 10 of Diamonds matches 10 of Hearts
+<br>Hand Jeff picked Queen of Spades
+<br>Hand Chris picked Jack of Spades
+<br>Hand Chris: Jack of Clubs matches Jack of Spades
+<br>Hand Jeff picked King of Spades
+<br>Hand Jeff: King of Clubs matches King of Spades
+<br>---------- Game <font color=black>is</font> Over
+<br>Hand Allen <font color=black>is</font> empty
+<br>
+<br>Hand Jeff contains
+<br>Queen of Spades
+<br>
+<br>Hand Chris <font color=black>is</font> empty
+<br>
+<br></font></tt></p>
+
+<p>
+So Jeff loses.
+
+<a name=8></a>
+<h3>16.8 Glossary</h3>
+
+<dl>
+<dt>inheritance</dt>
+<dd>The ability to define a new class that is a
+modified version of a previously defined class.</dd>
+<dt>parent class</dt>
+<dd>The class from which a child class inherits.</dd>
+<dt>child class</dt>
+<dd>A new class created by inheriting from an
+existing class; also called a "subclass."</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap15.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap17.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

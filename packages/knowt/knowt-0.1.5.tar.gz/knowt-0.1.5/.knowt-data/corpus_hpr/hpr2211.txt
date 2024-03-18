@@ -1,0 +1,26 @@
+## hpr2211 :: My podcast workflow
+
+ My podcast workflow
+I have been listening to podcasts for many years. I started in 2005, when I bought my first MP3 player.
+Various podcast downloaders (or podcatchers) have existed over this time, some of which I have tried. Now I use a script based on Bashpodder, which I have built to meet my needs. I also use a database to hold details of the feeds I subscribe to, what episodes have been downloaded, what is on a player to be listened to and what can be deleted. I have written many scripts (in Bash, Perl and Python) to manage all of this, and I will be describing the overall workflow in this episode without going into too much detail.
+I was prompted to put together this show by folky’s HPR episode 1992 “How I’m handling my podcast-subscriptions and -listening”. Thanks to him for a very interesting episode.
+Refer to the full notes for the details: https://hackerpublicradio.org/eps/hpr2211/full_shownotes.html
+Links
+
+Wikipedia article entitled “List of podcatchers”
+HPR episode 1992 from folky entitled “How I’m handling my podcast-subscriptions and -listening”
+HPR episode 1935 from Charles in NJ entitled “Quick Bashpodder Fix”
+Wikipedia article on the Podcast
+Wikipedia article on RSS
+Wikipedia article on the Atom standard
+Bashpodder
+HPR episode 1656 entitled “My audio player collection”
+The fix_tags script on GitHub
+Information about xsltproc
+Resources:
+
+My version of parse_enclosure.xsl
+My ID parser parse_id.xsl
+List of all components of the system described in this episode
+
+

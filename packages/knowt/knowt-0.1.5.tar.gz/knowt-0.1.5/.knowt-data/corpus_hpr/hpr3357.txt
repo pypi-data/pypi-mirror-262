@@ -1,0 +1,259 @@
+## hpr3357 :: My terminal journey, part 02.
+
+ Discovering the packages; vertical lists.
+apt package manager
+
+First Command: sudo apt list --upgradeable
+Command Breakdown:
+
+sudo is root privileges (to become admin for a single command).
+apt is the Command Name.
+list to display a list of packages satisfying certain criteria.
+--upgradeable the criteria
+
+Command Standard Output: (abridged)
+Listing...
+alsa-ucm-conf/focal-updates,focal-updates 1.2.2-1ubuntu0.7 all [upgradable from: 1.2.2-1ubuntu0.6]
+alsa-utils/focal-updates 1.2.2-1ubuntu2.1 amd64 [upgradable from: 1.2.2-1ubuntu2]
+bluetooth/focal-updates,focal-updates 5.53-0ubuntu3.1 all [upgradable from: 5.53-0ubuntu3]
+gir1.2-webkit2-4.0/focal-updates,focal-security 2.32.0-0ubuntu0.20.04.1 amd64 [upgradable from: 2.30.6-0ubuntu0.20.04.1]
+google-chrome-stable/stable 90.0.4430.212-1 amd64 [upgradable from: 90.0.4430.93-1]
+iio-sensor-proxy/focal-updates 2.8-1ubuntu1 amd64 [upgradable from: 2.8-1]
+qemu-system-x86/focal-updates 1:4.2-3ubuntu6.16 amd64 [upgradable from: 1:4.2-3ubuntu6.15]
+qemu-utils/focal-updates 1:4.2-3ubuntu6.16 amd64 [upgradable from: 1:4.2-3ubuntu6.15]
+samba-common-bin/focal-updates,focal-security 2:4.11.6+dfsg-0ubuntu1.8 amd64 [upgradable from:     2:4.11.6+dfsg-0ubuntu1.6]
+
+
+
+Discovering the packages; horizontal list.
+apt-get package manager
+
+Second Command: sudo apt-get -u upgrade --assume-no
+Command Breakdown:
+
+sudo is root privileges (to become admin for a single command).
+apt-get is the Command Name.
+-u or --show-upgraded list of packages that are to be upgraded; must be used with upgrade.
+upgrade is used to install the newest versions of all packages currently installed.
+--assume-no Automatically answers "No" when the command asks, “Do you want to continue? [Y/n]”. (Do you want to upgrade at this moment? No. You get it).
+
+Note: Linux Mint 20 manpage for apt-get does not include the -u option or description.
+-u, --show-upgraded
+Show upgraded packages. Print out a list of all packages that are to be upgraded.
+
+Command Standard Output:
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages were automatically installed and are no longer required:
+  libllvm10 libllvm10:i386 libnvidia-common-450 libnvidia-compute-455:i386
+  libnvidia-decode-455:i386 libnvidia-encode-455:i386 libnvidia-fbc1-455:i386
+  libnvidia-gl-455:i386 libnvidia-ifr1-455:i386 nvidia-kernel-common-455
+  nvidia-kernel-source-455 nvidia-utils-455 xserver-xorg-video-nvidia-455
+Use 'sudo apt autoremove' to remove them.
+The following packages have been kept back:
+  libnvidia-common-450 libnvidia-common-460 linux-generic
+  linux-headers-generic linux-image-generic
+The following packages will be upgraded:
+  alsa-ucm-conf alsa-utils bluetooth bluez bluez-cups bluez-obexd firefox
+  firefox-locale-en flatpak gir1.2-flatpak-1.0 gir1.2-javascriptcoregtk-4.0
+  gir1.2-webkit2-4.0 google-chrome-stable iio-sensor-proxy libasound2
+  libasound2-data libatopology2 libbluetooth3 libexiv2-27 libflatpak0
+  libjavascriptcoregtk-4.0-18 liblightdm-gobject-1-0 libmysqlclient21
+  libnetplan0 libsmbclient libvirt-clients libvirt-daemon
+  libvirt-daemon-driver-qemu libvirt-daemon-driver-storage-rbd
+  libvirt-daemon-system libvirt-daemon-system-systemd libvirt0 libwacom-bin
+  libwacom-common libwacom2 libwbclient0 libwebkit2gtk-4.0-37 libxmlb1 lightdm
+  linux-firmware linux-libc-dev netplan.io openvpn python3-apport
+  python3-problem-report python3-samba python3-yaml qemu-block-extra qemu-kvm
+  qemu-system-common qemu-system-data qemu-system-gui qemu-system-x86
+  qemu-utils samba-common samba-common-bin samba-libs smbclient thermald
+  xul-ext-lightning
+60 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Need to get 295 MB of archives.
+After this operation, 4,023 kB of additional disk space will be used.
+Do you want to continue? [Y/n] N
+Abort.
+
+
+
+Discovering the packages; colums & rows.
+dpkg-query
+
+Third Command: dpkg-query -l
+Command Breakdown:
+
+dpkg-query is the Command Name.
+-l or --list list all installed packages on your system.
+
+Fourth Command: dpkg-query -L add-apt-key
+Command Breakdown:
+
+dpkg-query is the Command Name.
+-L or --listfiles list specific package, add-apt-key in this example, installed on your system.
+
+Command Standard Output: (abridged)
+
+dpkg-query -l all installed packages.
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                              Version                               Architecture Description
++++-=================================================-=====================================-============-======================================================================================================
+ii  accountsservice                                   0.6.55-0ubuntu12~20.04.4              amd64        query and manipulate user account information
+ii  acl                                               2.2.53-6                              amd64        access control list - utilities
+ii  acpi-support                                      0.143                                 amd64        scripts for handling many ACPI events
+ii  acpid                                             1:2.0.32-1ubuntu1                     amd64        Advanced Configuration and Power Interface event daemon
+ii  add-apt-key                                       1.0-0.5                               all          Command line tool to add GPG keys to the APT keyring
+ii  adduser                                           3.118ubuntu2                          all          add and remove users and groups
+ii  adwaita-icon-theme                                3.36.1-2ubuntu0.20.04.2               all          default icon theme of GNOME (small subset)
+ii  adwaita-icon-theme-full                           3.36.1-2ubuntu0.20.04.2               all          default icon theme of GNOME
+
+dpkg-query -L add-apt-key single package.
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/add-apt-key
+/usr/share/doc/add-apt-key/README
+/usr/share/doc/add-apt-key/AUTHORS
+/usr/share/doc/add-apt-key/README.Debian
+/usr/share/doc/add-apt-key/copyright
+/usr/share/doc/add-apt-key/changelog.Debian.gz
+/usr/share/man
+/usr/share/man/man8
+/usr/share/man/man8/add-apt-key.8.gz
+/usr/sbin
+/usr/sbin/add-apt-key
+/etc
+/etc/default
+/etc/default/add-apt-key
+
+
+
+
+Marking the packages; hold.
+apt-mark
+
+Fifth & Sixth Commands: sudo apt-mark hold google-chrome-stable; sudo apt-mark showhold
+Command Breakdown:
+
+sudo is root privileges (to become admin for a single command).
+apt-mark is the Command Name.
+hold will prevent the package from being automatically installed, upgraded or removed.
+google-chrome-stable is the package effected by hold.
+; is the end of a command; command seperation.
+sudo is root privileges (to become admin for a single command).
+apt-mark is the Command Name.
+showhold will print a list of packages effected by hold.
+
+Command Standard Output: (abridged)
+google-chrome-stable set on hold.
+
+
+
+Marking the packages; unhold.
+apt-mark
+
+Seventh Command: sudo apt-mark unhold google-chrome-stable
+Command Breakdown:
+
+sudo is root privileges (to become admin for a single command).
+apt-mark is the Command Name.
+unhold will remove hold, allowing the package to be automatically installed, upgraded or removed.
+google-chrome-stable is the package once effected by hold; no longer due to unhold.
+
+Note: showhold will now print blank/nothing because packages are no longer effected by hold.
+
+
+Exporting Manpage to text file.
+
+Bonus Command: it's a big one.
+
+touch apt-get01.txt; date > ~/Documents/apt-get01.txt; echo -e "\n" >> ~/Documents/apt-get01.txt; apt-get --version >> ~/Documents/apt-get01.txt; echo -e "\n\napt-get --help\n\n" >> ~/Documents/apt-get01.txt; apt-get --help >> ~/Documents/apt-get01.txt; echo -e "\n\nman apt-get\n\n" >> ~/Documents/apt-get01.txt; man apt-get >> ~/Documents/apt-get01.txt; echo -e "\n\nCompleted.";
+
+
+Command Breakdown:
+
+touch apt-get01.txt; this command will create the "apt-get01.txt" file.
+date > ~/Documents/apt-get01.txt; this command stores the date and time with the "apt-get01.txt" file.
+echo -e "\n" >> ~/Documents/apt-get01.txt; this command gives us a blank line or new line within the "apt-get01.txt" file.
+apt-get --version >> ~/Documents/apt-get01.txt; this command adds the version of apt-get we have installed to the "apt-get01.txt" file.
+echo -e "\n\napt-get --help\n\n" >> ~/Documents/apt-get01.txt; this command adds to new lines or blank lines to the file then, adds the label "apt-get -- help" to the "apt-get01.txt" file.
+apt-get --help >> ~/Documents/apt-get01.txt; this command adds the standard output of apt-get --help to the "apt-get01.txt" file.
+echo -e "\n\nman apt-get\n\n" >> ~/Documents/apt-get01.txt; intentionally left blank.
+man apt-get >> ~/Documents/apt-get01.txt; intentionally left blank.
+echo -e "\n\nCompleted."; intentionally left blank.
+
+
+NATO Phonetic Alphabet
+The NATO phonetic alphabet is a Spelling Alphabet; a set of words used instead of letters in oral communication (i.e. over the phone or military radio). Each word ("code word") stands for its initial letter (alphabetical "symbol"). The 26 code words in the NATO phonetic alphabet are assigned to the 26 letters of the English alphabet in alphabetical order as follows: Symbol, Code Word, Morse Code, Phonic.
+(pronunciation)
+A, Alfa/Alpha, AL FAH.
+B, Bravo, BRAH VOH.
+C, Charlie, CHAR LEE.
+D, Delta, DELL TAH.
+E, Echo, ECK OH.
+F, Foxtrot, FOKS TROT.
+G, Golf, GOLF.
+H, Hotel, HOH TELL.
+I, India, IN DEE AH.
+J, Juliett, JEW LEE ETT.
+K, Kilo, KEY LOH.
+L, Lima, LEE MAH.
+M, Mike, MIKE.
+N, November, NO VEMBER.
+O, Oscar, OSS CAH.
+P, Papa, PAH PAH.
+Q, Quebec, KEH BECK.
+R, Romeo, ROW ME OH.
+S, Sierra, SEE AIRRAH.
+T, Tango, TANG OH.
+U, Uniform, YOU NEE FORM.
+V, Victor, VIK TAH.
+W, Whiskey, WISS KEY.
+X, X-ray, ECKS RAY.
+Y, Yankee, YANG KEY.
+Z, Zulu, ZOO LOO.
+
+Hacker Public Radio
+Correspondent: Some Guy On The Internet. Host ID: 391 E-mail: Lyunpaw@gmail.com
+
+use hpr391 as the subject for all emails. If not, junk filter.
+
+license: Creative Commons Attribution-ShareAlike 4.0 International
+Shows:
+
+In GNU/Linux, there is no "diversity", we're all just data.
+
+ogg: https://hackerpublicradio.org/local/hpr3272.ogg
+spx: https://hackerpublicradio.org/local/hpr3272.spx
+mp3: https://hackerpublicradio.org/local/hpr3272.mp3
+
+Embrace Firefox
+
+ogg: https://hackerpublicradio.org/local/hpr3273.ogg
+spx: https://hackerpublicradio.org/local/hpr3273.spx
+mp3: https://hackerpublicradio.org/local/hpr3273.mp3
+
+HP Laptop with AMD Ryzen 3 Mobile with Radeon Graphics
+
+ogg: https://hackerpublicradio.org/local/hpr3282.ogg
+spx: https://hackerpublicradio.org/local/hpr3282.spx
+mp3: https://hackerpublicradio.org/local/hpr3282.mp3
+
+Poisoning The Well
+
+ogg: https://hackerpublicradio.org/local/hpr3298.ogg
+spx: https://hackerpublicradio.org/local/hpr3298.spx
+mp3: https://hackerpublicradio.org/local/hpr3298.mp3
+
+let's talk about Thunderbird
+
+ogg: https://hackerpublicradio.org/local/hpr3308.ogg
+spx: https://hackerpublicradio.org/local/hpr3308.spx
+mp3: https://hackerpublicradio.org/local/hpr3308.mp3
+
+
+This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.

@@ -1,0 +1,62 @@
+## hpr2564 :: Intro to Fossil
+
+ Some shownotes for fossil
+
+Create a new fossil repository:
+
+  $ fossil new shownotes
+
+
+  Add your work to the repository:
+
+  $ fossil add shownotes.html
+
+
+  Commit your work:
+
+  $ fossil commit --comment "added shownote HTML file"
+
+
+  As a fun exercise, destroy your work.
+
+  $ echo "klaatu said this was perfectly safe" > shownotes.html
+  $ cat shownotes.html
+  klaatu said this was perfectly safe
+
+
+  And now revert it back to the
+  last known good version:
+
+  $ fossil revert shownotes.html
+  REVERT shownotes.html
+  $ head -n1 shownotes.html
+  <p>Some shownotes for fossil<p>
+
+
+  Did you accidentally revert? You can undo that.
+
+  $ fossil undo shownotes.html
+
+
+  And then revert again.
+
+  $ fossil revert shownotes.html
+  REVERT shownotes.html
+  $ head -n1 shownotes.html
+  <p>Some shownotes for fossil<p>
+
+
+Check your remote:
+
+  $ fossil remote-url
+
+
+Close a fossil repo:
+
+  $ fossil close
+
+
+See the fancy browser-based UI of your repo:
+
+  $ fossil ui
+

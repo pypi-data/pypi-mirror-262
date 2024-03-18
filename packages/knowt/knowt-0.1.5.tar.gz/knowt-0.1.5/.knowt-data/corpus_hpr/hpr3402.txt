@@ -1,0 +1,76 @@
+## hpr3402 :: Reading a manifesto: Declaration of Digital Autonomy
+
+ This episode, as its source material, is licensed under the Creative Commons Attribution-ShareAlike 4.0 International license.
+Previously
+
+hpr3317 :: Reading a manifesto: Towards A Cooperative Technology Movement
+hpr3326 :: HPR Community News for April 2021
+
+Free Software Timeline
+
+1983-09: The GNU Project announced
+1985-03: The GNU Manifesto [1987, GNU] [Dr. Dobb's 1985, Internet Archive]
+1986-02: The Free Software Definition [original bulletin]
+1997-05: The Cathedral and the Bazaar
+1997-07: The Debian Free Software Guidelines [original mail]
+1998-01: The Mozilla Project
+1998-02: The Open Source Initiative
+1998-02: The Open Source Definition
+2011-02: Simon Phipps's Open-By-Rule Benchmark
+2015-02: FOSDEM 2015 Open Source Design track
+2017-07: Open Design Manifesto (ekprayog)
+2018-08: DebConf 18: That's a free software Issue! by Sandler and de Blanc [debconf] [peertube]
+2019-09: rms resigns from the FSF
+2020-04: Open Source Design Manifesto (opensourcedesign.net)
+2020-07: GUADEC 2020: Principles of Digital Autonomy [invidious] [youtube]
+2020-08: DebConf 2020: Principles of Digital Autonomy [debconf] [peertube]
+2021-03: Simon Phipps's A Rights Ratchet Score Card
+2021-03: LibrePlanet 2021: rms returns to FSF board
+2021-04: Cooperative Technology manifesto [hpr3317] [official]
+
+Further sources for timeline:
+
+https://en.wikipedia.org/wiki/History_of_netscape
+https://en.wikipedia.org/wiki/History_of_free_and_open-source_software
+https://en.wikipedia.org/wiki/The_Cathedral_and_the_Bazaar
+https://en.wikipedia.org/wiki/Open_Source_Initiative
+
+People
+Molly DeBlanc
+https://deblanc.net/blog/about/
+
+Former Campaigns Manager, FSF
+Former President of the Board, OSI
+Current Strategic Initiatives Manager, GNOME Foundation
+Current Debian Community Team
+
+Karen Sandler
+https://en.wikipedia.org/wiki/Karen_Sandler
+
+Former General Counsel, SFLC
+Former Executive Director, GNOME Foundation
+Current Executive Director, SFC
+
+Manifesto
+https://techautonomy.org/
+Declaration of Digital Autonomy (draft 0.1)
+We demand a world in which technology is created to protect and empower the people who use it. Our technology must respect the rights and freedoms of those users. We need to take control for the purpose of collectively building a better world in which technology works in service to the good of human kind, protecting our rights and digital autonomy as individuals.
+We have become more reliant than ever on technology that we intertwine into every aspect of our lives. That technology is currently made not for us, those using it. Rather, it is for the companies who intend to monetize its use and whoever owns the associated copyrights and patents. Services are run via networked software  on computers we never directly interact with. Our devices are designed to only function while broadcasting our intimate information regardless of whether the transmission of that information is necessary functionality. We generate data that we do not have access to, that is bought, sold, and traded between corporations and governments. Technologies we're increasingly being forced to use reinforce and amplify social inequalities. As schools and jobs go online, high speed computing, centralized services and Internet become inescapably necessary. Technology is designed and implemented to oppress, often with sexist, classist, and racist implications. Rather than being served by these tools, we are instead in service to them. These gatekeepers of our technology are not individual people or public organizations who think about the wellbeing of others, but instead are corporations, governments and others with agendas that do not include our best interests. Our technology has become the basic infrastructure on which our society functions, and yet the individuals who use it have no say or control over its function.
+It's time to change  our digital destiny.
+We believe it is necessary for technology to provide opportunity for: informed consent of use; transparent development and operation; privacy and security from bad actors; interaction without fear of surveillance; technology to work primarily on the terms of the people using it; functionality inside and outside of connected networks; use with other services and other software, repair; and connection, and not alienation, from the technology itself and that which is created from it.
+We therefore call for the adoption of the following principles for ethical technology:
+
+In service of the people who use it
+From conception through to public availability, technology must be in the service of the people and communities who use it. This includes a freedom from surveillance, data gathering, data sales, and vendor and file format lock-in.  When it becomes apparent that the technology, as it is delivered, does not meet the needs of a given person, that person is able to change and repair their technology. Technology must have an option for use without an Internet connection.
+Informed consent
+People must have the ability to study and understand the technology in order to decide whether using it as is is the right choice for them. People must be able to determine, either directly or through third parties, how the technology is operating and what information it is collecting, storing and selling. Additionally, there should be no punitive responses for declining consent -- practical alternatives must be offered, whether those are changes to the underlying technology or compatible updates from the original provider or from third parties.
+Empowering individual and collective digital action
+When people discover that their technology is not functioning in their interest, or that the trade offs to use it have become too burdensome, they must have the ability to change what they are using, including the ability to replace the software on a device that they have purchased if it is not serving their interests and to use the technology while not being connected to a centralized network or choose a different network.
+Technology should not just be designed for the individuals using it, but also the communities of users. These communities can be those intentionally built around a piece of technology, geographic in nature, or united by another shared purpose. This includes having the ability and right to organize to repair the technology on and to migrate essential data to other solutions. Ownership of essential data must belong to the community relying on them.
+
+Protect people's privacy and other rights by design
+Building technology must be done to respect  the rights of people, including those of privacy, open communication, and the safety to develop ideas without fear of monitoring, risk, or retribution. These cannot be tacked on as afterthoughts, but instead must be considered during the entire design and distribution process. Services should plan to store the minimum amount of data necessary to deliver the service in question, not collect data that may lay the groundwork for a profitable business model down the road. Regular deletion of inessential data should be planned from the outset. Devices need to have the ability to run and function while not transmitting data. All of these requirements are to better ensure privacy, as everytime a device wirelessly transmits or otherwise broadcasts data there is opportunity for interference or theft of that data.
+
+We, as individuals, collectives, cultures, and societies, are making this call in the rapidly changing face of technology and its deepening integration into our lives. Technology must support us as we forge our own digital destinies as our connectivity to digital networks and one another changes in ways we anticipate and in ways we have yet to imagine. Technology makers and those who use this technology can form the partnerships necessary to build the equitable, hopeful future we dream of.
+We'd love to hear what you think! Let us know by emailing thoughts@ this domain.
+The Declaration of Digital Autonomy is (c) Molly de Blanc and Karen M. Sandler, 2020, licensed under Creative Commons Attribution-ShareAlike 4.0 International.

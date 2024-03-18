@@ -1,0 +1,39 @@
+## hpr3274 :: My Custom dwm Setup
+
+ 
+Intro - video on yt, audio on hpr https://youtu.be/EMFMyxYch14
+Who am I? arfab, clearnitesky, trumpetplanet
+my email has changed since my first hpr episode - thanks lavabit!
+You can now use hello@richcolq.xyz
+My previous episode was 0618
+
+
+Story of ricing my own desktop:
+
+Always been into customising look/feel, never satisfied
+Found Luke Smith and liked i3, made own version.
+Pandemic hits! Started learning Python, JavaScript but had no real use for them...
+Made a website (inspired by disconnecting from social media)
+check out richcolq.xyz and github.com/clearnitesky
+
+What programs am I using?
+
+dwm (obviously)
+dmenu
+st
+surf / brave
+sxhkd - various short cuts sorted by purpose
+dunst
+sxiv/feh
+zathura
+my status stuff using dwmstat script
+a look in ~/.local/bin
+I recently learned about awk and rewrote all icon scripts which is what inspired me to record this episode.
+
+What next?
+
+Is it necessary to patch dwm? Probably not.
+I've come to believe that the real value in these experiments has come from my custom status scripts and keyboard shortcuts - not from patching new features into dwm. It does what I need it to (manage windows!)
+
+Thanks for watching!
+

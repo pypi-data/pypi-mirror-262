@@ -1,0 +1,21 @@
+## hpr3492 :: Linux Inlaws S01E44: Pipewire Just another audio server Think again
+
+ In this episode - sadly missing Martin as he buggered off to do something
+else - the remaining Inlaw hosts Wim Taymans, inventor and brain behind
+Pipewire, a new approach to Linux audio. Don't miss out on this episode if
+you're fed up with Pulseaudio (hello Martin :-) or find Jack just too
+complicated for every-day usage - you may see audio on Linux from a different
+perspective after this episode... Never mind those of you who are looking for
+a crash-course on audio on Linux - this episode is for you!
+Links:
+
+Pipewire: https://github.com/PipeWire/pipewire
+gstreamer: https://gstreamer.freedesktop.org
+ALSA: https://alsa-project.org/wiki/Main_Page
+PulseAudio: https://www.freedesktop.org/wiki/Software/PulseAudio
+Jack: https://jackaudio.org
+eventfd: https://man7.org/linux/man-pages/man2/eventfd.2.html
+Rubik's Cube: https://www.rubiks.com/en-us
+And how to solve this: https://ruwix.com/the-rubiks-cube/advanced-cfop-fridrich
+How to make Kefir: https://www.twopeasandtheirpod.com/how-to-make-kefir
+

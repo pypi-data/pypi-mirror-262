@@ -1,0 +1,80 @@
+## hpr3104 :: HPR AudioBook Club 19 - Tincture: An Apocalyptic Proposition
+
+ In this episode, the HPR_AudioBookClub discusses Tincture: An Apocalyptic Proposition written by Matthew D. Jordan
+
+Non-Spoiler Thoughts
+
+
+If you don't like knowing what is going on until halfway through the book, then this book is for you.
+The book uses a very interesting type of speech that was all kinda dig.
+Some of us liked this book so much that we mainlined the sequel immediately.
+This feels a lot like "The Dark Tower" series by Stephen King, and even references it.
+We talk about the use of Hebrew in the character names in the story.
+The music for the book is excellent, and matches the story very well.
+How do you make alcohol in the apocalypse?
+This also feels a lot like the Fallout games.
+The return of PLOT BULLETS!!!!
+
+Beverage Reviews
+
+As usual, the HPR AudioBook Club took some time to review the beverages that each of us were drinking during the episode
+
+Thaj: Made my own tincture of homemade iced tea and lemonade mixed. Tastes good. Thaj still can't grow lemons though :(
+x1101: Wild Turkey Rare Breed
+pokey: I have beer this month it's pretty good. I Like it, but I don't love it. I also bought a few of the credit card sized tools that we talked about on our last episode. In short they are interesting, but mostly not very useful.
+FiftyOneFifty: Shiner Prickly Pear. This unusual beer came as a complete surprise to me because I was frankly expecting a sweet peary. Instead I was confronted by a very dry, only slightly hoppy (20 IBU) beer without much flavor but a lasting aftertaste that is slightly sweet. Those Shiner boys aren't messing around, they make beer with cactus. I really did not enjoy the first beer but by the end of the six it is growing on me. Though it would be refreshing on a hot day, I doubt I will be buying it again.
+
+Things We talked about
+
+
+We talk about the connections to "The Dark Tower"
+"Blue" Irons (Marcs/Afulan/Rolands guns)
+Another big gun
+Is this time travel, dimension travel, or something entirely different?
+The ties to Judeo-Christian mythology is interesting to Thaj.
+Is getting the answers about the setting what you really want?
+The book doesn't exactly get guns right...
+
+Our Next Audiobook
+
+Quarter Share by Nathan Lowell
+The Next Audiobook Club Recording
+
+Right now we are working through a backlog of older episode that have already been recorded. Once that ends we fully anticipate recording new episodes with listener participation.
+Further Recommendations
+
+
+Skull Flash
+That IT life
+Automating Android
+Titanium Backup
+What happened to Lyle's cookbook?
+CyanogenMod v. CyanogenOS
+Thaj predicts the name change to LineageOS
+OpenStreetMap
+Automated Cars
+H&K
+
+Feedback
+
+Thank you very much for listening to this episode of the HPR AudioBookClub. We had a great time recording this show, and we hope you enjoyed it as well. We also hope you'll consider joining us next time we record a new episode. Please leave a few words in the episode's comment section.
+As always; remember to visit the HPR contribution page HPR could really use your help right now.
+Sincerely, The HPR Audiobook Club
+P.S. Some people really like finding mistakes. For their enjoyment, we always include a few.
+Our Audio
+
+This episode was processed using Audacity. We've been making small adjustments to our audio mix each month in order to get the best possible sound. Its been especially challenging getting all of our voices relatively level, because everyone has their own unique setup. Mumble is great for bringing us all together, and for recording, but it's not good at making everyone's voice the same volume. We're pretty happy with the way this month's show turned out, so we'd like to share our editing process and settings with you and our future selves (who, of course, will have forgotten all this by then).
+We use the "Truncate Silence" effect with it's default settings to minimize the silence between people speaking. When used with it's default (or at least reasonable) settings, Truncate Silence is extremely effective and satisfying. It makes everyone sound smarter, it makes the file shorter without destroying actual content, and it makes a conversations sound as easy and fluid during playback as it was while it was recorded. It can be even more effective if you can train yourself to remain silent instead of saying "uuuuummmm." Just remember to ONLY pass the file through Truncate Silence ONCE. If you pass it through a second time, or if you set it too aggressively your audio may sound sped up and choppy.
+Next we use the "Compressor" effect with the following settings:
+Threshold: -30db
+Noise Floor: -50db
+Ratio: 3:1
+Attack Time: 0.2sec
+Decay Time: 1.0 sec
+
+"Make-up Gain for 0db after compressing" and "compress based on peaks" were both left un-checked.
+After compressing the audio we cut any pre-show and post-show chatter from the file and save them in a separate file for possible use as outtakes after the closing music.
+We adjust the Gain so that the VU meter in Audacity hovers around -12db while people are speaking, and we try to keep the peaks under -6db, and we adjust the Gain on each of the new tracks so that all volumes are similar, and more importantly comfortable. Once this is done we can "Mix and Render" all of our tracks into a single track for export to the .FLAC file which is uploaded to the HPR server.
+At this point we listen back to the whole file and we work on the shownotes. This is when we can cut out anything that needs to be cut, and we can also make sure that we put any links in the shownotes that were talked about during the recording of the show. We finish the shownotes before exporting the .aup file to .FLAC so that we can paste a copy of the shownotes into the audio file's metadata.
+At this point we add new, empty audio tracks into which we paste the intro, outro and possibly outtakes, and we rename each track accordingly.
+Remember to save often when using Audacity. We like to save after each of these steps. Audacity has a reputation for being "crashy" but if you remember save after every major transform, you will wonder how it ever got that reputation.

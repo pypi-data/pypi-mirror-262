@@ -1,0 +1,22 @@
+## hpr1031 :: Backing up your dvd collection using mencoder
+
+ 
+  Hello HPR BrocktonBob here with another short but sweet episode about backing up 
+ your dvd collection using mencoder a terminal command program.In this episode i tell
+ you how to back up your dvd's using a small mencoder command.You will end up with a
+ very nice .avi file about a third the size of your original dvd movie size.So just 
+ copy and paste the command below into the terminal after you have inserted the dvd
+ into your drive.make sure to close movie player by hitting cancel.so copy the code below
+
+
+mencoder dvd://1 \
+-alang en \
+-vf crop=640:480:0:0,scale=640:405 \
+-ovc xvid -xvidencopts \
+bvhq=1:chroma_opt:quant_type=mpeg:bitrate=3000 \
+-oac mp3lame \
+-lameopts br=96:cbr:vol=6 \
+-o HarryPotter.avi
+
+
+Just replace HarryPotter.avi with the name of the movie your backing up enjoy.

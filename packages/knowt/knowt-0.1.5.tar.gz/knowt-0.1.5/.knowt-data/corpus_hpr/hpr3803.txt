@@ -1,0 +1,13 @@
+## hpr3803 :: Chatbot hallucination
+
+ A simple case of "garbage in, garbage out", but it's interesting to
+see it "try" to make sense.
+In this show, I asked ChatGPT to write me the script for an episode
+of Hacker Public Radio, and tried to confuse it. Then, some thoughts on
+chatGPT and these chatbots in general.
+References:
+
+https://en.wikipedia.org/wiki/ChatGPT#Limitations
+https://spectrum.ieee.org/magnus-carlsen-chess-scandal-ai
+https://help.openai.com/en/articles/6783457-chatgpt-general-faq
+

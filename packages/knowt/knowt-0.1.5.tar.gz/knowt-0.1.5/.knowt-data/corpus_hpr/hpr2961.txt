@@ -1,0 +1,19 @@
+## hpr2961 :: Kubernetics / Cloud - Terminology
+
+ We talk about terms often used when using Kubernetes.
+Terms we talk about
+
+Node - Machine to run jobs on.
+Cluster - Grouping of nodes to deploy work to.
+Container - Compute unit that we can run in the cloud
+Pod - One or more containers that are one unit in the cloud that could be started, stopped, or restarted.
+Service - Different network services that serve the pods
+
+Load balancers - Balance network calls to different pods
+Certmanager - Handles certificates, for instance, let’s encrypt.
+Ingress - Handles traffic from the external network
+
+Volumes - External resources used by pods to keep state
+ConfigMap - Configuration parameters that could be changed without restarting the pods or deployment.
+Deployment - A configuration of all the terms mentioned that you use to deploy as a unit to the cluster.
+

@@ -1,0 +1,5 @@
+## hpr3731 :: Speech recognition in Kdenlive
+
+ Recently I returned to Kdenlive after about a 10-year break, and was
+pleased to discover the speech recognition feature.
+https://docs.kdenlive.org/en/effects_and_compositions/speech_to_text.html#install-python

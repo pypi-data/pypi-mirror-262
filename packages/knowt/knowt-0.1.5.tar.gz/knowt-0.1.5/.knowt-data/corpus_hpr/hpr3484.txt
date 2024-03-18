@@ -1,0 +1,64 @@
+## hpr3484 :: My vim setup with GnuPG
+
+ Using the GnuPG vim plugin to edit encrypted files.
+
+See show hpr3476 My mutt email setup
+https://www.hackerpublicradio.org/eps.php?id=3476
+GnuPG Vim Plugin on vim.org
+https://www.vim.org/scripts/script.php?script_id=3645
+GnuPG Vim Plugin on Github
+https://github.com/vim-scripts/gnupg.vim
+
+Line to directly clone from github
+  git clone https://github.com/vim-scripts/gnupg.vim
+From man 1 gpg-agent:
+
+You should always add the following lines to your .bashrc or whatever initialization file is used for all shell invocations:
+GPG_TTY=`tty`
+export GPG_TTY
+It is important that this environment variable always reflects the output of the tty command.
+
+.bashrc snippet
+  ## GPG Vim
+  GPG_TTY=`tty`
+  export GPG_TTY
+  export EDITOR=vim
+GnuPG folder structure
+  [mark@fedora-lt ~]$ tree .vim
+  .vim
+  ├── plugin
+  │   └── vim-gnupg
+  │       ├── autoload
+  │       │   └── gnupg.vim
+  │       ├── doc
+  │       │   └── gnupg.txt
+  │       ├── plugin
+  │       │   └── gnupg.vim
+  │       └── README.md
+  └── spell
+      ├── en.utf-8.add
+      └── en.utf-8.add.spl
+vimrc
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab textwidth=80
+syntax on
+autocmd BufRead,BufNewFile   *.log set filetype=logtalk
+set spell spelllang=en_us
+Generate gpg full key
+gpg --full-generate-key
+or just a regular one, with less options
+gpg --gen-key
+Encrypt the file in question, with -r as the recipient
+In this case, I used part of the comment as the recipient
+Picture 1
+ Click the thumbnail to see the full-sized image
+This is more like it.
+gpg -e -r test thisIsMyTestFile.txt
+Now test edit the file
+vim thisIsMyTestFile.txt.gpg
+Picture 2
+
+It is a good idea to shred the original text file
+      shred - overwrite a file to hide its contents, and optionally delete it
+      -u deallocate and remove file after overwriting
+      -v, --verbose, show progress
+Example: shred -u -v foo.txt

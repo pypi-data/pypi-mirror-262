@@ -1,0 +1,20 @@
+## hpr1971 :: BlinkStick
+
+ BlinkStick
+Introduction
+In late 2013 I noticed the local Edinburgh Hacklab were offering soldering courses building a BlinkStick. I offered to sign my son Tim up to the next course since he wanted to learn to solder. He couldn't afford the time at that point, but we agreed to buy some BlinkSticks to build at home.
+This episode describes some of our experiences with building and using the device.
+The version we bought and built was the v1.0 release, since that and the BlinkStick Pro were all that was available. The base version now available is v1.1, and there are several other products available from the manufacturer in addition to these. The company is called Agile Innovative Ltd, based in the UK.
+I have written out a moderately long set of notes about this subject and these are available here https://hackerpublicradio.org/eps/hpr1971/full_shownotes.html.
+Links
+
+Edinburgh Hacklab: https://edinburghhacklab.com/
+BlinkStick website: https://www.blinkstick.com/
+BlinkStick Pro: https://www.blinkstick.com/products/blinkstick-pro
+Build instructions for BlinkStick v1.0: https://www.blinkstick.com/help/build-1-0
+BlinkStick Software: https://github.com/arvydas
+BlinkStick Tutorials: https://www.blinkstick.com/help/tutorials
+BlinkStick Python Wiki: https://github.com/arvydas/blinkstick-python/wiki
+My cronjob_scrape script: https://gitlab.com/davmo/hprmisc/blob/master/cronjob_scrape
+Adafruit NeoPixel ring: https://www.adafruit.com/products/1586
+

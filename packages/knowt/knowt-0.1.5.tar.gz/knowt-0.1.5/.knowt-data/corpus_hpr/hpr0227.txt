@@ -1,0 +1,5 @@
+## hpr0227 :: Local Squid
+
+ 
+This month my HPR episode featured using a local squid proxy. You might want to to run your own proxy server to provide yourself with a secure web connection when you are out and about by tunneling your traffic over ssh. Another good reason is to find out which URLs your browser is going to. On some sites URLs are deliberately hidden or you may be interested in exactly where you are sending traffic to. All is explained.
+

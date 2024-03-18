@@ -1,0 +1,34 @@
+## hpr2649 :: More ancillary Bash tips - 10
+
+ More ancillary Bash tips - 10
+Making decisions in Bash
+This is my tenth contribution to the Bash Scripting series under the heading of Bash Tips. The previous episodes are listed below in the Links section.
+We are currently looking at decision making in Bash, and in the last episode we examined the tests themselves. In this episode we’ll look at the constructs that use these tests: looping constructs, conditional constructs and lists of commands.
+Note: this episode and the preceding one were originally recorded as a single episode, but because it was so long it was split into two. As a consequence the audio contains references to examples such as bash9_ex2.sh where the true name is bash10_ex1.sh. The notes have been updated as necessary but not the audio.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+“GNU BASH Reference Manual”
+
+“Bash Looping Constructs”
+“Bash Conditional Constructs”
+“Bourne Shell Builtins”
+
+HPR series: Bash Scripting
+Previous episodes under the heading Bash Tips:
+
+HPR episode 1648 “Bash parameter manipulation”
+HPR episode 1843 “Some Bash tips”
+HPR episode 1884 “Some more Bash tips”
+HPR episode 1903 “Some further Bash tips”
+HPR episode 1951 “Some additional Bash tips”
+HPR episode 2045 “Some other Bash tips”
+HPR episode 2278 “Some supplementary Bash tips”
+HPR episode 2293 “More supplementary Bash tips”
+HPR episode 2639 “Some ancillary Bash tips - 9”
+
+Resources:
+
+Examples: bash10_ex1.sh, bash10_ex2.sh, bash10_ex3.sh
+

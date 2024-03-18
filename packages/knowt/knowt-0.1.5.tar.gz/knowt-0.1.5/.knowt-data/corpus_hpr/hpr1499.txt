@@ -1,0 +1,301 @@
+## hpr1499 :: How I Got Into Computers
+
+ 
+HPR Episode: How I Got Into Computers
+
+1. Got into computers in 1974 in high school.
+ - School had a DEC PDP-11/20 minicomputer
+   * Two ASR-33 Teletype terminals, keypunch, line printer, card sorter
+   * Ran older operating system RSTS-11 v4a
+     - Too low-end to run anything more recent.
+     - 16K words of core memory: point-to-point wired "cores"
+
+ - The system was somewhat rudimentary.  It's idea of a prompt was:
+ 
+ READY
+ 
+ - A Teletype terminal does not have a screen, so the print head 
+     was the only "cursor" to let you know where you are. 
+ 
+Hardware:
+PDP-11/20: Computer Museum 
+  https://www.computerhistory.org/revolution/minicomputers/11/366/1946
+  
+PDP-11/20: Retro Technology
+  https://www.retrotechnology.com/pdp11/exhibit/PDP_11_infoage_1.htm
+
+ASR Model 33 Teletype with PDP-11 model computers
+  https://www.retrotechnology.com/pdp11/
+  
+Operating System:
+RSTS-11 System Managers Guide
+  https://bitsavers.trailing-edge.com/pdf/dec/pdp11/rsts/V04/DEC-11-ORSMA-B-D_RSTSmgr_73.pdf
+  
+RSTS-11 System Users Guide
+  https://bitsavers.trailing-edge.com/pdf/dec/pdp11/rsts/V06/DEC-11-ORSUA-D-D_RSTS_SystemUserGuide_Jul75.pdf
+
+
+
+2. Learned BASIC-Plus to get anywhere, starting with 1/2-year course
+
+DEC BASIC Plus Language Manual
+  https://bitsavers.trailing-edge.com/pdf/dec/pdp11/rsts/V04/DEC-11-ORBPA-A-D_BASIC-PLUS_LangMan_Oct72.pdf  
+
+ * Course was taught by a math teacher who was not an amazing programmer, 
+     but he was a great teacher.  He enabled us to get going with BASIC. 
+
+ * Anticipated pairs programming by working on programs with a friend as
+    "Chuck and Duck Enterprises", but we were mainly having fun.
+   - Started by necessity (1 TTY), but we got satisfying results faster
+   - Both of us could write code, but we learned about using
+       complementary strengths to get cool stuff done.
+
+Pairs programming:
+  Pairs Programming, from XP
+  https://www.extremeprogramming.org/rules/pair.html
+  
+  Laurie Williams (Her other stuff is good, too)
+  https://collaboration.csc.ncsu.edu/laurie/publications.html
+
+   
+ * Small memory --> innovation
+   - ASCII Art "Poster" Program: 
+     Create banner with block letters on LP based on terminal input.
+   - Developed a mini-language to encode characters, white space, 
+       newlines for each supported character.
+   - This was a special-purpose language used to compress data, rather
+       than a cool Domain-Specific Language (DSL).
+   - We just wanted to make cool banners to come off the line printer.
+
+Domain Specific Languages:  Why ours wasn't a DSL
+  Martin Fowler on DSLs
+  https://martinfowler.com/tags/domain%20specific%20language.html
+  
+
+
+3. Did a math major in college, after switching away from Comp. Sci.
+
+ * Math had advantages for me
+   - More flexible curriculum 
+   - Abstractions of the time were more fun to play with
+ 
+ * I used the University computers on jobs as research assistant, tutor, typist
+   - Used them in course work, too.
+   - Planning my code carefully let me use my excess CPU seconds for fun
+   - Rule of Thumb: 1 hour in library is worth 12 hours at the terminal.
+
+
+4. Branching out in hardware, systems and programming languages
+
+* We learned FORTRAN in the programming courses
+   - I resisted the temptation to "think in FORTRAN" 
+   - More general approach felt slower for getting individual jobs done.
+   - Working from first principles seemed more reliable
+   - Often gave me better solutions than following my nose in FORTRAN
+
+   Quirky FORTRAN Preprocessor for Structured Programming (SF/K)
+   https://www.worldcat.org/title/fundamentals-of-structured-programming-using-fortran-with-sfk-and-watfiv-s/oclc/301094243
+
+ * Later, I picked up Pascal and TOPS-20 Assembly Language
+   
+   Pascal: From the source
+   Pascal User Manual and Report (Springer)  Trade paperback (1975)
+   by Kathleen Jensen, K Jensen, N Wirth
+
+   Trade paperback, Springer, 1975.  English  2nd ed. 167 pages
+   ISBN: 0387901442      ISBN-13: 9780387901442
+ 
+ 
+
+5. Gear and software rundown:
+
+ * Xerox/Honeywell Sigma Six (descended from Scientific Data Systems)  
+    (1977 to 1979)
+     https://en.wikipedia.org/wiki/CP-V_operating_system
+     https://en.wikipedia.org/wiki/SDS_Sigma_series
+
+ * DEC System 2060 (relabeled PDP-10) running TOPS-20 on a 36-bit machine
+    (1979 to 1981)
+     https://bitsavers.trailing-edge.com/pdf/dec/pdp10/TOPS20/DECnet-20/AA-5091B-TM_TOPS-20_DECnet-20_Programmers_Guide_Jan80.pdf
+     https://pdp10.nocrew.org/docs/ad-h391at1.pdf  DECsystem-10 and -20 Processor Ref.
+
+
+6. Summer and Night Job
+ * The Duration Caper:
+   Friend fixing a Fortran program to compute bond duration on a large portfolio.
+   - Answers weren't coming out, so he printed out several subtotals in his calculation.
+   - "Extend the line" to include the last term in the numerator of one big fraction "and you'll have it"
+   
+   Found a typo in the Jack Clark Francis "bible" of investments theory
+   - Throwaway question: "What's this duration stuff, anyway?"
+   - Question got me hired as a research assistant by Finance department in Business school
+   
+   Investments: Analysis and Management, First Edition Hardcover(1972)
+   by Jack Clark Francis.  McGraw-Hill Book Company
+   ISBN: 0070217858             ISBN-13: 9780070217850
+   
+
+ * The "Sure!  I Know Assembly Language" Caper
+   Offered a job with Finance, conditional on first assignment.
+   - Take over maintenance of a Fortran program with inline Assembly Language
+   - Original developer was a senior Computer Science major I knew.
+   - Gambled that his code was solid.  And won in the end.
+   
+   Got paid 3 times minimum wage ($7.50/hour versus $2.30) to look up and read research papers.
+   - I'd have done it for free, so this was a sweet gig.
+   
+   
+ * Other jobs:
+   - Tutoring math, computer science for food or cash
+   - Programming jobs
+   - Teaching assistant jobs for statistics, finance courses
+   - Security and management of student-run darkroom in Summer months == "reading"
+   - Typing papers on a typewriter
+ 
+      
+7. After college, started working in non-life insurance.
+
+ * End user computing in actuarial group was in BASIC-Plus on PDP-11s
+   - Word processing was in DECword or the WPS-8 dedicated machine.
+   - After first year, moved to department-level PDP-11/44
+   - For heavy-duty jobs, we also had timesharing access to VAX-11/780
+   
+ * First project was building a database from mainframe data dump
+   - EBCDIC data conversion to ASCII led to my education about signed
+       data fields in COBOL.
+   - I knew hexadecimal math from my assembly language course
+   - I'd seen EBCDIC in dumps while writing FORTRAN on CP-V
+   
+    Data dumps from 9-track to PDP-11/70 led to Overpunch field conversion
+      https://www.3480-3590-data-conversion.com/article-signed-fields.html
+
+ * Note: When you have curly braces at the end of a signed number field, 
+     the brace opens in the direction of the positive or negative end of
+     the number line.
+   - Open brace ({): Value ends in zero and has positive sign.  Zero < X
+   - Closing brace (}): Value ends in zero and is negative. Zero > X
+
+ * If field ends in A, the value's final digit is 1, and it's positive
+   - B means positive value that ends with a 2, C is 3, ... I is 9.
+   - So "00003757D" is $   +375.74.
+   
+ * If the field ends in J-R, the value is negative and ends in 1-9.
+   - So "00000255R" is the value $   -25.59.
+   
+
+
+8. Irony: I was asked to help troubleshoot a program that was crashing
+     as it was automatically converting the rates and rules manuals away
+     from Unix with 'nroff' to DECword on RSTS in 1982.
+  - This may have delayed my adoption of Linux
+  - Used Unix (Ultrix) in early 1990s to preprocess data for use in OS/2
+  - Had to move to Win 95 and Win NT for work
+
+
+****** Skipping the Dark Period of DOS/Windows and OS/2 Computing ******
+  - Turbo Pascal, APL, PICK, QuickBasic, Visual Basic, Excel with VBA
+  - Learned SQL dialects, COM, .Net, and scripting languages
+
+More from Dark Period: Less Slackware
+
+
+8. Gave Linux a try with Quantian Live CD in 2006 (Thanks, Dirk!)
+   https://dirk.eddelbuettel.com/quantian.html 
+   https://dirk.eddelbuettel.com/quantian-tmp.pdf (PDF description)
+   https://dirk.eddelbuettel.com/quantian/quantian_0.7.9.2.quantian.packages.txt
+   
+ * Used Live CDs to try Debian packages, repair PCs, and do math stuff
+  - Liked Gnumeric, Python, R, and educational software
+  - Wiped my Vista laptop in April, 2008 to install Ubuntu full-time
+  - Music, checking, and photo editing kept me from switching other PCs
+
+9. Tried Ubuntu "Feisty" using WUBI on Windows XP on Racing Cow
+ * Trouble-free install, mainly because I was on an Ethernet cable
+   - Tried out Linux software in a risk-free environment to find what I liked
+   - GNOME 2 was close enough to Windows and Mac, so no problems with UI
+   - Command line was similar to Ultrix and even to DOS, so not so bad.
+
+ * WUBI let me try Ubuntu without having to dual boot or use Live CDs
+   - Easy to install and remove, like a Windows application
+   - No messy virtualization setup
+   - Linux could see and use files on my Windows partition seamlessly
+
+ * Ubuntu "Hardy" on "Titanic" (retired Dell Latitude D820 laptop)
+   - Install was easy, except for wireless networking
+   - Had to use NDISWRAPPER at first, but everything worked.
+
+ * Switched my main home desktop (Racing Cow) in April, 2011
+  - Just in time for Unity, which would not run on my gear.
+  - Gnome 2 ran well on my computers, and they choked on Unity and Gnome 3.
+  - Taste and older machines led me to go distro hopping.
+  - Dan Lynch of Linux Outlaws pointed me to CrunchBang.  Try it.
+      https://crunchbang.org
+
+
+9. Other distros I've tried:
+
+ * Gentoo (June 2011):  https://www.gentoo.org 
+ 
+   Note: It is not as super-hard as you've been told.
+   
+   Installed it in three 4-hour sessions after reading docs on train
+    - Compiled kernel on first shot
+    - Added modules for devices I liked, and that recompile worked
+    - Got X working enough to use a browser and a window manager
+    - Gave up only because I had not decided on my workflows
+    - Was afraid to mix GTK and QT or KDE packages at that stage
+    - Unsure about reversing wrong choices 
+    - Unfamiliar toolkits scared me, although I had no real problems
+  
+   Conclusion: My problem with Gentoo?  Between keyboard and chair. 
+
+
+ * Slackware (several times):  https://www.slackware.org
+   
+   Always installs on first try for me, with huge kernel
+    - Knowing what to do after initial install was the problem here, too
+    - To remove fear, I updated my 13.37 with all patches by hand
+    - Manual updates after install took 2 hours, including learning pkgtool
+    - Using generic or custom kernels is only hard when I'm stupid
+      * Be sure the drivers to operate your boot disk are compiled in
+   
+   Conclusion: After hating older versions, it's KDE 4 for the win!
+   
+     
+ * SlackerMedia book:  https://slackermedia.info
+   
+   Helpful tips on designing workstation around workflows
+    - Uses SlackBuilds and SlackBuild queues for repeatable configuration
+    - Gave me idea for groups working on math software-in-progress
+    - Slackware package format is simple, easy to grasp (for binaries)
+    - SlackBuilds: close to a universal format for sharing program source
+   
+   Why Slackware?
+    - There are SlackBuild scripts for Sage and other packages I like
+    - Slackware comes with support for TeX for math writing
+    - SlackerMedia has queues for audio, video, web editing, publishing
+   
+   Conclusion: SlackerMath is born.  Still needs to be fleshed out.
+    - Slackware distribution-from-scratch based on SlackBuilds
+    - Set it up as you wish using your own custom queues
+    - Suggested packages would include Sage, R, Octave, GSL, QuantLib,
+        Grass GIS, kile, gretl, Tux Racer, euler, gnucap, and others
+    - Languages: Python with NumPy/SciPy/matplotlib and bindings to 
+        other languages/libraries, Scheme, Perl, Lua, C and Fortran
+        
+ * Also tried the following, but didn't stay with them
+   - Slax (www.slax.org)
+   - 
+11. Right now: 
+  * Five of our six former Windows computers have switched to Linux.
+    - "Surfing Cow" decommissioned with CrunchBang as its final O/S.
+    - "Racing Cow" still going strong with CrunchBang
+    - Sony FE laptop "White Cloud" running Ubuntu 13.04
+    - Derringer is my audio editing machine, because it's under 3 lbs.
+    - Laptop "Titanic" died after a baptism in red wine
+      Back to life with new keyboard, disk, and name -- "Lazarus"
+      
+  * Number six ("Dawn Pixie") about to go to a Linux "granny" distro
+    - Linux Mint or PCLinuxOS (KDE version)
+    - Need a "granny" distros for generic use by all comers
+

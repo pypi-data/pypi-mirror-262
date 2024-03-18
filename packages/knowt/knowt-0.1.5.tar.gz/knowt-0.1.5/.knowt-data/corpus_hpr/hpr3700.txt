@@ -1,0 +1,7 @@
+## hpr3700 :: Introduction to Batch Files
+
+ Batch files are an important topic to mastering DOS, and in this episode we begin exploring them. Batch files in DOS are similar to BASH scripts in Unix/Linux in that they let you run multiple commands from one file.
+Links:
+
+https://www.ahuka.com/dos-lessons-for-self-study-purposes/dos-lesson-15-introduction-to-batch-files/
+

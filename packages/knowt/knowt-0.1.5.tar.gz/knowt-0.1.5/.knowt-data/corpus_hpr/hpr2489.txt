@@ -1,0 +1,20 @@
+## hpr2489 :: CONTEXT IS EVERYTHING
+
+ CONTEXT IS EVERYTHING
+hosted by Lostnbronx
+Turning a large audio file into a tiny video file for a very specific use case.
+This solution probably won't work for you, because none of the ones I found on the Internet worked for me. Trial and error led me here, and it's probably the only guide you'll have as well.
+Start with as high a quality audio file as you can manage. .wav is good, but it's big. Let's convert it to .flac. If you already have a .flac file, skip this part.
+1.) Convert .wav to .flac.
+sox INPUT.wav OUTPUT.flac
+2.) Convert the .flac to a very small mono .opus. Bitrate can be even smaller. I went down to 14.
+opusenc --bitrate 18 --downmix-mono INPUT.flac OUTPUT.opus
+3.) Combine the .opus file with a single static image, and output to a .webm video. This should not be very much bigger in file size than the .opus and .jpg combined. The smaller the image file, the better. (I tried using a .gif, but it was actually bigger than the .jpg I ended up with.)
+ffmpeg -i INPUT.opus -r 1 -loop 1 -i INPUT.jpg -c:v libvpx -tune stillimage -shortest -y -c:a copy OUTPUT.webm
+The final file. It doesn't sound great, but it's listenable, which is all that was desired.
+https://social.nasqueron.org/media/pEXqQotxC5P4GNJpf9U
+Here's a better quality version of the audiobook.
+https://downloads.cavalcadeaudio.com/stardrifter-novels/01-motherload/?p=home
+The process and final result can be improved upon by people smarter than I, without doubt, but this works for now.
+SPECIAL THANKS to the Urandom guys (X1101, Thaj, and Pokey), Monsterjavaguns (Jason van Gumster), and the ever-fabulous Klaatu, for their suggestions and encouragement. I would not have found a solution to this, nor even thought to do an episode of HPR, without them!
+Editor's Note 2018-02-15: The wrong audio was accidentally released with this show. It has been corrected and should be re-uploaded by your podcatcher.

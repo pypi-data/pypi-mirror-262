@@ -1,0 +1,25 @@
+## hpr1740 :: Mailing List Etiquette
+
+ Mailing List Etiquette
+Overview
+In February 2015 I created a script to add a section to the monthly Community News show notes. The added section summarises the discussions on the HPR mailing list over the previous month. My script processes the messages archived on the Gmane site and reports on the threads it finds there.
+In writing this script I noticed the number of times people made errors in replying to existing message threads and initiating new threads on the list. I thought it might be helpful if I explained some of the do's and don'ts of mailing list use to help avoid these errors.
+Full Notes
+Since the notes explaining this subject are long (the size limit is 4000 characters), they have been placed here: https://hackerpublicradio.org/eps/hpr1740_full_shownotes.html
+Experimental EPUB Notes
+For this show I have tried generating an EPUB version of the full notes. This can be found here: https://hackerpublicradio.org/eps/hpr1740_full_shownotes.epub. Comments on this idea are welcome.
+Links
+
+Gmane archive of the Hacker Public Radio mailing list: https://dir.gmane.org/gmane.network.syndication.podcast.hacker-public-radio
+Wikipedia article on message groupings referred to as conversations, topic threads, or threads: https://en.wikipedia.org/wiki/Conversation_threading
+A brief note on how to punctuate the phrase "do's and don'ts": https://www.visualthesaurus.com/cm/wc/dos-and-donts-or-dos-and-donts/
+Wikipedia article on Usenet: https://en.wikipedia.org/wiki/Usenet
+Thunderbird add-on ThreadVis: https://addons.mozilla.org/en-US/thunderbird/addon/threadvis/
+Wikipedia article on the RFC document: https://en.wikipedia.org/wiki/Request_for_Comments
+Text of RFC5322: https://www.rfc-editor.org/rfc/rfc5322.txt
+Wikipedia article on Email: https://en.wikipedia.org/wiki/Email
+Wikipedia article on MIME used in email: https://en.wikipedia.org/wiki/MIME
+Description of a threading algorithm from Jamie Zawinski: https://www.jwz.org/doc/threading.html
+Text of RFC1153: https://www.faqs.org/rfcs/rfc1153.html
+Wikipedia article on posting style: https://en.wikipedia.org/wiki/Posting_style
+A recent large thread on the Mailman-Users mailing list discussing the subject of replying to lists: https://www.mail-archive.com/mailman-users%40python.org/msg66089.html

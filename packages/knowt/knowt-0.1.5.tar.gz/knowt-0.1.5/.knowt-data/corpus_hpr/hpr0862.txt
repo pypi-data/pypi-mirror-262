@@ -1,0 +1,36 @@
+## hpr0862 :: Breaking Down TFTP
+
+ In the inaugural episode of Breaking Down Protocols, I dig into TFTP, what it's good for and what makes it tick.
+You can contact Kevin on identi.ca as  @kevingranade
+
+
+The original rfc
+https://www.ietf.org/rfc/rfc783.txt
+The errata
+https://www.ietf.org/rfc/rfc1123.txt
+An update
+https://www.ietf.org/rfc/rfc1350.txt
+The option extension 
+https://www.ietf.org/rfc/rfc1782.txt
+https://www.ietf.org/rfc/rfc1783.txt
+https://www.ietf.org/rfc/rfc1784.txt
+An update to option extension
+https://www.ietf.org/rfc/rfc2347.txt
+https://www.ietf.org/rfc/rfc2348.txt
+https://www.ietf.org/rfc/rfc2349.txt
+The multicast RFC.
+https://www.ietf.org/rfc/rfc2090.txt
+
+Trivial File Transfer Protocol
+From Wikipedia, the free encyclopedia
+https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol
+
+Trivial File Transfer Protocol (TFTP) is a file transfer protocol known for its simplicity.[citation needed] It is generally used for automated transfer of configuration or boot files between machines in a local environment. Compared to FTP, TFTP is extremely limited, providing no authentication, and is rarely used interactively by a user.
+
+Due to its simple design, TFTP could be implemented using a very small amount of memory. It is therefore useful for booting computers such as routers which may not have any data storage devices. It is an element of the Preboot Execution Environment (PXE) network boot protocol, where it is implemented in the firmware BIOS of the host's network card.
+
+It is also used to transfer small amounts of data between hosts on a network, such as IP phone firmware or operating system images when a remote X Window System terminal or any other thin client boots from a network host or server. The initial stages of some network based installation systems (such as Solaris Jumpstart, Red Hat Kickstart, Symantec Ghost and Windows NT's Remote Installation Services) use TFTP to load a basic kernel that performs the actual installation.
+
+TFTP was first defined in 1980 by IEN 133.[1] It is currently defined by RFC 1350. There have been some extensions to the TFTP protocol documented in later RFC's (see the section on Extensions, below). TFTP is based in part on the earlier protocol EFTP, which was part of the PUP protocol suite. TFTP support appeared first as part of 4.3 BSD.
+
+Due to the lack of security, it is dangerous to use it over the Internet. Thus, TFTP is generally only used on private, local networks.

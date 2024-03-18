@@ -1,0 +1,8 @@
+## hpr3939 :: How I got into tech and hacking
+
+ In the show, I mention that leaving Mark Williams Company was "a
+story for another time", but the short answer is that Linux crushed
+them. Coherent Unix had to make a choice to compete with either Windows,
+SCO Unix, or Linux, and had enough budget to add either X Windows or
+TCP/IP networking. They chose X11, and IMO that killed any chance of
+Coherent Unix being useful in a world of Linux and FreeBSD.

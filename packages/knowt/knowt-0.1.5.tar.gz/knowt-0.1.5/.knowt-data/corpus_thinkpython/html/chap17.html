@@ -1,0 +1,551 @@
+<html>
+<head>
+<title>Chapter 17: Linked lists</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap16.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap18.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 17</h2>
+
+
+
+<h1>Linked lists</h1>
+
+<a name=1></a>
+<h3>17.1 Embedded references</h3>
+<p>
+We have seen examples of attributes that refer to other objects, which
+we called <b>embedded references</b> (see <a href="chap12.html#8">Section 12.8</a>).  A
+common data structure, the <b>linked list</b>, takes advantage of this
+feature.
+<p>
+Linked lists are made up of <b>nodes</b>, where each node contains a
+reference to the next node in the list.  In addition, each node
+contains a unit of data called the <b>cargo</b>.
+<p>
+A linked list is considered a <b>recursive data
+structure</b> because it has a recursive definition.
+
+<blockquote>A linked list is either:
+<ul>
+<li>the empty list, represented by <tt><font size=-1>None</font></tt>, or</li>
+<li>a node that contains a cargo object and a reference
+to a linked list.</li>
+</ul>
+
+</blockquote>
+<p>
+Recursive data structures lend themselves to
+recursive methods.
+
+<a name=2></a>
+<h3>17.2 The <tt><font size=-1>Node</font></tt> class</h3>
+<p>
+As usual when writing a new class, we'll start with the
+initialization and <tt><font size=-1>__str__</font></tt> methods so that we
+can test the basic mechanism of creating and displaying the new
+type:
+
+<p><tt><font size=-1><font color=black>class</font> Node:
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self, cargo=None, next=None):
+<br>&nbsp; &nbsp; self.cargo = cargo
+<br>&nbsp; &nbsp; self.next&nbsp; = next
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>__str__</font>(self):
+<br>&nbsp; &nbsp; <font color=black>return</font> str(self.cargo)
+<br></font></tt></p>
+
+<p>
+As usual, the parameters for the initialization method are optional. By
+default, both the cargo and the link, <tt><font size=-1>next</font></tt>, are set
+to <tt><font size=-1>None</font></tt>.
+<p>
+The string representation of a node is just the string representation
+of the cargo.  Since any value can be passed to the <tt><font size=-1>str</font></tt>
+function, we can store any value in a list.
+<p>
+To test the implementation so far, we can create a <tt><font size=-1>Node</font></tt>
+and print it:
+
+<p><tt><font size=-1>&gt;&gt;&gt; node = Node(<font color=red>"test"</font>)
+<br>&gt;&gt;&gt; <font color=black>print</font> node
+<br>test
+<br></font></tt></p>
+
+<p>
+To make it interesting, we need a list with more than
+one node:
+
+<p><tt><font size=-1>&gt;&gt;&gt; node1 = Node(1)
+<br>&gt;&gt;&gt; node2 = Node(2)
+<br>&gt;&gt;&gt; node3 = Node(3)
+<br></font></tt></p>
+
+<p>
+This code creates three nodes, but we don't have a list yet
+because the nodes are not <b>linked</b>.  The state diagram
+looks like this:
+
+<p align="center"><img src="illustrations/link1.png"></p>
+<p>
+To link the nodes, we have to make the first node refer to the
+second and the second node refer to the third:
+
+<p><tt><font size=-1>&gt;&gt;&gt; node1.next = node2
+<br>&gt;&gt;&gt; node2.next = node3
+<br></font></tt></p>
+
+<p>
+The reference of the third node is <tt><font size=-1>None</font></tt>, which indicates that
+it is the end of the list.  Now the state diagram looks like this:
+
+<p align="center"><img src="illustrations/link2.png"></p>
+<p>
+Now you know how to create nodes and link them into lists.  What
+might be less clear at this point is why.
+
+<a name=3></a>
+<h3>17.3 Lists as collections</h3>
+<p>
+Lists are useful because they provide a way to assemble multiple
+objects into a single entity, sometimes called a <b>collection</b>.  In
+the example, the first node of the list serves as a reference to the
+entire list.
+<p>
+To pass the list as an argument, we only have to pass a
+reference to the first node.  For example, the function <tt><font size=-1>printList</font></tt>
+takes a single node as an argument.  Starting with the head of the
+list, it prints each node until it gets to the end:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printList</font>(node):
+<br>&nbsp; <font color=black>while</font> node:
+<br>&nbsp; &nbsp; <font color=black>print</font> node,
+<br>&nbsp; &nbsp; node = node.next
+<br>&nbsp; <font color=black>print</font>
+<br></font></tt></p>
+
+<p>
+To invoke this function, we pass a reference to the
+first node:
+
+<p><tt><font size=-1>&gt;&gt;&gt; printList(node1)
+<br>1 2 3
+<br></font></tt></p>
+
+<p>
+Inside <tt><font size=-1>printList</font></tt> we have a reference to the first node
+of the list, but there is no variable that refers to the other
+nodes.  We have to use the <tt><font size=-1>next</font></tt> value from each node
+to get to the next node.
+<p>
+To traverse a linked list, it is common to use a loop variable like
+<tt><font size=-1>node</font></tt> to refer to each of the nodes in succession.
+<p>
+This diagram shows the nodes in the list and the values that
+<tt><font size=-1>node</font></tt> takes on:
+
+<p align="center"><img src="illustrations/link3.png"></p>
+
+<blockquote><i>By convention, lists are often printed in brackets with commas
+between the elements, as in <tt><font size=-1>[1, 2, 3]</font></tt>.  As an exercise, modify
+<tt><font size=-1>printList</font></tt> so that it generates output in this format.</i>
+</blockquote>
+
+<a name=4></a>
+<h3>17.4 Lists and recursion</h3>
+<p>
+It is natural to express many list operations using recursive methods.
+For example, the following is a recursive algorithm for printing a list
+backwards:
+
+<ol>
+<li>Separate the list into two pieces: the first node (called
+the head); and the rest (called the tail).</li>
+<li>Print the tail backward.</li>
+<li>Print the head.</li>
+</ol>
+<p>
+Of course, Step 2, the recursive call, assumes that we have a way of
+printing a list backward.  But if we assume that the recursive
+call works <s>&nbsp; &nbsp;</s> the leap of faith <s>&nbsp; &nbsp;</s> then we can convince ourselves that
+this algorithm works.
+<p>
+All we need are a base case and a way of proving that for
+any list, we will eventually get to the base case.  Given the
+recursive definition of a list, a natural base case is
+the empty list, represented by <tt><font size=-1>None</font></tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printBackward</font>(list):
+<br>&nbsp; <font color=black>if</font> list == None: <font color=black>return</font>
+<br>&nbsp; head = list
+<br>&nbsp; tail = list.next
+<br>&nbsp; printBackward(tail)
+<br>&nbsp; <font color=black>print</font> head,
+<br></font></tt></p>
+
+<p>
+The first line handles the base case by doing nothing.  The
+next two lines split the list into <tt><font size=-1>head</font></tt> and <tt><font size=-1>tail</font></tt>.
+The last two lines print the list.  The comma at the end of the
+last line keeps Python from printing a newline after each node.
+<p>
+We invoke this function as we invoked <tt><font size=-1>printList</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; printBackward(node1)
+<br>3 2 1
+<br></font></tt></p>
+
+<p>
+The result is a backward list.
+<p>
+You might wonder why <tt><font size=-1>printList</font></tt> and <tt><font size=-1>printBackward</font></tt> are
+functions and not methods in the <tt><font size=-1>Node</font></tt> class.  The reason is that
+we want to use <tt><font size=-1>None</font></tt> to represent the empty list and it is not
+legal to invoke a method on <tt><font size=-1>None</font></tt>.  This limitation makes it
+awkward to write list-manipulating code in a clean object-oriented
+style.
+<p>
+Can we prove that <tt><font size=-1>printBackward</font></tt> will always terminate?   In other
+words, will it always reach the base case?  In fact, the answer
+is no.  Some lists will make this function crash.
+
+<a name=5></a>
+<h3>17.5 Infinite lists</h3>
+<p>
+There is nothing to prevent a node from referring back to
+an earlier node in the list, including itself.  For example,
+this figure shows a list with two nodes, one of which refers
+to itself:
+
+<p align="center"><img src="illustrations/link4.png"></p>
+<p>
+If we invoke <tt><font size=-1>printList</font></tt> on this list, it will loop forever.
+If we invoke <tt><font size=-1>printBackward</font></tt>, it will recurse infinitely.
+This sort of behavior makes infinite lists difficult to work
+with.
+<p>
+Nevertheless, they are occasionally useful.  For example, we
+might represent a number as a list of digits and use an infinite
+list to represent a repeating fraction.
+<p>
+Regardless, it is problematic that we cannot prove that <tt><font size=-1>printList</font></tt>
+and <tt><font size=-1>printBackward</font></tt> terminate.  The best we can do is the
+hypothetical statement, "If the list contains no loops, then these
+functions will terminate."  This sort of claim is called a <b>precondition</b>.  It imposes a constraint on one of the arguments and
+describes the behavior of the function if the constraint is satisfied.
+You will see more examples soon.
+
+<a name=6></a>
+<h3>17.6 The fundamental ambiguity theorem</h3>
+<p>
+One part of <tt><font size=-1>printBackward</font></tt> might have raised
+an eyebrow:
+
+<p><tt><font size=-1>&nbsp; &nbsp; head = list
+<br>&nbsp; &nbsp; tail = list.next
+<br></font></tt></p>
+
+<p>
+After the first assignment, <tt><font size=-1>head</font></tt> and <tt><font size=-1>list</font></tt> have the same
+type and the same value.  So why did we create a new variable?
+<p>
+The reason is that the two variables play different roles.  We think
+of <tt><font size=-1>head</font></tt> as a reference to a single node, and we think of
+<tt><font size=-1>list</font></tt> as a reference to the first node of a list.  These
+"roles" are not part of the program; they are in the mind of the
+programmer.
+<p>
+In general we can't tell by looking at a program what role a
+variable plays.
+This ambiguity can be useful, but it can also make programs
+difficult to read.  We often use variable names like <tt><font size=-1>node</font></tt>
+and <tt><font size=-1>list</font></tt> to document how we intend to use a variable and
+sometimes create additional variables to disambiguate.
+<p>
+We could have written <tt><font size=-1>printBackward</font></tt> without <tt><font size=-1>head</font></tt>
+and <tt><font size=-1>tail</font></tt>, which makes it more concise but possibly
+less clear:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printBackward</font>(list) :
+<br>&nbsp; <font color=black>if</font> list == None : <font color=black>return</font>
+<br>&nbsp; printBackward(list.next)
+<br>&nbsp; <font color=black>print</font> list,
+<br></font></tt></p>
+
+<p>
+Looking at the two function calls, we have to remember that <tt><font size=-1>printBackward</font></tt> treats its argument as a collection and <tt><font size=-1><font color=black>print</font></font></tt>
+treats its argument as a single object.
+<p>
+The <b>fundamental ambiguity theorem</b> describes the ambiguity
+that is inherent in a reference to a node:
+
+<blockquote><b>A variable that refers to a node might treat the node as a single
+object or as the first in a list of nodes.</b>
+</blockquote>
+
+<a name=7></a>
+<h3>17.7 Modifying lists</h3>
+<p>
+There are two ways to modify a linked list.  Obviously, we can change
+the cargo of one of the nodes, but the more interesting operations are
+the ones that add, remove, or reorder the nodes.
+<p>
+As an example, let's write a function that removes the second
+node in the list and returns a reference to the removed node:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>removeSecond</font>(list):
+<br>&nbsp; <font color=black>if</font> list == None: <font color=black>return</font>
+<br>&nbsp; first = list
+<br>&nbsp; second = list.next
+<br>&nbsp; <font color=#009000># make the first node refer to the third
+</font><br>&nbsp; first.next = second.next
+<br>&nbsp; <font color=#009000># separate the second node from the rest of the list
+</font><br>&nbsp; second.next = None
+<br>&nbsp; <font color=black>return</font> second
+<br></font></tt></p>
+
+<p>
+Again, we are using temporary variables to make the code more
+readable.  Here is how to use this function:
+
+<p><tt><font size=-1>&gt;&gt;&gt; printList(node1)
+<br>1 2 3
+<br>&gt;&gt;&gt; removed = removeSecond(node1)
+<br>&gt;&gt;&gt; printList(removed)
+<br>2
+<br>&gt;&gt;&gt; printList(node1)
+<br>1 3
+<br></font></tt></p>
+
+<p>
+This state diagram shows the effect of the operation:
+
+<p align="center"><img src="illustrations/link5.png"></p>
+<p>
+What happens if you invoke this function and pass a list with only one
+element (a <b>singleton</b>)?  What happens if you pass the empty list
+as an argument?  Is there a precondition for this function?  If so, fix
+the function to handle a violation of the precondition in a reasonable
+way.
+
+<a name=8></a>
+<h3>17.8 Wrappers and helpers</h3>
+<p>
+It is often useful to divide a list operation into
+two functions.  For example, to print a list
+backward in the
+format <tt><font size=-1>[3 2 1]</font></tt> we can use the
+<tt><font size=-1>printBackward</font></tt> function to print <tt><font size=-1>3 2 1</font></tt> but we need
+a separate function to print the brackets.
+Let's call it <tt><font size=-1>printBackwardNicely</font></tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printBackwardNicely</font>(list) :
+<br>&nbsp; <font color=black>print</font> <font color=red>"["</font>,
+<br>&nbsp; printBackward(list)
+<br>&nbsp; <font color=black>print</font> <font color=red>"]"</font>,
+<br></font></tt></p>
+
+<p>
+Again, it is a good idea to check functions like this to see
+if they work with special cases like an empty list or
+a singleton.
+<p>
+When we use this function elsewhere in the program, we
+invoke <tt><font size=-1>printBackwardNicely</font></tt> directly, and it invokes
+<tt><font size=-1>printBackward</font></tt> on our behalf.  In that sense,
+<tt><font size=-1>printBackwardNicely</font></tt> acts as a <b>wrapper</b>, and it uses
+<tt><font size=-1>printBackward</font></tt> as a <b>helper</b>.
+
+<a name=9></a>
+<h3>17.9 The <tt><font size=-1>LinkedList</font></tt> class</h3>
+<p>
+There are some subtle problems with the way we have been
+implementing lists.  In a reversal of cause and effect, we'll
+propose an alternative implementation first and then explain what
+problems it solves.
+<p>
+First, we'll create a new class called <tt><font size=-1>LinkedList</font></tt>.  Its
+attributes are an integer that contains the length of the list
+and a reference to the first node.  <tt><font size=-1>LinkedList</font></tt> objects
+serve as handles for manipulating lists of <tt><font size=-1>Node</font></tt> objects:
+
+<p><tt><font size=-1><font color=black>class</font> LinkedList :
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self) :
+<br>&nbsp; &nbsp; self.length = 0
+<br>&nbsp; &nbsp; self.head&nbsp; &nbsp;= None
+<br></font></tt></p>
+
+<p>
+One nice thing about the <tt><font size=-1>LinkedList</font></tt> class is that it provides
+a natural place to put wrapper functions like
+<tt><font size=-1>printBackwardNicely</font></tt>, which we can make a
+method of the <tt><font size=-1>LinkedList</font></tt> class:
+
+<p><tt><font size=-1><font color=black>class</font> LinkedList:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>printBackward</font>(self):
+<br>&nbsp; &nbsp; <font color=black>print</font> <font color=red>"["</font>,
+<br>&nbsp; &nbsp; <font color=black>if</font> self.head != None:
+<br>&nbsp; &nbsp; &nbsp; self.head.printBackward()
+<br>&nbsp; &nbsp; <font color=black>print</font> <font color=red>"]"</font>,
+<br>
+<br><font color=black>class</font> Node:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>printBackward</font>(self):
+<br>&nbsp; &nbsp; <font color=black>if</font> self.next != None:
+<br>&nbsp; &nbsp; &nbsp; tail = self.next
+<br>&nbsp; &nbsp; &nbsp; tail.printBackward()
+<br>&nbsp; &nbsp; <font color=black>print</font> self.cargo,
+<br></font></tt></p>
+
+<p>
+Just to make things confusing, we renamed <tt><font size=-1>printBackwardNicely</font></tt>.
+Now there are two methods named <tt><font size=-1>printBackward</font></tt>: one in the <tt><font size=-1>Node</font></tt> class (the helper); and one in the <tt><font size=-1>LinkedList</font></tt> class (the
+wrapper).  When the wrapper invokes <tt><font size=-1>self.head.printBackward</font></tt>,
+it is invoking the helper, because <tt><font size=-1>self.head</font></tt> is a
+<tt><font size=-1>Node</font></tt> object.
+<p>
+Another benefit of the <tt><font size=-1>LinkedList</font></tt> class is that it
+makes it easier to add or remove the first element of a list.  For
+example, <tt><font size=-1>addFirst</font></tt> is a method for <tt><font size=-1>LinkedList</font></tt>s; it
+takes an item of cargo as an argument and puts it at the beginning of the
+list:
+
+<p><tt><font size=-1><font color=black>class</font> LinkedList:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>addFirst</font>(self, cargo):
+<br>&nbsp; &nbsp; node = Node(cargo)
+<br>&nbsp; &nbsp; node.next = self.head
+<br>&nbsp; &nbsp; self.head = node
+<br>&nbsp; &nbsp; self.length = self.length + 1
+<br></font></tt></p>
+
+<p>
+As usual, you should check code like this to see if it handles
+the special cases.  For example, what happens if the list is initially
+empty?
+
+<a name=10></a>
+<h3>17.10 Invariants</h3>
+<p>
+Some lists are "well formed"; others are not.  For example, if a list
+contains a loop, it will cause many of our methods to crash, so we
+might want to require that lists contain no loops.  Another
+requirement is that the <tt><font size=-1>length</font></tt> value in the <tt><font size=-1>LinkedList</font></tt>
+object should be equal to the actual number of nodes in the list.
+<p>
+Requirements like these are called <b>invariants</b> because, ideally,
+they should be true of every object all the time.  Specifying
+invariants for objects is a useful programming practice because it
+makes it easier to prove the correctness of code, check the integrity
+of data structures, and detect errors.
+<p>
+One thing that is sometimes confusing about invariants is that
+there are times when they are violated.  For example, in the
+middle of <tt><font size=-1>addFirst</font></tt>, after we have added the node but
+before we have incremented <tt><font size=-1>length</font></tt>, the invariant is
+violated.  This kind of violation is acceptable; in fact, it is
+often impossible to modify an object without violating an
+invariant for at least a little while.  Normally, we require
+that every method that violates an invariant must restore
+the invariant.
+<p>
+If there is any significant stretch of code in which the invariant
+is violated, it is important for the comments to make that clear,
+so that no operations are performed that depend on the invariant.
+
+<a name=11></a>
+<h3>17.11 Glossary</h3>
+
+<dl>
+<dt>embedded reference</dt>
+<dd>A reference stored in an attribute of
+an object.</dd>
+<dt>linked list</dt>
+<dd>A data structure that implements a collection using
+a sequence of linked nodes.</dd>
+<dt>node</dt>
+<dd>An element of a list, usually implemented as an object
+that contains a reference to another object of the same type.</dd>
+<dt>cargo</dt>
+<dd>An item of data contained in a node.</dd>
+<dt>link</dt>
+<dd>An embedded reference used to link one object to
+another.</dd>
+<dt>precondition</dt>
+<dd>An assertion that must be true in order for a
+method to work correctly.</dd>
+<dt>fundamental ambiguity theorem</dt>
+<dd>A reference to a list
+node can be treated as a single
+object or as the first in a list of nodes.</dd>
+<dt>singleton</dt>
+<dd>A linked list with a single node.</dd>
+<dt>wrapper</dt>
+<dd>A method that acts as a middleman between a
+caller and a helper method, often making the method easier or
+less error-prone to invoke.</dd>
+<dt>helper</dt>
+<dd>A method that is not invoked directly by a caller
+but is used by another method to perform part of an operation.</dd>
+<dt>invariant</dt>
+<dd>An assertion that should be true of an object at
+all times (except perhaps while the object is being modified).</dd>
+</dl>
+<p>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap16.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap18.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

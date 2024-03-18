@@ -1,0 +1,25 @@
+## hpr2613 :: Quick Awk Tip
+
+ 
+This is obvious, but it tripped me up a few times after listening to the excellent Awk series by Dave and B-yeezi, so I though I'd share it here to save others the trouble.
+
+
+When moving from simple awk commands to proper awk scripts, you put a shebang line at the top of your script. It's pretty common to many of us, because we do it for Python and Bash all the time.
+
+
+But if you just put:
+
+
+#!/usr/bin/awk
+
+
+Then your awk script won't work the way you expect.
+
+You must provide the -f flag:
+
+
+#!/usr/bin/awk -f
+
+
+Now you can pipe things to your awk script as expected. 
+

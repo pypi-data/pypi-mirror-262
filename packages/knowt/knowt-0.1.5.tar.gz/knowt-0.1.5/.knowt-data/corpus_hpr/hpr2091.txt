@@ -1,0 +1,54 @@
+## hpr2091 :: Everyday Unix/Linux Tools for data processing
+
+ 
+Here are some of the tools I use to process and clean data from all manner of customers:
+
+detox
+The detox utility renames files to make them easier to work with. It removes spaces and other such annoyances. It’ll also translate or cleanup Latin-1 (ISO 8859-1) characters encoded in 8-bit ASCII, Unicode characters encoded in UTF-8, and CGI escaped characters.
+See other episodes for great sed information. I like to remove DOS end of line and end of file characters:
+
+sed -i 's/
+//g' *.txt
+or
+sed -i 's/\r//g' *.txt
+Command-line tools
+
+ack
+awk
+detox
+grep
+pandoc
+pdftotext -layout
+sed
+unix2dos and dos2unix
+wget
+curl
+
+R libraries
+
+RCurl
+XML
+rvest
+tm
+xlsx
+
+Python libraries
+
+beautifulsoup
+csv
+nltk YouTube Series
+rdflib
+re
+
+Vim tricks
+
+buffer searches (:vim /pattern/ ##)
+Ack plugin
+bufdo (:bufdo %s/pattern/replace/ge | update)
+
+Other tools
+
+OpenRefine
+reconcile-csv
+tabula
+

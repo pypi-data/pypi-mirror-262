@@ -1,0 +1,20 @@
+## hpr2487 :: Simple LibreOffice Repo for Fedora
+
+ Simple LibreOffice Repo for Fedora
+My setup: You can look at the real setup. Hosted at home on a DLS connection so real usage is discouraged. https://home.toebesacademy.com/libreoffice/
+Actual Script https://home.toebesacademy.com/libreoffice/LOrepo
+Repo file to put in /etc/yum.repo.d https://home.toebesacademy.com/libreoffice/home.toebesacademy.com.repo
+Cron Entry.  Should be run as web user, not root.
+
+# m h d m w
+# * * * * * command to be executed
+# - - - - -
+# | | | | |
+# | | | | +----- day of week (0 - 6) (Sunday=0)
+# | | | +------- month (1 - 12)
+# | | +--------- day of month (1 - 31)
+# | +----------- hour (0 - 23)
+# +------------- min (0 - 59)
+# m     h    dom mon dow command
+0       3    *   *   *    /var/www/html/libreoffice/LOrepo
+

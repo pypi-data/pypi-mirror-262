@@ -1,0 +1,56 @@
+## hpr3338 :: Using openssl s_client like telnet
+
+ 
+Connect to port 443 and send some HTTP signals:
+
+
+$ openssl s_client -connect example.com:443
+    [...snip...]
+    Verify return code: 0 (ok)
+    Extended master secret: no
+    Max Early Data: 0
+---
+
+
+You're now connected. If you wait too long, your connection will likely time out.
+View the default landing page of the site you've connected with:
+
+
+GET / HTTP/1.1
+HOST: example.com
+
+
+In return, you get a dump of the HTML source of the default page (usually index.html) in your terminal.
+
+
+You can also use OpenSSL s_client for email servers using SSL.
+Before you can send credentials, you must encode your email username and passphrase into Base64. The easiest method I know is this Perl one-liner:
+
+
+$ perl -MMIME::Base64 -e 'print encode_base64("myUserName");'
+$ perl -MMIME::Base64 -e 'print encode_base64("myPassPhrase");'
+
+
+Take note of the results.
+
+
+The s_client session, aside from authentication, is basically the same as a telnet session. You can find good telnet tutorials all over the Internet, and aside from sending your credentials, they apply to s_client.
+
+
+Here's a copy-paste of an example session:
+
+
+$ openssl s_client -starttls smtp -connect email.example.com:587
+> ehlo example.com
+> auth login
+##paste your user base64 string here####
+##paste your password base64 string here####
+
+> mail from: noreply@example.com
+> rcpt to: admin@example.com
+> data
+> Subject: Test 001
+This is a test email.
+.
+> quit
+

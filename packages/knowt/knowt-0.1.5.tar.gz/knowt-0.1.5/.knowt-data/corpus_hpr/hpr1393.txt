@@ -1,0 +1,31 @@
+## hpr1393 :: Audio Metadata in Ogg, MP3, and others
+
+ 
+
+Metadata in MP3, Opus/Ogg/FLAC/Speex, and other audio files.
+
+
+Today's episode discusses (and encourages) the use of metadata tags in audio files. 
+Most of the episode is spent on id3v2.3 (metadata for mp3 files) and vorbiscomments (metadata for opus, ogg vorbis, flac, and speex files), and how to mix them, though metadata in webm/matroska, windows media, and wav files is briefly discussed as well.
+
+
+This episode's files have also been crafted with substantially more metadata than the ID3v1 set of tags that HPR normally limits itself to, to serve as examples.
+
+
+Listeners to the opus, ogg (vorbis), or speex versions will also have access to chapter markings if your playback software recognizes standard vorbiscomment chapter metadata. (No chapter markings in the mp3, as support for it is extremely sparse, and I've not 
+yet even managed to find a tool for making mp3 chapters that actually works - the java utility I mention in the episode crashes on me without starting...)
+
+
+All metadata conforms to the published standards, so your playback software should at best fully use it all, or at worst simply ignore it. If your player software actually DOES have a real problem with this file, I would very much like to know!
+
+
+If there's anything wrong with the metadata, blame Epicanis, not HPR (I did the metadata myself). 
+
+
+If you hear or see any errors in this episode, please tell me. I'll issue appropriate corrections in subsequent episodes. If I'm a big enough screwup with this episode, I could even do a small episode on "everything I got wrong in my metadata episode" if I did 
+badly enough. I don't THINK there should be more than a few minor errors or omissions here, though.
+
+
+ERRATA: In chapter 18 (at 34:53) there is one small error: oggenc does NOT transfer attached pictures from flac input (though it DOES transfer all vorbiscomment metadata. FLAC stores attached pictures in a separate metadata structure so oggenc misses it. 
+opusenc - at least in recent beta versions - DOES appear to transfer the attached pictures as well as the vorbiscomments, though. Another reason to upgrade to opus, I suppose...)
+

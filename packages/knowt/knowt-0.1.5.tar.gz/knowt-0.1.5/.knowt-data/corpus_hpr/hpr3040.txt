@@ -1,0 +1,14 @@
+## hpr3040 :: Why use GNU Autotools
+
+ GNU Autotools is a build system that helps you distribute your code in a predictable and reliable way.
+Build systems offer many benefits, including:
+
+
+Standard and automate-able build process
+hooks into packaging systems (RPM, DEB, Slackbuilds, Flatpak, Snap, and so on)
+version reporting
+build for various OSes
+you get lots of  code to handle every possible corner case, for free
+with a single configuration, you can build your project as the developer, build it for packagers, and enable users to build it for themselves
+
+Next up: how to use GNU Autotools

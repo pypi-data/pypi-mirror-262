@@ -1,0 +1,25 @@
+## hpr1870 :: 19 - Home SSH Server
+
+ 
+The best way to get familiarity with the concepts we will discuss is by experimentation. I think that it is becoming more common these days for people to own more than one computer and set them up in a network. And with cheap computers like Raspberry Pi it is really easy to get started. In this tutorial I want to discuss how you can set up such a server for your experiments in ssh. I encourage you to do this even though I dont intend this series to focus on server administration. The idea is that by practising these these techniques behind a good firewall you can get some familiarity with them before you get out on the Internet where it matters. For most Linux users, at least, installing and setting up a server is really simple, and you can do it minutes.
+For more go to https://www.zwilnik.com/?page_id=847
+
+Links:
+
+https://www.openssh.com/manual.html
+
+https://help.ubuntu.com/community/SSH
+
+https://linuxconfig.org/how-to-install-start-and-connect-to-ssh-server-on-fedora-linux
+
+https://en.opensuse.org/OpenSSH
+
+https://blogs.msdn.com/b/powershell/archive/2015/06/03/looking-forward-microsoft-support-for-secure-shell-ssh.aspx
+
+https://www.raspberrypi.org/documentation/remote-access/ssh/
+
+https://www.openbsd.org/cgi-bin/man.cgi?query=sshd&sec=8
+
+https://www.zwilnik.com/?page_id=847
+
+

@@ -1,0 +1,22 @@
+## hpr4039 :: 3 ways to keep up with Youtube Channels
+
+ YT 3 ways
+
+Watch everything - subscribe
+Watch some - RSS reader
+binge a topic - moonmoon
+
+RSS Bridge
+https://github.com/RSS-Bridge/rss-bridge
+http://lamp.local.lan/rss-bridge/?action=display&bridge=YoutubeBridge&context=By+custom+name&custom=%40BenEater&duration_min=&duration_max=&format=Html
+http://lamp.local.lan/rss-bridge/?action=display&bridge=YoutubeBridge&context=By+username&u=cnn&duration_min=&duration_max=&format=Html
+planets
+
+http://fedoraplanet.org/
+https://fedoraproject.org/wiki/Planet
+
+moonmoon
+
+http://moonmoon.org/
+https://github.com/moonmoon/moonmoon
+

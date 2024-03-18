@@ -1,0 +1,78 @@
+## hpr2938 :: Naming pets in space game
+
+ Intro
+In the two previous episodes we built a weighted list and used that to build markov chains. This time we’re going to use them to generate some names based on examples. I’m skipping over a lot of uninteresting code in this episode, concentrating only the parts that deal with names.
+Idea
+Person in game might hear scurrying sounds inside walls of their quarters. Then they have option of getting a cat, taming a rat or letting someone else deal with the problem. Depending on their choice, they might end up with a cat or a rat, that of course needs a name. Game offers 3 different options of names that haven’t been used before and person can always opt for completely random one.
+Config
+While we’re not going to dig very deep into making configurations for markov chains, we can have look at the overall process.
+We have list of names to serve as examples and three functions, which implementation I won’t delve into:
+
+start for adding starting element
+links for recording link between two elements
+end adds ending element
+
+addName function is used to add single name into config:
+addName :: Int -> Text -> Config Text -> Config Text
+addName n s config =
+    links pairs $
+            end elements $
+            start elements config
+    where
+        elements = chunksOf n s
+        pairs = zip elements (safeTail elements)
+First s (name) is split into strings of length n. These elements are then combined into pairs, where consecutive elements form a pair. Final step is to add start and ending elements into config, followed by links between elements of pairs.
+We can then fold a list of examples into config:
+nameConfig :: [Text] -> Int -> Config Text
+nameConfig xs n =
+    foldr (addName n) emptyConfig xs
+This starts with emptyConfig and calls addName repeatedly until all elements of list containing examples have been processed.
+Implementation
+Now that we have configuration, we can start generating names. As usual, I like to keep things specific and generate PetName instead of just Text. I happened to have list of ancient greek names at hand, so I used that. Later on we’ll have to add more cultures, like Romans, Parthians, Persians, Germans, Phoenicians and so on.
+General implementation of generating infinite list of strings of specific kind is shown below:
+names :: (RandomGen g, Eq b) => (Text -> b) -> Config Text -> g -> [b]
+names t config g =
+    nub $ (t . toTitle . concat) <$> chains config g
+It’s easier to read if you start from right. chains config g generates infinite list of markov chains with given configuration. Next we create a new function (t . toTitle . concat), which uses concat to combine list of Text into single Text, toTitle to capitalize is correctly and t to transform it to something (PetName in our case). <$> is then used to apply this function to each element of our infinite list. Finally nub is used to remove duplicate entries.
+With names we can then define petNames:
+petNames :: (RandomGen g) => g -> [PetName]
+petNames =
+    names MkPetName greekNameConfig
+MkPetName is value constructor that turns Text into PetName (this is t used by names function).
+Pets
+Pets are currently very much work in progress. They have few attributes and there can be two different kinds of pets:
+Pet json
+    name PetName
+    type PetType
+    dateOfBirth StarDate
+    dateOfDeath StarDate Maybe
+    ownerId PersonId
+    deriving Show Read Eq
+data PetType
+    = Cat
+    | Rat
+    deriving (Show, Read, Eq, Ord, Enum, Bounded)
+The actual beef is namingPetEvent function. When applied with Entity Person, Entity Pet and StarDate, it will create News that can be saved into database and later on showed to player. While the code is shown below, I’m not going to go over it line by line:
+namingPetEvent :: (PersistQueryRead backend, MonadIO m,
+    BaseBackend backend ~ SqlBackend) =>
+    Entity Person -> Entity Pet -> StarDate -> ReaderT backend m News
+namingPetEvent personE petE date = do
+    pets <- selectList [ PetOwnerId ==. (entityKey personE)
+                       , PetDateOfDeath ==. Nothing
+                       ] []
+    let names = (petName . entityVal) <$> pets
+    g <- liftIO getStdGen
+    let availableNames = take 3 $ filter (\x -> not (x `elem` names)) $ petNames g
+    let content = NamingPet (NamingPetEvent { namingPetEventPersonId = entityKey personE
+                                            , namingPetEventPetId = entityKey petE
+                                            , namingPetEventPetType = (petType . entityVal) petE
+                                            , namingPetEventDate = date
+                                            , namingPetNameOptions = availableNames
+                                            })
+                            [] Nothing
+    return $ mkPersonalSpecialNews date (entityKey personE) content
+General idea is to use selectList to load living pets of given person and then extract their names. With random generator g, we create a infinite list of PetNames, remove already used names from it and take 3 first ones. These names are then used to create NamingPetEvent.
+In closing
+Names are probably one of the most common applications of markov chains in games. Same technique can be used to generate nonsense books and articles that look realistic on a glance.
+Questions, comments and feedback is welcomed, best way to reach is email or in fediverse where I’m Tuula@mastodon.social. Or even better, record your own episode for Hacker Public Radio.
+ad astra!

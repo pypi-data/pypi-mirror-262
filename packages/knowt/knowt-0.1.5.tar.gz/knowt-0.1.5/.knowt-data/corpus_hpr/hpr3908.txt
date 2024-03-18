@@ -1,0 +1,131 @@
+## hpr3908 :: Emacs package curation, part 2
+
+ We discuss the packages installed in the second of three files that
+make up my emacs config.
+;;; init-base.el ---  The basics
+;;; Commentary:
+;;; Packages for my personal and work laptop, but not termux.
+
+;;; Code:
+
+;;;;;;;;;;;;;;;
+;;; Writing ;;;
+;;;;;;;;;;;;;;;
+
+;; Focused writing mode
+(use-package olivetti
+  :hook (olivetti-mode . typewriter-mode-toggle)
+  :bind ("C-x C-w" . olivetti-mode)
+  :custom (olivetti-body-width 64)
+  :config
+      (defvar-local typewriter-mode nil
+      "Typewriter mode, automatically scroll down to keep cursor in
+      the middle of the screen. Setting this variable explicitly will
+      not do anything, use typewriter-mode-on, typewriter-mode-off
+      and typewriter-mode-toggle instead.")
+      (defun typewriter-mode-on()
+      "Automatically scroll down to keep cursor in the middle of screen."
+        (interactive)
+        (setq-local typewriter-mode t)
+        (centered-cursor-mode +1))
+      (defun typewriter-mode-off()
+      "Automatically scroll down to keep cursor in the middle of screen."
+        (interactive)
+        (kill-local-variable 'typewriter-mode)
+        (centered-cursor-mode -1))
+      (defun typewriter-mode-toggle()
+        "Toggle typewriter scrolling mode on and off."
+        (interactive)
+        (if typewriter-mode (typewriter-mode-off) (typewriter-mode-on))))
+
+(use-package centered-cursor-mode)
+
+;; Check for weasel words and some other simple rules
+(use-package writegood-mode
+  :bind ("C-c g" . writegood-mode))
+
+;; spellchecking
+(use-package flyspell-correct
+  :after flyspell
+  :bind (:map flyspell-mode-map
+              ("C-;" . flyspell-correct-wrapper)))
+
+;; show correction options in a popup instead of the minibuffer
+(use-package flyspell-correct-popup
+  :after (flyspell-correct))
+
+;online thesaurus service from powerthesaurus.org
+(use-package powerthesaurus)
+
+;; WordNet Thesaurus replacement
+(use-package synosaurus
+  :custom (synosaurus-choose-method 'default)
+  :config (when window-system
+            (if (string= (x-server-vendor) "Microsoft Corp.")
+              (setq synosaurus-wordnet--command "C:\\Program Files (x86)\\WordNet\\2.1\\bin\\wn.exe"))))
+
+;; WordNet search and view
+(use-package wordnut
+  :bind ("C-c s" . wordnut-search)
+  :config (when window-system
+            (if (string= (x-server-vendor) "Microsoft Corp.")
+                (setq wordnut-cmd "C:\\Program Files (x86)\\WordNet\\2.1\\bin\\wn.exe"))))
+
+;; fill and unfill with the same key
+(use-package unfill
+  :bind ("M-q" . unfill-toggle))
+
+;; Markdown...
+(use-package markdown-mode)
+
+;;;;;;;;;;;;;;
+;;; Coding ;;;
+;;;;;;;;;;;;;;
+
+;; Syntax checking
+(use-package flycheck
+  :diminish
+  :init (global-flycheck-mode))
+
+(use-package flycheck-popup-tip
+  :after (flycheck)
+  :hook (flycheck-mode-hook . flycheck-popup-tip-mode))
+
+;; Web design
+(use-package emmet-mode
+  :hook (sgml-mode . emmet-mode) ;; Auto-start on any markup modes
+        (css-mode . emmet-mode)) ;; enable Emmet's css abbreviation.
+
+(use-package sass-mode)
+
+(use-package web-mode)
+
+;; Python
+(use-package python
+  :mode ("\\.py\\'" . python-mode)
+  :interpreter ("python" . python-mode))
+
+;; highlight todo items everywhere
+(use-package hl-todo
+  :straight (:host github :repo "tarsius/hl-todo")
+  :custom (hl-todo-keyword-faces
+             `(("FIXME" error bold)
+             ("STUB" error bold)
+             ("REPLACETHIS" error bold)
+             ("REVISIT" error bold)))
+          (hl-todo-exclude-modes nil)
+  :config (add-to-list 'hl-todo-include-modes 'org-mode)
+  :init (global-hl-todo-mode))
+
+;; git
+(use-package magit)
+
+(use-package git-timemachine)
+
+;; rest APIs via org source block
+(use-package ob-restclient)
+
+;;; END ;;;
+
+(provide 'init-base)
+;;; init-base.el ends here

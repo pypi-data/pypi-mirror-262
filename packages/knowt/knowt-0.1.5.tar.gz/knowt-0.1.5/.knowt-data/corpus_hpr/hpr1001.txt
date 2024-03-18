@@ -1,0 +1,650 @@
+## hpr1001 :: HPR Community News May 2012
+
+ New hosts
+
+Welcome to our new host: 
+bgryderclock.
+
+If you would like to become a HPR host then please head over to https://hackerpublicradio.org/contribute.php
+
+
+
+id
+title
+host
+
+
+
+976
+HPR Community News (March 2012)
+HPR Admins
+
+977
+Setting Up a WordPress Blog 2
+Frank Bell
+
+978
+Dead_Hunt
+Various Hosts
+
+979
+Sunday Morning Linux Review Episode 029
+Various Creative Commons Works
+
+980
+Broadband for Rural North
+Ken Fallon
+
+981
+Review Indiana LinuxFest 2012
+Ahuka
+
+982
+LITS: Episode 005 - pmount
+Dann
+
+983
+Freedom is not Free 5 - Get Involved
+Ahuka
+
+984
+Going Linux: Introduction to Podcasting with Linux
+HPR Admins
+
+985
+LFNW: A Short Talk with Thomas Stover
+David Whitman
+
+986
+LFNW: Interview with Scott Newlon of MintCast
+David Whitman
+
+987
+LFNW: Larry Cafiero - the Crunchbang guy
+David Whitman
+
+988
+LFNW: Dawn McKenna of McKenna Interpreting Services
+David Whitman
+
+989
+Juiced Penguin 079 â€“ Early Spring
+Various Creative Commons Works
+
+990
+Portable Apps
+JWP
+
+991
+Making a Music Sampler with Midi and Pygame
+bgryderclock
+
+992
+Linux In The Shell 007 - Chmod and Unix Permissions.
+Dann
+
+993
+Setting up a Wordpress blog - tweaking appearance
+Frank Bell
+
+994
+NELF: John Maddog Hall Talking About Talking About Free Software
+Various Creative Commons Works
+
+995
+Do the four freedoms extend beyond software ?
+Ken Fallon
+
+996
+Command line cheat sheet
+JWP
+
+997
+Poorly Recorded Thoughts On Rural Computing
+lostnbronx
+
+998
+Viva la Federation!
+NYbill and Windigo
+
+999
+Simon Phipps on Open Software: OGG Camp Part One
+Robin Catling
+
+1000
+Episode 1000
+FiftyOneFifty
+
+
+
+Apologies
+
+Apologies to Dave Morriss for missing his show and code contribution
+
+New US Phone Number
+
+The US number has changed to 206-203-5729 while the UK number remains the same +44-203-432-5879
+
+A short report from the HPR Table at LinuxFest Northwest
+
+From: David Whitman 
+
+A friend from work got intersted in going to the LinuxFest and helped at the table - Much thanks to Brad Coffey. We got set up on time and were well received. We had a great run on our swag and ran out of the HPR pin buttons by closing on the first day and handed out quite a few informational cards.The little business cards were really a hit also. Lots of good conversation and exposure for HPR. There was a constant stream of people coming by. I have four interviews on my various recording devices and should be able to get about four to six more from the sign up sheet that was available on the table. With a bit of planning and a more formal interview 'track' (using an appointment schedule and a designated room or area) I am sure a well staffed HPR table could easily get 20 interviews at this fest. Of course I will be interested in 
+seeing if any of the many we talked to produces and post their own show. There was interest. I sensed that many of the speakers would have loved the extra exposure. HPR is probably becoming the embedded reporters of Linux Fests. The unofficial count of attendees that I heard was at "over 800". The table kit is ready to be shipped to the next venue. My intent is to put together a vertical layout canvas that can easily be shipped and set up as a backdrop and utilize a series of those 20 by 30 photo posters available at Costco Photo. This however will have to wait until after my annual spring fling of shutdown work that begins on May 5 and takes up to 3 weeks to complete. I'll post a G+pic of the backdrop we used at this fest. Best swag for me - a Tux 2012 bumper sticker from Pogo Linux. Look for a scan of this on G+ in the near future.
+
+Thanks to the HPR community for the opportunity to represent the show. It was much fun.
+
+davidWHITMAN
+
+New Banner
+
+There was a very kind offer by David Whitman to sponsor a tall free standing banner and the call was put out for a design. Here is the final outcome of the discussions.
+
+
+One Community supporting another
+
+Back in episode https://hackerpublicradio.org/eps.php?id=0980 Broadband for Rural North, I suggested that people could sponsor a meter of cable for their project to show your support. Well they have gone ahead and done it
+https://b4rn.org.uk/sponsor-a-metre. It's £5 for a meter or Special offer, 5 names for £20.
+
+I will also extend the donation deal from the holiday period, so that anyone who donates to this gets some HPR swag when it's available.
+
+Explicit Tag
+
+There was a discussion on whither we should have a ban on swearing. We already have a iTunes explicit tag so assume that all shows may contain controversial material. Hosts are free to add a "safe for work" warning or any other warning they wish to the shows.
+We may add an option in the upload forms to support this on a show by show basis.
+
+Episode 1000 and 1024
+
+A note from Fifty OneFifty
+This is a list of all the TWaTech correspondents that I either I had no contact information for or the best e-mail I could find bounced back:
+
+Adam, Coder365, DarkShadow, Draven, kotrin, Lunarsphere, MrE, spaceout, ThoughtPhreaker, killersmurf, Dominic Uilano, livinded, J-Hood, skyre, kitche, plexi, Scedha, Will Jasen, phizone, operat0r, blackratchet, merk, and Dr^ZigMan  
+
+
+I'd like you to mention the handles and maybe the community can help us make contact with them.  I sent the invitations to the first year HPR correspondents today.  One message bounced back, but I can contact that person by other means.  I'd also like you to read the message below and consider posting it on the site.
+
+
+Hacker Public Radio is inviting the participants in podcasts and organizations that proceeded HPR and led to it's creation to join a recorded panel discussion  on HPR's origins and history.  We are reaching out to TWATech, BinRev Radio, Radio Freak America, Podfert, the Infonomicon Computer Club, and contributors to the first twelve months of HPR.  Our discussion will be recorded via the LinuxBasix.com Mumble server (mumble.openspeak.cc , Port: 64747) and be released as HPR episode 1024 (Stankdawg's idea).  Episode 1024 should fall on 5 July, but we would like to shoot for recording the panel about two weeks before hand.  In case of technical or other unforeseen problems on the primary recording date, a two week lead would give us time to regroup and make a second attempt.  The date and time will be set  to make it convenient for the greatest number of people who are willing to participate to join in.  Connections over Skype and SIP phone via Asterisk are possible, but it would be simplest for everyone to try to use the open source Mumble client.
+
+If you decide to join in (and we hope you will), please include the time zone of where you will be in mid June, especially if you are outside the continental United States.  If there are dates, days of the week and/or times you would like me to avoid scheduling the panel (i.e., "I will be gone June 19-21", "I could only do it on a weekend", "only after 8PM", "only before 10PM") I would like to know that as well.  You may contact the organizers at ep1k@HackerPublicRadio.org
+
+Dedicated News Day
+
+For some reason that escapes us the mail archiver stopped working after the server move. So I'll paste in here the mail list discussions on the dedicated news show. I wanted to make sure that everyone sees this discussion so I'll paste it in here.
+
+
+From: Ken Fallon 
+Date: Mon, 30 Apr 2012 20:00:31 +0200
+
+Hi All,
+
+We mention it on today's show that /dev/random was in the queue for a
+long time and some of the news may have been out of date. Would it be
+an idea to switch one of the days to a "News" show so that we can
+carry shows that review news. Any shows in there would follow the
+regular scheduling rules
+https://hackerpublicradio.org/calendar.php#scheduling_rules.
+
+It's a discussion - let your voice be heard
+
+Ken.
+
+From: kevin granade 
+Date: Mon, 30 Apr 2012 13:27:25 -0500
+
+I think this is a good idea, in fact, perhaps people could request a
+priority level?  Most show ideas I have could sit in the queue for a while,
+and I'd be happy to let more timely shows move ahead.
+
+From: lostnbronx 
+Date: Mon, 30 Apr 2012 16:02:15 -0700
+
+I Think a certain day could easily be put aside as a day for topical
+or timely episodes.  It might be best, though, not to announce it as
+being such to the general listenership, so that if there's a dearth of
+news-type shows one week, another type of ep can be dropped in without
+any need for a special announcement.
+
+
+From: Kevin O'Brien 
+Date: Tue, 01 May 2012 16:03:11 -0400
+
+I'm going to try this again since I hit the wrong button last time and 
+sent it Ken personally instead of to the list.
+
+Just for the sake of discussion it occurs to me that while DeepGeek is 
+on a hiatus for the moment, he had a weekly news spot every Friday. I 
+don't know if there is any understanding that he will come back and 
+resume his spot, but if so, would this mean 2 days a week reserved for 
+newscasts? That might be a bit much.
+
+Regards,
+
+-- 
+Kevin B. O'Brien
+zwilnik@zwilnik.com
+"A damsel with a dulcimer in a vision once I saw."
+
+From: lostnbronx 
+Date: Mon, 30 Apr 2012 16:02:15 -0700
+
+I Think a certain day could easily be put aside as a day for topical
+or timely episodes.  It might be best, though, not to announce it as
+being such to the general listenership, so that if there's a dearth of
+news-type shows one week, another type of ep can be dropped in without
+any need for a special announcement.
+
+
+From: Cobra2 
+Date: Tue, 01 May 2012 17:30:34 -0300
+
+I honestly don't think news should be broadcast over HPR as it dilutes 
+the technology how to with mindless dribble that can be found almost 
+anywhere else. 
+-- cobra2 
+
+From: Todd 
+Date: Tue, 1 May 2012 20:30:10 -0500
+
+I think HPR is a real treasure.  Where else can so many people share
+their ideas.  The strength of HPR is anything and everything is
+acceptable content as long as it is of interest to hackers.  But as I
+look back over the history of HPR, most attempts to add structure or a
+rigorous schedule just haven't worked.  The one exception is the
+current policy of syndicated Thursdays.
+
+I have to agree with cobra2. If people want to do news shows, that's
+great.  But IMHO, unless it is really important (event announcements)
+it should take it's place in the queue with everybody else.  Shows
+like /dev/random are awesome, but it's not because of the news they
+cover.  There awesome because the guests are hilarious.  The stories
+just give them something to talk about.  Even when their news is
+weeks old, they are still fun to listen to.
+
+So, there's my two cents.  For what it's worth from a long time
+listener who has never contributed a show.
+
+Todd
+
+From: Jason Dodd 
+Date: Fri, 04 May 2012 03:56:46 -0400
+
+Why reserve any day?  One of the things I like about hpr is I don't know 
+what to expect.  The more I know what to expect I think the less I'll 
+like it.
+
+From: Kevin O'Brien 
+Date: Fri, 04 May 2012 12:02:29 -0400
+
+I'm a great believer in moderation in most things. I look forward to 
+many of the scheduled shows, and the ones that may not appeal to me 
+probably appeal to lots of other folks. But I would favor not adding to 
+them because part of the charm of HPR is not knowing what to expect. 
+About one time out of every 30-40 shows I will hit the "Next" button on 
+my MP3 player, which is not bad, really. But I would rather the 
+occasional show that does not appeal to me than missing out on the gems.
+
+Regards,
+
+-- 
+Kevin B. O'Brien
+zwilnik@zwilnik.com
+"A damsel with a dulcimer in a vision once I saw."
+
+From: Cobra2 
+Date: Fri, 04 May 2012 13:20:18 -0300
+
+I'm not in favor of dropping rule #2. Unless it is going to be used to 
+syndicate some sort of news show. News is not content it's just a 
+filler if there is nothing else left to talk about. 
+
+I know the rules state of interest to hackers. But the history of HPR 
+and TWAT has been mostly shows that dig deep into a piece of software 
+or hardware or are a detailed how to. Shows that have a fairly long 
+shelf life not something that can be outdated if a week or two passes 
+by.
+-- cobra2 
+
+From: Frank Bell 
+Date: Fri, 4 May 2012 18:53:41 -0400
+
+I tend to agree with this.
+
+Also, as someone who is very new here, I am concerned that, if many 
+slots are filled up with scheduled shows, aspiring contributers miight 
+be dismayed to find that a show uploaded, say today, might not be 
+posted until late June or July.   This can be a demotivator.
+
+As an aside, I can count on both sets of fingers the number of shows 
+I've hit "Next" on.  The variety of HPR is one of its main attractions 
+for me.  Usually, when I do hit "Next," it's because the topic is so 
+technical (say, a programming language) that I can't follow it.  
+
+Once or twice--no more than that--it has been because the premise of the 
+show was nonsensical--nevertheless, thanks to HPR, I got to hear and 
+evaluate the premise, which, without the HPR's variety, I would not have 
+had the opportunity to do.
+
+From: Ken Fallon 
+Date: Sat, 5 May 2012 09:14:08 +0200
+
+OK All,
+
+What I'm hearing is that the following shows will be dropped into the
+regular First come First Served Queue:
+Talk Geek To Me News.
+Dev Random
+
+The following show will be dropped from Syndicated Thursday.
+Sunday Morning Linux Review.
+
+Is this correct ?
+
+Ken.
+
+From: dg 
+Date: Sat, 5 May 2012 07:09:38 -0400
+
+Hi, Guys,
+
+Just wanted to say that whatever you decide is fine by me. The news
+shows I submit to HPR are actually "one half" of my regular show. That
+is to say, I do a special tech-only version of my full world+tech news
+show for HPR.
+
+Therefore, in theory, a news-lover would be able to go to my website
+and subscribe via RSS and get my shows rather quickly, if they so
+desired. 
+
+However, I also need to point out two more things.  First, I agree with
+another poster that a distinction needs to be made between a show that
+is about the guests, with current events thrown in as something for
+them to comment upon; as opposed to my show which is purely about the
+stories (I do rarely make editorial comments, but I try to keep my
+personal opinions to a minimum.)
+
+Second, I disagree with yet another poster that what I offer should be
+"filler" and qualifies as something "that can be found almost
+anywhere." The whole point of all the stories I cover is that a) they
+are not covered by the mainstream media and b) they are, nevertheless,
+timely and important news. In regards to this opinion, I ask you to
+consider whether or not it is widely held amongst the general
+listnership, which to I understand is not entirely present on this list.
+
+Thanks for considering,
+---
+DeepGeek
+
+
+From: Fifty OneFifty 
+Date: Sat, 5 May 2012 12:51:29 -0500
+
+I our discussion of whether we want to keep syndicated shows, we should not
+lose sight of the fact that last year Ken was really scrambling to find
+content to keep HPR broadcasting on a daily basis.  While I think most of
+the shows in syndication would understand, I hate to put Ken in the
+position of saying, "Thanks, but we don't need you any more".  As for
+variety, maybe we consider offering syndicated shows a limited run, 2 or 3
+shows, not in consecutive weeks, as an introduction to our listener base.
+Afterwards it would be incumbent on our listeners to add those shows to
+their queue if they like what they hear.  It will also be up to
+contributors and listeners to look for new shows that we can invite for
+temporary syndication, like pokey has with https://distributedpodcast.com.
+
+FiftyOneFifty
+
+From: David Whitman 
+Date: Sat, 5 May 2012 11:14:31 -0700
+
+I posted this on Henry Patrick Riley (Goggle+)
+
+What about making a MEGA syndicated day and combining 2 or more shows
+together with intro music between and posting the run time when one show
+ends and another begins? Rotate the order which show airs first.﻿
+
+The following is more comments not on G+:
+
+I want produce some 'casual' shows  that could go into an 'emergency' queue
+in case there are times when the regular queue get close to empty. Things I
+want to share, but they are not time critical and I am willing to have HPR
+bank (such as How I found Linux, How to run a car in the Auto-X, A vacation
+to Moab, Utah, Troubleshooting an MR2 using a volt/ohm meter etc. My idea
+is that as soon as the emergency queue gets a month's worth of shows they
+could be put out periodically into the regular queue. They could be tagged
+with a 1-5 tech rating and the more techie ones used first.
+
+How about having 2 parallel  tracks? or 3? HPR News, HPR Command Line, HPR
+Projects, a weekly show track just for news....
+
+All good and fine - I have 3 shows that need editing to help contribute to
+the problem.
+
+Thanks to all the HPR community members and admins. I love the show.
+
+davidWHITMAN
+
+From: Frank Bell 
+Date: Sat, 5 May 2012 15:28:05 -0400
+
+On Sat, 5 May 2012 12:51:29 -0500
+Fifty OneFifty wrote:
+
+> I our discussion of whether we want to keep syndicated shows, we should not
+> lose sight of the fact that last year Ken was really scrambling to find
+> content to keep HPR broadcasting on a daily basis.    
+
+(snip)
+
+>  As for
+> variety, maybe we consider offering syndicated shows a limited run, 2 or 3
+> shows, not in consecutive weeks, as an introduction to our listener base.  
+
+I think these thoughts have a lot of merit.  I rather enjoy learning about 
+new shows through Syndicated Thursdays (I had not heard of the Sunday Morning 
+Linux show until HPR introduced it to me).  Also, I must say I have heard 
+some syndicated shows that I do enjoy, but not enough to actually subscribe 
+to, so I find the idea of maintaining variety appealing..
+
+My concern is that, if there are too many dedicated days, the dedicated days 
+could turn into a regular line-up.  
+
+Just my two cents.
+
+From: Patrick Dailey 
+Date: Mon, 7 May 2012 23:17:11 -0400
+
+This may be the "healthiest" discussion that I've ever seen on the HPR
+mailing list, and I love it. I want to thank each and every person
+subscribed for keeping the conversation respectful, and on topic. Most
+mailing lists that I've seen could not have accomplished that.
+
+As to the scheduling multi-lemma, I have a few thoughts that I would thank
+you all in advance for considering:
+
+We have the kind of crisis that we've always wanted, namely: we have too
+many shows. This is an opportunity that I don't think we should squander.
+At the same time we're trying to establish a scheduling policy that an
+unmanned system can obey. The goal, as I see it, is to create rules that
+can deal with an abundance of shows without wasting them. Right now what we
+have is a scheduling policy that worked very well with a lack of shows, and
+in fact it helped to replenish them. So I believe that we need either: one
+set of rules that can cope with either situation, or two sets of rules and
+a way for a deterministic system to identify and transition between them.
+Please chime in on this if you are good with policy.
+
+As I see it, at least part of what we're dealing with is a resource
+management problem. People create content for us, and sometimes they assume
+that it has an expiration timeframe. Some content simply must be used
+before it's creator feels that it has expired, or we can expect that that
+creator will seek other venues in which to publish their content. We need a
+way of distinguishing "perishable" content from "non-perishable" content.
+We also need a way of putting a date on the perishable content. If you have
+experience with user feedback systems, we could really use your help
+(especially) with this part.
+
+Since identifying potential problems without offering solutions is just
+bitching, I have a couple of suggestions.
+
+Syndicated Thursdays and "timely content"
+I for one, am grateful to the shows who have allowed us to fill holes in
+our que with their content. While the syndicated Thursday slot was
+originally implemented out of necessity, I feel that it is an overall plus
+to continue the practice. We have developed friendly and mutually
+beneficial relationships with other podcasts that I would be hesitant (to
+put it mildly) to sever, and there are other great podcasts that we don't
+even know about yet. I agree with Frank Bell in that I think the syndicated
+Thursday feed is a great discovery tool, and I'd hate to loose it as such,
+but I also see these shows as friends, and I want to make sure that we
+treat them like it. I don't think it's in anyone's best interest for us to
+abandon that kind of relationship, or the content that has so generously
+been offered to us. If (and only if) there is a "Timely news show", I would
+like to see it get the Thursday slot, but in order for the syndicated show
+to not be wasted, I would like to see that show bumped to Saturday.
+
+Scheduled HPR exclusive shows and normal que shows
+I think if people commit to producing scheduled content before they record
+it, and live up to that commitment, that we should honor that commitment.
+Perhaps there needs to be some limit to the number of pre-schedulable slots
+per week and/or month that we make available, so that there is still room
+to play shows from our normal que, but we-as a group decided to ask people
+to produce content for us, and several people have stepped up and
+delivered. Perhaps this is a situation where more than one show should be
+posted per day. I don't know.
+
+While it's easy for me to sit here and suggest these things, I don't think
+that it's fair for any of us to vote for posting more than five shows per
+week unless we are committing to posting more than the requested "one show
+per year" if the que ever gets low again.
+
+Lastly, I believe that new hosts should continue to get the first
+unscheduled slot. This is critical to getting new people to contribute, and
+to return as hosts.
+
+If I'm wrong, or out of line, or TLDR, or whatever... feel free to say so.
+I can take it.
+
+pokey
+
+From: "Frank Bell"
+Date: Tue, 08 May 2012 13:21:53 -0400
+
+On Mon, 07 May 2012 23:17:11 -0400, Patrick Dailey 
+wrote an extremely thoughtful and useful post from the "be careful what  
+you wish for" department:
+
+
+> Syndicated Thursdays and "timely content"  
+
+> loose it as such, but I also see these shows as friends, and I want to  
+> make sure that we treat them like it. I don't think it's in anyone's  
+> best interest for us to abandon that kind of relationship, or the  
+> content that has so generously been offered to us. If (and only if)  
+> there is a "Timely news show", I would like to see it get the Thursday  
+> slot, but in order for the syndicated show to not be wasted, I would  
+> like to see that show bumped to Saturday.  
+
+I think this is a wise suggestion.  I wasn't here when the goal of five  
+days a week was set, but I'm inclined to think that it was intended to be  
+a goal, not a limit.
+
+I would suggest, as an aside, that the scheduling rules could be displayed  
+more prominently.  Currently, they are at the bottom of the calendar.  I  
+think prospective or new (like me) hosts should have their attention drawn  
+to them more forcefully, perhaps by giving them their own page linked from  
+the front page and linking to them from the calendar and from the  
+"Contribute" page.  I also suggest changing the terminology from "rules"  
+to "guidelines";  that's not just PR softening of a phrase, for they are  
+guidelines as exceptions can be made.
+
+It may also be useful to suggest that new hosts glance as the calendar to  
+see when their available slots.  I would also like to see a friendlier  
+calendar, meaning one that looks more like a wall calendar.  If you all  
+wish, I would be happy to explore the WordPress plugins to see what I can  
+find.
+
+I support continuing the practice of bumping new hosts up in the queue.   
+It's a recognition of effort and a motivator.  Frankly, I found it a blast  
+(if an intimidating one) to look at my podplayer and see my own name  
+looking back at me.
+
+> Perhaps there needs to be some limit to the number of pre-schedulable  
+> slots per week and/or month that we make available, so  
+
+This might also be a good idea and it speaks to my concern of HPR's  
+turning in to a line-up of  a few scheduled shows, rather than a platform  
+that's open to newbies like me.
+
+On the other hand, many persons have responded to the need for shows that  
+Ken sounded last fall, not only with shows, but by airing promos on their  
+own podcasts and websites, which leads to exposre which leads to shows (by  
+the way, I think this flowering of support is a tribute to HPR and to the  
+place it has amongst the community).
+
+The flowering may yet wither and need to be watered anew.  In other words,  
+once the enthusiasm wears off, Ken might be having to appeal for shows  
+again.
+
+In other words, I agree with some sort of limit and I lean towards a  
+monthly one, but have no idea what would be a reasonable one.  If I were  
+to try to word that as a guideline, it might come out like "the number of  
+scheduled shows and the intervals between them that HPR can commit to is  
+affected by the number of submissions" and leave it at that--that allows  
+wiggle-room for adjusting to the realities of now.
+
+> that there is still room to play shows from our normal que, but we-as a  
+> group decided to ask people to produce content for us, and several  
+> people have stepped up and delivered. Perhaps this is a situation where  
+> more than one show should be posted per day. I don't know.  
+
+"The following is an HPR special presentation . . . ."
+
+I like it.
+
+Just my two cents.
+
+Once again, thanks for the nice welcome.  This is a good place to be.  (I  
+have just cashed in some rewards points for a decent headset.)
+
+From: Ken Fallon 
+Date: Wed, 9 May 2012 07:10:43 +0200
+
+I've removed the extended calendar so that we have a better view of
+what shows are in the queue. There are under four weeks of shows left,
+acceptable but hardly anything to celebrate about. Without TGTMNews
+and the syndicated shows I would have been back begging for shows by
+now.
+
+Just something to keep in mind.
+
+Ken.
+
+From: Cobra 2 
+Date: Wed, 9 May 2012 13:18:51 -0300
+
+Deepgeek. I just wanted to apologize for using words which caused you to
+feel like I don't appreciate the work that you do every week. (I pull down
+the whole tgtm feed) I'm not going to defend or back down from what I said.
+But I just want you to know that what YOU do is appreciated. You've been a
+part of this community for as long as I can remember. You also put most of
+us to shame on contributing content. So i'm going to go back to my corner
+and attempt to not crush people next time I crawl out of my hole.
+
+Sorry again dude.
+
+--cobra2
+
+From: Frank Bell 
+Date: Sat, 12 May 2012 17:39:48 -0400
+
+On Wed, 9 May 2012 07:10:43 +0200
+Ken Fallon <ken.fallon@gmail.com> wrote:
+
+> I've removed the extended calendar so that we have a better view of
+> what shows are in the queue.  
+
+That is much easier to read.  Thank you.
+
+I'm planning to do a simple tutorial on prepping pictures for posting to 
+website with the GIMP.  I started my outline today and hope to have it done 
+within two weeks.
+

@@ -1,0 +1,40 @@
+## hpr3039 :: Making a Raspberry Pi status display
+
+ Introduction
+I have had a project on my To Do list for a while: to make a status display from a Raspberry Pi. My vision was to show the state of various things including some HPR stuff, and I had imagined setting up a Pi with a monitor and controlling it over SSH.
+I started on the project over the Christmas period 2019. I have a Raspberry Pi 3A+, which is a sort of souped-up Pi Zero, which I bought on a whim and hadn’t found a use for (Yannick reviewed this RPi model in show 2711). I also had an old square Dell monitor from about 15 years ago which still worked (at least to begin with).
+I had imagined I’d write some software of my own with a web front end which ran various tasks to monitor things.
+However, in my researches I came across MagicMirror2 which I thought I might be able to use instead of writing my own thing.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+JavaScript programming language:
+
+Wikipedia entry
+
+Node.js JavaScript runtime environment:
+
+Website
+Wikipedia entry
+
+Electron software framework:
+
+Website
+Wikipedia entry
+
+MagicMirror2:
+
+GitHub page
+Website
+List of third-party modules
+
+Resources:
+
+Example files:
+
+config.js
+custom.css
+
+
+

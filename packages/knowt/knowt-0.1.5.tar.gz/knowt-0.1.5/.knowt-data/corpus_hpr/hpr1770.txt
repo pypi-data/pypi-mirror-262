@@ -1,0 +1,13 @@
+## hpr1770 :: The OpenDyslexic Font
+
+ In this episode I talk about how you can take advantage of the OpenDyslexic font as a user, and also how as a content provider you can use it to help your readers. Incidentally, we also talked about this for a while during episode 1418, one of the 2013 New-Year shows. 
+Links
+
+OpenDyslexic's Website: https://opendyslexic.org/
+Debian, Ubuntu package name: fonts-opendyslexic
+Fedora package name: opendyslexic-fonts
+Arch package name: open-dyslexic-fonts
+Chrome Browser Extension
+Firefox Browser Add-on
+CSS3 Web Fonts Documentation: https://www.w3schools.com/css/css3_fonts.asp
+Download dyslexic-friendly version of counterpoint books: https://jonathankulp.org/gratis.html

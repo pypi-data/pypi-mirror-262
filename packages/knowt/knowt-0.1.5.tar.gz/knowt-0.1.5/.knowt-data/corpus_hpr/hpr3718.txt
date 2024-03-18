@@ -1,0 +1,27 @@
+## hpr3718 :: Making Ansible playbooks to configure Single Sign On for popular open source applications
+
+ This is a recording of a short introduction into my latest
+project.
+To help sysadmins everywhere the Onestein organization (an
+organization specialized in Odoo implementations) invested 4 month of
+research to create a set of easy to use Ansible playbooks to configure
+single sign on (SSO) for popular open source applications to enable them
+to authenticate to a Keycloak server as the central identity
+provider.
+These playbooks have been published on https://github.com/onesteinbv/project_single_sign_on.
+The list of supported applications are currently:
+
+Bitwarden
+Jenkins
+Gitlab
+Keycloak (not SSO, but the identity provider)
+Nextcloud
+Odoo
+Xwiki
+Zabbix
+
+All playbooks and servers are for Ubuntu servers and are meant to be
+used as a starting point.
+5 minute YouTube talk at the 2022 Nextcloud conference about this
+project:
+https://www.youtube.com/watch?v=pDPKzo8Bi10

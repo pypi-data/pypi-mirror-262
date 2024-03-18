@@ -1,0 +1,107 @@
+## hpr3252 :: Simple JSON querying tool (also YAML, and to a lesser extent XML)
+
+ JSON
+Json is a cool little data serialization language, that allows you to easily and clearly demarcate blocks of data by nesting data structures such as lists (enclosed by square brackets) and key-value pairs or "dictionaries" (enclosed by curly braces). So that in the end you get something that looks like this
+{
+"first list" : [ "element1", "element2", {"element3" : "is another k-v pair", "but contains" : ["a" , "list", "of", "words"]}] ,
+"this value is a string" : "1" ,
+"and this is a number" : 23 ,
+"and floating point" :  1.413
+}
+Aside from:
+
+Lists are enclosed in [] and each element is separated by ,
+Key-value pair lists are enclosed in {} and have the key and value separated by : and each pair is separated by ,
+Keys have to strings quoted with double quotes
+Numbers may be left unquoted (but just in value fields)
+
+There are no restrictions to what you can do with JSON. Given how explicit the syntax is then, it makes for very easy parsing, and there are plenty of good parser out there. My favourite JSON parser is jq(1).
+A canonical representation of the JSON example above can easily be obtained with jq by simply calling jq '' file.json (or piping the file through stdin, or even putting the contents properly quoted as the second argument).
+{
+  "first list": [
+    "element1",
+    "element2",
+    {
+      "element3": "is another k-v pair",
+      "but contains": [
+        "a",
+        "list",
+        "of",
+        "words"
+      ]
+    }
+  ],
+  "this value is a string": "1",
+  "and this is a number": 23,
+  "and floating point": 1.413
+}
+You can also use jq in a shell script to obtain, for example the second element of the first list:
+$ jq '."first list"[1]' example.json
+"element2"
+So to get the value associated to a key you use the notation .key and to get the k-th element you use the notation [k-1]. To remove the quotes on the string you can use the -r flag which stands for raw output.
+jq(1) also gives you a few more functionalities that can be useful like getting the number of elements in a list with the length function.
+$ jq 'length'  example.json
+3
+$ jq '."first list"[2]."but contains" | length'
+4
+Another useful feature is getting the list of keys from a key-value pair list which can be done with the function keys
+$ jq '."first list"[2] | keys[]' example.json
+"but contains",
+"element3"
+The query language is much much more flexible than this, but for most cases this should be enough for simple configuration querying.
+YAML and XML??
+The yq project allows one to use the exact same syntax as jq to query, and emit (and therefore also transcode) yaml and XML, extending the usefulness of the query language.
+So for example looking at the previous file through yq gives:
+$ yq -y '' example.json
+first list:
+  - element1
+  - element2
+  - element3: is another k-v pair
+    but contains:
+      - a
+      - list
+      - of
+      - words
+this value is a string: '1'
+and this is a number: 23
+and floating point: 1.413
+And the output of this can be of course queried with yq itself, or can be used to feed into whatever application requires a yaml input (I guess it lacks the triple dash at the top, but that is actually the only warning I get from passing that abomination to yamllint)
+Similarly xq can be used to query XML files with the same language. However, to emit these files from json you need to use yq -x like so:
+$ yq -x '' example2.json
+<file>
+  <first_list>element1</first_list>
+  <first_list>element2</first_list>
+  <first_list>
+    <element3>is another k-v pair</element3>
+    <but_contains>a</but_contains>
+    <but_contains>list</but_contains>
+    <but_contains>of</but_contains>
+    <but_contains>words</but_contains>
+  </first_list>
+  <this_value_is_a_string>1</this_value_is_a_string>
+  <and_this_is_a_number>23</and_this_is_a_number>
+  <and_floating_point>1.413</and_floating_point>
+</file>
+where the original (modified) file example2.json looks like:
+{
+    "file":
+    {
+      "first_list": [
+        "element1",
+        "element2",
+        {
+          "element3": "is another k-v pair",
+          "but_contains": [
+            "a",
+            "list",
+            "of",
+            "words"
+          ]
+        }
+      ],
+      "this_value_is_a_string": "1",
+      "and_this_is_a_number": 23,
+      "and_floating_point": 1.413
+    }
+}
+So that the root dictionary has a single key-value pair and all the keys have no spaces in them (so that they can be made into xml tags).

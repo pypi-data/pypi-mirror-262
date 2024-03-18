@@ -1,0 +1,196 @@
+## hpr1240 :: Doomsday Rule
+
+ 
+HPR Episode: Doomsday Perpetual Calendar Method
+
+What is it?  https://en.wikipedia.org/wiki/Doomsday_rule  
+  (due to John H. Conway, a mathematician born in Liverpool)
+
+  * He's done other research that hackers might like to check out.  
+  * Look up the "Game of Life" and "cellular automata".  
+  * There may be episodes on these topics, but those should come
+      with visualization software.
+
+John H. Conway
+  https://en.wikipedia.org/wiki/John_Horton_Conway
+
+Game of Life
+  https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+  
+
+Doomsday Rule lets you find the day of the week for any date
+  * Dates in history, in immediate past or in future are all good.
+  * Works for both the Gregorian and Julian calendar.  
+    - I'll only be looking at Gregorian dates for now.
+    - Method should work well for dates from 1800 onward.
+    - If dates for non-Gregorian calendars are converted to their
+        (extrapolated) Gregorian equivalents, this method works.
+
+Wikipedia entry (includes recent optimization):
+  https://en.wikipedia.org/wiki/Doomsday_algorithm
+
+
+Why do this?  It came up in Episode Zero of my "N Days" show on 
+calendar counting, where I used it without explanation.
+
+  https://hackerpublicradio.org/eps.php?id=1143
+
+
+Demos: Check these answers at www.day-calculator.com  
+  * Some listeners may now adjourn to the latest Linux Outlaws episode.
+
+
+Method: Get Century Anchor Day, calculate offset for the year to find
+   Doomsday's reference location for current year, find closest 
+   reference date to target date, and count off to the answer.
+
+a) Isaac Newton's date of birth: 
+   - 25 December 1642 - 1600's Tuesday. 
+     Year 42 = 3*12 + 6 and (6/4) = 1. 
+     Hence 3 + 6 + 1 = 10 for an offset of 3.
+     Tuesday + 3 = Friday.  12/12 is Friday, so 12/26 is Friday
+     Newton was born 12/25, so that was a Thursday
+
+b) My grandfather's date of birth:
+   - 20 January 1898 - 1800's anchor is Friday.  
+     Year 98 = 8*12 + 2, (2/4) = 0.  
+     So 8 + 2 + 0 = 10 gives an offset of 3.
+
+   - 1898 wasn't a leap year, so 10 January was Monday 
+   - That means 17 January was a Monday, too.
+   - So 20 January 1898 was a Thursday.
+
+c) A wedding anniversary that I like to remember: 15 May 2000
+   - 2000 has anchor day on Tuesday, and no offset.
+   - Rule: "I work 9 to 5 at 7-11", so 9 May (16 May) are on Tuesday.
+   - 15 May 2000 was a Monday.  True.  'Twas the day after Mother's Day.
+   
+d) My parent's wedding day: 19 May 1957
+   - 1900 has anchor day Wednesday.  57 = 4*12 + 9 and (9/4) = 2. 
+   - So 4 + 9 + 2 = 15 or an offset of 1.
+   - 9 May is Thursday, as is 16 May.  The 19th is 3 days later.
+   - So 19 May 1957 was a Sunday.
+
+
+Plan: I'm going to reveal the magic behind this, and introduce some 
+mental shortcuts to help you learn to do this in your head.  
+
+If you can master the 12's row in your times tables up to 8 times 12, 
+and the 4's row up the 20s or 30s, and you can tell time on a 12-hour 
+clock, you should be able to do this.  
+
+We're not in school, so paper and pencil to track the numbers, and 
+finger-counting offsets to days of the week are all allowed. 
+
+
+Explanation:
+1. Certain memorable dates fall on the same day of the week as
+   "Doomsday" = last day of February, whatever that is.
+
+2. Dates recycle every 400 years, and Doomsday Anchor dates by Century
+   are 1600: Tuesday, 1700: Sunday, 1800: Friday, 1900: Wednesday.
+
+3. That's enough, but to simplify mental math notice 12-year cycles.
+   - Every completed 12 years pushes the days of the week ahead by +1
+   - Each year within the current incomplete cycle adds +1
+   - Each leap year in current cycle adds +1 (including current year) 
+
+4. Doomsday dates are:
+   a. January 10 and Doomsday (last day of February)
+   
+   b. Odd months: Add +4 through July, then subtract 4.
+      7 March, 9 May, 11 July
+      5 September, 7 November
+   
+   c. Even months are reflexive: 4/4, 6/6, 8/8, 10/10, 12/12
+
+
+See the attached spreadsheets for examples and annotated calculations.
+
+ - LibreOffice Calc: 229-Charles-in-NJ-Doomsday-Rule-v1.ods
+ 
+ - Excel 5/95 'xls' for LibreOffice or Gnumeric:
+     229-Charles-in-NJ-Doomsday-Rule.xls
+ 
+ - Gnumeric: 229-Charles-in-NJ-Doomsday-Rule-v1.gnumeric
+
+
+Bonus Content:
+ - Excel VBA module: 229-Charles-in-NJ-Doomsday-Rule.vbaxl.bas 
+     * Import the .bas module
+     * Input is an Excel "Date" object
+     * Very proprietary formats and code, but some people use it.
+ 
+ - Python:  doomsday.py
+     * Contains two functions:  Each returns a string value for the day
+          of the week, e.g., "Sunday"
+       
+       dayOfWeek(year, month, day): Doomsday is last day of February,
+          and the (month, day) are converted to relative ordinal dates.
+          For leap years, we have to push both Doomsday and any target
+          date after 28 February up by one for the leap day.
+       
+       dayOfWeek2(year, month, day): Doomsday date anchors are computed
+           for each month, so leap years require adjustments to the
+           anchors for January and February to account for the shift
+           in the February ending date.  Later months are fine.
+
+ - Script for GNU 'bc': doomsday.bc is a bc 'port' of the Python code
+     * Differences: Return value is a number from 0-6 that represents
+         the day of the week by its relative position.
+         
+       0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, 
+       4 = Thursday, 5 = Friday, 6 = Saturday
+ 
+     * In a shell, run 'bc' with the filename as an argument:
+       catintp@Derringer:~$  bc doomsday.bc
+       
+       - This loads the two functions in the file.  You can invoke them
+           within 'bc' like any other function:
+           
+       dayofweek(1981, 5, 15)
+       dayofweek2(1642, 12, 25)
+       dayofweek(2013, 11, 22)
+       dayofweek2(2059, 5, 19)
+
+ - Alternate Script for GNU 'bc': doomsday2.bc 
+     * Return value is still a number from 0-6 that represents
+         the day of the week by its relative position.
+     
+     * Uses a side effect to print a human-friendly answer.   
+     
+     * English only, but localisation should be easy.
+
+Links
+
+https://hackerpublicradio.org/eps/hpr1240/20130401T171122Z_229_Charles_in_NJ_Doomsday_Rule.zip
+https://en.wikipedia.org/wiki/Doomsday_rule
+
+https://en.wikipedia.org/wiki/John_Horton_Conway
+
+https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+
+https://en.wikipedia.org/wiki/Doomsday_algorithm
+
+https://hackerpublicradio.org/eps.php?id=1143
+
+https://www.day-calculator.com
+
+https://hackerpublicradio.org/eps/hpr1240/229-Charles-in-NJ-Doomsday-Rule-v1.ods
+
+https://hackerpublicradio.org/eps/hpr1240/229-Charles-in-NJ-Doomsday-Rule-v1.xls
+
+https://hackerpublicradio.org/eps/hpr1240/229-Charles-in-NJ-Doomsday-Rule-v1.gnumeric
+
+https://hackerpublicradio.org/eps/hpr1240/229-Charles-in-NJ-Doomsday-Rule.vbaxl.bas
+
+https://hackerpublicradio.org/eps/hpr1240/doomsday.py
+
+https://hackerpublicradio.org/eps/hpr1240/doomsday.bc
+
+https://hackerpublicradio.org/eps/hpr1240/doomsday.bc
+
+https://hackerpublicradio.org/eps/hpr1240/doomsday2.bc
+
+
+

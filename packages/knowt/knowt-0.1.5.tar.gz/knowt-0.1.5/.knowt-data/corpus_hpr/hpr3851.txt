@@ -1,0 +1,34 @@
+## hpr3851 :: Firefox extensions
+
+ The following is a list of the extensions I have enabled all the
+time.
+
+Absolute
+Enable Right Click and Copy Force Enable Right Click & Copy
+Awesome
+RSS Puts an RSS/Atom subscribe button back in URL bar.
+cookies.txt
+Exports all cookies to a Netscape HTTP Cookie File, as used by curl,
+wget, and youtube-dl, among others.
+Don't
+Feck With Paste This add-on stops websites from blocking copy and
+paste for password fields and other input fields.
+Firefox
+Multi-Account Containers Lets you keep parts of your online life
+separated into color-coded tabs. Cookies are separated by container,
+allowing you to use the web with multiple accounts.
+https://tools.google.com/dlpage/gaoptout
+Tells the Google Analytics JavaScript not to send information to Google
+Analytics.
+KeePassXC-Browser
+Official browser plugin for the KeePassXC password manager (https://keepassxc.org) the
+Cross-platform Password Manager
+ModHeader
+- Modify HTTP headers Modify HTTP request headers, response headers,
+and redirect URLs
+uBlock
+Origin Finally, an efficient blocker. Easy on CPU and memory.
+User-Agent
+Switcher Switch between popular useragent strings from toolbar
+popup!
+

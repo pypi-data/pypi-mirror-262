@@ -1,0 +1,39 @@
+## hpr1951 :: Some additional Bash tips
+
+ Some additional Bash tips
+Expansion
+As we saw in the last episode 1903 there are seven types of expansion applied to the command line in the following order:
+
+Brace expansion (we looked at this subject in episode 1884)
+Tilde expansion (seen in episode 1903)
+Parameter and variable expansion (this was covered in episode 1648)
+Command substitution (seen in episode 1903)
+Arithmetic expansion
+Word splitting
+Pathname expansion
+
+There is also another, process substitution, which occurs after arithmetic expansion on systems that can implement it.
+We will look at one more of these expansion types in this episode but since there is a lot to cover, we'll continue in a later episode.
+I have written out a moderately long set of notes about this subject and these are available here https://hackerpublicradio.org/eps/hpr1951_full_shownotes.html.
+Audio Note
+This time, in the spirit of experimentation and as a way of learning Audacity I processed my audio thus:
+
+Turned the stereo tracks to mono
+Used a Noise Gate plug-in to reduce background noise (after "training" it on some silence)
+Performed a Truncate Silence pass to reduce the length of pauses
+Applied a small amount of amplification
+
+Let me know if this had any positive or negative effects on the end product.
+Links
+
+Bash Reference Manual:
+
+Arithmetic Expansion: https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html#Arithmetic-Expansion
+Shell Arithmetic: https://www.gnu.org/software/bash/manual/html_node/Shell-Arithmetic.html#Shell-Arithmetic
+
+HPR episode 1202 "LiTS 025: bc" hosted by Dann Washko: https://hackerpublicradio.org/eps.php?id=1202
+HPR episode 1648 "Bash parameter manipulation": https://hackerpublicradio.org/eps.php?id=1648
+HPR episode 1843 "Some Bash tips": https://hackerpublicradio.org/eps.php?id=1843
+HPR episode 1884 "Some more Bash tips": https://hackerpublicradio.org/eps.php?id=1884
+HPR episode 1903 "Some further Bash tips": https://hackerpublicradio.org/eps.php?id=1903
+

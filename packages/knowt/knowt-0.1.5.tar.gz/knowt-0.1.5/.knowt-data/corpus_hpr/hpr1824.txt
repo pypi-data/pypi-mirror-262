@@ -1,0 +1,29 @@
+## hpr1824 :: I'm Learning Some Python
+
+ 
+I'm Learning Some Python
+Lately I'm finally getting around to learning some Python. I wouldn't go as far as to say I'm learning it properly—that's not really my way—I'm kind of poking around in the dark learning things on an "as-needed" basis, but I'm finding that it's incredibly powerful and making me much more efficient in my daily life. In this podcast I discuss some of my favorite ways of using it and some of the cool modules and libraries that I've found that make things surprisingly easy in Python that used to be difficult for me in bash.
+What I Use It For
+
+Website build scripts, both for the School of Music and for my personal website. Converted from bash, tested and working fine on Windows and Mac.
+Text manipulation scripts, used in conjuction with blather. These do things like change text case, remove spaces, and so forth. 
+Text entry. Voice commands insert various kinds of text templates or canned email responses for my classes. Also used in conjunction with blather.
+Adding or stripping HTML tags to/from selected text.
+Getting current weather conditions and forecasts, having results spoken back to me using system text-to-speech engine.
+Fun blather commands where I interact with my computer and have it talk back to me.
+
+Favorite Python Modules/Libraries
+
+pyperclipA cross-platform clipboard module for Python. (only handles plain text for now) https://pypi.python.org/pypi/pyperclip/1.5.11
+pyttsxA Python package supporting common text-to-speech engines on Mac OS X, Windows, and Linux. https://pypi.python.org/pypi/pyttsx
+bs4HTML parsing library. Beautiful Soup Documentation
+htmlminA configurable HTML Minifier with safety features. https://pypi.python.org/pypi/htmlmin/
+smartypantssmartypants is a Python fork of SmartyPants, which easily translates "plain" ASCII punctuation characters into “smart” typographic punctuation HTML entities.
+titlecaseChanges all words to Title Caps, and attempts to be clever about SMALL words like a/an/the in the input. https://pypi.python.org/pypi/titlecase
+swnamerA name generator that uses Star Wars characters, species and planets to create un fisique names. https://pypi.python.org/pypi/swnamer/0.1.0
+
+Demo Screencasts
+
+Blather + Python: Insert Text from Predefined Nested Lists Using Voice Commands: https://www.youtube.com/watch?v=6futHS4JLsU
+Blather: "too much coffee?" python script: https://www.youtube.com/watch?v=GTDMi1zF76c
+

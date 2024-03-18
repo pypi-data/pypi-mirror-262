@@ -1,0 +1,44 @@
+## hpr3796 :: Dependent Types
+
+ I discuss dependent types, which are types that can contain non-type
+programs. An example of a dependent type is a list whose type contains
+its length. Instead of just writing List<String> for
+a list that contains strings, dependent types include types like
+List<String, 5> that describe lists of exactly five
+strings. Dependent types can also be used to represent mathematics, in
+which case the programs that they describe count as proofs, and tools
+from programming can be used to write math.
+Dependent types used to be something that really required a research
+background, but there has been a lot of progress on making them more
+user-friendly and on writing accessible introductions lately.
+Languages mentioned:
+
+Idris is a self-hosted
+dependently typed language with type-level resource tracking
+Agda
+is a testbed for new ideas in dependently typed programming
+Lean 4 is a self-hosted
+dependently typed language that has a more conservative logical core
+than Idris or Agda, and attempts to appeal more to practicing
+mathematicians.
+Coq is a proof assistant based
+on dependent types that has been used to fully mathematically verify a C
+compiler
+
+Books mentioned:
+
+The Little Typer, by
+Daniel P. Friedman and David Thrane Christiansen is an intro to the core
+ideas of dependent types, in dialog form
+Type
+Driven Development with Idris by Edwin Brady, the creator of Idris,
+describes an approach to programming that uses expressive types as a way
+to make programmers' lives easier
+Programming Language Foundations
+in Agda by Phil Wadler, Wen Kokke, and Jeremy Siek describes the use
+of Agda for both programming and proving
+Software
+Foundations is a series of books that use Coq as an introduction to
+mathematically rigorous software development in a proof assistant. It's
+how I initially learned these topics!
+

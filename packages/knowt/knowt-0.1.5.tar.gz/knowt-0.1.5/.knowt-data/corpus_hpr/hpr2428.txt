@@ -1,0 +1,17 @@
+## hpr2428 :: git Blobs
+
+ How do you manage large binary blobs, like pictures or video or sounds, when using git?
+In this episode, Klaatu explains two popular options:
+
+
+
+git-media
+
+
+
+
+git-annex
+
+
+
+Thanks to CapsLok at freesound.org for the sound effect.

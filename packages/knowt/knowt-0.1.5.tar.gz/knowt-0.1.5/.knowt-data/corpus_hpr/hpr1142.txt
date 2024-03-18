@@ -1,0 +1,10 @@
+## hpr1142 :: LiTS 020: pgrep and pkill
+
+ 
+This episode the focus will be on two commands that go hand-in-hand: pgrep and pkill. Like the kill command, pkill is used to send a signal to a process usually with the intent to terminate or stop the process. Instead of passing the Process ID (PID) you can pass the process name:
+
+pkill xterm
+
+
+For the rest of this episode please check out the shownotes and video at https://www.linuxintheshell.com/2012/12/18/episode-20-pgrep-and-pkill/
+

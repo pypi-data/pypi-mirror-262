@@ -1,0 +1,42 @@
+## hpr3236 :: The State of Linux Audio Apps in 2020
+
+ Pat and Claudio discuss the current state of Linux audio applications in 2020. The primary focus is applications to create music. We discuss Linux sound servers (Pulse, ALSA and Jack). Software synthesizers available in Linux. Midi, sequencers and drum machines. Digital Audio Workstation applications. Impulse Responses for guitar and bass speaker emulation. Commercial vendors that support the Linux platform. Music equipment vendors that use Linux as the basis of their products.
+
+
+This page has been around for years.  Some links might be stale or dead.
+https://linux-sound.org/
+
+Some of the sound fonts I've used:
+https://midkar.com/soundfonts/
+https://www.pvv.org/~hammer
+https://www.michaelpichermusic.com/sample-libraries
+
+MIDI/Music software discussed:
+JACK (JACK Audio Connection Kit)
+https://jackaudio.org/
+Qtractor
+https://qtractor.sourceforge.io/
+Ardour
+https://ardour.org/
+Reaper
+https://www.reaper.fm/index.php
+Carla
+https://kx.studio/Applications:Carla
+Duality Bass 
+https://audio-assault.com/duality.php
+
+My Soundcloud page.
+https://www.soundcloud.com/claudiom72
+
+Open source synthesizers:
+https://www.moddevices.com/
+https://www.linuxsynths.com/
+https://en.wikipedia.org/wiki/Korg_OASYS (Finally found that hardware Linux-based synth.)
+https://synthesia.sourceforge.net/
+https://zynthian.org/ (Don't remember if this was mentioned, but here it is. :-p)
+
+Pipewire
+https://pipewire.org/
+
+unfa
+https://www.youtube.com/channel/UCAYKj_peyESIMDp5LtHlH2A

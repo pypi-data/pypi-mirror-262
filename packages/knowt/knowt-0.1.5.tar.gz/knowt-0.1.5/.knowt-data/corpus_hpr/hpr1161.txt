@@ -1,0 +1,64 @@
+## hpr1161 :: PAM Two Factor Auth SSH
+
+ 
+Thank you to Broke For Free and for their Creative Commons album Broke For Free: Slam Funk, which was used during this latest show at HackerPublicRadio.org
+
+Good sources of information for PAM
+
+https://www.netbsd.org/docs/guide/en/chap-pam.html
+https://en.wikipedia.org/wiki/Two-factor_authentication
+
+Overview of PAM Security
+
+Definition: Presenting two or more from something you have, something you know, and something you are.
+Centos /etc/pam.d/
+Debian /etc/pam.d/ (common-auth exists in Debian and its a system wide security implementation for all pam.d applications)
+
+Google Two Factor Authentication
+
+MNXSolutions.com,Old instructions but still useful
+ Webbynode.com, Useful but still uses outdated mercurial steps
+Google two factor auth git repo source
+
+General Instructions
+
+Install git, gcc, and make on your system
+$ apt-get install git make gcc
+$ yum install git make gcc
+
+Execute git command as noted on google's site:
+$ git clone https://code.google.com/p/google-authenticator/
+Compile and install the google two factor auth PAM module and application
+$ cd google-authenticator/libpam/
+$ make install
+
+Add the following lines to the /etc/pam.d/sshd
+auth     required     pam_google_authenticator.so
+
+Location of SSH server configurations
+/etc/ssh/sshd_config
+
+Add/modify the following stanza to SSH server configuration:
+ChallengeResponseAuthentication yes
+
+Create Google two factor profile for SSH user and answer the setup questions based off your preferences
+$ google-authenticator
+
+Restart SSH server
+$ service ssh restart (on CENTOS try $ service sshd restart)
+
+Wrap Up
+
+In Debian based systems you can comment out the system wide common-auth by simply adding a # to the beginning of the @include common-auth.
+If you want to use google two auth with other applications simply add it to the appropriate /etc/pam.d/ file
+Other useful PAM modules include the Barada module: libpam-barada (OTP with Android Client), pam_winbind (Samba Active Directory authentication module), and many more.
+Make sure you have dual SSH connections and are sudo or su as a privileged user. Also make sure any files you configure today are backed up before you edit them. 
+When setting up Two Factor Auth profiles, go into cleanup mode to ensure you don't use the QR code url where it can be later retrieved from your url history. Also make sure you cleanup your command line and clipboard history so that emergency scratch codes and secret keys can't be found by wondering eyes.
+
+Podcasts worth mentioning.
+
+Linux Outlaws
+Network Security Podcast
+Risky Business Podcast
+
+

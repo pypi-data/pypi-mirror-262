@@ -1,0 +1,25 @@
+## hpr1491 :: Heartbleed
+
+ 
+The "Heartbleed" vulnerability in OpenSSL (CVE-2014-0160) is a bounds checking
+error in the heartbeat implementation that could return up to 64K of private
+data to the client. This can lead to server certificate private keys, session
+cookies, clear text passwords, or other sensitive data being leaked from the
+server to the client. This vulnerability exists in OpenSSL versions 1.0.1 through 1.0.1f and 1.0.2 beta.
+
+
+It is important for server administrators to update OpenSSL as soon as possible
+and take steps to secure any private data which may have been leaked. This may
+include updating server certificates and revoking certificates that may have
+been compromised.
+
+
+Users should ensure that web sites they use have been secured and should update
+passwords or other authentication information.
+
+
+CVE info: https://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160
+
+
+
+

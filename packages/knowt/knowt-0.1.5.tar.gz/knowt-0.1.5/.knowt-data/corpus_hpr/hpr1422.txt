@@ -1,0 +1,21 @@
+## hpr1422 :: Setting up and using SSH and SOCKS
+
+ 
+In this episode I go through how I set up SSH and SOCKS.  This is very useful when you need to feel a bit more secure in your internet traffic and need to keep out of prying eyes.  I also go over some tools used to access your home network from a Windows computer.
+
+
+Links:
+
+
+Klaatu's Show on SSH : https://gnuworldorder.info/audiophile/archive/season8/gnuWorldOrder_8x20.ogg
+
+DynDNS : https://dyn.com/dns/
+
+DDClient : https://sourceforge.net/p/ddclient/wiki/Home/
+
+Linksys E2500 : https://support.linksys.com/en-us/support/routers/E2500
+
+PuTTy : https://www.putty.org/
+
+Portable Firefox : https://portableapps.com/apps/internet/firefox_portable
+

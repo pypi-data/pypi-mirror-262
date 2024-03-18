@@ -1,0 +1,28 @@
+## hpr1363 :: Some pacman Tips By Way of Repacing NetworkManager With WICD
+
+ A while back, I used my Arch laptop to pre-configure a router for a customer, which of course required me set up a static IP on my eth0. I should have done this from the command line, instead I used the graphical Network Manager. I had a lot of trouble getting the graphical application to accept a change in IP, and in getting to go back to DHCP when I was done, and I wound up going back and forth between the Network Manager and terminal commands. I've mentioned before my ISP is behind two NATed networks, the router in the outbuilding where the uplink to the ISP is (this is also the network my server is on) and the router in my house. The static IP I used for the customer router configuration was in the same address range as my "outside" network Though I successfully got eth0 back on DHCP, there was a phantom adapter still out there on the same range as the network my server was on, preventing me from ssh'ing in. I did come across a hack, if I set eth0 to an IP and mask of all zeros, then stopped and started dhcpcd on eth0, I could connect. I had also used the laptop on a customer's WiFi recently, and the connection was horrible.
+I decided to see if just installing the wicd network manager would clear everything up (and it did), but before installing Wicd, I had to update the system, so first a little bit about pacman
+Arch's primary package manager is pacman. The -S operator is for sync operations, including package installation, for instance:
+# sudo pacman -S <package_name>
+ ..... installs a package from the standard repos and is more or less equivalent to the Debian instruction .... 
+# sudo apt-get install <package_name>
+ The option -y used with -S refreshes the master package list and -u updates all out of date packages, so the command 
+
+# sudo pacman -Syu .... is equivalent to the Debian instruction .... 
+# sudo apt-get update .... followed by .... 
+# sudo apt-get upgrade
+# sudo pacman -Syu <package_name1> <package_name2>
+
+ would update the system, then install the selected packages Perhaps because of my slow Internet, the first time through a few of the update packages timed out without downloading, so nothing installed. The second time through, even one of the repos didn't refresh. Thinking this was a connectivity problem, I kept trying the same update command over and over. Finally, I enlisted the help of Google. 'pacman -Syy' forces a refresh of all package lists "even if they appear to be up to date". This seems to automagically fix the timeout and connection problems, and the next time I ran the update, it completed without complaint. I was mad at myself when I found the solution, because I remember I'd had the exact same problem and the exact same solution before and had forgotten them. Podcasting your errors is a great way of setting them in your memory. About the same time, I ran out of space on my 10Gb root partition. I remembered Peter64 had a similar problem, but I found a different solution than he did.
+# sudo pacman -Sc
+ .... cleans packages that are no longer installed from the pacman cache as well as currently unused sync databases to free up disk space. I got 3Gb back! 'pacman -Scc' removes all files from the cache.https://wiki.archlinux.org/index.php/Wicd Use pacman to install the package 'wicd' and if you want a graphical front end, 'wicd-gtk' or 'wicd-kde' (in the AUR). For network notifications, install 'notification-daemon', or the smaller 'xfce4-notifyd' if you are NOT using Gnome. None of this enables wicd or makes it your default network manager on reboot, that you must do manually. First, stop all previously running network daemons (like netctl, netcfg, dhcpcd, NetworkManager) you probably won't have them all. Lets assume for the rest of the terminal commands, you are root, then do: 
+# systemctl stop <package_name> i.e # systemctl stop NetworkManager
+ Then we have to disable the old network tools so they don't conflict with wicd on reboot. 
+# systemctl disable <package_name> i.e. # systemctl disable NetworkManager
+ Make sure your login is in the users group 
+# gpasswd -a USERNAME users
+ Now, we have to initialize wicd 
+# systemctl start wicd.service
+# wicd-client
+ Finally, enable wicd.service to load on your next boot up 
+# systemctl enable wicd.service

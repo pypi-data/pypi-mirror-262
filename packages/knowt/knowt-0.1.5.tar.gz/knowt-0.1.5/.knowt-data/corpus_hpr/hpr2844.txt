@@ -1,0 +1,25 @@
+## hpr2844 :: The Sony TC-222-A Portable Reel-To-Reel Tape Recorder
+
+ In this episode I talk about my new 1969 Sony TC-222-A portable reel-to-reel tape recorder. I found it about 3 weeks ago at Hand-Up Thrift store in Lafayette Louisiana for $5. It was in partially working condition, without a power cord, and in need of some work. I cleaned the contact points, overhauled the fast-forward idler wheel, lubricated both of the tape shafts, replaced the belts, hacked an old electric razor cord to work as a power cord, and tightened up the record linkage. One thing I still can't get working is recording using the microphone.
+I spend about half of this episode talking about trying to make a super-long recording fit on a 5-inch reel and playing at 4.8 cm/second. I use Kimiko Ishizaka's wonderful Open Goldberg Variations and Open Well-Tempered Clavier as the music. To do this, I speeded up all of the tracks to play at 4x speed, for which I use the following script to loop through all mp3s in the current directory and subject them to the appropriate sox command:
+
+#!/bin/bash
+
+for i in *.mp3; do
+# speed em up 4x
+  infile=$(basename $i)
+  stem=$(basename "$i" .mp3)
+  outfile="$stem"_4x.mp3
+  sox $infile $outfile speed 4.0
+  sleep .1
+done
+
+It worked! Well. The script and sox command worked. Recording the 4x-speed audio at 19 cm/second and then playing back at 4.8 cm/second also mostly worked, I just had a very poor-quality tape so it sounded pretty bad. The speed was just about right, though. In fact when I compared pitch against my piano, it was EXACTLY right. I may try again with a better tape. (BTW I said my tape was "old new stock," but obviously I meant "new old stock.")
+Photo Album (click image)
+
+Links
+
+Video: The Sony TC-222-A in action
+Techmoan: one of my favorite YouTube channels
+Music bumpers are from Kimiko Ishizaka's The Open Goldberg Variations: https://www.opengoldbergvariations.org/, used by permission of their CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
+Vintage Electronics, my source for replacement belts, replacement lamps for my Marantz receiver, etc. 

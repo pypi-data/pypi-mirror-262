@@ -1,0 +1,60 @@
+## hpr3302 :: Input Methods on Ubuntu
+
+ First I go to the Language Support window. Either search (press Super/Windows, then type) for
+"Language Support" and go there directly, or search for "Region & Language", go there, then click
+"Manage Installed Languages".
+There I click Install / Remove Languages ..., check the Chinese I want, then click Apply.
+Then I add the packages for the input methods I want, either using the command line (apt install)
+or the Ubuntu Software application:
+
+Chinese Quick: ibus-table-quick-classic
+Chinese Pinyin: ibus-libpinyin
+Chinese (Cantonese) Jyutping: ibus-table-jyutping
+
+Bonus input method:
+
+Unicode emoji: ibus-typing-booster
+
+Now for each user that wants an input method, I search for and go to Region & Language. At the
+bottom of the Input Sources section I click the plus button. The different input methods are found
+by clicking down into different sublists. Click the right choice, then Add:
+
+Chinese Quick: Chinese -> Chinese (QuickClassic)
+Chinese Pinyin: ⋮ -> Other -> Chinese (Intelligent Pinyin)
+Chinese (Cantonese) Jyutping: Chinese -> Chinese (Jyutping)
+Unicode emoji: ⋮ -> Other -> Other (Typing Booster)
+EurKEY: English (United States) -> EurKEY (US based layout with European letters)
+
+The EurKEY layout is part of the standard English language support in Ubuntu.
+Finally, to enable unicode color emoji as completion suggestions, switch to the Typing Booster mode
+by pressing Super/Windows+Space repeatedly until you see the rocket in your notification area. Click
+the rocket -> Unicode symbols and emoji predictions -> On.
+I owe you a followup episode once I figure out how to make this work for Guix applications running
+inside Ubuntu.
+
+This episode was based on a Fediverse thread:https://libranet.de/display/0b6b25a8-6760-517c-52c9-654926232346
+References for your further study:
+
+IBus is an input method protocol for the
+GNU/Linux desktop. Other protocols supported are XIM,
+SCIM,
+fcitx and uim. You
+have to choose one of these to use for all your input methods, but the most common input methods
+exist at least for IBus and the first three of the rest, so this is not as much a limitation as
+it sounds like.
+Quick is a simplification of the
+Cangjie input method. Cangjie assigns
+radicals, character components, to 24 keys on the alphabetic keyboard, and you combine these into
+a character. In Quick you combine two and then choose a completion from a list.
+Pinyin is a romanization, a Latin alphabetic spelling,
+for Standard Chinese (Mandarin).
+Jyutping is one of
+many
+romanizations
+for
+Cantonese. 
+Guix is a GNU/Linux OS and also a package manager that can be installed
+and coexist with the GNU/Linux OS you already have, allowing you to mix and match programs from
+both sources. See also hpr2198 and
+hpr2308.
+

@@ -1,0 +1,336 @@
+## hpr1353 :: Practical Math - Introduction to Units
+
+ 
+Introduction: Units are the bridge from learning abstract arithmetic 
+  operations on numbers to actually using maths to navigate the world of 
+  objects, distance, time, rates, volume, temperature, heat, current,
+  voltage, and even cooking using recipes.
+
+Goal for the series: Embracing units, and carrying them along as you go,
+  can help you work with confidence in using maths in your life. 
+  
+  When you start to use maths to solve real problems, you are going to 
+  run into units.  This series is intended to show you that units are
+  your friends, and that they're here to help you.
+    
+Goal for this episode: We want to look at what units are, what they do, 
+  types of units, and how to mix unitless numbers with units.
+  
+
+Resource for the series:
+
+ * Khan Academy pages on Rates, Ratios and Units
+   https://www.khanacademy.org/math/arithmetic/rates-and-ratios
+
+
+Most articles that would be relevant to this introductory episode were
+about teaching physics and chemistry, or discussions of philosophical 
+implications of doing what we will be doing at every turn in this 
+series.  
+
+All of the formal operations that we will learn to do with units are
+done every day in real life by experts in their respective fields.  I am
+not worried about what it means to say, "There are 12 inches in a foot."
+
+Later shows will have more links and resources.
+
+
+Segment 1:  What do we mean by units?
+
+1. Definition: Two types of units are useful in practical maths:
+   
+   a. Counting units: An individual thing treated as single or complete.
+      Units can also apply to an individual component of a larger or 
+      more complex system.  E.g., mufflers can become part of a car. 
+
+      - Think of objects that you would keep in an inventory in your 
+          pantry or in a warehouse.
+
+   b. Measurement units: A quantity chosen as a standard that you can 
+      use as a common benchmark for comparing other quantities (of the
+      same kind).
+
+      - "Same kind": Don't try to compare distances to times or volumes.
+      
+      - "Standards": Communication tool for talking about quantities
+            without being face-to-face.  If you have standard units,
+            you avoid expressions like "yea long", "kind of tall", etc.
+      
+      - Probably invented by buyers and sellers, or by the spouse of an
+            avid fisherman.
+
+   c. Composite units: Units can be multiplied together (or divided) to
+      create new types of units.  Some people call these "derived
+      quantities", but that may sound too much like programming talk.
+      I use composite units because of the mental picture it creates of
+      putting things together, or doing one operation after another.
+      
+      - Dimensionality changes: 
+        * 1 ft * 1 ft = 1 square foot: distance^2 --> area
+        * 1 ft * 1 ft * 1 ft = 1 cubic foot: distance^3 --> volume
+        
+      - Rates: 
+        * Speed: distance / time = average speed, as in kilometers/hour
+        * Flow rates: volume / time, as in liters/minute
+        * Pressure: force / area, as in pounds / square foot
+        * Density: mass / volume, as in kilograms / liter
+        * Rationing: (1 period) counting units / time, as in apples/day
+                  (longer time) apples / family_member / day
+      
+      - We will run more of these types of units in later shows.
+       
+   
+2. Other kinds of numbers: Not every quantity has units attached
+
+   a. Numbers can be unitless. Unitless numbers help you make sense of
+         quantities with units through comparisons, extrapolations, etc.
+         
+     - Example: Percent changes are unitless floating point numbers, 
+          unless it is tied to an elapsed time.  That's a "rate", which
+          has units of "% per year" (say).
+            
+     - Example: Percentage of Total values are unitless fractions, too.
+     
+     - Example: Any unit can be multiplied by a unitless integer.
+          * 2 feet, 3 apples, 4 quarts, 10 meters, etc.
+          * "Twice as many", "ten times as far", "double a recipe"
+     
+     - Counting units can be multiplied by a unitless fraction, but the
+          result will be rounded off to the nearest integer value.
+          * "Mary has 2-1/2 times as many apples as John," is fine if
+               John has 4 apples, and Mary has 10 apples.
+          
+     - Example: Measurement units can be multiplied by any arbitrary
+          scale factor.
+          * How big: "A land area 3.6 times the size of New Jersey..."
+          * How far: "I'll meet you halfway..."
+          * How much: "If using white flour, you'll need 30% more..."   
+
+   b. When values with units are divided by other values with the very
+        same units, the result is a unitless number.
+      - Percent of Total and Percent Change are prime examples
+      - Comparison of distances: 
+        * "St. Johnsbury is 45 miles away, and Barton is only 15 miles.
+             So you have to drive 3 times as far to get to St. J."
+      
+   c. Conversion factors between units work in this way.  They are given
+          as ratios of some number of new_units divided by some other
+          number of original_units.  
+        
+        * The original_unit quantities cancel in multiplication, just as
+            numbers do, so you get an answer with the correct units!
+        
+        * You could call conversion factors "derived quantities", 
+            because you create them from something called an identity,
+            or a statement of equality that you know to be true. 
+   
+   d. Conversion factors will be covered next time.
+   
+   
+3. Why bother with "counting units"?  Aren't these just names?
+
+   a. Counting units are labels or names applied to individual items in
+      a total count, but they are still useful.
+   
+   b. Using counting units helps us to make distinctions between items
+      that are not interchangeable, so we can keep track of the counts
+      for each individual kind of item.
+      
+      - If you need 2 apples, having 10 onions does not help you.
+   
+      - Thinking with units will help you keep inventories and to start
+           setting up accounting systems for your business.  It will 
+           also help you manage your kitchen and your budget at home.
+      
+
+Segment 2: Counting Units?  Are you serious?
+
+1. Counting units give context to the numbers that you are using in any
+   calculations that arise when you are buying, selling, trading or just
+   using up items in a beginning inventory.
+   
+   Here's what happens when you don't track units in counting problems.
+   
+   - Example: "John has 9 apples in his basket.  If he gives 2 apples
+     to Mary, how many does he have left?"
+     
+   - Speed test preparation textbooks seem to teach you to parse the 
+     problem as if you were a word problem "compiler":
+
+     a. Fish out the numbers and their roles.
+       
+        --> Notice that 9 is near "in his basket", 
+                              and "how many does he have left?", 
+            
+            It must be the source.
+	
+	    --> Notice that 2 is next to "gives away". 
+	    
+	        It must be the change in quantity.
+	
+     b. Parse out the operation: "gives away" is code for subtraction.
+
+     c. Do the calculation and supply a numerical answer: 9 - 2 = 7
+
+
+2. Re-work the problem by tracking units.
+   a. Read the problem.  I'll wait.  We will parse it together.
+   b. John has a basket with 9 apples in it --> beginning inventory
+   c. John gives away two (2) apples to Mary.
+      - John's inventory of 9 apples is reduced by 2 apples, 
+      - John now has 7 apples in his basket.
+      
+   d. Mary now has 2 additional apples in her inventory.
+      - The apples were neither created out of nothing nor destroyed.
+      - They came from somewhere (John), and they went somewhere (Mary).
+      - If "apples out" does not equal "apples in", something's wrong. 
+   
+   e. Having this information lets you answer questions with confidence.
+   
+   f. Answer the question: "John now has 7 apples."
+      - John does not have '7'.  John has '7 apples'.
+
+
+3. Ho hum.  That solution is exactly the same. You're picking nits.
+
+   a. For a trivial problem, this looks the same.  But there are some 
+      benefits of using units, even if they appear to be "just labels".
+ 
+   b. If the problem had said that "John gave 2 oranges to Mary", we
+      would have spotted the discrepancy immediately.
+      - Giving away oranges does not affect John's apple inventory
+      - The oranges must have come from another supply (account)
+      - We can still talk about an increase in Mary's oranges count, and
+          the decrease in John's oranges -- even though we don't know
+          the beginning or ending balances.
+   
+   c. What if the problem had said, 
+         "Mary has three times as many apples as John.  How many apples
+           would Mary have to give to John to leave each of them with 
+           the same number of apples?"
+   
+   d. Better yet, what if the problem read:
+         "John has 19 apples, and Mary has 14 oranges. Now John likes 
+           oranges twice as much as he likes apples, but Mary likes 
+           apples three times as much as she likes oranges.  
+           
+           How can John and Mary exchange apples and oranges to get the 
+           best (equal) gain in happiness?"
+
+      - This problem involves not only the tracking of apples and 
+          oranges, but probably some type of "happiness" function 
+          that gives a value that carries some kind of units.
+        
+        Warning: There's not enough information to really solve this
+          problem without further assumptions.  It is meant as an 
+          illustration of how complicated a setup can become when you
+          get into real life situations.
+      
+      - Problems like this are what make people hate economics.  One 
+          way to solve it is to define utility functions for each party.
+      
+      - Their preferences are so different from their inventories, that
+          simply trading baskets is pretty close to an optimal solution.       
+      
+   e. If the problem had involved trading some of John's apples for 
+        some of Mary's oranges, and possibly an offsetting cash payment
+        to correct an imbalance, we would make the best use of our 
+        information about the sources and uses of resources by tracking
+        the units of each object or currency involved in the exchange.
+   
+      Point:  Problems can become complicated.  Units can help with the
+              bookkeeping needed to work through to the answers.
+
+              If someone poses a problem like this one to a group at a
+              dinner party, it is time to remember that you forgot to
+              iron your curtains.
+              
+              
+4. Final properties of counting units
+
+   a. Compatible counting units can be added and subtracted.
+      - Example: 6 apples + 4 apples = (6 + 4) apples, or 10 apples.
+      - Example: 6 apples + 2 oranges is a mixed expression.  They 
+          cannot be added, except as part of a fruit salad.
+   
+   b. An amount that's given in counting units can be multiplied by an 
+        integer, since that is like repeated additions.  They can also
+        be multiplied by a fractional amount, but we would want to 
+        interpret the result as a whole number.
+        
+   c. Any multiplication by a floating point number would have to be 
+      defined, and it's usually not worth the effort.
+   
+   d. Counting units have weaknesses, especially in classification:
+      - Organic items are usually not identical.  Apples can vary. 
+        * Size: A recipe calls for "3 large apples".  Are these large?
+        * Varieties: "Apples" in the US can include Macintosh, Rome, 
+             Gala, Granny Smith, etc.  These can be quite different.
+       
+      - Animals also vary within categories:
+        * Cats: Lions, lynxes and Little Puff can all qualify
+        * House cats: Siamese, Persians, Tabby cats are all just cats,
+            until you have them living in your home.
+      
+      - Some living things are hard to pin down: sponges, paramecia
+      
+      - Other items can also create classification issues, depending on
+           your purpose.
+        * Units are just tools.  Let them work for you, and not the 
+            other way round.
+
+
+Segment 3: Units of measurement
+
+1. Measurement units are often continuous (or just about), so they can
+     be divided conceptually into smaller and smaller subunits as many
+     times as we like.  
+
+   - They can also be lumped together into larger and larger wholes.
+
+   - Physical limitations place practical limits on how finely we can
+       actually chop things up, and still get a measurement.
+       
+   - There are real world limitations on how much we can lump together.
+
+   - But you get the idea.
+
+
+2. Measurement units can be applied to distance, time, area, volume, 
+     weight or mass, energy, frequencies of light or radio waves, 
+     voltages, current, heat, temperature, and a host of other things.
+
+   - We can measure these quantities with differing levels of precision,
+       based on the instruments and abilities that we have.
+
+   - For all practical purposes, we measure within tolerances that we
+       can meet without spending our whole lives measuring. 
+
+
+3. Applications of measurement units
+
+   a. Understanding the news: hectares of forest endangered by a fire,
+        square miles of arable farmland in South Africa,
+        temperatures given in unfamiliar scales such as Fahrenheit,
+        snowfall measurements in Canada versus neighboring Montana, etc.
+   
+   b. Following recipes to make bread, cookies, beer and other items 
+        that promote World Peace
+   
+   c. Mixing chemicals for an old-school darkroom, or for a very cool 
+        low-tech electronics home "fab lab"
+   
+   d. Buying gasoline (petrol) in other countries, and understanding
+        their speed limits in foreign units.
+        
+      - Can't help you with driving on the wrong side of the road
+   
+   e. Helping your kids with their maths homework, and understanding it
+        for once!
+   
+   f. Checking the dosages of your medications against your prescription
+         to find out if this is my medicine or my child's.  You just
+         have to be able to get this one right.
+
+We'll get to all of this and more in future episodes in this series.
+

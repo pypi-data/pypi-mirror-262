@@ -1,0 +1,109 @@
+## hpr3132 :: Keeping track of where I am
+
+ This episode covers how I keep track of what I'm listening to
+I almost never produced this podcast as I discovered part way through that I had covered it in my show "Describing how I listen to podcasts PART 2" (HPR 2889). I'm conscious I have a tendency to repeat myself in real life, I think this is because I have such a terrible memory. Despite this I decided to continue with the episode but will go into subject in a bit more detail.
+These ideas slowly evolved over time and I think some of them may now be redundant. I think I need to do some tidying.
+As I've previously mention I used cordless headphones to listen to my podcasts and audiobooks. The headphones come with base transmitter which was originally plugged into my old Compaq home server. This server was generally turned on when I came home from work and turned off before going to bed. Each night I had to remember which track I was on and where about in the track. I often forgot and had to try and find the place again. This quickly became a tiresome task.
+My first solution was to use some bash Kung Fu jiggery pokery to create list of files which I placed in each podcast folder. In the process I learned a bit about using bash commands.
+Command used to create index
+id3v2 -l *.mp3 | grep 'TIT2' | cut -c44- >> readme.txt
+id3v2 -l *.mp3 | grep 'TIT2' | cut -c44- | egrep 'HPR[01][9][7-9]' >> readme.txt
+id3v2 -l *.mp3 | grep 'TIT2' | cut -c44- | egrep 'HPR[1-9]' |less >> readme.txt
+========================================================
+========================================================
+Example output
+epr0006.mp3 - dosman                            complete
+hpr0010.mp3 - linux boot process, part 1        complete
+hpr0012.mp3 - zen virtulization                 complete
+hpr0018.mp3 - book review                       complete
+The downside of this was that at the end of each night I had to remember to update my file lists recording what I had listened to and what position I was in within the track. From time to time I had to update this list by appending the latest episodes sitting on my server using the previous id3v2 command.
+As you can imagine this took up a fair amount of time and became very tiresome, I would sometimes forget to do it this would cause me a headache next time I started listening to my podcasts.
+My next solution involved creating a bash script that attempted to persuade my music player moc to find the track I was previously listening to.
+The script sometimes worked but it was a bit flaky and didn't always work.
+My final solution is in multiple parts
+The 1st part consists of a bash script and a log file, it's a handy way of checking the last podcast episode and last position, this information is recorded to the log file when the front end of moc is exited by hitting Q. Of course this doesn't work if mocp closes for any other reason ie if I forgot to hit Q or my Pi crashed.
+First script
+~/scripts/podcasts
+
+quick lash up of script created 29/12/12 (DD/MM/YY)
+Created to keep track of last position of listened podcast
+
+Script displays last 4 lines of logfile "podcasts.txt"
+The four lines consist of a Dashed line separator, the last recorded Track
+Title, last recorded Filename and the last recorded track position.
+The script then pauses and displays a message saying
+press any key to continue.
+Runs mocp
+When the frontend of mocp exits
+The script gets the current track filename
+If the result is empty ie no filename then
+    exit with error saying (moc was not playing anything)
+if not empty
+    append a dashed line separator, the current track title, the current
+    filename, the current track position to logfile it then display last 4 lines
+    of logfile and exits the script
+
+So in essence I get a reminder of the track and position I'm listening to
+every time a start or stop the front end of moc
+
+The logfile located at /home/pi/scripts/podcast.txt
+podcasts.txt as of 4th October 2019 is 168KB in size and currently has 4904
+lines as each entry has 4 lines this means it currently contains 1226 entries.
+The 2nd script I use runs as a cron job every night at 11.01pm. This script keeps track of all the files copied to the MP3 directory of my raspberry pi, this is where I put my podcasts that I want to listen to. I can then grep the log file to see the latest version of a particular episodes that's been copied to my mp3 directory as from time to time I delete the episodes I've listened to before copying new ones in.
+~/scripts/update-podcast-episode-log
+ Below are the comments taken directly from my script
+Created to keep track of the latest podcast episode I've
+listened to it does this by logging the contents
+of the mp3 directory on the raspberry pi.
+The script checks the logfile exists, then checks the
+podcast (mp3) directory exists, it then use the find
+command to list the files in the mp3 directory and send the  listing to a log
+file, a date stamp is added at the beginning of the listing.
+V1 11 July 2015
+
+Logfile located at /home/pi/files/logs/podcast-episodes.log
+As of the 4th October 2019 the log file is an impressive 688Kb containing
+a whopping 28,158 lines, the first entry was dated  15th July 2013
+The 3rd script is also runs as a cron job every every night at 11.00pm
+/home/pi/scripts/update-podcast-position-log
+Below are the comments taken directly from my script
+Created to log current position of current podcast
+The script checks the logfile exists, then checks that mocp  is installed on
+the system it then writes a timestamp, and track position information to
+a logfile using moc with -Q flag to get current track position, track title
+& file name
+V1 Created by MrX 11th July 2015
+
+Logfile located at /home/pi/files/logs/podcast-position.log
+Size is 148Kb as of 4th October 2019 currently has a 1495 lines, the first
+entry was dated 15th July 2013
+Example logfile output
+15:09:06:23:01 | 01:12 | Dave Morriss - HPR1811: Life and Times of a Geek part 2 (Hacker Public Radio) | hpr1811.mp3
+
+YY:MM:DD:HH:MM | Track position (MM:SS) | ID3 track title | Filename
+The 4th script is identical to the previous script but is used to update the current audiobook position to a log file, like the previous script it runs as a cron job every night.
+/home/pi/scripts/update-audiobook-position-log
+The 5th and final script
+home/pi/scripts/logs
+Was created to easily view podcast and audiobook logs The script first checks that the logfiles exists, then displays the last three lines of my podcasts and audiobooks logs so I can quickly see the most recent episode positions that were stored by the cron jobs at 11pm.
+Logs are:-
+/home/pi/files/logs/podcast-position.log
+/home/pi/files/logs/audiobook-position.log
+V1 Created by MrX 13th July 2015
+V2 Updated by MrX 8th August 2015
+This added an option to seach for a string in my episodes position logs to easily find out what the last episode I listened to of a particular book or podcast, the output is piped to less as numerous lines can be returned.
+if more than one argument is given then it displays an error and usage message
+V3 Updated by MrX 21st Jul 2017
+If a single argument is given now jumps to end of list rather than beginning, this was achieved by using the +G flag with less command.
+The script displays contents of logfiles
+/home/pi/files/logs/podcast-position.log
+/home/pi/files/logs/audiobook-position.log
+Links
+
+https://hackerpublicradio.org/eps/hpr3132/logs
+https://hackerpublicradio.org/eps/hpr3132/update-podcast-episode-log
+https://hackerpublicradio.org/eps/hpr3132/update-podcast-position-log
+https://hackerpublicradio.org/eps/hpr3132/index.html
+https://hackerpublicradio.org/eps/hpr3132/update-audiobook-position-log
+https://hackerpublicradio.org/eps/hpr3132/podcasts
+

@@ -1,0 +1,25 @@
+## hpr3559 :: Linux Inlaws S01E52: The Zig Project
+
+ In this episode Martin and Chris have a very special guest: Loris Cro of
+Zig fame. Zig fame?  Stay tuned. Not only is Loris an ex-colleague of our two
+aging heroes, he is also the community vice president at the Zig Software
+Foundation. So this episode will be all about this new programming language,
+why you should use it (and perhaps why you shouldn't) and life, the universe
+and the rest. And Rust. Of course. :-) Full disclosure: In contrast to other
+episodes, this one is really tech-heavy and may offend the less technical
+listeners. Listen at your own discretion if you want to into the weeds of
+Clang, LLVM, typing and cross-compilation - you have been warned. If this is
+up alley, you may want consider seeking professional help just in case :-).
+Links:
+
+Zig: https://ziglang.org
+Zig Foundation financial update: https://ziglang.org/news/financials-update
+Clang / LLVM: https://clang.llvm.org
+Rust: https://www.rust-lang.org
+Cargo: https://doc.rust-lang.org/cargo
+Mitchell's Tweet: https://twitter.com/mitchellh/status/1481441162871279618?s=20&t=OBGncJWN4B0N7mhflxlAbg
+501cs (only read this if you can't get to sleep!): https://en.wikipedia.org/wiki/501(c)_organization
+Miami Vice: https://www.imdb.com/title/tt0086759
+Lord of the Rings Trilogy: https://www.imdb.com/list/ls072068350
+Land of the Blind: https://www.imdb.com/title/tt0433405/?ref_=fn_al_tt_1
+

@@ -1,0 +1,30 @@
+## hpr1668 :: Nixstaller
+
+ 
+Cross-distro and -POSIX packages are easy with Nixstaller. (Note that
+this pre-dates and is entirely unrelated to NixOS or Nix packages.)
+
+
+Download Nixstaller from https://nixstaller.sourceforge.net and read
+the docs there.
+
+
+Review the sample package templates included in the examples dir.
+
+
+Generate an empty template dir with genprojdir.sh
+
+
+Modify the config.lua and run.lua files to suit your needs.
+
+
+Place your payload(s) into the appropriate folders.
+
+
+Generate your re-distributable install file with geninstall.sh:
+
+
+geninstall foo-1.0.0 foo.run
+
+
+That's it!

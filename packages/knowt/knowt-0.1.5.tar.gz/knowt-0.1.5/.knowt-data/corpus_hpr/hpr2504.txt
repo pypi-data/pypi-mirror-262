@@ -1,0 +1,7 @@
+## hpr2504 :: Intro to Git with pen and paper
+
+ git add
+
+git commit -m "some useful message"
+
+git push origin HEAD

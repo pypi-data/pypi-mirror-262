@@ -1,0 +1,34 @@
+## hpr3619 :: Linux Inlaws S01E58: Kubernetes and Friends and Sarah
+
+ In this continuation of S01E57 our two chaps discuss how you can take containers from
+single instances to production-ready, scalable deployments handling large app stacks
+and that new-fangled hipster concept called micro-services. Using the once Google-owned project called Borg which later evolved into something now known as Kubernetes (k8s) as an example,
+Martin and Chris discuss typical challenges when using containers as the main infrastructure
+to modern workloads. Including such gory topics such as what happens if a container dies and
+doesn't go to heaven, contradictions in terms such as ephemeral storage and why many k8s developers
+have defected to VMware.
+Links:
+
+S01E57: https://linuxinlaws.eu/#episodes
+k8s: https://kubernetes.io
+Mesos: https://mesos.apache.org
+DC OS: https://dcos.io
+Redis Stack: https://redis.io/docs/stack
+Docker Swarm: https://docs.docker.com/engine/swarm
+Open Container Initiative: https://opencontainers.org
+cri-o: https://github.com/cri-o/cri-o
+containerd: https://github.com/containerd/containerd
+minikube: https://minikube.sigs.k8s.io/docs/start
+kubeadm: https://kubernetes.io/docs/reference/setup-tools/kubeadm
+kubeadm tutorial: https://citizix.com/how-to-set-up-kubernetes-cluster-on-debian-11-with-kubeadm-and-cri-o
+YAML: https://yaml.org
+OpenShift: https://www.redhat.com/en/technologies/cloud-computing/openshift
+HELM: https://helm.sh
+k8s operators: https://kubernetes.io/docs/concepts/extend-kubernetes/operator
+openstack: https://www.openstack.org
+Redis operator: https://github.com/AmadeusITGroup/Redis-Operator
+k8s grid: https://tanzu.vmware.com/kubernetes-grid
+Bradley Kuhn's Non-Profit blog post: https://sfconservancy.org/blog/2013/dec/05/non-profit-home
+Sarah's HPR episode: https://hackerpublicradio.org/eps.php?id=3577
+Volodymyr Zelenskyy: https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy
+

@@ -1,0 +1,19 @@
+## hpr0614 :: Intro To Audio and Pod/Oggcasting
+
+ In this show we talk about what sound is and how we represent it digitally.
+
+A sine wave
+Analog to digital conversion
+    
+Chopping it up. (Bit rate)
+How big is each slice. (Bit depth)
+What is a WAV and what is a broadcast WAV.
+What is a codec
+Lossless audio codecs
+Lossy audio codecs
+
+
+
+https://opensourcemusician.com
+irc.freenode.net #opensourcemusicians
+

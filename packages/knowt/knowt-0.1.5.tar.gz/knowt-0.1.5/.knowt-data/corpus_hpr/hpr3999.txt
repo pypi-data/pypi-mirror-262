@@ -1,0 +1,44 @@
+## hpr3999 :: Holiday Challenges Series Ep 02 TryHackMe Advent of Cyber Challenge
+
+ Holiday
+Challenges Series - Ep 2 - TryHackMe Advent of Cyber Challenge
+Since some of the information you are about to hear is time specific,
+I want to let you know that I am recording this near the end of November
+in 2023.
+If you missed the first episode, which introduces this series, you
+can go back and listen to HPR3996
+I have been using TryHackMe for several years, and I recommend it to
+all of my students. It is a great environment where people can get hands
+on experience with technology that relates to cyber security, all from
+the comfort of their browser and free year-round.
+The TryHackMe Advent of Cyber challenge is a free gamified
+environment which focuses on penetration testing, security
+operations/engineering, forensics/incident response, malware analysis,
+machine learning, and more!
+This year's challenge opens on December 1, 2023 (Which is the reason
+why I am posting twice this week). Typically, the Advent of Cyber
+challenge includes daily beginner-friendly exercises for people new to
+cybersecurity. These can consist of walkthroughs, video tutorials, and
+challenges. There are also prizes available based on random drawings and
+on participant success.
+Infosec personalities like John Hammond, Gerald Auger, InsiderPHD,
+and InfoSec Pat are featured in this year's challenge.
+You can play with last year's Advent of Cyber challenge by visiting
+https://tryhackme.com/room/adventofcyber4. It outlines
+the overall story and shows all of the tasks last year's participants
+experienced, including both offensive and defensive topics like: log
+analysis, OSINT, scanning, brute force attacks, email analysis,
+CyberChef, blockchain smart contracts, malware analysis, memory
+forensics, packet analysis, web application hacking, and more!
+Everything can be done with a free account from within a browser.
+If you want to learn more about cybersecurity, transition your career
+into infosec, or just have fun playing with cyber challenges, you can
+give it a try by visiting tryhackme.com or https://tryhackme.com/r/christmas
+Please note: I am not affiliated with TryHackMe in any way, other
+than having been a paying member for many years. Students and others who
+have participated in previous year's Advent of Cyber challenges have
+told me how much they enjoyed it and learned from it. Even though I have
+been an infosec practitioner for more years than I would like to admit,
+I also have enjoyed taking part in this challenge.
+If this is not for you, I will be sharing another option for a
+holiday challenge in my next episode.

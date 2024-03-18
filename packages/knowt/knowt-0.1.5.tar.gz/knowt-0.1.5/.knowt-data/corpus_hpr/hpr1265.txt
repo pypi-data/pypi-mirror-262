@@ -1,0 +1,10 @@
+## hpr1265 :: Mitigating SQL Injection And Other Message Protocol Attacks Through Compiler Signatures
+
+ 
+Sigflup talks about mitigating sql injection and other message protocol attacks through compiler signatures
+
+
+WEBSITE: https://www.theadesilva.com/sqlsig
+
+
+SOURCE CODE: https://www.theadesilva.com/sqlsig.tar.gz

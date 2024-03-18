@@ -1,0 +1,19 @@
+## hpr2023 :: Setting up my Raspberry Pi 3
+
+ Setting up my Raspberry Pi 3
+I bought a Raspberry Pi 3 in March 2016, soon after it was released. I want to use it as a server since it's the fastest Pi that I own, so I have tried to set it up in the best way for that role.
+In this episode I describe what I did in case you want to do something similar.
+Refer to the full notes for the details: https://hackerpublicradio.org/eps/hpr2023/full_shownotes.html
+Links
+
+Pimoroni Pibow 3: https://shop.pimoroni.com/products/pibow-for-raspberry-pi-3
+Raspberry Pi Universal Power Supply: https://shop.pimoroni.com/products/raspberry-pi-universal-power-supply
+Raspberry Pi 3 Heatsink: https://shop.pimoroni.com/products/heatsink
+SATA Hard Drive to USB Adapter: https://shop.pimoroni.com/products/sata-hard-drive-to-usb-adapter
+SanDisk SSD PLUS 120 GB Sata III 2.5-inch Internal SSD: https://www.amazon.co.uk/SanDisk-PLUS-Sata-2-5-inch-Internal/dp/B00S9Q9UKS
+Kingston Flash Memory Card 32 GB: https://www.amazon.co.uk/Kingston-Class10-microSDHC-Include-Adapter/dp/B0162YQG2I
+FLIRC Raspberry Pi 2/3 Case: https://thepihut.com/products/flirc-raspberry-pi-3-b-case
+Adafruit tutorial "Using an External Drive as a Raspberry Pi Root Filesystem": https://learn.adafruit.com/external-drive-as-raspberry-pi-root/overview
+Article by paulv on the Raspberry Pi forums - "HOWTO: Move the filesystem to a USB stick/Drive": https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=44177
+Copy of adafruit-pi-externalroot-helper script: https://hackerpublicradio.org/eps/hpr2023/adafruit-pi-externalroot-helper.txt
+Transcript of what happened when I ran the script: https://hackerpublicradio.org/eps/hpr2023/session_log.txt

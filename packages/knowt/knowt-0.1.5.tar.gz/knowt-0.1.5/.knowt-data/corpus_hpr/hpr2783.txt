@@ -1,0 +1,18 @@
+## hpr2783 :: The Windows "Shutdown.exe" Command Explained
+
+ Shutdown.exe
+
+Introduced in Windows 2000 as a way to shutdown the PC via the command prompt.
+Included in all versions since Windows 2000 all the way to Windows 10 and Windows Server 2019.
+ReactOS, the open source binary-compatible clone of Windows, also includes the shutdown.exe command and the commands are the same.
+Located in %windir%\System32. The variable %windir% is usually c:\windows. In ReactOS, the variable is usually c:\reactos (failed to mention this in the recording).
+
+
+Links: 
+
+https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Shutdown.exe.html
+https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/shutdown
+https://ss64.com/nt/shutdown.html
+https://en.wikipedia.org/wiki/Shutdown_(computing)#Windows_and_ReactOS
+
+

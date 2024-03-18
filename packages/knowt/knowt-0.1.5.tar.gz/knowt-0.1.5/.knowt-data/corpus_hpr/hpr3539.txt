@@ -1,0 +1,26 @@
+## hpr3539 :: Linux Inlaws S01E50: The OpenSUSE Project
+
+ In this episode of the Inlaws our two ageing heroes host Doug DeMaio and Axel Braun, both intimately
+associated with and actively supporting the OpenSUSE project, the foundation of one of the popular Linux distros
+apart from RedHat and Debian for companies of all sizes (yes, and Ubuntu before I get any hate mails
+from Mark Shuttleworth or Cannonical in general :-). Apologies for not mentioning Alma, CentOS or
+Rocky Linux. Topics of discussion include the advantages of hipster concepts like rolling releases,
+the year of the Linux desktop, other people's computers (aka Clouds) and philosophical things like
+IT security, all things cloud-native (well, almost) and Apple laptop users drinking fancy coffee
+derivatives. Never mind containers, edge-computing operating systems and live kernel patching.
+Links:
+
+OpenSUSE: https://www.opensuse.org
+SUSE: https://www.suse.com
+openQA: https://open.qa
+Open Build Service: https://openbuildservice.org
+CentOS debacle: https://arstechnica.com/gadgets/2020/12/centos-shifts-from-red-hat-unbranded-to-red-hat-beta
+OpenSUSE conference: https://events.opensuse.org
+MicroOS: https://microos.opensuse.org
+Kubic: https://kubic.opensuse.org
+Rancher: https://www.suse.com/products/rancher-kubernetes-engine
+OpenSUSE mailing lists: https://lists.opensuse.org/archives
+OpenSUSE bar: https://meet.opensuse.org/bar
+OpenSUSE social media: https://en.opensuse.org/openSUSE:Social_media_contacts
+OpenSUSE IRC: https://en.opensuse.org/openSUSE:IRC_list
+

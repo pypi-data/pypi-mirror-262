@@ -1,0 +1,44 @@
+## hpr1203 :: templer: a static html generator
+
+ 
+In today's show Chess talks to us about a static html generator written in perl called templer
+
+
+https://github.com/skx/templer
+https://www.steve.org.uk/
+
+Templer
+Templer is yet another static site generator, written in Perl.
+It makes use of the HTML::Template module for performing variable expansion within pages and layouts, along with looping and conditional-statement handling.
+Templer has evolved over time for my own personal use, but I believe
+it is sufficiently generic it could be useful to others.
+My motivation for putting it together came from the desire to change
+several hand-made, HTML-coded, sites to something more maintainable such
+that I could easily change the layout in one place.
+The design evolved over time but the key reason for keeping it around
+is that it differs from many other simple static-generators in several
+ways:
+
+You may define global variables for use in your pages/layouts.
+A page may define and use page-specific variables.
+You may change the layout on a per-page basis if you so wish.
+
+
+This was something that is missing from a lot of competing tools.
+
+
+Conditional variable expansion is supported, via HTML::Template.
+File contents, shell commands, and file-globs may be used in the templates
+
+
+This allows the trivial creation of galleries, for example.
+These are implemented via plugins.
+
+
+You may also embed perl code in your pages.
+Another key point is that the layouts allow for more than a single
+simple "content" block to be placed into them - you can add arbitrary
+numbers of optional side-menus, for example.
+Although this tool was written and used with the intent you'd write your
+site-content in HTML you can write your input pages in Textile or Markdown
+if you prefer (these inputs are supported via plugins).

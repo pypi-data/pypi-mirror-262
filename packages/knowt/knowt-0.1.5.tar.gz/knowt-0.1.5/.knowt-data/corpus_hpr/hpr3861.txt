@@ -1,0 +1,9 @@
+## hpr3861 :: How To find Things on your home Network
+
+ Hey guys I lost my Raspberry Pi Zero W - its place in the house. I am
+not sure if it's on solar power running or not. But in in any case it's
+not out and about at the normal locations in my home for such items.
+So I use an App called Network Analyzer on my Huawei phone to find
+the IPs in use in the home.
+Then use putty go and see how the PI is doing.
+Enjoy the Show

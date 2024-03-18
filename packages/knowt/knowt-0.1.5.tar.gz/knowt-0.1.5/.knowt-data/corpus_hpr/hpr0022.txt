@@ -1,0 +1,9 @@
+## hpr0022 :: Chunk Parsing 
+
+ Getting a machine to parse natural human language, can't be easy. Plexi, describes 'Chunk Parsing', and the work being done to develop it. 
+References and further readings: 
+ https://www-tsujii.is.s.u-tokyo.ac.jp/~tsuruoka/papers/IWPT05-tsuruoka.pdf  
+ https://www.ai.uga.edu/mc/ProNTo/Brooks.pdf  
+ Steven Bird Chunking.pdf  
+
+Shownotes by: diggsit

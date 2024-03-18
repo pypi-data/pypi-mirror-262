@@ -1,0 +1,275 @@
+## hpr3918 :: Emacs package curation, part 3
+
+ We discuss the packages installed in the second of three files that
+make up my emacs config.
+Since recording, I pulled in some EXWM (the Emacs X Window Manager,
+that's right), even though I'm not actually using it, I'm still using
+stumpWM.
+I have also added pass, the password manager, khardel, an emacs
+package for the khard CLI address book application.
+I also moved (server-start) to this file, so that it'll only happen
+when I'm on linux.
+;;; init-extra.el --- Extra init stuff
+;;; Commentary:
+;;; Stuff just for my personal laptop, not for my work laptop or termux, for example.
+
+;;; Code:
+
+;;;;;;;;;;;;;;;;
+;;; org-roam ;;;
+;;;;;;;;;;;;;;;;
+
+(use-package org-roam
+  :demand t
+  :straight (:host github :repo "org-roam/org-roam"
+             :files (:defaults "extensions/*"))
+  :custom (org-roam-mode-sections (list #'org-roam-backlinks-section
+                                        #'org-roam-reflinks-section
+                                        #'org-roam-unlinked-references-section))
+  :init (setq org-roam-directory "~/org/roam/"
+              org-roam-capture-templates
+                 '(("o" "outline" plain
+                     "%?"
+                     :if-new
+                     (file+head "${slug}.org" "#+title: ${title}\n#+filetags: :outline:\n")
+                     :immediate-finish t
+                     :unnarrowed t)
+                  ("r" "reference" plain "%?"
+                     :if-new
+                     (file+head "${slug}.org" "#+title: ${title}\n")
+                     :immediate-finish t
+                     :unnarrowed t)
+                  ("m" "memo" entry "* ${title}\n%?"
+                     :if-new
+                     (file "memos.org")
+                     :immediate-finish t
+                     :unnarrowed t)))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n g" . org-roam-graph)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture)
+         ;; Dailies
+         ("C-c n j" . org-roam-dailies-capture-today))
+  :config
+  ;; If you're using a vertical completion framework, you might want a more informative completion interface
+  (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+  (org-roam-db-autosync-mode)
+  ;; If using org-roam-protocol
+  (require 'org-roam-protocol))
+
+;; citations
+(use-package citar
+  :after org-roam
+  :custom (org-cite-insert-processor 'citar)
+          (org-cite-follow-processor 'citar)
+          (org-cite-activate-processor 'citar)
+          (citar-bibliography '("~/org/biblio.bib"))
+          (citar-notes-paths '("~/org/roam"))
+          (citar-file-note-extensions '("org"))
+  :hook (LaTeX-mode . citar-capf-setup)
+        (org-mode . citar-capf-setup)
+  :bind (("C-c n b" . #'citar-open-notes)
+          :map org-mode-map :package org
+          ("C-c b" . #'org-cite-insert)))
+
+;; view your org-roam notes on a map
+(use-package org-roam-ui
+  :after org-roam
+  :custom (org-roam-ui-sync-theme t)
+          (org-roam-ui-follow t)
+          (org-roam-ui-update-on-save t)
+          (org-roam-ui-open-on-start t))
+
+;; archive web pages in org attachments
+(use-package org-board
+  :after org
+  :custom (org-board-default-browser #'browse-url)
+          (org-board-property "ROAM_REFS")
+  :bind (:map org-mode-map
+          ("C-c B a" . org-board-archive)
+          ("C-c B o" . org-board-open)
+          ("C-c B D" . org-board-delete-all)))
+
+;;;;;;;;;;;;;;;
+;;; Writing ;;;
+;;;;;;;;;;;;;;;
+
+; something like grammarly, but open source
+(use-package langtool)
+
+;; better than docview, for pdf
+(use-package pdf-tools)
+
+;; annotating docs in org files
+(use-package org-noter)
+
+;; epub
+(use-package nov
+ :mode ("\\.epub$" . nov-mode))
+
+;;; Invoke quick emacs windows to edit anything anywhere.
+;;; bind a key in xorg to ~emacsclient -c (emacs-everywhere)~
+(use-package emacs-everywhere)
+
+;;;;;;;;;;;;;;
+;;; Auctex ;;;
+;;;;;;;;;;;;;;
+(straight-use-package '( auctex
+  :host nil :repo "https://git.savannah.gnu.org/git/auctex.git"
+  :pre-build (("./autogen.sh")
+                  ("./configure" "--without-texmf-dir" "--with-lispdir=.")
+                  ("make"))))
+
+  (setq TeX-data-directory (expand-file-name "straight/repos/auctex" user-emacs-directory)
+      TeX-lisp-directory TeX-data-directory)
+
+  (eval-after-load 'info
+      '(add-to-list 'Info-additional-directory-list
+          (expand-file-name "straight/repos/auctex/doc" user-emacs-directory)))
+  (load (expand-file-name "straight/repos/auctex/auctex.el" user-emacs-directory) nil t t)
+  (load (expand-file-name "straight/repos/auctex/preview-latex.el" user-emacs-directory) nil t t)
+
+(use-package evil-tex)
+
+(use-package latex-preview-pane
+  :custom (latex-preview-pane-use-frame t))
+
+(use-package adaptive-wrap)
+
+;;; END AUCTEX ;;;
+
+;;;;;;;;;;;;;;;;;;;
+;;; Programming ;;;
+;;;;;;;;;;;;;;;;;;;
+
+;; downloading and viewing Dash documentation files
+(use-package dash-docs
+  :init (defun elisp-doc ()
+            (setq-local consult-dash-docsets '("Emacs Lisp")))
+        (add-hook 'emacs-lisp-mode-hook 'elisp-doc)
+  :custom (dash-docs-docsets-path (expand-file-name "docsets" user-emacs-directory))
+          (dash-docs-browse-func 'eww))
+
+(use-package consult-dash
+  :straight (:host codeberg :repo "rahguzar/consult-dash")
+  :bind (("M-s d" . consult-dash))
+  :after consult
+  :config
+  ;; Use the symbol at point as initial search term
+  (consult-customize consult-dash :initial (thing-at-point 'symbol)))
+
+;;;;;;;;;;;;;
+;;; Email ;;;
+;;;;;;;;;;;;;
+
+(use-package notmuch
+  :commands notmuch
+  :config (defun notmuch-show-view-html ()
+            "Open the text/html part of the current message using
+            `notmuch-show-view-part'. From https://emacs.stackexchange.com/a/63457"
+            (interactive)
+            (save-excursion
+                (goto-char (prop-match-beginning
+                            (text-property-search-forward
+                            :notmuch-part "text/html"
+                            (lambda (value notmuch-part)
+                                (equal (plist-get notmuch-part :content-type)
+                            value)))))
+            (notmuch-show-view-part)))
+          ;; Enable link to message via org-store-link
+          (load-file (expand-file-name "org-notmuch.el" user-emacs-directory))
+          (require 'org-notmuch)
+  :bind (:map notmuch-show-mode-map
+              (". v" . notmuch-show-view-html))
+  :custom (notmuch-draft-folder "local/drafts")
+          (notmuch-search-oldest-first nil)
+          (notmuch-fcc-dirs "fastmail/sent")
+          (notmuch-tagging-keys '(("r" ("+receipt" "-inbox") "Receipt")))
+          (sendmail-program (executable-find "msmtp"))
+          (message-sendmail-f-is-evil t)
+          (message-sendmail-extra-arguments '("--read-envelope-from")))
+
+(use-package khardel
+  :after notmuch
+  :bind (:map notmuch-message-mode-map
+         ("C-c M-k" . khardel-insert-email)))
+
+;;;;;;;;;;;;
+;;; PASS ;;;
+;;;;;;;;;;;;
+
+(use-package pass)
+
+;;;;;;;;;;;;
+;;; EXWM ;;;
+;;;;;;;;;;;;
+
+(use-package xelb
+  :disabled t
+  :straight (:host github :repo "ch11ng/xelb"))
+
+(use-package exwm
+  :disabled t
+  :straight (:host github :repo "ch11ng/exwm")
+  :defer t
+  :config (require 'exwm-systemtray)
+          (require 'exwm-randr)
+          (setq xcb:connection-timeout 20)
+          (exwm-systemtray-enable)
+          (add-hook 'exwm-update-class-hook
+                  (lambda ()
+                  (exwm-workspace-rename-buffer exwm-class-name)))
+          (add-hook 'exwm-randr-screen-change-hook
+                    (lambda ()
+                      (start-process-shell-command
+                       "autorandr" nil "autorandr -c")))
+          (defun exwm-randr-mobile()
+          "Load a xrandr profile to use only the laptop screen."
+          (interactive)
+          (start-process-shell-command "xrandr" nil "xrandr --output eDP-1 --auto --output DP-1 --off"))
+          (defun exwm-randr-docked()
+          "Load a xrandr profile to use only the connected external screen DP-1."
+          (interactive)
+          (start-process-shell-command "xrandr" nil "xrandr --output eDP-1 --off --output DP-1 --auto"))
+          (defun exwm-randr-chair()
+          "Load a xrandr profile to use both the laptop screen and the connected screen."
+          (interactive)
+          (start-process-shell-command "xrandr" nil "xrandr --output HDMI-1 --auto --scale 1.3 --output eDP-1 --off"))
+          (defun exwm-randr-all()
+          "Load a xrandr profile to use both the laptop screen and the connected screen."
+          (interactive)
+          (start-process-shell-command "xrandr" nil "xrandr --output eDP-1 --primary --output DP-1 --above eDP-1")
+          (setq exwm-randr-workspace-output-plist '(0 "eDP-1" 1 "DP-1"))
+          )
+          (exwm-randr-enable)
+    :custom (exwm-input-global-keys
+              `((,(kbd "s-r") . exwm-reset)
+                (,(kbd "s-w") . exwm-workspace-switch)
+                (,(kbd "s-a") . exwm-randr-all)
+                (,(kbd "s-c") . exwm-randr-chair)
+                (,(kbd "s-d") . exwm-randr-docked)
+                (,(kbd "s-m") . exwm-randr-mobile)
+                (,(kbd "s-k") . exwm-input-release-keyboard)
+                (,(kbd "s-f") . exwm-layout-toggle-fullscreen)
+                (,(kbd "s-p") . pass)
+                (,(kbd "s-t") . exwm-workspace-switch-to-buffer)
+                (,(kbd "s-&") . (lambda (command)
+                                       (interactive (list (read-shell-command "$ ")))
+                                       (start-process-shell-command command nil command)))
+                ,@(mapcar (lambda (i)
+                       `(,(kbd (format "s-%d" i)) .
+                           (lambda ()
+                               (interactive)
+                               (exwm-workspace-switch-create ,i))))
+                     (number-sequence 0 9))
+                ))
+          )
+
+;; start emacs server
+(server-start)
+
+;;; END ;;;
+
+(provide 'init-extra)
+;;; init-extra.el ends here

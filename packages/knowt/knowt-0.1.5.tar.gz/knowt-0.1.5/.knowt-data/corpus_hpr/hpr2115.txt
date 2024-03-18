@@ -1,0 +1,22 @@
+## hpr2115 :: Apt Spelunking 3: nodm, cmus, and parecord
+
+ Hello, this is Windigo, and Welcome to the another episode of apt spelunking! If you missed the first episode, then you probably missed the second episode as well. I assure you, they were fantastic; no need to go back and check.
+This series (and yes, it’s official now) is about finding uncommon packages that are buried in the Debian repos. It could very well be about finding packages in other repos, but no Arch, Fedora, Ubuntu or OpenSUSE users are smart or handsome enough to contribute an episode.
+In no particular order, here are a few more packages I’ve discovered.
+nodm
+nodm is a very small, very specific utility that is used to start an X session automatically.
+On Debian, you configure nodm with the configuration file located at /etc/defaults/nodm. You can specify whether or not nodm is enabled, which user to run as, and what x session to run.
+While hugely insecure, nodm is a great way to avoid the hassle of a full display manager like gdm or lightdm. It’s extremely lightweight, which is perfect for my Mini 9, and kicks things right into my custom i3 session.
+cmus
+cmus is a very comprehensive, console-based music player. cmus stands for “C* music player“.
+I received cmus as a recommendation from chalkahlom (Gavin) while looking for a media player suitable for the Mini 9. It is a very light application (1.5M uncompressed), which suited my needs well.
+The interface of cmus is slightly strange, and may take some getting used to. It is broken up into seven “views”, which can be accessed using the number keys. The views are “Library”, “Sorted Library”, “Playlist”, “Play Queue”, “Browser”, “Filters”, and “Settings”.
+To be honest, I still haven’t given cmus a fair shake. It seems like an excellent music player, but I’m still unable to break away from the familiarity of audacious. I’m once again reaffirming my commitment to trying cmus out; it seems like a really good player, if given the time of day.
+parecord
+Pulseaudio comes with a selection of very handy command-line utilities that can be used to play and record audio in various formats. The one I’d like to discuss is “parecord”.
+Ordinarily, I do all of my podcast recording with the arecord utility, which talks directly to ALSA. Last time I tried this, it very badly broke audacity when I tried to import the audio. I sounded like a chipmunk, and then audacity crashed.
+parecord is a nice alternative to arecord, because it also does encoding on the fly. There may be an ALSA equivalent that also encodes your audio as you’re recording, but I don’t know about it. At best, you’d have to pipe the output of arecord to avconv or a similar utility.
+Using parecord, I can specify the file format using the --file-format flag, and record directly to FLAC, which is what HPR prefers. Other formats are available, but I think FLAC is a good balance of quality and compression.
+If you prefer the raw recording style of arecord, there is a utility called parec which will record raw audio data, but it’s a bit outside of the scope of this podcast. Also, I don’t really know much about it.
+
+I hope someone can find some use in the applications I’ve mentioned here. If you have some other packages that you find indispensable and/or useful, I’d love to hear about them in your very own episode.

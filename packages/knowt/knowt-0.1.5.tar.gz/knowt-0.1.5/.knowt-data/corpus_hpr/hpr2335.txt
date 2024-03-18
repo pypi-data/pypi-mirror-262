@@ -1,0 +1,22 @@
+## hpr2335 :: Baofeng UV5R VHF/UHF Handset part 9
+
+ In this episode I cover the menus 25 to 40 of the Baofeng UV5R VHF / UHF Hand Held Transceiver
+
+Menu 25, SFT-D - Frequency Shift Direction [ - / + / 0 ] (Duplex shift)
+Menu 26, OFFSET - Frequency shift amount - Values (MHz) [ 00.000 - 69.990 ]
+Menu 27, MEM-CH - Store a Memory Channel [ 000 -- 127 ]
+Menu 28, DEL-CH - Delete a memory channel [ 000 -- 127 ]
+Menu 29, WT-LED - Display back-light colour (Standby) [ BLUE, ORANGE, PURPLE, OFF ]
+Menu 30, RX-LED - Display back-light colour (Receive) [ BLUE, ORANGE, PURPLE, OFF ]
+Menu 31, TX-LED - Display back-light colour (Transmitt) [ BLUE, ORANGE, PURPLE, OFF ]
+Menu 32, AL-MOD - Alarm Mode, Activated when Orange button Held [ SITE, TONE, CODE ]
+Menu 33, BAND - Band Selection [VHF/UHF]
+Menu 34, TDR-AB - Transmit selection in Dual Watch mode [ A / B / OFF ]
+Menu 35, STE (Squelch Tail Elimination) [ ON / OFF ]
+https://ham.stackexchange.com/questions/3771/how-does-the-baofeng-radio-eliminate-squelch-tail
+Menu 36, RP-STE - Squelch Tail Elimination through a repeater [ 1-10 OFF]
+Menu 37, RPT-RL - Delay the squelch tail of re-peater [ 1 - 10 OFF ]
+Menu 38, 38 PONMGS - Power On Message [ Full / MSG ]
+Menu 39, Roger Beep, Wikipedia [ ON / OFF ]
+https://en.wiktionary.org/wiki/roger_beep
+Menu 40 RESET - Restore defaults [ VFO / ALL ]

@@ -1,0 +1,19 @@
+## hpr3748 :: The Squirrels gift to HPR
+
+ Humans,
+Download the following compressed tar file containing the Squirrels
+Podcast thingie.
+https://drive.google.com/file/d/1akf74fhM6s1DtDFPhrVvvbKXkzCCa4JQ/view?usp=sharing
+Untar the thingie;
+tar -zxvf PODTHING
+explore the subdirectories it created.
+You can copy the Media_Gift directory to where ever you want it to
+reside and even rename it
+mv Media_Gift  /home/me/mythingie
+install your own korn shell {KSH} or modify the bashpodder.shell
+scripts located inside to point to where ever you keep bash on your
+system.
+Run the entire script from the Media_Gift directory
+./get_all_podcasts
+Enjoy Humans. All Squirrels love all humans. Happy Holidays. Eat more
+nuts.

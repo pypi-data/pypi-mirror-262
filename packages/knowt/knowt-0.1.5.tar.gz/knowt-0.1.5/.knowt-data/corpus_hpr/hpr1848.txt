@@ -1,0 +1,35 @@
+## hpr1848 :: Introduction to w3m, a Command Line Web Browser
+
+ W3M is a text browser with image and tab support which supports both keyboard and mouse navigation. (Image support is not available in some terminals, but does work in Xterm and rxvt, but images may be opened in a external viewer)). Mouse and keyboard navigation are supported, but I recommend learning the keybindings. Keybindings are case sensitive.
+The manual is 12 pages long and quite exhaustive. Here are some useful keybindings to get started with.
+
+Open new tab: SHIFT-T
+Close tab: CTRL-Q
+Open URL: U (opens text dialog at bottom of window)
+See URL of current page: u (displays current URL at bottom of window)
+Close tab: CTRL Q
+Go left one tab: {
+Go right one tab: }
+Back in the same page: b
+Page Up: - (hyphen) or PG UP
+Page Down: SPACE or PG DOWN
+Previous page ("Buffer"): B
+There is no "forward" button, but you can use view History: CTRL-h
+Search in page: / (opens search dialog at bottom of window)
+Help: H
+Add bookmark: ESC-a
+View bookmarks: ESC-v
+Run shell command: # (Opens a dialog at the bottom of the window. Exit with B.)
+Paste into dialogs (e. g., passwords): Middle mouse button.
+Scroll left: . (period)
+Scroll right: , (comma)
+
+Useful Links:
+
+W3M homepage: https://w3m.sourceforge.net/
+W3M Manual: https://w3m.sourceforge.net/MANUAL Note: If you want to use W3M, I recommend having the manual handy.
+How-To Geek Intro to W3M: https://www.howtogeek.com/103574/how-to-browse-from-the-linux-terminal-with-w3m/
+gotbletu's Youtube w3m tutorial: https://www.youtube.com/watch?v=Z22cFTB-uqg&list=PLzp-Yldf70WnwhVP-7CsgWkpLXY_pSLtu
+Stack Exchange article on how to configure W3M to enable copying URLs (not tested). https://unix.stackexchange.com/questions/12497/yanking-urls-in-w3m
+Xterm configuration menus: https://scarygliders.net/2011/12/01/customize-xterm-the-original-and-best-terminal/
+

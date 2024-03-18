@@ -1,0 +1,157 @@
+## hpr3944 :: Race for the Galaxy
+
+ Race for the galaxy
+Race for the galaxy is a four player card game published by Rio
+Grande Games.
+The goal of the game is to build a space imperium and the player with
+most victory points wins.
+There's also a computer version of the game, which saves you from
+packing up the game after playing.
+Turn sequence
+There are five phases in turn:
+
+Explore
+Develop
+Settle
+Consume
+Produce
+
+At the beginning of turn, every player selects one of these phases
+and selections are revealed simultaneously. Only selected phases will be
+played. Player who selected a phase gets a small bonus.
+Explore
+
+draw two cards and keep one
+bonus: draw five cards and keep one
+bonus: draw one additional card and keep one additional card
+
+Develop
+
+place development card in play and discard cards from your hand to
+cover the cost
+bonus: -1 to cost
+
+Settle
+
+place a planet card in play and discard cards from your hand to
+cover the cost
+except military planets, which you'll conquer with your military
+score
+if it's a windfall world, produce on it
+
+Consume:
+
+use consume powers on cards to turn good into victory points
+you have to keep consuming until you can't anymore
+bonus: trade one goods card for 2-5 cards
+bonus: 2xVPs gain twice the victory points
+
+Produce:
+
+produce on regular planets
+bonus: produce on windfall planet
+
+repeat until:
+
+one empire is 12 cards big
+VP tokes run out
+
+score:
+
+points for cards on the table
+cards in the hand (+1 for each)
+VPs earned
+
+special rules
+
+cards on the table
+draw extra cards
+trade goods on planets
+add up your military score
+settle planets for cheaper
+have bigger empire limit
+produce on a windfall planet after discarding a card
+etc.
+
+Examples of cards
+Star nomad raiders
+
+military 2 planet, worth 1 vp
++1 to military
++2 cards when trading goods
+
+Terraforming robots
+
+development 3, worth 2 vp
+draw 1 card after placing a world
+discard 1 rare elements good to gain 1 card and 1 vp
+
+Public works
+
+development 1, worth 1 vp
+draw 1 card after placing a development
+discard 1 good to gain 1 vp
+
+Expansions
+All expansions add new cards.
+The gathering storm
+
+
+goals (first and most)
+extra player
+
+
+Rebel vs. Imperium
+
+
+solo play
+take over (conquer other player's worlds)
+extra player
+
+
+Brink of War
+
+
+- prestige
+
+
+counts as VP in the end
+can be used to perform actions
+
+
+
+
+requires two previous expansions
+
+
+Alien Artifacts
+
+
+incompatible with previous expansions
+49 cards representing alien orb players can explore
+balance between expanding and exploring
+
+
+Verdict
+
+fun and quick game
+every player concentrates on their own imperium
+keep an eye what opponent is doing (trading / military)
+cards are dense with information
+
+Example
+
+I recorded myself playing against computer: [Race for the galaxy -
+three medium AIs](https://diode.zone/w/rw8z8pqeqAauENSufmgkjV).
+for some reason, you can't follow me outside of the instance
+
+In closing
+
+- questions, comments, feedback?
+
+
+Tuula@mastodon.art
+or even better, record your own episode
+
+
+

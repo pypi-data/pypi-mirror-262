@@ -1,0 +1,23 @@
+## hpr3569 :: Linux Inlaws S01E53: Rust Marketing
+
+ In this episode our two heroes explore the depths a new (?) hipster
+programming language called Rust. Being an obvious piece of blatant technology
+marketing, the Linux Inlaws are still waiting for the funds to arrive from the
+Rust Foundation :-) (@Foundation: If you want to get in touch please send
+a mail to sponsor at linuxinlaws eu). Jokes aside, the episode give a short
+overview of this new programming language without going into deeper technical
+details as this podcast is only the usual four hours long.
+Links:
+
+Rust: https://en.wikipedia.org/wiki/Rust
+Rust (II): https://www.rust-lang.org
+Firefox and Rust: https://servo.org
+Rust on TIOBE: https://www.tiobe.com/tiobe-index/rust
+Rust adoption: https://thenewstack.io/rust-by-the-numbers-the-rust-programming-language-in-2021
+Bottlerocket: https://aws.amazon.com/bottlerocket/
+Rust Foundation: https://foundation.rust-lang.org
+Cargo (Rust's package management and build system): https://doc.rust-lang.org/cargo
+Rust's Crates: https://crates.io
+D-Wave's quantum machines: https://www.dwavesys.com/solutions-and-products/systems
+Grumpies: https://grumpy-old-coders.org
+

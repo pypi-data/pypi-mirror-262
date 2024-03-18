@@ -1,0 +1,8 @@
+## hpr1896 :: User Local Software
+
+ In this recording I describe how I decided where to store software that I downloaded manually, as opposed to software that is installed and organized automatically by GNU/Linux systems.
+SPOILER: I settled on ~/local/src/ and ~/local/opt/
+Happy Halloween.
+This is my first time recording a podcast. I recorded this in an afternoon when no one else was around except the furry kids and the neighbors outside. I've had the idea for this episode for a while, but having never recorded before didn't really know when/where/how to do it until just now.
+The perspective of this episode comes from a GNU/Linux user since Sept. 2012, and a little bit of experience from 2002-2004. I'm interested in easy, simple solutions that everyone can use to solve problems or use new things.
+Special thanks to Clacke for recommending in his recent episode the free/open-source Android recording application uRecord available from F-Droid. The resulting audio sounds great and uRecord is very easy to use. I recorded several separate paragraphs and concatenated them with Audacity.

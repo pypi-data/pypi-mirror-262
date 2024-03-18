@@ -1,0 +1,22 @@
+## hpr1620 :: Passwords, Entropy, and Good Password Practices
+
+ 
+Right now for most of us the key to any security in our online life is the degree of entropy in our passwords. So what is entropy, and how does it affect our passwords?
+
+
+Entropy is in general the degree of randomness or disorder in any given system. Sometimes it is very easy to assess, such as a password of 1234, which all too many people use. Because it is a simple sequence, there is no real randomness at all, and would be quickly guessed. And as we saw in the last tutorial, such passwords are quickly discovered in a dictionary attack. There are things you can do to make it less likely that your password will be cracked and used against you. - For more go to https://www.zwilnik.com/?page_id=530
+
+
+Links:
+
+
+https://splashdata.com/press/worstpasswords2013.htm
+
+https://www.grc.com/haystack.htm
+
+https://lastpass.com/
+
+https://keepass.info/
+
+https://www.zwilnik.com/?page_id=530
+

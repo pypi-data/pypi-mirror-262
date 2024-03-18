@@ -1,0 +1,10 @@
+## hpr2298 :: Phantom Power Drain
+
+ 
+disconnect negative battery cable.
+connect multimeter between battery and cable.
+read amp draw... 15-20 millivolts milliamps is on the high end.
+unplug fuses one at a time, until the problem circuit is identified.
+
+... some lip smacking, and vocal fry.
+Corrected 2017-05-27 - Editor

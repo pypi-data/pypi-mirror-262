@@ -1,0 +1,24 @@
+## hpr2752 :: XSV for fast CSV manipulations - Part 2
+
+ XSV for fast CSV manipulations - Part 1: Basic Usage
+
+https://github.com/BurntSushi/xsv
+
+Introduction
+xsv is a command line program for indexing, slicing, analyzing, splitting and joining CSV files. Commands should be simple, fast and composable:
+
+Simple tasks should be easy.
+Performance trade offs should be exposed in the CLI interface.
+Composition should not come at the expense of performance.
+
+We will be using the CSV file provided in the documentation.
+Commands covered in this episode
+
+fixedlengths - Force a CSV file to have same-length records by either padding or truncating them.
+fmt - Reformat CSV data with different delimiters, record terminators or quoting rules. (Supports ASCII delimited data.)
+input - Read CSV data with exotic quoting/escaping rules.
+partition - Partition CSV data based on a column value.
+split - Split one CSV file into many CSV files of N chunks.
+sample - Randomly draw rows from CSV data using reservoir sampling (i.e., use memory proportional to the size of the sample).
+cat - Concatenate CSV files by row or by column.
+

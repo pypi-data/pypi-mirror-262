@@ -1,0 +1,73 @@
+## hpr2332 :: Installing DD-WRT on ASUS RT-N66U
+
+ Notes
+
+This worked for me, but it’s no guarantee it’ll work for you
+It’s been a couple weeks and I’m doing this from memory with the help of the resources I used, so I may have missed or misremembered a step
+Read the relevant documentation for yourself
+
+Peacock Thread
+ASUS RT-N66U Specific Page
+
+DO NOT use the router database to determine the firmware version to use
+
+Resetting and Clearing
+
+Recovery Mode (use Reset Button):
+
+With router unplugged, press reset button
+Plug in power
+Hold reset button for ~10 seconds until the power LED is blinking slowly
+
+Clear the NVRAM (use WPS Button):
+
+With router unplugged, press WPS button
+Plug in power
+Hold WPS button for ~10 seconds
+Note: NVRAM is where the settings for the router are stored
+
+30-30-30 Reset
+
+Push reset button with the router powered on for 30 seconds
+Pull the power cord for 30 seconds while holding the reset button
+Plug the power cord in for 30 seconds, while holding the reset button
+
+
+Upload via Web GUI
+
+Tried using the Web GUI method, but ASUS firmware checks to see if it’s an official version (i.e. signed by ASUS), and will only install it if it is
+DD-WRT isn’t an official version, obviously, but not all is lost, uploading via recovery utility works
+
+Upload via Recovery Utility
+
+Download router firmware: dd-wrt.v24-26138_NEWD-2_K3.x-big-RT-N6UU.trx
+
+big version includes more tools than mega version
+
+Make the following network config information on the computer you’ll upload the firmware from:
+
+IP = 192.168.1.12
+Subnet = 255.255.255.0
+Default Gateway = 192.168.1.1
+
+Perform 30-30-30 Reset
+Perform Clear NVRAM
+Perform Recovery Mode
+Navigate to 192.168.1.1 and follow screen directions to upload DD-WRT firmware
+It may take up to 10 minutes to reboot (don’t think it took that long, but I waited that long)
+Perform Recovery Mode
+Navigate to 192.168.1.1 and select Reset NVRAM
+Navigate to https://192.168.1.1/do.htm?cmd=nvram+commit, and then select reboot and wait ~10 minutes
+Perform 30-30-30 Reset
+Navigating to 192.168.1.1 should now bring you to your new DD-WRT installation
+
+Remember to secure it
+
+Note: installing mini version (referenced in online directions) isn’t necessary prior to installing the big/mega version
+
+Resources
+
+Steps to take if you think you have a bricked router
+Should use recovery mode and K3.x version
+Non-official firmware is blocked
+

@@ -1,0 +1,47 @@
+## hpr2509 :: AudioBookClub 16 Matcher Rules
+
+ SUMMARY
+In this episode, the HPR_AudioBookClub discusses Matcher Rules by Mary Holland https://scribl.com/books/PDB66/matcher-rules
+NON-SPOILER THOUGHTS
+
+pokey: An enjoyable story, but not really for me.
+FiftyOneFifty: It's not about orgies...
+x1101: Liked it. A little slow.
+Thaj: It surprised me, I didn't expect to like it as much as I did.
+
+BEVERAGE REVIEWS
+As usual, the HPR_AudioBookClub took some time to review the beverages that each of us were drinking during the episode
+
+Thaj: Voice fading fast. Need a boost. With a little lemon and some local honey https://www.traditionalmedicinals.com/products/throat-coat/
+x1101: Harpoon IPA - https://www.harpoonbrewery.com/beer/1/harpoon-ipa
+pokey: "my beer is a knife" Smuttynose Robust Porter https://smuttynose.com/beer/robust-porter/. I sharpen it with a Spyderco Triangle Sharpmaker https://www.spyderco.com/catalog/details.php?product=77. It is awesome.
+FiftyOneFifty: Junior Johnson's Midnight Moonshine
+
+THINGS WE TALKED ABOUT
+We discuss the upsides and downsides of affinity groups. Pokey wonders why terminology for simple things are changed in sci-fi stories. How exactly do population and economics work together?
+OUR NEXT AUDIOBOOK
+Blood Witness by David Hitt - https://scribl.com/books/PA513/blood-witness
+NEXT RECORDING
+We are currently working through a backlog of pre-recorded episodes. Once this is completed we will restart the Audiobook Club again. If you want to be notified when this happens please let us know via the HPR Mailing List 'hpr at hackerpublicradio dot org'.
+FURTHER RECOMMENDATIONS
+Nothing this time, well except for the typical Star Wars reference...and Star Trek, and comics.
+FEEDBACK
+Thank you very much for listening to this episode of the HPR_AudioBookClub. We had a great time recording this show, and we hope you enjoyed it as well. We also hope you'll consider joining us next time. Please leave a few words in the episode's comment section. As always; remember to visit the HPR contribution page HPR could really use your help right now. https://hackerpublicradio.org/contribute.php
+Sincerely,
+The HPR_AudioBookClub
+P.S. Some people really like finding mistakes. For their enjoyment, we always include a few.
+OUR AUDIO
+This episode was processed using Audacity https://audacity.sourceforge.net. We've been making small adjustments to our audio mix each month in order to get the best possible sound. It has been especially challenging getting all of our voices relatively level, because everyone has their own unique setup. Mumble is great for bringing us all together, and for recording, but it's not good at making everyone's voice the same volume. We're pretty happy with the way this month's show turned out, so we'd like to share our editing process and settings with you and our future selves (who, of course, will have forgotten all this by then).
+Mumble uses a sample rate of 48kHz, but HPR requires a sample rate of 44.1kHz so the first step in our audio process is to resample the file at 44.1kHz. Resampling can take a long time if you don't have a powerful computer, and sometimes even if you do. If you record late at night, like we do, you may want to start the task before you go to bed, and save it first thing in the morning, so that the file is ready to go the next time you are.
+Next we use the "Compressor" effect with the following settings:
+Threshold: -30db
+Noise Floor: -50db
+Ratio: 3:1
+Attack Time: 0.2sec
+Decay Time: 1.0 sec
+Make-up Gain for 0db after compressing" and "compress based on peaks" were both left un-checked.
+After compressing the audio we cut any pre-show and post-show chatter from the file and save them in a separate file for possible use as outtakes after the closing music.
+At this point we listen back to the whole file and we work on the shownotes. This is when we can cut out anything that needs to be cut, and we can also make sure that we put any links in the shownotes that were talked about during the recording of the show. We finish the shownotes before exporting the .aup file to .FLAC so that we can paste a copy of the shownotes into the audio file's metadata. We use the "Truncate Silence" effect with its default settings to minimize the silence between people speaking. When used with its default (or at least reasonable) settings, Truncate Silence is extremely effective and satisfying. It makes everyone sound smarter, it makes the file shorter without destroying actual content, and it makes conversations sound as easy and fluid during playback as it was while it was recorded. It can be even more effective if you can train yourself to remain silent instead of saying "uuuuummmm." Just remember to ONLY pass the file through Truncate Silence ONCE. If you pass it through a second time, or if you set it too agressively your audio may sound sped up and choppy.
+At this point we add new, empty audio tracks into which we paste the intro, outro and possibly outtakes, and we rename each track accordingly.
+We adjust the Gain so that the VU meter in Audacity hovers around -12db while people are speaking, and we try to keep the peaks under -6db, and we adjust the Gain on each of the new tracks so that all volumes are similar, and more importantly comfortable. Once this is done we can "Mix and Render" all of our tracks into a single track for export to the .FLAC file which is uploaded to the HPR server.
+Remember to save often when using Audacity. We like to save after each of these steps. Audacity has a reputation for being "crashy" but if you remember save after every major transform, you will wonder how it even got that reputation.

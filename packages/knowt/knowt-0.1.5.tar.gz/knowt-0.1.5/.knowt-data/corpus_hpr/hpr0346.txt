@@ -1,0 +1,3 @@
+## hpr0346 :: GridBackup
+
+ Shawn Willden presents on GridBackup: A peer to peer backup system built on top of the allmydata.org Tahoe distributed file system.

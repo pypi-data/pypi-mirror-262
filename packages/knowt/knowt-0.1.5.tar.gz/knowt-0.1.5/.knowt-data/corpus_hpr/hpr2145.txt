@@ -1,0 +1,92 @@
+## hpr2145 :: Daily notes and todo list with markdown
+
+ Using Markdown and git to store your todo list and daily journal
+Why markdown
+
+No distractions
+Simple syntax
+Plain text, Human readable.
+Inline HTML
+Easy conversion to other formats
+
+Why git
+
+Any SCM probably OK
+Github and Gitlab render markdown.
+
+The todo page
+    # TODO
+
+    ### Can do now
+    * Bullet 1
+    * Bullet 2
+
+    ### Near term
+    1. Numbered 1
+    1. Numbered 2
+
+    ### Long term
+The journal script
+    DAILYFILE="/Users/norrist/Projects/todo/daily/$(/bin/date +%F).md"
+    DAILYPATH="/Users/norrist/Projects/todo/daily/"
+    LOCKFILE="/Users/norrist/Projects/todo/daily/LOCK"
+    TODOFILE="/Users/norrist/Projects/todo/todo.md"
+
+    if [ -f $LOCKFILE ]
+        then
+            echo "$LOCKFILE PRESENT - ABORTING"
+            read -n1 -p "Remove and Continue? [y,n]" doit
+                case $doit in
+                    y|Y) echo "Continuing with $LOCKFILE PRESENT" ;;
+                    *) exit 1 ;;
+                esac
+
+
+        else
+            echo "NO LOKCFILE"
+            touch $LOCKFILE
+
+    fi
+
+
+    if [ -f $DAILYFILE ]
+        then
+            echo "$DAILYFILE exists"
+        else
+            echo  >> $DAILYFILE
+            echo  "-----">> $DAILYFILE
+            echo "# $(/bin/date +%F)" >> $DAILYFILE
+            echo  >> $DAILYFILE
+            echo "### Projects" >> $DAILYFILE
+            echo  >> $DAILYFILE
+            echo "### Tickets" >> $DAILYFILE
+            echo  >> $DAILYFILE
+            echo "### Walkups" >> $DAILYFILE
+    fi
+
+    /usr/local/bin/edit -w --new-window $DAILYFILE
+    /opt/local/bin/aspell -c $DAILYFILE
+    /opt/local/bin/aspell -c $TODOFILE
+
+    rm $LOCKFILE
+    rm $DAILYPATH/README.md
+
+    cat $TODOFILE >> $DAILYPATH/README.md
+
+    for f in $(ls  -r $DAILYPATH/2*md)
+     do cat $f >> $DAILYPATH/README.md
+     echo >>$DAILYPATH/README.md
+     done
+
+    cd /Users/norrist/Projects/todo; /usr/bin/git add . && /usr/bin/git commit -m "$(date)" && /usr/bin/git push origin master
+Daily file template
+    # 2016-08-02
+
+    -----
+
+    ### Projects
+
+    ### Tickets
+
+    ### Walkups
+aspell is awesome

@@ -1,0 +1,25 @@
+## hpr2724 :: Using a DIN Rail to mount a Raspberry Pi
+
+ Overview
+A DIN Rail is a metal rail for mounting pieces of electrical equipment inside an equipment rack, for performing tasks in a building, in a machine, and so forth. It’s common to see DIN rails holding circuit breakers for example.
+See the Wikipedia article on the subject for full details.
+A number of people in the Maker Community have made use of these rails, and there are a number of freely available designs for stands that can be 3D printed on which you can mount these rails. There are also designs for mounts onto which devices like Raspberry Pis and disks can be fitted and attached to a rail.
+This show will recount my experiences with creating a compact mounting system for one of my Raspberry Pi systems. I had the help of my son and his girlfriend in 3D printing the parts for this project.
+Long notes
+I have provided detailed notes and pictures for this episode, and these can be viewed here.
+Links
+
+Wikipedia article DIN Rail
+Thingiverse designs used:
+
+DIN Mounts: Pi, Arduino and disks by imstrng
+DIN Rail Stand by RedWraith
+
+
+
+Other Thingiverse DIN Rail-related items:
+
+DIN Rail Stand v2 by philklaus
+Raspberry Pi Zero Vertical Edge-Mounted DIN Mount by coffeenut
+
+

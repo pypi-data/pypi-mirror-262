@@ -1,0 +1,19 @@
+## hpr1999 :: How I record a full band under Linux
+
+ How I use Ardour, Jack audio, and a Presonus interface to record an entire band practice under linux.
+
+Tools:
+
+Ardour
+Calf studio gear
+Invada Plugins
+ArtyFX
+Jack
+Qjackctl
+
+Hardware
+
+Dell Latitude e6320
+Presonus studiolive 16.4.2
+various Microphones
+

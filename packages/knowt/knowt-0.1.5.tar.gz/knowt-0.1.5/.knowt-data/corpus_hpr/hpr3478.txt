@@ -1,0 +1,8 @@
+## hpr3478 :: Audio Wiring Hack on a Classroom Podium
+
+ In this episode I take you along for the ride as I hack the wiring in a classroom podium so that I can show musical scores on the Elmo document camera while playing audio through the podium's laptop VGA audio source. Without this hack, the students could either see the score, or they could hear the music, but not both. This simple hack installing two jumper wires allows them to see the score and hear the music at the same time, which is important in my classes. I could already do this by using a PDF music score on my laptop while playing the audio file, but this allows me to use a paper score and audio from my laptop at once. It essentially acts as an audio splitter, sending the audio signal to two channels at once.
+Links
+
+Music from Kimiko Ishizaka's The Open Well-Tempered Clavier: https://www.welltemperedclavier.org/, used by permission of its CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
+Pictures of the Podium Audio Wiring Hack
+

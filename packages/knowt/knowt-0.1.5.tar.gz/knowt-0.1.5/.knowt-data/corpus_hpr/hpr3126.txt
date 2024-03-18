@@ -1,0 +1,12 @@
+## hpr3126 :: Metrics part II
+
+ In this show I continue from where I left off in my last show (3101) and talk about the geometry of curved 2D surfaces such as that of a sphere.
+Using the Earth's surface as an example we can use familiar the co-ordinates of longitude and latitude, illustrated on this diagram:
+
+Source: Public domain, Wikimedia commons
+On the left we see circles of constant latitude. The largest of these circles is at latitude 0° and is called the equator. Its circumference is equal to that of the Earth and so it is an example of a great circle.
+On the right we see lines of constant longitude. These run from pole to pole and are perpendicular to the equator. Each of these lie on a great circle (in fact they are half a great circle each).
+Great circles on the surface of a sphere are analogous to straight lines on a flat 2D surface. They offer a way to connect any two points with the shortest distance. Lines in 2D or great circles on a sphere are examples of what is called a geodesic. In physics, particles that are not subject to any forces will follow geodesics.
+In Einstein's General Theory of Relativity, the presence of mass or energy will alter the shape of spacetime and that will determine the metric. From the metric you can derive the geodesics and from that you can predict the motion of objects with no forces acting on them. In this way you can do away with the approximation that is Newton's gravitational force and replace it by a description that only involves the curvature of spacetime. I only touch on this in this show but will likely return to it in future shows.
+Here are the equations discussed in this show and the previous one:
+

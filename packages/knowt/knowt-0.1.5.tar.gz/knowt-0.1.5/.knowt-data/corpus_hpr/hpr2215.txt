@@ -1,0 +1,33 @@
+## hpr2215 :: Kickstarter Omega2 Plus first time setup walkthrough
+
+ I paid for one Omega2 Plus Kickstarter pledge. Later, as most do, the project offers upgrades. My pack was for one Omega2 plus, an OLED module, and the expansion board. After pledging I then added on another Omega2, a GPS module and a mini expansion board. Review wise, this is a good inexpensive IOT kit for any beginner. Someone that is more advanced can get into Arduino, or ESP8266 with microPython.
+
+MC Hawking: https://www.mchawking.com Check the nerdcore podcast there.
+Reference to https://systemau.net.au/ They often kickstart an indegogo as a segment.
+$5 WiFi Linux module Omega2 Plus kickstarter page. https://www.kickstarter.com/projects/onion/omega2-5-iot-computer-with-wi-fi-powered-by-linux
+Onion.io getting started: https://wiki.onion.io/get-started
+FiftyOneFifty's Port forwarding show: https://hackerpublicradio.org/eps.php?id=1924
+TJoe single board computer show: https://code4sale.com/sbc/ Joe follows and re-posts lots of really good tiny or single board computer links on Google plus.
+
+I mention Arduino and ESP8266 with microPython.
+
+MicroPython: https://docs.micropython.org/en/latest/pyboard/pyboard/quickref.html
+
+Really good tutorials on how to get going with microPython:
+
+https://learn.adafruit.com/micropython-displays-drawing-text
+Follow the Tony Dicola tutorials at Adafruit. He's got a lot of really good video tutorials on exactly what you need and how to do just about everything you would want to do with microcontrollers. https://learn.adafruit.com/users/tdicola
+https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html
+
+Links
+
+https://www.mchawking.com
+https://systemau.net.au/
+https://www.kickstarter.com/projects/onion/omega2-5-iot-computer-with-wi-fi-powered-by-linux
+https://wiki.onion.io/get-started
+https://hackerpublicradio.org/eps.php?id=1924
+https://code4sale.com/sbc/
+https://docs.micropython.org/en/latest/pyboard/pyboard/quickref.html
+https://learn.adafruit.com/micropython-displays-drawing-text
+https://learn.adafruit.com/users/tdicola
+https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html

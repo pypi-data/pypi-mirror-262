@@ -1,0 +1,51 @@
+## hpr2555 :: 2017-2018 New Years Eve show part 6
+
+ HPR NYE 2017 - 6
+
+Using Ubuntu with snaps or just using Debian for a home server
+Building a home firewall
+What is the best firewall distro
+Maybe just learn ip tables
+Fun with virtualization
+https://riscv.org/
+A completely Free Hardware CPU that is gaining press
+https://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html
+An ARM processor with built-in FPGA
+Western Digital moving to RISC-V:
+https://www.forbes.com/sites/tiriasresearch/2017/12/06/western-digital-gives-a-billion-unit-boost-to-open-source-risc-v-cpu/
+https://www.youtube.com/watch?v=ATZls4lbwmM&t=20m27s
+WD CEO announces their ambition to switch fully to RISC-V
+https://www.heropunch.io/
+Creating free hardware for decentralized communications, mobile applications and mesh networks
+https://www.scuttlebutt.nz/
+Secure Scuttlebutt, or SSB, is built for intermittent networks and drop points
+A little bit about https://ipfs.io/
+Content-Addressable Networks are important if you're in intermittent or high-latency mesh networks
+And in passing: https://twister.net.co/
+BitTorrent + blockchain + DHT social networking, not entirely dissimilar to SSB
+https://www.bitmessage.org/
+clacke was wrong, it doesn't store messages in a blockchain
+3D printers: https://podnutz.com/category/themakerz/
+
+podcast https://www.tinkercad.com/
+cloud CAD https://www.autodesk.com/products/fusion-360/overview
+cloud CAD https://www.onshape.com/
+cloud CAD https://www.thingiverse.com/
+"the Facebook of 3D model sharing" https://cults3d.com/
+3D model sharing
+https://www.cnx-software.com/2017/05/25/melon-s3-fpga-arduino-raspberry-pi-compatible-board-is-programmable-over-wifi-using-esp8266-wisoc/
+
+https://www.cnx-software.com/2015/11/24/fleafpga-uno-board-combines-a-lattice-fpga-arduino-uno-form-factor-hdmi-output-and-an-esp8266-wifi-module/
+Amiga and https://www.morphos-team.net/
+MorphOS is a proprietary implementation of AmigaOS for PowerPC, but uses free software components from e.g. AROS
+https://c64upgra.de/c-one/
+A C64 reimplementation project that turned into an FPGA platform that can even act as an Amiga
+Ken is awake and is going to solder
+Netminer mentions https://www.youtube.com/channel/UCu4uiUtALy1ILAxNh7TGsmQ
+https://www.youtube.com/watch?v=NHthWtKWXJE
+The kit ken is making  https://www.bitscope.com/product/BS05/
+Ken suggest a show on Bitscope + Raspberry Pi + aurduino tutorial series
+The PCB https://kenfallon.com/files/pcb.jpg
+https://www.ebay.com/p/40w-Co2-Laser-Engraving-Cutting-Machine-Engraver-Cutter-USB-Port/18011066781?iid=322496119440
+https://www.hobby-hour.com/electronics/resistorcalculator.php
+

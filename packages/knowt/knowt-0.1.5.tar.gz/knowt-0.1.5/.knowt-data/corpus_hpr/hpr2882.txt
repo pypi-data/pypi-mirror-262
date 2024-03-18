@@ -1,0 +1,145 @@
+## hpr2882 :: ONICS Part 1:  Basic Commands
+
+ Background
+
+It's been about 6 years since I talked about my project ONICS in HPR 1350
+ONICS stands for Open Network Inpection Command Suite
+I created ONICS as because I thought it would be neat to have a suite of tools that could manipulate packets on the command line in a way similar to how tools lik sed, awk, grep, cut, and so forth manipulate text.
+
+Installing
+
+Not currently maintained in any package distributions
+Maintainers who are interested in doing so are welcome
+Install by source
+
+    $ git clone https://gitlab.com/catlib/catlib
+    $ cd catlib
+    $ make
+    $ cd ..
+    $ git clone https://gitlab.com/onics/onics
+    $ cd onics
+    $ ./configure
+    $ make
+    $ make test
+    $ sudo make install
+    $ make veryclean
+
+
+Can always uninstall cleanly from the source directory
+
+    $ make uninstall
+
+
+Alternate to installation is to stop at 'make test' and then add to 'onics/bin' and 'onics/scripts' to your path.
+
+Documentation
+
+Manpages are available in onics/doc directory if you aren't installing locally. They are quite extensive.
+If installed locally, starting with:
+
+    $ man onics
+
+XPKT Format
+
+PCAP format is outdated and not very extensible
+
+I want to be able to annotate with interface IDs, flow IDs, packet numbers, classification info, header offsets, etc...
+
+First and foremost, the file header prevents just cating files together.
+
+it makes merging live streams more difficult
+pcapng improves things but still has global file header
+
+
+First Programs
+
+Let's first capture in the traditional way
+
+    $ sudo tcpdump -i eth0 -c 5 -w file1.pcap
+
+
+First program is to capture packets from the wire:
+
+    $ sudo pktin eth0 > file2.xpkt
+
+
+If not running as root
+
+    $ sudo chown myname file1.pcap file2.xpkt
+
+
+Let's dump them:
+
+    $ tcpdump -r file1.pcap
+    $ xpktdump file2.xpkt
+
+
+Now lets convert the PCAP to XPKT
+
+    $ pc2xpkt file1.pcap file1.xpkt
+      or
+    $ pc2xpkt file1.pcap > file1.xpkt
+      or
+    $ pc2xpkt < file1.pcap > file1.xpkt
+      or
+    $ cat file1.pcap | pc2xpkt > file1.xpkt
+
+
+Now we can dump file1 using xpktdump:
+
+    $ xpktdump file1.xpkt
+
+Something we can't do w/ tcpdump
+
+Lets now merge them one after another
+
+    $ cat file1.xpkt file2.xpkt > merged.xpkt
+    $ xpktdump merged.xpkt
+
+
+Of course there's a simpler way
+
+    $ cat file1.xpkt file2.xpkt | xpktdump
+
+Convert back to pcap:
+
+Let's convert file2 to PCAP
+
+    $ xpkt2pc file2.xpkt file2.pcap
+      or
+    $ xpkt2pc < file2.xpkt > file2.pcap
+      or
+    $ xpkt2pc file2.xpkt > file2.pcap
+      or
+    $ cat file2.xpkt | xpkt2pc > file2.pcap
+
+
+Let's look at the stream using tcpdump:
+
+    $ tcpdump -r file2.pcap
+
+
+If we didn't want to actually store as a PCAP
+
+    $ xpkt2pc file2.xpkt | tcpdump -r -
+
+
+Let's concatenate and dump using tcpdump
+
+    $ cat file1.xpkt file2.xpkt | xpkt2pc | tcpdump -r | less
+
+Sending packets:
+    $ sudo tcpdump -i eth0  # in one terminal
+    $ sudo pktout -i eth0 file1.xpkt
+      or
+    $ sudo pktout -i eth0 < file1.xpkt
+      or
+    $ cat file1.xpkt | sudo pktout -i eth0
+
+Summary
+
+XPKT is a versatile, extensible, self-contained packet trace format
+ONICS' most basic tools are pktin, pktout, pc2xpkt and xpkt2pc
+We've demonstrated how the ONICS design supports leveraging the power of the UNIX command line for packets
+This is only the VERY beginning. ONICS has over 20 binaries and 30 scripts for manipulating packets.
+

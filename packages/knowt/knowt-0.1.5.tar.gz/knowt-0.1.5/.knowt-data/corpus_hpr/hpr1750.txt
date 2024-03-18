@@ -1,0 +1,72 @@
+## hpr1750 :: xclip, xdotool, xvkbd: 3 CLI Linux tools for RSI sufferers
+
+ Basic commands
+Type the words "foo bar" with xvkbd:
+
+xvkbd -xsendevent -secure -text 'foo bar'
+
+Types out the entire contents of the file "foobar.txt" with xvkbd:
+
+xvkbd -xsendevent -secure -file "foobar.txt"
+
+Send text to the clipboard:
+
+xclip -i
+
+Send clipboard contents to standard output:
+
+xclip -o
+
+Do virtual Ctrl+C key combination with xdotool:
+
+xdotool key Control+c
+
+Save this complicated command as an environment variable—then the variable "$KEYPRESS" expands to this command.
+
+export KEYPRESS="xvkbd -xsendevent -secure -text"
+
+Examples
+With virtual keystrokes and CLI access to the clipboard, you're limited only by your imagination and scripting ability. Here are some examples of how I use them, both for the manipulation of text and for navigation. The words in bold-face are the voice commands I use to launch the written commands. 
+Capitalize this. Copies selected text to the clipboard, pipes it through sed and back into the clipboard, then types fixed text back into my document:
+
+xdotool key Control+c && xclip -o \| sed 's/\(.*\)/\L\1/' \| sed -r 's/\<./\U&/g' \| xclip -i && $KEYPRESS "$(xclip -o)" 
+
+
+Go to grades. This example takes advantage of Firefox "quick search." I start with a single quote to match the linked text "grades" and press the Return key (\r) to follow the link:
+
+$KEYPRESS "'grades\r"
+
+First Inbox. From any location within Thunderbird I can run this command and it executes the keystrokes to take me to the first inbox and put focus on the first message:
+xdotool key Control+k && $KEYPRESS "\[Tab]\[Home]\[Left]\[Right]\[Down]" && sleep .2 && xdotool key Tab
+
+single ex staff. Type out an entire Lilypond template into an empty text editor window:
+xvkbd -xsendevent -secure -file "/path/to/single_ex_staff.ly"
+
+Paragraph Tags. Puts HTML paragraph tags around selected text:
+
+#!/bin/bashKEYPRESS='xvkbd -xsendevent -secure -text'xdotool key Control+c$KEYPRESS '<p>'xdotool key Control+v$KEYPRESS '</p>'
+
+
+Launching commands with keystrokes in Openbox
+I normally use blather voice commands to launch the scripts and keystroke commands, but I have a handful of frequently-used commands that I launch using keystroke combos configured in the Openbox config file (~/.config/openbox/rc.xml on my system). This block configures the super+n key combo to launch my examplelink.sh script.
+
+
+<keybind key="W-n">
+  <action name="Execute">
+	<startupnotify>
+	  <enabled>true</enabled>
+	  <name>special</name>
+	</startupnotify>
+	<command>examplelink.sh</command>
+  </action>
+</keybind>
+
+
+Links
+
+Amazing collection of one-line tricks for the sed stream editor: https://sed.sourceforge.net/sed1line.txt
+Blather source code: https://gitorious.org/blather 
+Sphinx knowledge base tool: https://www.speech.cs.cmu.edu/tools/lmtool-new.html 
+snapshot of my blather commands file: https://paste.jonkulp.net/sicegamupi.tex
+Blather Installation Script for Debian: https://paste.jonkulp.net/lolilabuje
+

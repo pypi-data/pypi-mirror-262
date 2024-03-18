@@ -1,0 +1,5 @@
+## hpr2305 :: Configuring an HP Laptop for Dual Boot Linux and Windows 10
+
+ This presentation describes the installation of Ubuntu GNOME 16.04 to dual boot with Windows 10 Home on an HP Spectre x360-13 laptop. Previously, I had been using Linux in a virtual machine on Windows. After the update, there was a very significant improvement in performance working in Linux without the Windows/VM overhead. It turned out to not be difficult and was certainly worth doing.
+I found a lot of helpful information here: https://askubuntu.com/questions/666631
+Get Clonezilla here: https://clonezilla.org/

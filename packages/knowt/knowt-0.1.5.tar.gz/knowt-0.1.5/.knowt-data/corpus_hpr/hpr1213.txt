@@ -1,0 +1,8 @@
+## hpr1213 :: LiTS 026: units
+
+ Last episode of Linux in the Shell discussed the use of the bc command to perform math on the command line. This episode continues in suit with a mathematical theme picking up from the last examples of converting between different number systems or units. While bc can help you convert between units if you know the formulas, there is another program which will do it all for your units. Chances are units is not installed by default but a simple check in your package manager should allow you to add units to your daily tool set.
+
+
+For more on this post and to see the video please see the main article
+https://www.linuxintheshell.com/2013/03/27/episode-26-units/
+

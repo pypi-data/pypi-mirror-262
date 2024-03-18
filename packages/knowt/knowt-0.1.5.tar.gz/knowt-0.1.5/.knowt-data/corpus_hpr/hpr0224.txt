@@ -1,0 +1,61 @@
+## hpr0224 :: Installing gwibber webkit
+
+ 
+Installing gwibber webkit https://wiki.ubuntu.com/gwibber
+
+This is a guide to install the gwibber micro-blogging client on Ubuntu 8.04
+
+From PPA
+
+Create a file called /etc/apt/sources.list.d/gwibber.list. It should contain the gwibber PPA:
+
+deb https://ppa.launchpad.net/gwibber-team/ubuntu hardy main
+deb-src https://ppa.launchpad.net/gwibber-team/ubuntu hardy main
+deb https://ppa.launchpad.net/stemp/ubuntu hardy main
+
+and then the Webkit PPA (you probably don't need it if you're on Intrepid):
+
+deb https://ppa.launchpad.net/webkit-team/ubuntu hardy main
+deb-src https://ppa.launchpad.net/webkit-team/ubuntu hardy main
+
+
+sudo apt-get install bzr subversion 
+libwebkit-1.0-1 libwebkit-dev python-webkitgtk
+ build-essential autoconf automake libtool 
+libgtk2.0-dev python-dev python-gtk2 
+python-gtk2-dev libsexy2 libsexy-dev python-sexy
+ libxslt1-dev python-cairo-dev python-simplejson 
+python-egenix-mxdatetime
+
+
+            $ sudo apt-get update
+
+            $ svn checkout https://pywebkitgtk.googlecode.com/svn/trunk/ pywebkitgtk-read-only
+
+
+   7. Goto pywebkitgtk-read-only directory - Configure, compile and install pywebkitgtk.
+          *
+
+            $ . cd pywebkitgtk-read-only
+            $ ./autogen.sh --prefix=/usr/local
+            $ make
+            $ sudo make install
+
+   9. Download gwibber webkitui
+          *
+
+            $ cd ~
+            $ bzr branch lp:~segphault/gwibber/webkitui
+
+  10. Goto /webkitui directory to run gwibber
+          *
+
+            $ cd ~/webkitui
+            $ ./run
+
+  11. or install
+          *
+
+            sudo python setup.py install
+
+

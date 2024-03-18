@@ -1,0 +1,10 @@
+## hpr1771 :: Audacity: Label Tracks
+
+ Label Tracks in Audacity
+I don't know if I'm ignorant and everyone else already knows about this, but I decided to record a quick show about Audacity "Label Tracks," something I discovered while working on another HPR episode today.
+The label track is one of the most useful things I've found in a long time. It allows you to annotate your audio project so that you can quickly see important spots or summarize the contents of whole segments and see at a glance what they are about without hunting all over the place and playing things back, trying to find the part where you were talking about X,Y, or Z. You can also export the labels as a plain text file with exact timestamps. I have not tried this, but according to the documentation you can also use labels to mark the beginnings of separate songs in a long track and export multiple separate files at once from a single source based on the labels.
+To add a label track, go to the Tracks menu and select Add New --> Label Track, and it will add the label track to the bottom of your list of tracks. To add a label, either stick the cursor where you want the label to be and press ctrl+b to add text, or select a region to label by clicking and dragging over a region in the label track, then do ctrl+b to start typing the label text.
+Links
+
+Audacity Label Tracks Documentation: https://manual.audacityteam.org/o/man/label_tracks.html
+

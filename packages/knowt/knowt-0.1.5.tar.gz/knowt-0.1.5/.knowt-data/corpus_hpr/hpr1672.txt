@@ -1,0 +1,274 @@
+## hpr1672 :: Systemd for Learner Drivers 
+
+ systemd For Learner Drivers
+A graphic to help out: https://hackerpublicradio.org/eps/hpr1672.svg
+This is a subject that attracts controversy, but I am not today going to be controversial, I hope. Many Linux systems are moving away from SysV Init and adopting systemd instead; both Linuxes that I use, Fedora and Mint have adopted systemd, and I understand that Debian has now forked to allow both sides of the argument to have their way. I am not going to get into the debate here. My personal stance is that I see both sides of the argument and I will continue to perch on top of the fence until systemd either proves itself or fails to do so.
+In this HPR I am going to try to fill a gap that I have seen in the systemd discussion; that is - how to operate it. I am not an expert on systemd, I have just tried to work it, and in doing so I have fished around in my file system and in the documentation. If you want to know what I found, then keep on listening. By way of opening I will remind myself, and you also, what systemd is replacing.
+SysV initd works with runlevels, the most common being
+
+5 for graphical multiuser networked
+3 for cli multiuser networked
+1 for single user
+6 for reboot
+0 for halt
+
+In moving to a runlevel, unwanted services are shut down and wanted services are started up. For most users on most systems the most appropriate default runlevel is 5 giving multiuser, GUI & networking. Services can be started and stopped on demand by inetd.
+systemd works differently. It has target units. For most users on most systems the most appropriate default target is the graphical.target, which does a similar thing to runlevel 5 . Units are configured by unit configuration files. These files may start other units and stop other units. They can impose sequence and dependancies. There is a lot of cascading going on, with unit launching unit launching unit. Units also can be started and stopped on demand by systemd.
+Units
+The term Unit refers to a resource that systemd is taking under its control. There are 12 different types of Unit.
+
+systemd.service
+that starts/stops daemons
+systemd.socket
+activates network connections
+systemd.device
+activates kernel devices
+systemd.mount
+controls mount points
+systemd.automount
+provides on-demand mounting of file systems
+systemd.swap
+does for swap what systemd.mount does for filesystems
+systemd.scope
+starts/stops external processes
+systemd.target
+groups of services akin to init level 3, init level 5
+systemd.snapshot
+saves/restores the momentary state of other units
+systemd.timer
+triggers units based on date/time
+systemd.path
+trigger units based on changes in file system objects
+organises units in a hierarchical tree of cgroups, for resource management purposes
+
+Units files called by systemd live in /etc/systemd/system. But these are symbolic links to the real ones stored in /usr/lib/systemd/system
+There is a parallel /etc/systemd/user structure which does not seem to do anything on my computers, so I work for now like its not there.
+There is also a /run/systemd/system structure which appears to contain runtime configuration files with names like session-xxxx.scope. These are the unit type for external processes.
+
+Table 1. Directory structure for systemd
+
+Path
+Description
+
+
+/etc/systemd/system
+Local configuration
+
+
+/etc/systemd/user
+User configuration
+
+
+/run/systemd/system
+Runtime units
+
+
+/usr/lib/systemd/system
+Units of installed packages
+
+
+Directives
+The next thing we need is Directives.
+The unit configuration files contain directives to start/stop a unit, and directives that cascade to other unit configuration files that start/stop dependant units. Directives may impose conditions on whether or when to call a unit. There are a whole bunch of different directives listed in man systemd.unit. These are a few.
+
+Requires= list of units to start. If any required units fail then abort this one
+Conflicts= list of units to stop
+After= the order in which units will start
+Before= the order in which units will start
+Wants= list of units to start. If any fail just continue anyway
+
+As well wanted units listed by the WANTS directive, there may also be a 'wants' directory below the unit directory. So the unit conf file /etc/systemd/system/default.target will cause two further unit conf files to be read in from the /etc/systemd/system/default.target.wants/ directory.
+Each required unit and wanted unit from the directives, as well as those in the wants directory are added to a job queue. If directives cascade to other unit files containing more directives then all of these dependences are also added to the job queue. A directive may start or stop another unit, or that change the detail of a job already in the queue. All directives ultimately cascade down to starting or stopping one of the base units in /usr/lib/systemd/system.
+To get a feel for how this all pans out in practice I will walk us through the cascade of unit files from bootup.
+From Bootup
+First, the default.taget is activated, which on my system is just a link to graphical.target
+graphical.target
+[Unit]
+Description=Graphical Interface
+Documentation=man:systemd.special(7)
+Requires=multi-user.target
+After=multi-user.target
+Conflicts=rescue.target
+Wants=display-manager.service
+AllowIsolate=yes
+Cascades to
+
+start multi-user.target
+start display-manager.service
+stop rescue.target
+
+Also we have a wants directory /etc/systemd/system/graphical.target.wants/ that
+
+starts accounts-daemon.service (for logging)
+starts rtkit-daemon.service (for realtime scheduling)
+
+multi-user.target
+graphical target cascaded to multi-user.target.
+[Unit]
+Description=Multi-User System
+Documentation=man:systemd.special(7)
+Requires=basic.target
+Conflicts=rescue.service rescue.target
+After=basic.target rescue.service rescue.target
+AllowIsolate=yes
+Cascades to
+
+start basic.target
+stop rescue.service
+stop rescue.target (again)
+
+Also we have a wants directory /etc/systemd/system/multi-user.target.wants/ that
+- abrt-ccpp.service
+- abrtd.service
+- abrt-oops.service
+- abrt-vmcore.service
+- abrt-xorg.service
+- atd.service
+- auditd.service
+- avahi-daemon.service
+- chronyd.service
+- crond.service
+- cups.path
+- irqbalance.service
+- libvirtd.service
+- mcelog.service
+- mdmonitor.service
+- NetworkManager.service
+- nfs.target
+- remote-fs.target
+- rngd.service
+- rpcbind.service
+- rsyslog.service
+- smartd.service
+- vmtoolsd.service
+display-manager.service
+graphical.target also cascaded to display-manager.service which is not present on F20 so I guess we don't need it.
+basic.target
+So multiuser.target cascaded to basic.target, which itself cascades to
+- sysinit.target
+- sockets.target
+- timers.target
+- paths.target
+- slices.target
+- firewalld.service
+sysinit.target
+basic.target cascaded to sysinit.target which itself cascades to
+- local-fs.target 
+- swap.target
+- dmraid-activation.service
+- iscsi.service
+- lvm2-monitor.service
+- multipathd.service ( which looks like all the file system daemons)
+sockets.target
+basic.target also cascaded to sockets.target which itself cascades to
+- avahi-daemon.socket
+- cups.socket
+- dm-event.socket
+- iscsid.socket
+- iscsiuio.socket
+- lvm2-lvmetad.socket
+- rpcbind.socket
+End point
+Now we start reaching the end-points of this trail at
+- systemd.sockets
+- systemd.timer
+- systemd.path
+- systemd.slice
+- systemd-fstab-generator
+By the time all of that has finished, if I type the command
+# systemctl list-units --type service
+I see that 58 services are listed as running
+Running and Configuring Services
+If we are going to work with systemd we will have to give it instructions. In systemd parlance
+
+active = running, currently in use
+loaded = enabled, available for use
+
+These terms crop up in the output from commands
+Many instructions are given to systemd by the systemctl command.
+Now to compare line up some common SysV init tasks with their systemd equivalent
+
+Table 2. SysV init commands and their systemd equivalents
+
+command
+SysV Init
+systemd
+
+
+Check status
+# service bluetooth status
+# systemctl status bluetooth
+
+
+Start
+# service bluetooth start
+# systemctl start bluetooth
+
+
+Stop
+# service bluetooth stop
+# systemctl stop bluetooth
+
+
+Enable
+# chkconfig --level 35 ntpd on
+# systemctl enable ntpd
+
+
+Disable
+# chkconfig --level 35 ntpd off
+# systemctl disable ntpd
+
+
+Journalctl Logging
+Much has been said about the desirability or otherwise of binary logs, but systemd gives us these so we had better know what to do with them.
+Journal instructions are given to systemd by the journalctl command
+
+To view all log entries in one go. This is verbose, mine came out at ~9000 lines
+# journalctl
+To view from a specific date
+# journalctl --since="2014-05-07"
+To view kernel logs
+# journalctl -k
+To follow a log in realtime ... and then to close
+# journalctl -f ... # ctl-c
+To view log entries associated with a given PID
+# journalctl _PID=1
+To view log entries associated with a given service
+# journatlctl -u bluetooth
+
+Interrogating the system
+More systemd information
+
+Get/Set system information. Works like uname, but is more verbose
+# hostnamectl
+Get/Set timezone & timedate info
+# timedatectl
+
+
+Table 3. SysV init information and their systemd equivalents
+
+SysV Init Info
+SysV Init command
+systemd info
+systemd command
+
+
+What services are available for init.d to manage
+# ls /etc/init.d
+What service units are available for systemd to run
+# systemctl list-units --type service --all
+
+
+What services are configured to be run by init.d for each run level
+# chkconfig --list
+What service units are currently active
+# systemctl list-units --type service
+
+
+References
+
+man pages for systemd, systemd.unit, systemctl, journalctl. Plus a bunch of other man pages that are SEE ALSO in these man pages.
+systemd homepage
+A useful systemd blog posting, by Adam Dean of Asterisk Telephones
+A useful youtube vid by George Magklaras, UNiversity of Oslo, Norway

@@ -1,0 +1,123 @@
+## hpr2184 :: Gnu Awk - Part 5
+
+ GNU AWK - Part 5
+Regular Expressions in AWK
+The syntax for using regular expressions to match lines in AWK is as follows:
+word ~ /match/
+Or for not matching, use the following:
+word !~ /match/
+Remember the following file from the previous episodes:
+name       color  amount
+apple      red    4
+banana     yellow 6
+strawberry red    3
+grape      purple 10
+apple      green  8
+plum       purple 2
+kiwi       brown  4
+potato     brown  9
+pineapple  yellow 5
+We can run the following command:
+$1 ~ /p[elu]/ {print $0}
+We will get the following output:
+apple      red    4
+grape      purple 10
+apple      green  8
+plum       purple 2
+pineapple  yellow 5
+In another example:
+$2 ~ /e{2}/ {print $0}
+Will produce the output:
+apple      green  8
+Regular expression basics
+Certain characters have special meaning when using regular expressions.
+Anchors
+
+^ - beginning of the line
+$ - end of the line
+\A - beginning of a string
+\z - end of a string
+\b on a word boundary
+
+Characters
+
+[ad] - a or d
+[a-d] - any character a through d
+[^a-d] - not any character a through d
+\w - any word
+\s - any white-space character
+\d - any digit
+
+The capital version of w, s, and d are negations.
+Or, you can reference characters the POSIX standard way:
+
+[:alnum:] - Alphanumeric characters
+[:alpha:] - Alphabetic characters
+[:blank:] - Space and TAB characters
+[:cntrl:] - Control characters
+[:digit:] - Numeric characters
+[:graph:] - Characters that are both printable and visible (a space is printable but not visible, whereas an ‘a’ is both)
+[:lower:] - Lowercase alphabetic characters
+[:print:] - Printable characters (characters that are not control characters)
+[:punct:] - Punctuation characters (characters that are not letters, digits, control characters, or space characters)
+[:space:] - Space characters (such as space, TAB, and formfeed, to name a few)
+[:upper:] - Uppercase alphabetic characters
+[:xdigit:] - Characters that are hexadecimal digits
+
+Quantifiers
+
+. - match any character
++ - match preceding one or more times
+* - match preceding zero or more times
+? - match preceding zero or one time
+{n} - match preceding exactly n times
+{n,} - match preceding n or more times
+{n,m} - match preceding between n and m times
+
+Grouped Matches
+
+(...) - Parentheses are used for grouping
+| - Means or in the context of a grouped match
+
+Replacement
+
+The sub command substitutes the match with the replacement string. This only applies to the first match.
+The gsub command substitutes all matching items.
+The gensub command command substitutes the in a similar way as sub and gsub, but with extra functionality
+The & character in the replacement field references the matched text. You have to use \& to replace the match with the literal & character.
+
+Example:
+{ sub(/apple/, "nut", $1);
+    print $1}
+The output is:
+name
+nut
+banana
+strawberry
+grape
+nut
+plum
+kiwi
+potato
+pinenut
+Another example:
+{ sub(/.+(pp|rr)/, "test-&", $1);
+    print $1}
+This produces the following output:
+name
+test-apple
+banana
+test-strawberry
+grape
+test-apple
+plum
+kiwi
+potato
+test-pineapple
+Resources
+
+Regex 101 - Advanced online regex tester
+RegExr - Simple online regex tester
+Grymoire's Awk Tutorial - Great Resource for understanding Awk
+GNU Awk's Regex User Guide - Official Gawk user guide
+

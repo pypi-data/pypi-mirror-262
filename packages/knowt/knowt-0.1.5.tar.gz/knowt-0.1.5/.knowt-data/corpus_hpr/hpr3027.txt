@@ -1,0 +1,11 @@
+## hpr3027 :: What is quantum computing and why should we care?
+
+ What are quantum computers anyway?
+Physical computing systems that take advantage of quantum effects.
+What kind of quantum effects, and why does that matter?
+Entanglement and superposition: Entanglement lets us do unusual, head-scratching kinds of things like teleportation. Superposition lets us harness the almost unimaginable potential of quantum mechanics to do things that conventional computers can never do.
+How can you ever explain that in a podcast?
+To really understand the details, you must have math, but math and audio formats are not so compatible. So I use analogies, and throw in some pithy quotes from Einstein and hope that does the trick.
+Big picture?
+Lots of work going on to build quantum processors (QPUs) that use quantum memory and, get this, will at some point actually do error correction. There are programming frameworks and rudimentary compilers to compile down python code all the way down to microwave pulses and laser pulses and there is control machinery to gather back the signals and interpret them to ones and zeros. Quantum computers will be securely networked using quantum protocols and we’ll all live happily ever after in a quantum computing world.
+Questions? Please leave suggestions if you want to dive a bit deeper in some topic areas - it’ll encourage me to do more episodes.

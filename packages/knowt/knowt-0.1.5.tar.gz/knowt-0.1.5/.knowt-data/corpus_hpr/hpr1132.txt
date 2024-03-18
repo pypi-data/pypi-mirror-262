@@ -1,0 +1,8 @@
+## hpr1132 :: LiTS 019: Kill the worms!
+
+ 
+The kill command is used in the shell to terminate a process. Kill works by sending a signal to the process and typically this signal is either the SIGTERM or SIGKILL signal, but there are others that can be used. To properly use the kill command you need to know the Process ID, or PID, of the process you want to kill. Also be aware that some processes can spawn child processes of the same or similar name. For instance, if you have are running the Chromium browser you may find multiple instances of the chromium process running. Killing one of these processes may not terminate all the processes because typically all but the first process are children processes. Killing any or all of the children processes will not terminate the mother process. But terminated the mother process will typically kill the children processes.
+ 
+For more see:
+https://www.linuxintheshell.com/2012/12/04/episode-019-kill-the-worms/
+

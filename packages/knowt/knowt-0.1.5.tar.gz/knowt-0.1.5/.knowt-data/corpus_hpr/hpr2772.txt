@@ -1,0 +1,14 @@
+## hpr2772 :: My applications and software part 3
+
+ Hallo HPR listeners – in my recent episodes hpr2738 and hpr2746 I talked about some of the applications and software I regularly use as part of my day to day use of Linux Mint. This follow up show will continue with a few more of the same.
+
+CUPS – Common Unix Printing Software; printing in Linux with this utility is fairly well supported, if you don’t have a very recent printer it’s a good chance that CUPS will be able to find a driver for your printer if a Linux one has not been supplied when you bought it or through the manufacturers support site. In the menu just search for print and it will bring up the application for adding a new printer.
+Gparted – fully featured disc management tool for formatting and partitioning discs
+Document viewer – generic pdf viewer
+Software manager
+
+Synaptic package manager
+
+Terminal – apt command for updating the system and installing new software
+get_iplayer
+

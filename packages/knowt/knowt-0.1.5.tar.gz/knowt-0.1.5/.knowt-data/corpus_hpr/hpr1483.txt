@@ -1,0 +1,145 @@
+## hpr1483 :: HPR Community News for March 2014
+
+ 
+In today's community news we discuss the happenings in the HPR community. On the mumble were Dave Morriss and Ken Fallon, while we were joined by Pokey and NYBill from the North East Linux Fest. During the show we also heard from Bruce Patterson formally of the Distro weekly podcast. x1101 a HPR listener and soon to be new contributor and finally Paul from paul dot com Paul's Security Weekly.
+
+New hosts
+
+There were no new hosts this month.
+
+Running out of shows
+We got very few shows lately and were it not for the backup shows been moved into the main queue we would be in trouble.
+
+Last Months Shows
+
+
+id
+title
+host
+
+
+
+1456
+HPR Community News for January 2014
+HPR Admins
+
+1457
+Xubuntu, Kali on EeePc, Markdown Stuff, Pogoplug 4, and more.
+Beto
+
+1458
+Free Culture and Open Animation
+Seetee
+
+1459
+Locational Privacy with retrotech-the lowly pager
+deepgeek
+
+1460
+The road warrios command line combat life.
+Knightwise
+
+1461
+FOSDEM Keysigning Event
+Dave Morriss
+
+1462
+Encryption and Email with Thunderbird
+Ahuka
+
+1463
+Code Is a Life Sucking Abyss, Also My Story 
+sigflup
+
+1464
+HPR Audiobook Club: Space Casey
+HPR_AudioBookClub
+
+1465
+24 - LibreOffice Writer A Brochure Project
+Ahuka
+
+1466
+Thoughts on GPS
+pokey
+
+1467
+How to win Find-The-Difference games
+pokey
+
+1468
+A Whole Lot of Nothing: Chromebook EOL, CentOS WTF, Non Mainstream GNU/Linux Distros and more...
+Beto
+
+1469
+HPR Community News for February 2014
+HPR Admins
+
+1470
+Learn to read time with ccClock
+Ken Fallon
+
+1471
+Encrypt Your Stuff With Blowfish 
+sigflup
+
+1472
+How I Found Linux
+Curtis Adkins (CPrompt^)
+
+1473
+FOSDEM Discussion
+Dave Morriss
+
+1474
+A behind the Curtian Look at OsmAnd (OSM Automated Navigation Directions) with Pokey and David
+David Whitman
+
+1475
+25 - LibreOffice Calc What Is A Spreadsheet
+Ahuka
+
+1476
+Sega Genesis Music Driver
+sigflup
+
+
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This discussion takes place on the Mail List which is open to all HPR listeners and contributors. The discussions are open and available on the Gmane archive.
+
+
+Discussed this month was:
+
+Backup Shows
+
+In a discussion started by Dave Morris. Some felt that the content was getting stale, and keeping shows for 2 years or even 3 months was too long. Others felt that these shows were contributed with the purpose of been used in an emergency and therefore should be timeless.
+Eventually it was left to each of the contributors that had shows in the backup queue to release them, or to set them as emergency shows. The website has been updated to reflect this change.
+Summary
+
+HPR_AudioBookClub
+
+The next audiobook is Shaman Tales Book 1: South Coast by Nathan Lowell. It's available on https://podiobooks.com/title/shaman-tales-1-south-coast/. 
+
+
+wget https://podiobooks.com/rss/feeds/episodes/shaman-tales-1-south-coast/ -O - | xmlstarlet sel -T -t -m '/rss/channel/item/enclosure' -v "@url" -n - | grep 'PB-'| while read chapter;do wget $chapter;done
+
+New Podcasts
+
+https://linuxluddites.com/
+https://linuxlugcast.com/
+
+Round table
+
+The mumble server is still available for Recording round table discussions mumble.openspeak.cc Port: 64747
+
+Reserved slots
+
+July 8  is reserved by davidWHITMAN
+
+Usefulness of the Community News Show/Reserved Slot
+
+Last month we asked if the community news should continue - and yes it should. We are open to suggestions on how to improve it.
+It was also agreed to allow this show to be reserved.
+

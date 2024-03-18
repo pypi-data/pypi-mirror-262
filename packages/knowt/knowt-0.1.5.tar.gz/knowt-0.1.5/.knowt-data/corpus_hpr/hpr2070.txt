@@ -1,0 +1,36 @@
+## hpr2070 :: Adventures with Jonathan Slocum
+
+ 
+A 3 layer Birthday Cake
+With Frosting
+May I suggest that you partake of the layers in this order?
+
+Voyage of the Liberdade by Joshua Slocum
+Find the book at Gutenberg Press
+“Project Gutenberg offers over 50,000 free ebooks: choose among free epub books, free kindle books, download them or read them online.
+We carry high quality ebooks: Our ebooks were previously published by bona fide publishers. We digitized and diligently proofread them with the help of thousands of volunteers.
+No fee or registration is required, but if you find Project Gutenberg useful, we kindly ask you to donate a small amount so we can buy and digitize more books. Other ways to help include digitizing more books, recording audio books, or reporting errors.
+Over 100,000 free ebooks are available through our Partners, Affiliates and Resources”.
+
+Find the book in all available forms (HTML, EPub, Text, Kindle) at: https://www.gutenberg.org/ebooks/18541
+The text file is here: https://www.gutenberg.org/cache/epub/18541/pg18541.txt
+First create an espeak of the text file:
+Voyage of the Liberdade by Joshua Slocum
+https://www.gutenberg.org/ebooks/18541
+To create an espeak run this commmand against the text file:
+espeak -f location_text -w output_file_here(.whatever_extension_you_want)
+Or read the book old school
+Sailing Alone Around the World by Joshua Slocum (Audio Book read by Alan Chant)
+https://librivox.org/sailing-alone-around-the-world-by-joshua-slocum/
+A YouTube Movie that explains more about Captain Slocum.
+https://www.youtube.com/watch?v=iciZer5cbJ8
+
+The Cremation of Sam McGee Robert W. SERVICE (1874 - 1958) Read by Kristin Hughes https://ia600202.us.archive.org/28/items/cremationsammcgee_0711_librivox/sammcgee_service_klh.mp3
+Links
+
+https://www.gutenberg.org/ebooks/18541
+https://www.gutenberg.org/cache/epub/18541/pg18541.txt
+https://librivox.org/sailing-alone-around-the-world-by-joshua-slocum/
+https://www.youtube.com/watch?v=iciZer5cbJ8
+https://ia600202.us.archive.org/28/items/cremationsammcgee_0711_librivox/sammcgee_service_klh.mp3
+

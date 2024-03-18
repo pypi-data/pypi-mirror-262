@@ -1,0 +1,97 @@
+## hpr3489 :: Equality of structured errors
+
+ Equality of structured errors
+Background
+In previous episode, I built a system where error codes weren't defined in one huge type. This made compilation times faster and maintenance quite a bit more easier.
+Problem
+I wanted to write a test to see that parameters passed to validatePatchApiPersonR are validated correctly. patchApiPersonR is used by client to do partial updates on a Person entity. There's three different cases I wanted to check:
+
+trying to change life focus too soon (there's 5 year cooldown)
+trying to select same life focus that has already been selected
+trying to modify somebody else's avatar
+
+Code is shown below and the last 2 lines are the interesting ones. There I'm using equality to compare if a given error exists in a list of errors created by validatePatchApiPersonR.
+spec :: Spec
+spec = do
+    describe "people" $ do
+        describe "life focus" $ do
+            describe "Validating requests" $ do
+                it "All errors are reported" $ do
+                    forAll anyCompletelyFaultyRequest $
+                        \(userE, personE, msg, date) ->
+                            let res = validatePatchApiPersonR (userE ^. entityKeyL, userE ^. entityValL, personE, msg, date)
+                                newFocus = msg ^? patchPersonRequestLifeFocus . _Just . _Just
+                            in
+                                case res of
+                                    V.Success _ ->
+                                        expectationFailure "Invalid request was not detected"
+
+                                    V.Failure errs -> do
+                                        errs `shouldSatisfy` (\xs -> any (\x -> "CanNotChangeLifeFocusSoSoon" `isInfixOf` (pack $ show x)) xs)
+                                        errs `shouldContain` [ canNotReselectSameLifeFocus newFocus ]
+                                        errs `shouldContain` [ insufficientRights ]
+
+Detour on equality
+Equality in Haskell works slightly differently compared to for example C#. There is no built in, default implementation that gets used when the programmer hasn't written their own. If you want to compare equality, there needs to be implementation specific to your data types. This is done by making an instance of type class Eq (https://hackage.haskell.org/package/base-4.15.0.0/docs/Data-Eq.html).
+class Eq a where
+  (==) :: a -> a -> Bool
+  (/=) :: a -> a -> Bool
+
+There's two functions: == for equality and /= for inequality. You need to implement either one.
+Back to problem
+ECode is our structured error code type and defined as follows (this is short recap of previous episode):
+data ECode where
+    ECode :: (ErrorCodeClass a, ToJSON a, Eq a, Show a) => a -> ECode
+
+It can wrap anything that has correct type class instances and you will always get ECode as a result. It hides the specific type of thing being wrapped and only functions defined in type classes are available.
+First try
+Peel away ECode and compare what's inside and compare wrapped values:
+instance Eq ECode where
+    ECode a == ECode b =
+        a == b
+
+This will lead into a error "Couldn't match expected type ‘a’ with actual type ‘a1’. ‘a1’ is a rigid type variable bound by a pattern with constructor...". This is because ECode can wrap many different types, there is no quarantee that you're comparing values of same type. The whole error is show below for reference:
+[35 of 76] Compiling Errors           ( src/Errors.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Errors.o )
+
+/home/tuula/programming/sky/src/Errors.hs:148:14: error:
+    • Couldn't match expected type ‘a’ with actual type ‘a1’
+      ‘a1’ is a rigid type variable bound by
+        a pattern with constructor:
+          ECode :: forall a.
+                   (ErrorCodeClass a, ToJSON a, Eq a, Show a) =>
+                   a -> ECode,
+        in an equation for ‘==’
+        at src/Errors.hs:147:16-22
+      ‘a’ is a rigid type variable bound by
+        a pattern with constructor:
+          ECode :: forall a.
+                   (ErrorCodeClass a, ToJSON a, Eq a, Show a) =>
+                   a -> ECode,
+        in an equation for ‘==’
+        at src/Errors.hs:147:5-11
+    • In the second argument of ‘(==)’, namely ‘b’
+      In the expression: a == b
+      In an equation for ‘==’: ECode a == ECode b = a == b
+    • Relevant bindings include
+        b :: a1 (bound at src/Errors.hs:147:22)
+        a :: a (bound at src/Errors.hs:147:11)
+    |
+148 |         a == b
+    |
+
+Second try
+We can use Show to turn ECode into string and compare them. This is what I did initially.
+instance Eq ECode where
+    a == b = show a == show b
+
+While this works, it feels hacky. It relies on string representations being different. If you accidentally write Show instance in a way that produces same string with two different values, the comparison breaks down.
+Third time is a charm
+After pondering a bit, I asked myself a question "When are two ECode equal?". The answer I arrived is "When they have same http status code and description." Then I could write yet different take on equality:
+instance Eq ECode where
+    a == b =
+        httpStatusCode a == httpStatusCode b
+        &&  description a == description b
+
+This states that to two ECode values are equal, if they have same httpStatusCode and description.
+Thanks for listening, if you have any questions or comments, you can reach me via email or in fediverse, where I'm Tuula@tech.lgbt. Or even better, you could record your own hacker public radio episode.
+Ad astra!

@@ -1,0 +1,124 @@
+## hpr2828 :: Writing Web Game in Haskell - Science, part 2
+
+ Intro
+Last time we looked how to model technology and research. This time we’ll do some actual research. I’m skipping over some of the details as the episode is long enough as it is. Hopefully it’s still possible to follow with the show notes.
+Main concepts that I’m mentioning: Technology allows usage of specific buildings, ship components and such. Research unlock technologies and may have antecedents that has to be completed before the research can be started. Research cost is measure of how expensive a research is in terms of research points, which are produced by different buildings.
+Earlier I modeled tech tree as Map that had Technology as keys and Research as values. I realized that this is suboptimal and will replace it at some point in the future.
+Server API
+There’s three resources that client can connect to. First one is for retrieving list of available research, second one for manipulating current research and last one for retrieving info on how much research points is being produced.
+/api/research/available     ApiAvailableResearchR       GET
+/api/research/current       ApiCurrentResearchR         GET POST DELETE
+/api/research/production    ApiResearchProductionR      GET
+Simulation
+Simulation of research is done by handleFactionResearch, which does simulation for one faction for a given date. After calculating current research point production and retrieving list of current research, function calculates progress of current researches. Unfinished ones are written back to database, while completed are moved into completed_research table. Final step is updating what research will be available in the next turn.
+handleFactionResearch date faction = do
+    production <- totalProduction $ entityKey faction
+    current <- selectList [ CurrentResearchFactionId ==. entityKey faction ] []
+    let updated = updateProgress production <$> current
+    _ <- updateUnfinished updated
+    _ <- handleCompleted date updated $ entityKey faction
+    _ <- updateAvailableResearch $ entityKey faction
+    return ()
+Research point production
+Research points are produced by buildings. So first step is to load all planets owned by the faction and buildings on those planets. Applying researchOutput function to each building yields a list of TotalResearchScore, which is then summed up by mconcat. We can use mconcat as TotalResearchScore is a monoid (I talked about these couple episodes ago).
+totalProduction fId = do
+    pnbs <- factionBuildings fId
+    let buildings = join $ fmap snd pnbs
+    return $ mconcat $ researchOutput . entityVal <$> buildings
+researchOutput function below uses pattern matching. Instead of writing one function definition and case expression inside of it, we’re writing multiple definitions. Each of them matches building of different type. First example is definition that is used for ResearchComplex, while second one is for ParticleAccelerator. Final case uses underscore to match anything and indicate that we’re not even interested on the particular value being matched. mempty is again from our monoid definition. It is empty or unit value of monoid, which in case of TotalResearchScore is zero points in all research categories.
+researchOutput Building { buildingType = ResearchComplex } =
+    TotalResearchScore
+    { totalResearchScoreEngineering = ResearchScore 10
+    , totalResearchScoreNatural = ResearchScore 10
+    , totalResearchScoreSocial = ResearchScore 10
+    }
+
+researchOutput Building { buildingType = ParticleAccelerator } =
+    TotalResearchScore
+    { totalResearchScoreEngineering = ResearchScore 15
+    , totalResearchScoreNatural = ResearchScore 15
+    , totalResearchScoreSocial = ResearchScore 0
+    }
+
+researchOutput _ = mempty
+Updating progress
+Moving research forward is more complex looking function. There’s bunch of filtering and case expressions going on, but the idea is hopefully clear after a bit of explanation.
+updateProgress takes two parameters, total production of research points and current research that is being modified. This assumes that there are only one of each categories of research going on at any given time. If there were more, we would have to divide research points between them by some logic. Function calculates effect of research points on current research and produces a new current research that is the end result.
+Perhaps the most interesting part is use of lenses. For example, line entityValL . currentResearchProgressL +~ engResearch $ curr means that curr (which is Entity CurrentResearch) is used as starting point. First we reach to data part of Entity and then we focus on currentResearchProgress and add engResearch to it. This results a completely new Entity CurrentResearch being constructed, which is otherwise identical with the original, but the currentResearchProgress has been modified. Without lenses we would have to do this destructuring and restructuring manually.
+updateProgress :: TotalResearchScore ResearchProduction -> Entity CurrentResearch -> Entity CurrentResearch
+updateProgress prod curr =
+    case researchCategory <$> research of
+        Just (Engineering _) ->
+            entityValL . currentResearchProgressL +~ engResearch $ curr
+
+        Just (NaturalScience _) ->
+            entityValL . currentResearchProgressL +~ natResearch $ curr
+
+        Just (SocialScience _) ->
+            entityValL . currentResearchProgressL +~ socResearch $ curr
+
+        Nothing ->
+            curr
+    where
+        research = Map.lookup (currentResearchType . entityVal $ curr) techMap
+        engResearch = unResearchScore $ totalResearchScoreEngineering prod
+        natResearch = unResearchScore $ totalResearchScoreNatural prod
+        socResearch = unResearchScore $ totalResearchScoreSocial prod
+Writing unfinished research back to database is short function. First we find ones that hasn’t been finished by filtering with (not . researchReady . entityVal) and then we apply replace to write them back one by one.
+updateUnfinished updated = do
+    let unfinished = filter (not . researchReady . entityVal) updated
+    mapM (\x -> replace (entityKey x) (entityVal x)) unfinished
+Handling finished research starts by finding out which ones were actually completed by filtering with (researchReady . entityVal) and their research type with currentResearchType . entityVal. Rest of the function is all about database actions: creating entries into completed_research and adding news entries for each completed research, then removing entries from current_research and available_research.
+handleCompleted date updated fId = do
+    let finished = filter (researchReady . entityVal) updated
+    let finishedTech = currentResearchType . entityVal <$> finished
+    insertMany_ $ currentToCompleted date . entityVal <$> finished
+    insertMany_ $ researchCompleted date fId . (currentResearchType . entityVal) <$> finished
+    deleteWhere [ CurrentResearchId <-. fmap entityKey finished ]
+    deleteWhere [ AvailableResearchType <-. finishedTech
+                , AvailableResearchFactionId ==. fId ]
+Available research
+Figuring out what researches will be available for the next turn takes several steps. I won’t be covering random numbers in detail, they’re interesting enough for an episode on their own. It’s enough to know that g <- liftIO getStdGen gets us a new random number generator that is seeded by current time.
+updateAvailableResearch starts by loading available research and current research for the faction and initializing a new random number generator. g can be used multiple times, but it’ll always return same sequence of numbers. Here it doesn’t matter, but in some cases it might. getR is helper function I wrote that uses random number generator to pick n entries from a given list. n in our case is hard coded to 3, but later on I’ll add possibility for player to research technologies that raise this limit. newAvailableResearch (we’ll look into its implementation closer just in a bit) produces a list of available research for specific research category. These lists are combined with <> operator and written into database with rewriteAvailableResearch.
+updateAvailableResearch fId = do
+    available <- selectList [ AvailableResearchFactionId ==. fId ] []
+    completed <- selectList [ CompletedResearchFactionId ==. fId ] []
+    g <- liftIO getStdGen
+    let maxAvailable = ResearchLimit 3
+    -- reusing same g should not have adverse effect here
+    let engCand = getR g (unResearchLimit maxAvailable) $ newAvailableResearch isEngineering maxAvailable available completed
+    let natCand = getR g (unResearchLimit maxAvailable) $ newAvailableResearch isNaturalScience maxAvailable available completed
+    let socCand = getR g (unResearchLimit maxAvailable) $ newAvailableResearch isSocialScience maxAvailable available completed
+    rewriteAvailableResearch fId $ engCand <> natCand <> socCand
+newAvailableResearch is in charge of figuring out what, if any, new research should be available in the next turn. In case where amount of currently available research is same or greater than research limit, empty list is returned, otherwise function calculates candidates and returns them. Logic for that is following:
+
+candidates are research of specific category of those that has been unlock and unresearched
+unlocked and unresearched are unlocked ones that are in list of known technology
+unlocked research are ones with antecedents available in tech tree
+known technology are ones in list of completed research
+
+and complete definition of the function is shown below:
+newAvailableResearch selector limit available completed =
+    if ResearchLimit (length specificCategory) >= limit
+        then []
+        else candidates
+    where
+        specificCategory = filter (availableResearchFilter selector) available
+        candidates = filter (selector . researchCategory) unlockedAndUnresearched
+        unlockedAndUnresearched = filter (\x -> researchType x `notElem` knownTech) unlockedResearch
+        unlockedResearch = filter (antecedentsAvailable knownTech) $ unTechTree techTree
+        knownTech = completedResearchType . entityVal <$> completed
+
+
+availableResearchFilter f x =
+    maybe False (f . researchCategory) res
+    where
+        res = Map.lookup (availableResearchType $ entityVal x) techMap
+Final step of the simulation of research is to update database with new available research. mkUniq is helper function that removes duplicate elements from a list. It’s used in rewriteAvailableResearch function to make a list that contains all unique top research categories (engineering, natural sciences and social sciences). If the resulting list isn’t empty, we’ll use it to remove all available research for those top categories and insert new available research.
+rewriteAvailableResearch fId res = do
+    let cats = mkUniq $ fmap (topCategory . researchCategory) res
+    unless (null cats) $ do
+        deleteWhere [ AvailableResearchFactionId ==. fId
+                    , AvailableResearchCategory <-. cats ]
+        insertMany_ $ researchToAvailable fId <$> res
+Now everything is ready for next round of simulation.

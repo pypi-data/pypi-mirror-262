@@ -1,0 +1,10 @@
+## hpr1884 :: Some more Bash tips
+
+ Some more Bash tips
+We looked at Parameter Expansion back in HPR episode 1648 where we saw how Bash variables could be used, checked and edited. There are other sorts of expansions within Bash, and we'll look at one called "Brace Expansion" in this episode, which follows on from episode 1843 "Some Bash tips".
+I have written out a moderately long set of notes about this subject and these are available here https://hackerpublicradio.org/eps/hpr1884_full_shownotes.html.
+Links
+
+HPR episode 1648 "Bash parameter manipulation": https://hackerpublicradio.org/eps.php?id=1648
+HPR episode 1843 "Some Bash tips": https://hackerpublicradio.org/eps.php?id=1843
+

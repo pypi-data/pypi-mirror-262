@@ -1,0 +1,22 @@
+## hpr3359 :: Linux Inlaws S01E32: Politicians and artificial intelligence part 3
+
+ In part three of the 27.64 episodes long mini-series on artificial intelligences, machine and deep learning
+and other hipster topics around machines trying to imitate humans (marketing made us do these :-), our
+two heroes discuss domain-specific frameworks on top of (more generic) infrastructure like TensorFlow or PyTorch.
+As usual, all will be revealed and no details be spared (apart from a very few) including how to
+tell animals apart from humans (a tricky feat as any journalist can tell you who's ever faced a
+stampeding horde of angry politicians!).
+Links:
+
+Keras: https://keras.io
+Image recognition in Keras: https://keras.io/examples/vision/image_classification_from_scratch
+Facial recognition using convolutional neural networks (CNN): https://www.sitepoint.com/keras-face-detection-recognition
+PETA: https://www.peta.org
+User recognition based on mouse movements and deep learning: https://www.acta.sapientia.ro/acta-info/C12-1/info12-1-3.pdf
+Comparison of deep learning software: https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software
+Apache's mxnet: https://mxnet.apache.org/versions/1.8.0
+Classification with deep belief networks: https://www.ki.tu-berlin.de/fileadmin/fg135/publikationen/Hebbo_2013_CDB.pdf
+scikit-learn: https://scikit-learn.org/stable
+Life on Mars: https://www.bbc.co.uk/lifeonmars/index_non_flash.shtml
+Limitless: https://www.imdb.com/title/tt1219289/?ref_=fn_al_tt_1
+

@@ -1,0 +1,78 @@
+## hpr3986 :: Optical media is not dead
+
+ Brought up by Klaatu
+on GnuWorldOrder.info
+Media size
+4.7Gb DVD - Actual capacity: 4.377Gb
+What is the
+actual storage capacity of a dvd disc
+A disc with a 25GB capacity is the equivalent of 23.28 gigabytes
+Normally rated at 50GB, in practice they can record about 46.57GB of
+data
+What is the
+maximum capacity of a blu ray disc
+Generate ISO image from directory
+genisoimage -U -R -allow-lowercase -allow-multidot -o mydvd.iso "$1"
+Alternative is mkisofs
+-U
+
+Allows "untranslated" filenames, completely violating the ISO9660 standards described above. Enables the following flags: -d -l -N -allow-leading-dots -relaxed-filenames -allow-lowercase -allow-multidot -no-iso-translate. Allows more than one `.' character in the filename, as well as mixed-case filenames. This is useful on HP-UX, where the built-in cdfs filesystem does not recognize any extensions. Use with extreme caution.
+
+-R
+
+Generate SUSP and RR records using the Rock Ridge protocol to further describe the files on the ISO9660 filesystem.
+
+[Wikipedia - ISO 9660](https://en.wikipedia.org/wiki/ISO_9660#SUSP "Wikipedia - ISO 9660")
+Corrected command
+genisoimage -R -o mydvd.iso "$1"
+Burning data to a DVD or Blu-ray
+Note:
+Make sure that the medium is not mounted when you begin to write to
+it. Mounting may happen automatically if the medium contains a readable
+file system. In the best case, it will prevent the burn programs from
+using the burner device. In the worst case, there will be misburns
+because read operations disturbed the drive. So if in doubt, do:
+umount /dev/sr0
+growisofs has a small bug with blank BD-R media. It issues an error
+message after the burning is complete. Programs like k3b then believe
+the whole burn run failed. To prevent this, either format the blank BD-R
+by dvd+rw-format /dev/sr0 before submitting it to growisofs or use
+growisofs option
+-use-the-force-luke=spare:none
+Archwiki - Optical disk
+burning
+Burning an ISO image to
+CD, DVD, or BD
+To
+burn a readily prepared ISO image file isoimage.iso onto an optical
+medium, run for CD:
+cdrecord -v -sao dev=/dev/sr0 isoimage.iso
+and for DVD or BD:
+growisofs -dvd-compat -Z /dev/sr0=isoimage.iso
+for CD, DVD, BD:
+xorriso -as cdrecord -v dev=/dev/sr0 -dao isoimage.iso
+Other reading
+Archwiki - Optical disk
+drive
+Archwiki - Optical disk
+drive
+Debian - Gensisoimage man
+page
+Debian - Gensisoimage man
+page
+Debian wiki -
+genisoimage and xorrisofs
+Debian wiki
+Archiving data on Blu-ray
+discs
+Archiving data
+Mount
+an ISO file and Burning it to CD-R/DVD-R/BluRay in Linux
+Mount an ISO file and
+Burning
+What
+is the size capacity of my DVD, Dual Layer DVD or Blu-ray disc?
+What is the size capacity of
+my DVD
+Wikipedia ISO9660
+Wikipedia ISO9660

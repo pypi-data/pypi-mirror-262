@@ -1,0 +1,34 @@
+## hpr3304 :: Newsflash 21/01/04
+
+ Introduction
+After many years of confusion it has been decided to produce a common standard for dates and times between Europe and the United States of America.
+When encountering a USA date such as 03/14/2021 (known as Pi Day in the USA) there has been ambiguity over which part of the date is the day and which the month. There can also be confusion as to the year if the two-digit form is used.
+Standardisation is a way in which these sorts of ambiguities can be resolved. Having a common method of representation avoids confusion.
+Therefore, starting in 2021, in the spirit of clarity and prevention of misunderstanding, the EU has decided to standardise on compatible formats wherever possible.
+Dates
+Henceforward dates will be represented in one of the following forms:
+MM/DD/YY    month/day of month/two-digit year
+
+YY/DD/MM    two-digit year/day of month/month
+Thus, 21/14/03 or 03/14/21 will be universally recognised as Pi Day.
+Times
+The break from the previous tyranny of large|medium|small or small|medium|large formats has been extended to 24-hour time representations.
+Henceforward 24-hour times will be represented in one of the following forms:
+SS:HH:MM    seconds:hours:minutes
+
+MM:HH:SS    minutes:hours:seconds
+Support
+Bash already introduced support last year. You will need to update to Ubuntu Falex to get the latest version.
+Future plans
+The Standardisation Working Group will be planning other measures.
+Forthcoming rationalisations will be:
+
+Weights and Measures:
+
+Discrepancies such as the US pint (16 fluid ounces) versus the British pint (20 fluid ounces)
+
+Temperature:
+
+Fahrenheit versus Centigrade, replaced by the new Eurotemp which straddles both ranges. The choice might be the Rankine scale (°R), but this has yet to be decided.
+
+

@@ -1,0 +1,19 @@
+## hpr2353 :: RoboThermometer
+
+ Sorry this is such a short episode. I don't know what came over me, I was just listening to Mr.X talking about doing something with Python in Hacker Public Radio episode 2340, and for some reason I just felt a compulsion to record some kind of episode myself. It was so strange. I'm way behind on my Hacker Public Radio contribution duties anyway, so here's a quick, geeky tutorial about a thing I did with a Raspberry Pi just to try it.
+The temperature sensor I'm using is one of the many "1-wire" protocol devices supported by established kernel drivers, hence the reference to loading the modules for it:
+sudo modprobe w1-gpio
+sudo modprobe w1-therm
+The part about adding "dtoverlay=w1-gpio" to /boot/config.txt and then rebooting is also necessary, otherwise the modules load but no devices show up in /sys/bus/w1/devices/ .
+Part of the fun was coming up with a way of extracting the temperature reading in useful form without having to write a bunch of unnecessary python code. Not that there's anything wrong with python, but I get the impression that some people think everything "RaspberryPi" has to be written in python. An example of this that amused me is the piFM project, which cleverly abuses the first-generation Raspberry Pi spread-spectrum circuitry to turn it into a surprisingly powerful FM radio transmitter. This project had two ways to run it - the actual compiled C program that takes input audio and makes FM radio come out...and a python "module" that was literally just a system call that...ran the C program that takes the audio and makes FM radio come out.
+Examples of reading the temperature data that I ran into tended to also be short python scripts, so I took it as a challenge to do without, resulting in the fun-to-recite command in the episode, which on my system is:
+echo "scale=3; (`grep -o "[[:digit:]]\{5\}" /sys/bus/w1/devices/28-05167380f6ff/w1_slave`/(5000/9))+32" | bc
+As an example of what you get with a correctly connected and configured DS18B20 module on a Raspberry Pi, in my case the device shows up as:
+/sys/bus/w1/devices/28-05167380f6ff/
+Your device's number after the "28-" will be different, so just replace my example with your own device's number.
+If you read the "w1_slave" virtual-file in that directory, you get something that looks similar to this:
+67 01 4b 46 7f ff 0c 10 c4 : crc=c4 YES
+67 01 4b 46 7f ff 0c 10 c4 t=22437
+To be completely proper, one probably should validate that output to make sure the CRC matches so you know for sure that the read of the temperature data was correct, but I've had Zabbix checking my living-room temperature once every minute for a couple of days now and seen no odd readings or failures, so I'm not going to bother making anything more complicated than my hypnotic one-liner, unless I ever try to use the same kind of setup to monitor something more important, like a tank of expensive fish or a bioreactor full of beer.
+If you want some more detailed connection instructions for the DS18B20 temperature sensor and the Raspberry Pi, here is one of the many online pages with the whole process:
+https://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing/hardware

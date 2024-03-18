@@ -1,0 +1,19 @@
+## hpr3973 :: Creating an equalizer preset for your episodes of HPR
+
+ Here I describe my method for creating a macro using equalizer,
+compressor and normalize presets in Audacity, which can be used
+repeatedly to get consistent results, as long as you use the same voice,
+microphone and recording location.
+This is the sample of the equalizer setting I use with a Sennheiser
+MB2 Pro headset:
+
+This is the waveform for this episode before applying the
+Compressor.
+
+This is the waveform for this episode after applying the
+equalizer discussed earlier, the Compressor at threshold -31dB, noise
+floor -40dB and ratio 2:1. No make-up gain at the Compressor. Finally,
+Normalize to peak amplitude of -12dB. I was wrong in the show to say
+that I had been using "Amplify," in fact I have been using
+"Normalize."
+

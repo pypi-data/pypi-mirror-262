@@ -1,0 +1,25 @@
+## hpr1128 :: Compilers part4
+
+ 
+In this episode sigflup describes the construction of a calculator using
+lexical analysis and parsing.
+
+
+
+Figure A: https://devio.us/~sigflup/compiler/figa.jpg
+
+Figure B: https://devio.us/~sigflup/compiler/figb.jpg
+
+Figure C: https://devio.us/~sigflup/compiler/figc.jpg
+
+Figure D: https://devio.us/~sigflup/compiler/figd.jpg
+
+Figure E: https://devio.us/~sigflup/compiler/fige.jpg
+
+Figure F: https://devio.us/~sigflup/compiler/figf.jpg
+
+Figure G: https://devio.us/~sigflup/compiler/figg.jpg
+
+[Editor's Note 2015-05-22: The original links above are all dead, but the
+images have been rescued from the Wayback Machine and stored on the
+HPR server]

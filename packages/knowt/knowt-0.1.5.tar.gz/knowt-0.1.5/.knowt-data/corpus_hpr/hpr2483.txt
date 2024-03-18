@@ -1,0 +1,22 @@
+## hpr2483 :: Useful Bash functions - part 4
+
+ Useful Bash functions - part 4
+Overview
+This is the fourth show about the Bash functions I use, and it may be the last unless I come up with something else that I think might be of general interest.
+There is only one function to look at this time, but it's fairly complex so needs an entire episode devoted to it.
+As before it would be interesting to receive feedback on this function and would be great if other Bash users contributed ideas of their own.
+Full Notes
+Since the notes explaining this subject are long, they have been placed here.
+Links
+
+The GNU Bash Reference Manual
+
+ANSI-C Quoting section
+
+Previous HPR episodes in this group Useful Bash functions:
+
+Part 1: 'pad' and 'yes_no' functions
+Part 2: 'yes_no' revisited
+Part 3: 'read_value', 'check_value' and 'read_and_check'
+
+Download the range_parse function and the range_demo.sh test script.

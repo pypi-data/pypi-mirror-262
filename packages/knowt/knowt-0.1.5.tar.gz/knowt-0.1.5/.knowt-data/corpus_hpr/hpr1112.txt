@@ -1,0 +1,12 @@
+## hpr1112 :: LiTS 017: split
+
+ 
+Dann makes a welcome return with his podcast, blog and video entry over at https://www.linuxintheshell.com/2012/11/06/episode-017-split/
+
+The split command is used to split up a file into smaller files. For example, if you need to transfer a 3GB file but are restricted in storage space of the transfer to 500 MB you can split the 3GB file up into about 7 smaller files each 500MB or less in size. Once the files are transferred restoring them is done using the cat command and directing the output of each file back into the master file:
+
+split -b500M some3GBfile
+
+
+
+Please visit his site for more splitty goodness

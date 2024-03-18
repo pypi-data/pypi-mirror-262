@@ -1,0 +1,30 @@
+## hpr1423 :: Monty - The man behind your databases
+
+ Listen to the man who created the database YOU use every day, today on Hacker Public Radio.
+"There's no reasons to use MySQL anymore." -- Monty
+Michael Widenius at FSCONS 2013
+A couple of months ago I attended FSCONS 2013. There I met Michael "Monty" Widenius, the driving force behind both MySQL and MariaDB. This is a guy who loves being a developer and he loves Open Source software. He named MySQL after his daughter My, and the new fork MariaDB got its name from his other daughter Maria.
+Monty was invited to FSCONS 2013 to give a speech entitled "The MySQL and MariaDB story", and the synopsis on fscons.org says:
+"The story of how MySQL was created, why it was successful and how it grew until it was sold to Sun, who was then overtaken by Oracle. It will also cover how and why MariaDB was created and what we are doing to ensure that there will always be a free version of MySQL (under the name of MariaDB). The talk will also explain the challenges we have had to do this fork, especially the merge with MySQL 5.5, and the various systems (like buildbot) that we used to build the binaries and how we are working with the MariaDB/MySQL community."
+ -- https://frab.fscons.org/en/fscons13/public/events/51That presentation can be found on YouTube, and I encourage you all to have a look at it. "Michael Monty Widenius: The MySQL and MariaDB story": https://youtu.be/JxyBNdwmpzM
+
+If you have not yet made the switch to MariaDB, now is the time!
+Monty also asks everyone who uses MariaDB to activate the anonymous plug-in, so that the developers might know what to focus their attention on.
+If you wish to look Monty in the eyes, you have the opportunity to do so, as this interview was video recorded and will be released on YouTube or similar. Follow All In IT Radio on Google+, Twitter and Identi.ca for updates on when that will be released.
+Stuff referenced in the episode
+
+Wikipedia - Michael Widenius: https://en.wikipedia.org/wiki/Michael_Widenius
+Wikipedia - MySQL: https://en.wikipedia.org/wiki/MySQL
+MySQL: https://www.mysql.com/
+Wikipedia - MariaDB: https://en.wikipedia.org/wiki/MariaDB
+MariaDB Foundation: https://mariadb.org/
+SkySQL: https://www.skysql.com/
+
+How to reach me
+You should follow me and subscribe to All In IT Radio:
+
+Identi.ca: @alltinomit
+Twitter: @alltinomit
+https://aiit.se/radio/+
+https://aiit.se/radio/
+

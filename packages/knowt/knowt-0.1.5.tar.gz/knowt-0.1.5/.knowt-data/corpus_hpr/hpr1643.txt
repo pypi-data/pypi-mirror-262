@@ -1,0 +1,39 @@
+## hpr1643 :: Unison Syncing Utility
+
+ Unison is a file syncing/backup utility, similar to SyncBack on Windows, available in most repros.
+
+The graphical interface requires the installation of unison, and unison-gtk.. Unison may be installed w/o the graphical component, but all operations must be initiated from a system running the GUI. 
+Network backups require RSH or SSH to be installed on both machines
+
+
+The standard wisdom seems to be the rsync does not do a true 2 way sync, i.e., to sync to the newest file version going both ways you would have to do rsync ~/LocalFolder you@server:/home/you/RemoteFolder then turn around and do rsync you@server:/home/you/RemoteFolder ~/LocalFolder. Add that to the fact that like cp, or scp, rsync requires separate commands for files with extensions, files without, and hidden files, creating a bash script for syncing files is more complex than creating a Unison profile.
+Step One: If, like me you are syncing only Documents, make your subfolder structure the same on both machines, ergo, if one PC has /home/you/Documents/recipe and second PC has /home/you/Documents/Recipes, edit your folder structure to be the same on both PCs to avoid duplicate files and folders
+Launch Unison and create a backup profile First use, create a profile
+
+Name of profile
+
+Synchronization kind (Local, SSH, RSH, TCP)
+
+"First" Directory (you can browse your mounted volumes)
+
+"Second" Directory, if you chose Local
+
+Host Machine Name (or IP Address)
+
+User Name (If you haven't registered SSH keys, you will be prompted for a password on every synchronization.
+
+Check whether you want to use compression, (on fast networks or slow processors, compression may create more overhead than it's worth).
+
+Target directory (If it's on a remote server, you will need to type the full path, there is no browsing to the folder.)
+
+Tell Unison if either folder uses FAT (say an un-reformatted USB stick)
+
+
+If you are backing up to another system, Unison needs to be installed on both. If you are backing up to a server with no GUI desktop manager, you can install just the unison package without unison-gtk, but all the syncs will have to be initiated from the machine with a GUI. (Of course, if you back up to a remote volume that is mounted locally, it should be completely transparent to Unison). If you choose to sync via ssh (recommended), you will need ssh and ssh-server installed appropriately on each machine.
+
+
+Select and run your profile. 
+The first time, expect to get a warning that no archive files (index files that speed up the synchronization scan) were found. They will be created on the first sync.
+Unison will look for differences between the files in the two selected directories. The differences will be displayed graphically, with arrows pointing left or right, indicating which directory contains the most current version of the file (by modification date). You can choose to merge files either left or right (a conventional backup), do a merge (i.e., Unison itself decides how to combine data from files with the same name (obviously, that could be messy), or to do a sync (ergo, the most current version of a file overwrites older version, regardless of location). Click "Go" to do a true sync.
+
+

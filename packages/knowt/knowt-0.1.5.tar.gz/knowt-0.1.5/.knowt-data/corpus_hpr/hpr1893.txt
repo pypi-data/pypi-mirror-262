@@ -1,0 +1,33 @@
+## hpr1893 :: My LastPass Alternative
+
+ 
+My LastPass Alternative
+
+
+Password Database: KeePass https://keepass.info/
+KeePass client is in the fedora repos.
+
+
+
+Save file to a location that will be synced between devices.  Im my case Owncloud.   Desktop Client syncs available for Linux, Windows and Mac. Mobile clients for Android, IOS, and even blackberry. Syncing note:  I do not launch the desktop client on login. This allows the owncloud client to sync files before launching keepass. Also, I exit keypass before logging out for the same reason.
+
+
+For integration with browser, there are
+
+
+Firefox: Passifox https://addons.mozilla.org/en-US/firefox/addon/passifox/
+
+Chrome: chromeIPass https://chrome.google.com/webstore/detail/chromeipass/ompiailgknfdndiefoaoiligalphfdae?hl=en
+
+Android: https://f-droid.org/repository/browse/?fdfilter=keepass&fdid=com.android.keepass
+
+
+
+And finally when on machines I don't control:
+
+
+Remote Access: Browser Pass https://bitbucket.org/namn/browsepass/
+
+
+
+On same server with ownlcloud, can open files

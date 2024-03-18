@@ -1,0 +1,14 @@
+## hpr1814 :: Custom Context Menus in GNU/Linux GUI File Managers
+
+ On Nautilus
+On Nautilus you have to put your scripts into the Nautilus scripts folder, which on my system is located here: 
+
+~/.local/share/nautilus/scripts
+
+You can either put copies of the scripts in there, or you can do like I did and make symlinks from the Nautilus scripts folder to your /home/bin folder. (I prefer to make symlinks instead of copying the files in there, just in case I make any changes to my scripts. If I have made a symlink instead of copying the file, then I only have to change original script and the symlink will automatically use the updated version.) Once you've done that, you right-click on a file and choose scripts then <yourscriptname> to run your script on the file.
+Thunar
+On Thunar you don't have to put your scripts anywhere special. It actually handles custom actions much better than Nautilus, in my opinion. What you do is go to the Edit menu and choose Configure custom actions. Then you get a dialog box with two tabs. The first tab is where you can give your custom action a name and then tell it what command to run, and also tell it whether to apply the custom action only to the selected file, to all files in the directory, or to all selected files. On the other tab you choose the context in which this custom action will appear. You can select categories of files—like images, audio files, or text files, and so forth—or you can specify filetypes by extension, so that your custom action will only appear if you right click on a file that has the extension. 
+Links
+
+Thunar custom actions documentation.
+Auphonic: Automatic audio post production web service for podcasts, broadcasters, radio shows, movies, screencasts and more. https://auphonic.com/

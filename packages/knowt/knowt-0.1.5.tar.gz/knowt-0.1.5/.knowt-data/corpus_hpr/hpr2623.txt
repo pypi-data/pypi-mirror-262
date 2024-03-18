@@ -1,0 +1,20 @@
+## hpr2623 :: Actors and Agents, Sprites and Fractals
+
+ Plugs:
+
+Chris works on Object Capabilities for Linked Data (OCAP-LD) and other things for a living, at https://digitalbazaar.com/ .
+clacke works at https://fractalide.com/ making better tools for future programmers.
+We’re both fortunate enough to have the chance to get paid for creating all Free Software.
+Christopher Lemmer Webber and Morgan Lemmer Webber will be speaking at RacketCon 2018 on the topic Racket for Everyone (Else), how non-programmers can do "programmable publishing" using Scribble when writing humanities papers, and how Racket could better target not just beginner programmers and hard-core language theorists, but also the huge space in between.
+
+More information on the topics covered:
+
+For my last show with Chris, see hpr2198 :: How awesome is Guix and why will it take over the world
+His Actors library for Guile Scheme is 8sync. A video of him playing in front of an audience with the Multi-User Dungeon (MUD) on top of 8sync is available on the front page.
+Spritely, the media sharing platform that may or may not be the next MediaGoblin, is currently vaporware, but the underlying Goblins Actors library for Racket is real and works.
+Wikipedia has more on the Actor Model, Flow-Based Programming and Object Capabilities (OCap).
+We also mentioned in passing Communicating Sequential Processes.
+I knew that OCap grew up in the context of E, but I didn’t know that E itself actually grew out of the needs of a form of MUD, built by Electric Communities (EC). I’m guessing this is the graphical MMORPG Habitat that EC built for Lucasfilm back in 1986, for the Commodore 64. Some writing about EC and the philosophy and experience around what they did is collected at https://www.crockford.com/ec/.
+Language-oriented programming (LOP) is an old LISP methodology: Understand the problem, write a language for describing and solving the problem, write the solution in that language. Racket (itself a LISP) is heavily focused on this, and comes with a whole slew of languages out of the box. The Racket slogan on https://racket-lang.org/ is "solve problems — make languages".
+A recent ACM article describes in depth what the challenges of good LOP are, and how Racket helps the programmer work with it.
+

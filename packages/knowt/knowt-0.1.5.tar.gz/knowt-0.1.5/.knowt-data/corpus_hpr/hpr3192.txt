@@ -1,0 +1,37 @@
+## hpr3192 :: A light bulb moment, part 3
+
+ LED History
+The history of the LED revolution is both long and complex but I'll do my best to cover it. Please forgive me if I mispronounce some of the materials and processes I'm not a lighting expert as I stated right back at the beginning of this series.
+The following excerpts are from Wikipedia; the link will be in the show notes, https://en.wikipedia.org/wiki/Light-emitting_diode
+The LED or Light Emitting Diode first appeared as a practical electronic component in 1962, the earliest LEDs emitted low-intensity infrared light.[7] Infrared LEDs are used in remote-control circuits, such as those used with a wide variety of consumer electronics. The first visible-light LEDs were of low intensity and limited to red. Modern LEDs are available across the visible, ultraviolet, and infrared wavelengths, with high light output. A great deal of development and refinement was required to get to this point.
+The first commercial visible-wavelength LEDs were commonly used as replacements for incandescent and neon indicator lamps, and in seven-segment displays,[31] first in expensive equipment such as laboratory and electronics test equipment, then later in such appliances as calculators, TVs, radios, telephones, as well as watches (see list of signal uses). Until 1968, visible and infrared LEDs were extremely costly, in the order of US$200 per unit, and so had little practical use.[32]
+In 1968 Monsanto was the first organization to mass-produce visible LEDs, these were red LEDs suitable for indicators.[32]
+In February 1969, Hewlett-Packard introduced the HP Model 5082-7000 Numeric Indicator, the first LED device to use integrated circuit (integrated LED circuit) technology.[33] It was the first intelligent LED display, and was a revolution in digital display technology, replacing the Nixie tube and becoming the basis for later LED displays.[36]
+The early red LEDs were bright enough only for use as indicators, as the light output was not enough to illuminate an area. Readouts in calculators were so small that plastic lenses were built over each digit to make them legible. Later, other colors became widely available and appeared in appliances and equipment.
+The first blue-violet LED using magnesium-doped gallium nitride was made at Stanford University in 1972 by Herb Maruska and Wally Rhines
+In 1973 Pankove and Ed Miller demonstrated the first blue electroluminescence from zinc-doped gallium nitride, though the subsequent device Pankove and Miller built, the first actual gallium nitride light-emitting diode, emitted green light.[49][50]
+Today, magnesium-doping of gallium nitride remains the basis for all commercial blue LEDs and laser diodes. In the early 1970s, these devices were too dim for practical use, and research into gallium nitride devices slowed.
+In 1993, high-brightness blue LEDs were demonstrated by Shuji Nakamura of Nichia Corporation using a gallium nitride growth process.[56][57][58] In parallel, Isamu Akasaki and Hiroshi Amano in Nagoya were working on developing the important GaN deposition on sapphire substrates and the demonstration of p-type doping of GaN. This new development revolutionized LED lighting, making high-power blue light sources practical, leading to the development of technologies like Blu-ray[citation needed].
+In 1995, Alberto Barbieri at the Cardiff University Laboratory (GB) investigated the efficiency and reliability of high-brightness LEDs and demonstrated a "transparent contact" LED using indium tin oxide (ITO) on (AlGaInP/GaAs).
+In 2001[62] and 2002,[63] processes for growing gallium nitride (GaN) LEDs on silicon were successfully demonstrated.
+In January 2012, Osram demonstrated high-power InGaN LEDs grown on silicon substrates commercially,[64] and GaN-on-silicon LEDs are in production at Plessey Semiconductors.
+White LEDs and the illumination breakthrough
+Even though white light can be created using individual red, green and blue LEDs, this results in poor color rendering, since only three narrow bands of wavelengths of light are being emitted. The attainment of high efficiency blue LEDs was quickly followed by the development of the first white LED. In this device a cerium doped phosphor coating produces yellow light through fluorescence. The combination of that yellow with remaining blue light appears white to the eye. Using different phosphors produces green and red light through fluorescence. The resulting mixture of red, green and blue is perceived as white light, with improved color rendering compared to wavelengths from the blue LED/YAG phosphor combination.
+The first white LEDs were expensive and inefficient. However, the light output of LEDs has increased exponentially. The latest research and development has been propagated by Japanese manufacturers such as Panasonic, and Nichia, and by Korean and Chinese manufacturers such as Samsung, Kingsun, and others. This trend in increased output has been called Haitz's law after Dr. Roland Haitz.[79]
+Figure 1
+
+Illustration of Haitz's law, showing improvement in light output per LED over time, with a logarithmic scale on the vertical axis
+Light output and efficiency of blue and near-ultraviolet LEDs rose and the cost of reliable devices fell. This led to relatively high-power white-light LEDs for illumination, which are replacing incandescent and fluorescent lighting.[80][81]
+Experimental white LEDs have been demonstrated to produce 303 lumens per watt of electricity (lm/w); some can last up to 100,000 hours.[82][83] However, commercially available LEDs have an efficiency of up to 223 lm/w.[84][85][86]
+Below are some comparisons for incandescent bulbs
+Some figures I found online from Wikipedia
+https://en.wikipedia.org/wiki/Incandescent_light_bulb
+(Example figure for Standard Incandescent bulb only 12.6 lm / W)
+(Example figures for Halogen bulb being 24 lm / W)
+With LEDs continuing to get cheaper and even though for now they cost more than traditional bulbs, having this huge increase in electrical efficiency means the overall cost is significantly cheaper than that of incandescent bulbs.[87]
+While indicator LEDs are known for their extremely long life, up to 100,000 hours, lighting LEDs are operated much less conservatively, and consequently have shorter lives. LED technology is useful for lighting designers, because of its low power consumption, low heat generation, instantaneous on/off control, and in the case of single color LEDs, continuity of color throughout the life of the diode and relatively low cost of manufacture. LED lifetime depends strongly on the temperature of the diode. Operating an LED lamp in conditions that increase the internal temperature can greatly shorten the lamp's life.
+I now use LED lighting in my own home particularly in the areas where lighting is on for extended periods such as in the living room.
+As you can see we have come an extremely long way in a relatively short space of time with advancements continuing to accelerate.
+It's hard to appreciate the massive impact electric lighting has had on the world.
+It's even harder to imagine living in a time not that long ago where an expensive candle producing a puny amount illumination was the only source of light, with the added not inconsiderable fire risk of having a naked flame sharing a room with combustible materials.
+With all these deterrents it's little wonder that people just went to bed when the sun went down.

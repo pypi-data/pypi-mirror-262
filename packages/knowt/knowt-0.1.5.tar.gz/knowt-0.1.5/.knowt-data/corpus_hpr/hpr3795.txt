@@ -1,0 +1,289 @@
+## hpr3795 :: 2022-2023 New Years Show Episode 1
+
+ Episode #1
+Welcome to the 11th Annual Hacker Public Radio show. It is December
+the 31st 2022 and the time is 10 hundred hours UTC. We start the show by
+sending Greetings to Christmas Island/Kiribati and Samoa Kiritimati,
+Apia. Chatting with Honkey, Mordancy, Joe, Ken, and others
+Discussed: pi hole, podman, RPIs, Pfsense, and netminers new micro
+pc
+Introduction by Ken
+and Honkey.
+
+History:
+The New Years Celebrations.
+
+Civilizations around the world have been celebrating the start of
+each new year for at least four millennia. Today, most New Year’s
+festivities begin on December 31 (New Year’s Eve), the last day of the
+Gregorian calendar, and continue into the early hours of January 1 (New
+Year’s Day).
+
+HPR: So
+you want to do a podcast?
+
+Wikihow:
+How to make a good podcast.
+
+Death Wish Coffee
+
+We lead with an alternative point of view, providing bold, smooth
+cups of coffee to our people. We find fresh ways to enjoy coffee, and we
+foster community along the way. Disrupting the status quo interests us,
+so we create edgy, sarcastic content. We live to rebel against blah
+beans—and a boring, lackluster life.
+
+Thailand Elephant
+Sanctuary
+VLC
+commandline: List of commands and arguments.
+
+VLC
+commandline: Documentation.
+VLC
+commandline: Audio streaming from the commandline.
+pavucontrol:
+PulseAudio Volume Control.
+
+Hearse
+Club
+
+youtube:
+MotorWeek Over the Edge: Hearse Convention.
+
+xiph: The Ogg container format.
+
+Ogg is a multimedia container format, and the native file and stream
+format for the Xiph.org multimedia codecs. As with all Xiph.org
+technology is it an open format free for anyone to use.
+Library
+of Congress: .ogg file format.
+
+Wikipedia: .mp3 file
+format.
+xiph: .flac file
+format.
+
+FLAC stands for Free Lossless Audio Codec, an audio format similar
+to MP3, but lossless, meaning that audio is compressed in FLAC without
+any loss in quality. This is similar to how Zip works, except with FLAC
+you will get much better compression because it is designed specifically
+for audio, and you can play back compressed FLAC files in your favorite
+player (or your car or home stereo, see supported devices) just like you
+would an MP3 file.
+Wikipedia: .flac
+file format.
+
+elephantguide:
+How Much Can An Elephant Lift?
+Royal
+Thai Embassy: Thailand’s wild tiger population shows impressive
+growth.
+
+bangkokpost:
+Thailand has highest number of wild tigers in Southeast Asia.
+
+mumble: Mumble is a free,
+open source, low latency, high quality voice chat application.
+atpinc:
+What is M.2? Keys and Sockets Explained.
+armbian: Linux for ARM
+development boards.
+pine64:
+ROCK64 is a credit card sized Single Board Computer.
+docker:
+realies/nicotine.
+kubuntu:
+
+Kubuntu is a free, complete, and open-source alternative to
+Microsoft Windows and Mac OS X which contains everything you need to
+work, play, or share. Check out the Feature Tour if you would like to
+learn more!
+
+podman:
+
+Podman is a daemonless container engine for developing, managing,
+and running OCI Containers on your Linux System.
+
+docker:
+
+A
+container is a standard unit of software that packages up code and
+all its dependencies so the application runs quickly and reliably from
+one computing environment to another. A Docker container image is a
+lightweight, standalone, executable package of software that includes
+everything needed to run an application: code, runtime, system tools,
+system libraries and settings.
+Containers
+and VMs Together?
+
+cockpit: Cockpit is a
+web-based graphical interface for servers, intended for everyone.
+
+manage
+virtual machines in Cockpit.
+
+etherpad: big boy show
+notes.
+redhat:
+Transitioning from Docker to Podman.
+lugcast: We are an open
+Podcast/LUG that meets every first and third Friday of every month using
+mumble.
+[logitech:](https://www.logitech
+G435 Ultra-light Wireless Bluetooth Gaming Headset.
+fit
+philosophy: Junk volume.
+
+"Junk volume" refers to exercise that doesn't improve strength or
+build muscle, wasting your time and energy.
+Leg day
+workout
+
+jitsi: Jitsi Free &
+Open Source Video Conferencing Projects.
+mintCast The podcast by the
+Linux Mint community for all users of Linux.
+The Linux link tech show The
+Linux Link Tech Show is one of the longest running Linux podcasts in the
+world.
+PETG 3D
+Printing Filament.
+MIM-104
+Patriot
+
+military-today
+The Patriot is a long-range air defense missile system.
+
+samsclub:
+rancher:
+
+suse rancher:
+
+raspberrypi single board
+computers.
+pfsense: pfSense is a
+firewall/router computer software distribution based on FreeBSD.
+snort:
+
+Snort is the foremost Open Source Intrusion Prevention System (IPS)
+in the world. Snort IPS uses a series of rules that help define
+malicious network activity and uses those rules to find packets that
+match against them and generates alerts for users.
+Snort can be deployed inline to stop these packets, as well. Snort
+has three primary uses: As a packet sniffer like tcpdump, as a packet
+logger — which is useful for network traffic debugging, or it can be
+used as a full-blown network intrusion prevention system. Snort can be
+downloaded and configured for personal and business use alike.
+
+pi-hole:
+
+In addition to blocking advertisements, Pi-hole has an informative
+Web interface that shows stats on all the domains being queried on your
+network.
+
+nlnetlabs:
+Unbound Unbound is a validating, recursive, caching DNS resolver. It
+is designed to be fast and lean and incorporates modern features based
+on open standards.
+DHCP
+server
+dietpi: DietPi is an extremely
+lightweight Debian OS, highly optimised for minimal CPU and RAM resource
+usage, ensuring your SBC always runs at its maximum potential.
+servethehome:
+Project Tiny Mini Micro, cool 1 liter pc builds.
+filezilla: The
+FileZilla Client supports FTP, FTP over TLS (FTPS), and SFTP.
+redhat:
+Configure a Network Team Using the Text User Interface,
+nmtui.
+howtogeek:
+Manage Linux Wi-Fi Networks With Nmtui.
+travelcodex:
+The Southwest Airlines Meltdown.
+gpd
+kickstarter:
+Arduboy, the game system the size of a credit card.
+pine64:
+Pinetab 2.
+orangepi:
+Orange Pi 800, Mini PC in a keyboard.
+southeastlinuxfest:
+The SouthEast LinuxFest is a community event for anyone who wants to
+learn more about Linux and Open Source Software.
+fosdem: FOSDEM is a free
+event for software developers to meet, share ideas and collaborate.
+stallman: Richard Stallman's
+Personal Site.
+freedos: FreeDOS is a
+complete, free, DOS-compatible operating system. While we provide some
+utilities, you should be able to run any program intended for
+MS-DOS.
+reactos: Imagine running your
+favorite Windows applications and drivers in an open-source environment
+you can trust.
+wikipedia:
+Windows 3.0.
+winehq: a compatibility layer
+capable of running Windows applications on several POSIX-compliant
+operating systems, such as Linux, macOS, & BSD.
+codeweavers:
+playonlinux:
+PlayOnLinux is a piece of software which allows you to easily install
+and use numerous games and apps designed to run with Microsoft®
+Windows®.
+protondb: Proton is a new
+tool released by Valve Software that has been integrated with Steam Play
+to make playing Windows games on Linux as simple as hitting the Play
+button within Steam.
+libreoffice: LibreOffice
+is a free and powerful office suite.
+linuxmint: Linux Mint is a
+community-driven Linux distribution based on Ubuntu, bundled with a
+variety of free and open-source applications.
+xfce: Xfce or XFCE is a free and
+open-source desktop environment for Linux and other Unix-like operating
+systems.
+crunchbang: CrunchBang was a
+Debian GNU/Linux based distribution offering a great blend of speed,
+style and substance.
+openbox:
+gnome:
+mozilla:
+firefox
+google
+chrome
+AMD
+autism
+toastmasters
+Toastmasters International is a nonprofit educational organization that
+teaches public speaking and leadership skills through a worldwide
+network of clubs.
+openssl
+Asperger
+syndrome
+STEM
+BASIC BASIC
+(Beginners' All-purpose Symbolic Instruction Code) is a family of
+general-purpose, high-level programming languages designed for ease of
+use. The original version was created by John G. Kemeny and Thomas E.
+Kurtz at Dartmouth College in 1963.
+IRC IRC
+is short for Internet Relay Chat. It is a popular chat service still in
+use today.
+second life
+walmart
+aldi
+morrisons
+boots
+walgreens
+zulu
+clock
+
+Thanks To:
+Mumble Server: Delwin
+HPR Site/VPS: Joshua Knapp - AnHonestHost.com
+Streams: Honkeymagoo
+EtherPad: HonkeyMagoo
+Shownotes by: Sgoti and hplovecraft

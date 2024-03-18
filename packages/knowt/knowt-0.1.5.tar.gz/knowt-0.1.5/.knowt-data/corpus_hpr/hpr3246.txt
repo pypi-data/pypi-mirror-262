@@ -1,0 +1,50 @@
+## hpr3246 :: LXCast: freeing the Fairphone 3 (and many other phones) 
+
+ 
+My review on the FP3 when it came out
+https://lxcast.net/lxcast-2-fairphone-3-fair-but-not-free-yet/
+Two solutions for a free OS:
+
+lineage OS - free android with the Gapps removed
+https://download.lineageos.org/FP3
+the /e/ project !! A "de-googled" operating system - actually a fork of lineage OS - this is what I'm going to talk about here.
+https://e.foundation/about-e/
+
+The research paper on Google Data Collection by Professor Douglas C. Schmidt, Vanderbilt University (2018) - learn how and how often normal Android phones send your data to Google servers.
+https://digitalcontentnext.org/blog/2018/08/21/google-data-collection-research/
+Another background article on tracking (in German) based on research from a Norwegian journalist:
+https://www.golem.de/news/datenschutz-wie-ich-die-ueberwacher-in-meinem-smartphone-aufspuerte-2012-152829-2.html
+MicroG services, a replacement for Google's libraries on /e/ with purely open-source implementations.
+The man behind the /e/ project: Gael Duval, pioneer of Open Source, Mandrake, Ulteo...
+https://www.indidea.org/gael/blog/about-gael-duval/
+His article outlining his vision for /e/ : https://gael-duval.medium.com/e-os-redefines-the-mobile-operating-system-paradigm-for-a-more-sustainable-world-4e929b1010c
+You can buy a FP3 and an FP3 + with /e/ pre-installed here !!
+https://esolutions.shop/de/
+Installing on your phone: over 110 devices supported: from Asus to Google, to Oneplus and Xiaomi
+https://doc.e.foundation/devices/
+
+How to install it on the FP3
+
+Install /e/ on FairPhone FP3 - FP3 | /e/ documentation
+Privacy ratings of apps: https://exodus-privacy.eu
+Alternative launchers:
+
+KISS launcher
+Simple launcher
+
+I recommended you add these apps:
+
+Antennapod - podcast client
+FairEmail or simple email
+Fennec (Firefox)
+Signal
+newpipe for watching youtube without being tracked
+
+Backup via adb is apparently broken | Not the fault of /e/!!
+You cannot simply flash a new recovery, such as TWRP, to flash images or backup, instead, you can use this method
+https://twrp.me/fairphone/fairphone3.html
+Donate or become a member to keep the project going:
+https://e.foundation/donate-2/
+
+Feel free to add any comments below!
+Theme Music: Jazzhar, "Room with a View" CC-BY-SA, check him out on Jamendo and on Free Music Archive

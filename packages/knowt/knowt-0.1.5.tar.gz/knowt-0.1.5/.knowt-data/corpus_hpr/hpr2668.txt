@@ -1,0 +1,24 @@
+## hpr2668 :: Explaining the controls on my Amateur HF Radio Part 3
+
+ 
+Main display is a fluorescent display
+https://en.wikipedia.org/wiki/Vacuum_fluorescent_display
+Hertz and Kilohertz
+https://en.wikipedia.org/wiki/Hertz
+Example of an old type tuning dial with moving needle display.
+
+Example of AVO meter
+
+Standing Wave Ration Scale
+https://en.wikipedia.org/wiki/Standing_wave_ratio
+Explanation of Auto Limiter Control (ALC)
+https://www.robkalmeijer.nl/techniek/electronica/radiotechniek/hambladen/radcom/1995/07/page61/index.html
+
+Sub Display
+Used either to display the time or in graph mode gives a representation of the receiver bandwidth setting when using CW or SSB.
+Memories and band keys
+Ten memory and band keys to switch either between ten stored memories or to switch between the ten pre-set amateur HF bands when in VFO mode. Up / Down step keys jumps in 1Mhz step.
+Antenna Tuner
+I tried and failed to find a simple explanation of an antenna tuner it’s a complicated topic, I can at least have a go at explaining how to use a simple manual antenna tuner, hope this makes some sense.
+A typical manual Antenna Tuner has two rotatable knobs both interact with each other. The Tuner is used to match a badly tuned antenna to your transmitter. The Tuner is placed in-between the transmitter and antenna. To use it you typically hold down the transmit key while looking at the VSWR meter and rotating one knob at a time in turn repeating this operation until the minimum VSWR is achieved.
+If you really want to dive into more detail feel free to follow this link in wikipedia. https://en.wikipedia.org/wiki/Antenna_tuner

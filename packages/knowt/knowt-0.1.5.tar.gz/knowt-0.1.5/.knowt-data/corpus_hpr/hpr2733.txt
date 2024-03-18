@@ -1,0 +1,183 @@
+## hpr2733 :: Writing Web Game in Haskell - News and Notifications
+
+ Intro
+News and notifications are used in the game to let the players know something noteworthy has happened. It could be discovery of a new planet or construction project finally finishing.
+All relevant information in the news is hyperlinked. If news mentions a planet, player can click the link and view current information of that planet.
+Server interface
+Server has three resources for news, although we’re concentrating only one here:
+/api/message           ApiMessageR      GET POST
+/api/message/#NewsId   ApiMessageIdR    DELETE
+/api/icon              ApiMessageIcons  GET
+First one is for retrieving all messages and posting a new one. Second one is for marking one read and third one is for retrieving all icons that players can attach to messages written by them.
+Database
+Database is defined in /config/models file. For news, there’s only one table:
+News json
+    content Text
+    factionId FactionId
+    date Int
+    dismissed Bool
+deriving Show Read Eq
+Content field contains the actual news article data as serialized JSON. This allows storing complex data, without having to have lots of columns or multiple tables.
+Domain objects
+There are many kinds of messages that players might see, but we’ll concentrate on one about discovering a new planet
+All different kinds of articles are of same type: NewsArticle. Each different kind of article has their own value constructor (PlanetFound in this particular case). And each of those value constructors has single parameter of a specific type that holds information particular to that certain article (PlanetFoundNews in this case). Adding a new article means adding a new value constructor and record to hold the data.
+data NewsArticle =
+    StarFound StarFoundNews
+    | PlanetFound PlanetFoundNews
+    | UserWritten UserWrittenNews
+    | DesignCreated DesignCreatedNews
+    | ConstructionFinished ConstructionFinishedNews
+
+
+data PlanetFoundNews = PlanetFoundNews
+    { planetFoundNewsPlanetName :: Text
+    , planetFoundNewsSystemName :: Text
+    , planetFoundNewsSystemId   :: Key StarSystem
+    , planetFoundNewsPlanetId   :: Key Planet
+    , planetFoundNewsDate       :: Int
+    }
+Given a News object, we can turn it into NewsArticle. These are much nicer to deal with that densely packed News that is stored in database:
+parseNews :: News -> Maybe NewsArticle
+parseNews =
+    decode . toLazyByteString . encodeUtf8Builder . newsContent
+Because parsing arbitrary JSON might fail, we get Maybe NewsArticle, instead of NewsArticle. It is possible to write the same code in longer way:
+parseNews news =
+    let
+        content = newsContent news
+        utf8Encoded = encodeUtf8Builder content
+        byteString = toLazyByteString utf8Encoded
+    in
+        decode byteString
+Similarly there’s two other functions for dealing with Entities (primary key, data - pair really) and list of Entities. Note that parseNewsEntities filters out all News that it didn’t manage to turn into NewsArticle. They have following signatures:
+parseNewsEntity :: Entity News -> (Key News, Maybe NewsArticle)
+
+parseNewsEntities :: [Entity News] -> [(Key News, NewsArticle)]
+Writing JSON encoding and decoding is tedious, template Haskell can help us here:
+$(deriveJSON defaultOptions ''PlanetFoundNews)
+$(deriveJSON defaultOptions ''NewsArticle)
+Turning Articles into JSON
+News articles aren’t much use if they stay on the server, we need to send them to clients too. We can’t have multiple declarations of same typeclass for any type, so we declare complete new type and copy data there before turning it into JSON and sending to client (this is one way of doing this).
+First step, define our types (concentrating on planet found news here):
+data NewsArticleDto =
+    StarFoundDto StarFoundNewsDto
+    | PlanetFoundDto PlanetFoundNewsDto
+    | UserWrittenDto UserWrittenNewsDto
+    | DesignCreatedDto DesignCreatedNewsDto
+    | ConstructionFinishedDto ConstructionFinishedNewsDto
+    deriving (Show, Read, Eq)
+
+data PlanetFoundNewsDto = PlanetFoundNewsDto
+    { planetFoundNewsDtoPlanetName :: Text
+    , planetFoundNewsDtoSystemName :: Text
+    , planetFoundNewsDtoSystemId   :: Key StarSystem
+    , planetFoundNewsDtoPlanetId   :: Key Planet
+    , planetFoundNewsDtoDate       :: Int
+    }
+    deriving (Show, Read, Eq)
+We need way to move data into dto and thus define a type class for that operation:
+class (ToJSON d) => ToDto c d | c -> d where
+    toDto :: c -> d
+For more information about functional dependencies, check following links: https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#extension-FunctionalDependencies and https://wiki.haskell.org/Functional_dependencies
+Writing instances for our type class:
+instance ToDto PlanetFoundNews PlanetFoundNewsDto where
+    toDto news =
+        PlanetFoundNewsDto { planetFoundNewsDtoPlanetName = planetFoundNewsPlanetName news
+                           , planetFoundNewsDtoSystemName = planetFoundNewsSystemName news
+                           , planetFoundNewsDtoSystemId = planetFoundNewsSystemId news
+                           , planetFoundNewsDtoPlanetId = planetFoundNewsPlanetId news
+                           , planetFoundNewsDtoDate = planetFoundNewsDate news
+                           }
+
+instance ToDto NewsArticle NewsArticleDto where
+    toDto news =
+        case news of
+            (StarFound x) -> StarFoundDto $ toDto x
+            (PlanetFound x) -> PlanetFoundDto $ toDto x
+            (UserWritten x) -> UserWrittenDto $ toDto x
+            (DesignCreated x) -> DesignCreatedDto $ toDto x
+            (ConstructionFinished x) -> ConstructionFinishedDto $ toDto x
+Finally, we want to wrap our news into something that has all the common info (id and link to icon to show)
+data NewsDto = NewsDto
+    { newsDtoId    :: Key News
+    , newsContents :: NewsArticleDto
+    , newsIcon     :: Text
+    }
+    deriving (Show, Read, Eq)
+IconMapper knows how to turn NewsArticleDto (in this case) to corresponding link to the icon. Notice how our ToDto instance includes IconMapper in addition to Key and NewsArticle:
+instance ToDto ((Key News, NewsArticle), (IconMapper NewsArticleDto)) NewsDto where
+    toDto ((nId, article), icons) =
+        let
+            content = toDto article
+        in
+        NewsDto { newsDtoId = nId
+                , newsContents = content
+                , newsIcon = runIconMapper icons content
+                }
+Sideshow: IconMapper
+IconMapper is a function that knows how to retrieve url to icon that matches the given parameter (for example NewsArticleDto in this case):
+newtype IconMapper a =
+    IconMapper { runIconMapper :: a -> Text }
+One possible implementation that knows how to deal with NewsArticleDto. We have two levels of hierarchicy here, because UserNewsDto has special rules for figuring out which icon to use:
+iconMapper :: (Route App -> Text) -> IconMapper UserNewsIconDto -> IconMapper NewsArticleDto
+iconMapper render userIconMapper =
+    IconMapper $ article ->
+        case article of
+            PlanetFoundDto _->
+                render $ StaticR images_news_planet_png
+
+            UserWrittenDto details ->
+                runIconMapper userIconMapper $ userWrittenNewsDtoIcon details
+    ...
+Back to JSON
+I wrote ToJSON and FromJSON instances by hand, because I wanted full control on how the resulting JSON looks like. It’s possible to configure how template Haskell names fields for example, but I think that writing these out couple of times is good practice and makes sure that I understand what’s going on behind the scenes if I use template Haskell later.
+instance ToJSON NewsDto where
+    toJSON (NewsDto { newsDtoId = nId
+                    , newsContents = contents
+                    , newsIcon = icon }) =
+        object [ "id" .= nId
+               , "contents" .= contents
+               , "tag" .= jsonTag contents
+               , "icon" .= icon
+               , "starDate" .= newsStarDate contents
+               ]
+
+instance ToJSON PlanetFoundNewsDto where
+    toJSON (PlanetFoundNewsDto { planetFoundNewsDtoPlanetName = pName
+                               , planetFoundNewsDtoSystemId = sId
+                               , planetFoundNewsDtoPlanetId = pId
+                               , planetFoundNewsDtoSystemName = sName
+                               }) =
+        object [ "planetName" .= pName
+               , "systemName" .= sName
+               , "planetId" .= pId
+               , "systemId" .= sId
+               ]
+Time to put it all together
+Handler function authenticates user, check they’re member of a faction and then loads all the news:
+getApiMessageR :: Handler Value
+getApiMessageR = do
+    (_, _, fId) <- apiRequireFaction
+    loadAllMessages fId
+Loading messages involves multiple steps:
+
+retrieve News from database
+
+correct faction, not dismissed, sort by date
+
+parse them into ( Key News, NewsArticle )
+get Url render function
+create mapper for user icons
+map all NewsArticles into ( NewsArticleDto, IconMapper )
+turn them into JSON and return that to client
+
+loadAllMessages :: Key Faction -> HandlerFor App Value
+loadAllMessages fId = do
+    loadedMessages <- runDB $ selectList [ NewsFactionId ==. fId
+                                         , NewsDismissed ==. False ] [ Desc NewsDate ]
+    let parsedMessages = parseNewsEntities loadedMessages
+    render <- getUrlRender
+    let userIcons = userNewsIconMapper render
+    return $ toJSON $ map (toDto . (flip (,) (iconMapper render userIcons))) parsedMessages
+
+
+

@@ -1,0 +1,50 @@
+## hpr3123 :: Arduino controlled Christmas lights
+
+ 
+Inspired by an Instructable project
+https://www.instructables.com/id/LED-VU-Meter-With-Arduino-UNO
+Started the project with Arduino Uno.
+
+Found that power it with the barrel plug made audio input stable
+Tested this theory by using USB power
+Suspect this was due to grounding not being as good with the USB
+This caused LED's to light even without an audio input
+Ended up using an generic Arduino Nano to control the project
+
+Modified an audio mic preamplifier from Amazon to condition the output from the laptop music source
+Ran the output from this to A0 on the Arduino
+Split the signal out to an external speaker
+Used digital outputs listed in the sketch to power the LED indicators
+
+For reference, a sketch is the program that the Arduino runs through a loop.
+
+Used pins 10 to 12 as AnalogWrite pin to provide the power to the solid state relays.
+Used a dremel to separate the power to the hot side of the two power outlets
+
+Used three of the outlets to power three strings of Christmas tree LED lights.
+Used the other outlet to power the Arduino
+
+Bonus
+
+Using these particular solid state relays, there is still a 10Vac output in off state. It actually worked for good, as the lights are at a nice brightness without a music input.
+Kindly leave a note in the comments if this is common to Solid State relays.
+
+
+Links:
+GY-MAX4466 Electret Microphone Amplifier
+https://www.amazon.com/gp/product/B07C3HXPJ9/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
+Solid State relay on Ebay
+https://www.ebay.com/itm/25A-40A-SSR-25DA-SSR-40DA-250V-Solid-State-Relay-Module-Alloy-Heat-Sink/401478280169?hash=item5d79f863e9:g:dkwAAOSwiqFaX3f8
+ELEGOO for Arduino Nano V3.0
+https://www.amazon.com/gp/product/B0713XK923/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
+AnalogWrite
+https://www.arduino.cc/en/pmwiki.php?n=Reference/AnalogWrite
+https://www.arduino.cc/en/Tutorial/AnalogInOutSerial
+My video
+Sound
+Reactive Christmas lights on Archive.org
+
+Edit:
+Here is the song I meant to add, to see if it matches my video of the lights.
+It is the Trans Siberian Orchestra, Carol of the Bells.
+https://m.youtube.com/watch?v=sCabI3MdV9g

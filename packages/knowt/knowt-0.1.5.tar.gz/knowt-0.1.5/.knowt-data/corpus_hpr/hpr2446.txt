@@ -1,0 +1,24 @@
+## hpr2446 :: Git server and git hooks
+
+ A sample post-receive git hook:
+
+#!/usr/bin/tcsh
+
+foreach arg ( $< )
+  set argv = ( $arg )
+  set refname = $1
+end
+
+set branch = `git rev-parse --symbolic --abbrev-ref $refname`
+echo $branch
+
+    if ( "$branch" == "master" ) then
+      echo "Branch detected: master"
+      echo "Do some stuff here."
+    else if ( "$branch" == "dev" ) then
+      echo "Branch detected: dev"
+      echo "Do something else here."
+      else
+        echo "Do something entirely different here."
+    endif
+

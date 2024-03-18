@@ -1,0 +1,43 @@
+## hpr0380 :: Troubleshooting Blue screens of Death
+
+ 
+Debugging Tools link
+
+Some Common STOP codes: Bug Check 0xA: IRQL_NOT_LESS_OR_EQUAL  The 
+IRQL_NOT_LESS_OR_EQUAL bug check has a value of 0x0000000A. This indicates that 
+Microsoft Windows or a kernel-mode driver accessed paged memory at 
+DISPATCH_LEVEL or above.  The following parameters are displayed on 
+the blue screen. Parameter Description 1 Memory referenced 2 IRQL at time of 
+reference 3 0: Read 1: Write 4 Address which referenced memory Cause This bug 
+check is issued if paged memory (or invalid memory) is accessed when the IRQL is 
+too high. The error that generates this bug check usually occurs after the 
+installation of a faulty device driver, system service, or BIOS. If you 
+encounter bug check 0xA while upgrading to a later version of Windows, this 
+error might be caused by a device driver, a system service, a virus scanner, or 
+a backup tool that is incompatible with the new version.
+If a kernel debugger is available, obtain a stack trace.
+
+
+ To resolve an error caused by a faulty device driver, system service, or BIOS 1. Restart your 
+computer. 2. Press F8 at the character-based menu that displays the operating 
+system choices. 3. Select the Last Known Good Configuration option from the 
+Windows Advanced Options menu. This option is most effective when only one 
+driver or service is added at a time.  To resolve an error caused by an 
+incompatible device driver, system service, virus scanner, or backup tool 1. 
+Check the System Log in Event Viewer for error messages that might identify the 
+device or driver that caused the error. 2. Try disabling memory caching of the 
+BIOS. 3. Run the hardware diagnostics supplied by the system manufacturer, 
+especially the memory scanner. For details on these procedures, see the owner's 
+manual for your computer. 4. Make sure the latest Service Pack is installed. 5. 
+If your system has small computer system interface (SCSI) adapters, contact the 
+adapter manufacturer to obtain updated Windows drivers. Try disabling sync 
+negotiation in the SCSI BIOS, checking the cabling and the SCSI IDs of each 
+device, and confirming proper termination. 6. For integrated device electronics 
+(IDE) devices, define the onboard IDE port as Primary only. Also, check each IDE 
+device for the proper master/subordinate/stand-alone setting. Try removing all 
+IDE devices except for hard disks. If the message appears during an installation 
+of Windows, make sure that the computer and all installed peripherals are listed 
+in the Microsoft Windows Marketplace Tested Products List. 
+
+Other stop codes can be found at 
+Interpreting Bug Check Codes

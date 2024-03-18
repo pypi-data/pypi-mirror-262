@@ -1,0 +1,40 @@
+## hpr2689 :: Bash Tips - 14
+
+ Bash Tips - 14 (Some auxiliary Bash tips)
+More about loops
+This is the fourteenth episode covering useful tips about using Bash. Episodes 9-13 covered Making Decisions in Bash and in these episodes we looked at while and until loops, but not for loops. This episode is making good this deficiency, and is also looking at break and continue which are very useful when using loops.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+“GNU BASH Reference Manual”
+
+“Bash Looping Constructs”
+“Bash Shell Arithmetic”
+“Bourne Shell Builtins”
+“Bash Brace Expansion”
+
+HPR series: Bash Scripting
+Previous episodes under the heading Bash Tips:
+
+HPR episode 1648 “Bash parameter manipulation”
+HPR episode 1843 “Some Bash tips”
+HPR episode 1884 “Some more Bash tips”
+HPR episode 1903 “Some further Bash tips”
+HPR episode 1951 “Some additional Bash tips”
+HPR episode 2045 “Some other Bash tips”
+HPR episode 2278 “Some supplementary Bash tips”
+HPR episode 2293 “More supplementary Bash tips”
+HPR episode 2639 “Some ancillary Bash tips - 9”
+HPR episode 2649 “More ancillary Bash tips - 10”
+HPR episode 2659 “Further ancillary Bash tips - 11”
+HPR episode 2669 “Additional ancillary Bash tips - 12”
+HPR episode 2679 “Extra ancillary Bash tips - 13”
+
+
+
+Resources:
+
+Examples: bash14_ex1.sh, bash14_ex2.sh, bash14_ex3.sh, bash14_ex4.sh, bash14_ex5.sh
+
+

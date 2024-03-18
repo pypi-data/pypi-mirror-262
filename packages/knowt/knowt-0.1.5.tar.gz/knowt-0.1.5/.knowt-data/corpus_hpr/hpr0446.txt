@@ -1,0 +1,6 @@
+## hpr0446 :: Building Live CDs with Fedora
+
+ Clint Savage at SouthEast Linux Fest 2009 on how to build Live CDs and Live USB sticks ("remixes" and "respins") using Fedora tools like kickstart, live usb creator, revisor, and more.
+Note that this is Klaatu's edit and is shorter than the source audio on southeastlinuxfest.org because the delay due to technical difficulty has been chopped out.
+Ogg is available here:
+hpr0446.ogg

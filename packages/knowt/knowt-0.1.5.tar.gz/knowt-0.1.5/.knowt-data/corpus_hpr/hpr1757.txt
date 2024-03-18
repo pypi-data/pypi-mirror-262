@@ -1,0 +1,19 @@
+## hpr1757 :: Useful Bash functions
+
+ Overview
+I enjoy writing Bash scripts to solve various problems. In particular I have a number of scripts I use to manage the process of preparing a show for HPR, which I am developing at the moment.
+My more complex Bash scripts use a lot of functions to perform the various tasks, and, in the nature of things, some of these functions can be of use in other scripts and are shared between them.
+I thought I would share some of these functions with HPR listeners in the hopes that they might be useful. It would also be interesting to receive feedback on these functions and would be great if other Bash users contributed ideas of their own.
+Full Notes
+Since the notes explaining this subject are long, they have been placed here: https://hackerpublicradio.org/eps/hpr1757_full_shownotes.html, and an experimental ePub version is available here: https://hackerpublicradio.org/eps/hpr1757_full_shownotes.epub.
+Links
+
+Bash Support Vim plugin: https://www.vim.org/scripts/script.php?script_id=365
+HPR episode Bash parameter manipulation: https://hackerpublicradio.org/eps.php?id=1648
+How to write functions (from The Linux Documentation Project):
+
+Functions: https://tldp.org/LDP/abs/html/functions.html
+Complex Functions and Function Complexities: https://tldp.org/LDP/abs/html/complexfunct.html
+Examples of functions in scripts: https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_11_02.html
+
+Download the pad and yes_no functions: https://hackerpublicradio.org/eps/hpr1757_functions.sh

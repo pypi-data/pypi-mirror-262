@@ -1,0 +1,32 @@
+## hpr2639 :: Some ancillary Bash tips - 9
+
+ Some ancillary Bash tips - 9
+Making decisions in Bash
+This is my ninth contribution to the Bash Scripting series under the heading of Bash Tips. The previous episodes are listed below in the Links section.
+It seems to me that it would be worthwhile looking at how Bash can be used to make decisions, such as how many times a loop should cycle (looping constructs) or to choose between multiple choices (conditional constructs). Of course we need to look at some of the expressions used in conjunction with the commands that do these tasks – the tests themselves – and we’ll do this in this episode.
+This is a complex area which I had some trouble with when I first started using Bash, and there is a lot to say about it all. I have prepared a group of HPR shows about this subject, in order to do it justice, and this is the first of the group.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+“GNU BASH Reference Manual”
+
+“Bash Conditional Expressions”
+“Bourne Shell Builtins”
+
+HPR series: Bash Scripting
+Previous episodes under the heading Bash Tips:
+
+HPR episode 1648 “Bash parameter manipulation”
+HPR episode 1843 “Some Bash tips”
+HPR episode 1884 “Some more Bash tips”
+HPR episode 1903 “Some further Bash tips”
+HPR episode 1951 “Some additional Bash tips”
+HPR episode 2045 “Some other Bash tips”
+HPR episode 2278 “Some supplementary Bash tips”
+HPR episode 2293 “More supplementary Bash tips”
+
+Resources:
+
+Examples: bash9_ex1.sh
+

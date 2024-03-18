@@ -1,0 +1,95 @@
+## hpr3057 :: Formal verification with Coq
+
+ Coq is interactive theorem prover, which comes with its own programming language Gallina.
+If we wanted to write function that calculates resulting blood type based on two gene alleles, we could do it as following.
+Start by defining types that represents alleles and resulting blood type:
+Inductive BloodTypeAllele : Type :=
+  | BloodTypeA
+  | BloodTypeB
+  | BloodTypeO.
+
+Inductive BloodType : Type :=
+  | TypeA
+  | TypeB
+  | TypeAB
+  | TypeO.
+Mapping between them is defined as follows:
+Definition bloodType (a b : BloodTypeAllele) : BloodType :=
+  match a, b with
+  | BloodTypeA, BloodTypeA => TypeA
+  | BloodTypeA, BloodTypeO => TypeA
+  | BloodTypeA, BloodTypeB => TypeAB
+  | BloodTypeB, BloodTypeB => TypeB
+  | BloodTypeB, BloodTypeA => TypeAB
+  | BloodTypeB, BloodTypeO => TypeB
+  | BloodTypeO, BloodTypeA => TypeA
+  | BloodTypeO, BloodTypeB => TypeB
+  | BloodTypeO, BloodTypeO => TypeO
+  end.
+Notice that the only way of getting TypeO blood is for both alleles to be BloodTypeO.
+We can state theorems about the code:
+Theorem double_O_results_O_type :
+  bloodType BloodTypeO BloodTypeO = TypeO.
+Proof.
+  reflexivity.
+  Qed.
+double_O_results_O_type states that bloodType BloodTypeO BloodTypeO will have value of TypeO. There’s also attached proof for this theorem.
+Second theorem is longer:
+Theorem not_double_O_does_not_result_O_type :
+  forall (b1 b2 : BloodTypeAllele),
+  b1 <> BloodTypeO \/ b2 <> BloodTypeO ->
+  bloodType b1 b2 <> TypeO.
+Proof.
+  intros.
+  destruct b1.
+  - destruct b2.
+    + discriminate.
+    + discriminate.
+    + discriminate.
+  - destruct b2.
+    + discriminate.
+    + discriminate.
+    + discriminate.
+  - destruct b2.
+    + discriminate.
+    + discriminate.
+    + destruct H.
+      * simpl. contradiction.
+      * simpl. contradiction.
+Qed.
+It states that if bloodType is applied with anything else than two BloodTypeO, the result will not be TypeO. Proof for this is longer. It goes through each and every combination of parameters and proves that the result isn’t TypeO. Mathematician could write this as: ∀ b1 b2, b1 ≠ BloodTypeO ∨ b2 ≠ BloodTypeO → bloodType b1 b2 ≠ TypeO.
+If code above is in module called Genes, we can add following at the end to instruct compiler to emit Haskell code:
+Extraction Language Haskell.
+Extraction Genes.
+Resulting code is as follows:
+data BloodTypeAllele =
+   BloodTypeA
+ | BloodTypeB
+ | BloodTypeO
+
+data BloodType =
+   TypeA
+ | TypeB
+ | TypeAB
+ | TypeO
+
+bloodType :: BloodTypeAllele -> BloodTypeAllele -> BloodType
+bloodType a b =
+  case a of {
+   BloodTypeA -> case b of {
+                  BloodTypeB -> TypeAB;
+                  _ -> TypeA};
+   BloodTypeB -> case b of {
+                  BloodTypeA -> TypeAB;
+                  _ -> TypeB};
+   BloodTypeO ->
+    case b of {
+     BloodTypeA -> TypeA;
+     BloodTypeB -> TypeB;
+     BloodTypeO -> TypeO}}
+Now we have Haskell code that started in Coq, has two properties formally verified and is ready to be integrated with rest of the system.
+Further reading:
+
+Software Foundations
+Coq in a Hurry
+

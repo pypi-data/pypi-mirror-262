@@ -1,0 +1,62 @@
+## hpr2969 :: Crewing a spaceship in Haskell
+
+ Intro
+Every spaceship in game needs a crew to operate it. Smaller ships with fewer components require less crew than huge ones with lots of components.
+Types
+Unit stats lists amount of crew required to operate a spaceship and if they need sleeping quarters.
+data UnitStats = UnitStats
+    { unitStatsMinimumCrew :: ![CrewRequirement]
+    , unitStatsNominalCrew :: ![CrewRequirement]
+    , unitStatsCrewSpace :: !TotalCrewSpace
+    , unitStatsCrewSpaceRequired :: !CrewSpaceReq
+    } deriving (Show, Read, Eq)
+Different positions a crew can have is an enumeration:
+data CrewPosition =
+    Commander
+    | Navigator
+    | Signaler
+    | SensorOperator
+    | Gunner
+    | Doctor
+    | Nurse
+    | Driver
+    | Helmsman
+    | Artificer
+    | Crew
+    | Passenger
+    deriving (Show, Read, Eq, Enum, Bounded)
+derivePersistField "CrewPosition"
+Rank of a crew member isn’t a military rank, but rather their position in ship’s internal hierarchy:
+data CrewRank =
+    SecondClass
+    | FirstClass
+    | Senior
+    | Chief
+    deriving (Show, Read, Eq, Enum, Bounded)
+derivePersistField "CrewRank"
+Amount of crew is newtype that helps me not to mix different types of numbers with each other.
+newtype CrewAmount = CrewAmount { unCrewAmount :: Int }
+    deriving (Show, Read, Eq, Ord, Num)
+Total crew space of a ship is divided to three different types: steerage, standard and luxury.
+data TotalCrewSpace = TotalCrewSpace
+    { totalCrewSpaceSteerage :: !(CrewSpace SteerageQuarters)
+    , totalCrewSpaceStandard :: !(CrewSpace StandardQuarters)
+    , totalCrewSpaceLuxury :: !(CrewSpace LuxuryQuarters)
+    } deriving (Show, Read, Eq)
+Again, crew space is newtype so I don’t mix different types of numbers with each other.
+data CrewSpace a =
+    CrewSpace { unCrewSpace :: CrewAmount }
+    deriving (Show, Read, Eq)
+I could have modeled fact that vehicle might need crew space with Bool, but having a descriptive name and type is more to my liking.
+data CrewSpaceReq =
+    CrewSpaceRequired
+    | CrewSpaceOptional
+    deriving (Show, Read, Eq)
+derivePersistField "CrewSpaceReq"
+The fact that single person could manage multiple components is reflected by ComponentCrewReq having Double instead of Integer
+-- | Crew requirements for a component
+data ComponentCrewReq =
+    ComponentCrewReq CrewPosition Double
+    deriving (Show, Read, Eq)
+In closing
+If you have questions, comments or feedback, easiest way to catch me nowdays is by email or in fediverse where I’m Tuula@mastodon.social

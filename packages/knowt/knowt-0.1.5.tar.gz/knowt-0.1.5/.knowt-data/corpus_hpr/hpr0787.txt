@@ -1,0 +1,7 @@
+## hpr0787 :: Grep for tab
+
+ In todays summer short Ken tells us about how you can grep for a tab in a file.
+grep "first{ctrl+v}{tab}second" file.txt
+
+
+for more information see https://www.linuxquestions.org/questions/linux-newbie-8/tab-in-bash-script-242400/#post4386714

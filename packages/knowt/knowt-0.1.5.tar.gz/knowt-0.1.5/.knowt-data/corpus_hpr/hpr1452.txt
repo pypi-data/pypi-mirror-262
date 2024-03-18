@@ -1,0 +1,196 @@
+## hpr1452 :: HPR Coverage at FOSDEM 2014 Part 3
+
+ HPR Coverage at FOSDEM 2014
+
+The following are a series of interviews recorded at FOSDEM 2014.
+
+
+FOSDEM is a free event that offers open source communities a place to meet, share ideas and collaborate.
+
+
+For more information see the website https://fosdem.org/2014/, where you can watch a recording of the many talks https://video.fosdem.org/2014/
+
+A properly stocked fridge.
+Day 1 Part 3, Day 2 Part 1
+00:00:30 The TOR Project
+
+The next on our list of booths to visit was the Tor project at the Mozilla stand.
+
+
+Tor is free software and an open network that helps you defend against traffic analysis, a form of network surveillance that threatens personal freedom and privacy, confidential business activities and relationships, and state security.
+
+Links
+
+https://www.torproject.org/
+https://en.wikipedia.org/wiki/Tor_(anonymity_network)
+
+00:13:22 EPFSUG, Free Software User Group inside the European Parliament
+
+Next we spoke to the Erik Josefsson about the need for as many people as possible to register as a Supporter of Free Software on the spfsug website. Please take some time to do that now.
+
+
+The European Parliament Free Software User Group is an open community of staff, assistants and Members of the European Parliament, and of supporters from the free software community. Its goals are to:
+
+Assist people interested in using free software in the European Parliament
+Drive adoption of free software in the European Parliament's information infrastructure
+Push for use of open standards, to ensure equal access for citizens using free software
+Work in cooperation with like-minded groups in Europe and around the world
+
+
+Links
+
+https://epfsug.eu/
+https://www.greens-efa.eu/36-details/josefsson-erik-138.html
+Debian for use in Parliaments: https://wiki.debian.org/DebianParl
+https://epfsug.eu/become-a-member-or-a-supporter
+
+00:27:07 KDE
+
+Over at the KDE booth, I managed to track down Jonathan Riddell about the KDE project. From Wikipedia:
+
+
+KDE is an international free software community producing an integrated set of cross-platform applications designed to run on Linux, FreeBSD, Solaris, Microsoft Windows, and OS X systems. It is known for its Plasma Desktop, a desktop environment provided as the default working environment on many Linux distributions, such as openSUSE, Mageia and Kubuntu and is default desktop environment on PC-BSD a BSD operating system.
+
+The goal of the community is to provide basic desktop functions and applications for daily needs as well as tools and documentation for developers to write stand-alone applications for the system. In this regard, the KDE project serves as an umbrella project for many standalone applications and smaller projects that are based on KDE technology. These include Calligra Suite, digiKam, Rekonq, K3b, and many others.
+
+KDE software is based on the Qt framework. The original GPL version of this toolkit only existed for the X11 platform, but with the release of Qt 4, LGPL versions are available for all platforms. This allows KDE software based on Qt 4 to also be distributed to Microsoft Windows and OS X.
+
+
+About KDE
+
+
+The KDE Community is an international technology team dedicated to creating a free and user-friendly computing experience, offering an advanced graphical desktop, a wide variety of applications for communication, work, education and entertainment and a platform to easily build new applications upon. We have a strong focus on finding innovative solutions to old and new problems, creating a vibrant atmosphere open for experimentation.
+
+
+About Kubuntu
+
+
+Kubuntu is an operating system built by a worldwide team of expert developers. It contains all the applications you need: a web browser, an office suite, media apps, an instant messaging client and many more. Kubuntu is an open-source alternative to Windows and Office.
+
+Links
+
+https://jriddell.org/
+https://wiki.debian.org/Utnubu/AboutUbuntu/JonathanRiddell
+https://wiki.ubuntu.com/JonathanRiddell
+https://www.kde.org/
+https://www.kubuntu.org/
+https://en.wikipedia.org/wiki/KDE
+https://en.wikipedia.org/wiki/Blue_Systems
+https://www.blue-systems.com/
+
+00:50:13 Drupal
+
+Bumping into old friends is all part of the FOSDEM experience. Never one for missing an opertunity to turn a chat into an episode, I catch up with Paul Krischer, who tells us about his work with Drupal. Keep your diary clear for drupalcon Amsterdam, which will be held 29 SEP - 03 OCT.
+
+
+Drupal is an open source content management platform powering millions of websites and applications. It's built, used, and supported by an active and diverse community of people around the world.
+
+Links
+
+https://drupal.org/
+https://drupal.org/drupal-8.0
+https://amsterdam2014.drupal.org/
+https://acquia.com/
+
+00:55:00 Mozilla
+
+After a long night "discovering" Brussels using the public transport system, we track down Brian King the European Community Builder for Mozilla. We talk about the Mozilla phone.
+
+The mozilla team.
+
+At Mozilla, we're a global community of technologists, thinkers and builders working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.
+
+Links
+
+https://reps.mozilla.org/u/brianking/
+https://www.mozilla.org/en-US/
+https://www.mozilla.org/en-US/firefox/os/
+https://www.mozilla.org/en-US/firefox/new/
+
+01:07:09 GNOME
+
+We talk to Tobias Müller who is on the board of directors for the GNOME project.
+
+
+GNOME 3 is an easy and elegant way to use your computer. It is designed to put you in control and bring freedom to everybody. GNOME 3 is developed by the GNOME community, a diverse, international group of contributors that is supported by an independent, non-profit foundation.
+
+Links
+
+https://wiki.gnome.org/TobiasMueller
+https://www.gnome.org/
+https://en.wikipedia.org/wiki/GNOME
+
+01:12:52 CentOS
+
+Starting a series of RedHat interviews we interview Jim Perrin Governing Board member of the CentOS project.
+
+
+
+
+
+The CentOS trio.
+
+The CentOS Linux distribution is a stable, predictable, manageable and reproduceable platform derived from the sources of Red Hat Enterprise Linux (RHEL). We are now looking to expand on that by creating the resources needed by other communities to come together and be able to buld on the CentOS Linux platform. And today we start the process by delivering a clear governance model, increased transparency and access. In the coming weeks we aim to publish our own roadmap that includes variants of the core CentOS Linux.
+
+Links
+
+https://wiki.centos.org/JimPerrin
+https://www.centos.org/about/
+https://en.wikipedia.org/wiki/CentOS
+
+01:23:08 RedHat: Foreman, oVirt, and Open Stack
+
+Daniel Lobato and Doran Fedu help me understand what Foreman, oVirt, and OpenStack is all about.
+
+Foreman
+
+Foreman is an open source project that gives system administrators the power to easily automate repetitive tasks, quickly deploy applications, and proactively manage servers, on-premises or in the cloud. (From Wikipedia) Foreman (also known as The Foreman) is a complete life cycle systems management tool for physical and virtual servers with deep integration to configuration management software, specifically Puppet. The Foreman provides provisioning on bare-metal (through managed DHCP, DNS, TFTP, and PXE-based unattended installations), virtualization and cloud. The Foreman provides comprehensive, auditable interaction facilities including a web frontend, command line interface and robust, REST API.
+
+oVirt
+
+oVirt manages virtual machines, storage and virtualized networks. (From Wikipedia) oVirt is a free platform virtualization management web application community project started by Red Hat. oVirt is built on libvirt which could allow it to manage virtual machines hosted on any supported backend, including KVM, Xen and VirtualBox. However, oVirt is currently focused on KVM alone. oVirt is an open source software with backing from Red Hat and it is the base for Red Hat Enterprise Virtualization.
+
+OpenStack
+
+OpenStack is a cloud operating system that controls large pools of compute, storage, and networking resources throughout a datacenter, all managed through a dashboard that gives administrators control while empowering their users to provision resources through a web interface.
+
+Links
+
+https://gb.redhat.com/
+https://en.wikipedia.org/wiki/Red_Hat
+https://openstack.redhat.com/Main_Page
+https://theforeman.org/
+https://www.daniellobato.me/
+https://www.ovirt.org/Home
+https://en.wikipedia.org/wiki/Foreman_(software)
+
+01:48:17 Fedora
+
+Completing (for the most part) the RedHat thread we head over to the Fedora Project booth and talk to Jiří Eischmann and Jaroslav Řezník. Jiří is the chair of the Fedora Ambassador Steering Committee, and works for RedHat as a Community Manager. Jaroslav is the Fedora Program Manager.
+
+Fedora Friends
+
+Fedora is a fast, stable, and powerful operating system for everyday use built by a worldwide community of friends. It's completely free to use, study, and share.
+
+Links
+
+https://fedoraproject.org/wiki/JaroslavReznik
+https://fedoraproject.org/wiki/User:Eischmann
+
+Music
+
+Track name : Free Software Song
+Performer : Fenster
+Recorded date : 2002
+Copyright : Copyright (C) 2002,
+Fenster LLC. Verbatim copying of this entire recording is permitted in any medium,
+provided this notice is preserved.
+Performers:
+Paul Robinson (vocals),
+Roman Kravec (guitar),
+Ed D'Angelo (bass),
+Dave Newman (drums),
+Brian Yarbrough (trumpet),
+Tony Moore (trumpet).
+Free software info at www.gnu.org speeches at audio-video.gnu.org/audio
+

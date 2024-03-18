@@ -1,0 +1,49 @@
+## hpr3638 :: Ken drops a bear on his android phone
+
+ I have previously used https://f-droid.org/en/packages/org.primftpd/ to enable sftp to my android phone
+For more information on How to mount remote storage using sshfs, see hpr1944 :: sshfs - Secure SHell FileSystem
+Also you will need to know about some useful tools for working with Android Devices hpr3515 :: ADB and scrcpy
+
+I found https://www.galexander.org/software/simplesshd/
+SimpleSSHD is an SSH2 server based on dropbear that supports scp, sftp, and rsync. It only supports public-key based authentication (no password/interactive auth except for bootstrapping). It does not use root, which means it must listen on a port over 1024 (defaults to port 2222).
+Install from fdroid
+https://f-droid.org/en/packages/org.galexander.sshd
+ 
+ 
+ 
+before
+
+laptop$ adb root
+laptop$ adb shell
+phone: # cd /data/user/0/org.galexander.sshd/files
+phone:/data/user/0/org.galexander.sshd/files # ls -al
+total 56
+drwxrwx--x 2 u0_a268 u0_a268 4096 2022-06-17 12:06 .
+drwx------ 6 u0_a268 u0_a268 4096 2022-06-17 11:59 ..
+-rw-rw-rw- 1 root    root     490 2022-06-17 12:05 authorized_keys
+-rw------- 1 u0_a268 u0_a268  475 2022-06-17 12:07 dropbear.err
+-rw------- 1 u0_a268 u0_a268  650 2022-06-17 12:03 dropbear.err.old
+-rw------- 1 u0_a268 u0_a268    6 2022-06-17 12:06 dropbear.pid
+-rw------- 1 u0_a268 u0_a268   83 2022-06-17 12:03 dropbear_ed25519_host_key
+
+Commands to run
+
+phone:/data/user/0/org.galexander.sshd/files # restorecon -F authorized_keys
+SELinux: Loaded file_contexts
+phone:/data/user/0/org.galexander.sshd/files # chmod 600 authorized_keys
+phone:/data/user/0/org.galexander.sshd/files # chown u0_a268:u0_a268 authorized_keys
+
+after
+
+phone:/data/user/0/org.galexander.sshd/files # ls -al
+total 56
+drwxrwx--x 2 u0_a268 u0_a268 4096 2022-06-17 12:06 .
+drwx------ 6 u0_a268 u0_a268 4096 2022-06-17 11:59 ..
+-rw------- 1 u0_a268 u0_a268  490 2022-06-17 12:05 authorized_keys
+-rw------- 1 u0_a268 u0_a268  475 2022-06-17 12:07 dropbear.err
+-rw------- 1 u0_a268 u0_a268  650 2022-06-17 12:03 dropbear.err.old
+-rw------- 1 u0_a268 u0_a268    6 2022-06-17 12:06 dropbear.pid
+-rw------- 1 u0_a268 u0_a268   83 2022-06-17 12:03 dropbear_ed25519_host_key
+
+laptop$ sshfs -p 2222 192.168.1.123: /mnt/phone/
+

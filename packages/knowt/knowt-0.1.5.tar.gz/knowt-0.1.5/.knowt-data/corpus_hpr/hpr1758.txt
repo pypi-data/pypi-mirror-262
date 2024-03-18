@@ -1,0 +1,55 @@
+## hpr1758 :: Cool Stuff part 3
+
+ Radiotopia
+
+https://www.radiotopia.fm/
+
+
+A part of PRX (Public Radio Exchange), they are a collection of story-driven podcasts sponsored in part
+by the Knight Foundation.
+
+
+PRX : https://www.prx.org/
+
+
+Knight Foundation : https://www.knightfoundation.org
+
+
+Headed up by their flagship podcast 99% Invisible which is based on architecture and design and hosted by 
+Roman Mars
+
+urxvt256c
+
+rxvt = Roberts XVT.  X = X Window System, VT = VT102 terminal
+
+
+VT Terminal : https://www.en.wikipedia.org/wiki/VT100
+
+
+rxvt started as a replacement for xterm.  Written by Rob Nation
+https://en.wikipedia.org/wiki/Rxvt
+
+
+Forked by Marc Lehmann and called rxvt-unicode or urxvt.  
+Gave features such as transparency, Perl extensions and better font support
+https://en.wikipedia.org/wiki/Rxvt-unicode
+
+
+Uses the .xdefaults configuration file in your home directory for customizations.
+
+Phil Plait's Crash Course Astronomy
+
+Also known as The Bad Astronomer
+
+
+Wikipedia : https://en.wikipedia.org/wiki/Phil_Plait
+
+
+Blogs at Slate : https://www.slate.com/authors.phil_plait.html
+
+
+Ted Talks : https://www.ted.com/speakers/phil_plait
+
+
+Crash Course on YouTube:
+https://www.youtube.com/playlist?list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL

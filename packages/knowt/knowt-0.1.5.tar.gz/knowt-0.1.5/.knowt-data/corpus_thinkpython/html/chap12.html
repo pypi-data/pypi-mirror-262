@@ -1,0 +1,520 @@
+<html>
+<head>
+<title>Chapter 12: Classes and objects</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap11.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap13.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 12</h2>
+
+
+
+<h1>Classes and objects</h1>
+
+<a name=1></a>
+<h3>12.1 User-defined compound types</h3>
+<p>
+Having used some of Python's built-in types, we are ready to create a
+user-defined type: the <tt><font size=-1>Point</font></tt>.
+<p>
+Consider the concept of a mathematical point.  In two dimensions, a
+point is two numbers (coordinates) that are treated collectively as a
+single object.  In mathematical notation, points are often written in
+parentheses with a comma separating the coordinates. For example,
+<tt>(0, 0)</tt> represents the origin, and <tt>(x, y)</tt> represents the
+point <tt>x</tt> units to the right and <tt>y</tt> units up from the origin.
+<p>
+A natural way to represent a point in Python is with two
+floating-point values.  The question, then, is how to group these two
+values into a compound object.  The quick and dirty solution
+is to use a list or tuple, and for some applications that might
+be the best choice.
+<p>
+An alternative is to define a new user-defined compound type, also
+called a <b>class</b>.  This approach involves a bit more effort, but
+it has advantages that will be apparent soon.
+<p>
+A class definition looks like this:
+
+<p><tt><font size=-1><font color=black>class</font> Point:
+<br>&nbsp; <font color=black>pass</font>
+<br></font></tt></p>
+
+<p>
+Class definitions can appear anywhere in a program, but they are
+usually near the beginning (after the <tt><font size=-1><font color=black>import</font></font></tt> statements).  The
+syntax rules for a class definition are the same as for other compound
+statements (see <a href="chap04.html#4">Section 4.4</a>).
+<p>
+This definition creates a new class called <tt><font size=-1>Point</font></tt>.  The
+<b>pass</b> statement has no effect; it is only
+necessary because a compound statement must have something in its
+body.
+<p>
+By creating the <tt><font size=-1>Point</font></tt> class, we created a new type, also
+called <tt><font size=-1>Point</font></tt>.  The members of this type are called
+<b>instances</b> of the type or <b>objects</b>.  Creating a new instance
+is called <b>instantiation</b>.  To instantiate a <tt><font size=-1>Point</font></tt> object,
+we call a function named (you guessed it) <tt><font size=-1>Point</font></tt>:
+
+<p><tt><font size=-1>blank = Point()
+<br></font></tt></p>
+
+<p>
+The variable <tt><font size=-1>blank</font></tt> is assigned a reference to a new
+<tt><font size=-1>Point</font></tt> object.  A function like <tt><font size=-1>Point</font></tt> that creates
+new objects is called a <b>constructor</b>.
+
+<a name=2></a>
+<h3>12.2 Attributes</h3>
+<p>
+We can add new data to an instance using dot notation:
+
+<p><tt><font size=-1>&gt;&gt;&gt; blank.x = 3.0
+<br>&gt;&gt;&gt; blank.y = 4.0
+<br></font></tt></p>
+
+<p>
+This syntax is similar to the syntax for selecting a variable from a
+module, such as <tt><font size=-1>math.pi</font></tt> or <tt><font size=-1>string.uppercase</font></tt>.  In this case,
+though, we are selecting a data item from an instance.  These
+named items are called <b>attributes</b>.
+<p>
+The following state diagram shows the result of these assignments:
+
+<p align="center"><img src="illustrations/point.png"></p>
+<p>
+The variable <tt><font size=-1>blank</font></tt> refers to a Point object, which
+contains two attributes.  Each attribute refers to a
+floating-point number.
+<p>
+We can read the value of an attribute using the same syntax:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> blank.y
+<br>4.0
+<br>&gt;&gt;&gt; x = blank.x
+<br>&gt;&gt;&gt; <font color=black>print</font> x
+<br>3.0
+<br></font></tt></p>
+
+<p>
+The expression <tt><font size=-1>blank.x</font></tt> means, "Go to the object <tt><font size=-1>blank</font></tt>
+refers to and get the value of <tt><font size=-1>x</font></tt>." In this case, we assign that
+value to a variable named <tt><font size=-1>x</font></tt>.  There is no conflict between
+the variable <tt><font size=-1>x</font></tt> and the attribute <tt><font size=-1>x</font></tt>.  The
+purpose of dot notation is to identify which variable you are
+referring to unambiguously.
+<p>
+You can use dot notation as part of any expression, so the following
+statements are legal:
+
+<p><tt><font size=-1><font color=black>print</font> <font color=red>'('</font> + str(blank.x) + <font color=red>', '</font> + str(blank.y) + <font color=red>')'</font>
+<br>distanceSquared = blank.x * blank.x + blank.y * blank.y
+<br></font></tt></p>
+
+<p>
+The first line outputs <tt><font size=-1>(3.0, 4.0)</font></tt>; the second line calculates
+the value 25.0.
+<p>
+You might be tempted to print the value of <tt><font size=-1>blank</font></tt> itself:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> blank
+<br>&lt;__main__.Point instance at 80f8e70&gt;
+<br></font></tt></p>
+
+<p>
+The result indicates that <tt><font size=-1>blank</font></tt> is an instance of the <tt><font size=-1>Point</font></tt> class and it was defined in <tt><font size=-1>__main__</font></tt>.  <tt><font size=-1>80f8e70</font></tt>
+is the unique identifier for this object, written in hexadecimal (base
+16).  This is probably not the most informative way to display a <tt><font size=-1>Point</font></tt> object.  You will see how to change it shortly.
+
+<blockquote><i>As an exercise, create and print a <tt><font size=-1>Point</font></tt> object, and then
+use <tt><font size=-1>id</font></tt> to print the object's unique identifier.
+Translate the hexadecimal form into decimal and confirm that they
+match.</i>
+</blockquote>
+
+<a name=3></a>
+<h3>12.3 Instances as arguments</h3>
+<p>
+You can pass an instance as an argument in the usual way.
+For example:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>printPoint</font>(p):
+<br>&nbsp; <font color=black>print</font> <font color=red>'('</font> + str(p.x) + <font color=red>', '</font> + str(p.y) + <font color=red>')'</font>
+<br></font></tt></p>
+
+<p>
+<tt><font size=-1>printPoint</font></tt> takes a point as an argument and displays it in
+the standard format.  If you call <tt><font size=-1>printPoint(blank)</font></tt>, the
+output is <tt><font size=-1>(3.0, 4.0)</font></tt>.
+
+<blockquote><i>As an exercise, rewrite the <tt><font size=-1>distance</font></tt> function from
+<a href="chap05.html#2">Section 5.2</a> so that it takes two <tt><font size=-1>Point</font></tt>s as
+arguments instead of four numbers.</i>
+</blockquote>
+
+<a name=4></a>
+<h3>12.4 Sameness</h3>
+<p>
+The meaning of the word "same" seems perfectly clear until you give
+it some thought, and then you realize there is more to it than you
+expected.
+<p>
+For example, if you say, "Chris and I have the same car," you mean
+that his car and yours are the same make and model, but that they are
+two different cars.  If you say, "Chris and I have the same mother,"
+you mean that his mother and yours are the same person. <a href="javascript:fn('Not all
+languages have the same problem.  For example, German has different
+words for different kinds of sameness.  "Same car" in this context
+would be "gleiche Auto," and "same mother" would be "selbe
+Mutter."')">* Note</a>  So the idea of "sameness" is different depending on the
+context.
+<p>
+When you talk about objects, there is a similar ambiguity.  For
+example, if two <tt><font size=-1>Point</font></tt>s are the same, does that mean they
+contain the same data (coordinates) or that they are actually
+the same object?
+<p>
+To find out if two references refer to the same object, use
+the <tt><font size=-1><font color=black>is</font></font></tt> operator.  For example:
+
+<p><tt><font size=-1>&gt;&gt;&gt; p1 = Point()
+<br>&gt;&gt;&gt; p1.x = 3
+<br>&gt;&gt;&gt; p1.y = 4
+<br>&gt;&gt;&gt; p2 = Point()
+<br>&gt;&gt;&gt; p2.x = 3
+<br>&gt;&gt;&gt; p2.y = 4
+<br>&gt;&gt;&gt; p1 <font color=black>is</font> p2
+<br>False
+<br></font></tt></p>
+
+<p>
+Even though <tt><font size=-1>p1</font></tt> and <tt><font size=-1>p2</font></tt> contain the same coordinates,
+they are not the same object.  If we assign <tt><font size=-1>p1</font></tt> to
+<tt><font size=-1>p2</font></tt>, then the two variables are aliases of the same
+object:
+
+<p><tt><font size=-1>&gt;&gt;&gt; p2 = p1
+<br>&gt;&gt;&gt; p1 <font color=black>is</font> p2
+<br>True
+<br></font></tt></p>
+
+<p>
+This type of equality is called <b>shallow equality</b> because
+it compares only the references, not the contents of the objects.
+<p>
+To compare the contents of the objects <s>&nbsp; &nbsp;</s> <b>deep equality</b> <s>&nbsp; &nbsp;</s> we
+can write a function called <tt><font size=-1>samePoint</font></tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>samePoint</font>(p1, p2) :
+<br>&nbsp; <font color=black>return</font> (p1.x == p2.x) <font color=black>and</font> (p1.y == p2.y)
+<br></font></tt></p>
+
+<p>
+Now if we create two different objects that contain the same
+data, we can use <tt><font size=-1>samePoint</font></tt> to find out if they represent the
+same point.
+
+<p><tt><font size=-1>&gt;&gt;&gt; p1 = Point()
+<br>&gt;&gt;&gt; p1.x = 3
+<br>&gt;&gt;&gt; p1.y = 4
+<br>&gt;&gt;&gt; p2 = Point()
+<br>&gt;&gt;&gt; p2.x = 3
+<br>&gt;&gt;&gt; p2.y = 4
+<br>&gt;&gt;&gt; samePoint(p1, p2)
+<br>True
+<br></font></tt></p>
+
+<p>
+Of course, if the two variables refer to the same object,
+they have both shallow and deep equality.
+
+<a name=5></a>
+<h3>12.5 Rectangles</h3>
+<p>
+Let's say that we want a class to represent a rectangle.  The question
+is, what information do we have to provide in order to specify a
+rectangle? To keep things simple, assume that the rectangle is
+oriented either vertically or horizontally, never at an angle.
+<p>
+There are a few possibilities: we could specify the center of the
+rectangle (two coordinates) and its size (width and height); or we
+could specify one of the corners and the size; or we could specify two
+opposing corners.  A conventional choice is to specify the upper-left
+corner of the rectangle and the size.
+<p>
+Again, we'll define a new class:
+
+<p><tt><font size=-1><font color=black>class</font> Rectangle:
+<br>&nbsp; <font color=black>pass</font>
+<br></font></tt></p>
+
+<p>
+And instantiate it:
+
+<p><tt><font size=-1>box = Rectangle()
+<br>box.width = 100.0
+<br>box.height = 200.0
+<br></font></tt></p>
+
+<p>
+This code creates a new <tt><font size=-1>Rectangle</font></tt> object with two floating-point
+attributes.  To specify the upper-left corner, we can embed an
+object within an object!
+
+<p><tt><font size=-1>box.corner = Point()
+<br>box.corner.x = 0.0
+<br>box.corner.y = 0.0
+<br></font></tt></p>
+
+<p>
+The dot operator composes.  The expression <tt><font size=-1>box.corner.x</font></tt> means,
+"Go to the object <tt><font size=-1>box</font></tt> refers to and select the attribute named
+<tt><font size=-1>corner</font></tt>; then go to that object and select the attribute named
+<tt><font size=-1>x</font></tt>."
+<p>
+The figure shows the state of this object:
+
+<p align="center"><img src="illustrations/rectangle.png"></p>
+
+<a name=6></a>
+<h3>12.6 Instances as return values</h3>
+<p>
+Functions can return instances.  For example, <tt><font size=-1>findCenter</font></tt>
+takes a <tt><font size=-1>Rectangle</font></tt> as an argument and returns a <tt><font size=-1>Point</font></tt>
+that contains the coordinates of the center of the <tt><font size=-1>Rectangle</font></tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>findCenter</font>(box):
+<br>&nbsp; p = Point()
+<br>&nbsp; p.x = box.corner.x + box.width/2.0
+<br>&nbsp; p.y = box.corner.y - box.height/2.0
+<br>&nbsp; <font color=black>return</font> p
+<br></font></tt></p>
+
+<p>
+To call this function, pass <tt><font size=-1>box</font></tt> as an argument and assign
+the result to a variable:
+
+<p><tt><font size=-1>&gt;&gt;&gt; center = findCenter(box)
+<br>&gt;&gt;&gt; printPoint(center)
+<br>(50.0, -100.0)
+<br></font></tt></p>
+
+
+<a name=7></a>
+<h3>12.7 Objects are mutable</h3>
+<p>
+We can change the state of an object by making an assignment
+to one of its attributes.  For example, to change the size
+of a rectangle without changing its position, we could
+modify the values of <tt><font size=-1>width</font></tt> and <tt><font size=-1>height</font></tt>:
+
+<p><tt><font size=-1>box.width = box.width + 50
+<br>box.height = box.height + 100
+<br></font></tt></p>
+
+<p>
+We could encapsulate this code in a method and
+generalize it to grow the rectangle by any amount:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>growRect</font>(box, dwidth, dheight) :
+<br>&nbsp; box.width = box.width + dwidth
+<br>&nbsp; box.height = box.height + dheight
+<br></font></tt></p>
+
+<p>
+The variables <tt><font size=-1>dwidth</font></tt> and <tt><font size=-1>dheight</font></tt> indicate how much the
+rectangle should grow in each direction.  Invoking this method has the
+effect of modifying the <tt><font size=-1>Rectangle</font></tt> that is passed as an argument.
+<p>
+For example, we could create a new <tt><font size=-1>Rectangle</font></tt> named <tt><font size=-1>bob</font></tt>
+and pass it to <tt><font size=-1>growRect</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; bob = Rectangle()
+<br>&gt;&gt;&gt; bob.width = 100.0
+<br>&gt;&gt;&gt; bob.height = 200.0
+<br>&gt;&gt;&gt; bob.corner = Point()
+<br>&gt;&gt;&gt; bob.corner.x = 0.0
+<br>&gt;&gt;&gt; bob.corner.y = 0.0
+<br>&gt;&gt;&gt; growRect(bob, 50, 100)
+<br></font></tt></p>
+
+<p>
+While <tt><font size=-1>growRect</font></tt> is running, the parameter <tt><font size=-1>box</font></tt> is an
+alias for <tt><font size=-1>bob</font></tt>.  Any changes made to <tt><font size=-1>box</font></tt> also
+affect <tt><font size=-1>bob</font></tt>.
+
+<blockquote><i>As an exercise, write a function named <tt><font size=-1>moveRect</font></tt> that takes
+a <tt><font size=-1>Rectangle</font></tt> and two parameters named <tt><font size=-1>dx</font></tt> and <tt><font size=-1>dy</font></tt>.  It
+should change the location of the rectangle by adding <tt><font size=-1>dx</font></tt>
+to the <tt><font size=-1>x</font></tt> coordinate of <tt><font size=-1>corner</font></tt> and adding <tt><font size=-1>dy</font></tt>
+to the <tt><font size=-1>y</font></tt> coordinate of <tt><font size=-1>corner</font></tt>.</i>
+</blockquote>
+
+<a name=8></a>
+<h3>12.8 Copying</h3>
+<p>
+Aliasing can make a program difficult to read because changes
+made in one place might have unexpected effects in another place.
+It is hard to keep track of all the variables that might refer
+to a given object.
+<p>
+Copying an object is often an alternative to aliasing.
+The <tt><font size=-1>copy</font></tt> module contains a function called <tt><font size=-1>copy</font></tt> that
+can duplicate any object:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>import</font> copy
+<br>&gt;&gt;&gt; p1 = Point()
+<br>&gt;&gt;&gt; p1.x = 3
+<br>&gt;&gt;&gt; p1.y = 4
+<br>&gt;&gt;&gt; p2 = copy.copy(p1)
+<br>&gt;&gt;&gt; p1 == p2
+<br>False
+<br>&gt;&gt;&gt; samePoint(p1, p2)
+<br>True
+<br></font></tt></p>
+
+<p>
+Once we import the <tt><font size=-1>copy</font></tt> module, we can use the <tt><font size=-1>copy</font></tt> method
+to make a new <tt><font size=-1>Point</font></tt>.  <tt><font size=-1>p1</font></tt> and <tt><font size=-1>p2</font></tt> are not the
+same point, but they contain the same data.
+<p>
+To copy a simple object like a <tt><font size=-1>Point</font></tt>, which doesn't
+contain any embedded objects, <tt><font size=-1>copy</font></tt> is sufficient.  This is called 
+<b>shallow copying</b>.
+<p>
+For something like a <tt><font size=-1>Rectangle</font></tt>, which contains a reference
+to a <tt><font size=-1>Point</font></tt>, <tt><font size=-1>copy</font></tt> doesn't do quite the right thing.  It
+copies the reference to the <tt><font size=-1>Point</font></tt> object, so both the old
+<tt><font size=-1>Rectangle</font></tt> and the new one refer to a single <tt><font size=-1>Point</font></tt>.
+<p>
+If we create a box, <tt><font size=-1>b1</font></tt>, in the usual way and then make
+a copy, <tt><font size=-1>b2</font></tt>, using <tt><font size=-1>copy</font></tt>, the resulting
+state diagram looks like this:
+
+<p align="center"><img src="illustrations/rectangle2.png"></p>
+<p>
+This is almost certainly not what we want.  In this case, invoking
+<tt><font size=-1>growRect</font></tt> on one of the <tt><font size=-1>Rectangles</font></tt> would not affect
+the other, but invoking <tt><font size=-1>moveRect</font></tt> on either would affect both!
+This behavior is confusing and error-prone.
+<p>
+Fortunately, the <tt><font size=-1>copy</font></tt> module contains a method named <tt><font size=-1>deepcopy</font></tt> that copies not only the object but also any embedded
+objects.  You will not be surprised to learn that this operation is
+called a <b>deep copy</b>.
+
+<p><tt><font size=-1>&gt;&gt;&gt; b2 = copy.deepcopy(b1)
+<br></font></tt></p>
+
+<p>
+Now <tt><font size=-1>b1</font></tt> and <tt><font size=-1>b2</font></tt> are completely separate objects.
+<p>
+We can use <tt><font size=-1>deepcopy</font></tt> to rewrite <tt><font size=-1>growRect</font></tt> so that
+instead of modifying an existing <tt><font size=-1>Rectangle</font></tt>, it creates a new
+<tt><font size=-1>Rectangle</font></tt> that has the same location as the old one but new
+dimensions:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>growRect</font>(box, dwidth, dheight) :
+<br>&nbsp; <font color=black>import</font> copy
+<br>&nbsp; newBox = copy.deepcopy(box)
+<br>&nbsp; newBox.width = newBox.width + dwidth
+<br>&nbsp; newBox.height = newBox.height + dheight
+<br>&nbsp; <font color=black>return</font> newBox
+<br></font></tt></p>
+
+
+<blockquote><i>An an exercise, rewrite <tt><font size=-1>moveRect</font></tt> so that it creates and
+returns a new <tt><font size=-1>Rectangle</font></tt> instead of modifying the old one.</i>
+</blockquote>
+
+<a name=9></a>
+<h3>12.9 Glossary</h3>
+
+<dl>
+<dt>class</dt>
+<dd>A user-defined compound type.
+A class can also be thought of
+as a template for the objects that are instances of it.</dd>
+<dt>instantiate</dt>
+<dd>To create an instance of a class.</dd>
+<dt>instance</dt>
+<dd>An object that belongs to a class.</dd>
+<dt>object</dt>
+<dd>A compound data type that is often used to
+model a thing or concept in the real world.</dd>
+<dt>constructor</dt>
+<dd>A method used to create new objects.</dd>
+<dt>attribute</dt>
+<dd>One of the named data items that makes up
+an instance.</dd>
+<dt>shallow equality</dt>
+<dd>Equality of references, or two
+references that point to the same object.</dd>
+<dt>deep equality</dt>
+<dd>Equality of values, or two references
+that point to objects that have the same value.</dd>
+<dt>shallow copy</dt>
+<dd>To copy the contents of an object, including
+any references to embedded objects; implemented by the <tt><font size=-1>copy</font></tt>
+function in the <tt><font size=-1>copy</font></tt> module.</dd>
+<dt>deep copy</dt>
+<dd>To copy the contents of an object as well as any
+embedded objects, and any objects embedded in them, and so on;
+implemented by the <tt><font size=-1>deepcopy</font></tt> function in the <tt><font size=-1>copy</font></tt> module.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap11.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap13.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

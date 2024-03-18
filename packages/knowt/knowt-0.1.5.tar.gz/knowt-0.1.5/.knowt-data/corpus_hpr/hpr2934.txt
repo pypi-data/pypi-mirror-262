@@ -1,0 +1,135 @@
+## hpr2934 :: Server Basics 106: Namespaces and containers
+
+ 
+Namespaces provide context and constraints for processes on a Linux system.
+They are utilised by the infrastructure of "the cloud" to create distinct "containers", in which processes may run without awareness of the system they are actually running upon.
+
+
+// prove you are not running some process
+
+$ pidof tcsh
+// nothing
+
+$ sudo pidof tcsh
+// nothing
+
+// launch tcsh in a new namespace with unshare:
+
+$ sudo unshare --fork --pid --mount-proc tcsh
+
+// from within that session:
+
+# pidof tcsh
+1
+
+// wait what??
+// yes tcsh is the first pid of its own namespace
+
+// from another term
+$ ps 1
+init
+
+$ pidof tcsh
+26814
+
+// from inside the namespace, pid is seen as 1
+// from outside, pid is normal
+
+$ ps tree | less
+// search for tcsh
+
+// See evidence of namespaces:
+
+$ ls /proc/*/ns
+
+$ ls /proc/26814/ns
+ipc net pid user uts [...]
+
+
+To see this in action for a slightly more pragmatic purpose, you can use the lxc command.
+The LXC system uses namespaces and cgroups to create functional containers that act, more or less, like a Virtual Machine, except that they are built in containers so that they do not have to emulate hardware.
+
+If your system doesn't have LXC installed, first install it:
+
+
+$ sudo dnf install lxc lxc-templates lxc-doc
+
+// on Ubuntu or Debian:
+
+$ apt install lxc
+
+
+
+You also need to create a network bridge so that your container and your host system (that's the computer you're sitting in front of right now) can communicate.
+
+
+$ sudo ip link add br0 type bridge
+$ sudo ip addr show br0
+7: br0: <BROADCAST,MULTICAST> mtu 1500 qdisc
+   noop state DOWN group default qlen 1000
+   link/ether 26:fa:21:5f:cf:99 brd ff:ff:ff:ff:ff:ff
+
+
+Now give your bridge device an IP address that doesn't conflict with any existing IP address on your network:
+
+
+$ sudo ip addr add 192.168.168.168 dev br0
+$ sudo ip link set br0 up
+
+
+Create a configuration for your container.
+You can base this on the samples provided by lxc (located in /usr/share/docs/lxc or similar).
+Everything but veth, br0, and up is arbitrary. You can make up all the values.
+
+
+lxc.utsname = hackerpublicradio
+lxc.network.type = veth
+lxc.network.flags = up
+lxc.network.link = br0
+lxc.network.hwaddr = 4a:49:43:49:79:bd
+lxc.network.ipv4 = 192.168.168.1/24
+lxc.network.ipv6 = 2003:db8:1:0:214:c0ff:ee0b:3596
+
+
+Now install an OS into your container.
+OS templates are provided by LXC in /usr/share/doc/lxc/templates or a similar location.
+
+
+$ ls -m /usr/share/lxc/templates/
+lxc-alpine, lxc-altlinux, lxc-archlinux, lxc-busybox, lxc-centos [...]
+
+
+Choose a template and install.
+I use Alpine in the recorded show, because it's supposed to be really small.
+I don't necessarily recommend Alpine. I recommend Slackware, of course.
+
+
+$ sudo lxc-create --name slackware --template slackware
+
+
+Once the install is done, start your container:
+
+
+$ sudo lxc-start --name slackware
+--rcfile ~/mycontainer.conf
+
+
+Now attach to the container:
+
+
+$ sudo lxc-attach --name slackware
+#
+
+
+Run a command.
+
+
+# uname -av
+Linux hackerpublicradio 5.3.0.x86_64 #1 SMP Wed Oct 10 18:34:01 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+
+This is the technology that Docker and OCI projects use to create containers.
+And when a bunch of containers start swarming around on a bunch of hosts, you eventually end up with a cloud.
+How do you manage all of these things?
+That will be the topic for the next entry in this series, I'll bet.
+

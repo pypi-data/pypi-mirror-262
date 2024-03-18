@@ -1,0 +1,16 @@
+## hpr1042 :: LiTS 012: tail
+
+ The tail command is used to print out the last 10 lines of a file to standard out. This command is a staple in a system administrator’s tool kit and especially handy when monitoring log files. The basic syntax is:
+tail some_file
+Which will output the last 10 lines of the file. You can alter the number of lines with the -n, or –lines=, flag:
+tail -n20 some_file
+tail –lines=20 some_file
+In some versions of tail you can get away with specifying the number of lines from the end with just a “-” and number:
+tail -30 some_file
+Instead of working backwards with the -n command you can specify a “+” and some number to start from that number and list the contents to the end:
+tail -n+30 some_file
+This will display the contents of some_file from line 30 to the end of the file.
+
+
+For the complete write up including video please go to https://www.linuxintheshell.com/2012/07/31/episode-012-tail/
+

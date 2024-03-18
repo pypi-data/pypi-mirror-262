@@ -1,0 +1,21 @@
+## hpr2693 :: Getting started with web based game in Haskell and Elm
+
+ Haskell Stack: https://docs.haskellstack.org/en/stable/README/
+Stack is a build tool for Haskell with focus on reproducible build plans, multi-package projects, and a consistent, easy-to-learn interface. With stack, one can create new project: stack new my-project yesod-sqlite (more in the quick start guide: https://www.yesodweb.com/page/quickstart)
+models is used to define shape of the data and Yesod uses it to generate datatypes and database for you. For example, to define a Star that has name, spectral type, luminosity class and link to StarSystem, one can write:
+
+Star json
+    name Text
+    starSystemId StarSystemId
+    spectralType SpectralType
+    luminosityClass LuminosityClass
+
+Custom types, like LuminosityClass, need mapping between datatype and database. In simple cases like this, Yesod can do that:
+
+
+data LuminosityClass = Iap | Ia | Iab | Ib | II | III | IV | V | VI | VII
+    deriving (Show, Read, Eq)
+derivePersistField "LuminosityClass"
+
+The "derivePersistField" part is template haskell call that will generate mapping needed.
+For those interested seeing some code, source is available at https://github.com/Tuula/deep-sky/ (https://github.com/Tuula/deep-sky/tree/baa0807dd36b61fd02174b17c10013862af4ec18 is situation before lots of Elm related changes that I mentioned in passing in the episode)

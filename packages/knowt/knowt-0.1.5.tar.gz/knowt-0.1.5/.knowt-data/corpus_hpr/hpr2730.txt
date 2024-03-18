@@ -1,0 +1,54 @@
+## hpr2730 :: Resizing images for vcard on Android
+
+ I have had problems importing vcards onto my Android phone. After a lot of troubleshooting, I tracked it down to embedded images in the card. The PHOTO;VALUE field to be precise.
+Some images worked and some didn't, and looking at the properties some that worked were larger than others that didn't. In the end I tracked down a post on stackoverflow that hinted that the aspect ratio was important. And sure enough it was.
+
+starting with jelly bean (4.1), android now supports contact images that are 720x720.before, starting with ICS (4.0), android has supported contact images that are 256x256.and before that, contact photos had just a size of a thumbnail - 96x96.
+Stack exchange 
+
+I tried a 720x720 on a few phones but decided to settle on 256x256 for now. 
+To do image manipulation, I tend to use the GraphicsMagick tools instead of the more popular ImageMagick suite. You should be able to achieve the same result in either.
+My requirements were:
+
+The images should be scaled so that the maximum height/width shrinks to 256, maintaining the aspect ratio.
+The images should always be 256x256 in size.
+Scaled images should be padded and centered on a white background.
+All color profile information should be removed.
+
+To use an example I took the following image and saved it as Linus_Torvalds.jpg
+By Krd (photo)Von Sprat (crop/extraction) - File:LinuxCon Europe Linus Torvalds 03.jpg, CC BY-SA 4.0, Link
+Step one is to use the -size 256x256 option which you would think would do the scaling, but in fact it only reduces the file to 366x509 which is not what I expected.
+$ gm convert -size 256x256 "Linus_Torvalds.jpg" Linus_Torvalds_1.jpg$ gm identify Linus_Torvalds_1.jpg
+Linus_Torvalds_1.jpg JPEG 366x509+0+0 DirectClass 8-bit 56.1Ki 0.000u 0m:0.000002
+
+However it appears that the option is used when creating new files, and is also used by the processor to determine the intended target size. Which is why I left it in. So what we actually need is the -resize option.
+
+$ gm convert -size 256x256 "Linus_Torvalds.jpg" -resize 256x256 Linus_Torvalds_2.jpg
+$ gm identify Linus_Torvalds_2.jpg
+Linus_Torvalds_2.jpg JPEG 184x256+0+0 DirectClass 8-bit 47.7Ki 0.000u 0m:0.000001s
+
+
+So this has done a good job at scaling the image down. It's now scaled correctly so that the biggest edge is scaled down to 256. In this case it was the height but the width is now shorter than what we need. We do want to maintain the aspect ratio so that we don't distort the image but 184x256 is not 1:1 aspect ratio nor is it the needed dimensions of 256x256.
+The solution to this is to use the -extent command.
+$ gm convert -size 256x256 "Linus_Torvalds.jpg" -resize 256x256 -extent 256x256 Linus_Torvalds_3.jpg
+$ gm identify Linus_Torvalds_3.jpg
+Linus_Torvalds_3.jpg JPEG 256x256+0+0 DirectClass 8-bit 48.0Ki 0.000u 0m:0.000001s
+
+This gives us the correct size and a 1:1 aspect ratio, but the image is left justified. To fix this we need to use the -gravity command. That needs to be the first argument of the command. Finding the correct order of the commands took some trial and error.
+$ gm convert -gravity center -size 256x256 "Linus_Torvalds.jpg" -resize 256x256 -extent 256x256 Linus_Torvalds_4.jpg
+$ gm identify Linus_Torvalds_4.jpg
+Linus_Torvalds_4.jpg JPEG 256x256+0+0 DirectClass 8-bit 48.5Ki 0.000u 0m:0.000001s
+
+Finally we remove all profile information using +profile which should make the image more generic.
+$ gm convert -gravity center -size 256x256 "Linus_Torvalds.jpg" -resize 256x256 -extent 256x256 +profile "*" Linus_Torvalds_5.jpg
+$ gm identify Linus_Torvalds_5.jpg
+Linus_Torvalds_5.jpg JPEG 256x256+0+0 DirectClass 8-bit 5.7Ki 0.000u 0m:0.000001s
+Putting it all together we get.
+gm convert -gravity center -size 256x256 "big-image.jpg" -resize 256x256 -extent 256x256 +profile "*" "256x256_image.jpg"
+
+
+You should now be able to add these images to vcards without any problem.
+Here is a one liner to create 96x96 256x256 and 720x720 thumbnails of all the jpg images in a directory.
+ 
+for image in *jpg;do for size in 96x96 256x256 720x720; do gm convert -gravity center -size ${size} "${image}" -resize ${size} -extent ${size} +profile "*" "thumbnail-${size}-${image}";done;done
+Also available here

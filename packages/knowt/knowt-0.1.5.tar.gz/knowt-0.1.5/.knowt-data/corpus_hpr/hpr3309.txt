@@ -1,0 +1,20 @@
+## hpr3309 :: Linux Inlaws S01E27: The Big Uncertainties in Life and beyond
+
+ In this episode, our two heroes explore the realm of the great uncertainties also known as probabilistic data structures. For this adventures they managed to retain one of the experts in this field from the open source realm. Check out the episode to get in on this secret and its details!
+Links:
+
+Probabilistic data structures (PDS): https://en.wikipedia.org/wiki/Category:Probabilistic_data_structures
+
+Hash functions: https://en.wikipedia.org/wiki/Hash_function
+
+Bloom / cuckoo filters: https://bdupras.github.io/filter-tutorial
+
+Scalable Bloom filter: https://www.waitingforcode.com/big-data-algorithms/scalable-bloom-filter/read
+
+redis module: https://oss.redislabs.com/redisbloom
+
+HyperLogLog: https://en.wikipedia.org/wiki/HyperLogLog
+
+PDS Foundation: https://www.amazon.de/Probabilistic-Data-Structures-Algorithms-Applications/dp/3748190484
+
+

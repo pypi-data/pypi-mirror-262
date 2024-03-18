@@ -1,0 +1,71 @@
+## hpr1991 :: Adventures installing Linux on an Asus EeeBook X205A
+
+ High-level steps to install Ubuntu Mate on the Asus Eeebook X205A
+
+Information compiled from Here, Here, and Here
+
+Download and create startup disk
+Download the 64-bit version of the iso, then create a bootable USB. I recommend using dcfldd.
+Getting grub 32-bit
+Compile or download grubia32.efi (see links), then move it into the /EFI/BOOT directory on the USB.
+Installation
+Boot from the disk (assuming you already disabled secure boot from the BIOS). Install the system as you like.
+First Boot
+Reboot, but leave in USB. Type c when grub loads, then enter in:
+linux (hd1,gpt2)/boot/vmlinuz.... root=/dev/mmcblk0p2
+initrd (hd1,gpt2)/boot/initrd....
+boot
+Wi-Fi
+To get wi-fi working, put in terminal:
+sudo cp /sys/firmware/efi/efivars/nvram-XXXXXX /lib/firmware/brcm/brcmfmac43340-sdio.txt
+Then reload the brcmfmac driver:
+sudo modprobe -r brcmfmac
+sudo modprobe brcmfmac
+Fix bootloader
+Fix Bootloader with the following commands as root:
+sudo apt-get install git bison libopts25 libselinux1-dev autogen m4 autoconf help2man libopts25-dev flex libfont-freetype-perl automake autotools-dev libfreetype6-dev texinfo
+
+# from https://www.gnu.org/software/grub/grub-download.html
+git clone git://git.savannah.gnu.org/grub.git
+
+cd grub
+
+./autogen.sh
+
+./configure --with-platform=efi --target=i386 --program-prefix=""
+
+make
+
+cd grub-core
+sudo su
+../grub-install -d . --efi-directory /boot/efi/ --target=i386
+cd /boot/efi/EFI
+cp grub/grubia32.efi ubuntu/
+exit
+Then, we can just install grub-efi-ia32:
+sudo apt-get update
+sudo apt-get install grub-efi-ia32
+Edit the grub configuration file:
+sudo nano /etc/default/grub
+Find the line starting GRUB_CMDLINE_LINUX_DEFAULT and add intel_idle.max_cstate=1 before quiet splash".
+Then ctrl-o, ctrl-x to save & exit, and type: sudo update-grub to update Grub.
+Remove the USB stick and reboot, and you should now have a self-sufficient booting system.
+Conflict between sdhci-acpi and brcmfmac
+Due to some conflict between sdhci-acpi and brcmfmac (https://bugzilla.kernel.org/show_bug.cgi?id=88061), a parameter has to be changed for the sdhci-acpi driver. There are several ways to do this, but a quick fix is to add this line in /etc/sysfs.conf (make sure you have the package sysfsutils installed), this way the option is passed before the brcmfmac driver is loaded :
+# Disable SDHCI-ACPI for Wireless, otherwise WLAN doesn't work
+bus/platform/drivers/sdhci-acpi/INT33BB:00/power/control = on
+microSD Card Reader
+Create a file /etc/modprobe.d/sdhci.conf with the following content:
+# Adjustment to make micro SD card reader work
+options sdhci debug_quirks=0x8000
+Then run
+update-initramfs -u -k all
+After a reboot the card reader should be working.
+Links
+
+https://www.asus.com/Notebooks/ASUS_EeeBook_X205TA/
+https://www.jfwhome.com/2016/01/04/latest-steps-to-install-ubuntu-on-the-asus-t100ta/
+https://github.com/lopaka/instructions/blob/master/ubuntu-14.10-install-asus-x205ta.md
+https://wiki.debian.org/InstallingDebianOn/Asus/X205TA
+https://dcfldd.sourceforge.net/
+

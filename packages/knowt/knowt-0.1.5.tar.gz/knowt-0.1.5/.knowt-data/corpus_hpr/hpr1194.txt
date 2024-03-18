@@ -1,0 +1,82 @@
+## hpr1194 :: Copying a Printer Definition File Between Systems
+
+ 
+
+I recently learned where Linux stores the PPD created when you set up a
+printer and how to copy it between PCs.  I'd like to briefly share
+that information with you.
+
+
+
+This is how to copy a printer definition file (equivalent of a printer
+driver) from a system where the printer is already configured to
+another system that you want to be able to access the same
+printer.  Reasons you might need to do this:
+
+a.  The normal CUPS (Common Unified Printing System) set up
+doesn't have the right definition file for your printer.  In rare
+instances, you might have to download a ppd from the manufacturer or
+another source.  If so, copying the ppd may be easier than
+downloading it again.
+b.  You configure CUPS and find there are no pre-provided
+printer
+drivers.  I thought this was the case when I first tried to
+configure CUPS under Linaro on my ODroidX.   For all intents and
+purposes, Linaro is an Arm port of mainline Ubuntu (Unity
+included).  I installed CUPS via Aptitude and tried to configure a
+printer as I would on any Linux system.  When I got to printer
+selection, the dropdown to select a
+manufacturer (the next step would be to choose a model) was greyed out,
+as was the field to enter a path to a ppd file.  I closed the
+browser and tried again, and the same thing happened.  This is
+what prompted me to find out where to find a PPD file on another system
+and copy it.  I never got to see how it would work, because when I
+had the ppd file copied over and ready to install, the
+manufactures and models in CUPS were already populated.  There had
+bee an update between my first and second attempts to configure CUPS on
+the ODroidX, but I'd rather say it was a glitch the first time, instead
+of the ppd's suddenly showing up in the repo.
+
+c.  When I installed Arch on another system, I found there was far
+less options for choosing models, in my instance, there was only one
+selection for HP Deskjets.  I suspect borrowing the model specific
+ppd from another distro will increase the functionality of the printer.
+
+Copying the ppd
+
+1.  On the computer where the printer is already configured, find
+the .ppd (Postscript Printer Definition) file you generated (filename
+will be the same as the printer name) in /etc/cups/ppd/model (or
+possibly just /etc/cups/ppd, neither my ODroidX or my Fedora laptop
+have the "model" folder).
+2. Copy to your home folder on the new system (You can't place the file
+in it's final destination yet, unless you are remoted in as root)
+3. According to the post I found on LinuxQuestions.org, CUPS looks for
+a GZipped file [ gzip -c myprinter.ppd > myprinter.ppd.gz ; the '-c'
+arguement creates a new file, rather than gzipping the old one, and you
+use redirection to generate the new file.]  Recall that I never
+got to try this, because when I re-ran CUPS, the printer selections
+were already populated.  
+4. Copy the archived file to /etc/cups/ppd/model on the machine that needs the printer driver
+
+Configure CUPS (IP Printer)
+1. Open localhost:631 in a browser
+2. Click Administration tab
+3. Click "Add a Printer" button
+4. Log in as an account with root priviledges
+5. For Ethernet printers, select "AppSocket/HP JetDirect" button and click "Continue"
+6. From the examples presented, " socket://PRINT_SERVER_IP_ADDRESS:9100  " works for me, click continue
+7. On the next page, fill in a printer name, this will be the file name
+for the PPD generated as well as how the printer is labled in the
+printer select dialog.  The other fields are optional.  Click
+continue.
+8. (I am assuming if the LinuxQuestions post was right, CUPS will find
+the gz file and show the manuafacturer and model as options) From the
+list, select a manufacturer, or input the path to your PPD file
+9. Select the printer model
+9a.I think you could copy over the ppd as is and type the path to it in the field where it asks for a ppd file.  
+10.Modify or accept the default printer settings
+
+Or just copy the ppd and compare the settings in /etc/cups/printers.conf
+
+

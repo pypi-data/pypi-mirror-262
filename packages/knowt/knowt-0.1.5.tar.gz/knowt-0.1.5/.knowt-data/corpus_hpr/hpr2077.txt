@@ -1,0 +1,45 @@
+## hpr2077 :: libernil.net and self hosting for friends and family
+
+ What is libernil.net?
+libernil.net is an island of pseudo-freedom. This project was established in order to pursue ideals of Free Software, Free Culture, ethically sourced hardware, self hosting, and sharing with others. Generally it consists of personal content, though some community resources reside here as well.
+The name came from an old programming group and was repurposed. I would really like to find a new name!
+Similar networks
+
+tilde.club
+sdf.org
+
+The network
+Set in three physical locations: two in Northwest Arkansas, one (a VPS) in Sweden.
+One recycled shuttle rig called “summernight”, one ThinkPenguin nano called “aprilshowers”, and a VPS known as “eremit”. Two or three inaccessible machines for backups and other automation.
+Wireless access provided in the openwireless.org model at both US physical locations.
+Services
+
+Websites
+Shell accounts
+DNS
+wireless access
+XMPP
+IRC Bots
+Git
+MediaGoblin
+
+Future services
+
+Game servers
+pump.io and GNU Social instances
+mail server
+PBX with DID lines
+data service
+
+Events and community
+The community is very loosely organized and rarely operates under the name of the network, though we sometimes gather for events in the same location as the machines. In the past we’ve had a cryptoparty and I am trying to organize a FreeDOOM LAN party.
+How to host your own services
+
+Acquire a machine, any machine! Could be a junk rig, an old laptop, or a fancy single board computer.
+Install your favorite distro or try freedombone/freedom box.
+Get a domain name with your favorite registrar.
+Get a static IP from your ISP if possible or go with Dynamic DNS
+Install Bind or set up your router to manage DNS.
+Invite some friends to play on your new server! Maybe have a party!
+Set up backup scripts.
+

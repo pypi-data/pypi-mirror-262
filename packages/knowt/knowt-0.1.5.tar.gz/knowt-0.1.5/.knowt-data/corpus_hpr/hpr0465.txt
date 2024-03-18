@@ -1,0 +1,20 @@
+## hpr0465 :: Failsafe security
+
+ WARNING: It's easy to lock yourself out of a system implementing these changes so make sure you have physical access to the console of the system you are securing.
+To display all processes listening
+  netstat -anp | grep -i listen
+
+
+Deny all connections to any port from any external IP address
+/etc/hosts.deny
+  all:all
+
+/etc/hosts.allow
+  sshd:192.168.1.54 # My other pc
+
+IPTables Tutorial: https://iptables-tutorial.frozentux.net/
+A good starting point to block all except ssh:
+https://www.cyberciti.biz/tips/linux-iptables-4-block-all-incoming-traffic-but-allow-ssh.html
+Disable root login via ssh: https://www.howtogeek.com/howto/linux/security-tip-disable-root-ssh-login-on-linux/
+Setting up ssh keys and disabling password logins.
+https://www.debuntu.org/ssh-key-based-authentication

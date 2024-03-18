@@ -1,0 +1,13 @@
+## hpr1869 :: Irssi Connectbot
+
+ 
+NYbill talks about setting up Irssi Connectbot on a Android phone to access IRC.
+
+
+https://f-droid.org/repository/browse/?fdid=org.woltage.irssiconnectbot
+
+
+I don't know him. But, thanks for this handy guide on setting up key pairs with Connectbot, Michael:
+
+
+https://michaelchelen.net/0f3e/android-connectbot-ssh-key-auth-howto/

@@ -1,0 +1,103 @@
+## hpr1724 :: Vim Hints 002
+
+ Vim Ate my Homework
+In this episode I want to look at how to keep your work secure with Vim. Next episode we will look at how to create and edit files.
+Avoiding data loss with a backup
+The best place to start is with the configuration file which we met last episode. As we saw, this is usually $HOME/.vimrc. However, it can also be $HOME/.vim/vimrc, which is actually recommended since it keeps all Vim files in the same place. I use the former, since that's the way I have always done it.
+Let's add some options to this file. Configuration options consist of command mode commands. Actually, to be precise about it, any Vim Script expression may be written there.
+First it's a good idea to ensure that Vim runs with all of its standard features enabled. The option for this is called compatible (meaning compatible with Vi), which we need to turn off. This is done with the option:
+set nocompatible
+Next, it's highly advisable to make Vim generate a backup file whenever it opens a file for editing. The backup file has the same name as the original file with a tilde appended. The configuration command is:
+set backup
+The backup file is a copy of the file which existed before editing started.
+By default the backup file is saved in the same directory as the file being edited. If this is a problem (and to me this is not), then it is possible to tell Vim to save backups in a fixed place. This is done with the command set backupdir= followed by a list of directories. For example:
+set backupdir=~/.backup,.,/tmp
+If you were to add this to your configuration file, Vim would save backups in a top-level directory ~/.backup (which must already exist), then if this fails it will save in the current directory, falling back to /tmp if all else fails. Whether you do this is up to you. I would suggest you do not, at least not until you are more experienced with Vim.
+Undoing and redoing changes
+Vim can undo changes you make to a file. This is useful if a change was the wrong change or in the wrong place. It can also redo the undone change.
+The u command in normal mode undoes the last change. The redo function is invoked by pressing the Ctrl key while pressing r. This key sequence is normally represented as CTRL-R.
+Vim keeps a record of the changes, so successive u commands undo successive changes back in time. Conversely, CTRL-R redoes the undone changes forward in time.
+Normally the change history is lost when Vim exits, but two configuration options can be used to save it. The undofile option ensures change history is written to a file and undodir shows the (pre-existing) directory which is to hold these files.
+set undodir=~/.vim/undodir
+set undofile
+It can be a little surprising if you press u in a file you have just opened in Vim to find that it undoes something you changed last time you edited it! However, on the whole I think this is a great feature.
+File recovery
+The Swap File
+By default Vim uses a recovery mechanism where it generates a swap file. Under Unix and Linux this file has a name built from the name of the file being edited with a dot prepended (making it a hidden file) and with the extension ".swp". So, if you were editing the file testfile the swap file would be a file called .testfile.swp in the same directory.
+It is possible to make Vim write the swap file elsewhere, such as on another partition. You can also turn this recovery capability off. It is probably advisable to use the default settings while you are learning Vim.
+The swap file is updated after typing 200 characters or when you have not typed anything for four seconds. The swap file is deleted as soon as Vim stops editing the file.
+Recovery
+Case 1: there are changes in the swap file
+If something bad happens during an editing session, such as the loss of power, the swap file will remain after the event. If you know that you need to recover your edit session then you can simply type the following in the directory where the file you were editing exists:
+vim -r filename
+You will see a message such as the following:
+
+Using swap file ".testfile3.swp"
+Original file "~/testfile3"
+Recovery completed. You should check if everything is OK.
+(You might want to write out this file under another name
+and run diff with the original file to check for changes)
+You may want to delete the .swp file now.
+
+Press ENTER or type command to continue
+
+See the explanation on the Vim wiki.
+Alternatively, when you try to edit a file you were editing at the time of the failure Vim will detect the presence of a swap file and alert you with a message such as:
+
+E325: ATTENTION
+Found a swap file by the name ".testfile2.swp"
+          owned by: hprdemo   dated: Fri Feb 13 15:33:41 2015
+         file name: ~hprdemo/testfile2
+          modified: YES
+         user name: hprdemo   host name: i7-desktop
+        process ID: 16181
+While opening file "testfile2"
+             dated: Sat Dec  6 18:34:32 2014
+
+(1) Another program may be editing the same file.  If this is the case,
+    be careful not to end up with two different instances of the same
+    file when making changes.  Quit, or continue with caution.
+(2) An edit session for this file crashed.
+    If this is the case, use ":recover" or "vim -r testfile2"
+    to recover the changes (see ":help recovery").
+    If you did this already, delete the swap file ".testfile2.swp"
+    to avoid this message.
+
+Swap file ".testfile2.swp" already exists!
+[O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q)uit, (A)bort:
+
+Vim here is indicating that there are unsaved changes that can be recovered. It is also warning that if someone is editing the same file (such as you in another window) this might account for the presence of the swap file.
+Assuming it's appropriate, you can recover the changes and continue editing by pressing r at the above prompt. You will see messages such as the ones above relating to the vim -r filename example.
+Be aware that if you continue editing the original swap file will continue to exist and you will get the same message again next time you edit the file. Vim will create a new swap file (called /home/hprdemo/.testfile2.swo in this case) to protect the new editing session.
+This situation can be a little confusing if you have not encountered it before. There are a number of ways you can resolve this:
+
+You can save the recovered file and exit Vim (type :wq). You can then edit the same file all over again. You will see almost the same message as before, but you can now delete the swap file by pressing d. The message you see the second time round will contain the additional warning that the file you are editing is newer than the swap file - that is because you just saved a new copy of it!
+You can save the file and exit Vim as above, but then explicitly delete the swap file. In the example you would do this by typing: rm    .testfile2.swp
+As before you can save the file but this time without exiting Vim (type :w). Then tell Vim to re-edit the current file with the command :e. You will then see the warning about there being a swap file, and you can type d to delete it.
+
+Case 2: there are no changes in the swap file
+If, when you see the message about finding a swap file you see that there are no changes to recover you can just delete the swap file by pressing d. You can then continue with editing the file as normal.
+Don't Panic!
+This recovery process is complex because Vim is trying to ensure that you are protected against losing your changes.
+As it says in the Vim manual DON'T PANIC!
+Summary
+
+The configuration file should contain the following:
+
+set nocompatible
+set backup
+set undodir=~/.vim/undodir
+set undofile
+
+Use u in normal mode to undo a change
+Use CTRL-R in normal mode to redo an undone change
+Re-starting Vim after a crash will invoke a recovery dialogue
+
+Links
+
+Vim Script (vimscript or viml) https://en.wikipedia.org/wiki/Vim_script
+Recovering files (Vim Wiki) https://vim.wikia.com/wiki/Recovering_files
+Recovery after a crash https://vimdoc.sourceforge.net/htmldoc/recover.html
+Vim Community https://www.vim.org/
+Vim Tips Wiki https://vim.wikia.com/wiki/Vim_Tips_Wiki
+

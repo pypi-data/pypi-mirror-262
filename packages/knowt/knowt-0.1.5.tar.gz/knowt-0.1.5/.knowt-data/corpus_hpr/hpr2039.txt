@@ -1,0 +1,43 @@
+## hpr2039 :: Blather Configuration Part 0: Initial Setup
+
+ In this episode I walk you through the process of getting the Blather GNU/Linux speech recognition program running for the first time. 
+Arch: On Arch Linux this is really easy. Jezra made a package build for the AUR so you can just install it that way.
+Debian: I wrote an installation script for Debian-based systems that installs the dependencies to build pocketsphinx, plus a few extra packages that I use continually when I'm running blather (xvkbd, xdotool, espeak, wmctrl, elinks, xclip, curl). It builds/installs the Sphinx stuff, pulls the blather source code, and puts some configuration files and a startup script in place for you. This should take care of pretty much all of the heavy lifting.
+I refer frequently to Jezra's usage notes on the Blather source code page at gitlab, so if you're trying to install this as I talk, you might want to follow along over there.
+The trickiest bit in the initial run is the creation and placement of the language files. I normally use a bash script for this, but on this first episode of the series I'm going to use the web-based lmtool to create the language files, just the way Jezra says to do on his usage page. He also includes my automated language updater script in the blather source code, though, so going forward I will be talking about how to use that script instead of the web-based tool.
+Blather Launch Script
+I use a bash script to launch Blather because I want to set several environmental variables: location of the pocketsphinx gstreamer libraries, default browser, default text-to-speech engine, and so forth. Having these environmental variables set means that I can use easy-to-remember shortcuts in my blather commands config file. Here is my launch script:
+#!/bin/bash
+
+# tell it where the Gstreamer libraries are
+export GST_PLUGIN_PATH=/usr/local/lib/gstreamer-0.10
+
+# set some shortcuts to use in the commands file
+
+#export VOICE="/usr/bin/festival --tts"
+export VOICE="/usr/bin/espeak"
+export CONFIGDIR="/home/$(whoami)/.config/blather"
+export KEYPRESS="xvkbd -xsendevent -secure -text"
+export BROWSER="chromium-browser"
+
+# add blather script directory to the user's PATH
+export PATH="$HOME/bin:/home/$(whoami)/.config/blather/scripts:$PATH"
+
+# start blather in continuous mode with the GTK GUI 
+# and a history of 20 recent commands
+
+python2 /home/$(whoami)/code/blather/Blather.py -c -i g -H 20
+
+Links
+
+Blather source code
+Blather Installation Script for Debian
+Jezra's website
+Sphinx Speech Recognition Library
+Sphinx knowledge base tool
+Learn about the $2 Microphone that I use for blather: HPR Episode 1812
+
+Credits
+
+Music bumpers are from Kimiko Ishizaka's The Open Goldberg Variations: https://www.opengoldbergvariations.org/, used by permission of their CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
+

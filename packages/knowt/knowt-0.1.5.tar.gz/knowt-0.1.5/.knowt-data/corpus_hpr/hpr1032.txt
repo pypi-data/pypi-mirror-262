@@ -1,0 +1,6 @@
+## hpr1032 :: LiTS 011: du - disk usage
+
+ 
+The du command provides a summary of disk usage for files and directories. The default behavior is to show the number of blocks used by the contents of a directory or directories the command is run on. Usage is calculated recursively for directories. When du encounters a directory it will recurse into subdirectories and show the disk utilization of the files and directories under that directory and then present a total for the topmost directory. This cascades down through each subdirectory where the subdirectory becomes the parent and each child directory is summarized and the parent then totalled.
+
+For complete show notes see https://www.linuxintheshell.com/2012/07/17/episode-011-du-disk-usage/

@@ -1,0 +1,77 @@
+## hpr2858 :: Vehicle designer for a space game
+
+ This episode is about modeling vehicle designer that can be used to design all kinds of vehicles available in the game. It relates to episode about performing research.
+Major parts
+Two major parts about vehicle designer are components and chassis.
+Components are modular pieces of vehicle that are assembled on chassis. They can, among other things, be things lie star sails, astrolabe navigators or long range sensor. Each component is defined by two values ComponentId and ComponentLevel. If you know these two values, you’ll be able to find out details of the component. ComponentId tells what component it is and ComponentLevel the general knowledge of it. When component is first discovered as a result of research, it’s just a prototype and as a such doesn’t function particularly well. Further research refines it and factories are able to produce higher quality components.
+Full definition of component is show below:
+data Component = Component
+    { componentId :: ComponentId
+    , componentLevel :: ComponentLevel
+    , componentName :: ComponentName
+    , componentDescription :: ComponentDescription
+    , componentWeight :: Weight
+    , componentSlot :: ComponentSlot
+    , componentType :: [ ComponentPower ]
+    , componentCost :: RawResources ResourceCost
+    , componentChassisType :: ChassisType
+    }
+    deriving (Show, Read, Eq, Ord)
+Two particularly interesting fields are componentSlot and componentType. componentSlot has type of ComponentSlot and defines what kind of slot the component occupies in chassis. As there are limited amount of slots in each chassis, designer needs to make compromises on what components to install. componentType has type of ComponentPower, which defines what component does in general. It could be sensor or provide supplies for the vehicle for example.
+Technology requirements are defined by function: componentRequirements :: ComponentId -> Maybe Technology. It defines which technology unlock a given component. Part of the definition is show below. Each and every ComponentId has to be handled.
+componentRequirements ShipLongRangeSensors = Just HighSensitivitySensors
+componentRequirements ShipBridge = Nothing
+componentRequirements VehicleWheeledMotiveSystem = Nothing
+componentRequirements VehicleHoverMotiveSystem = Just HoverCrafts
+...
+Second major part of the designer are chassis. They’re stored in database, as I wanted a bit more flexible system than hardcoding as I did with components. Following piece of configuration is used to define database table and generated data for Haskell code. Most of the fields are probably easy enough to guess. type with type of ChassisType defines if this particular chassis is for example a land vehicle or a space ship. Various slot fields on other hand define amount of particular slots that the chassis offers.
+Chassis json
+    name ChassisName
+    tonnage Weight
+    type ChassisType
+    technology Technology Maybe
+    armourSlots SlotAmount
+    innerSlots SlotAmount
+    outerSlots SlotAmount
+    sensorSlots SlotAmount
+    weaponSlots SlotAmount
+    engineSlots SlotAmount
+    motiveSlots SlotAmount
+    sailSlots SlotAmount
+    deriving Show Read Eq
+Not all chassis are equal and some (probably pretty much every one of them) have some sort of requirements that has to be fulfilled when designing a vehicle. For example, space ships require a bridge for captain and star sails. Bawley, smallest of the working ships has room for two star sails, but requires only one of them to be installed in order to be a valid design. Flyboat on the other hand is smaller ship built for speed and always requires two set of sails.
+This data is stored in required_component table and represented as RequiredComponent data. Both are generated from the definition show below:
+RequiredComponent json
+    chassisId ChassisId
+    componentType ComponentType
+    level ComponentLevel
+    amount ComponentAmount
+    deriving Show Read Eq
+Designing a vehicle
+With all that data, we can now design a vehicle. Process is roughly the following:
+
+based on completed research, get a list of chassis that are available
+select chassis from the list
+based on the selected chassis and completed research, get a list of components that are available
+select components to install
+remember to check that maximum tonnage isn’t exceeded and that there’s enough slots and requirements are met
+fill in name
+save into database
+
+Completed design is saved in two different tables. First one design holds info like name of the design, faction that design belongs to and used chassis. planned_component holds info about which components are planned to be installed and in what quantity.
+Design json
+    name Text
+    ownerId FactionId
+    chassisId ChassisId
+    deriving Show Read Eq
+and
+PlannedComponent json
+    designId DesignId
+    componentId ComponentId
+    level ComponentLevel
+    amount ComponentAmount
+    deriving Show Read Eq
+As a little teaser, below is an screenshot of what the vehicle designer currently looks like.
+
+Finally
+Thanks for interest. If you have questions or comments, best way to reach me nowadays is either by email or in fediverse, where I’m Tuula@mastodon.social.

@@ -1,0 +1,82 @@
+## hpr3759 :: Chatting with dnt.
+
+ 
+Amazon Scalpers selling raspberry pi 4:
+
+$219.00
+pi4 8gb
+$285.99
+iUniker pi 4 8gb kit
+$285.99
+pi 4 8gb compute module
+$145.99
+pi 400
+$235.99
+pi 3 kit
+
+
+
+Software
+and documentation mentioned during the show.
+
+git-annex
+
+git-annex allows managing large files with git, without storing the
+file contents in git. It can sync, backup, and archive your data,
+offline and online.
+
+Taskwarrior
+
+Taskwarrior is Free and Open Source Software that manages your TODO
+list from the command line.
+
+Haskell.org
+
+An advanced, purely functional programming language.
+Haskell wiki
+Haskell Book: Learn you a
+Haskell for great good!
+tutorto
+← insert battle
+music from Skyrim
+Because dnt
+must answer for his crimes against Haskell.
+
+Radicale
+
+Radicale is a small but powerful CalDAV (calendars, to-do lists) and
+CardDAV (contacts) server.
+
+SSH
+Documentation
+
+port 22 and info on
+non-privileged or non-root ports
+sshd
+config: checkout AllowUsers and DenyUsers
+for your config.
+
+Fail2Ban
+iptables
+How
+attackers find ip addresses
+
+nmap
+scanning internet for random targets: for learning purposes
+only!!!
+
+Pagekite
+Windows
+Subsystem for Linux
+Figma
+Raspberry
+pi focus on businesses first
+ETA Prime
+PineTab
+2
+risc-v building the first open,
+collaborative community of software and hardware innovators powering
+innovation at the edge forward.
+arm
+architecture
+

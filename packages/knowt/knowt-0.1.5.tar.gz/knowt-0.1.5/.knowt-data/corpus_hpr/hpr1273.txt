@@ -1,0 +1,5 @@
+## hpr1273 :: LiTS 032: cat
+
+ 
+Episode 32 of Linux in the Shell talks about the use of the cat command. Learn the different switches to cat and how through the use of redirection cat becomes more than just a tool to view the contents of a file. For the full write-up of the command and the corresponding video examples check out https://www.linuxintheshell.com/2013/06/18/episode-032-cat/
+

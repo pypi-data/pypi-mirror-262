@@ -1,0 +1,61 @@
+## hpr2951 :: A walk through my PifaceCAD Python code – Part 2
+
+ Code
+The script being discussed in this show is available for download with this show: cad-menu.py
+GENERIC FUNCTIONS
+
+def get_hpr_que():
+Goto hacker public stats page and extract the number of days to next free slot turns on blinkstick LED with colour dependent on the number of days to next free slot in HPR queue prints number of days to next free slot to the display
+
+GENERIC BLINKSTICK FUNCTIONS
+
+def bstick_off():
+Search for all attached blinksticks and turn them all off
+def bstick_on(colour):
+Turn blinkstick on and set led colour to string value stored in var colour. valid colours are, black, silver, gray, white, maroon, red, purple, fuchsia, green, lime, olive, yellow, navy, blue, teal, aqua
+def bstick_on_random():
+Turn blinkstick on colour random
+def bstick_blink(colour):
+Turn blinkstick on with supplied colour
+
+END BLINKSTICK FUNCTIONS
+
+def run_cmd(cmd):
+Used to run an external linux command
+def get_my_ip():
+Returns ip address
+def get_my_essid():
+Returns wifi ESSID
+def get_my_wifi_strength():
+Returns wifi signal strength as a percentage
+def wait_for_ip():
+Tries 10 times to get IP address
+def show_wifi_info():
+Show WiFi information on display, shows essid on first line and both the wifi signal strength as a percentage and ip address on the second line.
+def custom_bitmaps():
+Selection of custom bitmaps to use on LCD display
+Article in pifacecad documentation giving details about creating custom bitmaps on the pifacecad
+https://piface.github.io/pifacecad/creating_custom_bitmaps.html
+This tool referenced in the pifacecad documentation link above can help design custom bitmaps. Make sure you select 5x8
+https://www.quinapalus.com/hd44780udg.html
+def writelongstring(longstring):
+Writes a long string to the piface control and display LCD & scrolls it to the left until the last character appears on the right hand side of the screen
+
+# Local Variables (for function writelongstring)
+DisplaySize = 15
+# Number of characters  that can be displayed on 1 line of display
+
+StepSize = 4
+# Step size when scrolling message on display
+
+ScrollSpeed =   0.55
+# Adjusts scroll speed, delay in seconds between scrolls
+
+Scroll = 0
+# Default value for scroll, used when string is smaller than display size
+
+def init_display():
+# Setup LCD display for selected menu 0 (Podcasts), 1 (Audiobooks), 2 (System)
+def display_main_menu(event):
+# Clear LCD & dsplays the appropriate main menu message
+

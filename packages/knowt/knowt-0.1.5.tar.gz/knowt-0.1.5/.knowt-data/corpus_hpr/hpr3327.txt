@@ -1,0 +1,13 @@
+## hpr3327 :: Looking into Ceph storage solution
+
+ We look into what a Ceph implementation entails, what specific use-cases it excels at.
+And we also talk about the building blocks of the system. What kind of hosts is required for different Ceph daemons and the requirements regarding disk space, CPU, and memory.
+The services we are talking about are OSD (Object storage daemon), Monitors, Managers, and MDS (MetaData Services).
+Ceph can be used as an S3 compatible object store, disk storage, and even a file system, depending on your setup.
+If you are interested in diving deeper into the topic, I have created a couple of videos on the subject that might interest you.
+
+Getting started with Ceph storage cluster setup - https://youtu.be/Uvbp3mtOltw
+Using the amazon s3 object storage API for local storage on Ceph - https://youtu.be/XtfjYp8ikaU
+Doing an automatic upgrade of Ceph cluster using CephAdm - https://youtu.be/N1ARNNvv1zY
+Looking into a manual upgrade of Ceph to Pacific - https://youtu.be/RrrS4UU5U6o
+

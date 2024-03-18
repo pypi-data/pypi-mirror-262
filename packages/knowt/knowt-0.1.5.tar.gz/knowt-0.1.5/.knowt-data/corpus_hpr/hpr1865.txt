@@ -1,0 +1,14 @@
+## hpr1865 :: 62 - LibreOffice Impress - Working With Text Boxes
+
+ 
+Text Boxes are considered graphical objects, actually, so they are controlled by the Drawing Object Styles. These can be a little bit confusing because they are shared among different LibreOffice modules, so some of the things you see arent really meant for Impress. For example, there are three Title styles, but none of them are meant for putting titles on slides. They are actually meant for putting titles on drawings, such as engineering drawings. If you you wanted to have a slide title but use Text boxes, you should select the Title Only slide layout. The Title would be controlled by the Title Presentation Style.
+For more go to https://www.ahuka.com/?page_id=1250
+
+Links
+
+https://www.ahuka.com/?page_id=683
+
+https://hackerpublicradio.org/eps.php?id=1465
+
+https://www.ahuka.com/?page_id=1250
+

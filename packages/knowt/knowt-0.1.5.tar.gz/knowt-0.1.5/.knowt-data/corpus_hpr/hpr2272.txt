@@ -1,0 +1,57 @@
+## hpr2272 :: In Which Our Hero Takes 4 Hours to Install Hyper-V Server 2012
+
+ So we had this server.
+As all servers are wont to do, this one had run successfully for a number of years. Everything worked perfectly until it didn’t.
+It ran, to my knowledge, only Hyper-V Server on its system drive, and had a second set of drives for hosting the VM that ran Microsoft Deployment Toolkit to service our depot. Our depot was on its own physical network, sharing with production only an ISP demarc.
+I had long since abandoned the depot and its trappings, thinking it someone else’s domain, thinking my time better spent on client systems, thinking that I didn’t need to know what happened in the oft-ignored part of our operation. I assumed that it was set up properly since it had been so stable for so many years. But you know the old saying:
+When you make assumptions you make an ass out of you and muptions.
+The Problem.
+Our monitoring systems reports the two depot servers offline, both the hypervisor and its virtual. I sent our depot technician to take a look. They come back online and he tells me that it needed to be rebooted. Having divested myself of giving a damn about the depot, I barely found the energy to shrug.
+Then it happened again. I again sent the technician and promptly got wrapped up in some client-facing issue. I forgot about the servers until:
+They went offline a third time. I didn’t have to tell my depot tech; he was watching the same feed as I. He rummaged a bit and came back with a story of defeat and virtual disks not being found.
+“The server won’t boot because the Virtual disk can’t be found” he said.
+“Ok, so you mean the virtual won’t come up, but what about the physical?” I replied.
+“No, that’s what I mean. It won’t get past BIOS. It’s complaining of a virtual drive not being found.”
+“Sounds bogus, let’s look.”
+He was not wrong; that is what the screen said. And what it meant was RAID failure. I slid off the front of the server case and sure enough, one of the drives had popped.
+Oh, did I mention? No backups.
+The Rabbit Hole.
+Drives pop sometimes, ain’t no thing. We build systems to be resilient. You slap a fresh one in there and it starts re-silvering and you get on with your day. Not this time, gentle reader.
+While digging through the RAID controller, I found, to my amazement, horror, and utter confusion, that whatever chucklefuck set up this server put the two system drives in a RAID 0. As I stared at the screen and at the blinking amber drive light, all that could pass my lips was a quiet “Oh my god, why?”
+In this scenario, I didn’t see any way forward, but through. So far, it had been demonstrated that the bad drive would behave for about 2 hours, then throw a fit. I shut down the server and took some time to think about how to proceed. In that time, I re-discovered some of the things the virtual machine was serving.
+Things like: MDT, DNS, DHCP, PXE boot, but most importantly: the lone DC for depot.local (MDT needs a domain). Oh, and it was the only machine that was set up to manage the hypervisor through the Hyper-V console and Server Manager.
+GREAT.
+Compounding the issue, the virtual was not stored on the separate set of RAID 1 disks in this server as I had assumed. It was stored on the system drive. Oh joy, oh rapture.
+My new mission: Rescue that virtual.
+The Struggle.
+First things first. I assume I’ll only have one chance to rescue this data before this drive bites the dust for good. I plug in the VGA and keyboard. Take a deep breath.
+I turn on the server.
+It fails to boot into the operating system. “Come on, you little shit.” Take out the drive and put it back in. Success. We boot into the OS and I’m presented with a log on screen. Password.
+There are no logon servers available to process your request.
+Shit, that’s right. The virtual is the only DC. K, local admin it is. Login successful. Presented with a command like and SConfig. Grab the terminal and start poking about. cd to C: and dir. Find a folder named VMs. Bingo. Started copying the VHDX to the RAID 1 set.
+cp “C:\vms\Hyper-V Replica\Virtual hard disks\{guid}\{guid}.vhdx” E:\
+The server moves the data at a respectful 700Mbps, considering its current degraded state. It eventually finished the transfer after about 10 agonizing minutes. Shut down the physical to preserve the bad drive.
+We are out of the woods, but it’s still a long way to Gramma’s house.
+The King is Dead; Long Live the King.
+I have a plan. Now that I have the VHDX, and since we clearly need a replica server, I’ll push my luck. I’ll build a new server and see if I can replicate the virtual. I happen to have a disused server sitting right next to the bad server. It’s admittedly dissimilar hardware, but shouldn’t be a problem. I don’t know why it’s lying dormant or what it was used for in the days of yore, but it’s mine now. Eminent domain.
+And here is the story of how it took me 4 hours to install an OS that usually takes 3 minutes.
+We need to load up Hyper-V 2012 on this “new” server first.
+As is standard practice, I disconnect all but one drive from the mobo. I do this because sometimes the Windows installer decides that the “SYSTEM” partition belongs on a different drive from the C partition and it makes me cry. I used rufus (what a fantastic little utility, really. I need to donate to that guy) to make a HV 2012 boot disk from ISO.
+You know how it takes a few times to get a USB to go into it’s slot correctly? Not me. I whipped that bad mamma-jamma like a shuriken from 30 feet away and it slid perfectly into the front of the server. Fireworks, 100 doves, the works.
+Boot it, get to the installer part where it asks you upon which drive you wish to install it. Boom, error:
+Setup was unable to create a new system partition or locate an existing system partition.
+Weird. Sounds like a problem with the disk, right? Open up diskpart, clean it, format, create partition, assign it a letter. No go. Try a different drive? Nope. Disconnect the cd drive maybe. No dice. Connect all the drives and try each one. Nada. Boot up into Ubuntu and use GParted to re-do what I did in diskpart. Zilch. Re-create the install media. Goose egg. Try the back USB ports. I’m running out of ways to say no, but in essence, nothing was making this error go away.
+Screw it. Maybe this is why this server was sitting unused? Maybe it’s a bad mobo or something and frankly, I don’t care. Part out the drives and junk it.
+We happen to have a literal pile of servers to pick from, so I grab the one on top because it’s the most similar to the bad server and because you must be out your damned mind if you think I’m digging through that mound of junk. This’ll do nicely.
+Remember how I said I didn’t want to have anything to do with the depot? I still don’t. I want this new server to be unkillable, may he reign for a thousand generations. So, I may have gone a little overboard with the RAID setup for one simple hypervisor, which is going to be backed up and replicated.
+That there is a 1TB RAID 1 with a hotspare and a 500ish GB RAID 5 with a hotspare. I never want to hear from this server again.
+OK, so we start the Windows server install and:
+THE SAME ERROR.
+No way. I have done this dozens of times, this is insane. I have used this exact same USB drive to do it! I can use it on an ancient spare laptop and go through the install perfectly fine. I have dug through pages of posts on forums and tried every last solution suggested except one. I find, on page 3 (!) of Google, someone say that it only failed for them when they used a USB 3.0 drive to install. I look at the end of my USB install media, see blue, then see red. NO. WAY.
+So I hunt around for a USB 2.0 drive. Takes me a few minutes, but we had one holding up the leg of a table. Rufus took a bit longer this time. When the drive was cooked, I gingerly placed it in the receptacle and crossed my fingers. If this didn’t work, then I was all out of ideas. No clue.
+It worked. I could not believe it. USB 3.0. Why, Windows, WHY?
+Playing with Fire.
+Creating a new domain is a pain in the ass. I considered a number of possibilities, but now that I had the re-install of this server figured out, I figured let’s go nuts and join the new hypervisor to the old domain depot.local. If you’ll remember from 6 years ago when I started telling you this story, the sole virtual server performed DCHP, DNS, and DC functions.
+I powered up the bad physical server. It complained, but complied. Started the virtual, no issue. Waited a few minutes, then joined the shiny new server to the domain depot.local. From there, with the DC up and running it was a simple matter of using the Hyper-V console to set up replication. After about an hour of pacing back and forth like I was awaiting the birth of my first child, the virtual made it and was failed over successfully.
+There were a few more issues to resolve, like the DNS server having the wrong IPs for just about everything even though they have been using statics for years, DHCP not responding on port 4011 for MDT for PXE Boot, DHCP being handed out by the virtual AND by the router on the same subnet (?!?!), and the DNS server refusing to connect over the HyperV vSwitch, but now at least I don’t have a knot in my stomach. I don’t know how this environment ever worked like this. What a mess to clean up.
+I ripped the bad half of the RAID 0 out of the server like a man possessed. I nailed it to the wall behind my desk. There is a sign under it that reads: “RAID 0 is not RAID. If you use RAID 0 on anything, I will throw this hard drive at your head. I have good aim. It will probably hit your mouth.”

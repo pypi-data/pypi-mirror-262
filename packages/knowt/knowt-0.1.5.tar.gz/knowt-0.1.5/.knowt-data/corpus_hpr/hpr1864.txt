@@ -1,0 +1,21 @@
+## hpr1864 :: Turning an old printer into a network printer
+
+ Overview
+I have a USB printer I bought back in 2005 when I bought a Windows PC for the family. It's an HP PSC 2410 PhotoSmart All-in-One printer. This device is a colour inkjet printer, with a scanner, FAX and card-reading facilities. It has been left unused in a corner for many years, and I recently decided to to see if I could make use of it again, so I cleaned it up and bought some new ink cartridges for it.
+It is possible to use this printer on Linux using CUPS for the printing and SANE for scanning. I connected it to my Linux desktop for a while to prove that it was usable. However, rather than leaving it connected in this way, I wanted to turn it into a network printer that could be used by the rest of the family. My kids are mostly away at university these days but invariably need to print stuff when they pass through. I searched the Internet and found an article in the Raspberry Pi Geek magazine which helped with this project.
+Full Notes
+Since the notes explaining this subject are long, they have been placed here: https://hackerpublicradio.org/eps/hpr1864_full_shownotes.html.
+Links
+
+HP PSC 2410 PhotoSmart All-in-One printer: https://h10025.www1.hp.com/ewfrf/wc/product?cc=uk&lc=en&product=303753
+CUPS.org main web site: https://www.cups.org/
+CUPS Wikipedia entry: https://en.wikipedia.org/wiki/CUPS
+HP Linux Imaging and Printing (HPLIP): https://hplipopensource.com/hplip-web/index.html
+Scanner Access Now Easy (SANE): https://en.wikipedia.org/wiki/Scanner_Access_Now_Easy
+"Converting the Raspberry Pi to a wireless print server" from the Raspberry Pi Geek magazine: https://www.raspberry-pi-geek.com/Archive/2013/01/Converting-the-Raspberry-Pi-to-a-wireless-print-server
+Linux Foundation OpenPrinting work group: https://www.linuxfoundation.org/collaborate/workgroups/openprinting/
+
+HP PSC 2400 series details: https://www.openprinting.org/printer/HP/HP-PSC_2400
+
+Arch Wiki on CUPS - Linux Server Windows Client: https://wiki.archlinux.org/index.php/CUPS_printer_sharing#Linux_server_-_Windows_client
+Internet Printing Protocol (IPP): https://en.wikipedia.org/wiki/Internet_Printing_Protocol

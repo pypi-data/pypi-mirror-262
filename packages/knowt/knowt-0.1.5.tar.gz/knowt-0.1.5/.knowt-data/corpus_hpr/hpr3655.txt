@@ -1,0 +1,206 @@
+## hpr3655 :: BSD for Linux users
+
+ UNIX, Linux, and BSD
+Linux was created by PC users attempting to use mainframe UNIX. BSD was created by mainframe UNIX users attempting to use a PC.
+BSD is what I like to call a “Pedigree UNIX”, meaning that it is a pure blooded descendant of AT&T UNIX. Although all of the original AT&T code has been re-written so a permissive license, the heritage persists.
+In contrast to Linux (which shares no original Bell Labs code), BSD was originally all Labs code.
+BSD in the wild
+BSD style licensing is quite simple to understand compared to the tome that is the GPL. Interpreting it usually goes something like follows:
+Do whatever the hell you want with this code, just don’t blame me when it breaks something and don’t claim you wrote it
+Permissive licensing means that various companies can put lipstick on the UNIX pig and falsely assert that it’s anything other than lipstick on the UNIX pig. Not that UNIX is a pig, but you cannot disguise a pig with lipstick. Those burdened with the gift of sight and knowledge can spot a UNIX system quite easily.
+
+Apple software is basically stolen BSD
+Windows TCP/IP stack (and ftp/rcp/rsh/ssh/scp and other various non-trash networking protocols) is basically stolen BSD
+Sony PlayStation is basically stolen BSD
+Nintendo switch is basically stolen BSD
+a million others that I can’t be bothered to list because they’re either abandonware or are embedded in your e-toaster and internet enabled dishwasher so no one cares
+
+Interacting with BSD guys
+Most Linux enthusiasts are missionaries. They are generally helpful and seek to guide the computing neophyte into the inner circle of FSF initiates.
+The BSD guys tend to be like hermits. They don’t care if you use their code, they only care that the code works for them. When you ask for help, a typical response will be “did you even read the error logs?” or “did you even RTFM? What about supplemental documentation? We didn’t write TFM just so you could go online and ask something clearly documented in TFM.”
+Not all BSD guys are bitter, but you really should consult available resources before asking questions
+Forking vs distros
+In Linux land, all the distros are basically the same with varying coats of paint. We call these distributions because all “implementations” of linux are nearly identical code bases built with varying compile time options.
+In BSD land, distros don’t exist. Free/Net/Open are entirely independent and don’t share a common upstream. They are forks of primordial BSD that run separate kernels, separate userlands, etc. Although code is shared amongst each other, a statically linked binary can’t simply be dumped from one to another and still run as it would in Linux land.
+Meta-distos of FreeBSD do exist but they are short lived unless they have corporate backers.
+Idiot’s guide to picking a BSD
+I want basically Linux desktop out of the box but with a BSD kernel so I can look cool when I post a neofetch screenshot to the /g/ desktop thread!!
+Selecting a FreeBSD fork that comes with a desktop is your goto. The currently maintained desktop distros are HelloSystems, GhostBSD, NomadBSD, and MidnightBSD.
+I want a viable desktop operating system
+FreeBSD with a non-GNOME DE is fairly reliable. I’ve had success with KDE, XFCE, and various tiling window managers. GNOME is too reliant on systemd so the port is janky.
+I want something to learn by example with
+OpenBSD is a great learning platform. The source code for userland utils is simple, short, and generally free from OS specific function calls. RTFM goes by the wayside when you easily RTFSC.
+I want to prevent foot shooting incidents
+OpenBSD eliminates many foot shooting scenarios by being a thorn in the side of the user who wants to do stupid things
+I want to run UNIX to an obscure device
+OpenBSD runs on a lot of architectures: i386, amd64, arm64, arm7, alpha, sparc64, risc64, ppc64, etc. The devs self-host these ports (ie build the release on a physical processor instead of cross compiling). This means that the alpha port is actually built on a VAX machine, the sparc port is actually built on a sparc machine, etc.
+NetBSD runs on everything.
+I can’t decide!!! Pick one for me!!!
+Just go with FreeBSD. It feels a lot like old Debian.
+Hardware
+Lenovo Thinkpads are bulletproof. Buy something on ebay. Dell desktops generally work quite well. Intel components are most stable. You will suffer less if you can find a pure Intel machine. The biggest things to look for are an intel CPU, intel wireless chipset, intel integrated graphics, and an intel sticker. Vpro vs no vpro doesn’t seem to make a difference in my anecdotal experience.
+But what about a GPU????
+no.
+FreeBSD
+Goal: general purpose, easy to use operating system
+Use cases: server, desktop, NAS, hypervisor
+Features:
+
+Core OS
+
+system feels clean and organized.
+
+Everything required to boot the system is in /
+Everything not required to boot the system is in /usr/local
+
+ZFS boot environments allow modification and upgrading without worrying
+Familiar enough to linux users
+System feels well integrated instead of hacked together like a GNU+/Linux
+
+storage
+
+UFS is dead, long live ZFS (the only actually good RAID)
+Disk encryption via GELI and encrypted ZVOLS
+
+Third party software
+
+Largest ports system of the BSDs
+Can install precompiled packages with the pkg utility or compile yourself via the ports tree
+
+Jails
+
+Like a chroot but actually secure
+Like docker but without the aspect of downloading random stuff from github
+all jails share a kernel but have separate hostnames, ip addrs, etc
+
+Virtualization
+
+bhyve hypervisor, similar to kvm
+
+Security
+
+Capsicum (sandboxing framework)
+ACLs
+
+OS compat layers
+
+Linux compat layer (can even run steam).
+wine
+
+Documentation
+
+FreeBSD handbook
+
+
+Detriments:
+
+storage
+
+UFS is not journaled by default, just use ZFS
+
+Virtualization
+
+there is a virtualbox port
+
+Security
+
+Fast rather than secure by default
+read security(7) and you’ll be fine
+
+
+OpenBSD
+Goal: simplicity, portability, standardization, correctness, proactive security, and integrated cryptography
+Use Cases: Networking appliances, desktops, servers
+Merits:
+
+Core OS
+
+webcam and microphone disabled by default
+
+Security
+
+API changes to prevent foot shooting (ie strlcpy and strlcat because string functions in C are a memory leak waiting to happen).
+kernel is randomly relinked and randomized at boot time
+Memory protection
+
+W^X protection means that memory is either exclusively writable or exclusively executable
+malloc’d memory is randomly allocated (bonus: makes buggy programs segfualt loudly)
+
+Crypto
+
+full disk encryption (including swap)
+various algos
+TCP/IP stack randomizes things to reduce predictibality
+
+Xenocara
+
+X11 fork
+privilege separation (ie all Xsessions don’t run as root)
+
+Pledge/unveil syscalls
+
+pledge restricts process capabilities, kernel kills misbehaving processes
+unveil restricts filesystem access to a minimul level
+
+All of the standard daemons run in a chroot with privilege separation
+ASLR
+A million other things
+
+Third party software
+
+Everything you need is in the base system. Some of what you want is available via ports or pkg_add
+
+Subprojects:
+
+CARP, doas (like sudo but less spaghetti), OpenBSD httpd, LibreSSL, OpenBGPD, OpenNTPD, OpenSMTPD, OpenSSH, pf (the only easy to use firewall), spamd (email filter that plugs into pf), a million other things
+
+Virtualization
+
+vmm and vmd
+
+Documentation
+
+FAQ
+Handbook
+
+Source code is the only good “learn by example” for C
+
+Demerits:
+
+Security features can cause slowness
+sometimes you can’t shoot your foot even if you really really want to
+critics claim it’s all security theater
+Requires opening vulnerabilities back up if you want a “Just Werks™” Linux desktop experience
+No MAC
+
+NetBSD
+Goal: clean and careful design, scalability, portability
+Use cases: server, embedded, desktop if you’re a flagellant
+Features:
+
+Portability
+
+It actually runs everywhere
+Designed for cross compiling (via build.sh)
+
+pkgsrc
+
+UNIX and arch agnostic third party packing framework
+
+virtualization
+
+xen
+nvmm (similar to kvm, works with qemu)
+
+storage
+
+a bunch of filesystems, including journaling UFS and ZFS
+LVM
+
+entirely POSIX compliant
+kernel is scriptable with Lua
+
+Demerits:
+
+haven’t used it enough to die the death of a thousand papercuts
+

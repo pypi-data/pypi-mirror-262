@@ -1,0 +1,14 @@
+## hpr1985 :: Fixing Bug 1092571
+
+ 
+After a windows server upgrade in work, I was no longer able to mount samba network drives from my laptop. Basically it boils down to not been able to mount drives on the console, but been able to browse them in the GUI. After investigating and trying all the options presented, I filed a bug with Fedora.
+https://bugzilla.redhat.com/show_bug.cgi?id=1092571
+
+
+Despite filling in all the information, the bug remained untouched by human hands. Robots shut it, I reopened it. To be honest I thought it might be my set-up as nobody else was reporting it as an issue. Sure there were other people reporting problems but not attached to this bug.
+
+
+Anyway I happened to be at FOSDEM (https://hackerpublicradio.org/series/0089.html) and spotted Jeremy Allison from the SAMBA project who I had the pleasure of interviewing previously https://hackerpublicradio.org/eps.php?id=1451).
+
+
+Jeremy was immediately able to pinpoint the issue to the kernel probably only supporting SMB version 1, while user space uses libsmbclient that supports smb1/smb2.

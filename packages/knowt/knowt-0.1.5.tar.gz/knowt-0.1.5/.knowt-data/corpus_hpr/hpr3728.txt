@@ -1,0 +1,382 @@
+## hpr3728 :: Pinebook Pro review
+
+ Why the PBP?
+Lately I've been thinking a lot about power consumption when it comes
+to computing. Intuitively, I know that arm devices pull significantly
+less power than amd64 machines but I've never really tested this in the
+real world. So, some preliminary power consumption stats:
+
+big amd64 laptops (thinkpad x220 and t490) pull at most 65
+watts
+small arm SOCs typically pull at most 15 watts
+most android phones pull at most 18 watts
+Pentium 4 pulls at most 250 watts
+
+These numbers are fairly easy to find: just look at the power supply
+for a MAXIMUM OUTPUT value or something similar. This is the point at
+which the power supply fails so we can safely assume this is the maximum
+power draw for any given computer. Of course, this is DC output and not
+AC output and anyone who knows anything about electricity knows that
+converting AC to DC is expensive but these values are useful as a
+general estimate. I
+wrote something similar about computer power consumption some time
+ago
+My goal in all of this was to find a self contained computer that
+runs UNIX, doesn't take much power, isn't a consumption rectangle
+(smartphone), and can be charged from both AC with a rectifier and
+stored DC without an inverter. Charging from existing stored power was
+probably the most novel consideration. Everything else is a given.
+A few obvious answers come to mind:
+
+Raspberry
+Pi 4 is not self contained and using a pitop in public is a good way
+to get the bomb squad called on you
+beaglebone black is good
+too but neither self contained nor popular enough for wide OS
+support
+Pinebook
+Pro is self contained and is supported by some of the operating
+systems I'd like to run
+
+The PBP is an obvious choice. It's an open hardware ARM laptop that
+can be charged via a barrel cable (AC->DC) or via USB-C. Charging
+from USB-C is a very useful feature because it means I can easily choose
+between charging from the mains where efficiency loss is acceptable and
+charging from a DC source where efficiency loss is unacceptable.
+The actual use case is "what computer can I run off of a old car
+battery or the alternator in my car without burning power with an
+inverter?". I'll revisit this use case in a later section.
+
+Initial notes
+I took these notes immediately upon opening the PBP. They remain
+unedited because I want to be honest on the first impressions.
+shipping
+I was worried about DHL dropping my package out of a plane. Or
+leaving it out in the rain. Or having one of the employees use it as a
+soccer ball. Or having the thing get stuck in customs. It ended up
+arriving safely and was packaged well. Two boxes within a padded
+envelope within another envelope. Surprising for DHL.
+hardware impressions
+
+Touchpad sucks and trackpad scrolling sucks (it's probably just
+KDE). Installing synaptics drivers allegedly fix this problem.
+keyboard is comfortable, clickly, full sized despite being a
+chicklet keyboard. I don't like that the <ctl> and
+<fn> keys are backwards when compared to a thinkpad.
+I really like the thinkpad keyboard layout.
+Shift+enter seems to type the M character. My muscle
+memory for key chording is now broken. This appears to be a fundamental
+design flaw with KDE.
+Passively cooled, gets a bit warm.
+display is sharp (IPS) and almost too high resolution for my eyes
+(1920x1080 instead of 1366x768). I can fix this in software.
+enabling/disabling mic/wifi/camera through the keyboard is confusing
+and (seemingly) does not perform the "kill switch" via hotplugging like
+the Thinkpad X220's wifi kill switch.
+Charger comes with both US and EU prongs.
+
+software impressions
+
+it's manjaro :(
+it's KDE :(
+it comes with mpv :)
+bluez instead of bluetoothd :(
+firewalld instead of UFW <3
+no vim, no vi, and no ed on the standard installation so this is
+completely useless and unusable.
+firefox config uses google as the default search engine
+It didn't come with RHEL7 or so obviously I hate it
+It didn't come with BSD so obviously I hate it
+Terminal color scheme is one of the worst I've seen in my life
+
+Secondary notes
+From my next available free day, largely unedited:
+software
+
+I still don't like manjaro. I still don't like pacman.
+On the default manjaro installation, the
+manjaro-arm-flasher tool seems to create bootable SD cards
+(nice for the insurance policy)
+when updating (lots of network IO throughput), the wireless card
+seems to stutter.
+I Can't boot another OS using the stock firmware. I need to flash
+the "SPI flash" (fancy ARM guy terminology for nvram) with newer
+versions of u-boot that are more hacker friendly (ie the ones that don't
+require a serial display).
+
+hardware
+
+The emmc is toggable with a DIP switch on the mainboard. My
+mainboard looks slightly different than the images on the wiki but
+all of the components are generally in the same location
+
+
+Technical stuff
+upgrading the u-boot on
+storage devices
+It seems that the PBP has three possible locations for the
+bootloader: nvram, EMMC, and sd card. The boot process is something
+like:
+
+load bootloader from nvram
+query storage device
+if the storage device has it's own bootloader, chainload that
+otherwise, use the bootloader from nvram
+
+It's u-boot soup but upgrading the bootloader on the storage device
+seems to marginally increase stability.
+$ sudo pacman -Syuu
+$ sudo pacman -S uboot-pinebookpro
+$ sudo dd if=/boot/idbloader.img of=/dev/mmcblk2 seek=64 conv=notrunc,fsync
+$ sudo dd if=/boot/u-boot.itb of=/dev/mmcblk2 seek=16384 conv=notrunc,fsync
+$ sudo sync
+$ sudo reboot
+Flashing
+u-boot externally and buying more stuff
+I
+found some fedora specific instructions that are actually just PBP
+specific Using the u-boot and idb from fedora, The screen flashes
+with garbled nonsense when loading a kernel but at least I can see the
+output from u-boot. Different kernels show different garbled nonsense so
+it's a bit of fun. The keyboard does not work in u-boot. The system will
+now also boot from the SD card (although it seems the system will always
+boot from EMMC once before allowing booting from the sd card).
+Armbian and NetBSD seem to boot just fine from the sd card. I'm
+keeping a sd card with the stock Manjaro image as an insurance
+policy.
+Because the keyboard does not work in u-boot, I ordered the pine64
+serial over 3.5mm audio jack cable so that I can (hopefully) fix this in
+the future. The system still boots automatically but I'd really like to
+pass options to my bootloader to do things like enter single user mode,
+run an fsck at boot time, boot various versions of kernels, etc.
+
+OS Support
+I will not use Arch. You cannot force me. You cannot coerce me. You
+cannot even bribe me. I will use anything other than Arch as long as
+it's not ubuntu.
+Sadly, BSD is not "super easy" on the PBP like most other SBCs but
+I've never stepped down from a challenge. Even sadder, no Plan 9 ported
+to PBP either. Running a "distro based on a distro based on a distro
+based on arch" is the antithesis of my computing philosophy. Luckily
+enough, there is a big list
+of operating systems that run on the PBP. Most of these are distros
+based on distros based on distros. OpenBSD instantly appeals to me but
+there is no support for graphical TTYs as of yet (installation must be
+performed over serial) so this is a non-starter. NetBSD also appeals to
+me but no wifi in 9.x, only in -CURRENT. A wide selection of actually
+usable software, take your pick.
+Official
+Manjaro images with a variety of DEs also exist for when you lost
+(or corrupted) your insurance policy SD card.
+
+
+NetBSD
+NetBSD seems to work just fine but 9.x doesn't yet ship the broadcom
+drivers. These drivers are present in the -CURRENT branch but the issue
+with -CURRENT is that it's not entirely stable. Additionally, the
+bootloader does not come with the system.
+u-boot
+from pkgsrc
+aarch64
+build of NetBSD
+To get around the no wifi issue, a dongle is required. I use an
+Atheros AR9271 USB->WiFi dongle. To get around no RJ45
+port, I use a USB->RJ45 adapter. I have an ASIX ax88772
+dongle (UGREEN branded but I'm not sure that matters). Both of these
+dongles seem to work with every single operating system and hardware
+configuration I've tried them with.
+Arm is strange, so we must boot from an SD card (running any OS, in
+my case NetBSD) in order to burn an image to the internal storage.
+From a separate machine, the options passed to dd
+are important.
+$ wget https://cdn.netbsd.org/pub/NetBSD/NetBSD-9.3/evbarm-aarch64/binary/gzimg/arm64.img.gz
+$ wget http://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/.9.0_2022Q2_pkgbuild/All/u-boot-pinebook-pro-2022.01nb1.tgz
+$ gunzip ./arm64.img
+$ tar xzf ./u-boot-pinebook-pro-2022.01nb1.tgz
+$ sudo umount /dev/sdx*
+$ sudo dd if=./arm64.img of=/dev/sdx status=progress conv=fsync bs=1M
+$ sudo sync
+$ sudo dd if=./u-boot-pinebook-pro-2022.01nb1/share/u-boot/pinebook-pro/rksd_loader.img of=/dev/sdx seek=64 conv=sync status=progress
+$ sudo sync
+$ sudo eject /dev/sdx
+And, to install NetBSD to the internal EMMC, the process is similar.
+NetBSD's version of dd varies slightly but the options
+passed are important.
+# ftp https://cdn.netbsd.org/pub/NetBSD/NetBSD-9.3/evbarm-aarch64/binary/gzimg/arm64.img.gz
+# gunzip ./arm64.img
+# dd if=./arm64.img of=/dev/rl0d conv=sync bs=1m
+# sync
+# PKG_PATH="http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/aarch64/9.3/All/" pkg_add pkgin
+# pkgin install u-boot-pinebook-pro
+# sudo dd if=/usr/pkg/share/u-boot/pinebook-pro/rksd_loader.img of=/dev/rld0 seek=64 conv=sync
+# sync
+# reboot
+And, some more desktop centric things after booting from EMMC:
+# passwd
+# echo "postfix=NO" >> /etc/rc.conf
+# echo "xdm=YES" >> /etc/rc.conf
+Installing pkgin (and some packages):
+# PKG_PATH="https://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/aarch64/9.3/All/" pkg_add pkgin
+# sed -i'' -e 's/9.0/9.3/g' /usr/pkg/etc/pkgin/repositories.conf
+# pkgin install vim git mozilla-rootcerts mozilla-rootcerts-openssl
+The rest is NetBSD specific and I've avoided getting into it here
+because it doesn't have anything to do with the PBP.
+
+Performance
+The PBP has 6 cores (2 fast, 4 slow) and 4gb ram. The cpu is fairly
+slow but entirely usable. On large procedural jobs like software
+compilation, it's painful. For concurrent jobs, it's mostly fine.
+Compiler performance
+As expected, the PBP is slower when it comes to compilation than a
+standard amd64 machine. Surprisingly enough, NetBSD was significantly
+slower than Manjaro. This is likely due to the Linux kernel knowing how
+to better handle multiple CPUs with varying speeds.
+sequential jobs
+I used plan9port
+because it's a fairly large but portable project. Compilation is largely
+sequential, invokes many standard shell utilities, and involves extra
+preprocessor steps to convert 9 C into something a standard UNIX
+compiler like GCC or Clang can compile.
+On a T490 - 8th gen Core i7 (4 cores, 8 threads, 4.8GHz, vPro for
+maximum thermal output):
+real    232.51 (~4 minutes)
+user    188.07
+sys     65.01
+On an X220 - 2nd gen Core i5 (2 cores, 4 threads, 2.6GHz, vPro for
+maximum thermal output):
+real    249.98 (~4 minutes)
+user    220.33
+sys     65.52
+On the PBP (2 2.0GHz cores + 4 1.5GHz cores, no CPU fan for maximum
+thermal output) (running stock Manjaro image):
+real    1355.27 (~22 minutes)
+user    1178.47
+sys     347.71
+On the PBP (2 2.0GHz cores + 4 1.5GHz cores, no CPU fan for maximum
+thermal output) (running NetBSD):
+real    3715.24 (~60 minutes)
+user    1946.84
+sys     3435.29
+concurrent jobs
+I used vim because it can be
+built in parallel without causing any issues.
+Same 8th gen Core i7 (make -j7):
+real    27.36
+user    170.21
+sys     11.30
+Same 2nd gen Core i5 (make -j7, approaching the
+exponential decay of marginal returns on concurrent processing):
+real    77.07
+user    292.46
+sys     10.00
+On the PBP (make -j7) (running stock
+Manjaro image):
+real    220.60
+user    1145.40
+sys     59.90
+On the PBP (make -j7) (running
+NetBSD):
+real    319.30
+user    1560.87
+sys     255.33
+Web browser testing
+Because the PBP has similar hardware specifications to the adware
+subsidized craptops sold by google, I thought it would be a good idea to
+compare web browser performance on these systems as well.
+I found a few web browser
+benchmark tests at browserbench.org. They're probably snakeoil but
+running JS tests is a good way to put a number on how performant
+$browser on $hardware is.
+Scores from the JetStream2 test
+
+JetStream 2.1 is a JavaScript and WebAssembly benchmark suite focused
+on the most advanced web applications. It rewards browsers that start up
+quickly, execute code quickly, and run smoothly. For more information,
+read the in-depth analysis. Bigger scores are better.
+
+Thinkpad T490   79.555
+Thinkpad X220   39.983
+PBP (manjaro)   19.148
+I don't have an chromesumption book to test against, so all I can say
+is that the PBP is slower than a workhorse amd64 machine when it comes
+to interpreting javascript.
+
+Conclusion
+Did the PBP fulfill it's
+needs?
+The intended use case was "UNIX machine I can charge from an existing
+battery or alternator". This immediately invokes ideas of "why would I
+even need wifi support?"
+Ultimately, I ended up flashing a bad image to the SPI flash chip and
+I cannot get the system to boot (or even show signs of life). I have
+attempted to enter maskrom mode to re-flash the SPI but I am
+unsuccessful. There are a few other things I need to try. I'll update
+this if I ever get it functional again.
+I did not have the opportunity to test the machine in the exact
+environment I got it for but it was fun before I bricked it. Again, a
+place for updates.
+Who is the PBP for?
+HACKERS!
+Obviously, the types of people who are interested in pine64 devices
+and similar SBCs are already computer owners (if not computer hoarders).
+It's unlikely that the PBP will become my (or anyone's) primary computer
+but that doesn't mean that it's useless. The entire point of arm SBCs is
+to have fun so why not have fun?
+Just don't flash your SPI if you want it to work as expected.
+
+Some final thoughts on
+open hardware
+Oftentimes, before purchasing freedom centric hardware, I search for
+a few reviews so that I can set my expectations correctly. Oftentimes
+these reviews are very epidermal: they're not even skin deep.
+These reviewers are consumers producing reviews for a consumer audience,
+not hackers producing in-depth reviews for hacker audience. These types
+of reviews are frustrating for me but fundamental flaws seem to shine
+through the lack of thoroughness.
+I think that the general negative reviews on open hardware largely
+stem from unrealistic expectations. The community seems to over-hype
+many of these devices out of ignorance, stating that $freedomDevice is
+the $proprietaryAlternative killer, the end all be all device that will
+usher in the year of the Linux $deviceCategory. Oftentimes, it seems
+like the high expectations fall flat when confronted with the reality of
+open hardware: it's either way too expensive or way too
+experimental.
+It seems like many of these devices are lacking both developer time
+and users who are both enthusiastic and knowledgeable. Pitfalls of
+mobile UNIX include bad power management, difficulty hotplugging
+wireless chipsets, graphical interfaces attempting to cope with the fact
+that they don't have a physical keyboard, etc. There is still much work
+to be done. As for users, it seems that the most enthusiastic users
+always have the impression that $linuxDevice will have 1:1 feature
+parity with $proprietaryDevice. Maybe it's just that the loudest users
+are heard or that we only want to hear utopian dreams of a free software
+future.
+A prime example of this conflict between expectations and reality:
+Linux smartphones. It doesn't help when many linux smartphones over the
+years were advertised as a viable android competitor rather than
+anything other than what they actually were: an arm board attached to a
+touch screen and a modem.
+I oftentimes ask myself "what is open source worth?". How much money
+are you willing to throw at an idea you like? Surely, money thrown at an
+idea you like is being used better than money thrown at an idea you
+don't like. In many cases, it seems like open hardware devices are more
+expensive than their proprietary counterparts for a few reasons. The two
+largest reasons are small batch manufacturing and the fact that open
+hardware isn't subsidized by pre-installed adware (in the case of nearly
+every device that comes pre-loaded with proprietary software).
+What is open source worth? A few extra dollars, a few extra hours of
+configuration, a few extra papercuts, and a clean conscious knowing that
+I didn't pay for yet another windows license I will never use and will
+never get a refund for. Open source is worth investing in because the,
+albeit slow, improvements to open hardware and software have wider
+implications than just "buying a laptop with Linux pre installed".
+Future projects
+
+something with the raspi
+NetBSD in depth
+"why is my lightbulb running android?" and other Internet-Of-Terror
+ideas
+turning a router into a general purpose computing device (probably
+MIPS because where else am I going to find a MIPS CPU? Might as well do
+something novel instead of $arm-project-1209)
+

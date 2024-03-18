@@ -1,0 +1,54 @@
+## hpr0274 :: TiddlyWiki
+
+ 
+Show Notes & Running Order (More Or Less)
+
+What it is / what it's not
+What people expect a wiki to be
+	Server based
+	Database storage
+	Multiple users
+	Revision control
+Where TiddlyWiki is best suited
+	Journal
+	Start a new clean wiki each month / year and tar.gz the previous one to be archived
+	Personal wiki you can take with you on a thumbdrive
+	A scratch pad for ideas on a project, ideal to zip and send to a client
+JavaScript & CSS
+Platform Neutral
+	Gecko based
+	Opera etc require additional TiddlySaver.jar file
+GTD Variants (b3cubed)
+Alternates (didiwiki, woas)
+No install needed
+Backstage
+Tiddlers
+Plugins
+	Installing plugins
+Themes
+	Blackicity theme from tiddlythemes.com
+	Installing themes - Importing themes
+	Installing themes - Empty file, importing tiddlers
+No passwords, encryption or theme switching by default
+A wiki for each project
+	Separate folders for each TiddlyWiki
+	Backups created by default
+	Rename your empty-tiddlywiki.html file anything you want
+	Some config info kept in cookies
+Upgrading
+Syncing with a version of TiddlyWiki on a different PC
+Free TiddlyWiki hosting at tiddlyspot.com, can be private
+Every wiki uses it's own syntax
+Why I needed something like TiddlyWiki
+DidiWiki requires a port opened to work
+
+Links 
+The main project site  
+ The official wiki  
+Themes for TiddlyWiki  
+ Guides for TiddlyWiki  
+ WikiOnAStick  
+ DidiWiki  
+A free hosted TiddlyWiki site.  
+DCubed GTD TiddlyWiki  
+Monkey GTD TiddlyWiki 

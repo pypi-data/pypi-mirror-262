@@ -1,0 +1,92 @@
+## hpr3389 :: Tales of a Tagger
+
+ https://hackerpublicradio.org/report_missing_tags.php
+Shows without a summary and/or tags
+Page generated on 2021-06-11 at 20:43:39 UTC
+Sort order: id
+Current counts
+
+323 shows without summaries
+306 shows without tags
+275 shows with neither summaries nor tags
+354 shows which need work
+
+Instructions
+
+Find a show in the list below
+Check in the list which attributes are missing: summary and/or tags
+Click the show number or title to visit the show page
+Read the show notes and listen to the show to determine the missing information
+Submit your updates by email to tags at hackerpublicradio.org
+
+Please send simple ASCII email. No HTML please, and no multipart, encrypted or signed messages; the script can't handle them at the moment! (We are working on a solution to some of this though). Remember, the internals of an email are complex and the script isn't clever enough to deal with all the many possible formats. Please be gentle with it!
+Format the message as follows:
+show:12345
+summary:Using Linux at Christmas to make tomato soup in a sporran
+tags:linux,christmas,sporran,tomato soup
+
+show: 12346
+tags: sausage,clothing,hairpiece
+
+Start with the show:XXXX line (just the show number, no 'hpr')
+If either the summary or the tags are already present on the show you can omit them from the group
+It's not possible to change existing summaries or tags by this route, only to add missing ones
+Ensure the summary text isn't longer than 100 characters
+The tags need to be separated by commas
+If you need to add a tag with a comma in it enclose the tag in double quotes
+The length of the tag list can't exceed 200 characters
+You can update more than one show per email if you want
+Blank lines between the groups of show/summary/tags lines are fine (as shown), as are comment lines beginning with '#'
+
+Updates will be processed with a script, which is run manually, and this page will be refreshed once the changes have been made. The timestamp above shows when it was last refreshed.
+
+Got carried away and broke the 100 character rule
+
+can be checked in vim by hitting '$', goes to the last character in the line. Observe the character count at the bottom of the screen to verify this is less than 100.
+
+Went a little too far with tags, and went pretty far beyond the 200 character
+Found that these are reasonable limits, that if not followed, break the script
+Don't be like me. Gently use these tools and they will serve you well.
+Here are some of the tools I used when tagging was done right.
+
+i3 window manager
+
+Use mplayer and vim
+
+Mplayer
+
+Play audio file faster without pitch increase
+https://kenfallon.com/speeding-up-speech-with-mplayer
+{ key will slow down by 50% of the current rate
+[ key will slow down by 10% of the current rate
+Backspace will return the speed to normal
+] key will speed up 10% of the current rate
+} key will speed up by 50% of the current rate
+9 key will decrease the volume
+0 key will increase the volume
+
+alias mplayer='mplayer -af scaletempo'
+
+Android - Termux
+
+Download a show via wget (Doing this on Firefox does not show progress bar)
+
+PodcastAddict
+
+https://podcastaddict.com/app
+bookmark tags
+
+advantage is having timestamps where you tagged (for reference)
+
+export tags
+
+Share to Pushbullet
+
+https://play.google.com/store/apps/details?id=com.pushbullet.android
+edit list of tags
+
+
+
+
+Enjoy old shows and lend a hand at the same time. :)
+

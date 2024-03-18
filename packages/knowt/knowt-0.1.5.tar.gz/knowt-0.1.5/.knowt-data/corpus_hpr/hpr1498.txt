@@ -1,0 +1,267 @@
+## hpr1498 :: Personal OpenVPN
+
+ Personal OpenVPN
+
+This guide will walk you through setting up an OpenVPN server as well as a client.
+
+OpenVPN Server Setup
+
+Here is how to install OpenVPN on Centos6. Other RedHat derivatives should be similar.
+
+
+
+    wget https://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+    rpm -Uvh epel-release-6-8.noarch.rpm
+    yum install openvpn -y
+
+
+
+Here is how to install OpenVPN on a Debian server. Other Debian derivatives should be similar.
+
+
+
+    apt-get install openvpn
+
+
+
+After the server is installed, the server certificate authority and keys must be generated.
+This will be followed by the client keys, and then the server configuration file.
+
+
+Copy the easy-rsa scripts into /etc/openvpn
+
+
+
+    cp -rf /usr/share/doc/openvpn/examples/easy-rsa/2.0/* /etc/openvpn/easy-rsa  # on Debian
+
+
+    cp -rf /usr/share/openvpn/easy-rsa/2.0/* /etc/openvpn/easy-rsa  # on Centos6
+
+
+
+Set Environmental variables
+
+
+
+    cd /etc/openvpn/easy-rsa
+    vim vars
+
+
+
+Change the following variables to meet your needs. These are used for your
+convenience. They will be used as the defaults during the interactive key
+generation session to set the keys attributes.
+
+
+
+    export KEY_COUNTRY="US"
+    export KEY_PROVINCE="CA"
+    export KEY_CITY="SanFrancisco"
+    export KEY_ORG="Fort-Funston"
+    export KEY_EMAIL="me@myhost.mydomain"
+
+
+
+Source the variables to the current shell
+
+
+    . ./vars
+
+
+Create certificate authority
+
+
+
+    ./clean-all
+    ./build-ca
+    ./build-dh
+
+
+
+Create keys for the server and clients
+
+
+
+    ./build-key-server server
+    ./build-key client1
+    ./build-key client2
+
+
+
+Setup the server configuration file
+
+
+
+  cd /etc/openvpn
+  gunzip /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz  # on Debian
+  vim /etc/openvpn/server.conf
+
+
+
+Server settings
+
+
+
+    port 1194
+    proto udp
+    dev tun
+    ca     /etc/openvpn/easy-rsa/keys/ca.crt
+    cert   /etc/openvpn/easy-rsa/keys/server.crt
+    key    /etc/openvpn/easy-rsa/keys/server.key
+    dh     /etc/openvpn/easy-rsa/keys/dh2048.pem
+    server 10.10.42.0 255.255.255.0
+    ifconfig-pool-persist ipp.txt
+    client-config-dir ccd
+    route 10.10.42.0 255.255.255.0
+    client-to-client
+    keepalive 10 120
+    cipher AES-256-CBC   # AES
+    comp-lzo
+    user nobody
+    group nogroup
+    persist-key
+    persist-tun
+    status openvpn-status.log
+    verb 3
+
+
+
+Restart VPN Service
+
+
+
+    service openvpn restart
+
+
+
+If the service fails to start, try starting openVPN manually.
+The resulting errors will allow you to see what item in the
+configuration file is incorrect.
+
+
+
+    openvpen server.conf
+
+
+
+Once you are able to get openVPN to start without error,
+kill it and restart it using the service command above.
+You can verify that the vpn is successfully running by
+looking at the configured interfaces using the following
+command.
+
+
+
+    ifconfig
+
+
+
+You should now see an entry like the following:
+
+
+
+tun0      Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00
+          inet addr:10.10.42.1  P-t-P:10.10.42.2  Mask:255.255.255.255
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:622255 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:986993 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:100
+          RX bytes:40649523 (38.7 MiB)  TX bytes:1344026670 (1.2 GiB)
+
+
+OpenVPN Client Setup
+
+The installation of OpenVPN for linux is the same as described above for
+the server. For Windows, Download and run the OpenVPN installer from the
+OpenVPN Community Downloads.
+
+
+NOTE: On Windows, User Account Control (UAC) must be turned
+off in order to allow OpenVPN to execute the necessary network
+commands to bring up the VPN. Open Start > Control Panel >
+User Accounts and Family Safety > User Accounts > Change User
+Account Control Settings. Set to Never Notify, click OK,
+and reboot the machine.
+
+
+Client Configuration file
+
+
+For linux, the client config file would go in `/etc/openvpn` just like
+the server config. We will name it `client.conf` to clarify that the
+device is being configured as an OpenVPN client.
+On Windows, the keys and client config files go in the
+`C:\Program Files (x86)\OpenVPN\config`. The config file has
+to have an `.ovpn` suffix.
+
+
+
+    client
+    dev tun
+    proto udp
+    remote myvpn.example.org 1194
+    resolv-retry infinite
+    nobind
+    user nobody
+    group nogroup
+    persist-key
+    persist-tun
+    ca     /etc/openvpn/keys/ca.crt
+    # on Windows, the format is:
+    # ca "C:\\Program Files (x86)\\OpenVPN\\config\\ca.crt"
+    # Windows may also change the file suffix on the crt files to cer.
+    # So, If Windows complains that it cannot find the file,
+    # examine its properties to verify the suffix.
+    # The logs are stored at C:\\Program Files (x86)\\OpenVPN\\log
+    cert   /etc/openvpn/keys/client1.crt
+    key    /etc/openvpn/keys/client1.key
+    ns-cert-type server
+    cipher AES-256-CBC
+    comp-lzo
+    verb 3
+
+
+
+Copy client key and server ca files onto client
+
+
+
+    scp  ca.crt  user@client1:.openvpn/
+    scp  client1.crt  user@client1:.openvpn/
+    scp  client1.key  user@client1:.openvpn/
+
+
+
+On the server create the ccd directory to assign static addresses to clients.
+
+
+
+    mkdir /etc/openvpn/ccd
+
+
+
+For each device, add a file with the CN name of the key.
+In that file, you will indicate the static address to be used and the server IP
+For linux, the server IP will be the VPN address of your VPN server. On Windows, the VPN client
+will set up a local TAP interface that must be used as the server IP. See the OpenVPN docs for available
+client and TAP server IP pairs.
+
+
+Examples:
+
+
+
+    cat /etc/openvpn/ccd/linux-client
+    ifconfig-push 10.10.42.10 10.10.42.1
+    cat /etc/openvpn/ccd/windows-client
+    ifconfig-push 10.10.42.13 10.10.42.14
+
+
+References:
+
+Hacker Public Radio episode 0297
+Debian OpenVPN Docs
+OpenVPN HowTo
+OpenVPN Windows Downloads
+OpenVPN Windows Guide
+

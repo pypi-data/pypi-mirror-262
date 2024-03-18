@@ -1,0 +1,6 @@
+## hpr0185 :: 3 tips
+
+  More info  
+Tip 1: while [ "x" = "x" ]; do ls -al ; sleep 5; done 
+Tip 2: sox in.mp3 out.ogg tempo 1.5 
+Tip 3: tar -cf - . | ( cd /media/backupdisk; tar -xvf - ) 

@@ -1,0 +1,11 @@
+## hpr0698 :: How I Found Linux
+
+ 
+After years of using Unix, Mac, and Windows I finally converted my two Windows computers to Linux for real. 
+The journey into Linux started with not being successful at writing a startup script for Linux. A few years later I discovered some Linux love when writing a driver that would make the keyboard LED lights blink the morse code of the letters being typed. A year ago I did a few virtual Linux installations (archLinux, Debian) in VirtualBox to test out some Cloud Computing stuff. 
+Before Christmas 2010, I was considering contributing to the KDE project and installed Kubuntu as well as Ubuntu. 
+This year, because I am going to the LinuxFest NorthWest (and I am going to have a table there for HackerPublicRadio) I had to install Linux on my old Windows Laptop. I also converted my Samsung Q1 Ultra Tablet computer from WindowsXP to Ubuntu. 
+Both conversions were successful, but a few problems had to be solved for which https://answers.launchpad.net/ubuntu is a great place to go and find or get answers.
+
+
+BTW: If you're going to https://www.linuxfestnorthwest.org/ please come and say "hi" at the HPR table and if you can help out at the table please let me know code.cruncher_hpr at yahoo ca.

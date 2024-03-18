@@ -1,0 +1,6 @@
+## hpr0414 :: Networking Basics Part 5
+
+ Klaatu goes over IP (Internet Protocol), its header information, the mechanics of datagram fragmentation, and RFC 791 in general.
+see also RFC 791
+iana protocol number assignments
+Listen to this episode in ogg.

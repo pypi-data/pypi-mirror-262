@@ -1,0 +1,30 @@
+## hpr3549 :: Linux Inlaws S01E51: git and static site generators
+
+  Another fortnight, another episode of our beloved podcast called Linux
+Inlaws :-). What starts as an episode on the history of Central Europe and the
+role of the Netherlands and Germany in the greater scheme of things rapidly
+moves sideways into a discussion of git-powered static HTML website generators
+in contrast to context management systems (CMSs) and their advantages,
+disadvantages and why the hell even think about this.  Chris uses an innocent
+(?) Linux User Group (LUG) as an example for a successful site migration from
+a Python-powered CMS to a version of the website based on a static site
+generator written in Go and called Hugo.  Even if you may find this boring to
+tears stay tuned as there may be an unexpected ending of this ditty in the
+shape of two interesting poxes...  
+Links:
+
+CMS: https://en.wikipedia.org/wiki/Content_management_system
+Adam and Eve: https://www.adam-and-eve.org
+MoinMoin: https://moinmo.in
+WordPress: https://wordpress.org
+PEP 404: https://www.python.org/dev/peps/pep-0404
+Python Enhancement Proposals: https://www.python.org/dev/peps
+Static site generators (overview): https://kinsta.com/blog/static-site-generator
+Linux User Group Frankfurt: https://lugfrankfurt.de/en/Home
+Gitea: https://gitea.io/en-us
+HUGO: https://gohugo.io
+HUGO source code: https://github.com/gohugoio/hugo
+Git (web)hooks: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+Reacher: https://en.wikipedia.org/wiki/Reacher_(TV_series)
+The Comeback Trail: https://www.imdb.com/title/tt5420210/?ref_=nv_sr_srsg_0
+

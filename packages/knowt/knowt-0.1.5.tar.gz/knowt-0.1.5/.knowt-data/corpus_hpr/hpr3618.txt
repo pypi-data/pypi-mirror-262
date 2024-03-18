@@ -1,0 +1,147 @@
+## hpr3618 :: The nnn terminal file manager
+
+ Set default text editor
+Edit .bashrc (in Fedora)
+# Export Default editor and while we're at it, the PATH to /opt
+export EDITOR=vim
+export PATH=/opt:$PATH
+Enable icons-in-terminal icons
+https://github.com/jarun/nnn/wiki/Advanced-use-cases
+https://github.com/sebastiencs/icons-in-terminal#installation
+To enable icons-in-terminal icons
+Install icons-in-terminal
+Clone the nnn repo
+Compile nnn with make O_ICONS=1 from the root s
+To enable Nerdfont icons
+Download and install a patched Nerdfont.
+Apply that font as your terminal emulator's font. This will vary from emulator to
+emulator, but usually involves editing a config file or changing a setting within a
+GUI menu system.
+Clone the nnn repo
+Compile nnn with make O_NERD=1 from the root
+Note:
+Arch Linux users can check out the AUR packages nnn-icons and nnn-nerd.
+Set default applications via .config/mineapps.list
+xdg-mime manpage
+
+https://linux.die.net/man/1/xdg-mime
+
+update-mime-database manpage
+
+https://linux.die.net/man/1/update-mime-database
+
+Add entry and use right away
+
+xdg-mime default mpv.desktop video/mpeg
+Query the entry
+
+xdg-mime query default image/png
+feh.desktop
+
+Query the file in question
+
+xdg-mime query filetype cory-doctorow-makers.epub
+application/epub+zip
+Examples
+image/jpeg=feh.desktop
+audio/x-wav=mpv.desktop
+audio/flac=mpv.desktop
+application/epub+zip=calibre-ebook-viewer.desktop
+video/mpg=mpv.desktop
+video/mpeg=mpv.desktop
+video/iso=vlc.desktop
+audio/ogg=mpv.desktop
+text/pdf=zathura.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+text/markdown=ebook-viewer.desktop
+
+[Added Associations]
+image/png=feh.desktop;
+video/x-matroska=mpv.desktop;
+image/jpeg=feh.desktop;
+audio/x-wav=mpv.desktop;
+audio/flac=mpv.desktop;
+application/epub+zip=calibre-ebook-viewer.desktop;
+application/x-cd-image=vlc.desktop;
+How I use nnn
+
+Watching movies and tv shows from samba Pi server
+
+Moving video rips to another directory
+
+
+Sample with folder icons
+ 
+
+Reading pdf files
+
+Zathura
+
+Reading epub books
+
+Calibre e-book viewer
+
+Editing files in vim
+
+'e' to edit
+
+Creating new files
+Creating new directories
+Dropping to a command prompt temporarily, using '!'
+Extracting tar.gz and zip files
+Bulk file renaming
+Organizing files
+
+use '/' to find like files and 'ESC'
+
+Send file as attachment in mutt
+
+'o' to open file, 'mutt -a' to attach files
+
+KDEconnect to send files and web links
+#!/bin/bash
+
+kdeconnect-cli -d $(kdeconnect-cli -a --id-only) --share $1
+View all commands
+
+'?'
+
+
+Help screen
+ Click the thumbnail to see the full-sized image 
+Videos
+
+https://vid.puffyan.us/watch?v=-knZwdd1ScU
+
+More info
+
+Github page
+
+https://github.com/jarun/nnn
+
+Arch wiki
+
+https://wiki.archlinux.org/title/Nnn
+
+Plugins
+
+https://github.com/jarun/nnn/blob/master/plugins/README.md
+
+
+
+https://github.com/jarun/nnn/wiki/Advanced-use-cases
+https://wiki.archlinux.org/title/XDG_MIME_Applications
+https://wiki.archlinux.org/title/Xdg-utils
+https://www.romanzolotarev.com/xdg-mime.html
+Find all available mimetypes for one application
+
+grep MimeType /usr/share/applications/gimp.desktop
+
+
+Applications
+
+Zathura for PDF
+
+https://wiki.archlinux.org/title/Zathura
+
+

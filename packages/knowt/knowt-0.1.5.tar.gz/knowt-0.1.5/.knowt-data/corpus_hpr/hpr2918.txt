@@ -1,0 +1,40 @@
+## hpr2918 :: Selecting random item from weighted list
+
+ Intro
+We’re going to have a look how to select random item from weighted list. There isn’t that much code this time, but it certainly took many tries to get it working and looking nice.
+Analogy
+Imagine stack of building blocks of different heights stacked on top of each other. Height of the each block is chance of how often it will be selected. Selection is done by chopping a stick so that its length at maximum is height of the stack. Place stick next to the stack and select the block that stick reaches at.
+Explanation of algorithm
+We have list of items and associated weight, defined as Frequency a = Frequency Int a.
+Total is sum of all the weights and we select a random number n between 1 and total.
+pick function has signature of [Frequency a] -> n -> Maybe a. Empty list will result Nothing. When picking item, if n is equal or less than weight of the first item, return that item. Otherwise, drop the first item, subtract weight of that first item from n and try again. Eventually we either arrive to item which weight is greater than n or to empty list.
+Quick detour on random number generators
+Haskell functions are pure, meaning that with same input, you are guaranteed to get the same output (safe for some specific cases). Which makes concept of random numbers at first glance to be impossible. This is solved by passing in a random number generator, which can supply you a random value a new random number generator. Using this new random number generator to generate a value yields you a yet another value and yet another random number generator.
+Passing these random number generators around in code gets tedious, but there’s different solution: MonadRandom. Using it will thread along generators automatically behind the scenes, ensuring that you always have access to a fresh generator. There’s several functions that can be used to generate random values, but we’re using this one: getRandomR :: Random a => (a, a) -> m a. Given a lower and upper bound, it will return you a random value wrapped in context that carries that new random number generator.
+In the end, we need to take our computation (that can be complex and use multiple calls to random number generator) and turn that m a into a. This is done with runRand :: RandomGen g => Rand g a -> g -> (a, g). We give it our computation and a RandomGen g that can generate random values and receive (a, g) where a is our result and g new random number generator. In cases where we aren’t going to use the new generator, we can use evalRand :: RandomGen g => Rand g a -> g -> a, which discards it and returns just a.
+Actual implementation with explanation
+First, Frequency for expressing weight of individual item. It’s parametrized, so can be used with any data.
+data Frequency a = Frequency Int a
+    deriving (Show, Read, Eq)
+Next, determining which item to choose, based on stack and measuring stick. In case a value outside of valid range has been selected, we end up with Nothing, otherwise with Just a. First case is for empty list (either we called this originally with empty list or picked number that is greater than total sum of weights), second one either picks the first item of list or recursive calls itself removing first item.
+pick :: [Frequency a] -> Int -> Maybe a
+pick [] _ = Nothing
+
+pick (Frequency x item:xs) i
+    | i <= x = Just item
+    | otherwise = pick xs (i - x)
+Finally, function for calculating total of weights and choosing random number. We’re using that Rand g (Maybe a) I explained earlier. First case is for empty list again and latter case for list with at least one item.
+choose :: RandomGen g => [Frequency a] -> Rand g (Maybe a)
+choose [] =
+    return Nothing
+
+choose items = do
+    let total = sum $ fmap (\(Frequency x _) -> x) items
+    n <- getRandomR (1, total)
+    return $ pick items n
+Notice how we can get random number by n <- getRandomR (1, total), without talking about generators. MonadRandom is handling generators and making sure that there’s always a fresh generator available and new generator is stored ready to be used.
+And that’s all the code this time (I told the amount of code is small this time).
+In closing
+This probably sounds a lot more complicated than it actually is. I arrived to the result after quite many detours, but the end result looks pretty nice.
+Next time we’re going to have a look where to use our choose function.
+In the meantime, questions, comments and feedback are welcomed. Best way to reach me is email or fediverse where I’m Tuula@mastodon.social. Or even better, record your own Hacker Public Radio episode.

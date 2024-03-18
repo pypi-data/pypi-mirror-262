@@ -1,0 +1,64 @@
+## hpr1756 :: Ranger File Manager
+
+ From Man Page:
+
+DESCRIPTION ranger is a console file manager with VI key bindings. It provides a minimalistic and nice curses interface with a view on the directory hierarchy. The secondary task of ranger is to figure out which program you want to use to open your files with.
+This manual mainly contains information on the usage of ranger. Refer to the README for install instructions and to doc/HACKING for development specific information. For configuration, see the files in ranger/config. They are usually installed to /etc/ranger/config and can be obtained with ranger's --copy-config option.
+Inside ranger, you can press 1? for a list of key bindings, 2? for a list of commands and 3? for a list of settings.
+
+
+Project page: https://ranger.nongnu.org/. Has pretty good documentation
+Available on Debian, Arch, Probably others, git and mailing list available as well.
+
+
+Features
+
+3-pane view: 
+Previous -> current -> next
+When current is a file, uses file magic and other programs to preview the file
+optional dependencies for previews: 
+img2txt from caca-utils for ASCII-art
+highlight for syntax highlights
+atool for archives
+lynx/w3m/elinks for html
+pdftotext for pdfs
+transmission-show for bittorrent information
+mediainfo or exiftool for mediafile info
+
+
+Color coded, with three themes to choose from
+One more over to the right opens the file from other programs
+
+
+
+Configuration
+
+located in ~/.config/ranger directory
+rc.conf = keybindings and settings
+commands.py = command-mode items
+rifle.conf = file launcher options, which let you make custom file opener commands
+scope.sh = custom file preview scripts, like mdview
+
+Navigation
+
+up, down, left, right, or h,j,k,l
+gg top G Bottom
+E edit
+pageup/down
+
+Command commands
+
+spacebar to mark or :mark for pattern
+dd, yy, pp
+:touch, :mkdir, :grep
+del
+rename and bulkrename (change from ranger.container.file import File to .fsobject.)
+zh - toggle hidden
+gn - new tab, gt or gT to navigate tabs
+/ search vile
+V visual mode
+:open_with
+1? = list key bindings
+2? list commands
+3? list settings
+? main help

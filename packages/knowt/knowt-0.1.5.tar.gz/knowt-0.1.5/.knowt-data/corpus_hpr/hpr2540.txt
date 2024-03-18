@@ -1,0 +1,14 @@
+## hpr2540 :: 28 - TLS 1.3
+
+ TLS 1.3 was just adopted, and it provides improved security for all Web communications. We take a look at what the protocol says and look at the controversies around its adoption. https://www.zwilnik.com/?page_id=980
+Links:
+
+https://www.theregister.co.uk/2017/02/27/blue_coat_chokes_on_chrome_encryption_update/
+https://en.wikipedia.org/wiki/POODLE
+https://www.cyberscoop.com/tls-1-3-weakness-financial-industry-ietf/
+https://tlseminar.github.io/tls-13/
+https://twit.tv/shows/security-now
+https://www.sophos.com/en-us/company/podcasts.aspx
+https://www.schneier.com
+https://blog.cryptographyengineering.com
+https://www.zwilnik.com/?page_id=980

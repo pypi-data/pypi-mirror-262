@@ -1,0 +1,93 @@
+## hpr1543 :: What's in my bag
+
+ Items
+
+Targus 17 - 18 inch / 43.1cm - 45.7cm XL Laptop Backpack: https://www.targus.com/uk/product_details.asp?sku=tcb001eu
+Case Logic VNB-217-BLACK: https://www.caselogic.com/en-us/us/products/laptop-cases/laptop-backpacks/17-laptop-backpack-_-vnb_-_217_-_black
+
+
+Poncho
+Bottle of water
+Dell Latitude E6420: https://www.dell.com/au/business/p/latitude-e6420/pd
+Perl Pocket Reference, 5th Edition: https://shop.oreilly.com/product/0636920018476.do
+Essential System Administration Pocket Reference: https://shop.oreilly.com/product/9780596004491.do
+The MagPi magazine: https://www.themagpi.com/
+Acer C7 Chromebook: https://www.google.com/intl/en/chrome/devices/acer-c7-chromebook.html#ac-c7
+Sonar GNU/Linux: https://www.sonar-project.org/
+
+
+Optical wired Mouse: https://www.trust.com/products/product.aspx?artnr=16591
+Sanza Clip: https://www.sandisk.co.uk/products/music-video-players/clip-plus-mp3-player/
+RockBox: https://www.rockbox.org/wiki/SansaClip
+TrueCrypt: https://www.truecrypt.org/
+
+
+Huawei Ascend G510: https://consumer.huawei.com/en/mobile-phones/smart-phones/overview/g510-en.htm
+iBood: https://www.ibood.com/
+HTC Desire running CyanogenMod: https://wiki.cyanogenmod.org/w/Bravo_Info
+
+
+Zoom H2: https://www.zoom.co.jp/english/products/h2/
+TERTIAL: https://www.ikea.com/gb/en/catalog/products/40370283/
+Tertial lamp into microphone stand: https://www.ikeahackers.net/2011/04/tertial-lamp-into-microphone-stand.html
+Remove Before Flight: https://www.rotary13b1.com/images/products/1084_reg.jpg
+
+
+USB Male to Micro USB Male Data/Charging Cable: https://dx.com/p/usb-male-to-micro-usb-male-data-charging-cable-for-samsung-i9100-10cm-length-105025
+Mini to Micro USB: https://dx.com/p/micro-usb-male-to-mini-usb-female-adapter-black-129131
+Pens
+3 RasberryPi's: https://www.raspberrypi.org/
+ModMyPi: https://www.modmypi.com/
+HDMI to VGA: HDMI v1.3 Male to VGA Female Converter Adapter w/ 3.5mm Audio Jack - Black
+config.txt hdmi_safe=1 
+for more options see https://elinux.org/RPi_config.txt
+
+
+USB Male to Male Cables: https://dx.com/p/usb-male-to-male-cables-pair-24-5cm-length-103841
+Eminent USB to Serial: 067b:2303 Prolific Technology, Inc. PL2303 Serial Port
+DVI 24+1 Male to HDMI Female Adapter: https://dx.com/p/gold-plated-dvi-24-1-male-to-hdmi-female-adapter-81593 (Not exactly the same one)
+1080P HDMI V1.3 Male to Male Connection Cable (50cm): https://dx.com/p/1080p-hdmi-v1-3-male-to-male-connection-cable-50cm-140332
+Short Ethernet Cable: https://en.wikipedia.org/wiki/Ethernet_cable
+Short Ethernet Crossover Cable: https://en.wikipedia.org/wiki/Ethernet_crossover_cable
+Foldable Flexible Compact Waterproof USB Silicone Keyboard - Color Assorted (85 Keys): https://dx.com/p/foldable-flexible-compact-waterproof-usb-silicone-keyboard-color-assorted-85-keys-55897
+7 Ports Powered USB Hub: https://dx.com/p/7-ports-powered-usb-hub-678
+
+
+OV-chipkaart: https://www.ov-chipkaart.nl/?taal=en
+Compulsory identification: https://www.iamsterdam.com/en-GB/living/official-matters/compulsory-identification
+
+$ cat pringbooklet
+#!/bin/bash
+
+#HTML Input --> HTML 2 PS --> PS 2 PDF --> PDF Output
+#lpstat -p |awk '{print $2}'
+
+if [ $# -lt 2 ]
+then
+  echo ""
+  echo "Usage: `basename $0` {pdf file} {printer name}"
+  echo ""
+  echo "Available printers: \"$(echo $(lpstat -p |awk '{print $2}' ) )\""
+  echo ""
+  exit
+fi
+
+FILE=$1
+PRINTER=$2
+
+
+if [ $# -eq 3 ]
+then
+  COPIES="$3"
+else
+  COPIES="1"
+fi
+
+if [ ! -e $FILE ];
+then
+  echo "Can't find the PDF file $1"
+  exit
+fi
+
+pdftops -level3 $FILE - | ps2ps - - | psbook | psnup -2 -Pa4 | ps2pdf - |\
+    lp -d $PRINTER -o media=a4 -o sides=two-sided-short-edge -n $COPIES -

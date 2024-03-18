@@ -1,0 +1,13 @@
+## hpr3777 :: Running Haiku on Bhyve, the BSD Hypervisor
+
+ 
+Bhyve - The BSD Hypervisor
+https://bhyve.org/
+vm-bhyve - Management system for FreeBSD bhyve virtual
+machines
+https://github.com/churchers/vm-bhyve
+Haiku - Open-source OS inspired by BeOS
+https://www.haiku-os.org/
+UEFI Booting Haiku
+https://www.haiku-os.org/guides/uefi_booting/
+

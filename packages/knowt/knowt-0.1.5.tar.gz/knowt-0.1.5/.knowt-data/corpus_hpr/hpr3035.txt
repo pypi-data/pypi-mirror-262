@@ -1,0 +1,13 @@
+## hpr3035 :: Decentralised Hashtag Search and Subscription in Federated Social Networks
+
+ The ActivityPub Conference of 2019 was held in Prague. This is about a talk a proposal for a method to allow searching for hashtags in a decentralized Fediverse environment so that we can find, and subscribe to, content of interest. https://www.zwilnik.com/?page_id=1091
+Links:
+
+https://redaktor.me/apconf/
+https://archive.org/details/apconf-talks/Talk5_Schmittlauch_compressed.mov
+https://relay.mastodon.host/
+https://hacks.mozilla.org/2018/11/decentralizing-social-interactions-with-activitypub/
+https://source.joinmastodon.org/mastodon/pub-relay
+https://git.orlives.de/schmittlauch/paper_hashtag_federation/src/branch/master/paper_hashtag_federation.pdf
+https://en.wikipedia.org/wiki/Fediverse
+https://www.zwilnik.com/?page_id=1091

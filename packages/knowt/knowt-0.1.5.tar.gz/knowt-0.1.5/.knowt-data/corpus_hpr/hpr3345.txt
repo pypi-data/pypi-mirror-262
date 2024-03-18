@@ -1,0 +1,5 @@
+## hpr3345 :: Audio for Podcasting: Episode 2 - Equalization
+
+ In this episode we discuss equalization in order to improve our audio quality for podcasting. We will use Audacity to manipulate our equalization.
+The best method of achieving this is to use the Graphic EQ plugin. To use this select the audio you wish to process, then use the "Effect" menu to select the Graphic EQ plugin.
+  

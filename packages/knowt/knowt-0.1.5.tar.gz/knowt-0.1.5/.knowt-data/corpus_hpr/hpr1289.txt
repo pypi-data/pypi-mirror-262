@@ -1,0 +1,31 @@
+## hpr1289 :: Short Xen Update From JWP
+
+ 
+Show Title - Short Xen Update From JWP
+
+
+In the Tilts 507 Rus came on as the Xen project manager.
+Had a lot to say about Xen but not about how xen is funded in the linux foundation by who.
+
+
+In the course of preparing for the podcast I learned that is not easy to see who gives money to the linux foundation.  But Oracle is on the board directors along with all the major players in the IT space.
+
+
+I also learned weather it is type 1 or type 2 hypervisor it is not clear as it used to be.
+At work I do not get very many requests for anything but ESX, HyperV or KVM in that order.  Once in a while a Xen or Oracle VM comes up.  This might change with the open stack a bit but I am not sure.
+
+
+A good start to look at it is here:
+https://www.ibm.com/developerworks/cloud/library/cl-hypervisorcompare/
+
+
+A better view of the real state of type 1 vs type 2 is here
+
+
+https://www.linkedin.com/groups/Hypervisors-Type-1-vs-Type-2445280.S.145843212
+
+
+https://hackerpublicradio.org/eps.php?id=1279
+
+https://tlltsarchive.org/archives/tllts_507-05-29-13.opus
+

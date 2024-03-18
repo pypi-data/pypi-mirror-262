@@ -1,0 +1,24 @@
+## hpr3004 :: Fixing simple audio problems with Audacity
+
+ Overview
+I recorded the audio for the show I did with MrX in late 2019: “hpr2972 :: The foot of the ski slope”. I was using my Zoom H2n recorder in my car, on a small tripod placed on the dashboard. Something about this setup caused the result to be very boomy and (to me) unpleasant to listen to. This episode is about what I did for a cure, after some research.
+I have also been using the ‘Truncate Silence’ effect in Audacity incorrectly in the past, and I used the opportunity to learn how to do a better job with it.
+Now, I am well aware that there are some skilled and experienced Audio Engineers out there in HPR-land. I am certainly not one of these, though I quite enjoy fiddling with audio to make it sound better. I’d like to make two requests:
+
+If I didn’t do a good job, please tell me what I did wrong here, and how I should have done it.
+Think about doing a show (or shows) on HPR about how to deal with common audio problems. For example: how to remove a mains hum, the use of compression and normalisation.
+
+Long notes
+A longer form of these notes may be found here (full_shownotes.html). These go into more detail on the steps I took to try and make the audio for show 2972 more tolerable.
+Links
+
+Wikipedia page describing Audacity
+Audacity website
+Effects:
+
+Noise Reduction
+High-pass Filter
+Amplify
+Truncate Silence
+
+

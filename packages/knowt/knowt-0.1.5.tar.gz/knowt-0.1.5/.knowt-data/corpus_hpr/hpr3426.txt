@@ -1,0 +1,118 @@
+## hpr3426 :: Rust 101: Episode 0 - What in Tarnishing?
+
+ Talking Points
+
+What is Rust?
+
+" Garbage Collection " - Resource Acquisition Is Initialization (RAII)
+Strict Typing with Type Inference
+Reference pointers
+Immutable by default
+Unsafe Mode
+
+Why use Rust over Python?
+
+Speed
+Compiled
+
+Help from compiler
+Smaller binary size
+Useful in high throughput/embedded applications
+
+Logically consistent
+
+Why use Rust over C?
+
+Safe by default
+Easier to read
+Forces you to write good code
+Arrays without stupidity++ and built in vectors
+Option<T> and Result<T> or a match {} made in heaven
+
+
+
+Show Notes
+Strict Typing
+fn main() {
+
+    // Type declared with var: <T> syntax
+    let penguin_one: &str = "gentoo";
+    
+    // Type &str is inherited from "gentoo"
+    let penguin_two = "gentoo";
+    
+    // Will not panic if they are the same
+    assert_eq!(penguin_one, penguin_two);
+}
+Reference Pointers
+Wrong Way:
+fn print_u8_vector(vec: Vec<u8>) {
+    println!("{:?}", vec);
+}
+
+fn main() {
+    let penguin_ages: Vec<u8> = vec!(2, 4, 6);
+    print_u8_vector(penguin_ages);
+    
+    // This line will throw an error
+    println!("{}", penguin_ages[0]);
+}
+Correct Way:
+fn print_u8_vector(vec: &Vec<u8>) {
+    println!("{:?}", vec);
+}
+
+fn main() {
+    let penguin_ages: Vec<u8> = vec!(2, 4, 6);
+    print_u8_vector(&penguin_ages);
+    
+    // This line will print '2'
+    println!("{}", penguin_ages[0]);
+}
+Immutable By Default
+Wrong Way:
+fn main() {
+    let my_num = 2;
+    
+    // This line will throw an error
+    my_num = my_num + 1;
+    println!("{}", my_num);
+}
+Correct Way:
+fn main() {
+    let mut my_num = 2;
+    my_num = my_num + 1;
+    
+    // This line will print '3'
+    println!("{}", my_num);
+}
+Unsafe Code
+Hello World Program in C in Rust:
+extern "C" {
+    fn printf(input: &str);
+}
+
+fn main() {
+    unsafe {
+        printf("Hello, World!");
+    }
+}
+
+Important Links:
+
+Rust Programming Language Homepage
+Rust Playground
+Ben Eater: Comparing C to machine language <WARNING: YouTube Hosted>
+
+
+
+Wikipedia Pages:
+
+Rust Programming Language Wikipedia article
+Resource Acquisition Is Initialization (RAII)
+
+
+
+Contact Me
+Email: izzyleibowitz at pm dot me
+Mastodon: at blackernel at nixnet dot social

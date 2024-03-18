@@ -1,0 +1,122 @@
+## hpr3818 :: nop test redux
+
+ nop redux
+This is the updated code
+-logicprobe
+marker -logicprobe
+
+variable Compare
+variable Count
+
+$23 constant PINB
+$24 constant DDRB
+$25 constant PORTB
+
+$100 constant PINH
+$101 constant DDRH
+$102 constant PORTH
+
+$a0 constant TCCR4A
+$a1 constant TCCR4B
+$a8 constant OCR4A
+
+$b0 constant TCCR2A
+$b1 constant TCCR2B
+$b3 constant OCR2A
+
+$2c constant PINE
+$2d constant DDRE
+$2e constant PORTE
+
+$6a constant EICRB
+$3d constant EIMSK
+
+: ext4.irq ( -- ) Count @ 1+ Count ! ;i
+
+: logicprobe.init ( -- )
+  \ tone generatoed through timer2
+  %0001.0000 DDRB mset \ d10, pb4
+  %0100.0010 TCCR2A c!    \ use OC2A, ctc mode
+  $ff OCR2A c! \ compare falue
+
+  %0 DDRE c! \ e input
+  %0000.0010 EICRB mset \ falling edge
+  ['] ext4.irq #6 int! \ attach interrupt
+;
+
+\ helper words
+: open.gate ( -- )   0 Count ! %0001.0000 EIMSK mset ;
+: close.gate ( -- )   %0001.0000 EIMSK mclr ;
+
+\ tone stuff
+: high.tone ( -- ) %0000.0100 TCCR2B c! 750 ms 0 TCCR2B c! ;
+: low.tone ( -- ) %0000.0110 TCCR2B c! 750 ms 0 TCCR2B c! ;
+: alt.tone ( -- )
+  3 for
+    %0000.0100 TCCR2B c! 150 ms 0 TCCR2B c!
+    150 ms
+    %0000.0110 TCCR2B c! 150 ms 0 TCCR2B c!
+    150 ms
+  next
+;
+
+: process.data ( -- )
+  Count @ 1-
+  Count !
+  Count @ 0 > if
+    \ cr ." freq=" 10 * .
+    cr ." pulse"
+    alt.tone      \ sound output
+  else
+    %0001.0000 PINE mtst if
+      cr ." high"
+      high.tone   \ sound output
+    else
+      cr ." low"
+      low.tone    \ sound output
+    then then
+;
+
+: wait 100 ms ;
+
+: sample ( -- ) open.gate wait close.gate process.data ;
+
+\ words called at the forth command line to do the test
+
+demo tones
+
+low.tone
+high.tone
+alt.tone
+
+the test
+
+sample \ a stop clocked
+start.clock
+sample
+
+a0 line
+
+sample
+
+stop.clock and sample a0
+
+stop.clock
+sample
+
+reset the z80 and single step probing the m1 signal
+
+reset
+step
+step
+step
+step
+step
+step
+run
+step sample
+step sample
+step sample
+step sample
+sample
+if its jammed hit it, if it breaks it needed replacing anyway

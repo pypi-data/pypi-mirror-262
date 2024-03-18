@@ -1,0 +1,181 @@
+## hpr1418 :: 2013-2014 HPR New Year Show Part 3 2013-12-31T22:00:00Z to 2014-01-01T04:00:00Z
+
+ 2013-12-31T22:00:00Z
+
+Greetings to Greece and 30 more  Cairo, Ankara, Athens, and Bucharest, followed by a short reminder of the ORCA fundraiser.
+
+Discussion of the new cast of TuxRadar
+
+Got talking about Jupiter Broadcasting
+
+Deep discussion on the world of Jono Bacon
+
+The discussion of Jono / Aq on LugRadio evolves into a debate on the nature of debate
+
+This conversation evolved into a question / debate about software morality, SndChaser suggested that maybe it is an ethical question instead of a moral question
+
+
+2013-12-31T23:00:00Z
+
+Greetings to Germany and 43 more Brussels, Madrid, Paris, and Rome, followed by a short reminder of the ORCA fundraiser.
+
+Our co-hosts pound on the morality topic some more...
+
+We should all be advocates for Free / Libre software wherever and whenever we can.
+
+Software applications that are Open Source which are better than their closed-source counterparts:
+
+FocusWriter (offered by ThistleWeb): https://gottcode.org/focuswriter/
+
+DarkTable (pegwole): https://www.darktable.org
+
+LightZone (pegwole): https://lightzoneproject.org
+
+GIMP (pegwole): https://www.gimp.org
+
+G'MIC (): https://gmic.sourceforge.net/gimp.shtml
+
+Sound Converter (ThistleWeb):
+
+Simple Screen Recorder (FXB): https://www.maartenbaert.be/simplescreenrecorder/
+
+Maelstrom (sebsebseb): https://maelstrom.sourceforge.net
+
+TuxPaint (sebsebseb): https://tuxpaint.org
+
+mtpaint (sebsebseb):  https://mtpaint.sourceforge.net
+
+Jitsi (sebsebseb): https://jitsi.org
+
+kid3 (pokey):
+
+EasyTag (pokey):
+
+Audacity (pokey):
+
+gPodder (pokey):
+
+PuddleTag (SndChaser):
+
+avidemux (ThistleWeb):
+
+OpenShot (Kwisher)
+
+EtherPad (k5tux):
+
+WordPress (SndChaser):
+
+Abiword (sebsebseb):
+
+gnumeric (sebsebseb):
+
+LibreOffice (k5tux): https://libreoffice.org
+
+mplayer (ken)
+
+ffmpeg (ken)
+
+emacs (SndChaser);
+
+vim (SndChaser):
+
+kdenlive (k5tux):
+
+Open Street Map (pokey): https://openstreetmap.org
+
+
+
+Which distro are you using and why?
+
+Ease of use vs control over the operating system.
+
+Dann: thinking about using desktop environments, always found that he was setting them up like Fluxbox, so just sticking to fluxbox now.
+
+
+2014-01-01T00:00:00Z
+
+Greetings to United Kingdom and 24 more  London, Casablanca, Dublin, and Lisbon, followed by a short reminder of the ORCA fundraiser.
+
+(0002Z) Pokey: Mac OS was moderne when it was created, but now it's looking old and tired
+
+SndChaser thinks we are kind of spoiled with all the options - includnig things that don't exist elsewhere - like Awesome.  But lovest the ability we have to build our desktops to fit our workflows and optimize how we work.
+
+(0020Z) K5Tux: Easy to learn (he's coming back to it...) -- "Going to change lanes: When discussing ease of use, what about "don't care to know" folks, gamers, etc -- those who don't worry about privacy and software freedom, I have my own thoughts on but I'd like to hear the consensus on the danger for those who just don't care."
+
+(0045Z) How did you come to Linux?
+
+(0048Z) Free Software's major achievements in 2014:
+
+Watches or glasses (marcusbaird)
+
+SteamBox (ThistleWeb)
+
+ROMs for entry-level mobile phones (pokey)
+
+
+
+
+2014-01-01T01:00:00Z
+
+Greetings to Cape Verde, some regions of Greenland and 1 more  Praia, Ponta Delgada (Azores), Ittoqqortoormiit, and Mindelo, followed by a short reminder of the ORCA fundraiser.
+
+Is Windows made for the consumer or is it made just to look that way on the store shelves? (pokey)
+
+Thistleweb expounds upon the evils of extended warranties
+
+eBook discussion
+
+
+2014-01-01T02:00:00Z
+
+Greetings to regions of Brazil, Uruguay and 1 more Rio de Janeiro, S??o Paulo, Brasilia, Montevideo, followed by a short reminder of the ORCA fundraiser.
+
+Pokey mentions that he is furious that the authors guild forced the text-to-speech to be disabled on the Kindle... and names Roy Bloundt Jr.
+
+Electronic versions of textbooks are not reducing the number of printed books.  Students have to buy / lease the paper books, then get the electronic version.  And, in many cases they cannot (easily) re-selly the paper copy for even half of what they paid.  In the case of grade school / highschool they cannot sell the books since they are just leased.
+
+Pokey brought up OpenText Books: https://creativecommons.org/tag/open-textbooks
+
+JonKulp - textbooks
+
+ https://jonathankulp.org/ - Creative Commons Counterpoint Textbook
+
+JonKulp - Blather
+
+SndChaser asks Jon to comment on Musopen and the status of classical music publishing / performance
+
+JonKulp mezmerizes the room with the contents of his cranium (this time it's with Blather).
+
+Your're funny!!
+
+LTM
+
+JonKulp is an accomplished composer. Some of his works can be found at https://jonathankulp.org/comp.html
+
+
+2014-01-01T03:00:00Z
+
+Greetings to regions of Brazil, Argentina and 7 more Buenos Aires, Santiago, Asuncion, Paramaribo, followed by a short reminder of the ORCA fundraiser.
+
+JonKulp gets introduced to mate tea
+
+Jonathan Nadeau (https://accessiblecomputingfoundation.org/) talks about Orca & Festival speech synthesis
+
+Jonathan Nadeau talks about moving to manjaro
+
+It is determined that Perberos, Stefano Karapetsas (stefano-k), Steve Zesch (amanas) and Clement Lefebvre (clem) are the people responsible for removing all accessibility features from MATE, the Gnome2 fork. Gnome2 used to be the most accessible desktop.
+
+
+2014-01-01T03:30:00Z
+
+Greetings to Newfoundland and Labrador/Canada  St. John's, Conception Bay South, Corner Brook, Gander, followed by a short reminder of the ORCA fundraiser.
+
+Jon Kulp: Open Dyslexic Font
+
+SndChaser installs Open Dyslexic extension in chromium
+
+Pokey looks at the Open Dyslexic website and is able to read the page very quickly (quickly for pokey anyway), goes ahead and tries to install the font on Mint
+
+
+
+

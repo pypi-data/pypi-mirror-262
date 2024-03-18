@@ -1,0 +1,31 @@
+## hpr3145 :: A light bulb moment, part 1
+
+ This show came about because of an email from Dave Morriss on the 4th March 2020
+The upshot of it was that Dave came into possession of an illuminated lantern that he wanted to use. He had a problem however as the lantern in question was sealed and he didn't know the working voltage of the bulb within. He asked me if there was a way of working it out.
+Well first of all before I go any further I should probably say I'm not a bulb expert, however I set about doing a little investigating. What I was about to discover is that calculating this is not as straightforward as you might think.
+One thing you might think to do is to use a meter to measure the resistance of the bulb. Even doing this however is fraught with difficulty because measuring the resistance of a cold bulb not at working temperature will give a misleading answer. This is because the resistance of a standard bulb changes with temperature.
+I can demonstrate this by measuring the resistance of two light bulbs I have lying around the house.
+One is a clear traditional Bayonet tungsten filament house bulb rated at 40W. I live in the UK so its operating voltage is 240V I used my trusty Fluke 77 Digital Ohmmeter but any meter capable of measuring resistance will do. This bulb at room temperature measured a resistance of 108 ohms
+The other bulb was a Halogen E14 screw in bulb rated at 28W and its operating voltage like the previous bulb was 240V. Its measured resistance at room temperature was 144 ohms)
+Diagrams Created using LibreOffice Draw "Version: 6.0.7.3"
+Formulae
+
+Calculations For (tungsten filament bulb)
+V/R = I (Amps)
+so 240V / 108 ohms = 2.2 Amps
+
+V x I = P (Watts)
+so 240V x 2.2 Amps = 528W
+Calculations For (halogen bulb)
+V/R = 240V / 144 ohms = 1.7 Amps    (halogen)
+
+V x I = W
+so 240V x 1.7 Amps = 408W
+As per usual I used google and come up with somebody asking the same sort of question at https://www.candlepowerforums.com/vb/showthread.php?64832-How-to-identify-voltage-of-an-unmarked-bulb yes it seems like there a forum for just about anything you can think of.
+One person on the forum made the point that there really isn't such a thing as a working voltage it just depends on how long you want the bulb to last. For this reason I always turn down the brightness on any car I own that his dimmable dashboard lights changing these bulbs can be a real pain and or can be expensive.
+Sometimes the stated working voltage for a bulb can be misleading for example a car bulb will often state a working voltage of 12V but is likely to be running at a higher voltage when the engine is running due to the operation of cars alternator.
+Another person suggested trying to estimate the length of the filament and using this to determine the working voltage.
+Yet somebody else suggested just using a variable supply and to just slowly increase the voltage until a reasonable amount of light is generated. This might be quite simple if it's a low voltage bulb and you could even use some batteries lying around connecting them in series adding one battery at a time until the required brightness is achieved.
+It isn't so simple if bulb requires a higher voltage.
+In the end I just passed this information onto Dave wishing him luck in his path to discovering the optimal working voltage for his lantern.
+Feel free to write a comment if any of you out there have any other idea on finding the working voltage of a bulb this way it can be shared with the rest of us during the Community News, better still send in your own show.

@@ -1,0 +1,76 @@
+## hpr2627 :: Home Phone Setup!!
+
+ I’m not sure what the echoing is about. It could be picked up from my cell phone’s speaker. Also, I call ftp “tiny ftp” It actually stands for “trivial ftp”
+   
+tftp file for xinetd:
+service tftp
+{
+ protocol = udp
+ port = 69
+ socket_type = dgram
+ wait = yes
+ user = nobody
+ server = /usr/sbin/in.tftpd
+ server_args = /tftpboot
+ disable = no
+ per_source = 11
+ cps = 100 2
+ flags = IPv4
+}
+voipbuster config files look like this:
+SIPDefault.cnf:
+  nat_enable: 1
+
+SIP<mac address>.cnf:
+proxy1_address: sip.voipbuster.com
+line1_name: outside
+line1_authname: <user>
+line1_displayname: outside
+line1_password: <password>
+github projects:
+
+SIP_Pi: github.com/fabianhu/SIP_Pi (PjSIP: https://www.pjsip.org/release/2.1/pjproject-2.1.tar.bz2 )
+Messenger-CLI: github.com/AstroCB/Messenger-CLI
+
+scripts:
+=============================
+const login = require("facebook-chat-api");
+
+login({email: "FB_EMAIL", password "FB_PASSWORD"}, (err, api) =>
+{
+  if(err) return console.error(err);
+  api.listen((err,message) => {
+   api.sendMessage(message.body, message.threadID);
+  });
+});
+
+=============================
+
+#!/bin/sh
+lame "$2" -o "$2".mp3
+
+scp "$2.mp3" planetearth.us:
+ssh planetearth.us ./runner ""$2.mp3""
+
+==============================
+
+#!/bin/sh
+
+echo "$@" | sed -e s/ /_/g > runner_tmp
+doas mv "$1" /var/www/theadesilva.com/html/$cat runner_tmp)
+node ./oo.js
+
+==============================
+
+fs= require('fs');
+login = require('facebook-chat-api');
+
+fs.readFile('runner_tmp', 'utf8', function (err, data) {
+ login({email: "FB_EMAIL", password: "FB_PASSWORD"}) => {
+  if(err) return console.error(err);
+
+  api.sendMessage("New voicemail at 1109's front door "https://theadesilva.com/" + data + """ , THREAD_ID);
+ });
+});
+
+===============================

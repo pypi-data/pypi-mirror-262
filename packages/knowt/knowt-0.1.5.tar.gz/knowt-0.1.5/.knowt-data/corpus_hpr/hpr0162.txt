@@ -1,0 +1,27 @@
+## hpr0162 :: Webkit
+
+ 
+Jza, Andymeows, and riddebox have a improvised discussion about an article in the 
+July issue of Linux Journal, called "Using Webkit In Your Desktop Application." pg 54 - 58.
+
+
+Linux Journal = www.linuxjournal.com 
+https://en.wikipedia.org/wiki/WebKit 
+
+What is webkit? 
+It has a LGPL license 
+Webkit is an open source application framework that provides 
+a foundation upon which to build a web browser.
+It was originally 
+derived from the konqueror browser's khtml software library by Apple Inc. for use in Safari.
+You can use Designer to create a nice gui and use the classes for QtWebKit inside it. 
+Which means that you can drag and drop forms and create the gui real fast. 
+The best part of QtWebKit is that you can pull stuff from the internet for you applications. 
+In the article they created an app that will download the pdf files from past issues for you. With a nice search feature for their website. 
+
+Examples of applications using Webkit: 
+Adium 
+Colloquy 
+MSN Messenger 
+Mac OS X's Dashboard 
+The IPhone uses it as well 

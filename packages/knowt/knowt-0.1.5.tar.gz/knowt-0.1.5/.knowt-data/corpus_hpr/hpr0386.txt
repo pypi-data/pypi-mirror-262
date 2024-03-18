@@ -1,0 +1,30 @@
+## hpr0386 :: SSH config file
+
+ 
+GSSAPIAuthentication no
+ForwardAgent yes
+EscapeChar none
+ForwardX11 yes
+Protocol 2
+
+Host hometunnel
+	User homeuser
+	Hostname mymachine.dynamicdns.org
+	LocalForward 8080 192.168.1.100:80
+        Port 1234
+
+Host home
+	User homeuser
+	Hostname mymachine.dynamicdns.org
+        Port 1234
+
+Host work
+	User workuser
+	Hostname mywork.mycompany.com
+        IdentityFile ~/.ssh/work_id_dsa.pub
+
+Host isp
+        User ispuser
+        Hostname isp.example.com
+        IdentityFile ~/.ssh/isp_id_dsa.pub
+

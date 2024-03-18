@@ -1,0 +1,285 @@
+## hpr2871 :: HPR Community News for July 2019
+
+ 
+New hosts
+
+Welcome to our new host: 
+mightbemike.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+2846
+Mon
+2019-07-01
+HPR Community News for June 2019
+HPR Volunteers
+
+
+2847
+Tue
+2019-07-02
+earbuds
+operat0r
+
+
+2848
+Wed
+2019-07-03
+Random numbers in Haskell
+Tuula
+
+
+2849
+Thu
+2019-07-04
+HPR NYE Show 2018-2019 part 5
+Honkeymagoo
+
+
+2850
+Fri
+2019-07-05
+NIST Cybersecurity Framework
+Ahuka
+
+
+2851
+Mon
+2019-07-08
+An introduction to the work of fire fighters
+Jeroen Baten
+
+
+2852
+Tue
+2019-07-09
+Gnu Awk - Part 16
+Dave Morriss
+
+
+2853
+Wed
+2019-07-10
+Feeding the beast
+folky
+
+
+2854
+Thu
+2019-07-11
+Telling myself something In The Morning
+Jezra
+
+
+2855
+Fri
+2019-07-12
+HPR NYE Show 2018-2019 part 6
+Honkeymagoo
+
+
+2856
+Mon
+2019-07-15
+Mint Mobile Security Rant
+operat0r
+
+
+2857
+Tue
+2019-07-16
+Creating CounterParty Collectible Tokens for the Bitcorn Game
+mightbemike
+
+
+2858
+Wed
+2019-07-17
+Vehicle designer for a space game
+Tuula
+
+
+2859
+Thu
+2019-07-18
+HPR NYE Show 2018-2019 part 7
+Honkeymagoo
+
+
+2860
+Fri
+2019-07-19
+Encryption and Quantum Computing
+Ahuka
+
+
+2861
+Mon
+2019-07-22
+Safety Razors
+operat0r
+
+
+2862
+Tue
+2019-07-23
+Art vs. Commerce In Storytelling
+lostnbronx
+
+
+2863
+Wed
+2019-07-24
+Simplified application architectures for improved security
+Beeza
+
+
+2864
+Thu
+2019-07-25
+One weird trick to add a --help option to your awk scripts
+klaatu
+
+
+2865
+Fri
+2019-07-26
+The YouTube channels I really like
+Jeroen Baten
+
+
+2866
+Mon
+2019-07-29
+Intro to Bitcoin for techies
+mightbemike
+
+
+2867
+Tue
+2019-07-30
+The Kenwood TS940S Automatic Tuning Unit
+MrX
+
+
+2868
+Wed
+2019-07-31
+Custom data with Persistent
+Tuula
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 13 comments in total.
+Past shows
+There are 2 comments on
+2 previous shows:
+
+hpr2787
+(2019-04-09) "NodeJS Part 1"
+by operat0r.
+
+
+
+Comment 2:
+operat0r on 2019-07-09:
+"Part2 ?"
+hpr438
+(2009-09-05) "Podcasts I Listen To"
+by Dave Yates.
+
+
+
+Comment 1:
+Viper on 2019-07-03:
+"Archive of podcasts"
+
+This month's shows
+There are 11 comments on 4 of this month's shows:
+hpr2851
+(2019-07-08) "An introduction to the work of fire fighters"
+by Jeroen Baten.
+
+Comment 1:
+Ken Fallon on 2019-07-08:
+"Cars parked over the put"Comment 2:
+Kevin O'Brien on 2019-07-08:
+"I loved the show"
+hpr2852
+(2019-07-09) "Gnu Awk - Part 16"
+by Dave Morriss.
+
+Comment 1:
+Tuula on 2019-07-09:
+"thanks"Comment 2:
+Hipstre on 2019-07-09:
+"Thank You!"Comment 3:
+norrist on 2019-07-09:
+"HPR Epic"Comment 4:
+Dave Morriss on 2019-07-13:
+"Many thanks for the kind words"
+hpr2854
+(2019-07-11) "Telling myself something In The Morning"
+by Jezra.
+
+Comment 1:
+Tuula on 2019-07-11:
+"Bagpipes for the win!"Comment 2:
+Dave Beck on 2019-07-18:
+"Rusted Pipes"Comment 3:
+jezra on 2019-07-18:
+"pipes up!"
+hpr2859
+(2019-07-18) "HPR NYE Show 2018-2019 part 7"
+by Honkeymagoo.
+
+Comment 1:
+dodddummy on 2019-07-29:
+"I disagree with just about all the opinions expressed in this episode."Comment 2:
+dodddummy on 2019-07-29:
+"1st hour, that is."
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2019-July/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+Ohio LinuxFest Conference CFP
+From Susan Rose, Social Media Manager for OLF:
+
+Dear Open Source Fans, Students and Professionals:
+The 2019 Ohio LinuxFest is looking for presentations on Friday and Saturday, November 1 and 2. Please visit the CFP page https://ohiolinux.org/call-for-presentations/ for full details about submitting a proposal. The deadline is Friday, August 17, but the sooner you can submit a talk, the better.
+Started in 2003, the Ohio LinuxFest https://ohiolinux.org/ is an annual grassroots conference in Columbus, Ohio dedicated to open access for all. Presentations relating to any free and open source software, not just Linux, are welcome. Areas where we’ve had talks in the past include networking, system administration, development, and community building. A preliminary pdf brochure is attached.
+Our audience consists of people at all skill levels. Prior speaking experience is a plus, although we do try to provide opportunities for first-time speakers. If you have any questions, please contact us at speakers@ohiolinux.org. We look forward to hearing from you! Thank you for your kind attention and for sharing.
+
+The PDF Brochure mentioned is available at https://hackerpublicradio.org/eps/hpr2871/olf2019.pdf.
+Problem with show 2855
+We upload all HPR shows to the Internet Archive (archive.org). Shows downloaded via the HPR RSS feeds actually come from there, though they are also available on the HPR site.
+Unfortunately, on Friday July 12th the archive.org copy of the show hpr2855 :: HPR NYE Show 2018-2019 part 6 was found to have been truncated and to consist only of the introduction and final part; no actual content.
+The problem was detected during the morning of Friday and was rectified during the afternoon (UK time). The RSS feeds were adjusted to ensure the show was re-downloaded and all podcatchers should have received the correct version the next time they checked the feed.
+Tags and Summaries
+Thanks to the following contributor for sending in updates in the past month: Dave Morriss
+Over the period tags and/or summaries have been added to 11 shows which were without them.
+If you would like to contribute to the tag/summary project visit the summary page at https://hackerpublicradio.org/report_missing_tags.php and follow the instructions there.

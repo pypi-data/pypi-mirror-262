@@ -1,0 +1,43 @@
+## hpr2089 :: Solving a blinkstick python problem
+
+ 
+This is a show describing how I solved a problem of using my new Blinkstick Nano in Python, the problem occurred because I inadvertently installed the blinkstick module to the wrong version of Python as I have multiple versions of python installed on my raspberry pi.
+A blinkstick is a USB powered device with attached RGB led’s, it can be controlled using a wide range of languages, and supports the Raspberry Pi, Linux, Microsoft Windows & Apple
+As a side note I forgot to mention that the blinkstick hardware and software is Open Source
+
+Link to blinkstick website
+https://www.blinkstick.com/
+This is the particular model I bought
+https://www.blinkstick.com/products/blinkstick-nano
+
+Initially I blindly followed the advice given at https://www.blinkstick.com/help/raspberry-pi-integration which recommended the following commands
+sudo apt-get install -y python-pip python2.7-dev
+sudo pip install blinkstick
+sudo blinkstick --info
+blnkstick --add-udev-rule
+I discovered that the blinkstick module was not being found when I ran my python script, this turned out to be because I was invoking a different version of python in my script from that which I installed the blinkstick module. I installed the blinkstick module to Python 2.7, my script was running python 3.2
+I ran the following commands to rectify the problem
+sudo apt-get install -y python3-pip
+sudo pip-3.2 install blinkstick
+sudo blinkstick --info (Run in my script)
+blinkstick --add-udev-rule (Not required 2nd time round)
+Here are some links I looked at to get some understanding of what was going on
+
+Installing Python Modules
+https://docs.python.org/3.6/installing/index.html
+Wikipedia entry for pip
+https://en.wikipedia.org/wiki/Pip_(package_manager)
+
+You can get a list of your installed python modules by first going to the python interpreter by typing python at the command prompt and issuing the following command
+>>> help('modules')
+You can list your python search path by first going to the interpreter by typing python at the command prompt and issuing the following commands, the search path is the list of system directories that python will search to run things like commands and modules
+>>> import sys
+>>> sys.path
+Links
+
+https://www.blinkstick.com/
+https://www.blinkstick.com/products/blinkstick-nano
+https://www.blinkstick.com/help/raspberry-pi-integration
+https://docs.python.org/3.6/installing/index.html
+https://en.wikipedia.org/wiki/Pip_(package_manager)
+

@@ -1,0 +1,23 @@
+## hpr3693 :: Fixing the automatic cutoff mechanism to an electric mower
+
+ Synopsis
+In this episode, Rho`n fixes the safety mechanism to his Neuton electric mower. Recently the automatic cutoff mechanism was getting finicky. Needing to pull the safety bar back just the correct amount to keep the mower running. Often needing to keep hands on both the left and right sides of the safety bar to prevent the mower from turning off.
+After opening up the housing holding the safety bars, it appeared that the tension spring which causes the bars to disengage from the switch when the bars are released was loose. This would allow the prong that the bars push into the switch contact to slip off the contact and slide overtop of the switch—turning off the mower. After tightening the coils and putting it back in place, the issue was resolved.
+
+
+
+
+
+Neuton electric mower with handle collapsed showing the bottom of the safety handle housing.
+
+
+
+
+Internal view of the automatic cutoff mechanism.
+
+
+Attribution
+The transition sound used between audio clips is found on freesound.org:
+Name: Harp Transition Music Cue
+Author: DanJFilms
+License: Creative Commons Zero

@@ -1,0 +1,45 @@
+## hpr1228 :: Utilizing Maximum Space on a Cloned BTRFS Partition
+
+ 
+Utilizing Maximum Space on a Cloned BTRFS Partition
+by FiftyOneFifty
+
+If you clone a disk to a disk, Clonezilla will increase (decrease) the size of each partition proportional to the relative size of the drives.
+	
+I wanted to keep my / the same size and have no swap (new drive was SSD), so I did a partition to partition clone instead
+Created partitions on the new SSDs with a GParted Live CD, 12Gb root (Ext4) and the remainder for /home, (btrfs, because I planned to move to SSD from the start, and last summer only btrfs supported TRIM)
+
+
+After cloning /dev/sda1 to /dev/sdb1 and /dev/sda2 to /dev/sdb2 using Clonezilla, I inspected the new volumes with the GParted Live CD
+	
+/dev/sdb2 had 40% inaccessible space, i.e., the usable space was the same size as the old /home volume
+GParted flagged the error and said I could correct it from the menu (Partition->Check) but btrfs doesn't support fsck, so it didn't work
+Tried shrinking the volume in GParted and re-expanding it to take up the free space, also didn't work.
+
+
+Discovered 'btrfs utility' and that it was supported by the GParted Live CD
+	
+Make a mount point
+		
+sudo mkdir /media/btrfs
+
+
+Mount the btrfs volume
+		
+sudo mount /dev/sdb2 /media/btrfs
+
+
+Use btrfs utility to expand the btrfs file system to the maximum size of the volume
+		
+sudo btrfs filesystem resize max /media/btrfs
+
+
+Unmount the btrfs volume
+		
+sudo umount /dev/sdb2
+
+
+
+
+Rechecked /dev/sdb2 with GParted, I no longer had inaccessible space
+

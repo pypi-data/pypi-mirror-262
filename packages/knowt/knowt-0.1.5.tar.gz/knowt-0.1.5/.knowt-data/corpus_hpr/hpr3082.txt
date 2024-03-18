@@ -1,0 +1,79 @@
+## hpr3082 :: RFC 5005 Part 1 – Paged and archived feeds? Who cares?
+
+ This conversation took almost an hour, so I split it into two shows:
+
+Part 1 talks mostly about the RFC itself, what it means and why.
+Part 2 goes into personal experiences with the RFC and with syndication in general, in particular in the context of web comics. This is part 1.
+
+The why
+When serving most RSS/Atom feed readers today, you have to choose: Do you make a complete feed with all the things you ever published, or do you make a shorter feed with just the latest entries?
+This is a trade-off with pros and cons, and it seems like a trade-off you have to make, but a solution to let your Atom feed have the cake and eat it too existed already 13 years ago, if only any of our feed readers would adhere to it: RFC 5005, Feed Paging and Archiving
+The what
+https://tools.ietf.org/html/rfc5005 was published in September 2007
+
+The XML namespace for RFC 5005 elements is https://purl.org/syndication/history/1.0, aliased as fh below.
+Section 2 defines the complete feed: It is one document (Atom file) that contains the entire set the feed describes. The document is marked with an fh:complete element.
+Section 3 defines the paged feed: It is a series of documents connected with Atom link elements with rel set to the link relations first, last, previous or next.
+Section 4 defines the archived feed: It has a subscription document that may change at any time, and a series of archive documents that are expected to have stable contents and URIs. The link relations defined are current, prev-archive and next-archive. The semantics are clearer: prev-archive refers to previously published entries, and because the contents are stable you can stop when you see a URI to a document you already have. Archive documents are marked with the fh:archive element.
+
+The who
+In this show I’m talking to:
+fluffy
+
+Federated social web:
+https://queer.party/@fluffy
+Writes and makes things in several creative fields:
+https://beesbuzz.biz/
+Publ is like a static site generator, but dynamic. It produces RFC 5005 archive feeds, of course:
+https://publ.beesbuzz.biz/
+Thoughts on ephemeral content vs content worth archiving and how they relate to protocols:
+https://beesbuzz.biz/blog/5709-Keeping-it-personal
+
+Jamey
+
+Federated social web:
+https://toot.cat/@jamey
+Blog:
+https://minilop.net/
+Made a prototype full-history reader that follows RFC 5005 links:
+https://reader.minilop.net/
+Made a webcomic reader mostly mentioned in Part 2:
+https://www.comic-rocket.com/
+Made a WordPress plugin implementing RFC 5005:
+https://github.com/jameysharp/wp-fullhistory
+Made an RFC 5005 archive feed synthesizer for sites with a predictable post frequency and URL structure:
+https://github.com/jameysharp/predictable/
+Hosted at https://fh.minilop.net/
+Was on HPR 9 years ago, talking about Xorg!
+https://hackerpublicradio.org/eps.php?id=0825
+
+Conversation notes
+
+Google Reader was terminated 2013-07-01, all subscription data permanently gone on 2013-07-15:
+https://www.google.com/reader/about/
+Mastodon had Atom feeds with paging, but the feeds went away when OStatus went away:
+https://github.com/tootsuite/mastodon/pull/11247
+HTML4 does indeed define the HTML link relations:
+https://www.w3.org/TR/html4/types.html#h-6.12
+It has prev rather than the previous of RFC 5005, but mentions that some browsers support previous as an alias.
+HTML5 also defines the HTML link relations:
+https://html.spec.whatwg.org/multipage/links.html
+Here previous is a lower-case must for historical reasons.
+IANA manages the Registry of Link Relations:
+https://www.iana.org/assignments/link-relations/link-relations.xhtml
+It references RFC 5005 for the Section 4 relations, but not the Section 3 ones.
+RFC 5005 singles out its own Section 3 (Paged Feeds) as the best-effort, loose, discouraged model.
+    
+Section 3:
+        Therefore, clients SHOULD NOT present paged feeds as coherent or complete, or make assumptions to that effect.
+
+Section 4:
+        Unlike paged feeds, archived feeds enable clients to do this without losing entries.
+
+
+
+I’m confused about it in the show, but the RFC is clear that an archived feed has one dynamic subscription document, which points to a chain of immutable archive documents.
+Back in 2002, Aaron Swartz published his joke MIME-header-based RSS 3:
+https://www.aaronsw.com/weblog/000574
+The cultural context at the time and the rivalry between RSS 0.91+, RSS 1.0, RSS 2.0 and Atom deserves a show of its own.
+

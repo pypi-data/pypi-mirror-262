@@ -1,0 +1,68 @@
+## hpr3816 :: Post Apocalyptic 4s5 Battery Pack  
+
+ HR000000000
+H Hybrid: Denotes some prepurchased or hard to find components
+R Robotics: suitable for robots
+buy: 4s 40A BMS
+https://www.aliexpress.com/item/4000025857655.html
+(can't specifically vouch for this vendor, just chose the first that
+came up)
+make sure to choose 4s and balance
+
+find or buy materials: duct or gorilla tape, trashed computer dvd
+or cd drive, 20 18650 cells, molex connectors(you can also use barrel
+jacks or whatever you want to transfer power), wire and maybe 'tab wire'
+https://nl.aliexpress.com/item/32650006768.html
+solder everything together as per schematic and pictures (there
+is theoretically a danger in soldering cells, but I have never had a
+problem. Have a pair of pliers and a nearby window handy to throw them
+out of if anything goes wrong)
+wrap in cardboard and tape as per pictures
+add the cd/dvd drive lids(if you taped well you won't short
+anything and burn your house down
+tape dvd lids to battery
+
+Getting into the battery for maintenance just requires a utility
+knife.
+Watt Hour does a great job describing the 3s BMS, which is very
+similar to the 4s used in my case: https://yewtu.be/watch?v=QNENyu97w2A
+Battery Schematic
+ Click the
+thumbnail to see the full-sized image
+Cut through tape to reveal battery
+
+Click the thumbnail to see the full-sized
+image
+Flat metal holds cells together
+
+Click the thumbnail to see the full-sized
+image
+Detail of 4.2v
+ Click the thumbnail
+to see the full-sized image
+Only have to desolder one side
+ Click
+the thumbnail to see the full-sized image
+New cells in
+ Click the thumbnail to
+see the full-sized image
+Make sure there is thick tape covering battery
+
+Click the thumbnail to see the full-sized
+image
+DVD drive case for stability
+ Click
+the thumbnail to see the full-sized image
+Tape the DVE case to battery
+ Click
+the thumbnail to see the full-sized image
+Charge board with Molex connector
+
+Click the thumbnail to see the full-sized
+image
+Outdoors 1
+ Click the thumbnail to
+see the full-sized image
+Outdoors 2
+ Click the thumbnail to
+see the full-sized image

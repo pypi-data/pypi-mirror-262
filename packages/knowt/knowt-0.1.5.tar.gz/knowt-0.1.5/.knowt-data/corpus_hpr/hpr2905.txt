@@ -1,0 +1,29 @@
+## hpr2905 :: Two HPR hosts living in the same region finally meet up!
+
+ Introduction
+Two HPR hosts who live in the Edinburgh locality in Scotland met on Saturday 24th August for a chat.
+The hosts are:
+
+MrX - first HPR show “Hobbies” on 2012-01-27
+Dave Morriss - first HPR show “Useful Vim Plugins” on 2012-10-05
+
+Some of the meeting was recorded and is presented here.
+Recording information
+We were both recording this chat. Dave was using his Zoom H2n (with the microphones in XY mode) and MrX had left his small Dictaphone-like recorder on the table.
+Most of the audio here was from the Zoom, but at one point it switches to MrX’s recorder for comparison. The sample is at about 18 minutes into the recording (hard to judge since an intro sequence will have been added on the HPR site). A “chirp” effect has been added at the start and end of this sample to help with identification.
+The Zoom track had noise reduction applied to it, using a noise sample from the start as a reference. The sample from MrX’s recorder also had noise reduction applied, and both tracks were amplified.
+Links
+
+MrX’s shows that we were talking about:
+
+Describing how I listen to podcasts PART 1
+Describing how I listen to podcasts PART 2
+Describing how I listen to podcasts PART 3
+
+The radio device for the Pi mentioned by Dave:
+
+ESP8266 IoT pHAT from Pimoroni (now discontinued)
+Wikipedia page on the ESP8266
+Pimoroni Tutorial on using the pHAT
+
+

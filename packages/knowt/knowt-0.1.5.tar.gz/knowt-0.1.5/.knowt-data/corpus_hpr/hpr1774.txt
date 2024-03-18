@@ -1,0 +1,40 @@
+## hpr1774 :: Router Hacking
+
+ Router Hacking
+What
+
+Flashing a router with alternate firmware
+
+Why
+
+Provide additional features
+Improve performance
+Privacy (gets rid of unwanted spyware)
+Fun
+
+Where
+
+The DD-WRT Router Database: https://www.dd-wrt.com/site/support/router-database
+Tomato Firmware for Linksys WRT54G/GL/GS: https://www.polarcloud.com/tomato
+OpenWRT firmware: https://openwrt.org/
+
+How: Steps for My Latest Hack
+
+Find used Netgear WNDR3400 router on shelf at local Goodwill store, priced at $3.99.
+Use my smartphone to check the dd-wrt database to see if this router is hackable.
+Grin broadly upon seeing the green "Yes" beside router WNDR3400.
+Double-check that power supply is included, find an AC outlet and plug in to be sure it powers on and my phone sees its ESSID. Yep and yep.
+Take router to cashier and purchase.
+Do hard reset of router to clear any previous configuration.
+Hook a laptop up to router using ethernet patch cable (turning off WiFi adapter on laptop).
+Access router's configuration in web browser at default router address of 192.168.1.1 just to confirm that it works.
+Go back to the dd-wrt router database and find the router again, then download the corresponding "mini" and the "mega" versions of dd-wrt firmware (The mega version has the most features—including USB support, which I wanted—but on many routers, including this one,  you have to install the mini version first or else you could brick the router)
+Read over the dd-wrt wiki page for this specific router just to see if there's anything unusual about the hack. There's not.
+Go to the router's stock configuration page again and find the "Firmware upgrade" button.
+Click the button and choose the "mini" version of the dd-wrt firmware, and click upgrade, then wait while crossing fingers until it says firmware successfully upgraded.
+Refresh the configuration page at 192.168.1.1 and see the new dd-wrt configuration interface.
+Pat myself on the back because I have just hacked another router. Hray!
+Find the upgrade firmware area on the new dd-wrt interface, and this time choose the "mega" firmware file and submit, then wait and cross fingers as before. Celebrate when it works. 
+Configure newly hacked router as wireless bridge (this is NOT going to be my main router), enable the USB and printer support, hook up our formerly-usb-only printer to the router, and configure household computers to be able to print wirelessly to the newly-networked printer.
+Enjoy kudos from appreciative family.
+

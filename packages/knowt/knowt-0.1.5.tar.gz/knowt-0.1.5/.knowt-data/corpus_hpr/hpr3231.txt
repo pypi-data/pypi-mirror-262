@@ -1,0 +1,22 @@
+## hpr3231 :: USB Key
+
+ Script and instruction at
+https://james.toebesacademy.com/USBKey.html
+
+Combo of
+
+Perl for Installation,
+ssh-keygen for key exchange.
+udev for actions
+bash for locking/unlocking/key checking.
+
+
+
+
+udev add/remove/change events
+
+add event does not allow access to drive
+change event was not allowing unlock.
+
+
+Compromise was unlock, then lock if key check fails.

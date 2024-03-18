@@ -1,0 +1,28 @@
+## hpr0253 :: Encryption
+
+ 
+Three Prime Numbers: 2, 3 and 5.
+I will call them A, B and C so A=2, B=3 and C=5
+Working through x as the current position, 
+and i being the unencrypted password and j being the encrypted as an array,
+ so i[x] is the 'current' position we get:
+
+j[x] = ((j[x-1] + i[x] + A) * B ) MOD C
+
+The password example I give is:
+
+Encrypting 123
+
+1 (unencrypted password) + 2 (Prime A) = 3
+3 * 3 (Prime B) = 9
+9 MOD 5 (Prime C) = 4
+
+4 (previous encrypted) + 2 (current unencrypted) + 2 (Prime A) = 8
+8 * 3 (Prime B) = 24
+24 MOD 5 (Prime C) = 4
+
+4 (previous encrypted) + 3 (current unencrypted) + 2 (Prime A) = 9
+9 * 3 (Prime C) = 27
+27 MOD 5 (Prime C) = 2
+
+So the encrypted password is 442

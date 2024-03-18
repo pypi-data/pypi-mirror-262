@@ -1,0 +1,24 @@
+## hpr2477 :: Reading Audio Books While Distracted
+
+ Just a quick and dirty episode on my attempt to solve the problem of listening to audio books at work or anytime you can't fully concentrate on the important thing, the audio book, of course.
+Problem
+I have more time to listen to books than to read them. I have no issues listening to audio books on my commute or when taking walks. The problem occurs at work. I have about 4 hours a day I could be listening to audio books. Over the years I've tried countless times, all with the same result. I get distracted by work and find I've missed key parts of the story and end up listening to music or podcasts I don't mind missing instead.
+There's nothing wrong with music or podcasts I don't mind missing but that doesn't help with my growing list of books I want to 'read'.
+I decided to treat this like a regular problem and break it down to see if I can find a solution to this problem.
+Here are the variable I have to play with. These might be different for you.
+
+Book in one file or broken into chapters
+Listening speed
+
+Design goals
+Be able to listen to an audio book and have reasonable comprehension. Super Simple. I can't be seen as messing around with my player more than whatever it is that's keeping me from my player :)
+Normally I listen to books in one large file because at one point in time it was easier for me to keep track of them in my player and bookmarking was easier for my little brain to handle. But I got to thinking this might solve the problem of wasted time when needing to repeat sections of the book. If the book were broken into pieces, I wouldn't need to repeat as often. I tried listening to 3 chapters at a time and had two issues. The first is that 3 chapters is still quite a bit of time and I was repeating sections I didn't need to repeat. For example, I might have been able to follow along with chapter 1 but not chapters 2 and 3. This meant repeating chapter 1 or messing around to manually skip chapter 1 when I repeat. Not good.
+The second issue I had when listening to 3 chapter chunks was spoilers. If I got distracted during chapter 1 but not chapter 3, chapter 3 would contain spoilers for chapter 1 and chapter 1 would be spoiled on the re-listen :)
+Solution
+As it turns out listening in 1 chapter chunks solved both of these issues. So now I play one chapter on a loop until I feel I comprehend it well enough and then move to the next. This reduces the time when I need to re-listen because I was distracted and is simple because I only need to mess with the player when I'm ready to move to the next chapter.
+It also reduces the spoiler issue. While there are still spoilers, they are limited to spoiling the same chapter. A good enough compromise for me.
+As far as playback speed goes, I like to speed audio up when I can concentrate on the audio but prefer to listen at normal speed when I can't.
+Other considerations
+Some content might lend itself more to being broken into chunks by time rather than chapters. After all, not all chapters are the same length and podcasts don't usually have chapters. Assuming I decide to stick with this approach, I'll probably try running podcasts which require one to pay attention through a script that splits them up into chunks based on duration and treat those chunks as chapters in books.
+If you try this and find it useful and/or have modifications, by all means, share.
+Also, if this is a well known technique, feel free to make fun of me. It'll be fun listening to the comments being read on the community news show.

@@ -1,0 +1,209 @@
+## hpr3823 :: Gitlab Pages for website hosting
+
+ How it works
+https://docs.gitlab.com/ee/user/project/pages/
+
+GitLab always deploys your website from a specific folder called
+public in your repository. To deploy your site, GitLab uses its built-in
+tool called GitLab CI/CD to build your site and publish it to the GitLab
+Pages server. The sequence of scripts that GitLab CI/CD runs to
+accomplish this task is created from a file named .gitlab-ci.yml, which
+you can create and modify. A specific job called pages in the
+configuration file makes GitLab aware that you're deploying a GitLab
+Pages website.
+
+Overview of Steps
+
+The end state has to be a directory named public that contains the
+site contents
+Optionally, run a build process in a container to create the
+contents of the public directory
+There has to be a pages declaration in
+.gitlab-ci.yml
+
+Example 1
+simple demo
+
+Create the Git repo and site content
+Go to gitlab and create new Gitlab repo
+Clone it to your workstation
+Add public folder with site files
+add .gitlab-ci.yml
+Commit and push
+
+git clone git@gitlab.com:norrist/simple_pages_demo.git
+cd simple_pages_demo/
+mkdir public
+echo "Hello World" > public/index.html
+git add public/
+vim  .gitlab-ci.yml
+git add .gitlab-ci.yml
+git commit -am "new page"
+git push
+.gitlab-ci.yml
+pages:
+  stage: deploy
+  script:
+    - echo
+  artifacts:
+    paths:
+      - public
+Pages settings
+
+Menu on left, Settings, Pages
+Your pages are served under:
+
+Example 2
+docs.norrist.xyz
+
+Combine my HPR show notes into a single page
+Custom Domain
+
+Verified with TXT record
+
+
+.gitlab-ci.yml
+image: "debian"
+before_script:
+    - apt-get update
+    - apt-get install -y  pandoc
+
+stages:
+- build
+pages:
+  stage: build
+  script:
+    - bash build_html.sh
+  artifacts:
+    paths:
+      - public
+set -euo pipefail
+IFS=$'\n\t'
+mkdir -pv public
+for MD in $(ls *md)
+    do
+    echo
+    # echo "---"
+    # echo
+    # echo "#" $MD
+    echo
+    echo "---"
+    echo
+    cat $MD
+done    \
+|pandoc \
+-H markdown.header \
+-B body.header \
+--toc \
+--toc-depth=1 \
+-f gfm \
+-t html \
+-o public/index.html
+Example 3
+HPR static
+
+Build the new HPR static site
+
+.gitlab-ci.yml
+services:
+  - mariadb
+variables:
+  MYSQL_DATABASE: hpr_hpr
+  MYSQL_ROOT_PASSWORD: mysql
+
+connect:
+  stage: .pre
+  image: mysql
+  script:
+  - echo "SELECT 'OK';" | mysql --user=root --password="$MYSQL_ROOT_PASSWORD" --host=mariadb "$MYSQL_DATABASE"
+
+pages:
+  image: debian
+  before_script:
+      - apt update
+      - apt -y install libgetopt-complete-perl libmemory-usage-perl libconfig-std-perl libtemplate-perl libtemplate-plugin-dbi-perl libclass-dbi-perl libtie-dbi-perl libdbd-mysql-perl  libdate-calc-perl
+      - apt -y install curl mariadb-client git
+      - curl -o hpr.sql http://hackerpublicradio.org/hpr.sql
+      - mysql --user=root --host=mariadb "$MYSQL_DATABASE" --password="$MYSQL_ROOT_PASSWORD"  < hpr.sql
+
+  stage: build
+  script:
+    - git clone https://gitlab.com/roan.horning/hpr_generator.git
+    - cd hpr_generator
+    - git apply ../mysql_settings.patch
+    - grep "database\|user\|driver\|password" site.cfg
+    - ./site-generator --all
+    - mv -v public_html ../public
+
+  artifacts:
+    paths:
+      - public
+
+site.cfg Patch
+diff --git a/site.cfg b/site.cfg
+index aefadb2..0243d27 100644
+--- a/site.cfg
++++ b/site.cfg
+@@ -8,10 +8,10 @@
+ #user:        (not used - leave blank)
+ #password:    (not used - leave blank)
+ # Configuration settings for MySQL
+-#database: mysql
+-#driver: dbi:mysql:database=hpr_hpr:hostname=localhost
+-#user: hpr-generator  (Suggested user with read-only privileges)
+-#password: *********  (Password for user)
++database: mysql
++driver: dbi:mysql:database=hpr_hpr:hostname=mariadb
++user: root
++password: mysql
+
+ # Configure the location of the templates and the generated HTML
+ [app_paths]
+@@ -25,7 +25,7 @@ output_path: ./public_html
+ [root_template]
+ content: page.tpl.html
+ #baseurl: OPTIONAL [i.e. file://<full path to local website directory>]
+-baseurl: file:///home/roan/Development/hpr/website/hpr_generator/public_html/
++baseurl: https://norrist.gitlab.io/hpr_generator_build/
+ media_baseurl: https://archive.org/download/hpr$eps_id/
+
+ # Configure the navigation menu and the content templates for each page
+Other Example Projects
+
+https://gitlab.com/pages
+Hugo, Jekyll, Plain HTML, ...
+Fork or just Copy
+
+Common Frustrations
+
+Waiting on builds during debugging.
+Having to push to CICD instead of running local
+
+Links
+HPR Generator - https://repo.anhonesthost.net/rho_n/hpr_generator
+
+
+
+
+
+
+
+Gitlab Example Repo
+Gitlab pages URL
+
+
+
+
+https://gitlab.com/norrist/simple_pages_demo
+https://norrist.gitlab.io/simple_pages_demo/
+
+
+https://gitlab.com/norrist/docs.norrist.xyz
+https://docs.norrist.xyz/
+
+
+https://gitlab.com/norrist/hpr_generator_build
+https://norrist.gitlab.io/hpr_generator_build/
+
+
+

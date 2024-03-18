@@ -1,0 +1,7 @@
+## hpr2473 :: Frotz - A Portable Z-Machine Interpreter
+
+ Frotz is an interpreter for Infocom games (like Zork) and other Z-machine games. You can install it via your respective package manager or download the source code from the URLs below.
+
+Website: https://frotz.sourceforge.net
+Github: https://github.com/DavidGriffith/frotz/
+

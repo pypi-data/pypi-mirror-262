@@ -1,0 +1,83 @@
+## hpr3719 :: HPR News
+
+ InfoSec; the language of
+security.
+What
+is Typosquatting and How Do Scammers Use it?
+
+Typosquatting, as an attack, uses modified or misspelled domain
+names to trick users into visiting fraudulent websites; the heart of
+this attack is domain name registration. Typosquatting is deployed by
+scammers to defraud unaware users. Attackers will attempt to: mimic
+login pages, redirect traffic, download malware, and extort users.
+Past Known Typosquatting Attacks.
+
+Several
+Malicious Typosquatted Python Libraries Found On PyPI
+Repository
+Over
+700 Malicious Typosquatted Libraries Found On RubyGems
+Repository
+Security
+advisory: malicious crate rustdecimal
+This
+Week in Malware-Malicious Rust crate, 'colors' Typosquats
+
+Solutions to Typosquatting.
+
+How
+to stop typosquatting attacks
+What
+Is a Checksum (and Why Should You Care)?
+PiHole
+Ubuntu font
+family
+
+DNS monitoring services.
+
+Link to dnstwister: https://dnstwister.report/
+Link to whois: https://www.whois.com/whois
+
+Password Managers.
+
+Link to bitwarden: https://bitwarden.com/
+Link to keepassxc: https://keepassxc.org/
+
+
+
+Two-factor and
+Multifactor Authentication.
+
+First, authentication. This is the process of verifying the
+validity of something; in our case, user credentials/identity. The most
+common way to authenticate is: USERNAME and PASSWORD.
+This is just a single layer (single-factor authentication) and isn’t
+enough to discourage attackers.
+Second, 2FA (Two-factor Authentication). 2FA increases the
+difficulty for attackers by providing users an additional layer of
+security to accomplish authentication. Common 2FA methods are: TOTP/OTP
+(the One Time Password), Authenticator
+Applications (Bitwarden, KeePassXC,...), and Security Keys (Yubikey). This works similar to ATMs;
+to authenticate the user must provide both knowledge (account
+PIN) and a physical object (bank card).
+Last, but not least, MFA (Multifactor Authentication). Similar to
+2FA, MFA offers users security with the addition of biometrics
+(fingerprint scan, retina scan, facial recognition, and voice
+recognition). Attackers must overcome the knowledge factor, Possession
+factor, Inherence/Biometric factor, Time factor, and sometimes Location
+factor.
+MORE helpful security information.
+
+FIDO Alliance
+Specifications.
+Field
+Guide to Two-Step Login.
+
+2FA/MFA Known Attacks.
+
+Bots
+That Steal Your 2FA Codes.
+hackers
+are cracking two-factor authentication
+
+

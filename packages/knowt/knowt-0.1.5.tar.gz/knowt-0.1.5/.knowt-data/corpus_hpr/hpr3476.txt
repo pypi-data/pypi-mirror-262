@@ -1,0 +1,120 @@
+## hpr3476 :: My mutt email setup
+
+ 
+
+Get app password and enter it in a file call pass
+
+    set my_gpass= "MyAppPassword"
+
+Encrypt pass file with 'gpg -e pass'
+Shred pass file with 'shred -uv pass', which uses verbose mode
+
+    shred - overwrite a file to hide its contents, and optionally delete it
+      -u deallocate and remove file after overwriting
+      -v, --verbose, show progress
+
+Use gpg encrypted key to open Gmail
+
+in .muttrc  source "gpg -d ~/.mutt/pass.gpg |" 
+
+Source colors file: Custom color scheme
+
+    ## Custom - Shows a gray line on tagged emails
+    color index yellow brightblack "~T ~N | ~T"
+Tagged emails
+
+
+Source hooks file: Redirect default save path for email sorting
+
+      ## Newsletters - Technology ##
+      save-hook '~f lists.linuxjournal.com' ='Linux'
+      save-hook '~f arch-dev-public'  =Newsletters
+      save-hook '~f noreply@mmorpg.com' =Newsletters
+      save-hook '~f ocw@mit.edu'|'~b Opencourseware' =Newsletters
+      save-hook '~s Linux'|'~s Foundation' ='Newsletters'
+      save-hook '~f weekly@raspberrypi.org' =Newsletters
+      save-hook '~f hackspace@raspberrypi.org' =Newsletters
+      save-hook '~f @pragmaticbookshelf.com' =Newsletters
+      save-hook '~f comixology@e.comixology.com' =Newsletters
+      save-hook '~f mrgroove@groovypost.com' =Newsletters
+      save-hook '~f oreilly@post.oreilly.com' =Newsletters
+      save-hook '~f mark ~s arduino' =Bookmarks/Arduino
+      save-hook '~f smith@torproject.org' =Newsletters/TorProject
+      save-hook '~f info@torproject.org' =Newsletters/TorProject
+      save-hook '~f editor@eff.org' =Newsletters.EFFdotOrg
+      save-hook '~f contact@diyodemag.com' =Newsletters/DIYODE-Magazine
+      save-hook '~f weekly-update@allaboutcircuits.com' =Newsletters/Circuits
+
+      ## Recipes ##
+      save-hook '~f dora ~s Recipe | ~s Recipe | ~B recipe | ~B casserole | ~B bake | ~B "omaha steaks" ' ='dabrat1972/Recipes'
+
+Source aliases file: Frequently used contacts
+
+      alias tags tags@hackerpublicradio.org
+      alias Dave_Morriss Dave Morriss <perloid@autistici.org>
+
+HTML email
+
+Install lynx
+
+Open URL's
+
+Install urlscan
+Capital 'U' open URL dialog
+
+Open pictures
+
+Install feh
+
+PDF reader
+
+Zathura
+
+https://bbs.archlinux.org/viewtopic.php?id=220572
+Install zathura-pdf-mupdf and zathura-pdf-poppler
+
+Just needed zathura-pdf-mupdf, zathura-pdf-poppler was included with zathura.
+
+
+
+
+mailcap - metamail capabilities file
+
+DESCRIPTION
+         The mailcap file is read by the metamail program to determine how to display non-text at the local site.
+  image/*; feh %s; test=test -n "$DISPLAY";
+  text/html; lynx -nonumbers -dump %s; copiousoutput; nametemplate=%s.html
+  application/pdf; zathura /dev/stdin
+More reading
+
+Regex question
+
+https://www.techrepublic.com/article/10-helpful-tips-for-mutt-e-mail-client-power-users
+
+Colors
+
+https://www.rdrop.com/docs/mutt/manual29.html
+
+
+Contact me:
+Email: ricemark20.nospam@nospam.gmail.com
+Mastodon: https://mastodon.sdf.org/@archer72
+Matrix: @archer72:matrix.org
+HPR Matrix room: https://app.element.io/#/room/#hpr:matrix.org
+Oggcastplanet Matrix room: https://app.element.io/#/room/!oIafedhXUbEidMzeTt:libera.chat
+Links
+Example files:
+
+
+colors
+
+
+gmail
+
+
+mailcap
+
+
+muttrc
+
+

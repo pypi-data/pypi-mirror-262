@@ -1,0 +1,125 @@
+## hpr0964 :: Sunday Morning Linux Review Episode 026
+
+ https://smlr.us
+Downloads:
+MP3 format (for Freedom Haters!)
+OGG format (for Freedom Lovers!)
+Total Running Time: 1:07:31
+Intro:
+Mat Enders, Tony Bemus, and Mary Tomich
+Intro Sound bite by Mike Tanner
+Kernel News: Mat
+Time: 5:47
+Release Candidate:
+Sorry I missed this last week but Linus did not release it until all most 8pm EDT on Saturday and I did not check Sunday morning before we recorded.
+On Sat, 31 Mar 2012 at 19:58:35 Linus Torvalds Released Kernel 3.4-rc1 
+On Sat, 7 Apr 2012 19:09:38 Linus Torvalds Released Kernel 3.4-rc2
+“So go forth, my eager minions. Go forth, and compile and test. Because nothing beats that warm fuzzy feeling of knowing that you’re on the bleeding edge, but at the same time -rc2 is not quite so bleeding edge that you need to worry too much.”
+Mainline:
+3.4-rc2
+Stable Updates:
+On Mon, 2 Apr 2012 at 12:52:39 Greg Kroah-Hartman Released Kernel 3.0.27
+121 files changed, 1172 files inserted, 450 files deleted 
+On Mon, 2 Apr 2012 at 13:35:54 Greg Kroah-Hartman Released Kernel 3.2.14
+168 files changed, 1606 files inserted, 793 files deleted 
+On Mon, 2 Apr 2012 at 13:54:51 Greg Kroah-Hartman Released Kernel 3.3.1
+227 files changed, 2007 files inserted, 1207 files deleted
+Kernel Quote:
+This was posted by Linus in response to Greg Kroah-Hartman publicly making fun of a kernel contributor for doing something massively stupid.
+“Publicly making fun of people is half the fun of open source programming. 
+In fact, the real reason to eschew programming in closed environments is that you can’t embarrass people in public”
+  —  Linus Torvalds
+Distro Talk: Tony
+Time: 8:27
+Distrowatch.com 
+
+4-4 – Puppy Linux 5.3 “Wary”, “Racy” – “Wary” and “Racy” editions of Puppy Linux, targeting older computers, are ready and available for download
+4-2 – DEFT Linux 7.1  –  Ubuntu-based distribution designed for forensic analysis, penetration testing and related tasks
+4-2 – Fuduntu 2012.2 – the latest of the regular quarterly release updates of the project’s rolling-release distribution previously forked from Fedora
+
+Distro of the Week: Tony
+
+Fedora – 1511
+Fuduntu – 1612
+Puppy – 1714
+Ubuntu – 2355
+Mint – 3763
+
+Tech News:
+Time: 27:56
+Udev Source To Be Merged Into Systemd tree 
+	Kay Sievers, lead developer for udev, announced on the Linux hotplug mailing list plans to merge the source code for udev into the systemd tree.  When this happens systemd will continue forward using the udev version number, so it will jump from 45 to 184. 
+	After the merge it will still be possible to build it for non-systemd systems.  He went on to say that builds of this nature will be supported for a long time to come.  This is necessary so as not to break systems with initrds that lack systemd.  Distributions that do not want to adopt systemd can build as they always have except they will need to use the systemd tar ball. 
+	The decision to merge the two projects was based on the fact that init needs to be completely hotplug capable.  Making udev’s device management and knowledge of device life cycles integral to systemd.  This makes this merge a change in build scheme not a change in direction or interface.  This leaves the libudev API untouched. 
+	So what all of this boils down to after the brouhaha settles down is that in essence nothing really has changed.
+
+Google Glass, Jetpacks Must Be Just Around The Corner 
+	I have been a fan of science fiction since I could read.  Well everyday reality seems to be catching up with the science fiction of my childhood.  If you have not seen the video yet head on over to YouTube and check it out:
+
+ These are the kinds of things we geeks have been saying are coming since we were children.  They are so futuristic that I am still having a hard time believing that they are actually in testing. 
+	The Internet rumor mill has been swirling around this for awhile now.  Google calls it Project Glass and it is being developed at Google[X], Googles R&D laboratory.  The announcement on Wednesday, 4/4 about field testing for Google Glass was released in a post on Google+ (https://plus.google.com/111626127367496192147/posts).  It is however for Google employees only.  The designs shown on Wednesday are just a selection they have more including one that can be incorporated into your existing eyewear. 
+	The biggest questions raised by this announcement have already been answered.  Those questions being, won’t these get in the way of reality, and, won’t these just separate us more from from real life, well according someone who has used these, in an interview with the NY Times, the answer is no: 
+“They let technology get out of your way.  If I want to take a picture I don’t have to reach into my pocket and take out my phone; I just press a button at the top of the glasses and that’s it.” 
+	The glasses do have a unique look about them, and people will know you are wearing them right away.  They will hopefully get smaller and be able to be integrated into a regular looking pair of glasses. 
+	I don’t care if these are impractical or don’t work I want a pair of these right now.  This is the science fiction stuff I used to dream about when I was a kid.  How far away are the personal jetpacks.
+
+ICANN Writes A How To For Governments To Seize Domains
+	Coming to you directly from the “Not Cool” department.  It was pointed out to ICANN that it was providing a disservice by not speaking out against governments seizing domains.  So what does ICANN do?  They publish a white paper that is basicly a how to for governments to seize domains.  They have also made public statements that they will work closer with governments to help them seize and censor domains.  This unfortunate turn of events just further illustrates the uselessness of ICANN to protect the Internet. It instead shows how they are actively undermining the very principals of the Internet.
+
+IBM And Red Hat May Join OpenStack 
+	From the I made this up to sound important bag.  GigaOm reports that IBM and Red Hat are joining OpenStack.  Neither company nor OpenStack has confirmed this report.  OpenStack was started about two years ago as joint effort between NASA and Rackspace.  Since its inception it has grown immensely with over 150 companies and 2,000 developers.  I do not know how much cache these two will bring to the party however as the list of companies already includes the likes of HP, Dell, Intel, AMD, and Cisco. 
+	OpenStack released the fifth version of its software this week code named Essex.  They are having a Design Summit April 16-18 in San Francisco.  This could be where new partners will be announced.
+
+April 4, 2012.  KDE released updates for its Workspaces, Applications, and Development Platform. 
+Significant bugfixes include
+* making encryption of multiple folders using GPG work,
+* XRender fixes in the KWin window and compositing manager,
+* a series of bugfixes to the newly introduced Dolphin view engine
+* improvements in the Plasma Quick-based new window switcher,
+* Kontact and its device counterpart Kontact Touch have received a number of important bugfixes as well as performance improvements.
+
+Yahoo Open-Sources Mojito JavaScript Framework
+
+KDE Tooltips— when is too much, too much?  Well for me when it’s associated with KDE tool-tips
+Despite the fact that I am a big fan of KDE, there is one thing that annoys me every time I install a KDE-based distro—the numerous tool-tips and pop-ups that appear in an attempt to be helpful. 
+Recently while searching for some KDE information, I found that someone else also had expressed similar sentiments and went on to list all of the tool-tips that he had disabled.  His version of KDE was 4.5—but it had not changed too much for 4.8.1.  Here are the various tooltips that I have deactivated. 
+System Settings tool-tips:  Are you bothered by KDE displaying the list of items for each configuration category within the System Setting area:  Disable it thusly:.
+1. Open System Settings
+2. Select the Configure button
+3. Uncheck the “Show detailed tool-tips”
+Icon-only Task bar tool-tips: If you’re using the icon-only task bar, you will appreciate this information instructing how to suppress task bar pop-ups.
+1. Right-click on the task bar.
+2. Select Icon-only Task Manager Settings
+3. In the Appearance section, Select “Do Not Show” in the tool-tips drop-down and save.
+Panel balloon pop-ups: Do these balloons make you want to blow up? Selecting this option will suppress the pop-ups that appear when you hover over shortcuts and icons on the desktop.
+1. Open System Settings
+2. Select Workspace Appearance and Behavior
+3. Select Workspace Behavior
+4. Select Workspace
+5. In the Informational Tips widget, select the “Do not show” option.
+.
+Title bar buttons (Maximize, Minimize, Close):
+Open System Settings
+Select Workspace Appearance
+Select Window Decorations
+Select the Configure Buttons button
+Uncheck the “Show window button tool-tips” check box
+This feature appears to be broken on my desktop—no tool-tips either way, plus my extra buttons with spacing are not appearing on the title bar. Perhaps my just downloaded and installed upgrade to 4.8.2 will fix this problem.  
+Dolphin:  Stopping the mother of all pop-up tooltips…This action prevents Dolphin from taking the content of the information panel (which can be set to appear on the right side) and repackaging it as a tool-tip..a very large tool-tip This may come in handy for some people, but for me it was over the top.
+1. Select the Settings menu
+2. Select the Configure Dolphin… option
+3. Select the General tab
+4. Uncheck the “Show tool-tips” check box.
+LibreOffice:  The tool-tips that appear when you hover over the tool-bar will disappear.
+1. Select Tools, Options.
+2. Under General, uncheck the Tips box.
+Listener Feedback
+Time: 47:29
+Keith Pawson
+Steve Barcomb
+Brad Alexander
+ Mats Soap Box 
+Time: 50:00
+Outtro Music: 
+Time: 1:03:36
+MultiPunk by Bilou le skankerfou

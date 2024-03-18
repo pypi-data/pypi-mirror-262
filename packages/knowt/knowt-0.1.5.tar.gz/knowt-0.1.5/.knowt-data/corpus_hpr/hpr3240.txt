@@ -1,0 +1,25 @@
+## hpr3240 :: Linux Under Attack
+
+ At one time most malware targeted Windows because it was the most popular OS, but as Linux has risen in popularity, particularly in the data center, it has become a target. We look at some of the recent attacks on Linux, and note some common features of the attacks. This then suggests some ways we can protect ourselves
+Links:
+
+https://build5nines.com/linux-is-most-used-os-in-microsoft-azure-over-50-percent-fo-vm-cores/
+https://w3techs.com/technologies/comparison/os-linux,os-windows
+https://gs.statcounter.com/os-market-share
+https://en.wikipedia.org/wiki/Chrome_OS
+https://www.zdnet.com/article/this-surprise-linux-malware-warning-shows-that-hackers-are-changing-their-targets/
+https://www.zwilnik.com/security-and-privacy/ssh-and-tunneling/ssh-introduction/
+https://hackerpublicradio.org/eps.php?id=1850
+https://www.bleepingcomputer.com/news/security/russian-hacker-pleads-guilty-for-role-in-infamous-linux-ebury-malware/
+https://www.theregister.com/2016/09/02/alleged_linux_hacker_arrested/
+https://www.helpnetsecurity.com/2018/12/07/linux-backdoors-openssh/
+https://www.welivesecurity.com/wp-content/uploads/2018/12/ESET-The_Dark_Side_of_the_ForSSHe.pdf
+https://www.helpnetsecurity.com/2018/12/07/linux-backdoors-openssh/
+https://www.nsa.gov/news-features/press-room/Article/2311407/nsa-and-fbi-expose-russian-previously-undisclosed-malware-drovorub-in-cybersecu/
+https://www.zdnet.com/article/fbi-and-nsa-expose-new-linux-malware-drovorub-used-by-russian-state-hackers/
+https://www.bleepingcomputer.com/news/security/lucifer-cryptomining-ddos-malware-now-targets-linux-systems/
+https://www.bleepingcomputer.com/news/security/lemon-duck-cryptominer-malware-now-targets-linux-devices/
+https://www.bleepingcomputer.com/news/security/fritzfrog-malware-attacks-linux-servers-over-ssh-to-mine-monero/
+https://www.amazon.com/SSH-Mastery-OpenSSH-PuTTY-Tunnels/dp/1642350028
+https://www.zwilnik.com/security-and-privacy/linux-under-attack/
+

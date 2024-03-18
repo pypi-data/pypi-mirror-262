@@ -1,0 +1,10 @@
+## hpr2537 :: Recording HPR on the fly Part II
+
+ This is an update to hpr1877 :: Recording HPR on the fly on your Android phone. I thought that was two years ago, but wow it's even two and a half years ago, back in late 2015.
+Updated recommendation! Back in #1877 I said that you could go with this app because it has these nice functions, or with that app because it has these other things. Well, there's no longer any need for trade-offs. Just go to f-droid, install 
+Audio Recorder and you're good to go!
+I installed it in two minutes, recorded a two-minute episode on how great it seems to be, and then I recorded another three episodes and I can confirm that it's pretty great. You've got the record/pause control available on the lock screen, it can save in FLAC, you can define the naming pattern it should use for the files, and you can tell it where to store its files.
+Some apps just insist on saving everything in internal storage, and that can run out pretty quick. Meanwhile I've got 30 GB left on my SD card that I'm struggling to make apps make use of.
+And finally, it also has a rename function (unlike my previous recommendation uRecord!), so you can conveniently, right in the app without finding the files through some other means, change the file name to reflect what it was that you were recording, so that you're not in the situation where one month later you're looking at a dozen files with just dates and times and need to listen to all of them to figure out which one it is you want.
+It even has an automatic skip silence function, but that's pretty useless for the places I record in. :-D
+When I said "cool waveform" I meant that it's displaying the recorded waveform on the screen as it records. Not that useful, but it's just part of the overall really nice polish of the app.

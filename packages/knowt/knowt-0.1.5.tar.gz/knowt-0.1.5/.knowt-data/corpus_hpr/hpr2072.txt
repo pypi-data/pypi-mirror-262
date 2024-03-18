@@ -1,0 +1,13 @@
+## hpr2072 :: That Awesome Time I Deleted My Home Directory
+
+ Omg, Sigflup deletes her home directory! Commands in this episode include:
+
+
+
+grep -b -a "what you remember" /dev/sd0a > /tmp/log
+dd if=/dev/sd0a bs=1 skip=12345 of=/tmp/out count=123456
+
+
+
+
+This is a capture of the program that sigflup recovered. It's a mouth tracker. https://www.youtube.com/watch?v=gf2NJrXGT4U

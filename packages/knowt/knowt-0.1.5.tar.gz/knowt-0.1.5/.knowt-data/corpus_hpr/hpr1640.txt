@@ -1,0 +1,31 @@
+## hpr1640 :: Symmetric vs. Asymmetric Encryption
+
+ 
+Previously we looked at Public Key encryption, which is also called Asymmetric Encryption because it uses two different keys for the encryption and decryption. This allows us to solve one of the biggest problems in secure encrypted communication, which is key distribution. Because the public key can be freely distributed, you dont need to maintain security around the process of distributing keys. Symmetric encryption, on the other hand, relies on a shared key that is used for both encryption and decryption. An example of this is the one-time pad, where you printed up a pad of paper that contained various keys, and each one was used only once. As long as no one can get the key, it is unbreakable, but the big weakness was key distribution. How do you get the one-time pad into the hands of your correspondent? And you would need to do this with separate one-time pads for each person you needed to communicate with. These are the kinds of problems that made asymmetric encryption so popular. Finally, symmetric key crypto cannot be used to reliably create a digital signature. The reason should be clear. If I have the same secret key you used to sign a message, I can alter the message, use the shared secret key myself, and claim you sent it. - For more go to https://www.zwilnik.com/?page_id=650
+
+
+Links:
+
+
+https://en.wikipedia.org/wiki/Data_Encryption_Standard
+
+https://en.wikipedia.org/wiki/Block_cipher
+
+https://en.wikipedia.org/wiki/ASCII
+
+https://en.wikipedia.org/wiki/Triple_DES
+
+https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+
+https://doctrina.org/How-RSA-Works-With-Examples.html
+
+https://en.wikipedia.org/wiki/Discrete_logarithm
+
+https://en.wikipedia.org/wiki/ElGamal_encryption
+
+https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange
+
+https://en.wikipedia.org/wiki/Elliptic_curve_cryptography
+
+https://www.zwilnik.com/?page_id=650
+

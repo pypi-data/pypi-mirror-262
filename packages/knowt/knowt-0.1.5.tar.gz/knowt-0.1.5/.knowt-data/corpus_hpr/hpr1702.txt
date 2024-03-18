@@ -1,0 +1,121 @@
+## hpr1702 :: FOSDEM 2015 Part 5 of 5
+
+ ReactOS
+
+
+
+Listen to the interview with Aleksey Bragin
+
+
+
+
+
+
+
+Website: https://www.reactos.org/
+
+
+ReactOS® is a free open source operating system based on the best design principles found in the Windows NT® architecture (Windows versions such as Windows XP, Windows 7, Windows Server 2012 are built on Windows NT architecture). Written completely from scratch, ReactOS is not a Linux based system, and shares none of the UNIX architecture. The main goal of the ReactOS® project is to provide an operating system which is binary compatible with Windows. This will allow your Windows® applications and drivers to run as they would on your Windows system. Additionally, the look and feel of the Windows operating system is used, such that people accustomed to the familiar user interface of Windows® would find using ReactOS straightforward. The ultimate goal of ReactOS® is to allow you to use it as alternative to Windows® without the need to change software you are used to.
+
+CoreOS
+
+
+
+Listen to the interview with Kelsey Hightower
+
+
+
+
+
+
+
+Website: https://coreos.com/
+
+
+CoreOS is a new Linux distribution that has been rearchitected to provide features needed to run modern infrastructure stacks. The strategies and architectures that influence CoreOS allow companies like Google, Facebook and Twitter to run their services at scale with high resilience.
+
+WolfSSL
+
+
+
+Listen to the interview with Chris Conlon
+
+
+
+
+
+
+
+Website: https://wolfssl.com/yaSSL/Home.html
+
+
+wolfSSL focuses on providing lightweight and embedded security solutions with an emphasis on speed, size, portability, features, and standards compliance.  Dual licensed to cater to a diversity of users ranging from the hobbyist to the user with commercial needs, we are happy to help our customers and community in any way we can.  Our products are Open Source giving customers the freedom to look under the hood.
+
+PicoTCP
+
+
+
+Listen to the interview with Maarten Vandersteegen
+
+
+
+
+
+
+
+Website: https://www.picotcp.com/
+
+
+picoTCP is a TCP/IP stack developed from scratch for embedded devices with an eye on the Internet of Things revolution.
+
+Ultimaker
+
+
+
+Listen to the interview with Olliver Schinagl
+
+
+
+
+
+
+
+Website: https://www.ultimaker.com/
+
+
+We wanted everyone to be able to enjoy the experience of making. Whether it was a cat dressed as an astronaut or a mechanical masterpiece. We set it as our goal to enable you to make those things. So we built a pioneering device that everyone could use and enjoy. We made it open source so everyone really could pitch in. And we started to grow.
+
+coreboot + flashrom
+
+
+
+Listen to the interview with Carl-Daniel Hailfinger
+
+
+
+
+
+
+
+Website: https://www.coreboot.org/
+
+
+coreboot is an extended firmware platform for delivering lightning fast and ultra secure boot experience on modern computers and embedded systems. As an Open Source project it provides auditability and helps regaining control over technology.
+
+SatNOGS
+
+
+
+Listen to the interview with Pierros Papadeas
+
+
+
+
+
+
+
+Website: https://satnogs.org/
+
+
+SatNOGS project is a complete platform of an Open Source Networked Ground Station. The scope of the project is to create a full stack of open technologies based on open standards , and the construction of a full ground station as a showcase of the stack.
+

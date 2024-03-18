@@ -1,0 +1,26 @@
+## hpr1193 :: Chris Conder Catchup on Broadband for Rural North
+
+ 
+#da12bb #HPR
+In todays show Ken catches up with Chris Conder of the Broadband for Rural North (https://b4rn.org.uk/). We interviewed her back in episode 980 (https://hackerpublicradio.org/eps.php?id=0980)
+
+
+
+Located in the very pretty but the rural Forest of Bowland in Lancashire in the UK, and tired of putting up with slow "broadband" they decided to put together their own network. They tried shared wifi, 3 and 4G mobile networks, MMDS and Satellite yet all proved to be unreliable.
+
+
+So over tea and cake they came up with a plan.
+
+A 240 Kilometer (150 mile) plan.
+A 1 gigabit (1000mb/sec) fiber optic connection plan.
+A let's give a connection to every one of the 1700 homes, farms, schools, churches and businesses, in the area plan
+
+And while they were at it they designed it to be:
+
+redundant with a dual homed backbone direct to the UK's Internet exchange
+upgradeable with ducts large enough to take multiple fibers
+laid through some of the most rugged, mountainous area of Lancashire to get to the people that need it most. (And let's be clear here, nothing to do with the fact that they will need to use dynamite to blast their way through the rocks.)
+
+
+Have a look at the recent videos here https://b4rn.org.uk/about-b4rn/jfdi
+

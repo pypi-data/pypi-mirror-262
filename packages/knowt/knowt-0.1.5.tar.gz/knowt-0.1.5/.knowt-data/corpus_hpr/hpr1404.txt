@@ -1,0 +1,49 @@
+## hpr1404 :: Editing pre-recorded audio in Audacity
+
+ 
+In today's show I walk you through the very basics of "editing" a audio track that has been recorded outside Audacity. Audacity can be found at https://audacity.sourceforge.net/
+
+Overview of Audacity
+
+Audacity is a free, easy-to-use and multilingual audio editor and recorder for Windows, Mac OS X, GNU/Linux and other operating systems..
+
+
+Menubar overview: https://manual.audacityteam.org/o/man/menu_reference.html
+Toolbars overview: https://manual.audacityteam.org/o/man/toolbars_overview.html
+Multi-Tool "*" (also F6): https://manual.audacityteam.org/o/man/multi_tool.html
+Set Project Rate to 44100 Hz
+
+Editing the audio
+
+The steps in this video include.
+
+
+File > Import > Your file
+Tracks > Stereo Track to Mono
+Effect > Amplify (Accept defaults)
+Delete audio: Highlight (click and drag) press Delete
+Undo: Ctrl + Z
+Intro Clip
+Outro Clip
+Move Track: (F6 Multitool) Ctrl - Click and drag
+Export the Track:
+  
+Confirm that the Project Rate is set to 44100 Hz (bottom left)
+File -> Export and select FLAC File
+Click Options... to reveal FLAC Export Setup
+Set Level to 8 (best)
+Set Bit depth to 24
+Artist Name: Your name
+Track Title: Your show title
+Album Title: Hacker Public Radio
+
+
+
+
+
+When you are ready you can contact admin@hackerpublicradio.org to get access to the FTP server.  For more technical information see the README file and the Sample Show notes file.
+
+
+https://hackerpublicradio.org/eps/hpr1404.webm
+https://hackerpublicradio.org/eps/hpr1404.mp4
+

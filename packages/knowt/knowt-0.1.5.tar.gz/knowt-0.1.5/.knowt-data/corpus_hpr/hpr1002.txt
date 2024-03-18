@@ -1,0 +1,13 @@
+## hpr1002 :: LiTS 008: free: Understanding Linux Memory Usage
+
+ 
+In today's show Dann explains to us what it means to be free. 
+
+
+
+The free command is a handy snapshot into your systems memory and how much of it is being used. In conjunction with other tools like top you can begin to understand where your system resources are being utilized and weed out potential bottlenecks and bugs. But before jumping into the deep end in system analysis, you need to have a decent grasp on how the Linux kernel utilizes memory, or your initial observations may send you tearing through the interwebs looking for a solution to a problem that does not exist.
+
+
+
+As ever catch the complete shownotes and video at https://www.linuxintheshell.com
+

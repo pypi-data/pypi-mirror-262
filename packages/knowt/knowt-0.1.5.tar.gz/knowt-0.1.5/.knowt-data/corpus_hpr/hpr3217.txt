@@ -1,0 +1,112 @@
+## hpr3217 :: Sump Minion
+
+ 
+1 introduction
+1.1 back in Ohio using my regular voice
+1.2 espeak is no worse than operat0rs audio and we all love his shows.
+2 the problem
+2.1 where i live the water table is high and basement flooding is a problem https://en.wikipedia.org/wiki/Great_Black_Swamp
+2.2 to counteract the water table problem houses have sumps in the basement
+sump closet
+
+sump close up
+
+2.2.1 sumps consist of a basin where outside water is collected
+2.2.2 a pump, usually electric, that drains the sump
+2.2.3 also a good sump system will have some type of backup pump
+2.3 the 'real' problem happens when the sump pump(s) fail
+2.3.1 primary pumps fail in many ways, mechanical motor failures, floats sticking electrical outage
+2.3.2 secondary pumps also fail battery problems, mechanical problems
+2.3.3 i wanted a notification system that would let me know that the water level in my sump was rising. i wanted it set so that if the water level hits where the secondary system kicks in i would get some ind of notification. i wanted a system that would not use python or some kind of 'home spy' system available from some friendly corporation.
+3 the solution
+3.1 a raspberrry pi, a simple transistor circuit, a c library that allows access to the pi's gpio's, mutt mail client, some bash scripting and a cron job
+
+The probe is meerly 2 wires on the end of a pvc pipe. one wire is higher up on the pipe than the other when both wires are submerged, the circuit is complete. the wires are just some old stuff from a stripped out ethernet cable. you could easily cascade anumber of these circuits and provide a water level meter something like this,
+
+, instead of running leds, you'd hook each end to a gpio pin on the pie.
+
+
+In picture 2, the closeup you can see the probe its the small pvc pipe with the blue wires running along the side. I attached the end of the wires to the pipe by stripping the ends and wrapping them around a small 1/2" self tapping screw. then I screwed one in towards the bottom and on higher up. the one higer up determines when the water alarm goes off. 
+
+4 implementation
+4.1 raspberry pi 3b+
+4.1.1 install slackware
+https://sarpi.fatdog.eu/
+slackware-arm
+https://arm.slackware.com/
+podcast
+https://shows.acast.com/slackchat
+4.1.2 access to gpio's
+4.1.2.1 initially sysfs, its deprecated
+https://www.kernel.org/doc/Documentation/ABI/obsolete/sysfs-gpio
+4.1.2.2 i was unable to get libgpio to compile
+4.1.2.3 other solutions python. wiringpi, project dead
+4.1.2.4 a library pigpiod
+https://abyz.me.uk/rpi/pigpio/pigpiod.html
+4.1.2.5 slackbuilds pigpiod
+https://slackbuilds.org/
+4.1.3 the circuit
+4.1.3.1 a rework of a forrest mims water alarm circuit
+https://en.wikipedia.org/wiki/Forrest_Mims
+circuit diagram
+
+4.1.4 mutt
+https://smalldata.tech/blog/2016/09/10/gmail-with-mutt
+4.1.5 email to text
+https://20somethingfinance.com/how-to-send-text-messages-sms-via-email-for-free/
+4.1.6 the script
+
+#!/bin/bash
+
+SENSOR=4
+RELAY=17
+INPUT=0
+OUTPUT=1
+ON=1
+OFF=0
+
+ADDRESS1=<your-phone-number>@vtext.com
+
+#if its 6am send system running sanity text
+if [ $(date | cut -c 12-16) == "06:00" ]; then
+
+#check to make sure daemon is running
+if [ "$(pidof pigpiod)" == "" ]; then
+   echo "Something is wrong, pigpiod is not running." | mutt -s "mutt message" $ADDRESS1
+   else
+   #make sure pin 4 is input, pin 17 output
+   if [ "$(pigs modeg $SENSOR)" = $OUTPUT ]; then
+      pigs modes $SENSOR R
+   fi
+   if [ "$(pigs modeg $RELAY)" = $INPUT ]; then
+      pigs modes $RELAY W
+   fi
+      echo "System running." | mutt -s "mutt message" $ADDRESS1
+   fi
+fi
+
+#if its the first wednesday of the month, run a system test
+if [ $(date | cut -c 1-3) `= "Wed" ] && [ $(date | cut -c 12-16) =' "12:00" ] && [ $(date | cut -c 9-10) -lt "8" ]; then
+   echo "Monthly Test." | mutt -s "mutt message" $ADDRESS1
+   pigs w $RELAY $ON
+   sleep 1
+
+   if [ $(pigs r $SENSOR) = 0 ]; then
+     echo "Test Passed!" | mutt -s "mutt message" $ADDRESS1
+   else
+     echo "Something is wrong!" | mutt -s "mutt message" $ADDRESS1
+   fi
+fi
+
+#check to see if water is rising, has the reading on pin 4 been driven low?
+if [ $(pigs r $SENSOR) = 0 ]; then
+   echo "Alert! The water is rising!" | mutt -s "mutt message" $ADDRESS1
+fi
+testing on breadboard
+
+strip board
+
+final installation
+
+5 conclusion
+5.1 fun project, shows the power of linux and floss and hope it inspires you

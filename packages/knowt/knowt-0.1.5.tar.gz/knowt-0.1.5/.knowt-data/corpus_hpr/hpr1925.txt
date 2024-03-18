@@ -1,0 +1,17 @@
+## hpr1925 :: Kdenlive Part 1: Introduction to Kdenlive
+
+ 
+This article has been written by Seth Kenlon and is narrated for you by Geddes. It was first published on 2011-11-16 and some of the commands may have changed slightly. Please see https://opensource.com/life/11/11/introduction-kdenlive for the complete text.
+
+
+Seth Kenlon is an independent multimedia artist, free culture advocate, and UNIX geek. He is one of the maintainers of the Slackware-based multimedia production project, https://slackermedia.ml
+
+
+GNU/Linux has infamously been wanting for a good, solid, professional-level free video editor for years. There have been glimpses of hope here and there, but mostly the editors that have the look and feel of a professional application are prone to blockbuster-worthy crashes, and those that have been stable have mostly been stable because they don't actually do anything beyond very basic editing. Kdenlive changes all of that.
+
+
+At the film production facility at which I work, Kdenlive is the Linux editor in production use, and it performs (and frequently out-performs) the Mac boxes in cost, upkeep, flexibility, speed, and stability. This article series seeks to illuminate for professional editors how Kdenlive can replace proprietary tools, nearly as a drop-in replacement.
+
+
+A good video editor is one that is suitable for anyone wanting to edit video, with powerful features that enable the video professional to do any task required of the job, yet with the simplicity that allows a hobbyist to quickly cut together footage off of a phone or point-and-click camera. Kdenlive can be both of those things, but regardless of the scope of your video project, there are right and wrong ways of doing things. Over the course of five articles, we will review the practical usage and the common set of best practices that will ensure your projects are successful.
+

@@ -1,0 +1,63 @@
+## hpr1206 :: Resolving Issues (The Vhost Config File)
+
+ 
+Windigo helps NYbill as he trys to set up mutiple servers on his VPS by explaining the
+stucture of the vhost file.
+
+
+NameVirtualHost *:80
+
+#this first virtualhost enables: https://127.0.0.1, or: https://localhost, 
+#to still go to /srv/http/*index.html(otherwise it will 404_error).
+#the reason for this: once you tell httpd.conf to include extra/httpd-vhosts.conf, 
+#ALL vhosts are handled in httpd-vhosts.conf(including the default one),
+# E.G. the default virtualhost in httpd.conf is not used and must be included here, 
+#otherwise, only domainname1.dom & domainname2.dom will be accessible
+#from your web browser and NOT https://127.0.0.1, or: https://localhost, etc.
+#
+
+<VirtualHost *:80>
+    DocumentRoot "/srv/http"
+    ServerAdmin root@localhost
+    ErrorLog "/var/log/httpd/127.0.0.1-error_log"
+    CustomLog "/var/log/httpd/127.0.0.1-access_log" common
+    <Directory /srv/http/>
+      DirectoryIndex index.htm index.html
+      AddHandler cgi-script .cgi .pl
+      Options ExecCGI Indexes FollowSymLinks MultiViews +Includes
+      AllowOverride None
+      Order allow,deny
+      Allow from all
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin your@domainname1.dom
+    DocumentRoot "/home/username/yoursites/domainname1.dom/www"
+    ServerName domainname1.dom
+    ServerAlias domainname1.dom
+    <Directory /home/username/yoursites/domainname1.dom/www/>
+      DirectoryIndex index.htm index.html
+      AddHandler cgi-script .cgi .pl
+      Options ExecCGI Indexes FollowSymLinks MultiViews +Includes
+      AllowOverride None
+      Order allow,deny
+      Allow from all
+</Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin your@domainname2.dom
+    DocumentRoot "/home/username/yoursites/domainname2.dom/www"
+    ServerName domainname2.dom
+    ServerAlias domainname2.dom
+    <Directory /home/username/yoursites/domainname2.dom/www/>
+      DirectoryIndex index.htm index.html
+      AddHandler cgi-script .cgi .pl
+      Options ExecCGI Indexes FollowSymLinks MultiViews +Includes
+      AllowOverride None
+      Order allow,deny
+      Allow from all
+</Directory>
+</VirtualHost>
+

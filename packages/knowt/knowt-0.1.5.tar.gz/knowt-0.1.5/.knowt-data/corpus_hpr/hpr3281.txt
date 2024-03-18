@@ -1,0 +1,285 @@
+## hpr3281 :: HPR Community News for February 2021
+
+ 
+New hosts
+
+Welcome to our new hosts: 
+o9l, 
+    Some Guy On The Internet.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+3261
+Mon
+2021-02-01
+HPR Community News for January 2021
+HPR Volunteers
+
+
+3262
+Tue
+2021-02-02
+My thoughts on diversity in Linux and open source
+swift110
+
+
+3263
+Wed
+2021-02-03
+My Beginnings in Tech
+o9l
+
+
+3264
+Thu
+2021-02-04
+Intro to Nagios
+norrist
+
+
+3265
+Fri
+2021-02-05
+My Chromebook Experience
+Ahuka
+
+
+3266
+Mon
+2021-02-08
+Upgrading Debian on my raspberry pi
+MrX
+
+
+3267
+Tue
+2021-02-09
+Ripping Media 2021
+operat0r
+
+
+3268
+Wed
+2021-02-10
+Video Game Review - Ark Survival Evolved
+Enigma
+
+
+3269
+Thu
+2021-02-11
+Linux Inlaws S01E23: The first year of the five year plan
+monochromec
+
+
+3270
+Fri
+2021-02-12
+An Example of Using Layers
+Ahuka
+
+
+3271
+Mon
+2021-02-15
+Interview with a 6yo child 
+operat0r
+
+
+3272
+Tue
+2021-02-16
+In GNU/Linux, there is no "diversity", we're all just data.
+Some Guy On The Internet
+
+
+3273
+Wed
+2021-02-17
+Embrace Firefox
+Some Guy On The Internet
+
+
+3274
+Thu
+2021-02-18
+My Custom dwm Setup
+arfab
+
+
+3275
+Fri
+2021-02-19
+D1 Mini Close Lid to Scan
+Ken Fallon
+
+
+3276
+Mon
+2021-02-22
+Deepgeek's thoughts about HD Radio
+deepgeek
+
+
+3277
+Tue
+2021-02-23
+Microsoft in my Debian repo
+Archer72
+
+
+3278
+Wed
+2021-02-24
+A Minor Victory Against Designed-In Obsolescence
+Beeza
+
+
+3279
+Thu
+2021-02-25
+Linux Inlaws S01E24: Legacy programming languages
+monochromec
+
+
+3280
+Fri
+2021-02-26
+What We Need For the ActivityPub Network
+Ahuka
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 16 comments in total.
+Past shows
+There are 7 comments on
+4 previous shows:
+
+hpr2356
+(2017-08-14) "Safely enabling ssh in the default Raspbian Image"
+by Ken Fallon.
+
+
+
+Comment 4:
+Leo_B on 2021-02-23:
+"If you're watching this in 2021"
+
+Comment 5:
+Ken Fallon on 2021-02-25:
+"Updated versions"
+hpr3187
+(2020-10-20) "Ansible for Dynamic Host Configuration Protocol"
+by norrist.
+
+
+
+Comment 2:
+Windigo on 2021-02-10:
+"Interesting approach"
+hpr3241
+(2021-01-04) "HPR Community News for December 2020"
+by HPR Volunteers.
+
+
+
+Comment 1:
+clacke on 2021-02-16:
+"NoSQL and Redis"
+
+Comment 2:
+clacke on 2021-02-16:
+"Redis pronunciation"
+
+Comment 3:
+Dave Morriss on 2021-02-17:
+"Key/value storage"
+hpr3259
+(2021-01-28) "Nextcloud - The easy way"
+by Archer72.
+
+
+
+Comment 1:
+archer72 on 2021-02-01:
+"Show name"
+
+This month's shows
+There are 9 comments on 5 of this month's shows:
+hpr3262
+(2021-02-02) "My thoughts on diversity in Linux and open source"
+by swift110.
+
+Comment 1:
+norist on 2021-02-02:
+"Storyteller"Comment 2:
+Bill n1vux on 2021-02-04:
+"well said"Comment 3:
+Kevin O'Brien on 2021-02-04:
+"Further discussion"Comment 4:
+blizzack on 2021-02-15:
+"Systematically kept out - part 1"Comment 5:
+blizzack on 2021-02-15:
+"Systematically kept out - part 2"
+hpr3269
+(2021-02-11) "Linux Inlaws S01E23: The first year of the five year plan"
+by monochromec.
+
+Comment 1:
+claudiom on 2021-02-12:
+"Thanks for the invite...."
+hpr3271
+(2021-02-15) "Interview with a 6yo child "
+by operat0r.
+
+Comment 1:
+thelovebug on 2021-02-16:
+"Loved this!"
+hpr3272
+(2021-02-16) "In GNU/Linux, there is no "diversity", we're all just data."
+by Some Guy On The Internet.
+
+Comment 1:
+bookewyrmm on 2021-02-17:
+"welcome"
+hpr3274
+(2021-02-18) "My Custom dwm Setup"
+by arfab.
+
+Comment 1:
+mcnalu on 2021-02-19:
+"Might return to dwm"
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2021-February/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+Tags and Summaries
+Thanks to the following contributor for sending in updates in the past month:
+Dave Morriss
+Over the period tags and/or summaries have been added to 10 shows which were without them.
+There are now 414 shows which need a summary and/or tags.
+If you would like to contribute to the tag/summary project visit the summary page at https://hackerpublicradio.org/report_missing_tags.php and follow the instructions there.

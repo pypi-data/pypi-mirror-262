@@ -1,0 +1,12 @@
+## hpr1599 :: Interview with Ingmar Steiner from the MaryTTS project
+
+ In today's show Ken interviews Ingmar Steiner who is the lead developer for the mary text to speech project. MaryTTS is an open-source, multilingual text-to-speech synthesis system written in pure java and is released under the LGPL. During the interview we get a history of the project, and dive into speech synthesis and we look at how to make your own voices.Links
+
+https://www.coli.uni-saarland.de/~steiner/index.html
+OpenMary development page: https://mary.opendfki.de/
+GitHub: https://github.com/marytts/marytts
+HomePage: https://mary.dfki.de/
+New HomePage: https://lnv-90208.sb.dfki.de/
+Orca : https://wiki.gnome.org/action/show/Projects/Orca?action=show&redirect=Orca
+FOSDEM: https://fosdem.org/
+Demo: https://mary.dfki.de:59125/

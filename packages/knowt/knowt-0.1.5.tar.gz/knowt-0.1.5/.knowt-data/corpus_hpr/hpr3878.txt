@@ -1,0 +1,11 @@
+## hpr3878 :: Linux commands to gather information about your system
+
+ https://www.redhat.com/sysadmin/linux-system-info-commands
+
+The various ls commands lscpu, lsblk, lspci,
+The disk commands df, fdisk and mount
+Usbutils
+pciutils
+
+Free
+dmidecode -t memory or -t bios or -t system

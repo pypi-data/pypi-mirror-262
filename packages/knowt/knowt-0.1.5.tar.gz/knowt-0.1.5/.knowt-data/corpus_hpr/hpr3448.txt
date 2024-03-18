@@ -1,0 +1,16 @@
+## hpr3448 :: Installing GuixSD
+
+ Synopsis
+In this episode Rho`n records his adventure in installing GuixSD on an external USB drive which will be run on a Mac Mini computer. After overcoming the initial difficulty of finding a keyboard that would connect wirelessly to the Mac Mini while using the Guix installer and some network difficulties, he describes the installation steps.
+Guix has a graphical text based installer. It is reminiscent of the mid to late 90s Debian installers. Even with its old school feel, the installer is very nice. It is well laid out, has good onscreen description for each step of the installation process, and provides ample configuration selections from language, to to key board layout, to desktop and software selection.
+References
+
+Guix website
+Instructions for installing Guix as the main OS
+Rii 2.4G Mini Wireless Keyboard with Touchpad Mouse,Lightweight Portable Wireless Keyboard Controller with USB Receiver Remote Control for Windows/ Mac/ Android/ PC/Tablets/ TV/Xbox/ PS3. X1-Black - EBay item
+
+Attribution
+The transition sound used between audio clips is found on freesound.org:
+Name: Harp Transition Music Cue
+Author: DanJFilms
+License: Creative Commons Zero

@@ -1,0 +1,11 @@
+## hpr3460 :: Dodge and Burn
+
+ Layer Modes, sometimes called Blending Modes, allow you to combine layers in a variety of ways. We continue with the Dodge and Burn Modes. Dodge is one of the Lighten Modes, while Burn is one of the Darken Modes, but I pulled them out for their own tutorial because they are not only closely related (inverse of each other), but also because I wanted to cover their use as Tool Modes in addition to Layer Modes. These are the Layer Modes available on the latest (at the time I write this) version of GIMP, 2.10.24.
+Links:
+
+https://docs.gimp.org/2.10/en/gimp-tools-paint.html#gimp-tools-paint-options
+https://www.ahuka.com/gimp/a-layer-mask-project/
+https://digitalmedia.fws.gov/digital/collection/natdiglib/id/14486/rec/210
+https://www.youtube.com/watch?v=bbaAEZl7_44
+https://www.ahuka.com/gimp/dodge-and-burn/
+

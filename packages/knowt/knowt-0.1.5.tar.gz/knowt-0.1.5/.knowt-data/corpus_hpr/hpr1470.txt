@@ -1,0 +1,25 @@
+## hpr1470 :: Learn to read time with ccClock
+
+ Over the years the image of the clock has been abstracted and stylized to
+a point where a long and a short line inside a circle, or even inside four
+dots on the ordinals, can be instantaneously recognized as a clock. This is
+perfectly fine if you already know how to read the analog clock but it makes
+no sense to use such a design as a teaching aid.
+
+
+
+
+As a teaching device, you need to make sure all the information that has been abstracted away has been put back.
+That is the basic principle of the ccClock
+
+The minute hand points at the minute dial
+All the minutes are listed removing the need to know the 5 or 15 math table
+The Clockwise direction is emphasized with arrows and text orientation.
+The two per day rotation of the hour hand is described using a concentric spiral
+The progression of day into night is indicated by recognizable icons of the rising and setting sun and moon
+The written format is described in the traditional dial digits
+The spoken form is described in speech balloonsLinks
+Dave Allen - "Teaching Your Kid Time"
+https://openclipart.org/
+https://kenfallon.com/ccclock
+

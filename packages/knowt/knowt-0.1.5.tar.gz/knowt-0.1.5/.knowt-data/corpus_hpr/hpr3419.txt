@@ -1,0 +1,35 @@
+## hpr3419 :: Linux Inlaws S01E38: Tiny kernels
+
+  This episode is dedicated to tiny kernels driving operating systems also
+    known as micro-kernels.  While discussing the last 100 years of operating
+    system design and implementation, our two aging heroes also shed some
+    light on operating systems in general and their recent history (like fifty
+    years). Unless you're a true OS nerd, you find the episode mildly
+    refreshing and educational on the layers of software underneath your
+    beloved applications controlling the hardware and other shenanigans. If
+    you're an OS nerd, this episode may have the potential of closing your few
+    remaining knowledge gaps (or something like this).  A fun show for
+    children of all ages and beyond.  
+Links:
+
+IBM VM: https://en.wikipedia.org/wiki/Z/VM
+Modern operating systems by Andy S. Tanenbaum: https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf
+Short write-up on fashion (for the uninitiated): https://en.wikipedia.org/wiki/Fashion
+Multics: https://www.multicians.org
+Unix: https://en.wikipedia.org/wiki/History_of_Unix
+CCP/M-86: https://en.wikipedia.org/wiki/Multiuser_DOS#Concurrent_CP/M-86
+QDOS: https://en.wikipedia.org/wiki/86-DOS
+VMS: https://vmssoftware.com
+Digital's VAX: https://en.wikipedia.org/wiki/VAX
+Mach kernel: https://en.wikipedia.org/wiki/Mach_(kernel)
+Android: https://en.wikipedia.org/wiki/Android_(operating_system)
+Homebrew: https://brew.sh
+MacPorts: https://www.macports.org
+Usenet war: https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate
+Minix and TPM: https://www.zdnet.com/article/minix-intels-hidden-in-chip-operating-system
+Trusted Platform Module: https://link.springer.com/content/pdf/10.1007%2F978-1-4302-6584-9.pdf
+Secure enclaves: https://software.intel.com/content/www/us/en/develop/topics/software-guard-extensions.html
+The Sleepover: https://www.imdb.com/title/tt10888708/?ref_=fn_al_tt_1
+Python Init Podcast episode: https://www.pythonpodcast.com/tony-liu-python-venture-investing-episode-305
+Martin's trainspotters' research paper: https://www.diva-portal.org/smash/get/diva2:1340183/FULLTEXT05
+

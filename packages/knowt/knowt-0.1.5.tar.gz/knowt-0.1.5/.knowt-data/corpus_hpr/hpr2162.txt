@@ -1,0 +1,42 @@
+## hpr2162 :: Review/Criticism of Hipp's "Git: Just Say No"
+
+ Review/Criticism of Hipp's "Git: Just Say No"
+I was recommended Richard Hipp – Git: Just Say No (youtube.com) last night on the excellent #oggcastplanet channel on freenode.
+I didn't listen to all of it, but I'm putting this out there with the material I have, because anything else would be procrastination and this is HPR. We Want Shows!
+Here are his criticisms, or suggested enhancements, top 10:
+
+Show descendants of a check-in
+Simplified mental model
+Remember branch history
+Multiple check-outs from the same repo
+Sliced check-out and clones
+Check-out & commit against a remote repo
+"Busybox" version of git
+All comms via HTTP/HTTPS
+"git all" command
+"git serve" command
+
+I think the killer of these is #2, the rest are nitpicks or incorrect. And for addressing #2 there is the very interesting gitless report and project, which I'm guessing doesn't abandon git entirely, just reworks the UI, which does need rework. Not for people like me, who already learned the nooks and crannies and make productive use of several of what might be misfeatures, but to lower the threshold for people coming to our software projects and whatever other source code we are managing.
+TL;DL:
+
+Why? Complete git log and less does the job, even for the oldest git project – git.
+YES, see gitless.
+Why?
+Already works.
+Presumably already works, don't know how well.
+Why?
+(Didn't listen) Why?
+(Didn't listen) Why? It has HTTP/HTTPS, but it also has the ssh model, which is great.
+Didn't listen.
+(Didn't listen) git serve sucks, use gogs.
+
+Fodder for further episodes
+
+I'm connecting to freenode through Matrix using Riot, both on web and mobile.
+Is Matrix a big fat NIH? (hey look, WikiWikiWeb is back online!)
+Why not just use XMPP?
+It works great for me, and I didn't have to bother setting up a native IRC bouncer like ZNC or Quassel.
+The quick-quick version: Just go to #freenode_#oggcastplanet:matrix.org and you're in the best IRC web chat available, in the #oggcastplanet channel on freenode.
+gitless (or gl)
+Fossil
+

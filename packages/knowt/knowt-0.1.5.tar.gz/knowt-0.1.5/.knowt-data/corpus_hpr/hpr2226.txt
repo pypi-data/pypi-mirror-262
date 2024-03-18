@@ -1,0 +1,170 @@
+## hpr2226 :: FOSDEM 2017 AW Building
+
+ Table of Contents
+
+coreboot
+GNU GRUB
+Olimex
+Automotive Grade Linux
+Ham radio
+CorteXlab
+OpenEmbedded
+
+
+
+https://www.coreboot.org/
+
+coreboot is a replacement for your BIOS / UEFI with a strong focus on boot speed, security and flexibility. It is designed to boot your operating system as fast as possible without any compromise to security, with no back doors, and without any cruft from the 80s. It was originally designed for large super-computers with thousands of nodes, but it will run on your desktop, headless internet server, laptop, tablet or your favorite IoT device.
+
+Listen to the interview with Julian Laubstein
+
+
+
+
+
+Links
+
+Source: https://github.com/coreboot
+Wikipedia: https://en.wikipedia.org/wiki/Coreboot
+IRC: https://webchat.freenode.net/?channels=coreboot
+Google+: https://plus.google.com/communities/115014129240741938880
+Linkedin: https://www.linkedin.com/company-beta/10663214/
+Mailinglist: https://www.coreboot.org/Mailinglist
+Twitter: https://twitter.com/coreboot_org
+Facebook: https://www.facebook.com/coreboot/
+YouTube: https://www.youtube.com/channel/UCviiVAz65y6EiFLITbLG81w/videos
+About: https://www.coreboot.org/Welcome_to_coreboot
+Twitch: https://www.twitch.tv/coreboot_org
+
+
+
+https://www.gnu.org/software/grub/
+
+GNU GRUB is a Multiboot boot loader. It was derived from GRUB, the GRand Unified Bootloader, which was originally designed and implemented by Erich Stefan Boleyn. Briefly, a boot loader is the first software program that runs when a computer starts. It is responsible for loading and transferring control to the operating system kernel software (such as the Hurd or Linux). The kernel, in turn, initializes the rest of the operating system (e.g. GNU).
+
+Listen to the interview with Vladimir 'phcoder' Serbinenko / Daniel Kiper
+
+
+
+
+
+Links
+
+Source: git://git.savannah.gnu.org/grub.git
+Wikipedia: https://en.wikipedia.org/wiki/GNU_GRUB
+Mailinglist: https://www.gnu.org/software/grub/grub-mailinglist.html
+
+
+
+https://www.olimex.com
+
+Olimex Ltd is a leading provider for development tools and programmers for embedded market. The company has 25+ years experience in designing, prototyping and manufacturing printed circuit boards, sub-assemblies, and complete electronic products. We are established in 1991 in Plovdiv - the second largest city in Bulgaria. We have extensive knowledge in analog, digital, and microcontroller design, and we offer our own-designed development boards, programmers and emulators for rapid prototyping ARM, AVR, MSP430, MAXQ and PIC microcontrollers.
+
+Listen to the interview with Tsvetan Usunov
+
+
+
+
+
+
+
+
+
+Links
+
+Source: https://github.com/OLIMEX
+IRC: https://webchat.freenode.net/?channels=olimex
+Google+: https://plus.google.com/102255887343137829901/posts
+Twitter: https://twitter.com/Olimex
+Facebook: https://www.facebook.com/pages/Olimex/284513994899126
+YouTube: https://www.youtube.com/tsvetanusunov
+About: https://www.olimex.com/About/
+Flickr: https://www.flickr.com/photos/olimex/
+
+
+
+https://www.automotivelinux.org/
+
+Automotive Grade Linux (AGL) is a Linux Foundation Workgroup dedicated to creating open source software solutions for automotive applications. Although the initial target for AGL is In-Vehicle-Infotainment (IVI) systems, additional use cases such as instrument clusters and telematics systems will eventually be supported. AGL has participants from the Automotive, Communications, and Semiconductor Industries and welcomes contributions from individual developers. 
+
+Listen to the interview with Jan-Simon Möller
+
+
+
+
+
+Links
+
+Source: https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo
+Wikipedia: https://en.wikipedia.org/wiki/Linux_Foundation#Automotive_Grade_Linux
+Linkedin: https://www.linkedin.com/company-beta/17891737/
+Mailinglist: https://lists.linuxfoundation.org/mailman/listinfo/automotive-discussions
+Twitter: https://twitter.com/autogradelinux
+About: https://www.automotivelinux.org/about
+
+
+
+https://uba.be/en/home
+
+Amateur radio is a hobby for people who like to talk using radio transmitters. Many people enjoy using amateur radio to talk to other amateur radio hobbyists in other countries. Amateur radio hobbyists also use their radio transmitters to get help in emergencies. Amateur radio is often called Ham Radio. Many people use their amateur radios for fun. People who use Amateur radio are often called amateur radio operators, hams or amateurs.
+
+Listen to the interview with Kristoff Bonne
+
+
+
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Amateur_radio
+RSS: https://uba.be/en/rss.xml
+Twitter: https://twitter.com/UBA_BEL
+Facebook: https://www.facebook.com/pages/UBA/206146739474007
+YouTube: https://www.youtube.com/watch?v=KZrhjfKY-9g
+Reddit: https://www.reddit.com/r/amateurradio/
+
+
+
+https://www.cortexlab.fr/
+
+CorteXlab is a radio testbed based on Software Defined Radio (SDR) and comprised of 40 radio nodes that allow remote users to test their own radio algorithms. The architecture will be also opened to industry third party to deploy their own front-end (RF or UWB) or baseband systems to test and validate their developments.
+
+Listen to the interview with Léonardo S. Cardoso
+
+
+
+
+
+Links
+
+Source: https://github.com/CorteXlab
+Twitter: https://twitter.com/FITCorteXlab
+About: https://www.cortexlab.fr/?page_id=2
+
+
+
+https://www.openembedded.org/
+
+Welcome to OpenEmbedded, the build framework for embedded Linux. OpenEmbedded offers a best-in-class cross-compile environment. It allows developers to create a complete Linux Distribution for embedded systems.
+
+Listen to the interview with Andreas Müller
+
+
+
+
+
+Links
+
+Source: git://git.openembedded.org/openembedded
+Wikipedia: https://en.wikipedia.org/wiki/OpenEmbedded
+IRC: https://www.openembedded.org/wiki/IRC
+Google+: https://plus.google.com/u/0/communities/104250716797176329741
+Linkedin: https://www.linkedin.com/groups/49269/profile
+Mailinglist: https://www.openembedded.org/wiki/Mailing_lists
+Twitter: https://twitter.com/hashtag/openembedded
+Facebook: https://www.facebook.com/pages/OpenEmbedded/103140443059741
+YouTube: https://www.youtube.com/results?search_query=OpenEmbedded
+

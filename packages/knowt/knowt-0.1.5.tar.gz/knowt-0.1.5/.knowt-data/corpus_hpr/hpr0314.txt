@@ -1,0 +1,11 @@
+## hpr0314 :: LVM2
+
+ Kevin gives a brief and basic overview of Logical Volume
+Management, or LVM.
+
+Please note that I will be using a Debian GNU+Linux frame of
+reference, and that there is a possibility that some of the
+command-line details of some of he commands may differ to some extent.
+
+Also note that the current LVM package is "LVM2", and that when I use
+the term LVM, that I am, indeed, referring to LVM2.

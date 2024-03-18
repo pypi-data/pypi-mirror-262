@@ -1,0 +1,12 @@
+## hpr4014 :: Post-Quantum Cryptography Update 1st November 2023
+
+ In May of 2023 a guide was published by NIST that aimed to guide IT
+Professionals and Security Officers on steps to take as we move into a
+world where Quantum computing has made traditional cryptography and
+security measures obsolete. This is their take on a best practices
+manual, and if you are in security or are an IT professional it merits a
+good look. And it is only 4 pages long, so you can do it easily.
+Links:
+
+https://www.nccoe.nist.gov/sites/default/files/2023-04/pqc-migration-nist-sp-1800-38a-preliminary-draft.pdf
+

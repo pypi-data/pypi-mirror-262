@@ -1,0 +1,10 @@
+## hpr0033 :: Linux Boot Process Part 2a - LILO
+
+ LILO = Linux Loader
+
+I discuss the ins-and-outs of LILO, hot it is configured and how it is initialized and what to do when it screws up.  This is part 2a in my Linux Start Process series.  Be on the look out for 2b discussing GRUB very soon.
+
+Links: 
+Lilo Mini-Howto 
+LILO Wikipedia Page 
+LILO home page 

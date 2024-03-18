@@ -1,0 +1,43 @@
+## hpr2824 :: Gnu Awk - Part 15
+
+ Introduction
+This is the fifteenth episode of the “Learning Awk” series which is being produced by b-yeezi and myself.
+This is the second of a pair of episodes looking at redirection in Awk scripts.
+In this episode I will spend some time looking at the getline command used for explicit input (as opposed to the usual implicit sort), often with redirection. The getline command is a complex subject which I will cover only relatively briefly. You are directed to the getline section of the GNU Awk User’s Guide for the full details.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+GNU Awk User’s Guide
+
+Explicit Input with getline
+Using getline with No Arguments
+Using getline with a coprocess
+Getline notes
+Two-way I/O
+
+
+
+Previous shows in this series on HPR:
+
+“Gnu Awk - Part 1” - episode 2114
+“Gnu Awk - Part 2” - episode 2129
+“Gnu Awk - Part 3” - episode 2143
+“Gnu Awk - Part 4” - episode 2163
+“Gnu Awk - Part 5” - episode 2184
+“Gnu Awk - Part 6” - episode 2238
+“Gnu Awk - Part 7” - episode 2330
+“Gnu Awk - Part 8” - episode 2438
+“Gnu Awk - Part 9” - episode 2476
+“Gnu Awk - Part 10” - episode 2526
+“Gnu Awk - Part 11” - episode 2554
+“Gnu Awk - Part 12” - episode 2610
+“Gnu Awk - Part 13” - episode 2804
+“Gnu Awk - Part 14” - episode 2816
+
+Resources:
+
+ePub version of these notes
+Examples: awk15_testdata1, awk15_ex1.awk, awk15_ex2.awk, awk15_testdata2, awk15_ex3.awk, awk15_ex4.awk, awk15_ex5.awk, awk15_ex6.awk, awk15_ex7.awk
+
+

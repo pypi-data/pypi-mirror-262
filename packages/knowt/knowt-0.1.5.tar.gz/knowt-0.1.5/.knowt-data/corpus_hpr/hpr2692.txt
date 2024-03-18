@@ -1,0 +1,11 @@
+## hpr2692 :: YouTube URL tricks
+
+ YouTube URL Tricks by Desearcher
+Recommended EpisodeYouTube Playlists by Ahuka
+User Upload playlistBEFOREhttps://www.youtube.com/channel/UCAL3JXZSzSm8AlZyD3nQdBAAFTERhttps://www.youtube.com/playlist?list=UUAL3JXZSzSm8AlZyD3nQdBA
+Embeded PlayerBEFOREhttps://www.youtube.com/playlist?list=UUAL3JXZSzSm8AlZyD3nQdBAAFTERhttps://www.youtube.com/embed?list=UUAL3JXZSzSm8AlZyD3nQdBA
+Watch LaterNORMALhttps://www.youtube.com/playlist?list=WLEMBEDhttps://www.youtube.com/embed?list=WL
+Show "Remove Watched" Button in Watch Later queuehttps://www.youtube.com/playlist?list=WL&disable_polymer=true
+Chrome App trick to maximize viewing areaWatch Laterchrome -app="https://www.youtube.com/embed?list=WL"Playlistchrome -app="https://www.youtube.com/embed?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"
+Play On TVhttps://www.youtube.com/pair
+TCL Roku TVRoku Product List

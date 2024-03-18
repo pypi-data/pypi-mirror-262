@@ -1,0 +1,54 @@
+## hpr2093 :: GNU Health
+
+ GNU Health
+This is an interview with Dr Tom Kane and his student Euan Livingstone in Tom’s office at Edinburgh Napier University (ENU) on 2016-07-06.
+Tom and Euan are investigating ways of running GNU Health for evaluation and demonstration purposes, using multiple Raspberry Pi systems and an Intel NUC. In particular they want to evaluate the conformity of interoperability (FHIR) standards, and are trying to build a reference implementation for decision makers who are procuring a Health and Hospital Information System.
+In the interview Tom used some terminology that I have provided links for here and at the end:
+
+LIMS: Laboratory Information Management System
+PACS: Picture Archiving and Communication System
+FHIR: Fast Healthcare Interoperability Resources
+
+I had forgotten where I’d seen Luis Falcón, originator of GNU Health, being interviewed. It was on FLOSS Weekly, as linked below.
+The complete notes for this episode, with pictures of the equipment, are here.
+Thanks to Tom and Euan for taking the time to talk to me.
+Links
+
+GNU Health website: https://health.gnu.org/
+GNU Health Wikipedia page: https://en.wikipedia.org/wiki/GNU_Health
+Tryton application platform: https://www.tryton.org/
+Luis Falcón, MD:
+
+On Twitter (@meanmicio): https://twitter.com/meanmicio
+On the web: https://www.meanmicio.org/
+
+Wikipedia page for SAP SE: https://en.wikipedia.org/wiki/SAP_SE
+LIMS (Laboratory Information Management System):
+
+Wikipedia page : https://en.wikipedia.org/wiki/Laboratory_information_management_system
+BIKA LIMS: https://www.bikalabs.org/
+
+PACS (Picture Archiving and Communication System):
+
+Wikipedia page: https://en.wikipedia.org/wiki/Picture_archiving_and_communication_system
+DICOM (Digital Imaging and Communications in Medicine):
+
+Wikipedia page: https://en.wikipedia.org/wiki/DICOM
+Orthanc DICOM server: https://www.orthanc-server.com/
+
+
+Wikipedia page on Fast Healthcare Interoperability Resources: https://en.wikipedia.org/wiki/Fast_Healthcare_Interoperability_Resources
+FLOSS WEEKLY episode 288 “GNU Health”: https://twit.tv/shows/floss-weekly/episodes/288
+Jamaica Ministry of Health:
+
+From opensource.com “Jamaica adopts GNU Health”: https://opensource.com/health/13/11/jamaica-adopts-gnu-health
+Ministry of Health Jamaica, Health Informatics: https://moh.gov.jm/divisions-agencies/divisions/technical-services-division/health-informatics/
+
+Nelson Mandela Children’s Hospital:
+
+Website: https://www.nelsonmandelachildrenshospital.org/
+Bongi Mkhabela, CEO NMCH Trust: https://whoswho.co.za/sibongile-mkhabela-1939
+
+Wikipedia page on the Intel NUC (Next Unit of Computing): https://en.wikipedia.org/wiki/Next_Unit_of_Computing
+Dr Tom Kane, Edinburgh Napier University: https://www.iidi.napier.ac.uk/c/people/peopleid/13383286
+Euan Livingstone (@euanlivingstone): https://twitter.com/euanlivingstone

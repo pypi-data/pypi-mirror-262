@@ -1,0 +1,10 @@
+## hpr1164 :: About git
+
+ 
+In this show I talk about the git version control system. I won't give
+example commands, but I discuss concepts like commits, branches,
+merging, push and pull, and rebasing. I also talk about the git workflow
+I use.
+
+
+I will put some more info on https://johanv.org/node/200.

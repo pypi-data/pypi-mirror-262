@@ -1,0 +1,153 @@
+## hpr2909 :: ONICS Basics Part 3:  Networking Fundamentals
+
+ Theory
+In this episode I decided to take a slight diversion into networking fundamentals. As before, if you want to learn more about installing the ONICS tool suite, go back and listen to HPR 2882.
+There are three key concepts to understand about modern networks. They are:
+
+digital - the networks carry bits and bytes (binary digits)
+packet switched - devices break data into blobs of data called "packets" and take turns sending and receiving those packets to/from other devices attached to the network
+internetworked -- machines communicate using a protocol that allows traffic to traverse across multiple, independently-managed networks in a uniform way
+
+My Setup
+
+2 laptops connected to a home wifi network that has Internet connectivity.
+Practicing sending data from a source machine to a destination machine. Both are running Linux.
+Source machine:
+
+Wifi interface: wlan0
+Ethernet address: 00:22:fa:a7:69:90
+IP address: 192.168.0.4
+
+Destination machine
+
+Wifi interface: wlo1
+Ethernet address: 6c:88:14:7c:2e:14
+IP address: 192.168.0.248
+
+Internet Router:
+
+Ethernet address: 00:0d:b9:23:f2:51
+IP address: 192.168.0.1
+
+
+More Terminology
+
+Address - a number that identifies a machine's interface in a network
+Packet - a blob of binary data sent as a unit over a network
+Route - a rule that specifies how to forward traffic to a given address
+Router / Gateway - a machine that uses the IP protocol and forwards traffic between multiple networks that it connects to
+Network Protocol - a set of rules and data formats for exchanging information over a network
+
+Standard UNIX Commands
+
+ifconfig (no arguments or '-a')
+
+list interfaces on a machine
+
+ifconfig IFNAME
+
+list properites about a given interface
+
+ping -c 1 IPADDRESS
+
+send an echo request to machine IPADDRESS
+
+arp -na
+
+Dump the Ethernet addresses of known nearby machines
+
+netstat -nr
+
+Dump the routes in a system
+
+netstat -nr | grep "^0.0.0.0"
+
+Find the route (and thus IP address) of the default gateway
+
+
+ONICS Commands in this Episode
+
+rawpkt - take a blob of data and wrap it in an XPKT format (so other ONICS tools can understand what it is)
+ethwrap - take an XPKT and prepend an Ethernet header to it
+ipwrap - take an XPKT and prepend an IP header to it
+pktin - read a stream of packets from a network interface
+pflt - filter a stream of packets so that only those matching a pattern get through
+pktout - send a stream of packets to a network interface
+x2hpkt - convert XPKTs into a hex dump
+xpktdump - like x2hpkt, but send the output to a pager like 'less' for easy reading
+
+Sending an Ethernet Packet to the Destination
+
+On the receiver:
+
+    $ sudo pktin wlo1 |
+      pflt "not ip and eth.dst == 6c:88:14:7c:2e:14" |
+      x2hpkt
+
+
+On the sender:
+
+    $ echo "hello world" |
+      rawpkt |
+      ethwrap "eth.dst = 6c:88:14:7c:2e:14; "
+              "eth.src = 00:22:fa:a7:69:90; "
+              "eth.ethtype = 12;" |
+      sudo pktout wlan0
+
+Note that while I broke up the field setting commands into multiple lines in ethwrap, they can all be part of a single quoted string if desired. To store the packet to a file rather than send it instead do something
+$ echo ... | rawpkt | ethwrap ... > outfile.xpkt
+
+One can then dump the packet by running:
+$ xpktdump outfile.xpkt
+
+or send the packet by running:
+$ sudo pktout outfile.xpkt wlan0
+
+Sending an IP Packet to the Destination over the Local Network
+
+On the reciever:
+
+    $ sudo pktin wlo1 |
+      pflt "ip and ip.proto == 255" |
+      x2hpkt
+
+
+On the sender:
+
+    $ echo "hello world" |
+      rawpkt |
+      ipwrap "ip.saddr = 192.168.0.4;"
+             "ip.daddr = 192.168.0.248;"
+             "ip.len = 32;"
+             "ip.ttl = 64;"
+             "ip.proto = 255;" |
+      ethwrap "eth.dst = 6c:88:14:7c:2e:14; "
+              "eth.src = 00:22:fa:a7:69:90; "
+              "eth.ethtype = 0x800;" |
+      sudo pktout wlan0
+
+Note that while I broke up the field setting commands into multiple lines in ipwrap and ethwrap, they can all be part of a single quoted string if desired. Also note that it is not actually necessary to set the 'ip.len' and 'eth.ethtype' fields: the tools will do that automatically.
+Sending an IP Packet to the Destination via IP
+
+On the receiver:
+
+    $ sudo pktin wlo1 |
+      pflt "ip and ip.proto == 255" |
+      x2hpkt
+
+
+One the sender:
+
+    $ echo "hello world" |
+      rawpkt |
+      ipwrap "ip.saddr = 192.168.0.4;"
+             "ip.daddr = 192.168.0.248;"
+             "ip.ttl = 64;"
+             "ip.proto = 255;" |
+      ethwrap "eth.dst = 00:0d:b9:23:f2:51; "
+              "eth.src = 00:22:fa:a7:69:90; " |
+      sudo pktout wlan0
+
+Challenge
+There are several differences between the packets that arrive at the destination machine when sending directly over the local network versus sending via an IP gateway (router). I've mentioned how the Ethernet header is different. Can you find the other differences? What causes these differences?
+TIP: instead of sending the pktin command to x2hpkt, send it to a file. Do this for both local network send and for sending via the router saving each to different files. Then run pdiff on the two files to highlight the differences.

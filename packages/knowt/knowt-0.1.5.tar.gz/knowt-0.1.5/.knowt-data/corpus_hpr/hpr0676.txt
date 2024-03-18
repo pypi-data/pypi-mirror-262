@@ -1,0 +1,210 @@
+## hpr0676 :: Behind the Scenes at Hacker Public Radio. A community update for the month 2011-02.
+
+ New hosts
+
+Welcome to 
+sp0rus and biosshadow, 
+Heisenbug, 
+JBu92, 
+Sven, 
+Mark Katerberg and Courtney Schauer, 
+Trixter, 
+Bariman, 
+dodddummy, 
+Claudio Miranda, and
+Doug Farrell.
+
+Show Review
+
+652:: sp0rus and biosshadow:: Nameless Infosec Podcast Ep 1
+653:: Heisenbug:: Intro to Black Box Testing
+654:: JBu92:: Offline Filesharing
+655:: Flaviu Simihaian:: Read 'n Code - 2 Camus's The Plague and Reddit.com
+656:: Sven:: My first steps in recovering pictures
+657:: droops:: HPR Video Proposal
+658:: Mark Katerberg and Courtney Schauer:: Music Management Consoles
+659:: Lord Drachenblut:: 10 Buck Review - Serenity
+660:: Trixter:: An argument against emulators when retrocomputing
+661:: Quvmoh:: War walking with smart phone
+662:: Xoke:: DD-WRT
+663:: brother mouse:: What is on your mp3 player
+664:: Michael Foord:: A Little Bit of Python: Episode 13
+665:: KFive:: Hacking the Craps Table
+666:: brother mouse:: Salvaging old Coleman lanterns and stoves
+667:: Johninsc:: Your Local Library
+668:: Flaviu Simihaian:: Read 'n Code - 3 Kurt Vonnegut's Slaughterhouse-five and Erlang
+669:: KFive:: QSK Netcast 6: The Origin of Open Source
+670:: Bariman:: Linux - A Jazz Musician's Viewpoint
+671:: dodddummy:: How I Found Linux
+672:: Claudio Miranda:: How I Upgraded My PC - CPU
+673:: droops:: droops returns to geocaching
+674:: Skirlet:: The Language Frontier Episode 2
+675:: Doug Farrell:: Python Response to Bad Apples Podcast 5x18
+
+Host 107 brings us BLUE HEAVEN
+
+A dramatized science-fiction short story written and read by lostnbronx 
+Get it now at https://www.info-underground.net:70/lostnbronx/fiction/blue-heaven
+
+
+Apologies To:
+
+sp0rus and biosshadow for not crediting them correctly. 
+Doug Farrell for missing the show he emailed me
+Jason Dodd for missing his show on the ftp server
+Pokey and Code Cruncher for messing up their been two fests
+Claudio Miranda for the unnecessary spam about his episode
+klaatu for anything I may have said or done to cause him to abandon HPR.
+
+Thanks to
+
+brother mouse for his mp3 tagging utility https://pastebin.com/t7dH8bK3
+Tony Baechler for his research into Google voice
+Code Cruncher for the entries to the business cards
+mordancy for volunteering to look into Archive.org automating
+droops for all the man love
+droops and slick0 for the flac version of the theme song
+David Stafford for constructive comments on how to improve the site
+pokeys mom for the HPR promo
+
+Podcasts by Phone
+
+
+Every listener is strongly encouraged to send us one contribution per year.
+In episode 636 pokey told us that his Mother also listens to the show from time to time and this month she upheld her end of the bargain.
+
+The call in lines
+US:  +1-206-312-5749 
+UK: +44-203-432-5879 
+
+Please include your name and email address.
+DON'T FORGET TO ADD THE # SIGN AT THE END
+Thanks to Russ Woodman - K5TUX and Arron 'Finux' Finnon for making this possible.
+
+Scheduling Rules update
+Shows will be released based on the following rules that gives content produced for HPR priority, while avoiding having any one host/series repeated in a week. Hosts are encouraged to release their shows on other feeds after uploading them to HPR.
+
+
+Time critical 
+    Where the host has requested a show to be posted at a particular time or that the show contains newsworthy information.
+Scheduled Slots 
+    Where a host has been assigned a regular day to release a show.
+New Hosts 
+    In order to encourage new hosts we will prioritize shows submitted from new hosts so they can experience the excitment of podcasting.
+HPR Content on a First in First Out basis.
+
+
+Syndicated shows will be released on their own scheduled slot following the same rules as above.
+HPR Stickers
+
+
+
+
+Hot off the press ! 
+The HPR stickers have been distributed to our Global distribution network in North America, Europe and Australia.
+For anyone else on this who wants them, now is the time to ask; before they all get handed out at the first couple of Linux fests. They're free as in beer btw.
+We're also sending stickers out to the other podcasters who promoted HPR in the past.
+
+Audio Book Club
+
+Several of the HPR contributors in the IRC channel have formed the beginning of an audio-book club. We'll be doing reviews which include spoilers, so I was wondering if you could announce our first audio-book title in case anyone wanted to listen to it before we spoiled it on them. We're hoping this will become a(n ir)regular show for HPR, but we'll see how the first one goes. All audio-books that we review will be free (as in beer) and easily available, so the barrier to entry for the listeners and participants will just be the time involved in listening to the audio. The first audio book is a short one. It runs about 3.5 hours total, and I can tell you it is a very good book which will appeal to both science fiction fans and political critics alike. 
+
+
+The book is Badge Of Infamy by Lester Del Rey and read by Steven Wilson. It is available from podiobooks.com. The direct url is
+https://www.podiobooks.com/title/badge-of-infamy.
+
+
+From podiobooks.com: "Daniel Feldman was a doctor once. He made the mistake of saving a friend's life in violation of Medical Lobby rules. Now, he's a pariah, shunned by all, forbidden to touch another patient. But things are more loose on Mars. There, Doc Feldman is welcomed by the colonists, even as he's hunted by the authorities. But, when he discovers a Martian plague may soon wipe out humanity on two planets, the authorities begin hunting him for a different reason altogether."
+
+
+We'll be announcing the next book at the end of our first show.
+
+Site improvements
+
+Each hosts have their own folder ie: hackerpublicradio.org/droops/
+Vimeo Group https://vimeo.com/channels/hpr
+Site redesign more up-to-date looking.
+All comments and posts need a rel=nofollow tag on links.
+All the RSS feed needs to be put in the address bar
+Each episode title link should link to the individual show page
+A separate link/graphic should play the audio, maybe have a built in player and a download link.
+Each episode should have a unique url with the shows title in it, ie hackerpublicradio.org/geocaching_with_droops/ 
+We need more of a call to action about recording a show, its kinda hidden.
+The total comment viewer needs to link to the episode page, so that people can see all of the comments about the episode.
+A way to upload our episodes and automate everything.
+We also need the ability for the hosts to add episodes of hpr and other shows to a "Select" RSS feed. This way, when we find something super cool that someone else recorded, we can share it with the community.
+
+News from the Admin Channel
+HPR is been blocked by some companies because they can filter the find the word hacker - money well spent. During the spam fest, HPR got listed on sites as a source of malware. I've been contacting the sites but each blames the next one for the listing and the trail runs cold.
+
+
+https://news.ycombinator.com/item?id=2239162
+  https://www.mywot.com/en/scorecard/hackerpublicradio.org/comment#comment
+  https://www.malwaredomains.com/wordpress/?p=1340
+    https://malwaresurvival.net/2011/01/21/courtney-cox-search-leads-to-fake-av-malware/
+    https://www.dshield.org/tools/suspicious_domains.html
+
+I registered Hobby Public Radio but cPanel doesn't seem to have a way to have HackerPublicRadio and HobbyPublicRadio served from the same directory.
+
+Question: Off the shelf or Self Build ?
+
+Can we make a HPR site using standard Wordpress plugins ?
+  
+User account management
+  Podcast plugins
+  Released according to a schedule 
+  
+email from the server is broken through cPanel and this is delaying up automation 
+Any PHP programmers want to help
+Proposal to make droops, finux, klaatu admins
+Still no update on the Ice Cast server
+
+Events
+
+Indiana LinuxFest is a community F/OSS conference, which is showcasing the best the community has to offer in the way of Free and Open Source Software, Open Hardware, and Free Culture. We are also highlighting the best and brightest from all of these communities from the hobbyist to professional level.
+
+
+Indiana LinuxFest 2011, March 25th to the 27th at the Wyndam Indianapolis West, is free to attend and Open for any to attend be it the hobbyist to the professional. So join us as we March to Freedom.
+
+
+
+
+Every 50th person who signs up for the following passes, Supporter Passes and LPIC-1 Exam Cram Session, will receive their choice of a Nook Color or Archos 70 while supplies last.
+
+
+https://www.indianalinux.org/cms/PrizesForParticipation
+
+Beep from https://www.freesound.org/: btn402.mp3 :: (0:00) :: Short button beep. Recorded in cAve studio... added by junggle 
+
+
+
+Northeast GNU/Linux Fest Details Saturday, April 2, 2011 Worcester MA
+
+ 
+More information.
+
+
+Linuxfest Northwest 2011 - April 30th-May 1st Bellingham, WA
+
+ 
+More information.
+ 
+HPR is going Northeast and then Northwest with tables at both Linuxfests. We would like people to help out at the table, finding equipment etc. 
+ 
+ 
+How it all started: here is the link to pokey's first mail about the table at NELF:
+ https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2010-December/000161.html 
+ 
+We are also running a Competition to design Mini Business Cards for HPR which we would like to have for the fest. 
+They submitted entries have all won a book and they are all up on the picasaweb site https://picasaweb.google.com/108536234968997542346/DesignCompetition#
+
+Upcoming Shows
+
+HPR Admins with "Community News" SCHEDULED SLOT
+biosshadow and sp0rus Nameless Infosec Podcast. SCHEDULED SLOT
+lostnbronx THEATER OF THE IMAGINATION 2
+Syndicated Thursday ---> 10 Buck Review
+Broam auctions yard sales and flea markets
+---
+pokey NELF Taxes
+riddlebox Ep1 Product Review SunVolt

@@ -1,0 +1,54 @@
+## hpr0110 :: Xoke's Favorite Apps
+
+ * Xubuntu
+# Thunderbird
+* Flock
+
+Firefox Extensions (these work on Flock too)
+* NoScript
+* Tab Mix Plus
+* Custom user chrome file to have tabs on the left as this laptop is widescreen.
+* Firekeeper
+* All-in-one-sidebar
+* Secure Login
+* Adblock Plus
+* Download Statusbar
+
+These I use just on Flock
+* Morning Coffee
+* Greasemonkey
+* Scrapbook
+
+These are my 'dev' profile extensions
+* Firebug - has major issues with FF3 though :(
+* Web Developer
+* Fire PHP
+* User Agent Switcher
+
+
+* Tracks
+* Tiddlywiki
+# Prism
+# XChat
+    * Uberscript
+# PC Man
+* Air
+* Twhirl
+# KeePassX
+# Ardour
+# Amarok
+# Rockbox
+* Bashpodder
+# Audacious
+# FileZilla
+# BaoBab
+# KTorrent
+# Pidgin
+* FunPidgin
+# DigiKam
+# GQView
+# GIMP
+# Inkscape
+# AutoFSCK
+
+Most of these (those with a # not a *) are available in the Ubuntu repositories though or are installed by default though.

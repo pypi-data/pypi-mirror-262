@@ -1,0 +1,45 @@
+## hpr3102 :: RFC 5005 Part 2 – Webcomics, subscribers and feed readers
+
+ An interview with two passionate RFC 5005 fans on how to handle big Atom feeds
+This conversation took almost an hour, so I split it into two shows:
+
+Part 1 talks mostly about the RFC itself, what it means and why. HPR 3082
+Part 2 goes into personal experiences with the RFC and with syndication in general, in particular in the context of web comics.
+
+This is part 2.
+In this show I’m talking to:
+fluffy
+
+Federated social web:
+https://queer.party/@fluffy
+Writes and makes things in several creative fields:
+https://beesbuzz.biz/
+Publ is like a static site generator, but dynamic. It produces RFC 5005 archive feeds, of course:
+https://publ.beesbuzz.biz/
+Thoughts on ephemeral content vs content worth archiving and how they relate to protocols:
+https://beesbuzz.biz/blog/5709-Keeping-it-personal
+
+Jamey
+
+Federated social web:
+https://toot.cat/@jamey
+Blog:
+https://minilop.net/
+Made a prototype full-history reader that follows RFC 5005 links:
+https://reader.minilop.net/
+Made a webcomic reader mostly mentioned in Part 2:
+https://www.comic-rocket.com/
+Made a WordPress plugin implementing RFC 5005:
+https://github.com/jameysharp/wp-fullhistory
+Made an RFC 5005 archive feed synthesizer for sites with a predictable post frequency and URL structure:
+https://github.com/jameysharp/predictable/
+Hosted at https://fh.minilop.net/
+Was on HPR 9 years ago, talking about X.Org!
+https://hackerpublicradio.org/eps.php?id=0825
+
+Conversation notes
+
+Back in 2002, Aaron Swartz published his joke MIME-header-based RSS 3:
+https://www.aaronsw.com/weblog/000574
+The cultural context at the time and the rivalry between RSS 0.91+, RSS 1.0, RSS 2.0 and Atom deserves a show of its own.
+

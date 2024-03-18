@@ -1,0 +1,26 @@
+## hpr2914 :: Describing how I listen to podcasts PART 4
+
+ 
+PiFace Control and Display
+https://www.piface.org.uk/products/piface_control_and_display/
+How to fit, setup and install the required software for your Raspberry Pi running the Raspbian Operating system
+https://www.piface.org.uk/guides/setting_up_pifacecad/fitting_PiFace_Control_and_Display/
+
+Pictures 01, 02 and 03 show how the PiFace Control and Display board and raspberry pi fit into the case
+
+
+
+Pictures 04 and 05 shows the piece of plastic used to transfer the light from the LED’s on the Pi board to the holes in the casing. This is supposed to allow you to monitor the PI LED’s. I held it in place using a piece of Blu Tack.
+
+
+
+Wikipedia article about Blu Tack
+https://en.wikipedia.org/wiki/Blu_Tack
+
+Picture 6 shows the completed box
+
+Pictures 7 and 8 show the project in operation and mounted on a spare Anker tablet stand that I had lying about.
+
+
+This is an example of the Anker stand I used. I use it to hold my project at a 45 degree angle so I can see it from around the room, it is intended to be used as a tablet stand.
+Anker stand for my Nexus 7, pictures, links

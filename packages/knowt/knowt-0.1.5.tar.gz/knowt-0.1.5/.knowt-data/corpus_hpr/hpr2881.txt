@@ -1,0 +1,15 @@
+## hpr2881 :: Automatically split album into tracks in Audacity
+
+ 
+In this show Ken, recalls hpr1771 :: Audacity: Label Tracks by Jon Kulp to add Labels to an large audio file.
+
+
+Tidy up the audio to the point where you are happy with it, but do not truncate silence.
+Find the first break in the audio and check how long it is. In my case it was 4 seconds.
+Select the entire track and select Analyze>Silence Finder
+Change Maximum duration of silence to just under the length of the break. In my case I set it to 3 seconds
+This will then create a series of labels on a new Label track
+Edit the names of each as desired.
+Select File > Export > Export Multiple
+Select Split Files based on Labels
+Name files using Label/Track Name

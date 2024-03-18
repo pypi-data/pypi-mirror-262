@@ -1,0 +1,71 @@
+## hpr1714 :: Vim Hints 001
+
+ Introduction to Vim
+This is the start of the Vim Hints series.
+As a Linux user there are many editors available to you. Which one you want to use depends on your needs and the amount of time you want to dedicate to learning how to use it.
+One of the editors from the early days of Unix is vi, written in 1976. Contemporary with it is Emacs, also originating in 1976. However, it seemed to become the norm (in my experience anyway) that vi rather than Emacs was provided as standard with versions of Unix, and this has often continued into Linux.
+I originally started using Unix around 1988 and found vi available to me. I learnt how to use it in a rudimentary way since I knew I'd find it on any Unix systems I came across.
+Many derivatives and clones of vi have been created. The one which has become the most popular and available is Vim, the name of which is an acronym for Vi IMproved, created in 1991 by Bram Moolenaar. This is what I use, and I have not wanted to learn another editor since adopting it, even though I have experimented with several. This is the editor we will be looking at in this series.
+What's the series about?
+The thinking behind this series is:
+
+You may already be using Vim; there are features you may not be aware of that can be revealed here
+You may be using a different, simpler editor; you might want to use Vim and gain from its advanced features
+
+Of course, you may prefer to learn Emacs instead. That's fine; you should choose the tool that best suits your needs. Both Emacs and Vim have quite steep learning curves, but the broad range of capabilities you gain from knowing either is considerable.
+I am not an expert in Vim. In fact I am continuing to learn new Vim features on a regular basis. However, I have been using it for many years and would like to share some of what I have learnt.
+Why use Vim?
+With simpler editors you can move about a file, add, remove and change text and save the results. The editor might have syntax highlighting and some degree of knowledge of the programming language you are typing. You might have spell checking as well.
+With Vim and other more advanced editors you have all of this and a lot more. You can perform global changes throughout a file, process many files at once, add plugins to the editor to change its behaviour, and so on. Also, there is a language behind the scenes which can be used to build extensions.
+Using Vim
+Usually, typing the command vi at the command line actually invokes vim. Vim runs in vi-compatible mode by default, which results in Vim enhancements being unavailable.
+Vim uses a configuration file, which is called .vimrc on Linux. (Vim will also run on Windows, OSX and other operating systems but we will not be covering these implementations in this series.) Vim also has a GUI interface invoked by the command gvim, and it has its own configuration file .gvimrc.
+I you don't have a .vimrc create one with touch ~/.vimrc before you start. This will stop Vim running in vi-compatible mode. We will look at what the .vimrc can be used to do later.
+You can start Vim on its own without pointing at a file, but normally you use it to edit a file, which need not already exist. So, to create a new file called testfile invoke Vim with the command: vim testfile
+Once running, Vim shows the contents of the file. All the lines on the screen where there is no content are marked with a tilde "~" character. If you are creating a file the first line on the screen will be blank, and last line will contain the name of the file followed by "[New File]" and some other details which we will examine later:
+"testfile" [New File]       0,0-1         All
+All the rest of the lines will contain a tilde.
+Vim is a modal editor. The mode you usually start in is normal mode where you can move around the lines of the file and perform actions, but nothing you type is actually written to the file. In fact, the keys you type are actually editing commands. This is one of the features of Vim that causes problems for new users.
+Since this is a new file there is not much you can do other than enter text, and to do this you need to switch to insert mode. Do this by pressing the i key. The message -- INSERT -- will appear on the bottom line of the screen. Now type some text, pressing the Enter key at the end of each line.
+You might notice that in insert mode you can press the arrow keys and move back to text you have already typed. This is a Vim feature and was not available in the original vi editor.
+When you have finished entering text, press the Esc key to exit from insert mode. Now you can move around in normal mode, but remember that the keys you press are now commands not data to be entered into the file.
+To move around in normal mode use the arrow keys or the home row keyboard keys: k to move up, j to move down, h to move left and l to move right.
+This brings us to the last mode we'll look at: command mode. To enter this mode press the : (colon) key in normal mode. This moves the cursor to the last line of the screen, which starts with the colon you just typed. Here you can enter another class of commands. This time, we'll just look at how you can save the file and exit Vim.
+Saving the file is achieved with the w command, and to exit from Vim the q command is used. These can be typed together, so :wq writes the file and exits.
+If you were to use :q on its own, having entered data into Vim, this would not work. Vim prevents you from throwing away your work this way. If you really meant to quit without saving then the q must be followed by an exclamation mark ("!"). So :q! lets you exit Vim without saving.
+Summary so far
+
+Vim usually starts in normal mode
+Arrow keys or h, j, k and l for left, down, up and right for navigation in normal mode
+i enters insert mode
+Esc exits from insert mode and reverts to normal mode
+: in normal mode enters command mode
+:w in normal mode writes the file
+:wq in normal mode writes and exits
+:q in normal mode exits but only if nothing was changed or added
+:q! in normal mode exits regardless of any changes
+
+Errata
+
+I was wrong about the contents of the last line of the Vim screen in the audio. The notes have been corrected.
+
+Links
+History
+
+Wikipedia page for vi https://en.wikipedia.org/wiki/Vi
+Wikipedia page for Emacs https://en.wikipedia.org/wiki/Emacs
+Wikipedia page for Vim https://en.wikipedia.org/wiki/Vim_(text_editor)
+Wikipedia page for Bram Moolenaar https://en.wikipedia.org/wiki/Bram_Moolenaar
+
+Books
+
+Learning the vi and Vim Editors, 7th Edition, by Arnold Robbins, Elbert Hannah, Linda Lamb. https://shop.oreilly.com/product/9780596529833.do
+vi and Vim Editors Pocket Reference, 2nd Edition, by Arnold Robbins. Available to buy or as a free PDF. https://it-ebooks.info/book/144/
+A Byte of Vim, by Swaroop C H. Available as a free PDF. https://www.swaroopch.com/notes/vim/
+The Vim Tutorial and Reference, by Steve Oualline. Available as a free PDF. https://www.oualline.com/vim-book.html
+
+Other resources
+
+Vim Community https://www.vim.org/
+Vim Tips Wiki https://vim.wikia.com/wiki/Vim_Tips_Wiki
+

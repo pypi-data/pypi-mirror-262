@@ -1,0 +1,38 @@
+## hpr1945 :: The Quassel IRC System
+
+ Quassel is a centralized IRC hub that allows several client computers to appear as only one connection to the IRC server, i.e. Freenode. About the same time NYBill posted Episode 1869 "IRSSI Connectbot", I was wondering how to merge all my simultaneous IRC connections from multiple hosts to the same channel on the same server into one connection. I did a search on "GUI front end IRSSI" and came up with Quassel instead. I think NYBill and I are trying to solve pretty much the same problem. I'm not trying to say my solution is better than NYBill's, I'm just saying it's the one that appeals the most to me.
+Problem: IRC servers (or at least Freenode) do not allow simultaneous connection from multiple hosts using the same user identifier. I.E., if I was logged in on the PC on my desk via XChat as FiftyOneFifty, if at the same time I was connected to IRC via a PC on the kitchen counter, I would have to use "Kitchen5150" as my identifier. If I was away from home, but left a computer connected to IRC back home, if I connected againover Android I'd have to be Andro5150. I could adopt all these other personas as aliases, which protected them from theft and allowed me to still have admin rights on channels where I was admin depite using a different login. These multiple versions of me running in IRC inevitably lead to confusion about which was the "real" FiftyOneFifty, a situation which MrJackson is all too familiar with, I'm sure.
+IRSSI Solution: Connect to a server via ssh, then login into IRC using the IRSSI terminal client inside a GNU screen or TMUX session. When moving between local hosts, disconnect from the current screen or tmux session, ssh into the server from the new host, and reconnect to the session running irssi. The irssi ncurses interface may not be as pretty or easy for some users as a GUI, but I understand it is quite functional.
+Quassel Solution: Connect to IRC server via a single host running quassel-core. Connect multiple simultaneous clients to the core via quassel-client. All clients share the same IRC display at the same time, all the while transparent to the server (i.e. Freenode), which only sees the one login from the host running quassel-core.
+There are two components two this system, quassel-core and quassel-client. You want to install quassel-core on to a system with a persistent Internet connection, say a home or cloud server. I first used Arch on and RPI model 2, so quassle-core setup for Arch may be found here: https://wiki.archlinux.org/index.php/Quassel .
+A. Install the core
+
+Install quassel-core on the server [sudo pacman -S quassel-core]
+Generate a certificate
+Start core (i.e. sudo systemctl start quassel)
+Enable quassel on every startup (sudo systemctl enable quassel)
+
+There is something in the wiki about a but preventing the enable fundction from working. "systemctl enable" just creates a sysmlink into the proper startup directory, so the wiki replaces it with a copy command "cp /usr/lib/systemd/system/quassel.service /etc/systemd/system/"
+
+Set up Port Forwarding on your router. I suggest you use an external port other than the default 4242 (Security Through Obscurity, see my Port Forwarding episode).
+
+All the configuration is done by the client!
+B. Install quassel-client
+
+All you need to connect is an IP address and the external port number. The first account you create will be master and the only account with the ability to create other users. In other words, if someone else had your server's IP address and the port Quassel-core is listening on, they could beat you to establishing a master account and controll Quassel on your server.
+Once you have established a connection to a core and set your password, you can set up the default IRC servers and channels. It's a GUI interface, so I'm not going to walk you through the menus and various inputs. I only had success setting up one IRC server (Freenode) in the initial setup on the first client (as you connect addition clients, you will find your channels are already configured), and then only if I avoided ssl connections. Channels are entered into a list in the normal way (#channel_1, #channel_2, etc), but once you connect to a server, /join commands become persistant. I added a second IRC server, tllts, once I finished the initial setup.
+
+The user interface is similar to XChat,but not quite as polished.
+
+You get popup notifications when someone uses your handle in a chat, but scrolling back to find it, rather than being in a different color, it shows up in a garish reverse text. Easier to spot, but not as eligant.
+No way to search back posts for your handle or anything else.
+Links posted by others only have "copy this link function", not "open this link in default browser"
+I don't seem to have spellchecking enabled in my IRC client. I discovered spell checkwas central in Linux, rather than every app having it's own version (i.e. I assume FireFox under Windows has it's own spellcheck libraries as Office has it's own library). I wonder if I installed hunspell on the Quassel core server, if I would suddenly get spellcheck ( https://hackerpublicradio.org/eps.php?id=1356 ).
+
+There is a perfectly adequate Android client for Quassel. Like AndChat, YAAIC, and the others, it seems to drop the connection unless you actively participating, but since the server is persistent, you never miss out on what was said while your client was disconnected.
+The last time I was awy for the weekend, I shut off all my PC's and network devices. One drawback of a local Quassel server would be my LAN and Quassel Core server would need to be up even when I was away from home.
+Migrating Quassel from my local server to the cloud: About a week after I'd set up Quassel, a buddy anounced he had secured a Digital Ocean Droplet ($5 a month, limited storage, limited bandwidth). He was open to letting his friends use the service, as long as their requirements were low impact. I jumped on the oppurtunity to move my quassel-core over to the "cloud". Remember the five and a half steps to setting up quassel-core under Arch? According to my friend who manages the Digital Ocean Droplet running Ubuntu Server, it was pretty much "sudo aptitude install quassel-core". Once the core was running I then configured the new core from one of the clients (i.e., pointed quassel-client to a new IP and port number, then created an account and password). Since I was on a new server, I had to set up connections my IRC channels again. After that, every client I migrated to the new core inherited those channels from the server. A week or so after moving the core to the cloud, I came home to find my Internet had been down for a few hours. Cycling the power on the ISPs tranceiver and my router fixed my Internet connection, and since Digital Ocean had experienced no interruption, I was still able to scroll back to the five hours of IRC I missed.
+Links
+
+https://wiki.archlinux.org/index.php/Quassel
+https://hackerpublicradio.org/eps.php?id=1356

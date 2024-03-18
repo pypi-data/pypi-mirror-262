@@ -1,0 +1,18 @@
+## hpr1122 :: LiTS 018: ln
+
+ 
+Linux In The Shell aims to explore the use of many commands a user can run in the Bash Shell. Tutorials include a write up with examples, an audio component about the write up, and a video component to demonstrate the usage of the command. 
+The website is https://www.linuxintheshell.com/
+
+
+Today it's the turn of the ln command. The rest of the shownotes and video can be found at 
+https://www.linuxintheshell.com/2012/11/20/episode-018-ln-command/
+
+The ln command is used to create a link between an existing file and a destination, typically newly created, file. Some operating systems may all this creating a short-cut. Recall that Linux treats everything like a file, thus you can create links to files, directories, or even devices.
+
+There are two types of links:
+
+Hard Links: A hard like is a connection where two files share the same inode.
+Symbolic Links: A symbolic link is a special file that refers to a different file.
+
+

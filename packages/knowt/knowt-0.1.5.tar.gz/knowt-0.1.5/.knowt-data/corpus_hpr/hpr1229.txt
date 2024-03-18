@@ -1,0 +1,28 @@
+## hpr1229 :: Chromebook Acer C7 Review
+
+ 
+
+I got into Linux after listening to lots of podcasts during my work commute and I am one of those non-technical people listening that after lots of worrying finally installed Ubuntu and found out that it works pretty easily. A few month ago I got a raspberry pi and played with its Arch Linux version and very recently got the Acer C7 Chromebook and immediately put Chrubuntu on it, which is also how I am recording this.
+
+
+So here is my strange problem. I currently have a Swiss-German keyboard layout at work, at the previous job I had an standard US keyboard and I am pretty sure that this chromebook has a UK keyboard. So I needed to find a really fast way to switch at first the UK keyboard layout to the Swissgerman layout and then also have a change to change to the US keyboard easily, because it happens ... you may believe it or not ... that some things I just know where they are in the US layout better than the Swiss layout and vice versa.
+
+
+This is not really a problem if you stick with Unity. You go to System Settings, Keyboard Layout and add the relevant. Where are those System settings now? 
+
+
+setxkbmap is the command. In /usr/share/X11/xkb/rules I found all the layouts (ch for Swiss and us for American layout). I added the option to toggle between ch and us by click both shift keys. So the full command as alias is Swiss='setxkbmap -option 'grp:shifts_toggle' 'ch,us''. To not write the entire thing you can add this as a alias in .bashrc or probably put somewhere in a startup file, so you don't have to worry about it.
+
+
+Further configurations and installations:
+
+
+To enable the 2nd screen use command: xrandr --output HDMI1 --auto --right-of LVDS1
+
+Change hostname by editing nano /etc/hostname (by default it is Chrubuntu)
+
+Install cmatrix just for fun
+
+Installations: Desktop Environment openbox, lxde, i3 just to play around - Terminator as terminal emulation - ranger as file manager - s3cmd for offsite backup, although dropbox and spideroak work too (s3cmd works also on raspberry pi) - encryption with encfs and truecrypt
+
+

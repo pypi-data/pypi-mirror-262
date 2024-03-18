@@ -1,0 +1,31 @@
+## hpr0921 :: Tag Team Chase Douglas Interview with Alison Chaiken
+
+ Chase Douglas is a software developer at Canonical working primarily on multitouch user interface support. For the past year, Chase has been involved with developing gesture support through Canonical’s uTouch framework and multitouch support through the X.org window system. Prior to working on multitouch, Chase spent three years performing Linux kernel and plumbing layer development and maintenance at Canonical and IBM.
+
+Alison's questions:
+3:49 -  Alison asks "Chase, back up for a  moment, can you talk a little bit about what X input is and how X in general works in Linux."
+
+6:13 - Alison asks "Do you have any particular target hardware that you are thinking about during its development?"
+
+11:57 - Alison asks "Do we expect the mouse and keyboard to be with us in the long term? Are you really thinking of all these touches used in concert with the mouse and keyboard or that we may be evolving away from that?"
+
+17:45 - Alison basically asks "Is there talk about an agreed upon gesture language?"
+
+20:56 - Alison asks "What is the state of device driver support for capacitive screens that will support multitouch in Linux?"
+
+26:34 - Alison asks "Speaking of software coupling, are you looking at Wayland already or is that still over the horizon?"
+
+28:43 - Alison says "The automotive case seems like a fascinating one. As far as touch and gesture goes and Ubuntu has an IDI and recently Cadillac has a multitouch screen that has haptic feedback and some gesture support.  This looks like a very exciting area for development. Actual shipping products in 2012.  I don't know if you're familiar with that at all."
+
+32:11 - Alison asks "Do you anticipate contributing the multitouch work to GNOME and Debian as well?
+
+35:0 - Alison asks "What new features can we anticipate that will be user visible for precision in the area of multitouch and gestures?"
+
+43:56 - Alison says "I think I'm happy although I must mention I was pained to hear that it was 24 years ago that you were an infant because I was at M.I.T when they started the X project.  heh heh.  you young whippersnappers.
+...
+that was very fascinating.  I had no idea there was that much activity going on. I'm really excited to see what's coming out and what new features are being added."
+
+launchpad.net/utouch
+multi-touch-dev@lists.launchpad.net
+
+#ubuntu-touch   irc.freenode.net

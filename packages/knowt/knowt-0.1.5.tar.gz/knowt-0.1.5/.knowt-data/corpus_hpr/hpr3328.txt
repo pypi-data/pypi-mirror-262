@@ -1,0 +1,17 @@
+## hpr3328 :: Pandas Part 2
+
+ 
+Part two in the For the Love of Data series. Enigma covers part 2 of Pandas 
+The following topics are discussed 
+
+1) Another way to apply a condition to a field 
+2) Creating a DataFrame from a dictionary 
+3) Appending a data frame with another DataFrame 
+4) Joining DataFrames with merge and join 
+5) Writing an output to csv 
+
+ Part 2 Sample code 
+
+Follow me on twitter @Ed_N1gma 
+
+Come chat on irc.freenode.net #hackerexchange

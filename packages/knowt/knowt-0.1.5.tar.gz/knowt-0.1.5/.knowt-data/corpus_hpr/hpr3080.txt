@@ -1,0 +1,119 @@
+## hpr3080 :: Ansible ping
+
+ Here are some steps you need to should take when setting up Ansible for the first time.
+
+
+Install the software
+Confirm ssh working
+Create a Inventory/Host_file
+Ansible Ping
+Create a playbook
+Confirm the YAML is valid
+Confirm the syntax is valid
+Confirm everything works together
+
+Install the software
+First you need to install the Ansible software. On Fedora that is as simple as a dnf install ansible, or on debian apt install ansible.
+
+Confirm ssh working
+
+Confirm that you can connect to the servers via ssh as you would normally.
+
+ssh -i /home/my_user/.ssh/id_ed25519_pi my_user@192.168.0.1
+ssh -i /home/my_user/.ssh/id_ed25519_pi your_username@192.168.1.2
+
+Create a Inventory/Host file
+
+Translate the ssh commands into a Inventory/Host file. I am using a YAML in this example but other variants are available.
+
+all:
+  hosts:
+    my_server:
+      ansible_host: 192.168.0.1
+    your_server:
+      ansible_host: 192.168.1.2
+      ansible_ssh_user: your_username
+  vars:
+    ansible_connection: ssh
+    ansible_ssh_user: my_user
+    ansible_ssh_private_key_file: /home/my_user/.ssh/id_ed25519_pi
+
+Ansible Ping
+Check that your server is up and reported correctly in your file by having Ansible ping it. This should allow you to determine if at least there is a command and control connection available.
+
+ansible --inventory-file my_inventory.yaml -m ping all
+
+
+This uses the group all and will ping all servers under it. The reply below shows a positive and negative response. 
+
+my_server | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+your_server | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.1.2 port 22: No route to host",
+    "unreachable": true
+}
+
+
+The msg will give you a clue as to what is going wrong and you should try to ssh directly with the Ansible credentials again, and then try and ping using Ansible.
+ansible --inventory-file my_inventory.yaml -m ping your_server
+
+
+Modify the Inventory file until you have managed to get a successful reply. 
+
+Create a playbook
+
+Work on your playbook and verify that it is valid yaml.
+
+---
+- name: Test Ping
+  hosts: all
+  tasks:
+  - action: ping
+
+Confirm the YAML is valid
+If there is no reply all is good.
+yamllint ~/my_example.yaml
+
+
+If there is no reply all is good. For your reference I will remove the --- line and this is the response.
+yamllint ~/my_example.yaml
+/home/user/my_example.yaml
+  1:1       warning  missing document start "---"  (document-start)
+
+Confirm the syntax is valid
+Then verify that the playbook is sane
+ansible-playbook --syntax-check ~/my_example.yaml
+
+
+If there is no reply all is good. For your reference I will remove the hosts line and this is the response.
+ansible-playbook --syntax-check ~/my_example.yaml
+ERROR! the field 'hosts' is required but was not set
+
+Confirm everything works together
+
+After that you should be able to run the playbook using.
+
+ansible-playbook --inventory-file my_inventory.yaml ~/my_example.yaml
+
+PLAY [Test Ping] ***************************************************************************************************
+
+TASK [Gathering Facts] *********************************************************************************************
+[WARNING]: Platform linux on host my_server is using the discovered Python interpreter at /usr/bin/python, but
+future installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+ok: [my_server]
+fatal: [your_server]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.1.2 port 22: No route to host", "unreachable": true}
+
+TASK [ping] ********************************************************************************************************
+ok: [my_server]
+
+PLAY RECAP *********************************************************************************************************
+my_server                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+your_server                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0
+

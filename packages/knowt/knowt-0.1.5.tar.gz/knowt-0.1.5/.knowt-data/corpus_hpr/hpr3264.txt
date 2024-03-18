@@ -1,0 +1,218 @@
+## hpr3264 :: Intro to Nagios
+
+ Nagios Basics
+Introduction
+I noticed nagios on the requested topics page. I am far from being an expert with nagios and there is a lot I do not know. I have a working knowledge of most of the basic nagios principles. So, hopefully, I can give a useful introduction and review some one the principles of nagios along the way
+Nagios is a network monitoring tool. You define some things for nagios to check, and nagios will alert you if those checks fail.
+Nagios has a web UI that is normally used to see the status of the checks. There are some basic administration tasks you can do from the web UI
+
+enabling/disabling notifications
+Scheduling Downtime
+Forcing immediate checks
+
+Nagios is primarily configured with text files. You have to edit the nagios config files for things like
+
+adding servers
+customizing commands
+
+Nagios core vs NagiosXI
+NagiosXI is the commercial version of nagios. NagiosXI requires a paid license and includes support. NagiosXI has some extra features including wizards for adding hosts and easy cloning of hosts.
+I have used NagiosXI, and personally don't find the extra features very useful. Probably the biggest reason to use NagiosXI is Enterprise that requires commercial support
+The community version of nagios is normally referred to as nagios core This episode will focus on the nagios core
+Nagios Documentation
+I don't like the official nagios core documentation. A lot like man pages, It is a good reference, but can be hard to follow.
+Maybe is it possible for someone to read the documentation and be able to install and configure nagios for the first time. But it took me a lot of trial and error to get a functional nagios server following the nagios documentation
+Outside of the official documentation, Most of the nagios installation guides I found online recommend downloading and building nagios from the nagios site. My general policy is to use OS provided packages whenever possible. Normally, sticking to packages eases long the term maintenance.
+You may not always get the latest feature release, but installation and updates are usually easier. I know not everyone will agree with me here, and will want to build the latest version. Regardless of the install method, most of the nagios principles I go over will still apply
+I am making the assumption that most listeners will be most familiar with Debian/Ubuntu, so I will go over installing nagios on Ubuntu using the nagios packages from the Ubuntu repository
+Hosts and Services
+Before I go over the installation, I'll talk a bit about some of the pieces that make up nagios Nagios checks are for either hosts or services.
+From the Nagios documentation
+
+A host definition is used to define a physical server, workstation, device, etc. that resides on your network.
+
+Also from the nagios documentation
+
+A service definition is used to identify a "service" that runs on a host. The term "service" is used very loosely. It can mean an actual service that runs on the host (POP, SMTP, HTTP, etc.) or some other type of metric associated with the host
+
+Normally, hosts are checked using ping. If the host responds to the ping with in the specified time frame, the host is considered up. Once a host is defined and determined to be UP, you can optionally check services on that host
+Installation and setup
+Install the packages
+apt install nagios4
+One of the dependencies is the monitoring-plugins I'll talk more about the monitoring-plugins package when we dig in to the checks
+The primary UI for nagios is a cgi driven web app usually served via apache. Following the nagios4 installation, the web UI isn't functional. So we need to make a few configuration changes
+The nagios config file for apache contains a directive that is not enabled by default
+Enable 2 Apache modules
+a2enmod authz_groupfile
+a2enmod auth_digest
+systemctl restart apache2
+Nagios authentication
+Enable users in the nagios UI
+In /etc/nagios4/cgi.cfg change the line
+'use_authentication=0'
+to
+'use_authentication=1'
+Modify Apache
+In /etc/apache2/conf-enabled/nagios4-cgi.conf change
+Require all granted
+to
+Require valid-user
+And if needed, remove the IP restriction by removing the line that starts with
+Require ip
+And finally we need to add a nagios basic auth user. I normally use nagiosadmin, but it can be any username
+htdigest  -c /etc/nagios4/htdigest.users Nagios4 nagiosadmin
+Restarts
+Restart apache and nagios and the nagios UI will be fully functional
+Check commands
+Nagios uses a collection of small standalone executables to perform the checks. Checks are either OK, Warning, or Critical, depending on the exit code of the check.
+
+
+
+Exit Code
+Status
+
+
+
+
+0
+OK/UP
+
+
+1
+WARNING
+
+
+2
+CRITICAL
+
+
+
+The check commands are standalone applications that can be run independent from nagios. Running the checks from the shell is helpful to better understand how the nagios checks work. The location of the check commands can vary depending on how nagios was packaged. In this case, they are in /usr/lib/nagios/plugins
+Looking at the names on the files can give you an idea of their purpose. For example, it should be obvious what check_http and check_icmp are for.
+cd /usr/lib/nagios/plugins
+$ ./check_icmp localhost
+OK - localhost: rta 0.096ms, lost 0%|rta=0.096ms;200.000;500.000;0; pl=0%;40;80;; rtmax=0.218ms;;;; rtmin=0.064ms;;;;
+$ ./check_http localhost
+HTTP OK: HTTP/1.1 200 OK - 10977 bytes in 0.005 second response time |time=0.004558s;;;0.000000;10.000000 size=10977B;;;0
+Most checks can be run with -h to print usage help
+The checks can be in any language as long as is it is executable by the nagios server. Many are compiled C but Perl and shell scripts are also common
+file check_icmp
+check_icmp: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=46badf6e4322515a70d5553c8018a20e1e9b8206, for GNU/Linux 3.2.0, stripped
+Nagios config files
+The primary nagios config file is /etc/nagios4/nagios.cfg
+nagios.cfg has a directive that will load additional user generated files
+cfg_dir=/etc/nagios4/conf.d
+I like to put all my additions to nagios in this directory and use git for both version control and backup.
+Nagios commands
+Nagios doesn't run the check executable directly The checks have to be explicitly defined in as a command Some predefined commands are in /etc/nagios4/objects/commands.cfg
+Debian package monitoring-plugins-basic contains several command definitions that are loaded by nagios.cfg cfg_dir=/etc/nagios-plugins/config
+Lets look in the /etc/nagios-plugins/config at ping.cfg for an example of how commands are defined
+# 'check-host-alive' command definition
+define command{
+    command_name    check-host-alive
+    command_line    /usr/lib/nagios/plugins/check_ping -H '$HOSTADDRESS$' -w 5000,100% -c 5000,100% -p 1
+    }
+Commands require command_name and command_line The command line is that path to the executable that will perform the check and optional arguments. Most checks require -H for the host address to check The check-host-alive command also contains arguments to set the critical and warning thresholds with -c and -w
+The check_ping command is similar the check-host-alive command except it requires 2 arguments to set the critical and warning thresholds.
+define command{
+        command_name    check_ping
+        command_line    /usr/lib/nagios/plugins/check_ping -H '$HOSTADDRESS$' -w '$ARG1$' -c '$ARG2$'
+        }
+Templates
+Hosts and services require a lot of reused variables. Object definitions normally use templates to avoid having to repetitively set the same variables on each host. Nagios normally ships with predefined templates for hosts and services that will work for most cases.
+In Ubuntu, the templates are defined in /etc/nagios4/objects/templates.cfg. Template definitions are the same as other object definitions, except they contain register 0 which designates the object as a template. I'll show how the templates are used when I go over the host and service definitions.
+Notifications
+By default, notifications are sent via email to nagios@localhost. The easiest way to get notifications is to configure the nagios server to forward emails to a monitored email address. Since many networks block sending email directly via SMTP, email forwarding may be challenging.
+In a follow up episode I will cover setting up postfix to relay mail through a mail sending service and maybe some other methods for sending alerts
+Localhost
+By default, nagios is set to monitor localhost. Having the nagios server can be useful but you probably want to add some additional servers.
+Have a look at /etc/nagios4/objects/localhost.cfg if you want to see how the checks for localhost are defined
+Adding a new host to monitor
+We will use google.com as an example and create a file named google.cfg and place it in in the cfg_dir /etc/nagios4/conf.d.
+The files can be named anything that ends in .cfg. My preference is one file per host that contains all the checks for that host. The content of google.cfg is included new the end of the show notes.
+First, we need to define the host. host_name is the only field required to be set. The remaining requirements are met by using the generic-host template.
+We can add a service check to google.com using the same file. The easiest to add is a http check host_name, service_description, and check_command have to be set the remaining requirements are met by using the generic-service template.
+Restarting Nagios
+Nagios has to be reloaded to pick up the configuration changes. Prior to restarting nagios, you can verify the nagios configuration is valid by running:
+nagios4 -v /etc/nagios4/nagios.cfg
+This will print a summary of the configuration. Any warnings or errors will be printed at the end.
+Warnings are not fatal, but should probably be looked at. Errors will keep nagios from restarting; if there are no errors, it is safe to restart nagios
+Check the nagios UI at https://SERVER_IP/nagios4 and you should see 2 hosts, localhost and google.com as well as the service checks for the hosts
+Next Episode
+Since I have already made the mistake of mentioning a follow up episode, I know I am now committed to making additional episode, Next time I will try to cover some enhancements to nagios, including
+
+some notification options
+monitoring-plugins packages
+writing custom checks
+using SNMP to monitor load average and disk usage
+
+Leave a comment if there are other aspects of nagios you would like me to try to cover. No promises, but I will do my best.
+Thanks for listening and I will see you next time.
+Files
+Playbook
+---
+- hosts: nagios
+  tasks:
+  - name: install nagios
+    apt:
+      name:
+        - nagios4
+      update_cache: yes
+
+  - name: Enable the Apache2 modules
+    command: a2enmod "{{item}}"
+    with_items:
+    - authz_groupfile
+    - auth_digest
+  - name: modify nagios cgi config to require user
+    replace:
+      path: /etc/nagios4/cgi.cfg
+      regexp: 'use_authentication=0'
+      replace: 'use_authentication=1'
+  - name: nagios require valid user
+    replace:
+      path: /etc/apache2/conf-enabled/nagios4-cgi.conf
+      regexp: "Require all  granted"
+      replace: "Require valid-user"
+  - name: remove IP restriction
+    lineinfile:
+      regexp: "Require ip"
+      path: /etc/apache2/conf-enabled/nagios4-cgi.conf
+      state: absent
+  - name: move auth requirements out of File restrictions
+    lineinfile:
+      path: /etc/apache2/conf-enabled/nagios4-cgi.conf
+      regexp: '^s*</?Files'
+      state: absent
+  - name: nagios user
+    copy:
+      dest: /etc/nagios4/htdigest.users
+      src: htdigest.users
+  - name: restart apache
+    service:
+      name: apache2
+      state: restarted
+  - name: copy nagios configs
+    copy:
+      src: "{{item}}"
+      dest: /etc/nagios4/conf.d
+    with_items:
+      - google.cfg
+  - name: restart nagios
+    service:
+      name: nagios4
+      state: restarted
+google.cfg
+define host {
+  host_name google.com
+  use generic-host
+}
+
+define service {
+  use generic-service
+  host_name google.com
+  service_description HTTP
+  check_command check_http
+}
+htdigest.users
+nagiosadmin:Nagios4:85043cf96c7f3eb0884f378a8df04e4c

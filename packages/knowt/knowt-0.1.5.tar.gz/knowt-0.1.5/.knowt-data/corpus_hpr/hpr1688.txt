@@ -1,0 +1,36 @@
+## hpr1688 :: Some useful tools when compiling software
+
+ introduction
+
+Hi this is Rho`n and welcome to my first submission to Hacker Public Radio. I have been working on an application using the Python programming language with the Enlightenment Foundation Libraries (EFL) libraries for the GUI interface. After acquiring a new laptop and installing a fresh copy of Ubuntu on it, I decided to set up the build environment I needed to be able to work on my project. I have been building from source the EFL libraries along with the Python-EFL wrapper libraries. For the last couple machines on which I have built the software, I would use the standard configure, make, and make install procedure. This time around I decided to create a debian package to use for installing the libraries. It had been a few years since I had created a .deb, so I googled for some tutorials, and found mention of the checkinstall program. After reading a couple blog posts about it I decided to try it out. checkinstall is run instead of "make install" , and will create a .deb file, and then install the newly created package.
+
+cut and tr commands
+
+To help speed up the configure process, I had previously created a file from my other builds that is a grep of my history for all the various "apt get install" commands of the libraries the EFL software needs to compile. Since my current operating system was a freshly installed distribution of Ubuntu, I needed to install the build-essential package first. After looking through my install file, and I decided to create a single apt-get install line with all the packages listed, instead of running each of the installs seperately. I knew I could grep the file, and then pass that to awk or sed, but my skill with either isn't that great. I did a little searching to see what other tools were out there and found the cut command and the tr command. Cut lets you print part of a line. You can extract set a field delimeter with the -d option and then list a range of fields to be printed with the -f option. The tr command can replace a character. I used this to replace the new line character that was printed by the cut command to generate a single line of packages which I piped to a file. A quick edit of the file to add "sudo apt-get install" at the beginning, add execute permissions to the file, and now I have a nice, easy way to install all the needed libraries.
+
+
+https://stackoverflow.com/questions/15580144/concatenate-many-lines-of-output-to-one-line
+
+https://stackoverflow.com/questions/7857090/awk-extract-specific-columns-from-delimited-file
+
+
+apt-file and checkinstall
+
+At least that was the idea. After installing the libraries, and running configure, I still received errors that libraries were missing. The machines from which my list of libraries was generated, had all been used for various development purposes, so some needed libraries were already installed on them, and so their installation had passed out of my history. Besides echoing to standard out the file configure can't find, it also creates a log file: config.log. Between the two it is relatively easy to figure out what library is needed. Often the libraries needed included their name in the .deb which has to be installed, and finding them is easy with an apt-cache search and grep of the library name. The hardest ones to find were often the X11 based references. In this case, I needed the scrnsaver.h header file. After googling, I found a reference to the needed package (libxss-dev) on Stack Exchange. The answer also showed how to use the apt-file command to determine in which package a file is included. I wish I had run into this before, there a few times where it took a number of searches on the internet to figure out which package I needed to install, and "apt-file find" would have saved time and frustration. A very handy tool for anyone developing on a debian based distribution. As it turns out, that was the last dependency that needed resolved. After a successful configure, and successful compile using the make command, I was ready to try out checkinstall. Running sudo checkinstall, brings up a series of questions about your package, helping you fill out the needed .deb meta-data. I filled out my name and email, name for the package, short description of the package, and let everything else go to the suggested defaults. After, that hit enter and checkinstall will create a debian package and install it for you. If you run "apt-cache search <name of package>" you will see it listed, and "apt-cache show <name of package>" will give you the details you created for the package. There are warnings on the Ubuntu wiki not to use this method for packages to be included in an archive or in a ppa. It does work great for a local install, and would use it to install on machines on my local network.
+
+
+https://askubuntu.com/questions/554724/compile-workrave-from-source
+
+https://community.linuxmint.com/tutorial/view/162
+
+https://www.falkotimme.com/howtos/checkinstall/
+
+https://help.ubuntu.com/community/CheckInstall
+
+
+conclusion
+
+After a short side trip into development setup, I'm back writing my application on my new laptop. While I am a big fan of binary packages, Debian being the first GNU/Linux distribution I ever used, sometimes you need to dive in and compile software from source. For me running configure, make, make install has been the easiest way to do this, and these days it usually isn't too difficult to get even moderately complex applications and libraries to build. The most tedious part can be resolving all the dependencies. Now, with apt-file in my tool belt, it will be even faster and easier. I will also be using checkinstall for future compiles. I do like being able to use package management tools to install, and un-install software.
+
+
+I hope others find these tools useful. I have posted links in the show notes to the pages about cut, tr, apt-file and checkinstall that led me to these tools. If you've made it this far, thanks for listening to my first post to HPR. As Ken Fallon points out, it's not an HPR episode until you have uploaded it to the server. So let those episode ideas flow from your brain, into your favorite recording device, and up to the HPR server. Let's keep HPR active, vibrant, and a part of our lives for years to come. 

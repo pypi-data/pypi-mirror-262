@@ -1,0 +1,516 @@
+## hpr2223 :: FOSDEM 2017 K (level 1, group B and C)
+
+ Table of Contents
+
+ReactOS
+Haiku
+Gentoo
+CoreOS Linux
+Debian
+PostgreSQL
+Nextcloud
+Bazel
+Open Build Service
+OpenQA
+Free Software Foundation Europe
+Vikings
+Tor Project
+Tails Project
+Frënn vun der Ënn
+Nos oignons
+Xen Project
+OpenStack
+oVirt
+Foreman
+Gluster
+ownCloud
+CAcert
+secure-u
+
+
+
+https://www.reactos.org/
+
+ReactOS® is a free open source operating system based on the best design principles found in the Windows NT® architecture (Windows versions such as Windows XP, Windows 7, Windows Server 2012 are built on Windows NT architecture). Written completely from scratch, ReactOS is not a Linux based system, and shares none of the UNIX architecture. The main goal of the ReactOS® project is to provide an operating system which is binary compatible with Windows.
+
+Listen to the interview with Colin Finck
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/ReactOS
+IRC: https://www.reactos.org/irc
+Google+: https://plus.google.com/100586191925430460947
+Linkedin: https://www.linkedin.com/company-beta/3977523/
+Mailinglist: https://www.reactos.org/community/mailing-lists
+Twitter: https://twitter.com/reactos
+Facebook: https://www.facebook.com/pages/ReactOS/19143619259
+YouTube: https://www.youtube.com/channel/UCMo8NP-2oP35rauon-Duc9Q
+
+
+
+https://www.haiku-os.org/
+
+Haiku is an open-source operating system that specifically targets personal computing. Inspired by the BeOS, Haiku is fast, simple to use, easy to learn and yet very powerful.
+
+Listen to the interview with François Revol
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Haiku_(operating_system)
+IRC: https://www.haiku-os.org/community/irc
+Google+: https://plus.google.com/communities/116050756631351429142
+Linkedin: https://www.linkedin.com/company/haiku-inc-
+Mailinglist: https://www.haiku-os.org/community/ml
+Twitter: https://twitter.com/haikuOS
+Facebook: https://www.facebook.com/groups/haikuosgroup/
+YouTube: https://youtube.com/user/haikuos
+About: https://www.haiku-os.org/about/
+
+
+
+https://www.gentoo.org/
+
+Gentoo is a free operating system based on either Linux or FreeBSD that can be automatically optimized and customized for just about any application or need. Extreme configurability, performance and a top notch user and developer community are all hallmarks of the Gentoo experience.
+
+Listen to the interview with Matthew Thode
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Gentoo_Linux
+IRC: https://www.gentoo.org/get-involved/irc-channels/
+Google+: https://plus.google.com/+Gentoo
+Linkedin: https://www.linkedin.com/company-beta/16350/
+Mailinglist: https://www.gentoo.org/get-involved/mailing-lists/
+Twitter: https://twitter.com/gentoo
+Facebook: https://www.facebook.com/gentoo.org
+
+
+
+https://coreos.com/
+
+Container Linux by CoreOS (formerly CoreOS Linux) is an open-source lightweight operating system based on the Linux kernel and designed for providing infrastructure to clustered deployments, while focusing on automation, ease of application deployment, security, reliability and scalability. As an OS, Container Linux provides only the minimal functionality required for deploying applications inside software containers, together with built-in mechanisms for service discovery and configuration sharing.
+
+Listen to the interview with Brian Redbeard
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/CoreOS
+IRC: https://webchat.freenode.net/?channels=coreos
+Google+: https://plus.google.com/+Coreos
+Linkedin: https://www.linkedin.com/company-beta/3323899/
+Mailinglist: https://groups.google.com/forum/#!forum/coreos-user
+Twitter: https://twitter.com/coreos/
+YouTube: https://www.youtube.com/user/coreoslinux
+
+
+
+https://www.debian.org/
+
+Debian is a free operating system (OS) for your computer. An operating system is the set of basic programs and utilities that make your computer run.
+
+Listen to the interview with Sebastiaan Couwenberg
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Debian
+IRC: https://wiki.debian.org/IRC
+Linkedin: https://www.linkedin.com/company-beta/163400/
+Mailinglist: https://www.debian.org/MailingLists/
+RSS: https://www.debian.org/News/news
+Twitter: https://twitter.com/debian
+
+
+
+https://www.postgresql.org/
+
+PostgreSQL is a powerful, open source object-relational database system. It has more than 15 years of active development and a proven architecture that has earned it a strong reputation for reliability, data integrity, and correctness. It runs on all major operating systems, including Linux, UNIX (AIX, BSD, HP-UX, SGI IRIX, Mac OS X, Solaris, Tru64), and Windows. It is fully ACID compliant, has full support for foreign keys, joins, views, triggers, and stored procedures (in multiple languages).
+
+Listen to the interview with Robert Juens
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/PostgreSQL
+Twitter: https://twitter.com/PostgreSQL
+
+
+
+https://nextcloud.com
+
+Nextcloud is a suite of client-server software for creating file hosting services and using them. It is functionally very similar to the widely used Dropbox, with the primary functional difference being that Nextcloud is free and open-source, and thereby allowing anyone to install and operate it without charge on a private server. In contrast to proprietary services like Dropbox, the open architecture allows adding additional functionality to the server in form of so-called applications.
+
+Listen to the interview with Frank Karlitschek
+
+
+
+
+
+Links
+
+Source: https://github.com/nextcloud
+Wikipedia: https://en.wikipedia.org/wiki/Nextcloud
+IRC: https://webchat.freenode.net/?channels=nextcloud
+Google+: https://plus.google.com/b/104036748063781940910/104036748063781940910/about
+Linkedin: https://www.linkedin.com/company-beta/10827569/
+Mailinglist: help.nextcloud.com
+RSS: https://nextcloud.com/blogfeed
+Twitter: https://twitter.com/nextclouders
+Facebook: https://www.facebook.com/Nextcloud-1032807203462807/
+YouTube: https://youtube.com/nextcloud
+About: https://nextcloud.com/about
+Reddit: https://www.reddit.com/r/NextCloud/
+
+
+
+https://bazel.build/
+
+Bazel is Google's own build tool, now publicly available in Beta. Bazel has built-in support for building both client and server software, including client applications for both Android and iOS platforms. It also provides an extensible framework that you can use to develop your own build rules.
+
+Listen to the interview with David Stanke
+
+
+
+
+
+Links
+
+Source: https://github.com/bazelbuild/bazel
+Wikipedia: https://en.wikipedia.org/wiki/Bazel_(software)
+Mailinglist: https://groups.google.com/forum/#!forum/bazel-discuss
+Twitter: https://twitter.com/bazelbuild
+
+
+
+https://openbuildservice.org/
+
+The Open Build Service (OBS) is a generic system to build and distribute binary packages from sources in an automatic, consistent and reproducible way. You can release packages as well as updates, add-ons, appliances and entire distributions for a wide range of operating systems and hardware architectures.
+
+Listen to the interview with Richard Brown
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Open_Build_Service
+IRC: https://webchat.freenode.net/?channels=openSUSE-buildservice
+Mailinglist: opensuse-buildservice+subscribe@opensuse.org
+
+
+
+https://openqa.opensuse.org/
+
+openQA is an automated test tool for operating systems and the engine at the heart of openSUSE's automated testing initiative.
+
+Listen to the interview with Richard Brown
+
+
+
+
+
+Links
+
+IRC: https://webchat.freenode.net/?channels=openSUSE-factory
+
+
+
+https://fsfe.org/index.en.html
+
+Free Software Foundation Europe is a charity that empowers users to control technology. Software is deeply involved in all aspects of our lives; and it is important that this technology empowers rather than restricts us. Free Software gives everybody the rights to use, understand, adapt and share software.These rights help support other fundamental freedoms like freedom of speech, press and privacy.
+
+Listen to the interview with Florian Snow
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/Free_Software_Foundation_Europe
+IRC: https://webchat.freenode.net/?channels=fsfe
+Mailinglist: https://fsfe.org/contact/community.html
+RSS: https://fsfe.org/news/news.rss
+Twitter: https://twitter.com/fsfe
+Facebook: https://facebook.com/thefsfe
+
+
+
+https://vikings.net/ 
+
+Libre Hosting Provider
+
+Listen to the interview with Thomas Umbach
+
+
+
+
+
+
+
+Links
+
+IRC: https://webchat.freenode.net/?channels=vikings
+Mailinglist: https://lists.vikings.net
+Twitter: https://twitter.com/VIKINGSlibre
+FediVerse: https://quitter.se/vikings
+Reddit: https://www.reddit.com/r/vikingslibre/ & https://www.reddit.com/r/VikingsDeutsch/
+
+
+
+https://www.torproject.org/
+
+Tor is free software and an open network that helps you defend against traffic analysis, a form of network surveillance that threatens personal freedom and privacy, confidential business activities and relationships, and state security.
+
+Listen to the interview with A Volunteer at the Booth
+
+
+
+
+
+Links
+
+IRC: https://www.torproject.org/about/contact.html.en#irc
+Mailinglist: https://www.torproject.org/docs/documentation.html.en#MailingLists
+Twitter: https://www.torproject.org/about/contact.html.en#twitter
+About: https://www.torproject.org/about/overview.html.en
+
+
+
+https://tails.boum.org/
+
+Tails is a live operating system that you can start on almost any computer from a DVD, USB stick, or SD card. It aims at preserving your privacy and anonymity, and helps you to: use the Internet anonymously and circumvent censorship; all connections to the Internet are forced to go through the Tor network; leave no trace on the computer you are using unless you ask it explicitly; use state-of-the-art cryptographic tools to encrypt your files, emails and instant messaging.
+
+Listen to the interview with A Volunteer at the Booth
+
+
+
+
+
+Links
+
+IRC: https://tails.boum.org/support/chat/index.en.html
+Mailinglist: https://tails.boum.org/about/contact/index.en.html#index1h1
+About: https://tails.boum.org/about/index.en.html
+
+
+
+https://www.enn.lu/
+
+Luxembourg based non-profit organization defending civil rights on the internet. We provide high-bandwidth Tor nodes all over the world to protect online privacy, anonymity, freedom of speech and fight censorship!
+
+Listen to the interview with A Volunteer at the Booth
+
+
+
+
+
+Links
+
+Mailinglist: https://lists.enn.lu/listinfo/discuss
+Twitter: https://twitter.com/FrennVunDerEnn
+About: https://wiki.enn.lu/doku.php?id=news
+
+
+
+https://nos-oignons.net/Services/index.en.html
+
+Nos oignons is a not-for-profit organization created to collect donations in order to run Tor exit nodes. Tor enables users to create anonymous connections and bypass censorship on the Internet. Tor is at the same time a piece of software, a network of relays made of more than 7,000 servers and a project around which fortyish people gravitate.
+
+Listen to the interview with A Volunteer at the Booth
+
+
+
+
+
+Links
+
+Twitter: https://twitter.com/NosOignons
+FediVerse: https://identi.ca/nosoignons
+
+
+
+https://www.xenproject.org/
+
+The Xen ProjectTM is the leading open source virtualization platform that is powering some of the largest clouds in production today. Amazon Web Services, Aliyun, Rackspace Public Cloud, Verizon Cloud and many hosting services use Xen Project software. Plus, it is integrated into multiple cloud orchestration projects like OpenStack.
+
+Listen to the interview with Julien Fontanet
+
+
+
+
+
+Links
+
+Source: https://www.xenproject.org/source-code.html
+Wikipedia: https://en.wikipedia.org/wiki/Xen
+IRC: https://www.xenproject.org/irc.html
+Mailinglist: https://www.xenproject.org/mailing-list.html
+
+
+
+https://www.openstack.org/
+
+Open source software for creating private and public clouds. OpenStack software controls large pools of compute, storage, and networking resources throughout a datacenter, managed through a dashboard or via the OpenStack API. OpenStack works with popular enterprise and open source technologies making it ideal for heterogeneous infrastructure. Hundreds of the world's largest brands rely on OpenStack to run their businesses every day, reducing costs and helping them move faster.
+
+Listen to the interview with Aurélien Joga
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/OpenStack
+IRC: https://webchat.freenode.net/?channels=openstack%2C%23openstack&uio=d4
+Linkedin: https://www.linkedin.com/company/openstack
+Mailinglist: https://www.openstack.org/community/
+Twitter: https://twitter.com/OpenStack
+Facebook: https://www.facebook.com/openstack
+YouTube: https://www.youtube.com/user/OpenStackFoundation
+
+
+
+https://www.ovirt.org/
+
+oVirt is a virtualization management application used to manage hardware nodes, storage, and network resources, as well as deploying and monitoring virtual machines running in your data center.
+
+Listen to the interview with Yaniv Kaul
+
+
+
+
+
+Links
+
+Source: https://www.ovirt.org/develop/
+Wikipedia: https://en.wikipedia.org/wiki/OVirt
+IRC: irc://irc.oftc.net/ovirt
+Google+: https://plus.google.com/u/0/communities/109346090491400112913
+Mailinglist: https://www.ovirt.org/community/about/mailing-lists/
+Twitter: https://twitter.com/ovirt
+Facebook: https://www.facebook.com/groups/ovirt.openvirtualization/
+YouTube: https://www.youtube.com/user/ovirtproject
+
+
+
+https://www.theforeman.org/
+
+Foreman is a complete lifecycle management tool for physical and virtual servers. We give system administrators the power to easily automate repetitive tasks, quickly deploy applications, and proactively manage servers, on-premise or in the cloud.
+
+Listen to the interview with Greg Sutcliffe
+
+
+
+
+
+Links
+
+Source: https://github.com/theforeman/theforeman.org
+Wikipedia: https://en.wikipedia.org/wiki/Foreman_(software)
+IRC: https://www.theforeman.org/support.html#IRC
+Google+: https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw
+Mailinglist: https://www.theforeman.org/support.html#Mailinglists
+
+
+
+https://www.gluster.org/
+
+GlusterFS is a scalable network filesystem. Using common off-the-shelf hardware, you can create large, distributed storage solutions for media streaming, data analysis, and other data- and bandwidth-intensive tasks. GlusterFS is free and open source software.
+
+Listen to the interview with Mohamed Ashiq Liyazudeen / Kaushal M / Jiffin Tony Thottan
+
+
+
+
+
+Links
+
+Source: https://github.com/gluster
+Wikipedia: https://en.wikipedia.org/wiki/GlusterFS
+IRC: https://webchat.freenode.net/?channels=gluster
+Google+: https://plus.google.com/communities/110022816028412595292
+Mailinglist: https://www.gluster.org/mailman/listinfo/gluster-users
+Twitter: https://twitter.com/gluster
+Facebook: https://www.facebook.com/GlusterInc
+
+
+
+https://owncloud.org/
+
+A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms
+
+Listen to the interview with Holger Dyroff
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/OwnCloud
+IRC: https://webchat.freenode.net/?channels=owncloud
+Google+: https://plus.google.com/107072838776436530705/about
+Mailinglist: https://mailman.owncloud.org/mailman/listinfo/
+RSS: https://owncloud.org/blogfeed
+Twitter: https://twitter.com/ownClouders
+Facebook: https://www.facebook.com/ownClouders
+
+
+
+https://www.cacert.org/
+
+CAcert.org is a community-driven Certificate Authority that issues certificates to the public at large for free. CAcert's goal is to promote awareness and education on computer security through the use of encryption, specifically by providing cryptographic certificates. These certificates can be used to digitally sign and encrypt email, authenticate and authorize users connecting to websites and secure data transmission over the internet. 
+
+Listen to the interview with Eva Stöwe
+
+
+
+
+
+Links
+
+Wikipedia: https://en.wikipedia.org/wiki/CAcert.org
+Google+: https://plus.google.com/u/0/117081703972254991731/posts
+Linkedin: https://www.linkedin.com/groups/89248/profile
+Facebook: https://www.facebook.com/CAcert/
+About: https://wiki.cacert.org/FAQ/AboutUs
+
+
+
+https://www.secure-u.de/
+
+Der Verein fördert die Wissenschaft, Forschung und Verbraucherberatung. Insbesondere ist Zweck des Vereins die Förderung der Sicherheit im Internet und die Unterstützung von Anwendern bei der Anwendung sicherer Kommunikation.
+
+Listen to the interview with Eva Stöwe
+
+
+
+
+
+Links
+
+

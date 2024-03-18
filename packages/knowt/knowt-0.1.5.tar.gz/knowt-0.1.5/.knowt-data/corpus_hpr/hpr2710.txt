@@ -1,0 +1,61 @@
+## hpr2710 :: Youtube downloader for channels
+
+ 
+I had a very similar problem to Ahuka aka Kevin, in hpr2675 :: YouTube Playlists. I wanted to be able to download an entire youtube channel and store them so that I could play them in the order that they were posted.
+
+
+Add the url's to a file called subscriptions.txt.
+
+
+#LASTRUN: 20181030
+# /home/ken/sourcecode/personal/bestofyoutube/youtube-channel-watcher.bash
+#
+# Big Clive 
+https://www.youtube.com/channel/UCtM5z2gkrGRuWd0JQMx76qA	20181030
+# Essential Craftsman
+https://www.youtube.com/channel/UCzr30osBdTmuFUS8IfXtXmg
+
+
+Then run the script
+
+
+#!/bin/bash
+# Downloads videos from youtube based on selection from https://thebestofyoutube.com
+# (c) Ken Fallon https://kenfallon.com
+# Released under the CC-0
+
+savepath="/mnt/media/Videos/channels"
+subscriptions="${savepath}/subscriptions.txt"
+YOUNGERTHAN="20010101"
+RUNDATE=$(date +%Y%m%d)
+youtubedl="/home/ken/sourcecode/youtube-dl/youtube-dl"
+#DRYRUN="echo DEBUG: "
+
+if [ ! -e "${subscriptions}" ]
+then
+	echo "Cannot find subscription file "${subscriptions}""
+	exit 1
+fi
+
+if [ "$(grep "#LASTRUN: " "${subscriptions}" | wc -l )" -eq 0 ]
+then
+	sed --follow-symlinks '1s/^/#LASTRUN: n/' -i "${subscriptions}"
+fi
+
+# Read the subscriptions
+cat "${subscriptions}" | grep -v '#' | while read channel_info
+do
+	if [ "$(echo "${channel_info}" | grep -P 't' | wc -l )" -eq 0 ]
+	then
+		DATEAFTER="--dateafter ${YOUNGERTHAN}"
+	else
+		DATEAFTER="--dateafter $(echo "${channel_info}" | awk '{print $NF}' )"
+	fi
+	channel="$(echo "${channel_info}" | awk '{print $1}' )"
+	echo "Processing Channel "${channel}" since ${DATEAFTER}"
+	${DRYRUN} ${youtubedl} ${DATEAFTER} --ignore-errors --no-mtime --restrict-filenames --format mp4 -o ${savepath}'/%(uploader)s/%(upload_date)s-%(title)s⋄%(id)s.%(ext)s' ${channel}
+	${DRYRUN} sed --follow-symlinks "s,${channel}.*$,${channel}t${RUNDATE},g" -i "${subscriptions}"
+done
+
+${DRYRUN} sed --follow-symlinks "s/#LASTRUN: .*$/#LASTRUN: ${RUNDATE}/" -i "${subscriptions}"
+

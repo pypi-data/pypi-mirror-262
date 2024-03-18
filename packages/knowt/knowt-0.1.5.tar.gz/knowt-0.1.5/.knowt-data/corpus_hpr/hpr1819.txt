@@ -1,0 +1,20 @@
+## hpr1819 :: LibreOffice Tips: Horizontal Lists and Headless Operation
+
+ LibreOffice Tips: Horizontal Lists
+One of these things is how to create horizontal lists in LibreOffice. This is something that I wanted to do, I think it was maybe a year ago that I was really trying to find out how to do this. What I mean by that is I wanted to be able to do in LibreOffice the equivalent of an in-line list in HTML and CSS. There's a way in CSS to tell the browser to display a series of list items in-line rather than vertically—and this is used all the time for footers and headers and things of that sort—and  I wanted to be able to do that in LibreOffice because it would ease the process of creating the exams that I make in my classes, where I have a numbered list for all of the questions, and the answers for each question are also done in a numbered list but at the 2nd level—usually done with a, b, c and d, whereas the numbers of the questions are 1, 2, 3, 4, and so forth. What I wanted to be able to do was have the ordered list a, b, c, d spread out horizontally across the page without having to do it manually. So in other words I wanted to be able to type a word for an answer and then press enter, and instead of having it go into a new line, have it simply move over to the right a little bit with a new letter in place for the next item in the ordered list. I hope it's clear what I'm after here. 
+Anyway I never did find a way to do this. I searched online and there were a couple of other people who were interested in doing the same thing but they were all told this is impossible. Well, sort of. I found a workaround for this and it's not all that elegant but in a pinch it could work, and I don't think I would want to do it for an entire test but I thought it was kind of a cool way to do it. 
+So what you do his make up the ordered list just like usual. I have here on my computer right now opened a document with a single question, question no. 1. And then it has at the 2nd level of ordered list a series of 4 options: red, purple, green, and blue. And each one of these is in a font color of the same name, so that the word "Red" is red, the word "Purple" is in purple, "green" is in green.  I do this because it makes it easier to see how these things move up and down. There are little buttons down at the bottom of the screen where if you click on the arrow up or the arrow down, it will move the list item up or down. So right now red is in the 1st position, but if I click the down arrow it will go down to the 2nd position and the one that was formally 2nd is now 1st. So purple and red have switched places. 
+I want to have this kind of flexibility going horizontally as well, and the way I found to do this was to use columns. I select the 4 items and then under the Format menu choose Columns and tell it I want 4 columns because I have 4 items, and I click OK and suddenly these things are distributed across the screen horizontally. Now if I click the up arrow, the item moves left and right!
+The bad thing about using columns is that the columns are of uniform width, so they do not dynamically change according to the number of characters that are in the word the way it would do in HTML with CSS.
+Headless Operation
+To convert a Word .docx file to HTML, run the following command (LibreOffice must not be open in a graphical environment when you try to do this):
+
+libreoffice --headless --convert-to html foobar.docx
+
+To convert the same document to .odt format, run this command. 
+
+libreoffice --headless --convert-to odt foobar.docx
+
+Links
+
+Convert Word documents to Clean HTML: https://word2cleanhtml.com/

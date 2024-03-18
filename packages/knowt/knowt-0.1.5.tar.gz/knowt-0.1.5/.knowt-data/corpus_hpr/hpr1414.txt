@@ -1,0 +1,18 @@
+## hpr1414 :: ohmroep hpr live 4, 31-06-2013, operating lights at Observe Hack Make
+
+ Doing the Lights on OHM2013. (shownotes donated by HobbyBob)
+During the interview i mention the LOC controller. The LOC controller was designed by Bob from Bitlair Hackerspace in Amersfoort, The Netherlands.
+Here you can find all the info on the controller:
+
+https://github.com/bobo1on1/loc_controller Also the wiki is a nice read:
+https://github.com/bobo1on1/loc_controller/wiki We also had the Proxy, you can find the repository here:
+https://github.com/bobo1on1/bobtricksFinally we had some great help by Gavan and Kat from the UK during the event, they also made a repository for all the effects which you can run on the controller too:
+
+https://github.com/ohm2013loc/art The famous police effect (when the police was entering the field) is also in this repository !!! Lastly there is Bas' DMX controller, more info you can find here:
+
+https://ohm2013.org/wiki/DMX_lightingFurthermore we talked about lasers, if you want to start building your own colorful lasers, Photonlexicon is a good way to start. You can find the photonlexicon forum here:https://photonlexicon.com/forums/
+
+My username is hobbybob there, so if you have any questions just ask me in a pm. It is good habit that you introduce yourself on the forum, this will get you more credits when you start asking questions. Just introduce yourself, what you want to built and what you already have done/tried in the past.
+Ohh and BTW i sound a bit dull because i was very tired. As the Light team, we worked from 9AM to 3AM every day during OHM to make the experience a colorful one for everyone!
+We hope you enjoy(ed) our effort and start building cool stuff yourself !
+If you want to make your own LOC controllers, LED effects or Lasers i am very interested to know. You can mail me: hobbybob at bitlair dot nl

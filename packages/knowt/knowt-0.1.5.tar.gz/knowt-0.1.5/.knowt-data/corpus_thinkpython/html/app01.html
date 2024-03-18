@@ -1,0 +1,541 @@
+<html>
+<head>
+<title>Appendix A: Debugging</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap20.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="app02.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Appendix A</h2>
+
+
+
+<h1>Debugging</h1>
+<p>
+Different kinds of errors can occur
+in a program, and it is useful to distinguish among them
+in order to track them down more quickly:
+
+<ul>
+<li>Syntax errors are produced by Python when it is
+translating the source code into byte code.  They usually
+indicate that there is something wrong with the syntax of the program.
+Example: Omitting the colon at the end of a <tt><font size=-1><font color=black>def</font></font></tt> statement yields
+the somewhat redundant message <tt><font size=-1>SyntaxError: invalid syntax</font></tt>.</li>
+<li>Runtime errors are produced by the runtime system if something
+goes wrong while the program is running.  Most runtime error messages
+include information about where the error occurred and what functions
+were executing.
+Example: An infinite recursion eventually causes
+a runtime error of "maximum recursion depth exceeded."</li>
+<li>Semantic errors are problems with a program that compiles and
+runs but doesn't do the right thing.  Example: An expression may
+not be evaluated in the order you expect, yielding an unexpected
+result.</li>
+</ul>
+<p>
+The first step in debugging is to figure out which kind of
+error you are dealing with.  Although the following sections are
+organized by error type, some techniques are
+applicable in more than one situation.
+
+
+<h3>Syntax errors</h3>
+<p>
+Syntax errors are usually easy to fix once you figure out what they
+are.  Unfortunately, the error messages are often not helpful.
+The most common messages are <tt><font size=-1>SyntaxError: invalid syntax</font></tt> and
+<tt><font size=-1>SyntaxError: invalid token</font></tt>, neither of which is very informative.
+<p>
+On the other hand, the message does tell you where in the program the
+problem occurred.  Actually, it tells you where Python
+noticed a problem, which is not necessarily where the error
+is.  Sometimes the error is prior to the location of the error
+message, often on the preceding line.
+<p>
+If you are building the program incrementally, you should have
+a good idea about where the error is.  It will be in the last
+line you added.
+<p>
+If you are copying code from a book, start by comparing
+your code to the book's code very carefully.  Check every character.
+At the same time, remember that the book might be wrong, so
+if you see something that looks like a syntax error, it might be.
+<p>
+Here are some ways to avoid the most common syntax errors:
+
+<ol>
+<li>Make sure you are not using a Python keyword for a variable name.</li>
+<li>Check that you have a colon at the end of the header of every
+compound statement, including <tt><font size=-1><font color=black>for</font></font></tt>, <tt><font size=-1><font color=black>while</font></font></tt>,
+<tt><font size=-1><font color=black>if</font></font></tt>, and <tt><font size=-1><font color=black>def</font></font></tt> statements.</li>
+<li>Check that indentation is consistent.  You may indent with either
+spaces or tabs but it's best not to mix them.  Each level should be
+nested the same amount.</li>
+<li>Make sure that any strings in the code have matching
+quotation marks.</li>
+<li>If you have multiline strings with triple quotes (single or double), make
+sure you have terminated the string properly.  An unterminated string
+may cause an <tt><font size=-1>invalid token</font></tt> error at the end of your program,
+or it may treat the following part of the program as a string until it
+comes to the next string.  In the second case, it might not produce an error
+message at all!</li>
+<li>An unclosed bracket <s>&nbsp; &nbsp;</s> <tt><font size=-1>(</font></tt>, <tt><font size=-1>{</font></tt>, or <tt><font size=-1>[</font></tt> <s>&nbsp; &nbsp;</s> makes
+Python continue with the next line as part of the current statement.
+Generally, an error occurs almost immediately in the next line.</li>
+<li>Check for the classic <tt><font size=-1>=</font></tt> instead of <tt><font size=-1>==</font></tt> inside
+a conditional.</li>
+</ol>
+<p>
+If nothing works, move on to the next section...
+
+<h4>I can't get my program to run no matter
+what I do.</h4>
+<p>
+If the compiler says there is an error and you don't see it, that
+might be because you and the compiler are not looking at the same
+code.  Check your programming environment to make sure that the
+program you are editing is the one Python is trying to run.  If you
+are not sure, try putting an obvious and deliberate syntax error at
+the beginning of the program.  Now run (or import) it again.  If the
+compiler doesn't find the new error, there is probably something wrong
+with the way your environment is set up.  
+<p>
+If this happens, one approach is to start again with a new
+program like "Hello, World!," and make sure you can get a known
+program to run.  Then gradually add the pieces of the new program
+to the working one.
+
+
+<h3>Runtime errors</h3>
+<p>
+Once your program is syntactically correct,
+Python can import it and at least start running it.  What could
+possibly go wrong?
+
+<h4>My program does absolutely nothing.</h4>
+<p>
+This problem is most common when your file consists of functions and classes
+but does not actually invoke anything to start execution.  This may be
+intentional if you only plan to import this module to supply classes
+and functions.
+<p>
+If it is not intentional, make sure that you
+are invoking a function to start execution, or execute one from
+the interactive prompt.  Also see the "Flow of Execution" section
+below.
+
+<h4>My program hangs.</h4>
+<p>
+If a program stops and seems to be doing nothing, we
+say it is "hanging."  Often that means that it is caught in
+an infinite loop or an infinite recursion.
+
+<ul>
+<li>If there is a particular loop that you suspect is the
+problem, add a <tt><font size=-1><font color=black>print</font></font></tt> statement immediately before the loop that says
+"entering the loop" and another immediately after that says
+"exiting the loop."</li>
+Run the program.  If you get the first message and not the second,
+you've got an infinite loop.  Go to the "Infinite Loop" section
+below.
+
+<li>Most of the time, an infinite recursion will cause the program
+to run for a while and then produce a "RuntimeError: Maximum
+recursion depth exceeded" error.  If that happens, go to the
+"Infinite Recursion" section below.</li>
+If you are not getting this error but you suspect there is a problem
+with a recursive method or function, you can still use the techniques
+in the "Infinite Recursion" section.
+
+<li>If neither of those steps works, start testing other
+loops and other recursive functions and methods.</li>
+<li>If that doesn't work, then it is possible that
+you don't understand the flow of execution in your program.
+Go to the "Flow of Execution" section below.</li>
+</ul>
+
+<h4>Infinite Loop</h4>
+<p>
+If you think you have an infinite loop and you think you know
+what loop is causing the problem, add a <tt><font size=-1><font color=black>print</font></font></tt> statement at
+the end of the loop that prints the values of the variables in
+the condition and the value of the condition.
+<p>
+For example:
+
+<p><tt><font size=-1><font color=black>while</font> x &gt; 0 <font color=black>and</font> y &lt; 0 :
+<br>&nbsp; <font color=#009000># do something to x
+</font><br>&nbsp; <font color=#009000># do something to y
+</font><br>
+<br>&nbsp; <font color=black>print</font>&nbsp; <font color=red>"x: "</font>, x
+<br>&nbsp; <font color=black>print</font>&nbsp; <font color=red>"y: "</font>, y
+<br>&nbsp; <font color=black>print</font>&nbsp; <font color=red>"condition: "</font>, (x &gt; 0 <font color=black>and</font> y &lt; 0)
+<br></font></tt></p>
+
+<p>
+Now when you run the program, you will see three lines of output
+for each time through the loop.  The last time through the
+loop, the condition should be <tt><font size=-1>false</font></tt>.  If the loop keeps
+going, you will be able to see the values of <tt><font size=-1>x</font></tt> and <tt><font size=-1>y</font></tt>,
+and you might figure out why they are not being updated correctly.
+
+<h4>Infinite Recursion</h4>
+<p>
+Most of the time, an infinite recursion will cause the program to run
+for a while and then produce a <tt><font size=-1>Maximum recursion depth exceeded</font></tt>
+error.
+<p>
+If you suspect that a function or method is causing an infinite
+recursion, start by checking to make sure that there is a base case.
+In other words, there should be some condition that will cause the
+function or method to return without making a recursive invocation.
+If not, then you need to rethink the algorithm and identify a base
+case.
+<p>
+If there is a base case but the program doesn't seem to be reaching
+it, add a <tt><font size=-1><font color=black>print</font></font></tt> statement at the beginning of the function or method
+that prints the parameters.  Now when you run the program, you will see
+a few lines of output every time the function or method is invoked,
+and you will see the parameters.  If the parameters are not moving
+toward the base case, you will get some ideas about why not.
+
+<h4>Flow of Execution</h4>
+<p>
+If you are not sure how the flow of execution is moving through
+your program, add <tt><font size=-1><font color=black>print</font></font></tt> statements to the beginning of each
+function with a message like "entering function <tt><font size=-1>foo</font></tt>," where
+<tt><font size=-1>foo</font></tt> is the name of the function.
+<p>
+Now when you run the program, it will print a trace of each
+function as it is invoked.
+
+<h4>When I run the program I get an exception.</h4>
+<p>
+If something goes wrong during runtime, Python
+prints a message that includes the name of the
+exception, the line of the program where the problem occurred,
+and a traceback.
+<p>
+The traceback identifies the function that is currently running,
+and then the function that invoked it, and then the function that
+invoked <i>that</i>, and so on.  In other words, it traces the
+path of function invocations that got you to where you are.  It
+also includes the line number in your file where each of these
+calls occurs.
+<p>
+The first step is to examine the place in the program where
+the error occurred and see if you can figure out what happened.
+These are some of the most common runtime errors:
+
+<dl>
+<dt>NameError</dt>
+<dd>You are trying to use a variable that doesn't
+exist in the current environment.
+Remember that local variables are local.  You
+cannot refer to them from outside the function where they are defined.</dd>
+<dt>TypeError</dt>
+<dd>There are several possible causes:</dd>
+<ul>
+<li>You are trying to use a value improperly.  Example: indexing
+a string, list, or tuple with something other than an integer.</li>
+<li>There is a mismatch between the items in a format string and
+the items passed for conversion.  This can happen if either the number
+of items does not match or an invalid conversion is called for.</li>
+<li>You are passing the wrong number of arguments to a function or method.
+For methods, look at the method definition and
+check that the first parameter is <tt><font size=-1>self</font></tt>.  Then look at the
+method invocation; make sure you are invoking the method on an
+object with the right type and providing the other arguments
+correctly.</li>
+</ul>
+
+<dt>KeyError</dt>
+<dd>You are trying to access an element of a dictionary
+using a key value that the dictionary does not contain.</dd>
+<dt>AttributeError</dt>
+<dd>You are trying to access an attribute or method
+that does not exist.</dd>
+<dt>IndexError</dt>
+<dd>The index you are using
+to access a list, string, or tuple is greater than
+its length minus one.  Immediately before the site of the error,
+add a <tt><font size=-1><font color=black>print</font></font></tt> statement to display
+the value of the index and the length of the array.
+Is the array the right size?  Is the index the right value?</dd>
+</dl>
+
+<h4>I added so many <tt><font size=-1><font color=black>print</font></font></tt> statements I get inundated with
+output.</h4>
+<p>
+One of the problems with using <tt><font size=-1><font color=black>print</font></font></tt> statements for debugging
+is that you can end up buried in output.  There are two ways
+to proceed: simplify the output or simplify the program.
+<p>
+To simplify the output, you can remove or comment out <tt><font size=-1><font color=black>print</font></font></tt>
+statements that aren't helping, or combine them, or format
+the output so it is easier to understand.
+<p>
+To simplify the program, there are several things you can do.  First,
+scale down the problem the program is working on.  For example, if you
+are sorting an array, sort a <i>small</i> array.  If the program takes
+input from the user, give it the simplest input that causes the
+problem.
+<p>
+Second, clean up the program.  Remove dead code and reorganize the
+program to make it as easy to read as possible.  For example, if you
+suspect that the problem is in a deeply nested part of the program,
+try rewriting that part with simpler structure.  If you suspect a
+large function, try splitting it into smaller functions and testing them
+separately.
+<p>
+Often the process of finding the minimal test case leads you
+to the bug.  If you find that a program works
+in one situation but not in another,
+that gives you a clue about what is going on.
+<p>
+Similarly, rewriting a piece of code can help you find subtle
+bugs.  If you make a change that you think doesn't affect the
+program, and it does, that can tip you off.
+
+
+<h3>Semantic errors</h3>
+<p>
+In some ways, semantic errors are the hardest to debug,
+because the compiler and the runtime system provide no information
+about what is wrong.  Only you know what the program is supposed to
+do, and only you know that it isn't doing it.
+<p>
+The first step is to make a connection between the program
+text and the behavior you are seeing.  You need a hypothesis
+about what the program is actually doing.  One of the things
+that makes that hard is that computers run so fast.
+<p>
+You will often wish that you could slow the program down to human
+speed, and with some debuggers you can.  But the time it takes to
+insert a few well-placed <tt><font size=-1><font color=black>print</font></font></tt> statements is often short compared to
+setting up the debugger, inserting and removing breakpoints, and
+"walking" the program to where the error is occurring.
+
+<h4>My program doesn't work.</h4>
+<p>
+You should ask yourself these questions:
+
+<ul>
+<li>Is there something the program was supposed to do but
+which doesn't seem to be happening?  Find the section of the code
+that performs that function and make sure it is executing when
+you think it should.</li>
+<li>Is something happening that shouldn't?  Find code in
+your program that performs that function and see if it is
+executing when it shouldn't.</li>
+<li>Is a section of code producing an effect that is not
+what you expected?  Make sure that you understand the code in
+question, especially if it involves invocations to functions or methods in
+other Python modules.  Read the documentation for the functions you invoke.
+Try them out by writing simple test cases and checking the results.</li>
+</ul>
+<p>
+In order to program, you need to have a mental model of how
+programs work.  If you write a program that doesn't do what you expect,
+very often the problem is not in the program; it's in your mental
+model.
+<p>
+The best way to correct your mental model is to break the program
+into its components (usually the functions and methods) and test
+each component independently.  Once you find the discrepancy
+between your model and reality, you can solve the problem.
+<p>
+Of course, you should be building and testing components as you
+develop the program.  If you encounter a problem,
+there should be only a small amount of new code
+that is not known to be correct.
+
+<h4>I've got a big hairy expression and it doesn't
+do what I expect.</h4>
+<p>
+Writing complex expressions is fine as long as they are readable,
+but they can be hard to debug.  It is often a good idea to
+break a complex expression into a series of assignments to
+temporary variables.
+<p>
+For example:
+
+<p><tt><font size=-1>self.hands[i].addCard (self.hands[self.findNeighbor(i)].popCard())
+<br></font></tt></p>
+
+<p>
+This can be rewritten as:
+
+<p><tt><font size=-1>neighbor = self.findNeighbor (i)
+<br>pickedCard = self.hands[neighbor].popCard()
+<br>self.hands[i].addCard (pickedCard)
+<br></font></tt></p>
+
+<p>
+The explicit version is easier to read because the variable
+names provide additional documentation, and it is easier to debug
+because you can check the types of the intermediate variables
+and display their values.
+<p>
+Another problem that can occur with big expressions is
+that the order of evaluation may not be what you expect.
+For example, if you are translating the expression
+<tt><table style="display: inline; align: center; vertical-align: middle;"><tr><td>x</td></tr><tr><td><hr noshade color=black></td></tr><tr><td>2 pi</td></tr></table></tt> into Python, you might write:
+
+<p><tt><font size=-1>y = x / 2 * math.pi
+<br></font></tt></p>
+
+<p>
+That is not correct because multiplication and division have
+the same precedence and are evaluated from left to right.
+So this expression computes <tt>x pi / 2</tt>.
+<p>
+A good way to debug expressions is to add parentheses to make
+the order of evaluation explicit:
+
+<p><tt><font size=-1> y = x / (2 * math.pi)
+<br></font></tt></p>
+
+<p>
+Whenever you are not sure of the order of evaluation, use
+parentheses.  Not only will the program be correct (in the sense
+of doing what you intended), it will also be more readable for
+other people who haven't memorized the rules of precedence.
+
+<h4>I've got a function or method that doesn't return what I
+expect.</h4>
+<p>
+If you have a <tt><font size=-1><font color=black>return</font></font></tt> statement with a complex expression,
+you don't have a chance to print the <tt><font size=-1><font color=black>return</font></font></tt> value before
+returning.  Again, you can use a temporary variable.  For
+example, instead of:
+
+<p><tt><font size=-1><font color=black>return</font> self.hands[i].removeMatches()
+<br></font></tt></p>
+
+<p>
+you could write:
+
+<p><tt><font size=-1>count = self.hands[i].removeMatches()
+<br><font color=black>return</font> count
+<br></font></tt></p>
+
+<p>
+Now you have the opportunity to display the value of
+<tt><font size=-1>count</font></tt> before returning.
+
+<h4>I'm really, really stuck and I need help.</h4>
+<p>
+First, try getting away from the computer for a few minutes.
+Computers emit waves that affect the brain, causing these
+effects:
+
+<ul>
+<li>Frustration and/or rage.</li>
+<li>Superstitious beliefs ("the computer hates me") and
+magical thinking ("the program only works when I wear my
+hat backward").</li>
+<li>Random-walk programming (the attempt to program by writing
+every possible program and choosing the one that does the right
+thing).</li>
+</ul>
+<p>
+If you find yourself suffering from any of these symptoms, get
+up and go for a walk.  When you are calm, think about the program.
+What is it doing?  What are some possible causes of that
+behavior?  When was the last time you had a working program,
+and what did you do next?
+<p>
+Sometimes it just takes time to find a bug.  We often find bugs
+when we are away from the computer and let our minds wander.  Some
+of the best places to find bugs are trains, showers, and in bed,
+just before you fall asleep.
+
+<h4>No, I really need help.</h4>
+<p>
+It happens.  Even the best programmers occasionally get stuck.
+Sometimes you work on a program so long that you can't see the
+error.  A fresh pair of eyes is just the thing.
+<p>
+Before you bring someone else in, make sure you have exhausted
+the techniques described here.  Your program should be as simple
+as possible, and you should be working on the smallest input
+that causes the error.  You should have <tt><font size=-1><font color=black>print</font></font></tt> statements in the
+appropriate places (and the output they produce should be
+comprehensible).  You should understand the problem well enough
+to describe it concisely.
+<p>
+When you bring someone in to help, be sure to give
+them the information they need:
+
+<ul>
+<li>If there is an error message, what is it
+and what part of the program does it indicate?</li>
+<li>What was the last thing you did before this error occurred?
+What were the last lines of code that you wrote, or what is
+the new test case that fails?</li>
+<li>What have you tried so far, and what have you learned?</li>
+</ul>
+<p>
+When you find the bug, take a second to think about what you
+could have done to find it faster.  Next time you see something
+similar, you will be able to find the bug more quickly.
+<p>
+Remember, the goal is not just to make the program
+work.  The goal is to learn how to make the program work.
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap20.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="app02.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

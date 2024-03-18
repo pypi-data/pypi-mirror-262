@@ -1,0 +1,44 @@
+## hpr1207 :: Icecast 101
+
+ 
+Klaatu talks about how to set up Icecast, new Ices, old Ices, and a
+nice little (simple) HTML5 player. This is part one of a
+two-part series.
+
+
+Here are the raw commands for Icecast, Ices, and Ices-cc:
+
+
+#start the streaming server
+icecast -c /etc/icecast.xml -B
+
+#start the mp3 stream
+ices-cc -c /etc/ices-cc.conf -F /home/dj/playlist.txt -R -b 96 -m mp3 -P radio
+
+# start the ogg stream
+ices /etc/ices/ices-playlist.xml
+
+
+Here is the code for the simple HTML5 player that Klaatu mentions in
+the episode. It's straight HTML5 but in case you're new to HTML5
+then this could be useful:
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>My Great Streaming Server Example dot Com</title>
+</head>
+<div id="player">
+<audio width="100px" height="200px" autoplay loop controls autobuffer preload="auto">
+      <source src="https://example.com:8000/mp3" type="audio/mp3" />
+      <source src="https://example.com:8000/ogg" type="audio/ogg" />
+</audio>
+</div>
+  </body>
+</html>
+
+
+Klaatu is indebted to Kwisher, Delwin, and Ruji for their help on this
+series.

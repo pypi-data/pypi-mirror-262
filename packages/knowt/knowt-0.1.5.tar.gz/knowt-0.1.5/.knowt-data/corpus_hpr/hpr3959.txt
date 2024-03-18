@@ -1,0 +1,113 @@
+## hpr3959 :: Download any HPR series with english file names
+
+ Hello all. This is gemlog from Terrace, bc, canada just up near the
+alaska panhandle.
+Some of you may know me from in COM chat on sdf dot org or as a
+fedizen on the tilde dot zone instance of mastodon.
+Now, the other day I finally got around to checking out HPR properly,
+even though my masto-pal claw-dio-m turned me on to it a couple of years
+ago.
+Recently, on a friday night in irc on tilde radio, I noticed there
+were whole series on hpr and not only single shows and that got me kind
+of excited.
+I guess I'm easily excitable.
+Anyhow, something I could listen to at work or while driving. Still,
+I managed to forget about it until /just/ before I was leaving the house
+for work on Monday morning. I rushed to copy over a few shows - nearly
+at random onto my phone and headed out to work.
+After I got my morning sorted at work, I told VLC to play-all and
+enjoyed a couple of shows. I noticed that each show I had chosen had a
+beg post at the beginning. I figured I could make one on at least
+something from my messy gemlog/bin dir.
+However, after a break, I came back and couldn't remember which 4
+digit numbered dot mp3 I had finished up on, which mildly irked me.
+Well, as we all know, irk becomes itch and I put my sad regex skills to
+the test scraping the hpr website with a custom bash script later when I
+got home.
+A very custom bash script. Like all scrapers, if any of the guys at
+hpr even breathe the wrong way, it will probably break horribly. On the
+other hand, I've had scrapers that looked just as sad running for many
+years against a canadian government site. So. Who knows?
+All the script uses are some built-ins from bash along with sed and
+wget for the actual getting. My local instance of searX N G was left
+smoking as scrambled for sed incantations to string together. I'm not a
+sed guy.
+Usage is simple, as the script only accepts one argument: ... the
+four digit series number of the show you want to download. It will
+create a dir with the series name and download every mp3 it finds,
+renaming each show to the show title.
+I was tempted to doll it up with some niceties like options for
+download dir, a selector for a series with a dialog of some kind... yada
+yada yada.
+But... we all know what happens when you stretch a quick hack with a
+bash script too far for the scripting language: hours of misery wishing
+you'd started with some other language.
+So far, I've used the script to download 8 series. DU dash S H tells
+me they add up to 2 dot 2 gig, so it seems to work well enough.
+It comes with the same iron clad warranty as everything I write:
+If it breaks, you get to keep all the pieces. Thanks for
+listening.
+#!/bin/bash
+# gemlog@gemlog.ca 2023-08-26
+# License: CC BY-SA 4.0.
+# not proud of my continuing lack of regex foo frankly...
+
+if [ $# -lt 1 ]; then
+  echo 1>&2 "$0: You need to enter the HPR Series Number to download as 4 digits"
+  echo "The full list of HPR Series is at https://hackerpublicradio.org/series/index.html"
+  exit 2
+fi
+
+snumber=$1
+re='^[[:digit:]]{4}$'
+if [[ $snumber =~ $re ]]; then
+    wget https://hackerpublicradio.org/series/$snumber.html -q -O /tmp/$snumber.html
+    content=$(</tmp/$snumber.html)
+    declare -a shows
+    shows=$(grep -P '^(?=.*h3)(?=.*title)' /tmp/$snumber.html)
+else
+    echo "'$snumber' is not exactly 4 digits like an HPR series number"
+    exit 2
+fi
+
+series=$(echo $content | sed -e :a -e 's/<[^>]*>//g;/</N;//ba' | grep -o -P -m1 '(?<=In-Depth Series:).*(?=Number)' | sed 's/[ t]*$//' )
+series=$(echo ${series// /_} | cut -b 2-50 | sed 's/_*$//' | sed 's/^_*//' | sed s/[^A-Za-z0-9_.]/_/g)
+
+#outdir="/home/gemlog/Music/Audio/HPR/$series-Se$snumber/"
+outdir=~/"Downloads/HPR/$series-Se$snumber/"
+mkdir -p "$outdir"
+echo "Files for the series "$series" will be saved in $outdir"
+
+declare -a shows
+declare -a url_array
+shows=$(grep -P '^(?=.*h3)(?=.*title)' /tmp/$snumber.html)
+IFS=$'n'
+
+for line in $shows
+  do
+    f=$((f+1))
+done
+echo
+echo
+echo "Downloading $f mp3 files"
+
+
+for line in $shows
+  do
+    i=$((i+1))
+    title=$(echo $line | sed -e :a -e 's/<[^>]*>//g;/</N;//ba' | grep -o -P '(?<=::).*('host')'  | sed 's/host//' | sed 's/[ t]*$//' | sed s/[^A-Za-z0-9_.]/_/g | sed 's/ /_/g' | sed 's/^_*//' )
+    enumber=$(echo $line | sed -e :a -e 's/<[^>]*>//g;/</N;//ba' | grep -o -P '(?<=hpr).*('::')' | sed 's/:://')
+    enumber=$(printf "%04d" $((enumber)) )
+    outfile=$outdir$title-Ep$enumber.mp3
+    url="https://www.hackerpublicradio.org/eps/hpr$enumber.mp3"
+    echo "Downloading file $i: $title"
+    wget --verbose --max-redirect 2 $url -O $outfile
+    sleep 2
+  done
+
+
+echo
+ttlfiles=$(ls -1 $outdir | wc -l)
+echo "$ttlfiles files for the series "$series" were saved in $outdir"
+
+exit 0

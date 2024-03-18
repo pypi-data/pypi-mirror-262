@@ -1,0 +1,31 @@
+## hpr0917 :: Uber Leet Hacker Force Radio 6
+
+ In a welcome return to HPR, SigFLUP talks to us about two of her projects:
+concr
+
+concr is an encryption framework for use to partially encrypt configuration files, or any file for that matter. concr is for use in UNIX systems and consist of two parts, libconcr and confcrypt. libconcr is an API for reading partially encrypted files and generating keys. confcrypt is a user-application for encrypting files using keyfile database or manually specified keys.
+
+
+concr leverages the own-by-root aspect of programs in UNIX systems and stores its decryption key inside of the application. Applications that use libconcr must be installed with execute-only permissions.
+
+
+
+When an application is linked with and makes use of concr it, when run for the first time, will generate a copy of itself containing a private rsa-key and output a public rsa-key. confcrypt is a user program that encrypts messages to be decrypted by second runs of the application. concr provides an api similar to that of libc for reading in files thus making it transparent to the application developer what is and is not encrypted in those files.
+
+
+https://devio.us/~sigflup/concr
+
+yesplz
+
+yesplz is a screeenshot uploader command line utility written by sigFLUP that will take a screenshot, tag
+your photo, log into unixporn.com, post the picture to your photo album, and return an ascii bunny on success.
+
+
+In order for it to work, you must have an account at unixporn.com but that is free and you can enter nothing but fake information into it.
+
+
+Then simply run yesplz --help to see the possible tags and instructions for yesplz.
+
+
+yesplz: https://devio.us/~sigflup/yesplz_dec_19_2011.tgz
+

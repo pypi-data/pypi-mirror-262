@@ -1,0 +1,38 @@
+## hpr1429 :: Debian sources.list
+
+ 
+Honkeymagoo and Kevin Wisher discuss the Debian GNU Linux sources.list file, and the many ways
+it can be used to personalize your Debian distro
+
+
+The site that gives most of the information about the sources.list file:
+https://www.debian.org/doc/debian-policy/ch-archive.html
+
+
+Mirror sites list:
+https://www.debian.org/mirror/list
+
+
+A site that can help you make a sources.list file:
+https://debgen.simplylinux.ch/
+
+
+2 good sites to learn about apt-pinning:
+https://jaqque.sbih.org/kplug/apt-pinning.html
+https://www.howtoforge.com/a-short-introduction-to-apt-pinning
+
+
+The Debian multimedia repository: https://www.deb-multimedia.org/
+
+
+Default sources.list file for US:
+
+
+deb https://ftp.us.debian.org/debian/ wheezy main
+deb-src https://ftp.us.debian.org/debian/ wheezy main
+
+deb https://security.debian.org/ wheezy/updates main
+deb-src https://security.debian.org/ wheezy/updates main
+
+deb https://ftp.us.debian.org/debian/ wheezy-updates main
+deb-src https://ftp.us.debian.org/debian/ wheezy-updates main 

@@ -1,0 +1,7 @@
+## hpr2701 :: First impressions of the Odroid-go
+
+ I ramble on about my impressions of the Odroid-go, a 32 USD handheld system similar to a gameboy built to run game system emulators and various other free software. It’s also built to be harcked.
+https://wiki.odroid.com/odroid_go/odroid_go
+The summary is this is an easy to put together kit requiring no soldering, and runs classic console emulators pretty well. Well worth the 32 USD plus shipping in my opinion. Claims 10 hours of game play and that seems about right so far for me.
+The systems emulated out of the box are:
+NES, Game Gear, Gameboy, Gameboy Color, Sega Master System, ColecoVision. Other systems of similar or earlier vintages have emulators that you have to install separately and boot into to run. I don’t think it will emulate newer systems. No Gameboy Advance emulator and I don’t see a Mame emulator. However, I do think this ‘might’ support Mame for some of the early arcade games like Asteroids and Space Invaders.

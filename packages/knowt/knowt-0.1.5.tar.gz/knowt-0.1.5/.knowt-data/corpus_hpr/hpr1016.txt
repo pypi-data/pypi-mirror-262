@@ -1,0 +1,18 @@
+## hpr1016 :: Nix: The Functional Package Manager
+
+ 
+An introduction to the Nix package manager and related projects:
+
+
+Nix is a purely functional package manager. This means that it can ensure that an upgrade to one package cannot break others, that you can always roll back to previous version, that multiple versions of a package can coexist on the same system, and much more.
+Nixpkgs is a large collection of packages that can be installed with the Nix package manager.
+NixOS is a Nix-based Linux distribution. Thanks to Nix, it supports atomic upgrades, rollbacks and multi-user package management, and it has a declarative approach to system configuration management that makes it easy to reproduce a configuration on another machine.
+Hydra is a Nix-based continuous build system.
+Disnix is a Nix-based distributed service deployment system.
+
+Links:
+
+NixOS: https://nixos.org, #nixos on freenode
+Eben Moglen on platforms: https://en.wikisource.org/wiki/09NTC_plenary:_Eben_Moglen
+Eelco Visser on Parsers: https://www.se-radio.net/2008/11/episode-118-eelco-visser-on-parsers/
+

@@ -1,0 +1,65 @@
+## hpr2766 :: Disk enumeration on Linux
+
+ 
+The old way:
+
+
+$ ls /dev/sd*
+
+
+Another old way:
+
+
+$ fdisk --list
+
+
+An old way to see what you just plugged in:
+
+
+$ sudo dmesg | tail
+
+
+Some new tricks:
+
+
+$ lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   2.7T  0 disk 
+├─sda1   8:1    0  23.3G  0 part 
+└─sda2   8:2    0   2.7T  0 part 
+sdb      8:16   0   3.9G  0 disk 
+sdc      8:32   0 111.8G  0 disk 
+├─sdc1   8:33   0   100M  0 part /boot/efi
+└─sdc2   8:34   0 111.7G  0 part /
+sdd      8:48   0   1.8T  0 disk 
+├─sdd1   8:49   0   120G  0 part /var
+├─sdd2   8:50   0   120G  0 part /tmp
+├─sdd3   8:51   0    60G  0 part /opt
+└─sdd4   8:52   0   1.5T  0 part /home
+sde      8:64   0 298.1G  0 disk 
+├─sde1   8:65   0   500M  0 part 
+├─sde2   8:66   0 296.8G  0 part 
+└─sde3   8:67   0   826M  0 part 
+sdf      8:80   0 931.5G  0 disk 
+└─sdf1   8:81   0 931.5G  0 part 
+sdg      8:96   1   7.5G  0 disk 
+└─sdg1   8:97   1   7.5G  0 part 
+
+
+User-friendly udisks:
+
+
+$ udisks --monitor /dev
+Ctrl-c
+$ udisk --enumerate | sort
+/org/freedesktop/UDisks/devices/sda
+/org/freedesktop/UDisks/devices/sda1
+/org/freedesktop/UDisks/devices/sda2
+/org/freedesktop/UDisks/devices/sdb
+/org/freedesktop/UDisks/devices/sdc
+/org/freedesktop/UDisks/devices/sdc1
+[...]
+$ udisks --mount /dev/sdc1
+Mounted /dev/sdc1 on /media/mythumbdrive
+$ udisks --unmount /dev/sdc1
+

@@ -1,0 +1,37 @@
+## hpr2544 :: How I prepared episode 2493: YouTube Subscriptions - update
+
+ How I prepared episode 2493: YouTube Subscriptions - update
+Introduction
+In show 2493 I listed a number of the YouTube channels I watch. Some of what I did to prepare the notes was to cut and paste information from YouTube pages, but the basic list itself was generated programmatically. I thought the process I used might be of interest to somebody so I am describing it here.
+Components
+I needed four components to achieve what I wanted:
+
+YouTube subscription list (only available in OPML format as far as I know)
+The xmlstarlet tool to parse the OPML
+Template Toolkit which I used to generate Markdown
+The pandoc document converter tool to generate HTML
+
+I will talk a little about the first three components in this episode in order to provide an overview.
+Full-length notes
+The full-length notes (available here) contain details of the processes involved in building the list of channels.
+Links
+
+YouTube Subscription Manager page
+The xmlstarlet manual (HTML, single page)
+Template Toolkit
+
+Template::Plugin::Datafile
+Template Toolkit replace virtual method
+
+The pandoc document converter
+Previous HPR shows referred to:
+
+hpr2202 :: Makers on YouTube
+hpr2493 :: YouTube Subscriptions - update
+
+Resources:
+
+Detailed notes
+Example template file: yt_template.tpl
+
+

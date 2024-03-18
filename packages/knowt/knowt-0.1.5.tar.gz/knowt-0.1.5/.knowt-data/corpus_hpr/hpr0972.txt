@@ -1,0 +1,26 @@
+## hpr0972 :: LiTS 005: wc
+
+ Fear not Dann has not decided to branch and do a plumbing show. Rather he sticks with the plan and brings us yet another excellent explanation of a common unix utility, namely wc
+
+https://www.linuxintheshell.com/2012/04/24/episode-005-wc/
+
+Ever want to know how many lines are in a file? How about how many words are in a file or even how many characters? Well then the “wc” command is just for you. The “wc” command, short for word count, is a very simple command that will print “new line, word and byte counts for file specified, and a total count for all files combined if more than one file is included.”
+Consider the following little ditty:
+the linux wc command
+for those not in the know
+stands for word count and
+does a lot you should know
+It counts lines and words and bytes
+producing output on site
+quickly giving you the numbers
+without any blunders
+Executing the following command:
+wc poem.txt
+Results in the following output:
+9 40 215 poem.txt
+To break it down:
+
+9 lines
+40 words
+215 characters
+

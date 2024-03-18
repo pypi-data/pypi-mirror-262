@@ -1,0 +1,133 @@
+## hpr3714 :: The News with Some Guy On the Internet
+
+ Threat Analysis; your
+attack surface.
+The Hacker News
+New
+Chinese Malware Attack Framework Targets Windows, macOS, and Linux
+Systems.
+A previously undocumented command-and-control (C2) framework dubbed
+Alchimist is likely being used in the wild to target Windows, macOS, and
+Linux systems.
+"Alchimist C2 has a web interface written in Simplified Chinese and
+can generate a configured payload, establish remote sessions, deploy
+payloads to the remote machines, capture screenshots, perform remote
+shellcode execution, and run arbitrary commands," Cisco Talos said in a
+report shared with The Hacker News. Written in GoLang, Alchimist is
+complemented by a beacon implant called Insekt, which comes with remote
+access features that can be instrumented by the C2 server.”
+"Since Alchimist is a single-file based ready-to-go C2 framework, it
+is difficult to attribute its use to a single actor such as the authors,
+APTs, or crimeware syndicates."
+The trojan, for its part, is equipped with features typically present
+in backdoors of this kind, enabling the malware to get system
+information, capture screenshots, run arbitrary commands, and download
+remote files, among others.
+Alchimist C2 panel further features the ability to generate first
+stage payloads, including PowerShell and wget code snippets for Windows
+and Linux, potentially allowing an attacker to flesh out their infection
+chains to distribute the Insekt RAT binary. The instructions could then
+be potentially embedded in a maldoc attached to a phishing email that,
+when opened, downloads and launches the backdoor on the compromised
+machine. What's more, the Linux version of Insekt is capable of listing
+the contents of the ".ssh" directory and even adding new SSH keys to the
+"~/.ssh/authorized_keys" file to facilitate remote access over SSH.
+The Hacker News
+Hackers
+Using Vishing to Trick Victims into Installing Android Banking
+Malware.
+Malicious actors are resorting to voice phishing (vishing) tactics to
+dupe victims into installing Android malware on their devices.
+The Dutch mobile security company said it identified a network of
+phishing websites targeting Italian online-banking users that are
+designed to get hold of their contact details.
+Telephone-oriented attack delivery (TOAD), as the social engineering
+technique is called, involves calling the victims using previously
+collected information from the fraudulent websites.
+The caller, who purports to be a support agent for the bank,
+instructs the individual on the other end of the call to install a
+security app and grant it extensive permissions, when, in reality, it's
+malicious software intended to gain remote access or conduct financial
+fraud.
+What's more, the infrastructure utilized by the threat actor has been
+found to deliver a second malware named SMS Spy that enables the
+adversary to gain access to all incoming SMS messages and intercept
+one-time passwords (OTPs) sent by banks.
+The new wave of hybrid fraud attacks presents a new dimension for
+scammers to mount convincing Android malware campaigns that have
+otherwise relied on traditional methods such as Google Play Store
+droppers, rogue ads, and smishing.
+The Hacker News
+64,000
+Additional Patients Impacted by Omnicell Data Breach - What is Your Data
+Breach Action Plan?
+Founded in 1992, Omnicell is a leading provider of medication
+management solutions for hospitals, long-term care facilities, and
+retail pharmacies. On May 4, 2022, Omnicell's IT systems and third-party
+cloud services were affected by ransomware attacks which may lead to
+data security concerns for employees and patients. While it is still
+early in the investigation, this appears to be a severe breach with
+potentially significant consequences for the company.
+Omnicell began informing individuals whose information may have been
+compromised on August 3, 2022. Hackers may be able to access and sell
+patient-sensitive information, such as social security numbers, due to
+the time delay between the breach and the company's report of affected
+patients.
+The type of information that may be exposed are:
+
+Credit card information.
+Financial information.
+Social security numbers.
+Driver's license numbers.
+Health insurance details.
+
+The healthcare industry is one of the most targeted sectors globally,
+with attacks doubling year over year. And these costs are measured in
+millions or even billions of dollars - not to mention increased risks
+for patients' privacy (and reputation).
+The Washington Post
+How to
+protect schools getting whacked by ransomware.
+Ransomware gangs are taking Americans to school. So far this year,
+hackers have taken hostage at least 1,735 schools in 27 districts; the
+massive Los Angeles Unified School District is their latest target.
+Ransomware hackers breach computers, lock them up, steal sensitive
+data and demand money to release their hold on organizations’ critical
+systems. These criminals often attack schools because they are
+profitable targets. If all ransomware victims refused to pay, the
+attacks would stop. Indeed, paying up might be illegal: The Treasury
+Department released guidance last year noting that giving money to
+global criminal organizations can violate sanctions law.
+The trouble is, saying no isn’t always easy. Los Angeles didn’t
+capitulate, and the criminals leaked a trove of data — a consequence
+that can prove more or less serious depending on the sensitivity of the
+stolen information.
+“Because we can,” said a representative of the ransomware gang that
+took down Los Angeles Unified School District, explaining the
+collective’s motivations to a Bloomberg News reporter. Schools’ task is
+to turn “can” to “can’t” — or, at least, to make success pay a whole lot
+less.
+CNET News.
+Verizon
+Alerts Prepaid Customers to Recent Security Breach.
+Verizon notified prepaid customers this week of a recent cyberattack
+that granted third-party actors access to their accounts, as reported
+earlier Tuesday by BleepingComputer. The attack occurred between Oct. 6
+and Oct. 10 and affected 250 Verizon prepaid customers.
+The breach exposed the last four digits of customers' credit cards
+used to make payments on their prepaid accounts. While no full credit
+card information was accessible, the information was enough to grant the
+attackers access to Verizon user accounts, which hold semi-sensitive
+data such "name, telephone number, billing address, price plans, and
+other service-related information," per a notice from Verizon.
+Account access also potentially enabled attackers to process
+unauthorized SIM card changes on prepaid lines. Also known as SIM
+swapping, unauthorized SIM card changes can allow for the transfer of an
+unsuspecting person's phone number to another phone.
+From there, the counterfeit phone can be used to receive SMS messages
+for password resets and user identification verifications on other
+accounts, giving attackers potential access to any account they have, or
+can guess, the username for. Consequently, Verizon recommended affected
+customers secure their non-Verizon accounts such as social media,
+financial, email and other accounts that allow for password resets by
+phone.

@@ -1,0 +1,19 @@
+## hpr3463 :: Clonezilla: A backup story
+
+ Notes on the audio quality
+I have been looking into the audio quality issues of my shows. I think I have found a solution to them. Unfortunately, this show was recorded before I discovered it.
+Synopsis
+In today's episode, I take the audience along my adventure in backing up my laptop's hard drives. During recent OS updates, the kernel updates started to fall. In my efforts to resolve the problem, I made things worse – to the point I decided it was time to reinstall the operating system. To prevent any data loss, I chose Clonezilla to image the drives.
+The Clonezilla Live edition lets you boot into a ncurses menu driven system that walks you through the process of either backing up your hard drives or restoring a Clonezilla backup. Clonezilla backups save space by imaging only the data on your drives (for those filesystems it recognizes – otherwise it uses dd to do a sector-by-sector copy)
+Overall the process was very smooth, and, at the end, I was confident to move forward with wiping my main hard drive and reinstalling the operating system knowing I had a way to restore any lost data.
+References
+
+Clonzilla website
+UNETBOOTIN website
+dd, command line utility for *nix like operating systems
+
+Attribution
+The transition sound used between audio clips is found on freesound.org:
+Name: Harp Transition Music Cue
+Author: DanJFilms
+License: Creative Commons Zero

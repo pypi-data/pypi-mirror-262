@@ -1,0 +1,55 @@
+## hpr1344 :: Filming a Dinosaur egg hatching
+
+ 
+In this episode Ken and his Son hatch a plan to film a Dinosaur egg hatching using fswebcam.
+
+
+https://www.intertoys.nl/speelgoed/groeiend-dinosaurus-ei-577680.html
+
+
+We had to wait 8 days for a Dinosaur egg to hatch, so we rigged up a RasberryPi with a cheap usb cam to take pictures. This was just before the camera module was releases. However the principle was the same. We positioned the egg in a mixing bowl and placed it on some boxes to give it height. Then we used the handle of a camera stand as a place to clip on a cheap usb camera. We then connected the camera to a RasberryPi.
+
+
+
+
+
+On the first day we let the light in and you see flickering as the lighting conditions change over the course of the day and the camera adjusts. Peter64 has promised a episode on how to fix this. So we closed the curtains and added an artificial light source as can be seen below.
+
+
+While we could have used fswebcam to automatically take the pictures, there was a certain satisfaction in seeing the program run every minute. Other than the default Raspbian install, we installed fswebcam and screen. The first to take the pictures and the other to allow the script to continue running after we disconnected.
+
+
+$ cat egg.bash
+#!/bin/bash
+while true
+do
+  nowdate=$(date -u +%Y-%m-%d_%H-%M-%SZ_%A)
+  echo ${nowdate}
+  fswebcam -r 640x480 \
+           -S 15 \ 
+           --flip h \
+           --jpeg 95 \
+           --shadow \
+           --title "Dinosaur Hatching" \
+           --subtitle "Pádraig Fallon" \
+           --info "" \
+           --save egg-${nowdate}.jpg
+  sleep 1m
+done
+
+
+That produced a big long list of images, 10886 in total, and it was a "simple" matter to convert them to a mp4 file with ffmpeg. See https://diveintohtml5.info/video.html for more information on encoding for the web in general
+
+
+ffmpeg -y -r 120 -f image2 -pattern_type glob -i "*.jpg" -b:v 2000k -vcodec libvpx -quality best egg-libvpx.webm
+
+
+
+
+
+
+
+
+Here's the finished product:
+
+

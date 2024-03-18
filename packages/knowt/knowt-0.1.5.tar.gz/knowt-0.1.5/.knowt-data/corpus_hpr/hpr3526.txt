@@ -1,0 +1,288 @@
+## hpr3526 :: HPR Community News for January 2022
+
+ 
+New hosts
+
+There were no new hosts this month.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+3501
+Mon
+2022-01-03
+HPR Community News for December 2021
+HPR Volunteers
+
+
+3502
+Tue
+2022-01-04
+New year Greetings and a short review of my new Juno PC
+Tony Hughes AKA TonyH1212
+
+
+3503
+Wed
+2022-01-05
+Configuring Mumble
+Ken Fallon
+
+
+3504
+Thu
+2022-01-06
+James Webb Space Telescope
+Dave Morriss
+
+
+3505
+Fri
+2022-01-07
+A DX with Hotel Bravo 9 Hotel November Tango
+beni
+
+
+3506
+Mon
+2022-01-10
+HPR CONTEST 2022 01
+operat0r
+
+
+3507
+Tue
+2022-01-11
+USB Turntable fix and sound journey
+Archer72
+
+
+3508
+Wed
+2022-01-12
+Differences between C# and Haskell
+Tuula
+
+
+3509
+Thu
+2022-01-13
+Linux Inlaws S01E46: The Matrix Project (Without Neo)
+monochromec
+
+
+3510
+Fri
+2022-01-14
+Syntax, Switches, and Help
+Ahuka
+
+
+3511
+Mon
+2022-01-17
+Podman like Vagrant
+klaatu
+
+
+3512
+Tue
+2022-01-18
+Auld Acquaintance
+Jezra
+
+
+3513
+Wed
+2022-01-19
+HB9HNT and PA7KEN on SOTA, Summits on the Air
+beni
+
+
+3514
+Thu
+2022-01-20
+Hacking Stories: Soft Drink
+operat0r
+
+
+3515
+Fri
+2022-01-21
+ADB and scrcpy
+Ken Fallon
+
+
+3516
+Mon
+2022-01-24
+Rant about RX
+operat0r
+
+
+3517
+Tue
+2022-01-25
+Hp stream laptop with Lubuntu 20.04
+JWP
+
+
+3518
+Wed
+2022-01-26
+Linux Inlaws S01E47: BigBlueButton and NAT
+monochromec
+
+
+3519
+Thu
+2022-01-27
+Rust 101: Episode 2 - Rolling With the Errors
+BlacKernel
+
+
+3520
+Fri
+2022-01-28
+Inversion Layer Modes
+Ahuka
+
+
+3521
+Mon
+2022-01-31
+Upgrades to Acer Aspire 5 Slim
+Archer72
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 9 comments in total.
+Past shows
+There are 4 comments on
+4 previous shows:
+
+hpr3322
+(2021-04-27) "Tune system performance with tuned"
+by klaatu.
+
+
+
+Comment 1:
+Windigo on 2022-01-21:
+"Lost udev episode"
+I was surprised to hear you say you've never done an episode on udev, because I distinctly remember that episode! You were discussing creating your own udev rules to automatically run tasks upon inserting a USB drive.
+
+It may be that you've never done an episode on HPR about it; I can't find it for the life of me.
+
+Either way, thank you - as always - for the excellent episode. :)
+
+hpr3485
+(2021-12-10) "50 years since the 1st Edition of Unix was published"
+by Ken Fallon.
+
+
+
+Comment 2:
+wynaut on 2022-01-07:
+"thanks great show"
+agree with prev comment, listener who just turned 51 :)
+
+hpr3496
+(2021-12-27) "How I record HPR Episodes"
+by norrist.
+
+
+
+Comment 2:
+Reto on 2022-01-09:
+"a good idea"
+Hi,
+Thank you for this program and the introduction as a podcast.
+
+I just downloaded the .zip from GitLab and while trying the commands, I realize a section with dependencies is missing. I think pip is too large, so, I usually do run it in an virtualenv.
+In other Phython projects like here: https://github.com/jonaswinkler/paperless-ng/blob/master/requirements.txt you find a requirements.txt. I was wondering if you add one too?
+
+Br,
+Reto
+
+hpr3498
+(2021-12-29) "Linux Inlaws S01E45: The Big Xmas New Year bash with the Grumpies"
+by monochromec.
+
+
+
+Comment 1:
+operat0r on 2022-01-09:
+"Love this show"
+reminds me a little bit of udev random  podcast. this one had a lot of laughs! You guys are my friends for now. Mine won't do anything.. Holidays  are hard for some/most people. Shooting the shit and ranting are my fav podcast eps!
+
+Take care of yourselves! your the only U you have!
+
+
+This month's shows
+There are 5 comments on 5 of this month's shows:
+hpr3504
+(2022-01-06) "James Webb Space Telescope"
+by Dave Morriss.
+
+Comment 1:
+dnt on 2022-01-06:
+"Mission control"
+hpr3505
+(2022-01-07) "A DX with Hotel Bravo 9 Hotel November Tango"
+by beni.
+
+Comment 1:
+baffled on 2022-01-11:
+"Nice show!"
+hpr3510
+(2022-01-14) "Syntax, Switches, and Help"
+by Ahuka.
+
+Comment 1:
+Tuula on 2022-01-17:
+"This brought some memories"
+hpr3516
+(2022-01-24) "Rant about RX"
+by operat0r.
+
+Comment 1:
+Janedoc on 2022-01-26:
+"empathize with you"
+hpr3517
+(2022-01-25) "Hp stream laptop with Lubuntu 20.04"
+by JWP.
+
+Comment 1:
+Jesse on 2022-01-25:
+"Monty Mint phone"
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2022-January/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+Older HPR shows on archive.org
+This month 120 additional shows in the range 1-870 have been uploaded.
+The number of shows left to upload in this range is now: 124.

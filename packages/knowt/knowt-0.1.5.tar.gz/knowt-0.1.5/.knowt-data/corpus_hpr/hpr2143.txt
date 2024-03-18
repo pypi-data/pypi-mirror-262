@@ -1,0 +1,93 @@
+## hpr2143 :: Gnu Awk - Part 3
+
+ Awk Part 3
+Remember our file:
+name       color  amount
+apple      red    4
+banana     yellow 6
+strawberry red    3
+grape      purple 10
+apple      green  8
+plum       purple 2
+kiwi       brown  4
+potato     brown  9
+pineapple  yellow 5
+Replace Grep
+As we saw in earlier episodes, we can use awk to filter for rows that match a pattern or text. If you know the grep command, you know that it does the same function, but has extended capabilities. For simple filter, you don't need to pipe grep outputs to awk. You can just filter in awk.
+Logical Operators
+You can use logical operators "and" and "or" represented as "&&" and "||", respectively. See example:
+$2 == "purple" && $3 < 5 {print $1}
+Here, we are selecting for color to to equal "purple" AND amount less than 5.
+Next command
+Say we want to flag every record in our file where the amount is greater than or equal to 8 with a '**'. Every record between 5 (inclusive) and 8, we want to flag with a '*'. We can use consecutive filter commands, but there affects will be additive. To remedy this, we can use the "next" command. This tells awk that after the action is taken, proceed to the next record. See the following example:
+NR == 1 {
+  print $0;
+  next;
+}
+
+$3 >= 8 {
+  printf "%s\t%s\n", $0, "**";
+  next;
+}
+
+$3 >= 5 {
+  printf "%s\t%s\n", $0, "*";
+  next;
+}
+
+$3 < 5 {
+  print $0;
+}
+End Command
+The "BEGIN" and "END" commands allow you to do actions before and after awk does its actions. For instance, sometimes we want to evaluate all records, then print the cumulative results. In this example, we pipe the output of the df command into awk. Our command is:
+df -l | awk -f end.awk
+Our awk file looks like this:
+$1 != "tmpfs" {
+    used += $3;
+    available += $4;
+}
+
+END {
+    printf "%d GiB used\n%d GiB available\n", used/2^20, available/2^20;
+}
+Here, we are setting two variables, "used" and "available". We add the records in the respective columns all together, then we print the totals.
+In the next example, we create a distinct list of colors from our file:
+NR != 1 {
+    a[$2]++
+}
+END {
+    for (b in a) {
+        print b
+    }
+}
+This is a more advanced script. The details of which, we will get into in future episodes.
+BEGIN command
+Like stated above, the begin command lets us print and set variables before the awk command starts. For instance, we can set the input and output field separators inside our awk file as follows:
+BEGIN {
+    FS=",";
+    OFS=",";
+    print "color,count";
+}
+NR != 1 {
+    a[$2]+=1;
+}
+END {
+    for (b in a) {
+        print b, a[b]
+    }
+}
+In this example, we are finding the distinct count of colors in our csv file, and format the output in csv format as well. We will get into the details of how this script works in future episodes.
+For another example, instead of distinct count, we can get the sum of the amount column grouped by color:
+BEGIN {
+    FS=",";
+    OFS=",";
+    print "color,sum";
+}
+NR != 1 {
+    a[$2]+=$3;
+}
+END {
+    for (b in a) {
+        print b, a[b]
+    }
+}

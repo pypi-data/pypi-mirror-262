@@ -1,0 +1,65 @@
+## hpr1292 :: Doomsday Remainders
+
+ 
+Last Episode on Conway's Doomsday Rule ends with teaser on MOD(), a
+"remainder" function defined for integer values (whole numbers):
+
+   MOD(K, m) = remainder when K is divided by "modulus" m.
+   
+Examples: 
+  a. MOD(207, 7) = MOD(207 - 140, 7) = MOD(67, 7) = 4
+  b. MOD(1234567, 2) = 1 because the number is odd
+  
+MOD() function found in most spreadsheet programs, but it also shows up
+as an operator in some programming languages: (a % b), or (a mod b).
+
+
+Other functions referenced:
+   DIV(K, m)    = quotient in integer division
+      where K = m * quotient + remainder (not returned)
+            0 <= remainder < m
+
+   DIVMOD(K, m) = (quotient, remainder) when K is divided by m
+      where remainder = MOD(K, m)
+            quotient  = DIV(K, m)
+            K = m * quotient + remainder
+
+Full Show Notes
+
+https://hackerpublicradio.org/eps/hpr1292.txt
+
+Links
+
+https://en.wikipedia.org/wiki/Modular_arithmetic
+
+https://www.khanacademy.org/math/applied-math/cryptography/modarithmetic/a/what-is-modular-arithmetic
+
+https://betterexplained.com/articles/fun-with-modular-arithmetic/
+
+https://mathworld.wolfram.com/Congruence.html
+
+https://en.wikipedia.org/wiki/ALGOL_60
+
+https://www.conservapedia.com/Pascal_%28programming_language%29
+
+https://www.gnu.org/software/libc/manual/html_node/Integer-Division.html#Integer-Division
+
+https://www.haskell.org/tutorial/numbers.html
+
+https://www.standardml.org/Basis/integer.html
+
+https://docs.python.org/2/library/functions.html#divmod
+
+https://docs.python.org/3/library/functions.html#divmod
+
+https://ruby-doc.org/core-2.0/Numeric.html
+
+https://en.wikipedia.org/wiki/Doomsday_rule
+
+https://en.wikipedia.org/wiki/Modulus_operation
+
+https://zetcode.com/lang/python/lists/
+
+https://docs.python.org/2/tutorial/introduction.html
+
+

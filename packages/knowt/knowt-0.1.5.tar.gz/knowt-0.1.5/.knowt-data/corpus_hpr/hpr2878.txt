@@ -1,0 +1,82 @@
+## hpr2878 :: Type classes in Haskell
+
+ Background
+Type classes are Haskell’s way of doing ad hoc polymorphics or overloading. They are used to defined set of functions that can operate more than one specific type of data.
+Equality
+In Haskell there’s no default equality, it has to be defined.
+There’s two parts to the puzzle. First is type class Eq that comes with the standard library and defines function signatures for equality and non-equality comparisons. There’s type parameter a in the definition, which is filled by user when they define instance of Eq for their data. In that instance definition, a is filled with concrete type.
+class  Eq a where
+  (==) :: a -> a -> Bool
+  (/=) :: a -> a -> Bool
+
+  x /= y = not (x == y)
+Definition above can be read as “class Eq a that has two functions with following signatures and implementations”. In other words, given two a, this function determines are they equal or not (thus Bool as return type). /= is defined in terms of ==, so it’s enough to define one and you get other one for free. But you can still define both if you’re so included (maybe some optimization case).
+If we define our own Size type, like below, we can compare sizes:
+data Size = Small | Medium | Large
+    deriving (Show, Read)
+
+instance Eq Size where
+    Small == Small = True
+    Medium == Medium = True
+    Large == Large = True
+    _ == _ = False
+And here’s couple example comparisons.
+> Small == Small
+True
+> Large /= Large
+False
+Writing these by hand is both tedious and error prone, so we usually use automatic derivation for them. Note how the second line now reads deriving (Show, Read, Eq).
+data Size = Small | Medium | Large
+    deriving (Show, Read, Eq)
+Hierarchy between type classes
+There can be hierarchy between type classes, meaning one requires presence of another. Common example is Ord, which is used to order data.
+class Eq a => Ord a where
+    compare :: a -> a -> Ordering
+    (<) :: a -> a -> Bool
+    (>=) :: a -> a -> Bool
+    (>) :: a -> a -> Bool
+    (<=) :: a -> a -> Bool
+    max :: a -> a -> a
+    min :: a -> a -> a
+This definition can be read as “class Ord a, where a has instance of Eq, with pile of functions as follows”. Ord has default implementation for quite many of these, in terms of others, so it’s enough to implement either compare or <=.
+For our Size, instance of Ord could be defined as:
+instance Ord Size where
+    Small <= _ = True
+    Medium <= Small = False
+    Medium <= _ = True
+    Large <= Large = True
+    Large <= _ = False
+Writing generic code
+There’s lots and lots of type classes in standard library:
+
+Num for numeric operations
+Integral for integer numbers
+Floating for floating numbers
+Show for turning data into strings
+Read for turning strings to data
+Enum for sequentially ordered types (these can be enumerated)
+Bounded for things with upper and lower bound
+and so on…
+
+Type classes allow you to write really generic code. Following is contrived example using Ord and Show:
+check :: (Ord a, Show a) => a -> a -> String
+check a b =
+    case compare a b of
+        LT ->
+            show a ++ " is smaller than " ++ show b
+        GT ->
+            show a ++ " is greater than " ++ show b
+        EQ ->
+            show a ++ " and " ++ show b ++ " are equal"
+Check takes two parameters that are same type and that type has to have Ord and Show instances. Ord is for ordering and Show is for turning data into string (handy for displaying it). The end result is string telling result of comparison. Below is some examples of usage. Note how our function can handle different types of data: Size, Int and [Int].
+> check Medium Small
+"Medium is greater than Small"
+> check Small Large
+"Small is smaller than Large"
+> check 7 3
+"7 is greater than 3"
+> check [1, 2] [1, 1, 1]
+"[1, 2] is greater than [1, 1, 1]"
+There are many extensions to type classes that add more behaviour. These aren’t part of standard Haskell, but can be enabled with a pragma definition or compiler flag. They can be somewhat more complicated to use, have special cases that need careful consideration, but offer interesting options.
+In closing
+Thank you for listening. Question, comments and feedback welcome. Best way to catch me nowadays is either by email or in fediverse, where I’m Tuula@mastodon.social.

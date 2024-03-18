@@ -1,0 +1,81 @@
+## hpr2810 :: Wi-Fi on Android
+
+ Background
+
+You're running a firewall on your work and home networks right, so of course you're running one on your Smart Phone. Given this device holds more information about you than you probably know yourself, it would be only prudent to make sure that you are protecting what gets in but also what gets out.
+
+
+I run AFWall+ which is available from the F-Droid app store. It runs fine on LineageOS.
+
+
+I then set it on the children's phone so that no application is allowed to use mobile data, and then only applications that need Internet get Internet Access. This works well as it's a normal use case for mobile applications to have intermittent access to the Internet.
+
+
+I see no reason why the Linux Kernel should need unfettered access to the Internet, so it's not allowed out. One issue you may come across is that even though you know that there is a Connection your phone doesn't, and so it will display the Wi-Fi Connected, no Internet message. 
+
+
+
+
+
+I'm not sure how this check is done but abqnm suggests at in the StackExchange question How does Android determine if it has an Internet connection? that it may be related to Google Cloud Messaging.
+
+
+... this means that the device is unable to receive a response from GCM (Google Cloud Messaging, the framework that handles push notifications). This traffic is sent through ports 5228, 5229, and 5230. If the AP is blocking or interfering with traffic on those ports, push notifications won't work ... 
+
+
+I do indeed see blocked attempts by Google Play Services on my own phone, but not on the other phones that have no google services installed. The only entry I see in the logs is an ICMP attempt to "Comcast Cable Communications, Inc". If you know more please record a show for Hacker Public Radio about it.
+
+Giving Access
+
+Normally you will get a message saying that the Wi-Fi has no Internet access. 
+
+
+
+
+
+If you tap the message a popup will allow you to stay connected and will let you remember the choice.
+
+
+
+
+
+In some cases the router helpfully resets the connection before you can reply to the message meaning it goes into a loop continually popping up the message but not reacting to it.
+
+
+In this case we can use Termux a Android Terminal emulator, to drop to a shell and fix the problem.
+
+
+
+
+
+I used su to get root access but you could also change to the user wifi.
+
+
+The file you need to edit is /data/misc/wifi/wpa_supplicant.conf. It's probably best to edit this file with the wifi off.
+
+
+network={
+	ssid="OpenWireless.Org"
+	key_mgmt=NONE
+	priority=15
+	id_str="{snip}"
+}
+
+
+Scroll down to the network that is giving you trouble and add disabled=1
+
+
+network={
+	ssid="OpenWireless.Org"
+	key_mgmt=NONE
+	priority=15
+	disabled=1
+	id_str="{snip}"
+}
+
+
+I ended up copying the file to the sdcard, and editing it there. I then copied it back as su and used chown wifi:wifi /data/misc/wifi/wpa_supplicant.conf to fix the permissions.
+
+
+Once that's done you can reboot the phone and connect to the network without a problem. You should also consider putting up an Open Wireless access point yourself.
+

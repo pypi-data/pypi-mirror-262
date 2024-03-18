@@ -1,0 +1,8 @@
+## hpr3548 :: Make a custom Git command
+
+ 
+How to make your own Git subcommands with shell scripts, and then how to pass arguments to them with git rev-parse. 
+
+For a real-world example of Git in scripts and hooks, see Git-portal.
+The joke site Klaatu mentions in the episode is 
+git-man-page-generator. It's a joke site. Do not attempt to run these commands. However, it could be fun inspiration on what Git command you could make next!

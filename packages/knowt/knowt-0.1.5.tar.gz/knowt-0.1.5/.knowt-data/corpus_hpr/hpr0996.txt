@@ -1,0 +1,57 @@
+## hpr0996 :: Command line cheat sheet
+
+ 
+In today's show JWP tries calling in a live over the UK call in number UK: +44-203-432-5879 (The US number +1-206-203-5729) and tells us of a CC-BY-SA cheat sheet written by FossWire.
+
+
+https://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/
+
+
+
+date - print or set the system date and time
+$ date
+Wed Mar  7 19:53:05 CET 2012
+
+cal, ncal — displays a calendar and the date of Easter
+$ cal
+cal: setlocale: No such file or directory
+     March 2012       
+Su Mo Tu We Th Fr Sa  
+             1  2  3  
+ 4  5  6  7  8  9 10  
+11 12 13 14 15 16 17  
+18 19 20 21 22 23 24  
+25 26 27 28 29 30 31  
+                      
+uptime - Tell how long the system has been running.
+
+uname - print system information
+$ uname -a
+Linux video 3.1.0-1-amd64 #1 SMP Tue Nov 29 13:47:12 UTC 2011 x86_64 GNU/Linux
+
+$ cat /proc/cpuinfo | head -5
+processor       : 0
+vendor_id       : AuthenticAMD
+cpu family      : 15
+model           : 44
+model name      : AMD Sempron(tm) Processor 2600+
+
+$ cat /proc/meminfo | head -5
+MemTotal:        1027176 kB
+MemFree:          111016 kB
+Buffers:          136104 kB
+Cached:           173992 kB
+SwapCached:         7964 kB
+
+du - estimate file space usage
+$ du -ch | tail -1
+253M    total
+
+df - report file system disk space usage
+$ df -h
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/sdd1                     28G   22G  4.3G  84% /
+tmpfs                        5.0M  4.0K  5.0M   1% /lib/init/rw
+tmpfs                        101M  632K  100M   1% /run
+udev                         496M     0  496M   0% /dev
+tmpfs                        201M     0  201M   0% /run/shm

@@ -1,0 +1,55 @@
+## hpr2609 :: SparkleShare
+
+ 
+Clacke mentioned SparkleShare in episode 2542, and it occurred to me that not everyone knows what Sparkleshare is. So here's a show about it.
+
+
+To setup SparkleShare, refer to SparkleShare.org. It's available for Linux, Windows, and Mac; great for cross-platform collaboration.
+
+
+The Linux installer uses FlatPak, so you do need to install that.
+
+
+Once installed, launch SparkleShare in the usual way. If you have no usual way, you can use this command:
+
+$ flatpak run org.sparkleshare.SparkleShare
+
+
+The first screen asks for your name and email. This doesn't have to be your real name and email, but it is what SparkleShare will use when making commits on your behalf. This name and email will be visible to anyone who can see your online Git repository.
+
+
+The next screen displays the Sync Remote Project screen. You use this screen any time you want to add another share to your sparkle.
+
+
+
+In this episode, I set up two projects: one brand new one using my home server as host, and one that mirrors an existing project on Gitlab.com.
+
+Adding a project from Gitlab
+
+The first thing you must do is give SparkleShare permission to access Gitlab. To do this, click on the SparkleShare icon in your system tray > SparkleShare > Client ID and copy your ID to your clipboard.
+
+
+
+Now go to your online Git host and add this "Client ID" to your approved SSH Keys. Where this is located depends on your Git host, but in Gitlab, it's located in the left column of the Settings screen. When your SSH Key has been added, Gitlab displays a key fingerprint (actually just a string of numbers) as confirmation.
+
+
+The path to your remote Git repository is the part of an URL after the host. It usually starts with your username. For example, if I have a project on Gitlab located at gitlab.com/notklaatu/foo.git then the path that SparkleShare needs is notklaatu/foo.git
+
+
+Click the Add button to add the project to your local SparkleShare folder.
+
+Adding a project hosted on your own server
+
+There are a lot more variables if you're hosting a Git repository on your own server. These are the things that you may need to account for:
+
+
+Is your local .ssh/config file setting some "invisible" defaults for when you SSH to your server? If so, you may need to modify or add an entry for SparkleShare.
+Your SparkleShare auto-generated "Client ID" is located in $HOME/.config/org.sparkleshare.SparkleShare/ssh
+Is your SparkleShare SSH key (the "Client ID" in SparkleShare lingo) in your authorized_hosts file?
+
+Does a Git repository exist on your remote server in the location you think it exists?
+
+Using SparkleShare
+
+Use SparkleShare exactly as you would DropBox or the NextCloud Desktop Client: drag-and-drop a file to add it, drag it to the Trash to delete it. All SparkleShare folders sync'd with any given project syncs automatically through the magickalfulness of Git hooks.
+

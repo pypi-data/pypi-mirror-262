@@ -1,0 +1,14 @@
+## hpr3122 :: Devuan review - and commentary
+
+ 
+From Wikipedia, the free encyclopedia
+
+
+Devuan is a fork Debian that uses sysvinit or OpenRC instead of systemd, which is the default in newer Debian releases. The Devuan development team aim to maintain compatibility with other init systems in the future and not detach Linux from other Unix systems.
+
+
+[Edit: Ken 2020-07-21]
+
+
+A significant portion of this show relates to the U.S Supreme Court decision in the case of McGIRT v. OKLAHOMA, and speculation as to possible ramifications.
+

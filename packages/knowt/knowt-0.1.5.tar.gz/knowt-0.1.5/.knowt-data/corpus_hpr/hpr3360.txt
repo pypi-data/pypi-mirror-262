@@ -1,0 +1,14 @@
+## hpr3360 :: Android Malware Alert
+
+ A type of malware nicknamed Joker has been infecting Android devices. In this episode we dig a little deeper into what this is and how it works.
+Links:
+
+https://stackoverflow.com/questions/7750448/what-are-dex-files-in-android#7750547
+https://www.zscaler.com/blogs/security-research/joker-playing-hide-and-seek-google-play
+https://blog.sucuri.net/2020/08/string-concatenation-obfuscation-techniques.html
+https://www.anquanke.com/post/id/211978
+https://www.zscaler.com/blogs/security-research/joker-playing-hide-and-seek-google-play
+https://www.techrepublic.com/article/how-to-manage-app-permissions-in-android-11
+https://arstechnica.com/information-technology/2020/09/joker-the-malware-that-signs-you-up-for-pricey-services-floods-android-markets/
+https://www.zwilnik.com/android-malware-alert
+

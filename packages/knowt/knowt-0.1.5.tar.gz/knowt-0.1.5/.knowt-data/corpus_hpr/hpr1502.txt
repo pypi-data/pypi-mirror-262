@@ -1,0 +1,341 @@
+## hpr1502 :: Practical Math - Units - Distances and Area, Part 2
+
+ 
+HPR Episode: Using and Converting Between Units of Distance
+
+Intro: Last time, we talked in general terms about units, numbers and
+how they might be useful in practice.  In this episode, we address some
+specific measurement units that apply to distance and area, and how we
+might convert from one system to another to better understand both.
+
+Entire point of this episode is this: Carry units in calculations on 
+  distances and areas, and you'll have more success in using them in 
+  your life.  
+
+
+
+Segment 1:  Review of Distance and Area conversions in the English system
+
+1. Links from last time
+
+   Table of Units: 
+      https://www.csgnetwork.com/converttable.html
+
+   To see why the story is tremendously more complicated than my account
+      https://en.wikipedia.com/wiki/Mile
+
+   Fun article on the mile.
+      https://www.sizes.com/units/mile.htm
+   
+   High school student theme on the furlong.
+      https://www.writework.com/essay/history-furlong by silverAlex2000
+
+   Brief dictionary article on the mile, referenced by Dr. Math 
+      https://www.unc.edu/~rowlett/units/dictM.html#mile 
+      Referred by https://mathforum.org/library/drmath/view/61126.html
+
+   Resource: StackExchange Physics and Maths sections ("mile" question)
+      https://physics.stackexchange.com/questions/57785/difference-between-nautical-and-terrestrial-miles
+
+
+2. Converting between units
+   a. Units of distance usually defined as multiples of each other
+      - 1 mile = 5,280 feet            - 1 hand = 4 inches
+      - 1 foot = 12 inches             - 1 yard = 36 inches
+      
+      Skipping ahead to look at the metric system, we now have:
+      - 1 inch = 2.54 centimeters (exact). Regularized in recent years.
+
+   b. This works because there's consensus on Zero distance, so we don't
+         have to adjust for differing origins, as we do with the 
+         non-absolute temperature scales like Fahrenheit and Celsius. 
+      
+      - We'll get to temperature, non-absolute scales in a later show.
+
+   c. For absolute scales, we can convert from one unit to another using
+         a "conversion factor".  That is, we can convert a measurement 
+         expressed in one unit to its equivalent in another unit by 
+         multiplying or dividing by some number to stretch or compress 
+         the original unit to match the target unit.
+	 
+      - Example: I know that 1 foot is 12 inches, so how many inches are
+          there in 10 feet?  How feet are there in 660 inches?
+      
+      - It is clear that a factor of 12 ought to be involved, but how do
+          I know when to multiply or divide by 12 in the conversion?
+      
+      - Wait!  I'm serious.  When you see this problem for the first 
+          time, you have to think this through to get it right.  
+        * Without a system in place, you always have to think about it.
+      
+      - Answers in naive setup:
+          (i) 10 feet = (12 * 10) inches = 120 inches
+         (ii) 660 inches = (660 / 12) feet = 55 feet
+
+3. Having a system.  Or units conversion as "multiplying by One"
+   
+   a. In each of the solutions I wrote down above, I start with an 
+         equation that looks like this: X inches = Y feet.
+
+   b. Inches are not feet, and this way of writing down the calculation 
+        does NOT help you figure you how the conversions should work, or
+        whether you should multiply or divide to get the right answers.
+
+   c. Here's a system for creating conversion factors that tell you what
+        to do at each step in the units conversion process.  It is based
+        on the very obvious fact that when I multiply any number by '1',
+        its value remains unchanged.
+	
+      - Start with one of the identities we wrote down at the beginning.
+	    In this case, let's use:  12 inches = 1 foot
+	  
+      - If I divide equals by equals, the results are equal.
+	    So I can write:
+	  
+	                                   12 inches      1 foot
+	  12 inches = 1 foot implies that  ---------  =  --------- = 1
+		                                 1 foot      12 inches
+      
+      -	Get the first term by dividing my original identity by (1 foot).
+      - Get the second term by dividing my original identity by (12 in).
+
+
+   d. To make a conversion from feet to inches, I use:
+   
+                           12 in    10 ft 
+      10 ft * 1 = 10 ft * ------- = ------ * 12 in = 10 * 12 in = 120 in
+                           1 ft      1 ft
+      
+      - Note: In the fraction (10 ft) / (1 ft), the units "cancel out", 
+                which leaves a unitless number.
+	      
+      - Suppose we start with the other form for the conversion factor:
+   
+                               1 ft    10 square feet 
+      10 feet * 1 = 10 feet * ------ = -------------- = ???
+                              12 in       12 inches
+      
+      - See?  When I use the form where the units don't cancel each 
+          other, I get a resulting equation that is still correct.  It 
+          just doesn't make much sense to me as a reader.
+      
+      - This is what you get when you "divide by 12" to convert feet to 
+          inches, but the difference is that you KNOW something's wrong.  
+      
+      - You do not have to even look at the numbers to know that this 
+         could not possibly be the right number of inches in 10 feet.
+
+
+Brilliant Insight #2: When you use unit conversion factors, you help 
+  your cause by carrying along both sets of units in the form of a 
+  fraction as you go through your calculation.  
+  
+  - If the units on the right-hand side of your final equation don't 
+    match the units you want (after everything else cancels out), your 
+    numerical answer is almost certainly WRONG.
+  
+  - The implication here?  To convert units of distance, you need to 
+       multiply or divide by a 
+       
+       conversion factor = (X New_Units) / (Y Old_Units).  
+       
+    When you do this, write the conversion factor in its full fractional
+       form, and carry out all of the multiplications and cancellations.
+  
+  - If you do the conversion this way, and the units match, you only 
+       have to check your arithmetic to be sure you've got it right.
+
+  - If the units you want do not match those on the right side of the 
+       equal sign, you are solving the wrong problem.  The equation may 
+       be correct, but it is not expressed in the units you wanted.
+
+
+ 6. Let's use the system to solve the second example:
+  
+                               1 ft       660 in * 1 ft 
+      660 in * 1 =  660 in *  -------  = --------------- = 55 feet
+                               12 in        12 in
+ 
+      Why?  The "inches" units cancel out because they appear in both 
+        numerator and denominator (top/bottom, upstairs/downstairs) of
+	    the fraction in the next to last term, leaving only "feet".
+
+  Why people hate units and conversion problems:
+  https://www.regentsprep.org/regents/math/algebra/am2/leseng.htm
+
+  Comment: The "algebraic" approach suggested here is ugly, ad hoc in
+    nature, and unnecessarily complicated.  Forget about setting up
+    equations and going through formal operations to solve them.
+    
+    Choose your conversion factors so that the units work out properly
+    as a straight multiplication problem with cancellation of all the
+    units you don't want.  You may have to "divide" numbers, but you
+    can use your calculator for working through the numbers.
+    
+  Cranky Summary: You should not have to solve equations to convert
+    between units. Phooey on anyone who says otherwise. :-)
+ 
+
+Segment 2: Conversions using compound conversion factors.
+
+1. Suppose I want to find the number of inches in a furlong, or the 
+   number of acres (or hectares) in a square mile?
+   
+   - My almanac doesn't carry these conversion factors, so I start with 
+       what I do have and work my way through it.
+       
+                                       4 rods    16.5 ft    12 in
+   1 furlong = 10 chains = 10 chains * ------- * ------- * -------
+                                       1 chain    1 rod      1 ft
+	
+	     = 10 * 4 * 16.5 * 12 inches = ... = 7920 inches 
+
+
+2. For acres in a square mile (1 mi^2), we have a bit more to do.
+
+     Abbreviations used: miles = mi, furlong = fur, chain = ch
+     
+     Area means that we are dealing in two dimensions, so we have to 
+        convert the lengths in each dimension.  An acre is already a 
+        measure of area, so we're good.
+	
+                       1 acre    10 ch    8 fur   10 ch   8 fur
+   1 sq mi = 1 mi^2 * -------- * ------ * ----- * ----- * -----
+                       10 ch^2   1 fur    1 mi    1 fur   1 mi
+		      
+	   = (1 mi * 1 mi) * 1 acre * 10 ch * 10 ch   8 fur * 8 fur
+	                              ------------- * -------------
+                                       10 ch * ch     1 mi * 1 mi
+     
+   Units cancel, leaving this:
+   
+   1 sq mi = 1 acre * (100/10) * (8 * 8) = 10 * 64 acres = 640 acres
+  
+   
+
+Segment 3: Hey!  Ready to try metric?
+
+1. Metric system never caught on in the US, although most of English-
+     speaking world has adopted it.  Units conversion is easy in the 
+     metric system, because everything is in powers of 10.
+   
+   - But you still need to carry along units in calculations!
+   
+2. Area and distance units in the metric system
+
+   - Basics of distance: Centimeter is easy for us to see, and now the 
+       factor to convert centimeters to inches is exact.
+       
+       1 inch = 2.54 centimeters (cm) exactly
+       
+                                    1 inch
+       1 meter = 100 cm = 100 cm * --------- = 39.37 in (approximate)
+                                    2.54 cm 
+
+       1 kilometer = 1,000 meters
+       
+
+   - Basics of area:
+ 
+       1 are = 100 sq meters  (area of a square that's 10m on each side)
+       
+                                          100 sq m
+       1 hectare = 100 ares = 100 ares * ---------- = 10,000 sq meters
+                                           1 are
+
+3. For short distances, we should do our conversions fairly precisely.
+
+   - There's usually a higher relative error from rounding off too soon.
+   - If you measure wood for a small project, you want to be "close".
+
+                        2.54 cm
+   So 1 foot = 12 in * --------- = 30.48 cm exactly.  Cut carefully!
+                        1 in
+			    
+4. For larger distances, like distances covered in track and field, or
+     the length of a football pitch (to a spectator), approximations can 
+     give you a nice intuition for comparing units you know and a new
+     set of units that you don't know as well.
+     
+   - 1 meter is around 39.37 inches.  Suppose I call it about 1.10 yards
+        as a kind of approximate benchmark (39.60 in), so each meter in 
+        my reckoning is about a quarter of an inch too long?  
+   
+   - If I'm planning a space mission, I could be in trouble. 
+       But how bad would this be for getting an intuitive feel of the 
+       distances covered by the athletes in the Olympic Games?
+
+   - Error at  100 meters is about 0.23 in (0.6 cm) * 100 = 60 cm over
+           at  200 meters, it's 1.1 m over.
+           at 1 kilometer, it's 5.6 m over.
+	   
+     Unless you're a long-range sharpshooter, 5.6m off in 1 km seems OK.
+
+
+5. Bonus: The news talked about a wildfire that burned 100,000 hectares.
+      What kind of area are we talking about?
+
+   - Let's use our approxmation of 1 meter is about 1.1 yards.
+   
+   - Acres are defined in terms of "square chains", so let's look at 
+        meters vs chains to see what we get.
+	
+	                                               1 m
+     1 chain = 4 linear rods = 22 yds = 22 yds * -------- = about 20m
+                                                  1.1 yd
+
+                                                 20m     20m
+     1 acre = 10 square chains = 10 ch * 1 ch * ----- * ------
+                                                1 ch     1 ch
+						       
+	    = 10 * 1 * 20m * 20m = 4,000 square meters, or 0.4 hectares
+
+   - Wow!  An acre's about 0.4 hectares, or 1 hectare's about 2.5 acres.
+
+
+   So what's the answer?
+                                               2.5 acres   
+      a) 100,000 hectares = 100,000 hectares * --------- = 250,000 acres
+                                               1 hectare 
+
+
+                                            1 sq. mi    250,000
+      b) 100,000 hectares = 250,000 acres * --------- = ------- sq. mi
+                                            640 acres     640
+					    
+	                  = 391 sq. miles (about 400 sq miles)
+
+   Note: This suggests a shortcut conversion (hectares to square miles).
+
+                                 640 acres   1 hectare
+    1 square mile = 1 sq. mile * --------- * --------- = 256 hectares
+                                 1 sq. mi.   2.5 acres
+
+
+6. Final check: Error analysis on this approximate conversion from 
+      hectares to acres or square miles.
+
+   - Using Google or 'units' in the shell, we have:
+   
+     1 sq mi = 259 hectares to 6 significant digits, versus 256 (1%)
+
+     Note: If we used 250 hectares per square mile, the relative error 
+       is 3.5%.  That's less than the error in the news report.
+
+     1 hectare = 2.47105 acres, versus 2.5 (1% error)
+
+   Units shell command: Dann Washko did a really nice job on 'units' for HPR.
+    * Linux in the Shell #26: https://www.linuxintheshell.org/
+    * HPR Episode #1213: https://hackerpublicradio.org/eps.php?id=1213
+
+
+Final word: Unless you are buying, selling or cultivating land, use the 
+  cruder approximations here to understand the relationships between 
+  acres, hectares and square miles.  It will make you seem smarter.
+  
+  - If someone calls you out and says it's wrong, blame "that guy on HPR."
+
+
+Next Topic?  Volumes and recipes, other than medicines (separate topic)
+  - Volumes are the bottom line in cooking, unless they aren't.
+  - Hint: You should weigh some items, like some kinds of flour.

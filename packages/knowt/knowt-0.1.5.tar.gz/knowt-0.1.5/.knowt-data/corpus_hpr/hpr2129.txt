@@ -1,0 +1,23 @@
+## hpr2129 :: Gnu Awk - Part 2
+
+ Gnu Awk - Part 2
+This is the second episode in a series where b-yeezi and I will be looking at the AWK language (more particularly its GNU variant gawk). It is a comprehensive interpreted scripting language designed to be used for manipulating text.
+I have written out a moderately long set of notes for this episode and these are available here https://hackerpublicradio.org/eps/hpr2129/full_shownotes.html.
+Links
+
+GNU Awk User’s Guide: https://www.gnu.org/software/gawk/manual/html_node/index.html
+Awk - A Tutorial and Introduction: https://www.grymoire.com/Unix/Awk.html
+Wikipedia article on AWK: https://en.wikipedia.org/wiki/AWK
+Alfred V. Aho, Brian W. Kernighan, Peter J. Weinberger (1988). The AWK Programming Language. Addison-Wesley Publishing Company. ISBN 9780201079814
+Previous show on HPR:
+
+“Gnu Awk - Part 1”: https://hackerpublicradio.org/eps.php?id=2114
+
+Resources:
+
+Example data file 1 - whitespace delimited “file1.txt”: https://hackerpublicradio.org/eps/hpr2129/file1.txt
+Example data file 1 - comma delimited “file1.csv”: https://hackerpublicradio.org/eps/hpr2129/file1.csv
+Example Awk file 1 “example1.awk”: https://hackerpublicradio.org/eps/hpr2129/example1.awk
+Example Awk file 2 “example2.awk”: https://hackerpublicradio.org/eps/hpr2129/example2.awk
+
+

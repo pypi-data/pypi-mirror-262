@@ -1,0 +1,73 @@
+## hpr3453 :: Rust 101: Episode 1 - Hello, World!
+
+ Talking Points
+
+main.rs
+	
+Like main.cpp in C++ or main.c in C
+Tells the compiler which file to start with
+Can link to other "crates" and "modules"
+
+Cargo.toml
+	
+Keeps track of application metadata
+This includes dependencies!
+
+Functions
+	
+Strictly typed, like everything in Rust
+Declared by fn
+Argument typed with argument: Type
+Return typed with -> Type otherwise assumed to return nothing
+
+The Main Function
+	
+Like the main functions in C and C++
+Where the program starts within the main.rs file
+CLI arguments handled by std::env, rather than argv and argc in C
+Can return nothing or a Result<()>
+
+Macros
+	
+Metafunctions or functions for functions
+More general than functions, having flexibility in the number of arguments, etc, but harder to write
+
+The println! Macro
+	
+Can take any number of arguments that implement the display trait
+Usually things like strings or character literals
+Will format them into a string and display it on the terminal
+Similar to printf in C
+
+The Hello World program
+	
+Can be automagically generated with cargo new and then the name of your application
+Located in Name-Of-Application/src/main.rs
+
+
+
+
+fn main() {
+  println!("Hello, world!");
+}
+
+
+
+Show Notes
+Important Links:
+
+Git repo for this miniseries
+The Rust Standard Library
+The format! macro
+The println! macro
+
+Wikipedia Articles:
+
+The Rust Programming Language
+
+
+Contact Me
+
+Email: izzyleibowitz at pm dot me
+Mastodon: at blackernel at nixnet dot social
+

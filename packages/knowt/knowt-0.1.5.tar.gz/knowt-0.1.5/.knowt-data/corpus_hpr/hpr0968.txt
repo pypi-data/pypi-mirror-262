@@ -1,0 +1,15 @@
+## hpr0968 :: FFMPEG for video Conversion
+
+ Hello Hacker Public Radio
+BrocktonBob here with my tutorial on how I use FFMPEG to convert videos to any format I like.
+FFMPEG is a terminal program used in Linux, but Windows and Mac users can use WINFF which
+is the gui frontend for FFMPEG.
+FFMPEG is more powerful than WINFF because you have more control when you use the terminal than a gui. Below are the examples I used in this podcast.
+I hope you give it a try
+
+My Examples:
+
+ffmpeg -i glue.flv glue.avi
+ffmpeg -i glue.flv glue.mp3
+ffmpeg -i glue.flv -target ntsc-dvd output.mpg
+

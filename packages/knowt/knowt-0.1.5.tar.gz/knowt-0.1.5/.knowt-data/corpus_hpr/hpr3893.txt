@@ -1,0 +1,18 @@
+## hpr3893 :: Game card design resources
+
+ Concepts
+A poker deck is a great starting point for developing game mechanics without getting distracted by what the game assets will look like. Playing cards have lots of unique things you can structure game play around, like two colours, four suits, face cards, Joker, and so on.
+Tarot cards add even more variety, because a tarot deck usually has unique art on every card, which provides you plenty of elements to work with. Etsy has lots of custom tarot decks that are beautifully designed by indie artists.
+Design
+TheGameCrafter.com has card templates for Inkscape.
+An easier option is to use LibreOffice Draw. Go to Page > Page Properties  > and set page size to 57mm x 89mm (2.25 x 3.5 inches).
+Minimalism is a great tool for any content creator on a budget. Think of the simplest requirement to convey your game mechanic. If your cards look better than your game mechanics play, nobody's going to play your game. Spend your time and effort on the game, not the design. (There's a balance to be struck, though. If your game assets make no sense and people can't figure out how to play the game, that's a problem too.)
+Resources
+
+Arcmage.org
+Petition card game
+Open Game Art
+Freesvg.org
+
+You can also look through places like Artstation.com and Deviantart.com, but finding Creative Commons and consistent-looking art is a challenge.
+

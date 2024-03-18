@@ -1,0 +1,4 @@
+## hpr3081 :: Why do formal verification?
+
+ In episode 3057 I talked about formal verification of software and forgot to mention why one would want to do it. This episode hopefully answers to that.
+While formal verification is powerful tool, it’s also rather cumbersome and slow to use. In some cases you’re better off with traditional ways of testing.

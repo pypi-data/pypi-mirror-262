@@ -1,0 +1,460 @@
+## hpr3675 :: Plan 9: An exercise in futility
+
+ Plan 9: An exercise in futility
+It is my right to exercise my futility wherever, whenever, and with whoever I please
+Some ideas about Plan 9:
+
+It's like the uncanny valley of UNIX
+
+
+Cool, but useless
+
+
+Can you sum up plan 9 in layman's terms? It does everything Unix does only less reliably - Ken Thompson
+
+
+If you cannot imagine a use for a computer that does not involve a web browser, Plan 9 may not be for you - 9front FQA
+
+
+#d/0:28: null list in concatenation
+
+History and description
+The boys at bell labs decide UNIX wasn't good enough so they decided to build something better: a distributed multiuser operating system composed of many machines. Many of the same ideas behind UNIX were pushed to absurd extremes. The idea that "everything is a file" is made blatantly apparent to everyone and sometimes, in my opinion, can feel 'overly-abstracted'. Additionally, the concept of private namespaces makes the concept of virtual filesystems seem like 'baby's first filesystem abstraction'.
+Just like UNIX, 9 started as a research operating system. Both are enjoyed by hobbyists, both are interesting ways of using a computer, both have a lot of fun in store. But the systems do diverge in one major aspect: UNIX is mainstream and 9 is still a research operating system. Plan 9 is currently distributed under the MIT license.
+"What is plan 9?", Taken directly from intro(1):
+
+Plan 9 is a distributed computing environment assembled from separate machines acting as terminals, CPU servers, and file servers. A user works at a terminal, running a window system on a raster display. Some windows are connected to CPU servers; the intent is that heavy computing should be done in those windows but it is also possible to compute on the terminal. A separate file server provides file storage for terminals and CPU servers alike.
+
+In practice, modern 9 users just run all of these services on a single machine because maintaining many machines to achieve a single usable 'operating system' is unnecessary; the 9 user finds himself scared and alone without enough users (1 is rarely enough) to justify building a distributed environment.
+Use cases
+Intended: distributed multiuser network (ie not mainframe), later embedded since UNIX was too bad to be stopped
+Actual: Acting like a UNIX hipster, pretending that 9 is anything other than vaporware, imagining that you are gaining social credit by posting screenshots of abandonware on internet forums. See also: Operating System Tourism
+9 in the wild
+
+Unicode is now a plague
+rfork
+9p
+
+leveraged by microsoft to discourage end users from actually running GNU+Linux as St Ignucius intended
+QEMU's VirtFS
+
+various window managers for UNIX, written by people who like the ideas behind 9 but not enough to actually run 9
+"cool idea, I'm adding it to Linux"
+
+
+private namespaces
+union directories
+see: docker
+
+Design
+The goal of 9 was to build a distributed operating system that expands upon Unixy ideas, not to build something that's backwards compatible. "We want to improve UNIX" is mutually exclusive to "we want to port UNIX to this wacky new kernel". UNIX programs (and behemoths like FireFox) are difficult^impossible to port to 9 because of this design decision.
+Distributed operating systems
+Since 9 was designed to be a distributed operating system, many of the internals are oriented towards networking. On a single system installation, all three of the components that make a 9 network are working together in a client-server model. The filesystem is presented as a service, the CPU is presented as a service, and the terminal is presented as a service. This type of "abstraction from the physical hardware" makes it difficult to succinctly describe and explain 9.
+If you think about 9 as a heterogeneous network of machines the ideas start to make sense. If you think about 9 as a self-contained single-machine operating system the ideas only become more confusing.
+One thing that has helped me wrap my head around the client/server idea is actually thinking less. When running a MySQL server in a LAMP stack, the database server and client are running on the same machine. When writing a program, you instruct the client to access the database located at the address localhost. Despite the design intention to run the database as a separate machine, loopback device hacks ensue. The idea of client/server permeates 9.
+The filesystem? Presented as a server regardless of what physical machine it's located on. The CPU? Presented as a server regardless of what physical machine it's located on. The terminal? Presented as a server regardless of the physical machine it's located on.
+On a single machine 9 installation, all of these servers are running locally but accessed as if they were running remotely. Insanity ensues but at least it's easier to write code for.
+9p: the Plan 9 Filesystem Protocol
+9p is a networking protocol that makes this client/server model possible. Internally, the filesystem is served to the client over 9p. Many applications make use of 9p, including text editors, windowing systems, plumber, etc. In UNIX, everything is a file. In 9, everything is a filesystem accessed via 9p.
+Private Namespaces, Union Directories
+The most important aspect of 9: namespaces.
+Namespaces have caused me much confusion until recently. In 9, each process constructs a unique view of the filesystem. The phrase that gets stuck in my head is "a private namespace is a per-process view of the filesystem". The easiest way to think about namespaces is to think about a "virtual directory". Unix has "virtual filesystems", 9 has "virtual directories".
+The concept of namespaces allows a user to pull resources from all over the network and present them as "a single local filesystem" with absolute disregard for where these resources are actually coming from. In order to construct a namespace, union directories are used. A union directory is a directory made of several directories bound to the same directory. This concept is similar to a bind mount on UNIX.
+The kernel keeps separate mount table for each process. Using namespaces, a user or admin can create more secure isolated environments (similar to a chroot).
+Processes and their children are grouped together so that inheritance of the namespace occurs. These process groups can be customized.
+
+The 'per-process namespace' concept can be confusing to UNIX users at first, especially when binding (ie mounting) resources. When I first started using 9 I was very confused when I bound something in one terminal, switched to another, then became disoriented as the thing I just bound seemingly stopped existing. My big example is mounting the boot partition or a filesystem over ssh:
+# In this window, I have bound the boot partition.
+# It behaves expectedly.
+term% 9fs 9fat
+term% lc /n
+9/      9fat/   other/  ssh/
+term% lc /n/9fat
+9bootfat        9pc64           oldplan9.ini    plan9.ini
+9pc             efi/            pbs.bak
+term%
+
+# In this other window, the boot partition doesn't seem to be mounted.
+# This causes much confusion for the end user.
+term% lc /n
+9/      9fat/   other/  ssh/
+term% lc /n/9fat
+term%
+
+
+Files
+The second most important aspect of 9: "Everything is a file" taken to absurdist absolutes. The kernel presents hardware devices as files bound to /dev. Within the namespace, devices are just files. Outside the namespace, devices are named with a leading # to help distinguish between pseudo-files and devices. These physical devices are bound to /dev/ and presented as files for easy administration, access, and programming. Presenting everything as a file accessible via 9p greatly reduces the total number of system calls.
+
+Examples of "Everything is a file":
+# The clipboard in 9 is called /dev/snarf
+# We can easily write and read from this clipboard
+term% cat /dev/snarf
+SYNOPSIS
+#include <u.h>
+
+#include <libc.h>
+
+#include term%
+term% fortune > /dev/snarf
+term% cat /dev/snarf
+If at first you succeed, try to hide your astonishment.
+term%
+
+# The display in 9 is called /dev/screen
+# We can easily take a screenshot
+term% file /dev/screen
+/dev/screen: plan 9 image, depth 32, size 1366x768
+term% cat /dev/screen | topng > screenshot.png
+term% file screenshot.png
+screenshot.png: PNG image
+term%
+
+
+Message oriented filesystem
+Continuing with the idea that "everything is a filesystem", processes can offer services to other processes by placing virtual files into other processes' namespaces. File I/O on this special virtual file becomes interprocess communication. This is similar to a UNIX socket but significantly less difficult to program against because all of the hard parts have been abstracted: it's just simple file I/O.
+Virtual filesystem (with more special files)
+The /proc filesystem presents processes as a files in a filesystem. This makes writing programs that manage process extremely easy by reducing the total number of system calls to simple file I/O. The /proc filesystem allows users to manage processes using standard command line utilities like cat(1) and ls(1).
+Linux borrowed the idea of a /proc filesystem.
+Unicode
+Although the implementation is not fully internationalized, UTF-8 is fully there. Unicode is fully backwards compatible with ASCII. Thanks to ⑨, we now have people writing exclusively with primitive hieroglyphics instead of words.
+Portability
+Just like UNIX, 9 was designed with portability in mind. 9 is written in a strange dialect of ANSI C which means it's portable. Although the system is self hosting, images are rarely built on a self hosting environment. Instead, the end user will download a generic amd64 or i386 image, cross compile for the obscure target architecture, wrap it up in an install image, then burn that image to an install disk. After installation, it is generally a good idea to recompile the entire operating system so that your copy is self-hosted.
+The compiler suite is quite clever in that each compiler is named according to the target architecture, the object files are named according to the target architecture, etc. The alnum prefix/extensions are also shared by the various linkers and assemblers.
+0c spim    little-endian MIPS 3000 family
+
+1c 68000   Motorola MC68000
+
+2c 68020   Motorola MC68020
+
+5c arm     little-endian ARM
+
+6c amd64   AMD64 and compatibles (e.g., Intel EM64T)
+
+7c arm64   ARM64 (ARMv8)
+
+8c 386     Intel i386, i486, Pentium, etc.
+
+kc sparc   Sun SPARC
+
+vc mips    big-endian MIPS 3000 family
+
+Filesystems
+Multiple filesystems are supported, most suck. The only one the average tourist has heard of is FAT. The one I use is cwfs64x(4). cwfs is a strange filesystem. Every night, it makes a dump of the filesystem. You can access these dumps by running:
+9fs dump
+cd /n/dump/YYYY/MMDD/
+
+And, managing the file server (trying to uncorrupt cwfs), all while the kernel is spraying error messages
+term% con -C /srv/cwfs.cmd
+help
+check tag
+check ream
+check free
+check
+
+After my system crashes, and after consulting fs(8), the above commands seem to solve my corruption problems. Not always. But sometimes.
+The cache is a WORM: Write Once Read Many filesystem. Traditionally, the "fast" hard drives would be backed up to tape archives. In the modern era, we have a WORM partition. The worm partition stores data forever so it will eventually get full and need cleaning. It is possible to run without a WORM but it's a bad idea. Built in version control.
+Data integrity not guaranteed.
+Secstore
+stores various passwords to nvram. BIOS integrety not gauranteed. If you don't like thrashing the nvram and it's limited write ops, an partition can be created and mouted as if it were nvram.
+Factotum
+stores various passwords in memory (like ssh-agent)
+Known forks
+
+Dead:
+
+Plan 9 From Bell Labs (also called 'Labs 9', the original)
+9atom (even the domain has expired)
+Akaros 
+Harvey (attempt to port 9 to GCC/Clang)
+NIX 
+jehanneOS 
+node9 
+inferno (in permanent limbo)
+
+Life Support:
+
+9front (actively developed, many QOL patches)
+9legacy (patches applied to Labs9)
+Plan 9 From User Space (also called 'plan9port', you will be laughed at)
+
+
+9front is really the only 'usable' one because the QOL modifications add important things like general stability, git client, mercurial, ssh, various emulators, audio, WiFi, and USB support.
+Using 9
+What does the 9 experience actually look like in 2022? You put 9 in a VM, posted a screenshot, shutdown the VM, then continued using Ubuntu because you can't play video games or easily watch videos online in 9.
+Hardware support in 9front is expanding but still limited. Refer to the list of supported hardware. I run 9front on a Thinkpad x220 and it seems to just work. Some people run it on a Raspi but I'm not sure why. It works quite well with KVM and QEMU if you're an OS tourist. I see no reason to add a dmesg because it will either work or it won't.
+Available software
+GNU might not be UNIX but 9 isn't even trying to be UNIX-like.
+GUI
+Unlink UNIX, 9 was designed with graphics in mind. Some people have said that the 9 GUI looks similar to a smalltalk machine but I think it's just the only good stacking window manager. A three button mouse is necessary for using 9front. Shift-rightclick emulates middle click.
+Rio
+Rio is the Plan 9 windowing system. It's the successor to 8½ window manager. Rio is lightweight compared to X11 because access to graphical hardware is built into the kernel and using files+namespaces to access input devices.
+The most brief way of explaining rio is to think of it as a rectangle multiplexer, where each rectangle is served a file interface (9p). Although rectangles might seem counterintuitive at first, thinking less hard makes it easier to use. I still have difficulty efficiently using a mouse-centric interface after using terminal interfaces almost exclusively for many years. I dislike the windows way of using a mouse but the 9 way seems to make quite a lot of sense when I "think less hard" and allow the intuition to take control.
+The argument for mouse-centric computing and text editing is that it's faster. Of course, the average vim user is editing text faster than the speed of thought but most people aren't the average vim user. Instead, they only know how to use arrow keys to move a cursor. Without memorizing hundreds of vim bindings (and forgetting the names and birth dates of your family members in the process), obviously a mouse is faster.
+Mouse controls are confusing at first because they follow the "click and hold, hover to option, release" to select an option. They look something like follows:
+
+Right click (window management controls)
+
+New
+Resize
+Move
+Delete
+Hide
+
+Middle click (text manipulation controls)
+
+cut
+paste
+snarf (copy highlighted text)
+plumb (send highlighted text to process, or, more effectively: open file with appropriate program)
+look (search for highlighted text)
+send (run highlighted text as a shell command)
+scroll (toggle autoscroll/noautoscroll)
+
+The left click button is used to select text and windows.
+
+
+
+The concept of mouse-chording is also prominent in rio but it's even more difficult to explain without a visual demonstration.
+Rio and it's windows also support UNIX style keyboard shortcuts:
+
+^-u deletes from cursor to start of line
+^-w deletes word before cursor
+^-h deletes the character before the cursor
+^-a moves the cursor to the start of the line
+^-e moves the cursor to the end of the line
+^-b moves the cursor back to the prompt
+^-f is the autocomplete key, functionally equivalent to tab completion
+^? (DEL key) is the equivalent to ^-c on UNIX
+
+Additionally, in a text window, the arrow keys and PgUp/PgDown keys behave as expected. The home/end keys scroll the window to the top/bottom of the text buffer respectively.
+These text windows have a built in pager so there is no more or less command. I can't decide if I like built in paging but it's definitely a thing to think about.
+The colorscheme of rio is dull and pastel and this is intentional. Less vibrant color schemes seem to fade away and become less obvious. Color themes like Tango, Linux Console, Solarized, all of KDE, and WIndows XP are very obvious but not in a good way. Bright colors are subtly distracting and make it difficult to concentrate. When I'm configuring a UNIX system with dwm, I borrow Rio's color theme because it's an anti-theme. Give it time. It's charming in it's own way. Modifying the source code for rio allows for custom color themes. It's possible but you will be laughed at. Setting a wallpaper is also possible but I don't do this because my windows are always covering the dull gray background.
+As for X11, the equis X11 server can only be run via linux compat layers. The lack of a viable X server is yet another reason 9 has no programs.
+Command Line Utilities
+The shell on 9 is called rc(1). It's like any other shell you've used except that you expect it to be bourne-like but it isn't. Standard UNIX shell concepts like pipes, file redirects, && and ||, etc. Scripting is not POSIX-like at all so reading the man page and various scripts written in rc is the only way to learn.
+Other various UNIX utilities exist and function as expected (although some of the ones you would like are missing). awk, grep, sed, cat, tar, gzip, ed, etc are present.
+Editors
+There are three primary ways of editing text on 9: ed(1), sam(1), and acme(1). There is no vi aside from the MIPS emulator, there is no emacs except for a man page explaining why there is no emacs.
+I have primarily used acme in the past, but sam is a much better editor.
+sam is a lot like a graphical version of ed. I still need to learn ed because it's the standard editor. Some of the standard vi commands are available and regex works. I like sam quite a lot but it seems to corrupt files when the system crashes.
+acme is a window manager, file browser, terminal emulator, and email client that some people use as a text editor. The coolest part about acme is the ability to write arbitrary editor and system commands in the menu bar, highlight them, then middle click to execute those commands.
+(Some of the ) Supported Networking Protocols
+
+IMAP
+
+good luck
+
+NTP
+IRC
+
+ircrc
+other non-default implementations exist
+
+FTP
+HTTP
+
+mothra is the standard web browser. It does not support CSS or all of the HTML tags. Obviously, javascript is unsupported.
+abaco exists. I've used it a few times. It renders slightly better than mothra but is a pain to use.
+Various inferno vaporware exists but the ports don't work
+NetSurf has been ported to 9front by leveraging components of APE. It almost works
+hget, like curl
+
+SSH
+
+it only works in conjunction with the vt(1) command.
+sshfs
+sshnet for proxying traffic
+
+VNC
+Various torrent software (magnet links not supported)
+Drawterm
+
+no, good luck, you will be laughed at
+
+Of course, 9p
+
+A Security aside
+Various server implementations for these protocols exist but you really shouldn't use them on the WAN as they are ancient, unmaintained, unaudited, and easy to exploit. Prime example: the /g/entoomen found a path traversal vulnerability in the 9front httpd server, then leveraged that vuln to exploit a vuln in the authentication system. Not that the boys back home did anything malicious with this bug . . . but the ability to pwn a system by sending cleverly crafted GET requests should tell you enough about the current state of security in 9.
+
+Firewall
+
+no
+
+Disk Encryption
+
+unreliable
+
+Access control
+
+what?
+
+filesystem
+
+cwfs has an poorly documented special user called none that is allowed to connect to fossil, cwfs, and maybe hjfs without a password. Set the nonone option in cwfs if you are even thinking about putting 9 on the internet.
+
+
+Don't even think about putting 9 on the internet
+UNIX compat layer (ape)
+APE is the ANSI POSIX Emulator. It doesn't work and is almost entirely empty. Lots of tiny programs to write, not much interest in writing lots of tiny program. There is a general attitude among 9 users that "9 is unique" porting POSIX libs to 9 would ruin the appeal. I almost think I agree with this sentiment.
+Emulation
+
+Linux
+
+don't
+
+GameBoy
+GameBoyAdvance
+NES
+SNES
+Sega MegaDrive/Genesis
+c64
+vmx, a PC emulator (effectively virtualization)
+
+It's slow
+it almost works
+it crashes your system
+cwfs gets corrupted
+"runs" OpenBSD, Linux, and ancient Windows with graphics support
+
+and also various emulators for obscure architectures
+
+VCS
+
+Mercurial used to come with 9front but it has been removed.
+CVS does exist but not in the base system.
+A native git implementation exists and is in the base system. It's bare bones but it mostly works.
+
+Community Maintained Software
+The 9front community has been collecting known programs for some time and various other community software can be found in the wiki. Both are served as a ports system, similar to a BSD style ports system. There are no binary packages. Makefiles are broken.
+Programming Languages
+mkfiles
+9 ships a program called mk(1). Syntax (in the simplest ways) is identical to UNIX make(1).
+The Absurdities of 9 C
+Plan 9 C is syntactically similar to ANSI C but it varies. The stdlibs on 9 are much simpler than the POSIX monster.
+/* POSIX C example */
+#include <stdio.h>
+
+int main(){
+    printf("hello, world\n");
+    return 0;
+}
+
+/* 9 C example */
+#include <u.h>
+#include <libc.h>
+
+void main(){
+    print("hello, world\n");
+    exits(0);
+}
+
+u.h contains CPU specific instructions, libc.h contains all of the system calls, time functions, math functions, unicode functions, and print functions. In contrast to POSIX, functions in 9c return strings instead of ints.
+# Compiling on UNIX
+$ cc main.c
+$ ./a.out
+hello, world
+$
+
+# Compiling on 9
+% 6c main.c
+% 6l main.6
+% 6.out
+hello, world
+%
+
+In the 9 compiler example, I'm using the amd64 compiler and linker. Notice how the 6 persists as the prefix/suffix to help developers remember which architecture this specific program is written for. Instead of unspecific object files with a .o suffix, the object file's suffix is actually representative of what types of opcodes the file contains. Similarly, after linking, the 6. prefix tells us that the binary is for an amd64 processor.
+And also, the simplest UNIX program with buffers: read from stdin and write directly to stdout:
+/* POSIX C */
+#include <stdio.h>
+
+int main(int argc, char *argv[]){
+    char buf[32];
+    size_t bufs = sizeof(char)*32;
+    size_t nread = 0;
+
+    while((nread = fread(buf, 1, bufs, stdin)) > 0){
+        fwrite(buf, 1, nread, stdout);
+    }
+
+    return 0;
+}
+
+/* Plan 9 C */
+#include <u.h>
+#include <libc.h>
+
+void main(int argc, char *argv[]){
+    char buf[32];
+    char bufs = sizeof(char)*32;
+    int nread = 0;
+
+    while((nread = read(0, buf, bufs)) > 0){
+        write(1, buf, nread);
+    }
+
+    exits(0);
+}
+
+In 9, stdin is file descriptor 0, stdout is 1, and stderr is 2.
+And, the binary sizes betwen the two. You probably recognize a.out, this one was compiled with GCC. 6.out is an amd64 Plan 9 binary compiled on 9.
+$ ls -sh ./*.out
+4.0K ./6.out
+ 28K ./a.out
+
+Binaries on plan 9 are statically linked. It's somewhat strange to see that a statically linked binary is smaller than a dynamically linked one. Even compiling the plan 9 source on Linux using plan9port yeilds a large binary: 40K.
+I have not written 9C in a long time so I cannot say much more with confidence and authority. Refer to C Programming in Plan 9 from Bell Labs for more information.
+The acid(1) debugger exists but it's hard to use if you're not fluent in assembly.
+Ancient Go
+Ancient Go once ran on 9. In 2022, you're better off just writing C and rc.
+WiFi
+Some wifi cards are supported on 9front. My thinkpad x220 uses the iwl drivers. The FQA is somewhat vague when it comes to actually using the drivers. Good luck :)
+Why isn't 9 more popular if it supposedly improves on "bad Unix ideas"?
+
+Unix is 'just good enough'
+9 is not 'better enough' to beat out 'just good enough'
+Porting software is difficult^impossible because 9 was deliberately written to be not backwards compatible.
+
+"If you port it, they will come"
+
+9 is uncomfortable to use if you have Unix muscle memory
+no modern web browser
+no video games (I'm pretty sure there are doom and quake source ports though)
+multimedia consumption is hard
+no GNU
+
+Why do people use 9 if it's so bad?
+I can't be sure about all other ~20 Plan 9 fans in the world, but for myself, it's purely out of a genuine curiosity and love for computing. My motivation for learning obscure, unnecessary, and quite frankly boring things related to computers is that it brings me some sense of satisfaction/accomplishment/enjoyment. Linux stopped being fun for me when I came to the realization that all distributions are fundamentally the same. I started exploring the BSD world only to realize that all UNIX-like operating systems are fundamentally the same. Although BSD remains a store of fun for me, I occasionally feel burned out on UNIX even if it's an abstract idea/experience/codebase I cherish.
+When I sit down at a computer my goal is always to discover something new, learn a new concept, explore alternative paradigms, and, most of all, to have fun in the process.
+For most people, 9 is a tourist experience. For me, it's the final frontier. Although I have yet to learn as much about 9 as I have about UNIX, every time I swap hard drives and boot into 9 I feel a sense of coming home. Sometimes I think I am wilfully resisting becoming a 9 expert because it will result in me struggling to find the next non-bad OS paradigm to explore.
+And when I think about "using a computer", what do I really do on the computer? I learn about it, learn about the software running on it, and proceed to write about it so that I can reinforce the ideas in a Feynman-esque way. I'm not really providing a real tangible value to the world because it's purely a "hey, here's the things I learned the hard way so you don't have to".
+Conclusion:
+
+How do I do xyz on 9?
+
+don't. search engines won't help. Man pages won't help. /sys/doc might help. Reading the source code won't help. have fun :)
+Or consider:
+term% vt -xb
+term% ssh user@host
+$ tmux a
+$ reset
+# some commands
+$ reset
+# some commands
+$ reset
+
+Alternatively:
+term% vncv host:display
+
+Further reading:
+
+9front FQA. Very humorous, good information
+read the papers in /sys/doc or on cat-v.org
+Plan 9: Not dead, Just resting
+A visual demonstration of rio
+A visual demonstration of acme
+C Programming in Plan 9 from Bell Labs
+Plan 9 Desktop Guide. Might be useful for someone. Not too useful for me. Man pages are better.
+C04tl3 youtube channel. Lots of cool videos with information.
+Introduction to Operating System Abstractions using Plan 9 from Bell Labs 
+SDF public Plan 9 server
+

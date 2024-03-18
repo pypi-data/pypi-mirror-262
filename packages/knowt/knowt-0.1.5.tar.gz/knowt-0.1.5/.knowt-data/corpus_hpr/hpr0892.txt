@@ -1,0 +1,53 @@
+## hpr0892 :: 2011-2012 Hacker Public Radio New Year's Eve Part 2/8 (A Bit About Fedora)
+
+ Hacker Public Radio New Year's Eve Part 2 (A Bit About Fedora)
+
+This is the second part of the Hacker Public Radio New Year's Eve event and you can expect more of them all week long.
+
+Thanks to:
+
+PipeManMusic of the Open Source Musician's Podcast for the Murmur server, and audio streaming
+Tracy Holtz for stream mirror
+Dann Washko of The Linux Link Tech Show for stream mirror
+cobra2 for stream mirror
+John Neusteter for stream mirror
+KevinW for creating the Mumble How-To, and for manning the testing room during most of the show.
+Ken Fallon for being Ken Fallon
+The Hacker Public Radio Community for coming together and pulling this off, and for making it so much fun for everone. 
+
+
+I was so wrapped up in the actual show, that it didn't occur to me to take notes and write down the names of all the people who helped us out. The few I listed above are all that I can remember 24 hours later. If you helped out in any way, and would like to be mentioned in the show notes of the remaining parts of this show (there will be a few of them) please email hpr (at) hackerpublicradio (dot) org with your name and I'll be glad to thank you publicly and properly.
+-pokey
+
+Fedora Review
+
+Got to RPM Fusion to get all the evil proprietary stuff.
+https://rpmfusion.org/Configuration/
+
+
+From the console run "yum update" and accept the keys
+
+
+Then run "yum install synergy openssh-server audacity-freeworld ffmpeg sox mplayer inkscape vlc vim firefox poppler-utils wget sshfs kdiff3 terminator kid3 speex-tools filezilla gimp hpijs kate kdiff3 kdirstat 
+
+
+# systemctl start sshd.service
+# systemctl enable sshd.services
+
+
+Firewall restart
+
+
+Follow these instructions to get the vpn working https://kenfallon.com/how-to-install-checkpoint-ssl-extender-vpn-snx-under-fedora-16/
+
+
+Follow these instructions to get the citrix working https://kenfallon.com/installing-citrix-on-fedora-14/
+
+
+Chromium
+https://fedoraproject.org/wiki/Chromium
+-
+Flash
+https://get.adobe.com/flashplayer/
+--
+skype.com download linux fedora install

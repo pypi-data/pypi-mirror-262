@@ -1,0 +1,27 @@
+image: python:3.10.12
+
+#services:
+#  - redis
+
+stages:
+  - test
+
+test:
+  stage: test
+  before_script:
+    - pip install --upgrade pip 
+    - pip install -e .[test]
+    - python -m spacy download en_core_web_sm
+    # - cp .env_ci_cd .env
+
+  script:
+    - black . --check
+    - pytest --cov=knowt
+#    - coverage xml -o ${CI_PROJECT_DIR}/coverage.xml
+  coverage: '/TOTAL[ ]+[0-9]+[ ]+[0-9]+[ ]+([0-9]+)%/'
+  artifacts:
+    expire_in: 7 days
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: ${CI_PROJECT_DIR}/coverage.xml

@@ -1,0 +1,88 @@
+## hpr2209 :: Calibre eBook Server
+
+ You can share your Calibre ebook library by running the calibre-server daemon, either from your desktop machine or on a server that is available on your local network. (Or, if you have it set up that way, it can be outward-facing to the wide world.)
+To share your library from the desktop Calibre application, choose Connect/share from the menu at the top of the window, then choose Start Content Server. Make a note of the IP address and port, and then you can use other devices on your network to access the library at that address. Normally I use the "Get Books" function of the Marvin ebook app on my iPad, or else the "Experimental Browser" on my Kindle and download the books directly to the devices. On my Android phone, I use the Chrome browser and then long press on the link to an Epub file, choose to save to device, and then open it using FBreader.
+To share the library from your GNU/Linux server, you'll have to install Calibre on the server and then put a copy of your ebook Library on the server as well. To start and stop the server daemon, you need to put a service startup script in the /etc/init.d directory with all of the other system startup scripts. An example is given below—fill in with the appropriate paths and user data for your setup. (See the calibre-server user manual for a full list of options and their descriptions.) When the script is in place and has executable permissions, you start and stop the service as follows (as root):
+
+service calibre-server start|stop|restart
+
+Service Startup Script
+
+#!/bin/bash
+
+CALIBRE_LIBRARY_PATH="/path/to/CalibreLibrary"
+PIDFILE=/tmp/calibre-server.pid
+USER=<run_as_user>        # run daemon as this user
+LOGIN=<end_user_username> # to log into library (optional)
+PW=<password>             # to log into library (optional)
+PORT=3456
+
+start() {
+        echo "Starting Calibre server..."
+        su -c "calibre-server --with-library=\"$CALIBRE_LIBRARY_PATH\" --username=$LOGIN --password=$PW -p $PORT --pidfile=$PIDFILE --daemonize" & 
+        if [ $? -ne 0 ]; then
+                echo "Could not start calibre-server."
+        fi
+}
+
+stop() {
+        echo "Stopping Calibre server..."
+        if [ -e $PIDFILE ]; then
+                read PID < $PIDFILE
+                ps aux | grep "$PID" | grep 'calibre-server' > /dev/null
+                RUNNING=$?
+                if [ $RUNNING -eq 0 ]; then
+                        kill $PID
+                        if [ $? -eq 0 ]; then
+                                rm $PIDFILE
+                        fi
+                else
+                        echo "Could not find a calibre-server process with PID $PID."
+                fi
+        else
+                echo "Could not find pidfile: $PIDFILE"
+        fi
+}
+
+restart() {
+        stop
+        start
+}
+
+status() {
+        if [ -e $PIDFILE ]; then
+                read PID < $PIDFILE
+                echo "calibre-server is running with PID $PID."
+        else
+                echo "calibre-server is not running."
+        fi
+}
+
+unknown() {
+        echo "Unrecognized command: $1"
+        echo "Try one of the following: (start|stop|restart|status)"
+}
+
+case $1 in
+        start ) 
+                start
+                ;;
+        stop )
+                stop
+                ;;
+        restart )
+                restart
+                ;;
+        status )
+                status
+                ;;
+        * )
+                unknown
+                ;;
+esac
+
+Links
+
+Calibre ebook Management Software
+Marvin ebook app for iOS
+FBreader open-source multi-platform ebook reader.

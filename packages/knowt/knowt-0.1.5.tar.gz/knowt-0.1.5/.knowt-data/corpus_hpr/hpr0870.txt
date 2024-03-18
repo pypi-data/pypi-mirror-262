@@ -1,0 +1,55 @@
+## hpr0870 :: Computer Memories
+
+ In his second HPR episode, Deltaray looks back at his early computer experiences, from the Commodore to the Amiga, early computer stores, a BBS, and...The Strip.
+Sound effects by jppi-stu (117647) and timbre (84427) of freesound.org
+
+Apple Lisa
+
+From Wikipedia, the free encyclopedia
+https://en.wikipedia.org/wiki/Apple_Lisa
+The Apple Lisa - also known as the Lisa - is a personal computer designed by Apple Computer, Inc. (now Apple, Inc.) during the early 1980s.
+
+Development of the Lisa began in 1978 as a powerful personal computer with a graphical user interface (GUI) targeted toward business customers.
+
+In 1982, Steve Jobs was forced out of the Lisa project, so he joined the Macintosh project instead. The Macintosh is not a direct descendant of Lisa, although there are obvious similarities between the systems and the final revision, the Lisa 2/10, was modified and sold as the Macintosh XL.
+
+The Lisa was a more advanced system than the Macintosh of that time in many respects, such as its inclusion of protected memory, cooperative multitasking, a generally more sophisticated hard disk based operating system, a built-in screensaver, an advanced calculator with a paper tape and RPN, support for up to two megabytes (MB) of RAM, expansion slots, a numeric keypad, data corruption protection schemes such as block sparing, non-physical file names (with the ability to have multiple documents with the same name), and a larger higher-resolution display. It would be many years before many of those features were implemented on the Macintosh platform. Protected memory, for instance, did not arrive until the Mac OS X operating system was released in 2001. The Macintosh featured a faster 68000 processor (7.89 MHz) and sound. The complexity of the Lisa operating system and its programs taxed the 5 MHz Motorola 68000 microprocessor so that consumers said it felt sluggish, particularly when scrolling in documents.
+
+
+https://en.wikipedia.org/wiki/Apple_lisa
+
+TRS-80
+
+From Wikipedia, the free encyclopedia
+https://en.wikipedia.org/wiki/TRS_80
+TRS-80 was Tandy Corporation's desktop microcomputer model line, sold through Tandy's Radio Shack stores in the late 1970s and early 1980s. The first units, ordered unseen, were delivered in November 1977, and rolled out to the stores the third week of December. The line won popularity with hobbyists, home users, and small-businesses. Tandy Corporation's leading position in what Byte Magazine called the "1977 Trinity" (Apple, Commodore and Tandy) had much to do with Tandy's retailing the computer through more than 3000 of its Radio Shack (Tandy in Europe) storefronts. Notable features of the original TRS-80 included its full-stroke QWERTY keyboard, small size, its Floating Point BASIC programming language, an included monitor, and a starting price of $600. The pre-release price was $500 and a $50 deposit was required, with a money back guarantee at time of delivery. One major drawback of the original system was the massive RF interference it caused in surrounding electronics. This became a problem when it was determined to violate FCC regulations, leading to the Model I's phase out in favor of the new Model III. 
+By 1979, the TRS-80 had the largest available selection of software in the microcomputer market.
+....
+In July 1980 Tandy released the Model III. The improvements of the Model III over the Model I included built-in lower case, a better keyboard, 1500-baud cassette interface, and a faster (2.03 MHz) Z-80 processor. With the introduction of the Model III, Model I production was discontinued as it did not comply with new FCC regulations as of 1 January 1981 regarding electromagnetic interference. The Model I radiated so much interference that while playing games an AM radio placed next to the computer could be used to provide sounds.
+
+The Model III could run about 80% of Model I software, but used an incompatible disk format. Customers and developers complained of bugs in its BASIC and the TRSDOS operating system. The computer also came with the option of integrated disk drives. Since they took power from the same supply as the motherboard and screen, which was not upgraded for the disk drive models, it was common to see the screen image shrink noticeably during drive access.
+
+
+https://web.archive.org/web/20060425163924/https://www.kjsl.com/trs80/model3info.html
+
+
+Commadore 128
+
+https://en.wikipedia.org/wiki/Commodore_128
+The Commodore 128 (C128, CBM 128, C=128) home/personal computer was the last 8-bit machine commercially released by Commodore Business Machines (CBM). Introduced in January 1985 at the CES in Las Vegas, it appeared three years after its predecessor, the bestselling Commodore 64.
+
+The C128 was a significantly expanded successor to the C64 and unlike the earlier Commodore Plus/4, nearly full compatibility with the C64 was retained, in both hardware and software. The new machine featured 128 KB of RAM, in two 64 KB banks and an 80-column RGBI video output (driven by the 8563 VDC chip with 16 KB dedicated video RAM), as well as a substantially redesigned case and keyboard. Also included was a Zilog Z80 CPU which allowed the C128 to run CP/M, as an alternate to the usual Commodore BASIC environment.
+
+The primary hardware designer of the C128 was Bil Herd, who had worked on the Plus/4. Other hardware engineers were Dave Haynie and Frank Palaia, while the IC design work was done by Dave DiOrio. The main Commodore system software was developed by Fred Bowen and Terry Ryan, while the CP/M subsystem was developed by Von Ertwine
+
+
+
+
+Amiga 2000
+
+From Wikipedia, the free encyclopedia
+The Amiga 2000, or A2000, is a personal computer released by Commodore in 1986. It is the successor to the Amiga 1000.
+https://en.wikipedia.org/wiki/Amiga_2000
+
+
+

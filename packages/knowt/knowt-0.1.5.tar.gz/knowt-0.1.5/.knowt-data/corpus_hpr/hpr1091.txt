@@ -1,0 +1,124 @@
+## hpr1091 :: Useful Vim Plugins
+
+ Useful Vim Plugins
+I started learning vi a long time ago when I first encountered Unix systems. In those days you could usually count on a system having vi (or at a pinch, when the system would only boot into single user mode, ed). Learning Emacs didn't seem like a good choice since it wasn't usually available on the systems I was administering.
+I don't remember when I changed to Vim, but for many years I have used it (actually gVim) as an IDE (Integrated Development Environment), particularly for writing Bash and Perl scripts.
+In these notes I have listed some of the plugins I use to enhance Vim and gVim's functionality. If you have never made enhancements to this editor, here's a site with a very good tutorial on how to install plugins https://www.installationwiki.com/Installing_Vim_Scripts.
+
+NERDTree
+
+Author: Marty Grenfell
+Version: 4.2.0
+Updated: 2011-12-28
+URL: https://www.vim.org/scripts/script.php?script_id=1658
+
+This plugin provides a file browser within Vim/gVim. A particular directory is opened by typing :NERDTree somedir. A tree is displayed in a window which can be scrolled and traversed to find files to edit.
+
+In case you're interested, the colour theme I use in gVim is "Murphy".
+Type :h NERD_tree for the large and comprehensive help file.
+I prefer to use NERDTree in gVim and not in Vim. To achieve this I have the following in my ~/.vimrc
+  " NERDTree settings (only in GUI mode)
+  if has("gui_running")
+      let NERDTreeRoot = '~'
+      let NERDTreeIgnore = ['\~$', '\.swp$']
+      let NERDTreeShowHidden = 1
+      let NERDTreeShowBookmarks = 1
+      let NERDTreeChDirMode = 2
+  else
+      let loaded_nerd_tree = 1
+  endif
+
+Bash-support
+
+Author: Fritz Mehner
+Version: 3.10
+Updated: 2012-06-01
+URL: https://vim.sourceforge.net/scripts/script.php?script_id=365
+
+This one provides a Bash scripting IDE for Vim and gVim. I find it most usable in gVim where it offers a comprehensive set of menus which you can see in the example.
+From the Help text:
+  It is written to considerably speed up writing code in a consistent style.
+  This is done by inserting complete statements, comments, idioms, and code
+  snippets. Syntax checking, running a script, starting a debugger can be done
+  with a keystroke. There are many additional hints and options which can
+  improve speed and comfort when writing shell scripts.
+
+The plugin can be used from the menu or by typing short-cut sequences such as \ct which inserts the current date and time at the cursor position. It's an amazingly detailed package that's well worth dedicating the time to learn if you often write Bash scripts.
+
+Perl-support
+
+Author: Fritz Mehner
+Version: 5.1
+Updated: 2012-06-01
+URL: https://www.vim.org/scripts/script.php?script_id=556
+
+This plugin provides a Perl scripting IDE for Vim and gVim. As with the Bash plugin from the same author I find it most useful from gVim where the menus can be used to perform a wide range of actions.
+Again, you can use it to insert statements, boilerplate text and comments, in a similar way to the Bash plugin. You can also get regular expression help, check, run and debug the script
+Two of the functions I find particularly useful are perltidy and perlcritic. Perltidy will reformat your Perl script, and Perlcritic will critique it according to the rules based on Damian Conway's book Perl Best Practices.
+
+Note the lower window showing the various problems detected by perlcritic.
+If you are a C or C++ programmer Fritz Mehner also provides a plugin for these languages here.
+
+manpageview
+
+Author: Charles E. Campbell, Jr.
+Version: v24
+Updated: 2011-01-03
+URL: https://www.drchip.org/astronaut/vim/index.html#MANPAGEVIEW
+
+This is a man page viewer for use within Vim. Use :Man topic or press K on a keyword. Can view perl, php and python help.
+This is a great way to view man pages, with the ability to search and cut and paste the contents.
+
+Surround
+
+Author: Tim Pope
+Version: 1.90
+Updated: 2010-03-06
+URL: https://www.vim.org/scripts/script.php?script_id=1697
+
+The plugin provides mappings to easily delete, change and add "surroundings" such as quotes, braces and parentheses.
+The following extract from the Help text should make this clearer:
+  Consider the following examples.  An asterisk (*) is used to denote the cursor
+  position.
+  
+    Old text                  Command     New text
+    "Hello *world!"           ds"         Hello world!
+    [123+4*56]/2              cs])        (123+456)/2
+    "Look ma, I'm *HTML!"     cs"<q>      <q>Look ma, I'm HTML!</q>
+    if *x>3 {                 ysW(        if ( x>3 ) {
+    my $str = *whee!;         vlllls'     my $str = 'whee!';
+
+Fugitive
+
+Author: Tim Pope
+Version: 1.2
+Updated: 2011-04-29
+URL: https://www.vim.org/scripts/script.php?script_id=2975
+
+A very powerful interface to git.
+
+The image shows the result of the :Gstatus command which is equivalent to typing git status on the command line.
+
+Taglist
+
+Author: Yegappan Lakshmanan
+Version: 4.5
+Updated: 2007-09-21
+URL: https://www.vim.org/scripts/script.php?script_id=273
+
+This plugin provides source code browsing by listing tags (functions, classes, structures, variables, etc.). The list is in a window in Vim or in a menu in gVim.
+The plugin makes us of the Exuberant Ctags utility to index tags in a source file. I believe that most Linux distributions ship with this utility, but if not it seems to be easily available in repositories.
+
+The image shows gVim with the tag list in a window. I find the menu in gVim more useful myself.
+
+Supertab
+
+Author: Eric Van Dewoestine
+Version: 2.0
+Updated: 2012-06-01
+URL: https://www.vim.org/scripts/script.php?script_id=1643
+
+Provides insert completion functionality using the Tab key.
+
+The example shows a Perl script where the choice being made from the list offered by Supertab is uptodate. Note also that manpageview is being used to view the manpage for the CPAN module.
+It has taken me a while to learn not to use the Tab key to enter TAB characters but to use CTRL-Tab instead. However, I have decided that the advantages of redefining the Tab key in this way outweigh the disadvantages. You might not agree!

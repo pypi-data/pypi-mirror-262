@@ -1,0 +1,26 @@
+## hpr1216 :: Digital Data Transfer
+
+ Spoiler
+How better to explain it than by sending it out in Morse Code https://hackerpublicradio.org/eps.php?id=1343.
+
+In this the first in a series exploring The Open Systems Interconnection (OSI) model (ISO/IEC 7498-1)
+
+
+
+OSI model
+From Wikipedia, the free encyclopedia https://en.wikipedia.org/wiki/OSI_model
+
+
+
+
+The Open Systems Interconnection (OSI) model (ISO/IEC 7498-1) is a product of the Open Systems Interconnection effort at the International Organization for Standardization. It is a prescription of characterizing and standardizing the functions of a communications system in terms of abstraction layers. Similar communication functions are grouped into logical layers. A layer serves the layer above it and is served by the layer below it.
+
+
+
+
+For example, a layer that provides error-free communications across a network provides the path needed by applications above it, while it calls the next lower layer to send and receive packets that make up the contents of that path. Two instances at one layer are connected by a horizontal connection on that layer.
+
+
+
+In today's show Ken starts off with a practical example of Layer One, the The Physical Layer, https://en.wikipedia.org/wiki/Physical_layer. Although we are limited to audio for the purposes of the show, the same techniques could and are used across the light spectrum.
+

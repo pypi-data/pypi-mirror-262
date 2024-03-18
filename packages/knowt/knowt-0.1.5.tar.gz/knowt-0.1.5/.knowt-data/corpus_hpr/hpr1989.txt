@@ -1,0 +1,64 @@
+## hpr1989 :: WDTV Makes Me Itch
+
+ This half-hour-long episode describes the complete process for turning an old, limited thin-client terminal (an HP T5740) - and incidentally just about any other kind of hardware - into a simple automatic media-playing kiosk-style device, running VLC on a hand-made minimalist Arch Linux installation. I've tried to describe the procedure I came up with in enough detail that anyone with a little bit of Linux experience can hopefully follow and potentially replicate the whole thing, but not so much detail that it gets horrifically tedious. Some of the extra details I glossed over in the audio are here in the show notes if you want them.
+This episode will mostly be of interest to people with a little bit of Linux experience, but may hopefully be interesting to a few others. Mac and Windows partisans take note: before you start giggling about how "complicated" it is to set up Linux as you listen to what I describe here, I will reiterate that I chose to do the install "by hand" like this, and I assure you a more typical Linux install is quite a bit simpler (having just spent several months brutally installing Windows systems on innocent computers, getting and ordinary Linux installation finished is not only easier but faster. ("Windows is getting ready to start to prepare to configure updates. Please wait 5 hours and don't turn off your computer...") So there.
+I'm also going to try posting an "enhanced" version of this episode in .opus format with chapter markings and so on at my site: https://hpr.dogphilosophy.network Additional information may be found there as well, especially if anyone asks for it.
+Some Linuxable Hardware I Mentioned:
+Installing linux on old computers, laptops, etc. is such a well-established tradition that I don't see any reason to hunt down specific examples, but I also mentioned:
+
+Dead Badgers:
+https://www.strangehorizons.com/2004/20040405/badger.shtml
+Raspberry Pi:
+https://archlinuxarm.org/platforms/armv6/raspberry-pi
+
+I assume I don't need to explain that the Dead Badgers thing isn't entirely serious... It's not entirely a joke, either: https://www.instructables.com/id/Compubeaver---%3E-How-to-case-mod-a-beaver---in-29-e/
+
+systemd-networkd config:
+https://wiki.archlinux.org/index.php/Systemd-networkd#Basic_DHCP_network
+
+[Match]
+Name=en*
+
+[Network]
+DHCP=ipv4
+Autostart X on tty1 only: https://wiki.archlinux.org/index.php/Xinitrc#Autostart_X_at_login
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+I actually have also tried the "web browser kiosk" thing with the browser loading up a particular web page on start. It actually works just fine, except that the Windows DHCP server seems to be kind of slow, and if I just let the system start without checking the browser initially just shows an "internet no work" sort of message. I got around this nicely by adding a couple of steps to .xinitrc before starting the web browser. First, I created a graphic to use as an X background that just has text that indicates that it's waiting for the network to come up. Then, I put a loop in .xinitrc that checks for a hostname on the internet to see if it resolves to an IP yet, which would tell me the internet had come up. I didn't want to have to install any specific additional software utilities or, ideally, to have to do any special parsing. It turns out that you can just use "getent ahosts4 google.com" (or other internet hostname) as a test for this - it will return nothing if the name doesn't resolve, so you only need to test if the response is not a blank. I used "sleep 1" to pause one second between tries. Once the resolution returns something, I had xsetbg change the background graphic to a more appropriate default and continue starting the browser, the VNC server, etc.
+The .xinitrc for that looks like this:
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+    for f in /etc/X11/xinit/xinitrc.d/?* ; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset -f
+fi
+
+xset s off
+xset -dpms
+xsetbg -fullscreen WaitingForNetwork.png
+#vlc --extraintf=http --http-host 0.0.0.0:8080 --http-password 'PutPasswordHere' -L playlist.m3u &
+#Not sure this is necessary - chromium seems to retry on its own
+while [ `getent ahostsv4 google.com` -eq '']
+do
+##wait one second then check again to see if network is up
+sleep 1
+done
+xsetbg NetworkNowUp.png
+##The URL below is a "test to see if you can connect to a conference" link
+chromium --incognito --app=https://www3.gotomeeting.com/join/406552062 &
+x0vncserver -display :0 -passwordfile /home/tech/.vnc/passwd &
+exec openbox-session
+If you have any questions or comments, you can leave them at either
+https://hackerpublicradio.org/eps.php?id=1989
+or on my own blog at
+https://hpr.dogphilosophy.net
+Links
+
+https://hpr.dogphilosophy.network
+https://www.strangehorizons.com/2004/20040405/badger.shtml
+https://archlinuxarm.org/platforms/armv6/raspberry-pi
+https://www.instructables.com/id/Compubeaver---%3E-How-to-case-mod-a-beaver---in-29-e/
+https://wiki.archlinux.org/index.php/Systemd-networkd#Basic_DHCP_network
+https://wiki.archlinux.org/index.php/Xinitrc#Autostart_X_at_login
+https://hackerpublicradio.org/eps.php?id=1989
+https://hpr.dogphilosophy.net
+

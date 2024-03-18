@@ -1,0 +1,9 @@
+## hpr3044 :: mocp snooze tip
+
+ I use cordless headphones, I find this very handy when I want mocp to play for a set time then pause.
+Commands used
+
+Ctrl + r, to quickly find the command
+sleep 10m && mocp -G
+sleep 10m && mocp -M ~/.moc/audiobooks -G
+sleep 5h && iplayer-url

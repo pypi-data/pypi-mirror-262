@@ -1,0 +1,15 @@
+## hpr0663 :: What is on your mp3 player
+
+ errata and clarifications
+
+I use hpodder to catch podcasts.  Great podcast client for hackers IMO; Easy to script and make it do what you want.  I run it from a cronjob nightly.
+
+links
+
+Planet Money: https://goo.gl/KC7Fb
+rockbox: https://www.rockbox.org/
+hpodder: https://jgoerzen.github.com/hpodder/
+hpodder documentation: https://goo.gl/lTAyc
+Super Mono BT to redirect audio on Android: https://goo.gl/LYdZ4
+Cyanogenmod: https://goo.gl/fUQ4
+

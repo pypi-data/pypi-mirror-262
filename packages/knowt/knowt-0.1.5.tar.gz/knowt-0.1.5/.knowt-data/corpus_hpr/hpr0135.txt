@@ -1,0 +1,24 @@
+## hpr0135 :: LPI Ceritification Part 5 PCI Cards
+
+ 
+ GNU Free Documentation License 
+ elpicx Live-CD/DVD 
+ Leading Edge Training Notes 
+101-letter.pdf
+
+
+Commands Used:
+
+lspci -h|less
+lspci -n|less
+locate pci.ids | less
+less 'locate pci.ids | head -1`
+lspci | less
+lspci -s 00:1d -v |less
+less /proc/pci
+echo "Read https://www.rt.com/man/pnpdump.8.html"
+less /proc/interupts
+less /proc/ioports
+less /proc/iomem
+less /proc/dma
+

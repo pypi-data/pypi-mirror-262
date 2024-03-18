@@ -1,0 +1,31 @@
+## hpr2610 :: Gnu Awk - Part 12
+
+ Gnu Awk - Part 12
+Introduction
+This is the twelfth episode of the “Learning Awk” series which is being produced by b-yeezi and myself.
+In this episode I want to continue with the subject I started in episode 10, an advanced-level look at arrays in Awk. This episode covers patsplit which can split a string into an array, the built-in array PROCINFO which can be used to control how awk sorts arrays, as well as asort and asorti, built-in functions for sorting arrays.
+In case it might be of interest I have also included a section describing a recent use I made of awk to solve a problem.
+Long notes
+I have provided detailed notes as usual for this episode, and these can be viewed here.
+Links
+
+GNU Awk User’s Guide
+Previous shows in this series on HPR:
+
+“Gnu Awk - Part 1” - episode 2114
+“Gnu Awk - Part 2” - episode 2129
+“Gnu Awk - Part 3” - episode 2143
+“Gnu Awk - Part 4” - episode 2163
+“Gnu Awk - Part 5” - episode 2184
+“Gnu Awk - Part 6” - episode 2238
+“Gnu Awk - Part 7” - episode 2330
+“Gnu Awk - Part 8” - episode 2438
+“Gnu Awk - Part 9” - episode 2476
+“Gnu Awk - Part 10” - episode 2526
+“Gnu Awk - Part 11” - episode 2554
+
+Resources:
+
+ePub version of these notes
+Examples: awk12_ex1.awk, awk12_ex2.awk, awk12_ex3.awk, awk12_ex4.awk, awk12_ex5.awk, awk12_ex6.awk, awk12_ex7.awk, awk12_ex8.awk, awk12_ex9.awk, awk12_ex10.awk, awk12_extra.awk
+

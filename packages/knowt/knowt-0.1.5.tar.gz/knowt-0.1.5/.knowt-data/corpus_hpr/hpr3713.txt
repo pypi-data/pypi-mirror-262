@@ -1,0 +1,105 @@
+## hpr3713 :: Bash snippet - short-circuit evaluation in Bash Boolean expressions
+
+ 
+Preamble
+This is a case where I came upon a thing in Bash I had never considered before and was pleased and surprised that there was a way of doing what I wanted to do! If this is completely obvious to you, apologies, but it wasn’t to me!
+Overview
+Many programming languages have the concept of short-circuit evaluation in Boolean expressions. What this means is that in an expression such as:
+A AND B
+if A is false then the whole expression must be false, and B doesn’t have to be evaluated. That is because both arguments to AND have to be true for the overall result to be true.
+If A is true on the other hand, then B has to be evaluated to determine if the overall result is true.
+Similarly with:
+A OR B
+if A is true then the whole expression must be true and B can be skipped without evaluation. This is because only one argument to OR needs to be true to return a true result.
+If A is false on the other hand, then B has to be evaluated to determine if the overall result is false.
+Both of these expressions are evaluated from left to right. This is not a given in all languages. Some use special operators such as 'and_then' and 'or_else' which explicitly perform short-circuiting and left-to-right evaluation.
+Definition
+In simple terms, short-circuiting is where the evaluation of an expression is stopped as soon as its outcome is determined.
+The Wikipedia article Short-circuit evaluation defines it as:
+
+Short-circuit evaluation, minimal evaluation, or McCarthy evaluation (after John McCarthy) is the semantics of some Boolean operators in some programming languages in which the second argument is executed or evaluated only if the first argument does not suffice to determine the value of the expression: when the first argument of the AND function evaluates to false, the overall value must be false; and when the first argument of the OR function evaluates to true, the overall value must be true.
+
+This article contains a table entitled Boolean operators in various languages which shows details of how various programming and scripting languages cater for this feature.
+Use case
+I was writing a Bash script in which I wanted to ask questions about various steps - should they be done or not? Alternatively, I wanted to be able to set an option to run without interaction and assume the answer is 'yes' to all questions.
+I’d encountered short-circuit evaluation before in Pascal and Perl so I wondered if I could use it in Bash.
+The expression I was trying to write was:
+if [[ $YES -eq 1 ]] || yes_no 'Create directory? %s ' 'N'; then
+    # Create directory
+fi
+
+Variable YES is being set through an option '-Y'; it’s normally set to zero but is set to 1 if the option is used.
+yes_no is a function I wrote, and talked about in HPR episode 2096: “Useful Bash functions - part 2”.
+
+The requirement was that if YES was set to 1 I didn’t want the function to be called at all.
+I was a little surprised, and very happy, to find that this is what happens.
+Here is the full example from the script that started me thinking about this issue - and therefore caused me to make this show:
+#
+# We need a show directory. If it doesn't exist then we'll create it because
+# other scripts will use it.
+#
+if [[ ! -d $SHOWDIR ]]; then
+    echo "${red}There is no directory for show $show${reset}"
+
+    #
+    # If the -Y option was not chosen ask with 'yes_no'. It -Y was chosen
+    # we're to go ahead regardless. This relies on the fact that Bash
+    # "short-circuits" logical expressions like this.
+    #
+    if [[ $YES -eq 1 ]] || yes_no 'Create directory? %s ' 'N'; then
+        mkdir "$SHOWDIR"
+        _silent "${green}Directory created for show $show${reset}"
+    else
+        _silent "${yellow}Not changed${reset}"
+    fi
+fi
+Notes:
+
+I have a Bash function that defines colours which is included into this script. That’s why you see 'echo "${red}...${reset}"' in the above. I also have a function to turn off colour by setting the relevant variables to empty strings.
+The 'yes_no' function takes a prompt string with an (optional) '%s' placeholder for the expected inputs and default. This is followed by the default: 'N'.
+The function '_silent' writes the message given as its argument, depending on the setting of a 'SILENT' variable set earlier.
+
+Should it be used?
+Case 1
+Bash uses short-circuiting in other contexts. This was discussed in the Bash Tips series, episode 10 with the example:
+[ -e /some/file ] || exit 1
+Here the test is performed using '-e' to determine if '/some/file' exists. The result is either true or false. If the test returns true then the overall result of the or is true and the evaluation is short-circuited so that the 'exit 1' is not invoked. If the test is false then the second expression has to be evaluated to determine the overall result, so the 'exit 1' is invoked and the script exits.
+Incidentally, the '[ -e file ]' construct is actually an instance of the test command so could be written:
+test -e /some/file || exit 1
+You might be familiar with command pipelines which use this technique, such as:
+sudo apt update && sudo apt upgrade
+If the 'apt update' is successful the 'apt upgrade' is run. If it fails then the second command is not run.
+Case 2
+We have seen the example that prompted me to make this show:
+if [[ $YES -eq 1 ]] || yes_no 'Create directory? %s ' 'N'; then
+    # Create directory
+fi
+This could have been written as:
+if [[ $YES -eq 1 ]]; then
+    # Create directory
+elif yes_no 'Create directory? %s ' 'N'; then
+    # Create directory
+fi
+I prefer the first way, but it could be argued in a development environment that co-workers might find it confusing.
+Conclusion
+So, my conclusion is that short-circuiting is a desirable feature that I will continue to use.
+Links
+
+Wikipedia:
+
+Wikipedia article on short-circuit evaluation
+
+Table entitled Boolean operators in various languages
+
+Wikipedia article on conditional constructs in programming
+Wikipedia article on Truth values in logic, mathematics and programming
+
+
+
+HPR shows:
+
+Useful Bash functions - part 2
+More ancillary Bash tips - 10
+
+
+

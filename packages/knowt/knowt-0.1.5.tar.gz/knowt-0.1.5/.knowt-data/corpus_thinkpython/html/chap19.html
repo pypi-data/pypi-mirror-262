@@ -1,0 +1,457 @@
+<html>
+<head>
+<title>Chapter 19: Queues</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap18.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap20.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 19</h2>
+
+
+
+<h1>Queues</h1>
+<p>
+This chapter presents two ADTs: the Queue and the Priority Queue.
+In real life, a <b>queue</b> is a line of customers waiting for service
+of some kind.  In most cases, the first customer in line is the
+next customer to be served.  There are exceptions, though.
+At airports, customers whose flights are leaving soon
+are sometimes taken from the middle of the queue.  At
+supermarkets, a polite customer might let someone with only a
+few items go first.
+<p>
+The rule that determines who goes next is called the
+<b>queueing policy</b>.  The simplest queueing policy is
+called <b>FIFO</b>, for "first-in-first-out."  The most general
+queueing policy is <b>priority queueing</b>, in which each customer
+is assigned a priority and the customer with the highest priority
+goes first, regardless of the order of arrival.  We
+say this is the most general policy because the priority
+can be based on anything: what time a flight leaves; how many
+groceries the customer has; or how important the customer is.
+Of course, not all queueing policies are "fair," but
+fairness is in the eye of the beholder.
+<p>
+The Queue ADT and the Priority Queue ADT have the same set
+of operations.  The difference
+is in the semantics of the operations: a queue uses the FIFO
+policy; and a priority queue (as the name suggests) uses the
+priority queueing policy.
+
+<a name=1></a>
+<h3>19.1 The Queue ADT</h3>
+<p>
+The Queue ADT is defined by the following operations:
+
+<dl>
+<dt><tt><font size=-1>__init__</font></tt></dt>
+<dd>Initialize a new empty queue.</dd>
+<dt><tt><font size=-1>insert</font></tt></dt>
+<dd>Add a new item to the queue.</dd>
+<dt><tt><font size=-1>remove</font></tt></dt>
+<dd>Remove and return an item from the queue.  The item
+that is returned is the first one that was added.</dd>
+<dt><tt><font size=-1>isEmpty</font></tt></dt>
+<dd>Check whether the queue is empty.</dd>
+</dl>
+
+<a name=2></a>
+<h3>19.2 Linked Queue</h3>
+<p>
+The first implementation of the Queue ADT we will look at is
+called a <b>linked queue</b> because it is made up of linked
+<tt><font size=-1>Node</font></tt> objects.  Here is the class definition:
+
+<p><tt><font size=-1><font color=black>class</font> Queue:
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self):
+<br>&nbsp; &nbsp; self.length = 0
+<br>&nbsp; &nbsp; self.head = None
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>isEmpty</font>(self):
+<br>&nbsp; &nbsp; <font color=black>return</font> (self.length == 0)
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>insert</font>(self, cargo):
+<br>&nbsp; &nbsp; node = Node(cargo)
+<br>&nbsp; &nbsp; node.next = None
+<br>&nbsp; &nbsp; <font color=black>if</font> self.head == None:
+<br>&nbsp; &nbsp; &nbsp; <font color=#009000># if list is empty the new node goes first
+</font><br>&nbsp; &nbsp; &nbsp; self.head = node
+<br>&nbsp; &nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; &nbsp; <font color=#009000># find the last node in the list
+</font><br>&nbsp; &nbsp; &nbsp; last = self.head
+<br>&nbsp; &nbsp; &nbsp; <font color=black>while</font> last.next: last = last.next
+<br>&nbsp; &nbsp; &nbsp; <font color=#009000># append the new node
+</font><br>&nbsp; &nbsp; &nbsp; last.next = node
+<br>&nbsp; &nbsp; self.length = self.length + 1
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>remove</font>(self):
+<br>&nbsp; &nbsp; cargo = self.head.cargo
+<br>&nbsp; &nbsp; self.head = self.head.next
+<br>&nbsp; &nbsp; self.length = self.length - 1
+<br>&nbsp; &nbsp; <font color=black>return</font> cargo
+<br></font></tt></p>
+
+<p>
+The methods <tt><font size=-1>isEmpty</font></tt> and <tt><font size=-1>remove</font></tt> are identical to the
+<tt><font size=-1>LinkedList</font></tt> methods <tt><font size=-1>isEmpty</font></tt> and <tt><font size=-1>removeFirst</font></tt>.
+The <tt><font size=-1>insert</font></tt> method is new and a bit more complicated.
+<p>
+We want to insert new items at the end of the list.
+If the queue is empty, we just set <tt><font size=-1>head</font></tt> to refer to the new node.
+<p>
+Otherwise, we traverse the list to the last node and
+tack the new node on the end.  We can identify the last node because
+its <tt><font size=-1>next</font></tt> attribute is <tt><font size=-1>None</font></tt>.
+<p>
+There are two invariants for a properly formed <tt><font size=-1>Queue</font></tt> object.
+The value of <tt><font size=-1>length</font></tt> should be the number of nodes in the
+queue, and the last node should have <tt><font size=-1>next</font></tt> equal to
+<tt><font size=-1>None</font></tt>.  Convince yourself that this method preserves
+both invariants.
+
+<a name=3></a>
+<h3>19.3 Performance characteristics</h3>
+<p>
+Normally when we invoke a method, we are not concerned with the
+details of its implementation.  But there is one "detail"
+we might want to know <s>&nbsp; &nbsp;</s> the performance characteristics of the
+method.  How long does it take, and how does the run time change
+as the number of items in the collection increases?
+<p>
+First look at <tt><font size=-1>remove</font></tt>.
+There are no loops or function calls here, suggesting that
+the runtime of this method is the same every time.  Such a method
+is called a <b>constant time</b> operation.
+In reality, the method might be slightly faster
+when the list is empty since it skips the body of the conditional,
+but that difference is not significant.
+<p>
+The performance of <tt><font size=-1>insert</font></tt> is very different.
+In the general case, we have to
+traverse the list to find the last element.
+<p>
+This traversal takes time proportional to the length of the
+list.  Since the runtime is a linear function of the length,
+this method is called <b>linear time</b>.  Compared to
+constant time, that's very bad.
+
+<a name=4></a>
+<h3>19.4 Improved Linked Queue</h3>
+<p>
+We would like an implementation of the Queue ADT that can
+perform all operations in constant time.  One way to
+do that is to modify the Queue class so that it
+maintains a reference to both the first and the last node,
+as shown in the figure:
+
+<p align="center"><img src="illustrations/queue1.png"></p>
+<p>
+The <tt><font size=-1>ImprovedQueue</font></tt> implementation looks like this:
+
+<p><tt><font size=-1><font color=black>class</font> ImprovedQueue:
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self):
+<br>&nbsp; &nbsp; self.length = 0
+<br>&nbsp; &nbsp; self.head&nbsp; &nbsp;= None
+<br>&nbsp; &nbsp; self.last&nbsp; &nbsp;= None
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>isEmpty</font>(self):
+<br>&nbsp; &nbsp; <font color=black>return</font> (self.length == 0)
+<br></font></tt></p>
+
+<p>
+So far, the only change is the attribute <tt><font size=-1>last</font></tt>. It is used in
+<tt><font size=-1>insert</font></tt> and <tt><font size=-1>remove</font></tt> methods:
+
+<p><tt><font size=-1><font color=black>class</font> ImprovedQueue:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>insert</font>(self, cargo):
+<br>&nbsp; &nbsp; node = Node(cargo)
+<br>&nbsp; &nbsp; node.next = None
+<br>&nbsp; &nbsp; <font color=black>if</font> self.length == 0:
+<br>&nbsp; &nbsp; &nbsp; <font color=#009000># if list is empty, the new node is head and last
+</font><br>&nbsp; &nbsp; &nbsp; self.head = self.last = node
+<br>&nbsp; &nbsp; <font color=black>else</font>:
+<br>&nbsp; &nbsp; &nbsp; <font color=#009000># find the last node
+</font><br>&nbsp; &nbsp; &nbsp; last = self.last
+<br>&nbsp; &nbsp; &nbsp; <font color=#009000># append the new node
+</font><br>&nbsp; &nbsp; &nbsp; last.next = node
+<br>&nbsp; &nbsp; &nbsp; self.last = node
+<br>&nbsp; &nbsp; self.length = self.length + 1
+<br></font></tt></p>
+
+<p>
+Since <tt><font size=-1>last</font></tt> keeps track of the last node, we don't have to search
+for it.  As a result, this method is constant time.
+<p>
+There is a price to pay for that speed.  We have to add a special case
+to <tt><font size=-1>remove</font></tt> to set <tt><font size=-1>last</font></tt> to <tt><font size=-1>None</font></tt> when the last node is
+removed:
+
+<p><tt><font size=-1><font color=black>class</font> ImprovedQueue:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>remove</font>(self):
+<br>&nbsp; &nbsp; cargo&nbsp; &nbsp; &nbsp;= self.head.cargo
+<br>&nbsp; &nbsp; self.head = self.head.next
+<br>&nbsp; &nbsp; self.length = self.length - 1
+<br>&nbsp; &nbsp; <font color=black>if</font> self.length == 0:
+<br>&nbsp; &nbsp; &nbsp; self.last = None
+<br>&nbsp; &nbsp; <font color=black>return</font> cargo
+<br></font></tt></p>
+
+<p>
+This implementation is more complicated than the
+Linked Queue implementation, and it is more difficult to demonstrate
+that it is correct.  The advantage is that we have achieved
+the goal <s>&nbsp; &nbsp;</s> both <tt><font size=-1>insert</font></tt> and <tt><font size=-1>remove</font></tt> are constant time
+operations.
+
+<blockquote><i>As an exercise, write an implementation of the Queue ADT using
+a Python list.  Compare the performance of this implementation to the
+<tt><font size=-1>ImprovedQueue</font></tt> for a range of queue lengths.</i>
+</blockquote>
+
+<a name=5></a>
+<h3>19.5 Priority queue</h3>
+<p>
+The Priority Queue ADT has the same interface as the Queue ADT, but
+different semantics.  Again, the interface is:
+
+<dl>
+<dt><tt><font size=-1>__init__</font></tt></dt>
+<dd>Initialize a new empty queue.</dd>
+<dt><tt><font size=-1>insert</font></tt></dt>
+<dd>Add a new item to the queue.</dd>
+<dt><tt><font size=-1>remove</font></tt></dt>
+<dd>Remove and return an item from the queue.  The item
+that is returned is the one with the highest priority.</dd>
+<dt><tt><font size=-1>isEmpty</font></tt></dt>
+<dd>Check whether the queue is empty.</dd>
+</dl>
+<p>
+The semantic difference is that the item that is removed from the
+queue is not necessarily the first one that was added.  Rather, it is
+the item in the queue that has the highest priority.  What the
+priorities are and how they compare to each other are not specified by
+the Priority Queue implementation.  It depends on which items are in
+the queue.
+<p>
+For example, if the items in the queue have names, we might choose
+them in alphabetical order.  If they are bowling scores, we might go
+from highest to lowest, but if they are golf scores, we would go from
+lowest to highest.  As long as we can compare the items in the queue,
+we can find and remove the one with the highest priority.
+<p>
+This implementation of Priority Queue has as an attribute
+a Python list that
+contains the items in the queue.
+
+<p><tt><font size=-1><font color=black>class</font> PriorityQueue:
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self):
+<br>&nbsp; &nbsp; self.items = []
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>isEmpty</font>(self):
+<br>&nbsp; &nbsp; <font color=black>return</font> self.items == []
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>insert</font>(self, item):
+<br>&nbsp; &nbsp; self.items.append(item)
+<br></font></tt></p>
+
+<p>
+The initialization method, <tt><font size=-1>isEmpty</font></tt>, and <tt><font size=-1>insert</font></tt> are all
+veneers on list operations.  The only interesting method is <tt><font size=-1>remove</font></tt>:
+
+<p><tt><font size=-1><font color=black>class</font> PriorityQueue:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>remove</font>(self):
+<br>&nbsp; &nbsp; maxi = 0
+<br>&nbsp; &nbsp; <font color=black>for</font> i <font color=black>in</font> range(1,len(self.items)):
+<br>&nbsp; &nbsp; &nbsp; <font color=black>if</font> self.items[i] &gt; self.items[maxi]:
+<br>&nbsp; &nbsp; &nbsp; &nbsp; maxi = i
+<br>&nbsp; &nbsp; item = self.items[maxi]
+<br>&nbsp; &nbsp; self.items[maxi:maxi+1] = []
+<br>&nbsp; &nbsp; <font color=black>return</font> item
+<br></font></tt></p>
+
+<p>
+At the beginning of each iteration, <tt><font size=-1>maxi</font></tt> holds the index of the
+biggest item (highest priority) we have seen <i>so far</i>.  Each time
+through the loop, the program compares the <tt><font size=-1>i</font></tt>-eth item to the champion.
+If the new item is bigger, the value of <tt><font size=-1>maxi</font></tt> is set to <tt><font size=-1>i</font></tt>.
+<p>
+When the <tt><font size=-1><font color=black>for</font></font></tt> statement completes,
+<tt><font size=-1>maxi</font></tt> is the index of the biggest item.  This item
+is removed from the list and returned.
+<p>
+Let's test the implementation:
+
+<p><tt><font size=-1>&gt;&gt;&gt; q = PriorityQueue()
+<br>&gt;&gt;&gt; q.insert(11)
+<br>&gt;&gt;&gt; q.insert(12)
+<br>&gt;&gt;&gt; q.insert(14)
+<br>&gt;&gt;&gt; q.insert(13)
+<br>&gt;&gt;&gt; <font color=black>while not</font> q.isEmpty(): <font color=black>print</font> q.remove()
+<br>14
+<br>13
+<br>12
+<br>11
+<br></font></tt></p>
+
+<p>
+If the queue contains simple numbers or strings, they are
+removed in numerical or alphabetical order, from highest to
+lowest.  Python can find the biggest integer or string because
+it can compare them using the built-in comparison operators.
+<p>
+If the queue contains an object type, it has to provide
+a <tt><font size=-1>__cmp__</font></tt> method.  When <tt><font size=-1>remove</font></tt> uses the <tt><font size=-1>&gt;</font></tt>
+operator to compare items, it invokes the <tt><font size=-1>__cmp__</font></tt>
+for one of the items and passes the other as an argument.  As
+long as the <tt><font size=-1>__cmp__</font></tt> method works correctly, the
+Priority Queue will work.
+
+<a name=6></a>
+<h3>19.6 The <tt><font size=-1>Golfer</font></tt> class</h3>
+<p>
+As an example of an object with an unusual definition of priority, let's
+implement a class called <tt><font size=-1>Golfer</font></tt> that keeps track of the
+names and scores of golfers.  As usual, we start by defining <tt><font size=-1>__init__</font></tt> and <tt><font size=-1>__str__</font></tt>:
+
+<p><tt><font size=-1><font color=black>class</font> Golfer:
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self, name, score):
+<br>&nbsp; &nbsp; self.name = name
+<br>&nbsp; &nbsp; self.score= score
+<br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>__str__</font>(self):
+<br>&nbsp; &nbsp; <font color=black>return</font> <font color=red>"%-16s: %d"</font> % (self.name, self.score)
+<br></font></tt></p>
+
+<p>
+<tt><font size=-1>__str__</font></tt> uses the format operator to put the names
+and scores in neat columns.
+<p>
+Next we define a version of <tt><font size=-1>__cmp__</font></tt> where the lowest
+score gets highest priority.  As always, <tt><font size=-1>__cmp__</font></tt> returns
+1 if <tt><font size=-1>self</font></tt> is "greater than" <tt><font size=-1>other</font></tt>, -1 if <tt><font size=-1>self</font></tt>
+is "less than" other, and 0 if they are equal.
+
+<p><tt><font size=-1><font color=black>class</font> Golfer:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>__cmp__</font>(self, other):
+<br>&nbsp; &nbsp; <font color=black>if</font> self.score &lt; other.score: <font color=black>return</font>&nbsp; 1&nbsp; &nbsp;<font color=#009000># less is more
+</font><br>&nbsp; &nbsp; <font color=black>if</font> self.score &gt; other.score: <font color=black>return</font> -1
+<br>&nbsp; &nbsp; <font color=black>return</font> 0
+<br></font></tt></p>
+
+<p>
+Now we are ready to test the priority queue with the <tt><font size=-1>Golfer</font></tt> class:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tiger = Golfer(<font color=red>"Tiger Woods"</font>,&nbsp; &nbsp; 61)
+<br>&gt;&gt;&gt; phil&nbsp; = Golfer(<font color=red>"Phil Mickelson"</font>, 72)
+<br>&gt;&gt;&gt; hal&nbsp; &nbsp;= Golfer(<font color=red>"Hal Sutton"</font>,&nbsp; &nbsp; &nbsp;69)
+<br>&gt;&gt;&gt;
+<br>&gt;&gt;&gt; pq = PriorityQueue()
+<br>&gt;&gt;&gt; pq.insert(tiger)
+<br>&gt;&gt;&gt; pq.insert(phil)
+<br>&gt;&gt;&gt; pq.insert(hal)
+<br>&gt;&gt;&gt; <font color=black>while not</font> pq.isEmpty(): <font color=black>print</font> pq.remove()
+<br>Tiger Woods&nbsp; &nbsp; : 61
+<br>Hal Sutton&nbsp; &nbsp; &nbsp;: 69
+<br>Phil Mickelson : 72
+<br></font></tt></p>
+
+
+<blockquote><i>As an exercise, write an implementation of the Priority Queue ADT 
+using a linked list.  You should keep the list sorted so that removal
+is a constant time operation.  Compare the performance of this
+implementation with the Python list implementation.</i>
+</blockquote>
+
+<a name=7></a>
+<h3>19.7 Glossary</h3>
+
+<dl>
+<dt>queue</dt>
+<dd>An ordered set of objects waiting for a service of
+some kind.</dd>
+<dt>Queue</dt>
+<dd>An ADT that performs the operations one might perform
+on a queue.</dd>
+<dt>queueing policy</dt>
+<dd>The rules that determine which member
+of a queue is removed next.</dd>
+<dt>FIFO</dt>
+<dd>"First In, First Out," a queueing policy in which
+the first member to arrive is the first to be removed.</dd>
+<dt>priority queue</dt>
+<dd>A queueing policy in which
+each member has a priority determined by external factors.
+The member with the highest priority is the first to be removed.</dd>
+<dt>Priority Queue</dt>
+<dd>An ADT that defines the operations one
+might perform on a priority queue.</dd>
+<dt>linked queue</dt>
+<dd>An implementation of a queue using a linked
+list.</dd>
+<dt>constant time</dt>
+<dd>An operation whose runtime does not
+depend on the size of the data structure.</dd>
+<dt>linear time</dt>
+<dd>An operation whose runtime is a linear
+function of the size of the data structure.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap18.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap20.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

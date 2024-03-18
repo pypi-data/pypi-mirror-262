@@ -1,0 +1,121 @@
+## hpr3921 :: HPR AudioBook Club 23 - John Carter of Mars (Books 1-3)
+
+ In
+this episode the HPR Audiobook Club discusses the audiobooks A
+Princess of Mars, The
+Gods of Mars, and The
+Warlord of Mars by Edgar Rice Burroughs
+
+Non-Spoiler Thoughts
+
+
+Burroughs is kind of verbose, which is symbolic of the time period
+in which it was written.
+
+Beverage Reviews
+
+
+Thaj: Tempting fate with a tall glass of the highly
+toxic, Dihydrogen
+Monoxide
+x1101: Shipyard
+Little Horror of Hops Its a very amber IPA
+Pokey: Yellow Tail
+Chardonay Its definitely a chardonay in flavor. You can taste the
+cost effectiveness up front, but it mellows out on the finish, and is
+pretty okay for the price on average.
+FiftyOneFifty: Funky Pumpkin spiced
+pumpkin ale
+Mark: Lagunitas IPA
+
+Things We Talked About
+
+
+Chat Secure secure XMPP,
+Think of the children!!!
+Technology on Barsoom
+Deus Ex Machina much???
+Names in fantasy books
+
+Our Next Audiobook
+
+See
+You At The Morgue by Lawrence Blochman
+The Next Audiobook Club
+Recording
+
+Right now we are working through a backlog of older episode that have
+already been recorded. Once that ends we fully anticipate recording new
+episodes with listener participation.
+Feedback
+
+Thank you very much for listening to this episode of the HPR
+AudioBookClub. We had a great time recording this show, and we hope you
+enjoyed it as well. We also hope you'll consider joining us next time we
+record a new episode. Please leave a few words in the episode's comment
+section.
+As always; remember to visit the HPR contribution page HPR could
+really use your help right now.
+Sincerely, The HPR Audiobook Club
+P.S. Some people really like finding mistakes. For their enjoyment,
+we always include a few.
+Our Audio
+
+This episode was processed using Audacity. We've been making
+small adjustments to our audio mix each month in order to get the best
+possible sound. Its been especially challenging getting all of our
+voices relatively level, because everyone has their own unique setup.
+Mumble is great for bringing us all together, and for recording, but
+it's not good at making everyone's voice the same volume. We're pretty
+happy with the way this month's show turned out, so we'd like to share
+our editing process and settings with you and our future selves (who, of
+course, will have forgotten all this by then).
+We use the "Truncate Silence" effect with it's default settings to
+minimize the silence between people speaking. When used with it's
+default (or at least reasonable) settings, Truncate Silence is extremely
+effective and satisfying. It makes everyone sound smarter, it makes the
+file shorter without destroying actual content, and it makes a
+conversations sound as easy and fluid during playback as it was while it
+was recorded. It can be even more effective if you can train yourself to
+remain silent instead of saying "uuuuummmm." Just remember to ONLY pass
+the file through Truncate Silence ONCE. If you pass it through a second
+time, or if you set it too aggressively your audio may sound sped up and
+choppy.
+Next we use the "Compressor" effect with the following settings:
+Threshold: -30db
+
+Noise Floor: -50db
+
+Ratio: 3:1
+
+Attack Time: 0.2sec
+
+Decay Time: 1.0 sec
+"Make-up Gain for 0db after compressing" and "compress based on
+peaks" were both left un-checked.
+After compressing the audio we cut any pre-show and post-show chatter
+from the file and save them in a separate file for possible use as
+outtakes after the closing music.
+We adjust the Gain so that the VU meter in Audacity hovers around
+-12db while people are speaking, and we try to keep the peaks under
+-6db, and we adjust the Gain on each of the new tracks so that all
+volumes are similar, and more importantly comfortable. Once this is done
+we can "Mix and Render" all of our tracks into a single track for export
+to the .FLAC file which is uploaded to the HPR server.
+At this point we listen back to the whole file and we work on the
+shownotes. This is when we can cut out anything that needs to be cut,
+and we can also make sure that we put any links in the shownotes that
+were talked about during the recording of the show. We finish the
+shownotes before exporting the .aup file to .FLAC so that we can paste a
+copy of the shownotes into the audio file's metadata.
+At this point we add new, empty audio tracks into which we paste the
+intro, outro and possibly outtakes, and we rename each track
+accordingly.
+Remember to save often when using Audacity. We like to save after
+each of these steps. Audacity has a reputation for being "crashy" but if
+you remember save after every major transform, you will wonder how it
+ever got that reputation.
+Attribution
+
+Record
+Scratch Creative Commons 0

@@ -1,0 +1,250 @@
+## hpr3828 :: The Oh No! News.
+
+ The Oh No! news.
+Oh No! News is Good
+News.
+
+Threat analysis;
+your attack surface.
+
+Article: CISA
+warns of actively exploited Plex bug after LastPass breach.
+
+Author: Sergiu
+Gatlan (2023, Mar 11).
+Attackers with "admin access to a Plex Media Server could abuse the
+Camera Upload feature to make the server execute malicious code,"
+according to an advisory published by the Plex Security Team in May 2020
+when it patched the bug with the release of Plex Media Server
+1.19.3.
+"This could be done by setting the server data directory to overlap
+with the content location for a library on which Camera Upload was
+enabled. This issue could not be exploited without first gaining access
+to the server's Plex account."
+Link to Cybersecurity &
+Infrastructure Security Agency (CISA).
+
+Supporting Article: Plex
+Security, regarding security vulnerability CVE-2020-5741.
+
+Author: PlexSecurity, Plex Employee. (2020,
+May).
+We have recently been made aware of a security vulnerability related
+to Plex Media Server. This issue allowed an attacker with access to the
+server administrator’s Plex account to upload a malicious file via the
+Camera Upload feature and have the media server execute it.
+
+Supporting Article: Official
+statement from Plex, concerning vulnerabilities, on LastPass Data
+Breach.
+
+Author: PlexInfo, Plex Employee. (2023, Feb
+28).
+"We have not been contacted by LastPass so we cannot speak to the
+specifics of their incident. We take security issues very seriously, and
+frequently work with external parties who report issues big or small
+using our guidelines
+and bug bounty program. When vulnerabilities are reported following
+responsible disclosure we address them swiftly and thoroughly, and we’ve
+never had a critical vulnerability published for which there wasn’t
+already a patched version released. And when we’ve had incidents of our
+own, we’ve always chosen to communicate them quickly. We are not aware
+of any unpatched vulnerabilities, and as always, we invite people to
+disclose issues to us following the guidelines linked above. Given
+recent articles about the LastPass incident, although we are not aware
+of any unpatched vulnerabilities, we have reached out to LastPass to be
+sure."
+
+Supporting Article: LastPass
+says employee’s home computer was hacked and corporate vault taken.
+
+Author: Dan
+Goodin. (2023, Feb 27).
+According to a person briefed on a private report from LastPass who
+spoke on the condition of anonymity, the media software package that was
+exploited on the employee’s home computer was Plex. Interestingly, Plex
+reported its own network intrusion on August 24, just 12 days after the
+second incident commenced.
+
+Supporting Article: Plex
+imposes password reset after attackers steal data from over 15 million
+users.
+
+Author: Dan
+Goodin. (2022, Aug 24).
+“Yesterday, we discovered suspicious activity on one of our
+databases,” company officials wrote in an email sent to customers. “We
+immediately began an investigation and it does appear that a third-party
+was able to access a limited subset of data that includes emails,
+usernames, and encrypted passwords.”
+The email said that the passwords were “hashed and secured in
+accordance with best practices,” meaning the passwords were
+cryptographically scrambled in a way that requires attackers to devote
+additional resources to crack the hashes and revert them back to their
+plaintext state. A Plex spokesperson said that the passwords were hashed
+using bcrypt, among the strongest algorithms for protecting passwords.
+bcrypt automatically applies what's known as cryptographic salting and
+peppering to make cracking harder.
+
+Article: Keepass
+vulnerablility allows attackers, with write access to the xml config, to
+export cleartext passwords.
+
+Author: National
+Institute of Standards and Technology (NIST). (2023, Jan 21).
+** DISPUTED ** KeePass through 2.53 (in a default installation)
+allows an attacker, who has write access to the XML configuration file,
+to obtain the cleartext passwords by adding an export trigger. NOTE: the
+vendor's position is that the password database is not intended to be
+secure against an attacker who has that level of access to the local
+PC.
+This vulnerability has been modified and is currently undergoing
+reanalysis. Please check back soon to view the updated vulnerability
+summary.
+
+Supporting Article: CWE-312:
+Cleartext Storage of Sensitive Information.
+
+Author: Common Weakness Enumeration.
+(N/A).
+Because the information is stored in cleartext (i.e., unencrypted),
+attackers could potentially read it. Even if the information is encoded
+in a way that is not human-readable, certain techniques could determine
+which encoding is being used, then decode the information.
+
+Supporting Article: KeePass Help Center,
+Security Issues.
+
+Author: KeePass. (N/A).
+This page lists various potential security issues that have been
+reported and their status/analysis (whether the claims are valid,
+whether an issue is fixed, etc.).
+
+
+
+User space.
+
+Article: How
+to delete yourself from the internet.
+
+Author: Martyn Casserly. (2023, Mar 9).
+Whether you are privacy minded or not, it’s very difficult to be
+completely anonymous online. Over the years you might have posted on
+social media, downloaded apps, entered competitions or opened accounts
+which required details such as your email address, phone number, age,
+gender and more.
+
+Article: Mark
+Zuckerberg’s Meta exploring plans to launch a Twitter rival.
+
+Author: Reuters (2023, Mar 10).
+Mark Zuckerberg’s Meta Platforms is exploring plans to launch a new
+social media app in its bid to displace Twitter as the world’s “digital
+town square.”
+Its video-sharing app, Instagram, is also facing stiff competition
+as content makers or hit influencers abandon the platform for
+TikTok.
+
+
+
+
+Toys for techs.
+Article: Inky Frame 4.0" (Pico
+W Aboard) review.
+
+Author: Phil
+King. (2023, Mar 1).
+"A classy colour e-ink display whose Wi-Fi connectivity greatly
+extends its possible uses, including as a digital photo/art frame, life
+organiser, or low-power smart home dashboard."
+
+Supporting Article: Inky Frame
+4.0" (Pico W Aboard).
+
+Author: Pimoroni. (N/A).
+Raspberry Pi Pico W Aboard.
+4.01" EPD display (640 x 400 pixels).
+
+E Ink Gallery Palette™ 4000 ePaper
+ACeP (Advanced Color ePaper) 7-color with black, white, red, green,
+blue, yellow, orange.
+Ultra wide viewing angles
+Ultra low power consumption
+Dot pitch – 0.135 x 0.135mm
+
+5 x tactile buttons with LED indicators
+Two Qw/ST connectors for attaching breakouts
+microSD card slot *
+Dedicated RTC chip (PCF85063A) for deep sleep / wake **
+Fully assembled (no soldering required)
+C/C++ and
+MicroPython libraries
+Schematic
+
+Article: YubiHSM
+2, the world’s smallest hardware security module, enhanced with new
+features to support security for the Public Sector.
+
+Author: Saqib Ahmad. (2023, Mar 9).
+AES is one of the most widely used symmetric cryptography algorithms
+and can be used in several modes such as ECB, CBC, CCM and GCM. Out of
+these four modes, YubiHSM 2 now supports three most commonly used modes
+of encryption.
+
+
+
+
+Additional Information.
+
+What is a
+Data Breach? A data breach is a security violation, in which
+sensitive, protected or confidential data is copied, transmitted,
+viewed, stolen, altered or used by an individual unauthorized to do
+so.
+What is
+Malware? Malware (a portmanteau for
+malicious software) is any software intentionally designed to cause
+disruption to a computer, server, client, or computer network, leak
+private information, gain unauthorized access to information or systems,
+deprive access to information, or which unknowingly interferes with the
+user's computer security and privacy.
+What is
+a Payload? In the context of a computer virus or worm, the payload
+is the portion of the malware which performs malicious action; deleting
+data, sending spam or encrypting data. In addition to the payload, such
+malware also typically has overhead code aimed at simply spreading
+itself, or avoiding detection.
+What is
+Phishing? Phishing is a form of social
+engineering where attackers deceive people into revealing sensitive
+information or installing malware such as ransomware. Phishing
+attacks have become increasingly sophisticated and often transparently
+mirror the site being targeted, allowing the attacker to observe
+everything while the victim is navigating the site, and transverse any
+additional security boundaries with the victim.
+What is
+Information Security (InfoSec)? Information security, sometimes
+shortened to InfoSec, is the practice of protecting information by
+mitigating information risks.
+It is part of information
+risk management.
+What is a
+Vulnerability (computing)? Vulnerabilities are flaws in a computer
+system that weaken the overall security of the device/system.
+Vulnerabilities can be weaknesses in either the hardware itself, or the
+software that runs on the hardware.
+What is an
+"Attack Surface"? The attack surface of a software environment is
+the sum of the different points (for "attack vectors") where an
+unauthorized user (the "attacker") can try to enter data to or extract
+data from an environment. Keeping the attack surface as small as
+possible is a basic security measure.
+What is an
+"Attack Vector"? In computer security, an attack vector is a
+specific path, method, or scenario that can be exploited to break into
+an IT system, thus compromising its security. The term was derived from
+the corresponding notion of vector in biology. An attack vector may be
+exploited manually, automatically, or through a combination of manual
+and automatic activity.
+
+

@@ -1,0 +1,13 @@
+## hpr0913 :: Exchanging Data Podcast 1
+
+ 
+This podcast is the first in a series about accessing the data you have on your web site in any number of other locations.  These can be other web sites or apps running on your mobile phone.  Over the next few episodes, I will describe the different formats used for sharing your data, what goes into building the web application that serves up your data, how to access your data from other locations such as other web sites or mobile apps, and, finally, I will talk briefly on how to make something like this scale to support higher load demands.
+
+This episode is an introduction to the data formats available when talking to web services.
+
+Thanks for listening!
+
+Links
+
+ https://github.com/dmfrey/ExchangingDataPresentation
+

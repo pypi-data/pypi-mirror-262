@@ -1,0 +1,546 @@
+<html>
+<head>
+<title>Chapter 9: Tuples</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap08.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap10.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 9</h2>
+
+
+
+<h1>Tuples</h1>
+
+<a name=1></a>
+<h3>9.1 Mutability and tuples</h3>
+<p>
+So far, you have seen two compound types: strings, which are made up
+of characters; and lists, which are made up of elements of any type.
+One of the differences we noted is that the elements of a list can be
+modified, but the characters in a string cannot.  In other words, strings
+are <b>immutable</b> and lists are <b>mutable</b>.
+<p>
+There is another type in Python called a <b>tuple</b> that is similar
+to a list except that it is immutable.  Syntactically, a tuple is a
+comma-separated list of values:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tuple = <font color=red>'a'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>
+<br></font></tt></p>
+
+<p>
+Although it is not necessary, it is conventional to enclose tuples in
+parentheses:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tuple = (<font color=red>'a'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>)
+<br></font></tt></p>
+
+<p>
+To create a tuple with a single element, we have to include the final
+comma:
+
+<p><tt><font size=-1>&gt;&gt;&gt; t1 = (<font color=red>'a'</font>,)
+<br>&gt;&gt;&gt; type(t1)
+<br>&lt;type <font color=red>'tuple'</font>&gt;
+<br></font></tt></p>
+
+<p>
+Without the comma, Python treats <tt><font size=-1>(<font color=red>'a'</font>)</font></tt> as a string in
+parentheses:
+
+<p><tt><font size=-1>&gt;&gt;&gt; t2 = (<font color=red>'a'</font>)
+<br>&gt;&gt;&gt; type(t2)
+<br>&lt;type <font color=red>'str'</font>&gt;
+<br></font></tt></p>
+
+<p>
+Syntax issues aside, the operations on tuples are the same as the
+operations on lists.  The index operator selects an element from
+a tuple.
+
+<p><tt><font size=-1>&gt;&gt;&gt; tuple = (<font color=red>'a'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>)
+<br>&gt;&gt;&gt; tuple[0]
+<br><font color=red>'a'</font>
+<br></font></tt></p>
+
+<p>
+And the slice operator selects a range of elements.
+
+<p><tt><font size=-1>&gt;&gt;&gt; tuple[1:3]
+<br>(<font color=red>'b'</font>, <font color=red>'c'</font>)
+<br></font></tt></p>
+
+<p>
+But if we try to modify one of the elements of the tuple, we get
+an error:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tuple[0] = <font color=red>'A'</font>
+<br>TypeError: object doesn't support item assignment
+<br></font></tt></p>
+
+<p>
+Of course, even if we can't modify the elements of a tuple, we can
+replace it with a different tuple:
+
+<p><tt><font size=-1>&gt;&gt;&gt; tuple = (<font color=red>'A'</font>,) + tuple[1:]
+<br>&gt;&gt;&gt; tuple
+<br>(<font color=red>'A'</font>, <font color=red>'b'</font>, <font color=red>'c'</font>, <font color=red>'d'</font>, <font color=red>'e'</font>)
+<br></font></tt></p>
+
+
+<a name=2></a>
+<h3>9.2 Tuple assignment</h3>
+<p>
+Once in a while, it is useful to swap the values of two variables.
+With conventional assignment statements, we have to use a temporary
+variable.  For example, to swap <tt><font size=-1>a</font></tt> and <tt><font size=-1>b</font></tt>:
+
+<p><tt><font size=-1>&gt;&gt;&gt; temp = a
+<br>&gt;&gt;&gt; a = b
+<br>&gt;&gt;&gt; b = temp
+<br></font></tt></p>
+
+<p>
+If we have to do this often, this approach becomes cumbersome.  Python
+provides a form of <b>tuple assignment</b> that solves this problem neatly:
+
+<p><tt><font size=-1>&gt;&gt;&gt; a, b = b, a
+<br></font></tt></p>
+
+<p>
+The left side is a tuple of variables; the right side is a tuple of
+values.  Each value is assigned to its respective variable.  
+All the expressions on the right side are evaluated before any
+of the assignments.
+This feature makes tuple
+assignment quite versatile.
+<p>
+Naturally, the number of variables on the left and the number of
+values on the right have to be the same:
+
+<p><tt><font size=-1>&gt;&gt;&gt; a, b, c, d = 1, 2, 3
+<br>ValueError: unpack tuple of wrong size
+<br></font></tt></p>
+
+
+<a name=3></a>
+<h3>9.3 Tuples as return values</h3>
+<p>
+Functions can return tuples as return values.  For example, we could
+write a function that swaps two parameters:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>swap</font>(x, y):
+<br>&nbsp; <font color=black>return</font> y, x
+<br></font></tt></p>
+
+<p>
+Then we can assign the return value to a
+tuple with two variables:
+
+<p><tt><font size=-1>a, b = swap(a, b)
+<br></font></tt></p>
+
+<p>
+In this case, there is no great advantage in making <tt><font size=-1>swap</font></tt> a
+function.  In fact, there is a danger in trying to encapsulate <tt><font size=-1>swap</font></tt>, which is the following tempting mistake:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>swap</font>(x, y):&nbsp; &nbsp; &nbsp; <font color=#009000># incorrect version
+</font><br>&nbsp; x, y = y, x
+<br></font></tt></p>
+
+<p>
+If we call this function like this:
+
+<p><tt><font size=-1>swap(a, b)
+<br></font></tt></p>
+
+<p>
+then <tt><font size=-1>a</font></tt> and <tt><font size=-1>x</font></tt> are aliases for the same value.  Changing <tt><font size=-1>x</font></tt>
+inside <tt><font size=-1>swap</font></tt> makes <tt><font size=-1>x</font></tt> refer to a different value, but it has no
+effect on <tt><font size=-1>a</font></tt> in <tt><font size=-1>__main__</font></tt>.  Similarly, changing <tt><font size=-1>y</font></tt> has no
+effect on <tt><font size=-1>b</font></tt>.
+<p>
+This function runs without producing an error message, but it
+doesn't do what we intended.  This is an example of a semantic
+error.
+
+<blockquote><i>As an exercise, draw a state diagram for this function so that
+you can see why it doesn't work.</i>
+</blockquote>
+
+<a name=4></a>
+<h3>9.4 Random numbers</h3>
+<p>
+Most computer programs do the same thing every time they execute,
+so they are said to be <b>deterministic</b>.  Determinism is usually a
+good thing, since we expect the same calculation to yield the same
+result.  For some applications, though, we want the computer to
+be unpredictable.  Games are an obvious example, but there are
+more.
+<p>
+Making a program truly nondeterministic turns out to be not so easy,
+but there are ways to make it at least seem nondeterministic.  One of
+them is to generate random numbers and use them to determine the
+outcome of the program.  Python provides a built-in function that
+generates <b>pseudorandom</b> numbers, which are not truly random in
+the mathematical sense, but for our purposes they will do.
+<p>
+The <tt><font size=-1>random</font></tt> module contains a function called <tt><font size=-1>random</font></tt> that
+returns a floating-point number between 0.0 and 1.0.  Each time you
+call <tt><font size=-1>random</font></tt>, you get the next number in a long series.  To see a
+sample, run this loop:
+
+<p><tt><font size=-1><font color=black>import</font> random
+<br>
+<br><font color=black>for</font> i <font color=black>in</font> range(10):
+<br>&nbsp; x = random.random()
+<br>&nbsp; <font color=black>print</font> x
+<br></font></tt></p>
+
+<p>
+To generate a random number between 0.0 and an upper bound like
+<tt><font size=-1>high</font></tt>, multiply <tt><font size=-1>x</font></tt> by <tt><font size=-1>high</font></tt>.
+
+<blockquote><i>As an exercise, generate a random number between <tt><font size=-1>low</font></tt> and
+<tt><font size=-1>high</font></tt>.</i>
+</blockquote>
+
+<blockquote><i>As an additional exercise, generate a random <i>integer</i>
+between <tt><font size=-1>low</font></tt> and <tt><font size=-1>high</font></tt>, including both end points.</i>
+</blockquote>
+
+<a name=5></a>
+<h3>9.5 List of random numbers</h3>
+<p>
+The first step is to generate a list of random values.  <tt><font size=-1>randomList</font></tt> takes an integer argument and returns a list of random
+numbers with the given length.  It starts with a list of <tt><font size=-1>n</font></tt>
+zeros.  Each time through the loop, it replaces one of the elements
+with a random number.
+The return value is a reference to the complete list:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>randomList</font>(n):
+<br>&nbsp; s = [0] * n
+<br>&nbsp; <font color=black>for</font> i <font color=black>in</font> range(n):
+<br>&nbsp; &nbsp; s[i] = random.random()
+<br>&nbsp; <font color=black>return</font> s
+<br></font></tt></p>
+
+<p>
+We'll test this function with a list of eight elements.  For
+purposes of debugging, it is a good idea to start small.
+
+<p><tt><font size=-1>&gt;&gt;&gt; randomList(8)
+<br>0.15156642489
+<br>0.498048560109
+<br>0.810894847068
+<br>0.360371157682
+<br>0.275119183077
+<br>0.328578797631
+<br>0.759199803101
+<br>0.800367163582
+<br></font></tt></p>
+
+<p>
+The numbers generated by <tt><font size=-1>random</font></tt> are supposed to be distributed
+uniformly, which means that every value is equally likely.
+<p>
+If we divide the range of possible
+values into equal-sized "buckets," and count the number of times a
+random value falls in each bucket, we should get roughly the
+same number in each.
+<p>
+We can test this theory by writing a program to 
+divide the range into
+buckets and count the number of values in each.
+
+<a name=6></a>
+<h3>9.6 Counting</h3>
+<p>
+A good approach to problems like this is to divide the problem into
+subproblems and look for subproblems that fit a computational pattern
+you have seen before.
+<p>
+In this case, we want to traverse a list of numbers and count the
+number of times a value falls in a given range.  That sounds familiar.
+In <a href="chap07.html#8">Section 7.8</a>, we wrote a program that traversed a string and
+counted the number of times a given letter appeared.
+<p>
+So, we can proceed by copying the old program and adapting it
+for the current problem.  The original program was:
+
+<p><tt><font size=-1>count = 0
+<br><font color=black>for</font> char <font color=black>in</font> fruit:
+<br>&nbsp; <font color=black>if</font> char == <font color=red>'a'</font>:
+<br>&nbsp; &nbsp; count = count + 1
+<br><font color=black>print</font> count
+<br></font></tt></p>
+
+<p>
+The first step is to replace <tt><font size=-1>fruit</font></tt> with <tt><font size=-1>t</font></tt> and
+<tt><font size=-1>char</font></tt> with <tt><font size=-1>num</font></tt>.  That doesn't change the program;
+it just makes it more readable.
+<p>
+The second step is to change the test.  We aren't interested
+in finding letters.  We want to see if <tt><font size=-1>num</font></tt> is between
+the given values <tt><font size=-1>low</font></tt> and <tt><font size=-1>high</font></tt>.  
+
+<p><tt><font size=-1>count = 0
+<br><font color=black>for</font> num <font color=black>in</font> t:
+<br>&nbsp; <font color=black>if</font> low &lt; num &lt; high:
+<br>&nbsp; &nbsp; count = count + 1
+<br><font color=black>print</font> count
+<br></font></tt></p>
+
+<p>
+The last step is to encapsulate this code in a function called
+<tt><font size=-1>inBucket</font></tt>.  The parameters are the list and the values
+<tt><font size=-1>low</font></tt> and <tt><font size=-1>high</font></tt>.
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>inBucket</font>(t, low, high):
+<br>&nbsp; count = 0
+<br>&nbsp; <font color=black>for</font> num <font color=black>in</font> t:
+<br>&nbsp; &nbsp; <font color=black>if</font> low &lt; num &lt; high:
+<br>&nbsp; &nbsp; &nbsp; count = count + 1
+<br>&nbsp; <font color=black>return</font> count
+<br></font></tt></p>
+
+<p>
+By copying and modifying an existing program, we were able
+to write this function quickly and save a lot of debugging
+time.  This development plan is called <b>pattern matching</b>.
+If you find yourself working on a problem you have solved
+before, reuse the solution.
+
+<a name=7></a>
+<h3>9.7 Many buckets</h3>
+<p>
+As the number of buckets increases, <tt><font size=-1>inBucket</font></tt> gets
+a little unwieldy.  With two buckets, it's not bad:
+
+<p><tt><font size=-1>low = inBucket(a, 0.0, 0.5)
+<br>high = inBucket(a, 0.5, 1)
+<br></font></tt></p>
+
+<p>
+But with four buckets it is getting cumbersome.
+
+<p><tt><font size=-1>bucket1 = inBucket(a, 0.0, 0.25)
+<br>bucket2 = inBucket(a, 0.25, 0.5)
+<br>bucket3 = inBucket(a, 0.5, 0.75)
+<br>bucket4 = inBucket(a, 0.75, 1.0)
+<br></font></tt></p>
+
+<p>
+There are two problems.  One is that we have to make up new
+variable names for each result.  The other is that we have to
+compute the range for each bucket.
+<p>
+We'll solve the second problem first.  If the number of buckets
+is <tt><font size=-1>numBuckets</font></tt>, then the width of each bucket is
+<tt><font size=-1>1.0 / numBuckets</font></tt>.
+<p>
+We'll use a loop to compute the range of each bucket.
+The loop variable, <tt><font size=-1>i</font></tt>,
+counts from 0 to <tt><font size=-1>numBuckets-1</font></tt>:
+
+<p><tt><font size=-1>bucketWidth = 1.0 / numBuckets
+<br><font color=black>for</font> i <font color=black>in</font> range(numBuckets):
+<br>&nbsp; low = i * bucketWidth
+<br>&nbsp; high = low + bucketWidth
+<br>&nbsp; <font color=black>print</font> low, <font color=red>"to"</font>, high
+<br></font></tt></p>
+
+<p>
+To compute the low end of each bucket, we multiply the loop variable
+by the bucket width.  The high end is just a <tt><font size=-1>bucketWidth</font></tt> away.
+<p>
+With <tt><font size=-1>numBuckets = 8</font></tt>, the output is:
+
+<p><tt><font size=-1>0.0 to 0.125
+<br>0.125 to 0.25
+<br>0.25 to 0.375
+<br>0.375 to 0.5
+<br>0.5 to 0.625
+<br>0.625 to 0.75
+<br>0.75 to 0.875
+<br>0.875 to 1.0
+<br></font></tt></p>
+
+<p>
+You can confirm that each bucket is the same width, that they don't
+overlap, and that they cover the entire range from 0.0 to 1.0.
+<p>
+Now back to the first problem.
+We need a way to store eight integers, using the loop variable
+to indicate one at a time.  By now you should be thinking,
+"List!"
+<p>
+We have to create the bucket list outside the loop, because we only
+want to do it once.  Inside the loop, we'll call <tt><font size=-1>inBucket</font></tt>
+repeatedly and update the <tt><font size=-1>i</font></tt>-eth element of the list:
+
+<p><tt><font size=-1>numBuckets = 8
+<br>buckets = [0] * numBuckets
+<br>bucketWidth = 1.0 / numBuckets
+<br><font color=black>for</font> i <font color=black>in</font> range(numBuckets):
+<br>&nbsp; low = i * bucketWidth
+<br>&nbsp; high = low + bucketWidth
+<br>&nbsp; buckets[i] = inBucket(t, low, high)
+<br><font color=black>print</font> buckets
+<br></font></tt></p>
+
+<p>
+With a list of 1000 values, this code produces this bucket list:
+
+<p><tt><font size=-1>[138, 124, 128, 118, 130, 117, 114, 131]
+<br></font></tt></p>
+
+<p>
+These numbers are fairly close to 125, which is what we expected.  At
+least, they are close enough that we can believe the random number
+generator is working.
+
+<blockquote><i>As an exercise, 
+test this function with some longer lists, and see if the
+number of values in each bucket tends to level off.</i>
+</blockquote>
+
+<a name=8></a>
+<h3>9.8 A single-pass solution</h3>
+<p>
+Although this program works, it is not as efficient as it could be.
+Every time it calls <tt><font size=-1>inBucket</font></tt>, it traverses the entire list.  As
+the number of buckets increases, that gets to be a lot of traversals.
+<p>
+It would be better to make a single pass through the list and compute
+for each value the index of the bucket in which it falls.  Then we can
+increment the appropriate counter.
+<p>
+In the previous section we took an index, <tt><font size=-1>i</font></tt>, and multiplied it
+by the <tt><font size=-1>bucketWidth</font></tt> to find the lower bound of a given
+bucket.  Now we want to take a value in the range 0.0 to 1.0 and find the
+index of the bucket where it falls.
+<p>
+Since this problem is the inverse of the previous problem, we might
+guess that we should divide by <tt><font size=-1>bucketWidth</font></tt> instead of
+multiplying.  That guess is correct.
+<p>
+Since <tt><font size=-1>bucketWidth = 1.0 / numBuckets</font></tt>, dividing by <tt><font size=-1>bucketWidth</font></tt> is the same as multiplying by <tt><font size=-1>numBuckets</font></tt>.  If we
+multiply a number in the range 0.0 to 1.0 by <tt><font size=-1>numBuckets</font></tt>, we get
+a number in the range from 0.0 to <tt><font size=-1>numBuckets</font></tt>.  If we round that
+number to the next lower integer, we get exactly what we are looking
+for <s>&nbsp; &nbsp;</s> a bucket index:
+
+<p><tt><font size=-1>numBuckets = 8
+<br>buckets = [0] * numBuckets
+<br><font color=black>for</font> i <font color=black>in</font> t:
+<br>&nbsp; index = int(i * numBuckets)
+<br>&nbsp; buckets[index] = buckets[index] + 1
+<br></font></tt></p>
+
+<p>
+We used the <tt><font size=-1>int</font></tt> function to convert a floating-point
+number to an integer.
+<p>
+Is it possible for this calculation to produce an index that is out of
+range (either negative or greater than <tt><font size=-1>len(buckets)-1</font></tt>)?
+<p>
+A list like <tt><font size=-1>buckets</font></tt> that contains counts of the number of values
+in each range is called a <b>histogram</b>.
+
+<blockquote><i>As an exercise, write a function called <tt><font size=-1>histogram</font></tt> that
+takes a list and a number of buckets as arguments and returns
+a histogram with the given number of buckets.</i>
+</blockquote>
+
+<a name=9></a>
+<h3>9.9 Glossary</h3>
+
+<dl>
+<dt>immutable type</dt>
+<dd>A type in which the elements cannot be
+modified.  Assignments
+to elements or slices of immutable types cause an error.</dd>
+<dt>mutable type</dt>
+<dd>A data type in which the elements can be
+modified.  All mutable
+types are compound types.  Lists and dictionaries are mutable data
+types; strings and tuples are not.</dd>
+<dt>tuple</dt>
+<dd>A sequence type that is similar to a list except that it is
+immutable.  Tuples can be used wherever an immutable type is required, such
+as a key in a dictionary.</dd>
+<dt>tuple assignment</dt>
+<dd>An assignment to all of the elements in a tuple using
+a single assignment statement. Tuple assignment occurs in parallel rather
+than in sequence, making it useful for swapping values.</dd>
+<dt>deterministic</dt>
+<dd>A program that does the same thing each time it is
+called.</dd>
+<dt>pseudorandom</dt>
+<dd>A sequence of numbers that appear to be random but that
+are actually the result of a deterministic computation.</dd>
+<dt>histogram</dt>
+<dd>A list of integers in which each element counts the 
+number of times something happens.</dd>
+<dt>pattern matching</dt>
+<dd>A program development plan that involves
+identifying a familiar computational pattern and copying the
+solution to a similar problem.</dd>
+</dl>
+<p>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap08.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap10.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

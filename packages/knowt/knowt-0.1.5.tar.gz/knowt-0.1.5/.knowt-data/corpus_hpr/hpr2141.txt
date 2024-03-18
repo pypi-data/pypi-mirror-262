@@ -1,0 +1,8 @@
+## hpr2141 :: Make Web Python with Flask
+
+ Klaatu talks about the Python web framework, Flask. Think Ruby-on-Rails but for Python, or a lightweight Django.
+Links in this show:
+
+https://pip.pypa.io/en/stable/installing/
+https://flask.pocoo.org/
+

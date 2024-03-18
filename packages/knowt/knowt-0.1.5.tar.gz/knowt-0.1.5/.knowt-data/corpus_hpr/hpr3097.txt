@@ -1,0 +1,12 @@
+## hpr3097 :: Linux Inlaws S01E07 The Big Blue Button
+
+ In this episode our two chaps welcome Fred Dixon, product manager for BigBlueButton, on the show to talk about the project, its history and if it will finally run on Fedora and CentOS.
+Surrounding musings include how to hack the GDM login screen, why Martin is not behind the recent Easyjet hack and poxes as well as anti-poxes.
+Shownotes:
+
+BigBlueButton: https://bigbluebutton.org
+The Easyjet hack
+How to hack the GDM login screen in Focal Fossa: https://github.com/PRATAP-KUMAR/focal_gdm3_login_theme_complete_hack
+The Ubuntu logo for the GDM3 login screen for Focal Fossa and previous Ubuntu versions can be found at: /usr/share/plymouth/ubuntu-logo.png. Simply truncate this to zero bytes and the logo will be gone from the login screen
+Virgy's open source website: https://www.websiteplanet.com/blog/what-is-open-source-software
+

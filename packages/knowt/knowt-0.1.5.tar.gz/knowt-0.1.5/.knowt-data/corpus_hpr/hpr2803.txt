@@ -1,0 +1,15 @@
+## hpr2803 :: Update on my Raspi 3 B OpenMedia Vault and Next Cloud instances
+
+ 
+https://nextcloud.com/box/
+This link was the first product and it is not available any more.
+https://ownyourbits.com/nextcloudpi/
+This link tells you about all the different ways to do next cloud.
+https://github.com/nextcloud/nextcloudpi/wiki/How-to-install-NextCloudPi
+The link above is what worked exactly for me.
+https://www.openmediavault.org/about.html
+The link above is about what OMV is.
+https://sourceforge.net/projects/openmediavault/files/Raspberry%20Pi%20images/
+Is were I got my image.
+
+I use a Toshiba 4TB non-powered drive external usb 3 drive.

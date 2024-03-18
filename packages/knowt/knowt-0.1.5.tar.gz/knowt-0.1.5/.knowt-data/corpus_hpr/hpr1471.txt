@@ -1,0 +1,8 @@
+## hpr1471 :: Encrypt Your Stuff With Blowfish 
+
+ 
+encrypting:
+$ openssl bf -e < my_file > my_file.bf
+
+decrypting:
+$ openssl bf -d < my_file.bf > my_file

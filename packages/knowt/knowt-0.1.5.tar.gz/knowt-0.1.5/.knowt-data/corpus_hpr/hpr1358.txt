@@ -1,0 +1,20 @@
+## hpr1358 :: How to set up GnuPG, a PGP-compliant encryption system
+
+ 
+Klaatu explains how to set up GnuPG, a PGP-compliant encryption
+system, and use it with both Thunderbird and Mutt mail clients.
+
+Links
+
+Set up GnuPG: https://straightedgelinux.com/blog/howto/setupgnupg.html
+
+
+Using Mutt: https://straightedgelinux.com/blog/howto/mutt.html
+
+
+Klaatu's
+humble dot-muttrc file: https://gnuworldorder.info/dot-muttrc (there are better ones out there)
+
+
+Klaatu's public key
+

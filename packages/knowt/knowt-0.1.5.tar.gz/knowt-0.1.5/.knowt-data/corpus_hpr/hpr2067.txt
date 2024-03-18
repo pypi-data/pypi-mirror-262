@@ -1,0 +1,48 @@
+## hpr2067 :: Haste - the pastebin alternative
+
+ Haste
+A walk through of installing haste as an open source federated pastebin.com alternative.
+See the project at hastebin.com
+I ran into project this while following John Kulp’s notes on his blather intro.
+Installing node.js
+Installing via a package manager. See nodejs website for most up-to-date information. Commands given below are just for reference.
+RedHat based systems
+curl --silent --location https://rpm.nodesource.com/setup | sudo bash -
+sudo yum install -y nodejs
+Debian based systems
+curl --silent --location https://deb.nodesource.com/setup | sudo bash -
+sudo apt-get install -y nodejs
+Upgrade npm
+npm install npm -g
+haste-server
+Take a look at the haste-server project on github
+Clone haste-server git repository
+git clone https://github.com/seejohnrun/haste-server.git
+cd haste-server
+Choose storage method
+Choices
+
+file system
+redis
+memcached
+
+If you will be using the file system storage method, delete storage section in config.js using your favorite text editor.
+Install
+npm install
+npm start &
+Use server
+You can now browse to your new haste-server at the server name or ip at port 7777. Follow the icon links on the page for usage.
+https://<servername>:7777
+Using shell to add content
+Create a bash alias to pipe files to the haste file server.
+Add the following to your .bashrc file:
+HASTE_SERVER='https://myserver:7777'
+haste() { a=$(cat); curl -X POST -s -d "$a" $HASTE_SERVER/documents | awk -v server="$HASTE_SERVER" -F '"' '{print server"/"$4}'; }
+References
+
+hastebin.com
+nodejs
+haste-server
+haste-client
+haste-client-bash
+

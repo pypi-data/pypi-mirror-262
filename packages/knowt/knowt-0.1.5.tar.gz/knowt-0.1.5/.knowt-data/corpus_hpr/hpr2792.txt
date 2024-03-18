@@ -1,0 +1,36 @@
+## hpr2792 :: Playing around with text to speech synthesis on Linux
+
+ Below the script I used to generate a bunch of wav files with different text to speech applications.
+#!/bin/bash
+
+string="This is HPR episode 2792 entitled \"Playing around with text to speech synthesis on Linux\" and is part of the series \"Sound Scapes\". It is hosted by Yeroon Bahten and is about 20 minutes long and carries a clean flag."
+echo "${string}" > text.txt
+
+espeak -w espeak.wav "${string}" 
+espeak -w espeak-ng-v-mb-us1.wav -v mb-us1 "${string}"
+espeak -w espeak-ng-v-mb-us2.wav -v mb-us2 "${string}"
+espeak -w espeak-ng-v-mb-us3.wav  -v mb-us3 "${string}"
+espeak-ng "${string}"
+espeak-ng -v en-gb "${string}"
+espeak-ng -w espeak-ng-en-gb-scotland.wav -v en-gb-scotland "${string}"
+espeak-ng -w espeak-ng-en-us.wav  -v en-us "${string}"
+
+flite -o flite-voice-cmu_us_slt.wav -voice cmu_us_slt  "${string}"
+
+echo "${string}"| festival --language english --tts # same as next line
+echo "${string}"| text2wave --language british_english --tts -o festival_british_english.wav
+text2wave -o festival_british_english.wav  text.txt
+
+for voice in don_diphone kal_diphone ked_diphone rab_diphone
+do
+  text2wave -o festival_voice_${voice}.wav -eval "(voice_${voice} )"  text.txt
+done
+
+# Gnustep say, recorded with audio recorder.
+say "${string}"
+
+text2wave -o festival_voice_cmu_us_slt_arctic_hts.wav -eval "(voice_cmu_us_slt_arctic_hts )" text.txt
+
+# merlin https://github.com/CSTR-Edinburgh/merlin
+
+# marytts: https://github.com/marytts

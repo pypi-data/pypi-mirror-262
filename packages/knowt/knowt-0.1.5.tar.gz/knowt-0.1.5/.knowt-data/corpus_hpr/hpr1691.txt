@@ -1,0 +1,47 @@
+## hpr1691 :: Arduino 101 Arduino IO
+
+ In this two-part series, Klaatu introduces you to the Arduino. First, learn about the breadboard and how to make electricity course through it in order to power your very own simple circuit.
+To follow along with what Klaatu is talking about, refer to these two graphics:
+
+https://openclipart.org/detail/104167/breadboard-by-mesamike
+https://openclipart.org/detail/181334/microcontroller--by-b.gaultier-181334
+
+And here are diagrams of the simple circuits that Klaatu constructs.The simple code to reset the servo:
+#include <Servo.h>
+Servo myservo;
+
+int servoPosition;
+
+void setup()
+{
+  myservo.attach(13);
+  myservo.write(90);
+}
+
+void loop() {}
+And the code that responds to input:
+#include <Servo.h>
+Servo myservo; 
+
+int servoPosition;
+int servoMax = 180;
+int servoMin = 0;
+
+int value;
+int valMax = 600;
+int valMin = 50;
+
+
+void setup()
+{
+  myservo.attach(13);
+}
+
+void loop() 
+{
+  value = analogRead(0);
+  servoPosition = map(value, valMin, valMax, servoMax, servoMin);
+  servoPosition = constrain(servoPosition, servoMin, servoMax);
+  myservo.write(servoPosition);
+}
+And here is a bonus diagramme that you can try to create, using a light sensor, servo, and resistor.

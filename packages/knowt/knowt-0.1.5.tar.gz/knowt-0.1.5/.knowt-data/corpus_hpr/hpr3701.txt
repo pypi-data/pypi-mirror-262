@@ -1,0 +1,17 @@
+## hpr3701 :: ReiserFS - the file system of the future
+
+ 
+ReiserFS – The file system of the future
+Intro: Welcome to HPR; What I do; How I got in to computing; How I got in to Slackware and discovered ReiserFS
+A history of ReiserFS: Previous episode; Brief recap; A brief history; Lessons learned and experiences gained; Some tools to use
+Outro: Thanks
+
+ReiserFS
+From Wikipedia, the free encyclopedia
+
+ReiserFS is a general-purpose, journaling file system initially designed and implemented by a team at Namesys led by Hans Reiser and licensed under GPLv2. Introduced in version 2.4.1 of the Linux kernel, it was the first journaling file system to be included in the standard kernel. ReiserFS was the default file system in Novell's SUSE Linux Enterprise until Novell decided to move to ext3 on October 12, 2006, for future releases.
+
+Namesys considered ReiserFS version 3.6 which introduced a new on-disk format allowing bigger filesizes, now occasionally referred to as Reiser3, as stable and feature-complete and, with the exception of security updates and critical bug fixes, ceased development on it to concentrate on its successor, Reiser4. Namesys went out of business in 2008 after Reiser's conviction for murder. The product is now maintained as open source by volunteers. The reiserfsprogs 3.6.27 were released on 25 July 2017.
+
+ReiserFS is currently supported on Linux without quota support. It has been discussed for removal from the Linux kernel since early 2022 due to a lack of maintenance upstream, and technical issues inherent to the filesystem, such as the fact it suffers from the year 2038 problem; it was deprecated in Linux 5.18, with removal planned for 2025.
+

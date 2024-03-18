@@ -1,0 +1,8 @@
+## hpr0809 :: talk geek to me
+
+ In todays syndicated Thursday DeepGeek allows us to play TGTM #28 - Segmented Downloading aired on 2011-09-05
+
+ “Segmented downloading” is a way of getting your file by getting pieces of your file from different webservers, which mirror each other with identical content. If “bittorrent” comes to mind, then you’re following me. It is essentially using full-fledged webservers as if they were bittorrent seeds. But in order to understand why you would want to do this, you need to understand some things about old-school downloads and some things about bittorrent, before you can understand the “why,” then the “how,” of segmented downloading
+
+
+For Complete shownotes see https://www.talkgeektome.us/tgtm-28-segmented-downloading.html

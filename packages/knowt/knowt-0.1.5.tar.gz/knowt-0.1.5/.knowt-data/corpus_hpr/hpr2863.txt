@@ -1,0 +1,8 @@
+## hpr2863 :: Simplified application architectures for improved security
+
+ Before the days of the PC, application architectures were often very simple - being little more than the executable itself and any input files. The constraints of the early PC’s very limited resources required new architectures to make the most of those resources.
+We now have a situation where most applications either install, or require the presence of, multiple runtime dependencies. Each dependency has an interface which allows communication between itself and the application, but every interface presents an attack surface with the potential to be exploited by a malicious 3rd party.
+Modern computers do not have those same resource constraints yet we are still developing applications using the principles that applied 3 decades ago.
+Re-usable functionality can be internalised through static linking at compile-time or by code inclusion (along the lines of a .h file in C/C++)
+To change from using tried and tested methods is never convenient, but with concern for cyber security high and rising, has the time come to exchange convenience for simpler application architectures that should reduce vulnerabilities?
+…And may a move to new (or is it old) architectures deliver a big win for open source software?

@@ -1,0 +1,16 @@
+## hpr0660 :: An argument against emulators when retrocomputing
+
+ 
+I was moved by Ken Fallon's cry for submissions, so here's my first podcast:  An argument against using emulators when retrocomputing.  In short, there are some semi-intangible things you can't get from an emulator that you can only get from the real hardware, so use real hardware when you can.  Examples contained within.
+
+
+Mentioned or hinted at on the show:
+
+
+Andrew Jenner's proposal to rewrite the CRTC emulation for MESS: https://www.reenigne.org/blog/crtc-emulation-for-mess/
+
+
+Ian Bogost's work on adding more realistic display techniques to Stella, a 2600 emulator:  https://www.bogost.com/games/a_television_simulator.shtml
+
+
+Send feedback, criticism, etc. to: trixter@oldskool.org

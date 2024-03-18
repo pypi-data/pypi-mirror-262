@@ -1,0 +1,21 @@
+## hpr2678 :: Explaining the controls on my Amateur HF Radio Part 4
+
+ The three dual function controls covered are
+Squelch/Notch
+
+(1A) Squelch https://en.wikipedia.org/wiki/Squelch
+(1B) Notch filter https://en.wikipedia.org/wiki/Band-stop_filter
+
+Pitch/AF Tune
+
+(2A) Pitch (From the Kenwood manual)
+The CW PITCH control is provided so that you may adjust the pitch or tone of the incoming CW signal so that the tone is pleasing to you. The TS-940S accomplishes this without shifting the actual transmitter or receiver frequency, by shifting the 100kHz IF frequency, just prior to Product detection.
+(2B) AF Tune (From the Kenwood manual)
+The AF TUNE circuit is just the opposite of the NOTCH circuit. With this control, it is possible to accentuate the desired signal by providing additional rejection of noise and interfering signals whose pitch (tone) falls outside the audio passband. Turn the AF TUNE switch ON and adjust the AF TUNE control to peak the desired signal.
+
+RIT/XIT
+
+(3A) RIT – Receiver incremental Tune
+The RIT control allows shifting the receive frequency without effecting the transmit frequency
+(3B) XIT – Transmitter incremental Tune
+The XIT control allows shifting the transmit frequency without effecting the receive frequency

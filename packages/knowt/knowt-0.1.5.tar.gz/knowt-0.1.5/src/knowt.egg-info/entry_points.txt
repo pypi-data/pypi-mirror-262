@@ -1,0 +1,3 @@
+[console_scripts]
+ask = knowt.llm:main
+knowt = knowt.search:main

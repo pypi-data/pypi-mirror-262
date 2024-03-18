@@ -1,0 +1,23 @@
+## hpr1654 :: Using AS numbers to identify where you are on the Internet
+
+ 
+I have a laptop and I want it to use different configurations depending on where I am. If I’m on wifi at home, I don’t want my NAS mounted, but if I’m on a wired connection I do. If I’m at work I want to connect to various servers there. If I’m in the train I want to setup a vpn tunnel. You get the idea.
+
+
+My solution to this was to approach it from the laptop and go out. So to look around and see what network I was on. There are a few ways to approach this, you could look at your IP address, the arp tables, try and ping a known server in each location. The issue with looking at an IP address is that most networks use Private Networks. Very soon you will find that the wifi coffee shop happens to have picked the same range as you use at home and now your laptop is trying to backup to their cash register.
+
+
+Then I was thinking that I’m approaching this problem from the wrong angle. Why not start with my public IP address range, which has to be unique, and work back from there to my laptop. From there I was planning on maintaining a look-up table of public IP addresses, along the lines of the GeoIP tools developed by MaxMind.
+
+
+By Accident I found out that geoiplookup supports AS Number
+
+
+From WikiPedia: Autonomous System (Internet)
+https://en.wikipedia.org/wiki/Autonomous_System_%28Internet%29
+ISP must have an officially registered autonomous system number (ASN). A unique ASN is allocated to each AS for use in BGP routing. AS numbers are important because the ASN uniquely identifies each network on the Internet.
+
+
+So what that is saying is that every network in the Inter(connected)Net(work), must have it’s own unique AS Number. From there I was able to write a script to easily manage my laptops behaviour based on both location and connection type
+
+See https://kenfallon.com/scripts-based-on-your-network-location/ for the complete article and scripts.

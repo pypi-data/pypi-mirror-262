@@ -1,0 +1,18 @@
+## hpr2505 :: The power of GNU Readline - part 3
+
+ The power of GNU Readline - part 3
+In part 2 we looked at deleting text in various ways and pasting it back, using GNU Readline key sequences.
+The full-length notes (available here) contain some new terms and features of GNU Readline, and introduce some further ways of manipulating text, with some examples.
+Links
+
+Wikipedia article on GNU Readline
+GNU Readline manual
+Previous episodes:
+
+The power of GNU Readline - part 1
+The power of GNU Readline - part 2
+
+Resources:
+
+Detailed notes
+

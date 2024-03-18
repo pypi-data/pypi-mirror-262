@@ -1,0 +1,8 @@
+## hpr2204 :: MASSCAN
+
+ I chat about my issues with our vuln scanner and destroy the discovery scan times from 5-8 days to 1hr with Masscan.
+
+bug ? / workaround
+my current cmdline
+
+masscan   -p21,22,23,25,53,80,88,110,111,113,135,139,143,220,264,389,443,445,449,524,585,636,993,995,1433,1521,1723,3306,3389,5900,8080    --rate=14114 --open --excludefile BLACKLIST --ping  172.16.0.0/12 -oX  172.xml

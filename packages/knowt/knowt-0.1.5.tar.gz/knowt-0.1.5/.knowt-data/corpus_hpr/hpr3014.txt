@@ -1,0 +1,27 @@
+## hpr3014 :: A Headless Raspberry Pi Streaming Radio
+
+ In this episode I talk about how I used a Raspberry Pi to create a streaming radio device to feed my pillow speaker. This is something I used to do with clock radios and later a satellite radio, but in an effort to decrease monthly subscription costs for services I did not use optimally, I discontinued my satellite radio subscription about a year ago. This new free solution is an excellent substitute for Satellite Radio so far, since I was mostly listening to this same channel on the Sat Radio but paying about $12 a month for the privilege. The device I’m using is a Raspberry Pi 2 Model B with Ubuntu Server. My barrier to this project in the past was not being able to find the URL for the stream I wanted but I discovered you can find it easily if you use Firefox with Video Download Helper to reveal the URL on a page with media playing (in this case it’s from TuneIn):
+https://XX.XXX.XXX.XXX/radio-stationmp3-48?session-id=af1b271fefba04b650f8e253c6b253bd&source=TuneIn
+
+Strip off everything after the 48 to get raw URL:
+https://XX.XXX.XXX.XXX/radio-stationmp3-48
+
+Command to play stream with mpg123 on the Pi. Using the -q option to suppress output:
+mpg123-pulse -q https://XX.XXX.XXX.XXX/radio-stationmp3-48 &
+
+Once I figure out the command that plays the stream I want, I save the command as an executable script in /home/$user/bin.
+Using the “Radio”
+To start playing a stream you first have to SSH into the RasPi. This is easy from a laptop using any terminal emulator. I use pubkey auth so I don’t have to type a password every time. On my phone I use ConnectBot. Once I’m into the Pi I run the radio commands from CLI like espn or kmfa or krvs. To stop playback I kill the process with pkill mpg. I have a 3.5mm audio splitter Plugged into the headphone jack of the USB audio interface. In one side of the splitter I’ve got an old pair of earbuds where one side didn’t work, with the working earbud under my pillow. That’s my pillow speaker. On the other side of the splitter I put the audio cable for an FM transmitter, so that I can use an FM radio to listen to the stream while I’m walking around the house.
+Click the image below to see pictures of the setup.
+
+Links
+
+Raspberry Pi 2 Model B
+Ubuntu Server
+Video Download Helper (Firefox extension)
+The USB Audio interface I use
+Panda Wireless USB WiFi adapter
+mpg123 command-line audio player
+ConnectBot
+C. Crane FM Transmitter
+

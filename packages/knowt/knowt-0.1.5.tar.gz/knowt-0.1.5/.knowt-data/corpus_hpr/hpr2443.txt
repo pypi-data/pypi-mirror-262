@@ -1,0 +1,24 @@
+## hpr2443 :: pdmenu
+
+ pdmenu
+Introduction
+Pdmenu is a tool written by Joey Hess which allows the creation of a simple menu in a terminal (console) window. It is in his list of less active projects, and the latest version is dated 2014, but it seems to be quite complete and useful as it is.
+I like simple menus. As a Sysadmin in my last job I used one on OpenVMS which helped me run the various periodic tasks I needed to run - especially the less frequent ones - without having to remember all of the details.
+I do the same on my various Linux systems, and find that pdmenu is ideal for the task.
+Installation
+I found pdmenu in the Debian repositories (I run Debian Testing), and it was very easily installed. The C source is available as a tarfile, though I
+ haven't tried building it myself.
+Running pdmenu
+Simply typing pdmenu at a command prompt will invoke the utility. It uses the file /etc/pdmenurc as its default configuration file, and this generates a menu with a demonstration of some of its features.
+This is not particularly useful but it can be overridden by creating your own configuration, which by default is in ~/.pdmenurc. The pdmenu command itself takes a configuration file as an argument, so there is plenty of flexibility.
+Full notes and examples
+The full notes which describe the use of pdmenu with examples can be found here.
+Links
+
+Pdmenu wiki
+Joey Hess
+Resources:
+
+Long notes for this episode
+
+

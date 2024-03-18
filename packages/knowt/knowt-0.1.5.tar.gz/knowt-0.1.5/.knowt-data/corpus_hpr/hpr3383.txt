@@ -1,0 +1,11 @@
+## hpr3383 :: My gEeeky Experiment - Part 1
+
+ 
+Blog post: https://claudiomiranda.wordpress.com/2020/01/04/my-geeeky-experiment-part-1/
+Asus Eee PC 901 info via Wikipedia (first paragraph in link): https://en.wikipedia.org/wiki/Asus_Eee_PC#Other_Eee_90x_models
+OpenBSD Web Site: https://www.openbsd.org/
+Duplicating installed packages on another machine, via the OpenBSD FAQ: https://www.openbsd.org/faq/faq15.html#PkgDup
+Video of Eee PC 901 running OpenBSD 6.6: https://imgur.com/KHJj8lK
+Mastodon post from @solene@bsd.network about the Firefox port on OpenBSD: https://bsd.network/@solene/106481939809930365
+
+CPU on my Dell Latitude E6410 via sysctl: hw.model=Intel(R) Core(TM) i5 CPU M 520 @ 2.40GHz

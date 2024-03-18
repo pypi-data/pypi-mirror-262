@@ -1,0 +1,124 @@
+## hpr0741 :: HPR Community News for May 2011
+
+ Mumble Server
+
+GeneralSettings 
+Server Name: This is your choice 
+Address: ch1.teamspeak.cc 
+Port: 64747 
+Username: This is your choice 
+https://wiki.linuxbasix.com/tiki-index.php?page=Linux+Basix+Mumble
+
+New hosts
+
+Welcome to our new hosts: Slurry, 
+Dismal Science & Sunzofman1, 
+Brotherred, 
+ArigornStrider, 
+Joel, and
+Josh Knapp.
+
+Show Review
+
+716 :: HPR Admins :: Behind the Scenes at HPR. A community update for the month 2011-04
+717 :: Slurry :: My Switch from Windows to Linux
+718 :: Brotherred :: How I got into Linux
+719 :: Skirlet :: The Language Frontier Episode 4
+720 :: klaatu :: CLI Magic
+721 :: lostnbronx :: THEATER OF THE IMAGINATION -- PART 03
+722 :: Claudio Miranda :: How I Upgraded My PC - Motherboard
+723 :: klaatu :: How to be a safe computerist
+724 :: Robin Catling :: Full Circle Podcast: Ubuntu Manual Project
+725 :: pokey :: NELF_Review
+726 :: MrGadgets :: Journey to Linux
+727 :: klaatu :: HOWTO root and mod an Andr0id phone.
+728 :: Dismal Science & Sunzofman1 :: Sex, Race and Open Source
+729 :: Robin Catling :: Syndicated Thursday: FSP Sam smith, Opentech Conference 2011
+730 :: code.cruncher :: LFNW: Some Facts and 2 Interviews
+731 :: klaatu :: Klaatu the ubiquity and potential danger of the rm command
+732 :: sikilpaake & badbit :: sikilpaake and badbit - spics on tech - episode 02
+733 :: marcoz :: Linux Packaging Systems (too many)
+734 :: Skirlet :: The Language Frontier Episode 4.5
+735 :: Ken Fallon :: Interview with Dave Yates about SELF 2011
+736 :: JWP :: Stop the Ubuntu 11.04 whining
+737 :: ArigornStrider :: My Start in Computing and Linux
+738 :: Joel :: Short History of Ham Radio and How I got Involved
+739 :: Knightwise :: The Knightcast KC0053 : Wirelessly syncing content to your Ipad and Ipod.
+740 :: Josh Knapp :: DDoS : What is it and how to protect yourself
+
+Apologies To
+
+Droops for not been there
+stankdawg not dwag
+
+
+Month in Review 
+
+This was a busy and bumpy month as I recall it ... Ken went on holidays and the server felt abandoned and went on strike and then it pretended that there is no more space in the queue and once there was more space we almost ran out of shows and we are still looking for people to do HPR-PR at SELF, for which they will get 2 fantastic HPR T-Shirts. Ken? did you also move the server this month?
+
+HPR Outro
+
+Klaatu proposal to mention binrev in the outro.
+
+Hacker Public Radio is brought to you by the BinRev Radio, 
+the Infonomicon Computer Club and our Sponsor ${SPONSOR}.
+${SPONSOR} is ${Marketing speak}
+HPR is a Community podcast network that releases shows every 
+weekday Monday through Friday.
+All the shows are made by the community  fellow listeners 
+like you!.
+For more information on how you can contribute a show please 
+go to hackerpublicradio dot org and click on the contribute 
+button
+There is no restrictions on how long the show can be, nor 
+on the topic you can cover as long as they are of interest 
+to hackers.
+
+Updated the Syndication page to include OGG, SPX and Comments Feeds.
+People had problems getting on the Mailing list
+Ira put a drupal website together imahuph.net/hpradmin1
+Code Cruncher is working on automation
+
+Show prep script
+upload form
+security issues?
+
+The books for the business card competition have been sent or have they ?
+Added a md5 script to the site.
+lostnbronx ran a spell check on the "Contribute" page
+We ran out of shows - you replied.
+Curbuntu is going to a lug meeting and wanted a history of HPR. We want droops on for an interview.
+Ken is going to OggCamp11 - ordered business cards.
+Fifty OneFifty found the Ultimate interview device
+Cobra 2 
+
+create a torrent tracker for podcast/oggcast/videocast
+Advanced Android hacking series
+HPR Guidelines for fests.
+Wiki
+
+Trend micro unblocked us
+Zibby Keaton says that James Turnbull published his latest book "Pro Puppet" through Apress Media 
+
+RFC Changing show to CC-BY-SA
+
+Hi All,
+
+This is an official request for a change of license that *NEW* shows
+are uploaded as.
+
+The proposal is to change from:
+https://creativecommons.org/licenses/by-nc-sa/3.0/
+
+To https://creativecommons.org/licenses/by-sa/3.0/
+
+The RFC will be open for a month and the results will be announced
+here and on July's HPR Community News. If approved all shows after
+that time will be by default CC-BY-SA unless indicated in the show
+notes. Further, I would then contact everyone that has hosted so far
+asking if we can relisence their show(s) as CC-BY-SA.
+
+This is entirely up to the community so please use the mail list you
+voice your opinion. Even a one liner is fine.
+
+Ken.

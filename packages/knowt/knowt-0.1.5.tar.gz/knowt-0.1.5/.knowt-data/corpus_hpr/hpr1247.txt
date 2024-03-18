@@ -1,0 +1,12 @@
+## hpr1247 :: Recording Terrestrial Radio with bash scripts and cron jobs
+
+ In this episode I talk about my solution for capturing terrestrial 
+radio so that I can listen to it at my own convenience. I use a bash 
+script, cron jobs, and the streamripper package. here are some links 
+to things I mentioned in the podcast. 
+Jezra's command-line audio player sap (simple audio
+player): https://www.jezra.net/projects/sap 
+Streamripper: https://streamripper.sourceforge.net/ 
+Radio station KRVS 88.7 FM, Lafayette, Louisiana, USA https://krvs.org/ 
+And you can see the whole radio-recording script here:
+https://jonathankulp.org/archives/647

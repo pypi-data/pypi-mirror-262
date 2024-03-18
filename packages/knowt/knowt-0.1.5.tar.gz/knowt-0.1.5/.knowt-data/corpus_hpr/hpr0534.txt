@@ -1,0 +1,4 @@
+## hpr0534 :: Mercurial Transition and comments on the Python Package Index
+
+ Mercurial Transition / Python 2.7 alpha 1 / Comments on the Python Package Index
+We cover the status of the transition to using Mercurial for the Python source code, the first alpha release of Python 2.7, and the recent controversy over adding commenting to the Python Package Index.

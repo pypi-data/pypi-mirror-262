@@ -1,0 +1,25 @@
+## hpr1854 :: Installing Ubuntu on the Asus TP500L
+
+ 
+Getting to BIOS
+		
+In Windows, go to Settings 
+Search for advanced startup options
+Follow your nose to Boot to UEFI settings
+Can also get there by doing Shift+click on the Restart or Shutdown buttons then clicking through to advanced options until you find "enter setup." Pressing F2 never worked for me
+
+In the BIOS
+		
+Security tab: disable "Secure Boot Control"
+Boot tab: disable "Fast Boot"
+Boot tab: Here Asus support says to enable "launch CSM" (Compatibility Support Mode) but it wouldn't boot from the Ubuntu USB image this way. It worked when I left CSM disabled. I bet CSM works with a Windows or DOS USB.
+
+Plug in USB with Ubuntu image on it
+Restart computer and hold ESC key down, forcing windows boot menu to appear
+Choose the USB drive to boot from, off you go!
+
+Links
+
+The Asus TP500LA: https://www.asus.com/US/Notebooks_Ultrabooks/ASUS_Transformer_Book_Flip_TP500LA/
+The page with the wireless solution: https://community.linuxmint.com/tutorial/view/1796
+

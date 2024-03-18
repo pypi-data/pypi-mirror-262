@@ -1,0 +1,7 @@
+## hpr1232 :: LiTS 028: extended attributes
+
+ Episode 28 of Linux in the Shell talks about extended attributes and how 
+to view them with lsattr and change them with chattr. Attributes are 
+discussed in some detail and those that are mutable by chattr are noted.
+
+https://www.linuxintheshell.com/2013/04/23/episode-028-extended-attributes-lsattr-and-chattr/

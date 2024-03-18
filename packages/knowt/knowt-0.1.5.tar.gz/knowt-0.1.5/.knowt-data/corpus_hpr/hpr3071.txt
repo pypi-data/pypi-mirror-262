@@ -1,0 +1,79 @@
+## hpr3071 :: Bash snippet - quotes inside quoted strings
+
+ Bash and quoted strings
+An issue I just hit in Bash was that I had a quoted string, and I wanted to enclose it in quotes. How to do this?
+This is the umpteenth time I have stumbled over this issue, and I realised I had found out how to solve it a while back but the information hadn’t rooted itself into my mind!
+I have always been less clear in my mind about quoted strings in Bash than I should be, so, assuming others might have similar confusion I thought I’d try and clarify things in the form of an HPR show.
+The problem
+The thing I was having difficulties with was an alias definition of a useful pipeline:
+nmap -sn 192.168.0.0/24 | awk '/^Nmap scan report/{print ""; print; next}{print}'
+This uses nmap (see Ken’s show 3052 for a discussion of its use) piped into an awk one-liner that formats the information returned by nmap.
+The alias command can be used to store such a command or command sequence as a single simple command. It’s usually added to the ~/.bashrc file so it gets added to every Bash shell you start up (note Bash Tips #22, currently being written, will cover these startup files).
+An alias definition looks something like this:
+alias la='ls -Al'
+The alias itself 'la' is defined as the command ls -Al.
+So how to make my nmap sequence into an alias given that the commands contain both single and double quotes?
+Quoted strings in Bash
+Bash is (to my mind) a bit weird with quoted strings.
+There are two sorts of quotes in Bash (leaving aside the backquote or backtick – `):
+
+Single quotes, also called hard quotes ('). The literal value of characters between the quotes is preserved. Single quotes are not allowed, even if preceded by backslash escape characters.
+Double quotes, also called soft quotes ("). Certain characters within the quotes have special meanings, such as '$' and '\'. Double quotes are allowed in the string when preceded by a backslash.
+
+There’s a more comprehensive treatment of these quoting types (and others) in the Bash Reference Manual.
+Changing quotes and concatenating strings
+To make a variable containing a string with embedded quotes you can do this:
+$ x='string1'"'"'string2'
+$ echo $x
+string1'string2
+What we did here was close 'string1', start a new string enclosed in double quotes "'", then append a second string 'string2'. Bash treats the three strings as one, but they have to be contiguous. There must be no intervening spaces1.
+This solution is rather ugly. You could also use Bash string concatenation to do this, though it’s more long-winded:
+$ x='string1'
+$ x+="'"
+$ x+='string2'
+$ echo $x
+string1'string2
+The same principles hold for double quotes of course:
+$ x="string1"'"'"string2"
+$ echo $x
+string1"string2
+You’d probably not want to do this though.
+Using backslashes
+You can use backslashes to escape double quotes inside a double quoted string in Bash as we have seen.
+$ x="string1\"string2"
+$ echo $x
+string1"string2
+However, as discussed earlier, it’s not possible to use backslashes to escape single quotes inside a single quoted string in Bash. However, outside a string a backslashed character is escaped. For example, if you have files which have spaces in their names, you can quote the name or use the backslash escape to protect the spaces2:
+$ ls -l a\ file\ with\ spaces.awk
+-rw-r--r-- 1 hprdemo hprdemo 0 Apr 22 22:25 'a file with spaces.awk'
+So, knowing this, you can exit a string, concatenate with a backslashed quote then restart a string like this:
+$ x='string1'\''string2'
+$ echo $x
+string1'string2
+Solution
+So now we can see how to achieve the alias definition I wanted earlier:
+alias show_network='nmap -sn 192.168.0.0/24 | awk '\''/^Nmap scan report/{print ""; print; next}{print}'\'''
+
+
+Epilogue
+There’s more to be said about this subject, but too much of this stuff is not healthy.
+Links
+
+Ken Fallon’s HPR show where he describes nmap: hpr3052 :: Locating computers on a network
+Bash Reference Manual:
+
+Quoting
+
+Stack Overflow articles:
+
+Difference between single and double quotes in Bash
+How to escape a double quote inside double quotes
+
+
+
+
+
+This is quite an artificial example to make a point. You wouldn’t do things this way in reality. Using x='string1'"'string2" would also work ('string1' in single quotes, and "'string2'" in double quotes). Also, you could just write x="string1'string2" and stop all the messing about, but that would not be much of an example!↩
+The backslash is making the space a literal space, otherwise Bash would see it as an argument delimiter, and would look for the files 'a', 'file', 'with' and 'spaces.awk' to list details about!↩
+
+

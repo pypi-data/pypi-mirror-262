@@ -1,0 +1,194 @@
+## hpr3745 :: Pinecil walkthrough
+
+ Pinecil – a RISC-V powered, open and versatile soldering iron. It can
+be  powered via USB-C PD as well as a DC5525 jack, and runs
+community developed  software. Moreover, it is compatible with
+popular TS-100 tips. All this at half  the price of the
+competition.
+Pine64 Pinecil
+Version
+
+Long press on minus button shows the version  v2.18.A1A569A
+17-07-22
+
+Secret setting
+
+Long press on minus button then short press on the plus button shows
+the version with the elapsed time the iron is on.
+
+This is is seconds, with the last digit in 100mS increments
+
+example 101 = 10 seconds and 100 milliseconds
+
+
+
+
+
+Menu
+
+Power Settings
+
+Power source
+
+Sets cutoff voltage. (DC 10V) (S 3.3V per cell, disabled power
+limit)
+
+QC Voltage 20.0
+
+Max QC Voltage the iron should negotiate for
+Range: 9 to 22 volts
+
+PD Timeout (20)
+
+PD negotiation timeout in 100ms steps for compatibility with some QC
+chargers
+Range: 1 to 50 seconds / Off 
+
+
+Soldering settings
+
+Boost temp 410∘
+
+Tip temperature used in "boost mode"
+Range: 10 to 450 degrees (Increments of 10)
+
+Start-up behavior (0)
+
+0=off | S=heat up to soldering temp | Z=standby at sleep temperature
+until moved | R=Standby without heating until moved
+
+Temperature change short (1)
+
+Temperature-change-increment on short button press
+Range: 1 to 50
+
+Temperature change long (10)
+
+Temperature-change-increment on short button press
+Range: 5 to 90 (Increments of 5)
+
+Allow locking buttons (D)
+
+While soldering, hold down both buttons to toggle locking them
+(D=disable | B=boost mode only | F=full locking) 
+
+
+Sleep mode
+
+Motion Sensitivity (7)
+
+0=off | 1=least sensitive | ... | 9=most sensitive
+
+Sleep temp (110 degrees)
+
+Tip temperature while in "sleep mode"
+Range: 10 to 300
+
+Sleep timeout (50s)
+
+Interval before "sleep mode" kicks in (s=seconds | m=minutes)
+Range: 10s to 50s | 1m to 10m | Off
+
+Shutdown timeout 10m
+
+Interval before the iron shuts down (m=minutes)
+Range: 1m to 60m | Off 
+
+
+User interface
+
+Temperature unit (C)
+
+C=Celsius | F=Fahrenheit
+
+Display orientation (R)
+
+R=right-handed | L=left-handed | A=automatic
+
+Cooldown flashing ☐
+
+Flash the temperature reading after heating was halted while the tip
+is still hot
+
+Scrolling speed (S)
+
+Speed info text scrolls past at (S=slow | F=fast)
+
+Swap +- key ☐
+
+Reverse assignment of buttons for temperature adjustment
+
+Anim. speed (M)
+
+Pace of icon animations in the menu (0=off | S=slow | M=medium |
+F=fast)
+
+Anim. loop ☐
+
+Loop icon animations in main menu
+
+(Brightness icon) (4)
+
+Adjust the brightness of the OLED screen
+
+(Invert icon) ☐
+
+Invert the colors of the OLED screen
+
+Boot logo duration (1s)
+
+Sets the duration for the boot logo (s=seconds)
+Range: 1-4s | Infinite | Off
+
+Detailed idle screen ☐
+
+Display detailed information in a smaller font on the idle
+screen
+
+Detailed solder screen ☐
+
+Display detailed information in a smaller font on the soldering
+screen
+
+
+Advanced Settings
+
+Power limit (35 W)
+
+Maximum power the iron can use (W=watts)
+Range: Off or 0 to 95W (Increments of 5)
+
+Reset factory settings?
+
+Reset all settings to default
+
+Calibrate temperature
+
+Start tip temperature offset calibration
+
+Calibrate input voltage
+
+Start VIN calibration (long press to exit)
+
+Power pulse (0.5)
+
+Intensity of power of keep-awake-pulse (watt)
+Range 0.1 to 9.9 | Off
+
+Power pulse delay (4)
+
+Delay before keep-awake-pulse is triggered (x 2.5s)
+Range: 1 to 9
+
+Power pulse duration (1)
+
+Keep-awake-pulse duration (x 250ms)
+Range: 1 to 9
+
+
+Barrel Power Supply
+
+ALITOVE 24V Power Supply 4A
+96W
+
+

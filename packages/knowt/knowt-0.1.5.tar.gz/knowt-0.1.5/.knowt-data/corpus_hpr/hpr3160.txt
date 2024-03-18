@@ -1,0 +1,9 @@
+## hpr3160 :: GIMP: Transform Tools
+
+ Transform Tools are where you start to manipulate an image. You can move it around, stretch it, rotate it, crop it, and so on. This is the third of the four groups of tools we will look at for GIMP.
+Links:
+
+https://docs.gimp.org/2.8/en/
+https://en.wikipedia.org/wiki/Transformation_matrix
+https://www.ahuka.com/gimp/transform-tools/
+

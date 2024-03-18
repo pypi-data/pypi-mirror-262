@@ -1,0 +1,40 @@
+## hpr2181 :: Install OpenBSD from Linux using Grub
+
+ Install OpenBSD from Linux using Grub
+Why OpenBSD
+Tune in for another episode.
+Why install from linux
+
+Most VPS providers have images for linux, but not OpenBSD
+Easier than trying to upload custom image or iso.
+
+Grub2
+
+Start with a distro that uses grub2. I use Centos7
+grub2 can load OpenBSD kernels.
+The openbsd installer is a OpenBSD kernel.
+
+Procedure
+
+Make sure you have console access to the linux VM
+Record the Network info for the running linux VM. If not using DHCP, you will need to know the IP, netmask, default route (gateway), and a DNS server.
+Download the OpenBSD installation ram disk to /boot
+cd /boot
+wget https://ftp5.usa.openbsd.org/pub/OpenBSD/6.0/amd64/bsd.rd
+Reboot
+Enter the grub command prompt by pressing c at the grub menu
+The grub2 prompt has tab completion which can be helpful.
+Type ls to see the available disks
+Load the OpenBSD installation ram disk and boot
+grub> set root=(hd0,msdos1)
+grub> kopenbsd /bsd.rd
+grub> boot
+
+The Installation
+
+The Installer will ask you several questions
+The default is almost always what you want. If unsure, just press enter.
+Look at the FAQ if you get stuck
+Enter the network settings of the linux VPS
+When asked "Location of sets", use HTTP
+

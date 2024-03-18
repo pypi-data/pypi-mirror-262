@@ -1,0 +1,434 @@
+## hpr2066 :: HPR Community News for June 2016
+
+ 
+New hosts
+
+Welcome to our new hosts: 
+handsome_pirate, 
+    Tony Hughes AKA TonyH1212, 
+    Todd Mitchell.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+2043
+Wed
+2016-06-01
+My First Beer Podcast
+JustMe
+
+
+2044
+Thu
+2016-06-02
+Bring on the Power!
+NYbill
+
+
+2045
+Fri
+2016-06-03
+Some other Bash tips
+Dave Morriss
+
+
+2046
+Mon
+2016-06-06
+HPR Community News for May 2016
+HPR Volunteers
+
+
+2047
+Tue
+2016-06-07
+Neo Fetch 1.5
+JWP
+
+
+2048
+Wed
+2016-06-08
+The Hubot chat-bot
+John Duarte
+
+
+2049
+Thu
+2016-06-09
+My Raspberry Pi Home Server
+Knightwise
+
+
+2050
+Fri
+2016-06-10
+Developing Black & White Film
+handsome_pirate
+
+
+2051
+Mon
+2016-06-13
+My Linux Journey
+Tony Hughes AKA TonyH1212
+
+
+2052
+Tue
+2016-06-14
+A Nerdy Conversation With Linden About Technology
+sigflup
+
+
+2053
+Wed
+2016-06-15
+My 2nd HPR Beer Podcast
+JustMe
+
+
+2054
+Thu
+2016-06-16
+Blather Configuration Part 1: Desktop Management
+Jon Kulp
+
+
+2055
+Fri
+2016-06-17
+GNU Nano Editor
+JWP
+
+
+2056
+Mon
+2016-06-20
+Interview with a young hacker
+Tony Hughes AKA TonyH1212
+
+
+2057
+Tue
+2016-06-21
+dodddummy on oats
+dodddummy
+
+
+2058
+Wed
+2016-06-22
+My 14th Beer Podcast
+JustMe
+
+
+2059
+Thu
+2016-06-23
+More Tech, Less Magic
+Todd Mitchell
+
+
+2060
+Fri
+2016-06-24
+Introduction to sed - part 5
+Dave Morriss
+
+
+2061
+Mon
+2016-06-27
+Handwriting
+droops
+
+
+2062
+Tue
+2016-06-28
+Now The Chips Are Definitely Down
+MrX
+
+
+2063
+Wed
+2016-06-29
+My 3rd HPR Beer Podcast
+JustMe
+
+
+2064
+Thu
+2016-06-30
+Test-Driving Devuan
+Frank Bell
+
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This discussion takes
+place on the Mail List which is open to all
+HPR listeners and contributors. The discussions are open and available on the
+Gmane
+archive.
+
+The main threads this month were:
+
+From: Ken Fallon <ken@...>
+Date: 2016-05-07 17:17:26 +0200
+Subject: HPR Policy Change - HTML default in RSS Feed
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1197
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2016-06-08 21:58:35 +0200
+Subject: HPR on Google Play Podcast
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1239
+Messages: 6
+From: Ken Fallon <ken@...>
+Date: 2016-06-11 12:07:35 +0200
+Subject: Fwd: Just hit 1000 IA uploads
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1245
+Messages: 3
+From: Dave Morriss <perloid@...>
+Date: 2016-06-11 19:52:08 +0100
+Subject: Changes to series and the series.php page
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1248
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2016-06-13 11:41:35 +0200
+Subject: Book Club
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1250
+Messages: 1
+From: sigflup synasloble <pantsbutt@...>
+Date: 2016-06-13 08:30:58 -0500
+Subject: dos?
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1251
+Messages: 2
+From: Ken Fallon <ken@...>
+Date: 2016-06-15 16:23:59 +0200
+Subject: Changes to the website
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1253
+Messages: 2
+From: "Thaj A. Sara" <thajasara@...>
+Date: 2016-06-15 15:17:37 -0400
+Subject: Re: Hpr Digest, Vol 93, Issue 5
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1255
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2016-06-16 08:52:53 +0200
+Subject: Re: Changes to the website
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1256
+Messages: 1
+From: Clinton Roy <clinton.roy@...>
+Date: 2016-06-17 09:37:15 +1000
+Subject: comments rss feed
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1257
+Messages: 5
+From: Ken Fallon <ken@...>
+Date: 2016-06-20 12:37:02 +0200
+Subject: Live @ PodcastAwards.com on June 26th @ 8pm EST
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1262
+Messages: 7
+From: Dave Morriss <perloid@...>
+Date: 2016-06-27 19:40:22 +0100
+Subject: HPR Community News - next Saturday on 2016-07-02T18:00:00Z
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1269
+Messages: 1
+From: "Kevin O'Brien" <zwilnik@...>
+Date: 2016-06-27 19:17:27 -0400
+Subject: Uploading not working?
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1270
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2016-06-28 16:04:08 +0200
+Subject: Upload not possible
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1271
+Messages: 2
+From: Clinton Roy <clinton.roy@...>
+Date: 2016-06-30 14:09:02 +1000
+Subject: World map of contributors?
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/1273
+Messages: 4
+
+Total messages this month: 38
+Comments this month
+These are comments which have been made during the past month, either to shows
+released during the month or to past shows.
+There are 38 comments:
+
+hpr1976
+(2016-02-29) "Introduction to sed - part 1"
+by Dave Morriss.
+ Comment 5:
+Frank on 2016-06-01:"[no title]" Comment 6:
+Frank on 2016-06-03:
+"LO and SED" Comment 7:
+Dave Morriss on 2016-06-05:
+"Regex in Libre Office"
+
+hpr2013
+(2016-04-20) "Parsing XML in Python with Xmltodict"
+by klaatu.
+ Comment 3:
+Luiz Rodrigo on 2016-06-28:
+"THANKS!"
+
+hpr2028
+(2016-05-11) "Some basic info on alarm systems"
+by schism.
+ Comment 6:
+Bill on 2016-06-03:"[no title]" Comment 7:
+Frank on 2016-06-03:"[no title]"
+
+hpr2029
+(2016-05-12) "The DSO138 Oscilloscope Kit"
+by NYbill.
+ Comment 2:
+NYbill on 2016-06-04:"[no title]" Comment 3:
+Dave Morriss on 2016-06-05:
+"Pre-built kit"
+
+hpr2034
+(2016-05-19) "Frank's Five Seed Bread"
+by Frank Bell.
+ Comment 4:
+Frank on 2016-06-01:"[no title]"
+
+hpr2035
+(2016-05-20) "Building Community"
+by droops.
+ Comment 6:
+FiftyOneFifty on 2016-06-17:"[no title]"
+
+hpr2038
+(2016-05-25) "Attempting to fix a plastic boat"
+by Jezra.
+ Comment 4:
+Kathy scogna on 2016-06-03:
+"Director"
+
+hpr2042
+(2016-05-31) "My podcast list"
+by janedoc.
+ Comment 1:
+Kevin O'Brien on 2016-05-31:
+"Dan Carlin" Comment 2:
+Jon Kulp  on 2016-06-01:
+"Ask Me Another " Comment 3:
+Dave Morriss on 2016-06-01:
+"Frank Delaney et al"
+
+hpr2044
+(2016-06-02) "Bring on the Power!"
+by NYbill.
+ Comment 1:
+rocket-dog on 2016-06-07:"[no title]" Comment 2:
+NYbill on 2016-06-11:"[no title]"
+
+hpr2047
+(2016-06-07) "Neo Fetch 1.5"
+by JWP.
+ Comment 1:
+FiftyOneFifty on 2016-06-07:
+"Neat little app, thanks"
+
+hpr2049
+(2016-06-09) "My Raspberry Pi Home Server"
+by Knightwise.
+ Comment 1:
+pitfd on 2016-06-09:
+"Server Setup" Comment 2:
+Jon Kulp on 2016-06-10:
+"CenterIM" Comment 3:
+Jon Kulp on 2016-06-11:
+"CLI word processing" Comment 4:
+laindir on 2016-06-16:
+"Me too"
+
+hpr2050
+(2016-06-10) "Developing Black & White Film"
+by handsome_pirate.
+ Comment 1:
+Clinton Roy on 2016-06-21:"[no title]"
+
+hpr2052
+(2016-06-14) "A Nerdy Conversation With Linden About Technology"
+by sigflup.
+ Comment 1:
+gurdonark on 2016-06-20:
+"Good listen"
+
+hpr2053
+(2016-06-15) "My 2nd HPR Beer Podcast"
+by JustMe.
+ Comment 1:
+FiftyOneFifty on 2016-06-17:"[no title]"
+
+hpr2054
+(2016-06-16) "Blather Configuration Part 1: Desktop Management"
+by Jon Kulp.
+ Comment 1:
+amunizp on 2016-06-17:
+"Headless?" Comment 2:
+Jon Kulp on 2016-06-17:
+"Probably"
+
+hpr2055
+(2016-06-17) "GNU Nano Editor"
+by JWP.
+ Comment 1:
+amunizp on 2016-06-17:
+"+1 for nano" Comment 2:
+0xf10e on 2016-06-18:
+"-1 for facebook, too"
+
+hpr2056
+(2016-06-20) "Interview with a young hacker"
+by Tony Hughes AKA TonyH1212.
+ Comment 1:
+Tony Hughes on 2016-05-16:
+"Links to Blackpool Makerspace and Jam" Comment 2:
+Tony Hughes on 2016-05-17:
+"Interview with a young hacker" Comment 3:
+Jon Kulp  on 2016-06-21:
+"Excellent! "
+
+hpr2057
+(2016-06-21) "dodddummy on oats"
+by dodddummy.
+ Comment 1:
+Luke on 2016-06-30:
+"Steel cut oats"
+
+hpr2059
+(2016-06-23) "More Tech, Less Magic"
+by Todd Mitchell.
+ Comment 1:
+Jon Kulp on 2016-06-23:
+"More!" Comment 2:
+Todd Mitchell on 2016-06-24:"[no title]"
+
+hpr2061
+(2016-06-27) "Handwriting"
+by droops.
+ Comment 1:
+Brian on 2016-06-27:"[no title]" Comment 2:
+jezra on 2016-06-28:"[no title]" Comment 3:
+Frank on 2016-06-28:"[no title]"
+
+hpr2062
+(2016-06-28) "Now The Chips Are Definitely Down"
+by MrX.
+ Comment 1:
+Mike Ray on 2016-06-28:
+"Baofeng UV5R"
+
+

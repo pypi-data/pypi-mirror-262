@@ -1,0 +1,45 @@
+## hpr3070 :: making vim xdg compatible
+
+ xdg vim config
+To make vim load an alternative config file either use an alias or the VIMINIT variable. i.e. place either alias vim="vim -u ~/.config/vim/vimrc" or VIMINIT="source ~/.config/vim/vimrc" in your .bashrc (ironically, that one is still in my home folder).
+Once that is loaded, you should source the following file after "nocompatible"
+" file: ~/.config/vim/xdg.vim
+if empty($XDG_CACHE_HOME)
+    let $XDG_CACHE_HOME=$HOME."/.cache"
+endif
+
+if empty($XDG_CONFIG_HOME)
+    let $XDG_CONFIG_HOME=$HOME."/.config"
+endif
+
+if empty($XDG_DATA_HOME)
+    let $XDG_DATA_HOME=$HOME."/.local/share"
+endif
+
+set directory=$XDG_CACHE_HOME/vim/swap,~/,/tmp
+set backupdir=$XDG_CACHE_HOME/vim/backup,~/,/tmp
+set undodir=$XDG_CACHE_HOME/vim/undo,~/,/tmp
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+set runtimepath+=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$XDG_DATA_HOME/vim/bundle/Vundle.vim,$VIM,$VIMRUNTIME
+let $MYVIMRC=$XDG_CONFIG_HOME."/vim/vimrc"
+
+With this file in place you should call it from your vimrc
+" file: ~/.config/vim/vimrc
+set nocompatible
+filetype off
+source $HOME/.config/vim/xdg.vim
+call vundle#begin()
+let vundle#bundle_dir = expand("$XDG_DATA_HOME/vim/bundle")
+
+" include your calls to Plugin here
+
+call vundle#end()
+filetype plugin indent on
+syntax on
+
+source ~/.config.
+
+Note that it is important that all the paths are defined BEFORE Vundle (or whatever is your plugin manager) is called, since the path to it is defined in xdg.vim.
+You can check my full vim config at gitlab.
+References
+The vim script I modified my config from - https://gist.github.com/dkasak/6ae1c6bf0d771155f23b

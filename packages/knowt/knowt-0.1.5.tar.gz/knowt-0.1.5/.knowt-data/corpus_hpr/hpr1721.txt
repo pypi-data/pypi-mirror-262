@@ -1,0 +1,22 @@
+## hpr1721 :: Cross-compilers Part 2
+
+ 
+In part 1 I described cross-compiling, what it means and why you might
+want to, or even need to use it.
+
+
+I also described how to create a cross-compiler tool-chain using crosstool-ng.
+
+
+In this show I will demonstrate using one of the cross-compilers which
+I created as described in the last show to compile a Raspberry Pi Linux kernel.
+
+
+As usual with my shows the show-notes can't be squashed into 4k, so there is an HTML version at:
+
+
+https://hackerpublicradio.org/eps/hpr1721/index.html
+https://hackerpublicradio.org/eps/hpr1721/index.md
+https://hackerpublicradio.org/eps/hpr1721/kcc
+Edited: hpr1706 :: Cross-compilers part 1
+

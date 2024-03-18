@@ -1,0 +1,123 @@
+## hpr1453 :: HPR Coverage at FOSDEM 2014 Part 4
+
+ HPR Coverage at FOSDEM 2014
+The following are a series of interviews recorded at FOSDEM 2014.
+FOSDEM is a free event that offers open source communities a place to meet, share ideas and collaborate.
+For more information see the website https://fosdem.org/2014/, where you can watch a recording of the many talks https://video.fosdem.org/2014/
+Day 2 Part 2
+00:00:30 OpenEmbedded
+We talk to Intel employee Paul Eggleton, who talked to us about OpenEmbedded and the yocto project.
+ Paul Eggleton and Apelete Seketeli at the OpenEmbedded booth
+The Yocto Project is an open source collaboration project that provides templates, tools and methods to help you create custom Linux-based systems for embedded products regardless of the hardware architecture. OpenEmbedded offers a best-in-class cross-compile environment. It allows developers to create a complete Linux Distribution for embedded systems
+ 00:02:48 ODROID with external display showing a waterfall display as described in the interview.
+ 00:03:25 The Galileo board as described in the interview.
+ 00:05:16 The Intel MinnowBoard as described in the interview.
+ 00:06:57 Industrial controller from a cable layer as described in the interview.
+ 00:06:57 Industrial controller buttons
+ 00:07:40 Toshiba arm development board with a smaller lcd screen
+ 00:08:04 OUYA console out of case
+Links
+
+https://www.yoctoproject.org/
+https://openembedded.org/wiki/Main_Page
+https://www.samsung.com/global/business/semiconductor/minisite/Exynos/platform_partners_platform.html
+https://arduino.cc/en/ArduinoCertified/IntelGalileo
+https://www.minnowboard.org/
+https://en.wikipedia.org/wiki/Ouya
+https://www.minnowboard.org/
+https://beagleboard.org/products/beaglebone%20black
+https://www.intel.com
+https://beagleboard.org/Products/BeagleBone+Black
+
+00:10:17 BSD
+We chat to Daniel Seuffert about the various BSD's.
+About FreeBSD:
+FreeBSD is an advanced computer operating system used to power modern servers, desktops and embedded platforms. A large community has continually developed it for more than thirty years. Its advanced networking, security and storage features have made FreeBSD the platform of choice for many of the busiest web sites and most pervasive embedded networking and storage devices.
+About OpenBSD:
+The OpenBSD project produces a FREE, multi-platform 4.4BSD-based UNIX-like operating system. Our efforts emphasize portability, standardization, correctness, proactive security and integrated cryptography. As an example of the effect OpenBSD has, the popular OpenSSH software comes from OpenBSD.
+About NetBSD:
+NetBSD is a free, fast, secure, and highly portable Unix-like Open Source operating system. It is available for a wide range of platforms, from large-scale servers and powerful desktop systems to handheld and embedded devices. Its clean design and advanced features make it excellent for use in both production and research environments, and the source code is freely available under a business-friendly license. NetBSD is developed and supported by a large and vivid international community. Many applications are readily available through pkgsrc, the NetBSD Packages Collection.
+About PC-BSD®:
+PC-BSD® is a user friendly desktop Operating System based on FreeBSD. Known widely for its stability and security in server environments, FreeBSD provides an excellent base on which to build a desktop operating system. PC-BSD uses a host of popular open source window managers and uses a custom-tailored application installer that puts popular applications in easy reach of users.
+Links
+
+https://www.freebsd.org/
+https://www.openbsd.org/
+https://www.netbsd.org/
+https://www.pcbsd.org/
+
+00:27:16 Olimex Ltd
+Tsvetan Usunov was giving away small penguin shaped arduino computers for free. The snag, you had to solder them yourselves. On day 1 over a hundred boards were soldered by programmers and all worked.
+Olimex Ltd is a leading provider for development tools and programmers for embedded market. The company has over 20 years’ experience in designing, prototyping and manufacturing printed circuit boards, sub-assemblies, and complete electronic products. We are established in 1991 in Plovdiv - the second largest city in Bulgaria.
+ Tux powered led strips
+ Tux measuring the temprature
+ Tux led strips overview
+ A10-OLinuXino, the small pc refered to in the openstreetmap interview
+ Panel with keyboard
+ A13-OLinuXino is a small server...
+ .. with hard disk
+ .. on it's side
+Links
+
+https://www.olimex.com/
+https://www.olimex.com/Products/OLinuXino/A10/A10-OLinuXino-LIME/open-source-hardware
+https://www.arduino.cc/
+https://plus.google.com/102255887343137829901/posts
+https://www.olimex.com/Products/OLinuXino/A13/A13-OLinuXino/open-source-hardware
+
+00:36:09 Pandora
+Next a chat with an Evildragon aka Michael Mrozek who talks to us about the OpenPandora device, and what's coming next.
+The Pandora is a handheld game console designed to take advantage of existing open source software and to be a target for homebrew development. The first copy was released in May 2008 and others in May 2010, and is developed by OpenPandora, which is made up of former distributors and community members of the GP32 and GP2X handhelds. When announcing the system, the designers of Pandora stated that it would be more powerful than any handheld video game console that had yet existed. It includes several features that no handheld game consoles have previously had, making it a cross between a handheld game console and a subnotebook.
+Links
+
+https://boards.openpandora.org/page/homepage.html
+https://en.wikipedia.org/wiki/Pandora_(console)
+https://openphoenux.org/
+https://projects.goldelico.com/p/gta04-main/
+
+00:44:40 Python
+We stop by the Python booth and find out how to tame the beast.
+Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.
+Links
+
+https://python.org/
+https://learnpythonthehardway.org/
+
+00:49:55 Jenkins
+We talk to Kohsuke Kawaguchi the lead developer of Jenkins.
+ KK and the Jenkins mascot
+ The Jenkins mascot
+From Wikipedia:
+Jenkins is an open source continuous integration tool written in Java. The project was forked from Hudson after a dispute with Oracle. Jenkins provides continuous integration services for software development. It is a server-based system running in a servlet container such as Apache Tomcat. It supports SCM tools including AccuRev, CVS, Subversion, Git, Mercurial, Perforce, Clearcase and RTC, and can execute Apache Ant and Apache Maven based projects as well as arbitrary shell scripts and Windows batch commands. The primary developer of Jenkins is Kohsuke Kawaguchi. Released under the MIT License, Jenkins is free software.
+Links
+
+https://jenkins-ci.org/
+https://www.cloudbees.com/
+https://en.wikipedia.org/wiki/Jenkins_(software)
+
+00:56:14 Puppet
+Over at the Puppet booth we talk to Eric Sorenson from PuppetLabs and Bert Van Vreckem from the Belgium Puppet user group.
+Puppet Open Source is a flexible, customizable framework available under the Apache 2.0 license designed to help system administrators automate the many repetitive tasks they regularly perform. As a declarative, model-based approach to IT automation, it lets you define the desired state - or the “what” - of your infrastructure using the Puppet configuration language. Once these configurations are deployed, Puppet automatically installs the necessary packages and starts the related services, and then regularly enforces the desired state. In automating the mundane, Puppet frees you to work on more challenging projects with higher business impact. Puppet Open Source is the underlying technology for Puppet Enterprise and runs on all major Linux distributions, major Unix platforms like Solaris, HP-UX, and AIX, and Microsoft Windows.
+Links
+
+https://puppetlabs.com/
+https://projects.puppetlabs.com/users/693
+https://be.linkedin.com/in/bertvanvreckem
+https://www.meetup.com/Belgian-Puppet-User-Group/
+
+Music
+Track name                               : Free Software Song
+Performer                                : Fenster
+Recorded date                            : 2002
+Copyright                                : Copyright (C) 2002, 
+Fenster LLC. Verbatim copying of this entire recording is permitted in any medium, 
+provided this notice is preserved. 
+Performers: 
+Paul Robinson (vocals), 
+Roman Kravec (guitar), 
+Ed D'Angelo (bass), 
+Dave Newman (drums), 
+Brian Yarbrough (trumpet), 
+Tony Moore (trumpet). 
+Free software info at www.gnu.org speeches at audio-video.gnu.org/audio
+

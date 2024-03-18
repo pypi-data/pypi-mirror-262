@@ -1,0 +1,88 @@
+## hpr1944 :: sshfs - Secure SHell FileSystem
+
+ 
+This is a topic Ken Fallon has been wanting someone to do for some time, but I didn't want to talk about sshfs until the groundwork for ssh in general was laid.  Fortunately, other hosts have recently covered the basics of ssh, so I don't have to record a series of episodes just to get to sshfs.
+
+
+From the sshfs man page:   SSHFS (Secure SHell FileSystem) is a file system for Linux (and other operating systems with a FUSE implementation, such as Mac OS X  or  FreeBSD)  capable  of operating  on files on a remote computer using just a secure shell login on the remote computer. On the local computer where the SSHFS is mounted,  the  implementation  makes  use  of the FUSE (Filesystem in Userspace) kernel module. The practical effect of this is that the end  user  can  seamlessly  interact  with remote files being securely served over SSH just as if they were local files on his/her computer. On the remote computer the SFTP subsystem of SSH is used.
+
+
+In short, sshfs offers a dead simple way of mounting remote network volumes from another system on at a specified mount point on your local host, with encrypted data communications.  It's perfect for at hoc connections on mobile computers or more permanent links.  This is tutorial is going to be about how I use sshfs, rather than covering every conceivable option. I really think my experience will cover the vast majority of use cases without making things complicated, besides, I don't like to discuss options I haven't used personally.
+
+
+There are other ways to mount remote storage, most noteably SAMBA,  but unless you are trying to connect to a Windows share, sshfs is far less trouble to set up, escpecially since most distros come with ssh-server already installed.
+
+
+The first thing to do when preparing to use sshfs is to create a mountpoint on your local computer.  For most purposes, you should create a folder inside your home folder.  You should plan to leave this folder empty, because sshfs won't mount inside a folder that already has files in it.   If I was configuring sshfs on a machine that had multiple users, I might set up a mount point under /media, then put symlinks in every user's home folder.
+
+
+The sshfs command syntax reminds me of many of the other extended commands based ssh, like scp. The basic format is:
+sshfs username@<remote_host>:  mountpoint
+
+
+To put things in a better  perspective, I'll use my situation as an example.   My home server is on 192.168.2.153.   If you have a hostname set up,you can use that instead of an IP. For the sake of arguement, my mountpoint for network storage is /home/fifty/storage .  So, I can mount the storage folder on my server using:
+
+
+sshfs fifty@192.168.2.153: /home/fifty/storage
+
+
+By default, your whole home directory on the remote system will be mounted at your mountpoint.  You may have noticed the colon after the IP address, it is a necessary part of the syntax.  Lets say you don't wish to mount your whole remote home folder, perhaps just the subdirectory containing shared storage.  In my case, my server is an Raspberry Pi 2 with a 5Tb external USB drive which is mounted under /home/fifty/storage .  Say, I only want to mount my shared storage, not everything in my home folder, I modify my command to be:
+
+
+sshfs fifty@192.168.2.153:storage /home/fifty/storage
+  .or.
+sshfs fifty@192.168.2.153:/home/fifty/storage /home/fifty/storage
+
+
+Except that generally doesn't work for me, and I'll come to that presently.  The 5Tb USB drive on the server isn't actually mounted in my home folder, it automounts under /media.  The directory /home/fifty/storage on the server is actually a symlink to the actual mountpoint under /media.  To make sshfs follow symlinks, you need to add the option '-o follow_symlinks', so now my sshfs command looks like:
+
+
+sshfs fifty@192.168.2.153: /home/fifty/storage -o follow_symlinks
+
+
+You may have noticed, the "-o" switch comes at end the end of the command.  Usually switches come right after the command, and before the arguements.  
+
+
+This will allow sshfs to navigate symlinks, but I've discovered not all distros are comfortable using a symlink as the top levelfolder in a sshfs connection.  For example, in Debian Wheezy, I could do:
+
+
+sshfs fifty@192.168.2.153:storage /home/fifty/storage -o follow_symlinks
+
+
+Other distros, Ubuntu, Mint, Fedora so far don't like to connect to a symlink at the top level.  For those distros, I need to use:
+
+
+sshfs fifty@192.168.2.153: /home/fifty/storage -o follow_symlinks
+
+
+and walk my way down to storage.
+
+
+Other related options and commands I haven't used but you may be interested in include -p , for Port.  Lets say the remote server you want to mount is not on your local network, but a server out on the Internet, it probably won't be on the default ssh port.  Syntax in this case might look like:
+
+
+sshfs -p 1022 fifty@142.168.2.153:storage /home/fifty/storage -o follow_symlinks
+
+
+Reading the man page, I also find "-o allow_root" which is described as "allow access to root" .  I would expect, combined with a root login, this would mount all of the storage on the remote system, not just a user's home directory, but without direct expertience, Iwouldn't care to speculate further. 
+
+
+The mount can be broken with 'fusermount -u <mountpoint>'. 
+
+
+At this point, I could explain to you how to modify /etc/fstab to automatically mount a sshfs partition. The trouble is, /etc/fstab is processed for local storage before any network connections are made.   Unless you want to modify the order in which services are enabled, no remote storage will ever be available when /etc/fstab is processed.  It makes far more sense to encapsulate your sshfs command inside a script file and either have it autoloaded with your desktop manager or manually loaded when needed from a terminal.
+
+
+One thing to watch out for, is saving files to the mountpoint when the remote storage is not actually mounted, i.e., you save to a default path under a mountpoint you expect to be mounted and is not, so all the sudden you have files in a folder that is supposed to be empty.  To remount the remote storage, you have to delete/move the paths created at your designated mountpoint, to leave a pristeen, empty folder again.
+
+
+Weihenstephaner Vitus - The label says it's a Weizenbock, so we know its a strong, wheat based lager
+
+
+https://us.weihenstephaner.com/en/our-beers/?slide=Vitus#slider-beer-main
+
+https://www.beeradvocate.com/beer/profile/252/35625/
+
+
+
+IBU 17  ABV 7.7%

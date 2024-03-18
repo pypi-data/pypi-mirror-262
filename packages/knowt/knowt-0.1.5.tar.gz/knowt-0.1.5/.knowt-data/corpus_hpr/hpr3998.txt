@@ -1,0 +1,7 @@
+## hpr3998 :: Using open source OCR to digitize my mom's book
+
+ To improve the speed of my workflow, I wrote a bash script that uses the
+open source programs gphoto2, tesseract,
+grep and ImageMagick to digitize my mom's 338 page
+book. Here is the link to the script:
+https://github.com/deltaray/ocr-script

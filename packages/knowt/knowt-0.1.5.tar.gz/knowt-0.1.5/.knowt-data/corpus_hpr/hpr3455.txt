@@ -1,0 +1,77 @@
+## hpr3455 :: Podcast Recommendation: IBM and Quantum computing
+
+ Moore's Lobby
+Ep. 34 | The Latest from the Lab: How IBM Research Is Inventing What's Next
+https://www.allaboutcircuits.com/podcast/ep-34-the-latest-from-the-lab-how-ibm-research-is-inventing-whats-next
+
+Rss feed: https://eetech.libsyn.com/rss
+Interview with Dr. Jeffrey Welser
+
+VP of Exploratory Science at IBM Research
+IBM Release first 2nm chip this year
+
+Engineers vs Scientists and how they drive innovations
+Goal to replace the transistor when Moore's Law stops scaling
+Managing thermal loads
+Finding new structures and materials to control current
+Neural nets, image recognition and AI
+Quantum computing
+
+Discussion starts at 34:35 into the podcast
+Richard Feynman, Early 80's
+
+https://www.feynman.com
+
+qubits
+
+superposition state
+"Spooky action at a distance"
+
+Encryption
+
+Need millions of qubits to break current encryption
+
+Only currently over 100 qubits
+At least a decade from having enough qubits
+Currently have classical systems that cannot be broken by quantum computers
+
+The math does not map onto a quantum system
+Currently working with NIST to create quantum safe cryptography
+
+https://csrc.nist.gov/Projects/Cryptographic-Standards-and-Guidelines
+
+
+
+
+Quantum chemistry
+Quantum chip - cooling and superconducting
+
+Dilution refrigerator
+
+Low temperature and pressure
+Top is 4 Kelvin, bottom gets to 15 milli Kelvin
+https://phys.org/news/2019-06-superconducting-quantum-refrigerator.html
+https://www.nist.gov/si-redefinition/kelvin-introduction
+
+
+Josephson junction
+
+It is the reference Volt as defined by NIST
+https://www.sciencedirect.com/topics/physics-and-astronomy/josephson-junctions
+https://en.wikipedia.org/wiki/Josephson_voltage_standard
+
+Use an IBM quantum computer online
+
+May 2016 the first quantum computer was put on the 'Net
+
+https://quantum-computing.ibm.com
+https://newsroom.ibm.com/2016-05-03-IBM-Makes-Quantum-Computing-Available-on-IBM-Cloud-to-Accelerate-Innovation
+300,000 users
+https://qiskit.org/documentation
+
+Qiskit is open-source software for working with quantum computers at the level of circuits, pulses, and algorithms.
+
+
+
+
+

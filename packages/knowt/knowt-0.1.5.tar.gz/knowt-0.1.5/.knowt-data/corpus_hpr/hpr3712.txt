@@ -1,0 +1,21 @@
+## hpr3712 :: The last ever CCHits.net Show
+
+ Over 12 years ago, Jon "The Nice Guy"
+Spriggs went to a "Pod Crawl" with (among others) Dave "The Love Bug" Lee, where he
+pitched the idea of a daily music promotion show, with a twist - it
+would all be automated, and use text-to-speech to introduce
+everything.
+The first show was released
+on 2010-10-24 and the last ever show (this one) was released on
+2022-10-12.
+Over the twelve years, Jon would go on to meet to meet Yannick and Ken Fallon, both
+of whom would go on to shape changes (big and small) to CCHits.
+This year, the cracks started to re-appear in the architecture
+underneath CCHits - between APIs shutting down that were used to load
+tracks to CCHits, and the general framework being used to write CCHits
+not receiving the care and attention it needed... and the team finally
+decided to stop adding new tracks, and let the process build the last
+few shows.
+This podcast gives you a peek behind the curtain to the team involved
+in the system, and gives you some of the high- and low-lights in the 12
+years the site ran for.

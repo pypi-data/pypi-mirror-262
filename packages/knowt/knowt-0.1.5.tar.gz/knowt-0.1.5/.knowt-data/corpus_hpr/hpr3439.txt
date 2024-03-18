@@ -1,0 +1,37 @@
+## hpr3439 :: Linux Inlaws S01E40: The One with the BSDs
+
+ In this episode, Martin and Chris host an eclectic panel of contributors to
+the *other* major FLOSS operating system family - you guessed it: the
+flavours of the Berkeley Software Distribution (aka BSD among friends).
+Disclaimer: you may be tempted to diverge from the Path of the
+Righteousness also known as Linux and give this alternative a spin. So
+this episode is *not* for the faint-hearted - listen at your own
+discretion! Also: the true defective nature of our beloved (?) hosts' past
+will be revealed - an episode not be missed despite the caveat! Plus
+a refresher on spaced-out operating system concepts including library
+operating systems and a rant on Android and friends. In addition to some
+cool BSD trolling...  
+Links:
+
+OpenBSD: https://www.openbsd.org
+FeeBSD: https://www.freebsd.org
+NetBSD: https://www.netbsd.org
+DragonFlyBSD: https://www.dragonflybsd.org
+386BSD: https://www.386bsd.org
+RUMP kernel: https://en.wikipedia.org/wiki/Rump_kernel
+Library operating systems: https://www.sigarch.org/leave-your-os-at-home-the-rise-of-library-operating-systems
+Free BSD Linux Compatibility: https://docs.freebsd.org/en/books/handbook/linuxemu
+BSD Jails (original paper): https://papers.freebsd.org/2000/phk-jails.files/sane2000-jail.pdf
+FeeBSD Ports: https://www.freebsd.org/ports
+NetBSD pkgsrc: https://www.netbsd.org/docs/pkgsrc
+ZFS: https://en.wikipedia.org/wiki/ZFS
+BSD's pledge: https://unix.stackexchange.com/questions/410056/what-is-openbsds-pledge-in-short
+FreeBSD and Netflix: https://papers.freebsd.org/2019/fosdem/looney-netflix_and_freebsd
+BSD Firewalls: https://docs.freebsd.org/en/books/handbook/firewalls
+Michael W. Lucas' "Savaged by Systemd": hhttps://www.goodreads.com/book/show/36190710-savaged-by-systemd
+Linux vs. Minix: https://www.oreilly.com/openbook/opensources/book/appa.html
+Pegasus spyware: https://en.wikipedia.org/wiki/Pegasus_(spyware)
+BSD History presentation: https://www.youtube.com/watch?v=DEEr6dT-4uQ
+The tragedy of systemd: https://www.youtube.com/watch?v=o_AIw9bGogo
+The Rise and Fall of Copyleft: https://archive.org/download/OhioLinuxfest2013/24-Rob_Landley-The_Rise_and_Fall_of_Copyleft.mp3
+

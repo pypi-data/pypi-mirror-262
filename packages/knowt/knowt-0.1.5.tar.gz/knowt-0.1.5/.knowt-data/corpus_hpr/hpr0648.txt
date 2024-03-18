@@ -1,0 +1,47 @@
+## hpr0648 :: Wput: a command-line ftp-client
+
+ 
+Wput is a command-line ftp-client that looks like wget but instead of downloading, uploads files or whole directories to remote ftp-servers.
+
+Main Features
+
+wget-like interface
+TLS-encryption
+resuming
+speed-limit
+time-stamping (compares local and remote dates)
+proxy-support (socks5, http)
+i18n
+windows-compatibility
+
+Wput is a free utility that is able to upload files to a
+ftp-server.
+
+Wput is non−interactive and background-capable. It
+can upload files or whole directories and is meant to be a
+robust client even for unstable connections and will
+therefore retry to upload a file, if the connection
+broke.
+
+Wput supports resuming, so it automatically continues
+uploading from the point where the previous upload stopped,
+meaning that you can kill Wput anytime and it will (if the
+remote ftp−server supports this, being most likely the
+case) finish the partial uploaded file.
+
+Wput supports connections through proxies, allowing you
+to use it in an environment that can access the internet
+only via a proxy or to provide anonymity by hiding your
+ip−address to the server. For SOCKSv5−proxies
+Wput supports also listening mode, allowing you to use
+port-mode ftp through a proxy (useful if the remote ftp is
+behind a firewall or a gateway).
+
+Wput supports timestamping, so it will (in the ideal case
+and if timestamping is enabled) only upload files, that are
+newer than the remote-file.
+
+The upload-rate of Wput can be restricted, so that Wput
+won’t eat all available bandwidth.
+https://wput.sourceforge.net/
+https://wput.sourceforge.net/wput.1.html

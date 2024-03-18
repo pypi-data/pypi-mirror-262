@@ -1,0 +1,65 @@
+## hpr4038 :: Network Attach Storage Options I Use Everyday
+
+ HPR Podcast January 19, 2024
+Here is a quick overview of the NAS systems/technology I use today
+and what I have used in the past. Some NAS systems don’t have all the
+features you want but today it’s becoming easier to make them do it with
+a few configurations. Overall, NAS technology has grown over the years
+and it’s blurred the lines in what we use to think of individual systems
+now bundled up into single devices.
+Network Attached Storage I use
+
+What is a NAS and why do I use one
+Compare NAS options I use
+Talk about some of the old things I used
+Conclusions about which NAS are right and why
+
+List of NAS I use
+
+Synology
+
+https://mariushosting.com/
+
+OMV
+
+https://www.openmediavault.org/
+
+TrueNas Scale
+
+https://www.truenas.com/truenas-scale/
+
+TrueNas Core
+
+https://www.truenas.com/truenas-core/
+
+Individual Drives
+Windows Storage Spaces
+
+https://support.microsoft.com/en-us/windows/storage-spaces-in-windows-b6c8b540-b8d8-fb8a-e7ab-4a75ba11f9f2
+
+
+Why do I use or have so many?
+
+I tinker a lot.
+I’m paranoid about backups.
+I enjoy spreading the load over different systems
+
+Old Ones
+
+Drobo
+
+https://www.drobo.com/docs/start-drobo-5n/
+
+FreeNas
+OwnCloud
+SAMBA
+Raid Enclosures
+Pogoplug
+
+https://www.reddit.com/r/pogoplug/comments/adcxfs/can_i_still_use_pogoplug_now_without_their_cloud/
+
+DLink 2323
+
+https://eu.dlink.com/uk/en/products/dns-323-sharecenter-2-bay-network-storage-enclosure
+
+

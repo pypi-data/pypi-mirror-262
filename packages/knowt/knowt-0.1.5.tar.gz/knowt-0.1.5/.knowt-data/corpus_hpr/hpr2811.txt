@@ -1,0 +1,3 @@
+## hpr2811 :: Interview with Alan Pope
+
+ A few years ago, when you wanted to install a package on your Linux system, you had to grab the source code, and the nightmare began. But nowadays, this is over. You have deb files, and snaps, and flatpacks, and many other package formats available. On this episode, I was joined by Alan Pope, from Canonical, to talk about one of them in particular : snaps.

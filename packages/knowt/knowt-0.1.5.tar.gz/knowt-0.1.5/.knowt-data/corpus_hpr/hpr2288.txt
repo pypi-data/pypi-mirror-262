@@ -1,0 +1,31 @@
+## hpr2288 :: Installing and using virtualenvwrapper for python
+
+ Installing Virtual env wrapper in linux
+Best documentation I have found for working with virtualenvwrapper:
+https://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/
+Assuming you have pip installed.
+
+Install virtualenv
+
+    sudo -H pip install virtualenv
+
+Install virtualenvwrapper
+
+    sudo -H pip install virtualenvwrapper
+
+Modify your .bashrc file to include that following lines:
+
+    export WORKON_HOME=~/Envs
+    source /usr/local/bin/virtualenvwrapper.sh
+
+Test the commands:
+
+mkvirtualenv <project_name>
+rmvirtualenv <project_name>
+lsvirtualenv (Lists all virtual environments you have
+created.)
+workon <project_name>
+deactivate
+
+Don't use SUDO when installing inside the virtualenv
+

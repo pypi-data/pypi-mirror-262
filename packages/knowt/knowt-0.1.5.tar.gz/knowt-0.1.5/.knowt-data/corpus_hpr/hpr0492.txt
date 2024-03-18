@@ -1,0 +1,63 @@
+## hpr0492 :: TIT Radio Ep 14
+
+ TiT Radio Episode 014 -
+Potluck Roundtable of Geeksmonsterb
+starts the show by mentioning the great shows on Hacker
+Public Radio like "Demo
+or Bust by SigFlup", "Talk
+Geek to Me by deepgeek", and mentions the active
+contributors like finux, Ken Fallon, Thistleweb, and lostnbronx. He also
+reads some email from Denny (Polarwave's
+OpenBSD Tips and Tricks for Newbies) and Jos (Camp
+KDE 2010).Azimuth talks about setting up a dirty,
+quick, temporary, unsecure, simple HTTP server to share files.1.)
+alias webshare='python -c
+"import SimpleHTTPServer;SimpleHTTPServer.test()"'2.)
+cd to directory to be served3.) webshare   
+# ctrl-c to exit.Az also mentions FOSSCasts
+(free screencasts covering Linux, Unix, and Open Source software in
+general).monsterb
+mentions Debian GNU/kFreeBSD
+(port that consists of GNU userland using the GNU C library on top of
+FreeBSD's kernel, coupled with the regular Debian package set). ISOs
+can be found at the Georgia
+Tech FTP.Klaatu
+talks about Quanta Plus (a
+highly stable and feature rich web development environment) and
+KDevelop (free opensource
+IDE).artv61 talks about Axel
+(a command line application which accelerates HTTP/FTP downloads by
+using multiple sources for one file).threethirty
+mentions the first FSF endorsed
+netbook running gNewSense.Source:
+In other words, DRM from
+top to bottom ... From LWN.netCOtW
+(Command of the Week):Azimuth$ inxi
+(command line information script)Download & Install: # cd
+/usr/local/bin && wget -Nc smxi.org/inxi && chmod +x
+inxiKlaatu$ find
+~ -type f -iname '*.ogg'Jman$ pinfo
+(viewer for Info documents, which is based on ncurses. The
+key-commands are in the style of lynx.)Other things
+mentioned: Chromium OS,
+Cranky Geeks, DistroWatch,
+KOffice, Linux
+Mint, Powerpill,
+Qt
+Creator, TuxRadar, and
+TuxRadar's "Code
+Project: create an ffmpeg front-end"
+
+Caller: SndChaser
+
+TerryF's Song of the
+Week: Shine by Cactus
+
+
+
+Please visit
+https://titradio.info for more
+information.
+
+
+

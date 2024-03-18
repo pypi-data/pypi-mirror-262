@@ -1,0 +1,47 @@
+## hpr3882 :: Alternatives to the cd command
+
+ Five or six ways I could think of to roam the files of your Linux computer without cd.
+pushd and popd dirs
+https://en.wikipedia.org/wiki/Pushd_and_popd
+The pushd command, when called with a filepath as an argument, saves
+the current working directory in memory (via a directory stack) so it
+can be returned to at any time, places the new filepath at the top of
+the stack, and changes to the new filepath. The popd command returns to
+the path at the top of the directory stack.
+cd -
+From man bash An argument of - is converted to $OLDPWD
+before the directory change is attempted.
+Variables
+EXPORT mydir="/path/to/file/"
+cd ${mydir}
+History and histverify
+Using !number from the history command will execute the command
+[user@pc ~]$ history
+1  cd tmp
+2  cd ~
+3  history
+
+[user@pc ~]$ !3
+cd tmp
+[user@pc tmp]$
+
+from the man command
+       shopt [-pqsu] [-o] [optname ...]
+              Toggle the values of settings controlling optional shell behavior.
+              ...
+              -s     Enable (set) each optname.
+              -u     Disable (unset) each optname.
+Now using !number from the history command will put the command on
+the prompt but you need to execute it yourself
+[user@pc ~]$ shopt -s histverify
+[user@pc ~]$ !39673
+[user@pc ~]$ cd tmp
+autocd command
+[ken@kalani ~]$ shopt -s autocd
+[ken@kalani ~]$ tmp
+cd -- tmp
+[ken@kalani tmp]$ ~
+cd -- /home/ken
+working without changing
+to directory
+[ken@kalani ~]$ ls tmp

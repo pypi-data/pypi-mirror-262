@@ -1,0 +1,64 @@
+## hpr3794 :: Retro Karaoke machine restored
+
+ ENTEX Electronics Electronic Singing Machine.
+Karaoke Model No. 1820. Entex Electronics Inc. Made in Taiwan. Late
+1970s early 1980s.
+It incorporates an 8-Track Player and Cassette Tape Recorder.
+It also uses the Bucket Brigade Device Echo (BBD ECHO) Power is supplied
+by
+AC 120 Volts. It also uses 10 D cell batteries, or alternatively 12-15
+volts DC.
+ENTEX
+Electronics Electronic Singing Machine
+Entex
+Electronics Handheld Games on the Internet Archive
+
+Belts
+Square
+Cassette Tape Machine Recorder Rubber Belt
+Cassette
+Recorder Repair Maintenance Mix Flat Cassette Tape Machine Rubber Belts
+(Width 4MM)
+
+USB Soundcard
+48KHz/44.1KHz sampling rate with 16-Bit Resolution.
+SABRENT
+Aluminum USB External Stereo Sound Adapter
+
+Free Music Archive
+Cyborg,
+Lost by Modern Monster
+
+Pictures
+The images are thumbnails. Click on each to see the
+full-sized picture.
+8 Track side
+
+Cassette tape side
+
+Initial condition of the cassette player
+
+Back of the player
+
+Player with the cassette cover removed
+
+Connecting rod for the cassette player
+
+Cassette pulley system
+
+Line out
+
+Analog audio capture
+arecord -L
+ - Find device to use
+ - This works for finding the microphone input or the USB external sound card
+
+Soundcard
+sysdefault:CARD=Device
+    USB Audio Device, USB Audio
+    Default Audio Device
+captureTheFlac.sh
+file=dump'_'$(date +%F_%H-%M-%S)'_Sabrent_soundcard_in'.flac
+
+arecord --device='sysdefault:CARD=Device' --rate=96000 --channels=2 --vumeter=stereo
+sysdefault:CARD=Device --duration=300 --format=dat --file-type wav - | flac - -o $file

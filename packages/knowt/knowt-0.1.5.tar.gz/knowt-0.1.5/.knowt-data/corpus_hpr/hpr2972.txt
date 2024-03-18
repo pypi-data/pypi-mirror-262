@@ -1,0 +1,113 @@
+## hpr2972 :: The foot of the ski slope
+
+ Another in the chat series from Edinburgh
+Hosted by MrX and Dave Morriss
+This time we met up for breakfast on Sunday 24th November in a pub/restaurant in an area called Hillend, just outside Edinburgh in Midlothian. The hill close by is the location of the Midlothian Snowsports Centre, an artificial Ski Slope which is very popular in the region for recreation and training.
+We chatted for a while inside then moved to Studio C in the car park and recorded this episode.
+PDAs and the like
+We were talking about PDAs (Personal Data Assistants) from the 1980’s.
+
+MrX had recently been offered a Gemini device and had at one time owned a Psion Series 3c.
+Dave owns a broken Psion Series 5 (and recently parted with a working one after much bargaining).
+Dave struggled to remember devices like the Palm Pilot which were quite popular in the 80’s and 90’s. These had no keyboard, but offered a touch-sensitive screen, used with a stylus, and had handwriting recognition1.
+MrX mentioned the Compaq iPAQ PDA (Compaq was later acquired by Hewlett Packard) from the 2000’s, which was a much advanced PDA with similar features.
+
+Software annoyances
+
+Mr X has had some problems with the latest Audacity on Ubuntu. It sometimes does not launch from the menu link after an upgrade.
+Calibre on Dave’s Debian Testing system has stopped working recently, due to a Python error.2
+Dave uses Clementine, the music player, which turns off the UI when you close it down the wrong way and apparently doesn’t provide a way to enable it again without hacking the configuration file3.
+MrX had problems with audio device recognition and uses hdajackretask to correct this. This is part of the alsa-tools-gui package on Debian (and related)4, but has a non-intuitive UI.
+
+OS choices
+
+Dave uses Raspbian Lite on his headless Raspberry Pis (which he secures using advice from Ken Fallon’s HPR show on preparing the Raspbian image).
+MrX uses standard Raspian on RPis, Ubuntu as his main Linux version, as well as OSMC (Open Source Media Center) on a Raspberry Pi, for watching media.
+Dave originally started with Fedora (actually Red Hat version 4 for a brief time) then moved to Ubuntu (Kubuntu) before moving to Debian Testing on his desktop, and KDE Neon on his laptop.
+Both had used Crunchbang at one point, another Debian-based distribution.
+
+A few other topics
+
+MrX uses a Wiki service (https://www.wikidot.com/). Dave uses MediaWiki on a Raspberry Pi and has scripts that update some of the contents (mainly tables). There was discussion about using Pandoc (https://pandoc.org/) to generate MediaWiki markup from something like Markdown.
+Emulating a Bash session in a web browser. One example is: https://bellard.org/jslinux/
+Online Python tools. For example: https://repl.it/languages/python3
+Midnight Commander (https://midnight-commander.org/) contains its own editor.
+Notepadqq (https://notepadqq.com/) is a Notepad++-like editor for the Linux desktop.
+File managers:
+
+MrX has problems with the Ubuntu file manager; he uses Nemo (https://en.wikipedia.org/wiki/Nemo_(file_manager)) for its more advanced features
+Dave uses KDE’s Dolphin (https://en.wikipedia.org/wiki/Dolphin_(file_manager))
+
+
+Links
+
+Location:
+
+Hillend (Wikipedia)
+Midlothian (Wikipedia)
+Midlothian Snowsports Centre (Wikipedia)
+
+
+
+PDAs (Personal Data Assistants - Wikipedia page)
+
+Psion Organiser II (Wikipedia)
+Psion Series 3 (Wikipedia)
+Psion Series 5 (Wikipedia)
+Palm Pilot (Wikipedia)
+Gemini PDA (Wikipedia)
+Compaq/HP iPAQ PDA (Wikipedia)
+
+
+
+Compaq computers
+
+iPAQ
+
+
+
+Software niggles:
+
+Audacity software
+Calibre e-book Manager
+Clementine music player
+hdajackretask from the ALSA Project
+
+
+
+Operating system choices:
+
+Raspbian Lite
+
+Dave’s HPR show about his what_pi script
+
+Open Source Media Center (OSMC)
+Crunchbang Linux (Wikipedia)
+
+
+
+MrX’s shows that we were talking about:
+
+Describing how I listen to podcasts PART 1
+Describing how I listen to podcasts PART 2
+Describing how I listen to podcasts PART 3
+Describing how I listen to podcasts PART 4
+Describing how I listen to podcasts PART 5
+A walk through my PifaceCAD Python code – Part 1
+A walk through my PifaceCAD Python code – Part 2
+
+
+
+The previous episode:
+
+Two HPR hosts living in the same region finally meet up!
+
+
+
+
+
+The person using a Palm Pilot to take meeting notes had an external keyboard, and wasn’t using handwriting recognition!↩
+calibre was failing with the error: ImportError: No module named functools_lru_cache. It later proved possible to fix this by reinstalling a Python module: pip2 install --force backports.functools_lru_cache↩
+There have been no releases of Clementine since 2016 sadly, though there are more recent changes on the GitHub page.↩
+Information on the web about alsa-tools-gui seems a little sparse. The hdajackretask application has a README file in the distribution that gives some information.↩
+

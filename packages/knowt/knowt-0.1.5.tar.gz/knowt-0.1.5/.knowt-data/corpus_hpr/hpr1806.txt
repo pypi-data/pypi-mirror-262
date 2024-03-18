@@ -1,0 +1,382 @@
+## hpr1806 :: HPR Community News for June 2015
+
+ 
+New hosts
+
+Welcome to our new hosts: 
+kurakura, 
+    GNULinuxRTM, 
+    cheeto4493.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+1781
+Mon
+2015-06-01
+HPR Community News for May 2015
+HPR Volunteers
+
+
+1782
+Tue
+2015-06-02
+ChorusText - a Non-visual Text Editor Open Assistive Device Project
+kurakura
+
+
+1783
+Wed
+2015-06-03
+Windows To Linux - Better Late Than Never.
+GNULinuxRTM
+
+
+1784
+Thu
+2015-06-04
+Intro to the Fugue and the Open Well-Tempered Clavier
+Jon Kulp
+
+
+1785
+Fri
+2015-06-05
+54 - LibreOffice Impress - Creating a Presentation
+Ahuka
+
+
+1786
+Mon
+2015-06-08
+What is MapReduce?
+Charles in NJ
+
+
+1787
+Tue
+2015-06-09
+A Beginner with a Wok
+Frank Bell
+
+
+1788
+Wed
+2015-06-10
+Podcrawl Glasgow 2015
+Kevie
+
+
+1789
+Thu
+2015-06-11
+The Ubuntu Quickly Ebook Template and Ebooks in General
+Jon Kulp
+
+
+1790
+Fri
+2015-06-12
+Penguicon 2015 Report
+Ahuka
+
+
+1791
+Mon
+2015-06-15
+Organizing Photos with Bash
+Tony Pelaez
+
+
+1792
+Tue
+2015-06-16
+An Interview with Andrea Frost
+David Whitman
+
+
+1793
+Wed
+2015-06-17
+Some thoughts about the Go language
+Stilvoid
+
+
+1794
+Thu
+2015-06-18
+12-Tone Music and My Random 12 Tone Row of the Day
+Jon Kulp
+
+
+1795
+Fri
+2015-06-19
+54 - LibreOffice Impress - Templates and Master Pages
+Ahuka
+
+
+1796
+Mon
+2015-06-22
+Audacity - Chains, Notches and Labels
+cheeto4493
+
+
+1797
+Tue
+2015-06-23
+An Interview with Aaron Wolf of the Snowdrift Co-op Project
+David Whitman
+
+
+1798
+Wed
+2015-06-24
+Machine learning and service robots.
+mirwi
+
+
+1799
+Thu
+2015-06-25
+Posting From the Command Line on Open Social Networks
+Jon Kulp
+
+
+1800
+Fri
+2015-06-26
+YouTube Video Subscriptions
+Ahuka
+
+
+1801
+Mon
+2015-06-29
+How to tell your left earbud from your right
+Ken Fallon
+
+
+1802
+Tue
+2015-06-30
+An Interview with Emily Hampton a LinuxFest Northwest Volunteer
+David Whitman
+
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This discussion takes
+place on the Mail List which is open to all
+HPR listeners and contributors. The discussions are open and available on the
+Gmane
+archive.
+
+The main threads this month were:
+
+From: Mike Ray <mike@...>
+Date: 2015-06-02 11:01:26 +0100
+Subject: Comment form and edit field accessibility
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/863
+Messages: 6
+From: Ken Fallon <ken@...>
+Date: 2015-06-03 08:50:04 +0200
+Subject: Git repository
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/869
+Messages: 21
+From: Ken Fallon <ken@...>
+Date: 2015-06-03 08:52:14 +0200
+Subject: PHP Developers
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/870
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2015-06-11 08:23:31 +0200
+Subject: Fwd: Ohio LinuxFest 2015 Call for Presentations
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/891
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2015-06-22 11:13:58 +0200
+Subject: New linux podcast #SYSTEMAU
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/892
+Messages: 3
+From: Ken Fallon <ken@...>
+Date: 2015-06-24 12:41:04 +0200
+Subject: Help with shownotes, tags and summaries
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/895
+Messages: 2
+From: Dave Morriss <perloid@...>
+Date: 2015-06-29 15:51:27 +0100
+Subject: HPR Community News - next Saturday on 2015-07-04T18:00:00Z
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/897
+Messages: 1
+
+Total messages this month: 35
+Comments this month
+There are 48 comments:
+
+hpr1728
+(2015-03-18) "Requested Topic: Favourite Browser Extensions"
+by Fin.
+ Comment 2:
+Bob Evans on 2015-06-01:
+"Ad-Block Edge discontinued"
+
+hpr1766
+(2015-05-11) "Sox of Silence"
+by Ken Fallon.
+ Comment 2:
+Urugami on 2015-06-12:
+"Can it do this...."
+
+hpr1771
+(2015-05-18) "Audacity: Label Tracks"
+by Jon Kulp.
+ Comment 3:
+Urugami on 2015-06-12:"[no title]"
+
+hpr1774
+(2015-05-21) "Router Hacking"
+by Jon Kulp.
+ Comment 3:
+FiftyOneFifty on 2015-06-01:
+"Single board options" Comment 4:
+Urugami on 2015-06-12:"[no title]"
+
+hpr1780
+(2015-05-29) "16 - TrueCrypt and GnuPG - An Update"
+by Ahuka.
+ Comment 2:
+Alison Chaiken on 2015-06-10:
+"TrueCrypt vs. GPG" Comment 3:
+Kevin O'Brien on 2015-06-17:
+"Audited"
+
+hpr1782
+(2015-06-02) "ChorusText - a Non-visual Text Editor Open Assistive Device Project"
+by kurakura.
+ Comment 1:
+Mike Ray on 2015-06-02:
+"Chorustext!" Comment 2:
+Jon Kulp  on 2015-06-02:
+"Awesome in Many Ways" Comment 3:
+Mike Ray on 2015-06-08:
+"Smashing the monopoly of commercial gadgetry"
+
+hpr1783
+(2015-06-03) "Windows To Linux - Better Late Than Never."
+by GNULinuxRTM.
+ Comment 1:
+Jon Kulp  on 2015-06-02:
+"Updates Pain! " Comment 2:
+0xf10e on 2015-06-06:
+"Entertaining episode!" Comment 3:
+Stilvoid on 2015-06-07:
+"Seconded"
+
+hpr1784
+(2015-06-04) "Intro to the Fugue and the Open Well-Tempered Clavier"
+by Jon Kulp.
+ Comment 1:
+Kevin O'Brien on 2015-06-04:
+"Great show!" Comment 2:
+Jon Kulp on 2015-06-04:
+"Open Scores" Comment 3:
+Robert Douglass on 2015-06-04:
+"Lady Gaga - fan of Bach and the Well-Tempered Clavier" Comment 4:
+Jon Kulp on 2015-06-04:
+"Gaga Bach" Comment 5:
+Ken Fallon on 2015-06-06:
+"Now I'm "seeing" this everythere " Comment 6:
+Jon Kulp on 2015-06-06:
+"Feature, not a bug" Comment 7:
+Frank on 2015-06-07:"[no title]" Comment 8:
+Daniel Worth on 2015-06-08:
+"Fantastic" Comment 9:
+Alison Chaiken on 2015-06-28:
+"Heard "Fugue for Friday"?" Comment 10:
+Jon Kulp on 2015-06-28:
+"Dragnet Fugue"
+
+hpr1787
+(2015-06-09) "A Beginner with a Wok"
+by Frank Bell.
+ Comment 1:
+Jon Kulp on 2015-06-09:
+"What about broccoli?" Comment 2:
+Mike Ray on 2015-06-10:
+"And baby corns" Comment 3:
+Frank on 2015-06-10:"[no title]" Comment 4:
+Jon Kulp on 2015-06-10:
+"Hollandaise??" Comment 5:
+Dave Morriss on 2015-06-10:
+"Thinks to stir-fry" Comment 6:
+Dave Morriss on 2015-06-10:
+"Things not thinks" Comment 7:
+Mike Ray on 2015-06-10:
+"Round-bttomed woks" Comment 8:
+Dave Morriss on 2015-06-10:
+"Wok rings" Comment 9:
+Frank on 2015-06-11:"[no title]" Comment 10:
+jezra on 2015-06-11:
+"chicken and woks" Comment 11:
+Frank on 2015-06-12:"[no title]" Comment 12:
+FiftyOneFifty on 2015-06-13:"[no title]" Comment 13:
+Frank on 2015-06-16:
+"Thanks for the suggestion"
+
+hpr1788
+(2015-06-10) "Podcrawl Glasgow 2015"
+by Kevie.
+ Comment 1:
+Ken Fallon on 2015-06-11:
+"So near and yet so expensive"
+
+hpr1791
+(2015-06-15) "Organizing Photos with Bash"
+by Tony Pelaez.
+ Comment 1:
+Dave Morriss on 2015-06-23:
+"Yay for Bash scripts!" Comment 2:
+Tony Pelaez on 2015-06-28:
+"Google CL is broken"
+
+hpr1793
+(2015-06-17) "Some thoughts about the Go language"
+by Stilvoid.
+ Comment 1:
+Frank on 2015-06-18:"[no title]" Comment 2:
+Dave Morriss on 2015-06-19:
+"Thanks for the show " Comment 3:
+Stilvoid on 2015-06-22:"[no title]"
+
+hpr1794
+(2015-06-18) "12-Tone Music and My Random 12 Tone Row of the Day"
+by Jon Kulp.
+ Comment 1:
+Dave Morriss on 2015-06-19:
+"Interesting lesson" Comment 2:
+Jon Kulp  on 2015-06-19:
+"Still Ugly " Comment 3:
+Mike Ray on 2015-06-20:
+"Atonal music vs. Unrepresentative visual art" Comment 4:
+Ken Fallon on 2015-06-24:
+"RSS feed" Comment 5:
+Jon Kulp on 2015-06-24:
+"Enjoy pain?"
+
+hpr1800
+(2015-06-26) "YouTube Video Subscriptions"
+by Ahuka.
+ Comment 1:
+Ken Fallon on 2015-06-29:
+"Links"
+
+

@@ -1,0 +1,5 @@
+## hpr0173 :: Configuring Pulse Audio
+
+ Klaatu and notJlindsay discuss Pulse Audio and how to configure it so it doesn't bork your system.  One thing Klaatu fails to mention is that before you try any of this, you should just run whatever software updates may be available for your OS.  Pulse configuration and compatability seems to be improving rapidly over time, so many thing may "fix themselves" by simply making sure your distro is up to date.
+Wiki Article
+the ogg version of this episode

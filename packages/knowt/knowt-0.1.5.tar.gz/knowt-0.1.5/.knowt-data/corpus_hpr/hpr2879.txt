@@ -1,0 +1,26 @@
+## hpr2879 :: Describing how I listen to podcasts PART 1
+
+ In this series I cover how I listen to podcasts and how the process has change over the years. This episode badly covers the console audio player moc.
+
+Link to HPR 2112 (Home Server) episode mentioned in this podcast
+https://hackerpublicradio.org/eps.php?id=2112
+My first MP3 player was a Jelly Bean shaped MP3 player apparently known as an S1 MP3 player
+https://en.wikipedia.org/wiki/S1_MP3_player
+Sansa Clip info on wikipedia
+https://en.wikipedia.org/wiki/Sansa_Clip#Sansa_Clip
+Raspberry Pi
+https://en.wikipedia.org/wiki/Raspberry_Pi
+Music On Console (MOC) is an ncurses-based console audio player for Linux/UNIX
+
+
+Here is a link to information about moc on wikipedia
+https://en.wikipedia.org/wiki/Music_on_Console
+On a Debian based system Moc can be installed by issuing the following command
+
+
+      sudo apt-get install moc
+
+Link to Moc, Music On Console homepage
+https://moc.daper.net/
+
+

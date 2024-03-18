@@ -1,0 +1,111 @@
+## hpr1842 :: TiT Radio 20 You've Been Pwned (probably)
+
+ 
+Longtime listeners of Hacker Public Radio will remember 'TiT Radio', a semi-weekly FOSS "news" and commentary show that appeared on HPR, recorded by the cast of "Linux Cranks" on the off schedule weeks.  "Linux Cranks" eventually morphed into the "Kernel Panic Oggcast".  While Peter is on walkabout, the cast of KPO has resurrected "Tit Radio" on a temporary basis.  The listener is cautioned, while KPO is family friendly, "TiT Radio" makes no such commitment. Please join netminer, FiftyOneFifty, and pegwole as they drag you down the rabbit hole that has always been "TiT Radio".
+
+
+Our show topics were drawn from these links.  Not all these topics made it into the show, but feel free to browse anyway:
+
+
+Jeep remotely pwned, 5150 feels vindicated https://www.wired.com/2015/07/hackers-remotely-kill-jeep-highway https://www.zdnet.com/article/chrysler-recalls-1-4m-vehicles-at-risk-of-remote-hack/
+
+Mac users plagued by pop-up urging them to call a fake tech support number https://blog.malwarebytes.org/fraud-scam/2014/12/mac-users-beware-of-increased-tech-support-scam-pop-ups/
+
+Use an RPi to block ads https://jacobsalmela.com/block-millions-ads-network-wide-with-a-raspberry-pi-hole-2-0
+
+Networked monkey brains https://www.livescience.com/51496-animal-brains-linked-into-networks.html
+
+Bacteria controlled robots https://www.youtube.com/watch?v=NDnXv6rqj2Q&index=21&list=WL
+
+Psensor monitors your hardware temps https://www.tecmint.com/psensor-monitors-hardware-temperature-in-linux/
+
+Facebook asks for a date to kill Flash https://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso
+
+Details of second Flash zero day leaked by Cyberteam https://thehackernews.com/2015/07/hacking-flash-player-exploit.html
+
+Mozilla blocks Flash in FF https://www.theverge.com/2015/7/14/8957177/mozilla-blocks-flash-as-facebook-security-chief-calls-for-its-death
+
+Did the U.S. Government Kill ProxyHam https://www.businessinsider.com/proxyham-anonymising-router-project-mysteriously-closed-down-government-rhino-caudill-2015-7
+
+NSA releases open-source network protection tools https://www.itnews.com.au/News/406509,nsa-releases-linux-based-open-source-infosec-tool.aspx
+
+Drones banned above All-Star game, also talk about CA wildfire https://arstechnica.com/tech-policy/2015/07/cincinnati-tells-fans-no-drones-at-tonights-all-star-game/
+
+MS fixes Windows and IE zero days https://arstechnica.com/security/2015/07/ms-kills-critical-ie-11-bug-after-exploit-was-shopped-to-hacking-team/
+
+92% of all smart phone profits go to Apple https://arstechnica.com/apple/2015/07/apple-makes-92-percent-of-all-smartphone-profits/
+
+Commodore phone https://www.engadget.com/2015/07/14/commodore-phone/
+
+Natron is a new open source compositor https://opensource.com/life/15/7/getting-started-with-natron
+
+Real life Mechwarrior https://www.zdnet.com/article/giant-man-piloted-robots-to-slug-it-out-in-international-grudge-match/
+
+SUSE to deliver ARM servers https://www.zdnet.com/article/suse-to-deliver-suse-linux-for-arm-servers/
+
+CERN discovers new sub atomic particle https://gizmodo.com/the-lhc-has-discovered-a-new-exotic-particle-called-a-p-1717676181?utm_campaign=socialflow_gizmodo_facebook&utm_source=gizmodo_facebook&utm_medium=socialflow
+
+team of volunteers from Reddit are crowdsourcing the development of the worlds first medical-grade open source prosthesis https://all3dp.com/wevolver-crowdsources-hackberry-3d-printed-prosthesis/
+
+Let's see if we can get pewole to say "Siri, charge 100%" https://www.theverge.com/2015/7/16/8976281/siri-charge-100-percent-emergency-services
+
+Linux creator not afraid of AI https://nakedsecurity.sophos.com/2015/07/13/linux-creator-linus-torvalds-pooh-poohs-fears-over-artificial-intelligence/?utm_source=Naked%2520Security%2520-%2520Feed&utm_medium=feed&utm_content=rss2&utm_campaign=Feed
+
+FBI used Hack-Team to find TOR user https://www.zdnet.com/article/fbi-used-hacking-team-services-to-unmask-tor-user/
+
+Updates can't be disabled in Windows 10 Home https://lifehacker.com/windows-10-home-updates-will-be-automatic-and-mandatory-1718476904
+
+Apple pushes targeted advertising based on credit balance https://www.forbes.com/sites/theopriestley/2015/07/18/apple-ads-based-on-your-credit-balance-pushes-privacy-beyond-the-limit/
+
+Google still uploads the pics you've deleted https://www.engadget.com/2015/07/13/deleting-google-photos-wont-stop-your-phone-from-uploading-pict
+
+But it's OK, since Google Photos is going away https://techcrunch.com/2015/07/20/google-photos-is-shutting-down-on-august-1st
+
+Shockingly, Red Star Linux contains content trackers https://www.theregister.co.uk/2015/07/20/north_korea_red_star_linux_inserts_sneaky_serial_content_tracker
+
+Israeli court finds Google responsible for misinterpreted search results
+
+https://www.timesofisrael.com/court-mks-google-responsible-for-preventing-trash-talk/
+
+Adultery site pwned https://bigstory.ap.org/article/f9f502126fd845fdba191e5e11c55b52/cheating-website-ashley-madison-hacked-personal-info-posted
+
+FTC says LifeLock still inadequately protecting customer data https://www.wired.com/2015/07/lifelock-failed-one-job-protecting-data/
+
+Bug found in SSH https://arstechnica.com/security/2015/07/bug-in-widely-used-openssh-opens-servers-to-password-cracking/
+
+Future personal devices may be human powered https://arstechnica.com/science/2015/07/your-body-the-battery-powering-gadgets-from-human-biofuel
+
+Google to release a container management system https://www.zdnet.com/article/google-releases-kubernetes-1-0/?adSession=g
+
+Docker implemented in 100 lines of bash https://github.com/p8952/bocker
+
+Man receives first bionic eye https://arstechnica.com/science/2015/07/british-man-receives-worlds-first-bionic-eye-implant-for-macular-degeneration/
+
+Is a cheap Nexus Fi Phone on the way? https://phandroid.com/2015/04/24/google-nexus-fi-budget/
+
+Bug that allows attacker root access to Mac requires local access https://arstechnica.com/security/2015/07/bug-in-latest-version-of-os-x-gives-attackers-unfettered-root-privileges/
+
+Movie makers asking Yahoo for take down notices against their own computers https://thenextweb.com/insider/2015/07/23/hahahahahahahaha
+
+Wichita LUG teaches Linux to children https://www.kansas.com/news/local/article28346635.html
+
+Australian security agency wants audits on Telcos security measures https://www.zdnet.com/article/telcos-hit-back-against-national-security-law-proposal/
+
+Replace your car's infotainment system with an Android ap https://arstechnica.com/cars/2015/07/android-auto-review-a-beautiful-but-beta-alternative-to-awful-oem-solutions/
+
+Flaw in Intel CPUs allows rootkit that bypasses Secure Boot https://www.itworld.com/article/2965875/security/design-flaw-in-intel-processors-opens-door-to-rootkits-researcher-says.html
+
+Malware can trap Android into endless reboot loop https://thehackernews.com/2015/08/android-endless-reboot-bug.html
+
+Drone delivers drugs to an Ohio prison  https://www.cnn.com/2015/08/04/us/prison-yard-drone-drugs-ohio/
+
+Self targeting rifles running Linux have poor security https://thenextweb.com/gadgets/2015/07/29/i-shot-the-sheriff-my-hacked-rifle-shot-the-deputy/
+
+FCC bans use of FOSS software on routers https://www.infoq.com/news/2015/07/FCC-Blocks-Open-Source
+
+Android vulnerable to attack from a malicious MMS https://www.linuxinsider.com/story/82315.html?rss=1
+
+naturally occurring reactor found in African mine https://interestingengineering.com/naturally-occurring-nuclear-reactor-found-in-oklo-africa
+
+Unpatched versions of Firefox allow attackers access to your passwords https://blog.mozilla.org/security/2015/08/06/firefox-exploit-found-in-the-wild/
+

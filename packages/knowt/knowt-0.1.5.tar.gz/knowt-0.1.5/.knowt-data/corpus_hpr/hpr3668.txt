@@ -1,0 +1,27 @@
+## hpr3668 :: Linux Inlaws S01E63: John Hawley on kernel dot org and other shenanigans
+
+ In this episode Martin and Chris host John Hawley of kernel.org fame. The
+discussion centers around Python, the royal British family and other FLOSS
+topics such as some break-away colonies like the US, version control systems,
+wireless wikis and containers. Never mind Python. Did I mention Python? :-)
+And perhaps VMware. Ever wondered why early versions of git just gobbled up
+your main memory? You may or may not find the answer in this episode. Or its
+outtakes...
+Links:
+
+The Linux kernel: https://kernel.org
+The wireless subsystem: https://wireless.kernel.org
+git: https://git-scm.com
+Linux kernel VCS before git: https://www.linuxjournal.com/content/git-origin-story
+xkcd on git: https://xkcd.com/1597
+Guido @ Microsoft: https://twitter.com/gvanrossum/status/1326932991566700549
+Episode on The Halloween Documents: https://linuxinlaws.eu/archive.html#S01
+TIOBE index: https://www.tiobe.com/tiobe-index
+PhotonOS: https://vmware.github.io/photon/assets/files/html/3.0/Introduction.html
+BusyBox: https://www.busybox.net
+Python Software Foundation: https://www.python.org/psf
+Google Summier of Code: https://summerofcode.withgoogle.com
+trace-cruncher: https://github.com/vmware/trace-cruncher
+Zero Dark Thirty: https://www.imdb.com/title/tt1790885/?ref_=nv_sr_srsg_0
+Command Line Heroes: https://www.redhat.com/en/command-line-heroes/about
+

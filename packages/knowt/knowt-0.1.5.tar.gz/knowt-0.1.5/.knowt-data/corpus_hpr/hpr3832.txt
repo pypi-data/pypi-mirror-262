@@ -1,0 +1,35 @@
+## hpr3832 :: How I left Google behind
+
+ A list of the software and hardware I cover in the show.
+Hardware:
+
+Server - 11th gen i5-11400, 64GB RAM, 12TB SSD storage
+Local backup server - 4th gen i5-4570, 32GB RAM, 24TB HDD storage
+in mirrored ZFS pool for 12TB usable.
+Offsite backup server - Celeron J4125, 16GB RAM, 8TB SSD
+storage
+
+Software:
+
+Hypervisor - Proxmox Virtual Environment
+https://www.proxmox.com/en/proxmox-ve
+Backup software - Proxmox Backup Server
+https://www.proxmox.com/en/proxmox-backup-server
+Email - iRedMail
+https://www.iredmail.org/index.html
+Photos, Notes, File Storage, Office Software - Nextcloud
+AIO
+https://github.com/nextcloud/all-in-one
+Music - Funkwhale
+https://funkwhale.audio/
+Social Media - Mastodon
+https://github.com/mastodon/mastodon
+Blog - writefreely
+https://github.com/writefreely/writefreely
+Video - Invidious, Peertube
+https://invidious.io/
+https://github.com/Chocobozzz/PeerTube/
+Chat - Matrix, Element
+https://github.com/matrix-org/synapse/
+https://element.io/
+

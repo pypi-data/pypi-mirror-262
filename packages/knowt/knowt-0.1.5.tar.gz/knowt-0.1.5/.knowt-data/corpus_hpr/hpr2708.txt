@@ -1,0 +1,28 @@
+## hpr2708 :: Ghostscript
+
+ 
+Ghostscript is the open source implementation of Postscript. You can read its docs online.
+
+
+To compress a big PDF into something possibly smaller:
+
+
+$ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dBATCH -sOutputFile=output.pdf example.pdf
+
+
+That renders basically the same PDF with all images down-res'd to 72 DPI. Other valid setting profiles are ebook, printer, and prepress.
+
+
+To render a version of a PDF without any raster images in it, making it cheaper and faster to print:
+
+
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dBATCH -dFILTERIMAGE -sOutputFile=output.pdf example.pdf
+
+
+The FILTERIMAGE option drops raster images from the file. The FILTERVECTOR option filters vector images, and FILTERTEXT filters text.
+
+
+If pdftk is not available for your OS, you can use pdf-stapler instead for cutting and concatenating PDF files. It doesn't deal with metadata as well as pdftk does, however.It's worth noting that pdftk is available as a snap package https://snapcraft.io/pdftk.
+
+
+It's also worth noting that this is actually episode 2 in a series about steganography.

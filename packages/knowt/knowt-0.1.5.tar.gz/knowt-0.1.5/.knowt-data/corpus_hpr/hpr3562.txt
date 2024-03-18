@@ -1,0 +1,41 @@
+## hpr3562 :: Creating a new project with Haskell and Stack
+
+ Stack
+Stack is a cross-platform program for developing Haskell projects. It features:
+
+Installing GHC automatically, in an isolated location.
+Installing packages needed for your project.
+Building your project.
+Testing your project.
+Benchmarking your project.
+
+Follow installation instructions to get it installed in your system.
+Starting a new project
+Our game will be called Treasure Dungeon. After installing stack, we'll open a new terminal window, change into some suitable directory and use stack to create our project: stack new treasure-dungeon rio.
+This will create directory treasure-dungeon and initialize it by using rio template. rio is a standard library that I have recently started using. There's a tutorial available if you want to learn more about it. We'll cover only very basics while writing the game.
+package.yaml
+Next step is to modify the project settings for the project that was created for us. Have a look at license file and change that to your liking. Then open up package.yaml and edit some of the metadata:
+
+git this should point to your public repository
+license this has machine readable info about the license terms
+author here you should fill in your info
+maintainer this is the person currently maintaining the package
+copyright Copyright information
+executablebles this section lists executable, you may want to edit the name
+
+I have a repository at codeberg if you want to have a look what settings I ended up with.
+stack.yaml
+Having finished with package.yaml, save it and start editing stack.yaml. Here we change only one setting: - resolver: lts-18.27, this specifies which set of libraries to use. These are fetched from Stackage.
+Final step is to edit README.md to suit your needs.
+Using stack
+Now we can work on our project. Lets start by building it: stack build. This will build the example code. There's one library and one executable there. If everything went correctly, we can start our executable with stack exec -- treasure-dungeon. This should print a little message on screen and exit. We can also turn on verbose logging, by starting the project with stack exec -- treasure-dungeon --verbose 2> log.txt.
+Another useful command is stack test, which will compile and run tests for the project. There's couple simple ones as an example created by the template.
+And if you want to clean up your project of intermediate files and exes, you can use stack clean.
+Project structure
+Final thing before finishing, let's have a look at the project structure. There's three directories: app, src and test.
+app contains code for our executable. This is where we will be placing big portion of the code, mainly one that deals with user interactions.
+src contains code for our library. This is where we will be placing code that codifies rules of the game. We want to keep this part of the code oblivious about outside world, like screens, user input and such.
+test this is where tests live. We aren't going to do much with them most likely.
+In closing
+We started our card game project. It doesn't do much yet, but we already have an executable that we can build and run. Next time we'll look into how to roll a new character and get them equipped before venturing into treasure dungeon.
+ad astra!

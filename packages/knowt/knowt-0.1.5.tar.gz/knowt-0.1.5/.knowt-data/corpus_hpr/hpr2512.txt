@@ -1,0 +1,28 @@
+## hpr2512 :: Intro to git remote
+
+ 
+Instantiate a git repo:
+
+
+$ mkdir alice
+$ cd !$
+$ git init
+
+
+Add a remote:
+
+
+$ git remote add origin URI_OF_REMOTE
+
+
+Change a remote:
+
+
+$ git remote set-url origin NEW_URI
+
+
+A remote can be a server, it can be a local directory, an NFS share, pretty much whatever you want.
+
+
+It is a Git convention that the primary remote is called origin. You don't have to call it that, but it's pretty common.
+

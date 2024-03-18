@@ -1,0 +1,87 @@
+## hpr3228 :: YAML basics
+
+ YAML has two data elements that serve as building blocks for complex data structures: sequences and mappings.
+Sequence
+This is a sequence:
+
+---
+- Emperor
+- Gentoo
+- Little Blue
+
+Mapping
+
+This is a mapping:
+
+
+---
+Penguin: Emperor
+
+
+In this case, Penguin is a key and Emperor is a value. This is often called a "key and value pair", but in YAML it's just called a mapping.
+
+Combining data blocks
+
+You can embed these data types into one another. Here is a mapping that has a sequence as its value:
+
+
+---
+Penguin:
+  - Emperor
+  - Gentoo
+  - Little Blue
+
+
+Here is a sequence of mappings:
+
+
+---
+- Penguin: Emperor
+- Penguin: Gentoo
+- Penguin: Little Blue
+
+yamllint
+Use yamllint to detect errors in your YAML. To install:
+
+
+
+$ pip install yamllint
+
+Run it:
+
+
+
+$ yamllint good.yaml
+$ yamllint bad.yaml
+bad.yaml
+  1:1       warning  missing document start "---"  (document-start)
+  4:14      error    no new line character at the end of file  (new-line-at-end-of-file)
+
+yaml2json
+
+Sometimes it's useful to convert your YAML to JSON so you can view the data structure in a different way. There are probably dozens of YAML-to-JSON converters out there, but here's the one I use: https://gitlab.com/slackermedia/yaml2json.git
+
+
+Run it:
+
+
+$ cat example.yaml
+---
+penguins:
+  - Gentoo
+  - Little Blue
+  - Rockhopper
+dragons:
+  - black
+  - white
+  - red
+$ ~/bin/yaml2json.py example.yaml
+{"penguins": ["Gentoo", "Little Blue", "Rockhopper"], "dragons": ["black", "white", "red"]}
+
+YAML police
+There are no YAML police. As long as yamllint finds no errors, your YAML is valid and can be parsed by any one of the dozens of YAML libraries out there. However, these YAML libraries aren't magical, so you must understand the internal logic of your own YAML data. Keep that in mind when devising a scheme for the data you're recording.
+
+YAML is a great method for creating configuration files, or storing simple data structures, and it's essential for Ansible playbooks.
+
+Enjoy!
+

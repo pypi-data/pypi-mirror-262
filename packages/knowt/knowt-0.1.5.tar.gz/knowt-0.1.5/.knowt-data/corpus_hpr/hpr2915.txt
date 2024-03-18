@@ -1,0 +1,5 @@
+## hpr2915 :: Intro - My Recording Setup
+
+ I discuss loading Fedora on various bits of older hardware and devise a plan to turn one of those bits of older hardware into a dedicated headless audio processor using its firewire port to keep yet another older piece of hardware alive: a Yamaha GO46 audio interface.
+Having done that and finding that it all performs admirably, I illogically decide to replace it with newer (but not new) hardware and buy yet another different model firewire audio interface: a Focusrite Saffire Pro 24.
+I record the end of the show on audio interface #3: a USB based Steinberg UR22mkII, which one could argue that I should have been using all along, leaving the firewire gear in the last decade where it belongs (?).

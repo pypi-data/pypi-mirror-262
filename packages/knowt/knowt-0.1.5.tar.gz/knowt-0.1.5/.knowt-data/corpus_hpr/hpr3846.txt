@@ -1,0 +1,312 @@
+## hpr3846 :: HPR Community News for April 2023
+
+ 
+New hosts
+
+There were no new hosts this month.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+3826
+Mon
+2023-04-03
+HPR Community News for March 2023
+HPR Volunteers
+
+
+3827
+Tue
+2023-04-04
+Reply to hpr 3798 
+Brian in Ohio
+
+
+3828
+Wed
+2023-04-05
+The Oh No! News.
+Some Guy On The Internet
+
+
+3829
+Thu
+2023-04-06
+The Edinburgh cohort of HPR hosts stops Mumbling!
+Dave Morriss
+
+
+3830
+Fri
+2023-04-07
+Into New Mexico
+Ahuka
+
+
+3831
+Mon
+2023-04-10
+Introducing Bumble Bee.
+Some Guy On The Internet
+
+
+3832
+Tue
+2023-04-11
+How I left Google behind
+minnix
+
+
+3833
+Wed
+2023-04-12
+Software Freedom Podcast
+Ken Fallon
+
+
+3834
+Thu
+2023-04-13
+2022-2023 New Years Show Episode 5
+HPR Volunteers
+
+
+3835
+Fri
+2023-04-14
+Retro Karaoke machine Part 2
+Archer72
+
+
+3836
+Mon
+2023-04-17
+Using 'zoxide', an alternative to 'cd'
+Dave Morriss
+
+
+3837
+Tue
+2023-04-18
+Make a vortex cannon
+Mike Ray
+
+
+3838
+Wed
+2023-04-19
+Biking to Work
+Jon Kulp
+
+
+3839
+Thu
+2023-04-20
+Rip a CD in the terminal
+Archer72
+
+
+3840
+Fri
+2023-04-21
+Playing the Original Civilization
+Ahuka
+
+
+3841
+Mon
+2023-04-24
+The Oh No! News.
+Some Guy On The Internet
+
+
+3842
+Tue
+2023-04-25
+What’s in my bag series
+MrX
+
+
+3843
+Wed
+2023-04-26
+LinuxLUGCast pre-show ramblings
+Honkeymagoo
+
+
+3844
+Thu
+2023-04-27
+2022-2023 New Years Show Episode 6
+HPR Volunteers
+
+
+3845
+Fri
+2023-04-28
+Using tmux, the terminal multiplexer Overview
+Archer72
+
+
+Comments this month
+These are comments which have been made during the past month, either to shows released during the month or to past shows.
+There are 16 comments in total.
+Past shows
+There are 6 comments on
+4 previous shows:
+
+hpr3819
+(2023-03-23) "Remapping Mouse Buttons with XBindKeys on Linux"
+by Jon Kulp.
+
+
+
+Comment 1:
+Zen_floater2 on 2023-04-03:
+"LOOK EVERYBODY!!!"
+hpr3822
+(2023-03-28) "A tale of wonder, angst and woe"
+by Bookewyrmm.
+
+
+
+Comment 2:
+Bookewyrmm on 2023-04-17:
+"small update"
+hpr3823
+(2023-03-29) "Gitlab Pages for website hosting"
+by norrist.
+
+
+
+Comment 1:
+rho`n on 2023-04-01:
+"Congfiguring HPR site generator"
+hpr3825
+(2023-03-31) "Creating a natural aquarium"
+by minnix.
+
+
+
+Comment 3:
+minnix on 2023-04-01:
+"video demonstration"
+
+Comment 4:
+Ahuka on 2023-04-03:
+"Brings back memories"
+
+Comment 5:
+minnix on 2023-04-06:
+"Hi Ahuka"
+
+This month's shows
+There are 10 comments on 8 of this month's shows:
+hpr3826
+(2023-04-03) "HPR Community News for March 2023"
+by HPR Volunteers.
+
+Comment 1:
+Kevin O'Brien on 2023-04-04:
+"Updating your profile"
+hpr3828
+(2023-04-05) "The Oh No! News."
+by Some Guy On The Internet.
+
+Comment 1:
+brian-in-ohio on 2023-04-14:
+"entertaining"
+hpr3831
+(2023-04-10) "Introducing Bumble Bee."
+by Some Guy On The Internet.
+
+Comment 1:
+Trey on 2023-04-10:
+"Great interview"Comment 2:
+brian-in-ohio on 2023-04-14:
+"liked it"Comment 3:
+Dave Morriss on 2023-04-16:
+"Excellent show"
+hpr3832
+(2023-04-11) "How I left Google behind"
+by minnix.
+
+Comment 1:
+brian-in-ohio on 2023-04-14:
+"thank you"
+hpr3837
+(2023-04-18) "Make a vortex cannon"
+by Mike Ray.
+
+Comment 1:
+brian-in-ohio on 2023-04-27:
+"intro"
+hpr3841
+(2023-04-24) "The Oh No! News."
+by Some Guy On The Internet.
+
+Comment 1:
+Ken Fallon on 2023-03-31:
+"Move Play button"
+hpr3843
+(2023-04-26) "LinuxLUGCast pre-show ramblings"
+by Honkeymagoo.
+
+Comment 1:
+brian-in-ohio on 2023-04-27:
+"thanks"
+hpr3844
+(2023-04-27) "2022-2023 New Years Show Episode 6"
+by HPR Volunteers.
+
+Comment 1:
+brian-in-ohio on 2023-04-27:
+"interesting show"
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This
+discussion takes place on the Mail List which is open to all HPR listeners and
+contributors. The discussions are open and available on the HPR server under
+Mailman.
+
+The threaded discussions this month can be found here:
+https://hackerpublicradio.org/pipermail/hpr_hackerpublicradio.org/2023-April/thread.html
+Events Calendar
+With the kind permission of LWN.net we are linking to
+The LWN.net Community Calendar.
+Quoting the site:
+This is the LWN.net community event calendar, where we track
+events of interest to people using and developing Linux and free software.
+Clicking on individual events will take you to the appropriate web
+page.
+Any other business
+Unicode characters in shows
+It came to light during the month that shows with Unicode characters
+in their title, summary or notes were not being represented properly on
+the website.
+This is the definition of Unicode on Wikipedia:
+
+Unicode, formally The Unicode Standard, is an information technology
+standard for the consistent encoding, representation, and handling of
+text expressed in most of the world's writing systems. The standard,
+which is maintained by the Unicode Consortium, defines as of the current
+version (15.0) 149,186 characters covering 161 modern and historic
+scripts, as well as symbols, thousands of emoji (including in colors),
+and non-visual control and formatting codes.
+
+The software and database behind the HPR website come from a time
+before Unicode, but had been updated to use this encoding a number of
+years ago. However, it was discovered that some changes had been
+overlooked.
+We are currently making changes to ensure that Unicode is properly
+displayed on the web site, and in audio tags. It will be necessary to
+find and correct encoding errors in the database, and this process will
+be carried out as soon as possible. ✓

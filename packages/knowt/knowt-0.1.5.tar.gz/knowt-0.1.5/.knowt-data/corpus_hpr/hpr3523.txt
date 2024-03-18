@@ -1,0 +1,24 @@
+## hpr3523 :: The Compose key
+
+ The Compose key allows you to input any character or sequence of characters regardless what keyboard layout you use, by typing the Compose key followed by a sequence of other keys. To use it, you must activate it in your system and choose what key you want to serve as the Compose key.
+If on Windows, we don't judge, we understand it's because, like me, you have no choice, and that's OK, one day we'll all get to live the dream, until then we'll just make do... WinCompose enables the compose key on that wretched environment. It comes with a ton of additional sequences, plus a fancy GUI for creating your own.
+If you use X, I suggest looking at the ArchLinux Wiki: https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Configuring_compose_key
+If you are a GNOME user, install GNOME Tweaks to activate the Compose key.
+$HOME/.XCompose
+include "%L"
+<Multi_key> <Multi_key> <braceleft> : "&#123;"
+<Multi_key> <Multi_key> <braceright> : "&#125;"
+<Multi_key> <Multi_key> <t> <f> : "(╯°□°）╯︵ ┻━┻"
+<Multi_key> <C> <C> <C> <P> : "☭"
+
+Note that that last one actually comes with X by default. In ArchLinux, all the default sequences can be found in /usr/share/X11/locale/<your-locale>/Compose. Also good to find out what to call your keys when writing your own sequences.
+/etc/X11/xorg.conf.d/00-keyboard.conf is the file that makes the Compose key happen in X.
+Section "InputClass"
+    Identifier "system-keyoard"
+    MatchIsKeyboard "on"
+    Option "XkbLayout" "us"
+    Option "XkbModel" "acer_laptop"
+    Option "XkbOptions" "compose:ralt,ctrl:nocaps"
+EndSection
+
+Note that it is not recommended to edit the file above, but use localectl to edit it. I don't know why that is. To learn more about that, and all the many options available, start with https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Using_localectl

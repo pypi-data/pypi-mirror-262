@@ -1,0 +1,46 @@
+## hpr0712 :: Linux Jazz - Recording my Audio
+
+ 
+My thanks to Pokey and ClaudioM for their kind comments on my first show. 
+
+
+Recording . . .
+How I record the show and use Linux in support of my jazz activities and work-flow.
+Set up and Gear:
+Main microphone - Behringer USB Condenser Microphone C-1U with boom mike stand and  'pop' screen.
+Sennheiser e815S with a Tascam US-100 Audio Interface or Zoom H4n Recorder.
+Audio Capture:
+Behringer USB mike straight into Audacity on an EeePC.
+(Klaatu's config file is at https://www.thebadapples.info/eastereggs/audacity.cfg.zip)
+
+
+Processing . . .
+Laptops  Asus EeePC 1005HA and a Sony Vaio VGN-BX297.
+All recordings saved as WAV or FLAC files initially.
+Spoken part of the show is scripted and each segment recorded separately.
+Assembly of segments and audio in Audacity, with adjustments, fades and overlaps, etc.
+Exported and mixed down into composite, sterio, MP3 file.
+
+
+Music Production . . .
+Music writing, arranging and composing: Band-In-A-Box 2009 and Sibelius 5 as there is no suitable Linux equivalents.
+Using Virtualbox with Windows XP.
+Band-In-A-Box use of sampled sounds for the backing voices.
+
+
+Use of Band-In-A-Box and Sibelius. I just wish there was the equivalent software the Linux to do this kind of thing  I would move there 'in a flash' if I could find some.
+
+
+Other Activities . . .
+Problem with keeping files up to date when using multiple machines.
+Use of 'Dropbox' is my solution.
+Folders moved from 'Dropbox' to large 1TB external drive when projects are complete.
+
+
+Next time . . .
+Linux software in the production of websites and other uses.
+
+
+My website and Blog . . .
+At 'www.tonydenton.com' and I am on Twitter as 'tonydenton.'
+My Identica name is 'Bariman' and I am on IRC, also as 'Bariman.'

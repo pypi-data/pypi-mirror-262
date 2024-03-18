@@ -1,0 +1,9 @@
+## hpr0005 :: Database 101 Part 1
+
+ 
+1st part of the Database 101 series with Stankdawg. He defines data as a collection of facts from which conclusions may be drawn while information is the application of data. While a database is a collection of data, regardless of whether it is a text file, spreadsheet etc.
+
+
+The larger the amount of data the slower text, and spreadsheets get. This is where a database management system comes in. A common database type is a Relational Database like Oracle, Microsoft SQL, PostgreSQL or MYSQL
+https://en.wikipedia.org/wiki/Relational_database
+

@@ -1,0 +1,11 @@
+## hpr1181 :: Mumble Audio Issues
+
+ 
+I had a couple of requests for more specific information regarding audio quality in mumble, so here I go through a few of the more common audio issues I've run into with a few tips about what you can try to do about them. These issues are: overdriven audio, quiet audio, distorted audio and choppy audio. 
+
+
+Eve bot (https://frymaster.127001.org/mumble) is also mentioned as an alternative to using the loopback settings within mumble for troubleshooting.
+
+
+Thanks to Peter64 for his help with generating the choppy audio segment.
+

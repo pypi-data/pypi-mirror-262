@@ -1,0 +1,33 @@
+## hpr0544 :: HPR: A private data cloud
+
+ 
+LINKS:
+Failure Trends in a Large Disk Drive Population https://labs.google.com/papers/disk_failures.pdf
+
+Nas solutions
+https://www.drobo.com/
+https://en.wikipedia.org/wiki/Network-attached_storage
+
+Clowd Solutions
+https://one.ubuntu.com/
+https://www.dropbox.com/
+https://www.carbonitepro.com/ProPricing.aspx
+
+Rsync
+https://samba.anu.edu.au/rsync/
+https://rsync.samba.org/ftp/rsync/rsync.html
+https://en.wikipedia.org/wiki/Sneaker_net
+
+Setting up the sshkey
+https://sial.org/howto/openssh/publickey-auth/
+
+Getting a well known url for your changing home IP address
+https://en.wikipedia.org/wiki/Dynamic_DNS
+
+Cron howto
+https://hackerpublicradio.org/eps.php?id=0507
+https://www.cyberciti.biz/faq/disable-the-mail-alert-by-crontab-command/
+
+Sponsored Podcast
+https://screencasters.heathenx.org/
+

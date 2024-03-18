@@ -1,0 +1,9 @@
+## hpr1162 :: LiTS 021: killall
+
+ The previous two shows have discussed different ways to kill a process using kill and pkill. This episode will cover a third command, killall. The killall command is used to send a signal to every process that is running the identified command. For instance:
+killall xterm
+Will send the SIGTERM process to all instances of xterm. Should there be any xterm processes running they would receive the default SIGTERM signal (recall, number 15) and be terminated. If there were no xterm processes running then killall would report the following:
+xterm: no process found
+
+For the rest of this episode please check out the shownotes and video at https://www.linuxintheshell.com/2013/01/01/episode-21-killall/
+

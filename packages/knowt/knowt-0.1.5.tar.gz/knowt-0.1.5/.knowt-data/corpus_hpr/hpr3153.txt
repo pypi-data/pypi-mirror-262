@@ -1,0 +1,15 @@
+## hpr3153 :: Fixing eBooks with Calibre and pdfcrop
+
+ 
+pdfcrop --margins '-4 -4 -4 -5' --clip input.pdf output.pdf
+
+
+calibre is a powerful and easy to use e-book manager. Users say it’s outstanding and a must-have. It’ll allow you to do nearly everything and it takes things a step beyond normal e-book software. It’s also completely free and open source and great for both casual users and computer experts. 
+
+
+PDFCrop is a Perl script that crops the white margins of PDF pages and rescales them to fit a standard size sheet of paper. It makes the printed pages far more attractive to read! 
+
+Links
+
+https://calibre-ebook.com/
+https://pdfcrop.sourceforge.net/

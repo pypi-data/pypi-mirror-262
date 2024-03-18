@@ -1,0 +1,72 @@
+## hpr1027 :: Migrating away from Google Reader
+
+ 
+One of the major advantages of Google Reader over application based clients is that no matter where you access it from your views are synchronized. Everything you read is marked a read everywhere and you don't have to worry about whither you check your feeds on a desktop PC or on your phone. It truly is the best example of a cloud application out there.
+
+
+Except for the fact that I'm not happy with the idea of a complete stranger watching and recording every article I read, how long I read it for, and share that information around to other trusted partners. Remember when your parents/guardians caught you reading over their shoulder ? It wasn't acceptable then and it sure isn't now. Epically when I noticed that my search results changed dramatically after I started following certain feeds. It's just not right and here's why https://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles.html
+
+
+
+
+
+
+
+
+
+
+
+
+Getting a list of my feeds
+
+Google should be credited with the fact that they make exporting very easy to do. Thanks to the work of the https://www.dataliberation.org/ team. Who's stated goal is "Users should be able to control the data they store in any of Google's products.  Our team's goal is to make it easier to move data in and out."
+For Google Reader this amounts to:
+
+
+Settings -> Reader Settings -> Import/Export -> OPML
+
+
+OPML (Outline Processor Markup Language) is an XML format for outlines (defined as "a tree, where each node contains a set of named attributes with string values"). Originally developed by Radio UserLand as a native file format for an outliner application, it has since been adopted for other uses, the most common being to exchange lists of web feeds between web feed aggregators.
+From Wikipedia, the free encyclopedia https://en.wikipedia.org/wiki/OPML
+
+
+That's it. You now have a list of all your feeds we are still faced with the problem of reading/deleting items in one place and having them synchronized everywhere else ? The answer is actually quite obvious.
+
+imap - Internet Message Access Protocol
+
+From Wikipedia, the free encyclopedia
+https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
+Internet message access protocol (IMAP) is one of the two most prevalent Internet standard protocols for e-mail retrieval, the other being the Post Office Protocol (POP). Virtually all modern e-mail clients and mail servers support both protocols as a means of transferring e-mail messages from a server.
+
+
+The great news is that there are imap clients everywhere. Microsoft Outlook supports it. Thunderbird, Evolution, Kmail, Claws-Mail all support it. It's supported on Android, the iPhone, and on Windows Mobile. There are a multitude of web clients. The only problem now was to find a way to get the RSS feeds over to a imap message format. A quick duckduckgo search later lead me to ....
+
+Feed2Imap
+https://home.gna.org/feed2imap/
+Feed2Imap is an RSS/Atom feed aggregator. After Downloading feeds (over HTTP or HTTPS), it uploads them to a specified folder of an IMAP mail server or copies them to a local maildir. The user can then access the feeds using Mutt, Evolution, Mozilla Thunderbird or even a webmail.
+
+
+It's in all the major repositories and I had it up and running in under ten minutes. It keeps it's settings in a hidden file .feed2imaprc in your home directory. The configuration is simple, four lines per feed.
+
+
+feeds:
+ - name: kenfallon.com
+   url: https://kenfallon.com/?feed=rss2
+   target: imap://RSSNewsAccount%40example.com:PasswordForRSSNewsAccount@imap.example.com/INBOX.Feeds.Tech_Blogs
+   include-images: true
+...
+
+
+The name filed is what will be the feed name and url is the link to the rss feed. The target is the path on the imap account you want to put it to. I used a throw away email account on my own domain with some restrictions on the size so that if I forget to check it won't affect the rest of my mailboxes. 
+The line it's broken into several parts, first is imap:// followed by the imap account user name and password. If your login contains an @ character, replace it with %40. Next is the @ sign followed by your server hostname and then the path. I chose INBOX.Feeds and then a subfolder for every group I had in Google Reader. The only other option I set was to include the images.
+
+opml2feed
+
+I have quite a few feeds now and I did not want to be typing them in by hand. So I wrote a small perl script to convert the opml file into a .feed2imaprc format and it will hopefully get you most of the way. The code is available on https://gitorious.org/opml2feed ( thanks to Klaatu over at https://www.gnuworldorder.info/ where he covered using Git in the March 31, 2012: Episode 7x13.)
+
+
+Now setup the imap account on your mail client(s) and once you are happy run feed2imap and you should see the items beginning to appear. I set it to run every two hours at 14 minutes past the hour by adding the following line to my cron tab.
+
+
+14 */2 * * * /usr/bin/feed2imap >/dev/null 2>&1
+

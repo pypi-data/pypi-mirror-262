@@ -1,0 +1,25 @@
+## hpr3518 :: Linux Inlaws S01E47: BigBlueButton and NAT
+
+ In this episode of your favourite FLOSS podcast our two OAPs discuss the challenges of running
+conferencing systems like BigBlueButton behind a network address translation
+(NAT) configuration, something that the Inlaws have been struggeling (?) with
+for quite some time but now have arrived a solution which might just work :-).
+If you face similar challenges or just want to refresh your knowledge about
+intricate network architectures never mind their pitfalls, stay tuned.  All
+will be revealed (hopefully :-). But beware: This show is highly technical and
+geek-only.  Which may come in handy if you're not technical but suffer from
+insomnia or similar sleep disorders - this is your show!
+Links:
+
+Network Address Translation (NAT): https://en.wikipedia.org/wiki/Network_address_translation
+BigBlueButton (BBB): https://github.com/bigbluebutton/bigbluebutton
+TURN server: https://gabrieltanner.org/blog/turn-server
+STUN and more: https://en.wikipedia.org/wiki/STUN
+Google TURN servers: https://gist.github.com/sagivo/3a4b2f2c7ac6e1b5267c2f1f59ac6c6b
+Dehydrated: https://github.com/dehydrated-io/dehydrated
+WebRTC: https://webrtc.org/getting-started/overview
+Parallels: https://www.imdb.com/title/tt3479316/?ref_=nv_sr_srsg_0
+Philip K. Dick's Vulcan Hammer: https://en.wikipedia.org/wiki/Vulcan%27s_Hammer
+The Ice Road: https://www.imdb.com/title/tt3758814/?ref_=nm_flmg_act_7
+Sorcerer: https://www.imdb.com/title/tt0076740/?ref_=fn_tt_tt_8
+

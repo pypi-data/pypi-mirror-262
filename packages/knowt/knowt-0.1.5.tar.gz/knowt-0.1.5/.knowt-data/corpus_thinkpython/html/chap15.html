@@ -1,0 +1,513 @@
+<html>
+<head>
+<title>Chapter 15: Sets of objects</title>
+
+<style type="text/css">
+<!--
+.code {font-family: Courier; font-size: 85%;}
+.keyword {color: #0000ff;}
+.comment {color: #008000;}
+.quote {color: #ff0000;}
+.function {color: #ffc400;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white>
+
+<table width=500><tr><td>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap14.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap16.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+
+<h2>Chapter 15</h2>
+
+
+
+<h1>Sets of objects</h1>
+
+<a name=1></a>
+<h3>15.1 Composition</h3>
+<p>
+By now, you have seen several examples of composition.
+One of the
+first examples was using a method invocation as part of an
+expression.  Another example is the nested structure of statements;
+you can put an <tt><font size=-1><font color=black>if</font></font></tt> statement within a <tt><font size=-1><font color=black>while</font></font></tt> loop, within
+another <tt><font size=-1><font color=black>if</font></font></tt> statement, and so on.
+<p>
+Having seen this pattern, and having learned about lists and objects,
+you should not be surprised to learn that you can create lists of
+objects.  You can also create objects that contain lists (as
+attributes); you can create lists that contain lists; you can
+create objects that contain objects; and so on.
+<p>
+In this chapter and the next, we will look at some examples of these
+combinations, using <tt><font size=-1>Card</font></tt> objects as an example.
+
+<a name=2></a>
+<h3>15.2 <tt><font size=-1>Card</font></tt> objects</h3>
+<p>
+If you are not familiar with common playing cards, now would be a good
+time to get a deck, or else this chapter might not make much sense.
+There are fifty-two cards in a deck, each of which belongs to one of four
+suits and one of thirteen ranks.  The suits are Spades, Hearts, Diamonds, and
+Clubs (in descending order in bridge).  The ranks are Ace, 2, 3, 4, 5,
+6, 7, 8, 9, 10, Jack, Queen, and King.  Depending on the game that you are
+playing, the rank of Ace may be higher than King or lower than 2.
+<p>
+If we want to define a new object to represent a playing card, it is
+obvious what the attributes should be: <tt><font size=-1>rank</font></tt> and
+<tt><font size=-1>suit</font></tt>.  It is not as obvious what type the attributes
+should be.  One possibility is to use strings containing words like
+<tt><font size=-1><font color=red>"Spade"</font></font></tt> for suits and <tt><font size=-1><font color=red>"Queen"</font></font></tt> for ranks.  One problem with
+this implementation is that it would not be easy to compare cards to
+see which had a higher rank or suit.
+<p>
+An alternative is to use integers to <b>encode</b> the ranks and suits.
+By "encode," we do not mean what some people think, which is to
+encrypt or translate into a secret code.  What a computer scientist
+means by "encode" is "to define a mapping between a
+sequence of numbers and the items I want to represent." For example:
+
+<p>
+<table align=center><tr><td align=left>Spades </td><td align=center> <tt>-&gt;</tt> </td><td align=left> 3 </td></tr><tr><td align=left>Hearts </td><td align=center> <tt>-&gt;</tt> </td><td align=left> 2 </td></tr><tr><td align=left>Diamonds </td><td align=center> <tt>-&gt;</tt> </td><td align=left> 1 </td></tr><tr><td align=left>Clubs </td><td align=center> <tt>-&gt;</tt> </td><td align=left> 0
+</td></tr></table>
+<p>
+An obvious feature of this mapping is that the suits map to integers in
+order, so we can compare suits by comparing integers.  The mapping for
+ranks is fairly obvious; each of the numerical ranks maps to the
+corresponding integer, and for face cards:
+
+<p>
+<table align=center><tr><td align=left>Jack </td><td align=center> <tt>-&gt;</tt> </td><td align=left> 11 </td></tr><tr><td align=left>Queen </td><td align=center> <tt>-&gt;</tt> </td><td align=left> 12 </td></tr><tr><td align=left>King </td><td align=center> <tt>-&gt;</tt> </td><td align=left> 13 </td></tr><tr><td align=left></td></tr></table>
+<p>
+The reason we are using mathematical notation for these mappings is
+that they are not part of the Python program.  They are part of the
+program design, but they never appear explicitly in the code.  The
+class definition for the <tt><font size=-1>Card</font></tt> type looks like this:
+
+<p><tt><font size=-1><font color=black>class</font> Card:
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self, suit=0, rank=2):
+<br>&nbsp; &nbsp; self.suit = suit
+<br>&nbsp; &nbsp; self.rank = rank
+<br></font></tt></p>
+
+<p>
+As usual, we provide an initialization method that takes an optional
+parameter for each attribute.  The default value of <tt><font size=-1>suit</font></tt> is
+0, which represents Clubs.
+<p>
+To create a Card, we invoke the Card constructor with the
+suit and rank of the card we want.
+
+<p><tt><font size=-1>threeOfClubs = Card(3, 1)
+<br></font></tt></p>
+
+<p>
+In the next section we'll figure out which card we just made.
+
+<a name=3></a>
+<h3>15.3 Class attributes and the <tt><font size=-1>__str__</font></tt> method</h3>
+<p>
+In order to print <tt><font size=-1>Card</font></tt> objects in a way that people can easily
+read, we want to map the integer codes onto words.  A natural way to
+do that is with lists of strings.  We assign these lists to <b>class
+attributes</b> at the top of the class definition:
+
+<p><tt><font size=-1><font color=black>class</font> Card:
+<br>&nbsp; suitList = [<font color=red>"Clubs"</font>, <font color=red>"Diamonds"</font>, <font color=red>"Hearts"</font>, <font color=red>"Spades"</font>]
+<br>&nbsp; rankList = [<font color=red>"narf"</font>, <font color=red>"Ace"</font>, <font color=red>"2"</font>, <font color=red>"3"</font>, <font color=red>"4"</font>, <font color=red>"5"</font>, <font color=red>"6"</font>, <font color=red>"7"</font>, 
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font color=red>"8"</font>, <font color=red>"9"</font>, <font color=red>"10"</font>, <font color=red>"Jack"</font>, <font color=red>"Queen"</font>, <font color=red>"King"</font>]
+<br>
+<br>&nbsp; <font color=#009000>#init method omitted
+</font><br>
+<br>&nbsp; <font color=black>def</font> <font color=orange>__str__</font>(self):
+<br>&nbsp; &nbsp; <font color=black>return</font> (self.rankList[self.rank] + <font color=red>" of "</font> + 
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.suitList[self.suit])
+<br></font></tt></p>
+
+<p>
+A class attribute is defined outside of any method, and it can be
+accessed from any of the methods in the class.
+<p>
+Inside <tt><font size=-1>__str__</font></tt>, we can use <tt><font size=-1>suitList</font></tt> and <tt><font size=-1>rankList</font></tt>
+to map the numerical values of <tt><font size=-1>suit</font></tt> and <tt><font size=-1>rank</font></tt> to strings.
+For example, the expression <tt><font size=-1>self.suitList[self.suit]</font></tt> means
+"use the attribute <tt><font size=-1>suit</font></tt> from the object <tt><font size=-1>self</font></tt> as an index
+into the class attribute named <tt><font size=-1>suitList</font></tt>, and select the
+appropriate string."
+<p>
+The reason for the <tt><font size=-1><font color=red>"narf"</font></font></tt> in the first element in <tt><font size=-1>rankList</font></tt> is to act as a place keeper for the zero-eth element of the
+list, which should never be used.  The only valid ranks are 1 to 13.  This
+wasted item is not entirely necessary.  We could have started at 0,
+as usual, but it is less confusing to encode 2 as 2, 3 as 3, and so on.
+<p>
+With the methods we have so far, we can create and print cards:
+
+<p><tt><font size=-1>&gt;&gt;&gt; card1 = Card(1, 11)
+<br>&gt;&gt;&gt; <font color=black>print</font> card1
+<br>Jack of Diamonds
+<br></font></tt></p>
+
+<p>
+Class attributes like <tt><font size=-1>suitList</font></tt> are shared by all <tt><font size=-1>Card</font></tt>
+objects.  The advantage of this is that we can use any <tt><font size=-1>Card</font></tt>
+object to access the class attributes:
+
+<p><tt><font size=-1>&gt;&gt;&gt; card2 = Card(1, 3)
+<br>&gt;&gt;&gt; <font color=black>print</font> card2
+<br>3 of Diamonds
+<br>&gt;&gt;&gt; <font color=black>print</font> card2.suitList[1]
+<br>Diamonds
+<br></font></tt></p>
+
+<p>
+The disadvantage is that if we modify a class attribute, it
+affects every instance of the class.  For example, if we decide
+that "Jack of Diamonds" should really be called
+"Jack of Swirly Whales," we could do this:
+
+<p><tt><font size=-1>&gt;&gt;&gt; card1.suitList[1] = <font color=red>"Swirly Whales"</font>
+<br>&gt;&gt;&gt; <font color=black>print</font> card1
+<br>Jack of Swirly Whales
+<br></font></tt></p>
+
+<p>
+The problem is that <i>all</i> of the Diamonds just became
+Swirly Whales:
+
+<p><tt><font size=-1>&gt;&gt;&gt; <font color=black>print</font> card2
+<br>3 of Swirly Whales
+<br></font></tt></p>
+
+<p>
+It is usually not a good idea to modify class attributes.
+
+<a name=4></a>
+<h3>15.4 Comparing cards</h3>
+<p>
+For primitive types, there are conditional operators
+(<tt><font size=-1>&lt;</font></tt>, <tt><font size=-1>&gt;</font></tt>, <tt><font size=-1>==</font></tt>, etc.)
+that compare
+values and determine when one is greater than, less than, or equal to
+another.  For user-defined types, we can override the behavior of
+the built-in operators by providing a method named
+<tt><font size=-1>__cmp__</font></tt>.  By convention, <tt><font size=-1>__cmp__</font></tt>
+has two parameters, <tt><font size=-1>self</font></tt> and <tt><font size=-1>other</font></tt>, and returns
+1 if the first object is greater, -1 if the
+second object is greater, and 0 if they are equal to each other.
+<p>
+Some types are completely ordered, which means that you can compare
+any two elements and tell which is bigger.  For example, the integers
+and the floating-point numbers are completely ordered.  Some sets are
+unordered, which means that there is no meaningful way to say that one
+element is bigger than another.  For example, the fruits are
+unordered, which is why you cannot compare apples and oranges.
+<p>
+The set of playing cards is partially ordered, which means that
+sometimes you can compare cards and sometimes not.  For example, you
+know that the 3 of Clubs is higher than the 2 of Clubs, and the 3 of
+Diamonds is higher than the 3 of Clubs.  But which is better, the 3 of
+Clubs or the 2 of Diamonds?  One has a higher rank, but the other has
+a higher suit.
+<p>
+In order to make cards comparable, you have to decide which is more
+important, rank or suit.  To be honest, the choice is
+arbitrary.  For the sake of choosing, we will say that suit is more
+important, because a new deck of cards comes sorted
+with all the Clubs together, followed by all the Diamonds, and so on.
+<p>
+With that decided, we can write <tt><font size=-1>__cmp__</font></tt>:
+
+<p><tt><font size=-1><font color=black>def</font> <font color=orange>__cmp__</font>(self, other):
+<br>&nbsp; <font color=#009000># check the suits
+</font><br>&nbsp; <font color=black>if</font> self.suit &gt; other.suit: <font color=black>return</font> 1
+<br>&nbsp; <font color=black>if</font> self.suit &lt; other.suit: <font color=black>return</font> -1
+<br>&nbsp; <font color=#009000># suits are the same... check ranks
+</font><br>&nbsp; <font color=black>if</font> self.rank &gt; other.rank: <font color=black>return</font> 1
+<br>&nbsp; <font color=black>if</font> self.rank &lt; other.rank: <font color=black>return</font> -1
+<br>&nbsp; <font color=#009000># ranks are the same... it's a tie
+</font><br>&nbsp; <font color=black>return</font> 0
+<br></font></tt></p>
+
+<p>
+In this ordering, Aces appear lower than Deuces (2s).
+
+<blockquote><i>As an exercise, modify <tt><font size=-1>__cmp__</font></tt> so that Aces are
+ranked higher than Kings.</i>
+</blockquote>
+
+<a name=5></a>
+<h3>15.5 Decks</h3>
+<p>
+Now that we have objects to represent <tt><font size=-1>Card</font></tt>s, the next logical
+step is to define a class to represent a <tt><font size=-1>Deck</font></tt>.  Of course, a
+deck is made up of cards, so each <tt><font size=-1>Deck</font></tt> object will contain a
+list of cards as an attribute.
+<p>
+The following is a class definition for the <tt><font size=-1>Deck</font></tt> class.  The
+initialization method creates the attribute <tt><font size=-1>cards</font></tt> and generates
+the standard set of fifty-two cards:
+
+<p><tt><font size=-1><font color=black>class</font> Deck:
+<br>&nbsp; <font color=black>def</font> <font color=orange>__init__</font>(self):
+<br>&nbsp; &nbsp; self.cards = []
+<br>&nbsp; &nbsp; <font color=black>for</font> suit <font color=black>in</font> range(4):
+<br>&nbsp; &nbsp; &nbsp; <font color=black>for</font> rank <font color=black>in</font> range(1, 14):
+<br>&nbsp; &nbsp; &nbsp; &nbsp; self.cards.append(Card(suit, rank))
+<br></font></tt></p>
+
+<p>
+The easiest way to populate the deck is with a nested loop.  The outer
+loop enumerates the suits from 0 to 3.  The inner loop enumerates the
+ranks from 1 to 13.  Since the outer loop iterates four times, and the
+inner loop iterates thirteen times, the total number of times the body
+is executed is fifty-two (thirteen times four).  Each iteration
+creates a new instance of <tt><font size=-1>Card</font></tt> with the current suit and rank,
+and appends that card to the <tt><font size=-1>cards</font></tt> list.
+<p>
+The <tt><font size=-1>append</font></tt> method works on lists but not, of course, tuples.
+
+<a name=6></a>
+<h3>15.6 Printing the deck</h3>
+<p>
+As usual, when we define a new type of object we want a method
+that prints the contents of an object.
+To print a <tt><font size=-1>Deck</font></tt>, we traverse the list and print each <tt><font size=-1>Card</font></tt>:
+
+<p><tt><font size=-1><font color=black>class</font> Deck:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>printDeck</font>(self):
+<br>&nbsp; &nbsp; <font color=black>for</font> card <font color=black>in</font> self.cards:
+<br>&nbsp; &nbsp; &nbsp; <font color=black>print</font> card
+<br></font></tt></p>
+
+<p>
+Here, and from now on, the ellipsis (<tt><font size=-1>...</font></tt>) indicates that we have
+omitted the other methods in the class.
+<p>
+As an alternative to <tt><font size=-1>printDeck</font></tt>, we could
+write a <tt><font size=-1>__str__</font></tt> method for the <tt><font size=-1>Deck</font></tt> class.  The
+advantage of <tt><font size=-1>__str__</font></tt> is that it is more flexible.  Rather
+than just printing the contents of the object, it generates a string
+representation that other parts of the program can manipulate
+before printing, or store for later use.
+<p>
+Here is a version of <tt><font size=-1>__str__</font></tt> that returns a string
+representation of a <tt><font size=-1>Deck</font></tt>.
+To add a bit of pizzazz, it arranges the cards in a cascade
+where each card is indented one space more than the previous card:
+
+<p><tt><font size=-1><font color=black>class</font> Deck:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>__str__</font>(self):
+<br>&nbsp; &nbsp; s = <font color=red>""</font>
+<br>&nbsp; &nbsp; <font color=black>for</font> i <font color=black>in</font> range(len(self.cards)):
+<br>&nbsp; &nbsp; &nbsp; s = s + <font color=red>" "</font>*i + str(self.cards[i]) + <font color=red>"\n"</font>
+<br>&nbsp; &nbsp; <font color=black>return</font> s
+<br></font></tt></p>
+
+<p>
+This example demonstrates several features.  First, instead of
+traversing <tt><font size=-1>self.cards</font></tt> and assigning each card to a variable,
+we are using <tt><font size=-1>i</font></tt> as a loop
+variable and an index into the list of cards.
+<p>
+Second, we are using the string multiplication operator to indent
+each card by one more space than the last.  The expression
+<tt><font size=-1><font color=red>" "</font>*i</font></tt> yields a number of spaces equal to the current value
+of <tt><font size=-1>i</font></tt>.
+<p>
+Third, instead of using the <tt><font size=-1><font color=black>print</font></font></tt> command to print the cards,
+we use the <tt><font size=-1>str</font></tt> function.  Passing an object as an argument to
+<tt><font size=-1>str</font></tt> is equivalent to invoking the <tt><font size=-1>__str__</font></tt> method on
+the object.
+<p>
+Finally, we are using the variable <tt><font size=-1>s</font></tt> as an <b>accumulator</b>.
+Initially, <tt><font size=-1>s</font></tt> is the empty string.  Each time through the loop, a
+new string is generated and concatenated with the old value of <tt><font size=-1>s</font></tt>
+to get the new value.  When the loop ends, <tt><font size=-1>s</font></tt> contains the
+complete string representation of the <tt><font size=-1>Deck</font></tt>, which looks like
+this:
+
+<p><tt><font size=-1>&gt;&gt;&gt; deck = Deck()
+<br>&gt;&gt;&gt; <font color=black>print</font> deck
+<br>Ace of Clubs
+<br> 2 of Clubs
+<br>&nbsp; 3 of Clubs
+<br>&nbsp; &nbsp;4 of Clubs
+<br>&nbsp; &nbsp; 5 of Clubs
+<br>&nbsp; &nbsp; &nbsp;6 of Clubs
+<br>&nbsp; &nbsp; &nbsp; 7 of Clubs
+<br>&nbsp; &nbsp; &nbsp; &nbsp;8 of Clubs
+<br>&nbsp; &nbsp; &nbsp; &nbsp; 9 of Clubs
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10 of Clubs
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Jack of Clubs
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Queen of Clubs
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; King of Clubs
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ace of Diamonds
+<br></font></tt></p>
+
+<p>
+And so on.  Even though the result appears on 52 lines, it is
+one long string that contains newlines.
+
+<a name=7></a>
+<h3>15.7 Shuffling the deck</h3>
+<p>
+If a deck is perfectly shuffled, then any card is equally likely
+to appear anywhere in the deck, and any location in the deck is
+equally likely to contain any card.
+<p>
+To shuffle the deck, we will use the <tt><font size=-1>randrange</font></tt> function
+from the <tt><font size=-1>random</font></tt> module.  With two integer arguments,
+<tt><font size=-1>a</font></tt> and <tt><font size=-1>b</font></tt>, <tt><font size=-1>randrange</font></tt> chooses a random integer in
+the range <tt><font size=-1>a &lt;= x &lt; b</font></tt>.  Since the upper bound is strictly
+less than <tt><font size=-1>b</font></tt>, we can use the length of a list as the
+second argument, and we are guaranteed to get a legal index.
+For example, this expression chooses the index of a random card in a deck:
+
+<p><tt><font size=-1>random.randrange(0, len(self.cards))
+<br></font></tt></p>
+
+<p>
+An easy way to shuffle the deck is by traversing the cards and
+swapping each card with a randomly chosen one.  It is possible that
+the card will be swapped with itself, but that is fine.  In fact, if
+we precluded that possibility, the order of the cards would be less
+than entirely random:
+
+<p><tt><font size=-1><font color=black>class</font> Deck:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>shuffle</font>(self):
+<br>&nbsp; &nbsp; <font color=black>import</font> random
+<br>&nbsp; &nbsp; nCards = len(self.cards)
+<br>&nbsp; &nbsp; <font color=black>for</font> i <font color=black>in</font> range(nCards):
+<br>&nbsp; &nbsp; &nbsp; j = random.randrange(i, nCards)
+<br>&nbsp; &nbsp; &nbsp; self.cards[i], self.cards[j] = self.cards[j], self.cards[i]
+<br></font></tt></p>
+
+<p>
+Rather than assume that there are fifty-two cards in the deck, we get
+the actual length of the list and store it in <tt><font size=-1>nCards</font></tt>.
+<p>
+For each card in the deck, we choose a random card from among the
+cards that haven't been shuffled yet.  Then we swap the current
+card (<tt><font size=-1>i</font></tt>) with the selected card (<tt><font size=-1>j</font></tt>).  To swap the
+cards we use a tuple assignment, as in <a href="chap09.html#2">Section 9.2</a>:
+
+<p><tt><font size=-1>self.cards[i], self.cards[j] = self.cards[j], self.cards[i]
+<br></font></tt></p>
+
+
+<blockquote><i>As an exercise, rewrite this line of code
+without using a sequence assignment.</i>
+</blockquote>
+
+<a name=8></a>
+<h3>15.8 Removing and dealing cards</h3>
+<p>
+Another method that would be useful for the <tt><font size=-1>Deck</font></tt> class is <tt><font size=-1>removeCard</font></tt>, which takes a card as an argument, removes it, and
+returns <tt><font size=-1>True</font></tt> if the card was in the deck and <tt><font size=-1>False</font></tt>
+otherwise:
+
+<p><tt><font size=-1><font color=black>class</font> Deck:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>removeCard</font>(self, card):
+<br>&nbsp; &nbsp; <font color=black>if</font> card <font color=black>in</font> self.cards:
+<br>&nbsp; &nbsp; &nbsp; self.cards.remove(card)
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> True
+<br>&nbsp; &nbsp; <font color=black>else</font>: 
+<br>&nbsp; &nbsp; &nbsp; <font color=black>return</font> False
+<br></font></tt></p>
+
+<p>
+The <tt><font size=-1><font color=black>in</font></font></tt> operator returns true if the first operand is in the
+second, which must be a list or a tuple.  If the first operand is an
+object, Python uses the object's <tt><font size=-1>__cmp__</font></tt> method to determine
+equality with items in the list.  Since the <tt><font size=-1>__cmp__</font></tt> in the
+<tt><font size=-1>Card</font></tt> class checks for deep equality, the <tt><font size=-1>removeCard</font></tt> method
+checks for deep equality.
+<p>
+To deal cards, we want to remove and return the top card.
+The list method <tt><font size=-1>pop</font></tt> provides a convenient way to do that:
+
+<p><tt><font size=-1><font color=black>class</font> Deck:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>popCard</font>(self):
+<br>&nbsp; &nbsp; <font color=black>return</font> self.cards.pop()
+<br></font></tt></p>
+
+<p>
+Actually, <tt><font size=-1>pop</font></tt> removes the <i>last</i> card in the list, so we are in
+effect dealing from the bottom of the deck.
+<p>
+One more operation that we are likely to want is the boolean function
+<tt><font size=-1>isEmpty</font></tt>, which returns true if the deck contains no cards:
+
+<p><tt><font size=-1><font color=black>class</font> Deck:
+<br>&nbsp; ...
+<br>&nbsp; <font color=black>def</font> <font color=orange>isEmpty</font>(self):
+<br>&nbsp; &nbsp; <font color=black>return</font> (len(self.cards) == 0)
+<br></font></tt></p>
+
+
+<a name=9></a>
+<h3>15.9 Glossary</h3>
+
+<dl>
+<dt>encode</dt>
+<dd>To represent one set of values using another
+set of values by constructing a mapping between them.</dd>
+<dt>class attribute</dt>
+<dd>A variable that is defined inside
+a class definition but outside any method.  Class attributes
+are accessible from any method in the class and are shared
+by all instances of the class.</dd>
+<dt>accumulator</dt>
+<dd>A variable used in a loop to accumulate
+a series of values, such as by concatenating them onto
+a string or adding them to a running sum.</dd>
+</dl>
+
+<p>
+This is an older version of the book now known as <i>Think Python</i>.  You might prefer to <a href="../../../../greenteapress.com/wp/think-python-2e/index.html">read a more recent version</a>.
+
+
+<hr>
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+
+  <tr>
+    <td width="20"><a href="chap14.html"><img border="0" alt="Previous" src="images/prev.png"></a></td>
+    <td width="20"><a href="index.html"><img border="0" alt="Up" src="images/up.png"></a></td>
+    <td width="20"><a href="chap16.html"><img border="0" alt="Next" src="images/next.png"></a></td>
+    <td center>How to Think Like a Computer Scientist</td>
+    <td width="20"><a href="dex.html"><img border="0" alt="Index" src="images/index.png"></a></td>
+  </tr>
+
+</table>
+<hr>
+
+
+</td></tr>
+</table>
+</body>
+</html>
+

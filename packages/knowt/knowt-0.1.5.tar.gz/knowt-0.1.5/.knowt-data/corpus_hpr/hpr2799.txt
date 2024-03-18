@@ -1,0 +1,173 @@
+## hpr2799 :: building an arduino programmer
+
+ 
+intro
+
+1.1 brian in ohio
+1.2 out from under my rock
+
+motivation
+
+2.1 ken fallon bootloader episode
+
+hpr 2660
+burned many bootloaders
+used usbtiny programmer
+putting together a programmer would be a good learning experience
+
+2.2 still use arduino
+
+easy to check out a new piece of hardware
+boards are cheap and easy to find
+boards are robust
+
+2.3 need to run an arduino board at lower frequency
+
+developing a data logger
+write code in c using the avr open source tool chain
+prototype on arduino board
+
+
+needed supplies
+
+3.1 arduino ide
+
+get from your distro’s repository
+slackbuilds i used the version that repackages the binaries, the little a arduino
+read this good information
+https://www.arduino.cc/en/Tutorial/ArduinoISP
+
+3.2 avrdude
+
+use it to test the programmer outside of the arduino environment
+part of the gnu avr toolchain
+
+3.3 arduino nano clone - un assembled
+
+
+look for the boards that have the unpoplated icsp header
+make sure its a nano and not a pro-mini
+
+3.4 3 leds 3mm or smaller
+
+
+optional but are useful, especially the heartbeat led
+
+3.5 3 resistors 200 ohm - small
+
+if you install the led’s
+
+3.6 1 5-10 uF electrolytic capacitor
+3.7 3-4 inch long jumper wire
+3.8 2x3 female header
+
+3.9 some way to cut wire
+3.10 soldering supplies
+
+howto
+
+4.1 upload arduino isp sketch to nano
+File→Examples→11.ArduinoISP→ArduinoISP
+
+i modified the sketch changing where the led’s are placed
+i put the led’s at digital 9, 7, and 5 for spacing
+#define RESET 10 // Use pin 10 to reset the target rather than SS
+#define LED_HB 9 // No change define LED_ERR 7 // changed define
+#LED_PMODE 5 // changed
+upload the sketch
+
+4.2 solder on led’s
+
+
+solder the anode leg to the apropriate digital pin on the board
+add a resistor to the cathode leg of the led (usually the shorter leg)
+solder the resistor attached to the cathode to ground pin of the board
+i started with pin 9
+you can test each led before moving on to the next led
+my soldering ended up messy but it gets the job done
+
+
+4.3 modify sketch and test leds
+
+you can modify the sketch
+change the heartbeat pin to whatever led you just soldered
+upload the modified sketch
+the led you just soldered should pulse
+
+4.4 clip jumper wire and attach
+
+
+pin 10
+used the hole on the end of the board as strain relief
+
+4.5 add capacitor
+
+watch polarity
+no more auto reset
+if you want to program with arduino ide, you need to push the reset button
+
+4.6 2x3 header
+                         MISO -|o o|-+Vcc
+                          SCK -|o o|-MOSI
+ Do not attach-Reset-|o o|-Gnd
+                                     -----
+
+
+remove reset connecter south-west connector
+solder the remaining 5 pins
+the header is soldered on the bottom of the board
+
+
+
+how to use
+
+5.1 plug usb cable into programmer and your computer
+5.2 start the arduino ide
+5.3 plug programmer onto target board remember to plug the wire into the reset pin of the target
+5.4 in the tools folder of the ide make sure your usb port is selected
+Tools→Port"/dev/ttyUSBx"→/dev/ttyUSBx
+5.5 and that in the programmer section you select arduino as isp not arduinoisp
+Tools→Programmer→Arduino as ISP
+5.6 at this point you can burn a bootloader as Ken described
+5.7 upload a program
+5.7.1 bring up the blink example sketch
+5.7.2 under tools make sure your target board type is selected
+Tools→Boards
+5.7.3 under the sketch menu you’ll see upload using a programmer
+Sketch→Upload Using Programer
+5.7.4 when you select that the blink sketch will be compiled and uploaded
+
+at the command line
+
+6.1 check functionallity
+bash-4.3$ avrdude -p m328p -c arduino -P /dev/ttyUSB0 -b 19200
+6.2 output
+  avrdude: AVR device initialized and ready to accept instructions
+
+  Reading | ################################################## | 100%
+  0.01s
+
+  avrdude: Device signature = 0x1e950f (probably m328p)
+
+  avrdude: safemode: Fuses OK (E:FD, H:DE, L:FF)
+
+  avrdude done.  Thank you.
+
+things to look out for
+
+7.1 permissions issues - arch wiki gentoo
+7.2 when you upload this way you overwrite bootloader
+7.3 arduino ide boards.txt has some fuse errors
+7.4 avrdude version 6.2 will not work
+7.5 baud rate using avrdude command line
+7.6 capacitor is non-optional, but makes uploading to that board non-trivial
+
+conclusion
+
+8.1 upload via icsp vs usb serial
+8.2 do you need a bootloader?
+8.3 challenge to max out any 8bit microcontroller
+
+if you need to do one or two things use a microcontroller i.e. arduino
+if you need to do many things use a linux single board computer i.e. raspberry pi
+

@@ -1,0 +1,20 @@
+## hpr0747 :: Botnets and DNS Tunnelling
+
+ HPR podcasting: "It's just as easy as getting two geeks onto skype!"
+Finux Tech Weekly podcast: https://www.finux.co.uk/
+BOTNETS
+53% increase in command and control servers in Canada
+This number was published by Websense. They decided to invest the situation after seeing an increase in targeted attacks against the Canadian government.
+Interesting Statistics!
+https://community.websense.com/blogs/websense-news-releases/archive/2011/05/19/new-research-shows-cyber-criminals-moving-operations-to-canada.aspx
+Patrick Runald's story that gets summarized, reblogged, quoted, misrepresented all over the place:
+https://community.websense.com/blogs/websense-insights/archive/2011/05/09/the-next-hotbed-of-cyber-crime-activity-is-canada.aspx?cmpid=prnr11.5.11
+Book:
+The Cuckoo's Egg: Tracking a Spy Through the Maze of Computer Espionage
+by Cliff Stoll
+Bruce Schneier's blog: https://www.schneier.com/
+Tunnelling over DNS inquires
+Finux gave a number of talks (most recently at BSides London) about how you can use DNS tunnelling to bypass some of the usual protocols to access online systems that would not let you access them without being subscribed. 
+Here are the slides:
+https://www.slideshare.net/bsideslondon/dns-tunnelling-its-all-in-the-name
+with lots of links on slides 27-29, including NSTX and OzimanDNS

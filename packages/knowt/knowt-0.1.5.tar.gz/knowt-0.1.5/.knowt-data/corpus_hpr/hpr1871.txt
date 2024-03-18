@@ -1,0 +1,446 @@
+## hpr1871 :: HPR Community News for September 2015
+
+ 
+New hosts
+
+Welcome to our new host: 
+Geddes.
+
+Last Month's Shows
+
+
+Id
+Day
+Date
+Title
+Host
+
+
+1847
+Tue
+2015-09-01
+Client Side C- WTF Is Wrong With You?
+sigflup
+
+
+1848
+Wed
+2015-09-02
+Introduction to w3m, a Command Line Web Browser
+Frank Bell
+
+
+1849
+Thu
+2015-09-03
+LinuxLugCast Episode-004 Outtakes
+Kevin Wisher
+
+
+1850
+Fri
+2015-09-04
+18 - ssh Introduction
+Ahuka
+
+
+1851
+Mon
+2015-09-07
+HPR Community News for August 2015
+HPR Volunteers
+
+
+1852
+Tue
+2015-09-08
+Operation Wallacea
+Dave Morriss
+
+
+1853
+Wed
+2015-09-09
+I <3 Vista
+Alpha32
+
+
+1854
+Thu
+2015-09-10
+Installing Ubuntu on the Asus TP500L
+Jon Kulp
+
+
+1855
+Fri
+2015-09-11
+61 - LibreOffice Impress - Slide Layouts and AutoLayout Text Boxes
+Ahuka
+
+
+1856
+Mon
+2015-09-14
+ssh config
+klaatu
+
+
+1857
+Tue
+2015-09-15
+Adventures In Coffee
+Curtis Adkins (CPrompt^)
+
+
+1858
+Wed
+2015-09-16
+Multimeter Mod's Part 2
+NYbill
+
+
+1859
+Thu
+2015-09-17
+A Mouse in a Maze on the Raspberry PI
+Gabriel Evenfire
+
+
+1860
+Fri
+2015-09-18
+FiftyOneFifty interviews Chris Waid of Save WiFi
+FiftyOneFifty
+
+
+1861
+Mon
+2015-09-21
+Cool Stuff pt. 4
+Curtis Adkins (CPrompt^)
+
+
+1862
+Tue
+2015-09-22
+The Awesomely Epic Guide To KDE Part 1
+Geddes
+
+
+1863
+Wed
+2015-09-23
+The Awesomely Epic Guide To KDE Part 2
+Geddes
+
+
+1864
+Thu
+2015-09-24
+Turning an old printer into a network printer
+Dave Morriss
+
+
+1865
+Fri
+2015-09-25
+62 - LibreOffice Impress - Working With Text Boxes
+Ahuka
+
+
+1866
+Mon
+2015-09-28
+An awkward talk with two young computer users
+Quvmoh
+
+
+1867
+Tue
+2015-09-29
+The Lafayette Public Library Maker Space
+Jon Kulp
+
+
+1868
+Wed
+2015-09-30
+Glasgow Podcrawl review
+Dave Morriss
+
+
+Mailing List discussions
+
+Policy decisions surrounding HPR are taken by the community as a whole. This discussion takes
+place on the Mail List which is open to all
+HPR listeners and contributors. The discussions are open and available on the
+Gmane
+archive.
+
+The main threads this month were:
+
+From: Dave Morriss <perloid@...>
+Date: 2015-09-01 07:56:04 +0100
+Subject: HPR Community News - next Saturday on 2015-09-05T18:00:00Z
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/911
+Messages: 3
+From: Dave Morriss <perloid@...>
+Date: 2015-09-06 17:41:07 +0100
+Subject: Test message. There seems to be a problem with the HPR list
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/914
+Messages: 3
+From: Charles Thayer <catintp@...>
+Date: 2015-09-08 13:58:29 -0700
+Subject: Markdown for HPR Show Notes
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/917
+Messages: 6
+From: Ken Fallon <ken@...>
+Date: 2015-09-09 10:53:50 +0200
+Subject: HPR Menus are not accessible
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/918
+Messages: 7
+From: Ken Fallon <ken@...>
+Date: 2015-09-09 10:56:42 +0200
+Subject: Mail list test with links - PLEASE IGNORE
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/919
+Messages: 2
+From: Fifty OneFifty <fiftyonefifty@...>
+Date: 2015-09-12 17:08:25 -0500
+Subject: Re: Submmiting markdown, WYSIWYG editors?
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/932
+Messages: 2
+From: Ken Fallon <ken@...>
+Date: 2015-09-14 09:55:26 +0200
+Subject: Getting in new contributors
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/934
+Messages: 22
+From: lostnbronx <lostnbronx@...>
+Date: 2015-09-15 16:29:58 -0700
+Subject: Re: Hpr Digest, Vol 84, Issue 16
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/949
+Messages: 1
+From: Fifty OneFifty <fiftyonefifty@...>
+Date: 2015-09-16 03:10:51 -0500
+Subject: Re: sounding stupid
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/952
+Messages: 3
+From: Fifty OneFifty <fiftyonefifty@...>
+Date: 2015-09-16 18:04:01 -0500
+Subject: Re: Hpr Digest, Vol 84, Issue 18
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/955
+Messages: 2
+From: Fifty OneFifty <fiftyonefifty@...>
+Date: 2015-09-18 01:04:19 -0500
+Subject: The HPR Zoom H1
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/956
+Messages: 1
+From: "Thaj A. Sara" <thajasara@...>
+Date: 2015-09-18 18:12:11 -0400
+Subject: Re: Hpr Digest, Vol 84, Issue 20
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/957
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2015-09-22 21:53:09 +0200
+Subject: Re: [SPAM] HPR Menus are not accessible
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/958
+Messages: 1
+From: Ken Fallon <ken@...>
+Date: 2015-09-24 13:46:16 +0200
+Subject: Linux News Log coming to an end after 10 years
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/959
+Messages: 1
+From: Dave Morriss <perloid@...>
+Date: 2015-09-28 11:15:19 +0100
+Subject: HPR Community News - next Saturday on 2015-10-03T18:00:00Z
+Link: https://comments.gmane.org/gmane.network.syndication.podcast.hacker-public-radio/965
+Messages: 1
+
+Total messages this month: 56
+Comments this month
+These are comments which have been made during the past month, either to shows
+released during the month or to past shows.
+There are 43 comments:
+
+hpr1739
+(2015-04-02) "Theater of the Imagination: Part 07"
+by lostnbronx.
+ Comment 1:
+FiftyOneFithty on 2015-09-08:
+"Thanks for conpairing Zoom and Tascam"
+
+hpr1750
+(2015-04-17) "xclip, xdotool, xvkbd: 3 CLI Linux tools for RSI sufferers"
+by Jon Kulp.
+ Comment 7:
+Rob Blaine on 2015-09-27:
+"Blather works great!" Comment 8:
+Jon Kulp  on 2015-09-27:
+"Blather" Comment 9:
+Rob Blaine on 2015-09-28:
+"Blather and RSI"
+
+hpr1831
+(2015-08-10) "Are speed listening and slow background music compatible?"
+by A Shadowy Figure.
+ Comment 5:
+folky on 2015-09-07:
+"It depends"
+
+hpr1834
+(2015-08-13) "Password Cards"
+by Jon Kulp.
+ Comment 1:
+Dave Morriss on 2015-09-03:
+"Very useful"
+
+hpr1837
+(2015-08-18) "Put an SSD in your Linux Box"
+by 2BFrank.
+ Comment 3:
+2BFrank on 2015-09-15:
+"Good points"
+
+hpr1841
+(2015-08-24) "My way into Linux"
+by folky.
+ Comment 2:
+folky on 2015-09-02:
+"Thank you"
+
+hpr1846
+(2015-08-31) "UNI-T UT61E Review"
+by NYbill.
+ Comment 1:
+Mike Ray on 2015-09-01:
+"Uni-T Meters" Comment 2:
+NYbill on 2015-09-01:"[no title]" Comment 3:
+Mike Ray on 2015-09-02:
+"Unit-T meters and serial ports" Comment 4:
+NYbill on 2015-09-02:"[no title]" Comment 5:
+Mike Ray on 2015-09-03:
+"PL2303 USB-toRS232 and UT6?" Comment 6:
+davidWHITMAN on 2015-09-07:
+"Damn You!"
+
+hpr1847
+(2015-09-01) "Client Side C- WTF Is Wrong With You?"
+by sigflup.
+ Comment 1:
+Gabriel Evenfire on 2015-09-17:
+"I always look forward to your shows..."
+
+hpr1848
+(2015-09-02) "Introduction to w3m, a Command Line Web Browser"
+by Frank Bell.
+ Comment 1:
+tom_len on 2015-10-01:
+"automatize login from command line"
+
+hpr1850
+(2015-09-04) "18 - ssh Introduction"
+by Ahuka.
+ Comment 1:
+0xf10e on 2015-09-10:
+"portable version of OpenSSH" Comment 2:
+Gabriel Evenfire on 2015-09-17:
+"This could be a very fruitful series." Comment 3:
+Kevin O'Brien on 2015-09-20:
+"Thank you"
+
+hpr1851
+(2015-09-07) "HPR Community News for August 2015"
+by HPR Volunteers.
+ Comment 1:
+Mike Ray on 2015-09-07:
+"Markdown show notes" Comment 2:
+Dave Morriss on 2015-09-08:
+"Markdown etc." Comment 3:
+NYbill on 2015-09-08:
+"Electronics videos. " Comment 4:
+NYbill on 2015-09-09:"[no title]"
+
+hpr1853
+(2015-09-09) "I <3 Vista"
+by Alpha32.
+ Comment 1:
+Aaronb483 on 2015-09-11:
+"great name for podcast"
+
+hpr1856
+(2015-09-14) "ssh config"
+by klaatu.
+ Comment 1:
+0xf10e on 2015-09-14:"[no title]" Comment 2:
+b-yeezi on 2015-09-15:
+"Thanks" Comment 3:
+Gabriel Evenfire on 2015-09-17:
+"Identity file"
+
+hpr1857
+(2015-09-15) "Adventures In Coffee"
+by Curtis Adkins (CPrompt^).
+ Comment 1:
+Gabriel Evenfire on 2015-09-17:
+"A nice episode even for non-coffee people" Comment 2:
+Dave Morriss on 2015-09-18:
+"I enjoyed this a lot" Comment 3:
+Michael on 2015-09-24:
+"You got my european mind."
+
+hpr1858
+(2015-09-16) "Multimeter Mod's Part 2"
+by NYbill.
+ Comment 1:
+Jon Kulp  on 2015-09-16:
+"Thank you! " Comment 2:
+Mike Ray on 2015-09-16:
+"Hacking at it's best" Comment 3:
+NYbill on 2015-09-16:
+"Thanks, Jon. " Comment 4:
+NYbill on 2015-09-16:
+"Ha, thanks Mike. " Comment 5:
+mirwi on 2015-09-24:
+"Splitting hair..." Comment 6:
+NYbill on 2015-09-25:
+"Transitors" Comment 7:
+Mike Ray on 2015-09-26:
+"Transistors"
+
+hpr1859
+(2015-09-17) "A Mouse in a Maze on the Raspberry PI"
+by Gabriel Evenfire.
+ Comment 1:
+Mike Ray on 2015-09-17:
+"Welcome return"
+
+hpr1862
+(2015-09-22) "The Awesomely Epic Guide To KDE Part 1"
+by Geddes.
+ Comment 1:
+Ken Fallon on 2015-09-28:
+"I just enabled a load of these"
+
+hpr1863
+(2015-09-23) "The Awesomely Epic Guide To KDE Part 2"
+by Geddes.
+ Comment 1:
+Jon Kulp  on 2015-09-23:
+"Probably still will not switch to KDE, but... "
+
+hpr1864
+(2015-09-24) "Turning an old printer into a network printer"
+by Dave Morriss.
+ Comment 1:
+Jon Kulp  on 2015-09-24:
+"Whoa remote scanning! " Comment 2:
+Dave Morriss on 2015-09-27:
+"Remote scanning, etc"
+
+hpr1866
+(2015-09-28) "An awkward talk with two young computer users"
+by Quvmoh.
+ Comment 1:
+Frank on 2015-09-28:"[no title]"
+
+
