@@ -1,0 +1,9 @@
+README.md
+setup.py
+socialshield/__init__.py
+socialshield/loader.py
+socialshield.egg-info/PKG-INFO
+socialshield.egg-info/SOURCES.txt
+socialshield.egg-info/dependency_links.txt
+socialshield.egg-info/requires.txt
+socialshield.egg-info/top_level.txt
