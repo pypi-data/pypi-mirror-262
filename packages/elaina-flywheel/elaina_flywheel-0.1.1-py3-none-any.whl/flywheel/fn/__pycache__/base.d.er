@@ -1,0 +1,33 @@
+##[pylyzer] failed /users/elaina/ryanvk/src/ryanvk/fn/base.py 1702884315 4747
+.___v_desugar_1 = pyimport "__future__"
+.annotations: Never
+.___v_desugar_2 = pyimport "typing"
+.TYPE_CHECKING: Never
+.Any: {typing.Any}
+.Callable: {typing.Callable}
+.Concatenate: (*Type) -> Type
+.Generic: {typing.Generic}
+.Protocol: (Type := NoneType) -> Type
+.TypeVar: {typing.TypeVar}
+.___v_desugar_3 = pyimport "ryanvk/_runtime"
+.upstream_staff: Never
+.___v_desugar_4 = pyimport "ryanvk/entity"
+.BaseEntity: Never
+.___v_desugar_5 = pyimport "(...)"
+.EntitiesHarvest: Never
+.FnCompose: Never
+.___v_desugar_6 = pyimport "(...)"
+.FnImplementEntity: Never
+.___v_desugar_7 = pyimport "(...)"
+.FnRecord: Never
+.___v_desugar_8 = pyimport "ryanvk/typing"
+.FnComposeCallReturnType: Never
+.FnComposeCollectReturnType: Never
+.P: Never
+.R: Never
+.inTC: Never
+.specifiedCollectP: Never
+.unspecifiedCollectP: Never
+
+.K: Type
+.outboundShape: Never
