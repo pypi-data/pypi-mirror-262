@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: tea-xyz-tv
+Version: 1.0.6
+Summary: A simple package testnet for https://app.tea.xyz/. Example tea-xyz-tv - https://github.com/tuanvofg/tea-xyz
+Home-page: https://github.com/tuanvofg/tea-xyz
+Author: TV
+Author-email: tuanvofg@gmail.com
+Project-URL: Homepage, https://github.com/tuanvofg/tea-xyz
+Project-URL: Source, https://github.com/tuanvofg/tea-xyz
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: requests>=2.20.0
+Requires-Dist: tea-xyz
