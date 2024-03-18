@@ -1,0 +1,10 @@
+matterdelta/__init__.py,sha256=_oyb4XTH0uNAQB0FvOPtR-WDY85b3lQbRDDaPD5WvZg,172
+matterdelta/__main__.py,sha256=M7jcIQ0wYwLot7bzOqMQUEJv_190nXbdctI6hrTINbA,65
+matterdelta/api.py,sha256=x13cmP2FW8vjA5i52xiCfh2d5HDpJ_W9B-TpC3pqt6U,5075
+matterdelta/hooks.py,sha256=qjfdXzyu4LX_iIotWdHlFgiwtogaoVYw93HvtaxyzQw,2867
+matterdelta-1.2.0.dist-info/LICENSE.txt,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+matterdelta-1.2.0.dist-info/METADATA,sha256=U23lpyQP-jTXcVF0HmbB0Q47ib3ttF-zvPGiYMCF6rs,3210
+matterdelta-1.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+matterdelta-1.2.0.dist-info/entry_points.txt,sha256=pQA7qdUQiQjQRffUp0rcdFvhnSRhMBtqIXeDBCA98uM,49
+matterdelta-1.2.0.dist-info/top_level.txt,sha256=wzF672hhzTK-pQ0u0vGJSC-fH8RLDm5PPe68of0x7Zs,12
+matterdelta-1.2.0.dist-info/RECORD,,
