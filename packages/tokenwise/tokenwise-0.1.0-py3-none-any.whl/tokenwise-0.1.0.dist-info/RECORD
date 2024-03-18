@@ -1,0 +1,9 @@
+tokenwise/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tokenwise/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tokenwise/models/base.py,sha256=Txnd3vuRWnl3lY0YhQJMYEsEdmylso2AWlN9lOOCwIo,3525
+tokenwise/models/huggingface.py,sha256=n4nd2VGmj35w0tRBegBGs96XIh9zqb5QzXL9aU8vzpU,6130
+tokenwise/quality.py,sha256=TZsf-MZuMmE5dnEwmLVwm1Pb9-n6miR0cJtLSacmgjE,2014
+tokenwise-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+tokenwise-0.1.0.dist-info/METADATA,sha256=e7ZylzEMUOz4Ww2j88tIMVE_ikFmv6joKyT8gGwAgRE,624
+tokenwise-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+tokenwise-0.1.0.dist-info/RECORD,,
