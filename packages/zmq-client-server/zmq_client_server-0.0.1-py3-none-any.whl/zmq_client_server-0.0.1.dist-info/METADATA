@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: zmq_client_server
+Version: 0.0.1
+Summary: Python ZMQ Client/Server Wrapper
+Home-page: https://github.com/perrytec/zmq_client_server
+Author: perry
+Author-email: noemail@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: zmq
+
+# zmq_client_server
+A simple Server and Client wrapper for ZMQ Python.
+Builds on top of `zmq`, `zmq.asyncio` to support an asynchronous server, and a synchronous client.
+
+Both Server and Client supports the Request-Reply, Push-Pull, and Publish-Subscribe message patterns.
+
+-----
+## Basic Usage
+
+### ZmqClient
+```
+from zmq_python import ZmqClient
+
+client = ZmqClient(
+    sub_ip = "<pubsub_socket_ip>",
+    push_ip = "<pushpull_socket_ip>",
+    req_ip = "<requestreply_socket_ip>"
+)
+```
+
+### ZmqServer
+```
+from zmq_python import ZmqServer
+
+client = ZmqServer(
+    pub_ip = "<pubsub_socket_ip>",
+    pull_ip = "<pushpull_socket_ip>",
+    rep_ip = "<requestreply_socket_ip>"
+)
+```

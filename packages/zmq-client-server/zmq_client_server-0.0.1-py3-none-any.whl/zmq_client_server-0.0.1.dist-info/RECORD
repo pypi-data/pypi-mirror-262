@@ -1,0 +1,8 @@
+zmq_client_server/__init__.py,sha256=oHGuh-vQ6q95jLwHQH13391N2GAspW0EQiZ4DxKf0zo,88
+zmq_client_server/zmq_client.py,sha256=zRnNWRnRLauwFCfOK6HzWDm88aEJx8a8XblSbkBwMQg,2842
+zmq_client_server/zmq_server.py,sha256=b3fUAnexC1hjF3FSytFCDRI_hbSd71B8nH6y9cPPduk,3662
+zmq_client_server-0.0.1.dist-info/LICENSE,sha256=-Dgao6stApeP3Wvl5dfXshU5KOhVRfAOXOWZrUCVlQ4,1074
+zmq_client_server-0.0.1.dist-info/METADATA,sha256=EHyE0pJTCFcTDkllj1f0upQwLnYJWoGio82ha-3qJTc,1087
+zmq_client_server-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+zmq_client_server-0.0.1.dist-info/top_level.txt,sha256=-XGXAhF9VcbxsB6McuXCjyh0t3oBhCv5rT2J5uruPU4,18
+zmq_client_server-0.0.1.dist-info/RECORD,,
