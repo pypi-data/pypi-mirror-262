@@ -1,0 +1,8 @@
+pytest_repo_structure/__init__.py,sha256=ZVsEkTgAC2U3_JK2O5w_6bt5OYvIWo149GiL0Pv_A6Q,29
+pytest_repo_structure/__main__.py,sha256=YVtVZ9sdWwaoc7Wvd__-q_eWy1qNx4qfu2P-Cl6dKGM,233
+pytest_repo_structure/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_repo_structure-0.0.0.dist-info/entry_points.txt,sha256=eNaeSipHdnNXXfTV1-gUvsFUoUvkpCzI8BwHkgEu_U4,77
+pytest_repo_structure-0.0.0.dist-info/LICENSE,sha256=smrOvKzy9xUSi4scvUzrXCPTqgnzJAlH2_Exv5ehwFo,1067
+pytest_repo_structure-0.0.0.dist-info/METADATA,sha256=MzfaR69BenZ2aPTyjMCExWIIrSJEOp-xC819ktHEAZU,3386
+pytest_repo_structure-0.0.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+pytest_repo_structure-0.0.0.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+pytest-repo-structure=pytest_repo_structure.__main__:main
+
