@@ -1,0 +1,8 @@
+packaged_non_std/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+packaged_non_std/ingest_data.py,sha256=0Tu8Qnejx5lT18zzup7FVDGDI1tld4GUJ09_dbr3W08,5110
+packaged_non_std/score.py,sha256=4xLbEI2u-C8xwhttIBSDDYRIkz0S3VXZwaERwcu_TQA,3799
+packaged_non_std/train.py,sha256=aW15hMxf2Fc8MjnU5-tCjRS6nl2TAfqMkw90cOEWvCo,3872
+packaged_non_std_sai_bandaru-0.0.1.dist-info/METADATA,sha256=mJ41f98zlnuqDUN4MH6g7CCF1rBjCoRKqd5yY3RsLkU,5122
+packaged_non_std_sai_bandaru-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+packaged_non_std_sai_bandaru-0.0.1.dist-info/top_level.txt,sha256=LMEFrsjlTMEmGKd5y8h5BEk6HaKyd1fwZ2TD8slp_5A,17
+packaged_non_std_sai_bandaru-0.0.1.dist-info/RECORD,,
