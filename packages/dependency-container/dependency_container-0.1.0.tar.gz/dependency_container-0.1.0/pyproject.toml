@@ -1,0 +1,248 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "dependency-container"
+description = "Support delayed dependency injection in FastApi to enable app constructor pattern."
+authors = [
+    { name = "Kevin Matlock", email = "kevin.matlock@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = []
+dynamic = []
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Documentation",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = [
+    "fastapi>=0.95.0",
+]
+version = "0.1.0"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://klmatlock.github.io/dependency-container"
+Documentation = "https://klmatlock.github.io/dependency-container"
+Changelog = "https://klmatlock.github.io/dependency-container/changelog"
+Repository = "https://github.com/klmatlock/dependency-container"
+Issues = "https://github.com/klmatlock/dependency-container/issues"
+Discussions = "https://github.com/klmatlock/dependency-container/discussions"
+Gitter = "https://gitter.im/dependency-container/community"
+
+[tool.pdm]
+plugins = [
+    "pdm-multirun",
+]
+
+[tool.pdm.version]
+source = "file"
+path = "src/dependency_container/__init__.py"
+
+[tool.pdm.build]
+package-dir = "src"
+editable-backend = "editables"
+
+[tool.pdm.dev-dependencies]
+duty = [
+    "duty>=1.2.0",
+]
+maintain = [
+    "towncrier>=23.11.0",
+]
+docs = [
+    "mkdocs-gen-files>=0.5.0",
+    "mkdocs-material>=9.5.7",
+]
+quality = [
+    "ruff>=0.0",
+    "griffe>=0.40.0",
+]
+tests = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "pytest-randomly>=3.15",
+    "pytest-xdist>=3.3",
+]
+typing = [
+    "pyright>=1.1.349",
+    "types-markdown>=3.5",
+    "types-pyyaml>=6.0",
+]
+security = [
+    "safety>=2.3",
+]
+test = [
+    "httpx>=0.26.0",
+]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+exclude = [
+    "fixtures",
+    "site",
+]
+select = [
+    "A",
+    "ANN",
+    "ARG",
+    "B",
+    "BLE",
+    "C",
+    "C4",
+    "COM",
+    "D",
+    "DTZ",
+    "E",
+    "ERA",
+    "EXE",
+    "F",
+    "FBT",
+    "G",
+    "I",
+    "ICN",
+    "INP",
+    "ISC",
+    "N",
+    "PGH",
+    "PIE",
+    "PL",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "PT",
+    "PYI",
+    "Q",
+    "RUF",
+    "RSE",
+    "RET",
+    "S",
+    "SIM",
+    "SLF",
+    "T",
+    "T10",
+    "T20",
+    "TCH",
+    "TID",
+    "TRY",
+    "UP",
+    "W",
+    "YTT",
+]
+ignore = [
+    "A001",
+    "ANN101",
+    "ANN102",
+    "ANN204",
+    "ANN401",
+    "ARG005",
+    "C901",
+    "D105",
+    "D417",
+    "E501",
+    "ERA001",
+    "G004",
+    "PLR0911",
+    "PLR0912",
+    "PLR0913",
+    "PLR0915",
+    "SLF001",
+    "TRY003",
+]
+
+[tool.ruff.per-file-ignores]
+"src/*/cli.py" = [
+    "T201",
+]
+"src/*/debug.py" = [
+    "T201",
+]
+"scripts/*.py" = [
+    "INP001",
+    "T201",
+]
+"tests/*.py" = [
+    "ANN201",
+    "ARG005",
+    "FBT001",
+    "PLR2004",
+    "S101",
+]
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "double"
+
+[tool.ruff.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.isort]
+known-first-party = [
+    "dependency-container",
+]
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 80
+
+[tool.pytest.ini_options]
+norecursedirs = [
+    ".git",
+    ".tox",
+    ".env",
+    "dist",
+    "build",
+]
+testpaths = [
+    "tests",
+    "integration",
+]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = [
+    "src/",
+    "tests/",
+]
+
+[tool.coverage.paths]
+equivalent = [
+    "src/",
+    "__pypackages__/",
+]
+
+[tool.coverage.report]
+precision = 2
+omit = [
+    "src/*/__init__.py",
+    "src/*/__main__.py",
+    "tests/__init__.py",
+]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING",
+]
+
+[tool.coverage.json]
+output = "htmlcov/coverage.json"
