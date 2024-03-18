@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: config-renderer
+Version: 1.0.0
+Summary: Generate HTML documentation from dotfiles
+Author-email: Juha-Matti Santala <juhamattisantala@gmail.com>
+License: MIT License
+Project-URL: Documentation, https://github.com/hamatti/config-renderer#readme
+Project-URL: Issues, https://github.com/hamatti/config-renderer/issues
+Project-URL: Source, https://github.com/hamatti/config-renderer/
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: docopt
