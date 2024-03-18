@@ -1,0 +1,63 @@
+<nav class="navbar nav-analytics sticky-top">
+  <div class="container-fluid">
+    <h4>{% block title %}{{ analytics_set.nav_title }}{% endblock title %}</h4>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+	<li class="nav-item dropdown">
+	  <a title="諸設定" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-gear" style="font-size:150%; color:limegreen;"></i>
+          </a>
+          <ul class="dropdown-menu">
+	    <li><a class="dropdown-item" href="{% url 'admin:analytics_analyticsappsettings_change' analytics_set.id %}">アプリ設定</a></li>
+	    <li><a class="dropdown-item" href="{% url 'admin:analytics_googleanalytics4config_change' request.user.id %}">GA4設定</a></li>
+          </ul>
+        </li>
+	<button title="アップデート" type="button" class="btn btn-defult" data-bs-toggle="modal" data-bs-target="#exampleModal">
+	  <i class="bi bi-arrow-clockwise" style="font-size:150%; color:limegreen;"></i>
+	</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Message -->
+{% if messages %}
+<div class="alert alert-danger" role="alert">
+  {% for message in messages %}
+  <strong>{{ message }}</strong>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- Modal -->
+<form action="{% url 'analytics:update' %}" method="GET">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+	<div class="modal-header">
+	  <h1 class="modal-title fs-5" id="exampleModalLabel">
+	    <blockquote class="blockquote">
+	      <p>確認画面</p>
+	      <figcaption class="blockquote-footer">
+		Confirmation
+	      </figcaption>
+	    </blockquote>
+	  </h1>
+	  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	</div>
+	<div class="modal-body">
+	  <blockquote class="blockquote">
+	    <p>アナリティクスデータの更新を実行しますか？</p>
+	    <figcaption class="blockquote-footer">
+	      Would you like to update your analytics data?
+	    </figcaption>
+	  </blockquote>
+	</div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">やめる</button>
+	  <button type="submit" class="btn btn-success">更新</button>
+	</div>
+      </div>
+    </div>
+  </div>
+</form>
