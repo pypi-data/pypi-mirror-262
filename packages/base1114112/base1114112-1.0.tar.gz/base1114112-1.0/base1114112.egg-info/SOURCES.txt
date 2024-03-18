@@ -1,0 +1,9 @@
+CHANGELOG.txt
+MANIFEST.in
+README.txt
+setup.py
+base1114112/__init__.py
+base1114112.egg-info/PKG-INFO
+base1114112.egg-info/SOURCES.txt
+base1114112.egg-info/dependency_links.txt
+base1114112.egg-info/top_level.txt
