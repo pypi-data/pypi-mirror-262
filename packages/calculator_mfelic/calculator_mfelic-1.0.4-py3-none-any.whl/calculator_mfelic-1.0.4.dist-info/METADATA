@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: calculator_mfelic
+Version: 1.0.4
+Summary: Calculator Package
+Home-page: https://github.com/TuringCollegeSubmissions/mfelic-DWWP.1.5
+Author: Matheus Feliciano
+Author-email: matheusfelic16@gmail.com
+Requires-Python: >=3.6
