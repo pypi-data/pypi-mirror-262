@@ -1,0 +1,5 @@
+requests
+pandas
+datetime
+mysql.connector
+openai
