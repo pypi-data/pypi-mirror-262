@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mlflow_for_ml_dev
+Version: 0.1.2
+Summary: 
+Author: Manuel Gil
+Author-email: manuelgilsitio@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+
