@@ -1,0 +1,11 @@
+_sargasso.cpython-310-x86_64-linux-gnu.so,sha256=VUYQ4bl-XrnGr7wiA3nBPiQ3v9eba3cH294Ay2e8vQ8,307289
+sargasso/__init__.py,sha256=3TnIumc8WwIMafWNDXDl7gnIqrQ12cEmVXKC4-7gvuo,119
+sargasso.libs/libgfortran-91cc3cb1.so.3.0.0,sha256=VePrZzBsL_F-b4oIEOqg3LJulM2DkkxQZdUEDoeBRgg,1259665
+sargasso.libs/libopenblas-r0-f650aae0.3.3.so,sha256=eewCtT9XPNcRaonwTDl0cwGOf9oFcgs1TUNQXBnUeVg,37325001
+sargasso.libs/libquadmath-96973f99.so.0.0.0,sha256=k0wi3tDn0WnE1GeIdslgUa3z2UVF2pYvYLQWWbB12js,247609
+sargasso.libs/libblas-357956a1.so.3.4.2,sha256=eLqolYX0nkk2PP64pkqa0Nif8hllaovrJMGbx8jU5W0,374265
+sargasso.libs/liblapack-1ad85175.so.3.4.2,sha256=wrfEW65bG_XaXB2gB_JZR24uf8UxvWTrvVe6nIqfwu4,5682809
+sargasso-0.5.1.dist-info/RECORD,,
+sargasso-0.5.1.dist-info/METADATA,sha256=lo-xHCDf2dCpMBkBbaCoKf04RKyli41_yDi40nt6fhs,726
+sargasso-0.5.1.dist-info/WHEEL,sha256=CzQQWV-lNyM92gr3iaBk8dvO35YDHRxgzkZ-dxumUIM,152
+sargasso-0.5.1.dist-info/top_level.txt,sha256=-AJ6cwzffuJhTy_I1ABkDOlNXqQjME5yzwLwqV5ObHU,19
