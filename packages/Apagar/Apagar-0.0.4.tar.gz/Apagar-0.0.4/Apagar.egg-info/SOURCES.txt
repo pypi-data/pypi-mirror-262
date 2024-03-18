@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+Apagar/__init__.py
+Apagar/__main__.py
+Apagar.egg-info/PKG-INFO
+Apagar.egg-info/SOURCES.txt
+Apagar.egg-info/dependency_links.txt
+Apagar.egg-info/top_level.txt
