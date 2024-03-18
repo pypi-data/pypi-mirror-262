@@ -1,0 +1,12 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+adt7422/__init__.py
+adt7422/adt7422.py
+adt7422.egg-info/PKG-INFO
+adt7422.egg-info/SOURCES.txt
+adt7422.egg-info/dependency_links.txt
+adt7422.egg-info/top_level.txt
