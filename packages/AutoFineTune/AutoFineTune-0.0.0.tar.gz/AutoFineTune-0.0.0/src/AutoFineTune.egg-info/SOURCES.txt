@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/autofinetune.py
+src/AutoFineTune.egg-info/PKG-INFO
+src/AutoFineTune.egg-info/SOURCES.txt
+src/AutoFineTune.egg-info/dependency_links.txt
+src/AutoFineTune.egg-info/top_level.txt

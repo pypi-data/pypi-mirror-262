@@ -1,0 +1,16 @@
+[project]
+name = "AutoFineTune"
+version = "0.0.0"
+authors = [
+  { name="Ivo Rapant", email="rapantios@gmail.com" },
+]
+description = "AutoFineTune: How to Finetune Pretrained Models"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+license = { file = "LICENSE" }
