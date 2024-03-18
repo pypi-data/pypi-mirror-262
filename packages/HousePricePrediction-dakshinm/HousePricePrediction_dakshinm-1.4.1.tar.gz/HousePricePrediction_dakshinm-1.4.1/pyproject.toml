@@ -1,0 +1,22 @@
+[project]
+name = "HousePricePrediction_dakshinm"
+version = "1.4.1"
+authors = [
+  { name="Dakshin Aravind M", email="dakshin.m@tigeranalytics.com" },
+]
+description = "House Price Prediction package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
+[tool.black]
+line-length = 79
+[tool.isort]
+profile = "black"
+[flake8]
+max-line-length = 79

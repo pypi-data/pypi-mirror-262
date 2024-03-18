@@ -1,0 +1,168 @@
+# Median housing value prediction
+The housing data can be downloaded from https://raw.githubusercontent.com/ageron/handson-ml/master/. The script has codes to download the data. We have modelled the median house value on given housing data.
+
+The following techniques have been used:
+
+ - Linear regression
+ - Decision Tree
+ - Random Forest
+
+## Steps performed
+ - We prepare and clean the data. We check and impute for missing values.
+ - Features are generated and the variables are checked for correlation.
+ - Multiple sampling techinuqies are evaluated. The data set is split into train and test.
+ - All the above said modelling techniques are tried and evaluated. The final metric used to evaluate is mean squared error.
+
+## Project Description
+●	Created new issue in github repo.
+
+●	Created a new branch to make the required changes related to the issue specified.
+
+●	Fixed bugs to make the python executable run.
+
+●	Added comments to the changes made to the existing code to make others understand the fixes.
+
+●	Created a conda environment to execute the python code.
+
+
+## How to run the code:
+
+
+## Command to create an environment from the env.yml file you have generated.
+
+### conda env create -f env.yml
+
+## Command to create an environment from the env.yml file you have generated.
+
+### conda activate mle-dev
+
+# Command to run the python scripts.
+
+## 1. Run the ingest_data.py file
+
+### python3 src/HousePricePrediction_dakshinm/ingest_data.py
+
+If necessary include the arguments like this
+
+### python3 src/HousePricePrediction_dakshinm/ingest_data.py --output data/raw --logs-folder logs --log-level DEBUG
+
+### REFER BELOW DOCUMENTATION FOR OTHER OPTIONS AS WELL:
+Download dataset from source and creates train and test datasets
+
+options:
+  -h, --help            show this help message and exit
+
+  --output OUTPUT       Output folder path where dataset will be stored.
+
+  --logs-folder LOGS_FOLDER
+                        Output folder path where logs are recorded
+
+  --log-level LOG_LEVEL
+                        Specify the log level (default: DEBUG)
+
+  --no-console-log      Toggle whether or not to write logs to the console (default:False)
+
+## 2. Run the train.py file
+
+### python3 src/HousePricePrediction_dakshinm/train.py
+
+If necessary include the arguments like this
+
+### python3 src/HousePricePrediction_dakshinm/train.py --input data/processed --output artifacts/ --logs-folder logs --log-level DEBUG
+
+### REFER BELOW DOCUMENTATION FOR OTHER OPTIONS AS WELL:
+
+usage: train.py [-h] [--input INPUT] [--output OUTPUT] [--logs-folder LOGS_FOLDER] [--log-level LOG_LEVEL] [--no-console-log]
+
+Train the model(s).
+
+options:
+  -h, --help            show this help message and exit
+
+  --input INPUT         Input folder path where dataset is stored.
+
+  --output OUTPUT       Output folder path where trained model(s) will be stored.
+
+  --logs-folder LOGS_FOLDER
+                        Output folder path where logs are recorded
+
+  --log-level LOG_LEVEL
+                        Specify the log level (default: DEBUG)
+
+  --no-console-log      Toggle whether or not to write logs to the console (default:False)
+
+## 3. Run the score.py file
+
+### python3 src/HousePricePrediction_dakshinm/score.py
+
+If necessary include the arguments like this
+
+### python3 src/HousePricePrediction_dakshinm/score.py --input_data data/processed
+
+### --input_pickle_folder artifacts/ --logs-folder logs --log-level DEBUG
+
+### REFER BELOW DOCUMENTATION FOR OTHER OPTIONS AS WELL:
+
+  usage: score.py [-h] [--input_data INPUT_DATA] [--input_pickle_folder INPUT_PICKLE_FOLDER] [--logs-folder LOGS_FOLDER] [--log-level LOG_LEVEL]
+                [--no-console-log]
+
+Score the model(s).
+
+options:
+  -h, --help            show this help message and exit
+
+  --input_data INPUT_DATA
+                        Input folder path where dataset(s) is stored.
+
+  --input_pickle_folder INPUT_PICKLE_FOLDER
+                        Input folder path where pickle file(s) are stored.
+
+  --logs-folder LOGS_FOLDER
+                        Output folder path where logs are recorded
+
+  --log-level LOG_LEVEL
+                        Specify the log level (default: DEBUG)
+
+  --no-console-log      Toggle whether or not to write logs to the console (default:False)
+
+
+## How to package the code:
+
+### Step 1 : python -m build
+
+### Step 2 : This will create a .tar.gz and .whl file in the dist folder.
+
+### Step 3 : Install the package from the .whl file by running the command below
+
+###  pip install dist/HousePricePrediction_dakshinm-1.4.1-py3-none-any.whl
+### or
+### pip install -i https://test.pypi.org/simple/ HousePricePrediction-dakshinm==1.4.1
+
+## How to run the test files:
+
+### Step 1 : Check if the installation of packages is successful by running the command below.
+### pytest tests/functional_tests/test_installation.py
+
+### Step 2 : Run the unit test cases for the files.
+### python3 -m unittest tests/unit_tests/test_data_ingestion.py
+### python3 -m unittest tests/unit_tests/test_train.py
+### python3 -m unittest tests/unit_tests/test_score.py
+
+### Step 3 : Run the functional test cases.
+### pytest tests/functional_tests/test_functional_tests.py
+
+## Where to find logs?:
+
+### Logs can be found in the logs/ folder inside the mle-training folder.
+
+## How to create documentations using Sphinx:
+
+### Step 1: Run the command : pip install sphinx
+
+### Step 2: Run the command : sphinx-quickstart
+
+### Step 3: Run the command : sphinx-apidoc -o docs/source/ src/
+            This will make the docstrings as html documents
+
+### Step 4: Run the command : sphinx-build -b html docs/source docs/build
+            This will create the html docs in the build folder
