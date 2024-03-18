@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/calculator_meluzx/__init__.py
+src/calculator_meluzx/calculator_meluzx.py
+src/calculator_meluzx.egg-info/PKG-INFO
+src/calculator_meluzx.egg-info/SOURCES.txt
+src/calculator_meluzx.egg-info/dependency_links.txt
+src/calculator_meluzx.egg-info/top_level.txt
+tests/test_calculator.py
