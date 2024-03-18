@@ -1,0 +1,16 @@
+click
+
+[dev]
+build
+pip
+pybind11
+twine
+pytest
+pytest-asyncio
+pytest-cov
+pytest-mypy
+pytest-pylint
+pytest-timeout
+setuptools>=45
+setuptools_scm[toml]
+wheel

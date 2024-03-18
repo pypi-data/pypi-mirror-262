@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import click
+
+
+@click.command()
+def entry():
+    from riscv import _riscv
+    print(help(_riscv))
+
+
+
+if __name__ == '__main__':
+    entry()

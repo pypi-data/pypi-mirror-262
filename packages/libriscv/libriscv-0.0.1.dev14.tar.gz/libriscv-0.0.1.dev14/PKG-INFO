@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: libriscv
+Version: 0.0.1.dev14
+Summary: Python bindings of Spike RISC-V ISA Simulator (libriscv.so)
+Home-page: https://github.com/liuyu81/libriscv
+Author: LIU Yu
+Author-email: liuy@etech-inc.com
+License: Proprietary
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: pip; extra == "dev"
+Requires-Dist: pybind11; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-mypy; extra == "dev"
+Requires-Dist: pytest-pylint; extra == "dev"
+Requires-Dist: pytest-timeout; extra == "dev"
+Requires-Dist: setuptools>=45; extra == "dev"
+Requires-Dist: setuptools_scm[toml]; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+
+# Python bindings of Spike RISC-V ISA Simulator (libriscv.so)
+
+```text
+LIU Yu <liuy@etech-inc.com>
+2024/03/14 (v0.1)
+```
+
+## Setting Up
+
+```bash
+$ python -m venv .venv
+$ source .venv/bin/activate
+(.venv) $ pip install -r requirements.txt
+```
+
+## Running Tests
+
+```bash
+(.venv) $ python setup.py build_ext --inplace
+(.venv) $ pytest -v
+```
+
+## Packaging
+
+```bash
+(.venv) $ python -m build --no-isolation
+```

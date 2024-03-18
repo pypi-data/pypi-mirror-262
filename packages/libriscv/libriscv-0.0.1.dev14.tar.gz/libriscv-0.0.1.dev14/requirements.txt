@@ -1,0 +1,14 @@
+build
+click
+pip
+pybind11 >= 2.11.1
+twine
+pytest
+pytest-asyncio
+pytest-cov
+pytest-mypy
+pytest-timeout
+pytest-pylint
+setuptools >= 51
+setuptools_scm[toml] >= 6.2
+wheel >= 0.36
