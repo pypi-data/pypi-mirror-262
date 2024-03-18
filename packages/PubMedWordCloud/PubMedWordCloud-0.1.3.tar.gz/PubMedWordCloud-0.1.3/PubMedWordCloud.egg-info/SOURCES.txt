@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+PubMedWordCloud/__init__.py
+PubMedWordCloud/english
+PubMedWordCloud/pubmed_wordcloud.py
+PubMedWordCloud.egg-info/PKG-INFO
+PubMedWordCloud.egg-info/SOURCES.txt
+PubMedWordCloud.egg-info/dependency_links.txt
+PubMedWordCloud.egg-info/requires.txt
+PubMedWordCloud.egg-info/top_level.txt

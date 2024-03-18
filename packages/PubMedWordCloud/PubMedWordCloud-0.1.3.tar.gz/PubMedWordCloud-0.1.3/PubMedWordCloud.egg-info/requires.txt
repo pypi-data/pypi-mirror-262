@@ -1,0 +1,6 @@
+Pillow
+biopython
+matplotlib
+nltk
+numpy
+wordcloud
