@@ -1,0 +1,13 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tkkillablethreads/README.MD
+tkkillablethreads/__init__.py
+tkkillablethreads/requirements.txt
+tkkillablethreads/thirdparty.json
+tkkillablethreads.egg-info/PKG-INFO
+tkkillablethreads.egg-info/SOURCES.txt
+tkkillablethreads.egg-info/dependency_links.txt
+tkkillablethreads.egg-info/top_level.txt

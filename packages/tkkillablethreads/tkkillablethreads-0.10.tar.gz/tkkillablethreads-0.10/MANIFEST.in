@@ -1,0 +1,3 @@
+include tkkillablethreads/requirements.txt
+include tkkillablethreads/thirdparty.json
+include tkkillablethreads/README.MD
