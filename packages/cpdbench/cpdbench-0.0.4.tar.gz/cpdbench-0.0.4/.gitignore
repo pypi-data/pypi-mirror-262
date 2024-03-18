@@ -1,0 +1,14 @@
+.idea
+*.dat
+
+src/cpdbench-log.txt
+src/cpdbench-result.json
+
+*.txt
+*.json
+
+venv
+venv-new
+
+dachboden.py
+config.yml
