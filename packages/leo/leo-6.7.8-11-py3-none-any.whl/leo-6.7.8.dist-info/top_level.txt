@@ -1,0 +1,15 @@
+Icons
+commands
+config
+core
+dist
+doc
+extensions
+external
+modes
+plugins
+scripts
+test
+themes
+unittests
+www
