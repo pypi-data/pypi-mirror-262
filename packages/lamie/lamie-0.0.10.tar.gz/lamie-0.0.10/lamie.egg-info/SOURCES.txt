@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+lamie/__init__.py
+lamie.egg-info/.DS_Store
+lamie.egg-info/PKG-INFO
+lamie.egg-info/SOURCES.txt
+lamie.egg-info/dependency_links.txt
+lamie.egg-info/top_level.txt
