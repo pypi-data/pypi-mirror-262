@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tea-xyz-c2
+Version: 1.0.6
+Summary: A simple package for https://app.tea.xyz/. Example tea-xyz - https://github.com/mparoni55/tea-xyz-c2
+Home-page: https://github.com/mparoni55/tea-xyz-c2
+Author: mparoni55
+Author-email: ducvudeptrai2021@gmail.com
+Project-URL: Homepage, https://github.com/mparoni55/tea-xyz-c2
+Project-URL: Source, https://github.com/mparoni55/tea-xyz-c2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: requests >=2.20.0
+Requires-Dist: tea-xyz-c2
+
