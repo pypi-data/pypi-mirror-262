@@ -1,0 +1,3 @@
+[console_scripts]
+ytmusic-deleter = cli:cli
+
