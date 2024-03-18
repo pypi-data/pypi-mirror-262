@@ -1,0 +1,11 @@
+insh/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+insh/command_line.py,sha256=YyYzE4mva5wQ7kgtcd4pmmZqD7ljXV70PI69KUKcyfw,2343
+insh/config.py,sha256=zFvSag1tofjDxjrB-qdX-lAfv9wFaERYmTHYBmApK_4,2541
+insh/shell.py,sha256=IjMHyR0k9IG5QPfrLe_MKLgERAX8BU1x6k77bCFYQrI,6047
+insh-2.0.data/data/LICENSE,sha256=bTxGO-yOviW9awdwTO20DTZKveXRSjpOsdteVeV3AeQ,1084
+insh-2.0.dist-info/LICENSE,sha256=bTxGO-yOviW9awdwTO20DTZKveXRSjpOsdteVeV3AeQ,1084
+insh-2.0.dist-info/METADATA,sha256=mHZ23bvGvPTCeWRPDGAZF9SgE4R9qtGgleBA29J7Bn0,2548
+insh-2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+insh-2.0.dist-info/entry_points.txt,sha256=cJ0lbOzjMKybVjB6irczQpqzOKW9uTpQ7Z9yPHIJajI,48
+insh-2.0.dist-info/top_level.txt,sha256=iIHuuVDnx9IWbuSz1i42d55TNtkQAyj8xTPSLzeq6eY,5
+insh-2.0.dist-info/RECORD,,
