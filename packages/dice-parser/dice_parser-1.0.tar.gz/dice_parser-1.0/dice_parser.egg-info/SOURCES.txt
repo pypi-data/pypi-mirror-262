@@ -1,0 +1,15 @@
+README.md
+setup.py
+dice_parser/__init__.py
+dice_parser/dice_roller.py
+dice_parser/modifier.py
+dice_parser/parser.py
+dice_parser/parser_result.py
+dice_parser/transformer.py
+dice_parser.egg-info/PKG-INFO
+dice_parser.egg-info/SOURCES.txt
+dice_parser.egg-info/dependency_links.txt
+dice_parser.egg-info/requires.txt
+dice_parser.egg-info/top_level.txt
+tests/test_dice_parser.py
+tests/test_dice_roller.py
