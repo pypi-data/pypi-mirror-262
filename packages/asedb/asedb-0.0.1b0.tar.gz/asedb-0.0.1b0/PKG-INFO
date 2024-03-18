@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: asedb
+Version: 0.0.1b0
+Summary: SQLAlchemy model for ASE Atoms objects
+Home-page: https://gitlab.com/AlTy/asedb
+Author: Alexander Tygesen
+Author-email: atygesen@hotmail.com
+License: MIT
+Project-URL: Source, https://gitlab.com/AlTy/asedb
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: ase
+Requires-Dist: sqlalchemy>2
+Requires-Dist: python-dotenv
+Requires-Dist: pendulum
+Requires-Dist: packaging
+Requires-Dist: numpy
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Provides-Extra: postgres
+Requires-Dist: psycopg2-binary; extra == "postgres"
+
+# ASE DB
+
+This package provides a [SQL Alchemy](https://docs.sqlalchemy.org/en/20/index.html) model
+to the [ASE](https://wiki.fysik.dtu.dk/ase/) Atoms object.
+
+For more information, see the [documentation](https://asedb.readthedocs.io/en/latest/).
+
+## Basic Usage
+
+The `AtomsModel` is the main model that translates an atoms object (and attached calculator info) into
+a SQL model.
+
+```python
+from asedb import AtomsModel, Element, initialize_engine, make_sqlite_engine
+import ase
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
+
+
+engine = make_sqlite_engine("foo.db")  # Helper function to create a SQL Alchemy engine for sqlite
+initialize_engine(engine)  # Create necessary schema/tables
+
+Session = sessionmaker(bind=engine)
+session = Session()
+
+atoms = ase.Atoms('H2',
+           positions=[[0, 0, 0],
+                      [0, 0, 0.7]])
+
+model = AtomsModel.from_atoms(atoms)
+
+session.add(model)
+session.commit()
+
+model_id = model.id
+
+loaded = session.query(AtomsModel).where(AtomsModel.id == model_id).scalar()
+atoms_loaded = loaded.to_atoms()  # The atoms object loaded from the database
+
+print(atoms_loaded)  # Atoms(symbols='H2', pbc=False, tags=...)
+```
+
+Here, we used the `make_sqlite_engine` helper function to create the SQL Alchemy engine
+object for a sqlite database. You can also create your own engine, e.g. for postgres:
+
+```python
+import urllib.parse
+from sqlalchemy import create_engine
+
+def make_engine():
+    database = os.environ["PG_DATABASE"]
+    user = os.environ["PG_USER"]
+    password = urllib.parse.quote_plus(os.environ["PG_PASSWORD"])
+    host = os.environ["PG_HOST"]
+    port = os.environ["PG_PORT"]
+    connection_string = (
+        f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{database}"
+    )
+    return create_engine(connection_string)
+```
+
+where the parameters for the connection parameters have been stored in the environment variables.
+
+## Querying
+
+We can construct queries using the SQL Alchemy models, e.g. looking for all atoms objects with at least 2 hydrogen atoms:
+
+```python
+
+# Fetch all AtomsModel objects that fit the query
+results = (session.query(AtomsModel)
+                  .join(Element)
+                  .where((Element.symbol == 'H') & (Element.count >= 2))
+                  .all())
+# Convert them into actual Atoms objects
+all_atoms = [res.to_atoms() for res in results]
+```
+
+## Schema
+By default, the schema `asedb` is used - except for sqlite databases, which doesn't
+utilize schemas. In this case, the `make_sqlite_engine` helper function ensures
+the schema is remapped to `None`.
+
+For any "real" database connections, such as Postgres, the schema `asedb` will be used.
