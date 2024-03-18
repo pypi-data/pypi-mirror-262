@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/Taoufiq/__init__.py
+src/Taoufiq/example.py
+src/package_taoufiq.egg-info/PKG-INFO
+src/package_taoufiq.egg-info/SOURCES.txt
+src/package_taoufiq.egg-info/dependency_links.txt
+src/package_taoufiq.egg-info/requires.txt
+src/package_taoufiq.egg-info/top_level.txt
