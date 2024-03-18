@@ -1,0 +1,12 @@
+clearedge/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clearedge/chunk.py,sha256=lx4voIyfWe_tENaI2d_3IrDPNqYgivO059rzKE-yWP0,692
+clearedge/dockerfile,sha256=p5fLzkDlBdxh931OZcv6VESHCkPaPPc4XZWvMCXZet0,298
+clearedge/metadata.py,sha256=_JiMAZ_w5B7u7TmT3vnTGxXD_Q9tQB4pulOUwNUtWcY,102
+clearedge/reader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clearedge/reader/pdf.py,sha256=aazpOadBO3-p67Gz5jvjI7_aN2cM2lUeyxXKak2O1zA,4966
+clearedge/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clearedge/utils/pdf_utils.py,sha256=Z6pFDgjkf4zb2nO_KIpGW4X76O0MYKZs_bw5f7fIeuA,5152
+clearedge-0.1.2.dist-info/METADATA,sha256=kJ_Vsoa2yx5mIno54NWbSfHE052lMD-tzw1DTRpom4c,616
+clearedge-0.1.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+clearedge-0.1.2.dist-info/entry_points.txt,sha256=ohIsnJXhLEnyYg0wNRiwIMJ6NKq6W5qioQQq5IouHS4,50
+clearedge-0.1.2.dist-info/RECORD,,
