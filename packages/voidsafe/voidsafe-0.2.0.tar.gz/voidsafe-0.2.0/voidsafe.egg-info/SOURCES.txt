@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+test/__init__.py
+voidsafe/__init__.py
+voidsafe/core.py
+voidsafe.egg-info/PKG-INFO
+voidsafe.egg-info/SOURCES.txt
+voidsafe.egg-info/dependency_links.txt
+voidsafe.egg-info/top_level.txt
+voidsafe.egg-info/zip-safe
+voidsafe/unreliable/__init__.py
+voidsafe/unreliable/events.py

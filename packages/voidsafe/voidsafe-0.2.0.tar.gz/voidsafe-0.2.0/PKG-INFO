@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: voidsafe
+Version: 0.2.0
+Summary: A null-safe-like approach to Python programming language.
+Home-page: https://github.com/gus-caribe/voidsafe
+Author: Gustavo Cardoso Ribeiro
+Author-email: gustavocaribe@caribesphaneron.com
+License: MIT
+Keywords: voidsafe,nullsafe,none-aware,python
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+        `VoidSafe` is a package that brings a '_null-safe-like_' approach to Python3-written 
+        scripts and applications. It provides software developers with resources to apply 
+        `void-safety` principles to their codebase, allowing `safe` operations to be performed 
+        on `Potentially Unsafe Instances [2.1]` , which helps assuring that your software will 
+        be able to handle many `memory-access` problems at runtime.
+    
