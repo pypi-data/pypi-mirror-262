@@ -1,0 +1,9 @@
+altqq/__init__.py,sha256=PxzLdtf3Y7M5DW5oGnIxHQz5v9bdcO4bP6YqGYnklP4,1142
+altqq/structs.py,sha256=QMD96aAUG8B5VnX3_tal8yxhVhTWF9HjBP0j6ko7KMo,1731
+altqq/translators/plain_text.py,sha256=qeCCriHEWHKInagI4_fS6ctNCSdgZURt2n10yPgJZf0,1656
+altqq/translators/pyodbc.py,sha256=_eUrmDlzY3zvFj6jc1XZVB_x9noT-zN5T-pWuqt4eEE,3091
+altqq/types.py,sha256=4vfN9KT9Ls02ktxgW4u47Hpvk6EgMyLU_jvB_XBuNnI,353
+altqq-0.0.1a1.dist-info/LICENSE,sha256=wV5h_0o2HtULiYLUNL9d__U1pPvrV3877WC0rq_jLY8,1074
+altqq-0.0.1a1.dist-info/METADATA,sha256=YZuhvwCtCrkpFEs6dzByucob8pyyJxzORDCn_JjSe80,3883
+altqq-0.0.1a1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+altqq-0.0.1a1.dist-info/RECORD,,
