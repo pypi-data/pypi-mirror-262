@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: VLoD-Validater-Package
+Version: 1.0.0
+Summary: A package to easily check licenses when using VLoD
+Home-page: https://github.com/ArjanCodes/2023-package
+Author: tagotago
+Author-email: santiagobuisnessmail@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: cryptography
+
