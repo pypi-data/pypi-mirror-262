@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: zeleva
+Version: 0.0.1
+Summary: Check EVM wallet balance with GUI
+Home-page: https://github.com/0xraia/zeleva.git
+Author: Mamang Joko
+Author-email: aimar.airdrop123@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/0xraia/zeleva.git
+Keywords: python,interface
+Requires-Dist: zuperscripts
+Requires-Dist: tkinter
+
