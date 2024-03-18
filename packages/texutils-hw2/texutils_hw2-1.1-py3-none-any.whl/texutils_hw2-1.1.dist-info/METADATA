@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: texutils_hw2
+Version: 1.1
+Summary: Latex markdown functions
+Author: Vladimir Kravtsov
+Author-email: vladimir140201@yandex.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
