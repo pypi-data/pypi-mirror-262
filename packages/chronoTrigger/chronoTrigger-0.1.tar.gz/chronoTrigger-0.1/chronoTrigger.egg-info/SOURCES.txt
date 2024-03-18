@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+chronoTrigger/__init__.py
+chronoTrigger/chronoTrigger.py
+chronoTrigger.egg-info/PKG-INFO
+chronoTrigger.egg-info/SOURCES.txt
+chronoTrigger.egg-info/dependency_links.txt
+chronoTrigger.egg-info/not-zip-safe
+chronoTrigger.egg-info/top_level.txt
