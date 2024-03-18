@@ -1,0 +1,8 @@
+redxclient-0.2.1.dist-info/METADATA,sha256=AyykE8N9odR8P25PcET0230AVAWZzPL6jZUs2uxJqKA,1371
+redxclient-0.2.1.dist-info/WHEEL,sha256=N2J68yzZqJh3mI_Wg92rwhw0rtJDFpZj9bwQIMJgaVg,90
+redxclient/__init__.py,sha256=6POfvP0RpGmcE9DpSXjhvhAZok_LdQzp9w3JmBUWF6g,4811
+redxclient/schema/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+redxclient/schema/areas.py,sha256=OaNDNbWXsHv1hqWsVFamVUaKyw8SHNFUZ6DzEDi9uF8,855
+redxclient/schema/parcel.py,sha256=9OcHg-8jcQSO9RPXP8o6raxALa_F7GrZqtdPV6mfMXI,1033
+redxclient/schema/pickup.py,sha256=vnKKYrakJl-BfV43Oo_xEnUbNFP7glr_yuuCsajJP3Q,368
+redxclient-0.2.1.dist-info/RECORD,,
