@@ -1,0 +1,17 @@
+OPENAI_GPT35_MODEL = "gpt-3.5-turbo"
+OPENAI_GPT4_MODEL = "gpt-4-turbo-preview"
+OPENAI_DEFAULT_MODEL = OPENAI_GPT4_MODEL
+
+AZURE_OPENAI_GPT35_MODEL = "komodo-gpt-35"
+AZURE_OPENAI_GPT4_MODEL = "komodo-gpt4-1106"
+AZURE_DEFAULT_MODEL = AZURE_OPENAI_GPT35_MODEL
+
+BEDROCK_COHERE_MODEL = "cohere.command-text-v14"
+BEDROCK_CLAUDE_MODEL = "anthropic.claude-v2:1"
+BEDROCK_TITAN_MODEL = "amazon.titan-tg1-large"
+
+KOMODO_DEFAULT_MODEL = OPENAI_DEFAULT_MODEL
+
+
+def max_function_output_len(model):
+    return 60000 if model == OPENAI_GPT4_MODEL else 12000
