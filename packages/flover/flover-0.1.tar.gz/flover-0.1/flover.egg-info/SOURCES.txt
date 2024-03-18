@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+flover.egg-info/PKG-INFO
+flover.egg-info/SOURCES.txt
+flover.egg-info/dependency_links.txt
+flover.egg-info/requires.txt
+flover.egg-info/top_level.txt
