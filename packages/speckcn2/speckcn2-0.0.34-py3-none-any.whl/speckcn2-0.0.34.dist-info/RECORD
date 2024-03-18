@@ -1,0 +1,17 @@
+speckcn2/__init__.py,sha256=qB14d7R-mShUL0OtvljR9TxSAdh1Ps1Y11hsbQFtQFU,823
+speckcn2/io.py,sha256=ekv9v5tDn6-BqBEtdy077vWsjhvu_tA_466VKSzCFtw,3380
+speckcn2/loss.py,sha256=hHtS8wR7-a8DITZD6gKWY-_fUvmvROSzR2O-3CpT0G4,14519
+speckcn2/mlmodels.py,sha256=jsz8PS1WXgURr1ilerO9qL8ALlC30W8-qQTLiYjxwp8,7445
+speckcn2/mlops.py,sha256=2GL7JJ3eRpk6PkzJLeIDdQwSEwdIrrZX9qSNl1bT5Pw,5904
+speckcn2/normalizer.py,sha256=qqzqKtt4IyTEn02ZSlOd3JgwdkQOm77SJWdv4EohadA,9126
+speckcn2/plots.py,sha256=yxgzKMY3Ee42K2A6nHjxC9sSPXQ_GUmhp7pMZcuYCQs,6366
+speckcn2/postprocess.py,sha256=aikOsxYvZOpFqjyvrgYnCJIzC7DWi_eigynLRnGqijA,3865
+speckcn2/preprocess.py,sha256=JajZHVmS_IGG_FjYQlDz797c7RkNGJBTL8kT-EPsogI,14441
+speckcn2/scnn.py,sha256=BclBru7xlqAVA9shkdMBEccef_bGbsqGykoXggKkTYI,6135
+speckcn2/transformations.py,sha256=JH1-uMWQKJYWP4yGzAVhnxB0UuhtVX1Qtcjtg6X4fE4,3769
+speckcn2/utils.py,sha256=3nJ2nhvUSXezhL7KaL423ySTY_fq6s7S1FS12AWM2QY,2696
+speckcn2-0.0.34.dist-info/LICENSE,sha256=Uu7IrT6S_AZUAFXO0QzonBQHXkk6CfnoY4XLZAspy0w,1070
+speckcn2-0.0.34.dist-info/METADATA,sha256=V5AJG579SfNf_xNQv9jgPUbVCY4d82lm_on2ZoApLRM,976
+speckcn2-0.0.34.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+speckcn2-0.0.34.dist-info/top_level.txt,sha256=DfKRgbPKpdJS7gL-cnCsf26qvyMNySRtLu4EE06wgEk,9
+speckcn2-0.0.34.dist-info/RECORD,,
