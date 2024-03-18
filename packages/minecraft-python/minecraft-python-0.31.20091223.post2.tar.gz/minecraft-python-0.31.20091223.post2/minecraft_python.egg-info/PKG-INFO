@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: minecraft-python
+Version: 0.31.20091223.post2
+Summary: A project that seeks to recreate every old Minecraft version in Python using Pyglet and Cython.
+Home-page: https://github.com/pythonengineer/minecraft-python
+Download-URL: https://pypi.org/project/minecraft-python
+Author: pythonengineer
+License: BSD
+Project-URL: Source, https://github.com/pythonengineer/minecraft-python
+Project-URL: Tracker, https://github.com/pythonengineer/minecraft-python/issues
+Keywords: minecraft pyglet cython sandbox game classic
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Games/Entertainment
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Minecraft: Python Edition
+
+![Minecraft](/screenshot.png?raw=true)
+
+_**Minecraft: Python Edition**_ is a project that strives to recreate each and every old Minecraft version in Python 3 using the **Pyglet** multimedia library and **Cython** for performance.
+
+The project is currently working on the Indev versions of Minecraft.
+The latest version is **Indev 0.31 20091223-2**, the first version of Indev which was released on _**December 23, 2009**_.
+
+This version is the last available version of Minecraft to be released in creative mode exclusively.
+However, the work-in-progress survival mode can be enabled by running the game with the argument `-survival`.
+This is the first version to feature one of the MD3 mobs of Indev, Rana.
+
+You can learn more about this version [on the Minecraft wiki.](https://minecraft.wiki/w/Java_Edition_Indev_0.31_20091223-2).
+
+### Organization
+
+This project's commits represent the Python versions of each Minecraft Java game version.
+You can view source code changes between game versions by checking the commit history or comparing branches.
+To play any version, specify it in the `pip install` command as demonstrated below.
+
+### General Usage
+
+*Pyglet*, *Cython*, and *Pillow* are required dependencies and can easily be installed with *pip*. Use the versions specified in `requirements.txt`.
+
+While the late Classic versions and later Indev versions feature audio, this version does not.
+
+To easily install this version of *Minecraft: Python Edition*, just run `python -m pip install minecraft-python==0.31.20091223-2`.
+
+Alternatively, for a manual Cython build, run `python setup.py build_ext --inplace`.
+
+Run `python -m mc.net.minecraft.Minecraft` to launch the game. *Minecraft: Python Edition* should be compatible with any modern platform that supports OpenGL and Cython.
+
+Run with the argument `-fullscreen` to open the window in fullscreen mode.
+
+### Gameplay
+
+Press B to pick any of the ores and tiles that exist in this creative version.
+Press F5 to toggle rain. Other keys are listed in the regular options menu.
+
+If you enable survival mode, you will spawn with some lava and water blocks for testing.
+You will be able to attack the Rana mobs, but items in general won't drop. Arrows and mushrooms are unusable.
+
+### Additional Notes
+
+The `mc.resources` directory contains all of the textures and sounds that this version uses. However,
+the textures are only there for convenience, as all of the texture buffers are already preloaded
+in the `mc.Resources` module.
+
+This would have been much more challenging to work on without the great tools provided by [RetroMCP-Java](https://github.com/MCPHackers/RetroMCP-Java).
