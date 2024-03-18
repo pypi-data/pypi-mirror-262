@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: mlxcli
+Version: 0.1.4
+Requires-Dist: cmd2
+Requires-Dist: mlx
+Requires-Dist: mlx-lm
+
