@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: DataPrepKitP
+Version: 0.1.2
+Summary: A Python package for data preparation tasks.
+Author: Roqaiah Bin Jamil
+Author-email: roqaiahjamil@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+# DataPrepKitP
+**A Python library for _data preparation_ tasks.**
+
+## Features
+> Read data from CSV, Excel, and JSON files.
+> Summarize data with statistical measures.
+> Handle missing values by removing or imputing.
+> Encode categorical data using one-hot encoding.
+
+## Installation
+pip install DataPrepKitP
+
+## Usage
+import DataPrepKitP as dp
+
+### Read data from a CSV file
+data = dp.read_data('data.csv')
+
+### Summarize the data
+dp.data_summary(data)
+
+### Handle missing values by imputing with the strategy: {'mean', 'median', 'mode', 'drop'}, default='mean'
+data = dp.handle_missing_values(data, strategy='mean')
+
+### Encode categorical data
+data = dp.encode_categorical_data(data, 'column_name')
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+If you have any questions or suggestions, please feel free to contact me at roqaiahjamil@gmail.com.
