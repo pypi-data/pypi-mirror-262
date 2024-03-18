@@ -1,0 +1,15 @@
+jobspec/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jobspec/schema.py,sha256=tjnlpf0gM2XZ78UB4BmNW5IsQDSGg583FDG4A-zqAOo,5113
+jobspec/utils.py,sha256=skQfGcl-Am8rhDjAvZ0DsTXMKxH5T5WYuhwuy1ADyFA,581
+jobspec/core/__init__.py,sha256=OD870DLOUV-E8dfLxeMQQTUKssllySks30oM6JsavVo,161
+jobspec/core/converter.py,sha256=bg8EyjfuW3kDpTnWphXMljePUhwd4e-LxTFsQtfOgc4,2684
+jobspec/core/v1.py,sha256=FkiQschPT-dhlFA4gRp-gBFUtQkGOEouliKhlDTtZ5o,2236
+jobspec/transformer/__init__.py,sha256=_pFgMA--vXcsT4u80xmkhlzMDMvUMM8HkPevJela8hs,276
+jobspec/transformer/base.py,sha256=NsJzaOnCHbKpIZMq8cwKtLKCsC2460cSsINH7bTeQKI,842
+jobspec/transformer/registry.py,sha256=74ico6gVR7uvLf0HQUb1ZXD-RzNiz-7EwtnwqNAgmaU,92
+jobspec-0.0.0.dist-info/LICENSE,sha256=AlyLB1m_z0CENCx1ob0PedLTTohtH2VLZhs2kfygrfc,1108
+jobspec-0.0.0.dist-info/METADATA,sha256=2xnbojT82CsM-jqkjFBKXVx1RiOcSXyTGG2t3YpZTZ4,1767
+jobspec-0.0.0.dist-info/NOTICE,sha256=9CR93geVKl_4ZrJORbXN0fzkEM2y4DglWhY1hn9ZwQw,1167
+jobspec-0.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+jobspec-0.0.0.dist-info/top_level.txt,sha256=AdQYSGmOll7ZB25DDceU28GqNoaa8YZBpqaMUTC9BWQ,8
+jobspec-0.0.0.dist-info/RECORD,,
