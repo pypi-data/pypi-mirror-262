@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: PyserSSH
+Version: 4.0
+Summary: A easy ssh server
+Home-page: https://github.com/damp11113/PyserSSH
+Author: damp11113
+Author-email: damp51252@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: paramiko
+
+# PyserSSH
+Part from [damp11113](https://github.com/damp11113/damp11113-library)
