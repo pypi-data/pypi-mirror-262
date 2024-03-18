@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/cv2_enumerate_cameras/__init__.py
+src/cv2_enumerate_cameras/__main__.py
+src/cv2_enumerate_cameras/camera_info.py
+src/cv2_enumerate_cameras/linux_backend.py
+src/cv2_enumerate_cameras/opencv_backend.py
+src/cv2_enumerate_cameras/windows_backend.py
+src/cv2_enumerate_cameras.egg-info/PKG-INFO
+src/cv2_enumerate_cameras.egg-info/SOURCES.txt
+src/cv2_enumerate_cameras.egg-info/dependency_links.txt
+src/cv2_enumerate_cameras.egg-info/top_level.txt
