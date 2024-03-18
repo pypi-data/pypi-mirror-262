@@ -1,0 +1,9 @@
+networkx[default]~=3.2.1
+requests
+appdirs~=1.4.4
+
+[tests]
+build
+twine
+pytest
+flake8
