@@ -1,0 +1,13 @@
+amazon_product_details_scraper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amazon_product_details_scraper/app.py,sha256=HsUUOCA2yA-_-lTPtNYVde4sRUd8x1fC60nOaGglBak,3222
+amazon_product_details_scraper/config/__init__.py,sha256=XSJ2rdFt1vAZgtFOKoJIfr77_x-YI1ya-SynBy1SK5w,241
+amazon_product_details_scraper/config/config.py,sha256=FRCUlfNt5MyH2eZrd7y1FBq4G8oW60KbwtPHWCqknxo,163
+amazon_product_details_scraper/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amazon_product_details_scraper/core/scraper.py,sha256=8zBQntl3BpWQ475IJRvLklzFpCrZL8OrYAqxevD-b1g,3443
+amazon_product_details_scraper/core/utils.py,sha256=H_UItsA7i6ZglOtCvU-z06dRJPvgG8VM72zH1xVtJNg,3051
+amazon_product_details_scraper-1.0.1.dist-info/LICENSE,sha256=ewr-k87FBE4vJ1BAHEjQ1UvWWJCHkifaDO16w1oMggE,1071
+amazon_product_details_scraper-1.0.1.dist-info/METADATA,sha256=9ZEm5cnCyrR0luDcOVabR_fYY-hWzch71tq4jj9tVgs,5400
+amazon_product_details_scraper-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+amazon_product_details_scraper-1.0.1.dist-info/entry_points.txt,sha256=YVB1hu6jAVjhOjV5IZI6cL-BIQ-V4Tm901Zf0BIKkJE,75
+amazon_product_details_scraper-1.0.1.dist-info/top_level.txt,sha256=J9C8VbQVPwprA780Pl9CJuklLfp-Or-FloC7oGso-18,31
+amazon_product_details_scraper-1.0.1.dist-info/RECORD,,
