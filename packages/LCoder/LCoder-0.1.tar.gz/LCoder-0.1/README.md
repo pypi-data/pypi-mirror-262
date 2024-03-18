@@ -1,0 +1,40 @@
+# LCoder
+library for easy data encryption (string format)
+
+## To install:
+```Python
+pip install LCoder
+```
+
+## To init:
+```Python
+import LCoder
+coder = LCoder.CODER()
+```
+
+## To encode:
+```Python
+coder.encode("text")
+```
+
+## To decode:
+```Python
+coder.decode("12345")
+```
+
+## if you want to create custom(another random numbers)
+```Python
+coder.create_code(save=True)
+```
+argument "save" need for save code, maybe you want only read but don't save code...
+
+## save
+```Python
+coder.save_code({"A": "aaa", "B": "111"})
+```
+! keys only cap's!
+
+
+
+
+TELEGRAM: @LOMlNKA
