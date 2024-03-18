@@ -1,0 +1,8 @@
+HousePricePrediction_dakshinm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+HousePricePrediction_dakshinm/ingest_data.py,sha256=4j5Un9n3ZrnssVPrFx-2Zzcfh8un2BZCURPuC449Ykg,8405
+HousePricePrediction_dakshinm/score.py,sha256=2r0vLvIsiYNCgGoRCyHirs-unTNn4UCwaEPx9bN5DIU,7457
+HousePricePrediction_dakshinm/train.py,sha256=70PYbyD243Ma4ov7eeHGhjUq3xrdHFc_5Jcxl7MLaik,9689
+HousePricePrediction_dakshinm-1.4.1.dist-info/METADATA,sha256=dFmmefqKTdWbnm2sCy6Ybu-90IFIAFHrG5rMX81QpfQ,6034
+HousePricePrediction_dakshinm-1.4.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+HousePricePrediction_dakshinm-1.4.1.dist-info/top_level.txt,sha256=o39JK94XJE7rYOOZ73ZP9S68iOXGW52ERgZt0R2wuTU,30
+HousePricePrediction_dakshinm-1.4.1.dist-info/RECORD,,
