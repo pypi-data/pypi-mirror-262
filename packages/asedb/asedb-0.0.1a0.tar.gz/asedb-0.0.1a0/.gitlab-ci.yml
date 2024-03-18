@@ -1,0 +1,22 @@
+image: python:3.11
+
+before_script:
+  - python3 --version
+
+stages:
+  - Static Analysis
+  - Code Test
+
+ruff:
+  stage: Static Analysis
+  script:
+    - pip install -r requirements-dev.txt
+    - ruff check src
+    - ruff format --check
+
+
+pytest:
+  stage: Code Test
+  script:
+    - pip install ".[test]"
+    - pytest

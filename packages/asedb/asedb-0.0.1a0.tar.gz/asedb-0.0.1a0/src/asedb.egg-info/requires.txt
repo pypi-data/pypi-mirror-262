@@ -1,0 +1,11 @@
+ase
+sqlalchemy>2
+python-dotenv
+pendulum
+packaging
+
+[postgres]
+psycopg2-binary
+
+[test]
+pytest
