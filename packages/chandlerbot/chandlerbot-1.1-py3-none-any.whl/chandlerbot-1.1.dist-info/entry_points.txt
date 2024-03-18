@@ -1,0 +1,2 @@
+[console_scripts]
+chandler = chandlerbot.bot:main
