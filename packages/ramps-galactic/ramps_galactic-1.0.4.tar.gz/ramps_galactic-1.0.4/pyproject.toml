@@ -1,0 +1,62 @@
+
+
+
+#
+#	agenda:
+#		[ ] parse toml config for installations
+#
+
+
+#
+#	publish: python3 moves/publish.py
+#
+
+#
+#	not sure what this does:
+#		python3 -m build --sdist 
+#
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ramps_galactic"
+version = "1.0.4"
+dependencies = [
+	"bracelet",
+
+	"click",
+	"pandas",
+	"plotly",
+	"rich"
+]
+
+license = { text = "GPL 3.0" }
+# license = { file = "license.s.HTML" }
+
+description = ""
+readme = "module/module.MD"
+
+
+[project.scripts]
+#
+#	https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#creating-executable-scripts
+#	from ramps_galactic import clique; clique ()
+#
+# 	ramps_galactic = "ramps_galactic:clique"
+#
+
+[tool.setuptools.packages.find]
+where = [ "module" ]
+
+
+#
+#	https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+#
+[tool.setuptools.package-data]
+"*" = [ "*.html" ]
+
+
+
+
