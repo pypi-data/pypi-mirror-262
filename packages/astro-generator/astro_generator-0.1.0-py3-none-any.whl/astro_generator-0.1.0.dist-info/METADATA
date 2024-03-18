@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: astro_generator
+Version: 0.1.0
+Summary: A library providing simple methods of generating random but semi-realistic data of fictional celestial bodies.
+Home-page: https://github.com/Zitronenjoghurt/AstroGenerator
+Author: Zitronenjoghurt
+License: GNU General Public License v3.0
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+
+# AstroGenerator
+A library for generating random and semi-realistic data for celestial bodies.
