@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: web3_common
+Version: 1.0.2
+Summary: web3 commom utils
+Home-page: 
+Author: yszr
+Author-email: yszr222@gmail.com
+Project-URL: Documentation, https://github.com/yszr149/web3_common/
+Project-URL: Source, https://github.com/yszr149/web3_common
+Project-URL: Tracker, https://github.com/yszr149/web3_common/issues
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+web3 utils
+

@@ -1,0 +1,4 @@
+web3==5.31.3
+
+[:python_version=='3.6']
+dataclasses==0.8

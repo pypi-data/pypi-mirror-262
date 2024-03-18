@@ -1,0 +1,10 @@
+README.md
+setup.py
+web3_common/__init__.py
+web3_common/rpc.py
+web3_common/util.py
+web3_common.egg-info/PKG-INFO
+web3_common.egg-info/SOURCES.txt
+web3_common.egg-info/dependency_links.txt
+web3_common.egg-info/requires.txt
+web3_common.egg-info/top_level.txt
