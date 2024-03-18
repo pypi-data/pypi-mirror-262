@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: retry_later
+Version: 0.0.5
+Summary: Retry your functions later, asynchronously
+Author-email: Krishnasis Mandal <krishnasis.mandal@prestatech.com>
+Maintainer-email: Krishnasis Mandal <krishnasis.mandal@prestatech.com>
+License: MIT License
+        
+        Copyright (c) 2024 Krishnasis
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: utils,retry,python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-xdist; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: pylint; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: typing-extensions; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+
+[![latest](https://github.com/krishnasism/retry-later/actions/workflows/publish.yml/badge.svg)](https://github.com/krishnasism/retry-later/actions/workflows/publish.yml)
+[![tests](https://github.com/krishnasism/retry-later/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/krishnasism/retry-later/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/krishnasism/retry-later/badge.svg?branch=main)](https://coveralls.io/github/krishnasism/retry-later?branch=main)
+# retry_later
+
+`@retry_later` allows you to retry the execution of a function asynchronously in the background until it's done.
+
+### Why?
+
+For example, you can retry sending an email until it's sent.
+
+## Installation
+
+```bash
+pip install retry-later
+```
+
+## Usage
+
+Simply add `@retry_later()` to your function. This also works with `async` functions.
+
+Look inside the `examples` folder for more examples!
+
+Here's a simple demonstration:
+
+```python
+from my_very_python_real_email_client import send_mail_to_friend, send_text_to_friend
+import asyncio
+
+# Create new event loop
+loop = asyncio.new_event_loop()
+
+# Import the decorator
+from retry_later import retry_later
+
+@retry_later(retry_interval=10, max_retries=5, exception=ConnectionError)
+def send_email():
+    send_mail_to_friend(email="veryrealperson@veryrealemail.haha", body="hi!")
+
+@retry_later(retry_interval=10, max_retries=5, exception=ConnectionError)
+async def send_a_text():
+    await send_text_to_friend(number="+123456789", body="hi! texting you")
+
+send_email()
+asyncio.run(send_a_text())
+
+# Other stuff
+print("Hi - I am here!! I complete before my_function!")
+
+# event loop must be running for retry_later to work
+loop.run_forever()
