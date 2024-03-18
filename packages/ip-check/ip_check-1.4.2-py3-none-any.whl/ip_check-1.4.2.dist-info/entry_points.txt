@@ -1,0 +1,6 @@
+[console_scripts]
+igeo-asn = ipcheck.geoinfo:get_asn
+igeo-db = ipcheck.geoinfo:update_db
+igeo-loc = ipcheck.geoinfo:get_loc
+ip-check = ipcheck.main:main
+ip-check-cfg = ipcheck.main:config_edit
