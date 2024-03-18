@@ -1,0 +1,13 @@
+_sargasso.cp39-win_amd64.pyd,sha256=-yhm3er-XSg4l5jmxM_JOtRb-BcC2vOuaMN01rTiK_A,110592
+sargasso/__init__.py,sha256=3g3XKD7a5fv0eJR7a7HnWT7uwqWYSEWXn2zhVmps54w,1471
+sargasso-0.4.1.data/platlib/.load-order-sargasso-0.4.1,sha256=1h7WXfEZKxHtHBotw8oGb31Uzu7qBFeKdCgg-ksTDVk,225
+sargasso-0.4.1.data/platlib/flang-b230c7bcadeb39f3e7e9de6d960b856d.dll,sha256=7DrKKltDKoRQGfy1rEAPVx29bSfl64cVMMl38hW8PuI,1679360
+sargasso-0.4.1.data/platlib/flangrti-95c9d3d60053a668e99fd30038f11ce0.dll,sha256=6KTstJNpePR639Ugcgv_rnbii0SWPsnXx6GH__yd9yU,50688
+sargasso-0.4.1.data/platlib/libomp-23f42654910d405a7852cc2a9abb4fa3.dll,sha256=z0O154uGZMc0NmrZm756Nn_lDThE8mfJIPHmKA08Vr4,612864
+sargasso-0.4.1.data/platlib/msvcp140-f3a4bc3af4ab149c831da2c39e62f8fa.dll,sha256=oDDcLf0uyiipN1ySmJrfTa8WH5iNteFrnhBnjrDf9Mc,573008
+sargasso-0.4.1.data/platlib/openblas-847a4898def0f371ab675fd5e83d963e.dll,sha256=eWtDfqjC25kk_M0AfwenxlV8RTmjOjkMcr0ns1Urk0w,28739072
+sargasso-0.4.1.dist-info/DELVEWHEEL,sha256=e3QexMHBx3vHAhqu8lYMXtoY-poamoZG6uLH2n0vNxo,413
+sargasso-0.4.1.dist-info/METADATA,sha256=BNurnzo-2G7mivgZEiVwehYou-4e0VuQ8laDXwJJaVI,745
+sargasso-0.4.1.dist-info/RECORD,,
+sargasso-0.4.1.dist-info/top_level.txt,sha256=-AJ6cwzffuJhTy_I1ABkDOlNXqQjME5yzwLwqV5ObHU,19
+sargasso-0.4.1.dist-info/WHEEL,sha256=Z6c-bE0pUM47a70GvqO_SvH_XXU0lm62gEAKtoNJ08A,100
