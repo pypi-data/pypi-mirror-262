@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: mime-utils
+Version: 0.1.0
+Summary: Some reusable libraries
+Home-page: https://www.vegvesen.no
+Author: Bjørne Malmanger
+Author-email: bjorne.malmanger@vegvesen.no
+License: MIT
+Description: # Mime Utils
+        
+        An package containing misc helper libraries for projects
+        
+        * oauth2user - Support user interaction when logging inn with Oauth2
+        
+        ## Installation
+        
+        Run the following to install:
+        
+        ```python
+        pip install mime-utils
+        ```
+        
+        ## Usage
+        
+        ```python
+        from oauth2user import Oauth2User
+        
+        TODO: Fill out here
+        ```
+        
+        # Developing Mime Utils
+        
+        To install Mime Utils, along with the tools you need to develop and run tests, run the following in your virtualenv:
+        
+        ```bash
+        $ pip install -e .[dev]
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
