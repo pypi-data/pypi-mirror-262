@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: funmodels-mivolo
+Version: 0.0.2
+Summary: Layer MiVOLO for SOTA age and gender recognition
+Home-page: https://github.com/farfarfun/funmodels-mivolo
+Author: bingtao
+Author-email: 1007530194@qq.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: funpypi
+Requires-Dist: funmodels
+Requires-Dist: huggingface-hub
+Requires-Dist: ultralytics ==8.0.124
+Requires-Dist: timm ==0.8.13.dev0
+Requires-Dist: yt-dlp
+Requires-Dist: lapx >=0.5.2
+
+# funmodels-mivolo
+
+[WildChlamydia/MiVOLO](https://github.com/WildChlamydia/MiVOLO)
