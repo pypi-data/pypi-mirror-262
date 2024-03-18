@@ -1,0 +1,8 @@
+psutil==5.9.8
+pyaes==1.6.1
+
+[:os_name == "nt"]
+pywin32
+
+[dev]
+pip-tools
