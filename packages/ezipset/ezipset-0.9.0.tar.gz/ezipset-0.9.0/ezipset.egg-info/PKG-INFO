@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: ezipset
+Version: 0.9.0
+Summary: ezIPSet is a pure Python library to manipulate IPSet rules. Uses ctypes and libipset.so, it's incredibly fast!
+Home-page: https://github.com/rabuchaim/ezIPSet
+Author: Ricardo Abuchaim
+Author-email: ricardoabuchaim@gmail.com
+Maintainer: Ricardo Abuchaim
+Maintainer-email: ricardoabuchaim@gmail.com
+License: MIT
+Project-URL: Issue Tracker, https://github.com/rabuchaim/ezIPSet/issues
+Project-URL: Source code, https://github.com/rabuchaim/ezIPSet
+Project-URL: Latest Release, https://github.com/rabuchaim/ezIPSet/releases/latest
+Keywords: ip,ipset,libipset,libipset.so,ctypes,iptables,ezipset,eziptables,purepython,pure,firewall,rules,tools
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Security
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: Finger
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Localization
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+ezIPSet
+ezIPSet is a Pure Python library to manipulate IPSet rules. Uses ctypes and libipset.so, it's incredibly fast!
+
+(This is just a reserve for the library's name and the first release will be available until april/2024)
+
+
