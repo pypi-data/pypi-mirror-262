@@ -1,0 +1,51 @@
+# Hi welcome to ddd_layer V 0.0.4
+
+DDD Method should compute matrix whit size 4x4 and up. If you try compute a system 3x3 or 2x2
+is important don't use DDD, just use Sympy method (ADJ, GE or LU).
+
+DDD works whit symengine is fast and also DDD works better.
+
+
+1.- instructions for use:
+example to use:
+
+	#from ddd_layer import DDD
+	#from symengine import symbols as sym
+	#import numpy as np
+
+	#R1 = sym('R1'); R2 = sym('R2'); R3 = sym('R3'); R4 = sym('R4'); R5 = sym('R5')
+	#C1 = sym('C1'); C2 = sym('C2'); C3 = sym('C3'); C4 = sym('C4'); C5 = sym('C5')
+	#L1 = sym('L1'); L2 = sym('L2'); L3 = sym('L3'); L4 = sym('L4'); L5 = sym('L5')
+	#s = sym('s')
+	#V1 = sym('V1');V2=sym('V2');V3=sym('V3');I1=sym('I1');I2=sym('I2');I3=sym('I3')
+	#A = [[1/R1+1/R2, R1, 1/R2+1/R3, 1/R5, 1/R4+1/(L3*s), C1*s],
+        #    [C2*s, C3*s+1/R1+1/(L4*s), 1/R2, L1,L2,L3],
+     	#    [C1,C2,C3,C4,C5,R5],
+     	#    [C1*s,C2*s,C3*s,C4*s,1/(L1*s)+1/(L2*s)+1/(L3*s)+1/(L4*s),1/(R1+C1*s)],
+        #    [1/(L1*s),1/(L2*s),1/(L3*s),1/(L4*s),1/(L5*s),1/(R1+(1/R5))],
+     	#    [58+R1,0.6*R2,1e-6*C5*s,235+1/R5,1/L4*s+235,1/R1 + 1/R2]
+    	#    ]
+
+	#x = [[],
+	#     [],
+ 	#     [],
+  	#     [],
+  	#     []]
+
+	#z = [[V1],
+	#     [V2],
+  	#     [V3],
+  	#     [I1],
+  	#     [I2],
+   	#     [I3]]
+
+	#A = np.array(A,dtype=object)
+	#x = np.array(x,dtype=object)
+	#z = np.array(z,dtype=object)
+
+	#out = DDD.DDDs(A,x,z)
+ 
+
+
+
+
