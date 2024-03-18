@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: autonomous-learning-library
+Version: 0.9.1
+Summary: A library for building reinforcement learning agents in Pytorch
+Home-page: https://github.com/cpnota/autonomous-learning-library.git
+Author: Chris Nota
+Author-email: cnota@cs.umass.edu
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: gymnasium (~=0.29.1)
+Requires-Dist: numpy (~=1.22)
+Requires-Dist: matplotlib (~=3.7)
+Requires-Dist: opencv-python-headless (~=4.0)
+Requires-Dist: torch (~=2.2)
+Requires-Dist: tensorboard (~=2.8)
+Requires-Dist: cloudpickle (~=2.0)
+Provides-Extra: all
+Requires-Dist: gymnasium[accept-rom-license,atari] (~=0.29.1) ; extra == 'all'
+Requires-Dist: gymnasium[mujoco] (~=0.29.1) ; extra == 'all'
+Requires-Dist: pybullet (<4,>=3.2.2) ; extra == 'all'
+Requires-Dist: gym (<0.26.0,>=0.10.0) ; extra == 'all'
+Requires-Dist: PettingZoo[accept-rom-license,atari] (~=1.24.3) ; extra == 'all'
+Requires-Dist: supersuit (~=3.9.2) ; extra == 'all'
+Provides-Extra: atari
+Requires-Dist: gymnasium[accept-rom-license,atari] (~=0.29.1) ; extra == 'atari'
+Provides-Extra: dev
+Requires-Dist: gymnasium[accept-rom-license,atari] (~=0.29.1) ; extra == 'dev'
+Requires-Dist: gymnasium[mujoco] (~=0.29.1) ; extra == 'dev'
+Requires-Dist: pybullet (<4,>=3.2.2) ; extra == 'dev'
+Requires-Dist: gym (<0.26.0,>=0.10.0) ; extra == 'dev'
+Requires-Dist: PettingZoo[accept-rom-license,atari] (~=1.24.3) ; extra == 'dev'
+Requires-Dist: supersuit (~=3.9.2) ; extra == 'dev'
+Requires-Dist: black (~=24.2.0) ; extra == 'dev'
+Requires-Dist: isort (~=5.13.2) ; extra == 'dev'
+Requires-Dist: flake8 (~=7.0.0) ; extra == 'dev'
+Requires-Dist: torch-testing (==0.0.2) ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx (~=7.2.6) ; extra == 'docs'
+Requires-Dist: sphinx-autobuild (~=2024.2.4) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (~=2.0.0) ; extra == 'docs'
+Requires-Dist: sphinx-automodapi (~=0.17.0) ; extra == 'docs'
+Provides-Extra: ma-atari
+Requires-Dist: PettingZoo[accept-rom-license,atari] (~=1.24.3) ; extra == 'ma-atari'
+Requires-Dist: supersuit (~=3.9.2) ; extra == 'ma-atari'
+Provides-Extra: mujoco
+Requires-Dist: gymnasium[mujoco] (~=0.29.1) ; extra == 'mujoco'
+Provides-Extra: pybullet
+Requires-Dist: pybullet (<4,>=3.2.2) ; extra == 'pybullet'
+Requires-Dist: gym (<0.26.0,>=0.10.0) ; extra == 'pybullet'
+Provides-Extra: test
+Requires-Dist: black (~=24.2.0) ; extra == 'test'
+Requires-Dist: isort (~=5.13.2) ; extra == 'test'
+Requires-Dist: flake8 (~=7.0.0) ; extra == 'test'
+Requires-Dist: torch-testing (==0.0.2) ; extra == 'test'
+
+UNKNOWN
+
