@@ -1,0 +1,11 @@
+_flexfloat.abi3.so,sha256=BN5YmWZ-ZaY6qnFGc-_P5naF1zCrvFJPk45KdSODAlA,160752
+pyflexfloat-0.1.0.dist-info/RECORD,,
+pyflexfloat-0.1.0.dist-info/METADATA,sha256=O5jmwWAMIpls8LJwoMnk0_VFdVqhG2xIzhUgzn2KzwY,13563
+pyflexfloat-0.1.0.dist-info/WHEEL,sha256=-dXUxQJS0dF4AHZCo07Dt2TCYvwyNT7o6m2vzxmW15M,111
+pyflexfloat-0.1.0.dist-info/top_level.txt,sha256=OFH7X6DxWIOUU9TVMyupFlBg3Owug5SmTMYLtwbQdIA,23
+pyflexfloat-0.1.0.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+pyflexfloat/FlexFloat.py,sha256=skRnKPoVNiZb7wJaNzdzRqqx2v0hvi1RVVLF7w-Q7EA,7701
+pyflexfloat/__init__.py,sha256=5HisptzQbQ7G1iSaLgdk7GMQlsP8h2EaKzpywOQljXU,273
+pyflexfloat/func.py,sha256=X3OqYNbOp6owYCxkn_LfufHtsAc-n62DQege4N02vxo,1489
+pyflexfloat/util.py,sha256=BLB68KXwIp8RkBdCJTAuYy6bqTg5_jHdAsmLOWhT32U,528
+pyflexfloat/build_flexfloat_ffi.py,sha256=fJFU4nhGttjl6XNTUHCvdm97SRxXSI2tuydtLtYrc9s,2408
