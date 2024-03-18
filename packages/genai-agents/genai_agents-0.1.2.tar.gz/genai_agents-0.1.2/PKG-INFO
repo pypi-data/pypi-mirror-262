@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: genai-agents
+Version: 0.1.2
+Summary: 
+Author: AI Planet
+Author-email: tech@aiplanet.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: azure-identity (>=1.15.0,<2.0.0)
+Requires-Dist: duckduckgo-search (==5.1.0)
+Requires-Dist: google-api-python-client (>=2.121.0,<3.0.0)
+Requires-Dist: google-auth-httplib2 (>=0.2.0,<0.3.0)
+Requires-Dist: google-auth-oauthlib (>=1.2.0,<2.0.0)
+Requires-Dist: langchain (==0.1.8)
+Requires-Dist: langchain-community (==0.0.21)
+Requires-Dist: langchain-exa (>=0.0.1,<0.0.2)
+Requires-Dist: langchain-experimental (>=0.0.53,<0.0.54)
+Requires-Dist: langchain-openai (==0.0.6)
+Requires-Dist: langchain-text-splitters (>=0.0.1,<0.0.2)
+Requires-Dist: ollama (>=0.1.7,<0.2.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: spacy (==3.7.4)
+Requires-Dist: spacytextblob (>=4.0.0,<5.0.0)
+Requires-Dist: wikipedia (>=1.4.0,<2.0.0)
+Requires-Dist: xorbits (>=0.7.2,<0.8.0)
+Requires-Dist: yfinance (>=0.2.37,<0.3.0)
+Description-Content-Type: text/markdown
+
+<div align="center">
+<h1 align="center">GenAI Agents </h1>
+
+<a href="https://img.shields.io/badge/Python-3.11+-3776AB.svg?style=flat&logo=python&logoColor=white"><img src="https://img.shields.io/badge/Python-3.11+-3776AB.svg?style=flat&logo=python&logoColor=white" alt="Python 3.11+"></a>
+
+</div>
+
+## Installation
+
+1. Setup a virtual environment.
+
+   #### Note: Use python3.11
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+2. Install the genai-agents
+
+   ```bash
+   pip install genai-agents
+   ```
+
+## Documentations
+
+The documentation for GenAI Agents can be found at [agents.genaistack.aiplanet.com](https://agents.genaistack.aiplanet.com/)
+
+## Get in Touch
+
+You can schedule a 1:1 meeting with our DevRel & Community Team to get started with AI Planet Open Source LLMs(effi and Panda Coder) and GenAI Stack. Schedule the call here: [https://calendly.com/jaintarun](https://calendly.com/jaintarun)
+
+## Contribution guidelines
+
+GenAI Stack thrives in the rapidly evolving landscape of open-source projects. We wholeheartedly welcome contributions in various capacities, be it through innovative features, enhanced infrastructure, or refined documentation.
+
+For a comprehensive guide on the contribution process, please click [here](https://github.com/aiplanethub/genai-stack/blob/main/CONTRIBUTING.md).
+
