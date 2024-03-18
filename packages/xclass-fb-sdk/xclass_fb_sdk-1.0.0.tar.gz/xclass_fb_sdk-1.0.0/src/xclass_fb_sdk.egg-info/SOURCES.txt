@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/xclass_fb_sdk.egg-info/PKG-INFO
+src/xclass_fb_sdk.egg-info/SOURCES.txt
+src/xclass_fb_sdk.egg-info/dependency_links.txt
+src/xclass_fb_sdk.egg-info/requires.txt
+src/xclass_fb_sdk.egg-info/top_level.txt
+src/xclass_sdk/__init__.py
+src/xclass_sdk/chat_bot_fb_app.py
+src/xclass_sdk/xclass_helpers.py
+src/xclass_sdk/chat_bot_fb/facebookApiSupporter.py
+src/xclass_sdk/chat_bot_fb/logic.py
+src/xclass_sdk/chat_bot_fb/main.py
+src/xclass_sdk/chat_bot_fb/requirements.txt
+src/xclass_sdk/chat_bot_fb/vercel.json
+src/xclass_sdk/chat_bot_fb/xClassService.py

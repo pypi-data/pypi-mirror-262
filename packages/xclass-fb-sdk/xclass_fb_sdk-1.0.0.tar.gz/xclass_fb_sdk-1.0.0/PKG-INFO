@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: xclass_fb_sdk
+Version: 1.0.0
+Summary: X-Class Facebook SDK
+Author-email: Dinh Bac <ndinhbac.0@gmail.com>
+Project-URL: Homepage, https://github.com/X-Class/xclass-fb-sdk
+Project-URL: Bug Tracker, https://github.com/X-Class/xclass-fb-sdk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests<3,>=2
+Requires-Dist: pystache>=0.6.0
+
+# xclass-sdk Documentation
+
+## Installation
+
+To install the `xclass-fb-sdk`, use the following pip command:
+
+```bash
+pip install xclass-fb-sdk
+```
+
+## Examples
+Please see the test in `src/*.py`

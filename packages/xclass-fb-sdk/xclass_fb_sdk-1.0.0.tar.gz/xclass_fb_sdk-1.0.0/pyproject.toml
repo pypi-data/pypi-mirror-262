@@ -1,0 +1,33 @@
+
+[project]
+name = "xclass_fb_sdk"
+version = "1.0.0"
+authors = [
+  { name="Dinh Bac", email="ndinhbac.0@gmail.com" },
+]
+description = "X-Class Facebook SDK"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  'requests >= 2, < 3',
+  'pystache >= 0.6.0'
+]
+
+[project.urls]
+"Homepage" = "https://github.com/X-Class/xclass-fb-sdk"
+"Bug Tracker" = "https://github.com/X-Class/xclass-fb-sdk"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.*"] 
