@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+latex_tables_and_images.egg-info/PKG-INFO
+latex_tables_and_images.egg-info/SOURCES.txt
+latex_tables_and_images.egg-info/dependency_links.txt
+latex_tables_and_images.egg-info/requires.txt
+latex_tables_and_images.egg-info/top_level.txt
