@@ -1,0 +1,16 @@
+opticallyshallowdeep/__init__.py,sha256=kEjIbO2t6MUWobrSOr1KEYnXqgn4TJvqZ1KPNffp_wk,20
+opticallyshallowdeep/check_transpose.py,sha256=WcuGNmLEoy5qfg2r2G33PIj515N5xmCae4gctdvzF7g,187
+opticallyshallowdeep/find_epsg.py,sha256=s5gzo-MQVfXQfOxus25xSPVBudDTCv6XFK2AHnJ_DxQ,1025
+opticallyshallowdeep/make_multiband_image.py,sha256=o4Oy8Z9VqPCAWcluhV4BjfeD3FS0iUKT93kHQbHkqLM,2011
+opticallyshallowdeep/netcdf_to_multiband_geotiff.py,sha256=RTlPBBKO2gvj8UuYjIXhy3O35QfmwsVLymyddNxutOU,3275
+opticallyshallowdeep/parse_string.py,sha256=lWciiRXQMnS7hrYj2iie03gC98wtMo4HqAAPGvJdnKk,942
+opticallyshallowdeep/process_as_strips.py,sha256=8-HW7V2YOeOb7ecCy3waPiCh8tLdR-F6I-g_4DIAoYU,21827
+opticallyshallowdeep/run.py,sha256=CwIlYHaJbq8wIAh9nRE3kmwv2_aCFIU3yfcRGNztrn4,3853
+opticallyshallowdeep/write_georef_image.py,sha256=LLoKP45ONiGMx4TqqAnUOhDJLZPhDSDTkV-cwlGps2g,807
+opticallyshallowdeep/models/SR.h5,sha256=0JYx4FnBdedI0P2nM84w1BiqyygKl8g8dFU7ZItb1VY,212192
+opticallyshallowdeep/models/TOA.h5,sha256=dJ8J4GLXZng6pJGGfPrWo_E2jwVl2XE1sqQvhkJZkvk,137376
+opticallyshallowdeep-1.1.1.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+opticallyshallowdeep-1.1.1.dist-info/METADATA,sha256=bXGkBQ9R3w7Em6Nc6tOV3VBgX9tIM88NprwvF1UjeWI,2209
+opticallyshallowdeep-1.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+opticallyshallowdeep-1.1.1.dist-info/top_level.txt,sha256=QGZtL8_SKijLHwOLSpMeicvAiAvG1XiU9I3mxkfXMgs,21
+opticallyshallowdeep-1.1.1.dist-info/RECORD,,
