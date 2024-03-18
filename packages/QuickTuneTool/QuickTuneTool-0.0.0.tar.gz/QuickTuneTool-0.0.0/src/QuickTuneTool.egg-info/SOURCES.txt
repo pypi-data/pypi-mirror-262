@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/quicktunetool.py
+src/QuickTuneTool.egg-info/PKG-INFO
+src/QuickTuneTool.egg-info/SOURCES.txt
+src/QuickTuneTool.egg-info/dependency_links.txt
+src/QuickTuneTool.egg-info/top_level.txt

@@ -1,0 +1,16 @@
+[project]
+name = "QuickTuneTool"
+version = "0.0.0"
+authors = [
+  { name="Ivo Rapant", email="rapantios@gmail.com" },
+]
+description = "QTT: The Quick-Tune-Tool for Finetuning Pretrained Models"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+license = { file = "LICENSE" }
