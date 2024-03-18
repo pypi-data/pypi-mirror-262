@@ -1,0 +1,3 @@
+[console_scripts]
+prepembd = prepembd.bin.tokenize:app
+
