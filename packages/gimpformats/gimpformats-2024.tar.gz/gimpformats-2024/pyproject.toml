@@ -1,0 +1,93 @@
+[tool.poetry]
+name = "gimpformats"
+version = "2024"
+license = "lgpl-3.0-only"
+description = "Pure python implementation of the gimp file format(s)"
+authors = ["FredHappyface"]
+classifiers = [
+	"Development Status :: 3 - Alpha",
+	"Intended Audience :: Developers",
+	"Intended Audience :: Education",
+	"Natural Language :: English",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python :: Implementation :: CPython",
+	"Topic :: Multimedia :: Graphics",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+	"Topic :: Utilities"
+]
+homepage = "https://github.com/FHPythonUtils/GimpFormats"
+repository = "https://github.com/FHPythonUtils/GimpFormats"
+documentation = "https://github.com/FHPythonUtils/GimpFormats/blob/master/README.md"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+blendmodes = "<2026,>=2024.1"
+brackettree = "<2,>=0.2.5"
+numpy = "<2,>=1.26.4"
+Pillow = "<11,>=10.2.0"
+
+[tool.poetry.group.dev.dependencies]
+imgcompare = "^2.0.1"
+pytest = "^8.1.1"
+handsdown = "^2.1.0"
+coverage = "^7.4.4"
+ruff = "^0.2.2"
+pyright = "^1.1.354"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+	"ANN101",  # type annotation for self in method
+	"COM812",  # enforce trailing comma
+	"D2",  # pydocstyle formatting
+	"ISC001",
+	"N",  # pep8 naming
+	"PLR09",  # pylint refactor too many
+	"TCH",  # type check blocks
+	"W191"  # ignore this to allow tabs
+]
+fixable = ["ALL"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/{tests,docs,tools}/*" = ["D", "S101", "E402"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all" # Disallow all relative imports.
+
+[tool.ruff.format]
+indent-style = "tab"
+docstring-code-format = true
+line-ending = "lf"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.coverage.run]
+branch = true
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+env_list =
+	py311
+	py310
+	py39
+	py38
+
+[testenv]
+deps =
+	imgcompare
+	pytest
+commands = pytest tests
+"""
