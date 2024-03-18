@@ -1,0 +1,7 @@
+include README.md
+include LICENSE-COM
+include LICENSE-NC
+exclude vizmath/__pycache__
+exclude vizmath/examples
+exclude vizmath/binary_tree.py
+exclude vizmath/path_swarm.py
