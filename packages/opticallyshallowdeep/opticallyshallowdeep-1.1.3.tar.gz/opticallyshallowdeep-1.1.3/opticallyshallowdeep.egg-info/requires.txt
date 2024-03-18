@@ -1,0 +1,9 @@
+geopandas
+rasterio
+tifffile
+netCDF4
+pyproj
+joblib
+scipy
+matplotlib
+tensorflow
