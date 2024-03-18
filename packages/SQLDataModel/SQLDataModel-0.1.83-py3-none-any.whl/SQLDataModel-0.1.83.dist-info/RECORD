@@ -1,0 +1,15 @@
+SQLDataModel/ANSIColor.py,sha256=vnWmRa6QSIggzubiEOiCpy8_HmHlziJ8aZUSgu2cOV8,6899
+SQLDataModel/HTMLParser.py,sha256=WetZDccf10pxnHP6YDQAksvmNg-29Gbd7GEq4cIctzI,9137
+SQLDataModel/JSONEncoder.py,sha256=aNNSLmUJYB_bFC0HrHAvH4Due-hi_betTSep1dw1Yeg,1267
+SQLDataModel/SQLDataModel.py,sha256=4ecUK0rEwaLFLt0DmLzwNKnzse4GmaM3PxMI-LLZFU4,455160
+SQLDataModel/StandardDeviation.py,sha256=ZQM4_m953D6A2gxcWLHoSxj-2ko8pdcyQYy0N58rZZs,2286
+SQLDataModel/__init__.py,sha256=BzSO311eX8mA2HUP6vspOYZ2BZO4c9lO779F-tcBSWU,173
+SQLDataModel/converters.py,sha256=VaZmqv17-FNEj393ci3ibx8ZlAMZ7gMz90ms-cvErOk,1501
+SQLDataModel/demo.py,sha256=Y1Q0_9lAs_uydn4YYkmnUQOpRw6cLQf-55uQrCttAc4,1269
+SQLDataModel/exceptions.py,sha256=clPNov6iPVLyChQpdHzPxvar4THfIGbW7nOukpGnmTw,2804
+SQLDataModel/extensions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SQLDataModel-0.1.83.data/scripts/SQLDataModel.py,sha256=4ecUK0rEwaLFLt0DmLzwNKnzse4GmaM3PxMI-LLZFU4,455160
+SQLDataModel-0.1.83.dist-info/METADATA,sha256=TxLyzjTPxlWbhPzOv_199LCcfk8k9JVNwTztjB82K8I,6828
+SQLDataModel-0.1.83.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+SQLDataModel-0.1.83.dist-info/top_level.txt,sha256=XZy7wuMj9tsEDyq-YX7_I11WcYixuX1xSXtaaKgZg1E,13
+SQLDataModel-0.1.83.dist-info/RECORD,,
