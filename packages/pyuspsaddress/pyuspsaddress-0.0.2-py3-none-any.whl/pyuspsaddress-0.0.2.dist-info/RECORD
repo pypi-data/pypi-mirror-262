@@ -1,0 +1,14 @@
+dvpOAuth/__init__.py,sha256=S8zHAC2AYNjy3oeaA6tiVAQh-Ilf9aDSr4_96UeUul4,163
+dvpOAuth/class_OAuth.py,sha256=nUfc4lf_QxYWkriiQ6RZzK_ncnUG-XhcBVkukvKw8Ic,20440
+dvpOAuth/error.py,sha256=Y3BjsevsSGMDVVdn6ztiQMcGNtB6lySkNPoL7y4BT-Q,131
+dvpOAuth/util.py,sha256=u5bBx6MBbxjFha6iVarvFVOQUuauVT1Z36h14g-Pp70,627
+pyuspsaddress/__init__.py,sha256=degONTzqET555X5MZu8_mnqD6EbDhkHhEMB7CzY6Sdc,163
+pyuspsaddress/constants.py,sha256=v1I37Ia7Q5i9HG6LOxvOH9VyDTLQAVL-LWz4MXKcXFM,121
+pyuspsaddress/error.py,sha256=a9K7O70PLXCJQHj3qJWRqNDyLft6yCmFc0YbhPPpkks,129
+pyuspsaddress/errors.py,sha256=a9K7O70PLXCJQHj3qJWRqNDyLft6yCmFc0YbhPPpkks,129
+pyuspsaddress/pyuspsaddress.py,sha256=O2QQ7vFTMnvEgYPRhTtB5ILzXG8QIV1vpaaBE7hl_jU,7796
+pyuspsaddress-0.0.2.dist-info/LICENSE,sha256=kvtQ8TFcEHieq5Rq278N_cFl5mWhOXZNpzEMCfEWgkw,1054
+pyuspsaddress-0.0.2.dist-info/METADATA,sha256=9URqNycWwNYtgwuET-XNBQeZEGGW63CMRIT-vhsY5-Y,866
+pyuspsaddress-0.0.2.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+pyuspsaddress-0.0.2.dist-info/top_level.txt,sha256=gEdAn7JPOuvDxo_ny35hKq4liearEBoM18VTZFDwXto,14
+pyuspsaddress-0.0.2.dist-info/RECORD,,
