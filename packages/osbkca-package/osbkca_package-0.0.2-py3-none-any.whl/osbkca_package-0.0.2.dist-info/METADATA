@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: osbkca_package
+Version: 0.0.2
+Summary: A osbkca package
+Author-email: Osbkca <osbkca@gmail.com>
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Osbkca package
