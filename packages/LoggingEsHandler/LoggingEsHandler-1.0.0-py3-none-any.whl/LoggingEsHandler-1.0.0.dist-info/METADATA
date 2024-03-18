@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: LoggingEsHandler
+Version: 1.0.0
+Summary: Elasticsearch Log handler for the logging library
+Home-page: https://github.com/smockgithub/python-elasticsearch-logger
+Author: smock
+Author-email: 
+License: Apache2
+Keywords: logging elasticsearch handler log django instrumentation
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Internet :: Log Analysis
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE.md
+Requires-Dist: elasticsearch ==7.17.9
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Requires-Dist: six ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
