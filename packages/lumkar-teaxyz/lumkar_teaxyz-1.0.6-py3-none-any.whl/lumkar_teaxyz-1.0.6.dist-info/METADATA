@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lumkar-teaxyz
+Version: 1.0.6
+Summary: A simple package for https://app.tea.xyz/. Example tea-xyz - https://github.com/mccallumkarin7/tea-xyz
+Home-page: https://github.com/mccallumkarin7/tea-xyz
+Author: lumkar
+Author-email: mccallumkarin7@gmail.com
+Project-URL: Homepage, https://github.com/mccallumkarin7/tea-xyz
+Project-URL: Source, https://github.com/mccallumkarin7/tea-xyz
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: requests >=2.20.0
+Requires-Dist: lumkar-teaxyz
+
