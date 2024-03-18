@@ -1,0 +1,7 @@
+acme>=2.9.0
+certbot>=2.9.0
+requests>=2.31.0
+mock
+setuptools
+zope.interface
+build
