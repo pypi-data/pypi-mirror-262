@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+tolatex/__init__.py
+tolatex/tolatex.py
+tolatex.egg-info/PKG-INFO
+tolatex.egg-info/SOURCES.txt
+tolatex.egg-info/dependency_links.txt
+tolatex.egg-info/top_level.txt
