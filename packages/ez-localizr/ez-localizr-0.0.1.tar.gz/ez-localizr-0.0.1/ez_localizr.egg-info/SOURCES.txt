@@ -1,0 +1,6 @@
+README.md
+setup.py
+ez_localizr.egg-info/PKG-INFO
+ez_localizr.egg-info/SOURCES.txt
+ez_localizr.egg-info/dependency_links.txt
+ez_localizr.egg-info/top_level.txt
