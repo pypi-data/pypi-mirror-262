@@ -1,0 +1,10 @@
+numpy
+requests
+pandas
+seaborn
+matplotlib
+typer
+rdkit
+py3dmol
+jupyter
+ipython
