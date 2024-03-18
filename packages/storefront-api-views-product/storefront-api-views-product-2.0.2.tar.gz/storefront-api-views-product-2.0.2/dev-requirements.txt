@@ -1,0 +1,22 @@
+# Tests
+pytest < 8.0.0
+pytest-cov
+pytest-mock
+pytest-cases
+pytest-randomly
+freezegun
+
+# Linting, Formatting, etc.
+pre-commit
+flake8
+flake8-comprehensions
+flake8-mutable
+mypy
+black
+isort
+
+# Typing
+types-setuptools
+
+#building distributables
+wheel

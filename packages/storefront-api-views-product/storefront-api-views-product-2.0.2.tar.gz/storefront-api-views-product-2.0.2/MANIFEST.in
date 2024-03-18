@@ -1,0 +1,7 @@
+include version
+include README.md
+include dev-requirements.txt
+
+recursive-exclude tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
