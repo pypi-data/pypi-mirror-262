@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lightningrobot-next"
+version = "0.0.1"
+requires-python = ">=3.8"
+authors = [
+  {name = "Zhihan", email = "zhihan2727@hotmail.com"}
+]
+description = "轻快，好用，基于Python的多平台机器人框架。"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["robot", "lightningrobot"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Homepage = "https://lightningrobot.github.io/"
+Documentation = "https://lightningrobot.github.io/"
+Repository = "https://github.com/LightningRobot/core.git"
+"Bug Tracker" = "https://github.com/LightningRobot/core/issues"
