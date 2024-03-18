@@ -1,0 +1,9 @@
+wbx_cpl/__init__.py,sha256=N1bxIFNAkuyG1VHYyK3ozSQ3CtbFbf_zQqvYz1d_A6A,64
+wbx_cpl/__main__.py,sha256=UMiX9Vfv7ita3UVJA9kcKQV75Scw7WbjvTmatk4LZUY,16960
+wbx_cpl/dataframe.py,sha256=kGHpX2NPbjie-tzo-p9IpyQfyqIMluce_TGgRPGA7Ws,11083
+wbx_cpl/utils.py,sha256=upnworn8idOF4VxYdVz_2dGklOqRDObc-vj8ILdmt4Q,600
+wbx_cpl/wbx.py,sha256=1dMazGGnj0ElgjyD1wA0BRy7TxIHXSENAvg3s90S3EY,12817
+wbx_cpl-1.2.0.dist-info/METADATA,sha256=O-AQtyLxPm5VM0Q-fBCEpc7u5eQjwe4h3RGYgmPjoRI,5005
+wbx_cpl-1.2.0.dist-info/WHEEL,sha256=LL0B1KxSLwaTWceo7tT-0aDLd-qq9dmbnsnk1DnXlg8,87
+wbx_cpl-1.2.0.dist-info/licenses/LICENSE,sha256=ag3hbcDSMdplNgQzhroAWPS8kE6cIYOrVzC0IHN2pnM,1071
+wbx_cpl-1.2.0.dist-info/RECORD,,
