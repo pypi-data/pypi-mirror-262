@@ -1,0 +1,10 @@
+dice_parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dice_parser/dice_roller.py,sha256=a2Pq9X4oQdQdYNdQiE5TmFKJeMhMznJAGDYSZ5BXXY0,625
+dice_parser/modifier.py,sha256=roaHyMKgZ5sm6YQy8W0wWjBQ6qKalFwgQLgNKCI-Ju4,1063
+dice_parser/parser.py,sha256=tWrO5sekMW0ZHL5f9kf83rimbynyzf33LVwPL8IKtYo,1321
+dice_parser/parser_result.py,sha256=SM205A2hl1mmQrI3s5_UVBx_8UKyWMmd3yTsw7f4-SI,1731
+dice_parser/transformer.py,sha256=FftUlfgkCy6Pk-ZLDtlmiiXJwx01b77B0yfxEgLpPgM,4606
+dice_parser-1.0.dist-info/METADATA,sha256=Njdj-lMUF5iiv3MNTpDTo3Jyp_h6scU5taIDfQ4CUDQ,265
+dice_parser-1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dice_parser-1.0.dist-info/top_level.txt,sha256=wfkSe2aIHfiGyCW0yFfXwcMhfLfATkaco8hG4_xgfNk,12
+dice_parser-1.0.dist-info/RECORD,,

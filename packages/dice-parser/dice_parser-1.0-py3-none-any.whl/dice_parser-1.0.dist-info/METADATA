@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: dice_parser
+Version: 1.0
+Summary: Arithmetic expressions with dice roll support
+Home-page: https://github.com/VadimPushtaev/dice_parser
+Author: Vadim Pushtaev
+Author-email: pushtaev.vm@gmail.com
+License: MIT
+Requires-Dist: lark >=1.1.9
+
