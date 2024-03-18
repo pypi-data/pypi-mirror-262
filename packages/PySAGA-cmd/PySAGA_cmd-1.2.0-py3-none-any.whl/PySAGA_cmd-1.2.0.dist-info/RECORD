@@ -1,0 +1,13 @@
+PySAGA_cmd/__init__.py,sha256=QETQsyvqC6qFlNYqXSx38TdFnROr-w1DMvgX_6sck8s,59
+PySAGA_cmd/objects.py,sha256=Q4j-Xsl3jX_lRP3zBrYGOOfdzJMTLiHB3dFGzzezFcI,6376
+PySAGA_cmd/saga.py,sha256=86b4Bf4YU_Pgl8K99VTrI8QHg7CGaJNRt7PjUhMbCHg,27096
+PySAGA_cmd/utils.py,sha256=wQ4CakW16MRw3DJPurtSl4TLxwtAUyDc_0GR6v_aOtQ,7407
+PySAGA_cmd/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PySAGA_cmd/tests/test_saga.py,sha256=ny4VmNei4I00dOrWim_qntnCGFb8eyDWpIefSokT6CU,6462
+PySAGA_cmd/tests/test_utils.py,sha256=viF2RQ7yQBbiMMQZXfot1iOR1NTFuov-t7mRPW_kdPQ,1315
+assets/DEM_30m.tif,sha256=zlrPQNirzU0LPNbCQjPMgHYXmGvkkoyuelrRdX1Tg8E,282855
+PySAGA_cmd-1.2.0.dist-info/LICENSE,sha256=MNq8IBPvLpj-6OBCH_yg-kA4N07vrTqUYrbNXx8d49Q,1076
+PySAGA_cmd-1.2.0.dist-info/METADATA,sha256=LPVXZYR8KgypDp--LyHuPATjG0AIFb67NDkFVKRzxbs,7035
+PySAGA_cmd-1.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+PySAGA_cmd-1.2.0.dist-info/top_level.txt,sha256=5HTTuTr3EcQ9ubDOjAWPktNGy4vo0setEUJIMk2ec4M,18
+PySAGA_cmd-1.2.0.dist-info/RECORD,,
