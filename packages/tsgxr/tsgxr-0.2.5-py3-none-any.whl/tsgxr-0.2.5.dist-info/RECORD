@@ -1,0 +1,11 @@
+tsgxr/__init__.py,sha256=eStyeS5GtCsLHa3qB1Mmu9-AqIOaOBb1cpL0cog_T4Q,839
+tsgxr/_version.py,sha256=Rgr9-kM9sjuvfU01TMenCLDkepJEoVqJfvPF4sZHeHQ,518
+tsgxr/cli.py,sha256=1aDWzt3illBs5LyVPtCiXwEM37N6HrMvWsPCl4rk0J0,3420
+tsgxr/read.py,sha256=Aftrg27lpv3a7_eyLw275JzdFwlezoU45r66rRRYXTk,9328
+tsgxr/util.py,sha256=FXSd_5DNO7_R4RfbECVmvgBnwIStLE-ZaFmvLrp3RVI,2081
+tsgxr-0.2.5.dist-info/LICENSE,sha256=JB2dmWhX23ROfECaIjOv4AIwuMDh_AsuhX-RfO8HTMg,1104
+tsgxr-0.2.5.dist-info/METADATA,sha256=nk19GySCcRTm6p8fQO01aPEMNaCxfU911nXMOLjw5II,5992
+tsgxr-0.2.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+tsgxr-0.2.5.dist-info/entry_points.txt,sha256=romb6Q4qxRhmsEdmMj68fb1A-rHOz0v3nllUqD19ha0,40
+tsgxr-0.2.5.dist-info/top_level.txt,sha256=vmsz9I_RNWIhqugBymBtJAm9_hdk5p2Xv9-8nCSb1PM,6
+tsgxr-0.2.5.dist-info/RECORD,,
