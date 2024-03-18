@@ -1,0 +1,7 @@
+markdown
+prompt-toolkit
+pycountry
+Pygments
+tabulate
+wcwidth
+requests
