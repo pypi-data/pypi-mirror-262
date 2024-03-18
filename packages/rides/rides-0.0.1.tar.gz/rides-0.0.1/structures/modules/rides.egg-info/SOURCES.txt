@@ -1,0 +1,14 @@
+license.s.HTML
+pyproject.toml
+readme.md
+structures/modules/rides/__init__.py
+structures/modules/rides/status_1.py
+structures/modules/rides.egg-info/PKG-INFO
+structures/modules/rides.egg-info/SOURCES.txt
+structures/modules/rides.egg-info/dependency_links.txt
+structures/modules/rides.egg-info/requires.txt
+structures/modules/rides.egg-info/top_level.txt
+structures/modules/rides/_clique/__init__.py
+structures/modules/rides/_clique/group/__init__.py
+structures/modules/rides/_licenses/gpl-3.0-standalone.html
+structures/modules/rides/_status/status.proc.py

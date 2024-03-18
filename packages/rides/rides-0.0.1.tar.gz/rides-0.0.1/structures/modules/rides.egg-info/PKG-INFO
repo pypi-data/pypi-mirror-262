@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: rides
+Version: 0.0.1
+License: 
+        
+        
+        
+        
+        
+        
+        
+        <pre>
+        	<h1>Licensing</h1>
+        
+        	<p>
+        		This repository "." and 
+        		the module at "./structures/modules/this_module"
+        		
+        		are both governed by the terms declared in
+        		"./structures/modules/this_module/license.S.HTML"
+        	</p>
+        </pre>
+Description-Content-Type: text/markdown
+Requires-Dist: OHF
+Requires-Dist: somatic
+Requires-Dist: click
+
+
+
+
+
+
+******
+
+Bravo!  You have received a Medical Diploma from   
+the Orbital Convergence University International Air and Water Embassy of the Tangerine Planet.  
+
+You are now officially certified to include this module in your practice.
+
+******
+
+
+# this_module
+
+---
+
+## description
+		
+---		
+		
+## install
