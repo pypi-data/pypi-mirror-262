@@ -1,0 +1,11 @@
+conveiro/__init__.py,sha256=a_wM-z2UHllll_Z6HhkMvdbzqDGBJ6KOZ2fYUcYYTDo,281
+conveiro/cdfs.py,sha256=l9XoL8BkXSeyxEVS_ET1I6CH4SQbEUSBEiZTv9yyDdo,11787
+conveiro/cli.py,sha256=Cnim87f648lmlLGkm-d7SZW9IYxO2KTsFdNaPLx4G3A,10671
+conveiro/deep_dream.py,sha256=Tkzm9oETQ84Xdm2xJFQr8vm1DmWCkCcfqr2GKCvz5bM,14367
+conveiro/utils.py,sha256=9Rd5OQDlQgWi3rdL1bdNdLg4GAWVignrFrEhLlu0uFs,3021
+conveiro-0.2.1.dist-info/LICENSE,sha256=nDy88WcZDOltCm9x2GYGZS_iETBis2nYw3Lx4K180q8,561
+conveiro-0.2.1.dist-info/METADATA,sha256=MIWQq47_sAp5-NSJREWji9vIw16i1_A9UtQISaI8b64,4526
+conveiro-0.2.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+conveiro-0.2.1.dist-info/entry_points.txt,sha256=knbbiU4Ukzia_LFWcHAttb65zVJ-A6DyiSMP4XZMd9w,50
+conveiro-0.2.1.dist-info/top_level.txt,sha256=urJOzp8VU5bZfEPqrXKiBNIIlrZDklFeHcwqLAioVuU,9
+conveiro-0.2.1.dist-info/RECORD,,
