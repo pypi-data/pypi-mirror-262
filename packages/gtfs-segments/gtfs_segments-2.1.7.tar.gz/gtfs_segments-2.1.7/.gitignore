@@ -1,0 +1,37 @@
+__pycache__/
+.ruff_cache/
+*.ai
+.tox
+# Distribution / packaging
+.Python
+
+build/
+/data/
+/example_notebooks/
+develop-eggs/
+dist/
+downloads/
+env/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+src/
+# Jupyter notebook
+*.ipynb
+*.csv
+*.png
+*.geojson
+*.coverage
+# VsCode
+.vscode/
+gtfs_tool/
+!docs/tutorials/*
+docs/tutorials/data/
+.Rproj.user

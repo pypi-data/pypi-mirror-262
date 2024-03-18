@@ -1,0 +1,6 @@
+*.csv
+GTFS2GPS/
+*.aux
+*.log
+*.gz
+output.pdf
