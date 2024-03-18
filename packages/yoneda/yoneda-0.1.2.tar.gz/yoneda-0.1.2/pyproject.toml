@@ -1,0 +1,59 @@
+[project]
+name = "yoneda"
+version = "0.1.2"
+description = "Categeory theory in python."
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "category",
+    "category-theory",
+    "monad",
+    "monoid",
+    "functor",
+    "isopmorphism",
+    "morphism",
+    "arrow",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Typing :: Typed",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "infix>=1.2",
+    "lunchbox",
+]
+authors = [
+    { name = "Alex Braun", email = "alexander.g.braun@gmail.com" },
+]
+
+[project.urls]
+repository = "https://github.com/theNewFlesh/yoneda"
+documentation = "https://theNewFlesh.github.io/yoneda"
+
+[project.optional-dependencies]
+
+[build-system]
+requires = [
+    "pdm-pep517>=1.0.0",
+]
+build-backend = "pdm.pep517.api"
+
+[tool.coverage.report]
+show_missing = true
+omit = [
+    "*/__init__.py",
+    "*/*_test_base.py",
+    "*/*_test.py",
+    "*/*_tests.py",
+    "*/cli.py",
+    "*/command.py",
+    "*/mock_*.py",
+    "*/conftest.py",
+]
