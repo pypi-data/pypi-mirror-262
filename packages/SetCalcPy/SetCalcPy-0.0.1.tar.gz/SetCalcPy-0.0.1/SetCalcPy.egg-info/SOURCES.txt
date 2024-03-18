@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+SetCalcPy/__init__.py
+SetCalcPy.egg-info/PKG-INFO
+SetCalcPy.egg-info/SOURCES.txt
+SetCalcPy.egg-info/dependency_links.txt
+SetCalcPy.egg-info/top_level.txt

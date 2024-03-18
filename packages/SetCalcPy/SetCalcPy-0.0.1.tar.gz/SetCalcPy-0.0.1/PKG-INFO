@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: SetCalcPy
+Version: 0.0.1
+Home-page: https://github.com/SockRocks/Python-Elementary-Set-Theory-Calculator
+Author: SockRocks
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
