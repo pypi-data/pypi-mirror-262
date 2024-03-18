@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: lighthouse-scoring-calculator-v10
+Version: 1.0.10
+Summary: A package for calculating Lighthouse scores.
+Home-page: https://github.com/fabiomanz/lighthouse-scoring-calculator
+Author: Fabio Manz
+Author-email: fabio.manz@t-online.de
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A Python package for calculating Lighthouse scores based on performance metrics.
+
