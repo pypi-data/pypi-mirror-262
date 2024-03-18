@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Dashboard</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://kit.fontawesome.com/831169e0bd.js" crossorigin="anonymous"></script>
+    <!--style-slot-->
+</head>
+<body>
+    <div class="header">
+        <!--logo-slot-->
+        LLM Attributor
+    </div>
+    <div class="prompt-text-wrapper">
+        <div class="prompt-wrapper">
+            <div class="prompt-title">Prompt</div>
+            <!--prompt-slot-->
+        </div>
+        <div class="generated-user-provided-wrapper">
+            <div class="generated-wrapper">
+                <div class="generated-title">
+                    <!--robot-icon-->
+                    LLM-Generated</div>
+                <!--generated-text-slot-->
+            </div>
+            <div class="user-provided-wrapper">
+                <div class="user-provided-title">
+                    <!--user-icon-->
+                    User-provided</div>
+                <!--user-provided-text-slot-->
+            </div>
+        </div>
+    </div>
+    <div class="result-wrapper">
+        <div class="positive-attribution-wrapper">
+            <div class="attribution-wrapper generated-positive-attribution-wraper">
+                <div class="attribution-title generated-positive-attribution-title">
+                    <!--up-solid-icon-->
+                    Top <span class="attribution-num-dropdown-wrapper generated-positive-attribution-num-dropdown-wrapper"></span> data supporting LLM generation
+                </div>
+                <div class='attribution generated-positive-attribution'></div>
+                <div class="attribution-text-tf-idf-wrapper generated-positive-attribution-text-tf-idf-wrapper">
+                    <div class="generated-positive-attribution-text-tf-idf-title-wrapper attribution-text-tf-idf-title-wrapper">
+                        <div class="generated-positive-attribution-text-tf-idf-title attribution-text-tf-idf-title">Important words</div>
+                        <div class="generated-positive-attribution-text-tf-idf-title-detail">by TF-IDF</div>
+                    </div>
+                    <div class="generated-positive-attribution-text-tf-idf attribution-text-tf-idf"></div>
+                </div>
+            </div>
+            <div class="attribution-wrapper user-provided-positive-attribution-wrapper">
+                <div class="attribution-title user-provided-positive-attribution-title">
+                    <!--up-solid-icon-->
+                    Top  <span class="attribution-num-dropdown-wrapper user-provided-positive-attribution-num-dropdown-wrapper"></span> data supporting user-provided text
+                </div>
+                <div class='attribution user-provided-positive-attribution'></div>
+                <div class="attribution-text-tf-idf-wrapper user-provided-positive-attribution-text-tf-idf-wrapper">
+                    <div class="user-provided-positive-attribution-text-tf-idf-title attribution-text-tf-idf-title">Important words</div>
+                    <div class="user-provided-positive-attribution-text-tf-idf attribution-text-tf-idf"></div>
+                </div>
+            </div>
+        </div>
+        <div class="attribution-score-histogram-wrapper">
+            <div class="attribution-score-histogram-title"></div>
+            <div class="attribution-score-histogram"></div>
+        </div>
+        <div class="negative-attribution-wrapper">
+            <div class="attribution-wrapper generated-negative-attribution-wraper">
+                <div class="attribution-title generated-negative-attribution-title">
+                    <!--down-icon-->
+                    Bottom <span class="attribution-num-dropdown-wrapper generated-negative-attribution-num-dropdown-wrapper"></span>
+                </div>
+                <div class='attribution generated-negative-attribution'></div>
+                <div class="attribution-text-tf-idf-wrapper generated-negative-attribution-text-tf-idf-wrapper">
+                    <div class="generated-negative-attribution-text-tf-idf-title attribution-text-tf-idf-title">Important words</div>
+                    <div class="generated-negative-attribution-text-tf-idf attribution-text-tf-idf"></div>
+                </div>
+            </div>
+            <div class="attribution-wrapper user-provided-negative-attribution-wrapper">
+                <div class="attribution-title user-provided-negative-attribution-title">
+                    <!--down-icon-->
+                    Bottom <span class="attribution-num-dropdown-wrapper user-provided-negative-attribution-num-dropdown-wrapper"></span>
+                </div>
+                <div class='attribution user-provided-negative-attribution'></div>
+                <div class="attribution-text-tf-idf-wrapper user-provided-negative-attribution-text-tf-idf-wrapper">
+                    <div class="user-provided-negative-attribution-text-tf-idf-title attribution-text-tf-idf-title">Important words</div>
+                    <div class="user-provided-negative-attribution-text-tf-idf attribution-text-tf-idf"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--js-slot-->
+    <!--message-slot-->
+</body>
+</html>

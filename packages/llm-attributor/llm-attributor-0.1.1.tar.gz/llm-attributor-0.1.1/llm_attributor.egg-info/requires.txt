@@ -1,0 +1,6 @@
+ipython
+tqdm
+torch
+transformers
+datasets
+peft
