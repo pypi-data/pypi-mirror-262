@@ -1,0 +1,47 @@
+Metadata-Version: 2.3
+Name: bluet
+Version: 0.0.3
+Summary: A unit-test library and setup for embedded bluetooth testing.
+Project-URL: Issues, https://github.com/jeru/bluet/issues
+Project-URL: Source, https://github.com/jeru/bluet
+Author-email: Cheng Sheng <jeru.sheng@gmail.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Keywords: ble,bluetooth,mock,test,unit-test
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: bumble
+Description-Content-Type: text/markdown
+
+# bluet
+
+A *unit-test* library and setup for embedded bluetooth testing.
+
+It expects a bluetooth application to be cross-compiled into an executable in a PC to run, and it should only include the bluetooth host but not the controller.
+The test framework will use [bumble](https://github.com/google/bumble) to setup everything else so the test code interacts with a python-based device.
+
+<!-- [![PyPI - Version](https://img.shields.io/pypi/v/bluet.svg)](https://pypi.org/project/bluet) -->
+<!-- [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bluet.svg)](https://pypi.org/project/bluet) -->
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+COMING...
+
+## License
+
+`bluet` is distributed under the terms of the [Apache-2.0](https://github.com/jeru/bluet/blob/main/LICENSE) license.
