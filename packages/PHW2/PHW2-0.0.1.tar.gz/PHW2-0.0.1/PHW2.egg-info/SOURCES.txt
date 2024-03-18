@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+PHW2/Ex1.py
+PHW2/Ex2.py
+PHW2/__init__.py
+PHW2.egg-info/PKG-INFO
+PHW2.egg-info/SOURCES.txt
+PHW2.egg-info/dependency_links.txt
+PHW2.egg-info/requires.txt
+PHW2.egg-info/top_level.txt
