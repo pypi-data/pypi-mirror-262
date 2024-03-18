@@ -1,0 +1,18 @@
+Package: gwdatafind
+Source: igwn-lldd-common
+Version: 0.3.0-1
+Architecture: all
+Maintainer: Rhys Poulton <rhys.poulton@ligo.org>
+Installed-Size: 9
+Depends: python3-igwn-lldd-common (= 0.3.0-1), python3-configargparse, python3-pkg-resources
+Section: python
+Priority: optional
+Homepage: https://git.ligo.org/computing/lowlatency/igwn-lldd-common
+Description: International Gravitational Wave Network (IGWN) low latency data distribution
+ The IGWN - Low Latency Data Distribution (lldd) is software to distribute low
+ latency data used by the International Gravitational-Wave Observatory Network
+ (IGWN). This software currently utilizes the Apache Kafka event streaming
+ platform to distribute the low latency data by connecting to Kafka Broker(s)
+ to produce or consume Kafka messages containing the data.
+ .
+ This package provides the command-line interface `frame2kafka' and `kafka2frame'.
