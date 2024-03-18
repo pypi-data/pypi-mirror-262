@@ -1,0 +1,3 @@
+[console_scripts]
+chatpilot = chatpilot.cli:main
+
