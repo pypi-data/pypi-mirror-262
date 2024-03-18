@@ -1,0 +1,8 @@
+setup.py
+autilsy/__init__.py
+autilsy/common.py
+autilsy.egg-info/PKG-INFO
+autilsy.egg-info/SOURCES.txt
+autilsy.egg-info/dependency_links.txt
+autilsy.egg-info/requires.txt
+autilsy.egg-info/top_level.txt
