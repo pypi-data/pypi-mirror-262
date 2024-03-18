@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: dsgp4
+Version: 0.1.0
+Summary: Differentiable SGP4 prototype
+Author: Acciarini & Baydin
+Author-email: giacomo.acciarini@gmail.com
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: matplotlib
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: pytest-xdist ; extra == 'dev'
+Requires-Dist: sgp4 >=2.21 ; extra == 'dev'
+
