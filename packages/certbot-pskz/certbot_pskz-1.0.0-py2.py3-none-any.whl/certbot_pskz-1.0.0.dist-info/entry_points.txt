@@ -1,0 +1,2 @@
+[certbot.plugins]
+pskz_dns = certbot_pskz.dns:Authenticator

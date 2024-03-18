@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: certbot-pskz
+Version: 1.0.0
+Summary: Ps.kz DNS authenticator plugin for Certbot
+Home-page: https://github.com/IvanRockMen/cerbot-pskz/
+Author: Ivan Bartenev
+Author-email: bartenev.ivan.a@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Security
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: acme >=2.9.0
+Requires-Dist: certbot >=2.9.0
+Requires-Dist: requests >=2.31.0
+Requires-Dist: mock
+Requires-Dist: setuptools
+Requires-Dist: zope.interface
+Requires-Dist: build
+
+# Certbot plugin for ps.kz authorizer
+
+![PyPI - Status](https://img.shields.io/pypi/status/certbot-pskz.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/certbot-pskz.svg)
+
+PS.KZ DNS Authenticator plugin for
+[Certbot](https://certbot.eff.org/)
+
+Installation
+---------------
+```sh
+pip install -U certbot
+pip install certbot-pskz
+```
+
+Verify:
+
+```sh
+certbot plugin --text
+```
+
+Development
+-----------
+Create virtualenv install the plugin (`editable` mode),
+spawn ther environment and run test:
+```
+python3.12 -m venv env
+
+source env/bin/activate
+
+pip install -e .
+
+pip install tox
+
+tox
+```
+
+License
+-------
+Copyright (c) 2024
+[MIT](https://github.com/IvanRockMen/certbot-pskz/blob/main/LICENSE)

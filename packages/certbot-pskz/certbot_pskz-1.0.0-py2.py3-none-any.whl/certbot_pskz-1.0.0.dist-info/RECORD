@@ -1,0 +1,10 @@
+certbot_pskz/__init__.py,sha256=etl5LcKBGSPwJRP4R6hueQxebzJ0vlxrRJrjZxBEoLE,71
+certbot_pskz/dns.py,sha256=n-i1eI8JjusRtO1_RKEEbc927w0zDNqHWO_k81-IwSs,10551
+certbot_pskz/dns_test.py,sha256=k7xQ3lel_GNlniiA_BZaa5fsJPU5Cqo-1ByDR9zv4jo,2003
+etc/letsencrypt/pskz.ini,sha256=F-AiXIm1DxImmHKCH8JrT6Ev5XEeuis6nRohs_57enc,43
+certbot_pskz-1.0.0.dist-info/LICENSE,sha256=WGcKWGesbeFvjAXlaILEVsqo-cd9X7-8I4tKLJakZ_E,1061
+certbot_pskz-1.0.0.dist-info/METADATA,sha256=YKzTyYPPTie5CUGiypUH1zihPTLCN5-jInb4rBZLh78,2002
+certbot_pskz-1.0.0.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+certbot_pskz-1.0.0.dist-info/entry_points.txt,sha256=pt27oYf8m2JkcYNXM4G3_APrfzA9x-cA5zbFvJtpcms,60
+certbot_pskz-1.0.0.dist-info/top_level.txt,sha256=OzudIDKzs3FgsBE9BfcUNfR_YYzPxyuRfkxQk6_yo-8,13
+certbot_pskz-1.0.0.dist-info/RECORD,,
