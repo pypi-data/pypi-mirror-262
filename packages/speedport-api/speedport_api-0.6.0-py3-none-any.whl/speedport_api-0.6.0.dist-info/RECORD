@@ -1,0 +1,15 @@
+speedport/__init__.py,sha256=emHP7xbzqtem60b6_C2V-8Iks9eCwB8iWFdJirC2hPU,58
+speedport/__main__.py,sha256=_VfBJv-sDYvh2fKbJMwpQZf6GoOw2X9ym69puemiXDs,7012
+speedport/api.py,sha256=8f9FpY5dfjv2XA5iWU5gAHW45DTJm43R30rZ1cRoEII,5788
+speedport/call.py,sha256=OopvZcyz6n49ngLL2PezTTaN-UGtZil1aomMGVQdyYM,1169
+speedport/connection.py,sha256=Luwu_MY9XKN3pLWM8jQ7H5wW_oBocFKXqtCNCLwD3Yg,5858
+speedport/const.py,sha256=TFSJKaDPKUdOnepb2MUzpe1ecnaMOtMvoN0dBFUUwp8,143
+speedport/device.py,sha256=XvOkcg0sxaRIGJKp_Z1VGo6TQJSOIPngNFFyIQ2IdDI,2083
+speedport/exceptions.py,sha256=RLqgPTXKEE1m20egEgvei3mrOMT9sqjCj4X8iRv5P_g,148
+speedport/speedport.py,sha256=6P0ilIFAm13gujnl048OCvroHtda1R54xUWskkGWWzI,6699
+speedport_api-0.6.0.dist-info/LICENSE,sha256=T9j9Tvo3CZ0qPHaQ9YWTooemmBLJwY7qCTbpvxRMozk,1069
+speedport_api-0.6.0.dist-info/METADATA,sha256=Fb_dOt3RpnwbONgeb6r3DsQYhlDPXYkkS9y7tf4Izo4,3824
+speedport_api-0.6.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+speedport_api-0.6.0.dist-info/entry_points.txt,sha256=iMYZzg3YJVhauEu-I6QC8lQHvQEdueA4gjwriyHDYnY,55
+speedport_api-0.6.0.dist-info/top_level.txt,sha256=9AObLD9lR2H0X-nJfCceDaKNdR5y2PV55HveX05H-b8,10
+speedport_api-0.6.0.dist-info/RECORD,,
