@@ -1,0 +1,6 @@
+attrs>=17.4.0
+PyYAML>=3.13
+python-dateutil>=2.7.5
+requests>=2.20.0
+zhmcclient>=0.24.0
+jsonschema>=3.0.0
