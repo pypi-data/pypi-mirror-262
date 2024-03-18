@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "libvegas"
+version = "0.3.2"
+description = "Kinesis client library"
+authors = ["Buddhike de Silva <buddhiks@amazon.com>"]
+license = "MIT"
+include = [
+    { path = "src/libvegas/libs/*.so", format = "wheel" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
