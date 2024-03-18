@@ -1,0 +1,9 @@
+-c requirements.txt
+pip
+ipdb
+ipython
+mypy
+pytest
+tox
+build
+twine
