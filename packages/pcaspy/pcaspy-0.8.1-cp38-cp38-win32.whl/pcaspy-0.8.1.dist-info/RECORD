@@ -1,0 +1,12 @@
+pcaspy/__init__.py,sha256=RWRXk7WICN6pQuXDRJcQpoEhvxvSIaE3lg-8NzR0MW4,142
+pcaspy/_cas.cp38-win32.pyd,sha256=iRxph-ybyCOnBOOuL2eftubDWFq5ggc4jEOSjwmpT9U,780288
+pcaspy/_version.py,sha256=EIIeB2g-11wXjuJsV2fWFrTdz--TrJG7-h_dFlv25ew,74
+pcaspy/alarm.py,sha256=9xEBf5ueIFDKJFyAeNATN60tPJx5_eoSNfMIWAHUGfA,1286
+pcaspy/cas.py,sha256=6rFaISN-iK-GYZNeOawLayZZXJSzqEGFZNLPwBRz1Lw,24507
+pcaspy/driver.py,sha256=C4zf9pnPmc2Es6wBvZbO46t8wy670d9b4NxpdHaXTfI,32073
+pcaspy/tools.py,sha256=28SudqA7Lux48ExRljQZ6RyIarDWjPZ9-IS8waVGRj8,859
+pcaspy-0.8.1.dist-info/LICENSE,sha256=kIsXvtjUbbJYNwRQUnlo6tvROSH0fJZg63M7xTrOtYw,1525
+pcaspy-0.8.1.dist-info/METADATA,sha256=iCT4xhlnzrlpJyOvt_hDprNQ5njUMnYo8KNt0b5ISIs,1182
+pcaspy-0.8.1.dist-info/WHEEL,sha256=f5A3Ypo9PM0E06rgvH7-s12WthkA89SedEqLArPnjKU,96
+pcaspy-0.8.1.dist-info/top_level.txt,sha256=YUxKlj_NqAQOTdHqb8tEPXgmHoHJSUCjwu3QJfCtT3Q,7
+pcaspy-0.8.1.dist-info/RECORD,,
