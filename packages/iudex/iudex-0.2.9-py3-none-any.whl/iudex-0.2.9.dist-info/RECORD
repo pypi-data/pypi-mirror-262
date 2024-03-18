@@ -1,0 +1,11 @@
+iudex/__init__.py,sha256=H8I2yFBOns2-A4bWr90k3JgbZJ7kJg4HzybrvQqrE-M,54
+iudex/chat.py,sha256=BdXd4FUgkHkc0-ZLDtndHVIz6hMc3BIuQGawfVzI5cY,7348
+iudex/client.py,sha256=EHKS7imm3SE44Jk4gBKHmVPH4ooWYiL47oGe9a4dLAA,7141
+iudex/functions.py,sha256=RfP0xK0uwqS9Fim_eZIrmS8DVSlABK_QuX1qpuM-K0o,1653
+iudex/resource.py,sha256=warziwy5rCAblphvf7EyV-eolLJBtz5mjNEeg4ST8GQ,236
+iudex/types/function.py,sha256=Z8I1CaGnPH4vvQnfL4ZW5j0gmkeoKWOKxbc2oNEe3HY,4349
+iudex/utils.py,sha256=yk45NNJkEKnCtsUMK7zQCHi9GMPBGJmoVTn1V0YRmmY,137
+iudex-0.2.9.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+iudex-0.2.9.dist-info/METADATA,sha256=P5vyiuWde-CJo-XPFQryiG0dB26_xNm8MCj033Pt0M4,4215
+iudex-0.2.9.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+iudex-0.2.9.dist-info/RECORD,,
