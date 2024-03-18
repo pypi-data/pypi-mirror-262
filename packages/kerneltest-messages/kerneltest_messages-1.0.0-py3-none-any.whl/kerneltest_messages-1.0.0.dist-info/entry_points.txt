@@ -1,0 +1,5 @@
+[fedora.messages]
+kerneltest.release.edit.v1=kerneltest_messages:ReleaseEditV1
+kerneltest.release.new.v1=kerneltest_messages:ReleaseNewV1
+kerneltest.upload.new.v1=kerneltest_messages:UploadNewV1
+
