@@ -1,0 +1,5 @@
+setup.py
+evalverse.egg-info/PKG-INFO
+evalverse.egg-info/SOURCES.txt
+evalverse.egg-info/dependency_links.txt
+evalverse.egg-info/top_level.txt
