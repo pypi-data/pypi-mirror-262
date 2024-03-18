@@ -1,0 +1,10 @@
+environ/__init__.py,sha256=ZYYA7TMf-dFuNkv0Fm1aKc_kwNbJMoUhjZScljkZGAM,1511
+environ/compat.py,sha256=QqruhBE8WoGNMe-Upd6TcSKyKaNGwzYLrCbi7zBKXnM,2202
+environ/environ.py,sha256=p7WQgu8W8E1VzG7MfWOIf6I_j3W4ZTfPNMoS7Nxe-uo,36905
+environ/fileaware_mapping.py,sha256=Z38cYcBiiYaeCNF8bMD4MmYGxhk8l-BGj4vVVj1jCWI,3131
+fdemmer_django_environ-0.11.3.dist-info/AUTHORS.rst,sha256=rLyl-fxsjwu0T7Q_MqXPdVLz_53Zh_qgBpwidqRExpw,1027
+fdemmer_django_environ-0.11.3.dist-info/LICENSE.txt,sha256=vFQTpjdSU8d5J19QAz1sweryuPxjNTufS0eldJVEWJc,1159
+fdemmer_django_environ-0.11.3.dist-info/METADATA,sha256=Y1leBZLdmOeNHVfF2j8uxb-0hx7fnbSL6XmKKDnMq6E,11983
+fdemmer_django_environ-0.11.3.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+fdemmer_django_environ-0.11.3.dist-info/top_level.txt,sha256=vLrvR0rjlfzn--WLv_InBUvf9Lhd-VZIisjM2eBC9QE,8
+fdemmer_django_environ-0.11.3.dist-info/RECORD,,
