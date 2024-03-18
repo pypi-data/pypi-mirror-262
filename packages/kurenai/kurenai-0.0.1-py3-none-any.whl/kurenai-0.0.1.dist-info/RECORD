@@ -1,0 +1,9 @@
+kurenai/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+kurenai/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kurenai/rouge_scorer.py,sha256=HvNnz-uiki1AS1zsLocAfPIkiPG4qFnIiPiDsa6MHd8,517
+kurenai/tokenizers.py,sha256=y9DaAYQIrAL65f5yzdFMB2POdnVNY-UaXAidSU3RjnQ,373
+kurenai-0.0.1.dist-info/LICENSE,sha256=IxYn-d07yIiXHhd7X3lIlYzCgVy4HmkUgnORyaijcjs,1063
+kurenai-0.0.1.dist-info/METADATA,sha256=Dj0V2ZnxQFTDDx7BvtcDYKCwro-uLELEgi8wnOohvHg,2301
+kurenai-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+kurenai-0.0.1.dist-info/top_level.txt,sha256=yx3YwsE4G0h-Bn6-oEQZFU-3aNIxNudBR9lemKZZVzw,8
+kurenai-0.0.1.dist-info/RECORD,,
