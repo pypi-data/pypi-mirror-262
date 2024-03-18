@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/packaged_non_std_code/__init__.py
+src/packaged_non_std_code/ingest_data.py
+src/packaged_non_std_code/score.py
+src/packaged_non_std_code/train.py
+src/packaged_non_std_nisha.egg-info/PKG-INFO
+src/packaged_non_std_nisha.egg-info/SOURCES.txt
+src/packaged_non_std_nisha.egg-info/dependency_links.txt
+src/packaged_non_std_nisha.egg-info/top_level.txt

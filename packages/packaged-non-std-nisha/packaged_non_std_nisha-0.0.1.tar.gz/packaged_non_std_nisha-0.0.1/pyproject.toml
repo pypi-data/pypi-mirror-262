@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "packaged_non_std_nisha"
+version = "0.0.1"
+authors = [
+  { name="Nisha", email="nisa.ampolu@tigeranalytics.com" },
+]
+description = "A custom package for house price prediction"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]

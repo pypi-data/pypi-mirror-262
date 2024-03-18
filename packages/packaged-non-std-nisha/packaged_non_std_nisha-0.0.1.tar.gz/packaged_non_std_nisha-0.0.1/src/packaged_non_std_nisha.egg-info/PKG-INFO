@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: packaged_non_std_nisha
+Version: 0.0.1
+Summary: A custom package for house price prediction
+Author-email: Nisha <nisa.ampolu@tigeranalytics.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Median housing value prediction
+
+The housing data can be downloaded from https://raw.githubusercontent.com/ageron/handson-ml/master/. The script has codes to download the data. We have modelled the median house value on given housing data.
+
+The following techniques have been used:
+
+ - Linear regression
+ - Decision Tree
+ - Random Forest
+
+## Steps performed
+
+ - In python code we have executed the following steps.
+ - Prepared and cleaned the data. We check and impute for missing values.
+ - Features are generated and the variables are checked for correlation.
+ - Multiple sampling techinuqies are evaluated. The data set is split into train and test.
+ - linear regression, Decision tree and random forest techniques were used.
+ - Also used RandomizedSearchCV and GridSearchCV to find the best params
+ - All the above said modelling techniques are tried and evaluated. The final metric used to evaluate is mean squared error.
+
+ 
+ 
+## Execution of the script
+
+  - Inorder to set up the conda environment and make the execution process isolated, a special environment 'mle-dev' was created with the help of env.yml file generated. The folowing is the command to create the environment using env.yml file
+  
+    `conda env create -f env.yml`
+  - To create and activate the env 'mle-dev' 
+   
+    `conda create -n mle-dev`
+
+    `conda activate mle-dev`
+
+  - After creating the environment, the bug free file nonstandardcode.py
+  was executed with the help of the following command.
+
+    `python3 nonstandardcode.py`
+
+    `flake8 nonstandardcode.py`
+    
+  - The screenshot of the output from running the nonstandardcode.py successfully in the mle-dev environment was attached as part of PR description
+
+## Packaging and Testing
+
+ Breaking the nonstandardcode.py file into three files
+
+  - The nonstandardcode.py file was converted into three seperate files namely ingest_data.py, train.py and score.py
+  - The ingest_data.py file is responsible for preprocessing the data and creation of valid test and train datasets that are ready for training the model
+  - The ingest_data.py file was run by giving the path to the output folder where the processed files are to be stored using the command prompt.
+  - The train.py file is solely responsible for training the models. It uses different algorithms to train using the datasets and as an output,it generates the pickle files which are stored in the artifacts folder of the project
+  - The score.py file is responsible for evaluating the performance of the models by considering the pickle files and prints the scores to the terminal
+
+ Running Tests
+  - Created two unit tests in the tests folder of the project root folder and in that folder, two seperate folders were created, one for unit testing and one for functional testing.
+  - Ran unit test for ingest_data.py evaluating whether the the generated outputs are valid
+  - Ran functional test for the proper installation of the package in a virtual environment created using the subprocess inbuilt package in python
+
+ Packaging
+  - Created the pyproject.toml file to create the package.The following command is used to create the package
+
+    `python -m build`
+
+  - After converting it to a package, sphinx - a python documentation generating tool is used to create the proper documentation and to generate html document to the prepared package.
+  - The following are the commands used for generating html content
+
+    `conda install sphinx`
+
+    `sphinx-quickstart`
+
+  - Made a documentation in index.rst file
+  - The following is the command used for generating the html
+
+    `make html`
