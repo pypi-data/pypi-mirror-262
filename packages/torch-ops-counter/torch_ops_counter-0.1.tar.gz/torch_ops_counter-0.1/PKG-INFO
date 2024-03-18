@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: torch_ops_counter
+Version: 0.1
+Home-page: https://gitlab.cs.univie.ac.at/samirm97cs/torch_ops_counter
+Author: Samir Moustafa
+Author-email: samir.moustafa.97@gmail.com
+Requires-Dist: torch>=1.13.1

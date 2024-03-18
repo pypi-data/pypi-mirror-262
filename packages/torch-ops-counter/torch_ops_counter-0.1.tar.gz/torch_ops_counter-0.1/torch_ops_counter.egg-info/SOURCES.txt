@@ -1,0 +1,9 @@
+README.md
+setup.py
+test/test_matmul_operations_count.py
+test/test_spmm_op_count.py
+torch_ops_counter.egg-info/PKG-INFO
+torch_ops_counter.egg-info/SOURCES.txt
+torch_ops_counter.egg-info/dependency_links.txt
+torch_ops_counter.egg-info/requires.txt
+torch_ops_counter.egg-info/top_level.txt
