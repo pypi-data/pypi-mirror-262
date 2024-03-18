@@ -1,0 +1,2 @@
+[console_scripts]
+cybergear-api = cybergear.api.__main__:main

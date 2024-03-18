@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cybergear-api
+Version: 0.0.1
+Summary: 小米关节电机-API
+Author: notmmao
+Author-email: notmmao@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: AUTHORS
+Requires-Dist: cybergear-core
+Requires-Dist: fastapi
+Requires-Dist: requests
+Requires-Dist: uvicorn
+
+小米关节电机-API
