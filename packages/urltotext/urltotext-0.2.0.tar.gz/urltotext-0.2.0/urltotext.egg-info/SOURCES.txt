@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+urltotext/ContentFinder.py
+urltotext/__init__.py
+urltotext.egg-info/PKG-INFO
+urltotext.egg-info/SOURCES.txt
+urltotext.egg-info/dependency_links.txt
+urltotext.egg-info/requires.txt
+urltotext.egg-info/top_level.txt

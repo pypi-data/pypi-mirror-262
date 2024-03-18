@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: urltotext
+Version: 0.2.0
+Summary: A light weight library that takes in a url and extracts any readable text in it.
+Home-page: https://github.com/ChinmayShrivastava/url2text
+Author: Chinmay Shrivastava
+Author-email: cshrivastava99@gmail.com
+License: GPLv3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: bs4
+Requires-Dist: langdetect
+Requires-Dist: selenium
+
+# urltotext
+ A light weight library that takes in a url and extracts any readable text in it.
+
+ Accepting any and all PRs!
+
+## Installation
+
+```
+pip install urltotext
+```
+
+## Pre-requisites
+
+1. `urltotext` uses `selenium` with the driver scope currently limited to `chrome` only. Please ensure that chromedriver is properly configured. Use this [link](https://www.swtestacademy.com/install-chrome-driver-on-mac/) for installation instructions.
+
+## Usage
+
+1. Import and initialize ContentFinder
+
+```python
+from urltotext import ContentFinder
+cf = ContentFinder
+```
+
+2. Scrape a url
+
+```python
+# scrape a url
+cs.scrape_url(url="your_url_here")
+
+# print the article
+cs.print_article(url="your_url_here")
+
+# all urls passed will be stored in the class instance.
+# use the flush_data method to free memory
+cs.flush_data()
+```
+
+Enjoy!
