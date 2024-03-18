@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+dev_hi_chem.egg-info/PKG-INFO
+dev_hi_chem.egg-info/SOURCES.txt
+dev_hi_chem.egg-info/dependency_links.txt
+dev_hi_chem.egg-info/entry_points.txt
+dev_hi_chem.egg-info/not-zip-safe
+dev_hi_chem.egg-info/requires.txt
+dev_hi_chem.egg-info/top_level.txt
+hi_chem/__init__.py
+hi_chem/__version__.py
+hi_chem/app.py
+hi_chem/conformer.py
+hi_chem/translate.py
+hi_chem/view.py
