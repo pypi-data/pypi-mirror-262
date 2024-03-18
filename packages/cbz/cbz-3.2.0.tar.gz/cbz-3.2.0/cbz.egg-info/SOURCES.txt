@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+cbz/__init__.py
+cbz/comic.py
+cbz/constants.py
+cbz/page.py
+cbz/utils.py
+cbz.egg-info/PKG-INFO
+cbz.egg-info/SOURCES.txt
+cbz.egg-info/dependency_links.txt
+cbz.egg-info/requires.txt
+cbz.egg-info/top_level.txt
