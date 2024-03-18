@@ -1,0 +1,16 @@
+hypergrep/__init__.py,sha256=vs_jwf-kdOxCjKlNdr2CY6TNCw5ubKYu_sK1-d4NNoc,599
+hypergrep/multiscanner.py,sha256=hijZQw6UDaUoFvTNSEM5fE7kX1kHnY2wuverohJfPL8,23638
+hypergrep/scanner.py,sha256=aouH47FXMGUhShhiUlwnlEl2jZ0aMRUm1ugshoyFPto,1091
+hypergrep/utils.py,sha256=_4qhrW78WJ2St1ICgF2wXI6m2DOp8tNvWesf1a9hXTs,15392
+hypergrep/lib/__init__.py,sha256=Hjk-D37LpNDPbSeo6gt0CebJT3cq5Y1L2EeSnjanfoA,99
+hypergrep/lib/libhs.so.5.4.2,sha256=2nEm5kYX-ItA_I72R2CrjxD4xYoYoW9qSLt0BU3F4QE,8880963
+hypergrep/lib/libhyperscanner.so,sha256=la4Ni7Wy7T399z9AIRiuZ6dS5ILX69dSVNLZCiDrvuo,62893
+hypergrep/lib/libzstd.so.1.5.5,sha256=zurOyVtK33_gjl0ELPoyBC5TToNlcCagsKjwVuDqxaE,984396
+hypergrep/lib/c/hyperscanner.c,sha256=kYFJiS-hmK4GZ2CrRS51dUtoZXlrnvlepbJ6-6uEiog,13784
+hypergrep/lib/c/hyperscanner.h,sha256=RMiHDCecA1PVzv7qtjwC96Elfl8ya4htzLerSnZysv4,325
+hypergrep-3.2.0.dist-info/LICENSE,sha256=6svDaeVX_j8rlaPtKH7m1r1IDiR2Z7xEoVQ_Pwkijsg,1068
+hypergrep-3.2.0.dist-info/METADATA,sha256=neMEKCi8LVmSXdTqPayEAUhz6frasMzhcONwDGEwLpk,9869
+hypergrep-3.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hypergrep-3.2.0.dist-info/entry_points.txt,sha256=eI12wg43xB3nMk-yOV3vqprQQJjyqM-KSpL-ge1j19w,58
+hypergrep-3.2.0.dist-info/top_level.txt,sha256=ObWXkEr8s095JgB226RA9nbsl7EDx6w-R429blag97Q,10
+hypergrep-3.2.0.dist-info/RECORD,,
