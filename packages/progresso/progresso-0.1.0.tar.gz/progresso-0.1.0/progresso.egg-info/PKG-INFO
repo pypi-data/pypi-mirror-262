@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: progresso
+Version: 0.1.0
+Summary: Make iterators yield progress
+Author-email: Jose Tiago Macara Coutinho <coutinhotiago@gmail.com>
+License: GPL-3.0-or-later
+Project-URL: Documentation, https://tiagocoutinho.github.io/progresso/
+Project-URL: Homepage, https://github.com/tiagocoutinho/progresso
+Project-URL: Source, https://github.com/tiagocoutinho/progresso
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing_extensions<5,>=4.6; python_version < "3.12"
+Provides-Extra: dev
+Requires-Dist: build>=0.10.0; extra == "dev"
+Requires-Dist: twine>=4.0.2; extra == "dev"
+Requires-Dist: pytest>=7; extra == "dev"
+Requires-Dist: pytest-cov>=4; extra == "dev"
+Requires-Dist: hypothesis>=6; extra == "dev"
+Requires-Dist: ruff>=0.3.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs; extra == "docs"
+Requires-Dist: mkdocs-material; extra == "docs"
+Requires-Dist: mkdocstrings[python]; extra == "docs"
+Requires-Dist: pygments; extra == "docs"
+Requires-Dist: pymdown-extensions; extra == "docs"
+
+# progresso
+
+[![progresso][pypi-version]](https://pypi.python.org/pypi/progresso)
+[![Python Versions][pypi-python-versions]](https://pypi.python.org/pypi/progresso)
+![License][license]
+[![CI][CI]](https://github.com/tiagocoutinho/progresso/actions/workflows/ci.yml)
+
+
+A simple library that aims at making hierarchical progress
+iterators / generators easy.
+
+A single point API: `progresso(it: Iterable, start: float = 0, end: float = 100) -> Iterable`
+
+Example:
+
+```python
+>>> def task_1():
+...     yield 10
+...     yield 90
+...     yield 100
+...
+
+>>> def task_2():
+...     yield 5
+...     yield 2
+...     yield 99
+...
+
+>>> def task():
+...     yield 30
+...     yield from progresso(task_1(), 30, 60)
+...     yield from progresso(task_2(), 60, 90)
+
+>>> for i in progresso(task()):
+...     print(i)
+30.0
+33.0
+57.0
+60.0
+61.5
+89.7
+90.0
+100.0
+```
+
+[pypi-python-versions]: https://img.shields.io/pypi/pyversions/progresso.svg
+[pypi-version]: https://img.shields.io/pypi/v/progresso.svg
+[pypi-status]: https://img.shields.io/pypi/status/progresso.svg
+[license]: https://img.shields.io/pypi/l/progresso.svg
+[CI]: https://github.com/tiagocoutinho/progresso/actions/workflows/ci.yml/badge.svg

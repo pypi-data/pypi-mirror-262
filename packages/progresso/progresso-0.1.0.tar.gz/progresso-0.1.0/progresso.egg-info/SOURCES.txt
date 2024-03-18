@@ -1,0 +1,10 @@
+LICENSE
+README.md
+progresso.py
+pyproject.toml
+setup.py
+progresso.egg-info/PKG-INFO
+progresso.egg-info/SOURCES.txt
+progresso.egg-info/dependency_links.txt
+progresso.egg-info/requires.txt
+progresso.egg-info/top_level.txt
