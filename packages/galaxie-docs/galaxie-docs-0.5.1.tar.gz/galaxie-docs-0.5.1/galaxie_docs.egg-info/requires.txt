@@ -1,0 +1,12 @@
+wheel
+markdown
+Pygments
+
+[tests]
+coverage
+wheel
+markdown
+Pygments
+
+[tests:python_version < "3.4"]
+mock<4,>=1.0.1

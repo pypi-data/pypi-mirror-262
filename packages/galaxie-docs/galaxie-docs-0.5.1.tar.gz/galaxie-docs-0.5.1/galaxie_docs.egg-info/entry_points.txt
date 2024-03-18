@@ -1,0 +1,3 @@
+[console_scripts]
+glx-md2html = glxdocs.md2html:main
+glx-yaml2md = glxdocs.yaml2md:main
