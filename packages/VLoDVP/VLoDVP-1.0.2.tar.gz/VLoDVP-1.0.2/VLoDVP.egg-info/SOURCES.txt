@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+VLoDVP.egg-info/PKG-INFO
+VLoDVP.egg-info/SOURCES.txt
+VLoDVP.egg-info/dependency_links.txt
+VLoDVP.egg-info/requires.txt
+VLoDVP.egg-info/top_level.txt
+vlod/__init__.py
