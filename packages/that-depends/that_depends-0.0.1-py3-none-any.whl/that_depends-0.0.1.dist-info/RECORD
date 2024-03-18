@@ -1,0 +1,8 @@
+that_depends/__init__.py,sha256=DLK8R3r5qd_bun0oGVBmQfu0zal6m0kFTOkv3MfWQ0M,144
+that_depends/container.py,sha256=IBBgoErVzawhbQwXYABHSZA4iu9FILrGOU08bubBajI,655
+that_depends/injection.py,sha256=OGXDJyMOqdr1oCHcWcRADU-hV8-YOcfvuAerdTj5J8c,833
+that_depends/providers.py,sha256=_0wfLLFOaV-JfHTcoZ3MGXrE4PRpFzaq1lyNF1B3sVo,3775
+that_depends/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+that_depends-0.0.1.dist-info/METADATA,sha256=0PVzKBfLrMmyGqcL9jbsczCJwVkRn6RGNHN3SYv-RnE,756
+that_depends-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+that_depends-0.0.1.dist-info/RECORD,,
