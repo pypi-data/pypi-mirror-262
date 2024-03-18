@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Gemini-cli/__init__.py
+Gemini-cli/main.py
+Gemini_cli_by_Yoru_cyber.egg-info/PKG-INFO
+Gemini_cli_by_Yoru_cyber.egg-info/SOURCES.txt
+Gemini_cli_by_Yoru_cyber.egg-info/dependency_links.txt
+Gemini_cli_by_Yoru_cyber.egg-info/requires.txt
+Gemini_cli_by_Yoru_cyber.egg-info/top_level.txt
