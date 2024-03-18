@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: stressy
+Version: 1.0.1
+Summary: a tool to repeatedly run a command until failure
+Author-email: Daniel Pauli <dapaulid@gmail.com>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2021 Daniel Pauli
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/dapaulid/stressy
+Project-URL: Documentation, https://github.com/dapaulid/stressy
+Project-URL: Repository, https://github.com/dapaulid/stressy.git
+Project-URL: Bug Tracker, https://github.com/dapaulid/stressy/issues
+Project-URL: Changelog, https://github.com/dapaulid/stressy
+Keywords: testing,repeat,forever,retry,shell,cli
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# stressy
+
+A simple tool to repeatedly run a shell command until failure.
+
+## Usage
+
+```
+usage: stressy.py [-h] [-r RUNS] [-p PROCESSES] [-t TIMEOUT] [-o {fail,stdio,file,none}] [-c] command [command ...]
+
+repeatedly run a command until failure
+
+positional arguments:
+  command               the shell command to be executed
+
+options:
+  -h, --help            show this help message and exit
+  -r RUNS, --runs RUNS  number of repetitions. Repeat until failure if not specified
+  -p PROCESSES, --processes PROCESSES
+                        number of processes to run the command in parallel
+  -t TIMEOUT, --timeout TIMEOUT
+                        timeout in seconds for command to complete
+  -o {fail,stdio,file,none}, --output {fail,stdio,file,none}
+                        destination for command output (stdout/stderr)
+  -c, --continue        continue after first failure
+```
