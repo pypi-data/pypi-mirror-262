@@ -1,0 +1,131 @@
+Metadata-Version: 2.1
+Name: PLCSQL
+Version: 0.4
+Summary: This is package where you can build databases importing (mysql and mariadb) in python as easy
+Author: PLC PEIRIS
+Author-email: lashen985832@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: license.txt
+
+ let's go through each function and provide examples on how to use them.
+
+1. CD (Create Database):
+   This function creates a new database.
+
+   Example:
+      CD("mydatabase", mydb)
+   
+
+2. CT (Create Table):
+   This function creates a new table.
+
+   Example:
+      CT("mytable (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255))", mydb)
+   
+
+3. IV (Insert Values):
+   This function inserts values into a table.
+
+   Example:
+      IV("mytable", "name", ("John",),mydb)
+   
+
+4. IVM (Insert Multiple Values):
+   This function inserts multiple rows of values into a table.
+
+   Example:
+      IVM("mytable", "name", [("John",), ("Alice",), ("Bob",)],mydb)
+   
+
+5. SA (Select All):
+   This function selects all rows from a table and prints them.
+
+   Example:
+      SA("mytable", mydb)
+   
+
+6. DB (Drop Database):
+   This function drops a database.
+
+   Example:
+      DB("mydatabase", mydb)
+   
+
+7. DT (Drop Table):
+   This function drops a table.
+
+   Example:
+      DT("mytable", mydb)
+   
+
+8. STBC (Select Text By Column):
+   This function selects a specific column from a table and prints its contents.
+
+   Example:
+      STBC("name", "mytable", mydb)
+   
+
+9. STBW (Select Text By Where):
+   This function selects all columns from a table based on a given condition and prints the results.
+
+   Example:
+      STBW("mytable", "age > 18", mydb)
+   
+
+10. STBWL (Select Text By Where Like):
+    This function selects all columns from a table based on a LIKE condition and prints the results.
+
+    Example:
+        STBWL("mytable", "name", "J%", mydb)
+    
+
+11. UTBW (Update Text By Where):
+    This function updates values in a table based on a given condition.
+
+    Example:
+        UTBW("mytable", "name='Jane'", "id=1", mydb)
+    
+
+12. STBR (Select Text By Row):
+    This function selects all columns from a table based on a given condition and prints the results row by row.
+
+    Example:
+        STBR("mytable", mydb)
+    
+
+13. STBO (Select Text By Order):
+    This function selects all columns from a table and orders the results by a specified field.
+
+    Example:
+        STBO("mytable", "name", mydb)
+    
+
+14. STBOAD (Select Text By Order And Direction):
+    This function selects all columns from a table, orders the results by a specified field, and specifies the order direction (ascending or descending).
+
+    Example:
+        STBOAD("mytable", "age", "DESC", mydb)
+    
+
+15. MCDT (Modify Column Data Type):
+    This function modifies the data type of a column in a table.
+
+    Example:
+        MCDT("mytable", "age", "INT", mydb)
+    
+
+16. MCP (Modify Column Position):
+    This function modifies the position of a column in a table.
+
+    Example:
+        MCP("mytable", "name", "age", mydb)
+    
+
+17. ATBF (Add Table Field):
+    This function adds a new column to a table.
+
+    Example:
+        ATBF("mytable", "email", "VARCHAR(255)", mydb)
