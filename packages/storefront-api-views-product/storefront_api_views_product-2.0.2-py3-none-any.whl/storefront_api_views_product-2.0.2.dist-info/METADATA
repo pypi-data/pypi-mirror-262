@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: storefront-api-views-product
+Version: 2.0.2
+Home-page: https://github.com/TAKEALOT/storefront-api-views-product
+Author: DSCBE
+Author-email: en-dsc-be@takealot.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+Requires-Dist: typing-extensions
+Requires-Dist: storefront-product-adapter >=2.0.0
+Requires-Dist: storefront-media-urls >=1.0.0
+Provides-Extra: dev
+Requires-Dist: pytest <8.0.0 ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-mock ; extra == 'dev'
+Requires-Dist: pytest-cases ; extra == 'dev'
+Requires-Dist: pytest-randomly ; extra == 'dev'
+Requires-Dist: freezegun ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: flake8-comprehensions ; extra == 'dev'
+Requires-Dist: flake8-mutable ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: types-setuptools ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+
+# Storefront API Views - Product
+
+[![python](https://img.shields.io/badge/python-3.8-informational)](https://docs.python.org/3.8/)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![pytest](https://img.shields.io/badge/pytest-enabled-brightgreen)](https://docs.pytest.org/en/latest/)
+
+## Getting Started
+
+```bash
+pip install storefront-api-views-product
+```
+
+For the full details of this library, see the included [documentation](docs/README.md).
+
+## Library Development
+
+Getting started with developing on storefront-api-views-product
+
+### Setup your virtual environment
+
+You will have 2 choices here depending on whether you use `pyenv-virtualenv` or `virtualenv`
+
+1. Using `pyenv-virtualenv`:
+    ```bash
+    pyenv virtualenv 3.8 storefront-api-views-product
+    echo "storefront-api-views-product" >| .python-version
+    ```
+
+2. Using `virtualenv`:
+    ```bash
+    virtualenv -p python3 venv
+    source venv/bin/activate
+    ```
+
+### Install dependencies
+
+Install the service and developer dependencies, as well as, configure pre-commit
+
+```bash
+make deps
+pre-commit install
+```
+
+> **Note:** If you have already set up the repo, and just want to update your dependencies, just use:
+> ```bash
+> make deps
+> ```
+
+> **Note:** If you want to run the pre-commits without committing to a branch:
+> ```bash
+> pre-commit run
+> ```
+
+### Running Unit Tests
+
+```bash
+make test
+```
+
+> **Note:** This will generate an HTML coverage file located at `htmlcov/index.html`
