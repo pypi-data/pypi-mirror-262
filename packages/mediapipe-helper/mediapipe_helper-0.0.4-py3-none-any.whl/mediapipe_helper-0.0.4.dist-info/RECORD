@@ -1,0 +1,8 @@
+mediapipe_helper/__init__.py,sha256=Qkdiz6Ybn1PE1SlWhKAQBmETf7pQ0yr5HmkqLVDxsqE,21
+mediapipe_helper/config.py,sha256=dk8X5H7hMoJKyfVuL6Ha9buutliNeSMOKvnGdB3va_8,4871
+mediapipe_helper/face_landmark_helper.py,sha256=fYJgOJgbmQSC9uJISencOdL288C0AzHQOWCdpA_4J10,10940
+mediapipe_helper-0.0.4.dist-info/LICENSE.txt,sha256=hwfu8FM5h-_FsVXWR2HutuIHk_ULm9Gmja0c9HGdDtg,12331
+mediapipe_helper-0.0.4.dist-info/METADATA,sha256=c5eUgUnLUqoMdpk2PENhp2RCG7H6Gap31MEczg0EEEo,6776
+mediapipe_helper-0.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+mediapipe_helper-0.0.4.dist-info/top_level.txt,sha256=LPsLSbn__yYByWLDNDffPckwGiopuGeo12PpaTgen20,17
+mediapipe_helper-0.0.4.dist-info/RECORD,,
