@@ -1,0 +1,6 @@
+ase
+sqlalchemy>2
+python-dotenv
+pendulum
+packaging
+numpy
