@@ -1,0 +1,91 @@
+[tool.poetry]
+name = "dans-log-formatter"
+version = "0.0.1"
+description = ""
+authors = ["danyi1212 <danyi1212@gmail.com>"]
+readme = "README.md"
+include = ["dans_log_formatter/"]
+exclude = ["tests/", "*_test.py"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+ujson = { version = "*", optional = true }
+orjson = { version = "*", optional = true }
+fastapi = { version = "*", optional = true }
+flask = { version = "*", optional = true }
+django = { version = "*", optional = true }
+celery = { version = "*", optional = true }
+
+[tool.poetry.extras]
+ujson = ["ujson"]
+orjson = ["orjson"]
+fastapi = ["fastapi"]
+flask = ["flask"]
+django = ["django"]
+celery = ["celery"]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.2"
+pytest-cov = "^4.1.0"
+ruff = "^0.3.0"
+pre-commit = "^3.6.2"
+httpx = "^0.27.0"
+mypy = "^1.8.0"
+types-ujson = "^5.9.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["tests", "dans_log_formatter"]
+testpaths = ["tests"]
+
+[virtualenvs]
+create = true
+in-project = true
+
+[tool.ruff]
+line-length = 120
+src = ["dans_log_formatter", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle
+    "W", # pycodestyle
+    "F", # pyflakes
+    "N", # pep8
+    "BLE", # flake8 blind except
+    "FBT", # flake8 boolean trap
+    "B", # flake8 bug bear
+    "C4", # flake8 comprehensions
+    "PIE", # flake8 pie
+    "T20", # flake8 print
+    "SIM", # flake8 simplify
+    "ARG", # flake8 unused arguments
+    "PTH", # flake8 pathlib
+    "UP", # pyupgrade
+    "ERA", # comment out code
+    "PD", # pandas
+    "RUF", # ruff rules
+]
+
+[tool.mypy]
+python_version = "3.9"
+namespace_packages = true
+check_untyped_defs = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = "dans_log_formatter"
+warn_return_any = true
+disallow_untyped_defs = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+
+
+[[tool.mypy.overrides]]
+module = "tests"
