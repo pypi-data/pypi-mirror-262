@@ -1,0 +1,6 @@
+azure-messaging-webpubsubservice
+aiohttp
+
+[client]
+azure-messaging-webpubsubclient
+python-dotenv
