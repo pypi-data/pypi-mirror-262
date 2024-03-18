@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: DataPrepKitP
+Version: 0.1.0
+Summary: A Python library for data preparation tasks.
+Author: Roqaiah Bin Jamil
+Author-email: roqaiahjamil@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENCE.txt
+Requires-Dist: pandas
+Requires-Dist: numpy
+
