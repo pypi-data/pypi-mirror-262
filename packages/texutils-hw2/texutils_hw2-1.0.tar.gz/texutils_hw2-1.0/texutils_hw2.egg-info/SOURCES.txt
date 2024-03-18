@@ -1,0 +1,8 @@
+setup.py
+texutils_hw2/__init__.py
+texutils_hw2/image.py
+texutils_hw2/table.py
+texutils_hw2.egg-info/PKG-INFO
+texutils_hw2.egg-info/SOURCES.txt
+texutils_hw2.egg-info/dependency_links.txt
+texutils_hw2.egg-info/top_level.txt
