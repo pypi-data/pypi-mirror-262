@@ -1,0 +1,7 @@
+xinterp-0.1.1.dist-info/METADATA,sha256=5P0_OtrWxbrQV8tBwsR6c-8_1vewqGXHgQnsucYi6wg,1348
+xinterp-0.1.1.dist-info/WHEEL,sha256=1WVBudP2uGuWxretrBFqLgXGduBywn6TuK3XY8BMSpY,94
+xinterp-0.1.1.dist-info/license_files/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+xinterp/core.py,sha256=LpHbwQHBZhqKg7k4zvEy0thPaaC7fV-rG6onH-eTZ04,5233
+xinterp/__init__.py,sha256=QnwTbZZ5Zv80iJljGU0Htngi8mhF3DPjTg2yjnSJFYk,36
+xinterp/rust.cp39-win_amd64.pyd,sha256=hOrIoSArf4AbModFtmSxeJbM4QjdgYscWyvPEAnqEQU,436736
+xinterp-0.1.1.dist-info/RECORD,,
