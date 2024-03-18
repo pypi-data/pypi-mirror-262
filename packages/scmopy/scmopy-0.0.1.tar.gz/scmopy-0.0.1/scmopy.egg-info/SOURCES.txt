@@ -1,0 +1,5 @@
+setup.py
+scmopy.egg-info/PKG-INFO
+scmopy.egg-info/SOURCES.txt
+scmopy.egg-info/dependency_links.txt
+scmopy.egg-info/top_level.txt
