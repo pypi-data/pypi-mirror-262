@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+src/prompit/__init__.py
+src/prompit/cli.py
+src/prompit/module.py
+src/prompit.egg-info/PKG-INFO
+src/prompit.egg-info/SOURCES.txt
+src/prompit.egg-info/dependency_links.txt
+src/prompit.egg-info/entry_points.txt
+src/prompit.egg-info/requires.txt
+src/prompit.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_prompit.py
