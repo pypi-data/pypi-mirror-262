@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: nlogging
+Version: 0.1.0
+Summary: A Simple logging Liblary.
+Author-email: matsutaka <dog@norageek.co.jp>
+License: MIT License
+        
+        Copyright (c) 2024 matsutaka
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Repository, https://github.com/noradoglabo/nLogging.git
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# nlogging
+
+## Description
+
+`nlogging` is a Python package for a Simple logging Liblary.
+
+## Installaction
+
+```bash
+pip install nlogging
+```
+
+## Usage
+
+```python
+from nlogging import nLogging
+from nlogging import DEBUG, INFO, WARNING, ERROR, CRITICAL, NOOUT
+
+
+def subfunc1():
+	logging.output(DEBUG, 'message for debugging.')
+	logging.output(CRITICAL, 'message for critical!')
+
+def subfunc2():
+	logging.output(DEBUG, 'message for debugging.')
+	logging.output(CRITICAL, 'message for critical!')
+
+
+# Initializing for nLogging
+logging = nLogging('YourLoggerName', './sample.log')
+logging.set_out_level(stream_lv=DEBUG, file_lv=DEBUG)
+
+logging.output(DEBUG, 'message for debugging.')
+logging.output(CRITICAL, 'message for critical!')
+
+
+# You can chang log-lv(stream_lv: DEBUG -> INFO, file_lv: DEBUG -> INFO)
+logging.set_out_level(stream_lv=INFO, file_lv=INFO)
+subfunc1()
+
+# You can chang log-lv(stream_lv: INFO -> NOOUT, file_lv: INFO -> WARNING)
+logging.set_out_level(stream_lv=NOOUT, file_lv=WARNING)
+subfunc2()
+```
+
+Result(stream)
+```
+2024/03/17 18:18:29.602 DEBUG    exsample.py(18) [<module>] message for debugging.
+2024/03/17 18:18:29.602 CRITICAL exsample.py(19) [<module>] message for critical!
+2024/03/17 18:18:29.602 CRITICAL exsample.py(7) [subfunc1] message for critical!
+```
+Result(file)
+```text
+2024/03/17 18:18:29.602 DEBUG    exsample.py(18) [<module>] message for debugging.
+2024/03/17 18:18:29.602 CRITICAL exsample.py(19) [<module>] message for critical!
+2024/03/17 18:18:29.602 CRITICAL exsample.py(7) [subfunc1] message for critical!
+2024/03/17 18:18:29.602 CRITICAL exsample.py(11) [subfunc2] message for critical!
+```

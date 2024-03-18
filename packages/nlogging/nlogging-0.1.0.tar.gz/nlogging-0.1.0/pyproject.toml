@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nlogging"
+version = "0.1.0"
+description = "A Simple logging Liblary."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+  {name = "matsutaka", email = "dog@norageek.co.jp"}
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Programming Language :: Python :: 3",
+  "Topic :: System :: Logging",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Utilities",
+]
+dependencies = [
+]
+
+[project.urls]
+Repository = "https://github.com/noradoglabo/nLogging.git"
+
+[tool.setuptools]
+package-dir = {"" = "nlogging"}
