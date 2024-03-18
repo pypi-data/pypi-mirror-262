@@ -1,0 +1,13 @@
+harambe/__init__.py,sha256=OHBhzHXNvnAGgXdOMiQf1znMuWauo1-BPwI9Pte-HHw,278
+harambe/core.py,sha256=NXK1sBMxQ44zSzHZGSEsn787zSkFY_Vde9eQsHMMdpA,12142
+harambe/handlers.py,sha256=EeXSzGlRhzQbH6cFES07VLPWnTgbFpkTwnTR_32W_4o,2397
+harambe/meta.py,sha256=xpo68nyVnU2tBg6LWnixClkD8rhai_KlEKjioI_1iw4,3038
+harambe/normalize_url.py,sha256=6xKIaQjyQIWQFAA02bLJZESa7JcvmimdB3mWMbLc6Uo,2457
+harambe/observer.py,sha256=GifDeJOE6V-mMy-CObkP65UdcOMxwi2-SK1DX4yAMHQ,3016
+harambe/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+harambe/tracker.py,sha256=fMakwZCtCeulTB9WycWhlTjhg6sNsLhvND9uatQLuOw,3907
+harambe/types.py,sha256=pp3K2yyOfxIVLOnxRZxJzux1MErsfTqVF6oxW7fSbDg,256
+harambe/utils.py,sha256=Uy4QiAw5jZrKUFE2OgaH4JL8IBYr_Azk4lyXfkTbZ1c,3049
+harambe_sdk-0.8.42.dist-info/METADATA,sha256=DD3Qi9S_g_bWxviAeoEqzNXDk-4upcY099lrIdXvqnA,5861
+harambe_sdk-0.8.42.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+harambe_sdk-0.8.42.dist-info/RECORD,,
