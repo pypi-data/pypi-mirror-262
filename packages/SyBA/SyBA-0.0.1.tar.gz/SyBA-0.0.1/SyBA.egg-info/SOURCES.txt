@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+SyBA/SyBA.py
+SyBA.egg-info/PKG-INFO
+SyBA.egg-info/SOURCES.txt
+SyBA.egg-info/dependency_links.txt
+SyBA.egg-info/requires.txt
+SyBA.egg-info/top_level.txt
