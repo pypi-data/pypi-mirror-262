@@ -1,0 +1,13 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "calculator_mfelic"
+author = "Matheus Feliciano"
+author-email = "matheusfelic16@gmail.com"
+home-page = "https://github.com/TuringCollegeSubmissions/mfelic-DWWP.1.5"
+requires-python = ">=3.6"
+
+[tool.flit.scripts]
+calculator = "calculator_mfelic.calculator:main"
