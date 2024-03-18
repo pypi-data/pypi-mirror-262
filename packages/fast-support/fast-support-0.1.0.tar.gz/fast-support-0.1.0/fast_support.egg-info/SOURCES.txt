@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+fast_support.egg-info/PKG-INFO
+fast_support.egg-info/SOURCES.txt
+fast_support.egg-info/dependency_links.txt
+fast_support.egg-info/requires.txt
+fast_support.egg-info/top_level.txt
