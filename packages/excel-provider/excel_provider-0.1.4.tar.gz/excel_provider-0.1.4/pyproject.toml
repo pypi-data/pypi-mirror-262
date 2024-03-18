@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "excel-provider"
+version = "0.1.4"
+description = ""
+authors = ["Alexander Essenwanger <cibernop@mable-anex.de>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/cybernop/excel-provider"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2"
+openpyxl = "^3.1.2"
+flask = "^3.0.2"
+pyyaml = "^6.0.1"
+flask-swagger = "^0.2.14"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2"
+pytest = "^8.1.1"
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
