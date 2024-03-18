@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gp-bench-client
+Version: 0.0.1
+Summary: 测试台架客户端
+Author: notmmao
+Author-email: notmmao@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: AUTHORS
+Requires-Dist: requests
+
+测试台架客户端
