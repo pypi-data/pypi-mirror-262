@@ -1,0 +1,13 @@
+spakky_fastapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spakky_fastapi/error.py,sha256=SWyNZk1kxbTCiy-tLxB8saLpX5rBxwvy7q7JRCtNQV0,1124
+spakky_fastapi/jwt_auth.py,sha256=Ug3DPEHQQn14gFb-j_o_NW0SUF-4NyfR67FLngjPCCQ,2822
+spakky_fastapi/middlewares/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spakky_fastapi/middlewares/error_handling.py,sha256=w_zy4PtEdGkFNN79AHh7TfwWUGSQ1JFNvPo3Dy8ojDM,1325
+spakky_fastapi/post_processor.py,sha256=33czA6PLYzNxnwQ5dKz0fXjpM_7kyMf9kaY88b_GoCI,2889
+spakky_fastapi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spakky_fastapi/routing.py,sha256=3OhnnDIzaDeNhuIMWpPG17--98ti6LsgdfENsWr332g,19181
+spakky_fastapi/stereotypes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spakky_fastapi/stereotypes/api_controller.py,sha256=hLeIYM-olZHwvFZkd1joQ-5-OQAiZXznFu4CEhrcskk,196
+spakky_fastapi-0.7.19.dist-info/METADATA,sha256=Epf3M5LlqNrHnnwrv0UDDnIuSKW4wRqo11C91P2BS38,1702
+spakky_fastapi-0.7.19.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+spakky_fastapi-0.7.19.dist-info/RECORD,,
