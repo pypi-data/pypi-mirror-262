@@ -1,0 +1,8 @@
+setup.py
+CoreLogger.egg-info/PKG-INFO
+CoreLogger.egg-info/SOURCES.txt
+CoreLogger.egg-info/dependency_links.txt
+CoreLogger.egg-info/requires.txt
+CoreLogger.egg-info/top_level.txt
+IBBCoreLogger/IBBCoreLogger.py
+IBBCoreLogger/__init__.py
