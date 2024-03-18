@@ -1,0 +1,13 @@
+linkwiz/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linkwiz/__main__.py,sha256=FeOUM5NJLfmGC4fhi08JoqgRipm5airdZxZWhOdeGQs,421
+linkwiz/browser.py,sha256=f0s-TdFp_xJ0jK4tMYwVB-JCJ1Z0br4Tn3uS8dNiCgM,1612
+linkwiz/config.py,sha256=BPiYiUENsZn4VTeSe1qwzkYtyH3DYP21ZGVPFKvMshM,2625
+linkwiz/core.py,sha256=DnYk9N6ph5o82nWoev3vaybx7vmR2dYyrQnbfHhMkNQ,1116
+linkwiz/gui.py,sha256=-iKd4xFwh-tPgfFybl2pIGsIA-0SX6vaBfvobd9UyCE,4007
+linkwiz/launch.py,sha256=ZVgP2OrASWxBEW_w3t8qCngnez-NU5Ot1AmSiTK-H4k,1360
+linkwiz/match.py,sha256=SbnnepZmzQ_CbaYrrC18nBUlZabzskE-UNbG9_B8jp4,1021
+linkwiz-0.1.6.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+linkwiz-0.1.6.dist-info/METADATA,sha256=JhGkBaQ7Lg-Gx-19aHo5PVRQ-xF8Ao9DbOgqDCIXcDQ,1551
+linkwiz-0.1.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+linkwiz-0.1.6.dist-info/entry_points.txt,sha256=aLizAFU8lL44xb4hXHUPUCj2obpYlbf9hyscrLBBlfQ,49
+linkwiz-0.1.6.dist-info/RECORD,,
