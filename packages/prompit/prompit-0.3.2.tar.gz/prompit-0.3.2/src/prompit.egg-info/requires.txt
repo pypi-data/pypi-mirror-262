@@ -1,0 +1,4 @@
+pathspec~=0.12.1
+pytest~=8.1.1
+pytest-cov
+pathlib~=1.0.1
