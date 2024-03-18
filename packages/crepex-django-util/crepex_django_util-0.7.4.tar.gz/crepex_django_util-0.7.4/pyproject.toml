@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "crepex-django-util"
+version = "0.7.4"
+description = "CrepeX django utilities"
+authors = ["Hyunwoo Shim <hyunwoo.shim@crepe-x.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+crepex-pyutil = ">= 0.14.0 < 1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+Django = "^3.1"
+djangorestframework = "^3.12.0"
+pre-commit = "^3.1.1"
+tox = "^4.4.6"
+pytest = "^7.3.1"
+drf-spectacular = "^0.21.2"
+django-filter = "^2.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
