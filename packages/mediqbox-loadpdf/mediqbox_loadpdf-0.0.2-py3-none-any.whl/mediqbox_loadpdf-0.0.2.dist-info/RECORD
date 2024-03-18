@@ -1,0 +1,10 @@
+mediqbox/loadpdf/__init__.py,sha256=1Qbc0ckiPDYkX4-J-gGNhbhBiMGlrtgVZ3m4ncbfC9Y,1654
+mediqbox/loadpdf/doc.py,sha256=WrIULg9Vo7J4XB24nNbAsAOdjtpq5RkXMR7mCvQkue0,6233
+mediqbox/loadpdf/figure.py,sha256=N_yUhRh9uWREh0w589tsrA2zPQBRTiRbmTA05qODW9U,5455
+mediqbox/loadpdf/helpers.py,sha256=MYJeGfGMb4s50Ie9eLAPJ1CA4IUM6LgOsmQAaJow0qQ,382
+mediqbox/loadpdf/rect.py,sha256=BQxLzAsoYrMjGWJ8VRn2KdrdlAI7gEotCHHM4DYmkjc,3252
+mediqbox/loadpdf/text.py,sha256=f6oHOVwH4NN5xM-SDBqje7t6v17Fmbm7kbsvFl-HQ_4,3128
+mediqbox_loadpdf-0.0.2.dist-info/METADATA,sha256=VKewKkw2zThs1dLnc_MAcqsOhJYZRvsf0ZkatbdGr-o,330
+mediqbox_loadpdf-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mediqbox_loadpdf-0.0.2.dist-info/top_level.txt,sha256=uzOSvMjz-vWU0kxoEIB8uQwzq1VmZ5UU2CMQf6_797M,9
+mediqbox_loadpdf-0.0.2.dist-info/RECORD,,
