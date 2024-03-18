@@ -1,0 +1,14 @@
+xclass_sdk/__init__.py,sha256=R8_LQT1miy9DaxPFXoDujrY2TzbVZVfeJ_rQIDmGQa8,26
+xclass_sdk/chat_bot_fb_app.py,sha256=ntY869mvwaanKRmz_b-DW3VHXGzGGrBrx5ek8rZxBrc,1663
+xclass_sdk/xclass_helpers.py,sha256=WJhRQz5Gv4qXf1di2H7xLJtWyyNn6GjuhFG1HqqV_mA,1304
+xclass_sdk/chat_bot_fb/facebookApiSupporter.py,sha256=zPyHpXrMbUuBmJOWB3_i6U5jGFS-4a74ejwGooAilMs,1964
+xclass_sdk/chat_bot_fb/logic.py,sha256=1IvL9LSgEoc-3-R_zX6NSZFkz_U2fah47sIo4rYeoDg,556
+xclass_sdk/chat_bot_fb/main.py,sha256=uz8ToSAtURH-92hbX2zgFAgEHC2nZpjvwlA9VAQd6Y4,1271
+xclass_sdk/chat_bot_fb/requirements.txt,sha256=bH3zBU0QzY7hQ-z9ZrZLsSX5lrHs2TnfRhr3sGgqpyQ,45
+xclass_sdk/chat_bot_fb/vercel.json,sha256=Y_gPRBaLOCyzJNwyZqS87IFRgZjU5_XVUOE19SlDihE,165
+xclass_sdk/chat_bot_fb/xClassService.py,sha256=O8lTw_UJrUrBQ6Q-8lgjHMfkyVHSjSqC51FTYnzjEv0,421
+xclass_fb_sdk-1.0.0.dist-info/LICENSE.txt,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+xclass_fb_sdk-1.0.0.dist-info/METADATA,sha256=JBhRpfrJ5IZV6hjVwHIOYzGF-rEd-BD_b1yqJBHPB7U,757
+xclass_fb_sdk-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+xclass_fb_sdk-1.0.0.dist-info/top_level.txt,sha256=EGiAOGbh6gaku6voLa6RJjUagTr2R6eNDXnh2lFMCrU,11
+xclass_fb_sdk-1.0.0.dist-info/RECORD,,
