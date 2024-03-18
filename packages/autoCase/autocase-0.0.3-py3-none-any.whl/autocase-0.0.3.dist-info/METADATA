@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: AutoCase
+Version: 0.0.3
+Summary: Automatic AI based (optional) Camel / Snake / Pascal / Kebab / Train(Title) / Upper / Lower Case Conversion
+Author-email: Mohit Burkule <mohitburkule5@gmail.com>
+Requires-Python: >=3.8.1
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: build ; extra == "build"
+Requires-Dist: twine ; extra == "build"
+Requires-Dist: bandit[toml]==1.7.5 ; extra == "test"
+Requires-Dist: black==23.3.0 ; extra == "test"
+Requires-Dist: check-manifest==0.49 ; extra == "test"
+Requires-Dist: flake8-bugbear==23.5.9 ; extra == "test"
+Requires-Dist: flake8-docstrings ; extra == "test"
+Requires-Dist: flake8-formatter_junit_xml ; extra == "test"
+Requires-Dist: flake8 ; extra == "test"
+Requires-Dist: flake8-pyproject ; extra == "test"
+Requires-Dist: pre-commit==3.3.1 ; extra == "test"
+Requires-Dist: pylint==2.17.4 ; extra == "test"
+Requires-Dist: pylint_junit ; extra == "test"
+Requires-Dist: pytest-cov==4.0.0 ; extra == "test"
+Requires-Dist: pytest-mock<3.10.1 ; extra == "test"
+Requires-Dist: pytest-runner ; extra == "test"
+Requires-Dist: pytest==7.3.1 ; extra == "test"
+Requires-Dist: pytest-github-actions-annotate-failures ; extra == "test"
+Requires-Dist: shellcheck-py==0.9.0.2 ; extra == "test"
+Project-URL: Documentation, https://github.com/MohitBurkule/AutoCase/tree/main#readme
+Project-URL: Source, https://github.com/MohitBurkule/AutoCase
+Project-URL: Tracker, https://github.com/MohitBurkule/AutoCase/issues
+Provides-Extra: build
+Provides-Extra: test
+
+# AutoCase (WIP:Expect Major Changes)
+
+Automatic AI based (optional) Camel / Snake / Pascal / Kebab / Train(Title) / Upper / Lower Case Conversion
+
+# Latest Python Installation
+```bash
+git clone https://github.com/MohitBurkule/AutoCase.git
+cd AutoCase
+pip install -e .
+```
+# Pypi ( slightly older version)
+```
+pip install AutoCase
+```
+# Usage
+## Basic Usage
+```python
+from autoCase import camel, snake, kebab, title
+
+camel = camel("hello-world") # helloWorld
+snake = snake("helloWorld") # hello_world
+kebab = kebab("helloWorld") # hello-world
+##title = title("helloWorld") # Hello World
+```
+
+## AI Based Conversion (Coming Soon)
+```python
+from autoCase import camel, snake, kebab, title
+
+string = "helloworld"
+camel = camel(string,ai=True,outputs=3) # [helloWorld, hellOworld, hellOWorld]
+snake = snake(string,ai=True,outputs=3) # [hello_world, hell_oworld, hell_o_world]
+pascal = pascal(string,ai=True,outputs=3) # [HelloWorld, HellOworld, HellOWorld]
+kebab = kebab(string,ai=True,outputs=3) # [hello-world, hell-oworld, hell-o-world]
+train = train(string,ai=True,outputs=3) # [Hello-World, Hell-Oworld, Hell-O-World]
+upper = upper(string,ai=True,outputs=3) # [HELLO WORLD, HELL OWORLD, HELL O WORLD]
+lower = lower(string,ai=True,outputs=3) # [hello world, hell oworld, hell o world]
+```
+
+## Dictionary Based Conversion (Coming Soon)
+```python
+from autoCase import camel, snake, kebab, title
+
+word_list = ["hello","world","hell"]
+
+string = "helloworld"
+camel = camel(outputs=3) # [helloWorld, hellWorld, hellWorld]
+snake = snake(outputs=3) # [hello_world, hell_world, hell_world]
+pascal = pascal(outputs=3) # [HelloWorld, HellWorld, HellWorld]
+kebab = kebab(outputs=3) # [hello-world, hell-world, hell-world]
+train = train(outputs=3) # [Hello-World, Hell-World, Hell-World]
+upper = upper(outputs=3) # [HELLO WORLD, HELL WORLD, HELL WORLD]
+lower = lower(outputs=3) # [hello world, hell world, hell world]
+```
+
+
+
+
+
+
+

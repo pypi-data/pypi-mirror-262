@@ -1,0 +1,14 @@
+AutoCase/__init__.py,sha256=dPzJS74wRvWMe8Z8bBsJ180gltInjbP2ewBP1R08zHY,149
+AutoCase/case/__init__.py,sha256=06jxc9YP1bMMRqo3sJ8St8rbL1VJngNRQsc2hGR-0tQ,198
+AutoCase/case/caseConverter.py,sha256=LpiTaIc-Lu9UoDku2tgO3pZChFsmWCF7pl3C6x5JQQs,906
+AutoCase/core/main.py,sha256=ZVQyuv842yS5iK0jWoSbaGK-eZs_eSvrUDFxZDEEuUc,2087
+AutoCase/core/validator.py,sha256=yDRkBR2HYNw3zb3UVHRNaHi2_BdgIwPtBIfuOrv2XWM,147
+AutoCase/wordSplitter/AiSplitter.py,sha256=u-qTj8tFwf3AkJdiUm76jg06WWvGirVp_w-roagAcSA,40
+AutoCase/wordSplitter/CaseSplitter.py,sha256=V4LDd43YyOmXFyJghUCzJCSDc0IkMrnE3MjJBpp9EHI,1883
+AutoCase/wordSplitter/DictSplitter.py,sha256=A0fYLoaXDNDkRdJ4L9NfNuf4Z2_p-5O3EA7nxZUUNEs,1505
+AutoCase/wordSplitter/RegexSplitter.py,sha256=UyNVAhEldFL7CJOFoeqyxTouo6KAmL7b28IbgBdB-ag,1678
+AutoCase/wordSplitter/__init__.py,sha256=eaqr53Kx0Gq5VqpQlELKQ1pEuAPBeSLW1vqkKkzFvVQ,376
+AutoCase/wordSplitter/utils.py,sha256=vG8wI5Zx479oLau-ONi5dCtV6WmhBNC2ffxfHL12RQU,252
+autocase-0.0.3.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+autocase-0.0.3.dist-info/METADATA,sha256=RrBRlJYDQ5RuP07WmPz2Wgh4D8xR6WnWYCzwA4Uqhfo,3825
+autocase-0.0.3.dist-info/RECORD,,
