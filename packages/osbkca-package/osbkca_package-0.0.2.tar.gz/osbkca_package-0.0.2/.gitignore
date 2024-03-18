@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+dist/
+osbkca_package.egg-info/
+**/*.pyc
+.pypirc
