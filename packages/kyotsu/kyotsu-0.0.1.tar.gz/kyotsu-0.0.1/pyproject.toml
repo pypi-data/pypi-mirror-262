@@ -1,0 +1,57 @@
+[project]
+name = "kyotsu"
+version = "0.0.1"
+description = "Kyōtsū 共通 is a package with common logic and use cases used as foundation for microservices."
+authors = [
+    { name = "Oleh Mazur", email = "oleh@four-velocity.com" },
+]
+keywords = [
+    "development",
+    "utilities",
+    "common",
+    "generic",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Celery",
+    "Framework :: FastAPI",
+    "Framework :: Pydantic :: 2",
+    "Intended Audience :: Developers",
+    "Operating System :: Unix",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Database",
+    "Topic :: Documentation",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Logging",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+readme = "README.md"
+dependencies = []
+requires-python = ">=3.10"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ipython>=8.22.2",
+]
+docs = [
+    "mkdocs>=1.5.3",
+    "mkdocstrings-python>=1.9.0",
+    "mkdocs-material[recommended,git,imaging] @ git+https://${TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.5.14-insiders-4.53.2",
+]

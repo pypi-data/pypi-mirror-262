@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: kyotsu
+Version: 0.0.1
+Summary: Kyōtsū 共通 is a package with common logic and use cases used as foundation for microservices.
+Keywords: development utilities common generic
+Author-Email: Oleh Mazur <oleh@four-velocity.com>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Celery
+Classifier: Framework :: FastAPI
+Classifier: Framework :: Pydantic :: 2
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+[![Github Test](https://github.com/four-velocity/kyotsu/workflows/Test/badge.svg?event=push&branch=master&style=flat-square)]()
+[![Coverage](https://coverage-badge.samuelcolvin.workers.dev/four-velocity/kyotsu.svg?style=flat-square)]()
+[![PyPI - Version](https://img.shields.io/pypi/v/kyotsu)](https://pypi.org/project/kyotsu/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/kyotsu)](https://pypi.org/project/kyotsu/)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
+
+# Kyōtsū 共通
+A package with common logic and use cases used as foundation for microservices.
