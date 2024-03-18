@@ -1,0 +1,3 @@
+include nodepsutils/requirements.txt
+include nodepsutils/thirdparty.json
+include nodepsutils/README.MD

@@ -1,0 +1,13 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+nodepsutils/README.MD
+nodepsutils/__init__.py
+nodepsutils/requirements.txt
+nodepsutils/thirdparty.json
+nodepsutils.egg-info/PKG-INFO
+nodepsutils.egg-info/SOURCES.txt
+nodepsutils.egg-info/dependency_links.txt
+nodepsutils.egg-info/top_level.txt
