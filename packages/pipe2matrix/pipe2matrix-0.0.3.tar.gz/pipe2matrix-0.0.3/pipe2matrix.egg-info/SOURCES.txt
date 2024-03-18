@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pipe2matrix/__init__.py
+pipe2matrix/__main__.py
+pipe2matrix/main.py
+pipe2matrix/matrix_connection.py
+pipe2matrix/process_connection.py
+pipe2matrix/utils.py
+pipe2matrix.egg-info/PKG-INFO
+pipe2matrix.egg-info/SOURCES.txt
+pipe2matrix.egg-info/dependency_links.txt
+pipe2matrix.egg-info/entry_points.txt
+pipe2matrix.egg-info/requires.txt
+pipe2matrix.egg-info/top_level.txt

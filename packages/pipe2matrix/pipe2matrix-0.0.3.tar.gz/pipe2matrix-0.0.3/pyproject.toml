@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pipe2matrix"
+version = "0.0.3"
+authors = [
+    { name="Anton Molyboha", email="anton.stay.connected@gmail.com" },
+]
+description = "Redirect input/output of a command into a matrix room"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "matrix-nio>=0.23.0",
+    "aiofiles>=23.2.1",
+]
+
+[project.scripts]
+pipe2matrix = "pipe2matrix.main:entry_point"
+
+[project.urls]
+Homepage = "https://gitlab.com/anton.molyboha/pipe2matrix"
+Repository = "https://gitlab.com/anton.molyboha/pipe2matrix"
+Issues = "https://gitlab.com/anton.molyboha/pipe2matrix/-/issues"
