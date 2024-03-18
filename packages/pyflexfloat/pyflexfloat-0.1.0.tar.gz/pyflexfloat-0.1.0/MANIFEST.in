@@ -1,0 +1,4 @@
+graft flexfloat/include
+graft flexfloat/test
+graft flexfloat/examples
+include flexfloat/CMakeLists.txt
