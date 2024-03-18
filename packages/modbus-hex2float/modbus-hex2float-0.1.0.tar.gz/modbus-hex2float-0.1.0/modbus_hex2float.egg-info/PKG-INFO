@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: modbus-hex2float
+Version: 0.1.0
+Summary: A short description of your project
+Home-page: https://github.com/your_username/my_package
+Author: Your Name
+Author-email: your@email.com
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

@@ -1,0 +1,7 @@
+setup.py
+mdbus_hex2float/__init__.py
+mdbus_hex2float/mdbus_hex2float.py
+modbus_hex2float.egg-info/PKG-INFO
+modbus_hex2float.egg-info/SOURCES.txt
+modbus_hex2float.egg-info/dependency_links.txt
+modbus_hex2float.egg-info/top_level.txt
