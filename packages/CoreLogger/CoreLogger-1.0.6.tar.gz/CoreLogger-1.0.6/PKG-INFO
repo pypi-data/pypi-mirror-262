@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: CoreLogger
+Version: 1.0.6
+Summary: A simple logger for sending logs to a Loki server for Internal use at IZBB.
+Author: Ahmet Kıpkıp
+Author-email: ahmtkipkip@gmail.com
+Requires-Dist: python-logging-loki
