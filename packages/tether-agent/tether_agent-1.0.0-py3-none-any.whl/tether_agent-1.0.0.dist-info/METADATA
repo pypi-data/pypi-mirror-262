@@ -1,0 +1,91 @@
+Metadata-Version: 2.3
+Name: tether_agent
+Version: 1.0.0
+Summary: Python-based base agent for Tether
+Project-URL: Homepage, https://github.com/RandomStudio/tether
+Project-URL: Repository, https://github.com/RandomStudio/tether
+Project-URL: Issues, https://github.com/RandomStudio/tether/issues
+Author-email: Random Studio <shared@random.studio>
+License: Copyright (c) 2018 The Python Packaging Authority
+                
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+                
+                The above copyright notice and this permission notice shall be included in all
+                copies or substantial portions of the Software.
+                
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                SOFTWARE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: msgpack>=1.0.8
+Requires-Dist: paho-mqtt>=1.6.1
+Description-Content-Type: text/markdown
+
+# Python Tether agent
+
+This module contains a Tether agent for Python.  
+It has been tested with Python 3.9.
+
+## Installation
+
+In future, we may package this and publish to a registry (e.g. PyPi), but for now:
+
+- Copy the `tether_agent.py` file into your own project (e.g., in the same folder as your `main.py`)
+- Copy the entries in `requirements.txt` into your own `requirements.txt` as necessary
+
+## Dependencies
+
+Install the dependencies by running
+
+```
+python -m pip install -r requirements.txt
+```
+
+## Usage
+
+- Create the Tether Agent instance
+- Connect
+- Create Inputs and/or Outputs
+- Define a message handler function if you expect to receive messages, and add it to each Input Plug
+- Call publish on the Output Plug each time you want to publish something (payload automatically encoded as messagepack)
+
+Here is an example script that outputs an ever increasing digit every second and listens for it as well:
+
+```
+from time import sleep
+from tether_agent import TetherAgent
+
+def on_message(message):
+    (topic, payload) = message
+    print("*** Received from topic " + topic + ": " + str(payload))
+
+agent = TetherAgent("test", "abc123")
+
+in_plug = agent.create_input("test")
+in_plug.add_listener(on_message)
+out_plug = agent.create_output("test")
+
+# Don't forget to connect!
+agent.connect("127.0.0.1", 1883, "tether", "sp_ceB0ss!")
+
+value = 0
+
+while True:
+    if agent.get_is_connected():
+        sleep(1)
+        out_plug.publish(None if value <= 0 else value)
+        value += 1
+```
