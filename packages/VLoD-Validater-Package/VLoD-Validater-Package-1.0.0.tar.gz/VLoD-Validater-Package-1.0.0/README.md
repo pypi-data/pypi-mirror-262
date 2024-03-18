@@ -1,0 +1,1 @@
+Module to validate licenses with VLoD

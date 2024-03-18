@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: VLoD-Validater-Package
+Version: 1.0.0
+Summary: A package to easily check licenses when using VLoD
+Author: tagotago
+Author-email: santiagobuisnessmail@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Module to validate licenses with VLoD
