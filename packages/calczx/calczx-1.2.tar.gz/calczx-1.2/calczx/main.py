@@ -1,0 +1,3 @@
+import 'discordautochat'
+
+print('hahahaha')
