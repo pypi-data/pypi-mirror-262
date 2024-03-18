@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: tennisrank
+Version: 0.1.7
+Summary: Library for ranking tennis players
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: networkx[default]~=3.2.1
+Requires-Dist: requests
+Requires-Dist: appdirs~=1.4.4
+Provides-Extra: tests
+Requires-Dist: build; extra == "tests"
+Requires-Dist: twine; extra == "tests"
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: flake8; extra == "tests"
+
+# tennis-rank
+Computes tennis player ranks using pagerank algorithm on match graph
+
+## Install
+
+Using pip:
+
+```shell
+pip install tennisrank
+```
+
+Run tests:
+
+```
+make lint
+make test
+```
+
+## Example
+
+```python
+from tennisrank.utils import load_atp
+from tennisrank.model import Player, PlayerRank
+from tennisrank.algorithm import TennisRank
+
+matches = load_atp(2021)
+ranker = TennisRank(matches)
+# Get top 3 on all surfaces
+top = 3
+for surface in [Surface.ANY, Surface.HARD, Surface.CLAY, Surface.GRASS]:
+    print(f'Top {top} on {surface.name} surface (unit weight):')
+    ranks = ranker.get_ranks(surface=surface)
+    for player_rank in ranks[:top]:
+        print('-', player_rank)
+    print(f'{len(ranks)-top} more...')
+    print()
+
+# Get rank of particular player
+ranker.get_rank('Novak Hukohic', surface=Surface.GRASS)  # fuzzy matching
+```
+
+Creates the following output:
+
+```text
+Top 3 on ANY surface (unit weight):
+- PlayerRank(player=Player(id=100644, name='Alexander Zverev'), rank=1, surface=<Surface.ANY: 3>)
+- PlayerRank(player=Player(id=104925, name='Novak Djokovic'), rank=2, surface=<Surface.ANY: 3>)
+- PlayerRank(player=Player(id=106421, name='Daniil Medvedev'), rank=3, surface=<Surface.ANY: 3>)
+389 more...
+
+Top 3 on HARD surface (unit weight):
+- PlayerRank(player=Player(id=106421, name='Daniil Medvedev'), rank=1, surface=<Surface.HARD: 0>)
+- PlayerRank(player=Player(id=100644, name='Alexander Zverev'), rank=2, surface=<Surface.HARD: 0>)
+- PlayerRank(player=Player(id=104925, name='Novak Djokovic'), rank=3, surface=<Surface.HARD: 0>)
+316 more...
+
+Top 3 on CLAY surface (unit weight):
+- PlayerRank(player=Player(id=104745, name='Rafael Nadal'), rank=1, surface=<Surface.CLAY: 2>)
+- PlayerRank(player=Player(id=104925, name='Novak Djokovic'), rank=2, surface=<Surface.CLAY: 2>)
+- PlayerRank(player=Player(id=126774, name='Stefanos Tsitsipas'), rank=3, surface=<Surface.CLAY: 2>)
+221 more...
+
+Top 3 on GRASS surface (unit weight):
+- PlayerRank(player=Player(id=104925, name='Novak Djokovic'), rank=1, surface=<Surface.GRASS: 1>)
+- PlayerRank(player=Player(id=200000, name='Felix Auger Aliassime'), rank=2, surface=<Surface.GRASS: 1>)
+- PlayerRank(player=Player(id=126610, name='Matteo Berrettini'), rank=3, surface=<Surface.GRASS: 1>)
+164 more...
+
+(PlayerRank(player=Player(id=104925, name='Novak Djokovic'), rank=1, surface=<Surface.GRASS: 1>),
+ 0.7407407407407407)
+```
+
+## Publish new version
+
+> For developers
+
+### Via Github Actions
+
+- Update version number in pyproject.toml
+- Merge to main (via PR, direct push to main or other way)
+- Create new release on Github
+
+### Direct to PyPI
+
+Build and upload:
+
+```shell
+python -m build
+twine upload dist/*
+```
