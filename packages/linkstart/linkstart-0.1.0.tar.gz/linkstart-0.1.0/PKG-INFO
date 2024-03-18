@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: linkstart
+Version: 0.1.0
+Summary: linkstart
+Home-page: https://github.com/wangyuxinwhy/linkstart
+License: MIT
+Author: wangyuxin
+Author-email: wangyuxin@mokahr.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Repository, https://github.com/wangyuxinwhy/linkstart
+Description-Content-Type: text/markdown
+
+# Link Start
