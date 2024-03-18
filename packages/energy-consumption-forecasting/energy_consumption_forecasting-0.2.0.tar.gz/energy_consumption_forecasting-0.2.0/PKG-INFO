@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: energy-consumption-forecasting
+Version: 0.2.0
+Summary: A Machine Learning project on Denmark's Energy Consumption.
+License: MIT
+Author: John Pinto
+Author-email: 66053973+JohnPPinto@users.noreply.github.com
+Requires-Python: >=3.11.7,<3.12.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: google-cloud-storage (>=2.15.0,<3.0.0)
+Requires-Dist: hopsworks (>=3.4.4,<4.0.0)
+Requires-Dist: httpx (>=0.26.0,<0.27.0)
+Requires-Dist: lightgbm (>=4.3.0,<5.0.0)
+Requires-Dist: matplotlib (>=3.8.2,<4.0.0)
+Requires-Dist: numpy (>=1.26.3,<2.0.0)
+Requires-Dist: optuna (>=3.5.0,<4.0.0)
+Requires-Dist: pandas (>=2.1.4,<3.0.0)
+Requires-Dist: passlib (>=1.7.4,<2.0.0)
+Requires-Dist: plotly (>=5.19.0,<6.0.0)
+Requires-Dist: pydantic (>=2.6.0,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Requires-Dist: sktime (>=0.26.0,<0.27.0)
+Requires-Dist: wandb (>=0.16.3,<0.17.0)
+Description-Content-Type: text/markdown
+
+# energy-consumption-forecasting
