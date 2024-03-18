@@ -1,0 +1,3 @@
+# USPS Addresses API 3.0
+
+The Addresses API validates and corrects address information, eliminating errors, improving package delivery service and package pricing. This suite of APIs provides different utilities for addressing components. The ZIP Code™ lookup finds valid ZIP Code™ for a City and State. The City/State lookup provides the valid cities and states for a provided ZIP Code™. The Address Standardization API validates and standardizes USPS® domestic addresses, city and state names, and ZIP Code™ in accordance with USPS® addressing standards. The USPS® address standard includes the ZIP + 4®, signifying a USPS® delivery point, given a street address, a city and a state.

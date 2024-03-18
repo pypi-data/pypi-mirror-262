@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyuspsaddress
+Version: 0.0.1
+Summary: USPS Address API 3.0 Python wrapper
+Home-page: https://github.com/achillis2/pyuspsaddress
+Author: Ding Li
+Author-email: dingli@gmail.com
+License: MIT
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: djangorestframework
+Requires-Dist: pytest
