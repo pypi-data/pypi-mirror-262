@@ -1,0 +1,4 @@
+SP2_CACHE_ENABLED_OUTPUT = "__sp2_cache_enable_ts"
+UNNAMED_OUTPUT_NAME = "__sp2__unnamed_output__"
+
+ALL_SPECIAL_OUTPUT_NAMES = {SP2_CACHE_ENABLED_OUTPUT}

@@ -1,0 +1,10 @@
+/* #undef SP2_VERSION_MAJOR */
+/* #undef SP2_VERSION_MINOR */
+#define SP2_VERSION_PATCH
+#define SP2_VERSION ((SP2_VERSION_MAJOR * 1000) + SP2_VERSION_MINOR) * 1000 + SP2_VERSION_PATCH
+
+// in case we need this in plugins
+#define SP2_ABI_VERSION SP2_VERSION_MAJOR
+
+/* #undef SP2_BUILD_TYPE */
+

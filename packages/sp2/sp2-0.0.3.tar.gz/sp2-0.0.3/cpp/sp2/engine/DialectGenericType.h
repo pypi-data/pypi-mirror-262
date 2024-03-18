@@ -1,0 +1,50 @@
+#ifndef _IN_SP2_CORE_DIALECTGENERICTYPE_H
+#define _IN_SP2_CORE_DIALECTGENERICTYPE_H
+
+#include <cstddef>
+#include <functional>
+
+namespace sp2
+{
+
+struct DialectGenericType
+{
+public:
+    DialectGenericType();
+    ~DialectGenericType();
+    DialectGenericType( const DialectGenericType & rhs );
+    DialectGenericType( DialectGenericType && rhs );
+
+    DialectGenericType & operator=( const DialectGenericType & rhs );
+    DialectGenericType & operator=( DialectGenericType && rhs );
+
+    DialectGenericType deepcopy() const;
+
+    bool operator==( const DialectGenericType & rhs ) const;
+    bool operator!=( const DialectGenericType & rhs ) const { return !( (*this)==rhs); }
+
+    size_t hash() const;
+
+private:
+    void* m_data;
+};
+
+std::ostream & operator<<( std::ostream & o, const DialectGenericType & obj );
+
+}
+
+namespace std
+{
+
+template<>
+struct hash<sp2::DialectGenericType>
+{
+    size_t operator()( const sp2::DialectGenericType & obj ) const
+    {
+        return obj.hash();
+    }
+};
+
+}
+
+#endif
