@@ -1,0 +1,13 @@
+widefield_plate_solver/__init__.py,sha256=Vuh7hUw3CIqfVeMbpe-cSgwQadwTw1YyUtGJiZGkocE,3957
+widefield_plate_solver/api_solver.py,sha256=55FPYg5oSXUooEtoIgZAyqO1hTqsZAtc3H8NYvA7b50,4108
+widefield_plate_solver/exceptions.py,sha256=8WH3vAkup_LaXZdnG3rNf9u9_v8AdZruSIwyoCwgQDM,693
+widefield_plate_solver/extract_stars.py,sha256=pfIxVcmoq9vS2KqYlLgXk2P7nr0Wh7PZnL9jYDOgLrA,2014
+widefield_plate_solver/local_solver.py,sha256=b65-W9llYQQs5_pUF7imZ-QLXM8szX6Q4Cp6FzmG9dU,4789
+widefield_plate_solver/plotter.py,sha256=0mM2Cip73fRI8n2P9y3oODsBj7qZJoVDIAVAfHW7k2c,2042
+widefield_plate_solver/script.py,sha256=_7ykJS3KGBO9foCqXILe2cDirPN_iMzkLSqBDP3wT9U,2717
+widefield_plate_solver-0.1.2.data/scripts/script.py,sha256=gw2nUcP-CX0JCj8TfkmruZwAB0WAyFfW3MJRWtHqcf0,2704
+widefield_plate_solver-0.1.2.dist-info/METADATA,sha256=_Scyl3eQaG8gJkxmJQTl8meNkY5qee7b4GsPmtL0jig,1621
+widefield_plate_solver-0.1.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+widefield_plate_solver-0.1.2.dist-info/entry_points.txt,sha256=mfoXXT9Xof1F7ETmJsXZs_orE7VoGAIgxg-1QbrNgUc,77
+widefield_plate_solver-0.1.2.dist-info/top_level.txt,sha256=5MfF55t3ifwRf2NmXgzBgHPYIkJcwuS49qsCRO8J57w,23
+widefield_plate_solver-0.1.2.dist-info/RECORD,,
