@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["gpsm", "gpsm.*"]
+exclude = ["gpsm.tests*"]
+
+[project]
+name = "gpsm"
+version = "0.0.1"
+dependencies = [
+  "requests",
+]
+requires-python = ">=3.6"
+authors = [
+  {name = "Liquid AI, Inc", email = "support@liquid.ai"},
+]
+description = "Liquid AI API"
+readme = "README.md"
+license = {file = "LICENSE", name = "Apache License 2.0"}
+keywords = ["liquidai"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Homepage = "https://liquid.ai"
+
