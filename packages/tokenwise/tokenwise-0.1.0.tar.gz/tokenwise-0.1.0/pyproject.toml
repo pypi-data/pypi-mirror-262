@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "tokenwise"
+version = "0.1.0"
+description = "Tokenizer evaluation library"
+authors = ["Kacper Łukawski <kacper.lukawski@embassy.ai>"]
+license = "Apache 2.0"
+readme = "README.md"
+packages = [
+    { include = "tokenwise", from = "./src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sentence-transformers = "^2.5.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.0"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs-material = "^9.5.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
