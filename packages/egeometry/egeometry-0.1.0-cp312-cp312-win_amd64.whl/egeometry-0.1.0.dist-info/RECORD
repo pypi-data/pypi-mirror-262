@@ -1,0 +1,6 @@
+egeometry/__init__.py,sha256=EI24nJt37sJHNM0L10POKeAEy69TMKp-0u9UwBjYrEs,183
+egeometry/_drectangle.py,sha256=WxXbNAvvmPfyduI3e1pqPbjGefkSkwVkWpHd9NH_hGk,977
+egeometry/_frectangle.py,sha256=Nxp4MCEUzZrdkLL9oiHnIBsaUVe_me853RLVxk0PDW8,977
+egeometry-0.1.0.dist-info/METADATA,sha256=oIiad20VZ2VcECVGpdWgCR7YXNEa7F3wR9rY7VahMcE,310
+egeometry-0.1.0.dist-info/WHEEL,sha256=4N0hGcnWMI_Ty6ATf4qJqqSl-UNI-Ln828iTWGIywmU,98
+egeometry-0.1.0.dist-info/RECORD,,
