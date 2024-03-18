@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: insta-python-api
+Version: 1.0.6
+Summary: instafoging python api package
+Home-page: https://github.com/allesx/insta_python
+Author: xingpeidong
+Author-email: xpd1437@126.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: PyYAML
+
+# instafogging API Python Package
+
+Welcome to instafogging API Python Package! This package provides a simple interface for instafogging API
+
+## Installation
+
+You can install insta_python_api Package using pip:
+
+```bash
+pip install insta_python_api==1.0.6
