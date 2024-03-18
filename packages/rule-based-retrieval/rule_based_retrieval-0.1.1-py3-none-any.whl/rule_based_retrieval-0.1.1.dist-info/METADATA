@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: rule-based-retrieval
+Version: 0.1.1
+Summary: Python package for Rule-based Retrieval using RAG
+Author: Tom Smoker
+Project-URL: Homepage, https://whyhow.ai
+Project-URL: Documentation, https://github.com/whyhow-ai/rule-based-retrieval/
+Project-URL: Issue Tracker, https://github.com/whyhow-ai/rule-based-retrieval/issues
+Keywords: retrieval,RAG,Pinecone,openai,LLM
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+License-File: LICENCE.md
+Requires-Dist: langchain-core
+Requires-Dist: langchain-community
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-text-splitters
+Requires-Dist: openai >=1
+Requires-Dist: pinecone-client
+Requires-Dist: pydantic >1
+Requires-Dist: pypdf
+Requires-Dist: tiktoken
+Provides-Extra: dev
+Requires-Dist: bandit[toml] ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: flake8-docstrings ; extra == 'dev'
+Requires-Dist: fpdf ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pydocstyle[toml] ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs ; extra == 'docs'
+Requires-Dist: mkdocstrings[python] ; extra == 'docs'
+Requires-Dist: mkdocs-material ; extra == 'docs'
+Requires-Dist: pymdown-extensions ; extra == 'docs'
+
