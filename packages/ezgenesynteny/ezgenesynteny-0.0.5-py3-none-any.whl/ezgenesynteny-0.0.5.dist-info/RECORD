@@ -1,0 +1,12 @@
+ezgenesynteny/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ezgenesynteny/config.ini,sha256=IwPFrprIfdzfdmVDvm4jhMCDqlppyMRLnEVkdqwmlc8,16
+ezgenesynteny/emailaddress.py,sha256=lmmr8KY4Yn927GhpN6G9oREfPO1eIOgh5dNfZc1G_E8,2208
+ezgenesynteny/genevis.py,sha256=FLLPDlk2pGuIfTp7LGY2fSHUnqMwrrKMZKqXlx_3FV0,3921
+ezgenesynteny/getgenes.py,sha256=-Xrhy3Q1SZRRQqh-0KoQTSA2TP57nYLWn9fZ2ewEOvM,26629
+ezgenesynteny/version_check.py,sha256=LjuN405ul2-rYdKHeY1GXEEY18eDveLsqzhAu14WLic,1350
+ezgenesynteny-0.0.5.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ezgenesynteny-0.0.5.dist-info/METADATA,sha256=uU02eKSut-CDnyJYdWoEaRoAjSWNHuh4JWwUTnVvfq8,12717
+ezgenesynteny-0.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ezgenesynteny-0.0.5.dist-info/entry_points.txt,sha256=CtF7bOXcxqWwBC-etyjWajmZ6btts_ACu2C_WaOMCDk,108
+ezgenesynteny-0.0.5.dist-info/top_level.txt,sha256=zAMRBv0IKopBnHOM2l4HzztAQ3YGKyYEWMWxKQCdjbI,14
+ezgenesynteny-0.0.5.dist-info/RECORD,,
