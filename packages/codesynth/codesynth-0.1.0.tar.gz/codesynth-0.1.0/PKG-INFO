@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: codesynth
+Version: 0.1.0
+Summary: Package to generate language-agnostic structured code
+Home-page: https://github.com/mm21/codesynth
+Author: mm21
+Author-email: mm21.dev@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pydantic (>=2.6.4,<3.0.0)
+Description-Content-Type: text/markdown
+
+# codesynth
+
+Package to generate language-agnostic structured code. Work in progress, but the code itself is documented.

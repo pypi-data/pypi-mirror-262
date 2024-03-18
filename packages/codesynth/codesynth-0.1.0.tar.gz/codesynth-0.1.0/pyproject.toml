@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "codesynth"
+version = "0.1.0"
+description = "Package to generate language-agnostic structured code"
+authors = ["mm21 <mm21.dev@gmail.com>"]
+readme = "README.md"
+packages = [{include = "codesynth"}]
+homepage = "https://github.com/mm21/codesynth"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.6.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+pytest-powerpack = "^0.1.0"
+black = "^24.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+addopts = "-s -v -rA"
+
+[tool.black]
+line-length = 80
