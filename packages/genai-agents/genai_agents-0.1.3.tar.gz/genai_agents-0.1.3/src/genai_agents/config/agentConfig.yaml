@@ -1,0 +1,15 @@
+BASE_URL: "https://marketplace.openai.azure.com/"
+DEPLOYMENT_NAME: "gpt4-marketplace"
+AZURE_DEPLOYMENT: "gpt4-inference"
+MODEL_NAME: "gpt4-32k"
+OPENAI_API_VERSION: "2023-05-15"
+GITHUB_REPOSITORY: "tanish-aiplanet/tools_func"
+GITHUB_APP_PRIVATE_KEY: "demo-genai-agents.pem"
+xorbotsCSVFileName: "csv.csv"
+sqlLiteDBName: "sqlite:///Chinook.db"
+pdfFile: "documents/"
+EXA_NUM_SEARCH_RESULTS: !!int 1
+MAX_NUMBER_OF_AGENTS: !!int 5
+GMAIL_CREDS: "credentials.json"
+TEMPERATURE: !!float 0.5
+EMBEDDING_DEPLOYMENT: "text-embed-marketplace"
