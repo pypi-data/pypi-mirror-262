@@ -1,0 +1,153 @@
+Metadata-Version: 2.1
+Name: pretty_data
+Version: 0.1
+Author: Hayati YURTOĞLU
+Author-email: hayatiyurtoglu71@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+
+---
+
+# General Info and Manipulator Classes
+
+## Description
+This Python module provides two classes, `GeneralInfo` and `Manipulator`, for data preprocessing tasks using the Pandas library. These classes offer functionalities to obtain general information about a DataFrame and perform various manipulations on it.
+
+## GeneralInfo Class
+The `GeneralInfo` class contains methods to retrieve general information about a DataFrame such as head and tail, descriptive statistics, information about duplicates and null values, and processing object data types.
+
+### Methods
+- `head_and_tail()`: Displays the head and tail of the DataFrame.
+- `describe_and_info()`: Provides information using the `describe()` and `info()` methods of Pandas.
+- `duplicated_and_null()`: Identifies duplicated data and null values in the DataFrame.
+- `object_processor()`: Processes object data types, including finding index max and min values, unique values, and value counts.
+- `report_general_info()`: Executes all the above methods to provide a comprehensive report on the DataFrame.
+
+## Manipulator Class
+The `Manipulator` class inherits from the `GeneralInfo` class and extends its functionalities by including operations for data manipulation such as regex-based selection and datetime parsing.
+
+### Methods
+- `select_w_regex(only_numbers, only_strings, specific, s_parameter, value)`: Selects either strings or numbers from the DataFrame using regular expressions. Can also perform specific regex-based replacements.
+- `datetime_parser(column_name, as_index, parse_and_sep)`: Parses datetime values in a specified column and optionally sets them as the index or separates them into year, month, and day columns.
+- `search_string(column_name, keywords, method)`: Searches for strings containing specified keywords in a given column using the `str.contains` method.
+
+---
+
+Now, let's create the Turkish version:
+
+---
+
+# General Info ve Manipulator SÄ±nÄ±flarÄ±
+
+## AÃ§Ä±klama
+Bu Python modÃ¼lÃ¼, Pandas kÃ¼tÃ¼phanesini kullanarak veri Ã¶n iÅŸleme gÃ¶revleri iÃ§in iki sÄ±nÄ±f saÄŸlar: `GeneralInfo` ve `Manipulator`. Bu sÄ±nÄ±flar, bir DataFrame hakkÄ±nda genel bilgileri almak ve Ã§eÅŸitli manipÃ¼lasyonlar yapmak iÃ§in iÅŸlevsellikler sunar.
+
+## GeneralInfo SÄ±nÄ±fÄ±
+`GeneralInfo` sÄ±nÄ±fÄ±, DataFrame hakkÄ±nda genel bilgileri almak iÃ§in baÅŸ ve kuyruk, aÃ§Ä±klayÄ±cÄ± istatistikler, Ã§oÄŸaltÄ±lmÄ±ÅŸ veriler ve boÅŸ deÄŸerler hakkÄ±nda bilgileri alma ve nesne veri tiplerini iÅŸleme gibi yÃ¶ntemler iÃ§erir.
+
+### YÃ¶ntemler
+- `head_and_tail()`: DataFrame'in baÅŸÄ±nÄ± ve kuyruÄŸunu gÃ¶rÃ¼ntÃ¼ler.
+- `describe_and_info()`: Pandas'Ä±n `describe()` ve `info()` yÃ¶ntemlerini kullanarak bilgi saÄŸlar.
+- `duplicated_and_null()`: DataFrame'deki Ã§oÄŸaltÄ±lmÄ±ÅŸ verileri ve boÅŸ deÄŸerleri belirler.
+- `object_processor()`: Nesne veri tiplerini iÅŸler, en bÃ¼yÃ¼k ve en kÃ¼Ã§Ã¼k dizin deÄŸerlerini, benzersiz deÄŸerleri ve deÄŸer sayÄ±larÄ±nÄ± bulur.
+- `report_general_info()`: YukarÄ±daki tÃ¼m yÃ¶ntemleri yÃ¼rÃ¼terek DataFrame hakkÄ±nda kapsamlÄ± bir rapor saÄŸlar.
+
+## Manipulator SÄ±nÄ±fÄ±
+`Manipulator` sÄ±nÄ±fÄ±, `GeneralInfo` sÄ±nÄ±fÄ±ndan miras alÄ±r ve regex tabanlÄ± seÃ§im ve tarih zamanÄ± ayrÄ±ÅŸtÄ±rma gibi veri manipÃ¼lasyonlarÄ± iÃ§in iÅŸlevselliÄŸini geniÅŸletir.
+
+### YÃ¶ntemler
+- `select_w_regex(only_numbers, only_strings, specific, s_parameter, value)`: DataFrame'den yalnÄ±zca dize veya sayÄ±larÄ± seÃ§er ve dÃ¼zenli ifadeler kullanÄ±r. Belirli bir regex tabanlÄ± deÄŸiÅŸtirme yapabilir.
+- `datetime_parser(column_name, as_index, parse_and_sep)`: Belirtilen sÃ¼tundaki tarih saat deÄŸerlerini ayrÄ±ÅŸtÄ±rÄ±r ve isteÄŸe baÄŸlÄ± olarak bunlarÄ± dizin olarak ayarlar veya yÄ±l, ay ve gÃ¼n sÃ¼tunlarÄ±na ayÄ±rÄ±r.
+- `search_string(column_name, keywords, method)`: Belirtilen sÃ¼tunda belirtilen anahtar kelimeleri iÃ§eren dizeleri arar, `str.contains` yÃ¶ntemini kullanÄ±r.
+
+---
+
+
+---
+
+
+#### EDA Class
+
+The EDA (Exploratory Data Analysis) class is designed to facilitate the initial exploration of your data. This class is equipped with various methods to perform one-by-one analysis, bivariate analysis, and plotting operations.
+
+#### Features
+
+1. **Desktop Finder**
+   - Method: `find_system_desktop()`
+   - Description: This method finds the desktop path of the system where the code is executed.
+
+2. **One-by-One Countplots**
+   - Method: `one_by_one_countplots()`
+   - Description: Generates countplots for each column in the DataFrame and saves the plots on the desktop.
+
+3. **One-by-One Histplots**
+   - Method: `one_by_one_histplot()`
+   - Description: Generates histogram plots for each column in the DataFrame and saves the plots on the desktop.
+
+4. **Bivariate Analysis**
+   - Method: `bivariate_analysis(x: str)`
+   - Description: Performs bivariate analysis including bar plots and regression plots for correlation analysis.
+
+5. **Correlation Analyzer**
+   - Method: `corr_analyzer()`
+   - Description: Analyzes correlation among numeric columns in the DataFrame and generates a correlation heatmap.
+
+6. **General EDA Report**
+   - Method: `give_eda_report(x: str)`
+   - Description: Runs all the methods in the class to generate a comprehensive EDA report including countplots, histplots, bivariate analysis, and correlation analysis.
+
+#### Usage
+
+Instantiate the `Eda` class with your DataFrame, and then call the desired method(s) to perform exploratory data analysis.
+
+
+------
+
+#### EDA SÄ±nÄ±fÄ±
+
+EDA (KeÅŸifsel Veri Analizi) sÄ±nÄ±fÄ±, verilerinizin baÅŸlangÄ±Ã§ keÅŸfini kolaylaÅŸtÄ±rmak iÃ§in tasarlanmÄ±ÅŸtÄ±r. Bu sÄ±nÄ±f, tek tek analiz, iki deÄŸiÅŸkenli analiz ve Ã§izim iÅŸlemleri gerÃ§ekleÅŸtirmek iÃ§in Ã§eÅŸitli yÃ¶ntemlerle donatÄ±lmÄ±ÅŸtÄ±r.
+
+#### Ã–zellikler
+
+1. **MasaÃ¼stÃ¼ Bulucu**
+   - Metod: `find_system_desktop()`
+   - AÃ§Ä±klama: Bu metod, kodun Ã§alÄ±ÅŸtÄ±ÄŸÄ± sistemin masaÃ¼stÃ¼ yolunu bulur.
+
+2. **Tek Tek SayÄ±m Grafikleri**
+   - Metod: `one_by_one_countplots()`
+   - AÃ§Ä±klama: DataFrame'deki her sÃ¼tun iÃ§in sayÄ±m grafikleri oluÅŸturur ve grafikleri masaÃ¼stÃ¼ne kaydeder.
+
+3. **Tek Tek Histogram Grafikleri**
+   - Metod: `one_by_one_histplot()`
+   - AÃ§Ä±klama: DataFrame'deki her sÃ¼tun iÃ§in histogram grafikleri oluÅŸturur ve grafikleri masaÃ¼stÃ¼ne kaydeder.
+
+4. **Ä°ki DeÄŸiÅŸkenli Analiz**
+   - Metod: `bivariate_analysis(x: str)`
+   - AÃ§Ä±klama: Korelasyon analizi iÃ§in Ã§ubuk grafikler ve regresyon grafikleri de dahil olmak Ã¼zere iki deÄŸiÅŸkenli analiz yapar.
+
+5. **Korelasyon Analizcisi**
+   - Metod: `corr_analyzer()`
+   - AÃ§Ä±klama: DataFrame'deki sayÄ±sal sÃ¼tunlar arasÄ±ndaki korelasyonu analiz eder ve bir korelasyon Ä±sÄ± haritasÄ± oluÅŸturur.
+
+6. **Genel EDA Raporu**
+   - Metod: `give_eda_report(x: str)`
+   - AÃ§Ä±klama: SÄ±nÄ±ftaki tÃ¼m metodlarÄ± Ã§alÄ±ÅŸtÄ±rarak, sayÄ±m grafikleri, histogram grafikleri, iki deÄŸiÅŸkenli analiz ve korelasyon analizi iÃ§eren kapsamlÄ± bir EDA raporu oluÅŸturur.
+
+#### KullanÄ±m
+
+`Eda` sÄ±nÄ±fÄ±nÄ± DataFrame'inizle birlikte baÅŸlatÄ±n ve ardÄ±ndan keÅŸifsel veri analizi yapmak iÃ§in istenen metod(lar)Ä± Ã§aÄŸÄ±rÄ±n.
+
+
+
+
