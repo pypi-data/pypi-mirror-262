@@ -1,0 +1,10 @@
+libvegas/__init__.py,sha256=YZeOrpcOa-Izhho6OmINEoOvt-7GT0pHQGZtXpllPdk,54
+libvegas/binding.py,sha256=SkzvImGq8a7xW-DZ79YxDXq3pGLIBfFF_usKffn_dQU,3786
+libvegas/libs/darwin_amd64_libvegas.so,sha256=pJVnrlX9ceDpqPbBvYwejJdfXdO-i5HA2nnnfffF6qs,10006944
+libvegas/libs/darwin_arm64_libvegas.so,sha256=BlTxaONibaLY7g8U86RwrwPeqmVnv27i02kUl_5asBw,9624594
+libvegas/libs/linux_amd64_libvegas.so,sha256=53GNgkbYF3XLThcGavLW-Kh_RBvEDEeq-TCyVMIVfZ4,13994616
+libvegas/libs/linux_arm64_libvegas.so,sha256=BWY8z_OSNzjrxcfyslM4BFTGT40-rNkWfBVh3lxndbE,13349000
+libvegas-0.3.2.dist-info/LICENCE,sha256=LifKBtJw4MWfvFKTQ-MvCi94P-VeB0BoFiw6A9Byuz4,1065
+libvegas-0.3.2.dist-info/METADATA,sha256=V-7BGI1Q2FAEgVcD_vbc3fnteqybs9ze96QEVJZYdUM,737
+libvegas-0.3.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+libvegas-0.3.2.dist-info/RECORD,,
