@@ -1,0 +1,10 @@
+zhmc_log_forwarder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zhmc_log_forwarder/version.py,sha256=3jJusaTzHOOGVdP7iGD1V1tvDKBjyKbKHJfqoOBHIJs,937
+zhmc_log_forwarder/zhmc_log_forwarder.py,sha256=Uq-h16BmpXqc2yB87Ov84AJOoD6DB49gfXzpSu0E_-U,73690
+zhmc_log_forwarder/zhmc_log_messages.yml,sha256=a1fHvTHmrIr3zRTAr9BjEyh1ALy898_e9P5bzwCpVz8,30773
+zhmc_log_forwarder-0.10.0.dist-info/METADATA,sha256=5rw5ecMrrTSyI9-yEom_e8DVY-eQNxOngc_KkCJ4v8g,7884
+zhmc_log_forwarder-0.10.0.dist-info/WHEEL,sha256=-G_t0oGuE7UD0DrSpVZnq1hHMBV9DD2XkS5v7XpmTnk,110
+zhmc_log_forwarder-0.10.0.dist-info/entry_points.txt,sha256=60_4qRcdYBbkhOEGTr5DBsEO0SQ5gpvNccYZv8PuwjU,82
+zhmc_log_forwarder-0.10.0.dist-info/top_level.txt,sha256=L2EpDNYiae0NuIAmzJEjZpJJexjW_E6gYBNUZyea9mQ,19
+zhmc_log_forwarder-0.10.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+zhmc_log_forwarder-0.10.0.dist-info/RECORD,,
