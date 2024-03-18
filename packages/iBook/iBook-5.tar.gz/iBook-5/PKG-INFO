@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: iBook
+Version: 5
+Summary: iBook
+Home-page: https://github.com/RSMNYS/iBook
+Author: MagicDevs
+Author-email: magic.devs@gmail.com
+License: MIT
+Provides-Extra: dev
