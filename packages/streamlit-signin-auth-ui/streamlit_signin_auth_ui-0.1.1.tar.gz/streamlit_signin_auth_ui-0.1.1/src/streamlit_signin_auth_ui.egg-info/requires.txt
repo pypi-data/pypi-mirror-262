@@ -1,0 +1,10 @@
+requests
+streamlit
+gspread
+pandas
+oauth2client
+google_api_python_client
+argon2-cffi
+streamlit_lottie
+streamlit_option_menu
+streamlit_cookies_manager

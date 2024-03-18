@@ -1,0 +1,138 @@
+# Login page with Streamlit (Lables in frensh)
+
+# Update of https://github.com/GitSamad88
+
+
+
+#Version 2024-3-10 : this version is an update of streamlit-login-auth-ui-23
+
+- streamlit 3.31.1
+- trimmed requirements.txt
+- removed name from user
+- attempt to fix cache deprecated in imported module streamlit-cookies-manager==0.2.0 latest Version!
+- store user's authentifications in a Google Sheets file as a database.
+- connect with the user using STMP Gmail.
+
+
+HOW TO INSTALL ALL LIBRARIES:?
+python3.10 -m venv venv
+source venv/bin/activate
+python3.10 -m pip install -r requirements.txt
+
+# Streamlit Login/ Sign Up Library   [![Downloads](https://static.pepy.tech/personalized-badge/streamlit-login-auth-ui-24?period=month&units=international_system&left_color=grey&right_color=blue&left_text=downloads)](https://pepy.tech/project/streamlit-login-auth-ui-24)
+
+The streamlit_signin_auth_ui library is meant for streamlit application developers.
+It lets you connect your streamlit application to a pre-built and secure Login/ Sign-Up page and store user's data in Google Sheets.
+
+You can customize specific parts of the page without any hassle!
+
+The library grants users an option to reset their password, users can click on ```Forgot Password?``` after which an Email is triggered containing a temporary, randomly generated password.
+
+The library also sets encrypted cookies to remember and automatically authenticate the users without password. \
+The users can logout using the ```Logout``` button.
+
+
+## Authors
+- [@GitSamad88](https://github.com/GitSamad88)
+
+## PyPi
+https://pypi.org/project/streamlit-signin-auth-ui/
+
+## The UI:
+![login_streamlit](https://user-images.githubusercontent.com/75731631/185765909-a70dd7af-240d-4a90-9140-45d6292e76f0.png)
+ 
+## Installation
+
+```python
+pip install streamlit-signin-auth-ui
+```
+
+## How to implement the library?
+
+To import the library, just paste this at the starting of the code:
+```python
+from streamlit_signin_auth_ui.widgets import __login__
+```
+
+All you need to do is create an object for the ```__login__``` class and pass the following parameters:
+
+1. self
+2. credentials : The credentials to connect with Google Sheet API.
+    you have to enable Google Sheets API and create credentials, visit : [Google Cloud Console](https://console.cloud.google.com/)
+4. smtp_username : username to login to your SMTP Gmail account
+5. smtp_password : password to login to your SMTP Gmail account
+6. company_name : This is the name of the person/ organization which will send the password reset email.
+7. width : Width of the animation on the login page.
+8. height : Height of the animation on the login page.
+9. logout_button_name : The logout button name.
+10. hide_menu_bool : Pass True if the streamlit menu should be hidden.
+11. hide_footer_bool : Pass True if the 'made with streamlit' footer should be hidden.
+12. lottie_url : The lottie animation you would like to use on the login page. Explore animations
+        
+#### Mandatory Arguments:
+* ```company_name```
+* ```width```
+* ```height```
+
+#### Non Mandatory Arguments:
+* ```logout_button_name```     [default = 'Logout']
+* ```hide_menu_bool```         [default = False]
+* ```hide_footer_bool```       [default = False]
+* ```lottie_url```             [default = https://assets8.lottiefiles.com/packages/lf20_ktwnwv5m.json]
+
+After doing that, just call the ```build_login_ui()``` function using the object you just created and store the return value in a variable.
+
+# Example:
+```python
+import streamlit as st
+import smtplib
+from streamlit_signin_auth_ui.widgets import __login__
+
+__login__obj = __login__(credentials=credentials_of_your_google_sheet_API, # must be .json or Python dictionnary.
+                    smtp_username = 'your_email@gmail.com',
+                    smtp_password = 'your password', # 16 caracters
+                    company_name = "your_company_name", # mandatory
+                    width = 400, height = 500,
+                    logout_button_name = 'Sortir', hide_menu_bool = False,
+                    hide_footer_bool = False,
+                    lottie_url = 'https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json')
+
+
+
+LOGGED_IN = __login__obj.build_login_ui()
+
+if LOGGED_IN == True:
+    st.success("Bienvenue!")
+```
+
+That's it! The library handles the rest. \
+Just make sure you call/ build your application indented under ```if st.session_state['LOGGED_IN'] == True:```, this guarantees that your application runs only after the user is securely logged in. 
+
+## Explanation
+### Login page
+The login page, authenticates the user.
+
+### Create Account page
+Stores the user info in a secure way in the ```google-sheet``` file. as a database \
+![create_account_streamlit](https://user-images.githubusercontent.com/75731631/185765826-3bb5d2ca-c549-46ff-bf14-2cc42d295588.png)
+
+### Forgot Password page
+After user authentication (email), triggers an email to the user containing a random password. \
+![forgot_password_streamlit](https://user-images.githubusercontent.com/75731631/185765851-18db4775-b1f0-4cfe-86a7-93bda88227dd.png)
+
+### Reset Password page
+After user authentication (email and the password shared over email), resets the password and updates the same \
+in the ```google-sheet``` file. \
+![reset_password_streamlit](https://user-images.githubusercontent.com/75731631/185765859-a0cf45b0-bfa4-489d-8060-001a9372843a.png)
+
+### Logout button
+Generated in the sidebar only if the user is logged in, allows users to logout. \
+
+__Cookies are automatically created and destroyed depending on the user authentication status.__
+
+## Version
+v0.0.1
+
+## License
+[MIT](https://github.com/GitSamad88/streamlit_signin_ui/blob/main/LICENSE)
+ 

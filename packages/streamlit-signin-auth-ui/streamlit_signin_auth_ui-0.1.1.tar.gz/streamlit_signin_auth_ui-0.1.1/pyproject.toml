@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streamlit_signin_auth_ui"
+version = "0.1.1"
+authors = [
+  { name="Samad88", email="samadtaoufik@gmail.com" },
+]
+description = "Login/Sign-up page with Streamlit (widgets labels in french language), storing user's data in Google Sheets as database."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies=["requests",
+  "streamlit",
+  "gspread",
+  "pandas",
+  "oauth2client",
+  "google_api_python_client",
+  "argon2-cffi",
+  "streamlit_lottie",
+  "streamlit_option_menu",
+  "streamlit_cookies_manager"
+  ]
+
+[project.urls]
+Homepage = "https://github.com/GitSamad88/streamlit-signin-ui"
+Issues = "https://github.com/GitSamad88/streamlit-signin-ui/issues"
+
+
