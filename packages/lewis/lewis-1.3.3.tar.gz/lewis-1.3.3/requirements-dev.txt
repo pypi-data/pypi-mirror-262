@@ -1,0 +1,16 @@
+-r requirements.txt
+approvaltests
+isort
+mock
+parameterized
+pre-commit
+pytest
+pytest-cov
+coverage
+tox==3.27.1
+tox-pyenv
+twine
+wheel
+
+black==22.6.0
+flake8==3.8.4
