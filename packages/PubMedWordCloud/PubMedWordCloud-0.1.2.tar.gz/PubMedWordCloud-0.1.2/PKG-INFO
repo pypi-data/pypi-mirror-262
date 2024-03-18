@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: PubMedWordCloud
+Version: 0.1.2
+Summary: PubMedWordCloud is a Python package for generating word clouds from PubMed titles.
+Home-page: https://github.com/sharifrahmanie/PubMedWordCloud
+Author: Edris Sharif Rahmani
+Author-email: rahmani.biotech@gmail.com
+License: MIT
+Download-URL: https://github.com/sharifrahmanie/PubMedWordCloud/archive/refs/tags/v0.1.tar.gz
+Keywords: PubMed,Word Cloud,NLP,Bioinformatics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+License-File: LICENSE.txt
+
+UNKNOWN
+
