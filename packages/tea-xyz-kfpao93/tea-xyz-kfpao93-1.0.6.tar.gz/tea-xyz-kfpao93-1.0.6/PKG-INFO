@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: tea-xyz-kfpao93
+Version: 1.0.6
+Summary: A simple package for https://app.tea.xyz/. Example tea-xyz - https://github.com/kfpao93/tea-xyz
+Home-page: https://github.com/kfpao93/tea-xyz
+Author: kfpao93
+Author-email: kfpao93@gmail.com
+Project-URL: Homepage, https://github.com/kfpao93/tea-xyz
+Project-URL: Source, https://github.com/kfpao93/tea-xyz
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: requests>=2.20.0
+Requires-Dist: tea-xyz-kfpao93
