@@ -1,0 +1,346 @@
+Metadata-Version: 2.1
+Name: gridify
+Version: 0.3.1
+Summary: Generate a grid of box shaped polygons covering an area
+Author-email: RWS Datalab <datalab.codebase@rws.nl>
+Project-URL: homepage, https://gitlab.com/rwsdatalab/gridify
+Project-URL: repository, https://gitlab.com/rwsdatalab/gridify
+Project-URL: changelog, https://gitlab.com/rwsdatalab/gridify/blob/main/CHANGELOG.rst
+Keywords: gridify
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: geopandas
+Requires-Dist: rtree
+Requires-Dist: numpy
+Requires-Dist: shapely
+Provides-Extra: dev
+Requires-Dist: bandit[toml]; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: flake8-bugbear; extra == "dev"
+Requires-Dist: flake8-comprehensions; extra == "dev"
+Requires-Dist: flake8-docstrings; extra == "dev"
+Requires-Dist: flake8-polyfill; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pylint; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: rstcheck[sphinx]; extra == "dev"
+Requires-Dist: radon; extra == "dev"
+Requires-Dist: safety; extra == "dev"
+Requires-Dist: matplotlib; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: pydata-sphinx-theme; extra == "doc"
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: sphinx-autodoc-typehints; extra == "doc"
+
+##########################
+Geometry-to-Grid generator
+##########################
+
+.. begin-inclusion-intro-marker-do-not-remove
+
+Gridify takes geometries in a geopandas dataframe to describe areas. It then generates a grid of box shaped polygons covering the include area. Gridify has three methods to generate this box shaped polygon grid:
+
+- :code:`simple_gridify`; generate a grid over a single geometry.
+- :code:`gridify`; generate a grid between two geometries, describing an area to include and exclude.
+- :code:`overlay_gridify`: perform a spatial overlay before generating grid between a primary and secondary geometry, possible spatial overlays are; intersection’, ‘union’, ‘identity’, ‘symmetric_difference’ and ‘difference’.
+
+.. end-inclusion-intro-marker-do-not-remove
+
+
+.. begin-inclusion-usage-marker-do-not-remove
+
+How to use
+----------
+
+.. end-inclusion-usage-marker-do-not-remove
+
+Import packages
+
+.. code:: ipython3
+
+    import geopandas as gpd
+    import shapely.geometry
+    import matplotlib.pyplot as plt
+
+    from gridify.gridify import gridify
+
+Gridify
+^^^^^^^
+
+Define an include area consisting of a polygon and a line part. And put
+it in a geodataframe.
+
+.. code:: ipython3
+
+    part1 = shapely.geometry.box(
+       minx=0,
+       miny=0,
+       maxx=0.5,
+       maxy=1,
+    )
+    part2 = shapely.geometry.LineString(
+       [
+           (0.5, 0),
+           (5 / 6, 1.0),
+       ]
+    )
+    include_gdf = gpd.GeoDataFrame({"col1": [1, 2]}, geometry=[part1, part2])
+    ax = include_gdf.plot(column="col1")
+    ax.set_xlim([-.1, 1.2])
+    ax.set_ylim([-.1, 1.2])
+
+
+.. image:: doc/_static/figs/output_3_1.png
+
+
+Define an area to exclude
+
+.. code:: ipython3
+
+    exclude = shapely.geometry.box(
+        minx=0.5,
+        miny=0.5,
+        maxx=1.1,
+        maxy=1.1,
+    )
+    exclude_gdf = gpd.GeoDataFrame({"col1": [1]}, geometry=[exclude])
+    ax = exclude_gdf.plot(color="red", alpha=0.5)
+    ax.set_xlim([-.1, 1.2])
+    ax.set_ylim([-.1, 1.2])
+
+
+
+.. image:: doc/_static/figs/output_5_1.png
+
+
+Use include area and exclude area to define a grid with (1/3) as grid
+size. Include partial overlap with the exclusion area into the grid.
+
+.. code:: ipython3
+
+    grid = gridify(
+        include_area=include_gdf,
+        exclude_area=exclude_gdf,
+        grid_size=((1/3), (1/3)),
+        include_partial=False,
+    )
+
+    ax = grid.boundary.plot()
+    ax.set_xlim([-.1, 1.2])
+    ax.set_ylim([-.1, 1.2])
+
+
+
+.. image:: doc/_static/figs/output_7_1.png
+
+
+Plot the grid overlapping the include area in green, and the exclude
+area in red.
+
+.. code:: ipython3
+
+    ax = include_gdf.plot(color="green", alpha=0.5)
+    exclude_gdf.plot(ax=ax, color="red", alpha=0.5)
+    grid.boundary.plot(ax=ax, color="blue")
+
+
+
+.. image:: doc/_static/figs/output_9_1.png
+
+
+Alternatively, partial overlap may be included into the final grid.
+
+.. code:: ipython3
+
+    grid_include_partial = gridify(
+        include_area=include_gdf,
+        exclude_area=exclude_gdf,
+        grid_size=((1/3), (1/3)),
+        include_partial=True,
+    )
+
+    ax = include_gdf.plot(color="green", alpha=0.5)
+    exclude_gdf.plot(ax=ax, color="red", alpha=0.5)
+    grid_include_partial.boundary.plot(ax=ax, color="blue")
+
+.. image:: doc/_static/figs/output_11_1.png
+
+
+Overlay Gridify
+^^^^^^^^^^^^^^^
+
+Define the area of the primary geometry. Both geometries need to be off the same geometry kind. Add the geometries to a dataframe.
+
+.. code:: ipython3
+
+    part1 = shapely.geometry.box(
+       minx=0,
+       miny=0,
+       maxx=0.5,
+       maxy=1,
+    )
+    part2 = shapely.geometry.box(
+       minx=0.5,
+       miny=0,
+       maxx=0.75,
+       maxy=0.75,
+    )
+    primary_gdf = gpd.GeoDataFrame({"col1": [1, 2]}, geometry=[part1, part2])
+    ax = primary_gdf.plot(column="col1")
+    ax.set_xlim([-.1, 1.2])
+    ax.set_ylim([-.1, 1.2])
+
+.. image:: doc/_static/figs/overlay_primary.png
+
+
+Define a secondary geometry.
+
+.. code:: ipython3
+
+    exclude = shapely.geometry.box(
+        minx=0.5,
+        miny=0.5,
+        maxx=1.1,
+        maxy=1.1,
+    )
+    secondary_gdf = gpd.GeoDataFrame({"col1": [1]}, geometry=[exclude])
+    ax = secondary_gdf.plot(color="red", alpha=0.5)
+    ax.set_xlim([-.1, 1.2])
+    ax.set_ylim([-.1, 1.2])
+
+.. image:: doc/_static/figs/overlay_secondary.png
+
+
+Perform a `difference` spatial overlay between the primary and secondary geometry before
+generating a grid with (1/3) as grid size.
+
+.. code:: ipython3
+
+    grid = overlay_gridify(
+        primary_area=primary_gdf,
+        secondary_area=secondary_gdf,
+        grid_size=((1/3), (1/3)),
+        how="difference",
+    )
+
+    ax = grid.boundary.plot()
+    ax.set_xlim([-.1, 1.2])
+    ax.set_ylim([-.1, 1.2])
+
+.. image:: doc/_static/figs/overlay_grid.png
+
+
+Plot the grid overlapping the primary area in green, and the secondary area in red.
+
+.. code:: ipython3
+
+    ax = primary_gdf.plot(color="green", alpha=0.5)
+    secondary_gdf.plot(ax=ax, color="red", alpha=0.5)
+    grid.boundary.plot(ax=ax, color="blue")
+
+
+.. image:: doc/_static/figs/overlay_total.png
+
+
+GridifyProcessor
+^^^^^^^^^^^^^^^^
+
+Other than the basic Gridify functionality, the package also supports raw GeoData handling trough the :code:`GridifyProcessor` class. The class is able to read GIS files and save the grid to a specified GIS file format (`GeoJSON`, `Shapefile` or `GPKG`).
+
+
+.. code:: ipython3
+
+    from gridify.processor import GridifyProcessor
+
+Initialize the :code:`GridifyProcessor` class by the path to the primary and, optionally, secondary geometry files. For example, to create processor class where the grid is saved as a grid of centroids in GIS format `Shapefile` use:
+
+.. code:: ipython3
+
+    primary_geometry_path = "<dir_to_geometry><primary_geometry_filename>"
+
+    processor = GridifyProcessor(path_to_primary_geometry=primary_geometry_path,
+                                 as_centroids=True,
+                                 file_format="Shapefile")
+
+Through parameter :code:`as_centroids=True` it is specified to save the grid as points instead of box shaped polygons. The points represents the centroid of each box shaped polygon. To revert back to a grid of box shaped polygons set :code:`as_centroids` back to :code:`False`. It is possible to specify the CRS of the saved grid, this CRS does not need to be the same as the input geometry. This can be done by the parameter :code:`crs`. The GIS file format is specified by parameter :code:`file_format`.
+
+Once the class is initialized, and the output format is specified, a grid may be generated. The :code:`GridifyProcessor` has three methods to generate grid:
+
+- :code:`gridify_primary_geometry()`; generate a grid over the primary geometry.
+- :code:`gridify_secondary_geometry()`; generate a grid over the secondary geometry.
+- :code:`gridify_overlay()`; generate a grid over a performed spatial overlay between two areas.
+
+For each of the three methods the size of the grid may be set by the user. After successfully calling the function, the path to the saved grid is returned.
+
+.. code:: ipython3
+
+    print(processor.gridify_primary_geometry(grid_size=(300, 300)))
+    # <dir_to_geometry><primary_geometry_filename>_300x300_centroids.shp.zip
+
+
+.. end-inclusion-usage-marker-do-not-remove
+
+
+.. begin-inclusion-installation-marker-do-not-remove
+
+Installation
+------------
+
+To install gridify, do:
+
+.. code-block:: console
+
+  git clone https://gitlab.com/rwsdatalab/public/codebase/image/gridify.git
+  cd gridify
+  pip install .
+
+Run tests (including coverage) with:
+
+.. code-block:: console
+
+    pip install .[dev]
+    pytest
+
+.. end-inclusion-installation-marker-do-not-remove
+
+
+Documentation
+-------------
+
+Include a link to your project's full documentation here.
+
+
+.. begin-inclusion-license-marker-do-not-remove
+
+License
+-------
+
+Copyright (c) 2024, Rijkswaterstaat
+
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+
+.. end-inclusion-license-marker-do-not-remove
