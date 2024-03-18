@@ -1,0 +1,22 @@
+import logging
+from genai_agents.tools.base import BaseTool, tool
+from pydantic import BaseModel, Field
+from genai_agents.custom_tools.custom_tool_db import proxyToolkit
+
+class ProxyInputSchema(BaseModel):
+    input_str: str = Field(description="Input to be returned.")
+
+
+class ProxyOutputSchema(BaseModel):
+    response: str = Field(description="Returns the input.")
+
+
+class ProxyTool(BaseTool):
+    name: str = "Proxy Tool"
+    description: str = "A tool that returns the input."
+
+    @tool(args_schema=ProxyInputSchema, output_schema=ProxyOutputSchema)
+    def _run(self, input_str: str = None):
+        logging.debug(f"Proxy tool called with some input of length {len(input_str)}.")
+        print("custom tool executed")
+        return proxyToolkit(input_str)
