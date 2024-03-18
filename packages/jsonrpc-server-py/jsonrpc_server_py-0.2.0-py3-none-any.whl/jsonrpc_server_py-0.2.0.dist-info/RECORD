@@ -1,0 +1,11 @@
+jsonrpc_server/__init__.py,sha256=XaUSc13YvjfxWsEnHc41tZWC6jxLA3t_fSEEp4leto0,188
+jsonrpc_server/server.py,sha256=mPkzjpHZT85QN7fthw3wRGZ6pGZTLT3J4qSTKFgGh2w,6401
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/server_fixture.py,sha256=ckHTeGomIr9ObscskyYP2U9VSqYKLMVzrVNghXoBX1Q,621
+tests/test_server.py,sha256=W5DLegbGyj30ljMafvvl-itHHQi5EpGdwAZznKDm6Q0,6015
+jsonrpc_server_py-0.2.0.dist-info/LICENSE,sha256=HXckjjY2Jern0g0E1dJ4xZeMx0v-t8pPYXapQOZVsPk,1070
+jsonrpc_server_py-0.2.0.dist-info/METADATA,sha256=Zx5Eg6aUT64ERMJF0ViybOjQOidPHxXIgMWYlN7OvDY,2252
+jsonrpc_server_py-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+jsonrpc_server_py-0.2.0.dist-info/entry_points.txt,sha256=9LPowNCWQuzwTcli7IYHFItW5cYRaEkMzETLroTvRfI,55
+jsonrpc_server_py-0.2.0.dist-info/top_level.txt,sha256=Cn9NDOL70becl_3ybnnaQkp0rbWOv36yO94FW-Rvav0,21
+jsonrpc_server_py-0.2.0.dist-info/RECORD,,
