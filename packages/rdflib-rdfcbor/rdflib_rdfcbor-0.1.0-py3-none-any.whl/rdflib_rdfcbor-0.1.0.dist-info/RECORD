@@ -1,0 +1,11 @@
+rdflib_rdfcbor/__init__.py,sha256=pGASQ493GAdwF-DqMP0H-9rvsfE-27wZiay0v4uh43g,740
+rdflib_rdfcbor/content_addressable.py,sha256=SOp9SdGYEme8YeLsypc9gY6eR_LUrm048e0tRpKxEmQ,7371
+rdflib_rdfcbor/dictionary.py,sha256=gD2Z7BN3-dSE7pPLtqEefnihCHlIafP1NMK1tgBbyPE,4517
+rdflib_rdfcbor/molecule.py,sha256=fQbkR1apk6vXxGDxV7vzFeOmif9OUD5x0eGCsFpZQaw,3740
+rdflib_rdfcbor/parser.py,sha256=zD_s2jARxK2SWgNCpgXoxvpmSfdOB0L6Icoc7LVcqT8,753
+rdflib_rdfcbor/serializer.py,sha256=1upBh9kKsUohm_1QBmKVDJ2aFD7xVF5W-Nkv7FUYy5w,759
+rdflib_rdfcbor/term.py,sha256=OVQBDj68WSjuKfVoCPTcYBzw63MLbvzc9y_GTzQI3ts,8756
+rdflib_rdfcbor-0.1.0.dist-info/METADATA,sha256=Jqone0ZBJLRg2c7g0-vJt65m4pMTaUM7OiZVQXQ3kCw,41565
+rdflib_rdfcbor-0.1.0.dist-info/WHEEL,sha256=LL0B1KxSLwaTWceo7tT-0aDLd-qq9dmbnsnk1DnXlg8,87
+rdflib_rdfcbor-0.1.0.dist-info/licenses/COPYING,sha256=2KbMMavBa2dIx6IfIWEfWh7DP2fSLKI9faHBm5VJa-4,34020
+rdflib_rdfcbor-0.1.0.dist-info/RECORD,,
