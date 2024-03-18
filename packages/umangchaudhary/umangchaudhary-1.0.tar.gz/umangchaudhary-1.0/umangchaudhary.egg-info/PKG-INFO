@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: umangchaudhary
+Version: 1.0
+Summary: personal lib
+Home-page: https://github.com/nikrozine/umangchaudhary
+Download-URL: https://github.com/nikrozine/umangchaudhary/archive/refs/tags/1.0.tar.gz
+Author: Umang Chaudhary
+Author-email: umang3934@gmail.com
+License: MIT
+Keywords: python,umangchaudhary,machine learning,ai
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE.txt
