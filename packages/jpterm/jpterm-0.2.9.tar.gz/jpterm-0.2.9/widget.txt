@@ -1,0 +1,23 @@
+from decimal import Decimal
+
+from textual import events, on
+from textual.app import App, ComposeResult
+from textual.containers import Container
+from textual.css.query import NoMatches
+from textual.reactive import var
+from textual.widgets import Button, Digits
+from ypywidgets_textual import Widget, Driver
+class 
+ScatterApp(App[None]):
+
+    def compose(self) -> ComposeResult:
+            yield PlotextPlot()
+
+    def on_mount(self) -> None:
+        plt = self.query_one(PlotextPlot).plt
+        y = plt.sin() # sinusoidal test signal
+        plt.scatter(y)
+        plt.title(\"Scatter Plot\") # to apply a title
+)
+
+app ScatterorAdrr_class=Driver)
