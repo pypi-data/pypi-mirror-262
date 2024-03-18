@@ -1,0 +1,13 @@
+BetterADBSync/SAOLogging.py,sha256=_dqeTdi2jWYeXYVvAWxqu6QKNlZlk_Og0I4Vz5oe9Q8,8879
+BetterADBSync/__init__.py,sha256=zw9KATqggeLkDeXANZvOmZbvLp7wqPGlG7URxldANno,28996
+BetterADBSync/argparsing.py,sha256=_9ra323QQ9ul04ZfKG__oFJBZYtILpWkLvKvKk1vIC4,6794
+BetterADBSync/FileSystems/Android.py,sha256=cjAROeVOzCsQNYf3Xyb2Xq4CLtoJleTHzUIpusYc0rQ,10546
+BetterADBSync/FileSystems/Base.py,sha256=6pt_eEYzj4GeJuzSUmjmVm8vesWktkU9i6P0DWFRKeo,8983
+BetterADBSync/FileSystems/Local.py,sha256=bjLpQBwlX8hy-0Py9XHC1MCb888YFfj2-i1pJf9bh-0,2979
+BetterADBSync/FileSystems/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adbclone-0.0.3.dist-info/LICENSE,sha256=Pd-b5cKP4n2tFDpdx27qJSIq0d1ok0oEcGTlbtL6QMU,11560
+adbclone-0.0.3.dist-info/METADATA,sha256=sV5DxTDBeWqlc93Lpn0rRPkB6ErJZMtcN7XWeDh78ds,21419
+adbclone-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+adbclone-0.0.3.dist-info/entry_points.txt,sha256=BZDvZFqQPXcloaMpLrnvIlflwfJQPIg8ZxBSTC9S5B0,48
+adbclone-0.0.3.dist-info/top_level.txt,sha256=nHII89-ZdSnUwscrWdWes71gV-iVxVbdcM11H_6ZxCw,14
+adbclone-0.0.3.dist-info/RECORD,,
