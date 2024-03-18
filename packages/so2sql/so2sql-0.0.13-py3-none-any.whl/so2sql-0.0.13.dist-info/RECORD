@@ -1,0 +1,14 @@
+so2sql/__init__.py,sha256=QTrVu-ePfsPPO60B9EGIwVOdXGiK6ykMrNf05Yi9mxk,133
+so2sql/models.py,sha256=p1Wi4A839_-xDJIbHKlp7wg0PtX3hNroq60HVgrxm-Y,1460
+so2sql/so2sql.py,sha256=fov7iUwaXbzgTCC250AldshLJAKSSfHfBLSP3IImm4g,13837
+so2sql/sqldf.py,sha256=UrEAv0E11crXPEGxJMWmDFUDNu2YhJFmOSmdE31Cn1M,473
+so2sql/utils.py,sha256=sVBSRevElYgIamyHpO8nkf4Tc1f7EF84ZxeiO9VehXE,2712
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/mockresponses.py,sha256=5FdJoacZwobtb3pjHSEjXgvMOIHNP695AtdXNgRS4pM,9963
+tests/test_so2sql.py,sha256=JrjQ52kFxS2OFgYR7r14v808swXC7eR1ScYa31DzWLs,5132
+tests/test_sqldf.py,sha256=YGNEl_QiLh_Ic9hKjfyCrzMLXTzXjKWhYEmJh2c--0Y,832
+tests/test_utils.py,sha256=KzIF--BNCk_d0A4kLdv7BbM7ZEBucp3UIThlAtMYmmM,1976
+so2sql-0.0.13.dist-info/METADATA,sha256=A8xqcBgwBHBmYwc3ntlxRHIYcmZVE9-Ch6rbu2AbTv8,915
+so2sql-0.0.13.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+so2sql-0.0.13.dist-info/top_level.txt,sha256=5cslJvOFh1VNr6yhTyu_4pIlL_dEaiWOmRm0PhGRGOY,13
+so2sql-0.0.13.dist-info/RECORD,,
