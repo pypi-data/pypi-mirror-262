@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: sysca
+Version: 2.3
+Summary: Certificate tool for Sysadmins
+Home-page: https://github.com/markokr/sysca
+Author: Marko Kreen
+Author-email: markokr@gmail.com
+License: ISC
+Keywords: x509,tls,ssl,certificate,authority,command-line,server,authentication
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+License-File: LICENSE.txt
+
+SysCA - Certificate tool for Sysadmins
+======================================
+
+Description
+-----------
+
+Easy-to-use command-line tool for certificate management.
+
+Features
+--------
+
+- Simple command-line UI.
+- Good defaults, sets up common extensions automatically.
+- PGP- and password-protected private keys.
+- OCSP and CRL info settings.
+- Supports EC, RSA and DSA keys.
+
+Dependencies
+------------
+
+- Python `cryptography`_ module (version >= 3.1).
+- (Optional) `gpg`_ command-line tool to decrypt files.
+
+.. _cryptography: https://cryptography.io/
+.. _gpg: https://www.gnupg.org/
+
+Summary
+-------
+
+Generate new key::
+
+    sysca new-key              [--password-file TXT_FILE] [--out DST]
+    sysca new-key ec[:<curve>] [--password-file TXT_FILE] [--out DST]
+    sysca new-key rsa[:<bits>] [--password-file TXT_FILE] [--out DST]
+    sysca new-key dsa[:<bits>] [--password-file TXT_FILE] [--out DST]
+
+Create certificate signing request::
+
+    sysca request [-h] --key KEY_FILE [--password-file PSW_FILE]
+                  [--out OUT_FILE] [--outform FMT] [--text] [--rsa-pss]
+                  [--subject DN] [--san GNAMES] [--usage USAGE] [--CA] [--path-length DEPTH]
+                  [--crl-urls URLS] [--issuer-urls URLS] [--ocsp-urls URLS]
+                  [--ocsp-must-staple] [--ocsp-must-staple-v2] [--ocsp-nocheck]
+                  [--permit-subtrees GNAMES] [--exclude-subtrees GNAMES]
+                  [--require-explicit-policy N] [--inhibit-policy-mapping N]
+                  [--inhibit-any N] [--add-policy POLICY]
+
+Create selfsigned certificate::
+
+    sysca selfsign [-h] [--out OUT_FILE] [--outform FMT] [--text]
+                   --key KEY_FILE [--password-file PSW_FILE]
+                   [--not-valid-before DATE] [--not-valid-after DATE] [--days DAYS]
+                   [--serial-number SN] [--rsa-pss]
+                   [--subject DN] [--san GNAMES] [--usage USAGE] [--CA] [--path-length DEPTH]
+                   [--crl-urls URLS] [--issuer-urls URLS] [--ocsp-urls URLS]
+                   [--ocsp-must-staple] [--ocsp-must-staple-v2] [--ocsp-nocheck]
+                   [--permit-subtrees GNAMES] [--exclude-subtrees GNAMES]
+                   [--require-explicit-policy N] [--inhibit-policy-mapping N]
+                   [--inhibit-any N] [--add-policy POLICY]
+
+Sign certificate signing request::
+
+    sysca sign [-h] [--out OUT_FILE] [--outform FMT] [--text] --request CSR_FILE
+               --ca-info CRT_FILE --ca-key KEY_FILE [--password-file PSW_FILE]
+               [--not-valid-before DATE] [--not-valid-after DATE] [--days DAYS]
+               [--serial-number SN] [--reset] [--rsa-pss]
+               [--subject DN] [--san GNAMES] [--usage USAGE] [--CA] [--path-length DEPTH]
+               [--crl-urls URLS] [--issuer-urls URLS] [--ocsp-urls URLS]
+               [--ocsp-must-staple] [--ocsp-must-staple-v2] [--ocsp-nocheck]
+               [--permit-subtrees GNAMES] [--exclude-subtrees GNAMES]
+               [--require-explicit-policy N] [--inhibit-policy-mapping N]
+               [--inhibit-any N] [--add-policy POLICY]
+
+
+Create or update CRL file::
+
+    sysca update-crl [-h] [--out OUT_FILE] [--outform FMT] [--text]
+                     --ca-info CRT_FILE --ca-key KEY_FILE [--password-file PSW_FILE]
+                     [--crl CRL_FILE] [--crl-number VER] [--delta-crl-number VER]
+                     [--crl-scope SCOPE] [--crl-reasons REASONS] [--indirect-crl]
+                     [--issuer-urls URLS] [--delta-crl-urls URLS]
+                     [--last-update DATE] [--next-update DATE] [--days DAYS]
+                     [--revoke-certs FN [FN ...]]
+                     [--revoke-serials NUM [NUM ...]]
+                     [--reason REASON] [--invalidity-date DATE] [--revocation-date DATE]
+
+Display contents of CRT, CSR or CRL file::
+
+    sysca show FILE
