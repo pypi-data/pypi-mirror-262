@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: asknews
+Version: 0.3.9
+Summary: Python SDK for AskNews
+Home-page: https://gitlab.com/emergentmethods/asknews/python-sdk
+License: MIT
+Author: Emergent Methods
+Author-email: contact@emergentmethods.ai
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: asgiref (>=3.7.2,<4.0.0)
+Requires-Dist: authlib (>=1.3.0,<2.0.0)
+Requires-Dist: httpx (>=0.25.2,<0.26.0)
+Requires-Dist: orjson (>=3.9.10,<4.0.0)
+Requires-Dist: pydantic (>=2.5.3,<3.0.0)
+Project-URL: Repository, https://gitlab.com/emergentmethods/asknews/python-sdk
+Description-Content-Type: text/markdown
+
+# AskNews Python SDk
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/asknews?style=flat-square)
+
+Python SDK for the AskNews API.
+
+## Installation
+
+```bash
+pip install asknews
+```
+
+## Usage
+
+```python
+import asyncio
+from asknews_sdk import AskNewsSDK
+
+async def main():
+    async with AskNewsSDK(
+        client_id="your_client_id",
+        client_secret="your_client_secret",
+        scopes=["chat", "news", "stories"],
+    ) as sdk:
+        response = await sdk.stories.get_stories(query="covid", n_stories=50, method="nl")
+        print(response)
+
+        response = await sdk.news.search_news(query="covid", n_articles=50, method="nl")
+        print(response)
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
