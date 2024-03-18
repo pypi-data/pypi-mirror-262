@@ -1,0 +1,16 @@
+lazzy_orm/__init__.py,sha256=-Prd-YXJNcMDOYu9nWdhO8seyfr053mmvXWlr_qmGnE,25
+lazzy_orm/config/__init__.py,sha256=MtMi-_HsPur-nsnZzFY8zTJbZgYPYktoxotVmPMb1Lg,94
+lazzy_orm/config/connector.py,sha256=TCCLsEosIjpSvape42bq3ByhyVoGThyNTvLJMDYgw14,5490
+lazzy_orm/config/date_parser.py,sha256=k5l7f1TX4hEHXmFIFvnlXTkSj7_ss3ljuZ_kuLmNnnI,2199
+lazzy_orm/lazzy_fetch/__init__.py,sha256=dDLsIEQnPI9aLjE03guEYX5iW5ovtoZNMbnbQCH_A5Q,57
+lazzy_orm/lazzy_fetch/lazzy_fetch.py,sha256=mRFkAyuQtwVrzBmUxhX8gfh6qrg4eRDW8UGzZbf0sEw,1871
+lazzy_orm/lazzy_insert/__init__.py,sha256=Ba6Yz-Cde_BZxNbU_gkxr28m72d8q1rwoNhOqzRqqaw,60
+lazzy_orm/lazzy_insert/lazzy_insert.py,sha256=sNq93lEKVv8CUEwFQL0SLiFwubZ8pKn99ix41YC0SOo,8802
+lazzy_orm/logger/__init__.py,sha256=1KbcEGdIcGhBUiv0Ampm7hP1NYIVaP_own65yKKIbZI,44
+lazzy_orm/logger/logger.py,sha256=-vyfyZmZBsBOjJkPaziNPK-sXl2AGoL57TdRGmMLZtE,1833
+LazzyORM-0.2.2.dist-info/LICENSE,sha256=NZPRAVakCS7TIBwOxH-XupCz2x-zjWi3I-Zh4bRyYnE,1095
+LazzyORM-0.2.2.dist-info/METADATA,sha256=gi9EQoomVnUC_igzkNDE8VO9a1t9R-_r4JOx27HEPVs,567
+LazzyORM-0.2.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+LazzyORM-0.2.2.dist-info/entry_points.txt,sha256=8D_T640hfn7KrmDj7Ox9Jbcld_XkSMKG41STnsq2HTU,48
+LazzyORM-0.2.2.dist-info/top_level.txt,sha256=GUyVJDuhKliMIgal_e3oKF9qr2VNiITb3MiszF6eYMA,10
+LazzyORM-0.2.2.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+lazzy_orm = lazzy_orm.cli:cli
