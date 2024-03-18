@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: hexly
+Version: 0.0.3
+Summary: A hex viewer for Jupyter notebooks
+Author: Shad Sharma
+Author-email: shadanan@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Hexly
+
+Hexly is a hex viewer for Jupyter notebooks.
+
+## Usage
+
+```python
+import hexly as hl
+hl.HexView(bytes(range(256)))
+```
+
+![usage](usage.png)
+
+For more usage, checkout the [usage notebook](usage.ipynb).
+
