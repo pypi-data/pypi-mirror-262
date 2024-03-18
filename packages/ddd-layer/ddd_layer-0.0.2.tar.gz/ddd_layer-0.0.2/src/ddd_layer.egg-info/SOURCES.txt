@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/ddd_layer/DDD.py
+src/ddd_layer/__init__.py
+src/ddd_layer/ddd_test.py
+src/ddd_layer.egg-info/PKG-INFO
+src/ddd_layer.egg-info/SOURCES.txt
+src/ddd_layer.egg-info/dependency_links.txt
+src/ddd_layer.egg-info/top_level.txt

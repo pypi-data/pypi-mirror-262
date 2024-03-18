@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ddd_layer"
+version = "0.0.2"
+authors = [
+  { name="luisCorl", email="lui.corl.ing@hotmail.com" },
+]
+description = "this calculate symbolic determinants"
+readme = "README.md"
+requires-python = ">=3.4"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/luisCorl/ddd_layer"
+Issues = "https://github.com/luisCorl/ddd_layer"
+
+[options]
+
+install_requires = [
+	"numpy>=0.0",
+	"sympy>=0.0",
+	"symengine >=1.0",
+	"pandas >= 2.0",
+	"memory-profiler >= 0.1",
+	"multiprocessing >= 2.0",
+	]
