@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tether_agent"
+version = "1.0.0"
+authors = [{ name = "Random Studio", email = "shared@random.studio" }]
+description = "Python-based base agent for Tether"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = ["paho-mqtt >= 1.6.1", "msgpack >= 1.0.8"]
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/RandomStudio/tether"
+Repository = "https://github.com/RandomStudio/tether"
+Issues = "https://github.com/RandomStudio/tether/issues"
