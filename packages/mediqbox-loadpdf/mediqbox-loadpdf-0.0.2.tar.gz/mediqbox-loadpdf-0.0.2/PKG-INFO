@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mediqbox-loadpdf
+Version: 0.0.2
+Summary: A mediqbox component for extracting figures and tables from PDF files
+Description-Content-Type: text/markdown
+Requires-Dist: mediqbox-abc>=0.0.4
+Requires-Dist: pymupdf
+
+# mediqbox-loadpdf
+
+A mediqbox component for extracting figures and tables from PDF files.
