@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+dxtutils/__init__.py
+dxtutils/utils.py
+dxtutils.egg-info/PKG-INFO
+dxtutils.egg-info/SOURCES.txt
+dxtutils.egg-info/dependency_links.txt
+dxtutils.egg-info/top_level.txt
