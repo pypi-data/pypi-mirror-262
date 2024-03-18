@@ -1,0 +1,3 @@
+include bin/*
+recursive-include prmpt *.py
+recursive-include skel *
