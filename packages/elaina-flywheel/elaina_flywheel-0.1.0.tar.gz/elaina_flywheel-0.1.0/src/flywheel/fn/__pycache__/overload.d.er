@@ -1,0 +1,22 @@
+##[pylyzer] failed /users/elaina/ryanvk/src/ryanvk/fn/overload.py 1702090830 2148
+.___v_desugar_1 = pyimport "__future__"
+.annotations: Never
+.___v_desugar_2 = pyimport "typing"
+.TYPE_CHECKING: Never
+.AbstractSet: {typing.AbstractSet}
+.Any: {typing.Any}
+.Generic: {typing.Generic}
+.MutableSet: {typing.MutableSet}
+.TypeVar: {typing.TypeVar}
+.overload: Never
+.___v_desugar_3 = pyimport "(...)"
+.Self: Never
+.___v_desugar_4 = pyimport "(...)"
+.FnOverloadHarvest: Never
+.___v_desugar_5 = pyimport "ryanvk/typing"
+.Twin: Never
+
+.On: Never
+.TCallValue: Type
+.TCollectValue: Type
+.TSignature: Type
