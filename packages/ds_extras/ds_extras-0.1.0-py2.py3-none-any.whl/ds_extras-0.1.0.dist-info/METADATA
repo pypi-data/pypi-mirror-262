@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ds_extras
+Version: 0.1.0
+Summary: my demiansoft_extras
+Author-email: Hyungjin Kim <hj3415@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: Django >= 5.0.3
+Requires-Dist: pillow >= 10.2.0
+Project-URL: Home, https://www.demiansoft.com
