@@ -1,0 +1,2 @@
+[console_scripts]
+prompit = prompit.cli:main
