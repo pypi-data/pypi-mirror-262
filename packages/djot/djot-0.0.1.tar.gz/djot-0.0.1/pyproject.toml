@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "djot"
+authors = [
+  {name = "Drew Jose", email = "mail@drewsh.com"}
+]
+description = "A parser and HTML converter for djot markup."
+version = "0.0.1"
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+  "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+  "Topic :: Text Processing :: Markup",
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/crmsnbleyd/djot.py"
+Repository = "https://codeberg.org/crmsnbleyd/djot.py.git"
