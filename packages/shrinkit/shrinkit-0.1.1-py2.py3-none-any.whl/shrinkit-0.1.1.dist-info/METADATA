@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: shrinkit
+Version: 0.1.1
+Summary: The package that helps to compress everything for ML/AI projects.
+Home-page: https://github.com/blurred-machine/shrinkit
+Author: Paras Varshney
+Author-email: paras.varshney97@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: streamlit
+
+
+# shrinkit
+A GUI based Auto ML training package
+
+
+
