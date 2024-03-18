@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: sargasso
+Version: 0.4.1
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy >=1.18
+Requires-Dist: pybind11 >=2.6
+
+# sargasso
+
+An example project that uses [cibuildwheel](https://cibuildwheel.pypa.io/en/stable/) to automatically publish a C++/Python project that uses OpenBLAS. Produces macOS (x86-64 and arm64) and manylinux (x86-64) wheels for CPython.
+
+## How to publish
+
+The publishing job is `publish-to-pypi` in the [build\_wheels.yml](https://github.com/alecheckert/sargasso/blob/main/.github/workflows/build_wheels.yml) file. This will execute automatically when a new tag is pushed to this git repo:
+```
+git tag -a v0.3.6 <commit>
+git push origin v0.3.6
+```
