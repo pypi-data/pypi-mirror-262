@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mlapme
+Version: 0.0.2
+Summary: A small example package
+Home-page: https://github.com
+Author: xyl
+Author-email: 1280745039@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
