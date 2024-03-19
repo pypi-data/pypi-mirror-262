@@ -1,0 +1,6 @@
+README.md
+setup.py
+latexgen_renzo_fu.egg-info/PKG-INFO
+latexgen_renzo_fu.egg-info/SOURCES.txt
+latexgen_renzo_fu.egg-info/dependency_links.txt
+latexgen_renzo_fu.egg-info/top_level.txt
