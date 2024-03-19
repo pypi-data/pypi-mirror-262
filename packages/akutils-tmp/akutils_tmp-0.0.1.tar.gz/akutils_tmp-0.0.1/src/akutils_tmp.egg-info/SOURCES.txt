@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/akutils/__init__.py
+src/akutils/pandas_read_files.py
+src/akutils/pandas_type_conversion.py
+src/akutils/project_api.py
+src/akutils/utils_functions.py
+src/akutils/tests/unit/test_pandas_columns_to_float.py
+src/akutils_tmp.egg-info/PKG-INFO
+src/akutils_tmp.egg-info/SOURCES.txt
+src/akutils_tmp.egg-info/dependency_links.txt
+src/akutils_tmp.egg-info/requires.txt
+src/akutils_tmp.egg-info/top_level.txt
