@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: chaostoolkit-addons
+Version: 0.11.0
+Summary: Addons for your Chaos Toolkit experiments
+Author-Email: Chaos Toolkit <contact@chaostoolkit.org>
+License: Apache-2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: Freely Distributable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Project-URL: Documentation, https://chaostoolkit.org
+Project-URL: Repository, https://github.com/chaostoolkit/chaostoolkit-addons
+Project-URL: Changelog, https://github.com/chaostoolkit/chaostoolkit-addons/blob/master/CHANGELOG.md
+Requires-Python: >=3.8
+Requires-Dist: chaostoolkit-lib>=1.42.1
+Description-Content-Type: text/markdown
+
+# Chaos Toolkit Addons
+
+This project provides a set of commnly requested actions, probes, tolerances
+or controls that can benefit the community.
+
+## Install
+
+This package requires Python 3.8+
+
+To be used from your experiment, this package must be installed in the Python
+environment where [chaostoolkit][] already lives.
+
+[chaostoolkit]: https://github.com/chaostoolkit/chaostoolkit
+
+```
+$ pip install chaostoolkit-addons
+```
+
+## Develop
+
+### Test
+
+To run the tests for the project execute the following:
+
+```
+$ pytest
+```
+
+### Contribute
+
+If you wish to contribute more functions to this package, you are more than
+welcome to do so. Please, fork this project, make your changes following the
+usual [PEP 8][pep8] code style, sprinkling with tests and submit a PR for
+review.
+
+[pep8]: https://pycodestyle.readthedocs.io/en/latest/
