@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-019d4ab68ec971cac2bda8753507ab05"}, "mark": {"type": "bar", "binSpacing": 0.5, "cornerRadiusEnd": 5, "height": 15}, "center": true, "encoding": {"color": {"condition": {"test": "test(regexp(param_14,'i'),datum.ngram)", "field": "ngram", "sort": "-x", "title": "", "type": "nominal"}, "value": ""}, "column": {"field": "topic", "header": {"labelFontWeight": "bold"}, "type": "nominal"}, "opacity": {"condition": {"test": "test(regexp(param_14,'i'),datum.ngram)", "value": 1}, "value": 0}, "tooltip": [{"field": "ngram", "title": "token", "type": "nominal"}, {"field": "value", "title": "rttr value", "type": "quantitative"}], "x": {"field": "value", "title": "rttr", "type": "quantitative"}, "y": {"field": "ngram", "sort": "-x", "title": "", "type": "nominal"}}, "params": [{"name": "param_14", "bind": {"input": "search", "placeholder": "insert token...", "name": "Filter by token "}, "value": ""}], "resolve": {"scale": {"x": "independent", "y": "independent"}}, "transform": [{"window": [{"op": "rank", "field": "value", "as": "rank"}], "groupby": ["topic"], "sort": [{"field": "value", "order": "descending"}, {"field": "ngram", "order": "ascending"}]}, {"filter": "(datum.rank <= 20)"}], "width": 266.6666666666667, "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json", "datasets": {"data-019d4ab68ec971cac2bda8753507ab05": [{"topic": "climate change", "ngram": "mean", "value": 3.846851357395195}, {"topic": "climate change", "ngram": "stdev", "value": 0.7285251128488555}, {"topic": "migration", "ngram": "mean", "value": 3.8516899773107234}, {"topic": "migration", "ngram": "stdev", "value": 0.7127332722686066}, {"topic": "public health", "ngram": "mean", "value": 3.838399445999719}, {"topic": "public health", "ngram": "stdev", "value": 0.7013231600302476}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
