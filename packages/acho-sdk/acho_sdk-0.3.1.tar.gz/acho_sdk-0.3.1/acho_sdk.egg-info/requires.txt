@@ -1,0 +1,9 @@
+python-socketio==5.9.0
+requests==2.25.1
+setuptools==59.6.0
+ipynbname
+python-engineio==3.11.2
+python-socketio==4.4.0
+
+[:python_version < "3.2"]
+subprocess32
