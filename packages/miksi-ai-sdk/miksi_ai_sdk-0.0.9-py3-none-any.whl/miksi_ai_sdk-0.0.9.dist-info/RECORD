@@ -1,0 +1,10 @@
+miksi_ai_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+miksi_ai_sdk/agent.py,sha256=6tPUCn4K59FDGgQdqmW0rgwvQ-rBYOosnf67HfFU-zA,8498
+miksi_ai_sdk/api.py,sha256=8k8uO5Okl1eAfY7oSwF7KIOrVEgw0cX9_EKijmqowyg,3198
+miksi_ai_sdk/master.py,sha256=ZoFcPxI3Ks5lSlmqCGKmkIXTQokih5PeFN4BmV4YB-4,718
+miksi_ai_sdk/pythontool.py,sha256=y9clsueAEFTimisUoKm3BhhIgfwoPc30Ro-ZAAr_5j0,1805
+miksi_ai_sdk/sqltool.py,sha256=yrI9NzL4Ocb9sDMPRuCW5qItAbuTTvsLnn7SMegiIsY,5061
+miksi_ai_sdk-0.0.9.dist-info/METADATA,sha256=lfFWSNafoGUadGhjeZqAimqSFqs1lXUWBtURDJiWfj0,4284
+miksi_ai_sdk-0.0.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+miksi_ai_sdk-0.0.9.dist-info/top_level.txt,sha256=CrTJBVtyuSbja1X5cUxe0RnuBKy_GecyIfPTi_LY02A,13
+miksi_ai_sdk-0.0.9.dist-info/RECORD,,
