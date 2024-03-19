@@ -1,0 +1,10 @@
+.gitignore,sha256=zbyuFRBda3geYggTx5x-hodA1OnMU85vX8u8Ejh630s,2
+flet_page_manager-0.1.10.dist-info/METADATA,sha256=S7X6lzZLK3KM803oFIhqX4dZVXaCL54lryhOp_WCynE,429
+flet_page_manager-0.1.10.dist-info/WHEEL,sha256=N2J68yzZqJh3mI_Wg92rwhw0rtJDFpZj9bwQIMJgaVg,90
+page_manager/__init__.py,sha256=eMRgZHNIgHqVzgPRpmtEcmTwO1uBYkH0aKxAZypEBTo,220
+page_manager/exception.py,sha256=gcpmT_pGcgXbEkW5hIzaLyBJMqieBqLXstEUooGcVlg,84
+page_manager/manager.py,sha256=Om3xrKxTv7C9sxMkl96nC8MoPUho2cVO3HVG-TTkWq0,2922
+page_manager/pages/__init__.py,sha256=otvgMgIQu5PAV7N5UAV4NUdde0qGqTIM5shRiOTimhY,51
+page_manager/pages/base.py,sha256=glUlZyatZkdJlYVPA5_MqkDOOkPCi-1p_p7a4usbjBs,731
+page_manager/state.py,sha256=7YbxsadthpIwIsGFf2kPpFVrV2AJUbqmrlbnTKskegY,234
+flet_page_manager-0.1.10.dist-info/RECORD,,
