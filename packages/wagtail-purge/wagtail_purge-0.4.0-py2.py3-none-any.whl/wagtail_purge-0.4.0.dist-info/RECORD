@@ -1,0 +1,11 @@
+wagtail_purge/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_purge/admin_urls.py,sha256=RQdL16lyvBU93KCcRouerJlv9IEMbG2hCsNYhqIF5ks,102
+wagtail_purge/apps.py,sha256=2I2HLHF3cdWAVlucEY86nCbdSz-dcL9ADvE0IwQ9YB4,100
+wagtail_purge/views.py,sha256=RpQwgoRytDu8OFpfSFKBmNi_z-bEMbs4pjJVc-FnrZA,929
+wagtail_purge/wagtail_hooks.py,sha256=u4NNIpZm2ogvsPSOS4r92bqH6rp8UR3Bmv3N-dcqR8Y,514
+wagtail_purge/templates/index.html,sha256=vZxFOZpduD1xJLbo0lFMIEJ6zY_2LvkWEK3vM-9SzZ8,962
+wagtail_purge-0.4.0.dist-info/LICENSE,sha256=OBGmLvnos2jvIN2xi2Wc4K9-xKJfxPNIuUWhr6_JzfA,1066
+wagtail_purge-0.4.0.dist-info/METADATA,sha256=Kc5jxAa1c4fc33vzoutTgiB_NiGIUV1OKxiyBFe5850,1722
+wagtail_purge-0.4.0.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+wagtail_purge-0.4.0.dist-info/top_level.txt,sha256=9ZRAcsL3fDYi5sKeI-h2n2JfgvJlHD4vQ2ce6XY0648,14
+wagtail_purge-0.4.0.dist-info/RECORD,,
