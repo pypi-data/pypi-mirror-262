@@ -1,0 +1,7 @@
+hw_latex/__init__.py,sha256=9N9ctP7a_-8sJc_w-cFyKvg0F_3M66xtPF2_q33LSGE,23
+hw_latex/generate.py,sha256=YtTH3IdCaRGwi4RgSoto5wlxR2V4IqKC_Jm4JSqn1Fo,239
+hw_latex/latex.py,sha256=r-f7HiKqaT1PLkxFbctpHBJ23bACMoFwK8bs18ppi2o,1313
+hw_latex-0.0.8.dist-info/METADATA,sha256=yHr0dPGFvxToREzLk1vos_d92H12oi6yTreUtaLIQ-o,847
+hw_latex-0.0.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+hw_latex-0.0.8.dist-info/top_level.txt,sha256=koLUICY69nYiWHcsCDh1WPwwUuAjPX_adIKnMnt1rTw,9
+hw_latex-0.0.8.dist-info/RECORD,,
