@@ -1,0 +1,9 @@
+spreadsheet/__init__.py,sha256=VrXpHDu3erkzwl_WXrqINBm9xWkcyUy53IQOj042dOs,22
+spreadsheet/googlesheet.py,sha256=qgYPid8UCzCoVyEp9NK0y7oc7E-ek4B8tWi8rxId-NQ,3868
+spreadsheet/spreadsheet.py,sha256=BkQsjQGLEhOdSUbdXBH24-geXtfnQRR76ePcOZQG1dA,15874
+spreadsheet/tableediting.py,sha256=SSB0HetXZ1admrWs-D1IwEAeqyL5hrbLVIWhKMC5tHg,1798
+spreadsheet/version.py,sha256=L-X8Qshf6SsGTwNUJdgMFc6Ju4iH5qOQYOT-lT1_-mM,362
+pygenericspreadsheet-0.3.0.dist-info/METADATA,sha256=8ztOgO-SEQR5BLP4JZKv3o-fLG5Qh2Ofo_evsyL6Rbs,2928
+pygenericspreadsheet-0.3.0.dist-info/WHEEL,sha256=LL0B1KxSLwaTWceo7tT-0aDLd-qq9dmbnsnk1DnXlg8,87
+pygenericspreadsheet-0.3.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pygenericspreadsheet-0.3.0.dist-info/RECORD,,
