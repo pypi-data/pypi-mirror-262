@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+django_testcase_generator/__init__.py
+django_testcase_generator.egg-info/PKG-INFO
+django_testcase_generator.egg-info/SOURCES.txt
+django_testcase_generator.egg-info/dependency_links.txt
+django_testcase_generator.egg-info/requires.txt
+django_testcase_generator.egg-info/top_level.txt
+django_testcase_generator/management/__init__.py
+django_testcase_generator/management/commands/__init__.py
+django_testcase_generator/management/commands/generate_tests.py
+django_testcase_generator/tests/__init__.py
