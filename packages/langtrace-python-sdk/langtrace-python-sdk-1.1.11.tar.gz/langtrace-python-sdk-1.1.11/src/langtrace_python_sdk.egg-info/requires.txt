@@ -1,0 +1,5 @@
+trace-attributes
+opentelemetry-api
+opentelemetry-instrumentation
+opentelemetry-sdk
+tiktoken
