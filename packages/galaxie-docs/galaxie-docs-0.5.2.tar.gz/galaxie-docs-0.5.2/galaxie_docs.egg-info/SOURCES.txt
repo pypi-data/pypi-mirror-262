@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+galaxie_docs.egg-info/PKG-INFO
+galaxie_docs.egg-info/SOURCES.txt
+galaxie_docs.egg-info/dependency_links.txt
+galaxie_docs.egg-info/entry_points.txt
+galaxie_docs.egg-info/requires.txt
+galaxie_docs.egg-info/top_level.txt
+glxdocs/__init__.py
+glxdocs/md2html.py
+glxdocs/yaml2md.py
+glxdocs/libs/directory.py
+glxdocs/libs/file.py
+tests/test_md2html.py
+tests/test_yaml2md.py

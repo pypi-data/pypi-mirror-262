@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="galaxie-docs"
+dynamic = [
+    "version",
+    "authors",
+]
+description = "Galaxie Docs is a low-tech survival ToolKit for documents conversion"
+readme = "README.md"
+requires-python = ">=3.0"
+keywords = [
+    "Galaxie",
+    "docs",
+    "yaml",
+    "markdown"
+]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: Public Domain",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "wheel",
+    "markdown",
+    "Pygments",
+]
+
+[project.optional-dependencies]
+tests = [
+    'coverage',
+    "wheel",
+    "markdown",
+    "Pygments",
+    'mock >= 1.0.1, < 4; python_version < "3.4"',
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/Tuuux/galaxie-docs"
+Issues = "https://gitlab.com/Tuuux/galaxie-docs/-/issues"
+Readthedocs = "http://galaxie-docs.readthedocs.io"
+
+[project.scripts]
+glx-yaml2md = "glxdocs.yaml2md:main"
+glx-md2html = "glxdocs.md2html:main"
+
+
