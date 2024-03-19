@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+simpleaiosqlite.py
+simpleaiosqlite.egg-info/PKG-INFO
+simpleaiosqlite.egg-info/SOURCES.txt
+simpleaiosqlite.egg-info/dependency_links.txt
+simpleaiosqlite.egg-info/top_level.txt

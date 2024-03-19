@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: simpleaiosqlite
+Version: 0.0.2
+Summary: асинхронная версия
+Author: yayaya
+Requires-Python: >=3.10,<4.0
