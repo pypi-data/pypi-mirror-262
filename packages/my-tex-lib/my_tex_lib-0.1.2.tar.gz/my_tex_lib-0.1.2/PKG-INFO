@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: my_tex_lib
+Version: 0.1.2
+Summary: Test module
+Home-page: https://github.com/nick15431543/python_course/tree/main/hw_2
+Author: nkocherin
+Author-email: nkocherin@inbox.ru
+Project-URL: GitHub, https://github.com/nick15431543/python_course/tree/main/hw_2
+Keywords: files speedfiles
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
