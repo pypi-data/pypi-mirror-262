@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: mediqbox-jobctxmgr
+Version: 0.0.1
+Summary: A mediqbox component for job context management
+Description-Content-Type: text/markdown
+
+# mediqbox-jobctxmgr
+
+A mediqbox component for job context management.
