@@ -1,0 +1,6 @@
+setup.py
+genpack/genpack.py
+genpack.egg-info/PKG-INFO
+genpack.egg-info/SOURCES.txt
+genpack.egg-info/dependency_links.txt
+genpack.egg-info/top_level.txt
