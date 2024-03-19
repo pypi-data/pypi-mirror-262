@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: expressmoney
+Version: 13.1.1
+Summary: SDK ExpressMoney
+Author: Development team
+Author-email: dev@expressmoney.com
+Requires-Python: >=3.7
+Requires-Dist: requests
+Requires-Dist: google-auth
