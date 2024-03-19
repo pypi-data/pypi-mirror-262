@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/ml_dojo/__init__.py
+src/ml_dojo/example.py
+src/ml_dojo.egg-info/PKG-INFO
+src/ml_dojo.egg-info/SOURCES.txt
+src/ml_dojo.egg-info/dependency_links.txt
+src/ml_dojo.egg-info/top_level.txt
