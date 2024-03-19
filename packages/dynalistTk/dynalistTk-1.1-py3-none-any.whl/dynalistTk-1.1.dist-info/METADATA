@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: dynalistTk
+Version: 1.1
+Project-URL: Homepage, https://github.com/d33pster/dynalistTk
+Project-URL: Issues, https://github.com/d33pster/dynalistTk/issues
+Keywords: d33pster,dynamiclist,tkinter list,list gui,python gui list,gui,tkiner,tcl
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: tkinter
+
