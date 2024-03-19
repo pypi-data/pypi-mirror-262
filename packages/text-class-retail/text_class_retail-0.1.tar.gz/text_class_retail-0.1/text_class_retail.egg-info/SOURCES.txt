@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+text_class_retail/__init__.py
+text_class_retail/ds_tree.joblib
+text_class_retail/logreg.joblib
+text_class_retail/predictor.py
+text_class_retail/rd_forest.joblib
+text_class_retail.egg-info/PKG-INFO
+text_class_retail.egg-info/SOURCES.txt
+text_class_retail.egg-info/dependency_links.txt
+text_class_retail.egg-info/requires.txt
+text_class_retail.egg-info/top_level.txt
