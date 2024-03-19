@@ -1,0 +1,13 @@
+_tmdsclient_version.py,sha256=syG0Fx-20oA6MCpFa4meF5Ek4gIktwSUO-cAoWVdVP4,19
+tmdsclient/__init__.py,sha256=h2wVNSjjc5_lSzygHtbZG-ou6RIVpFEmQOZD5iSjcAk,293
+tmdsclient/py.typed,sha256=ZvYa-_QF7Xg7F6Dow8m1zHvSP6kNHuhh3BEBVxjAdUQ,168
+tmdsclient/client/__init__.py,sha256=xkpkr36rYMvgtAPs8B57cJlQWkxNGq-H0EPH9eUcRUY,61
+tmdsclient/client/config.py,sha256=Xk6FIecb8dH933bPVZcOnfw2vUethaT3GO4dwIPRyg8,1569
+tmdsclient/client/tmdsclient.py,sha256=EWPbBEz75tiRyBKfYM4DQg6ywthrTBDqmzRVBMyslOk,13214
+tmdsclient/models/__init__.py,sha256=tur-qv1u8MGB9chIPSViDGypui8yyaTDH8oDrbG4GME,496
+tmdsclient/models/netzvertrag.py,sha256=S45zilTx1xuTnVMD9Crz9VjP-emWcYsO34ztCl4IR5Y,1822
+tmdsclient/models/patches.py,sha256=Ia4aSBA1c8cuks2CUAIvjvHC7EftWkMGZeNqfIbolVg,1172
+tmdsclient-0.1.19.dist-info/METADATA,sha256=BkDS29rf2KMqRvdkLD93piJqx9U6XJVrtU0BZp9ioEw,3477
+tmdsclient-0.1.19.dist-info/WHEEL,sha256=LL0B1KxSLwaTWceo7tT-0aDLd-qq9dmbnsnk1DnXlg8,87
+tmdsclient-0.1.19.dist-info/licenses/LICENSE,sha256=04B920e2sAO59yFAclMRa8PIsOMJYVRH9L2vWBFyoFc,1095
+tmdsclient-0.1.19.dist-info/RECORD,,
