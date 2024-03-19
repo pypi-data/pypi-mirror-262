@@ -1,0 +1,3 @@
+[console_scripts]
+perigene=perigene.cli:main
+
