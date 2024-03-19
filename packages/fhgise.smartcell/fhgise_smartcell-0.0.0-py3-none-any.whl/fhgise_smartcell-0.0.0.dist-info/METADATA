@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: fhgise.smartcell
+Version: 0.0.0
+Summary: The official SmartCell library for python.
+Author: Jannik Rebmann
+Author-email: jannik.rebmann@ise.fraunhofer.de
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# SmartCell
+
+This is a package name reservation for a scientific project at [Fraunhofer ISE](https://www.ise.fraunhofer.de/).
