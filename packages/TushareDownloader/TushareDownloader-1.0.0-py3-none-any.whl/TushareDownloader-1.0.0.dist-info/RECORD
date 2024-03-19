@@ -1,0 +1,11 @@
+TushareDownloader/__init__.py,sha256=82CIVrpESJ7n71E7T71gV4WXoEQE3BxW3pMo0W9qnKw,138
+TushareDownloader/database.py,sha256=oA9GM1pQVkZBCIP4Bfqk-6OiUU0VKHobA0tSiwP6Bmo,1741
+TushareDownloader/query.py,sha256=StIsyqmDaOtRhcxT8sIZxPRYwm-k-hofdv8cmrS06-0,1607
+TushareDownloader/save_and_log.py,sha256=Q3_geR3fZq2goJwrPY5Wgl_6220x-NQMV2FlmGY908c,2230
+TushareDownloader/tushare_api.py,sha256=uyYqhM1exNG2lk9CIfuFSs37EU6oHQHyPA4vHFQa8k8,745
+TushareDownloader/tushare_downloader.py,sha256=NtMVBJPo6Id8mpee9fC-hkJlR5CjNtOL8eAI3ZZatAU,6488
+TushareDownloader-1.0.0.dist-info/LICENSE,sha256=LTB-olOmxA3fXfuDyla1YHXCUpBOgRCBS_BPmb7bgMA,1071
+TushareDownloader-1.0.0.dist-info/METADATA,sha256=huHMBaMPgbizo_p0JmpNL0EML--H9NtCEH9kMW7ccWw,1048
+TushareDownloader-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+TushareDownloader-1.0.0.dist-info/top_level.txt,sha256=pFGmbUM1ZotqfHtbZc45PtO8nEBM-Uh_hBC5ifpWAAk,18
+TushareDownloader-1.0.0.dist-info/RECORD,,
