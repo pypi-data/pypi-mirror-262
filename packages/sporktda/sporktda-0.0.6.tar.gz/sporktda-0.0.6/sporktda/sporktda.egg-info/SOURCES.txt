@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+sporktda/sporktda/__init__.py
+sporktda/sporktda.egg-info/PKG-INFO
+sporktda/sporktda.egg-info/SOURCES.txt
+sporktda/sporktda.egg-info/dependency_links.txt
+sporktda/sporktda.egg-info/requires.txt
+sporktda/sporktda.egg-info/top_level.txt
+sporktda/sporktda/TDA/BuZZ.py
+sporktda/sporktda/TDA/TGZZ.py
+sporktda/sporktda/TDA/__init__.py
