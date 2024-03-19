@@ -1,0 +1,17 @@
+gnfish/align_sequences.py,sha256=mOv02YHDiu3B-N9QYPy6Kc553UlyTvu8Jk8uD1ZOTBo,4451
+gnfish/alignment_trimming.py,sha256=cf1GULwY2UoSMBaWw7l4NZj6X91sxKlaGU1A4uCOSEc,950
+gnfish/blast.py,sha256=ZHM0yA0GBN2KEi3_T7Psbwk2DP6OhZpzMzKQiGFbA1A,5719
+gnfish/decompress_genomes.py,sha256=VGE8o2-_-8M1iJryoomArXRUqLfCjHWPjMp5t-P6pa8,1591
+gnfish/get_combined_seqs.py,sha256=JpY2KOPa2zMgvoJpzxOp6fAZbt0WNgi8qERb6sMGv8w,5125
+gnfish/get_genomes.py,sha256=TuHyB6jvQ75uQdnZFwywRh2exywxPIjhmltUBcHNGEc,9585
+gnfish/get_query_sequences.py,sha256=rCAhi_6-h1Se6q-BMlqkeiMz9W-4wdqIe4Ug9-Vd034,5010
+gnfish/get_raw_sequences.py,sha256=nKXHjRVVYDTFcEYGbXZO8xdoAsLrojIsikG7EY9K-M0,12373
+gnfish/get_unique_hits.py,sha256=r34FimyQG1dUIqBRLU7mmUN6i16KjgtPYmkFs585sLk,4439
+gnfish/phylogenetic_inference.py,sha256=p5snRw0yazcVOI1jUZcQqk_n07wYZUwdt5w9W_wkoUg,1173
+gnfish/translate_sequences.py,sha256=UwBS1Po3Cs95fsaMvcm496YbvgPePAAFBIS1PYyD9NY,32635
+gnfish/utils.py,sha256=V2YNxhcXIpUdxA2KxQshAq4Zau6TWkx08CLVMW-3JBY,303
+gnfish-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+gnfish-0.1.0.dist-info/METADATA,sha256=CDEnEUljs_QE4HLS1bB1h7ynImL31zujGb-Awguk4do,28055
+gnfish-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+gnfish-0.1.0.dist-info/entry_points.txt,sha256=Xs6RhmM1eUQf8QrDHfjaXMuH7S-F_Plfq-buXRidsqo,525
+gnfish-0.1.0.dist-info/RECORD,,

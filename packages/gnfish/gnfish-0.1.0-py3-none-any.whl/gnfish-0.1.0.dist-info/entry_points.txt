@@ -1,0 +1,13 @@
+[console_scripts]
+align_sequences=gnfish.align_sequences:main
+alignment_trimming=gnfish.alignment_trimming:main
+blast=gnfish.blast:main
+decompress_genomes=gnfish.decompress_genomes:main
+get_combined_seqs=gnfish.get_combined_seqs:main
+get_genomes=gnfish.get_genomes:main
+get_query_sequences=gnfish.get_query_sequences:main
+get_raw_sequences=gnfish.get_raw_sequences:main
+get_unique_hits=gnfish.get_unique_hits:main
+phylogenetic_inference=gnfish.phylogenetic_inference:main
+translate_sequences=gnfish.translate_sequences:main
+
