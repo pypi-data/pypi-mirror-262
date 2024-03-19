@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: EchoMessagerAPI
+Version: 0.0.7
+Summary: API to access EchoServer post-quantum messager.
+Home-page: https://github.com/FunDan3/EchoAPI/
+Author: Fun_Dan3
+Author-email: dfr34560@gmail.com
+Project-URL: Bug Tracker, https://github.com/FunDan3/EchoAPI/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pqcryptography
+Requires-Dist: aiohttp
+
+# EchoAPI
+API for accessing Echo messager server
