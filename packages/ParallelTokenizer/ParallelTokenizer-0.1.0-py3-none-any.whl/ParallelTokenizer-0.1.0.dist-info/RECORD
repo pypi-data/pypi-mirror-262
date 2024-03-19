@@ -1,0 +1,10 @@
+parallel_tokenizer/__init__.py,sha256=ON0Fhvci_I05KqiXlBkU6gpdYU6l90OTTlxkUUvCjc8,253
+parallel_tokenizer/logger.py,sha256=Gjod4hJUqeU8fRw2V69_tpDAF-aZSqfz3wGuICwM6AI,1363
+parallel_tokenizer/parallel_tokenizer.py,sha256=-S8HeRbTsBeJ01Wl8cy5s_sPJzG1C8qJL1fdbMoNcWM,8944
+parallel_tokenizer/sp_tokenizer.py,sha256=ZHNFk3fmGBylw9WI-YSJ2XAnR2wBIW0TkBLgjbYGXZY,2389
+parallel_tokenizer/utils.py,sha256=rpFDlxb7hpIAW3yd4D1M0kwbMjenH346PsGq0u2C51Q,12605
+ParallelTokenizer-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ParallelTokenizer-0.1.0.dist-info/METADATA,sha256=yMfsTYNuC_5VmgHPoIjjXp7X-U05C_vJcA4Y9f_P21M,638
+ParallelTokenizer-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ParallelTokenizer-0.1.0.dist-info/top_level.txt,sha256=hPOgez-u9tQjusWI_JV2dH5l7FkMJJBOyrvOnC57XEw,19
+ParallelTokenizer-0.1.0.dist-info/RECORD,,
