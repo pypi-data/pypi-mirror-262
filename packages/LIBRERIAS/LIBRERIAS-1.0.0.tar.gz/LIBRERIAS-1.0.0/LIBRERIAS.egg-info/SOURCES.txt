@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+LIBRERIAS.egg-info/PKG-INFO
+LIBRERIAS.egg-info/SOURCES.txt
+LIBRERIAS.egg-info/dependency_links.txt
+LIBRERIAS.egg-info/top_level.txt
+tramas/CrearTrama.py
+tramas/__init__.py
