@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/dynalistTk.py
+src/dynalistTk.egg-info/PKG-INFO
+src/dynalistTk.egg-info/SOURCES.txt
+src/dynalistTk.egg-info/dependency_links.txt
+src/dynalistTk.egg-info/requires.txt
+src/dynalistTk.egg-info/top_level.txt
