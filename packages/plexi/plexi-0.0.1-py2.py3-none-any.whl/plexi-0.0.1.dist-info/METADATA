@@ -1,0 +1,35 @@
+Metadata-Version: 2.3
+Name: plexi
+Version: 0.0.1
+Summary: A module for working with 24 bit bitmap files
+Author: Frederik Siegumfeldt
+Description-Content-Type: text/markdown
+
+Bitmap(width : int, height : int, color=(0, 0, 0)):
+
+bmp[coord]
+bmp[coord] = (255, 0, 0)
+
+for coord in bmp:
+    print(coord)
+
+if coord in bmp:
+    bmp[coord] = (255, 0, 0)
+
+bmp.get(coord):
+
+for coord in keys():
+    pass
+
+for coord, color in items():
+    pass
+
+for color in values():
+    pass
+
+
+bmp.save(path):
+
+Bitmap.from_dict(d : dict)
+Bitmap.load(path)
+Bitmap.get_sample(name)

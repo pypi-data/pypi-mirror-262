@@ -1,0 +1,9 @@
+plexi/__init__.py,sha256=Z3VoeumerWeG1DiHpBC77v7Ii3h_ngu03WXpAOFGrDo,78
+plexi/bitmap.py,sha256=UrLdu6b5bA3ZuGSxivRzO7DJk-zFi2QV0kJTMhgUcFA,2543
+plexi/color.py,sha256=ZE9jcl3kNoFUEmyiqzfdGLUNWsWwFT5qgCYf_01TlAk,388
+plexi/coords.py,sha256=yPjJ8vn5i_8b5XbtVCgoGbLjPZtWiYngj7_xA6xQGRU,619
+plexi/io_.py,sha256=ANoLsYqN0iAlhWHo4Xw-IUYOMK4TCfc_PYYGEiYkys0,1907
+plexi/images/logo.bmp,sha256=gAR_uFXSRDThM5Qk1RiRhBU-Qh9w52treYA0aJM58Pc,220638
+plexi-0.0.1.dist-info/METADATA,sha256=LW34rE8Y4en_UJAVq0gqmSkVq6uY7VETZcCWi_bs-sY,553
+plexi-0.0.1.dist-info/WHEEL,sha256=L5_n4Kc1NmrSdVgbp6hdnwwVwBnoYOCnbHBRMD-qNJ4,105
+plexi-0.0.1.dist-info/RECORD,,
