@@ -1,0 +1,66 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pixano-inference"
+dynamic = ["version"]
+description = 'Inference models for Pixano, data-centric AI building blocks for computer vision applications' 
+readme = "README.md"
+requires-python = "~=3.10"
+license = "CeCILL-C"
+authors = [{name = "Pixano Developers", email = "pixano@cea.fr"}]
+keywords = [
+  "computer vision",
+  "deep learning",
+  "machine learning",
+  "data visualization",
+  "data annotation"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3.10",
+  "License :: CeCILL-C Free Software License Agreement (CECILL-C)",
+]
+dependencies = [
+  "pixano ~= 0.5.0",
+  "torch ~= 2.2.0",
+  "torchaudio ~= 2.2.0",
+  "torchvision ~= 0.17.0",
+  "tensorflow ~= 2.15.0",
+  "tensorflow-hub ~= 0.15.0",
+  "transformers >= 4.33.0",
+  "timm >= 0.9.12",
+  "gitpython >= 3.1.30",
+  "matplotlib >= 3.3",
+  "psutil >= 5.9.5",
+  "PyYAML >= 5.3.1",
+  "requests >= 2.23.0",
+  "seaborn >= 0.11.0",
+  "scipy >= 1.4.1",
+  "thop >= 0.1.1",
+]
+
+[project.optional-dependencies]
+documentation = [
+  "mkdocs-material ~= 9.4.0",
+  "mkdocstrings-python ~= 1.7.0",
+  "mkdocs-gen-files ~= 0.5.0",
+  "mkdocs-literate-nav ~= 0.6.0",
+  "mkdocs-redirects ~= 1.2.1",
+]
+
+[project.urls]
+Documentation = "https://github.com/pixano/pixano-inference#readme"
+Issues = "https://github.com/pixano/pixano-inference/issues"
+Source = "https://github.com/pixano/pixano-inference"
+
+[tool.hatch.build]
+include = ["/pixano_inference"]
+exclude = ["__pycache__"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.version]
+path = "pixano_inference/__version__.py"
