@@ -1,0 +1,5 @@
+requests
+httpx
+httpx[http2]
+fake_useragent
+loguru
