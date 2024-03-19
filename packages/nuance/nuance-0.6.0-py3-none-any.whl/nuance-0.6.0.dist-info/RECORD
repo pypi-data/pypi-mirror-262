@@ -1,0 +1,12 @@
+nuance/__init__.py,sha256=cPY_LIPKB3Idu_TDS3lgydNA0f6RuK1avImpeDN18zM,263
+nuance/combined.py,sha256=COHdeN7r4NaJeskv8M8WXKgGACjZnEn852OfoP85dPE,9245
+nuance/core.py,sha256=No5BUf3Zmd87_ysyVUCDkm_fWt8b18mJqLZWKxhm4uY,1815
+nuance/kernels.py,sha256=YkYIDAWQfP4-dzq8lcqrLkE9e40cKT7mPiRtH4176kc,1711
+nuance/nuance.py,sha256=vFRxkvmS6FuU_i0TNw66s28t0oTsVYzvNsJ4frL0Vlo,17746
+nuance/search_data.py,sha256=Ds-MjzMYsm2DBtC-feEpjqi1ZUp93l8BC48rjy4uMi4,4988
+nuance/star.py,sha256=m4YoQWXgbmHXE1w4v_GfDLx7PJatjPnu0f_6x4V8m5U,7037
+nuance/utils.py,sha256=wCa0VlLdjs3blaRPpCLVjl4V0kNHN1t83zj_RQyaujI,6403
+nuance-0.6.0.dist-info/LICENSE,sha256=bGbTsnnDsiLoFmbdFgvSiKeT4rhYQC3YUgyQdKladcQ,1097
+nuance-0.6.0.dist-info/METADATA,sha256=QU1j3tsP4Kp74Au5_ldXWC55ipKKwZr0vc39AJWx9Go,2159
+nuance-0.6.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+nuance-0.6.0.dist-info/RECORD,,
