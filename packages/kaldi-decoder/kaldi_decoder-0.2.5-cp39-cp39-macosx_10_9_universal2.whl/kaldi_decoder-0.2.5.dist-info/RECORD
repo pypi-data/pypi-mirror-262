@@ -1,0 +1,11 @@
+_kaldi_decoder.cpython-39-darwin.so,sha256=5t4hEcd3AiX3arRFHvM2-q8jl5lPrsdIfBgML3_H6Cs,605008
+kaldi_decoder/__init__.py,sha256=cwZgeSBq4XfDMofzCXL-9Pj-DWT6uk0ovcGbo_6iyqw,217
+kaldi_decoder/lib/libkaldi-decoder-core.dylib,sha256=m08_9GaLq0NnFJn0vV41rZafxA8RxbecVDmitS5L3aI,700536
+kaldi_decoder/lib/libkaldi-decoder-fst.6.dylib,sha256=P6NaYOUZzd-deMyKmDaO35SXL48SX7ED4yUK5FknkFg,1807680
+kaldi_decoder/lib/libkaldi-decoder-fst.dylib,sha256=P6NaYOUZzd-deMyKmDaO35SXL48SX7ED4yUK5FknkFg,1807680
+kaldi_decoder/lib/libkaldi-decoder-kaldi-fst-core.dylib,sha256=YPezmrIZ-O8y1ZiMOmERV3eoCPZh69QTgSsg_D1L4zo,1243224
+kaldi_decoder-0.2.5.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+kaldi_decoder-0.2.5.dist-info/METADATA,sha256=HpvFCjwdV1Zk2P_7hHuLmaIxAtNXAQs5lPFcjr8NpWQ,1262
+kaldi_decoder-0.2.5.dist-info/WHEEL,sha256=DRUtZWfg_vgxWiUs-O1AqLTEbWMpZd0jFAjVIhwHG9M,113
+kaldi_decoder-0.2.5.dist-info/top_level.txt,sha256=_zZmTx-EYjIPrjkMZkT_9Vb0fFV12mKWRps7FBONiR4,29
+kaldi_decoder-0.2.5.dist-info/RECORD,,
