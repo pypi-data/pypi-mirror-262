@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: jasperClient
+Version: 0.0.3
+Summary: jasper Client for connecting to Jasper Server and using rest API
+Home-page: https://www.billonprestations.fr
+Author: Billon Prestations
+Author-email: alexandre@billonprestations.fr
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Requires-Dist: setuptools (>=21.0.0)
+Requires-Dist: urllib3 (>=2.2.1)
+Requires-Dist: fastapi (>=0.92.0)
+Requires-Dist: requests (>=2.31.0)
+Requires-Dist: xmltodict (>=0.13.0)
+
+# Jasper Client Python Library
+
+## Installation
+
+```sh
+pip3 install jasperClient
+```
+
+## Utilisation
+
+### Create a client instance
+
+```python
+from jasperClient.client import JasperClient
+
+client = JasperClient("https://jasper.host/jasperserver/", "username", "password")
+```
+
+### Get a list of reports
+
+```python
+client.listReports()
+```
+
+### Get a dict with the required params of a report
+
+```python
+client.getParameters(path_of_the_report)
+```
+
+### Generate a report
+
+```python
+client.getReport(
+    path=path_of_the_report,
+    data=dict_with_report_params,
+    filename="test",
+    format="pdf",
+)
+```
+
