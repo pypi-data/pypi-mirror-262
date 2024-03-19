@@ -1,0 +1,15 @@
+AUTHORS.md
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+Morphomics.egg-info/PKG-INFO
+Morphomics.egg-info/SOURCES.txt
+Morphomics.egg-info/dependency_links.txt
+Morphomics.egg-info/requires.txt
+Morphomics.egg-info/top_level.txt
+morphomics/__init__.py
+morphomics/default_parameters.py
+morphomics/protocols.py
+morphomics/utils.py
