@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: geospotter_api_py
+Version: 0.0.3
+Summary: API interface to for university project
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Author-email: PettingStrings <danutrazvan.paduraru@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# geospotter_api_py
+ 
