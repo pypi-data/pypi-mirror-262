@@ -1,0 +1,10 @@
+text_class_retail/__init__.py,sha256=he9sYbnXBUH0twKsl7BCTn2-VatsVbC2xkXjvwL8gjc,37
+text_class_retail/ds_tree.joblib,sha256=D_aenk-bQ-ctSApKyIAl2nIef3fJUC0ce7mYHWoEJoE,861225
+text_class_retail/logreg.joblib,sha256=dqqqtJSQY44f1CTYgqEQXxKyHM5zvsrO9x0P7jeJrqA,2254859
+text_class_retail/predictor.py,sha256=_JUd5HiqdZUFz2STHqraiNFoHJPcloW0Xw5QsC6gf-o,1060
+text_class_retail/rd_forest.joblib,sha256=EHPSEtHiQJmLXPRu5jxupX_LKC1rG-wECAWkdy0GfYU,59659220
+text_class_retail-0.1.dist-info/LICENSE.txt,sha256=C2es1txc55Au58FMivq_-u1pFFSjzM2zDDI5O75WICE,1105
+text_class_retail-0.1.dist-info/METADATA,sha256=z-mzoZ3kFj_zLmU4Ujy6l3kMChIrddKPynv74NFyTpg,162
+text_class_retail-0.1.dist-info/WHEEL,sha256=Xo9-1PvkuimrydujYJAjF7pCkriuXBpUPEjma1nZyJ0,92
+text_class_retail-0.1.dist-info/top_level.txt,sha256=HxAcBNAFZiqc3-aRH-qxOuIqsoNJPQ3sDJf87uEFQ3s,18
+text_class_retail-0.1.dist-info/RECORD,,
