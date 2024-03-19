@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: jasperClient
+Version: 0.0.2
+Summary: jasper Client for connecting to Jasper Server and using rest API
+Home-page: https://www.billonprestations.fr
+Author: Billon Prestations
+Author-email: alexandre@billonprestations.fr
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: setuptools (>=21.0.0)
+Requires-Dist: urllib3 (>=2.2.1)
+Requires-Dist: fastapi (>=0.92.0)
+Requires-Dist: requests (>=2.31.0)
+Requires-Dist: xmltodict (>=0.13.0)
+
+UNKNOWN
+
