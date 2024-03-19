@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+src/jasperClient/__init__.py
+src/jasperClient/client.py
+src/jasperClient.egg-info/PKG-INFO
+src/jasperClient.egg-info/SOURCES.txt
+src/jasperClient.egg-info/dependency_links.txt
+src/jasperClient.egg-info/requires.txt
+src/jasperClient.egg-info/top_level.txt
