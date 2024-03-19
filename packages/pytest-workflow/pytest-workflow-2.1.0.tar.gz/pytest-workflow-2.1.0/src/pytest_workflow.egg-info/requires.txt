@@ -1,0 +1,5 @@
+pytest>=7.0.0
+pyyaml
+jsonschema
+xopen>=1.4.0
+zstandard
