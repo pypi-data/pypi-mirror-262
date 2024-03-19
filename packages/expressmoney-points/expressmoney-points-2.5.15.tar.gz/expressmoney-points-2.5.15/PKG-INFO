@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: expressmoney-points
+Version: 2.5.15
+Summary: Service points
+Author: Development team
+Author-email: dev@expressmoney.com
+Requires-Python: >=3.7
