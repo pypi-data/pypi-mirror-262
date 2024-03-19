@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: CapCokor_tiga
+Version: 1.1.4
+Summary: cap cokor tiga adalah minuman paling goblog di dunia
+Home-page: https://github.com/IrfanDect/Cap_Cokor_tiga
+Author: bsbdrack
+Author-email: bsbdrack@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: baso-kontol
+Provides-Extra: excel
+Requires-Dist: openpyxl ; extra == 'excel'
+
+example : hello word ...
+
