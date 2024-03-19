@@ -1,0 +1,8 @@
+setup.py
+Analysis/Encoding_ChingVersion.py
+Analysis/__init__.py
+Encoding_ChingVersion.egg-info/PKG-INFO
+Encoding_ChingVersion.egg-info/SOURCES.txt
+Encoding_ChingVersion.egg-info/dependency_links.txt
+Encoding_ChingVersion.egg-info/requires.txt
+Encoding_ChingVersion.egg-info/top_level.txt

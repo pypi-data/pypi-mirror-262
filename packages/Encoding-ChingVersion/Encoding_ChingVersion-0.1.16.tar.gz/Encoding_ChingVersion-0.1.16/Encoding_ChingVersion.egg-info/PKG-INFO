@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Encoding_ChingVersion
+Version: 0.1.16
+Summary: One hot encoding Categorical to Numerical
+Author: chingDev.Official (Prince Carl Ajoc)
+Author-email: chingace471@gmail.com
+Keywords: encoding,categorical data,numerical data,data preprocessing,machine learning,data science
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: pandas
