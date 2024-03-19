@@ -1,0 +1,7 @@
+PyYAML
+numpy
+validators>=0.20.7
+python-gnupg
+requests
+pycryptodome
+tqdm
