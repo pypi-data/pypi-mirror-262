@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: poetry-patches
+Version: 0.1.0
+Summary: A patches plugin for Poetry.
+Home-page: https://github.com/csirmazbendeguz/poetry-patches
+License: MIT
+Keywords: poetry
+Author: Bendegúz Csirmaz
+Author-email: csirmazbendeguz@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: poetry (>=1.8.2,<2.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: whatthepatch (>=1.0.5,<2.0.0)
+Project-URL: Repository, https://github.com/csirmazbendeguz/poetry-patches
+Description-Content-Type: text/markdown
+
+# poetry-patches
+
+A patches plugin for Poetry.
+
