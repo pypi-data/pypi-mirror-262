@@ -1,0 +1,20 @@
+"""This module contains the response models for the detected issues endpoint
+and a report helper."""
+
+from typing import Any, Dict, List, Optional
+
+from pydantic import BaseModel, Field
+
+from mythx_models.response.issue import Issue, SourceFormat, SourceType
+
+
+class IssueReport(BaseModel):
+    issues: List[Issue]
+    source_type: Optional[SourceType] = Field(None, alias="sourceType")
+    source_format: Optional[SourceFormat] = Field(None, alias="sourceFormat")
+    source_list: Optional[List[str]] = Field(None, alias="sourceList")
+    meta_data: Dict[str, Any] = Field(alias="meta")
+
+
+class DetectedIssuesResponse(BaseModel):
+    issue_reports: List[IssueReport]
