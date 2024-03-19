@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+gymnasium_snake_game/__init__.py
+gymnasium_snake_game/version.py
+gymnasium_snake_game.egg-info/PKG-INFO
+gymnasium_snake_game.egg-info/SOURCES.txt
+gymnasium_snake_game.egg-info/dependency_links.txt
+gymnasium_snake_game.egg-info/requires.txt
+gymnasium_snake_game.egg-info/top_level.txt
+gymnasium_snake_game/environment/__init__.py
+gymnasium_snake_game/environment/core.py
+gymnasium_snake_game/environment/snake_env.py
+gymnasium_snake_game/environment/utils.py
