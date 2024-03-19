@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: mcdacomparator
+Version: 0.0.1
+Home-page: https://github.com/mcdait/comparator
+Author: Artur Karczmarczyk
+Author-email: "info@mcda.it"
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib >=3.8.3
+Requires-Dist: numpy >=1.26.4
+Requires-Dist: pandas >=2.2.1
+Requires-Dist: pyrepo-mcda >=0.1.5
+Requires-Dist: scipy >=1.12.0
+Requires-Dist: seaborn >=0.13.2
+
+# comparator
+MCDA Methods Comparator
