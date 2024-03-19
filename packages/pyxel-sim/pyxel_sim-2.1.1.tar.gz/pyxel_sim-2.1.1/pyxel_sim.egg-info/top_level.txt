@@ -1,0 +1,6 @@
+data
+dist
+output
+outputs
+pyxel
+pyxel-sim
