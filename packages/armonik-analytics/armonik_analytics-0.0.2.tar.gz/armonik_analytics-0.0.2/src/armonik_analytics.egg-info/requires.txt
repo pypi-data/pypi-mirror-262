@@ -1,0 +1,15 @@
+armonik>=3.16.1
+numpy
+
+[dev]
+mypy
+ruff
+
+[samples]
+matplotlib
+
+[tests]
+coverage
+pytest
+pytest-cov
+pytest-benchmark[histogram]
