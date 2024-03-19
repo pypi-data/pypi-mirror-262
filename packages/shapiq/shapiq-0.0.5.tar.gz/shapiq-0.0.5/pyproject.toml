@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = "shapiq"
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.ruff]
+select = ["E", "F", "I", "UP"]  # https://beta.ruff.rs/docs/rules/
+line-length = 100
+target-version = 'py39'
+ignore = ["E501"]
