@@ -1,0 +1,45 @@
+# Python_course
+LaTeX Tools
+LaTeX Tools is a Python package that simplifies the generation of LaTeX documents. It provides functionality to automatically create tables and include images in your LaTeX documents, making it easier to incorporate data and visuals into your LaTeX projects.
+
+Features
+Generate LaTeX code for tables from Python lists.
+Include images in your LaTeX documents with simple Python commands.
+Installation
+You can install LaTeX Tools directly from PyPI:
+
+sh
+Copy code
+pip install latexgen-renzo-fu
+Replace latexgen-renzo-fu with the actual name of your package on PyPI.
+
+Usage
+Creating a Table
+To create a table in your LaTeX document, use the generate_latex_table function:
+
+python
+Copy code
+from latex_tools import generate_latex_table
+
+data = [
+    ["Header 1", "Header 2", "Header 3"],
+    ["Row 1, Cell 1", "Row 1, Cell 2", "Row 1, Cell 3"],
+    ["Row 2, Cell 1", "Row 2, Cell 2", "Row 2, Cell 3"]
+]
+
+latex_code = generate_latex_table(data)
+print(latex_code)
+Including an Image
+To include an image in your LaTeX document, use the generate_latex_image function:
+
+python
+Copy code
+from latex_tools import generate_latex_image
+
+image_code = generate_latex_image('path/to/your/image.png', 'Caption for the image', 'fig:image_label')
+print(image_code)
+Contributing
+Contributions to LaTeX Tools are welcome! Please fork the repository and submit a pull request with your improvements.
+
+License
+LaTeX Tools is licensed under the MIT License. See the LICENSE file for more details.
