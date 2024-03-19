@@ -1,0 +1,13 @@
+
+[dev]
+black
+build
+flake8
+flake8-black
+isort
+mypy
+pre-commit
+pytest
+pytest-cov
+pytest-xdist
+twine
