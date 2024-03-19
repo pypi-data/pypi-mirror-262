@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: UnsupervisedBinning
+Version: 0.1.0
+Summary: Unsupervised Analysis Binning
+Author: chingDev.Official (Prince Carl Ajoc)
+Author-email: chingace471@gmail.com
+Keywords: unsupervised learning,binning,data analysis,machine learning,clustering,data science
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
