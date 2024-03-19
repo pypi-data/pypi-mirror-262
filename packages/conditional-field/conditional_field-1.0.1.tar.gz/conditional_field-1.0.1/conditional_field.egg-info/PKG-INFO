@@ -1,0 +1,137 @@
+Metadata-Version: 2.1
+Name: conditional_field
+Version: 1.0.1
+Summary: An application made for the Django Web Framework.
+Home-page: https://github.com/Nigel2392/conditional_field
+Author: Nigel
+Author-email: nigel@goodadvice.it
+License: GPL-3.0-only
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django>=4.2
+Requires-Dist: Wagtail>=4.2
+
+# conditional_field
+
+Allows for arbitrary showing and hiding of fields in the admin based on certain user input.
+Idea based on [Wagtail UI+](https://pypi.org/project/wagtailuiplus/#description)'s conditional visibility fields.
+
+## Installations
+
+1. Add conditional field to your `INSTALLED_APPS`
+   ```
+   INSTALLED_APPS = [
+       ...
+       'conditional_field'
+       ...
+   ]
+   ```
+   
+2. Run `python3 ./manage.py collectstatic`
+
+## Example usage of the gcf conditional fields.
+
+```python
+from wagtail import blocks
+
+
+class Link(blocks.StructBlock):
+    text = blocks.CharBlock(
+        required=False,
+        label=_("Link"),
+        help_text=_("The text to be displayed."),
+    )
+    page = blocks.PageChooserBlock(
+        required=False,
+        label=_("Link"),
+        classname=(
+            "gcf "
+            "gcf-handler--choice "
+            "gcf-action--show--page "
+        ),
+    )
+    document = DocumentChooserBlock(
+        required=False,
+        label=_("Document"),
+        classname=(
+            "gcf "
+            "gcf-handler--choice "
+            "gcf-action--show--document "
+        ),
+    )
+    external_link = blocks.URLBlock(
+        required=False,
+        label=_("External Link"),
+        classname=(
+            "gcf "
+            "gcf-handler--choice "
+            "gcf-action--show--external_link"
+        ),
+    )
+    choice = blocks.ChoiceBlock(
+        required=True,
+        choices=[
+            ("page", _("Page")),
+            ("document", _("Document")),
+            ("external_link", _("External Link")),
+        ],
+        default="page",
+        label=_("Link Type"),
+        classname=(
+            "gcf "
+            "gcf-handler--choice "
+        ),
+        # Works with radios; selects and other input types.
+        widget=forms.RadioSelect,
+    )
+
+
+hide_animation_fields_classname = (
+    'gcf '
+    'gcf-handler--animation '
+    'gcf-action-empty--hide '
+    'gcf-action-any--show'
+)
+
+class AnimatorBlock(blocks.StructBlock):
+    animation = blocks.ChoiceBlock(
+        choices=animations_choices,
+        required=False,
+        label=_("Animation"),
+        translatable=False,
+        classname=(
+            'gcf-handler '
+            'gcf-handler--animation'
+        ),
+    )
+
+    duration = blocks.IntegerBlock(
+        default=1000,
+        required=True,
+        translatable=False,
+        label=_("Duration"),
+        classname=hide_animation_fields_classname,
+    )
+
+    delay = blocks.IntegerBlock(
+        default=0,
+        required=True,
+        translatable=False,
+        label=_("Delay"),
+        classname=hide_animation_fields_classname,
+    )
+```
