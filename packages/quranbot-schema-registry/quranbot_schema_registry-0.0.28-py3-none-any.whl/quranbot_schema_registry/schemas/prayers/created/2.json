@@ -1,0 +1,56 @@
+{
+  "$id": "https://example.com/demo",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Prayers.Sended.v1",
+  "version": 1,
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "event_version": {
+      "enum": [
+        2
+      ]
+    },
+    "event_name": {
+      "type": "string"
+    },
+    "event_time": {
+      "type": "string"
+    },
+    "producer": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        },
+        "city_id": {
+          "type": "string"
+        },
+        "day": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "time",
+        "city_id",
+        "day"
+      ]
+    }
+  },
+  "required": [
+    "event_id",
+    "event_version",
+    "event_name",
+    "event_time",
+    "producer",
+    "data"
+  ]
+}
