@@ -1,0 +1,14 @@
+torch<2.3,>=2.1
+configargparse
+ctranslate2<5,>=4
+tensorboard>=2.3
+flask
+waitress
+pyonmttok<2,>=1.37
+pyyaml
+sacrebleu
+rapidfuzz
+pyahocorasick
+fasttext-wheel
+spacy
+six
