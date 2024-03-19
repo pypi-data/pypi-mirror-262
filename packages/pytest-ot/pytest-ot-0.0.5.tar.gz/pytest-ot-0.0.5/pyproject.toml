@@ -1,0 +1,70 @@
+[project]
+name = "pytest-ot"
+version = "0.0.5"
+authors = [
+  { name="Chris Guidry", email="chris@theguidrys.us" },
+  { name="Drobyshev Maksim", email="sibmaks@vk.com" },
+]
+description = "A pytest plugin for instrumenting test runs via OpenTelemetry"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: Pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/sibmaks/pytest-ot"
+Issues = "https://github.com/sibmaks/pytest-ot/issues"
+
+[build-system]
+requires = ["setuptools>=62", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[tool.black]
+skip-string-normalization = true
+target-version = ['py39']
+
+[tool.coverage.report]
+omit = [
+    "src/pytest_ot/__init__.py",
+    "src/pytest_ot/plugin.py"
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+namespace_packages = true
+
+[[tool.mypy.overrides]]
+module = ['xdist.workermanage']
+ignore_missing_imports = true
+
+[tool.pylint.messages_control]
+disable = [
+    'attribute-defined-outside-init',
+    'fixme',
+
+    'missing-function-docstring',
+    'missing-module-docstring',
+
+    # fundamental to how pytest fixtures work
+    'redefined-outer-name',
+    'unused-argument'
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = """
+    --cov=src
+    --cov=tests
+    --cov-branch
+    --cov-report=term-missing
+    --cov-fail-under=100
+    --no-cov-on-fail
+"""
