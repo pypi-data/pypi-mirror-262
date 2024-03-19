@@ -1,0 +1,10 @@
+README.md
+setup.py
+CapCokor_tiga/__init__.py
+CapCokor_tiga/cli.py
+CapCokor_tiga.egg-info/PKG-INFO
+CapCokor_tiga.egg-info/SOURCES.txt
+CapCokor_tiga.egg-info/dependency_links.txt
+CapCokor_tiga.egg-info/entry_points.txt
+CapCokor_tiga.egg-info/requires.txt
+CapCokor_tiga.egg-info/top_level.txt
