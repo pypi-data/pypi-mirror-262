@@ -1,0 +1,1 @@
+This is a simple inSis package. By using this package We can get the CurrentData and HistoryData Information and Publish the ManualEntry data.
