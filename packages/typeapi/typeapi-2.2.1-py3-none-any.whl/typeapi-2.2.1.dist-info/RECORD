@@ -1,0 +1,17 @@
+typeapi/__init__.py,sha256=OvqzX5iwCNY6ITEPhalDwiYOMLSlFAsniwvCIA_fn3E,644
+typeapi/backport/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+typeapi/backport/inspect.py,sha256=ccyzHiGZjLavr9UkKBdF86foeOjvnM82_ztS3BX5zh4,4883
+typeapi/future/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+typeapi/future/astrewrite.py,sha256=MP4_7MWgiRqBDrYXuY2AajUiSuVGxa9KM8Gl024FFdM,5210
+typeapi/future/astrewrite_test.py,sha256=75FTVvwCZ6t67uX9AYTtUZFp_1QJUjR-19hj3T8zD6w,765
+typeapi/future/fake.py,sha256=k57Kq9fwRzzDU59_NeRYh8z61DVAxqYUmYdyFi4TcW4,3723
+typeapi/future/fake_test.py,sha256=xStMKrYWeL7q7qQeByTq4rMxfy4IMpZHPdqNYu5idlY,1965
+typeapi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+typeapi/typehint.py,sha256=NjGH5przDOBpYtEAh9Us-1CuRYuovrKNHxncR1wgGvc,21609
+typeapi/typehint_test.py,sha256=ibWVTpu2gNnZl98kkmHMc8-2_0yqkX1XQxffeBrgQZE,18002
+typeapi/utils.py,sha256=RL1ApjDzlMPIhJUq9ZtV3B_a43AvJ0Ck9KLy6QkhcRQ,13464
+typeapi/utils_test.py,sha256=9iAcm5T-_KFWP1QA2zpixmWaB0Vu_eJPKn6gnVXMO_c,16290
+typeapi-2.2.1.dist-info/LICENSE,sha256=lZqeKjXTURfW9lygbsFbkEPae421LZNFAyLGl6iCohg,991
+typeapi-2.2.1.dist-info/METADATA,sha256=cCgBY2LtCraXs71xV_agghNXRJqI6DECfopWKWuf9lE,1892
+typeapi-2.2.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+typeapi-2.2.1.dist-info/RECORD,,
