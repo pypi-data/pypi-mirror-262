@@ -1,0 +1,17 @@
+odbc2deltalake/__init__.py,sha256=FHv5cK16pTR-x6j9rtHforDrnSQCFYFp7vFjc_TElME,64
+odbc2deltalake/db_to_delta.py,sha256=sGps5EQhSfUHRK8h_swgQn3ljD1JMDJKZfj4T6cHqcw,29335
+odbc2deltalake/destination/__init__.py,sha256=5altK3qcLBq1GNdc99eu1nMc3AoHq_HXdkerl2ZKUJg,38
+odbc2deltalake/destination/azure.py,sha256=sdGeYQgAblN8Jxhk1K5sNoj4zz_09APJeJs-gntVK7U,3695
+odbc2deltalake/destination/azure_utils.py,sha256=EjpTYIUZAJohhrW5gHmG9UMWJ23x35xf70d-DGNKpHk,4317
+odbc2deltalake/destination/destination.py,sha256=PjCgGdYKIi6nWflEq3bpqu1P1kB4iKXrvogyu4dM7EI,1437
+odbc2deltalake/destination/file_system.py,sha256=vSdGFeOaHiEeC5daf5vCOFQggqzoUszKoOVRryru-Lo,1730
+odbc2deltalake/metadata.py,sha256=DhmYRUxyZL0F3tx8Xg3iT_G-eqirL8JIlQli9aBU9wg,4355
+odbc2deltalake/odbc_utils.py,sha256=d7n9YzCDq5wZD7ag6WHeUv6EfBnH0_51NTMSpJTjTcY,1221
+odbc2deltalake/query.py,sha256=tVmgICEzUXXgsDVAbX0NrIE969grRA1UIfWHAUR--8o,1851
+odbc2deltalake/reader.py,sha256=2gbiO_auGFq4hKqumOHiAirDRqN6F1NqK5NnVsLY09U,8751
+odbc2deltalake/sql_glot_utils.py,sha256=1su1FiIu8fqvaFPHD-p5U8XNKdxds97CmOGQPwB50Kg,1976
+odbc2deltalake/sql_schema.py,sha256=vArVnA4853LZ6Z45LfcB6JUr_r2RG3Bc-xyK57qo71s,3251
+odbc2deltalake-0.3.0.dist-info/LICENSE,sha256=RmDLrxKO4r1fjOOczJCkKrd1Tv3AF1q1SGb14PFp1iQ,1081
+odbc2deltalake-0.3.0.dist-info/METADATA,sha256=SawVsHpzpQBmATsTA07ockwRFAki6fwch0XBLYP_qSo,1818
+odbc2deltalake-0.3.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+odbc2deltalake-0.3.0.dist-info/RECORD,,
