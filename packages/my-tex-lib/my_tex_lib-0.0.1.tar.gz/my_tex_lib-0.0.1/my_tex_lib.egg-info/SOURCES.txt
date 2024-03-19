@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+my_tex_lib.egg-info/PKG-INFO
+my_tex_lib.egg-info/SOURCES.txt
+my_tex_lib.egg-info/dependency_links.txt
+my_tex_lib.egg-info/requires.txt
+my_tex_lib.egg-info/top_level.txt
+tex_lib/__init__.py
+tex_lib/generate_pdf.py
+tex_lib/generator.py
+tex_lib/make_table.py
+tex_lib/make_table_and_image.py
