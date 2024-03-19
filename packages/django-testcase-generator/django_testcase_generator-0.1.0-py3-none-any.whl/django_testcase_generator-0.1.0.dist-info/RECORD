@@ -1,0 +1,10 @@
+django_testcase_generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_testcase_generator/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_testcase_generator/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_testcase_generator/management/commands/generate_tests.py,sha256=6fVSchG_XmVJ2sbuXzO0UxOVXRJFtORQUCkN2amN3mw,8826
+django_testcase_generator/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_testcase_generator-0.1.0.dist-info/LICENSE,sha256=YrKp7zFaX-ewDEAuspf1rH2GmXmiZm-7OeV0Cyb7XsI,1075
+django_testcase_generator-0.1.0.dist-info/METADATA,sha256=eNbs9yo5vRYNGgubUj-517Wj7t2KWfS9BdG7bqyZBUk,664
+django_testcase_generator-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_testcase_generator-0.1.0.dist-info/top_level.txt,sha256=W640R-mupaBw0abnPSb4hbeHLYUxPwZKLoRx_wmyxcI,26
+django_testcase_generator-0.1.0.dist-info/RECORD,,
