@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+NeuronsMemoryTestPipeline.egg-info/PKG-INFO
+NeuronsMemoryTestPipeline.egg-info/SOURCES.txt
+NeuronsMemoryTestPipeline.egg-info/dependency_links.txt
+NeuronsMemoryTestPipeline.egg-info/requires.txt
+NeuronsMemoryTestPipeline.egg-info/top_level.txt

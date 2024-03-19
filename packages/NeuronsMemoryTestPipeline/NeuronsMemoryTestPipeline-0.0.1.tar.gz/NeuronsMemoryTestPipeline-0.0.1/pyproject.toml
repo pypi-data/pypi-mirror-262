@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "NeuronsMemoryTestPipeline"
+version = "0.0.1"
+description = "Package provides QA, MRT and FRT metrics calculation for frt and mrt scores."
+authors = [
+  { name="Irina White", email="i.white@neuronsinc.com" },
+  { name="Theo Sell", email="t.sell@neuronsinc.com" }
+]
+license = "MIT"
+homepage = "https://gitlab.com/neurons-inc1/data-analyst/neurons_metrics_package"
+readme = "README.md"
+keywords = ["metrics", "QA", "MRT", "FRT", "freerecall"]
+repository = "https://gitlab.com/neurons-inc1/data-analyst/neurons_metrics_package"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fuzzywuzzy = "*"
+google_cloud_aiplatform = "*"
+matplotlib = "*"
+numpy = "*"
+pandas = "*"
+protobuf = "*"
+scikit_learn = "*"
+scipy = "*"
+seaborn = "*"
+setuptools = "*"
+torch = "*"
+tqdm = "*"
+transformers = "*"
+vertexai = "*"

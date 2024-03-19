@@ -1,0 +1,14 @@
+fuzzywuzzy
+google_cloud_aiplatform
+matplotlib
+numpy
+pandas
+protobuf
+scikit_learn
+scipy
+seaborn
+setuptools
+torch
+tqdm
+transformers
+vertexai

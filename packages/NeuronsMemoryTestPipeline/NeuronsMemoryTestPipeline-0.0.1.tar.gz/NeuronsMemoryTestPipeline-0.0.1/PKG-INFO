@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: NeuronsMemoryTestPipeline
+Version: 0.0.1
+Summary: Root package:
+Home-page: https://gitlab.com/neurons-inc1/data-analyst/neurons_metrics_package
+Author: Irina White, Theo Sell
+Author-email: i.white@neuronsinc.com, t.sell@neuronsinc.com
+License-File: LICENSE
+Requires-Dist: fuzzywuzzy
+Requires-Dist: google_cloud_aiplatform
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: protobuf
+Requires-Dist: scikit_learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: setuptools
+Requires-Dist: torch
+Requires-Dist: tqdm
+Requires-Dist: transformers
+Requires-Dist: vertexai
