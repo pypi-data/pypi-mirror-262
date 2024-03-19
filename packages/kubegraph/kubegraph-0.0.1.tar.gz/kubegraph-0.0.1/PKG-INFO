@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: kubegraph
+Version: 0.0.1
+Summary: KubeGraph Python Client
+Project-URL: Bug Tracker, https://github.com/ulagbulag/kubegraph-py/issues
+Project-URL: Changelog, https://github.com/ulagbulag/kubegraph-py/blob/master/CHANGELOG.md
+Project-URL: Documentation, https://github.com/ulagbulag/kubegraph-py
+Project-URL: Homepage, https://github.com/ulagbulag/kubegraph-py
+Project-URL: Repository, https://github.com/ulagbulag/kubegraph-py.git
+Author-email: Ho Kim <ho.kim@ulagbulag.io>
+Maintainer-email: Ho Kim <ho.kim@ulagbulag.io>
+License: GPL-3.0-or-later WITH Classpath-exception-2.0
+License-File: LICENSE
+Keywords: graph,iac,kubegraph,kubernetes,network
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Requires-Dist: aiohttp
+Requires-Dist: polars
+Description-Content-Type: text/markdown
+
+# KubeGraph Python Client
+
+This is the official Python client library for [KubeGraph](https://github.com/ulagbulag/OpenARK/tree/master/templates/kubegraph), a service that facilitates the collection and distribution of real-time `network graph` information in a cloud-native environment.
+A `network graph` refers to a data structure that can be described in terms of nodes and edges.
+This repository enables access to KubeGraph services using Python, allowing users to receive network graph information and consume it within various data processing and machine learning frameworks, including Apache Arrow, Polars, and PyTorch. It offers robust and flexible compatibility options.
+
+KubeGraph extracts and stores data in the form of nodes or edges from multiple data sources such as Kubernetes, [OpenARK](https://github.com/ulagbulag/OpenARK), and Prometheus, enabling users to tailor data retrieval and storage to their needs.
