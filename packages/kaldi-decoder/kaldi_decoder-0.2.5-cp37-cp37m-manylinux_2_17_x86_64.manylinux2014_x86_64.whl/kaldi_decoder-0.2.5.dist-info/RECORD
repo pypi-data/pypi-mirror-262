@@ -1,0 +1,11 @@
+_kaldi_decoder.cpython-37m-x86_64-linux-gnu.so,sha256=eLDNn7-k4xhq86A2dUQ6ElB1q8XBiX5o0FIHr0ZiTEY,348168
+kaldi_decoder-0.2.5.dist-info/RECORD,,
+kaldi_decoder-0.2.5.dist-info/METADATA,sha256=HpvFCjwdV1Zk2P_7hHuLmaIxAtNXAQs5lPFcjr8NpWQ,1262
+kaldi_decoder-0.2.5.dist-info/WHEEL,sha256=Nrkcdc5ssDAAtKZIozqeGQ1t0XBlmR69FDXmyKXAxps,150
+kaldi_decoder-0.2.5.dist-info/top_level.txt,sha256=_zZmTx-EYjIPrjkMZkT_9Vb0fFV12mKWRps7FBONiR4,29
+kaldi_decoder-0.2.5.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+kaldi_decoder/__init__.py,sha256=cwZgeSBq4XfDMofzCXL-9Pj-DWT6uk0ovcGbo_6iyqw,217
+kaldi_decoder/lib/libkaldi-decoder-core.so,sha256=rA9lZUUBYNZX_3ERbZ7bFNk7qOvwMRAd8B861ldAzDY,524232
+kaldi_decoder/lib/libkaldi-decoder-kaldi-fst-core.so,sha256=r3DCEtYPyyEgou9GRQwrKtCXnFBhHB0VnvjchN1U6SU,881992
+kaldi_decoder/lib/libkaldi-decoder-fst.so,sha256=1YN7dYqxmkXx-xN1WCDhIJtoXs0AF7HN_AVKpI4ASLs,1608368
+kaldi_decoder/lib/libkaldi-decoder-fst.so.6,sha256=1YN7dYqxmkXx-xN1WCDhIJtoXs0AF7HN_AVKpI4ASLs,1608368
