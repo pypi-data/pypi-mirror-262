@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: rl-tutorial
+Version: 0.0.1
+Summary: rl tutorial
+Author-Email: Zhan Rongrui <2742392377@qq.com>
+License: MIT
+Project-URL: Homepage, https://github.com/zrr1999/Reinforcement-learning-with-PyTorch
+Project-URL: Repository, https://github.com/zrr1999/Reinforcement-learning-with-PyTorch
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Reinforcement-learning-with-PyTorch
