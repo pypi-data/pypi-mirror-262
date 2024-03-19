@@ -1,0 +1,2 @@
+[console_scripts]
+tz = tz.client.cli:main
