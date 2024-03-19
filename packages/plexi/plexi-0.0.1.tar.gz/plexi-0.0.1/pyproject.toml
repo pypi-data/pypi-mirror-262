@@ -1,0 +1,12 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "plexi"
+version = "0.0.1"
+authors = [{ name = "Frederik Siegumfeldt", author_email = "siegumfeldt@gmail.com" }]
+description = "A module for working with 24 bit bitmap files"
+readme = "readme.md"
+
+
