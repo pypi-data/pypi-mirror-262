@@ -1,0 +1,8 @@
+README.md
+image_to_latex_document.py
+list_of_lists_to_latex_document.py
+setup.py
+LatexGenerationCustomLibrary.egg-info/PKG-INFO
+LatexGenerationCustomLibrary.egg-info/SOURCES.txt
+LatexGenerationCustomLibrary.egg-info/dependency_links.txt
+LatexGenerationCustomLibrary.egg-info/top_level.txt
