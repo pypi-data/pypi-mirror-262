@@ -1,0 +1,16 @@
+##[pylyzer] failed /users/elaina/ryanvk/src/ryanvk/fn/record.py 1701667937 2771
+.___v_desugar_1 = pyimport "__future__"
+.annotations: Never
+.___v_desugar_2 = pyimport "dataclasses"
+.dataclass: {dataclasses.DataClass}
+.___v_desugar_3 = pyimport "typing"
+.TYPE_CHECKING: Never
+.Any: {typing.Any}
+.Iterable: {typing.Iterable}
+.Mapping!: {Type_v_global_330: |K: Type, V: Type|(K: Type, V: Type) -> {Mapping!(K, V)} | Type_v_global_330 == <const subroutine 'Mapping!'>}
+.TypedDict: (Str, Type) -> Type
+.___v_desugar_4 = pyimport "ryanvk/topic"
+.PileTopic: Never
+.___v_desugar_5 = pyimport "ryanvk/typing"
+.Twin: Never
+
