@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: hcw_py_sdk
+Version: 0.1.0
+Summary: SDK Package for communication with HCW@Home API
+Author-email: Olivier Bitsch <olivier.b@iabsis.com>
+Maintainer-email: Olivier Bitsch <olivier.b@iabsis.com>
+Project-URL: Homepage, https://hcw-at-home.com
+Project-URL: Documentation, https://hcw-home.github.io/hcw-docs/
+Project-URL: Repository, https://projects.iabsis.com/git/hcw-py-sdk
+Project-URL: Bug Tracker, https://projects.iabsis.com/projects/hcw-py-sdk
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: JavaScript
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: 
+Requires-Python: >=3.8
+Requires-Dist: requests
+Requires-Dist: hcw-py-sdk
+
