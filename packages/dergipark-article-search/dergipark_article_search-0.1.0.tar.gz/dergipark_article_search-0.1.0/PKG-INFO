@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: dergipark_article_search
+Version: 0.1.0
+Author: alistnel
+Author-email: aliustunelin@gmail.com
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4

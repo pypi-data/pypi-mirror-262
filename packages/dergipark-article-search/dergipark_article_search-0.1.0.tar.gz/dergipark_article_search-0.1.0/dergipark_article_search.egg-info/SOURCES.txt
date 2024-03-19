@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+dergipark_article_search.egg-info/PKG-INFO
+dergipark_article_search.egg-info/SOURCES.txt
+dergipark_article_search.egg-info/dependency_links.txt
+dergipark_article_search.egg-info/requires.txt
+dergipark_article_search.egg-info/top_level.txt
