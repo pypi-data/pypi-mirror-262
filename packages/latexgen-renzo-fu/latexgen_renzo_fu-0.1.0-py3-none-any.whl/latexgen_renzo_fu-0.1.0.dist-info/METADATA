@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: latexgen-renzo-fu
+Version: 0.1.0
+Summary: A simple LaTeX table and image generator
+Home-page: https://github.com/Renzo-Fu/Python_course
+Author: Renzo
+Author-email: renz_alexander@example.com
+Keywords: LaTeX,table,image
+Requires-Python: >=3.6
+
