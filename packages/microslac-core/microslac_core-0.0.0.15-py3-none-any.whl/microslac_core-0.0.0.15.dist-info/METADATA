@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: microslac-core
+Version: 0.0.0.15
+Summary: 
+Author: tanlda
+Author-email: ledinhanhtan.stack@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pre-commit (>=3.6.2,<4.0.0)
+Requires-Dist: pyjwt (>=2.8.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+
