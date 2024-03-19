@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ParallelTokenizer
+Version: 0.1.0
+Summary: a tool that uses a parallel approach to tokenizer to achieve superior acceleration
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ParallelTokenizer
+Use the tokenizer in parallel to achieve superior acceleration
+
+

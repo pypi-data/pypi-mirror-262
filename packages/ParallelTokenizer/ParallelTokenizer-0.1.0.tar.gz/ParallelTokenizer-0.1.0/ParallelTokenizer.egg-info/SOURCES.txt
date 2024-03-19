@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+ParallelTokenizer.egg-info/PKG-INFO
+ParallelTokenizer.egg-info/SOURCES.txt
+ParallelTokenizer.egg-info/dependency_links.txt
+ParallelTokenizer.egg-info/top_level.txt
+parallel_tokenizer/__init__.py
+parallel_tokenizer/logger.py
+parallel_tokenizer/parallel_tokenizer.py
+parallel_tokenizer/sp_tokenizer.py
+parallel_tokenizer/utils.py
