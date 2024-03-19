@@ -1,0 +1,2 @@
+[pytest11]
+pytest_ot = pytest_ot.plugin
