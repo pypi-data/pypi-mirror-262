@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: dnv-sesam-commands
+Version: 5.16.0.124
+Summary: A Python library designed for developing and executing Sesam-enabled workflows on either local systems or OneCompute cloud platforms.
+Author-email: DNV AS <software.support@dnv.com>
+License: MIT License
+        Copyright (c) 2024 DNV
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://myworkspace-dev.dnv.com/download/public/sesam/workflow/docs/latest/index.html
+Keywords: onecompute,oneworkflow,workflow,sesam
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dnv-oneworkflow
+
+# Python Library for Sesam Workflows
+
+This Python library is designed to streamline the development and execution of Sesam-integrated workflows. It supports both local systems and OneCompute cloud platforms.
+
+## Usage and Examples
+
+For a more comprehensive understanding and additional examples, please visit the Homepage link provided on this page.
+
+```python
+"""Demonstration of executing a SesamCoreCommand using the OneWorkflow client asynchronously."""
+
+# Import necessary modules and functions
+import asyncio
+from dnv.oneworkflow.utils import (
+    CommandInfo,
+    one_workflow_client,
+    run_managed_commands_parallelly_async,
+)
+from dnv.sesam.commands import SesamCoreCommand
+
+# Instantiate the OneWorkflow client with workspace ID and path
+client = one_workflow_client(
+    workspace_id="TestWorkflow", workspace_path=r"C:\MyWorkspace", cloud_run=False
+)
+
+# Create an instance of the SesamCoreCommand class, specifying the command, input file name, and options
+sesam_core_command = SesamCoreCommand(
+    command="uls", input_file_name="input.json", options="-v"
+)
+
+# Create an instance of the CommandInfo class, specifying the commands and load case folder name
+cmd_info = CommandInfo(
+    commands=[sesam_core_command],
+    load_case_foldername="LoadCase1",
+)
+
+# Run the workflow/command asynchronously using the run_managed_commands_parallelly_async function
+asyncio.run(
+    run_managed_commands_parallelly_async(
+        client=client,
+        commands_info=[cmd_info],
+    )
+)
+```
