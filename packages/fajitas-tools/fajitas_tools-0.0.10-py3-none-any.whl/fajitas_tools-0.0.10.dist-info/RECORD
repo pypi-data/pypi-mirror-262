@@ -1,0 +1,17 @@
+example_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_package/main.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_package/print_env.py,sha256=Af5_yLl4sTI0obhIu39Z99Fc4PkA_wwgEkx5ok7i6Ko,170
+example_package/print_text.py,sha256=FkDVTzOC2nFfipiiTH7WDMI_XU4eYN_L8u5f2P0Vh2E,59
+example_package/service_function.py,sha256=ffXmdclV_0XectfmvgS7GLDhvz7ZvQHSASV0ynDv_88,5729
+fajitas_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fajitas_tools/big_query.py,sha256=MpAHZJfhWNu5T1r9iH1n72OfsZfSOcFyYl1pDjfjfJM,927
+fajitas_tools/compute_log.py,sha256=mQ-ZTi2sY-aFbkRsLIOZi5Fd5LuwSsG-qtQ9LzL0hNk,367
+fajitas_tools/get_env.py,sha256=zsK4zXPTw0oWyqRaalfEKRQOb6G6yoEGB0zaGEGevF4,302
+fajitas_tools/gmail.py,sha256=jBf1GFbXeLBzeRKVkzV5adRkECa02uKnSfOinyNeVbM,6072
+fajitas_tools/google_sheet.py,sha256=mhOIRDboR9kk1f_a2l_ECohiwtMH__X7ZGcezPCmK8k,5240
+fajitas_tools/main.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fajitas_tools-0.0.10.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fajitas_tools-0.0.10.dist-info/METADATA,sha256=GN_r5DC1EjMgJIntck9wEkkxV8ZL4OrafRj1WI0Q0b4,593
+fajitas_tools-0.0.10.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fajitas_tools-0.0.10.dist-info/top_level.txt,sha256=RZOAhzy7I4iupOUI12tFhepoSTXXpSXmeRJMnVyUmCc,30
+fajitas_tools-0.0.10.dist-info/RECORD,,
