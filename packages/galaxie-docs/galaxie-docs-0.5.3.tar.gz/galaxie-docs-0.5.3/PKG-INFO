@@ -1,0 +1,220 @@
+Metadata-Version: 2.1
+Name: galaxie-docs
+Version: 0.5.3
+Summary: Galaxie Docs is a low-tech survival ToolKit for documents conversion
+Author: Tuuux
+Project-URL: Homepage, https://gitlab.com/Tuuux/galaxie-docs
+Project-URL: Issues, https://gitlab.com/Tuuux/galaxie-docs/-/issues
+Project-URL: Readthedocs, http://galaxie-docs.readthedocs.io
+Keywords: Galaxie,docs,yaml,markdown
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: Public Domain
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: wheel
+Requires-Dist: markdown
+Requires-Dist: Pygments
+Provides-Extra: tests
+Requires-Dist: coverage; extra == "tests"
+Requires-Dist: wheel; extra == "tests"
+Requires-Dist: markdown; extra == "tests"
+Requires-Dist: Pygments; extra == "tests"
+Requires-Dist: mock<4,>=1.0.1; python_version < "3.4" and extra == "tests"
+
+[![pipeline status](https://gitlab.com/Tuuux/galaxie-docs/badges/master/pipeline.svg)](https://gitlab.com/Tuuux/galaxie-docs/-/commits/master) [![coverage report](https://gitlab.com/Tuuux/galaxie-docs/badges/master/coverage.svg)](https://gitlab.com/Tuuux/galaxie-docs/-/commits/master) [![Documentation Status](https://readthedocs.org/projects/galaxie-docs/badge/?version=latest)](https://galaxie-docs.readthedocs.io/en/latest/?badge=latest)
+```text
+                  ________        __                 __        
+                 /  _____/_____  |  | _____  ___  __|__| ____  
+                /   \  ___\__  \ |  | \__  \ \  \/  /  |/ __ \ 
+                \    \_\  \/ __ \|  |__/ __ \_>    <|  \  ___/_
+                 \________(______/____(______/__/\__\__|\_____/
+```
+
+# Galaxie Docs, The ToolKit
+
+## The Project
+
+**Galaxie Docs** is a free software Tool Kit for convert document.
+
+The lib is written with **Python** and deal with:
+* Markdown to Html
+* Yaml to Markdown
+
+It is usable from CLI and Python code.
+
+## Installation
+* **Pre Version**: ```pip install galaxie-docs```  
+* **Dev Version**: ```pip install -i https://test.pypi.org/simple/ galaxie-docs```
+
+## Documentation:
+* **Readthedocs link**: [http://galaxie-docs.readthedocs.io](http://galaxie-docs.readthedocs.io)  
+* **Packages documentation**: [https://galaxie-docs.readthedocs.io/en/latest/glxdocs.html](https://galaxie-docs.readthedocs.io/en/latest/glxdocs.html)
+
+## The Mission
+Galaxie use Markdown format as text format, then the lib have targeted to convert documents around MarkDown.
+
+Contribute
+----------
+You welcome !!!
+
+- Issue Tracker: [https://gitlab.com/Tuuux/galaxie-docs/issues](https://gitlab.com/Tuuux/galaxie-docs/issues)
+- Source Code: [https://gitlab.com/Tuuux/galaxie-docs](https://gitlab.com/Tuuux/galaxie-docs)
+
+Screenshots
+-----------
+
+**The source**
+```markdown
+[![Documentation Status](https://readthedocs.org/projects/galaxie-curses/badge/?version=latest)](http://galaxie-curses.readthedocs.io/?badge=latest)
+[![pipeline status](https://gitlab.com/Tuuux/galaxie-curses/badges/master/pipeline.svg)](https://gitlab.com/Tuuux/galaxie-curses/-/commits/master)
+[![coverage report](https://gitlab.com/Tuuux/galaxie-curses/badges/master/coverage.svg)](https://gitlab.com/Tuuux/galaxie-curses/-/commits/master)
+[![codecov](https://codecov.io/gl/Tuuux/galaxie-curses/branch/master/graph/badge.svg)](https://codecov.io/gl/Tuuux/galaxie-curses)
+
+Galaxie Curses, The ToolKit
+===========================
+<div style="text-align:center"><img src ="https://gitlab.com/Tuuux/galaxie-curses/raw/master/docs/source/images/logo_galaxie.png" /></div>
+
+Once upon a time, this project was hosted on a ancient platform called GitHub. Then came the Buyer.
+The Buyer bought GitHub, willing to rule over its community.
+
+I was not to sell, so here is the new home of "https://github.com/Tuuux/galaxie-curses".
+
+The Project
+-----------
+**Galaxie Curses** alias **Le Truc Blue** (The Blue Thing) is a free software Tool Kit for the **NCurses** API.
+It can be consider as a text based implementation of the famous **GTK+** Library (Or Ultra Inspired...).
+
+Where ``implementation`` mean: ``Devellop a project from a documentation specs``.
+
+Originally the project have start in 2016 when the author Jérôme.O have start to learn **Python** at home.
+
+Then the lib is write in **Python**
+
+```
+
+**Pretty good**
+<div style="text-align:center"><img src ="https://gitlab.com/Tuuux/galaxie-docs/-/raw/9005032bfb4f6418465721ab25726bdcdf95a96e/docs/source/_images/result_01.png" /></div>
+
+**Syntax coloration with css**
+<div style="text-align:center"><img src ="https://gitlab.com/Tuuux/galaxie-docs/-/raw/9005032bfb4f6418465721ab25726bdcdf95a96e/docs/source/_images/result_02.png" /></div>
+
+## Usage
+
+### CLI
+For convert a YAML file name ``./file.yml`` in to a Markdown file name ``./file.md``
+```bash
+glx-yaml2md ./file.yml ./file.md
+```
+
+For convert a Markdown file name ``./file.md`` in to a HTML file name ``./file.html``
+```bash
+glx-html2md ./file.md ./file.html
+```
+
+### For Sphinx inside conf.py file
+adapt cwd as you needed
+
+```python
+import os
+import sys
+from glxdocs.yaml2md import Yaml2Md
+
+yaml2md = Yaml2Md()
+cwd = os.path.dirname(os.path.abspath(__file__))
+roles_src_path = os.path.join(cwd, 'data', 'roles')
+roles_dst_reference = os.path.join(cwd, 'data', 'reference', 'role')
+
+
+ignore_role_list = [
+    'galaxie_clans.dns',
+    'galaxie_clans.clan_host',
+    'galaxie_clans.system_base',
+    'galaxie_clans.system_users'
+]
+
+for element in os.listdir(roles_src_path):
+    default_directory = os.path.abspath(os.path.join(roles_src_path, element, 'defaults'))
+    if not os.path.isdir(default_directory) or element in ignore_role_list:
+        continue
+    for path, sub_dirs, files in os.walk(default_directory):
+        for filename in files:
+            if filename.startswith("."):
+                continue
+
+            yaml2md.file_input.path = os.path.join(path, filename)
+            yaml2md.file_output.path = roles_dst_reference + "_" + element + ".md"
+
+            yaml2md.convert_file()
+
+            sys.stdout.write("Converted {0}".format(roles_dst_reference + "_" + element + "\n"))
+            sys.stdout.flush()
+```
+
+**Help**
+```bash
+usage: glx-md2html [-h] [--lang LANG] [--charset CHARSET] source destination
+
+Galaxie Docs - Markdown to HTML
+
+positional arguments:
+  source             source file path
+  destination        destination file path
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --lang LANG        HTTP_ACCEPT_LANGUAGE
+  --charset CHARSET  character sets
+
+Developed under GPLv3+ license
+```
+
+```bash
+usage: glx-yaml2md [-h] [--strip-regex strip_regex] [source_file] [target_file]
+
+Galaxie Docs - YAML to Markdown
+
+positional arguments:
+  source_file           A pathname of an YAML input file. If no file operands are specified, the standard input shall
+                        be used. If a file is '-', the utility read from the standard input at that point in the
+                        sequence.
+  target_file           A pathname of an target file. If no file operands are specified, the standard output shall be
+                        used. If a file is '-', the utility write to the standard output at that point in the
+                        sequence.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --strip-regex strip_regex
+                        Regex which will remove everything it matches. Can be used e.g. to remove fold markers from
+                        headings. Example to strip out [[[,]]] fold markers use: '\s*(:?\[{3}|\]{3})\d?$'. Check the
+                        README for more details.
+
+Developed under GPLv3+ license
+```
+
+## Features
+* ``glx-md2html`` command line interface
+* ``glx-yaml2md`` command line interface
+* CSS is included inside html file
+* Code coloration
+* EveryMarkDown extension is enabled
+* Defensive code style
+* Singleton Thread safe
+* Can be used as a class
+
+## Roadmap
+Be the documents wrapper for **Galaxie-Curses** lib .
+
+* create Html to Markdown converter
+* create CVS to Markdown converter
+
+## Thanks
+To everyone i have interest to it project, copy it, use it, diffuse it , and have fun ...
+
+## License
+GNU General Public License v3 or later (GPLv3+)
+https://gitlab.com/Tuuux/galaxie-docs/blob/master/LICENSE
