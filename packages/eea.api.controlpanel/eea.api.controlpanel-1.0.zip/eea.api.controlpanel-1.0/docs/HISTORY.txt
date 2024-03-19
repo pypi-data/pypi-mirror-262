@@ -1,0 +1,8 @@
+Changelog
+=========
+
+1.0 - (2024-03-15)
+-----------------------
+
+* Moved Version RestAPI endpoint and init logic from eea.kitkat
+  [avoinea - refs #264531]
