@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "texcreator"
+version = "0.3.0"
+description = "latex document creator"
+authors = ["Artem Kovalev <artem@kovalev.cc>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
