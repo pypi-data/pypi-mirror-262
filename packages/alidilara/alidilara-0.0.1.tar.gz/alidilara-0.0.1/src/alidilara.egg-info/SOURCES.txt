@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/alidilara/__init__.py
+src/alidilara/our_codes.py
+src/alidilara.egg-info/PKG-INFO
+src/alidilara.egg-info/SOURCES.txt
+src/alidilara.egg-info/dependency_links.txt
+src/alidilara.egg-info/top_level.txt
+test/test_our_codes.py
