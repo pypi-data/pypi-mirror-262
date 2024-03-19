@@ -1,0 +1,67 @@
+
+# This CI does not currently include particle transport tests as openmc is not installed
+
+name: CI with pip install
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - 'docs/**'
+      - '.gitignore'
+      - '*.md'
+      - 'CITATION.cff'
+      - 'LICENSE.txt'
+      - 'readthedocs.yml'
+  push:
+    branches:
+      - main
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    container:
+      image: openmc/openmc:develop-dagmc
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: install non pypi dependencies
+        shell: bash
+        run: |
+          apt-get --allow-releaseinfo-change update
+          apt-get update -y
+          apt-get upgrade -y
+          apt-get install -y libgl1-mesa-glx libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev libosmesa6 libosmesa6-dev libgles2-mesa-dev libarchive-dev libpangocairo-1.0-0 libxcursor-dev libxft2 libxinerama-dev 
+          apt-get install -y make cmake
+          apt install python3
+          apt install python3-pip
+          python -m pip install --upgrade pip
+          mkdir MOAB
+          cd MOAB
+          git clone --single-branch -b 5.5.1 --depth 1 https://bitbucket.org/fathomteam/moab/
+          mkdir build
+          cd build
+          apt-get install -y libeigen3-dev
+          cmake ../moab -DENABLE_PYMOAB=ON -DENABLE_HDF5=ON -DENABLE_BLASLAPACK=OFF -DENABLE_FORTRAN=OFF
+          make -j2
+          make install
+          cd ../..
+          python -m pip install .
+          python -c "import cad_to_dagmc"
+          python -m pip install .[tests]
+          pytest -v tests
+          cd examples
+          python create_stp_files_for_examples.py
+          python cadquery_assembly.py
+          python cadquery_compound.py
+          python cadquery_object_and_stp_file.py
+          python cadquery_text.py
+          python curved_cadquery_object_to_dagmc_surface_mesh.py
+          python curved_cadquery_object_to_dagmc_volume_mesh.py
+          python multiple_cadquery_objects.py
+          python multiple_stp_files.py
+          python single_stp_file_multiple_volumes.py
+          python single_cadquery_object.py
+          python single_stp_file.py
